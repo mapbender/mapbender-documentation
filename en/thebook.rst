@@ -6,8 +6,8 @@ Content
 .. toctree::
    :maxdepth: 2
 
-   ../mapbender/documentation/book/en/installation.rst
-   ../mapbender/documentation/book/en/installation_git.rst
-   ../mapbender/documentation/book/en/concepts.rst
-   ../mapbender/documentation/book/en/database.rst
+   book/installation.rst
+   book/installation_git.rst
+   book/concepts.rst
+   book/database.rst
 

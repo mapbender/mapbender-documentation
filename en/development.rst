@@ -4,8 +4,8 @@ The Developer's Book
 .. toctree::
    :maxdepth: 2
 
-   ../mapbender/documentation/book/en/development/introduction
-   ../mapbender/documentation/book/en/development/apidocumentation
-   ../mapbender/documentation/book/en/development/elements
-   ../mapbender/documentation/book/en/development/git
+   book/development/introduction
+   book/development/apidocumentation
+   book/development/elements
+   book/development/git
    ../fom/documentation/en/index
