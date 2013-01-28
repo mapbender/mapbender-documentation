@@ -15,7 +15,6 @@ Class, Widget & Style
 Configuration
 =============
 
-<Put YAML configuration here, include defaults and explain>
 .. code-block:: yaml
 
     activityClass: mb-activity          # CSS class to indicate activity (Ajax or tile)

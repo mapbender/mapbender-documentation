@@ -1,0 +1,37 @@
+Copyright
+************
+
+The copyright shows a copyright label and terms of use as a dialog.
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\CoreBundle\\Element\\Copyright
+* Widget: mapbender.element.copyright.js
+* Style: mapbender.elements.css
+
+Configuration
+=============
+
+.. code-block:: yaml
+
+   tooltip: "Copyright"           # text to use as tooltip
+   copyrigh_text: "© XXX # 2013"  # edit the text you want to display as copyright text
+   dialog_link: "Terms of use"    # 
+   dialog_content: "Terms of use (Content)" #
+   dialog_title: "Terms of use"   #
+
+HTTP Callbacks
+==============
+
+None.
+
+JavaScript API
+==============
+
+None.
+
+JavaScript Signals
+==================
+
+None.

@@ -6,7 +6,7 @@ The coordinates display shows your mouse position in map coordinates.
 Class, Widget & Style
 =====================
 
-* Class: Mapbender\CoreBundle\Element\CoordinatesDisplay
+* Class: Mapbender\\CoreBundle\\Element\\CoordinatesDisplay
 * Widget: mapbender.element.coordinatesdisplay.js
 * Style: mapbender.elements.css
 
@@ -16,12 +16,12 @@ Configuration
 .. code-block:: yaml
 
    tooltip: 'coordinates display' # text to use as tooltip
-   target: ~ # Id of Map element to query 
-   label: true # 
-   empty: 'x= - y= -' # 
+   target: ~                      # Id of Map element to query 
+   label: true                    # true/false to label
+   empty: 'x= - y= -'             # 
    displaystring:  'Coordinates:' #
-   prefix: 'x= ' #
-   separator: ' y= ' #
+   prefix: 'x= '                  #
+   separator: ' y= '              #
 
 HTTP Callbacks
 ==============

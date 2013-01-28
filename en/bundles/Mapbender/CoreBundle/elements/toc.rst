@@ -6,21 +6,18 @@ Table of Content diplays the layer. The Table of Content allows you to de/activa
 Class, Widget & Style
 ==============
 
-* Class: Mapbender\CoreBundle\Element\Toc
+* Class: Mapbender\\CoreBundle\\Element\\Toc
 * Widget: mapbender.element.toc.js
 * Style: mapbender.elements.css
 
 Configuration
 =============
 
-<Put YAML configuration here, include defaults and explain>
-
 .. code-block:: yaml
 
-   title:  Table of Contents #
-   tooltip: Table of contents #
-   target: null #Id of Map element to query
-   autoOpen: true # open when application is started
+   tooltip: 'Table of contents' # text to use as tooltip
+   target: ~                    # Id of Map element to query
+   autoOpen: true               # true/false open when application is started
 
 
 HTTP Callbacks

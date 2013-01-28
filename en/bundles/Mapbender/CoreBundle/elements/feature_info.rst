@@ -6,7 +6,7 @@ This element provides feature info capabilties to Mapbender 3. It works for WMS 
 Class, Widget & Style
 ==============
 
-* Class: Mapbender\CoreBundle\Element\FeatureInfo
+* Class: Mapbender\\CoreBundle\\Element\\FeatureInfo
 * Widget: mapbender.element.featureInfo.js, subclasses mapbender.element.button.js
 * Style: mapbender.elements.css
 
@@ -17,8 +17,10 @@ Also see :doc:`button` for inherited configuration options.
 
 .. code-block:: yaml
 
-   target: ~ # Id of Map element to query
-
+   tooltip: Feature Info # text to use as tooltip
+   target: ~             # Id of Map element to query
+   label: true           # true/false to label button
+   icon: featureinfo     # class name of the icon see css-template
 
 HTTP Callbacks
 ==============
