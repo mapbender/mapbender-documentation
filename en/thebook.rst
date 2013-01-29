@@ -10,4 +10,6 @@ Content
    book/installation_git.rst
    book/concepts.rst
    book/database.rst
+   book/templates.rst
+   book/quickstart.rst
 
