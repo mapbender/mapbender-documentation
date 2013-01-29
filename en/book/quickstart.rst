@@ -179,7 +179,7 @@ A WMS returns an XML-file when the getCapabilities document is requested. This i
 
 #. After successfull registration of the service Mapbender will display an overview on the information that was provides by the service.
 
-  .. image:: figures/mapbender3_load_wms.png
+  .. image:: figures/mapbender3_wms_load.png
      :scale: 80
 
 
@@ -251,7 +251,7 @@ Add Elements to your application
 ================================
 Mapbender offers a set of elements. You can add the elements to your application. You have different regions (top, content, footer) to which you can add elements.
 
-  .. image:: figures/mapbender3_add_element.png
+  .. image:: figures/mapbender3_application_add_element.png
      :scale: 80
 
 #. Choose : menuselection:`Applications --> Elements--> Button +` to get an overview over the elements Mapbender3 provides.
