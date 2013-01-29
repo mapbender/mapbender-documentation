@@ -17,8 +17,8 @@ Configuration
 .. code-block:: yaml
 
    tooltip: 'About Mapbender3' # text to use as tooltip
-   label => true ## false/true to label the scale selector
-   icon => 'abouticon' # icon to display on button
+   label: true # false/true to label the scale selector
+   icon: 'abouticon' # icon to display on button
 
 HTTP Callbacks
 ==============
