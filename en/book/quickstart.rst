@@ -286,9 +286,7 @@ Examples for elements Mapbender3 offers:
 * Table of Content
 * Navigation Bar
 
-You find detailed information on every elements at the http://doc.mapbender3.org/en/bundles/Mapbender/CoreBundle/index.html.
-
-.. Link does not work like this: doc:`Mapbender3 element documentation <bundles/Mapbender/WmsBundle/index>`.
+You find detailed information on every element at the `MapbenderCoreBundle element documentation <../../../documentation/en/bundles/Mapbender/CoreBundle/index.html>`_.
 
 
 Try it yourself
