@@ -35,7 +35,7 @@ Each element consists of four parts itself:
   everything you do and interact with on your screen. Using Ajax, it can call
   it's server-side counterpart to do things like database queries.
 * Template - HTML the element is using. In the most basic version, this would
-  just be an DIV, but it can be as complex as is needed.
+  just be a DIV, but it can be as complex as is needed.
 * CSS - of course, most elements want some style, so they may provide their
   own.
 
