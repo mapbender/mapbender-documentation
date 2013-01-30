@@ -25,7 +25,7 @@ Download
 ********
 
 Installation packages are distributed as compressed packages and are available
-for download at the `download http://mapbender3.org/download`_ page.
+for download at the `download <http://mapbender3.org/download>`_ page.
 
 After downloading, extract the package in a directory of your choice. Then make
 sure your Webserver points to the web directory inside the mapbender3 directory
