@@ -1,8 +1,8 @@
 Git-based installation
 ######################
 
-If you want to participate in the Mapbender3 development, or for some other
-reasons want to use the Git repositories for Mapbender3, follow this guide
+If you want to participate in the Mapbender3 development or for some other
+reasons want to use the Git repositories from Mapbender3, follow this guide
 instead of the normal download. This guide is based on Ubuntu 12.04. For
 other distributions, you may need to adapt, especially package names like
 sphinx-common.
@@ -10,12 +10,13 @@ sphinx-common.
 Cloning the Repository
 **********************
 
-Cloning is easy, just issue the following command in your shell:
+Get the code from the git repository. Cloning is easy, just issue the following command in your shell:
 
     :command:`git clone -b 3.0 git://github.com/mapbender/mapbender-starter`
 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-starter
+
 
 Fetching the Submodules
 ***********************
@@ -55,7 +56,7 @@ of available build tasks by issuing
     :command:`phing -l`
 
 The first task you want to - actually need to - execute is the deps task, which
-uses `Composer http://getcomposer.org` to install the runtime dependencies like
+uses `Composer http://getcomposer.org`_ to install the runtime dependencies like
 Symfony and Doctrine:
 
     :command:`phing deps`
@@ -69,10 +70,11 @@ to install the cURL command line tool:
 
     :command:`sudo apt-get install curl`
 
-Package Build Tools
-===================
+..
+ Package Build Tools
+ ===================
 
-TODO: Skipped for now, KMQ has the knowledge.
+ TODO: Skipped for now, KMQ has the knowledge.
 
 PHPUnit
 =======
@@ -91,6 +93,13 @@ based systems, you can use apt to install Sphinx:
     :command:`sudo apt-get install sphinx-common`
 
 
+You find the Mapbender3 documentation at github at mapbender-documentation. Get the clone like this: 
+    :command:`git clone git://github.com/mapbender/mapbender-documentation`
+
+Developers granted secure access to the code must use the SSH-URL of the
+repository: git@github.com:mapbender/mapbender-documentation
+
+
 ApiGen
 ======
 
@@ -107,4 +116,5 @@ Troubleshooting
   Pear packages with
 
     :command:`sudo pear upgrade-all`
+
 
