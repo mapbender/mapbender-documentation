@@ -14,9 +14,8 @@ Mapbender3 needs the following components in order to run:
 * PHP SQLite extension (php5-sqlite)
 * PHP cURL extension (php5-curl)
 
-Optionally, in order to use a database other than the preconfigured SQLite one
-you will one a matching PHP extension supported by
-`Doctrine http://www.doctrine-project.org/projects/dbal.html`.
+Optionally, in order to use a database other than the preconfigured SQLite one,
+you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_.
 
 If you want to use the developer mode, for using the web installer or to create
 profiler data to be used to analyze errors you will still need the SQLite
@@ -26,7 +25,7 @@ Download
 ********
 
 Installation packages are distributed as compressed packages and are available
-for download at the `download http://mapbender3.org/download` page.
+for download at the `download http://mapbender3.org/download`_ page.
 
 After downloading, extract the package in a directory of your choice. Then make
 sure your Webserver points to the web directory inside the mapbender3 directory
@@ -73,14 +72,13 @@ Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Database connection parameters are stored together with some more configuration
 parameters in the file app/config/parameters.yml. This file is using YAML
-syntax, so be aware that you can **not** use tabs for indenting. Be careful
-about this.
+syntax, so be aware that you can **not** use tabs for indenting. Be careful about this and use whitespaces instead. 
 
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^
 
 Symfony2 can attempt to create your database, this works of course only if the
-configured database user is allowed to. Call the console utility like so:
+configured database user is allowed to. Call the console utility like this:
 
     :command:`app/console doctrine:database:create`
 
@@ -115,6 +113,7 @@ The standard roles need to be initialized in the database:
 
     :command:`app/console fom:user:initroles`
 
+
 Creating the administrative user
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -124,6 +123,10 @@ The first user - which has all privileges - must be created using the command:
 
 This will interactively ask all information needed and create the user in the
 database.
+
+There is a silent mode you can use, if you want to use a script to install Mapbender3 and don't want to be asked for all information:
+
+    :command:`app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent`
 
 Now head over to your installation in your browser and enjoy.
 
