@@ -27,7 +27,8 @@ Possible values for the %database_driver% parameter are:
 * pdo_pgsql - PostgreSQL PDO driver
 * oci8 - Oracle OCI8 driver
 * pdo_oci - Oracle PDO driver
-TODO: See other drivers in the Doctrine docs
+
+..TODO: See other drivers in the Doctrine docs
 
 The parameters should be self-explanatory except for the %database_path% - that's the file path a SQLite database
 would be stored. If you don't use a SQLite database, don't delete the parameter from the parameters.yml though.
@@ -39,8 +40,7 @@ Using multiple databases
 Using multiple databases is easy with Mapbender3 and advised if you want to seperate your own data from Mapbender's.
 This is usefull in a scenario where you have your own custom code provided by an non-Mapbender bundle.
 
-There's always a default database connection and all Mapbender code assumes that it can access it's data using that
-default database connection.
+There's always a default database connection and all Mapbender code assumes that it can access it's data using that default database connection.
 
 So if your code wants to use a different database you have to define a second named database connection and always
 use that named database connection. Other than that, there's nothing to do.
