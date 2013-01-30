@@ -2,6 +2,8 @@ How to create your own Template?
 ################################
 
 Mapbender3 comes with application templates you can use. But usually you want to use your own template with your own corporate design. 
+This document uses the Mapbender CoreBundle for demonstration purposes, but you should use your own bundle as otherwise things might 
+break during a upgrade.
 
 How to create your own template?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,23 +19,23 @@ Create your own twig-file
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 You find the twig-files at the following path:
 
-* \\src\\Mapbender\\CoreBundle\\Ressourcen\\views\\Template
+* \\src\\Mapbender\\CoreBundle\\Resources\\views\\Template
 
 The easiest way to create your own twig file is to copy an existing twig, save it under a new name and change the content like colors.
 
-.. code-block:: yaml
+.. code-block:: bash
 
- cd application/src/Mapbender/CoreBundle/Ressourcen/views/Template 
+ cd application/src/Mapbender/CoreBundle/Resources/views/Template 
  cp base.html.twig demo.html.twig
 
 
 Create your own css-file
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-The css-files are located in application/src/Mapbender/CoreBundle/Ressourcen/public/css. Create your own css file and edit the content.
+The css-files are located in application/src/Mapbender/CoreBundle/Resources/public/css. Create your own css file and edit the content.
 
-.. code-block:: yaml
+.. code-block:: bash
 
- cd application/src/Mapbender/CoreBundle/Ressourcen/public/css
+ cd application/src/Mapbender/CoreBundle/Resources/public/css
  cp mapbender.template.base.css mapbender.template.demo.css
 
 
@@ -43,11 +45,24 @@ To register your template you have to create a file at
 
 * application/src/Mapbender/CoreBundle/Template 
 
-.. code-block:: yaml
+.. code-block:: bash
 
  cd application/src/Mapbender/CoreBundle/Template
  cp Fullscreen.php Demo.php
 
+Finally, add the fully qualified Template class name to your Bundles setup class getTemplates function:
+
+.. code-block:: php
+
+    class MapbenderCoreBundle extends MapbenderBundle
+    {
+        public function getTemplates()
+        {
+            return array(
+                'Mapbender\CoreBundle\Template\Demo'
+            );
+        }
+    }
 
 Use your new template in mapbender.yml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
