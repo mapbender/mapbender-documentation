@@ -7,5 +7,6 @@ The Developer's Book
    book/development/introduction
    book/development/apidocumentation
    book/development/elements
+   book/development/requestresponse
    book/development/git
    ../fom/documentation/en/index
