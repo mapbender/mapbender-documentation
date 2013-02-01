@@ -10,7 +10,7 @@
   :align: right
 
 ########################
-Mapbender Quickstart 
+Mapbender3 Quickstart 
 ########################
 
 Mapbender is a web based geoportal framework to publish, register, view, navigate, monitor and grant secure access to spatial data infrastructure services. 
@@ -37,6 +37,10 @@ This Quick Start describes how to:
   * create an individual application
   * create a user and a group and assign applications to them
 
+Installation
+===============
+For the installation of Mapbender have a look at :doc:`installation <installation>`.
+
 Start Mapbender
 ================================================================================
 
@@ -59,7 +63,7 @@ Symfony offers a developer mode with lot of information about your application (
 
 #. Have a look at the information that is offered in the developer mode.
 
-  .. image:: figures/mapbender3_app_dev_controller.png
+  .. image:: figures/mapbender3_symfony_profiler.png
      :scale: 80
 
 

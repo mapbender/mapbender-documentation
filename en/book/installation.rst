@@ -32,6 +32,18 @@ sure your Webserver points to the web directory inside the mapbender3 directory
 you just uncompressed. You will also need to make sure that the default
 directory index is *app.php*.
 
+Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender3
+
+.. code-block:: yaml
+
+  ALIAS /mapbender3 /var/www/mapbender3/web/
+  <Directory /var/www/mapbender3/web>
+    Options MultiViews
+    DirectoryIndex app.php
+    Order allow,deny
+    Allow from all
+  </Directory>
+
 A :doc:`Git-based <installation_git>` installation - mainly for developers -
 is also possible.
 
@@ -71,8 +83,21 @@ understand, before continuing:
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Database connection parameters are stored together with some more configuration
-parameters in the file app/config/parameters.yml. This file is using YAML
+parameters in the file **app/config/parameters.yml**. This file is using YAML
 syntax, so be aware that you can **not** use tabs for indenting. Be careful about this and use whitespaces instead. 
+
+Your database configuration in the parameters.yml could look like this when you use PostgreSQL:
+
+.. code-block:: yaml
+
+    database_driver:   pdo_pgsql
+    database_host:     localhost
+    database_port:     5432
+    database_name:     mapbender3
+    database_path:
+    database_user:     postgres
+    database_password: 1xyz45ab
+
 
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^
@@ -136,3 +161,67 @@ Inserting srs parameters
 Inserting from srs parameters into the database occurs using the command:
 
     :command:`app/console doctrine:fixtures:load  --append`
+
+
+Installation Example for Ubuntu
+===============================
+
+Install necessary components:
+
+.. code-block:: yaml
+
+  apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl
+
+
+Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart your Apache
+
+.. code-block:: yaml
+
+  ALIAS /mapbender3 /var/www/mapbender3/web/
+  <Directory /var/www/mapbender3/web>
+    Options MultiViews
+    DirectoryIndex app.php
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+Check the ALIAS is working
+
+* http://localhost/mapbender3/
+
+Open Symfonys Welcome Script config.php. This script checks whether all necessary components are installed and configurations are made. If there are still problems, you should fix them.
+ 
+* http://localhost/mapbender3/config.php
+
+
+.. image:: figures/mapbender3_symfony_check_configphp.png
+     :scale: 80 
+
+Set owner, group and rights
+
+.. code-block:: yaml
+
+ chmod -R uga+r /var/www/mapbender3
+ chown -R www-data:www-data /var/www/mapbender3
+ chmod -R o+w /var/www/mapbender3/app/cache
+ chmod -R o+w /var/www/mapbender3/app/logs
+ 
+Run the app/console commands
+
+.. code-block:: yaml
+
+ cd /var/www/mapbender3
+ app/console doctrine:database:create
+ app/console doctrine:schema:create
+ app/console init:acl
+ app/console assets:install web
+ app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
+ app/console doctrine:fixtures:load  --append
+
+Installation of Mapbender3 is done. You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
+
+* http://localhost/mapbender3/app_dev.php
+
+Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
+
+To lern more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`. 
