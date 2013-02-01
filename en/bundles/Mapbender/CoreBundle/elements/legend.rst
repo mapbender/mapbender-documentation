@@ -20,7 +20,10 @@ Also see :doc:`button` for inherited configuration options.
    target: ~                       # Id of Map element to query
    tooltip: 'Legend'               # text to use as tooltip
    nolegend: 'No legend available' # text to display if no legend is available
-
+   elementType:                    # dialig/blockelement 
+   autoOpen: true                  # true/false open when application is started
+   displayType: accordion          # accordion/list type of display
+   hiddeemptylayer: false          # true/false hidde when no legend is available
 
 HTTP Callbacks
 ==============
@@ -30,7 +33,7 @@ None.
 JavaScript API
 ==============
 
-showLegend
+open
 ----------
 
 Shows the legend.

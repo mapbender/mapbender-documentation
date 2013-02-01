@@ -19,7 +19,6 @@ Configuration
    target: ~                      # Id of Map element to query 
    label: true                    # true/false to label
    empty: 'x= - y= -'             # 
-   displaystring:  'Coordinates:' #
    prefix: 'x= '                  #
    separator: ' y= '              #
 

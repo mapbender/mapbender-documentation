@@ -15,11 +15,13 @@ Configuration
 =============
 
 .. code-block:: yaml
-
+    title:        # Title
+    tooltip:      # Tooltip
     icon: ~       # Icon CSS class to use
     label: true   # true/false Icon label to use
     group: ~      # Group to put the button into. Only one button per group can be active
-    target: ~     # Id of target element
+    click:        #
+    target: ~     # Title (Id) of target element
     action: ~     # method of target to call when button is activated
     deactivate: ~ # method of target to call when button is deactivated
 
