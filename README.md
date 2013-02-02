@@ -9,6 +9,15 @@ The website code is generated using [Sphinx](http://sphinx-doc.org/), therefore
 the documentation source is written in
 [Restructured Text](http://sphinx-doc.org/rest.html).
 
+You find a documentation about how to document at:
+
+http://doc.mapbender3.org/en/book/development/documentation_howto.html
+
+or
+
+https://github.com/mapbender/mapbender-documentation/blob/master/en/book/development/documentation_howto.rst
+
+
 To build the website locally, you need to install Sphinx, in Debian-based
 distributions a
 
