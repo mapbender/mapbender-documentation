@@ -37,6 +37,12 @@ This Quick Start describes how to:
   * create an individual application
   * create a user and a group and assign applications to them
 
+This is how a Mapbender application can look like:
+
+  .. image:: figures/mapbender3_basic_application.png
+     :scale: 80
+
+
 Installation
 ===============
 For the installation of Mapbender have a look at :doc:`installation <installation>`.
@@ -403,7 +409,8 @@ What Next?
 This is only the first step on the road to using Mapbender3. There is a lot more functionality you can try.
 
 Mapbender Project home
-htp://mapbender.org
+
+  http://mapbender.org
 
 Mapbender3 Webside
 
@@ -412,6 +419,7 @@ Mapbender3 Webside
 You find tutorials at
 
   http://doc.mapbender3.org
+
   http://api.mapbender3.org
 
 
