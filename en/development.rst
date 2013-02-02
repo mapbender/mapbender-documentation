@@ -9,4 +9,5 @@ The Developer's Book
    book/development/elements
    book/development/requestresponse
    book/development/git
+   book/development/documentation_howto.rst
    ../fom/documentation/en/index
