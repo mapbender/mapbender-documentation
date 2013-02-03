@@ -264,7 +264,7 @@ Mapbender offers a set of elements. You can add the elements to your application
   .. image:: figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Choose : menuselection:`Applications --> Elements--> Button +` to get an overview over the elements Mapbender3 provides.
+#. Choose :menuselection:`Applications --> Elements--> Button +` to get an overview over the elements Mapbender3 provides.
 
 #. Choose an element from the list.
 
@@ -344,7 +344,7 @@ Create a group
 #. Save your new group.
 
 
-Assign applications to user/group
+Assign users to group
 ================================================================================
 
 #. Assign a user to a group by :menuselection:`Users --> Group --> Edit your Group`. 
