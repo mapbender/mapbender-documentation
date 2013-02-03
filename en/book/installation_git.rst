@@ -99,6 +99,7 @@ You find the Mapbender3 documentation at github at mapbender-documentation. Get 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-documentation
 
+Read more about :doc:`How to write Mapbender3 Documentation? <development/documentation_howto>`.
 
 ApiGen
 ======
@@ -107,6 +108,9 @@ ApiGen
 can be installed using Pear, so use the following command:
 
     :command:`sudo pear install pear.apigen.org/apigen`
+
+Read more about :doc:`How to write Mapbender3 API Documentation? <development/apidocumentation>`.
+
 
 Troubleshooting
 ***************
