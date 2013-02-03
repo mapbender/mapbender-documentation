@@ -9,6 +9,7 @@ Content
    book/installation.rst
    book/installation_git.rst
    book/components.rst
+   book/directory_structure.rst
    book/concepts.rst
    book/database.rst
    book/templates.rst
