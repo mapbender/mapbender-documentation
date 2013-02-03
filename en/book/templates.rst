@@ -2,8 +2,7 @@ How to create your own Template?
 ################################
 
 Mapbender3 comes with application templates you can use. But usually you want to use your own template with your own corporate design. 
-This document uses the Mapbender CoreBundle for demonstration purposes, but you should use your own bundle as otherwise things might 
-break during a upgrade.
+This document uses the Mapbender CoreBundle for demonstration purposes, but you should use your own bundle as otherwise things might break during an upgrade.
 
 How to create your own template?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

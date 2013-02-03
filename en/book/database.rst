@@ -28,10 +28,11 @@ Possible values for the %database_driver% parameter are:
 * oci8 - Oracle OCI8 driver
 * pdo_oci - Oracle PDO driver
 
-..TODO: See other drivers in the Doctrine docs
+..TODO: 
+  See other drivers in the Doctrine docs
 
 The parameters should be self-explanatory except for the %database_path% - that's the file path a SQLite database
-would be stored. If you don't use a SQLite database, don't delete the parameter from the parameters.yml though.
+would be stored. If you don't use a SQLite database, don't delete the parameter from the parameters.yml though. Just leave it empty (path:     ).
 It would throw an error and providing some nonsense value here doesn't hurt the other drivers.
 
 Using multiple databases

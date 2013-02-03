@@ -7,10 +7,10 @@ This directory contains:
 
 * the php-Cache (app/cache)
 * the logs (app/logs)
-* the configutations (app/config)
+* the configurations (app/config)
 * the applicationkernel (app/AppKernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
-* and the configutation
+* and the configuration
 * the application specific resource directory (Resources)
 * the commandline application for maintaining and management tasks (app/console)
 
@@ -30,11 +30,11 @@ mapbender
 web
 ****************************** 
 
-This directory has to be published by the webserver. The ALIAS has to referto this directory. 
+This directory has to be published by the webserver. The ALIAS has to refer to this directory. 
 
 It controlls 
 
-* the FrontendController (PHP-Scripts, which can be called. These are app.php for the productive-system and app_dev.php for the development version. The development version contains the profiler for perfomancetests and more.
+* the FrontendController (PHP-Scripts, which can be called. These are **app.php** for the productive-system and **app_dev.php** for the development version. The development version contains the profiler for perfomancetests and more.
 * this directory contains the static resoures like css, js, favicon etc.
 
 
@@ -43,7 +43,7 @@ web/bundles
 
 * here the static resources of the single bundles are stored.
 * the command **app/console assets:install --symlink web** copies the resources from the bundles to the folder. 
-* **Notice**: if you use windows you can't create symbolic links and therefor you have to run the command (**app/console assets:install web**) after every change in the code to copy the files to the directory.
+* **Notice**: if you use windows you can't create symbolic links and therefore you have to run the command (**app/console assets:install web**) after every change in the code to copy the files to the directory.
 
 
 src
