@@ -7,6 +7,15 @@ instead of the normal download. This guide is based on Ubuntu 12.04. For
 other distributions, you may need to adapt, especially package names like
 sphinx-common.
 
+First check the prerequisites at :doc:`Installation <installation>`. 
+
+For git-based installations you also need:
+* git     - have a look at the :doc:`Quick primer on using Git <git>` to get familiar with git 
+* cURL    - command line tool for transferring data with URL syntax, supporting HTTP, HTTPS and more
+* pear    - PHP Extension and Application Repository 
+* Phing   - `Phing <http://www.phing.info/>`_ Is Not GNU make; it's a PHP project build system or build tool based on ​Apache Ant.
+
+
 Cloning the Repository
 **********************
 
@@ -28,6 +37,16 @@ directory of your cloned repository:
 
     :command:`git submodule update --init --recursive`
 
+
+cURL
+====
+
+Our build system uses cURL to fetch some remote components, therefore you need
+to install the cURL command line tool:
+
+    :command:`sudo apt-get install curl`
+
+
 Build management using Phing
 ****************************
 
@@ -44,6 +63,8 @@ update Pear:
     :command:`sudo pear upgrade-all`
 
 Then let's get Phing:
+
+    :command:`pear channel-discover pear.phing.info` 
 
     :command:`sudo pear install phing/phing`
 
@@ -62,14 +83,45 @@ Symfony and Doctrine:
     :command:`phing deps`
 
 
-cURL
-====
+Next steps from Installation
+****************************
 
-Our build system uses cURL to fetch some remote components, therefore you need
-to install the cURL command line tool:
+Now follow the steps that are described in  :doc:`Installation <installation>`:
 
-    :command:`sudo apt-get install curl`
+* Adapting the configuration file
+* Creating the database
+* Creating the database schema
+* Copying the bundles' assets to the public web directory
+* Initializing the role system
+* Creating the "root" user
+* Inserting srs parameters
 
+
+Refer to web with a symbolic link
+**********************************
+As a developer, you might want to use the symlink switch on that command to
+symlink instead of copy. This will make editing assets inside the bundle
+directories way easier
+
+.. code-block:: yaml
+
+    :command:`app/console assets:install web --symlink --relative`
+
+Learn more about app/console
+****************************
+The Symfony Console Component makes it possible to create command-line commands. Doctrine for example comes with a couple of command-line commands you can use.
+
+Read more in the Symfony documentation about `Console Commands <http://symfony.com/doc/current/components/console/usage.html>`_.
+
+Here are some commands to help to find information:
+.. code-block:: yaml
+ app/console                        - lists all assets
+ app/console help                   - displays help
+ app/console help list              - displays help for a special command
+ app/console doctrine               - lists all functions from mapbender 
+ app/console mapbender              - lists all functions from mapbender 
+ app/console help assets:install    - help for a special command
+        
 ..
  Package Build Tools
  ===================
