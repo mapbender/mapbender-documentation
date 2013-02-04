@@ -21,4 +21,4 @@ At a later point the possibility to assign individual roles directly to an user
 will also be implemented.
 
 Also Symfony provides an API for hierarchical roles which has not yet been
-employed by the FOSUserBundle.
+employed by the FOMUserBundle.
