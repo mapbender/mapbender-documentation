@@ -33,9 +33,14 @@ Here comes just a list of some components Symfony offers:
 * Database abstraction via Doctrine
 * User authentication, authorization
 * Templating via Twig
-* Translation
+* Translation using xliff-files
 * Logging via Monolog
 * Security
+
+The project has a very good documentation 
+
+* http://symfony.com/symfony-in-five-minutes 
+* TheBook http://symfony.com/doc/current/book/index.html
 
 
 OpenLayers
@@ -48,6 +53,10 @@ OpenLayers
 
 OpenLayers is a powerfull software for web maps. It supports lot of data sources and functionality.
 
+Read more about OpenLayers at http://openlayers.org/
+
+You find example applications with OpenLayers at http://openlayers.org/dev/examples/
+
 
 MapQuery
 ********
@@ -59,6 +68,7 @@ MapQuery
 
 MapQuery implements a jQuery interface to OpenLayers. It provides a set of mapping related widgets. In Mapbender3 MapQuery is used to interact with OpenLayers.
 
+Read more about MapQuery at http://mapquery.org/
 
 jQuery and jQuery UI
 ********************
@@ -75,6 +85,7 @@ jQuery is a feature-rich JavaScript library. jQuery UI is a set of user interfac
  http://jquery.com
 
  http://jqueryui.com/
+
 
 Mapbender3
 **********

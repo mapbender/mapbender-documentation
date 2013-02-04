@@ -10,6 +10,7 @@ The Developer's Book
    book/development/requestresponse
    book/development/bundle
    book/development/controllers
+   book/development/twig
    book/development/git
    book/development/documentation_howto.rst
    ../fom/documentation/en/index
