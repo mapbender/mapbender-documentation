@@ -9,7 +9,7 @@ Prerequisites
 
 Mapbender3 needs the following components in order to run:
 
-* PHP 5.3 or later (php5)
+* PHP 5.3.10 or later (php5)
 * PHP CLI interpreter (php5-cli)
 * PHP SQLite extension (php5-sqlite)
 * PHP cURL extension (php5-curl)
@@ -39,7 +39,7 @@ Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender
 .. code-block:: yaml
 
   ALIAS /mapbender3 /var/www/mapbender3/web/
-  <Directory /var/www/mapbender3/web>
+  <Directory /var/www/mapbender3/web/>
     Options MultiViews
     DirectoryIndex app.php
     Order allow,deny
@@ -133,12 +133,7 @@ As a developer, you might want to use the symlink switch on that command to
 symlink instead of copy. This will make editing assets inside the bundle
 directories way easier.
 
-Initializing Mapbender's role system
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The standard roles need to be initialized in the database:
-
-    :command:`app/console fom:user:initroles`
+    :command:`app/console assets:install web --symlink --relative`
 
 
 Creating the administrative user
@@ -165,6 +160,27 @@ Inserting from srs parameters into the database occurs using the command:
     :command:`app/console doctrine:fixtures:load  --append`
 
 
+Check config.php and write permission 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* http://localhost/mapbender3/config.php
+
+You have to set write permission to app/cache and app/logs
+
+.. code-block:: yaml
+
+ chmod -R o+w /var/www/mapbender3/app/cache
+ chmod -R o+w /var/www/mapbender3/app/logs
+
+
+You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
+
+* http://localhost/mapbender3/app_dev.php
+
+**Notice:** Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
+
+
+
 Installation Example for Ubuntu
 ===============================
 
@@ -172,7 +188,7 @@ Install necessary components:
 
 .. code-block:: yaml
 
-  apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl
+  apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
 
 
 Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart your Apache
@@ -180,7 +196,7 @@ Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart yo
 .. code-block:: yaml
 
   ALIAS /mapbender3 /var/www/mapbender3/web/
-  <Directory /var/www/mapbender3/web>
+  <Directory /var/www/mapbender3/web/>
     Options MultiViews
     DirectoryIndex app.php
     Order allow,deny
@@ -205,8 +221,7 @@ Set owner, group and rights
 
  chmod -R uga+r /var/www/mapbender3
  chown -R www-data:www-data /var/www/mapbender3
- chmod -R o+w /var/www/mapbender3/app/cache
- chmod -R o+w /var/www/mapbender3/app/logs
+
  
 Run the app/console commands
 
@@ -220,10 +235,24 @@ Run the app/console commands
  app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
  app/console doctrine:fixtures:load  --append
 
-Installation of Mapbender3 is done. You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
+Installation of Mapbender3 is done. 
+
+Check config.php 
+
+* http://localhost/mapbender3/config.php
+
+You have to set write permission to app/cache and app/logs
+
+.. code-block:: yaml
+
+ chmod -R o+w /var/www/mapbender3/app/cache
+ chmod -R o+w /var/www/mapbender3/app/logs
+
+
+You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
 
 * http://localhost/mapbender3/app_dev.php
 
-Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
+**Notice:** Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
 
 To lern more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`. 
