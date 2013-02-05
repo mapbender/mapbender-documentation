@@ -75,6 +75,7 @@ You can check for syntax errors in Twig templates using the twig:lint console co
 
  app/console twig:lint mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig
 
+The example checks by filename, but you could also check by directory or bundle name.
 
 .. ToDO
  assets  
