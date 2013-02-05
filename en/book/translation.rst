@@ -3,15 +3,15 @@ Translation in Mapbender3
 
 Mapbender3 uses the translator service (`Translator <http://api.symfony.com/2.1/Symfony/Component/Translation/Translator.html>`_) which is a Symfony component. 
 
-In the code you use the function trans to translate a text to the a language.
+In the code you use the function **trans** to translate a text to the a language.
 
-Example how trans is called in a Twig template:
+Example how trans can be used in a Twig template:
 
 .. code-block:: yaml
 
  {% block title %}{{ application.title | trans }}{% endblock %}
 
- or 
+or 
 
 .. code-block:: yaml
 
@@ -27,9 +27,9 @@ Example for PHP:
 
 XLIFF-files for translations
 ****************************
-The translations can be stored in different formats. We use XLIFF-format. Symfony will take the xliff-loader to load and parse the file.
+The translations can be stored in different formats. We use XLIFF-format for Mapbender3. Symfony will take the XLIFF-loader to load and parse the file.
 
-This is how a translation file messages.de.xliff for german (de) could look like.
+This is how a translation file messages.de.xliff for german translation could look like.
 
 .. code-block:: yaml
 
@@ -60,20 +60,21 @@ This is how a translation file messages.de.xliff for german (de) could look like
 
 How can you activate translation?
 *********************************
-Aktivate translator in the configuration-file app/config/config.yml
+Activate translator in the configuration file **app/config/config.yml**
 
 .. code-block:: yaml
 
-framework:
+ framework:
     translator:      { fallback: %locale% }
 
-Activate your default locale in the configuration-file app/config/parameters.yml
+Activate your default locale in the configuration file **app/config/parameters.yml**
 
 .. code-block:: yaml
 
     locale:            de
 
-Check whether a translation (xliff-file) for your language exists at 
+
+Check whether translations (xliff-files) for your language exist 
 
 * mapbender/src/Mapbender/CoreBundle/Resources/translations
 * mapbender/src/Mapbender/ManagerBundle/Resources/translations
@@ -82,18 +83,18 @@ Check whether a translation (xliff-file) for your language exists at
 * ...
 
 
-create xliff-files for your language
+Create xliff-files for your language
 *************************************
 If your language is not translated yet, it is easy to add a new language.
 
 * Check the translation directories and create a new file by copying an existing locale
-* translate the source-tags
+* translate the source-tags into the traget-tags
 * clear your cache
 
 
 Naming conventions and locations
 ********************************** 
-Symfony looks for translation files in the following directories: in the following order:
+Symfony looks for translation files in the following directories in the following order:
 
 * the <kernel root directory>/Resources/translations
 * the <kernel root directory>/Resources/<bundle name>/translations
@@ -108,11 +109,6 @@ The naming convention is **domain.locale.loader**.
 * domain    - we use the default domain messages
 * locale    - locale that the translations is made for (e.g. de, de_DE);
 * loader    - defines the loader to load and parse the file. Symfony offers XLIFF, PHP, YAML
-
-
-
-
-.. code-block:: yaml
 
 
 Share your translations with the Mapbender3 community!
