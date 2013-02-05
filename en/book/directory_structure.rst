@@ -10,7 +10,6 @@ This directory contains:
 * the configurations (app/config)
 * the applicationkernel (app/AppKernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
-* and the configuration
 * the application specific resource directory (Resources)
 * the commandline application for maintaining and management tasks (app/console)
 
@@ -34,7 +33,7 @@ This directory has to be published by the webserver. The ALIAS has to refer to t
 
 It controlls 
 
-* the FrontendController (PHP-Scripts, which can be called. These are **app.php** for the productive-system and **app_dev.php** for the development version. The development version contains the profiler for perfomancetests and more.
+* the FrontendController (PHP-Script, which can be called). These are **app.php** for the productive-system and **app_dev.php** for the development version. The development version contains the profiler for perfomancetests and more.
 * this directory contains the static resoures like css, js, favicon etc.
 
 
@@ -56,3 +55,9 @@ vendor
 ****************************** 
 * directory where all the Bundles which are used from Symfony are found. The Resources are used by Symfony using the Autoloading.
 
+
+tranlations
+***********
+The translation is stored in xliff-textfiles. Every language needs an xliff-file like messages.de.xliff for the german translation.
+
+* mapbender/src/Mapbender/CoreBundle/Resources/translations/

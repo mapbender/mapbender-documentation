@@ -1,6 +1,12 @@
 Configuring the database
 ########################
 
+Doctrine
+*************
+In Mapbender3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>` and read more.
+
+Database definition
+********************
 The standard database definition in the config.yml looks like this:
 
 .. code-block:: yaml
@@ -20,6 +26,7 @@ The standard database definition in the config.yml looks like this:
 
 All values encapsulated in % are parameters, loaded from the parameters.yml. Therefore, to change the database,
 modify the parameters values in the parameters.yml.
+
 Possible values for the %database_driver% parameter are:
 
 * pdo_sqlite - SQLite PDO driver
@@ -34,6 +41,7 @@ Possible values for the %database_driver% parameter are:
 The parameters should be self-explanatory except for the %database_path% - that's the file path a SQLite database
 would be stored. If you don't use a SQLite database, don't delete the parameter from the parameters.yml though. Just leave it empty (path:     ).
 It would throw an error and providing some nonsense value here doesn't hurt the other drivers.
+
 
 Using multiple databases
 ~~~~~~~~~~~~~~~~~~~~~~~~

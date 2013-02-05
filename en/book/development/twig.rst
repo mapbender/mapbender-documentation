@@ -29,7 +29,7 @@ Twig Syntax
    
    {%    %}           {# do something if, for #}
    
-   { mb_user|upper}   {# use filter #}
+   {{ mb_user|upper }}   {# use filter #}
 
    {{title|trans }}   {# translates the variable title #}
    {% trans %}title{% endtrans %} 
@@ -65,6 +65,17 @@ In Mapbender3 we use for example the following twig templates:
 * app/base.html.twig
 * application/mapbender/src/Mapbender/CoreBundle/Resources/views/frontend.html.twig
 * application/mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig
+
+
+Check the syntax of your Twig template
+**************************************
+You can check for syntax errors in Twig templates using the twig:lint console command:
+
+.. code-block:: yaml
+
+ app/console twig:lint mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig
+
+The example checks by filename, but you could also check by directory or bundle name.
 
 .. ToDO
  assets  

@@ -1,7 +1,7 @@
 Users
 =====
 
-User are implemented as FOS\UserBundle\Entity\User and stored in the database.
+User are implemented as FOM\\UserBundle\\Entity\\User and stored in the database.
 The entity has only some basic information about the user itself, more complex
 user data will have to be implemented by user profiles (yet to be done).
 

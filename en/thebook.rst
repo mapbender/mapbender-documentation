@@ -12,6 +12,7 @@ Content
    book/directory_structure.rst
    book/concepts.rst
    book/database.rst
+   book/translation.rst
    book/templates.rst
    book/quickstart.rst
 

@@ -8,14 +8,14 @@ objects.
 For each domain object class up to 30 individual permissions can be given. In
 general, 7 are used most often:
 
-- View: View object
-- Create: Create a new object
-- Edit: Edit an existing object
-- Delete: Delete an existing object
-- Undelete: Undelete an object marked as deleted
-- Operator: View, Create, Edit, Delete and Undelete permission
-- Master: Operator permission, can manage all permissions up to operator level.
-- Owner: Master permission, can grant master permission as well.
+- View       : View object
+- Create     : Create a new object
+- Edit       : Edit an existing object
+- Delete     : Delete an existing object
+- Undelete   : Undelete an object marked as deleted
+- Operator   : View, Create, Edit, Delete and Undelete permission
+- Master     : Operator permission, can manage all permissions up to operator level.
+- Owner      : Master permission, can grant master permission as well.
 
 Each ACL is composed by an object identity and several Access Control Entries
 (ACE).
