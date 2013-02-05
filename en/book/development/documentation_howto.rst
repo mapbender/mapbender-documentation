@@ -131,7 +131,7 @@ Here are the steps you have to do:
   sphinx-build . output
   
   # have a look at the documentation in your browser (example location). Is everything ok? Any changes needed?
-  file:///data/mapbender-documentation/documentation/index.html
+  file:///data/mapbender-documentation/documentation/output/index.html
 
   # add, commit and push your new file to the mapbender-documentation repository
   git add en/bundles/Mapbender/CoreBundle/elements/add_wms.rst
