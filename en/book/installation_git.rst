@@ -10,7 +10,8 @@ sphinx-common.
 First check the prerequisites at :doc:`Installation <installation>`. 
 
 For git-based installations you also need:
-* git     - have a look at the :doc:`Quick primer on using Git <git>` to get familiar with git 
+
+* git     - have a look at the :doc:`Quick primer on using Git <development/git>` to get familiar with git 
 * cURL    - command line tool for transferring data with URL syntax, supporting HTTP, HTTPS and more
 * pear    - PHP Extension and Application Repository 
 * Phing   - `Phing <http://www.phing.info/>`_ Is Not GNU make; it's a PHP project build system or build tool based on ​Apache Ant.
