@@ -3,9 +3,9 @@ Configuring the database
 
 Doctrine
 *************
-In Mapbnder3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>` and read more.
+In Mapbender3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>` and read more.
 
-DAtabase definition
+Database definition
 ********************
 The standard database definition in the config.yml looks like this:
 
