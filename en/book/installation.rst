@@ -107,18 +107,24 @@ Creating the database
 Symfony2 can attempt to create your database, this works of course only if the
 configured database user is allowed to. Call the console utility like this:
 
-    :command:`app/console doctrine:database:create`
+.. code-block:: yaml
+
+   app/console doctrine:database:create
 
 Creating the database schema
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Symfony2 will create the database schema for you, if you ask nicely:
 
-    :command:`app/console doctrine:schema:create`
+.. code-block:: yaml
+
+    app/console doctrine:schema:create
 
 We also need to initialize the security system's database tables separately:
 
-    :command:`app/console init:acl`
+.. code-block:: yaml
+
+  app/console init:acl
 
 Copying the bundles' assets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -126,14 +132,18 @@ Copying the bundles' assets
 Each bundle has it's own assets - CSS files, JavaScript files, images and more -
 but these need to be copied into the public web folder:
 
-    :command:`app/console assets:install web`
+.. code-block:: yaml
+
+    app/console assets:install web
 
 
 As a developer, you might want to use the symlink switch on that command to
 symlink instead of copy. This will make editing assets inside the bundle
 directories way easier.
 
-    :command:`app/console assets:install web --symlink --relative`
+.. code-block:: yaml
+
+   app/console assets:install web --symlink --relative
 
 
 Creating the administrative user
@@ -141,14 +151,18 @@ Creating the administrative user
 
 The first user - which has all privileges - must be created using the command:
 
-    :command:`app/console fom:user:resetroot`
+.. code-block:: yaml
+
+    app/console fom:user:resetroot
 
 This will interactively ask all information needed and create the user in the
 database.
 
 There is a silent mode you can use, if you want to use a script to install Mapbender3 and don't want to be asked for all information:
 
-    :command:`app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent`
+.. code-block:: yaml
+
+    app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
 
 Now head over to your installation in your browser and enjoy.
 
@@ -157,7 +171,9 @@ Inserting srs parameters
 
 Inserting from srs parameters into the database occurs using the command:
 
-    :command:`app/console doctrine:fixtures:load  --append`
+.. code-block:: yaml
+
+    app/console doctrine:fixtures:load  --append
 
 
 Check config.php and write permission 
