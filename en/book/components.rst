@@ -9,7 +9,7 @@ We have a Mapbender core bundle with the Mapbender basis functionality. And more
 
 We offer a Mapbender Starter package. With the Mapbender starter you can set up a Mapbender3 installation easily.
 
-  .. image:: figures/mapbender3_components.png
+  .. image:: ../../figures/mapbender3_components.png
      :scale: 60
 
 
