@@ -44,6 +44,7 @@ Every language (en - english, de - german) has the same file structure.
 
   /mapbender-documentation
     index.rst          # refers to the different languages
+    /figures           # images that are included in the documentation
     /de 
       ...
     /en
@@ -105,6 +106,15 @@ How to write documentation?
 ***************************
 We write documentation for elements, entities, services.
 
+Images (figures)
+***************
+Images for the documentation are **all** located at
+
+* mapbender-documentation/figures
+* create images with size 800 x 600px (you can resize your browser window f.e. with web developer to this size)
+* have a look at quickstart.rst about how to refer to an image
+
+
 Quickstart
 **********
 The Mapbender3 Quickstart is a tutorial to get to know Mapbender. It is used on OSGeo-Live too http://live.osgeo.org.
@@ -112,7 +122,7 @@ The Mapbender3 Quickstart is a tutorial to get to know Mapbender. It is used on 
 If you want to add a new lesson to the Quickstart:
  * add the subject of you lesson at the beginning of the document (This Quick Start describes how to: ...)
  * add the new lesson to the document and provide a screenshot if this makes sense
- * images are stored in the figures-directory
+ * images are stored in the ../../../figures-directory
 
 
 Example for element documentation

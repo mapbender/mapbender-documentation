@@ -39,7 +39,7 @@ This Quick Start describes how to:
 
 This is how a Mapbender application can look like:
 
-  .. image:: figures/mapbender3_basic_application.png
+  .. image:: ../../figures/mapbender3_basic_application.png
      :scale: 80
 
 
@@ -62,14 +62,14 @@ Start Mapbender in the developer mode app_dev.php
 =================================================
 Symfony offers a developer mode with lot of information about your application (logging, exceptions, database queries, memory usage, time and more). This mode is only available from localhost.
 
-  .. image:: figures/mapbender3_app_dev.png
+  .. image:: ../../figures/mapbender3_app_dev.png
      :scale: 80
 
 #. Start the developer mode: http://localhost/mapbender3/app_dev.php
 
 #. Have a look at the information that is offered in the developer mode.
 
-  .. image:: figures/mapbender3_symfony_profiler.png
+  .. image:: ../../figures/mapbender3_symfony_profiler.png
      :scale: 80
 
 
@@ -86,7 +86,7 @@ Welcome page
 
 #. You can login with the user that was generated on installation. It can be :guilabel:`root` and password :guilabel:`root` (This is the default user and password that you get after installation of Mapbender on OSGeo-Live. Please change the root password if you want to run a productive environment. Please don't delete the user :guilabel:`root`.).
   
-  .. image:: figures/mapbender3_welcome.png
+  .. image:: ../../figures/mapbender3_welcome.png
      :scale: 80
 
 After successful login you are directed to the :guilabel:`Mapbender administration`.
@@ -108,7 +108,7 @@ The Application overview provides the following functionality:
 
   .. NOT IMPLEMENTED YET: In Mapbender you have template applications, that you can use to set up your own applications.
 
-  .. image:: figures/mapbender3_application_overview.png
+  .. image:: ../../figures/mapbender3_application_overview.png
      :scale: 80
 
 
@@ -131,7 +131,7 @@ Create a new application by providing basic information about your application. 
 
 #. your application is set up. Now you need a WMS to be displayed in your application. This will be described in the section **WMS Management**.
 
-  .. image:: figures/mapbender3_create_application.png
+  .. image:: ../../figures/mapbender3_create_application.png
      :scale: 80
 
 ..
@@ -189,7 +189,7 @@ A WMS returns an XML-file when the getCapabilities document is requested. This i
 
 #. After successfull registration of the service Mapbender will display an overview on the information that was provides by the service.
 
-  .. image:: figures/mapbender3_wms_load.png
+  .. image:: ../../figures/mapbender3_wms_load.png
      :scale: 80
 
 
@@ -221,7 +221,7 @@ After the successfull upload of a WMS you want to add your WMS to an application
 
 #. You can change the order of the Services in your application by drag & drop.
 	
-  .. image:: figures/mapbender3_add_source_to_application.png
+  .. image:: ../../figures/mapbender3_add_source_to_application.png
      :scale: 80
 
 Configure your WMS
@@ -234,7 +234,7 @@ You can configure the WMS for your specific application. Maybe you don't want to
 
 #. You can change the order of the layers via drag & drop
 
-.. image:: figures/mapbender3_wms_application_settings.png
+.. image:: ../../figures/mapbender3_wms_application_settings.png
   :scale: 80
 
 Service configuration
@@ -261,7 +261,7 @@ Add Elements to your application
 ================================
 Mapbender offers a set of elements. You can add the elements to your application. You have different regions (top, content, footer) to which you can add elements.
 
-  .. image:: figures/mapbender3_application_add_element.png
+  .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
 #. Choose :menuselection:`Applications --> Elements--> Button +` to get an overview over the elements Mapbender3 provides.
@@ -274,7 +274,7 @@ Mapbender offers a set of elements. You can add the elements to your application
 
 Now you should get an idea how easy it is to change a Mapbender application without changes in the code. 
 
-  .. image:: figures/mapbender3_application_elements.png
+  .. image:: ../../figures/mapbender3_application_elements.png
      :scale: 80
 
 .. NOT IMPLEMENTED YET 
@@ -331,7 +331,7 @@ Create a user
 
 #. Save your new user.
 
-.. image:: figures/mapbender3_create_user.png
+.. image:: ../../figures/mapbender3_create_user.png
      :scale: 80 
 
 
@@ -353,7 +353,7 @@ Assign users to group
 
 #. Assign a user by :menuselection:`Users --> Users --> Edit --> Groups` to a group. 
 
-  .. image:: figures/mapbender3_assign_user_to_group.png
+  .. image:: ../../figures/mapbender3_assign_user_to_group.png
      :scale: 80
  
 
@@ -367,7 +367,7 @@ Mapbender3 provides different roles you can assign to a group.
 
 #. Assign roles to a group by :menuselection:`Users --> Group --> Edit your Group --> Roles`.
 
-  .. image:: figures/mapbender3_roles.png
+  .. image:: ../../figures/mapbender3_roles.png
      :scale: 80 
 
 
@@ -389,7 +389,7 @@ Assign an Application to a User/Group
 
 #. Login as the new user
 
-  .. image:: figures/mapbender3_security.png
+  .. image:: ../../figures/mapbender3_security.png
      :scale: 80
 
 

@@ -32,7 +32,7 @@ Access checks are not done in the mapbender service, entity or application
 object but in the controller's getApplication function - keep in mind if you
 develop your own controller.
 
-.. image:: figures/http_workflow_application.png
+.. image:: ../../../figures/http_workflow_application.png
 
 Element Rendering Workflow
 **************************

@@ -228,7 +228,7 @@ Open Symfonys Welcome Script config.php. This script checks whether all necessar
 * http://localhost/mapbender3/config.php
 
 
-.. image:: figures/mapbender3_symfony_check_configphp.png
+.. image:: ../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
 
 Set owner, group and rights
