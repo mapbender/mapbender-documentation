@@ -129,6 +129,25 @@ Here are some commands to help to find information:
 
  TODO: Skipped for now, KMQ has the knowledge.
 
+Update your installation
+========================
+As development goes on you want to stay up-to-date with the code on github. 
+
+There are following steps you have to do to stay up-to-date
+
+* get the code from the mapbdner-starter repository
+* update the submodules 
+* update your database so that new structures (tables, columns) will be created
+
+
+.. code-block:: yaml
+ 
+ cd mapbender-starter
+ git pull
+ git submodule update --init --recursive
+ app/console doctrine:schema:update
+
+
 PHPUnit
 =======
 
