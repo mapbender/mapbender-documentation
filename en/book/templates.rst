@@ -78,6 +78,30 @@ You find the mapbender.yml at:
 
 Use your new template in the Mapbender administration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-When you create a new application through the Mapbender3 administration you have to choose a template you want to use. Your new template should show up in the list.
+When you create a new application through the Mapbender3 administration you have to choose a template you want to use. 
+
+Before your new template will show up you have to register it in 
+
+* mapbender/src/Mapbender/CoreBundle/MapbenderCoreBundle.php
+
+.. code-block:: yaml
+
+    public function getTemplates()
+
+    {
+        return array(
+            'Mapbender\CoreBundle\Template\Fullscreen',
+            'Mapbender\CoreBundle\Template\Base',
+            'Mapbender\CoreBundle\Template\Base2',
+
+            'Workshop\DemoBundle\Template\Demotemplate'
+            );
+    }
+
+
+
+Now your template should show up in the list.
+
+
 
 
