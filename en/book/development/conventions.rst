@@ -10,15 +10,16 @@ Code conventions
 
 
 * document the x steps on the way to a new functionality
-** define the topic
-** crate a ticket
-** create a workflow
-** discuss the workflow with the core team and find a final solution
-** do the programming
-** insert License
-** test
-** documentation in mapbender-documentation --> rst
-** close the ticket
+
+  * define the topic
+  * create a ticket
+  * create a workflow
+  * discuss the workflow with the core team and find a final solution
+  * do the programming
+  * insert License
+  * test
+  * documentation in mapbender-documentation --> rst
+  * close the ticket
 
  
 * where to put a module/element
@@ -38,6 +39,7 @@ What to keep in mind, when you create a layout
 
 Translation conventions
 ************************
+
 * where to put the files? Groß-Kleinschreibung/ welche Übersetzungen werden generell gepflegt? en/de weitere?
 * also have a look at `Translation in Mapbender3 <../translation.rst>`
 
@@ -45,6 +47,8 @@ Translation conventions
 Version conventions
 ********************
 How to name the Mapbender3 versions.
+
+* have a look at http://mapbender.org/Release_number
 
 
 Documentation conventions
