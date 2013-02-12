@@ -1,3 +1,5 @@
+.. _documentation_howto:
+
 How to write Mapbender3 Documentation?
 ######################################
 

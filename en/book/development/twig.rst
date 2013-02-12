@@ -1,3 +1,5 @@
+.. _twig:
+
 Twig
 #####
 Symfony follows the template approach and we use this in Mapbender3. Symfony uses a templating engine to generate HTML, CSS or other content. 

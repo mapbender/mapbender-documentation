@@ -1,3 +1,5 @@
+.. _bundle:
+
 How to create a Bundle?
 #######################
 
@@ -92,4 +94,34 @@ This means: Parse the mentioned file and look for Route-Annotations, which refer
         );
     }
  // ...
+
+
+How to activate a new Element for the administration interface
+***************************************************************
+When you wrote a new functionality for Mapbender3 your new element will not show up in the administration.
+
+You have to register it first in 
+
+* mapbender/src/Mapbender/CoreBundle/MapbenderCoreBundle.php
+
+.. code-block:: yaml
+
+    public function getElements()
+    {
+        return array(
+            'Mapbender\CoreBundle\Element\AboutDialog',
+            'Mapbender\CoreBundle\Element\ActivityIndicator',
+            'Mapbender\CoreBundle\Element\Button',
+            ...
+   
+            'Workshop\DemoBundle\Element\SuperElement' 
+            );
+    }
+
+
+
+Now your element should show up in the element list.
+
+
+
 

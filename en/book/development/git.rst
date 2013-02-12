@@ -1,3 +1,5 @@
+.. _git:
+
 Quick primer on using Git
 #########################
 

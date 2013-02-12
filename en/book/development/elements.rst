@@ -1,3 +1,5 @@
+.. _elements:
+
 Understanding Elements
 ######################
 
