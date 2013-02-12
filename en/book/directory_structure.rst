@@ -1,3 +1,5 @@
+.. _directory_structure:
+
 Directory structure in Mapbender3
 #################################
 

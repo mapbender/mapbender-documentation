@@ -1,3 +1,5 @@
+.. _installation_git:
+
 Git-based installation
 ######################
 
@@ -47,6 +49,7 @@ to install the cURL command line tool:
 
     :command:`sudo apt-get install curl`
 
+.. _phing:
 
 Build management using Phing
 ****************************
@@ -155,6 +158,8 @@ Symfony2 needs a more recent PHPUnit than for example comes with Ubuntu 12.04.
 So we will use Pear to install PHPUnit:
 
     :command:`sudo pear install phpunit/PHPUnit`
+
+.. _installation_sphinx:
 
 Sphinx
 ======

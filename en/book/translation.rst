@@ -1,3 +1,5 @@
+.. _translations:
+
 Translation in Mapbender3
 ######################################
 

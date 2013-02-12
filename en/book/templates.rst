@@ -1,3 +1,5 @@
+.. _templates:
+
 How to create your own Template?
 ################################
 
