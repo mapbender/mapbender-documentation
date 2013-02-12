@@ -1,3 +1,5 @@
+.. _srs_selector:
+
 Spatial Reference System Selector (SRS Selector)
 ************************************************
 

@@ -1,3 +1,5 @@
+.. _zoom_bar:
+
 Navigation Toolbar (Zoombar)
 ***********************
 

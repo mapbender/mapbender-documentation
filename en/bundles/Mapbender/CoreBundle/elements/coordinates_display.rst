@@ -1,3 +1,5 @@
+.. _coordinates_display:
+
 Coordinates Display
 ********************
 

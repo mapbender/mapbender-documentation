@@ -1,3 +1,5 @@
+.. _toc:
+
 TOC - Table of Content
 ***********************
 

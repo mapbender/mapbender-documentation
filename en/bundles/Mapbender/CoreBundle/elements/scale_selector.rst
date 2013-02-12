@@ -1,3 +1,5 @@
+.. _scale_selector:
+
 Scale Selector
 ************
 
