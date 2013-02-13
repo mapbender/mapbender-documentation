@@ -24,7 +24,9 @@ Cloning the Repository
 
 Get the code from the git repository. Cloning is easy, just issue the following command in your shell:
 
-    :command:`git clone -b 3.0 git://github.com/mapbender/mapbender-starter`
+.. code-block:: yaml
+
+	git clone -b 3.0 git://github.com/mapbender/mapbender-starter
 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-starter
@@ -38,7 +40,10 @@ kept in a repository of their own and are included as a submodule of the
 starter repository. To fetch them, issue the following command at the root
 directory of your cloned repository:
 
-    :command:`git submodule update --init --recursive`
+
+.. code-block:: yaml
+
+	git submodule update --init --recursive
 
 
 cURL
@@ -47,7 +52,10 @@ cURL
 Our build system uses cURL to fetch some remote components, therefore you need
 to install the cURL command line tool:
 
-    :command:`sudo apt-get install curl`
+
+.. code-block:: yaml
+
+	sudo apt-get install curl
 
 .. _phing:
 
@@ -57,20 +65,26 @@ Build management using Phing
 Build management is done using `Phing` which is installed using Pear. So, first
 we need to get Pear, we are assuming a Debian-based system here:
 
-    :command:`sudo apt-get install php-pear`
+.. code-block:: yaml
+
+	sudo apt-get install php-pear
 
 We then tell Pear where to autodiscover it's repositories and for good measure,
 update Pear:
 
-    :command:`sudo pear config-set auto_discover 1`
 
-    :command:`sudo pear upgrade-all`
+.. code-block:: yaml
+
+    sudo pear config-set auto_discover 1
+    sudo pear upgrade-all
 
 Then let's get Phing:
 
-    :command:`pear channel-discover pear.phing.info` 
 
-    :command:`sudo pear install phing/phing`
+.. code-block:: yaml
+
+    sudo pear channel-discover pear.phing.info 
+    sudo pear install phing/phing
 
 Our build scripts need some more dependencies to run unit test, generate
 documentation and build installation packages.
@@ -78,13 +92,18 @@ documentation and build installation packages.
 Once you have installed the dependencies listed below, you can get an overview
 of available build tasks by issuing
 
-    :command:`phing -l`
+
+.. code-block:: yaml
+
+   phing -l
 
 The first task you want to - actually need to - execute is the deps task, which
 uses `Composer http://getcomposer.org`_ to install the runtime dependencies like
 Symfony and Doctrine:
 
-    :command:`phing deps`
+.. code-block:: yaml
+
+	phing deps
 
 
 Next steps from Installation
@@ -109,7 +128,21 @@ directories way easier
 
 .. code-block:: yaml
 
-    :command:`app/console assets:install web --symlink --relative`
+    app/console assets:install web --symlink --relative
+
+Please notice that you might have to activate the :command:`FollowSymLinks` option to your apache Directory like this:
+
+
+.. code-block:: yaml
+
+  ALIAS /mapbender3 /var/www/mapbender3/web/
+  <Directory /var/www/mapbender3/web/>
+    Options MultiViews FollowSymLinks
+    DirectoryIndex app.php
+    Order allow,deny
+    Allow from all
+  </Directory>
+
 
 Learn more about app/console
 ****************************
@@ -157,7 +190,10 @@ PHPUnit
 Symfony2 needs a more recent PHPUnit than for example comes with Ubuntu 12.04.
 So we will use Pear to install PHPUnit:
 
-    :command:`sudo pear install phpunit/PHPUnit`
+
+.. code-block:: yaml
+
+	sudo pear install phpunit/PHPUnit
 
 .. _installation_sphinx:
 
@@ -167,11 +203,17 @@ Sphinx
 Sphinx is used to build the documentation you are reading right now. On Debian-
 based systems, you can use apt to install Sphinx:
 
-    :command:`sudo apt-get install sphinx-common`
+
+.. code-block:: yaml
+
+   sudo apt-get install sphinx-common
 
 
 You find the Mapbender3 documentation at github at mapbender-documentation. Get the clone like this: 
-    :command:`git clone git://github.com/mapbender/mapbender-documentation`
+
+.. code-block:: yaml
+
+	git clone git://github.com/mapbender/mapbender-documentation
 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-documentation
@@ -184,7 +226,10 @@ ApiGen
 `ApiGen <http://apigen.org>`_ is our API documentation generator of choice. It too
 can be installed using Pear, so use the following command:
 
-    :command:`sudo pear install pear.apigen.org/apigen`
+
+.. code-block:: yaml
+    
+	 sudo pear install pear.apigen.org/apigen
 
 Read more about :doc:`How to write Mapbender3 API Documentation? <development/apidocumentation>`.
 
@@ -196,6 +241,9 @@ Troubleshooting
   while 2.4.9 is not. Check with :command:`phing -v`. You can update all your
   Pear packages with
 
-    :command:`sudo pear upgrade-all`
+
+.. code-block:: yaml
+
+	sudo pear upgrade-all
 
 
