@@ -240,6 +240,17 @@ Set owner, group and rights
  chmod -R uga+r /var/www/mapbender3
  chown -R www-data:www-data /var/www/mapbender3
 
+Adapt the configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create.
+
+.. code-block:: yaml
+
+    database_driver:   pdo_pgsql
+    database_host:     localhost
+    database_port:     5432
+    database_name:     mapbender3
+    database_path:
+    database_user:     postgres
+    database_password: 1xyz45ab
  
 Run the app/console commands
 
@@ -250,7 +261,7 @@ Run the app/console commands
  app/console doctrine:schema:create
  app/console init:acl
  app/console assets:install web
- app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
+ app/console fom:user:resetroot
  app/console doctrine:fixtures:load  --append
 
 Installation of Mapbender3 is done. 
@@ -273,4 +284,86 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 
 **Notice:** Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
 
-To lern more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`. 
+To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`.
+
+
+Installation Example for Windows
+==================================
+Install necessary components:
+
+ * add the path to your  PHP-bin directory to the PATH variable 
+ * activate the PHP extensions in your php.ini configuration file
+
+.. code-block:: yaml
+
+ extension=php_curl.dll
+ extension=php_gd2.dll
+ extension=php_intl.dll
+ extension=php_pdo_pgsql.dll
+ extension=php_pdo_sqlite.dll
+ extension=php_pgsql.dll
+
+Configure the Apache ALIAS and restart your Apache
+
+.. code-block:: yaml
+
+  ALIAS /mapbender3 c:/mapbender3/web/
+  <Directory c:/mapbender3/web/>
+    Options MultiViews
+    DirectoryIndex app.php
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+Check the ALIAS is working
+
+* http://localhost/mapbender3/
+
+Open Symfonys Welcome Script config.php. This script checks whether all necessary components are installed and configurations are made. If there are still problems, you should fix them.
+ 
+* http://localhost/mapbender3/config.php
+
+
+.. image:: ../../figures/mapbender3_symfony_check_configphp.png
+     :scale: 80 
+
+Adapt the configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create.
+
+.. code-block:: yaml
+
+    database_driver:   pdo_pgsql
+    database_host:     localhost
+    database_port:     5432
+    database_name:     mapbender3
+    database_path:
+    database_user:     postgres
+    database_password: 1xyz45ab
+
+Run the app/console commands with php. First you have to open a terminal (cmd).
+
+.. code-block:: yaml
+
+ cd c:/mapbender3
+ php.exe app/console doctrine:database:create
+ php.exe app/console doctrine:schema:create
+ php.exe app/console init:acl
+ php.exe app/console assets:install web
+ php.exe app/console fom:user:resetroot
+ php.exe app/console doctrine:fixtures:load  --append
+
+Installation of Mapbender3 is done. 
+
+Check config.php 
+
+* http://localhost/mapbender3/config.php
+
+
+You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
+
+* http://localhost/mapbender3/app_dev.php
+
+**Notice:** Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
+
+To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`.
+
+
