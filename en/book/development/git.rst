@@ -16,6 +16,17 @@ These are the Git commands you should be familiar with (in no particular order):
 * git commit (-m)
 * git reset (HEAD)
 
+
+Git reference and Git Cheat Sheets
+==================================
+Get to know more about Git. Have a look at the git reference and the Git Cheat Sheets
+* http://gitref.org/
+* http://blog.fournova.com/2011/06/git-cheat-sheet/
+* https://help.github.com/
+* https://help.github.com/articles/where-can-i-learn-more-about-git-and-github
+* Get familiar with the git workflow :https://help.github.com/articles/what-is-a-good-git-workflow
+
+
 Committing
 ==========
 
@@ -40,6 +51,7 @@ staged. (use git reset HEAD <file> to unstage).
 For commit messages it is recommended to put a one- or two-word caption at the
 start: "WMC Editor: Added more options".
 
+
 Submodule
 =========
 
@@ -63,6 +75,7 @@ headaches. We develop in the submodule, commit there and often leave commits
 outside any branch, basically making them prone to be lost. Newer git versions
 will warn you that your commit is not on a branch, but older ones do not.
 Therefore we lay out the following submodule commit workflow.
+
 
 Workflow
 --------
