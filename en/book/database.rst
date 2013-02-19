@@ -65,24 +65,24 @@ Here is an example for an database connection block in the config.yml with two c
         dbal:
             default_connection: default
             connections:
-            default:
-                    driver:   %database_driver%
-                    host:     %database_host%
-                    port:     %database_port%
-                    dbname:   %database_name%
-                    path:     %database_path%
-                    user:     %database_user%
-                    password: %database_password%
-                    charset:  UTF8
-                custom:
-                    driver:   %database2_driver%
-                    host:     %database2_host%
-                    port:     %database2_port%
-                    dbname:   %database2_name%
-                    path:     %database2_path%
-                    user:     %database2_user%
-                    password: %database2_password%
-                    charset:  UTF8
+                default:
+                        driver:   %database_driver%
+                        host:     %database_host%
+                        port:     %database_port%
+                        dbname:   %database_name%
+                        path:     %database_path%
+                        user:     %database_user%
+                        password: %database_password%
+                        charset:  UTF8
+                    custom:
+                        driver:   %database2_driver%
+                        host:     %database2_host%
+                        port:     %database2_port%
+                        dbname:   %database2_name%
+                        path:     %database2_path%
+                        user:     %database2_user%
+                        password: %database2_password%
+                        charset:  UTF8
         orm:
             auto_generate_proxy_classes: %kernel_debug%
 
