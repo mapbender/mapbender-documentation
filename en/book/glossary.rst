@@ -126,7 +126,12 @@ This glossary is under construction. Please add more topics.
 
         .. seealso::
             :ref:`twig`
-    
+
+    XLIFF
+        XLIFF is a file format and stand for XML Localization Interchange File Format. The translations can be stored in different formats. We use XLIFF-format for Mapbender3. Symfony will take the XLIFF-loader to load and parse the file.
+
+        .. seealso::
+            :ref:`translation`    
    
 
 

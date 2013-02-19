@@ -1,4 +1,4 @@
-.. _translations:
+.. _translation:
 
 Translation in Mapbender3
 ######################################
