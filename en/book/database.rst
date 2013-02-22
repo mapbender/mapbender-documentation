@@ -1,6 +1,9 @@
+.. _database:
+
 Configuring the database
 ########################
 
+.. _doctrine:
 Doctrine
 *************
 In Mapbender3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>` and read more.
@@ -60,25 +63,26 @@ Here is an example for an database connection block in the config.yml with two c
 
     doctrine:
         dbal:
-            default: mapbender
-            mapbender:
-                driver:   %database_driver%
-                host:     %database_host%
-                port:     %database_port%
-                dbname:   %database_name%
-                path:     %database_path%
-                user:     %database_user%
-                password: %database_password%
-                charset:  UTF8
-            custom:
-                driver:   %database2_driver%
-                host:     %database2_host%
-                port:     %database2_port%
-                dbname:   %database2_name%
-                path:     %database2_path%
-                user:     %database2_user%
-                password: %database2_password%
-                charset:  UTF8
+            default_connection: default
+            connections:
+                default:
+                        driver:   %database_driver%
+                        host:     %database_host%
+                        port:     %database_port%
+                        dbname:   %database_name%
+                        path:     %database_path%
+                        user:     %database_user%
+                        password: %database_password%
+                        charset:  UTF8
+                    custom:
+                        driver:   %database2_driver%
+                        host:     %database2_host%
+                        port:     %database2_port%
+                        dbname:   %database2_name%
+                        path:     %database2_path%
+                        user:     %database2_user%
+                        password: %database2_password%
+                        charset:  UTF8
         orm:
             auto_generate_proxy_classes: %kernel_debug%
 

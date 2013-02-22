@@ -1,3 +1,5 @@
+.. _<add filename without rst as reference>:
+
 <Put Element Name Here>
 ***********************
 

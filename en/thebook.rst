@@ -15,5 +15,5 @@ Content
    book/translation.rst
    book/templates.rst
    book/quickstart.rst
-
+   book/glossary.rst
 
