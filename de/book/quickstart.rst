@@ -4,7 +4,7 @@
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
 
-.. image:: ../../_static/mapbender3_logo.png
+.. image:: ../../../../_static/mapbender3_logo.png
   :scale: 100 %
   :alt: project logo
   :align: right
@@ -17,14 +17,13 @@ Mapbender ist ein web-basiertes Geoportal Framework zum Veröffentlichen, Regist
 
 Administrationsoberflächen ermöglichen es Administratoren Karten- und Datendienste zu verwalten und zu kategorisieren. Über die Administration können einzelnen Benutzern und Gruppen Zugriffe gewährt werden.
 
-Mapbender3 ist die nächste Version in der Mapbender Serie. Es wurde unter Verwendung moderner Webtechnologien komplett neu geschrieben. Die Grundlage bildet Symfony 2, die brandneue Version des erfolgreichen Symfony PHP Web Application Framework.
+Mapbender3 ist die nächste Version in der Mapbender Serie. Es wurde unter Verwendung moderner Webtechnologien komplett neu geschrieben. Die Grundlage bildet Symfony2, die brandneue Version des erfolgreichen Symfony PHP Web Application Framework.
 
 Auf der Clientseite finden Sie OpenLayers und jQuery (UI) verbunden über MapQuery.
 
 Mit dieser neuen Code-Grundlage setzen wir die Mapbender Idee eines Geoportal Frameworks fort.
   * Anwendungen können direkt im Browser erstellt und konfiguriert werden.
-  * Dienste wie WMS können in einem Service Repository verwaltet und mit Anwendungen verbunden werden.
-  * Rights management are easy to maintain, for individual users and groups, whether you store them inside the database or in an LDAP. 
+  * Dienste wie WMS können in einem Service Repository verwaltet und mit Anwendungen verbunden werden. 
   * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
 
 Sie brauchen nichts weiter als einen Standard Webbrowser für diesen Schnellstart.
@@ -38,7 +37,7 @@ Dieser Quickstart beschreibt, wie Sie:
   * eine eigene Anwendung erstellen
   * Benutzer und Gruppen anlegen und Anwendungen zuweisen
 
-Eine Mapbenderanwendung kann so aussehen:
+Eine Mapbenderanwendung wie folgt aussehen:
 
   .. image:: ../../figures/mapbender3_basic_application.png
      :scale: 80
@@ -49,20 +48,20 @@ Installation
 
 Hinweise zur Installation von Mapbender finden Sie unter :doc:`installation <installation>`.
 
-Start des Mapbender
+Starten Sie Mapbender
 ================================================================================
 
 #. Wählen Sie :menuselection:`Mapbender` aus dem Startmenü oder besuchen Sie http://localhost/mapbender3/app.php
 
 
-#. Die Anwendung braucht ein eine kurze Zeit um zu starten.
+#. Die Anwendung braucht ein eine kurze Zeit, um zu starten.
 
-Falls Sie Schwierigkeiten haben, Mapbender zu ans laufen zu kriegen, überprüfen Sie ob der Apache Web Server und die PostgreSQL Datenbank funktionieren.
+Falls Sie Schwierigkeiten haben, Mapbender zu starten, überprüfen Sie ob der Apache Web Server und die PostgreSQL Datenbank laufen.
 
 
-Start von Mapbender im Entwicklungsmodus über app_dep.php
+Starten Sie Mapbender im Entwicklungsmodus über app_dep.php
 ==============================================================
-Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über die Anwendung an (logging, exceptions, Datenbankabfragen, Speicherverbrauch, Zeit und mehr). Dieser Modus ist nur über localhost verfügbar.
+Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über die Anwendung an (Logging, Fehlermeldungen, Datenbankabfragen, Speicherverbrauch, Zeit und mehr). Dieser Modus ist nur über localhost verfügbar.
 
   .. image:: ../../figures/mapbender3_app_dev.png
      :scale: 80
@@ -75,31 +74,30 @@ Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über d
      :scale: 80
 
 
-Willkommensseite
+Die Willkommensseite
 ================================================================================
 
-#. Die Willkommensseite listet die öffentlichen Anwendungen auf, die von allen Benutzern aufgerufen werden können. Die Anwendungen sind mit werden mit Screenshot, Titel und Beschreibung aufgelistet.
+#. Die Willkommensseite listet die öffentlichen Anwendungen auf, die von allen Benutzern aufgerufen werden können. Die Anwendungen werden mit Screenshot, Titel und Beschreibung aufgelistet.
 
 #. Sie können die Anwendung per Klick auf den Titel oder den Startbutton aufrufen.
 
-#. Bevor Sie Mapbender administrieren können müssen Sie sich anmelden.
+#. Bevor Sie Mapbender administrieren können, müssen Sie sich anmelden.
 
-#. Klicken Sie auf das Mapbender-Logo links um die Loginseite aufzurufen.
+#. Klicken Sie auf das Mapbender-Logo links, um die Loginseite aufzurufen.
 
 #. Sie können sich mit den Benutzer anmelden, der während der Installation erzeugt wurde. Es kann :guilabel:`root` heißen mit dem Kennwort :guilabel:`root`  (Dies ist der Standardbenutzer und Kennwort nach der Installation von Mapbender auf der OSGeo-Live. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben. Löschen Sie den Benutzer :guilabel:`root` nicht.).
   
   .. image:: ../../figures/mapbender3_welcome.png
      :scale: 80
 
-Nach erfolgreicher Anmeldung werden Sie zur :guilabel:`Mapbender administration` weiter geleitet.
+Nach erfolgreicher Anmeldung werden Sie zur :guilabel:`Mapbender Administration` weiter geleitet.
 
 
 Anwendungsübersicht
 ================================================================================
 Nach der Anmeldung werden Sie zum :guilabel:`Application overview` mit einer Liste von für Sie freigegebenen Anwendungen weiter geleitet.
 
-The Application overview provides the following functionality:
-Die Anwendungsübersicht bietet folgende Funktionen.
+Die Anwendungsübersicht bietet folgende Funktionen:
 
 
  * Titel und Beschreibung
@@ -124,15 +122,15 @@ Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen e
 
 #. Geben Sie einen Titel und eine Beschreibung der Anwendung ein
 
-#. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu startet. Er kann identisch zum Titel sein.
+#. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu starten. Er kann identisch zum Titel sein.
 
 #. Wählen Sie eine Vorlage aus der Liste aus. Diese definiert das Aussehen der Anwendung.
 
-#. Betätigen Sie die Schaltfläche **Create** um die Anwendung zu erzeugen.
+#. Betätigen Sie die Schaltfläche **Create**, um die Anwendung zu erzeugen.
 
-#. Gehen Sie zu :menuselection:`Application Management --> Edit application elements` und wählen die neue Anwendung
+#. Gehen Sie zu :menuselection:`Application Management --> Edit application elements` und wählen Sie die neue Anwendung aus.
 
-#. Ihre Anwendung ist erstellt. Jetzt brauchen Sie WMS, die in Ihrer Anwendung dargestellt werden. Dies wird im Abschnitt **WMS Management** beschrieben.
+#. Ihre Anwendung wurde erstellt. Jetzt brauchen Sie WMSs, die in Ihrer Anwendung dargestellt werden. Dies wird im Abschnitt **WMS Management** beschrieben.
 
   .. image:: ../../figures/mapbender3_create_application.png
      :scale: 80
@@ -145,9 +143,7 @@ Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen e
 
 Löschen einer Anwendung
 ================================================================================
-You can delete an application from the :menuselection:`Applications` with the Button Delete. Only the application is deleted, not the services which were part of the application. 
-Sie können eine Anwendung aus der Liste :menuselection:`Applications` über die Schaltfläche Delete löschen. Nur die Anwendung wird gelöscht, nicht die Dienste, die in der Anwendung eingebunden waren..
-Sie können eine Anwendung löschen, die auch anderen Benutzern gehört.
+Sie können eine Anwendung aus der Liste :menuselection:`Applications` über die Schaltfläche Delete löschen. Nur die Anwendung wird gelöscht, nicht die Dienste, die in der Anwendung eingebunden waren.
 
 ..
   NOCH NICHT IMPLEMENTIERT
@@ -168,28 +164,28 @@ Mapbender kann verschiedene Dienste wie OGC WMS, OGC WMTS oder OGC WFS verwalten
 
 #. Gehen Sie auf :guilabel:`Services` und schauen sich die Dienstquellen an.
 
-#. Sie bekommen einen Überblick über die Dienste, die in Ihren Mapbender geladen sind.
+#. Sie bekommen einen Überblick über die Dienste, die bereits in Mapbender geladen wurden.
 
 #. Typ (z.B. WMS, WMTS), Titel und Beschreibung bieten eine erste Information über den Dienst.
 
-#. Mit einem Klick auf die Schaltfläche :menuselection:`View` bekommen Sie weitere Informationen über die Quelle.
+#. Per Klick auf die Schaltfläche :menuselection:`View` bekommen Sie weitere Informationen über die Quelle.
 
-#. Mit der Schaltfläche :menuselection:`Delete` können Sie die Datenquelle aus ihrem Repository löschen.
+#. Über die Schaltfläche :menuselection:`Delete` können Sie die Datenquelle aus ihrem Repository löschen.
 
 
 Laden von Web Map Services
 ================================================================================
 Sie können OGC Web Map Services (WMS) in Ihre Applikation laden.
 
-Ein WMS liefert eine XML-Datei wenn das getCapabilities-Dokument angefordert wird. Diese Information wird von Mapbender analysiert, wodurch er alle notwendigen Informationen über den Dienst aus diesem XML erhält.
+Ein WMS liefert eine XML-Datei, wenn das getCapabilities-Dokument angefordert wird. Diese Information wird von Mapbender analysiert, wodurch er alle notwendigen Informationen über den Dienst aus diesem XML erhält.
 
-.. tip:: Sie sollten das Capabilities-Dokument zuerst in Ihrem Browser überprüfen, bevor Sie versuchen, es in den Mapbender zu laden.
+.. tip:: Sie sollten das Capabilities-Dokument zuerst in Ihrem Browser überprüfen, bevor Sie versuchen, es in Mapbender zu laden.
 
 #. Wählen Sie :menuselection:`Services --> Button Add`. Geben Sie den Link zur WMS getCapabilities URL in das Textfeld :menuselection:`Originurl` ein.
 
 #. Geben Sie Nutzername und Kennwort ein, sofern der Dienst Authentifizierung benötigt.
 
-#. Klicken Sie **Load** um den Dienst in das Repository zu laden.
+#. Klicken Sie **Load**, um den Dienst in das Repository zu laden.
 
 #. Nach erfolgreicher Registrierung des Dienstes zeigt Mapbender eine Übersicht der Informationen an, die der Service geliefert hat.
 
@@ -216,7 +212,7 @@ http://osm.omniscale.net/proxy/service?
   .. tip:: Erzeugen Sie eine Containeranwendung und laden Sie jeden WMS nur einmal hier hinein. Sie können die WMS aus diesem Container in andere Anwendungen übernehmen. Wenn Sie diesen WMS aktualisieren werden mögliche Änderungen in allen Anwendungen übernommen, die diesen WMS beinhalten. Sie können einen WMS einfach von einer Anwendung zu einer anderen über den Menüeintrag *Link WMS to application* kopieren.
 
 
-Fügen Sie Dienste zu Applikation hinzu
+Fügen Sie Dienste zur Anwendung hinzu
 ===========================================
 Nach dem erfolgreichen Hochladen eines WMS möchten Sie diesen zu einer Anwendung hinzufügen.
 
@@ -229,11 +225,11 @@ Nach dem erfolgreichen Hochladen eines WMS möchten Sie diesen zu einer Anwendun
   .. image:: ../../figures/mapbender3_add_source_to_application.png
      :scale: 80
 
-Konfigurieren Ihrer WMS
+Konfigurieren von Diensten
 ================================================================================
-Sie können die WMS für ihre Anwendung konfigurieren. Vielleicht möchten Sie nicht alle Layer anbieten oder Sie möchten die Reihenfolge oder den Titel des Layers ändern, das feature info verhindern oder den Maximalmaßstab ändern.
+Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie nicht alle Layer anbieten oder Sie möchten die Reihenfolge oder den Titel des Layers ändern, die Info-Abfrage für einzelne Layer verhindern oder den Maximalmaßstab ändern.
 
-#. Wählen Sie :menuselection:`Applications --> Layers--> Button Edit Source Instance` um eine Instanz zu konfigurieren.
+#. Wählen Sie :menuselection:`Applications --> Layers--> Button Edit Source Instance`, um eine Instanz zu konfigurieren.
 
 #. Sie sehen eine Tabelle mit den Layern des Dienstes.
 
@@ -247,7 +243,7 @@ Servicekonfiguration
 * format - wählen Sie das Format für den getMap-Requests
 * infoformat - wählen Sie das Format für getFeatureInfo-Requests
 * exceptionformat - wählen Sie das Format für exceptions
-* opacity - wählen Sie die Opazität(Deckkraft) in Prozent
+* opacity - wählen Sie die Opazität (Deckkraft) in Prozent
 * tiled - Sie können eine WMS in Kacheln anfordern, Standard ist nicht gekachelt.
 
 
@@ -258,8 +254,8 @@ Layerkonfiguration
 * sel_default - Layer ist bei Anwendungsstart aktiv
 * info / info default - der Layer reagiert auf feature info requests, info default aktiviert diese Funktionalität in der Anwendung
 * minscale / maxscale - Der Maßstabsbereich, in dem der Layer angezeigt wird. 0 bedeutet keine Maßstabsbeschränkung
-* style - falls eine WMS mehr als einen style anbietet können sie einen anderen als den default wählen
-* prio - definiert die Reihenfolge in welcher die Layer gezeichnet werden
+* style - falls eine WMS mehr als eine style-Definition im Layer anbietet, können Sie einen anderen als den default-Style wählen
+* prio - definiert die Reihenfolge, in welcher die Layer gezeichnet werden
 
 
 Fügen Sie Elemente zu Ihrer Anwendung hinzu
@@ -277,13 +273,13 @@ Mapbender biete eine Reihe von Elementen. Sie können diese Anwendung in verschi
 
 #. Sehen Sie sich ihre Anwendung an. Öffnen Sie Ihre Anwendung über :menuselection:`Applications --> Applications Overview`
 
-Sie sollten nun verstanden haben, wie einfach eine Mapbenderanwendung geändert werden kann, ohne den Code zu ändern!
 
   .. image:: ../../figures/mapbender3_application_elements.png
      :scale: 80
 
-.. NOCH NICHT IMPLEMENTIERT  
-  Wenn Sie ein Element, z.B. **map** auswähöen, sehen Sie die Attribute dieses Elements. Diese Attribute sind HTML Attribute. Durch Definition eines Mapbenderelements definieren sie ein HTML Element. Beim Starten Ihrer Anwendung erzeugt Mapbender eine HTML-Seite aus allen definierten Elementen.
+ 
+Wenn Sie ein Element, z.B. **map** auswählen, sehen Sie die Optionen für dieses Element und können es entsprechend konfigurieren.
+
 
 Beispiele für Elemente, die Mapbender3 anbietet:
 
@@ -298,20 +294,20 @@ Beispiele für Elemente, die Mapbender3 anbietet:
 * Ruler Line/Area
 * Scale Selector
 * SRS Selector
-* Table of Content
-* Navigation Bar
+* Table of Contents
+* Navigation Toolbar
 
 Sie finden detaillierte Informationen zu jedem Element unter `MapbenderCoreBundle element documentation <../../../documentation/en/bundles/Mapbender/CoreBundle/index.html>`_.
 
 Versuchen Sie es selber
 ================================================================================
 
-* Fügen Sie eine Karte zum content-Bereich ihrer Anwendung hinzu.
-* Fügen Sie ein Inhaltsverzeichnis zum content-Bereich ihrer Anwendung hinzu.
+* Fügen Sie eine Karte (Map-Element) zum content-Bereich Ihrer Anwendung hinzu.
+* Fügen Sie ein Inhaltsverzeichnis (Table of Contents oder Layertree) zum content-Bereich Ihrer Anwendung hinzu.
 * Fügen Sie einen Butten hinzu, der das Inhaltsverzeichnis öffnet.
-* fügen Sie das Navigationselement hinzu
-* fügen Sie ein copyright hinzu und ändern sie den Copyright-Text.
-* fügen sie einen SRS Selector zum footer-Bereich.
+* fügen Sie das Navigationselement in den content-Bereich hinzu
+* fügen Sie ein copyright-Element hinzu und ändern Sie den Copyright-Text.
+* fügen Sie einen SRS Selector in den footer-Bereich ein.
 
 
 
@@ -319,7 +315,7 @@ Benutzer- und Gruppenverwaltung
 =================================
 Zugriff auf eine Mapbenderanwendung benötigt Authentifizierung. Nur öffentliche Anwendungen können von allen genutzt werden.
 
-Ein Benutzer hat Berechtigungen um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
+Ein Benutzer hat Berechtigungen, um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
 
 .. NOCH NICHT IMPLEMENTIERT
   Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie :guilabel:`guest`, :guilabel:`operator` oder :guilabel:`administrator`. Die :guilabel:`role` eines Benutzers beruht auf den Funktionen und des Diensten, aud die der Benutzer durch diese Anwendung Zugriff hat.
@@ -328,7 +324,7 @@ Ein Benutzer hat Berechtigungen um auf eine oder mehrere Anwendungen und Dienste
 Benutzer anlegen
 ================================================================================
 
-#. Um einen Benutzer anzulegen, gehe Sie zu :guilabel:`Users -> Button Create new user`.
+#. Um einen Benutzer anzulegen, gehen Sie zu :guilabel:`Users -> Button Create new user`.
 
 #. Wählen Sie einen Namen und ein Kennwort für Ihren Benutzer. 
 
@@ -349,12 +345,12 @@ Gruppen anlegen
 #. Speichern Sie Ihre neue Gruppe.
 
 
-Benutzern einer Gruppe zuweisen
+Benutzer einer Gruppe zuweisen
 ================================================================================
 
-#. Fügen Sie einen Benutzer einer Gruppe über :menuselection:`Users --> Group --> Edit your Group` zu. 
+#. Weisen Sie einen Benutzer einer Gruppe über :menuselection:`Users --> Group --> Edit your Group` zu. 
 
-#. Wählen Sie einen oder mehrere Benutzer über :menuselection:`Users` aus, die sie der Gruppe zuweisen wollen.
+#. Wählen Sie einen oder mehrere Benutzer über :menuselection:`Users` aus, die Sie der Gruppe zuweisen wollen.
 
 #. Weisen Sie einen Benutzer über :menuselection:`Users --> Users --> Edit --> Groups` einer Gruppe zu.
 
@@ -382,9 +378,9 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 #. Wählen Sie :menuselection:`Security`
 
-#. Veröffentlichen Sie Ihre Anwendung oder ziehen die Veröffentlichung zurück
+#. Veröffentlichen Sie Ihre Anwendung oder ziehen Sie die Veröffentlichung zurück
 
-#. Setzten sie Berechtigungen wie View Edit Delete Undelete Operator Master Owner 
+#. Setzten Sie Berechtigungen wie View, Edit, Delete, Undelete, Operator, Master, Owner 
 
 #. Weisen Sie eine Anwendung einem Benutzern/einer Gruppe zu
 
@@ -398,7 +394,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
      :scale: 80
 
 
-Zum Ausprobieren
+Weitere Aufgaben
 ================================================================================
 
 Hier sind einige weiter Dinge, die Sie ausprobieren sollten:
@@ -408,22 +404,24 @@ Hier sind einige weiter Dinge, die Sie ausprobieren sollten:
 #. Versuchen Sie eine eigene Anwendung zu erzeugen.
 
 
-Was als nächstes?
+Was kommt als Nächstes?
 ================================================================================
 
-Dies sind nur die ersten Schritte mit Mapbender3. Es gibt viel mehr Funktionen, die Sie ausprobieren können.
+Dies waren nur die ersten Schritte mit Mapbender3. Es gibt viele weitere Funktionen, die Sie ausprobieren können.
 
-Mapbender Project home
+Mapbender Projektseite
 
   http://mapbender.org
 
-Mapbender3 Website
+Mapbender3 Webseite
 
   http://mapbender3.org/
 
 Sie finden Tutorials unter
 
   http://doc.mapbender3.org
+
+Die API-Dokumentation finden Sie unter
 
   http://api.mapbender3.org
 
