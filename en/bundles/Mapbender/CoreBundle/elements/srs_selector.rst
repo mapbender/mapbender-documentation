@@ -18,8 +18,8 @@ Configuration
 .. code-block:: yaml
 
    tooltip: 'SRS Selector'  # text to use as tooltip
-   label: false             #
-   targets: array(map" => null,coordinatesdisplay" => null) # Array, Ids of Map element and coordinatesdisplay element
+   label: false             # true/false to label  the srs selector
+   target: ~                # Id of Map element to query
 
 
 HTTP Callbacks

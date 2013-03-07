@@ -19,7 +19,7 @@ Configuration
 
    tooltip: 'coordinates display' # text to use as tooltip
    target: ~                      # Id of Map element to query 
-   label: true                    # true/false to label
+   label: true                    # true/false to label  the coordinates display
    empty: 'x= - y= -'             # 
    prefix: 'x= '                  #
    separator: ' y= '              #
