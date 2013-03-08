@@ -17,16 +17,16 @@ Configuration
 
 .. code-block:: yaml
 
-   layerset: null      # main
-   dpi: 72             #
-   srs: "EPSG:4326"    #
-   otherSrs: "EPSG:31466,EPSG:31467,EPSG:25832" #
+   layerset: null      # layer collection
+   dpi: 72             # resolution
+   srs: "EPSG:4326"    # coordinate referece system
+   otherSrs: "EPSG:31466,EPSG:31467,EPSG:25832" # other coordinate referece systems
    units: "degrees"    # units to use deegrees/meters
    extents: array(
        max: array(0, 40, 20, 60) 
-       start: array(5, 45, 15, 55)) #
-   maxResolution: "auto" #
-   scales: "25000000,10000000,5000000,1000000,500000" # 
+       start: array(5, 45, 15, 55)) # map extents 
+   maxResolution: "auto" # 
+   scales: "25000000,10000000,5000000,1000000,500000" # a scale list
    imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img" #
 
 HTTP Callbacks
