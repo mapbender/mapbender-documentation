@@ -70,7 +70,7 @@ Configuring your Mapbender3 installation is made up of the following steps:
 * Copying the bundles' assets to the public web directory
 * Initializing the role system
 * Creating the "root" user
-* Inserting srs parameters
+* Inserting srs parameters (EPSG code definition)
 
 All can be done using the console utility provided by Symfony2, the awesome
 framework Mapbender3 is build upon. There's a mayor caveat though you should
@@ -160,13 +160,11 @@ The first user - which has all privileges - must be created using the command:
 This will interactively ask all information needed and create the user in the
 database.
 
-There is a silent mode you can use, if you want to use a script to install Mapbender3 and don't want to be asked for all information:
+There is a silent mode you can use, if you want to use a script to install Mapbender3 and don't want to be asked for all parameters:
 
 .. code-block:: yaml
 
     app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
-
-Now head over to your installation in your browser and enjoy.
 
 Inserting srs parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -183,7 +181,7 @@ Check config.php and write permission
 
 * http://localhost/mapbender3/config.php
 
-You have to set write permission to app/cache and app/logs
+You have to set write permission to app/cache and app/logs.
 
 .. code-block:: yaml
 
