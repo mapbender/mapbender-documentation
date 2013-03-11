@@ -8,9 +8,9 @@ The Map's Overview element provides a control to overview, similar to the OpenLa
 Class, Widget & Style
 ==============
 
-* Class: Mapbender\\CoreBundle\\Element\\Overview
-* Widget: mapbender.element.overview.js
-* Style: mapbender.element.overview.css
+* Class: Mapbender\\CoreBundle\\Element\\ScaleBar
+* Widget: mapbender.element.scalebar.js
+* Style: mapbender.element.scalebar.css
 
 Configuration
 =============
@@ -19,17 +19,15 @@ Configuration
 
 .. code-block:: yaml
 
-   tooltip: 'Overview'              # text to use as tooltip
+   tooltip: 'Scale Bar'             # text to use as tooltip
    target: ~                        # Id of Map element to query
    layerset: ~                      # layer collection
-   width: 200                       # overview width
-   height: 100                      # overview height
+   maxWidth: 200                    # the max width of the scale bar, default 200
    anchor: array('inline',
      'left-top','left-bottom',
-     'right-top','right-bottom')    # overview alignment
-   position: array('0px','0px')     # overview position, default: x=0px, y=0px
-   maximized: true                  # false/true to open/close on start
-   fixed: true                      # false/true to fix the overview
+     'right-top','right-bottom')    # scale bar alignment
+   position: array('0px','0px')     # scale bar  position, default: x=0px, y=0px
+   units: array('kilometer','mile') # scale bar units, default 'kilometer'
 
 HTTP Callbacks
 ==============
