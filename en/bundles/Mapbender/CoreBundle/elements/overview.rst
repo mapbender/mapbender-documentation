@@ -1,9 +1,9 @@
 .. _zoom_bar:
 
-Map's Overview (Overview)
+Overview
 ***********************
 
-The Map's Overview element provides a control to overview, similar to the OpenLayers Overview control. This element though is easier to use when custom styling is needed.
+The Overview element provides a control of an overview map, similar to the OpenLayers Overview control. This element though is easier to use when custom styling is needed.
 
 Class, Widget & Style
 ==============
@@ -15,8 +15,6 @@ Class, Widget & Style
 Configuration
 =============
 
-<Put YAML configuration here, include defaults and explain>
-
 .. code-block:: yaml
 
    tooltip: 'Overview'              # text to use as tooltip
@@ -24,12 +22,12 @@ Configuration
    layerset: ~                      # layer collection
    width: 200                       # overview width
    height: 100                      # overview height
-   anchor: array('inline',
-     'left-top','left-bottom',
-     'right-top','right-bottom')    # overview alignment
-   position: array('0px','0px')     # overview position, default: x=0px, y=0px
-   maximized: true                  # false/true to open/close on start
-   fixed: true                      # false/true to fix the overview
+   anchor: array('inline',          # overview alignment, default is left-top
+     'left-top','left-bottom',      # use inline f.e. in sidebar
+     'right-top','right-bottom')    
+   position: array('0px','0px')     # overview position in relation to anchor, default: x=0px, y=0px
+   maximized: true                  # false/true to open/close on start, default is true
+   fixed: true                      # false/true to fix the overview, default is true
 
 HTTP Callbacks
 ==============
