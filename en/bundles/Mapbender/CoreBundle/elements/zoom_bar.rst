@@ -18,16 +18,16 @@ Configuration
 .. code-block:: yaml
 
    tooltip: 'Navigation Toolbar' # text to use as tooltip
-   components: array("pan",
+   components: array("pan",      # components of the navigation toolbar, default all selected
      "history","zoom_box",
-     "zoom_max","zoom_slider")  # components of the navigation toolbar, default all selected
+     "zoom_max","zoom_slider")
    target: ~                     # Id of Map element to query
    stepSize: 50                  # step value for pan 
    stepByPixel: false            # step type "by pixel"/"percent" (false = percent)
-   anchor: array('inline',
-     'left-top','left-bottom',
-     'right-top','right-bottom') # navigation toolbar alignment, default left-top
-   position: array('0px','0px')  # navigation toolbar position, default: x=0px, y=0px
+   anchor: 'inline'/'left-top'/  # navigation toolbar alignment, default is 'left-top' 
+     'left-bottom'/'right-top'/  # use inline f.e. in sidebar
+     'right-bottom'
+   position: array('0px','0px')  # navigation toolbar position, default: x=20px, y=20px
    draggable: true               # element is draggable or not, default true
 
 HTTP Callbacks

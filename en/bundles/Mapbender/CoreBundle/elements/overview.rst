@@ -22,9 +22,9 @@ Configuration
    layerset: ~                      # layer collection
    width: 200                       # overview width
    height: 100                      # overview height
-   anchor: array('inline',          # overview alignment, default is left-top
-     'left-top','left-bottom',      # use inline f.e. in sidebar
-     'right-top','right-bottom')    
+   anchor: 'inline'/'left-top'/     # overview alignment, default is 'left-top'
+     'left-bottom'/'right-top'/     # use inline f.e. in sidebar
+     'right-bottom'   
    position: array('0px','0px')     # overview position in relation to anchor, default: x=0px, y=0px
    maximized: true                  # false/true to open/close on start, default is true
    fixed: true                      # false/true to fix the overview, default is true

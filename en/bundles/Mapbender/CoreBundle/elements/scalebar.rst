@@ -23,10 +23,10 @@ Configuration
    target: ~                        # Id of Map element to query
    layerset: ~                      # layer collection
    maxWidth: 200                    # the max width of the scale bar, default 200
-   anchor: array('inline',
-     'left-top','left-bottom',
-     'right-top','right-bottom')    # scale bar alignment
-   position: array('0px','0px')     # scale bar  position, default: x=0px, y=0px
+   anchor: 'inline'/'left-top'/     # scale bar alignment, default is 'right-bottom'
+     'left-bottom'/'right-top'/     # use inline f.e. in sidebar
+     'right-bottom'     
+   position: array('0px','0px')     # scale bar  position, default: x=20px, y=20px
    units: array('kilometer','mile') # scale bar units, default 'kilometer'
 
 HTTP Callbacks
