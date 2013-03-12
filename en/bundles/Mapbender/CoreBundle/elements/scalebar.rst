@@ -1,9 +1,9 @@
-.. _zoom_bar:
+.. _scalebar:
 
-Map's Overview (Overview)
+ScaleBar
 ***********************
 
-The Map's Overview element provides a control to overview, similar to the OpenLayers Overview control. This element though is easier to use when custom styling is needed.
+The ScaleBar displays a small line indicator representing the current map scale.
 
 Class, Widget & Style
 ==============

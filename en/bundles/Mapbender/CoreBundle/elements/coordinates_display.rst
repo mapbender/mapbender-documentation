@@ -18,6 +18,7 @@ Configuration
 .. code-block:: yaml
 
    tooltip: 'coordinates display' # text to use as tooltip
+   numDigits: 2                   # the number of digits each coordinate shall have when being rendered, default 2
    target: ~                      # Id of Map element to query 
    label: true                    # true/false to label  the coordinates display
    empty: 'x= - y= -'             # 
