@@ -15,22 +15,20 @@ Class, Widget & Style
 Configuration
 =============
 
-<Put YAML configuration here, include defaults and explain>
-
 .. code-block:: yaml
 
    tooltip: 'Navigation Toolbar' # text to use as tooltip
    components: array("pan",
      "history","zoom_box",
-     "zoom_max","zoom_slieder")  # components of the navigation toolbar, default all
+     "zoom_max","zoom_slider")  # components of the navigation toolbar, default all selected
    target: ~                     # Id of Map element to query
    stepSize: 50                  # step value for pan 
    stepByPixel: false            # step type "by pixel"/"percent" (false = percent)
    anchor: array('inline',
      'left-top','left-bottom',
-     'right-top','right-bottom') # navigation toolbar alignment
+     'right-top','right-bottom') # navigation toolbar alignment, default left-top
    position: array('0px','0px')  # navigation toolbar position, default: x=0px, y=0px
-   draggable: true               # element is draggable or not
+   draggable: true               # element is draggable or not, default true
 
 HTTP Callbacks
 ==============
