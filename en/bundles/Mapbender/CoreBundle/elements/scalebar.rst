@@ -15,8 +15,6 @@ Class, Widget & Style
 Configuration
 =============
 
-<Put YAML configuration here, include defaults and explain>
-
 .. code-block:: yaml
 
    tooltip: 'Scale Bar'             # text to use as tooltip
