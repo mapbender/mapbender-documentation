@@ -169,12 +169,20 @@ There is a silent mode you can use, if you want to use a script to install Mapbe
 Inserting srs parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Inserting from srs parameters into the database occurs using the command:
+Inserting proj4 srs parameters into a database occurs using the command:
 
 .. code-block:: yaml
 
-    app/console doctrine:fixtures:load  --append
+    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
 
+Importing applications from mapbender.yml
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Importing applications from mapbender.yml into a database occurs using the command:
+
+.. code-block:: yaml
+
+    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
 Check config.php and write permission 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -27,7 +27,7 @@ Configuration
      'left-bottom'/'right-top'/     # use inline f.e. in sidebar
      'right-bottom'     
    position: array('0px','0px')     # scale bar  position, default: x=20px, y=20px
-   units: array('kilometer','mile') # scale bar units, default 'kilometer'
+   units: array('km','ml')          # scale bar units 'kilometer' and/or 'miles', default ['km']
 
 HTTP Callbacks
 ==============
