@@ -9,20 +9,17 @@ Class, Widget & Style
 ==============
 
 * Class: Mapbender\\CoreBundle\\Element\\FeatureInfo
-* Widget: mapbender.element.featureInfo.js, subclasses mapbender.element.button.js
+* Widget: mapbender.element.featureInfo.js
 * Style: mapbender.elements.css
 
 Configuration
 =============
 
-Also see :doc:`button` for inherited configuration options.
-
 .. code-block:: yaml
 
    tooltip: Feature Info # text to use as tooltip
    target: ~             # Id of Map element to query
-   label: true           # true/false to label button
-   icon: featureinfo     # class name of the icon see css-template
+   autoOpen: false       # true/false open when application is started, default: false
 
 HTTP Callbacks
 ==============
