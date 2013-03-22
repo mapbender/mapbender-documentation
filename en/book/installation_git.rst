@@ -60,17 +60,6 @@ to install the cURL command line tool:
 .. _phing:
 
 
-PHPUnit
-=======
-
-Symfony2 needs a more recent PHPUnit than for example comes with Ubuntu 12.04.
-So we will use Pear to install PHPUnit:
-
-
-.. code-block:: yaml
-
-	sudo pear install phpunit/PHPUnit
-
 
 Build management using Phing
 ****************************
@@ -98,6 +87,18 @@ Then let's get Phing:
 
     sudo pear channel-discover pear.phing.info 
     sudo pear install phing/phing
+
+PHPUnit
+=======
+
+Symfony2 needs a more recent PHPUnit than for example comes with Ubuntu 12.04.
+So we will use Pear to install PHPUnit:
+
+
+.. code-block:: yaml
+
+	sudo pear install phpunit/PHPUnit
+
 
 Our build scripts need some more dependencies to run unit test, generate
 documentation and build installation packages.
