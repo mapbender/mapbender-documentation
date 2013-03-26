@@ -84,6 +84,8 @@ understand, before continuing:
   | all these files with other permissions. So make sure you give the PHP
   | process write access to these files. See last step below.
 
+The following steps assume that you are in folder **mapbender-starter/application**.
+
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Database connection parameters are stored together with some more configuration
@@ -139,7 +141,7 @@ but these need to be copied into the public web folder:
     app/console assets:install web
 
 
-As a developer, you might want to use the symlink switch on that command to
+Alternatively, as a developer, you might want to use the symlink switch on that command to
 symlink instead of copy. This will make editing assets inside the bundle
 directories way easier.
 
@@ -160,7 +162,7 @@ The first user - which has all privileges - must be created using the command:
 This will interactively ask all information needed and create the user in the
 database.
 
-There is a silent mode you can use, if you want to use a script to install Mapbender3 and don't want to be asked for all parameters:
+Alternatively, there is a silent mode you can use, if you want to use a script to install Mapbender3 and don't want to be asked for all parameters:
 
 .. code-block:: yaml
 
@@ -184,10 +186,8 @@ Importing applications from mapbender.yml into a database occurs using the comma
 
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
-Check config.php and write permission 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* http://localhost/mapbender3/config.php
+Write permission
+^^^^^^^^^^^^^^^^
 
 You have to set write permission to app/cache and app/logs.
 
@@ -196,6 +196,11 @@ You have to set write permission to app/cache and app/logs.
  chmod -R o+w /var/www/mapbender3/app/cache
  chmod -R o+w /var/www/mapbender3/app/logs
 
+
+Check config.php
+^^^^^^^^^^^^^^^^
+
+* http://localhost/mapbender3/config.php
 
 You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
 

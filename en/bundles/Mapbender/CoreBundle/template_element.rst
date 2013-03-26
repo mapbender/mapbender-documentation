@@ -18,6 +18,7 @@ Configuration
 <Put YAML configuration here, include defaults and explain>
 
 .. code-block:: yaml
+
    foo: bar # Example, delete me!
 
 HTTP Callbacks

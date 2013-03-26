@@ -6,7 +6,7 @@
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
 
-.. image:: ../../../../_static/mapbender3_logo.png
+.. image:: ../../_static/mapbender3_logo.png
   :scale: 100 %
   :alt: project logo
   :align: right

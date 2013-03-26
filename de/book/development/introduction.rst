@@ -21,16 +21,12 @@ Wo gibt es Hilfe?
 
 Themen
 *******
+   administrations
 
 .. toctree::
    :maxdepth: 1
 
-   git
-   github
    apidocumentation
    requestresponse
-   code_convention
-   translations
-   elements
-   administrations
+   introduction
 

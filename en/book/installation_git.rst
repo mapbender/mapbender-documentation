@@ -59,6 +59,8 @@ to install the cURL command line tool:
 
 .. _phing:
 
+
+
 Build management using Phing
 ****************************
 
@@ -85,6 +87,18 @@ Then let's get Phing:
 
     sudo pear channel-discover pear.phing.info 
     sudo pear install phing/phing
+
+PHPUnit
+=======
+
+Symfony2 needs a more recent PHPUnit than for example comes with Ubuntu 12.04.
+So we will use Pear to install PHPUnit:
+
+
+.. code-block:: yaml
+
+	sudo pear install phpunit/PHPUnit
+
 
 Our build scripts need some more dependencies to run unit test, generate
 documentation and build installation packages.
@@ -135,7 +149,7 @@ Please notice that you might have to activate the :command:`FollowSymLinks` opti
 
 .. code-block:: yaml
 
-  ALIAS /mapbender3 /var/www/mapbender3/web/
+  Alias /mapbender3 /var/www/mapbender3/web/
   <Directory /var/www/mapbender3/web/>
     Options MultiViews FollowSymLinks
     DirectoryIndex app.php
@@ -183,17 +197,6 @@ There are following steps you have to do to stay up-to-date
  git submodule update --init --recursive
  app/console doctrine:schema:update
 
-
-PHPUnit
-=======
-
-Symfony2 needs a more recent PHPUnit than for example comes with Ubuntu 12.04.
-So we will use Pear to install PHPUnit:
-
-
-.. code-block:: yaml
-
-	sudo pear install phpunit/PHPUnit
 
 .. _installation_sphinx:
 
