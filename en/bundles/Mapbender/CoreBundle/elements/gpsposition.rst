@@ -7,7 +7,7 @@ Provides a button to navigate to your current position.
 
 
 Class, Widget & Style
-==============
+======================
 
 * Class: Mapbender\\CoreBundle\\Element\\GpsPosition
 * Widget: mapbender.element.gpsPostion.js
