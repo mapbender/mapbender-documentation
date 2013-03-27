@@ -3,7 +3,8 @@
 GPS-Position
 ***********************
 
-Provides a button to navigate to your current postion.
+Provides a button to navigate to your current position.
+
 
 Class, Widget & Style
 ==============
@@ -11,6 +12,7 @@ Class, Widget & Style
 * Class: Mapbender\\CoreBundle\\Element\\GpsPosition
 * Widget: mapbender.element.gpsPostion.js
 * Style: mapbender.element.gpsPosition.css
+
 
 Configuration
 =============
@@ -24,10 +26,12 @@ Configuration
    autoStart: false	 # true/false (default is false)
    refreshinterval: 5000 # refresh interval in ms
 
+
 HTTP Callbacks
 ==============
 
 None.
+
 
 JavaScript API
 ==============
