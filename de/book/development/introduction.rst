@@ -28,5 +28,4 @@ Themen
 
    apidocumentation
    requestresponse
-   introduction
 
