@@ -20,23 +20,23 @@ Create your own twig-file
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 You find the twig-files at the following path:
 
-* \\src\\Mapbender\\CoreBundle\\Resources\\views\\Template
+* mapbender\\src\\Mapbender\\CoreBundle\\Resources\\views\\Template
 
 The easiest way to create your own twig file is to copy an existing twig, save it under a new name and change the content like colors.
 
 .. code-block:: bash
 
- cd application/src/Mapbender/CoreBundle/Resources/views/Template 
+ cd mapbender/src/Mapbender/CoreBundle/Resources/views/Template 
  cp base.html.twig demo.html.twig
 
 
 Create your own css-file
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-The css-files are located in application/src/Mapbender/CoreBundle/Resources/public/css. Create your own css file and edit the content.
+The css-files are located in application/mapbender/src/Mapbender/CoreBundle/Resources/public/css. Create your own css file and edit the content.
 
 .. code-block:: bash
 
- cd application/src/Mapbender/CoreBundle/Resources/public/css
+ cd mapbender/src/Mapbender/CoreBundle/Resources/public/css
  cp mapbender.template.base.css mapbender.template.demo.css
 
 
@@ -44,11 +44,11 @@ Register your template
 ~~~~~~~~~~~~~~~~~~~~~~
 To register your template you have to create a file at 
 
-* application/src/Mapbender/CoreBundle/Template 
+* mapbender/src/Mapbender/CoreBundle/Template 
 
 .. code-block:: bash
 
- cd application/src/Mapbender/CoreBundle/Template
+ cd mapbender/src/Mapbender/CoreBundle/Template
  cp Fullscreen.php Demo.php
 
 Finally, add the fully qualified Template class name to your Bundles setup class getTemplates function:
@@ -71,7 +71,7 @@ Now you can use the template in mapbender.yml where you can configure applicatio
 
 You find the mapbender.yml at:
 
-* application/app/config
+* app/config
 
 .. code-block:: yaml
   
