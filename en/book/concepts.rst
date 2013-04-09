@@ -11,8 +11,7 @@ Application
 ===========
 
 The application is a single Mapbender3 configuration which is usually used
-as an interactive web map. It's what was called an GUI in Mapbender 2. But
-please forget that term instantly - it's called an Application now.
+as an interactive web map. It's what was called a GUI in Mapbender 2.
 
 Every application consists of several components:
 
