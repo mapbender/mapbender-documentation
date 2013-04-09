@@ -185,7 +185,7 @@ As development goes on you want to stay up-to-date with the code on github.
 
 There are following steps you have to do to stay up-to-date
 
-* get the code from the mapbdner-starter repository
+* get the code from the mapbender-starter repository
 * update the submodules 
 * update your database so that new structures (tables, columns) will be created
 
@@ -226,8 +226,8 @@ Read more about :doc:`How to write Mapbender3 Documentation? <development/docume
 ApiGen
 ======
 
-`ApiGen <http://apigen.org>`_ is our API documentation generator of choice. It too
-can be installed using Pear, so use the following command:
+`ApiGen <http://apigen.org>`_ is our API documentation generator of choice. It can
+ also be installed using Pear, so use the following command:
 
 
 .. code-block:: yaml
@@ -240,9 +240,15 @@ Read more about :doc:`How to write Mapbender3 API Documentation? <development/ap
 Troubleshooting
 ***************
 
-* The ApiGen task only works with recent versions of Phing. 2.4.12 is sufficent,
-  while 2.4.9 is not. Check with :command:`phing -v`. You can update all your
-  Pear packages with
+* The ApiGen task only works with recent versions of Phing (>= 2.4.12). Check the Phing version with 
+
+
+.. code-block:: yaml
+
+              phing -v
+
+
+You can update all your Pear packages with
 
 
 .. code-block:: yaml
