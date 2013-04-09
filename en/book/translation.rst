@@ -5,9 +5,9 @@ Translation in Mapbender3
 
 Mapbender3 uses the translator service (`Translator <http://api.symfony.com/2.1/Symfony/Component/Translation/Translator.html>`_) which is a Symfony component. 
 
-In the code you use the function **trans** to translate a text to the a language.
+In the code you use the function **trans** to translate a text into another language.
 
-Example how trans can be used in a Twig template:
+Example how the function **trans** can be used in a Twig template:
 
 .. code-block:: yaml
 
@@ -90,7 +90,7 @@ Create xliff-files for your language
 If your language is not translated yet, it is easy to add a new language.
 
 * Check the translation directories and create a new file by copying an existing locale
-* translate the source-tags into the traget-tags
+* translate the source-tags into the target-tags
 * clear your cache
 
 
