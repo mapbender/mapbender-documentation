@@ -3,13 +3,13 @@
 Components
 #####################
 
-Mapbender3 is made up of different components. On the serverside we use Symfony2 as a framework which comes along with powerfull components like Doctrine, Twig, Monolog and more.
+Mapbender3 is made up of different components. On the server side we use Symfony2 as a framework which comes along with powerfull components like Doctrine, Twig, Monolog and more.
 
-On the client side we use OpenLayer, MapQuery and jQuery & jQuery UI.
+On the client side we use OpenLayers, MapQuery and jQuery & jQuery UI.
 
-We have a Mapbender core bundle with the Mapbender basis functionality. And more Mapbender bundles which are optional.
+We have a Mapbender core bundle with the Mapbender basic functionalities. And more Mapbender bundles which are optional.
 
-We offer a Mapbender Starter package. With the Mapbender starter you can set up a Mapbender3 installation easily.
+We offer a Mapbender Starter package. With the Mapbender Starter package you can set up a Mapbender3 installation easily.
 
   .. image:: ../../figures/mapbender3_components.png
      :scale: 60
@@ -103,7 +103,7 @@ There are optional bundles like:
 
 CoreBundle
 ~~~~~~~~~~
-The Mapbender CoreBundle ist the base bundle for Mapbender. It offers base classes for applications, elements, layers and more.
+The Mapbender CoreBundle is the base bundle for Mapbender. It offers base classes for applications, elements, layers and more.
 
 It provides jQuery, jQuery UI, OpenLayers and MapQuery for all other Mapbender bundles.
 
