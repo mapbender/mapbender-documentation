@@ -13,13 +13,13 @@ This directory contains:
 * the applicationkernel (app/AppKernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
 * the application specific resource directory (Resources)
-* the commandline application for maintaining and management tasks (app/console)
+* the command line application for maintaining and management tasks (app/console)
 
 
 bin
 ******************************
 
-* is not in use at the moment. Here you can deposit f. e. installation scripts.
+* is not in use at the moment. Here you can deposit e.g. installation scripts.
 
 
 mapbender
@@ -33,9 +33,9 @@ web
 
 This directory has to be published by the webserver. The ALIAS has to refer to this directory. 
 
-It controlls 
+It controlls: 
 
-* the FrontendController (PHP-Script, which can be called). These are **app.php** for the productive-system and **app_dev.php** for the development version. The development version contains the profiler for perfomancetests and more.
+* the FrontendController (PHP-Script, which can be called). These are **app.php** for the productive-system and **app_dev.php** for the development version. The development version contains the profiler for perfomance tests and more.
 * this directory contains the static resoures like css, js, favicon etc.
 
 
@@ -43,8 +43,13 @@ web/bundles
 ****************************** 
 
 * here the static resources of the single bundles are stored.
-* the command **app/console assets:install --symlink web** copies the resources from the bundles to the folder. 
-* **Notice**: if you use windows you can't create symbolic links and therefore you have to run the command (**app/console assets:install web**) after every change in the code to copy the files to the directory.
+* the following command copies the resources from the bundles to the folder. 
+
+.. code-block:: yaml
+
+     app/console assets:install --symlink web
+
+* **Notice**: if you use Windows you can't create symbolic links and therefore you have to run the command (**app/console assets:install web**) after every change in the code to copy the files to the directory.
 
 
 src
@@ -55,7 +60,7 @@ src
 
 vendor
 ****************************** 
-* directory where all the Bundles which are used from Symfony are found. The Resources are used by Symfony using the Autoloading.
+* directory where all the Bundles which are used from Symfony are found. Resources are used by Symfony using the Autoloading.
 
 
 tranlations
