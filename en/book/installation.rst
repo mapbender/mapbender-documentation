@@ -3,7 +3,7 @@
 Installation
 ############
 
-This document describes all neccessary steps in order to get an running
+This document describes all necessary steps in order to get a running
 Mapbender3 installation.
 
 Prerequisites
@@ -16,12 +16,12 @@ Mapbender3 needs the following components in order to run:
 * PHP SQLite extension (php5-sqlite)
 * PHP cURL extension (php5-curl)
 * PHP Alternative PHP Cache (php-apc)
-* PHP Internationalisierungserweiterung (php5-intl)
+* PHP Internationalization (php5-intl)
 
 Optionally, in order to use a database other than the preconfigured SQLite one,
 you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_.
 
-If you want to use the developer mode, for using the web installer or to create
+If you want to use the developer mode, for using the web installer or creating
 profiler data to be used to analyze errors you will still need the SQLite
 extension!
 
@@ -72,8 +72,8 @@ Configuring your Mapbender3 installation is made up of the following steps:
 * Creating the "root" user
 * Inserting srs parameters (EPSG code definition)
 
-All can be done using the console utility provided by Symfony2, the awesome
-framework Mapbender3 is build upon. There's a mayor caveat though you should
+All can be done using the console utility provided by Symfony2, the
+Mapbender3 framework is built upon. There's a mayor caveat though you should
 understand, before continuing:
 
   | The console utility will write files in the app/cache and app/logs
@@ -84,7 +84,7 @@ understand, before continuing:
   | all these files with other permissions. So make sure you give the PHP
   | process write access to these files. See last step below.
 
-The following steps assume that you are in folder **mapbender-starter/application**.
+The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender-starter/application/ else mapbender-starter/).
 
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -92,7 +92,7 @@ Database connection parameters are stored together with some more configuration
 parameters in the file **app/config/parameters.yml**. This file is using YAML
 syntax, so be aware that you can **not** use tabs for indenting. Be careful about this and use whitespaces instead. 
 
-Your database configuration in the parameters.yml could look like this when you use PostgreSQL:
+Your database configuration in the parameters.yml file could look like this when you use PostgreSQL:
 
 .. code-block:: yaml
 
@@ -118,7 +118,7 @@ configured database user is allowed to. Call the console utility like this:
 Creating the database schema
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Symfony2 will create the database schema for you, if you ask nicely:
+Symfony2 will create the database schema for you:
 
 .. code-block:: yaml
 
@@ -206,7 +206,7 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 
 * http://localhost/mapbender3/app_dev.php
 
-**Notice:** Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
+**Notice:** Click on the Mapbender3 logo to get to the login page. Log in with the new user you created. 
 
 
 
@@ -220,7 +220,7 @@ Install necessary components:
   apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
 
 
-Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart your Apache
+Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart your Apache server
 
 .. code-block:: yaml
 
@@ -236,7 +236,7 @@ Check the ALIAS is working
 
 * http://localhost/mapbender3/
 
-Open Symfonys Welcome Script config.php. This script checks whether all necessary components are installed and configurations are made. If there are still problems, you should fix them.
+Open Symfony´s Welcome Script config.php. This script checks whether all necessary components are installed and configurations are done. If there are still problems, you should fix them.
  
 * http://localhost/mapbender3/config.php
 
@@ -293,7 +293,7 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 
 * http://localhost/mapbender3/app_dev.php
 
-**Notice:** Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
+**Notice:** Click on the Mapbender3 logo to get to the login page. Log in with the new user you created. 
 
 To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`.
 
@@ -314,7 +314,7 @@ Install necessary components:
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
 
-Configure the Apache ALIAS and restart your Apache
+Configure the Apache ALIAS and restart your Apache server
 
 .. code-block:: yaml
 
@@ -330,7 +330,7 @@ Check the ALIAS is working
 
 * http://localhost/mapbender3/
 
-Open Symfonys Welcome Script config.php. This script checks whether all necessary components are installed and configurations are made. If there are still problems, you should fix them.
+Open Symfony´s Welcome Script config.php. This script checks whether all necessary components are installed and configurations are done. If there are still problems, you should fix them.
  
 * http://localhost/mapbender3/config.php
 
@@ -373,7 +373,7 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 
 * http://localhost/mapbender3/app_dev.php
 
-**Notice:** Klick on the Mapbender3 logo to get to the login page. Login with the new user you created. 
+**Notice:** Click on the Mapbender3 logo to get to the login page. Log in with the new user you created. 
 
 To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`.
 
