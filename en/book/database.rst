@@ -6,7 +6,7 @@ Configuring the database
 .. _doctrine:
 Doctrine
 *************
-In Mapbender3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>` and read more.
+In Mapbender3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>`_ and read more.
 
 Database definition
 ********************
@@ -49,7 +49,7 @@ It would throw an error and providing some nonsense value here doesn't hurt the 
 Using multiple databases
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using multiple databases is easy with Mapbender3 and advised if you want to seperate your own data from Mapbender's.
+Using multiple databases is easy with Mapbender3 and advised if you want to separate your own data from Mapbender's.
 This is usefull in a scenario where you have your own custom code provided by an non-Mapbender bundle.
 
 There's always a default database connection and all Mapbender code assumes that it can access it's data using that default database connection.
@@ -57,7 +57,7 @@ There's always a default database connection and all Mapbender code assumes that
 So if your code wants to use a different database you have to define a second named database connection and always
 use that named database connection. Other than that, there's nothing to do.
 
-Here is an example for an database connection block in the config.yml with two connections:
+Here is an example for a database connection block in the config.yml with two connections:
 
 .. code-block:: yaml
 
