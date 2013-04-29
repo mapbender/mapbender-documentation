@@ -39,24 +39,33 @@ What to keep in mind, when you create a layout
 * where to put the images / should be possible to easy switch an image collection an get other buttons
 
 
-Translation conventions
+Translation where
 ************************
 
-* where to put the files? Groß-Kleinschreibung/ welche Übersetzungen werden generell gepflegt? en/de weitere?
+* conventions to put the files? Groß-Kleinschreibung/ welche Übersetzungen werden generell gepflegt? en/de weitere?
 * also have a look at `Translation in Mapbender3 <../translation.rst>`
 
 
 Version conventions
 ********************
-How to name the Mapbender3 versions.
+The Mapbender3 version is defined by a four digit numbering system, seperated by dots.
 
-* have a look at http://mapbender.org/Release_number
+**3**.0.10.20
+The **first** digit is constant and represents the Mapbender3 software cycle.
+
+3.**0**.10.20
+The **second** digit describes all new features and changes in Mapbdender3, with
+the highest difficulty level of a merge or update process.
+
+3.0.**10**.20
+The **third** digit describes new features and changes too, 
+but which can be easily merged or updated.
+
+3.0.10.**20**
+The **fourth** digit represents the bugfixes.
 
 
 Documentation conventions
 **************************
 
 * have a look at `How to write Mapbender3 Documentation? <documentation_howto>`
-
-
-
