@@ -65,6 +65,9 @@ but which can be easily merged or updated.
 The **fourth** digit represents the bugfixes.
 
 
+This numbering system started with Mapbender3 verion 3.0.0.0
+
+
 Documentation conventions
 **************************
 
