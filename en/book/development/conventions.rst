@@ -50,18 +50,16 @@ Version conventions
 ********************
 The Mapbender3 version is defined by a four digit numbering system, seperated by dots.
 
-**3**.0.10.20
-The **first** digit is constant and represents the Mapbender3 software cycle.
+3.0.10.20
 
-3. **0** .10.20
-The **second** digit describes all new features and major changes in Mapbdender3, with
+* The **first** digit is constant and represents the Mapbender3 software cycle.
+
+* The **second** digit describes all new features and major changes in Mapbdender3, with
 the highest difficulty level of a update process.
 
-3.0. **10** .20
-The **third** digit describes new features and minor changes, which can be easily updated.
+* The **third** digit describes new features and minor changes, which can be easily updated.
 
-3.0.10. **20**
-The **fourth** digit represents only bugfixes and micro changes.
+* The **fourth** digit represents only bugfixes and micro changes.
 
 
 This numbering system started with Mapbender3 version 3.0.0.0
