@@ -1,9 +1,10 @@
 .. _owsproxy3:
 
-<Put Element Name Here>
+OWSProxy3
 ***********************
 
-<Put short description - 5-6 sentences - here>
+OWSProxy3 allows you to hide your services behind a proxy.
+
 
 Class, Widget & Style
 ==============
@@ -15,40 +16,18 @@ Class, Widget & Style
 Configuration
 =============
 
-<Put YAML configuration here, include defaults and explain>
+The configuration is done in the file config.yml at the section ows_proxy3_core.
 
 .. code-block:: yaml
 
-   foo: bar # Example, delete me!
-
-HTTP Callbacks
-==============
-
-<Check the PHP class' httpAction method to find out the actions and what they
- do. If no httpAction method is defined put "None." into this section.>
-
-<action>
---------------------------------
-
-<Put description here, including required and optional HTTP parameters, HTTP
- method restrictions if any and return values and format. Repeat for every
- callback action>
-
-JavaScript API
-==============
-
-<Check the widgets methods which don't start with an underscore.>
-
-<function>
-----------
-
-<Put description here, including required and optional parameters and return
- value if any>
-
-JavaScript Signals
-==================
-
-<signal>
---------
-
-<Put description here.>
+ows_proxy3_core:
+    logging: true
+    obfuscate_client_ip: true  
+    proxy:
+        host: localhost
+        port: 8888
+        user: user
+        password: password
+        noproxy:
+            - host_a
+            - host_b
