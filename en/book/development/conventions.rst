@@ -54,7 +54,7 @@ The Mapbender3 version is defined by a four digit numbering system, seperated by
 
 * The **first** digit is constant and represents the Mapbender3 software cycle.
 
-* The **second** digit describes all new features and major changes in Mapbdender3, with
+* The **second** digit describes all new features and major changes in Mapbender3, with
 the highest difficulty level of a update process.
 
 * The **third** digit describes new features and minor changes, which can be easily updated.
