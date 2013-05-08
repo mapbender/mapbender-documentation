@@ -61,6 +61,7 @@ the highest difficulty level of a update process.
 
 * The **fourth** digit represents only bugfixes and micro changes.
 
+Increase a digit means always to resets all digits before. For example - 3.0.10.20 -> 3.1.0.0
 
 This numbering system started with Mapbender3 version 3.0.0.0
 
