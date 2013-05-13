@@ -1,9 +1,9 @@
 .. _wms_loader:
 
-WMS-Loader
+WMS Loader
 ***********************
 
-Opens a dialog in  wich a WMS can be loaded via the getCapabilities-Request.
+Opens a dialog in  which a WMS can be loaded via the getCapabilities-Request.
 You can load WMS 1.1.1 and  WMS 1.3.0
 
 Class, Widget & Style
@@ -20,9 +20,9 @@ Configuration
 
    target: ~                            # Id of Map element to query
    tooltip: 'WMS Loader'                # text to use as tooltip
-   autoOpen: false			 # true/false open when application is started, default false 
-   defaulformat: 'png'		         # default format is image/png
-   defaultinfoformat: 'html'	         # default infoformat is text/html
+   autoOpen: false                      # true/false open when application is started, default false 
+   defaultformat: 'png'                 # default format is image/png, further possibilities: image/gif, image/jpeg
+   defaultinfoformat: 'html'            # default infoformat is text/html, further possibilities: text/xml, text/plain
 
 HTTP Callbacks
 ==============
