@@ -3,12 +3,12 @@
 Layertree - Table of Content
 ****************************
 
-The layertree diplays the layer. The Table of Content allows you to de/activate layer in the map. 
+The layertree diplays the layers and Service folders. The layertree allows you to de/activate layer in the map, shows metadata, . 
 
 Class, Widget & Style
 ======================
 
-* Class: Mapbender\\CoreBundle\\Element\\layertree
+* Class: Mapbender\\CoreBundle\\Element\\Layertree
 * Widget: mapbender.element.layertree.js
 * Style: mapbender.elements.css
 
