@@ -14,5 +14,6 @@ Bundle Documentation
    bundles/Mapbender/MonitoringBundle/index
    bundles/Mapbender/ManagerBundle/index
    bundles/FOM/UserBundle/index
+   bundles/OwsProxy3/CoreBundle/index
    book/development/bundle
 
