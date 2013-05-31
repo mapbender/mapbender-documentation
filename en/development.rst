@@ -6,6 +6,7 @@ The Developer's Book
 
    book/development/introduction
    book/development/apidocumentation
+   book/development/frontend_architecture
    book/development/elements
    book/development/requestresponse
    book/development/bundle
