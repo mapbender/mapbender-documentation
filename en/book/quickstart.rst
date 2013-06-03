@@ -78,13 +78,13 @@ Symfony offers a developer mode with lot of information about your application (
 Welcome page
 ================================================================================
 
-#. The Welcome page lists applications that are public and can be used by all users. The applications are listed with a litte screenshot, a title and a description.
+#. The Welcome page lists applications that are public and can be used by all users. The applications are listed with a little screenshot, a title and a description.
 
 #. You can open an application by click on the title or the start button.
 
 #. Before you can administrate with Mapbender you have to login to get access to the administration.
 
-#. Click on the Mapbender logo at the left to open the login page.
+#. Click on Login at right-top to open the login page.
 
 #. You can login with the user that was generated on installation. It can be :guilabel:`root` and password :guilabel:`root` (This is the default user and password that you get after installation of Mapbender on OSGeo-Live. Please change the root password if you want to run a productive environment. Please don't delete the user :guilabel:`root`.).
   
@@ -97,16 +97,16 @@ After successful login you are directed to the :guilabel:`Mapbender administrati
 
 Application overview
 ================================================================================
-After the login you are directed to the :guilabel:`Application overview` with a list of applications you are allowed to access.
+After the login you are directed to the :guilabel:`Applications` with a list of applications you are allowed to access.
 
 The Application overview provides the following functionality:
 
  * title and description
  * link to the application
- * icon to publish/unpublish the application
- * Button to edit the application 
- * Button to delete the application 
- * Button to create a new application 
+ * button to edit the application 
+ * button to publish/unpublish the application
+ * button to delete the application 
+ * button to create a new application 
 
   .. NOT IMPLEMENTED YET: In Mapbender you have template applications, that you can use to set up your own applications.
 
@@ -119,17 +119,15 @@ Create an individual application
 
 Create a new application by providing basic information about your application. After that you use the edit mode to add elements, layers and security.
 
-#. choose :menuselection:`Applications --> Button Create new application`
+#. choose :menuselection:`Applications --> Button New Application`
 
-#. define a Title and description for your application
+#. define a title and description for your application
 
 #. define an URL title which will be used in the URL to open te application. It can be the same as the title
 
-#. choose a template from the list of templates. This will define the style of your application
-
 #. choose the button **Create** to create the application
 
-#. go to the link :menuselection:`Application Management --> Edit application elements` and select the new application
+#. click the pencil button at the new application to edit the application
 
 #. your application is set up. Now you need a WMS to be displayed in your application. This will be described in the section **WMS Management**.
 
@@ -142,10 +140,10 @@ Create a new application by providing basic information about your application. 
   ================================================================================
  You also can create a new application by copying an existing application. Go t  o :menuselection:`Application Management --> Rename/copy application`, choose the application you want to copy and define a name for the new application. This functionality not only copies the application, it also copies the services of the application and the user/groups (optional). That means that the new application already has map services and the user and groups which have access to the copied application will have access to the new application too.
 
+
 Delete an application
 ================================================================================
-You can delete an application from the :menuselection:`Applications` with the Button Delete. Only the application is deleted, not the services which were part of the application. 
-You are not allowed to delete applications which also belong to other users.
+You can delete an application from the menu item :menuselection:`Applications` with the x-Button.
 
 ..
   NOT IMPLEMENTED YET
@@ -183,13 +181,13 @@ A WMS returns an XML-file when the getCapabilities document is requested. This i
 
 .. tip:: You should first check the Capabilities document in your browser before you try to load it with Mapbender
 
-#. Choose :menuselection:`Services --> Button Add`. Link to the WMS getCapabilities URL in the text field :menuselection:`Originurl` 
+#. Choose menu item :menuselection:`Services --> Add Service` or use the +-Button. Link to the WMS getCapabilities URL in the text field :menuselection:`Serviceurl`. 
 
 #. Enter username and password if your service needs authentication.
 
 #. Hit **Load** to load the Service to the repository.
 
-#. After successfull registration of the service Mapbender will display an overview on the information that was provides by the service.
+#. After successfull registration of the service Mapbender will display an overview on the information that was provided by the service.
 
   .. image:: ../../figures/mapbender3_wms_load.png
      :scale: 80
@@ -217,9 +215,13 @@ Add Service to Application
 ==========================
 After the successfull upload of a WMS you want to add your WMS to an application.
 
-#. Choose :menuselection:`Applications --> Layers--> Button Add Source`. 
+#. Choose :menuselection:`Applications --> Choose edit your Application --> Choose Tab Layers`. 
 
-#. Select a Source and add it to your application.
+#. Click on the +-button to add a layerset, which represents a collection of layers (a possible name could be main)
+
+#. Now you can add layer to the layerset
+
+#. Click on the +-button at your new layerset to add a Service.
 
 #. You can change the order of the Services in your application by drag & drop.
 	
@@ -230,9 +232,9 @@ Configure your WMS
 ================================================================================
 You can configure the WMS for your specific application. Maybe you don't want to provide all layers or you want to change the order or titles of the layer or disable the feature info or change the maxscale for a layer.
 
-#. Choose :menuselection:`Applications --> Layers--> Button Edit Source Instance` to configure a the Instance.
+#. Choose :menuselection:`Applications --> edit-Button --> Layers--> edit-Button to configure the Service Instance`.
 
-#. You see a table with the layers of the Service. 
+#. You will see a table with the layers of the Service. 
 
 #. You can change the order of the layers via drag & drop
 
@@ -245,18 +247,26 @@ Service configuration
 * infoformat - choose the format for getFeatureInfo-Requests
 * exceptionformat - choose the format for exceptions
 * opacity - choose opacity in percent
+* visible
+* proxy
+* transparency
 * tiled - you can request a WMS in tiles, default is not tiled
 
 
 Layer configuration
 
-* on/off - enable/disable a layer for this individual application
-* sel - selectable in geodata explorer
-* sel_default - layer is active when the application starts
-* info / info default - layer provides feature info requests, info default activates the feature info functionality
+* title - layer title from Service information
+* active (on/off) - enable/disable a layer for this individual application
+* select on - selectable in geodata explorer
+* select allow - layer is active when the application starts
+* info on - layer provides feature info requests, info default activates the feature info functionality
+* info allow 
 * minscale / maxscale - the scale range in which the layer should be displayed, 0 means no scale limitation
+* toggle
+* reorder
+* ... -> opens a dialog with more information
+* name
 * style - if a WMS provides more than one style you can choose a different style than the default style
-* prio - defines the order in which the layer are drawn
 
 
 Add Elements to your application
