@@ -107,6 +107,7 @@ The Application overview provides the following functionality:
  * button to publish/unpublish the application
  * button to delete the application 
  * button to create a new application 
+ * with the filter textfield you can search for applications
 
   .. NOT IMPLEMENTED YET: In Mapbender you have template applications, that you can use to set up your own applications.
 
@@ -199,9 +200,9 @@ Germany demo
 
 http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS 
 
-WhereGroup OSM WMS (see also http://www.wheregroup.com/de/osmwms)
+WhereGroup OSM WMS
 
-http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.1.1
+http://osm-demo.wheregroup.com/service
 
 Omniscale OSM WMS (see also http://osm.omniscale.de/)
 http://osm.omniscale.net/proxy/service?
@@ -300,13 +301,20 @@ Examples for elements Mapbender3 offers:
 * Coordinates Display
 * Copyright
 * Feature Info
+* GPS-Position
 * Legend
+* Layertree - Table of Content
 * Map
+* Overview
+* PrintClient
 * Ruler Line/Area
 * Scale Selector
+* ScaleBar
+* Search Router
 * SRS Selector
-* Table of Content
-* Navigation Bar
+* Spatial Reference System Selector (SRS Selector)
+* Navigation Toolbar (Zoombar)
+* WMS Loader
 
 You find detailed information on every element at the `MapbenderCoreBundle element documentation <../../../documentation/en/bundles/Mapbender/CoreBundle/index.html>`_.
 
@@ -314,11 +322,11 @@ You find detailed information on every element at the `MapbenderCoreBundle eleme
 Try it yourself
 ================================================================================
 
-* add a map to the content of your application
-* add a table of content to the content of your application
-* add a button that opens the table of content to the top of your application
-* add the navigation to the content
-* add a copyright and change the copyright text
+* add a Map Element to the content of your application
+* add a Layertree to the content of your application
+* add a button that opens the Layertree to the top of your application
+* add the Navigation Toolbar to the content
+* add a Copyright and change the copyright text
 * add a SRS Selector to the footer
 
 
