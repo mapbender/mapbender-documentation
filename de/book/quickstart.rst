@@ -95,17 +95,17 @@ Nach erfolgreicher Anmeldung werden Sie zur :guilabel:`Mapbender Administration`
 
 Anwendungsübersicht
 ================================================================================
-Nach der Anmeldung werden Sie zum :guilabel:`Application overview` mit einer Liste von für Sie freigegebenen Anwendungen weiter geleitet.
+Nach der Anmeldung werden Sie zum :guilabel:`Applications` mit einer Liste von für Sie freigegebenen Anwendungen weiter geleitet.
 
 Die Anwendungsübersicht bietet folgende Funktionen:
 
 
  * Titel und Beschreibung
  * Ein Link zur Anwendung
- * Ein Icon zum Veröffentlichen der Anwendung
  * Eine Schaltfläche um die Anwendung zu bearbeiten
- * Eine Schaltfläche um die Anwendung zu löschen
+ * Ein Icon zum Veröffentlichen der Anwendung
  * Eine Schaltfläche um eine neue Anwendung anzulegen
+ * Eine Schaltfläche um die Anwendung zu löschen
 
   .. NOCH NICHT IMPLEMENTIERT: In Mapbender gibt es Anwendungsvorlagen, mit denen eigene Anwendungen erstellt werden können.
 
@@ -118,17 +118,15 @@ Erstellen Sie eine eigene Anwendung
 
 Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen eingeben. Anschließend können die den Editiermodus benutzen, um Elemente, Layer und Sicherheitseinstellungen zu verwalten.
 
-#. Wählen Sie :menuselection:`Applications --> Button Create new application`
+#. Wählen Sie :menuselection:`Applications --> New Application`
 
 #. Geben Sie einen Titel und eine Beschreibung der Anwendung ein
 
 #. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu starten. Er kann identisch zum Titel sein.
 
-#. Wählen Sie eine Vorlage aus der Liste aus. Diese definiert das Aussehen der Anwendung.
-
 #. Betätigen Sie die Schaltfläche **Create**, um die Anwendung zu erzeugen.
 
-#. Gehen Sie zu :menuselection:`Application Management --> Edit application elements` und wählen Sie die neue Anwendung aus.
+#. Gehen Sie zu :menuselection:`Edit-Button` neben der Anwendung und wählen Sie die neue Anwendung aus.
 
 #. Ihre Anwendung wurde erstellt. Jetzt brauchen Sie WMSs, die in Ihrer Anwendung dargestellt werden. Dies wird im Abschnitt **WMS Management** beschrieben.
 
@@ -139,17 +137,17 @@ Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen e
   NOCH NICHT IMPLEMENTIERT
   Kopieren und Umbenennen einer Anwendung
   ================================================================================
- Sie können eine neue Anwendung auch durch Kopieren einer vorhandenen erzeugen. Gehen Sie zu :menuselection:`Application Management --> Rename/copy application`, wählen die Anwendung, die Sie kopieren möchten und geben einen Namen für die neue Anwendung ein. Diese Funktion kopiert sowohl die Anwendung als auch die Dienste der Anwendung und die Benutzer/Gruppen (optional). Die neue Anwendung hat dadurch bereits die Kartendienste eingebunden und die Benutzer und Gruppen der kopierten Anwendung haben ebenfalls Zugriff auf die neue Anwendung.
+ Sie können eine neue Anwendung auch durch Kopieren einer vorhandenen erzeugen. Gehen Sie zu :menuselection:`Applications --> Rename/copy application`, wählen die Anwendung, die Sie kopieren möchten und geben einen Namen für die neue Anwendung ein. Diese Funktion kopiert sowohl die Anwendung als auch die Dienste der Anwendung und die Benutzer/Gruppen (optional). Die neue Anwendung hat dadurch bereits die Kartendienste eingebunden und die Benutzer und Gruppen der kopierten Anwendung haben ebenfalls Zugriff auf die neue Anwendung.
 
 Löschen einer Anwendung
 ================================================================================
-Sie können eine Anwendung aus der Liste :menuselection:`Applications` über die Schaltfläche Delete löschen. Nur die Anwendung wird gelöscht, nicht die Dienste, die in der Anwendung eingebunden waren.
+Sie können eine Anwendung aus der Liste :menuselection:`Applications` über den :menuselection:`+-button` löschen. Nur die Anwendung wird gelöscht, nicht die Dienste, die in der Anwendung eingebunden waren.
 
 ..
   NOCH NICHT IMPLEMENTIERT
   Exportieren einer Anwendung
   ================================================================================
-  Sie können eine Anwendung als SQL-Skript über :menuselection:`Application Management --> Export  application (SQL)` exportieren. Das SQL-Skript beinhaltet alle Definitionen der Anwendungselemente und kann in eine andere Mapbenderinstallation importiert werden.
+  Sie können eine Anwendung als SQL-Skript über :menuselection:`Applications --> Export  application (SQL)` exportieren. Das SQL-Skript beinhaltet alle Definitionen der Anwendungselemente und kann in eine andere Mapbenderinstallation importiert werden.
 
   .. tip:: Der Export einer Anwendung beinhaltet weder die Informationen über die Dienste noch über die Benutzer und Gruppen.
 
@@ -168,9 +166,9 @@ Mapbender kann verschiedene Dienste wie OGC WMS, OGC WMTS oder OGC WFS verwalten
 
 #. Typ (z.B. WMS, WMTS), Titel und Beschreibung bieten eine erste Information über den Dienst.
 
-#. Per Klick auf die Schaltfläche :menuselection:`View` bekommen Sie weitere Informationen über die Quelle.
+#. Per Klick auf den :menuselection:`View-Button` bekommen Sie weitere Informationen über die Quelle.
 
-#. Über die Schaltfläche :menuselection:`Delete` können Sie die Datenquelle aus ihrem Repository löschen.
+#. Über den :menuselection:`Delete-Button` können Sie die Datenquelle aus ihrem Repository löschen.
 
 
 Laden von Web Map Services
@@ -181,7 +179,7 @@ Ein WMS liefert eine XML-Datei, wenn das getCapabilities-Dokument angefordert wi
 
 .. tip:: Sie sollten das Capabilities-Dokument zuerst in Ihrem Browser überprüfen, bevor Sie versuchen, es in Mapbender zu laden.
 
-#. Wählen Sie :menuselection:`Services --> Button Add`. Geben Sie den Link zur WMS getCapabilities URL in das Textfeld :menuselection:`Originurl` ein.
+#. Wählen Sie :menuselection:`Services --> Add Service`. Geben Sie den Link zur WMS getCapabilities URL in das Textfeld :menuselection:`Originurl` ein.
 
 #. Geben Sie Nutzername und Kennwort ein, sofern der Dienst Authentifizierung benötigt.
 
@@ -216,9 +214,13 @@ Fügen Sie Dienste zur Anwendung hinzu
 ===========================================
 Nach dem erfolgreichen Hochladen eines WMS möchten Sie diesen zu einer Anwendung hinzufügen.
 
-#. Wählen Sie :menuselection:`Applications --> Layers--> Button Add Source`.
+#. Wählen Sie :menuselection:`Applications --> Edit-Button --> Layers --> Edit-Button`.
 
-#. Wählen Sie eine Quelle und fügen sie der Anwendung hinzu.
+#. Wählen Sie den :menuselection:`+-button` um ein layerset hinzuzufügen. Ein Layerset präsentiert mehrere Layer (ein möglicher Name könnte main sein)
+
+#. Jetzt können Sie Dienste zum layerset hinzufügen.
+
+#. Wählen Sie den :menuselection:`+-button` um dem neuen layerset Dienste hinzuzufügen.
 
 #. Sie können die Reihenfolge der Dienste in Ihrer Anwendung über  drag & drop ändern.
 	
@@ -229,7 +231,7 @@ Konfigurieren von Diensten
 ================================================================================
 Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie nicht alle Layer anbieten oder Sie möchten die Reihenfolge oder den Titel des Layers ändern, die Info-Abfrage für einzelne Layer verhindern oder den Maximalmaßstab ändern.
 
-#. Wählen Sie :menuselection:`Applications --> Layers--> Button Edit Source Instance`, um eine Instanz zu konfigurieren.
+#. Wählen Sie :menuselection:`Applications --> edit-Button --> Layers --> edit-Button`, um eine Instanz zu konfigurieren.
 
 #. Sie sehen eine Tabelle mit den Layern des Dienstes.
 
@@ -244,28 +246,37 @@ Servicekonfiguration
 * infoformat - wählen Sie das Format für getFeatureInfo-Requests
 * exceptionformat - wählen Sie das Format für exceptions
 * opacity - wählen Sie die Opazität (Deckkraft) in Prozent
+* visible
+* proxy
+* transparency
 * tiled - Sie können eine WMS in Kacheln anfordern, Standard ist nicht gekachelt.
 
 
 Layerkonfiguration
 
-* on/off - schaltet einen Layer in dieser Anwendung ein/aus
-* sel - auswählbar im Geodatenexplorer (Layerbaum)
-* sel_default - Layer ist bei Anwendungsstart aktiv
-* info / info default - der Layer reagiert auf feature info requests, info default aktiviert diese Funktionalität in der Anwendung
+* title - layer title von der Service Information
+* active (on/off) - schaltet einen Layer in dieser Anwendung ein/aus
+* select on - auswählbar im Geodatenexplorer (Layerbaum)
+* select allow - Layer ist bei Anwendungsstart aktiv
+* info on - der Layer reagiert auf feature info requests, info default aktiviert diese Funktionalität in der Anwendung
+* info allow 
 * minscale / maxscale - Der Maßstabsbereich, in dem der Layer angezeigt wird. 0 bedeutet keine Maßstabsbeschränkung
-* style - falls eine WMS mehr als eine style-Definition im Layer anbietet, können Sie einen anderen als den default-Style wählen
-* prio - definiert die Reihenfolge, in welcher die Layer gezeichnet werden
+* toggle
+* reorder
+* ... -> öffnet einen Dialog mit weiteren Informationen
+* name
+* style - wenn ein WMS mehr als einen Style anbietet, können Sie einen anderen Style als den default Style wählen.
+
 
 
 Fügen Sie Elemente zu Ihrer Anwendung hinzu
 =================================================
-Mapbender biete eine Reihe von Elementen. Sie können diese Anwendung in verschiedene Bereiche (top, content, footer) ihrer Anwendung hinzufügen.
+Mapbender biete eine Reihe von Elementen. Sie können diese Anwendung in verschiedene Bereiche (Toolbar, Sidepane, Content, Footer) ihrer Anwendung hinzufügen.
 
   .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Wählen Sie :menuselection:`Applications --> Elements--> Button +` um eine Übersicht über die Mapbender3-Elemente zu erhalten.
+#. Wählen Sie :menuselection::menuselection:`Applications --> edit-Button --> Layers --> +-Button` um eine Übersicht über die Mapbender3-Elemente zu erhalten.
 
 #. Wählen Sie ein Element aus der Liste aus.
 
@@ -289,13 +300,20 @@ Beispiele für Elemente, die Mapbender3 anbietet:
 * Coordinates Display
 * Copyright
 * Feature Info
+* GPS-Position
 * Legend
+* Layertree - Table of Content
 * Map
+* Overview
+* PrintClient
 * Ruler Line/Area
 * Scale Selector
+* ScaleBar
+* Search Router
 * SRS Selector
-* Table of Contents
-* Navigation Toolbar
+* Spatial Reference System Selector (SRS Selector)
+* Navigation Toolbar (Zoombar)
+* WMS Loader
 
 Sie finden detaillierte Informationen zu jedem Element unter `MapbenderCoreBundle element documentation <../../../documentation/en/bundles/Mapbender/CoreBundle/index.html>`_.
 
@@ -303,11 +321,11 @@ Versuchen Sie es selber
 ================================================================================
 
 * Fügen Sie eine Karte (Map-Element) zum content-Bereich Ihrer Anwendung hinzu.
-* Fügen Sie ein Inhaltsverzeichnis (Table of Contents oder Layertree) zum content-Bereich Ihrer Anwendung hinzu.
-* Fügen Sie einen Butten hinzu, der das Inhaltsverzeichnis öffnet.
-* fügen Sie das Navigationselement in den content-Bereich hinzu
-* fügen Sie ein copyright-Element hinzu und ändern Sie den Copyright-Text.
-* fügen Sie einen SRS Selector in den footer-Bereich ein.
+* Fügen Sie ein Inhaltsverzeichnis (Layertree) zum content-Bereich Ihrer Anwendung hinzu.
+* Fügen Sie einen Butten hinzu, der das den Layertree öffnet.
+* Fügen Sie das Navigationselement in den content-Bereich hinzu
+* Fügen Sie ein copyright-Element hinzu und ändern Sie den Copyright-Text.
+* Fügen Sie einen SRS Selector in den footer-Bereich ein.
 
 
 
@@ -324,7 +342,7 @@ Ein Benutzer hat Berechtigungen, um auf eine oder mehrere Anwendungen und Dienst
 Benutzer anlegen
 ================================================================================
 
-#. Um einen Benutzer anzulegen, gehen Sie zu :guilabel:`Users -> Button Create new user`.
+#. Um einen Benutzer anzulegen, gehen Sie zu :guilabel:`New User` oder wählen Sie den :menuselection:`+-Button`.
 
 #. Wählen Sie einen Namen und ein Kennwort für Ihren Benutzer. 
 
@@ -338,7 +356,7 @@ Benutzer anlegen
 
 Gruppen anlegen
 ================================================================================
-#. Erzeugen Sie eine Gruppe über :menuselection:`Users --> Groups --> Button Create new group`. 
+#. Erzeugen Sie eine Gruppe über  :guilabel:`New Group`. 
 
 #. Wählen Sie einen Namen und eine Beschreibung für Ihre Gruppe.
 
@@ -348,11 +366,11 @@ Gruppen anlegen
 Benutzer einer Gruppe zuweisen
 ================================================================================
 
-#. Weisen Sie einen Benutzer einer Gruppe über :menuselection:`Users --> Group --> Edit your Group` zu. 
+#. Weisen Sie einen Benutzer einer Gruppe über :guilabel:`Users --> Groups` zu. 
 
 #. Wählen Sie einen oder mehrere Benutzer über :menuselection:`Users` aus, die Sie der Gruppe zuweisen wollen.
 
-#. Weisen Sie einen Benutzer über :menuselection:`Users --> Users --> Edit --> Groups` einer Gruppe zu.
+#. Weisen Sie einen Benutzer über :menuselection:`Users --> Edit-Button--> Groups` einer Gruppe zu.
 
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
      :scale: 80
@@ -366,7 +384,7 @@ Mapbender3 bietet verschiedene Rollen an, die Sie einer Gruppe zuweisen können.
 * Kann Benutzer & Gruppen administrieren
 * Kann Anwendungen administrieren
 
-#. Weisen Sie einer Gruppe eine Rolle über :menuselection:`Users --> Group --> Edit your Group --> Roles` zu.
+#. Weisen Sie einer Gruppe eine Rolle über :menuselection:`Users --> Edit your User --> Security` zu.
 
   .. image:: ../../figures/mapbender3_roles.png
      :scale: 80 
@@ -374,13 +392,11 @@ Mapbender3 bietet verschiedene Rollen an, die Sie einer Gruppe zuweisen können.
 
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 ============================================================
-#. Bearbeiten Sie Ihre Anwendung über :menuselection:`Applications --> Edit`
+#. Bearbeiten Sie Ihre Anwendung über :menuselection:`Application --> Edit-Button`.
 
 #. Wählen Sie :menuselection:`Security`
 
-#. Veröffentlichen Sie Ihre Anwendung oder ziehen Sie die Veröffentlichung zurück
-
-#. Setzten Sie Berechtigungen wie View, Edit, Delete, Undelete, Operator, Master, Owner 
+#. Setzten Sie Berechtigungen wie view edit delete operator master owner 
 
 #. Weisen Sie eine Anwendung einem Benutzern/einer Gruppe zu
 
