@@ -120,7 +120,7 @@ Create an individual application
 
 Create a new application by providing basic information about your application. After that you use the edit mode to add elements, layers and security.
 
-#. choose :menuselection:`Applications --> Button New Application`
+#. choose :menuselection:`Applications --> New Application`
 
 #. define a title and description for your application
 
@@ -128,7 +128,7 @@ Create a new application by providing basic information about your application. 
 
 #. choose the button **Create** to create the application
 
-#. click the pencil button at the new application to edit the application
+#. click the :menuselection:`Edit-Button` at the new application to edit the application
 
 #. your application is set up. Now you need a WMS to be displayed in your application. This will be described in the section **WMS Management**.
 
@@ -144,13 +144,13 @@ Create a new application by providing basic information about your application. 
 
 Delete an application
 ================================================================================
-You can delete an application from the menu item :menuselection:`Applications` with the x-Button.
+You can delete an application from the menu item :menuselection:`Applications` with the :menuselection:`+-button`.
 
 ..
   NOT IMPLEMENTED YET
   Export an application
   ================================================================================
-  You can export an application as SQL with :menuselection:`Application Management --> Export  application (SQL)`. The SQL contains all the definitions of the application elements and can be imported in another Mapbender installation. 
+  You can export an application as SQL with :menuselection:`Applications --> Export  application (SQL)`. The SQL contains all the definitions of the application elements and can be imported in another Mapbender installation. 
 
   .. tip:: The export of an application does not contain the service information and the informations about user and group access.
 
@@ -169,9 +169,9 @@ Service Repository overview
 
 #. Type (f.e WMS, WMTS), Title, Description offer first information about the services.
 
-#. On click on the button :menuselection:`View` you get further information about the source.
+#. On click on the button :menuselection:`View-Button` you get further information about the source.
 
-#. With the button :menuselection:`Delete` you can delete the source from your repository.
+#. With the button :menuselection:`Delete-Button` you can delete the source from your repository.
 
 
 Loading Web Map Services
@@ -216,13 +216,13 @@ Add Service to Application
 ==========================
 After the successfull upload of a WMS you want to add your WMS to an application.
 
-#. Choose :menuselection:`Applications --> Choose edit your Application --> Choose Tab Layers`. 
+#. Choose :menuselection:`Applications --> edit-Button --> Layers --> Edit-Button`. 
 
-#. Click on the +-button to add a layerset, which represents a collection of layers (a possible name could be main)
+#. Click on the :menuselection:`+-button` to add a layerset, which represents a collection of layers (a possible name could be main)
 
 #. Now you can add layer to the layerset
 
-#. Click on the +-button at your new layerset to add a Service.
+#. Click on the :menuselection:`+-button` at your new layerset to add a Service.
 
 #. You can change the order of the Services in your application by drag & drop.
 	
@@ -233,7 +233,7 @@ Configure your WMS
 ================================================================================
 You can configure the WMS for your specific application. Maybe you don't want to provide all layers or you want to change the order or titles of the layer or disable the feature info or change the maxscale for a layer.
 
-#. Choose :menuselection:`Applications --> edit-Button --> Layers--> edit-Button to configure the Service Instance`.
+#. Choose :menuselection:`Applications --> edit-Button --> Layers --> edit-Button` to configure the Service Instance.
 
 #. You will see a table with the layers of the Service. 
 
@@ -272,16 +272,16 @@ Layer configuration
 
 Add Elements to your application
 ================================
-Mapbender offers a set of elements. You can add the elements to your application. You have different regions (top, content, footer) to which you can add elements.
+Mapbender offers a set of elements. You can add the elements to your application. You have different regions (Toolbar, Sidepane, Content, Footer) to which you can add elements.
 
   .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Choose :menuselection:`Applications --> Elements--> Button +` to get an overview over the elements Mapbender3 provides.
+#. Choose :menuselection:`Applications --> edit-Button --> Layers --> Button +` to get an overview over the elements Mapbender3 provides.
 
 #. Choose an element from the list.
 
-#. Notice that you have different areas in your application. Make sure to add the element to a regio that makes sense.
+#. Notice that you have different areas in your application. Make sure to add the element to a region that makes sense.
 
 #. Have a look at your application. Open your application from :menuselection:`Applications --> Applications Overview`
 
@@ -343,7 +343,7 @@ A user has permissions to access one or a set of applications and services.
 Create a user
 ================================================================================
 
-#. To create a user go to :guilabel:`Users -> Button Create new user`.
+#. To create a user go to :guilabel:`New User` or click the :menuselection:`+-Button`.
 
 #. Choose a name and a password for your user. 
 
@@ -357,7 +357,7 @@ Create a user
 
 Create a group
 ================================================================================
-#. Create a group by :menuselection:`Users --> Groups --> Button Create new group`. 
+#. Create a group by :guilabel:`New Group`. 
 
 #. Define a name and a description for your group.
 
@@ -367,12 +367,12 @@ Create a group
 Assign users to group
 ================================================================================
 
-#. Assign a user to a group by :menuselection:`Users --> Group --> Edit your Group`. 
+#. Assign a user to a group by :guilabel:`Users --> Groups`. 
 
 #. Choose one or more users you want to add to the group at :menuselection:`Users`.
 
-#. Assign a user by :menuselection:`Users --> Users --> Edit --> Groups` to a group. 
-
+#. Assign a user by :menuselection:`Users --> Edit-Button--> Groups` to a group. 
+http://doc.mapbender3.org/en/book/quickstart.html
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
      :scale: 80
  
@@ -385,7 +385,7 @@ Mapbender3 provides different roles you can assign to a group.
 * Can administrate users & groups 
 * Can administrate applications 
 
-#. Assign roles to a group by :menuselection:`Users --> Group --> Edit your Group --> Roles`.
+#. Assign roles to a user by :menuselection:`Users --> Edit your User --> Security`.
 
   .. image:: ../../figures/mapbender3_roles.png
      :scale: 80 
@@ -393,15 +393,13 @@ Mapbender3 provides different roles you can assign to a group.
 
 Assign an Application to a User/Group
 ======================================
-#. Edit your application by :menuselection:`Applications --> Edit`
+#. Edit your application by :menuselection:`Application --> Edit-Button`.
 
 #. Choose :menuselection:`Security`
 
-#. Publish/unpublish your application
+#. Set permission like view edit delete operator master owner 
 
-#. Set permission like View Edit Delete Undelete Operator Master Owner 
-
-#. Assign an application to a user/group
+#. Assign a user/group to the application
 
 #. Test your configuration!
 
