@@ -65,6 +65,32 @@ Increase a digit means always a reset for all digits before. For example - 3.0.1
 
 This numbering system started with Mapbender3 version 3.0.0.0
 
+How to build a new Mapbender3 build
+************************************
+
+* update version number in parameters.yml and push
+
+.. code-block:: bash
+
+ git clone -b design git@github.com:mapbender/mapbender-starter mapbender-build
+ cd mapbender-build
+ git submodule update --init --recursive
+ phing deps
+ phing tarball
+ cd /data/git/mapbender-build/artefacts
+ unzip
+ add documentation
+ delete parameters.yml
+ create tar.gz with right name for example mapbender3-3.0.0.1.tar.gz
+ move file to /sites/www.mapbender3.org/builds
+ update Roadmap and milestones
+ write release mail
+ 
+ 
+
+ 
+
+
 
 Documentation conventions
 **************************
