@@ -36,8 +36,13 @@ The css-files are located in application/mapbender/src/Mapbender/CoreBundle/Reso
 
 .. code-block:: bash
 
- cd mapbender/src/Mapbender/CoreBundle/Resources/public/css
- cp mapbender.template.base.css mapbender.template.demo.css
+ cd fom/src/FOM/CoreBundle/Resources/public/css/frontend
+
+ # css for frame (container position)
+ cp fullscreen.css demo.css
+
+ # css for colors, fonts, icons
+ cp mapbender3_theme.css mapbender3_theme_demo.css
 
 
 Register your template
@@ -55,15 +60,40 @@ Finally, add the fully qualified Template class name to your Bundles setup class
 
 .. code-block:: php
 
-    class MapbenderCoreBundle extends MapbenderBundle
+    public function getAssets($type)
     {
-        public function getTemplates()
-        {
-            return array(
-                'Mapbender\CoreBundle\Template\Demo'
-            );
-        }
+        parent::getAssets($type);
+        $assets = array(
+            'css' => array('@FOMCoreBundle/Resources/public/css/frontend/mapbender3_theme_demo.css,@FOMCoreBundle/Resources/public/css/frontend/demo.css'),
+            'js' => array(),
+        );
+
+        return $assets[$type];
     }
+
+
+.. code-block:: php
+
+    public function render($format = 'html', $html = true, $css = true,
+            $js = true)
+    {
+        $templating = $this->container->get('templating');
+        return $templating
+                        ->render('MapbenderCoreBundle:Template:demo.html.twig',
+                                 array(
+                            'html' => $html,
+                            'css' => $css,
+                            'js' => $js,
+                            'application' => $this->application));
+    }
+
+Edit your twig-file and refer to the new css-files
+
+.. code-block:: yaml
+
+  <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/mapbender3_theme.css') }}">
+  <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/fullscreen.css') }}">
+
 
 Use your new template in mapbender.yml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -93,10 +123,7 @@ Before your new template will show up you have to register it in
     {
         return array(
             'Mapbender\CoreBundle\Template\Fullscreen',
-            'Mapbender\CoreBundle\Template\Base',
-            'Mapbender\CoreBundle\Template\Base2',
-
-            'Workshop\DemoBundle\Template\Demotemplate'
+            'Mapbender\CoreBundle\Template\Demo'
             );
     }
 
