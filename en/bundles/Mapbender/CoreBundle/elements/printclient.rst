@@ -1,7 +1,7 @@
 ﻿PrintClient
 ***********************
 
-under construction
+PrintClient is still under construction. For now WGS84 is not supported.
 
 Class, Widget & Style
 ==============
@@ -17,38 +17,22 @@ Also see :doc:`button` for inherited configuration options.
 
 .. code-block:: yaml
 
-   target: map
-	autoOpen: false				# true/false open when application is started
-        printer:
-	    service:				# printer server url f.e. http://localhost/mbPrinterService.php
-	formats:				# define the formats
-	    a4:					# block concerning format a4
-		label:  A4			# label for format selectbox
-		orientations:			# define portrait and/or landscape 
-		    portrait:			# define portrait options
-		        label: Portrait		# label for orientation selectbox
-		        height: 21		# print frame height
-		        width: 17		# print frame width
-		    landscape:		
-		        label: Landscape
-		        height: 17
-		        width: 21
-		scales: [5000, 10000, 25000]	# define scales to choose from selectbox or if empty free scale can be defined in a textfield
-		quality_levels: 		# define quality levels in dpi, default is ?
-		    72: draft
-		    288: high quality
-		title_block_selector: true	# show/hide title block
-		rotatable: true			# textfield to define rotation
-		free_extent: true		# if true a checkbox will show up to print full map extent
-		optional_fields: 		# define optional fields
-		    editor:			# name of optional field
-                	type: text		# type (can be text/checkbox/selectbox)
-                	options:		# define options (can be required/label ...)
-                  	    required: false
-        	    approved:
-                 	type: checkbox
-                	options:
-                	    label: approved		
+    target: map                                 # id of a "map" element (if yml configuration - string 'map', if database configuration - id of a "map" element)
+    autoOpen: false				# true/false open when application is started, default: false
+    print_directly: true                	# true/false must be true for now
+    templates:
+        a4portrait:                             # template name, tamplate file name without file extension 
+            label: "A4 Portrait"                # template label at dialog
+            format: a4                          # format
+        a4landscape:                            # template name, tamplate file name without file extension 
+            label: "A4 Landscape"               # template label at dialog
+            format: a4                          # format
+    scales: [5000, 10000, 25000]        	# define scales to choose from selectbox or if empty free scale can be defined in a textfield
+    quality_levels:                             # define quality levels in dpi
+        72: draft                               # 72 - dpi value, draft - label
+        288: high quality                       # 288 - dpi value, draft - label
+    rotatable: true                             # true/false use true for rotation
+    optional_fields:            		# define optional fields - not yet implemented
 
 HTTP Callbacks
 ==============
