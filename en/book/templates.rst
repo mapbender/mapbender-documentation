@@ -131,6 +131,24 @@ Before your new template will show up you have to register it in
 
 Now your template should show up in the list.
 
+How to change your design?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You have to edit the following files, if want to change the design
+* twig - changes in the structure (like - delete a component like sidebar)
+* mapbender3_theme_demo.css - changes in the structure - position and size of content or footer
+* demo.css - changes of color, icons, fonts
+
+Notice: 
+In demo.css the beginning of the file is concerned for browser specific css. Do not edit this part. The part you can edit starts at row 430.
 
 
+Try this out
+~~~~~~~~~~~~
+* change the color of your icons
+* change the size of your icons
+* change the color of the toobar
+* use an image instead of a font-icon for your button
+* move the position of your overview to the left
+
+* Have a look at the workshop files to see how it works
 
