@@ -26,7 +26,7 @@ Get the code from the git repository. Cloning is easy, just issue the following 
 
 .. code-block:: yaml
 
-	git clone -b 3.0 git://github.com/mapbender/mapbender-starter
+	git clone -b design git://github.com/mapbender/mapbender-starter
 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-starter
