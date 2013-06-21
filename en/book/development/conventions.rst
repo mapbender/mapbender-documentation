@@ -65,6 +65,19 @@ Increase a digit means always a reset for all digits before. For example - 3.0.1
 
 This numbering system started with Mapbender3 version 3.0.0.0
 
+Release
+********
+
+* check whether all tickets are done
+* build a build - check documentation -> How to build a new Mapbender3 build 
+* update Roadmap and milestones
+* update demo.mapbender3.org
+* write release mail (mapbender-user / mapbender-dev / major releases osgeo-announce)
+* twitter
+
+
+
+
 How to build a new Mapbender3 build
 ************************************
 
