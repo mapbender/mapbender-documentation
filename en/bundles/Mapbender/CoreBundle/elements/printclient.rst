@@ -68,7 +68,7 @@ None.
 
 File location
 ===============
-** north arrow**
+**northarrow**
 The North arrow image is located at images/. you can replace the north arrow image an use a different image as northarrow.
 
 **print templates**
