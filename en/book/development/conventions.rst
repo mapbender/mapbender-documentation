@@ -65,6 +65,19 @@ Increase a digit means always a reset for all digits before. For example - 3.0.1
 
 This numbering system started with Mapbender3 version 3.0.0.0
 
+Release
+********
+
+* check whether all tickets are done
+* build a build - check documentation -> How to build a new Mapbender3 build 
+* update Roadmap and milestones
+* update demo.mapbender3.org
+* write release mail (mapbender-user / mapbender-dev / major releases osgeo-announce)
+* twitter
+
+
+
+
 How to build a new Mapbender3 build
 ************************************
 
@@ -76,17 +89,25 @@ How to build a new Mapbender3 build
  cd mapbender-build
  git submodule update --init --recursive
  phing deps
+ git tag -a v3.0.0.1 -m "Mapbender bugfix release Version 3.0.0.1 read changes https://github.com/mapbender/mapbender/issues?milestone=3"  
+ git tag
+ git push --tags
  phing tarball
  cd /data/git/mapbender-build/artefacts
- unzip
- add documentation
- delete parameters.yml
+ cd /data/git/mapbender-build/artefacts
+ sudo tar xfz mapbender3-3.0.0build0.tar.gz 
+ sudo chmod -R 777 mapbender3-3.0.0build0
+ sudo mv mapbender3-3.0.0build0 mapbender3-3.0.0.1
+ rm -R /data/git/mapbender-build/artefacts/mapbender3-3.0.0.1/app/config/parameters.yml
+ rm -R /data/git/mapbender-build/artefacts/mapbender3-3.0.0.1/documentation/
+ cp -R /data/git/mapbender-documentation/output/*  /data/git/mapbender-build/artefacts/mapbender3-3.0.0.1/documentation/
  create tar.gz with right name for example mapbender3-3.0.0.1.tar.gz
  move file to /sites/www.mapbender3.org/builds
  update Roadmap and milestones
- write release mail
- 
- 
+ write release mail (mapbender-user / mapbender-dev / major releases osgeo-announce)
+ twitter
+ update demo.mapbender3.org
+ tag version
 
  
 
