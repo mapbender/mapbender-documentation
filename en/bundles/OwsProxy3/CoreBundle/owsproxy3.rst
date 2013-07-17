@@ -21,9 +21,9 @@ The configuration is done in the file config.yml at the section ows_proxy3_core.
 		                        # at least 'host' and 'port' are needed for proxy definition
                 connecttimeout: 30      # default 30s
                 timeout: 60             # default 60s 
-		host:                   # host name of the proxy server
-		port:                   # port number of the proxy server
+		host:                   # host name of the proxy server (define a host for a connection via a proxy server)
+		port:                   # port number of the proxy server (define a host for a connection via a proxy server)
 		user:                   # user name for proxy server (set user for proxy server if needed)
 		password:               # password for proxy server (set password for proxy server if defined)
-		noproxy:                # list of hosts for connnections without proxy
+		noproxy:                # list of hosts for connnections without proxy server
 		    - host_a            # host name
