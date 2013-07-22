@@ -71,6 +71,7 @@ Configuring your Mapbender3 installation is made up of the following steps:
 * Initializing the role system
 * Creating the "root" user
 * Inserting srs parameters (EPSG code definition)
+* Loading the applications of the mapbender.yml to your database
 
 All can be done using the console utility provided by Symfony2, the
 Mapbender3 framework is built upon. There's a mayor caveat though you should
@@ -197,8 +198,8 @@ You have to set write permission to app/cache and app/logs.
  chmod -R o+w /var/www/mapbender3/app/logs
 
 
-Check config.php
-^^^^^^^^^^^^^^^^
+Check Symfonys config.php
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * http://localhost/mapbender3/config.php
 

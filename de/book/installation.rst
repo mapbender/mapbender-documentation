@@ -68,6 +68,7 @@ Um die Mapbender3-Installation zu konfigurieren, sind die folgenden Schritte not
 * Initialisieren der Rollen
 * Erzeugen des "root" Benutzers
 * Laden der SRS Parameters (EPSG-Code Definition)
+* Laden der Anwendungen der mapbender.yml Definition in die Datenbank
 
 Diese Schritte können mit dem console-Hilfsprogramm von Symfonie2 durchgeführt werden, auf dem das Mapbender3 Framework aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
 
@@ -102,7 +103,9 @@ Erzeugen der Datenbank
 
 Mit Symfony2 kann die Datenbank erzeugt werden. Beachten Sie, dass dazu die benötigten Datenbank-Benutzerrechte vorliegen. Rufen Sie folgenden Befehl mit dem console-Hilfsprogramm auf:
 
-    :command:`app/console doctrine:database:create` 
+.. code-block:: yaml
+
+   app/console doctrine:database:create
 
 
 Erzeugen des Datenbankschemas
@@ -110,14 +113,15 @@ Erzeugen des Datenbankschemas
 
 Erzeugen des Datenbankschemas über Symfony2:
 
-    :command:`app/console doctrine:schema:create` 
+.. code-block:: yaml
+
+    app/console doctrine:schema:create
 
 Sie müssen die Tabellen des Sicherheitssystems separat initialisieren:
 
 .. code-block:: yaml
 
   app/console init:acl
-
 
 Kopieren des bundles' assets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
@@ -126,7 +130,7 @@ Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien
 
 .. code-block:: yaml
 
-    :command:`app/console assets:install web` 
+    app/console assets:install web
 
 
 Sie können auch einen symbolischen Link verwenden, statt die Dateien zu kopieren.  Dies erleichtert die Bearbeitung der abhängigen Dateien in den bundle-Verzeichnissen.
@@ -141,8 +145,9 @@ Erzeugen des administrativen Benutzers
 
 Der erste Benutzer, der alle Privilegien hat, wird mit folgendem Kommando erzeugt:
 
-    :command:`app/console fom:user:resetroot` 
+.. code-block:: yaml
 
+    app/console fom:user:resetroot
 
 Dieses Kommando wird interaktiv alle notwendigen Informationen abfragen und den Benutzer in der Datenbank erzeugen.
 
@@ -154,19 +159,27 @@ Sie können auch den Modus silent verwenden, wenn Sie ein Skript nutzen möchten
 
 
 Einfügen den SRS Parameter
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Fügen Sie die Informationen zu SRS Parametern über den folgenden Aufruf in die Datenbank:
 
 .. code-block:: yaml
 
-    app/console doctrine:fixtures:load  --append
+    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
 
 
-Prüfen Sie die config.php und Schreibberechtigungen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Importieren von Anwendungen aus der mapbender.yml
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* http://localhost/mapbender3/config.php
+Sie können die Anwendungen, die in der mapbender.yml definiert sind, in die Datenbank importieren:
+
+.. code-block:: yaml
+
+    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
+
+Prüfen Sie die Schreibberechtigungen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
 
@@ -175,6 +188,11 @@ Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
  chmod -R o+w /var/www/mapbender3/app/cache
  chmod -R o+w /var/www/mapbender3/app/logs
 
+
+Prüfen Sie Symfony config.php
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* http://localhost/mapbender3/config.php
 
 Sie können nun Mapbender3 nutzen. Starten Sie Mapbender3 im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen.
 
