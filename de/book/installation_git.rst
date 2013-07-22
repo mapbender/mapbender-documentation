@@ -1,8 +1,19 @@
+.. _installation_git:
+
 Git-basierte Installation
 ##########################
 
 
 Wenn Sie sich an der Mapbender3-Entwicklung beteiligen möchten oder aus anderen Gründen die Git Repositories für Mapbender3 verwenden, folgen Sie dieser Anleitung statt des normalen Downloads. Diese Anleitung basiert auf Ubuntu 12.04.  Für andere Distributionen benötigen Sie vielleicht spezielle Pakete wie z.B. sphinx-common.
+
+Prüfen Sie zuerst die Systemvoraussetzungen :doc:`Installation <installation>`. 
+
+Für die Gitt-basierte Installation benötigen Sie:
+
+* git     - schauen Sie sich das Dokument :doc:`Quick primer on using Git <development/git>` an, um mit GIt vertraut zu werde 
+* cURL    - kommandozeilen basiertes Tool für die Übertragung von Daten über URL Syntax,unterstützt HTTP, HTTPS und mehr
+* pear    - PHP Erweiterung und Anwendungs-Repository 
+* Phing   - `Phing <http://www.phing.info/>`_ ist nicht GNU make; es ist ein  PHP Projekt Build System oder Build-Werkzeug basierend auf ​Apache Ant.
 
 
 Klonen des Repositories
@@ -10,11 +21,11 @@ Klonen des Repositories
 
 Klonen ist einfach, geben Sie das folgende Kommando auf Ihrer Shell ein:
 
-    :command:`git clone -b 3.0 git://github.com/mapbender/mapbender-starter`
+.. code-block:: yaml
 
+	git submodule update --init --recursive
 
-Entwickler, die Zugriff auf den Code haben möchten,  müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-starter
-
+Entwickler, die Zugriff auf den Code haben möchten, müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-starter
 
 
 Submodule abrufen
@@ -22,8 +33,21 @@ Submodule abrufen
 
 Die Starter-Applikation enthält nicht die Mapbender3 bundles, diese sind in einem eigenen Repository gespeichert und werden als Submodule in das Starter-Repository eingefügt. Rufen Sie das folgende Kommando im root-Verzeichnis ihres geklonten Repositories auf.
 
-    :command:`git submodule update --init --recursive`
+.. code-block:: yaml
 
+	git submodule update --init --recursive
+
+
+cURL
+====
+
+Das build-System benutzt cURL, um einige Remote-Komponenten abzurufen. Dazu müssen Sie das cURL-Kommandozeilen-Werkzeug installieren:
+
+.. code-block:: yaml
+
+	sudo apt-get install curl
+
+.. _phing:
 
 
 Build-Management mit Phing
@@ -32,45 +56,28 @@ Build-Management mit Phing
 
 Das Build-Management wird mit Phing vorgenommen, welches die Pear-Bibliothek benötigt. Zunächst muss Pear installiert werden.  Hier wird ein Debian-basiertes System verwendet:
 
-    :command:`sudo apt-get install php-pear`
+
+.. code-block:: yaml
+
+    sudo apt-get install php-pear
 
 
 Dann muss Pear gezeigt werden, wie ein Autodiscover seiner Repositories erzeugt wird.  Vorsichtshalber wird ein Update von Pear gemacht.
 
-    :command:`sudo pear upgrade-all`
+
+.. code-block:: yaml
+
+    sudo pear config-set auto_discover 1
+    sudo pear upgrade-all
 
 
 Dann wird Phing installiert:
 
 
-    :command:`sudo pear install phing/phing`
+.. code-block:: yaml
 
-
-Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
-
-Wenn Sie die Abhängigkeiten installiert haben, erhalten Sie einen Überblick der verfügbaren build-Tasks über:
-
-    :command:`phing -l`
-
-
-Der ersten Task, den Sie benötigen, ist der debs task. Dieser benötigt `Composer http://getcomposer.org`, um die Laufzeit-Abhängigkeiten wie Symfony und Doctrine zu installieren.
-    :command:`phing deps`
-
-
-
-cURL
-====
-
-Das build-System benutzt cURL, um einige Remote-Komponenten abzurufen. Dazu müssen Sie das cURL-Kommandozeilen-Werkzeug installieren:
-
-    :command:`sudo apt-get install curl` 
-
-
-
-Package Build Tools
-===================
-
-Dokumentation im Aufbau
+    sudo pear channel-discover pear.phing.info 
+    sudo pear install phing/phing
 
 
 PHPUnit
@@ -78,32 +85,182 @@ PHPUnit
 
 Symfony2 benötigt ein neueres PHPUnit als z.B. Ubuntu 12.04 enthält. Pear wird verwendet, um  PHPUnit zu installieren:
 
-    :command:`sudo pear install phpunit/PHPUnit`
+
+.. code-block:: yaml
+
+	sudo pear install phpunit/PHPUnit
+
+Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
+
+Wenn Sie die Abhängigkeiten installiert haben, erhalten Sie einen Überblick der verfügbaren build-Tasks über:
+
+.. code-block:: yaml
+
+    phing -l
 
 
+Der ersten Task, den Sie benötigen, ist der debs task. Dieser benötigt `Composer <http://getcomposer.org>`_, um die Laufzeit-Abhängigkeiten wie Symfony und Doctrine zu installieren.
+
+.. code-block:: yaml
+
+    phing deps
+
+
+Die nächsten Schritte der Installation
+**************************************
+
+Folgen Sie nun den Schritten, die unter :doc:`Installation <installation>` beschrieben werden.:
+
+* Anpassung der Konfigurationsdatei parameters.yml
+* Erzeugen der Datenbank
+* Erzeugen des Datenbank Schemas
+* Kopieren/Verlinken der Bundle' Assets in das öffentliche web-Verzeichnis
+* Initialisierung des Rollen-Systems
+* Erzeugen des "root"-Benutzers
+* Einfügen  der Projektions-Definitionen
+* Einfügen der Anwendungen aus der mapbender.yml in die Datenbank
+
+
+Referenzieren Sie auf der Verzeichnis web über einen Symbolischen Link
+**********************************************************************
+
+Als Entwickler werden Sie es bevorzugen, über einen Symbolischen Link auf das Verzeichnis web zu verweisen statt die DAteien zu kopieren. 
+Dies vereinfacht das Editieren von Assets innerhalb der Bundle-Verzeichnisse.
+
+.. code-block:: yaml
+
+    app/console assets:install web --symlink --relative
+
+
+Bitte beachten Sie, dass Sie die Option :command:`FollowSymLinks` in der Apache Directory Definition angeben müssen:
+
+
+.. code-block:: yaml
+
+  Alias /mapbender3 /var/www/mapbender3/web/
+  <Directory /var/www/mapbender3/web/>
+    Options MultiViews FollowSymLinks
+    DirectoryIndex app.php
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+
+Lernen Sie mehr über app/console
+********************************
+Die Symfony Console Komponenten ermöglichen es, kommandozeilen basierte Befehle zu erzeugen. Doctrine verfügt beispielsweise über einige kommandozeilen basierte Befehle, die Sie verwenden können.
+
+Lesen Sie mehr in der Symfony Dokumentation über `Console Commands <http://symfony.com/doc/current/components/console/usage.html>`_.
+
+Hier finden Sie einige Kommandos zum Auffinden von Informationen:
+
+.. code-block:: yaml
+
+ app/console                        - lists all assets
+ app/console help                   - Anzeige der Hilfe
+ app/console help list              - Anzeige der Hilfe für einzelne Kommandos
+ app/console doctrine               - Anzeige aller Funktionen von Doctrine 
+ app/console mapbender              - Anzeige aller Funktionen von Mapbender
+ app/console help assets:install    - Anzeige der Hilfe zu speziellen Kommandos
+        
+..
+ Package Build Tools
+ ===================
+
+ TODO: Skipped for now, KMQ has the knowledge.
+
+Aktualisierung der Installation
+===============================
+Da die Entwicklungen voranschreiten, wollen Sie ihren Code aktuell halten. 
+
+Folgende Schritte müssen durchgeführt werden:
+
+* Holen Sie den Code vom mapbender-starter Repository
+* Aktualisieren Sie die Submodule
+* Aktualisieren Sie die Datenbank, um gegebenenfalls neue Strukturen (Tabellen, Spalten) zu erzeugen
+
+
+.. code-block:: yaml
+ 
+ cd mapbender-starter
+ git pull
+ git submodule update --init --recursive
+ app/console doctrine:schema:update
+
+
+.. _installation_sphinx:
 
 Sphinx
 ======
 
 Sphinx wird für die Dokumentation benötigt, die Sie gerade lesen. In Debian-basierten Systemen wird Sphinx folgendermaßen installiert.
 
-    :command:`sudo apt-get install sphinx-common`
 
+.. code-block:: yaml
+
+   sudo apt-get install sphinx-common
+
+
+Sie finden die Mapbender3 Dokumentation auf github unter  mapbender-documentation. Sie könnnen den Klon über den Befehl holen: 
+
+.. code-block:: yaml
+
+	git clone git://github.com/mapbender/mapbender-documentation
+
+Entwickler mit Schreibrechten müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-documentation
+
+Lesen Sie mehr über :doc:`How to write Mapbender3 Documentation? <development/documentation_howto>`.
 
 ApiGen
 ======
 
-`ApiGen <http://apigen.org>` - ist der API-Dokumentations-Generator erster Wahl. Es wird auch mit Pear installiert: 
+`ApiGen <http://apigen.org>`_ ist der API-Dokumentations-Generator erster Wahl. Es wird auch mit Pear installiert: 
 
-    :command:`sudo pear install pear.apigen.org/apigen`
 
+.. code-block:: yaml
+    
+	 sudo pear install pear.apigen.org/apigen
 
 
 Troubleshooting
 ***************
 
-* Die ApiGen-Bestandteile laufen nur in der neusten Version von Phing. 2.4.12  ist ausreichend,  2.4.9 reicht nicht aus! Testen Sie mit: :command:`phing -v`. Mit dem folgenden Befehl können Sie ein Update all Ihrer Pear-Pakete vornehmen: 
+* Die ApiGen-Bestandteile laufen nur in der neusten Version von Phing. 2.4.12  ist ausreichend,  2.4.9 reicht nicht aus! 
+Testen Sie mit: 
 
-    :command:`sudo pear upgrade-all`
+
+.. code-block:: yaml
+
+              phing -v
+
+
+Mit dem folgenden Befehl können Sie ein Update all Ihrer Pear-Pakete vornehmen: 
+
+
+.. code-block:: yaml
+    
+	 sudo pear install pear.apigen.org/apigen
+
+
+Lesen Sie mehr über :doc:`How to write Mapbender3 API Documentation? <development/apidocumentation>`.
+
+
+Troubleshooting
+***************
+
+* The ApiGen task only works with recent versions of Phing (>= 2.4.12). Check the Phing version with 
+
+
+.. code-block:: yaml
+
+              phing -v
+
+
+You can update all your Pear packages with
+
+
+.. code-block:: yaml
+
+	sudo pear upgrade-all
 
 

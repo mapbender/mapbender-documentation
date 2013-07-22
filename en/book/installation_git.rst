@@ -67,9 +67,11 @@ Build management using Phing
 Build management is done using `Phing` which is installed using Pear. So, first
 we need to get Pear, we are assuming a Debian-based system here:
 
+
 .. code-block:: yaml
 
 	sudo apt-get install php-pear
+
 
 We then tell Pear where to autodiscover it's repositories and for good measure,
 update Pear:
@@ -80,6 +82,7 @@ update Pear:
     sudo pear config-set auto_discover 1
     sudo pear upgrade-all
 
+
 Then let's get Phing:
 
 
@@ -87,6 +90,7 @@ Then let's get Phing:
 
     sudo pear channel-discover pear.phing.info 
     sudo pear install phing/phing
+
 
 PHPUnit
 =======
@@ -112,7 +116,7 @@ of available build tasks by issuing
    phing -l
 
 The first task you want to - actually need to - execute is the deps task, which
-uses `Composer http://getcomposer.org`_ to install the runtime dependencies like
+uses `Composer <http://getcomposer.org>`_ to install the runtime dependencies like
 Symfony and Doctrine:
 
 .. code-block:: yaml
@@ -125,13 +129,14 @@ Next steps from Installation
 
 Now follow the steps that are described in  :doc:`Installation <installation>`:
 
-* Adapting the configuration file
+* Adapting the configuration file parameters.yml
 * Creating the database
 * Creating the database schema
-* Copying the bundles' assets to the public web directory
+* Copying/Linking the bundles' assets to the public web directory
 * Initializing the role system
 * Creating the "root" user
 * Inserting srs parameters
+* Inserting of applications from mapbender.yml into the database
 
 
 Refer to web with a symbolic link
@@ -143,6 +148,7 @@ directories way easier
 .. code-block:: yaml
 
     app/console assets:install web --symlink --relative
+
 
 Please notice that you might have to activate the :command:`FollowSymLinks` option to your apache Directory like this:
 
@@ -165,11 +171,13 @@ The Symfony Console Component makes it possible to create command-line commands.
 Read more in the Symfony documentation about `Console Commands <http://symfony.com/doc/current/components/console/usage.html>`_.
 
 Here are some commands to help to find information:
+
 .. code-block:: yaml
+
  app/console                        - lists all assets
  app/console help                   - displays help
  app/console help list              - displays help for a special command
- app/console doctrine               - lists all functions from mapbender 
+ app/console doctrine               - lists all functions from Doctrine 
  app/console mapbender              - lists all functions from mapbender 
  app/console help assets:install    - help for a special command
         
@@ -226,8 +234,7 @@ Read more about :doc:`How to write Mapbender3 Documentation? <development/docume
 ApiGen
 ======
 
-`ApiGen <http://apigen.org>`_ is our API documentation generator of choice. It can
- also be installed using Pear, so use the following command:
+`ApiGen <http://apigen.org>`_ is our API documentation generator of choice. It can also be installed using Pear, so use the following command:
 
 
 .. code-block:: yaml
