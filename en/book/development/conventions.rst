@@ -91,7 +91,7 @@ How to build a new Mapbender3 build
  phing deps
  git tag -a v3.0.0.1 -m "Mapbender bugfix release Version 3.0.0.1 read changes https://github.com/mapbender/mapbender/issues?milestone=3"  
  git tag
- git push --tags
+ git push --tags (https://github.com/mapbender/mapbender-starter/releases)
  phing tarball
  cd /data/git/mapbender-build/artefacts
  cd /data/git/mapbender-build/artefacts
@@ -103,11 +103,11 @@ How to build a new Mapbender3 build
  cp -R /data/git/mapbender-documentation/output/*  /data/git/mapbender-build/artefacts/mapbender3-3.0.0.1/documentation/
  create tar.gz with right name for example mapbender3-3.0.0.1.tar.gz
  move file to /sites/www.mapbender3.org/builds
- update Roadmap and milestones
- write release mail (mapbender-user / mapbender-dev / major releases osgeo-announce)
- twitter
- update demo.mapbender3.org
- tag version
+ update Roadmap: milestones, features, date on http://mapbender3.org/roadmap
+ write release mail to mapbender-user and mapbender-dev 
+ only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
+ twitter on https://twitter.com/mapbender
+ update demo.mapbender3.org and sandbox.mapbender3.org
 
  
 
