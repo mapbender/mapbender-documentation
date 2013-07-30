@@ -5,6 +5,23 @@
 
 <Put short description - 5-6 sentences - here>
 
+.. image:: ../../../../../figures/nameoftheelement.png
+     :scale: 80
+
+Configuration
+=============
+
+.. image:: ../../../../../figures/nameoftheelement_configuration.png
+     :scale: 80
+
+YAML-Definition:
+<Put YAML configuration here, include defaults and explain>
+
+.. code-block:: yaml
+
+   foo: bar # Example, delete me!
+
+
 Class, Widget & Style
 ==============
 
@@ -12,14 +29,6 @@ Class, Widget & Style
 * Widget: <Put Widget name here>
 * Style: <Put name of css file here>
 
-Configuration
-=============
-
-<Put YAML configuration here, include defaults and explain>
-
-.. code-block:: yaml
-
-   foo: bar # Example, delete me!
 
 HTTP Callbacks
 ==============

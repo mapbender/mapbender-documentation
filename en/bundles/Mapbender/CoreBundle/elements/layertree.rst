@@ -3,22 +3,24 @@
 Layertree - Table of Content
 ****************************
 
-The layertree diplays the layers and Service folders. The layertree allows you to de/activate layer in the map, shows metadata, . 
+The layertree diplays the layers and Service folders. The layertree allows you to de/activate layer in the map. 
 
-Class, Widget & Style
-======================
-
-* Class: Mapbender\\CoreBundle\\Element\\Layertree
-* Widget: mapbender.element.layertree.js
-* Style: mapbender.elements.css
+.. image:: ../../../../../figures/layertree.png
+     :scale: 80
 
 Configuration
 =============
 
+.. image:: ../../../../../figures/layertree_configuration.png
+     :scale: 80
+
+YAML-Definition:
+
 .. code-block:: yaml
 
    title: layertree
-   target: ~                    # Id of Map element to query   type: element # dialog/element
+   target: ~                    # Id of Map element to query   
+   type: element                # dialog/element
    displaytype: tree            # only tree in 3.0, future will offer list
    useAccordion: false          # default is false
    autoOpen: false              # true/false open when application is started, default is false
@@ -27,6 +29,12 @@ Configuration
    showHeader: true             # shows a headline which counts the number of services  
    layerMenu: false             # show contextmenue for layer (like legend, transparency, zoom to layer, metadata u.o.), default is false, not implemented in 3.0
 
+Class, Widget & Style
+======================
+
+* Class: Mapbender\\CoreBundle\\Element\\Layertree
+* Widget: mapbender.element.layertree.js
+* Style: mapbender.elements.css
 
 HTTP Callbacks
 ==============
@@ -39,7 +47,7 @@ JavaScript API
 open
 ----------
 
-Shows the legend.
+Opens the layertree
 
 reload
 ----------
