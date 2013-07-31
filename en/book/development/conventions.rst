@@ -48,7 +48,7 @@ Translation where
 
 Issue conventions
 ********************
-Issues (bugs and features) are administrated at:
+Issues (bugs and features) are administrated in the **mapbender**-repository at:
 
 * https://github.com/mapbender/mapbender/issues
 
@@ -58,12 +58,30 @@ We create a milestone for every version of Mapbender3:
 
 There are some rules you should keep in mind:
 
-* write your title so that the issue is already described in the title: Backend/Frontend - element - issue (like: Frontend - layertree - visible is not handled in frontend see ticket https://github.com/mapbender/mapbender/issues/48)
+* **write understandable tickets!!**
+
+* **write your title** so that the issue is already described in the title: 
+
+  * Backend/Frontend - element - issue 
+  * like: Frontend - layertree - option visible is not handled in frontend
+  * see ticket https://github.com/mapbender/mapbender/issues/48
+* write **comments** with all necessary information
 * when you create a new ticket do not assign it to a milestone or developer, if you are not sure
 
-* when you work on a ticket or close it please assign a user and milestone
+* **add labels** to your ticket 
+  * bug - describes a bug that orrurs in a special version of Mapbender3 (add info about the version)
+  * feature - new feature
+  * enhancement - stands for feature enhancement
+  * wip - work in progress
 
-* when you close a ticket, please add a comment in the ticket and refer to the commit
+* when you work on a ticket or close it please **assign a user and milestone**
+
+* **when you close a ticket**, please:
+
+  * add a comment in the ticket and **refer to the commit**,
+  * refer to the documentation at http://doc.mapbender3.org or a demo if possibile.
+
+
 
 
 Version conventions
