@@ -46,6 +46,26 @@ Translation where
 * also have a look at `Translation in Mapbender3 <../translation.rst>`
 
 
+Issue conventions
+********************
+Issues (bugs and features) are administrated at:
+
+* https://github.com/mapbender/mapbender/issues
+
+We create a milestone for every version of Mapbender3:
+
+*  https://github.com/mapbender/mapbender/issues/milestones
+
+There are some rules you should keep in mind:
+
+* write your title so that the issue is already described in the title: Backend/Frontend - element - issue (like: Frontend - layertree - visible is not handled in frontend see ticket https://github.com/mapbender/mapbender/issues/48)
+* when you create a new ticket do not assign it to a milestone or developer, if you are not sure
+
+* when you work on a ticket or close it please assign a user and milestone
+
+* when you close a ticket, please add a comment in the ticket and refer to the commit
+
+
 Version conventions
 ********************
 The Mapbender3 version is defined by a four digit numbering system, seperated by dots.
