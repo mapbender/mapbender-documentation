@@ -32,7 +32,7 @@ Git branch conventions
 **********************
 
 We follow the Git Flow branching model (Read more about it in the
-`original document<http://nvie.com/posts/a-successful-git-branching-model/>`_
+`original document <http://nvie.com/posts/a-successful-git-branching-model/>`_
 describing it). Basically that boils down to having at least two branches:
 
 * develop - for the daily work, always has the latest merged commits, and is
