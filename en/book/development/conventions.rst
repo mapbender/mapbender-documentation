@@ -28,6 +28,30 @@ Code conventions
 * naming vor files (referred to symfony convention)
 
 
+Git branch conventions
+**********************
+
+We follow the Git Flow branching model (Read more about it in the
+`original document<http://nvie.com/posts/a-successful-git-branching-model/>`_
+describing it). Basically that boils down to having at least two branches:
+
+* develop - for the daily work, always has the latest merged commits, and is
+  equal to or ahead of the latest release
+* master - only changes on new releases (right now and until the 3.0.1 release,
+  some of our repositories don't have a master branch but will get one then
+  again)
+
+Furthermore there might be more branches, which must always be namespaced:
+
+* feature/<name> - Used for developing new features (feature/printservice)
+* hotfix/<name> - Used for making hot fixes for releases (hotfix/bug_123)
+* release/<name> - Used for preparing releases, very short-lived (release/3.0.1)
+
+Some Linux distributions have a package called git-flow which will provide easy
+git command shortcuts to use the merge/branch model of Git Flow without having
+to do everything by yourself (which is still possible and you should always know
+how Git Flow uses plain git to achieve things).
+
 
 Layout conventions
 *******************
