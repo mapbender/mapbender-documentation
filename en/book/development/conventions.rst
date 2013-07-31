@@ -86,10 +86,12 @@ There are some rules you should keep in mind:
 
 * **write your title** so that the issue is already described in the title: 
 
-  * Backend/Frontend - element - issue 
-  * like: Frontend - layertree - option visible is not handled in frontend
+  * Browser - Backend/Frontend - element - issue 
+  * like: Firefox - Frontend - layertree - option visible is not handled in frontend
   * see ticket https://github.com/mapbender/mapbender/issues/48
-* write **comments** with all necessary information
+* write **comments** with all necessary information: 
+  * for bugs: describe step by step how the error can be reproduced
+  * for features: describe feature and functionality
 * when you create a new ticket do not assign it to a milestone or developer, if you are not sure
 
 * **add labels** to your ticket 
