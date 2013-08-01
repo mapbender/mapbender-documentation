@@ -17,7 +17,7 @@ This glossary is under construction.
         ApiGen is a tool used to generate API documentation.
 
         .. seealso::
-            :ref:`installation_sphinx`      
+            :ref:`apigen`      
 
     Bundle        
 
