@@ -3,17 +3,18 @@
 Coordinates Display
 ********************
 
-The coordinates display shows your mouse position in map coordinates.
+The coordinates display element shows your mouse position in map coordinates.
 
-Class, Widget & Style
-=====================
-
-* Class: Mapbender\\CoreBundle\\Element\\CoordinatesDisplay
-* Widget: mapbender.element.coordinatesdisplay.js
-* Style: mapbender.elements.css
+.. image:: ../../../../../figures/coordinates_display.png
+     :scale: 90
 
 Configuration
 =============
+
+.. image:: ../../../../../figures/coordinates_display_configuration.png
+     :scale: 80
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -24,6 +25,13 @@ Configuration
    empty: 'x= - y= -'             # 
    prefix: 'x= '                  #
    separator: ' y= '              #
+
+Class, Widget & Style
+=====================
+
+* Class: Mapbender\\CoreBundle\\Element\\CoordinatesDisplay
+* Widget: mapbender.element.coordinatesdisplay.js
+* Style: mapbender.elements.css
 
 HTTP Callbacks
 ==============

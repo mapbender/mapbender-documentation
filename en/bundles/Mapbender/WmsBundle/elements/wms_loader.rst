@@ -6,15 +6,12 @@ WMS Loader
 Opens a dialog in  which a WMS can be loaded via the getCapabilities-Request.
 You can load WMS 1.1.1 and  WMS 1.3.0
 
-Class, Widget & Style
-==============
-
-* Class: Mapbender\\WmsBundle\\Element\\WmsLoader
-* Widget: 
-* Style: 
-
 Configuration
 =============
+
+You need a button to show this element. See :doc:`button` for inherited configuration options.
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -23,6 +20,13 @@ Configuration
    autoOpen: false                      # true/false open when application is started, default false 
    defaultformat: 'png'                 # default format is image/png, further possibilities: image/gif, image/jpeg
    defaultinfoformat: 'html'            # default infoformat is text/html, further possibilities: text/xml, text/plain
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\WmsBundle\\Element\\WmsLoader
+* Widget: 
+* Style: 
 
 HTTP Callbacks
 ==============
@@ -36,8 +40,8 @@ JavaScript API
 activate
 ----------
 
-Opens a dialog in  wich a WMS can be loaded via the getCapabilities-Request.
-You can load WMS 1.1.1 and  WMS 1.3.0
+Opens a dialog in wich a WMS can be loaded via the getCapabilities-Request.
+You can load WMS 1.1.1 and WMS 1.3.0.
 
 
 JavaScript Signals

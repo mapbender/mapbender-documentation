@@ -16,6 +16,8 @@ Class, Widget & Style
 Configuration
 =============
 
+You need a button to show this element. See :doc:`button` for inherited configuration options.
+
 .. code-block:: yaml
 
    target: map  # for result visualization

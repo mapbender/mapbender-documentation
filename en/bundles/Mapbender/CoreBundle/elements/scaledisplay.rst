@@ -3,17 +3,15 @@
 ScaleDisplay
 ***********************
 
-The ScaleDisplay displays a representing the current map scale (1:1K or 1: 1000).
-
-Class, Widget & Style
-==============
-
-* Class: Mapbender\\CoreBundle\\Element\\ScaleDisplay
-* Widget: mapbender.element.scaledisplay.js
-* Style: mapbender.element.scaledisplay.css
+The ScaleDisplay displays the current map scale (1:1K or 1: 1000).
 
 Configuration
 =============
+
+.. image:: ../../../../../figures/scaledisplay_configuration.png
+     :scale: 80
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -23,6 +21,13 @@ Configuration
    anchor: 'inline'/'left-top'/     # scale bar alignment, default is 'right-bottom'
      'left-bottom'/'right-top'/     # use inline f.e. in sidebar
      'right-bottom'
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\CoreBundle\\Element\\ScaleDisplay
+* Widget: mapbender.element.scaledisplay.js
+* Style: mapbender.element.scaledisplay.css
 
 HTTP Callbacks
 ==============

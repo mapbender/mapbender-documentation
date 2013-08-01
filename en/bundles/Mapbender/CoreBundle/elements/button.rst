@@ -6,26 +6,32 @@ Button
 The button element provides a push button widget, which can optionally be
 grouped, so that only one button in a group can be active at any given time.
 
+Configuration
+=============
+
+.. image:: ../../../../../figures/button_configuration.png
+     :scale: 80
+
+YAML-Definition:
+
+.. code-block:: yaml
+
+    title:        # Title
+    tooltip:      # Tooltip
+    icon: ~       # Icon CSS class to use
+    label: true   # true/false Icon label to use
+    group: ~      # Group to put the button into. Only one button per group can be active
+    click:        # Refer to a website or script like http://mapbender3.org
+    target: ~     # Title (Id) of target element
+    action: ~     # method of target to call when button is activated
+    deactivate: ~ # method of target to call when button is deactivated
+
 Class, Widget & Style
 =====================
 
 * Class: Mapbender\\CoreBundle\\Element\\Button
 * Widget: mapbender.mbButton (mapbender.element.button.js)
 * Style: mapbender.elements.css
-
-Configuration
-=============
-
-.. code-block:: yaml
-    title:        # Title
-    tooltip:      # Tooltip
-    icon: ~       # Icon CSS class to use
-    label: true   # true/false Icon label to use
-    group: ~      # Group to put the button into. Only one button per group can be active
-    click:        #
-    target: ~     # Title (Id) of target element
-    action: ~     # method of target to call when button is activated
-    deactivate: ~ # method of target to call when button is deactivated
 
 HTTP Callbacks
 ==============

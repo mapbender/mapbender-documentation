@@ -3,17 +3,18 @@
 
 PrintClient is still under construction. For now WGS84 is not supported.
 
-Class, Widget & Style
-==============
-
-* Class: Mapbender\\CoreBundle\\Element\\PrintClient
-* Widget: mapbender.element.printClient.js
-* Style: mapbender.element.printClient.css
+.. image:: ../../../../../figures/print_client.png
+     :scale: 80
 
 Configuration
 =============
 
-Also see :doc:`button` for inherited configuration options.
+.. image:: ../../../../../figures/print_client_configuration.png
+     :scale: 80
+
+You need a button to show this element. See :doc:`button` for inherited configuration options.
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -38,6 +39,13 @@ Also see :doc:`button` for inherited configuration options.
             type: text                          # type of the optional field   
             options:                            # 
                 required: true                  # true or false
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\CoreBundle\\Element\\PrintClient
+* Widget: mapbender.element.printClient.js
+* Style: mapbender.element.printClient.css
 
 HTTP Callbacks
 ==============
@@ -69,7 +77,7 @@ None.
 File location
 ===============
 **northarrow**
-The North arrow image is located at images/. you can replace the north arrow image an use a different image as northarrow.
+The "North arrow" image is located at images/. You can replace the "North arrow" image to use a different image as northarrow.
 
 **print templates**
 You find the print templates at app/Resources/MapbenderPrintBundle/templates/. Create your own print template to provide an individual output for your application.

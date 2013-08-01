@@ -5,15 +5,16 @@ Map
 
 MapQuery/OpenLayers based map
 
-Class, Widget & Style
-==============
-
-* Class: Mapbender\\CoreBundle\\Element\\Map
-* Widget: , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
-* Style: mapbender.elements.css, mapquery//lib//openlayers//theme//default//style.css
+.. image:: ../../../../../figures/map.png
+     :scale: 80
 
 Configuration
 =============
+
+.. image:: ../../../../../figures/map_configuration.png
+     :scale: 80
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -36,6 +37,13 @@ Configuration
    maxResolution: "auto" # 
    scales: "25000000,10000000,5000000,1000000,500000" # a csv scale list
    imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img" #
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\CoreBundle\\Element\\Map
+* Widget: , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
+* Style: mapbender.elements.css, mapquery//lib//openlayers//theme//default//style.css
 
 HTTP Callbacks
 ==============
@@ -110,7 +118,7 @@ removeById
 
 layerById
 ----------
-Searches for a MapQuery layer by it's Mapbender id. Returns the layer or null if not found.
+Searches for a MapQuery layer by its Mapbender id. Returns the layer or null if not found.
 
 scales
 ----------

@@ -5,15 +5,16 @@ Overview
 
 The Overview element provides a control of an overview map, similar to the OpenLayers Overview control. This element though is easier to use when custom styling is needed.
 
-Class, Widget & Style
-==============
-
-* Class: Mapbender\\CoreBundle\\Element\\Overview
-* Widget: mapbender.element.overview.js
-* Style: mapbender.element.overview.css
+.. image:: ../../../../../figures/overview.png
+     :scale: 80
 
 Configuration
 =============
+
+.. image:: ../../../../../figures/overview_configuration.png
+     :scale: 80
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -28,6 +29,13 @@ Configuration
    position: array('0px','0px')     # overview position in relation to anchor, default: x=0px, y=0px
    maximized: true                  # false/true to open/close on start, default is true
    fixed: true                      # false/true to fix the overview, default is true
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\CoreBundle\\Element\\Overview
+* Widget: mapbender.element.overview.js
+* Style: mapbender.element.overview.css
 
 HTTP Callbacks
 ==============

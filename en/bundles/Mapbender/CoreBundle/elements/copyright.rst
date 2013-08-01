@@ -5,15 +5,13 @@ Copyright
 
 The copyright shows a copyright label and terms of use as a dialog.
 
-Class, Widget & Style
-==============
-
-* Class: Mapbender\\CoreBundle\\Element\\Copyright
-* Widget: mapbender.element.copyright.js
-* Style: mapbender.elements.css
-
 Configuration
 =============
+
+.. image:: ../../../../../figures/copyright_configuration.png
+     :scale: 80
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -31,6 +29,13 @@ Configuration
    link_type: ''/'dialog'/'url'     # use '' for a link to hide "Terms of use" components,
                                     # use 'dialog' to show "Terms of use (Content)" at dialog,
                                     # use 'url' to call a website as "Terms of use (Content)"
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\CoreBundle\\Element\\Copyright
+* Widget: mapbender.element.copyright.js
+* Style: mapbender.elements.css
 
 HTTP Callbacks
 ==============

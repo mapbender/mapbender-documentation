@@ -5,17 +5,18 @@ Legend
 
 The legend object shows the legend of the map's layers.
 
-Class, Widget & Style
-==============
-
-* Class: Mapbender\\CoreBundle\\Element\\Legend
-* Widget: mapbender.element.legend.js
-* Style: mapbender.element.legend.css
+.. image:: ../../../../../figures/legend.png
+     :scale: 80
 
 Configuration
 =============
 
-Also see :doc:`button` for inherited configuration options.
+.. image:: ../../../../../figures/legend_configuration.png
+     :scale: 80
+
+You need a button to show this element. See :doc:`button` for inherited configuration options.
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -30,6 +31,13 @@ Also see :doc:`button` for inherited configuration options.
    showWmsTitle: true                   # true/false show WMS title, default is true
    showLayerTitle: true                 # true/false show layer title, default is true
    showGroupedLayerTitle: true          # true/false show group title for grouped layers, default is true
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\CoreBundle\\Element\\Legend
+* Widget: mapbender.element.legend.js
+* Style: mapbender.element.legend.css
 
 HTTP Callbacks
 ==============
