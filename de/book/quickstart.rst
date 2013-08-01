@@ -59,7 +59,7 @@ Starten Sie Mapbender
 Falls Sie Schwierigkeiten haben, Mapbender zu starten, überprüfen Sie ob der Apache Web Server und die PostgreSQL Datenbank laufen.
 
 
-Starten Sie Mapbender im Entwicklungsmodus über app_dep.php
+Starten Sie Mapbender im Entwicklungsmodus über app_dev.php
 ==============================================================
 Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über die Anwendung an (Logging, Fehlermeldungen, Datenbankabfragen, Speicherverbrauch, Zeit und mehr). Dieser Modus ist nur über localhost verfügbar.
 
@@ -440,11 +440,6 @@ Sie finden Tutorials unter
 Die API-Dokumentation finden Sie unter
 
   http://api.mapbender3.org
-
-
-Lernen Sie Mapbender kennen 
-	
-	http://projects.mapbender.osgeo.org
 
 Beteiligen Sie sich
 

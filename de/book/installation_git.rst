@@ -23,7 +23,7 @@ Klonen ist einfach, geben Sie das folgende Kommando auf Ihrer Shell ein:
 
 .. code-block:: yaml
 
-	git submodule update --init --recursive
+	git clone -b develop git://github.com/mapbender/mapbender-starter
 
 Entwickler, die Zugriff auf den Code haben möchten, müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-starter
 
