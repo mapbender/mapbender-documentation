@@ -17,7 +17,7 @@ This glossary is under construction.
         ApiGen is a tool used to generate API documentation.
 
         .. seealso::
-            :ref:`apigen`      
+            http://doc.mapbender3.org/en/book/installation_git.html#apigen
 
     Bundle        
 
