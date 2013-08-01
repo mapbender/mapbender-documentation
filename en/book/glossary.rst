@@ -17,7 +17,7 @@ This glossary is under construction.
         ApiGen is a tool used to generate API documentation.
 
         .. seealso::
-            http://doc.mapbender3.org/en/book/installation_git.html#apigen
+            `Apigen <http://doc.mapbender3.org/en/book/installation_git.html#apigen>`_
 
     Bundle        
 
@@ -51,8 +51,8 @@ This glossary is under construction.
         It is fully decoupled from Symfony.
 
         .. seealso::
-            :ref:`database`
-             http://www.doctrine-project.org
+           :ref:`database`
+           - http://www.doctrine-project.org
 
     Element 
 
@@ -63,7 +63,7 @@ This glossary is under construction.
         An entity is a basic class that holds data.
 
 	.. seealso::
-            http://symfony.com/doc/2.1/book/doctrine.html#creating-an-entity-class
+            `Entity <http://symfony.com/doc/2.1/book/doctrine.html#creating-an-entity-class>`_
 
     FOM
         Friends of Mapbender Bundle
@@ -103,7 +103,7 @@ This glossary is under construction.
         Namespaces are a way of encapsulating items. They prevent collisions among classes, functions and constants.
         
         .. seealso::
-            http://symfony.com/doc/2.1/cookbook/bundles/best_practices.html
+            `Namespace <http://symfony.com/doc/2.1/cookbook/bundles/best_practices.html>`_
 
     ORM 
         Object Relational Mapper
@@ -115,8 +115,8 @@ This glossary is under construction.
 	Phing is a PHP project build system or build tool based on ​Apache Ant.
 
         .. seealso::
-            :ref:`phing`
-	     http://www.phing.info
+            `Phing <http://doc.mapbender3.org/mapbender/documentation/book/en/installation_git.html#build-management-using-phing>`_
+	    - http://www.phing.info
 
     Profiler
         The Symfony profiler collects and stores a lot of usefull information. The information is collected on each request and stored for later analysis.
@@ -125,7 +125,7 @@ This glossary is under construction.
 	Query Builder is a Doctrine API to costruct DQL queries. It's mostly used to build queries dinamically basing on conditions, parameters, filters and also loops.
 
         .. seealso::
-           http://docs.doctrine-project.org/en/latest/reference/query-builder.html
+             `Query Builder <http://docs.doctrine-project.org/en/latest/reference/query-builder.html>`_
 
     SearchRouter
         MapbenderCore Element to set up a Search f.e. a street/housenumber search or a parcel search
@@ -137,7 +137,7 @@ This glossary is under construction.
        A slug is a variable part of an URL.
 
        .. seealso::	
-            http://symfony.com/doc/2.1/book/routing.html
+            `Slug <http://symfony.com/doc/2.1/book/routing.html>`_
 
     Sphinx
        Sphinx is a tool you can use to generate documentations f.e. html or pdf. 
@@ -150,7 +150,7 @@ This glossary is under construction.
 
         .. seealso::
             :ref:`templates`
-             :ref:`twig`
+            - :ref:`twig`
     
     Twig
         Twig is a templating engine for PHP that is packaged in Symfony2 and offers an easy and powerful way to generate templates. With Twig we can separate the program functionality from design. A Twig file is a simple textfile from which you can generate every text-based format like html or xml.
