@@ -5,15 +5,16 @@ Navigation Toolbar (Zoombar)
 
 The Navigation Toolbar element provides a control to pan and zoom, similar to the OpenLayers PanZoomBar control. This element though is easier to use when custom styling is needed.
 
-Class, Widget & Style
-==============
-
-* Class: Mapbender\\CoreBundle\\Element\\ZoomBar
-* Widget: mapbender.element.zoombar.js
-* Style: mapbender.element.zoombar.css
+.. image:: ../../../../../figures/zoom_bar.png
+     :scale: 100
 
 Configuration
 =============
+
+.. image:: ../../../../../figures/zoom_bar_configuration.png
+     :scale: 80
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -29,6 +30,13 @@ Configuration
      'right-bottom'
    position: array('0px','0px')  # navigation toolbar position, default: x=20px, y=20px
    draggable: true               # element is draggable or not, default true
+
+Class, Widget & Style
+==============
+
+* Class: Mapbender\\CoreBundle\\Element\\ZoomBar
+* Widget: mapbender.element.zoombar.js
+* Style: mapbender.element.zoombar.css
 
 HTTP Callbacks
 ==============

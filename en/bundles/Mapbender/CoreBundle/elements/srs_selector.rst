@@ -5,15 +5,14 @@ Spatial Reference System Selector (SRS Selector)
 
 The spatial reference system selector changes the map's spatial reference system.
 
-Class, Widget & Style
-=====================
-
-* Class: Mapbender\\CoreBundle\\Element\\SrsSelector
-* Widget: mapbender.element.srsselector.js
-* Style: mapbender.elements.css
+.. image:: ../../../../../figures/srs_selector.png
+     :scale: 100
 
 Configuration
 =============
+
+.. image:: ../../../../../figures/srs_selector_configuration.png
+     :scale: 80
 
 .. code-block:: yaml
 
@@ -21,6 +20,12 @@ Configuration
    label: false             # true/false to label  the srs selector
    target: ~                # Id of Map element to query
 
+Class, Widget & Style
+=====================
+
+* Class: Mapbender\\CoreBundle\\Element\\SrsSelector
+* Widget: mapbender.element.srsselector.js
+* Style: mapbender.elements.css
 
 HTTP Callbacks
 ==============

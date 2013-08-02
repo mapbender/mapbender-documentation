@@ -6,17 +6,15 @@ Search Router
 Search frontend GUI for plugable search engine modules. Right now a generic SQL search engine
 is provided, with more to come (think Lucene enhanced search, etc.)
 
-Class, Widget & Style
-=====================
-
-* Class: Mapbender\\CoreBundle\\Element\\SearchRouter
-* Widget: mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
-* Style: mapbender.element.searchRouter.css
-
 Configuration
 =============
 
+.. image:: ../../../../../figures/search_router_configuration.png
+     :scale: 80
+
 You need a button to show this element. See :doc:`button` for inherited configuration options.
+
+YAML-Definition:
 
 .. code-block:: yaml
 
@@ -52,6 +50,13 @@ You need a button to show this element. See :doc:`button` for inherited configur
                        buffer: 10  # buffer result geometry with this (map units) before zooming
                        minScale: ~  # scale restrictions for zooming, ~ for none
                        maxScale: ~
+
+Class, Widget & Style
+=====================
+
+* Class: Mapbender\\CoreBundle\\Element\\SearchRouter
+* Widget: mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
+* Style: mapbender.element.searchRouter.css
 
 HTTP Callbacks
 ==============
