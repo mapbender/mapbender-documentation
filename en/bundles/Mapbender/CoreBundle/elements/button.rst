@@ -20,9 +20,9 @@ YAML-Definition:
     tooltip:      # Tooltip
     icon: ~       # Icon CSS class to use
     label: true   # true/false Icon label to use
-    group: ~      # Group to put the button into. Only one button per group can be active
-    click:        # Refer to a website or script like http://mapbender3.org
     target: ~     # Title (Id) of target element
+    click:        # Refer to a website or script like http://mapbender3.org
+    group: ~      # Group to put the button into. Only one button per group can be active
     action: ~     # method of target to call when button is activated
     deactivate: ~ # method of target to call when button is deactivated
 

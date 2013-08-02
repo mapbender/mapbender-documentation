@@ -23,8 +23,8 @@ YAML-Definition:
    position: array('0px','0px')     # copyright position, default: x=0px, y=0px
    copyrigh_text: "© XXX # 2013"    # edit the text you want to display as copyright text
    copyright_link: "Terms of use"   # title for a link to "terms of use" content, default is 'Terms of use'
-   dialog_content: "Terms of use (Content)"  # the content of the "terms of use", default is 'Terms of use (Content)'
    dialog_title: "Terms of use"     # title of the dialog, default is 'Terms of use'
+   dialog_content: "Terms of use (Content)"  # the content of the "terms of use", default is 'Terms of use (Content)'
    link_url: ''/'http://example.de' # url from "Terms of use (Content)" as a website
    link_type: ''/'dialog'/'url'     # use '' for a link to hide "Terms of use" components,
                                     # use 'dialog' to show "Terms of use (Content)" at dialog,

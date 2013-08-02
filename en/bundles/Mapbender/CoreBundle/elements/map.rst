@@ -23,19 +23,18 @@ YAML-Definition:
    srs: "EPSG:4326"           # coordinate referece system. Two srs definitions are supported:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
-   otherSrs: array(
-      "EPSG:31466",
-      "EPSG:31467",
-      "EPSG:25832")           # other coordinate referece systems. Two srs definitions are supported:
-                                - ["EPSG:CODE","EPSG:CODE"] or
-                                - ["EPSG:CODE|MY SRS TITLE","EPSG:CODE|MY SRS TITLE"]
-                     
    units: "degrees"           # units to use deegrees/meters
    extents: array(
        max: array(0, 40, 20, 60) 
-       start: array(5, 45, 15, 55)) # map extents 
-   maxResolution: "auto" # 
+       start: array(5, 45, 15, 55)) # map extents
    scales: "25000000,10000000,5000000,1000000,500000" # a csv scale list
+   maxResolution: "auto" #
+   otherSrs: array(
+      "EPSG:31466",
+      "EPSG:31467",
+      "EPSG:25832")           # other coordinate reference systems. Two srs definitions are supported:
+                                - ["EPSG:CODE","EPSG:CODE"] or
+                                - ["EPSG:CODE|MY SRS TITLE","EPSG:CODE|MY SRS TITLE"]
    imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img" #
 
 Class, Widget & Style

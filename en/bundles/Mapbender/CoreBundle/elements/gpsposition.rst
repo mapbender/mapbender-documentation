@@ -19,9 +19,9 @@ YAML-Definition:
 .. code-block:: yaml
 
    tooltip: GPS-Position # text to use as tooltip
-   target: map           # Id of Map element to query
    label: true           # true/false to label button
    icon: gpsposition      # icon to display on button
+   target: map           # Id of Map element to query
    autoStart: false	 # true/false (default is false)
    refreshinterval: 5000 # refresh interval in ms
 

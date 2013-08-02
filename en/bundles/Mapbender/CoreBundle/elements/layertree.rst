@@ -3,7 +3,7 @@
 Layertree - Table of Content
 ****************************
 
-The layertree diplays the layers and Service folders. The layertree allows you to de/activate layer in the map. 
+The layertree diplays the layers and Service folders. The layertree allows you to activate/deactivate layers in the map. 
 
 .. image:: ../../../../../figures/layertree.png
      :scale: 80

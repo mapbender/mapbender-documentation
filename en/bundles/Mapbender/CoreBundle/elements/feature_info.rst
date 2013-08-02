@@ -17,9 +17,10 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: Feature Info # text to use as tooltip
-   target: ~             # Id of Map element to query
-   autoOpen: false       # true/false open when application is started, default: false
+   tooltip: Feature Info   # text to use as tooltip
+   target: ~               # Id of Map element to query
+   autoOpen: false         # true/false open when application is started, default: false
+   deactivateOnClose: true # true/false (default is true)
 
 Class, Widget & Style
 ==============
