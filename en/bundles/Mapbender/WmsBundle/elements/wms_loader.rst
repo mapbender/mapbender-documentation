@@ -4,12 +4,15 @@ WMS Loader
 ***********************
 
 Opens a dialog in  which a WMS can be loaded via the getCapabilities-Request.
-You can load WMS 1.1.1 and  WMS 1.3.0
+You can load WMS 1.1.1 and  WMS 1.3.0.
 
 Configuration
 =============
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
+.. image:: ../../../../../figures/wms_loader_configuration.png
+     :scale: 80
+
+You need a button to show this element. See :ref:`button` for inherited configuration options.
 
 YAML-Definition:
 
