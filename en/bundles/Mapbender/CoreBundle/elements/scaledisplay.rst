@@ -17,7 +17,6 @@ YAML-Definition:
 
    tooltip: 'Scale Bar'             # text to use as tooltip
    target: ~                        # Id of Map element to query
-   unitPrefix: true/false           # use true for unit prefix
    anchor: 'inline'/'left-top'/     # scale bar alignment, default is 'right-bottom'
      'left-bottom'/'right-top'/     # use inline f.e. in sidebar
      'right-bottom'
