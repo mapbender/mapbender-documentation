@@ -378,4 +378,18 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 
 To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`.
 
+Configuration
+=============
+
+Basically all configuration is done inside the app/config/parameters.yml file. A template is
+provided in the app/config/parameters.yml.dist file.
+
+The parameters starting with "database" are the database connection details. As well, the mailer
+settings start with mailer.
+
+To enable or disable self registration of users, change the fom.selfregistration parameter.
+In the same way the possibility to reset passwords can be enabled or disabled.
+
+For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set
+to true.
 
