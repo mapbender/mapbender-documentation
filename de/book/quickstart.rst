@@ -376,14 +376,14 @@ Benutzer einer Gruppe zuweisen
 
 Rechte
 ========
-Mapbender3 bietet verschiedene Rechte an, die Sie vergeben können.
+Mapbender3 bietet verschiedene Rechte an, die Sie vergeben können. Diese beruhen auf dem Symfony ACL System http://symfony.com/doc/2.1/cookbook/security/acl_advanced.html#built-in-permission-map
 
 * view - anzeigen
 * edit - editieren
 * delete - löschen
-* operator - 
-* master - 
-* owner - Besitzer, darf alles
+* operator - kann anzeigen, editieren und löschen
+* master - kann anzeigen, editieren und löschen und diese Rechte außerdem weitergeben
+* owner - Besitzer, darf alles. Darf master und owner Recht vergeben.
 
 #. Weisen Sie einem Benutzer über :menuselection:`Users --> Edit your User --> Security` Rechte zu.
 
