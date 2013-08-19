@@ -373,17 +373,21 @@ Assign users to group
 
 #. Assign a user by :menuselection:`Users --> Edit-Button--> Groups` to a group. 
 http://doc.mapbender3.org/en/book/quickstart.html
+
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
      :scale: 80
  
 
-Roles
-=====
-Mapbender3 provides different roles you can assign to a group.
+Rechte
+======
+Mapbender3 provides different rights. They refer to the Symfony ACL System http://symfony.com/doc/2.1/cookbook/security/acl_advanced.html#built-in-permission-map
 
-* Can administrate everything (super admin) 
-* Can administrate users & groups 
-* Can administrate applications 
+* view - Whether someone is allowed to view the object.
+* edit - Whether someone is allowed to make changes to the object.
+* delete - Whether someone is allowed to delete the object.
+* operator - Whether someone is allowed to perform all of the above actions.
+* master - Whether someone is allowed to perform all of the above actions, and in addition is allowed to grant any of the above permissions to others.
+* owner - Whether someone owns the object. An owner can perform any of the above actions and grant master and owner permissions.
 
 #. Assign roles to a user by :menuselection:`Users --> Edit your User --> Security`.
 
