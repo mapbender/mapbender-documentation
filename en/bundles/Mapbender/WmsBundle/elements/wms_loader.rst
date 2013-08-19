@@ -21,8 +21,9 @@ YAML-Definition:
    target: ~                            # Id of Map element to query
    tooltip: 'WMS Loader'                # text to use as tooltip
    autoOpen: false                      # true/false open when application is started, default false 
-   defaultformat: 'png'                 # default format is image/png, further possibilities: image/gif, image/jpeg
-   defaultinfoformat: 'html'            # default infoformat is text/html, further possibilities: text/xml, text/plain
+   defaultformat: 'image/png'                 # default format is image/png, further possibilities: image/gif, image/jpeg
+   defaultinfoformat: 'text/html'            # default infoformat is text/html, further possibilities: text/xml, text/plain
+   
 
 Class, Widget & Style
 ==============
