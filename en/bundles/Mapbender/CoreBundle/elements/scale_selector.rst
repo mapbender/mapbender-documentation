@@ -3,7 +3,9 @@
 Scale Selector
 ************
 
-Displays and changes the map scale.
+Displays a selctbox with scales. The map scale changes when an value from the selectbox is choosen. 
+
+Notice: The Selectbox offers the scales that are defined for the map-Element.
 
 .. image:: ../../../../../figures/scale_selector.png
      :scale: 100
@@ -18,9 +20,9 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: "Scale" # text to use as tooltip
-   target: ~        # Id of Map element to query
-   label: false     # false/true to label the scale selector
+   tooltip: "Scale"  # text to use as tooltip
+   target: ~         # Id of Map element to query
+   label: false      # false/true to label the scale selector, default is false
 
 Class, Widget & Style
 ==============

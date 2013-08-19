@@ -3,7 +3,9 @@
 Layertree - Table of Content
 ****************************
 
-The layertree diplays the layers and Service folders. The layertree allows you to activate/deactivate layers in the map. 
+The layertree diplays the layers and Service folders. The layertree allows you to activate/deactivate layers in the map. You can also activate/deactivate the info request for layers.
+
+You can change the order of Services and layers via drag & drop.
 
 .. image:: ../../../../../figures/layertree.png
      :scale: 80
@@ -14,7 +16,7 @@ Configuration
 .. image:: ../../../../../figures/layertree_configuration.png
      :scale: 80
 
-You can optionally use a button to show this element. See :doc:`button` for inherited configuration options.
+You can optionally use a button to show this element. See :doc:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
 
 YAML-Definition:
 
@@ -22,7 +24,7 @@ YAML-Definition:
 
    title: layertree
    target: ~                    # Id of the Map element to query   
-   type: element                # dialog/element
+   type: ~
    displaytype: tree            # only tree in 3.0, future will offer list
    useAccordion: false          # default is false
    autoOpen: false              # true/false open when application is started, default is false

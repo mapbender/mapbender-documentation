@@ -3,7 +3,7 @@
 GPS-Position
 ***********************
 
-Provides a button to navigate to your current position.
+Provides a button to navigate to your current position and display a symbol at that position. The scale will not be changed.
 
 .. image:: ../../../../../figures/gps_position.png
      :scale: 80
@@ -18,12 +18,12 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: GPS-Position # text to use as tooltip
-   label: true           # true/false to label button
+   tooltip: GPS-Position  # text to use as tooltip
+   label: true            # true/false to label button, default is true
    icon: gpsposition      # icon to display on button
-   target: map           # Id of Map element to query
-   autoStart: false	 # true/false (default is false)
-   refreshinterval: 5000 # refresh interval in ms
+   target: map            # Id of Map element to query
+   autoStart: false	  # true/false, default is false
+   refreshinterval: 5000  # refresh interval in ms, default is 5000 ms
 
 Class, Widget & Style
 ======================

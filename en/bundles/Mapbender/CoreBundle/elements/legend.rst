@@ -3,7 +3,7 @@
 Legend
 ************
 
-The legend object shows the legend of the map's layers.
+The legend object shows the legend of the layers that are displayed in the map.
 
 .. image:: ../../../../../figures/legend.png
      :scale: 80
@@ -22,7 +22,7 @@ YAML-Definition:
 
    tooltip: 'Legend'                    # text to use as tooltip
    elementType: dialog                  # dialog/blockelement, default is dialog
-   autoOpen: true                       # true/false open when application is started
+   autoOpen: true                       # true/false open when application is started, default is true
    displayType: list                    # accordion/list type of display, default is list
    target: ~                            # Id of Map element to query
    noLegend: 'No legend available'      # text to display if no legend is available

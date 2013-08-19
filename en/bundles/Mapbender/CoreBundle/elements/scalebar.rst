@@ -25,7 +25,7 @@ YAML-Definition:
      'right-bottom'     
    position: array('0px','0px')     # scale bar  position, default: x=20px, y=20px
    maxWidth: 200                    # the max width of the scale bar, default 200
-   units: array('km','ml')          # scale bar units 'kilometer' and/or 'miles', default ['km']
+   units: array('km')          # scale bar units 'kilometer' and/or 'miles' (ml), default ['km']
 
 Class, Widget & Style
 ==============

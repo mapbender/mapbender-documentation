@@ -4,8 +4,8 @@ Activity Indicator
 ******************
 
 The activity indicator element provides a simple widget showing background activity (Ajax calls and pending map tile requests).
-In the default configuration it uses a spinner GIF to work. This can be easily modified by overriding the CSS for the 
-widget.
+In the default configuration it uses a Font symbol. This can be easily modified by changing the CSS for the 
+widget in the css-file fom//src//FOM//CoreBundle//Resources//public//css/frontend//mapbender3_theme.css.
 
 Configuration
 =============

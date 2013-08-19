@@ -1,7 +1,9 @@
 ﻿PrintClient
 ***********************
 
-PrintClient is still under construction. For now WGS84 is not supported.
+Print Client allows you to print a defined area of you map. You can choose a template an format and a scale you want to use for printing. You can allow to rotate the area you want to print.
+
+Please not: The PrintClient is still under construction. In version 3.0.0.2 WGS84 is not supported and only printing in A4 and A3 is possible.
 
 .. image:: ../../../../../figures/print_client.png
      :scale: 80
@@ -19,23 +21,23 @@ YAML-Definition:
 .. code-block:: yaml
 
     target: map                                 # id of a "map" element (if yml configuration - string 'map', if database configuration - id of a "map" element)
-    autoOpen: false				# true/false open when application is started, default: false
+    autoOpen: false				# true/false open when application is started, default is false
     print_directly: true                	# true/false must be true for now
     templates:
         a4portrait:                             # template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
-            label: "A4 Portrait"                # template label at dialog
+            label: "A4 Portrait"                # template label in the dialog
             format: a4                          # format (a4,a3,...) has to be defined
-        a4landscape:                            # template name, tamplate file name without file extension 
-            label: "A4 Landscape"               # template label at dialog
-            format: a4                          # format
+        a4landscape:                            # 
+            label: "A4 Landscape"               # 
+            format: a4                          # 
     scales: [5000, 10000, 25000]        	# define scales to choose from selectbox or if empty free scale can be defined in a textfield
     quality_levels:                             # define quality levels in dpi
         72: draft                               # 72 - dpi value, draft - label
         288: high quality                       # 288 - dpi value, draft - label
-    rotatable: true                             # true/false use true for rotation
+    rotatable: true                             # true/false use true for rotation, default is true
     optional_fields:            		# define optional fields (example title-field)
-        title:                                  # name of the optional fields
-            label: Title                        # Label of the optional field  
+        title:                                  # name of the optional fields, default is null (no optional fields are defined)
+            label: Title                        # label of the optional field  
             type: text                          # type of the optional field   
             options:                            # 
                 required: true                  # true or false

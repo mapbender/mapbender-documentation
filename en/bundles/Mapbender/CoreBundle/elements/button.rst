@@ -3,8 +3,11 @@
 Button
 ******
 
-The button element provides a push button widget, which can optionally be
-grouped, so that only one button in a group can be active at any given time.
+The button element provides a push button widget. Some elements like Legend, Layertree, FeatureInfo, Line/Area Ruler and  PrintClient need a button to be displayed/activated if not defined in a frame.
+
+Buttons optionally can be grouped, so that only one button in a group can be active at any given time. This is done by the group paramter.
+
+You can define a button that refers to a website or script using the click paramter.
 
 Configuration
 =============
@@ -16,13 +19,13 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-    title:        # Title
-    tooltip:      # Tooltip
-    icon: ~       # Icon CSS class to use
-    label: true   # true/false Icon label to use
-    target: ~     # Title (Id) of target element
-    click:        # Refer to a website or script like http://mapbender3.org
-    group: ~      # Group to put the button into. Only one button per group can be active
+    title:        # title
+    tooltip:      # text to use as tooltip
+    icon: ~       # icon CSS class to use
+    label: true   # false/true to label the button, default is true
+    target: ~     # title (Id) of target element
+    click:        # refer to a website or script like http://mapbender3.org
+    group: ~      # group to put the button into. Only one button per group can be active
     action: ~     # method of target to call when button is activated
     deactivate: ~ # method of target to call when button is deactivated
 

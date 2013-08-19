@@ -24,11 +24,10 @@ YAML-Definition:
      "zoom_max","zoom_slider")
    target: ~                     # Id of Map element to query
    stepSize: 50                  # step value for pan 
-   stepByPixel: false            # step type "by pixel"/"percent" (false = percent)
+   stepByPixel: false            # step type "by pixel"/"percent", false = percent, default is false
    anchor: 'inline'/'left-top'/  # navigation toolbar alignment, default is 'left-top' 
      'left-bottom'/'right-top'/  # use inline f.e. in sidebar
      'right-bottom'
-   position: array('0px','0px')  # navigation toolbar position, default: x=20px, y=20px
    draggable: true               # element is draggable or not, default true
 
 Class, Widget & Style

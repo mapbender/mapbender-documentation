@@ -3,7 +3,7 @@
 Feature Info
 ************
 
-This element provides feature info capabilities to Mapbender 3. It works for WMS services.
+This element provides feature info capabilities to Mapbender3. It works for WMS services.
 
 Configuration
 =============
@@ -20,7 +20,7 @@ YAML-Definition:
    tooltip: Feature Info   # text to use as tooltip
    target: ~               # Id of Map element to query
    autoOpen: false         # true/false open when application is started, default: false
-   deactivateOnClose: true # true/false (default is true)
+   deactivateOnClose: true # true/false to deactivate the functionality after closing the result dialog, default is true
 
 Class, Widget & Style
 ==============

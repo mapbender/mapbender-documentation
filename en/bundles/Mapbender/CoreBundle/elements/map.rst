@@ -3,7 +3,7 @@
 Map
 ***********************
 
-MapQuery/OpenLayers based map
+MapQuery/OpenLayers based map. You have to define the units, the start and max extent, scales and supported projections.
 
 .. image:: ../../../../../figures/map.png
      :scale: 80
@@ -18,24 +18,24 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   layerset: null             # layer collection
-   dpi: 72                    # resolution
-   srs: "EPSG:4326"           # coordinate referece system. Two srs definitions are supported:
+   layerset: null             # refer to a layerset, define the layerset first and refer to it
+   dpi: 72                    # resolution, default is 72
+   srs: "EPSG:4326"           # coordinate reference system. Two ways of srs definitions are supported:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
-   units: "degrees"           # units to use deegrees/meters
+   units: "degrees"           # units to use deegrees/meters, default is deegrees
    extents: array(
        max: array(0, 40, 20, 60) 
        start: array(5, 45, 15, 55)) # map extents
    scales: "25000000,10000000,5000000,1000000,500000" # a csv scale list
-   maxResolution: "auto" #
+   maxResolution: "auto"      # at the moment only auto is supported, so please do not change
    otherSrs: array(
       "EPSG:31466",
       "EPSG:31467",
       "EPSG:25832")           # other coordinate reference systems. Two srs definitions are supported:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MY SRS TITLE","EPSG:CODE|MY SRS TITLE"]
-   imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img" #
+   imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img"   # 
 
 Class, Widget & Style
 ==============

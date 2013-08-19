@@ -20,11 +20,11 @@ YAML-Definition:
 
    tooltip: 'coordinates display' # text to use as tooltip
    numDigits: 2                   # the number of digits each coordinate shall have when being rendered, default 2
-   target: ~                      # Id of Map element to query 
-   label: true                    # true/false to label  the coordinates display
-   empty: 'x= - y= -'             # 
-   prefix: 'x= '                  #
-   separator: ' y= '              #
+   target: ~                      # id of Map element to query 
+   label: true                    # true/false to label coordinates display, default is false
+   empty: 'x= - y= -'             # show the following text, if the mouse is not on the map
+   prefix: 'x= '                  # show prefix before x-coordinate
+   separator: ' y= '              # show separator before y-coordinate
 
 Class, Widget & Style
 =====================

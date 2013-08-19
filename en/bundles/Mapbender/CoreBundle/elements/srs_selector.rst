@@ -5,6 +5,9 @@ Spatial Reference System Selector (SRS Selector)
 
 The spatial reference system selector changes the map's spatial reference system.
 
+Notice: The Selectbox offers the SRS that are defined for the map-Element.
+
+
 .. image:: ../../../../../figures/srs_selector.png
      :scale: 100
 
@@ -17,7 +20,7 @@ Configuration
 .. code-block:: yaml
 
    tooltip: 'SRS Selector'  # text to use as tooltip
-   label: false             # true/false to label  the srs selector
+   label: false             # true/false to label the srs selector, default is false
    target: ~                # Id of Map element to query
 
 Class, Widget & Style

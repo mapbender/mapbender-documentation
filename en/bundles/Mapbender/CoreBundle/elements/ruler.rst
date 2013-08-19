@@ -3,7 +3,7 @@
 Line/Area Ruler
 ***************
 
-Ruler to draw a line/area and display length/area.
+Ruler to draw a line/area and display length/area in a dialog.
 
 .. image:: ../../../../../figures/ruler.png
      :scale: 80

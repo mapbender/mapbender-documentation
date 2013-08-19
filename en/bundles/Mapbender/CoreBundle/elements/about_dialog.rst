@@ -19,9 +19,9 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: 'About Mapbender3' # text to use as tooltip
-   label: true # false/true to label the scale selector
-   icon: 'abouticon' # icon to display on button
+   tooltip: 'About Mapbender3'  # text to use as tooltip
+   label: true                  # false/true to label the button, default is true
+   icon: 'abouticon'            # icon to display on button
 
 Class, Widget & Style
 ==============
