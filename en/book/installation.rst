@@ -386,17 +386,43 @@ To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <q
 Configuration
 =============
 
-Basically all configuration is done inside the app/config/parameters.yml file. A template is
-provided in the app/config/parameters.yml.dist file.
+The basic configuration is done inside the **app/config/parameters.yml** file. A template is
+provided in the app/config/parameters.yml.dist file. 
 
-The parameters starting with "database" are the database connection details. As well, the mailer
-settings start with mailer.
+**app/config/config.yml** provides more parameters f.e. to configure portal functionality, owsproxy or provide an additional database. 
 
-To enable or disable self registration of users, change the fom.selfregistration parameter.
-In the same way the possibility to reset passwords can be enabled or disabled.
 
-For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set
-to true.
+parameters.yml
+------------------
+
+* database: The parameters starting with **database** are the database connection details. 
+* mailer: The mailer settings start with **mailer**. Use f.e. smtp or sendmail. 
+* locale: You can choose a locale for your application (default is en, de is available). Check http://doc.mapbender3.org/en/book/translation.html to find out how to modify translations or how to add a new language.
+
+**Notice:** You need a mailer for self-registration and reset password functionality.
+
+
+config.yml
+-----------
+
+* fom_user.selfregistration: To enable or disable self-registration of users, change the fom_user.selfregistration parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
+* fom_user.reset_password: In the same way the possibility to reset passwords can be enabled or disabled.
+* framework.session.cookie_httponly: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
+
+**Notice:** You need a mailer for self-registration and reset password functionality (see parameters.yml).
+
+
+mapbender.yml
+------------------
+You can configure an applications on two ways. In the mapbender.yml file or with the browser in the Mapbender3 backend.
+
+* The Mapbender Team provides an up-to-date mapbender.yml with element all parameters with every new version.
+* applications that are defined in the mapbender.yml are not editable in the backend
+* you can import the applications to the database with an app/console command
+
+.. code-block:: yaml
+
+    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
 
 Update Mapbender3 to a newer Version
@@ -404,12 +430,12 @@ Update Mapbender3 to a newer Version
 
 To update Mapbender3 you have to do the following steps:
 
-# get the new version from http://mapbender3.org/builds/ or nightlies from http://mapbender3.org/builds/nightly/
-# save your configuration files and your old Mapbender
-# replace the new files 
-# merge your configuration files (check for new parameters)
-# update your Mapbender database
-# That's all! Have a look at your new Mapbender version
+* get the new version from http://mapbender3.org/builds/ or nightlies from http://mapbender3.org/builds/nightly/
+* save your configuration files and your old Mapbender
+* replace the new files 
+* merge your configuration files (check for new parameters)
+* update your Mapbender database
+* That's all! Have a look at your new Mapbender version
 
 
 Update Example for Linux
@@ -445,6 +471,7 @@ Have a look at the steps as commands
 Update your Mapbender database
 
 .. code-block:: yaml
+
  cd /var/www/mapbender3/
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
@@ -454,4 +481,7 @@ Update your Mapbender database
  chmod -R uga+r /var/www/mapbender3"
  chown -R www-data:www-data /var/www/mapbender3"
 
+ # You have to set write permission to app/cache and app/logs.
+ chmod -R o+w /var/www/mapbender3/app/cache
+ chmod -R o+w /var/www/mapbender3/app/logs
 
