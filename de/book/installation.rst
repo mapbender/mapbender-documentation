@@ -46,7 +46,7 @@ Eine :doc:`Git-basierte <installation_git>`-Installation - vorwiegend für Entwi
 
 
 Konfiguration
-============= 
+******************** 
 
 
 
@@ -206,7 +206,7 @@ Wenn Sie mehr über Mapbender3 erfahren möchten, schauen Sie sich das :doc:`Map
 
 
 Installationsbeispiel für Ubuntu
-=================================
+**************************************** 
 
 Installieren Sie die notwendigen Komponenten:
 
@@ -294,7 +294,8 @@ Wenn Sie mehr über Mapbender3 erfahren möchten, schauen Sie sich das :doc:`Map
 
 
 Installationsbeispiel für Windows
-==================================
+**************************************** 
+
 Installieren Sie die notwendigen Komponenten:
 
  * fügen Sie den Pfad zum PHP-bin Verzeichnis zu Ihrer PATH Variable hinzu 
@@ -375,11 +376,8 @@ Sie können Mapbender3 nun nutzen. Starten Sie Mapbender3 im Entwicklermodus, in
 Wenn Sie mehr über Mapbender3 erfahren möchten, schauen Sie sich das :doc:`Mapbender3 Quickstart Dokument <quickstart>` an.
 
 
-Konfiguration
-=============
-
-Configuration
-=============
+Konfigurationsdateien
+********************** 
 
 Die Basiskonfiguration erfolgt in der Datei **app/config/parameters.yml**. Eine Vorlage app/config/parameters.yml.dist liegt vor. 
 
@@ -420,7 +418,7 @@ Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die mapbe
 
 
 Aktualisierung von Mapbender3 auf eine neuere Version
-=====================================================
+********************************************************** 
 
 Um Mapbender3 zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 

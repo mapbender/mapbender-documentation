@@ -52,7 +52,7 @@ A :doc:`Git-based <installation_git>` installation - mainly for developers -
 is also possible.
 
 Configuration
-=============
+****************
 
 Using the web installer
 -----------------------
@@ -213,7 +213,7 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 
 
 Installation Example for Ubuntu
-===============================
+********************************
 
 Install necessary components:
 
@@ -301,7 +301,8 @@ To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <q
 
 
 Installation Example for Windows
-==================================
+****************************************
+
 Install necessary components:
 
  * add the path to your  PHP-bin directory to the PATH variable 
@@ -383,8 +384,8 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`.
 
 
-Configuration
-=============
+Configuration files
+************************
 
 The basic configuration is done inside the **app/config/parameters.yml** file. A template is
 provided in the app/config/parameters.yml.dist file. 
@@ -426,7 +427,7 @@ You can configure an applications on two ways. In the mapbender.yml file or with
 
 
 Update Mapbender3 to a newer Version
-=======================================
+****************************************
 
 To update Mapbender3 you have to do the following steps:
 
