@@ -119,6 +119,15 @@ The first task you want to - actually need to - execute is the deps task, which
 uses `Composer <http://getcomposer.org>`_ to install the runtime dependencies like
 Symfony and Doctrine:
 
+So, first install Composer (more information at http://getcomposer.org/download/):
+
+.. code-block:: yaml
+
+    curl -sS https://getcomposer.org/installer | php
+
+
+And afterwards install the runtime dependencies like Symfony and Doctrine:
+
 .. code-block:: yaml
 
 	phing deps
