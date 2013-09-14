@@ -3,8 +3,6 @@
 WMC Loader
 ***********************
 
-**Notice:** this functionality will come in Mapbender3 Version 3.0.1.
-
 Mapbender can save configurations (see WMC Editor). This configurations can be loaded with the element WMC loader.
 
 You can add WMC Loader to your application as a selectbox or a button which opens a dialog.

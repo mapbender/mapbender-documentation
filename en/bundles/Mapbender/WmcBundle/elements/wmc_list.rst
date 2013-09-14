@@ -1,6 +1,6 @@
-.. _wmc_editor:
+.. _wmc_list:
 
-WMC Editor
+WMC List
 ***********************
 
 Mapbender can save and edit configurations with the WMC Editor. This configurations can be loaded with the element WMC loader (see WMC Loader).
@@ -13,13 +13,13 @@ The Editor offers the possibility to create and update configurations. You can s
 
 
 
-.. image:: ../../../../../figures/wmc_editor.png
+.. image:: ../../../../../figures/wmc_list.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/wmc_editor_configuration.png
+.. image:: ../../../../../figures/wmc_list_configuration.png
      :scale: 80
 
 You need a button to show this element. See :doc:`button` for inherited configuration options.
