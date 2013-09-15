@@ -29,8 +29,10 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   foo: bar # Example, delete me!
-
+    title: WMC Editor
+    tooltip: WMC Editor   # text to use as tooltip
+    target: map           # name of map element
+    accessGroups: [0,1]   # define groups that can use the WMC Editor
 
 Class, Widget & Style
 ==============

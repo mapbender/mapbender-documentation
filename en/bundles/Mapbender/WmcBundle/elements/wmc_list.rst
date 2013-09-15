@@ -5,13 +5,11 @@ WMC List
 
 Mapbender can save and edit configurations with the WMC Editor. This configurations can be loaded with the element WMC loader (see WMC Loader).
 
-You can add WMC Editor to your application. Notice that the editor needs a button to open.
-
-The Editor offers the possibility to create and update configurations. You can save configurations with a title, desciption and upload a screenshot.
+You can add configurations from the selectbox to your application. 
 
 **Notice:** that all configurations are pubic at the moment. Later in development we want to add access control to this module too.
 
-
+**Notice:** that you need the element WMC Loader to use this functionality.
 
 .. image:: ../../../../../figures/wmc_list.png
      :scale: 80
@@ -22,14 +20,15 @@ Configuration
 .. image:: ../../../../../figures/wmc_list_configuration.png
      :scale: 80
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
-
 
 YAML-Definition:
 
 .. code-block:: yaml
 
-   foo: bar # Example, delete me!
+    title: WMC List         
+    tooltip: WMC List           # text to use as tooltip
+    target: wmcloader           # target to interact with, should be wmcloader
+    label: true                 # add title as label in front of selectbox (default is false)
 
 
 Class, Widget & Style

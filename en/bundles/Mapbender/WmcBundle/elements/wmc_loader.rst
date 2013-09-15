@@ -25,7 +25,17 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   foo: bar # Example, delete me!
+   title: WMC Loader
+   tooltip: 'Load configuration'        # text to use as tooltip
+   target: map                          # name of map element  
+   components:  ['idloader', 'listloader', 'wmcloader'] # select components from 
+                                        # idloader (load configuration by id on start of application), 
+                                        # listloader (load configuration from a list), 
+                                        # wmcloader (load from a file
+   keepSources: false                   # keep the sources that are already loaded in an application,
+                                        # default false
+   keepExtent: false                    # keeps the actual extent, default is false (will apply the 
+                                        # extent of the configuration)
 
 
 Class, Widget & Style
