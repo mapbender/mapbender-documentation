@@ -3,13 +3,14 @@
 About Dialog
 ************
 
-This element renders a button which shows a simple about dialog, listing Mapbender's version.
-(Future: Licenses, Custom information page)
+Dieses Element rendert einen Button, der einen Dialog über Mapbender anzeigt.
+Bisher wird die Mapbender Version angezeigt. In Zukunft kann auch die Lizenz 
+oder kundenspezifische Daten angezeigt werden.
 
 .. image:: ../../../../../figures/about_dialog.png
      :scale: 80
 
-Configuration
+Konfiguration
 =============
 
 .. image:: ../../../../../figures/about_dialog_configuration.png
@@ -19,9 +20,9 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: 'About Mapbender3'  # text to use as tooltip
-   label: true                  # false/true to label the button, default is true
-   icon: 'abouticon'            # icon to display on button
+   tooltip: 'Über Mapbender3'   # Text des Tooltips
+   label: true                  # false/true-Einstellung, um den BUtton zu beschriften. Voreingestellt ist true.
+   icon: 'abouticon'            # Symbol für den Button
 
 Class, Widget & Style
 ==============
@@ -36,15 +37,15 @@ HTTP Callbacks
 about
 -----
 
-Retrieves dialog contents.
+Ruft Inhalte des Dialogs auf.
 
 JavaScript API
 ==============
 
-None.
+Keine.
 
 JavaScript Signals
 ==================
 
-None.
+Keine.
 
