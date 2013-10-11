@@ -3,7 +3,7 @@
 Button
 ******
 
-Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die Legende, Layertree (Layerbaum), FeatureInfo (Infoabfrage), Linien- und Flächenberechnung und der Druck benötigen eine Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element nicht in einem Frame definiert wurde.
+Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die Legende, Layertree (Layerbaum), FeatureInfo (Infoabfrage), Linien- und Flächenberechnung und der Druck benötigen einen Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element nicht in einem Frame definiert wurde.
 
 Button können optional gruppiert werden, so dass nur ein Button in der Gruppe aktiviert ist. Dieses wird im Gruppen-Parameter eingestellt.
 
