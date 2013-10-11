@@ -1,7 +1,7 @@
 .. _about_dialog:
 
-About Dialog
-************
+About Dialog (Über Dialog)
+********************************
 
 Dieses Element rendert einen Button, der einen Dialog über Mapbender anzeigt.
 Bisher wird die Mapbender Version angezeigt. In Zukunft kann auch die Lizenz 
@@ -21,11 +21,11 @@ YAML-Definition:
 .. code-block:: yaml
 
    tooltip: 'Über Mapbender3'   # Text des Tooltips
-   label: true                  # false/true-Einstellung, um den BUtton zu beschriften. Voreingestellt ist true.
+   label: true                  # false/true, um den Button zu beschriften. Standardwert ist true.
    icon: 'abouticon'            # Symbol für den Button
 
 Class, Widget & Style
-==============
+======================
 
 * Class: Mapbender\\CoreBundle\\Element\\AboutDialog
 * Widget: mapbender.mbAboutDialog
