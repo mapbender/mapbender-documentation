@@ -23,7 +23,7 @@ YAML-Definition:
 
    tooltip: 'Legend'                    # Text des Tooltips
    elementType: dialog                  # Anzeige als Dialog- oder Vlockelement, Standard ist Dialog.
-   autoOpen: true                       # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird, der Standardwert ist false.
+   autoOpen: true                       # true, wenn die Legende beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
    displayType: list                    # akkordeonartige Anzeige oder Liste. Standard ist Liste.
    target: ~                            # ID des Kartenelements
    noLegend: 'No legend available'      # Text, der angezeigt wird, wenn keine Legende verfügbar ist.

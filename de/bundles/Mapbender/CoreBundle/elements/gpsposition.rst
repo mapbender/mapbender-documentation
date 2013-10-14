@@ -23,7 +23,7 @@ YAML-Definition:
    label: true            # false/true, um den Button zu beschriften. Der Standardwert ist true.
    icon: gpsposition      # Symbol für den Button
    target: map            # ID des Kartenelements
-   autoStart: false	   # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird, der Standardwert ist false.
+   autoStart: false	   # true, wenn diese Funktion beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
    refreshinterval: 5000  # Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
 
 Class, Widget & Style

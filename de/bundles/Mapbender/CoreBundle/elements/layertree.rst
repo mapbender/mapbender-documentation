@@ -29,7 +29,7 @@ YAML-Definition:
    type: ~                      # Typ des Layerbaums
    displaytype: tree            # In 3.0 gibt es nur den Baum (Tree), in Zukunft wird auch eine Liste angeboten.
    useAccordion: false          # akkordeonartige Anzeige. Standard ist false
-   autoOpen: false              # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird, der Standardwert ist false.
+   autoOpen: false              # true, wenn der Layerbaum beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
    titleMaxLength: 20           # Maximale Länge des Layertitels, Standard ist 20  
    showBaseSource: true         # Anzeige des Basislayers, der Standardwert ist true
    showHeader: true             # zeigt eine Überschrift, die die Anzahl der Services zählt, der Standardwert ist true
