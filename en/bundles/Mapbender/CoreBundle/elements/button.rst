@@ -47,7 +47,7 @@ JavaScript API
 activate
 --------
 
-Activates button. Get's called on click if button is deactivated.
+Activates button. Gets called on click if button is deactivated.
 
 deactivate
 ----------

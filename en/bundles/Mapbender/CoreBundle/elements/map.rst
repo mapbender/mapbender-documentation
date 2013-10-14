@@ -23,7 +23,7 @@ YAML-Definition:
    srs: "EPSG:4326"           # coordinate reference system. Two ways of srs definitions are supported:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
-   units: "degrees"           # units to use deegrees/meters, default is deegrees
+   units: "degrees"           # units to use degrees/meters, default is deegrees
    extents: array(
        max: array(0, 40, 20, 60) 
        start: array(5, 45, 15, 55)) # map extents
@@ -35,7 +35,7 @@ YAML-Definition:
       "EPSG:25832")           # other coordinate reference systems. Two srs definitions are supported:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MY SRS TITLE","EPSG:CODE|MY SRS TITLE"]
-   imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img"   # 
+   imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img"   # path of images
 
 Class, Widget & Style
 ==============
