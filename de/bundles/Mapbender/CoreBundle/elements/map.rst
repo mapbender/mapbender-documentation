@@ -29,7 +29,7 @@ YAML-Definition:
        max: array(0, 40, 20, 60) 
        start: array(5, 45, 15, 55)) # Kartenbereich (extent)
    scales: "25000000,10000000,5000000,1000000,500000" # eine CSV-Liste für den Maßstab
-   maxResolution: "auto"      # im Moment wird nur auto unterstützt, bitte ändern Sie es nicht.
+   maxResolution: "auto"      # Auflösung, im Moment wird nur auto unterstützt, bitte ändern Sie es nicht.
    otherSrs: array(
       "EPSG:31466",
       "EPSG:31467",
@@ -82,7 +82,7 @@ rebuildStacking
 
 move
 ----------
-Moves a layer up (direction == true) or down (direction == false) on the same level in the layer hierarchy.
+Bewegt den Layer nach oben (direction == true) oder nach unten (direction == false) im gleichen Level in der Layerhirarchie.
 
 zoomIn
 ----------
@@ -118,7 +118,7 @@ removeById
 
 layerById
 ----------
-Searches for a MapQuery layer by its Mapbender id. Returns the layer or null if not found.
+Sucht nach einem MapQuery Layer mit der Mapbender ID. Gibt einen Layer zurück oder Null, wenn kein Layer gefunden wird.
 
 scales
 ----------

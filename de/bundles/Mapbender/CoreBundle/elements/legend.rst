@@ -22,7 +22,7 @@ YAML-Definition:
 .. code-block:: yaml
 
    tooltip: 'Legend'                    # Text des Tooltips
-   elementType: dialog                  # Anzeige als Dialog- oder Vlockelement, Standard ist Dialog.
+   elementType: dialog                  # Anzeige als Dialog- oder Blockelement, Standard ist Dialog.
    autoOpen: true                       # true, wenn die Legende beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
    displayType: list                    # akkordeonartige Anzeige oder Liste. Standard ist Liste.
    target: ~                            # ID des Kartenelements

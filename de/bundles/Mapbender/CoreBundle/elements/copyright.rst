@@ -18,7 +18,7 @@ YAML-Definition:
    tooltip: "Copyright"             # Text des Tooltips
    width: 200px                     # Copyright Breite, Standard ist '200px'
    anchor: 'inline'/'left-top'/     # Copyright Ausrichtung, Standard ist 'left-bottom'
-     'left-bottom'/'right-top'/     # Benutzen Sie inline z.B. für die sidebar
+     'left-bottom'/'right-top'/     # Benutzen Sie inline z.B. für die Sidebar
      'right-bottom'                 
    position: array('0px','0px')     # Copyright Position, Standard ist: x=0px, y=0px
    copyrigh_text: "© XXX # 2013"    # Erstellen Sie ihren Text für das Copyright
