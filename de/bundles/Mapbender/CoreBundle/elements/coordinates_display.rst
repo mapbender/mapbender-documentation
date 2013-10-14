@@ -21,7 +21,7 @@ YAML-Definition:
    tooltip: 'coordinates display' # Text des Tooltips
    numDigits: 2                   # die Anzahl der Nachkommastellen, die jede Koordinate haben soll
    target: ~                      # ID des Kartenelements
-   label: true                    # false/true, um den Button zu beschriften. Standardwert ist true.
+   label: true                    # false/true, um den Button zu beschriften. Der Standardwert ist true.
    empty: 'x= - y= -'             # zeigt diesen Text, wenn die Maus sich nicht in der Karte befindet.
    prefix: 'x= '                  # zeigt ein Präfix vor der X-Koordinate
    separator: ' y= '              # zeigt einen Separator vor der Y-Koordinate

@@ -22,7 +22,7 @@ YAML-Definition:
     title:        # Titel
     tooltip:      # Text des Tooltips
     icon: ~       # Symbol verwendete CSS Klasse
-    label: true   # false/true, um den Button zu beschriften. Standardwert ist true.
+    label: true   # false/true, um den Button zu beschriften. Der Standardwert ist true.
     target: ~     # Titel (Id) des Zielelements
     click:        # bezieht sich auf eine Webseite oder ein Skript, z.B.: http://mapbender3.org
     group: ~      # Gruppe, in die der Button eingefügt werden soll. Nur ein Button pro Gruppe kann aktiviert sein.

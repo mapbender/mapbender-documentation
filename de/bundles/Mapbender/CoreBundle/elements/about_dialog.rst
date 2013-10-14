@@ -21,7 +21,7 @@ YAML-Definition:
 .. code-block:: yaml
 
    tooltip: 'Über Mapbender3'   # Text des Tooltips
-   label: true                  # false/true, um den Button zu beschriften. Standardwert ist true.
+   label: true                  # false/true, um den Button zu beschriften. Der Standardwert ist true.
    icon: 'abouticon'            # Symbol für den Button
 
 Class, Widget & Style
