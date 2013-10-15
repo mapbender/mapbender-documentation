@@ -3,7 +3,7 @@
 Overview (Übersicht)
 ***********************
 
-Dieses Element stellt die Kontrolle über eine Übersichtskarte bereit, ähnlich zur OpenLayers Übersicht.
+Mit diesem Element kann eine Übersichtskarte erstellt werden, ähnlich wie in OpenLayers.
 Es kann die Größe des Übersichtsfensters und die Position bestimmt werden. In der Übersicht wird ein vorher definiertes Layerset angezeigt.
 Die Übersichtskarte kann fixiert sein, oder sie ist zoomfähig, d.h. wenn in der Hauptkarte gezoomt wird, wird dies auch in der Übersicht angezeigt.
 Es kann auch definiert werden, ob die Übersichtskarte nach dem Öffnen der Applikation minimiert oder maximiert ist.
@@ -28,11 +28,11 @@ YAML-Definition:
    width: 200                       # Breite der Übersicht
    height: 100                      # Höhe der Übersicht
    anchor: 'inline'/'left-top'/     # Ausrichtung der Übersicht, Standard ist 'right-top'
-     'left-bottom'/'right-top'/     # Benutzen Sie inline z.B. für die sidebar
+     'left-bottom'/'right-top'/     # Benutzen Sie inline z.B. für die Sidebar
      'right-bottom'   
    position: array('0px','0px')     # Position der Übersicht in Relation zum Anker, Standard: x=0px, y=0px
-   maximized: true                  # true/false zum Öffnen beim Start der Applikation, der Standardwert ist true
-   fixed: true                      # true/false um die Übersichtsbereich zu fixieren, der Standardwert ist true
+   maximized: true                  # true/false ob die Applikation beim Start maximiert ist, der Standardwert ist true
+   fixed: true                      # true/false um den Übersichtsbereich zu fixieren, der Standardwert ist true
 
 Class, Widget & Style
 ==============
