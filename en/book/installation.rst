@@ -18,6 +18,7 @@ Mapbender3 needs the following components in order to run:
 * PHP Alternative PHP Cache (php-apc)
 * PHP Internationalization (php5-intl)
 * PHP GD (php5-gd) for printing
+* PHP FileInfo for printing to check image format
 
 Optionally, in order to use a database other than the preconfigured SQLite one,
 you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_.

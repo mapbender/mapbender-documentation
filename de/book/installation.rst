@@ -17,7 +17,9 @@ Mapbender3 benötigt die folgenden Komponenten:
 * PHP cURL Erweiterung (php5-curl) 
 * PHP Alternative PHP Cache (php-apc)
 * PHP Internationalisierungserweiterung (php5-intl)
-* PHP GD (php5-gd) for printing
+* PHP GD (php5-gd) für den Druck
+* PHP FileInfo für den Druck zur Prüfung der Bilder
+
 
 Um optional eine andere Datenbank als die vorkonfigurierte SQLite zu verwenden, wird eine PHP-Erweiterung benötigt, die von Doctrine unterstützt wird:
 `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. 
