@@ -22,7 +22,7 @@ YAML-Definition:
 
    tooltip: "ruler"   # Text des Tooltips
    target: ~          # ID des Kartenelements
-   type: 'line'       # Wählen Sie Typ line oder area
+   type: 'line'       # Wählen Sie Typ 'line' oder 'area'
 
 Class, Widget & Style
 =====================

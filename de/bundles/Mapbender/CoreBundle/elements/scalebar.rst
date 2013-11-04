@@ -1,14 +1,14 @@
 .. _scalebar:
 
 ScaleBar (Maßstabsbalken)
-***********************
+**************************
 
 Der Maßstabsbalken ist eine schmale Linie, die den aktuellen Maßstab anzeigt.
 
 .. image:: ../../../../../figures/scalebar.png
      :scale: 100
 
-Configuration
+Konfiguration
 =============
 
 .. image:: ../../../../../figures/scalebar_configuration.png
@@ -28,7 +28,7 @@ YAML-Definition:
    units: array('km')               # Einheiten des Maßstabsbalkens, 'kilometer' und/oder 'miles' (ml), Standard ist ['km']
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\ScaleBar
 * Widget: mapbender.element.scalebar.js
