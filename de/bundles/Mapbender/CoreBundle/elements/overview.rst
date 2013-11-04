@@ -27,7 +27,7 @@ YAML-Definition:
    layerset: ~                      # vorher definiertes Layerset, das angezeigt werden soll.
    width: 200                       # Breite der Übersicht
    height: 100                      # Höhe der Übersicht
-   anchor: 'inline'/'left-top'/     # Ausrichtung der Übersicht, Standard ist 'right-top'
+   anchor: 'inline'/'left-top'/     # Ausrichtung der Übersicht, Standard ist 'right-top' (rechts oben)
      'left-bottom'/'right-top'/     # Benutzen Sie inline z.B. für die Sidebar
      'right-bottom'   
    position: array('0px','0px')     # Position der Übersicht in Relation zum Anker, Standard: x=0px, y=0px

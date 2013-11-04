@@ -33,7 +33,7 @@ YAML-Definition:
         - { dpi: 72 , label: Draft (72dpi)}		# die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
         - { dpi: 288,  label: Document (288dpi)}	# es können weitere dpi-Werte angegeben werden
     rotatable: true                             	# true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
-    optional_fields:            		 # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
+    optional_fields:                            # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
         title:                                  # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
             label: Title                        # Beschriftung des optionalen Feldes
             type: text                          # Typ des optionalen Feldes
