@@ -21,8 +21,11 @@ YAML-Definition:
    target: ~                            # Id of Map element to query
    tooltip: 'WMS Loader'                # text to use as tooltip
    autoOpen: false                      # true/false open when application is started, default false 
-   defaultformat: 'image/png'                 # default format is image/png, further possibilities: image/gif, image/jpeg
-   defaultinfoformat: 'text/html'            # default infoformat is text/html, further possibilities: text/xml, text/plain
+   defaultFormat: 'image/png'           # default format is image/png, further possibilities: image/gif, image/jpeg
+   defaultInfoFormat: 'text/html'       # default infoformat is text/html, further possibilities: text/xml, text/plain
+   splitLayers: false                   # split layer on load of the service, default false
+   useDeclarative: false                # allow to load service from a link (for example from featureInfo or search) 
+                                        # and define the layers to activated, default false 
 
 
 How to add a WMS by defining a link
@@ -30,20 +33,27 @@ How to add a WMS by defining a link
 
 You can add a WMS to Mapbender by defining a link f.e. in your WMS featureinfo or your search results.
 
+Set **useDeclarative** true im mapbender.yml or check declarative in administration.
+
 The link has to look like this:
 
-.. code-block:: yaml
+.. code-block:: html
 
-<a id="abc" mb-action="source.add.wms" mb-wms-merge="1" 
+<a mb-action="source.add.wms" mb-wms-merge="1" 
 mb-wms-layers="Gewaesser,Fluesse" 
-href="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">Laden</a>
+href="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
+
+
+<a mb-action="source.add.wms" mb-wms-merge="1" 
+mb-wms-layers="Gewaesser,Fluesse" 
+mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS" href="">load service</a>
 
 
 .. code-block:: yaml
 
-mb-action="source.add.wms"    # defines action to add a  WMS
-mb-wms-merge="1"              # adds the WMS only once, if WMS is already part of the application it will use the WMS which is there (default is 1)
-mb-wms-layers="Gewaesser,Fluesse" # defines the layers to be activated, _all activates all layers, default all layers are deactivated
+    mb-action="source.add.wms"    # defines action to add a  WMS
+    mb-wms-merge="1"              # adds the WMS only once, if WMS is already part of the application it will use the WMS which is there (default is 1)
+    mb-wms-layers="Gewaesser,Fluesse" # defines the layers to be activated, _all activates all layers, default all layers are deactivated
 href oder mb-url              # refer to the WMS getcapabilities URL
 
    
