@@ -32,8 +32,7 @@ YAML-Definition:
     rotatable: true                             	# true/false use true for rotation, default is true
     optional_fields:            		# define optional fields (example title-field)
         title:                                  # name of the optional fields, default is null (no optional fields are defined)
-            label: Title                        # label of the optional field  
-            type: text                          # type of the optional field   
+            label: Title                        # label of the optional field    
             options:                            # 
                 required: true                  # true or false
 
@@ -42,29 +41,6 @@ Class, Widget & Style
 
 * Class: Mapbender\\CoreBundle\\Element\\PrintClient
 * Widget: mapbender.element.printClient.js
-
-HTTP Callbacks
-==============
-
-None.
-
-JavaScript API
-==============
-
-open
-----------
-
-Opens the print client dialog.
-
-close
------
-Closes the print client dialog.
-
-JavaScript Signals
-==================
-
-None.
-
 
 
 File location
