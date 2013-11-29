@@ -17,6 +17,8 @@ Mapbender3 needs the following components in order to run:
 * PHP cURL extension (php5-curl)
 * PHP Alternative PHP Cache (php-apc)
 * PHP Internationalization (php5-intl)
+* PHP GD (php5-gd) for printing
+* PHP FileInfo for printing to check image format
 
 Optionally, in order to use a database other than the preconfigured SQLite one,
 you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_.
@@ -52,7 +54,7 @@ A :doc:`Git-based <installation_git>` installation - mainly for developers -
 is also possible.
 
 Configuration
-=============
+****************
 
 Using the web installer
 -----------------------
@@ -115,6 +117,7 @@ configured database user is allowed to. Call the console utility like this:
 .. code-block:: yaml
 
    app/console doctrine:database:create
+
 
 Creating the database schema
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -212,7 +215,7 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 
 
 Installation Example for Ubuntu
-===============================
+********************************
 
 Install necessary components:
 
@@ -245,7 +248,7 @@ Open Symfony´s Welcome Script config.php. This script checks whether all necess
 .. image:: ../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
 
-Set owner, group and rights
+Set owner, group and rights. Assign the files to the Apache user (www-data).
 
 .. code-block:: yaml
 
@@ -300,7 +303,8 @@ To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <q
 
 
 Installation Example for Windows
-==================================
+****************************************
+
 Install necessary components:
 
  * add the path to your  PHP-bin directory to the PATH variable 
@@ -354,14 +358,17 @@ Adapt the configuration file parameters.yml (app/config/parameters.yml) and defi
 Run the app/console commands with php. First you have to open a terminal (cmd).
 
 .. code-block:: yaml
-
- cd c:/mapbender3
+ 
+ c:
+ cd mapbender3
  php.exe app/console doctrine:database:create
  php.exe app/console doctrine:schema:create
  php.exe app/console init:acl
  php.exe app/console assets:install web
  php.exe app/console fom:user:resetroot
- php.exe app/console doctrine:fixtures:load  --append
+ php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+ php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
 
 Installation of Mapbender3 is done. 
 
@@ -374,22 +381,110 @@ You can start using Mapbender3 now. You can open the developer mode when you run
 
 * http://localhost/mapbender3/app_dev.php
 
-**Notice:** Click on the Mapbender3 logo to get to the login page. Log in with the new user you created. 
+**Notice:** Go to the login link at the right-top and log in with the new user you created. 
 
 To learn more about Mapbender3 have a look at the :doc:`Mapbender3 Quickstart <quickstart>`.
 
-Configuration
-=============
 
-Basically all configuration is done inside the app/config/parameters.yml file. A template is
-provided in the app/config/parameters.yml.dist file.
+Configuration files
+************************
 
-The parameters starting with "database" are the database connection details. As well, the mailer
-settings start with mailer.
+The basic configuration is done inside the **app/config/parameters.yml** file. A template is
+provided in the app/config/parameters.yml.dist file. 
 
-To enable or disable self registration of users, change the fom.selfregistration parameter.
-In the same way the possibility to reset passwords can be enabled or disabled.
+**app/config/config.yml** provides more parameters f.e. to configure portal functionality, owsproxy or provide an additional database. 
 
-For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set
-to true.
+
+parameters.yml
+------------------
+
+* database: The parameters starting with **database** are the database connection details. 
+* mailer: The mailer settings start with **mailer**. Use f.e. smtp or sendmail. 
+* locale: You can choose a locale for your application (default is en, de is available). Check http://doc.mapbender3.org/en/book/translation.html to find out how to modify translations or how to add a new language.
+
+**Notice:** You need a mailer for self-registration and reset password functionality.
+
+
+config.yml
+-----------
+
+* fom_user.selfregistration: To enable or disable self-registration of users, change the fom_user.selfregistration parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
+* fom_user.reset_password: In the same way the possibility to reset passwords can be enabled or disabled.
+* framework.session.cookie_httponly: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
+
+**Notice:** You need a mailer for self-registration and reset password functionality (see parameters.yml).
+
+
+mapbender.yml
+------------------
+You can configure an applications on two ways. In the mapbender.yml file or with the browser in the Mapbender3 backend.
+
+* The Mapbender Team provides an up-to-date mapbender.yml with element all parameters with every new version.
+* applications that are defined in the mapbender.yml are not editable in the backend
+* you can import the applications to the database with an app/console command
+
+.. code-block:: yaml
+
+    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
+
+Update Mapbender3 to a newer Version
+****************************************
+
+To update Mapbender3 you have to do the following steps:
+
+* get the new version from http://mapbender3.org/builds/ or nightlies from http://mapbender3.org/builds/nightly/
+* save your configuration files and your old Mapbender
+* replace the new files 
+* merge your configuration files (check for new parameters)
+* update your Mapbender database
+* That's all! Have a look at your new Mapbender version
+
+
+Update Example for Linux
+--------------------------
+Have a look at the steps as commands
+
+.. code-block:: yaml
+
+ # Download the new version
+ wget -O http://mapbender3.org/builds/mapbender3-3.0.1.tar.gz /tmp/build_mapbender3/
+ tar xfz /tmp/build_mapbender3/mapbender3-3.0.tar.gz
+ 
+ # save the old version
+ mv -R /var/www/mapbender3 /var/www/mapbender3_save
+ 
+ # get the code of the new version
+ cp -R /tmp/build_mapbender3/mapbender3-3.0.1 /var/www/
+ mv /var/www/mapbender3-3.0.1 /var/www/mapbender3
+ 
+ # copy your old configuration files to the new version
+ cp /var/www/mapbender3_save/app/config/parameters.yml /var/www/mapbender3/app/config/parameters.yml
+ cp /var/www/mapbender3/app/config/parameters.yml /var/www/mapbender3/app/config/config.yml-dist
+ cp /var/www/mapbender3_save/app/config/config.yml /var/www/mapbender3/app/config/config.yml 
+ 
+ # manual step
+ # merge parameters.yml, config.yml and if used mapbender.yml back to the new installation
+ 
+ # change the accessrights and owner of the files
+ chmod -R uga+r /var/www/mapbender3"
+ chown -R www-data:www-data /var/www/mapbender3"
+
+
+Update your Mapbender database
+
+.. code-block:: yaml
+
+ cd /var/www/mapbender3/
+ app/console doctrine:schema:update --dump-sql
+ app/console doctrine:schema:update --force
+ app/console assets:install web
+ 
+ # change the access rights and owner of the files
+ chmod -R uga+r /var/www/mapbender3"
+ chown -R www-data:www-data /var/www/mapbender3"
+
+ # You have to set write permission to app/cache and app/logs.
+ chmod -R o+w /var/www/mapbender3/app/cache
+ chmod -R o+w /var/www/mapbender3/app/logs
 

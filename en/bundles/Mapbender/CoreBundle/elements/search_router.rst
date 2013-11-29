@@ -32,7 +32,7 @@ YAML-Definition:
                geometry_attribute: geom  # name of the geometry column to query
            form:  # search form configuration
                the_name:  # field name, use relation column name to query or anything else for splitted fields (see below)
-                   type: text  # field type, usually text
+                   type: text  # field type, usually text or integer
                    options:  # field options
                        required: true  # HTML5 required attribute
                        attr:  # HTML attributes to inject

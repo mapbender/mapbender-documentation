@@ -1,9 +1,9 @@
 ﻿PrintClient
 ***********************
 
-Print Client allows you to print a defined area of you map. You can choose a template an format and a scale you want to use for printing. You can allow to rotate the area you want to print.
+Print Client allows you to print a defined area of your map. You can choose a template, a format and a scale you want to use for printing. You can allow to rotate the area you want to print.
 
-Please not: The PrintClient is still under construction. In version 3.0.0.2 WGS84 is not supported and only printing in A4 and A3 is possible.
+Please note: The PrintClient is still under construction.
 
 .. image:: ../../../../../figures/print_client.png
      :scale: 80
@@ -20,25 +20,19 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-    target: map                                 # id of a "map" element (if yml configuration - string 'map', if database configuration - id of a "map" element)
+    target: map                            	# Id of Map element to query
     autoOpen: false				# true/false open when application is started, default is false
-    print_directly: true                	# true/false must be true for now
     templates:
-        a4portrait:                             # template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
-            label: "A4 Portrait"                # template label in the dialog
-            format: a4                          # format (a4,a3,...) has to be defined
-        a4landscape:                            # 
-            label: "A4 Landscape"               # 
-            format: a4                          # 
-    scales: [5000, 10000, 25000]        	# define scales to choose from selectbox or if empty free scale can be defined in a textfield
-    quality_levels:                             # define quality levels in dpi
-        72: draft                               # 72 - dpi value, draft - label
-        288: high quality                       # 288 - dpi value, draft - label
-    rotatable: true                             # true/false use true for rotation, default is true
+        - { template: a4portrait, label: A4 Portrait, format: a4}	# template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
+        - { template: a4landscape, label: A4 Landscape, format: a4} 	# template label in the dialog, format (a4,a3,...) has to be defined 
+    scales: [5000, 10000, 25000]        		# define scales to choose from selectbox or if empty free scale can be defined in a textfield
+    quality_levels:					# define quality levels in dpi
+        - { dpi: 72 , label: Draft (72dpi)}		# 72 - dpi value, Draft - label
+        - { dpi: 288,  label: Document (288dpi)}	# 288 - dpi value, Document - label
+    rotatable: true                             	# true/false use true for rotation, default is true
     optional_fields:            		# define optional fields (example title-field)
         title:                                  # name of the optional fields, default is null (no optional fields are defined)
-            label: Title                        # label of the optional field  
-            type: text                          # type of the optional field   
+            label: Title                        # label of the optional field    
             options:                            # 
                 required: true                  # true or false
 
@@ -47,33 +41,6 @@ Class, Widget & Style
 
 * Class: Mapbender\\CoreBundle\\Element\\PrintClient
 * Widget: mapbender.element.printClient.js
-* Style: mapbender.element.printClient.css
-
-HTTP Callbacks
-==============
-
-/direct
---------------------------------
-
-Not Yet Implemented
-
-JavaScript API
-==============
-
-open
-----------
-
-Opens the print client dialog.
-
-close
------
-Closes the print client dialog.
-
-JavaScript Signals
-==================
-
-None.
-
 
 
 File location

@@ -22,9 +22,9 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   title: layertree
+   title: layertree             # title of layertree
    target: ~                    # Id of the Map element to query   
-   type: ~
+   type: ~                      # type of layertree
    displaytype: tree            # only tree in 3.0, future will offer list
    useAccordion: false          # default is false
    autoOpen: false              # true/false open when application is started, default is false
@@ -32,7 +32,7 @@ YAML-Definition:
    showBaseSource: true         # show base layer, default is true
    showHeader: true             # shows a headline which counts the number of services  
    layerMenu: false             # show contextmenu for the layer (like legend, transparency, zoom to layer, metadata u.o.), default is false, not implemented in 3.0
-   layerRemove: false		# default is false
+   layerRemove: false           # default is false
 
 Class, Widget & Style
 ======================

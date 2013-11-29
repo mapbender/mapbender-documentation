@@ -10,6 +10,7 @@ The Developer's Book
    book/development/elements
    book/development/requestresponse
    book/development/bundle
+   book/development/proxy
    book/development/controllers
    book/development/twig
    book/development/git
