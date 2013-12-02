@@ -9,7 +9,7 @@ The Sketch element adds a vector layer in the map and enables geometry objects t
      :scale: 80
 
 Configuration
-=============
+================
 
 .. image:: ../../../../../figures/sketch_configuration.png
      :scale: 80
@@ -26,13 +26,13 @@ YAML-Definition:
    defaultType: 'circle'            # sketch type from types (s. parameter 'types')
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\Sketch
 * Widget: mapbender.element.sketch.js
 
 HTTP Callbacks
-==============
+=====================
 
 None.
 
