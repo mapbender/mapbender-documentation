@@ -6,6 +6,11 @@ WMS Loader
 Opens a dialog in  which a WMS can be loaded via the getCapabilities-Request.
 You can load WMS 1.1.1 and  WMS 1.3.0.
 
+
+.. image:: ../../../../../figures/wms_loader.png
+     :scale: 80
+
+
 Configuration
 =============
 
