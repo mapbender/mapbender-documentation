@@ -212,6 +212,7 @@ There are following steps you have to do to stay up-to-date
  cd mapbender-starter
  git pull
  git submodule update --init --recursive
+ cd application
  app/console doctrine:schema:update
 
 
