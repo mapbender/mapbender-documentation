@@ -5,10 +5,16 @@ Sketch
 
 The Sketch element adds a vector layer in the map and enables geometry objects to draw
 
+.. image:: ../../../../../figures/sketch.png
+     :scale: 80
 
 Configuration
 =============
 
+.. image:: ../../../../../figures/sketch_configuration.png
+     :scale: 80
+
+You need a button to show this element. See :ref:`button` for inherited configuration options.
 
 YAML-Definition:
 
