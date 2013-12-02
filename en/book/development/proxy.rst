@@ -25,7 +25,7 @@ in PHP by using the `signing` service provided by Mapbender:
 .. code-block:: php
 
     $url = 'http://example.com';
-    $signer = $this->container->get('signing');
+    $signer = $this->container->get('signer');
     $signedUrl = $signer->signUrl(); // http://example.com?_signature=18:ePbX2vK9dy6AvaJq31URCvSz3EM
 
 Checking that the URL and signature still match is also easy:
