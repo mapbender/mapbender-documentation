@@ -46,29 +46,6 @@ Class, Widget & Style
 * Class: Mapbender\\CoreBundle\\Element\\PrintClient
 * Widget: mapbender.element.printClient.js
 
-HTTP Callbacks
-==============
-
-Keine.
-
-JavaScript API
-==============
-
-open
-----------
-
-Öffnet den Druckdialog.
-
-close
------
-Schließt den Druckdialog.
-
-JavaScript Signals
-==================
-
-Keine.
-
-
 
 File location
 ===============
