@@ -3,7 +3,7 @@
 Sketch
 ***********************
 
-Das Sketch Element fügt einen Vektorlayer in der Karte hinzu, wodurch Geometrieobjekte gezeichnet wird.
+Das Sketch Element fügt einen Vektorlayer in der Karte hinzu, wodurch Geometrieobjekte gezeichnet werden.
 
 .. image:: ../../../../../figures/sketch.png
      :scale: 80
