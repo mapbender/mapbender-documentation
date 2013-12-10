@@ -36,16 +36,16 @@ YAML-Definition:
                    options:  # Feld Optionen
                        required: true  # für HTML5 erforderliche Attribute, Standard ist true
                        attr:  # HTML Attribute
-                           data-autocomplete: on  # Datenvervollständigung, Standard ist on (eingeschaltet)
+                           data-autocomplete: on  # automatische Datenvervollständigung, Standard ist on (eingeschaltet)
                    split: [name, zusatz]  # optionales Feld, kann geteilt werden
-                   autocomplete-key: id  # Spaltenname, der als automatisch vervollständigter Schlüssel zurückgegeben wird, anstatt eines Spaltenwertes
+                   autocomplete-key: id  # Spaltenname, der als automatisch vervollständigter Schlüssel zurückgegeben wird (statt eines Spaltenwertes)
            results:
-               view: table  #  nur aktuelle Ergebnisansicht
+               view: table  # aktuelle Ergebnisansicht
                headers:  #    Hash des Tabellen-Headers und die entsprechenden Ergebnisspalten
                    id: ID  # Spaltenname -> Header Beschriftung
                    name: # Name
                callback:  #  Was soll beim Klick/Mousover passieren
-                   event: click  # Ergebniszeileereignis, auf das gehört werden soll (Klick oder Mouseover)
+                   event: click  # Ereignis, auf das gehört werden soll (Klick oder Mouseover)
                    options:
                        buffer: 10  # Wert des Puffers für die Geometrie des Ergebnisses, bevor gezoomt wird
                        minScale: ~  # Maßstabsbeschränkung für das Zoomen
