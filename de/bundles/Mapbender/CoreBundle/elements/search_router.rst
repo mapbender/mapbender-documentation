@@ -3,52 +3,52 @@
 Search Router
 ***********************
 
-Search frontend GUI for plugable search engine modules. Right now a generic SQL search engine
-is provided, with more to come (think Lucene enhanced search, etc.)
+Dieses Element ist eine Such-Frontend Oberfläche für Suchmaschinen-Module. Zur Zeit wird eine generische SQL Suchmaschine unterstützt, weitere Entwicklungen werden folgen (z.B. Lucene Suche)
 
-Configuration
+
+Konfiguration
 =============
 
 .. image:: ../../../../../figures/search_router_configuration.png
      :scale: 80
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
+Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration.
 
 YAML-Definition:
 
 .. code-block:: yaml
 
-   target: map  # for result visualization
-   asDialog: true  # render inside a dialog or not
-   timeoutFactor:  2  # timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started
-   routes:      # collection of search routes
-       demo_a:  # machine readable name
-           title: Demo A  # human readable title
-           class: Mapbender\CoreBundle\Component\SQLSearchEngine  # Search engine to use
-           class_options:  # these are forwarded to the search engine
-               connection: ~  # DBAL connection name to use, use ~ for the default one
-               relation: test.demo_a  # Relation to select from, you can use subqueries
-               attributes: [id, name]  # array of columns to select, expressions are possible
-               geometry_attribute: geom  # name of the geometry column to query
-           form:  # search form configuration
-               the_name:  # field name, use relation column name to query or anything else for splitted fields (see below)
-                   type: text  # field type, usually text or integer
-                   options:  # field options
-                       required: true  # HTML5 required attribute
-                       attr:  # HTML attributes to inject
-                           data-autocomplete: on  # this triggers autocomplete
-                   split: [name, zusatz]  # optional field contents, might be split
-                   autocomplete-key: id  # column name to return as autocomplete key instead of column value
+   target: map  # für die Ergebnisanzeige
+   asDialog: true  # true, false im Dialog rendern
+   timeoutFactor:  2  # timeout Faktor (multipliziert mit automatischem Verschiebungfaktor), um die automatische Vervollständigung direkt nach dem Start der Suche zu verhindern
+   routes:      # Sammlung von Suchrouten
+       demo_a:  # maschinenlesbarer Name
+           title: Demo A  # von Menschen lesbarer Name
+           class: Mapbender\CoreBundle\Component\SQLSearchEngine  # aktuelle Suchmaschine
+           class_options:  # die class-options werden zur Suchmaschine weitergeleitet
+               connection: ~  # verwendeter DBAL Verbindungsname, verwenden Sie ~ für den Standardnamen
+               relation: test.demo_a  # ausgewählte Relation, Sie können Unterabfragen verwenden
+               attributes: [id, name]  #  Array von Spalten, die ausgewählt werden können, Ausdrücke (expressions) sind möglich
+               geometry_attribute: geom  # Name der Geometriespalte für die Suchanfrage
+           form:  # Suchformularkonfiguration
+               the_name:  # Feldname, verwenden Sie Relationsspaltennamen für die Abfrage oder anderes für geteilte Felder (siehe unten)
+                   type: text  # Feldtyp, normalerweise Text oder Integer
+                   options:  # Feld Optionen
+                       required: true  # für HTML5 erforderliche Attribute, Standard ist true
+                       attr:  # HTML Attribute
+                           data-autocomplete: on  # automatische Datenvervollständigung, Standard ist on (eingeschaltet)
+                   split: [name, zusatz]  # optionales Feld, kann geteilt werden
+                   autocomplete-key: id  # Spaltenname, der als automatisch vervollständigter Schlüssel zurückgegeben wird (statt eines Spaltenwertes)
            results:
-               view: table  # only result view type for now
-               headers:  # hash of table headers and the corresponding result columns
-                   id: ID  # column name -> header label
-                   name: Name
-               callback:  # What to do on hover/click
-                   event: click  # result row event to listen for (click or mouseover)
+               view: table  # aktuelle Ergebnisansicht
+               headers:  #    Hash des Tabellen-Headers und die entsprechenden Ergebnisspalten
+                   id: ID  # Spaltenname -> Header Beschriftung
+                   name: # Name
+               callback:  #  Was soll beim Klick/Mousover passieren
+                   event: click  # Ereignis, auf das gehört werden soll (Klick oder Mouseover)
                    options:
-                       buffer: 10  # buffer result geometry with this (map units) before zooming
-                       minScale: ~  # scale restrictions for zooming, ~ for none
+                       buffer: 10  # Wert des Puffers für die Geometrie des Ergebnisses, bevor gezoomt wird
+                       minScale: ~  # Maßstabsbeschränkung für das Zoomen
                        maxScale: ~
 
 Class, Widget & Style
@@ -64,29 +64,26 @@ HTTP Callbacks
 <route_id>/autocomplete
 -----------------------
 
-Autocomplete Ajax endpoint for given search route. Autocomplete is implemented
-using Backbone.js with the Mapbender.Autocomplete model implemented in
-mapbender.element.searchRouter.Search.js.
+Automatisch vervollständigter Ajax Endpunkt für die vorgegebene Suchroute. Die Autovervollständigung  wird unter Verwendung von Backbone.js eingesetzt. Das Autovervollständigung-Modul ist implementiert in mapbender.element.searchRouter.Search.js.
 
 <route_id>/search
 -----------------
 
-Search Ajax endpoint for given search route. Search is implemented using
-Backbone.js with the Mapbender.Search model implemented in
-mapbender.element.searchRouter.Search.js.
+Automatisch vervollständigter Ajax Endpunkt für die vorgegebene Suchroute. Die Suche  wird unter Verwendung von Backbone.js eingesetzt. Das Such-Modul ist implementiert in mapbender.element.searchRouter.Search.js.
+
 
 JavaScript API
 ==============
 
 open
 ----
-If configured as dialog, open.
+Wenn das Modul als Dialog konfiguriert wird: open.
 
 close
 -----
-If configured as dialog, close.
+Wenn das Modul als Dialog konfiguriert wird: close.
 
 JavaScript Signals
 ==================
 
-None.
+Keine.
