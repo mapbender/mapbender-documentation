@@ -1,4 +1,4 @@
-.. _poi>:
+.. _poi:
 
 POI (MeetingPoint)
 ***********************
@@ -17,7 +17,7 @@ YAML-Definition:
 
 
 Class, Widget & Style
-==============
+=========================
 
 * Class: Mapbender\CoreBundle\Element\POI
 * Widget: mapbender.mbPOI
