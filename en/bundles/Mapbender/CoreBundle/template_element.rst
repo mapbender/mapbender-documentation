@@ -1,7 +1,7 @@
 .. _<add filename without rst as reference>:
 
 <Put Element Name Here>
-***********************
+**********************************
 
 <Put short description - 5-6 sentences - here>
 
@@ -23,7 +23,7 @@ YAML-Definition:
 
 
 Class, Widget & Style
-==============
+===========================
 
 * Class: <Put PHP class name here>
 * Widget: <Put Widget name here>
