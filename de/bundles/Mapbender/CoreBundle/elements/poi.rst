@@ -1,7 +1,7 @@
 .. _poi:
 
-POI
-***
+POI (Treffpunkt)
+**************************
 
 Generiert POI-URLs (Treffpunkt-URLS), verwendbar für das Verschicken per eMail.
 
