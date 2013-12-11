@@ -1,4 +1,6 @@
- BaseSourceSwitcher (Wechseln der Hintergrundkarten)
+.. _basesourceswitcher:
+
+BaseSourceSwitcher (Wechseln der Hintergrundkarten)
 *********************************************************************
 
 Mit diesem Element kann zwischen vordefinierten Hintergrundkarten gewechselt werden. 
