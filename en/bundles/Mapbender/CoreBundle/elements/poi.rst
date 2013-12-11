@@ -1,7 +1,7 @@
 .. _poi>:
 
-POI
-***
+POI (MeetingPoint)
+***********************
 
 Generate POI (aka meeting point) URLs suitable for sending by e-mail
 
