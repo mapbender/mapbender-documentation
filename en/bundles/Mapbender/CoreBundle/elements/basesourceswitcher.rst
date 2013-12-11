@@ -11,8 +11,8 @@ Configuration
 =============
 
 The configuration occurs in 2 steps: 
-- Create a BaseSourceSwitcher Element with Title, Tooltip and Target
-- Add Sourceset/s
+* Create a BaseSourceSwitcher Element with Title, Tooltip and Target
+* Add Sourceset/s
 
 YAML-Definition:
 

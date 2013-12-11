@@ -5,14 +5,9 @@ POI
 
 Generate POI (aka meeting point) URLs suitable for sending by e-mail
 
-.. image:: ../../../../../figures/nameoftheelement.png
-     :scale: 80
 
 Configuration
 =============
-
-.. image:: ../../../../../figures/nameoftheelement_configuration.png
-     :scale: 80
 
 YAML-Definition:
 

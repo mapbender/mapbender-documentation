@@ -10,8 +10,8 @@ konfiguration
 =============
 
 Die Konfiguration geschieht in zwei Schritten:
-- Erzeugen eines Elements zum Wechseln der Hintergrundkarten mit Titel, Tooltip und Target
-- Hinzufügen einer oder mehrerer Sourcesets
+* Erzeugen eines Elements zum Wechseln der Hintergrundkarten mit Titel, Tooltip und Target
+* Hinzufügen einer oder mehrerer Sourcesets
 
 YAML-Definition:
 
