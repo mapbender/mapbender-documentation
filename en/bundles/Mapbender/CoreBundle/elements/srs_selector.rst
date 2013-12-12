@@ -1,7 +1,7 @@
 .. _srs_selector:
 
 Spatial Reference System Selector (SRS Selector)
-************************************************
+********************************************************
 
 The spatial reference system selector changes the map's spatial reference system.
 
@@ -67,11 +67,11 @@ enableSrs
 <>
 
 enableOnlySrs
-----------
+--------------------
 <>
 
 getFullSrsObj
-----------
+--------------------
 <>
 
 enableAllSrs

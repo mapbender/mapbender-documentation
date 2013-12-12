@@ -1,6 +1,6 @@
 .. _srs_selector:
 
-Spatial Reference System Selector (SRS Selector). (Auswahl des räumlichen Referenzsystems)
+Spatial Reference System Selector (SRS Selector) (Auswahl des räumlichen Referenzsystems)
 ************************************************************************************************
 
 Nach der Auswahl eines räumlichen Referenzsystems (SRS) ändert sich das räumliche Referenzsystem in der Karte.
