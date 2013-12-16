@@ -26,7 +26,6 @@ YAML-Definition:
    autoOpen: true                       # true, wenn die Legende beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
    displayType: list                    # akkordeonartige Anzeige oder Liste. Standard ist Liste.
    target: ~                            # ID des Kartenelements
-   noLegend: 'No legend available'      # Text, der angezeigt wird, wenn keine Legende verfügbar ist.
    hideEmptyLayer: true                 # true/false Layer wird versteckt, wenn keine Legende verfügbar ist, der Standardwert ist true
    generateGetLegendGraphicUrl: false   # true/false generiert eine GetLegendGraphic-Url, wenn die Operation GetLegendGraphic unterstützt wird, der Standardwert ist false
    showWmsTitle: true                   # true/false zeigt den WMS Titel, der Standardwert ist true

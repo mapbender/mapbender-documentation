@@ -25,7 +25,6 @@ YAML-Definition:
    autoOpen: true                       # true/false open when application is started, default is true
    displayType: list                    # accordion/list type of display, default is list
    target: ~                            # Id of Map element to query
-   noLegend: 'No legend available'      # text to display if no legend is available
    hideEmptyLayer: true                 # true/false hide when no legend is available, default is true
    generateGetLegendGraphicUrl: false   # true/false generate GetLegendGraphic-Url if the operation GetLegendGraphic is supported, default is false
    showWmsTitle: true                   # true/false show WMS title, default is true
