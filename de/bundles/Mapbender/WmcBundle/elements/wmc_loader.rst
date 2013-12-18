@@ -10,8 +10,6 @@ Sie können den WMC-Lader ihrer Applikation als Selektbox oder als Button, der e
 Wenn Sie eine Konfiguration auswählen, werden die Dienste der Konfiguration in Ihrer vorhandenen Applikation zusammengefügt.
 
 
-.. image:: ../../../../../figures/wmc_loader.png
-     :scale: 80
 
 Konfiguration
 =============

@@ -10,9 +10,6 @@ Suggest Map
 
 
 
-.. image:: ../../../../../figures/suggestmap.png
-     :scale: 80
-
 Konfiguration
 =============
 
