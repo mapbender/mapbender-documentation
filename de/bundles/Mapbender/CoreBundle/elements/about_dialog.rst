@@ -1,6 +1,6 @@
 .. _about_dialog:
 
-About Dialog (Über Dialog)
+About Dialog (Über-Dialog)
 ********************************
 
 Dieses Element rendert einen Button, der einen Dialog über Mapbender anzeigt.
