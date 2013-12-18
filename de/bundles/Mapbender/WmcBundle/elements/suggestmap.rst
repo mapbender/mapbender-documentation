@@ -13,7 +13,7 @@ Suggest Map
 .. image:: ../../../../../figures/suggestmap.png
      :scale: 80
 
-Configuration
+Konfiguration
 =============
 
 .. image:: ../../../../../figures/suggestmap_configuration.png

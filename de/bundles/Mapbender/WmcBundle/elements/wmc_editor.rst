@@ -4,7 +4,7 @@ WMC Editor
 ***********************
 
 Im Mapbender können mit dem WMC Editor Konfigurationen gespeichert und bearbeitet werden. 
-Diese Konfigurations können mit WMC-Lader geladen werden (siehe WMC-Lader).
+Diese Konfigurations können mit dem WMC-Lader geladen werden (siehe WMC-Lader).
 
 Sie können den WMC-Editor ihrer Applikation hinzufügen. Beachten Sie, dass der WMC-Editor einen Button benötigt.
 
