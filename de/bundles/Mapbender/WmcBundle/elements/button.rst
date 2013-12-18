@@ -3,13 +3,13 @@
 Button
 ******
 
-The button element provides a push button widget. Some elements like Legend, Layertree, FeatureInfo, Line/Area Ruler and  PrintClient need a button to be displayed/activated if not defined in a frame.
+Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die Legende, Layertree (Layerbaum), FeatureInfo (Infoabfrage), Linien- und Flächenberechnung und der Druck benötigen einen Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element nicht in einem Frame definiert wurde.
 
-Buttons optionally can be grouped, so that only one button in a group can be active at any given time. This is done by the group paramter.
+Button können optional gruppiert werden, so dass nur ein Button in der Gruppe aktiviert ist. Dieses wird im Gruppen-Parameter eingestellt.
 
-You can define a button that refers to a website or script using the click paramter.
+Es kann ein Button definiert werden, der sich auf eine Webseite oder ein Script bezieht.
 
-Configuration
+Konfiguration
 =============
 
 .. image:: ../../../../../figures/button_configuration.png
@@ -19,15 +19,15 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-    title:        # title
-    tooltip:      # text to use as tooltip
-    icon: ~       # icon CSS class to use
-    label: true   # false/true to label the button, default is true
-    target: ~     # title (Id) of target element
-    click:        # refer to a website or script like http://mapbender3.org
-    group: ~      # group to put the button into. Only one button per group can be active
-    action: ~     # method of target to call when button is activated
-    deactivate: ~ # method of target to call when button is deactivated
+    title:        # Titel
+    tooltip:      # Text des Tooltips
+    icon: ~       # Symbol verwendete CSS Klasse
+    label: true   # false/true, um den Button zu beschriften. Der Standardwert ist true.
+    target: ~     # Titel (Id) des Zielelements
+    click:        # bezieht sich auf eine Webseite oder ein Skript, z.B.: http://mapbender3.org
+    group: ~      # Gruppe, in die der Button eingefügt werden soll. Nur ein Button pro Gruppe kann aktiviert sein.
+    action: ~     # Methode, die aufgerufen wird, wenn der Button aktiviert wird. 
+    deactivate: ~ # Methode, die aufgerufen wird, wenn der Button deaktiviert wird
 
 Class, Widget & Style
 =====================
@@ -39,7 +39,7 @@ Class, Widget & Style
 HTTP Callbacks
 ==============
 
-None.
+Keine.
 
 JavaScript API
 ==============
@@ -47,15 +47,15 @@ JavaScript API
 activate
 --------
 
-Activates button. Gets called on click if button is deactivated.
+Aktiviert den Button. Wird über einen Klick aufgerufen, wenn der Button deaktiviert ist.
 
 deactivate
 ----------
 
-Deactivates button. Gets called on click if button is active or when another button of the same group gets activated.
+Deaktiviert den Button. Wird über einen Klick aufgerufen, wenn der Button aktiviert ist oder wenn ein anderer Button der gleichen Gruppe aktiviert ist.
 
 JavaScript Signals
 ==================
 
-None.
+Keine.
 
