@@ -17,30 +17,30 @@ Konfiguration
 .. image:: ../../../../../figures/wms_loader_configuration.png
      :scale: 80
 
-You need a button to show this element. See :ref:`button` for inherited configuration options.
+Für das Element wird ein Button verwendet. Siehe unter :ref:`button` für die Konfiguration.
 
 YAML-Definition:
 
 .. code-block:: yaml
 
-   target: ~                            # Id of Map element to query
-   tooltip: 'WMS Loader'                # text to use as tooltip
-   autoOpen: false                      # true/false open when application is started, default false 
-   defaultFormat: 'image/png'           # default format is image/png, further possibilities: image/gif, image/jpeg
-   defaultInfoFormat: 'text/html'       # default infoformat is text/html, further possibilities: text/xml, text/plain
-   splitLayers: false                   # split layer on load of the service, default false
-   useDeclarative: false                # allow to load service from a link (for example from featureInfo or search) 
-                                        # and define the layers to activated, default false 
+   target: ~                            # ID des Kartenelements
+   tooltip: 'WMS Loader'                # Text des Tooltips
+   autoOpen: false                      # true, wenn das Element beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
+   defaultFormat: 'image/png'           # Standard Format ist image/png, weitere Möglichkeiten: image/gif, image/jpeg
+   defaultInfoFormat: 'text/html'       # Standard Infoformat ist text/html, weitere Möglichkeiten: text/xml, text/plain
+   splitLayers: false                   # geteilte Ebenen beim Laden des Dienstes, Standard ist false
+   useDeclarative: false                # erlaubt einen Dienst über einen Link zu laden (zum Beispiel über die Informationsabfrage oder Suche) 
+                                        # und definiert die Layer zu aktivieren, Standard ist false
 
 
-How to add a WMS by defining a link
-====================================
+Hinzufügen eines WMS über einen definierten Link
+========================================================================
 
-You can add a WMS to Mapbender by defining a link f.e. in your WMS featureinfo or your search results.
+Mapbender kann ein WMS über einen definierten Link hinzugefügt werden, z.B. zum Beispiel über die Informationsabfrage oder über Suchergebnisse.
 
-Set **useDeclarative** true im mapbender.yml or check declarative in administration.
+Stellen Sie **useDeclarative** in der mapbender.yml auf true oder stellen Sie in diesem Element auf **useDeclarative**
 
-The link has to look like this:
+Der Link sollte folgendermaßen aussehen:
 
 .. code-block:: html
 
@@ -56,11 +56,11 @@ mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetC
 
 .. code-block:: yaml
 
-    mb-action="source.add.wms"    # defines action to add a  WMS
-    mb-wms-merge="1"              # adds the WMS only once, if WMS is already part of the application it will use the WMS which is there (default is 1)
-    mb-layer-merge="1"            # default is 1 which means: activate the layers passed mb-wms-layers and do not disable the layers which are already active.
-    mb-wms-layers="Gewaesser,Fluesse" # defines the layers to be activated, _all activates all layers, default all layers are deactivated
-href oder mb-url              # refer to the WMS getcapabilities URL
+    mb-action="source.add.wms"    # definiert die Aktion, um einen WMS hinzuzufügen
+    mb-wms-merge="1"              # fügt den WMS nur einmal hinzu, wenn der WMS in der Applikation bereits Bestandteil ist, wird dieser verwendet (Standard ist 1)
+    mb-layer-merge="1"            # Standard ist 1: aktiviert die Ebene in mb-wms-layers. Deaktiviert die Ebenen nicht, die schon aktiviert sind.
+    mb-wms-layers="Gewaesser,Fluesse" # Definiert die Ebenen, die aktiviert werden sollen, _all activates aktiviert alle Ebenen. Standard ist alle Ebenen sind deaktiviert.
+    href oder mb-url              # verweist auf die WMS getcapabilities URL
 
    
 
@@ -74,7 +74,7 @@ Class, Widget & Style
 HTTP Callbacks
 ==============
 
-None.
+Keine.
 
 
 JavaScript API
@@ -83,11 +83,11 @@ JavaScript API
 activate
 ----------
 
-Opens a dialog in wich a WMS can be loaded via the getCapabilities-Request.
-You can load WMS 1.1.1 and WMS 1.3.0.
+Öffnet einen Dialog, in dem ein WMS über einen getCapabilities-Request geladen werden kann.
+Es kann WMS 1.1.1 und  WMS 1.3.0 geladen werden.
 
 
 JavaScript Signals
 ==================
 
-None.
+Keine.
