@@ -318,7 +318,7 @@ Examples for elements Mapbender3 offers:
 
 You find detailed information on every element at the `MapbenderCoreBundle element documentation <../../../documentation/en/bundles/Mapbender/CoreBundle/index.html>`_.
 
-You find detailed information on every element at the `MapbenderCoreBundle element documentation <../en/bundles/Mapbender/CoreBundle/index.html>`_.
+You find detailed information on every element at the `MapbenderCoreBundle element documentation <../bundles/Mapbender/CoreBundle/index.html>`_.
 
 
 Try it yourself
