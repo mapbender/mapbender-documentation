@@ -18,7 +18,7 @@ Konfiguration
      :scale: 80
 
      
-Das Element kann als Selektbox oder als Dialog konfiguriert werden. Wenn das Element als Dialog verwendet wird, wird ein Button benötigt. Siehe unter :doc:`button` für die Konfiguration.
+Das Element kann als Selektbox oder als Dialog konfiguriert werden. Wenn das Element als Dialog verwendet wird, wird ein Button benötigt. Siehe unter :ref:`button_de` für die Konfiguration.
      
 
 YAML-Definition:

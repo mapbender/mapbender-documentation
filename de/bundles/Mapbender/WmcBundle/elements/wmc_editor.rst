@@ -23,7 +23,7 @@ Konfiguration
 .. image:: ../../../../../figures/wmc_editor_configuration.png
      :scale: 80
 
-Für das Element wird ein Button benötigt. Siehe unter :doc:`button` für die Konfiguration.
+Für das Element wird ein Button benötigt. Siehe unter :ref:`button_de` für die Konfiguration.
 
 
 YAML-Definition:
