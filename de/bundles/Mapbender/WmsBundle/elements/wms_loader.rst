@@ -49,9 +49,9 @@ Der Link sollte folgendermaßen aussehen:
   href="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
 
 
-<a mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1" 
-mb-wms-layers="Gewaesser,Fluesse" 
-mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS" href="">load service</a>
+  <a mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1" 
+  mb-wms-layers="Gewaesser,Fluesse" 
+  mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS" href="">load service</a>
 
 
 .. code-block:: yaml
