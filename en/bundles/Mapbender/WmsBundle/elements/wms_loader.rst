@@ -17,7 +17,7 @@ Configuration
 .. image:: ../../../../../figures/wms_loader_configuration.png
      :scale: 80
 
-You need a button to show this element. See :ref:`button` for inherited configuration options.
+You need a button to show this element. See :ref:`button_en` for inherited configuration options.
 
 YAML-Definition:
 
