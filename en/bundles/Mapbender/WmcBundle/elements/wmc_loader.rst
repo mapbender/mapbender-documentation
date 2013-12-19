@@ -18,7 +18,7 @@ Configuration
 .. image:: ../../../../../figures/wmc_loader_configuration.png
      :scale: 80
 
-You can configure this module as a selectbox or dialog. When you use dialog then you need a button to show this element. See :ref:`button` for inherited configuration options.
+You can configure this module as a selectbox or dialog. When you use dialog then you need a button to show this element. See :ref:`button_de` for inherited configuration options.
 
 
 YAML-Definition:
