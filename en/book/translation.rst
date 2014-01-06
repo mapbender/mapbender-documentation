@@ -3,7 +3,7 @@
 Translation in Mapbender3
 ######################################
 
-Mapbender3 uses the translator service (`Translator <http://api.symfony.com/2.1/Symfony/Component/Translation/Translator.html>`_) which is a Symfony component. 
+Mapbender3 uses the translator service which is a Symfony component. You get more information at the `Symfony Translation Documentation <http://symfony.com/doc/2.1/book/translation.html>`_ and `Translator Class Documentation <http://api.symfony.com/2.1/Symfony/Component/Translation/Translator.html>`_ . 
 
 In the code you use the function **trans** to translate a text into another language.
 
