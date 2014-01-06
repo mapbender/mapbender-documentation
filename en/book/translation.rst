@@ -31,25 +31,33 @@ XLIFF-files for translations
 ****************************
 The translations can be stored in different formats. We use XLIFF-format for Mapbender3. Symfony will take the XLIFF-loader to load and parse the file.
 
+We use place holder for every text. Like this you can define different tranlsation for the same word which accurs in different modules.
+
+We translate the place holder to different languages. English is the default language that we provide. It is also defined as the fallback language in the parameters.yml file. The fallback language wil be used if you define a language in parameters.yml that does not exist.
+
 This is how a translation file messages.de.xliff for german translation could look like.
 
 .. code-block:: yaml
 
  <?xml version="1.0" encoding="utf-8"?>
  <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" datatype="plaintext" original="file.ext">
+  <file source-language="de" datatype="plaintext" original="file.ext">
     <body>
-      <trans-unit id="1">
-        <source>FeatureInfo</source>
-        <target>Sachinformation</target>
+      <trans-unit id="20bbe30e6fcefd2ab10c780590b458af" resname="mb.core.admin.button.show_label">
+        <source>mb.core.admin.button.show_label</source>
+        <target>Beschriftung anzeigen</target>
       </trans-unit>
-      <trans-unit id="2">
-        <source>Services</source>
-        <target>Dienste</target>
+      <trans-unit id="7cb565a35d95af70959282faf4989642" resname="mb.manager.admin.element.delete">
+        <source>mb.manager.admin.element.delete</source>
+        <target>Element entfernen</target>
       </trans-unit>
-      <trans-unit id="3">
-        <source>X coordinate</source>
-        <target>X-Koordinate</target>
+      <trans-unit id="04cd08843fed089f29b6aa525b3380cf" resname="mb.manager.admin.element.delete.confirm">
+        <source>mb.manager.admin.element.delete.confirm</source>
+        <target>Wollen Sie ddas Element wirklich löschen?</target>
+      </trans-unit>
+      <trans-unit id="8f31981eb7f9c7b4331f1550f0e68b6c" resname="mb.manager.admin.element.btn.delete">
+        <source>mb.manager.admin.element.btn.delete</source>
+        <target>Löschen</target>
       </trans-unit>
       .....        
 
@@ -62,26 +70,24 @@ This is how a translation file messages.de.xliff for german translation could lo
 
 How can you activate translation?
 *********************************
-Activate translator in the configuration file **app/config/config.yml**
-
-.. code-block:: yaml
-
- framework:
-    translator:      { fallback: %locale% }
 
 Activate your default locale in the configuration file **app/config/parameters.yml**
 
 .. code-block:: yaml
-
+    
+    fallback_locale:   en
     locale:            de
 
 
 Check whether translations (xliff-files) for your language exist 
 
-* mapbender/src/Mapbender/CoreBundle/Resources/translations
-* mapbender/src/Mapbender/ManagerBundle/Resources/translations
-* mapbender/src/Mapbender/WmsBundle/Resources/translations
-* mapbender/src/Mapbender/WmcBundle/Resources/translations
+* mapbender/src/Mapbender/CoreBundle/Resources/translations/
+* mapbender/src/Mapbender/ManagerBundle/Resources/translations/
+* mapbender/src/Mapbender/WmsBundle/Resources/translations/
+* mapbender/src/Mapbender/WmcBundle/Resources/translations/
+* mapbender/src/Mapbender/PrintBundle/Resources/translations/
+* fom/src/FOM/CoreBundle/Resources/translations/
+* fom/src/FOM/ManagerBundle/Resources/translations/
 * ...
 
 
@@ -89,8 +95,9 @@ Create xliff-files for your language
 *************************************
 If your language is not translated yet, it is easy to add a new language.
 
-* Check the translation directories and create a new file by copying an existing locale
-* translate the source-tags into the target-tags
+* Check the translation directories and create a new file by copying the english locale
+* translate the target-tags into the target-tags
+* format your translated file with app/console translation:update --output-format=xlf --force de MapbenderWmcBundle
 * clear your cache
 
 
