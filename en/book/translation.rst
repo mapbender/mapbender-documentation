@@ -83,11 +83,12 @@ Check whether translations (xliff-files) for your language exist
 
 * mapbender/src/Mapbender/CoreBundle/Resources/translations/
 * mapbender/src/Mapbender/ManagerBundle/Resources/translations/
-* mapbender/src/Mapbender/WmsBundle/Resources/translations/
-* mapbender/src/Mapbender/WmcBundle/Resources/translations/
 * mapbender/src/Mapbender/PrintBundle/Resources/translations/
+* mapbender/src/Mapbender/WmcBundle/Resources/translations/
+* mapbender/src/Mapbender/WmsBundle/Resources/translations/
 * fom/src/FOM/CoreBundle/Resources/translations/
 * fom/src/FOM/ManagerBundle/Resources/translations/
+* fom/src/FOM/UserBundle/Resources/translations/
 * ...
 
 
