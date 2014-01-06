@@ -101,12 +101,11 @@ Die Anwendungsübersicht bietet folgende Funktionen:
 
  * Titel und Beschreibung
  * Link zur Anwendung
- * Schaltfläche, um die Anwendung zu bearbeiten
- * Icon zum Veröffentlichen der Anwendung
- * Schaltfläche, um eine neue Anwendung anzulegen
- * Schaltfläche, um die Anwendung zu löschen
-
-  .. NOCH NICHT IMPLEMENTIERT: In Mapbender gibt es Anwendungsvorlagen, mit denen eigene Anwendungen erstellt werden können.
+ * Button, um die Anwendung zu kopieren
+ * Button, um die Anwendung zu bearbeiten
+ * Button zum Veröffentlichen der Anwendung
+ * Button, um eine neue Anwendung anzulegen
+ * Button, um die Anwendung zu löschen
 
   .. image:: ../../figures/mapbender3_application_overview.png
      :scale: 80
@@ -123,6 +122,8 @@ Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen e
 
 #. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu starten. Er kann identisch zum Titel sein.
 
+#. Wählen Sie eine Layoutvorlage für die Anwendung.
+
 #. Betätigen Sie die Schaltfläche **Create**, um die Anwendung zu erzeugen.
 
 #. Gehen Sie zu :menuselection:`Edit-Button` neben der Anwendung und wählen Sie die neue Anwendung aus.
@@ -132,11 +133,13 @@ Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen e
   .. image:: ../../figures/mapbender3_create_application.png
      :scale: 80
 
-..
-  NOCH NICHT IMPLEMENTIERT
-  Kopieren und Umbenennen einer Anwendung
-  ================================================================================
- Sie können eine neue Anwendung auch durch Kopieren einer vorhandenen erzeugen. Gehen Sie zu :menuselection:`Applications --> Rename/copy application`, wählen die Anwendung, die Sie kopieren möchten und geben einen Namen für die neue Anwendung ein. Diese Funktion kopiert sowohl die Anwendung als auch die Dienste der Anwendung und die Benutzer/Gruppen (optional). Die neue Anwendung hat dadurch bereits die Kartendienste eingebunden und die Benutzer und Gruppen der kopierten Anwendung haben ebenfalls Zugriff auf die neue Anwendung.
+.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter http://doc.mapbender3.org/en/book/templates.html
+
+
+Kopieren und Umbenennen einer Anwendung
+================================================================================
+Sie können eine neue Anwendung auch durch Kopieren einer vorhandenen erzeugen. Jede Anwendung, auf die Sie schreibend zugreifen können, verfügt über den Button kopieren. Beim Kopieren wird die Anwendung mitsamt der Dienste kopiert. Die kopierte Anwendung erhält einen abgeleiteten Namen, den Sie im nächsten Schritt anpassen können.
+
 
 Löschen einer Anwendung
 ================================================================================
@@ -281,6 +284,8 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an. Ihre Anwendung verfügt 
 
 #. Beachten Sie die verschiedenen Bereiche Ihrer Anwendung. Stellen Sie sicher, dass sie das Element zum richtigen Bereich hinzufügen.
 
+#. Sie können die Position der Elemente über drag & drop ändern.
+
 #. Schauen Sie sich Ihre Anwendung an. Öffnen Sie Ihre Anwendung über :menuselection:`Applications --> Applications Overview`
 
 
@@ -313,7 +318,8 @@ Beispiele für Elemente, die Mapbender3 anbietet:
 * Navigation Toolbar (Zoombar)
 * WMS Loader
 
-Sie finden detaillierte Informationen zu jedem Element unter `MapbenderCoreBundle element documentation <http://doc.mapbender3.org/en/bundles/Mapbender/CoreBundle/index.html>`_ http://doc.mapbender3.org/en/bundles/Mapbender/CoreBundle/index.html.
+Sie finden detaillierte Informationen zu jedem Element unter `MapbenderCoreBundle Element Dokumentation <http://doc.mapbender3.org/en/bundles/Mapbender/CoreBundle/index.html>`_ , `MapbenderWmcBundle Element Dokumentation <../bundles/Mapbender/WmcBundle/index.html>`_ und `MapbenderWmsBundle Element Dokumentation <../bundles/Mapbender/WmsBundle/index.html>`_.
+
 
 Versuchen Sie es selber
 ================================================================================
@@ -329,9 +335,9 @@ Versuchen Sie es selber
 
 Benutzer- und Gruppenverwaltung
 =================================
-Zugriff auf eine Mapbender Anwendung benötigt Authentifizierung. Nur öffentliche Anwendungen können von allen genutzt werden.
+Der Zugriff auf eine Mapbender Anwendung benötigt Authentifizierung. Nur öffentliche Anwendungen können von allen Anwendern genutzt werden.
 
-Ein Benutzer hat Berechtigungen, um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
+Ein Benutzer kann die Berechtigungen bekommen, um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
 
 .. NOCH NICHT IMPLEMENTIERT
   Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie :guilabel:`guest`, :guilabel:`operator` oder :guilabel:`administrator`. Die :guilabel:`role` eines Benutzers beruht auf den Funktionen und des Diensten, aud die der Benutzer durch diese Anwendung Zugriff hat.
@@ -348,8 +354,11 @@ Benutzer anlegen
 
 #. Speichern Sie Ihren neuen Benutzer.
 
-.. image:: ../../figures/mapbender3_create_user.png
+#. Weitere Angaben zum Benutzer können im Reiter :menuselection:`Profil` erfolgen.
+
+  .. image:: ../../figures/mapbender3_create_user.png
      :scale: 80 
+
 
 
 Gruppen anlegen
