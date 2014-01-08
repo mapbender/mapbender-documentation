@@ -47,7 +47,7 @@ This is how a Mapbender application can look like:
 
 Installation
 ===============
-For the installation of Mapbender have a look at :doc:`installation <installation>`.
+For the installation of Mapbender3 have a look at :doc:`installation <installation>`.
 
 Start Mapbender
 ================================================================================
@@ -286,6 +286,8 @@ Mapbender offers a set of elements. You can add the elements to your application
 
 #. Notice that you have different areas in your application. Make sure to add the element to a region that makes sense.
 
+#. Configure the element. Notice: When you select an element for example **map** you see that the element has a set of attributes. Each element offers individual attributes for configuration.
+
 #. You can change the position of the element via drag & drop
 
 #. Have a look at your application. Open your application from :menuselection:`Applications --> Applications Overview`
@@ -379,13 +381,12 @@ Assign users to group
 #. Choose one or more users you want to add to the group at :menuselection:`Users`.
 
 #. Assign a user by :menuselection:`Users --> Edit-Button--> Groups` to a group. 
-http://doc.mapbender3.org/en/book/quickstart.html
 
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
      :scale: 80
  
 
-Rechte
+Roles
 ======
 Mapbender3 provides different rights. They refer to the Symfony ACL System http://symfony.com/doc/2.1/cookbook/security/acl_advanced.html#built-in-permission-map
 

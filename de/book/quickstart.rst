@@ -34,6 +34,7 @@ Dieser Quickstart beschreibt, wie Sie:
   * eine Anwendung erstellen
   * einen Web Map Service (OGC WMS) laden
   * WMS konfigurieren
+  * eine individuelle Anwendung erstellen
   * Benutzer und Gruppen anlegen und Anwendungen zuweisen
 
 Eine Mapbender Anwendung kann wie folgt aussehen:
@@ -106,6 +107,7 @@ Die Anwendungsübersicht bietet folgende Funktionen:
  * Button zum Veröffentlichen der Anwendung
  * Button, um eine neue Anwendung anzulegen
  * Button, um die Anwendung zu löschen
+ * mit dem Filtertextfeld kann nach Anwendungen gesucht werden
 
   .. image:: ../../figures/mapbender3_application_overview.png
      :scale: 80
@@ -208,7 +210,6 @@ http://osm.omniscale.net/proxy/service?
  
 
 .. NOCH NICHT IMPLEMENTIERT
-  .. tip:: Create a container application and upload every WMS just once to this container application. You can transfer the WMS from this container to other aplications. When you update the WMS the possible changes will appear in all applications that contain this WMS. You easily can copy a WMS from one to another application with the menu entry *Link WMS to application*.
   .. tip:: Erzeugen Sie eine Containeranwendung und laden Sie jeden WMS nur einmal hier hinein. Sie können die WMS aus diesem Container in andere Anwendungen übernehmen. Wenn Sie diesen WMS aktualisieren werden mögliche Änderungen in allen Anwendungen übernommen, die diesen WMS beinhalten. Sie können einen WMS einfach von einer Anwendung zu einer anderen über den Menüeintrag *Link WMS to application* kopieren.
 
 
@@ -284,6 +285,8 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an. Ihre Anwendung verfügt 
 
 #. Beachten Sie die verschiedenen Bereiche Ihrer Anwendung. Stellen Sie sicher, dass sie das Element zum richtigen Bereich hinzufügen.
 
+#. Konfigurieren Sie das Element. Hinweis: Wenn Sie ein Element z.B. **map** auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
+
 #. Sie können die Position der Elemente über drag & drop ändern.
 
 #. Schauen Sie sich Ihre Anwendung an. Öffnen Sie Ihre Anwendung über :menuselection:`Applications --> Applications Overview`
@@ -292,7 +295,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an. Ihre Anwendung verfügt 
   .. image:: ../../figures/mapbender3_application_elements.png
      :scale: 80
 
- 
+.. NOCH NICHT IMPLEMENTIERT 
 Wenn Sie ein Element z.B. **map** auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
 
 Beispiele für Elemente, die Mapbender3 anbietet:
@@ -450,6 +453,10 @@ Sie finden Tutorials unter
 Die API-Dokumentation finden Sie unter
 
   http://api.mapbender3.org
+
+Mapbender kennenlernen unter
+	
+	http://projects.mapbender.osgeo.org
 
 Beteiligen Sie sich
 
