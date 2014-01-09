@@ -3,7 +3,7 @@
 Wie werden eigene Vorlagen (templates) erzeugt?
 ################################################################
 
-Mapbender3 beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Vorlage mit Ihrem eigenen Corporate Design verwendet werden. Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im  Mapbender CoreBundle (application/mapbender/src/Mapbender/CoreBundle). Für einene Vorlagen sollten Sie ein eigenes Bundle verwenden, um Probleme bei einem Upgrade zu vermeiden.
+Mapbender3 beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Vorlage mit Ihrem eigenen Corporate Design verwendet werden. Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im  Mapbender CoreBundle (application/mapbender/src/Mapbender/CoreBundle). Für eigene Vorlagen sollten Sie ein eigenes Bundle verwenden, um Probleme bei einem Upgrade zu vermeiden.
 
 
 Wie werden eigene Vorlagen (templates) erzeugt?
@@ -92,13 +92,19 @@ Abschließend müssen Sie den vollständigen Classnamen der neuen Vorlage in der
                             'application' => $this->application));
     }
 
-Bearbeiten Sie Ihre twig-Datei und verweisen Sie auf die neue css-Datei:
+Bearbeiten Sie Ihre twig-Datei und verweisen Sie auf die neuen css-Dateien:
 
 .. code-block:: yaml
 
   <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/mapbender3_theme.css') }}">
   <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/fullscreen.css') }}">
 
+verändern in
+  
+  .. code-block:: yaml
+
+  <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/mapbender3_theme_demo.css') }}">
+  <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/demo.css') }}">
 
 Verwenden der neuen Vorlage in der mapbender.yml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
