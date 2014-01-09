@@ -1,7 +1,7 @@
 Willkommen bei der Mapbender3 Dokumentation
 ###########################################
 
-Contents:
+Inhalt:
 
 .. toctree::
    :maxdepth: 2
@@ -10,8 +10,8 @@ Contents:
    bundles
    development
 
-Indices and tables
-==================
+Indizes und Tabellen
+====================================
 
 * :ref:`genindex`
 * :ref:`modindex`
