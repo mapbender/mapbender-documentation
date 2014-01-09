@@ -101,7 +101,7 @@ Bearbeiten Sie Ihre twig-Datei und verweisen Sie auf die neuen css-Dateien:
 
 verändern in
   
-  .. code-block:: yaml
+.. code-block:: yaml
 
   <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/mapbender3_theme_demo.css') }}">
   <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/demo.css') }}">
