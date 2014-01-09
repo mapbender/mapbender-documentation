@@ -105,6 +105,8 @@ verändern in
 
   <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/mapbender3_theme_demo.css') }}">
   <link rel="stylesheet" href="{{ asset('bundles/fomcore/css/frontend/demo.css') }}">
+  
+  
 
 Verwenden der neuen Vorlage in der mapbender.yml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
