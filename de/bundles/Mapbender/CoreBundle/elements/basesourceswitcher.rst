@@ -9,6 +9,9 @@ Mit diesem Element kann zwischen vordefinierten Hintergrundkarten gewechselt wer
 konfiguration
 =============
 
+.. image:: ../../../../../figures/basesourceswitcher_configuration.png
+     :scale: 80
+
 Die Konfiguration geschieht in zwei Schritten:
 * Erzeugen eines Elements zum Wechseln der Hintergrundkarten mit Titel, Tooltip und Target
 * Hinzufügen einer oder mehrerer Sourcesets
