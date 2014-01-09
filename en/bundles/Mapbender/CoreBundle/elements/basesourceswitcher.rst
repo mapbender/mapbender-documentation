@@ -14,10 +14,6 @@ The configuration occurs in 2 steps:
 * Create a BaseSourceSwitcher Element with Title, Tooltip and Target
 * Add Sourceset/s
 
-
-Configuration
-=============
-
 .. image:: ../../../../../figures/basesourceswitcher_configuration.png
      :scale: 80
 
