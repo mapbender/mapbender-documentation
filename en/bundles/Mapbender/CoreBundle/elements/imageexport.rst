@@ -5,10 +5,16 @@ ImageExport
 
 Image Export allows you to export your current mapview. You can choose png or jpeg format.
 
+.. image:: ../../../../../figures/image_import.png
+     :scale: 80
+
 Configuration
 =============
 
 You need a button to show this element. See :doc:`button` for inherited configuration options.
+
+.. image:: ../../../../../figures/image_import_configuration.png
+     :scale: 80
 
 YAML-Definition:
 

@@ -5,8 +5,17 @@ POI (Treffpunkt)
 
 Generiert POI-URLs (Treffpunkt-URLS), verwendbar für das Verschicken per eMail.
 
+.. image:: ../../../../../figures/poi.png
+     :scale: 80
+     
+
 Konfiguration
 =============
+
+
+.. image:: ../../../../../figures/poi_configuration.png
+     :scale: 80
+     
 
 YAML-Definition:
 
