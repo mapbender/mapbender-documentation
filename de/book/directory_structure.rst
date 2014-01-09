@@ -1,7 +1,7 @@
 .. _directory_structure:
 
-Directory structure in Mapbender3 - Verzeichnisstruktur
-##################################################################
+Verzeichnisstruktur in Mapbender3
+#################################
 
 app
 ******************************
