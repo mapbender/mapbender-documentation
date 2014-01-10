@@ -31,7 +31,7 @@ YAML-Definition:
                                     # use 'url' to call a website as "Terms of use (Content)"
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\Copyright
 * Widget: mapbender.element.copyright.js

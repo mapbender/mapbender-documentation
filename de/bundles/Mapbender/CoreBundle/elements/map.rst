@@ -39,7 +39,7 @@ YAML-Definition:
    imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img"   # Pfad der Bilder (images)
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\Map
 * Widget: , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
@@ -67,7 +67,7 @@ layer
 
 
 appendLayer
-----------
+--------------------
 <>
 
 
@@ -77,7 +77,7 @@ insert
 
 
 rebuildStacking
-----------
+--------------------
 <>
 
 move
@@ -93,11 +93,11 @@ zoomOut
 <>
 
 zoomToFullExtent
-----------
+--------------------
 <>
 
 zoomToScale
-----------
+--------------------
 <>
 
 panMode
@@ -109,7 +109,7 @@ addPopup
 <>
 
 removePopup
-----------
+--------------------
 <>
 
 removeById
@@ -125,7 +125,7 @@ scales
 <>
 
 setMapProjection
-----------
+--------------------
 <>
 
 getAllSrs

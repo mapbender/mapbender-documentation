@@ -1,7 +1,7 @@
 .. _scale_selector:
 
 Scale Selector
-************
+***************
 
 Displays a selctbox with scales. The map scale changes when an value from the selectbox is choosen. 
 
@@ -25,7 +25,7 @@ YAML-Definition:
    label: false      # false/true to label the scale selector, default is false
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\ScaleSelector
 * Widget: mapbender.element.scaleselector.js

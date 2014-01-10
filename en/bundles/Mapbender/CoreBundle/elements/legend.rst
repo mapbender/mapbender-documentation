@@ -32,7 +32,7 @@ YAML-Definition:
    showGroupedLayerTitle: true          # true/false show group title for grouped layers, default is true
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\Legend
 * Widget: mapbender.element.legend.js

@@ -32,7 +32,7 @@ YAML-Definition:
    draggable: true               # element is draggable or not, default true
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\ZoomBar
 * Widget: mapbender.element.zoombar.js
