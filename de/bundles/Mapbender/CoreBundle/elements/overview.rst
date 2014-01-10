@@ -1,4 +1,4 @@
-.. _zoom_bar:
+.. _overview:
 
 Overview (Übersicht)
 ***********************
