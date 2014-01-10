@@ -1,5 +1,5 @@
-FOMUserBundle - Users and Security
-===================================
+FOMManagerBundle -Using the FOM Manager
+=========================================
 
 .. toctree::
    :maxdepth: 1
