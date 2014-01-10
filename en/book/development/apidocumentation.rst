@@ -16,7 +16,10 @@ with docbblock annotations:
 
 You can check the `generated documentation <../../../../../../apidoc/class-Mapbender.Example.php>`_.
 
-You can check the `generated documentation <Example.php>`_.
+You can check the `generated documentation <../Example.php>`_.
+
+
+You can check the :doc:`Example`.
 
 JavaScript
 **********
