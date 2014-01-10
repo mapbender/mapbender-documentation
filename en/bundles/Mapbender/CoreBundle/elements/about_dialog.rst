@@ -24,7 +24,7 @@ YAML-Definition:
    icon: 'abouticon'            # icon to display on button
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\AboutDialog
 * Widget: mapbender.mbAboutDialog
