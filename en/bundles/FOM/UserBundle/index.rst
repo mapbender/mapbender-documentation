@@ -4,8 +4,8 @@ FOMUserBundle - Users and Security
 .. toctree::
    :maxdepth: 1
 
+   acl
    users
-   groups
    roles_groups
    security
 

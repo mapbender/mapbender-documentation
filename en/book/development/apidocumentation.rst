@@ -14,7 +14,8 @@ with docbblock annotations:
     :language: html+php
     :linenos:
 
-You can check the `generated documentation <../../../../../../apidoc/class-Mapbender.Example.html>`_.
+You can check the `generated documentation </data/git/mapbender-documentation/de/book/development/Example.php>`_.
+
 
 JavaScript
 **********

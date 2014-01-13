@@ -10,7 +10,7 @@ PHP
     :language: html+php
     :linenos:
 
-Sie können dieDokumentation prüfen mit: `generated documentation <../../../../../../apidoc/class-Mapbender.Example.html>`_.
+Sie können die Dokumentation prüfen mit: `dem Beispiel </data/git/mapbender-documentation/de/book/development/Example.php>`_.
 
 JavaScript
 **********

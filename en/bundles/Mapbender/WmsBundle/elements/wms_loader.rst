@@ -17,7 +17,7 @@ Configuration
 .. image:: ../../../../../figures/wms_loader_configuration.png
      :scale: 80
 
-You need a button to show this element. See :ref:`button` for inherited configuration options.
+You need a button to show this element. See :ref:`button_en` for inherited configuration options.
 
 YAML-Definition:
 
@@ -44,14 +44,13 @@ The link has to look like this:
 
 .. code-block:: html
 
-<a mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1" 
-mb-wms-layers="Gewaesser,Fluesse" 
-href="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
+  <a mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1" 
+  mb-wms-layers="Gewaesser,Fluesse" 
+  href="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
 
-
-<a mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1" 
-mb-wms-layers="Gewaesser,Fluesse" 
-mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS" href="">load service</a>
+  <a mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1" 
+  mb-wms-layers="Gewaesser,Fluesse" 
+  mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS" href="">load service</a>
 
 
 .. code-block:: yaml
@@ -60,7 +59,7 @@ mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetC
     mb-wms-merge="1"              # adds the WMS only once, if WMS is already part of the application it will use the WMS which is there (default is 1)
     mb-layer-merge="1"            # default is 1 which means: activate the layers passed mb-wms-layers and do not disable the layers which are already active.
     mb-wms-layers="Gewaesser,Fluesse" # defines the layers to be activated, _all activates all layers, default all layers are deactivated
-href oder mb-url              # refer to the WMS getcapabilities URL
+    href oder mb-url              # refer to the WMS getcapabilities URL
 
    
 

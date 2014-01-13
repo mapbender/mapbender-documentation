@@ -1,4 +1,4 @@
-.. _button:
+.. _button_en:
 
 Button
 ******

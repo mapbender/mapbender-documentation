@@ -1,4 +1,4 @@
-.. _zoom_bar:
+.. _overview:
 
 Overview (Übersicht)
 ***********************
@@ -35,7 +35,7 @@ YAML-Definition:
    fixed: true                      # true/false um den Übersichtsbereich zu fixieren, der Standardwert ist true
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\Overview
 * Widget: mapbender.element.overview.js

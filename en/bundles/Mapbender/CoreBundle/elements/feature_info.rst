@@ -23,7 +23,7 @@ YAML-Definition:
    deactivateOnClose: true # true/false to deactivate the functionality after closing the result dialog, default is true
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\FeatureInfo
 * Widget: mapbender.element.featureInfo.js

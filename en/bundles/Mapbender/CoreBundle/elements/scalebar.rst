@@ -28,7 +28,7 @@ YAML-Definition:
    units: array('km')          # scale bar units 'kilometer' and/or 'miles' (ml), default ['km']
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\ScaleBar
 * Widget: mapbender.element.scalebar.js

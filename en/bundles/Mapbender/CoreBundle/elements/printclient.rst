@@ -37,7 +37,7 @@ YAML-Definition:
                 required: true                  # true or false
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\PrintClient
 * Widget: mapbender.element.printClient.js

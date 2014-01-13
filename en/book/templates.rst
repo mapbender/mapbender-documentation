@@ -134,6 +134,7 @@ Now your template should show up in the list.
 How to change your design?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You have to edit the following files, if want to change the design
+
 * twig - changes in the structure (like - delete a component like sidebar)
 * mapbender3_theme_demo.css - changes in the structure - position and size of content or footer
 * demo.css - changes of color, icons, fonts

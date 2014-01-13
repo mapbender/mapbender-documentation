@@ -1,18 +1,22 @@
-.. _poi>:
+.. _poi:
 
-POI
-***
+POI (MeetingPoint)
+***********************
 
 Generate POI (aka meeting point) URLs suitable for sending by e-mail
 
-.. image:: ../../../../../figures/nameoftheelement.png
+
+.. image:: ../../../../../figures/poi.png
      :scale: 80
+
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/nameoftheelement_configuration.png
+
+.. image:: ../../../../../figures/poi_configuration.png
      :scale: 80
+     
 
 YAML-Definition:
 
@@ -22,7 +26,7 @@ YAML-Definition:
 
 
 Class, Widget & Style
-==============
+=========================
 
 * Class: Mapbender\CoreBundle\Element\POI
 * Widget: mapbender.mbPOI

@@ -22,7 +22,7 @@ YAML-Definition:
      'right-bottom'
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\ScaleDisplay
 * Widget: mapbender.element.scaledisplay.js

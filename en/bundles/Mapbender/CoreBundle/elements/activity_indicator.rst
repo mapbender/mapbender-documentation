@@ -22,7 +22,7 @@ YAML-Definition:
     tileActivityClass: mb-activity-tile # CSS class to indicate tile loading activity
 
 Class, Widget & Style
-==============
+============================
 
 * Class: Mapbender\\CoreBundle\\Element\\ActivityIndicator
 * Widget: mapbender.element.activityindicator.js
