@@ -35,10 +35,12 @@ YAML-Definition:
                    type: text  # field type, usually text or integer
                    options:  # field options
                        required: true  # HTML5 required attribute
+                       label: Custom Label  # Enter a custom label, otherwise the label will be derived off the field name
                        attr:  # HTML attributes to inject
                            data-autocomplete: on  # this triggers autocomplete
                    split: [name, zusatz]  # optional field contents, might be split
                    autocomplete-key: id  # column name to return as autocomplete key instead of column value
+                   compare: ~  # See note below for compare modes
            results:
                view: table  # only result view type for now
                headers:  # hash of table headers and the corresponding result columns
@@ -50,6 +52,22 @@ YAML-Definition:
                        buffer: 10  # buffer result geometry with this (map units) before zooming
                        minScale: ~  # scale restrictions for zooming, ~ for none
                        maxScale: ~
+
+Compare modes
+-------------
+
+Each field can be assigned a compare mode which is evaluated by the engine when building the search query. The SQL search
+engine has the following modes:
+
+* exact: exact comparison (key = val)
+* iexact: case-insensitive comparison
+* like: default, uses two-sided like
+* like-left: uses left-sided like
+* like-right: uses right-sided like
+* **ilike**: uses two-sided case-insensitive like
+* ilike-left: uses left-sided case-insensitive like
+* ilike-right: uses right-sided case-insensitive like
+
 
 Class, Widget & Style
 =====================
