@@ -467,8 +467,8 @@ Have a look at the steps as commands
  # merge parameters.yml, config.yml and if used mapbender.yml back to the new installation
  
  # change the accessrights and owner of the files
- chmod -R uga+r /var/www/mapbender3"
- chown -R www-data:www-data /var/www/mapbender3"
+ chmod -R uga+r /var/www/mapbender3
+ chown -R www-data:www-data /var/www/mapbender3
 
 
 Update your Mapbender database
@@ -481,8 +481,8 @@ Update your Mapbender database
  app/console assets:install web
  
  # change the access rights and owner of the files
- chmod -R uga+r /var/www/mapbender3"
- chown -R www-data:www-data /var/www/mapbender3"
+ chmod -R uga+r /var/www/mapbender3
+ chown -R www-data:www-data /var/www/mapbender3
 
  # You have to set write permission to app/cache and app/logs.
  chmod -R o+w /var/www/mapbender3/app/cache
