@@ -20,7 +20,7 @@ There are 4 steps you have to follow on the way to your own template.
 
 Notice: We already prepared a Workshop/DemoBundle that you can use as a template. You can download it here:
 
-* Workshop/DemoBundle at https://github.com/mapbender/workshop (will come soon)
+* Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop 
 
 
 Create your own bundle
@@ -43,11 +43,11 @@ This is how the structure can look like:
                                              print.png
                                              ...
                                   /views
-										/Template								
-                                                 fullscreen_demo.html.twig
+					/Template								
+                                             fullscreen_demo.html.twig
                         /Template
-                                 FullscreenDemo.php
-		                WorkshopDemoBundle.php
+		                DemoFullscreen.php
+
 
 Create a new namespace 
 **************************
@@ -62,13 +62,20 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
 
  use Mapbender\CoreBundle\Component\MapbenderBundle;
 
- class WorkshopDemoBundle extends MapbenderBundle
+ class DemoFullscreen extends MapbenderBundle
  {
-    public function getTemplates()
-    {
-        return array('Workshop\DemoBundle\Template\FullscreenDemo');
-    }
+    ...
  }
+
+ public static function getTitle()
+ {
+   return 'DemoFullscreen';
+ }
+
+ ...
+ ->render('WorkshopDemoBundle:Template:demo_fullscreen.html.twig',
+
+
 
 
 Create your own template file
@@ -115,12 +122,12 @@ Register your template
 
 To register your template you have to create a file at 
 
-* mapbender/src/Workshop/DemoBundle/Template/FullscreenDemo.php 
+* mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php 
 
 .. code-block:: bash
 
  cd mapbender/src/Mapbender/CoreBundle/Template
- cp Fullscreen.php mapbender/src/Workshop/DemoBundle/Template/FullscreenDemo.php
+ cp Fullscreen.php mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php
 
 
 Add the fully qualified Template class name to your Bundles setup class getTemplates function:
@@ -146,7 +153,7 @@ Add the fully qualified Template class name to your Bundles setup class getTempl
     {
         $templating = $this->container->get('templating');
         return $templating
-                        ->render('WorkshopDemoBundle:Template:fullscreen_demo.html.twig',
+                        ->render('WorkshopDemoBundle:Template:demo_fullscreen.html.twig',
                                  array(
                             'html' => $html,
                             'css' => $css,
@@ -173,7 +180,7 @@ You find the mapbender.yml at:
 
 .. code-block:: yaml
   
-  "template:   Workshop\DemoBundle\Template\FullscreenDemo"
+  "template:   Workshop\DemoBundle\Template\DemoFullscreen"
 
 
 Register your bundle in app/AppKernel.php
@@ -206,7 +213,7 @@ Before your new template will show up you have to register your bundle in the fi
             new Mapbender\CoreBundle\MapbenderCoreBundle(),
             ...
 
-			new Workshop\DemoBundle\WorkshopDemoBundle(),
+	    new Workshop\DemoBundle\WorkshopDemoBundle(),
 
         );
 
@@ -304,7 +311,7 @@ If you want to use an image you could place the image in your bundle and refer t
 
 Try this out
 ~~~~~~~~~~~~
-* you can download the Workshop/DemoBundle at https://github.com/mapbender/workshop (will come soon)
+* you can download the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop 
 * change the color of your icons
 * change the size of your icons
 * change the color of the toobar
