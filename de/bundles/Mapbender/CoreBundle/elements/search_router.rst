@@ -35,10 +35,12 @@ YAML-Definition:
                    type: text  # Feldtyp, normalerweise Text oder Integer
                    options:  # Feld Optionen
                        required: true  # für HTML5 erforderliche Attribute, Standard ist true
+                       label: Custom Label  #  Fügen Sie eine benutzerdefinierte Beschriftung ein, ansonsten wird der Feldname als Beschriftung verwendet     
                        attr:  # HTML Attribute
                            data-autocomplete: on  # automatische Datenvervollständigung, Standard ist on (eingeschaltet)
                    split: [name, zusatz]  # optionales Feld, kann geteilt werden
                    autocomplete-key: id  # Spaltenname, der als automatisch vervollständigter Schlüssel zurückgegeben wird (statt eines Spaltenwertes)
+                   compare: ~  # Siehe unten Vergleichsmodus
            results:
                view: table  # aktuelle Ergebnisansicht
                headers:  #    Hash des Tabellen-Headers und die entsprechenden Ergebnisspalten
@@ -50,6 +52,23 @@ YAML-Definition:
                        buffer: 10  # Wert des Puffers für die Geometrie des Ergebnisses, bevor gezoomt wird
                        minScale: ~  # Maßstabsbeschränkung für das Zoomen
                        maxScale: ~
+
+                       
+Vergleichsmodus
+--------------------------
+
+Jedes Feld kann für einen Vergleichsmodus bestimmt werden, welcher von der Engine ausgewertet wird, wenn die Suchabfrage gestellt wird. Die SQL Suche Engine hat die folgenden Modi:
+
+
+* exact: genauer Vergleich, Schlüssel = Wert (key = val)
+* iexact: Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
+* like: Standard, zweiseitiges 'like'
+* like-left: linksseitiges 'like'
+* like-right: rechtsseitiges 'like'
+* **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
+* ilike-left: linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
+* ilike-right: rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
+                       
 
 Class, Widget & Style
 =====================
