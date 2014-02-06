@@ -17,11 +17,11 @@ YAML-Definition:
 
    query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8   # Beispiel Solr URL
    query_key: q                                                                  # Der Suchparameterschlüssel, der angehängt wird
-   collection_path: response.docs                                                # Es kann ein   Can be a dotted attribute path to extract from the query result.
+   collection_path: response.docs                                                # Es kann ein Attributspfad sein, der vom Abfrageergebnis extrahiert wird.
    label_attribute: label                                                        # Name des Attributs, das für die Beschriftung verwendet wird.
    geom_attribute: geom                                                          # Name der Attribute der Geometriedaten 
    geom_format: WKT                                                              # Geometiedatenformat,kann WKT oder GeoJSON sein
-   delay: 300                                                                    # Automatische Vervollständigungs-Verzögerung. 0 wird zum Ausschalten der Automatische Vervollständigung verwendet.
+   delay: 300                                                                    # Automatische Vervollständigungs-Verzögerung. 0 wird zum Ausschalten der Automatischen Vervollständigung verwendet.
 
 Class, Widget & Style
 =========================
