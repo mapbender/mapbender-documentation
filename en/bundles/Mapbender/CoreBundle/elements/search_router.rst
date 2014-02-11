@@ -41,14 +41,14 @@ YAML-Definition:
                    split: [name, zusatz]  # optional field contents, might be split
                    autocomplete-key: id  # column name to return as autocomplete key instead of column value
                    compare: ~  # See note below for compare modes
-                my_select:
-                    type: choice
-                    options:
-                        empty_value: Please select a sex
-                        choices:
-                            m: Male
-                            f: Female
-                            u: Unknown
+               my_select:
+                   type: choice
+                   options:
+                       empty_value: Please select a sex
+                       choices:
+                           m: Male
+                           f: Female
+                           u: Unknown
            results:
                view: table  # only result view type for now
                headers:  # hash of table headers and the corresponding result columns
