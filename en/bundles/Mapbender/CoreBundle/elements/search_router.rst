@@ -38,6 +38,8 @@ YAML-Definition:
                        label: Custom Label  # Enter a custom label, otherwise the label will be derived off the field name
                        attr:  # HTML attributes to inject
                            data-autocomplete: on  # this triggers autocomplete
+                           data-autocomplete-distinct: on  # This forces DISTINCT select
+                           data-autocomplete-using: field_a,field_b  # comma-separated list of other field values to use in WHERE clause for autocomplete
                    split: [name, zusatz]  # optional field contents, might be split
                    autocomplete-key: id  # column name to return as autocomplete key instead of column value
                    compare: ~  # See note below for compare modes
