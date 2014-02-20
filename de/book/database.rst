@@ -37,31 +37,42 @@ Es gibt eine Standard-Datenbankverbindung, die vom Mapbender3 verwendet wird.
 
 Wenn Sie eine andere Datenbank verwenden möchten, müssen Sie eine zweite Datenbankverbindung mit einem anderen Namen definieren und diese verwenden. Weiter ist nichts zu tun.
 
-Es folgt ein Beispiel mit zwei Datenbankverbindungen in der config.yml:
+Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **config.yml**:
 
 .. code-block:: yaml
 
     doctrine:
         dbal:
-            default: mapbender
-            mapbender:
-                driver:   %database_driver%
-                host:     %database_host%
-                port:     %database_port%
-                dbname:   %database_name%
-                path:     %database_path%
-                user:     %database_user%
-                password: %database_password%
-                charset:  UTF8
-            custom:
-                driver:   %database2_driver%
-                host:     %database2_host%
-                port:     %database2_port%
-                dbname:   %database2_name%
-                path:     %database2_path%
-                user:     %database2_user%
-                password: %database2_password%
-                charset:  UTF8
-        orm:
-            auto_generate_proxy_classes: %kernel_debug%
+            default_connection: default
+            connections:
+                default:
+                    driver:   %database_driver%
+                    host:     %database_host%
+                    port:     %database_port%
+                    dbname:   %database_name%
+                    path:     %database_path%
+                    user:     %database_user%
+                    password: %database_password%
+                    charset:  UTF8
+                search_db:
+                    driver:   %database2_driver%
+                    host:     %database2_host%
+                    port:     %database2_port%
+                    dbname:   %database2_name%
+                    path:     %database2_path%
+                    user:     %database2_user%
+                    password: %database2_password%
+                    charset:  UTF8
 
+
+The definition of the database variables is done in the file **parameters.yml**.
+
+.. code-block:: yaml
+
+    database2_driver:   pdo_pgsql
+    database2_host:     localhost
+    database2_port:     5432
+    database2_name:     geodatabase
+    database2_path:     ~
+    database2_user:     postgres
+    database2_password: postgres

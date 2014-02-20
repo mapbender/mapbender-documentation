@@ -6,6 +6,9 @@ Search Router
 Search frontend GUI for plugable search engine modules. Right now a generic SQL search engine
 is provided, with more to come (think Lucene enhanced search, etc.)
 
+.. image:: ../../../../../figures/search_router.png
+     :scale: 80
+
 Configuration
 =============
 
@@ -14,7 +17,44 @@ Configuration
 
 You need a button to show this element. See :doc:`button` for inherited configuration options.
 
-YAML-Definition:
+The SearcRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
+
+You can define Searches (Routes) with the + Button. Each Search has a titel which will show up in the search form in a selectbox where you can choose the search you want to use.
+
+The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the desihn of the form and of the result table.
+
+Element definition in web interface in the configuration area:
+
+.. code-block:: yaml
+
+    class: Mapbender\CoreBundle\Component\SQLSearchEngine
+    class_options:
+        connection: germany
+        relation: ortschaften
+        attributes:
+            - gid
+            - ortsname
+        geometry_attribute: geom
+    form:
+        ortsname:
+            type: text
+            options:
+                required: true
+            compare: exact
+    results:
+        view: table
+        headers:
+            gid: ID
+            ortsname: Name
+        callback:
+            event: click
+            options:
+                buffer: 10
+                minScale: null
+                maxScale: null
+
+
+YAML-Definition for mapbender.yml:
 
 .. code-block:: yaml
 
@@ -26,7 +66,7 @@ YAML-Definition:
            title: Demo A  # human readable title
            class: Mapbender\CoreBundle\Component\SQLSearchEngine  # Search engine to use
            class_options:  # these are forwarded to the search engine
-               connection: ~  # DBAL connection name to use, use ~ for the default one
+               connection: search_db  # DBAL connection name to use, use ~ for the default one
                relation: test.demo_a  # Relation to select from, you can use subqueries
                attributes: [id, name]  # array of columns to select, expressions are possible
                geometry_attribute: geom  # name of the geometry column to query

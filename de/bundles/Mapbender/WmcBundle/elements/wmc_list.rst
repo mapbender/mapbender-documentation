@@ -14,6 +14,9 @@ Ihrer Applikation können Konfigurationen von einer Selektbox hinzugefügt werde
 **Beachten Sie:** Diese Funktion kann nur verwendet werden, wenn ein WMC-Lader vorhanden ist.
 
 
+.. image:: ../../../../../figures/wmc_list.png
+     :scale: 80
+
 
 Konfiguration
 =============
