@@ -33,7 +33,7 @@ YAML-Definition:
    titleMaxLength: 20           # Maximale Länge des Layertitels, Standard ist 20  
    showBaseSource: true         # Anzeige des Basislayers, der Standardwert ist true
    showHeader: true             # zeigt eine Überschrift, die die Anzahl der Services zählt, der Standardwert ist true
-   layerMenu: false             # zeigt ein Kontextmenü für den Layer an (wie Legende, Transparenz, Zoom, Metadaten u.a.), der Standardwert ist false. Das Element ist in 3.0 noch nicht implementiert.
+   menu: [opacity,zoomtolayer]  # zeigt ein Kontextmenü für den Layer an (wie Legende, Opazität, Zoom auf Layer, Metadaten u.a.), der Standardwert ist false. 
    layerRemove: false           # Entfernen von Layern. der Standardwert ist false
 
 Class, Widget & Style
