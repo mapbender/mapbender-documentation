@@ -149,7 +149,7 @@ How to build a new Mapbender3 build
 
 .. code-block:: bash
 
- git clone -b design git@github.com:mapbender/mapbender-starter mapbender-build
+ git clone -b develop git@github.com:mapbender/mapbender-starter mapbender-build
  cd mapbender-build
  git submodule update --init --recursive
  phing deps
@@ -157,7 +157,6 @@ How to build a new Mapbender3 build
  git tag
  git push --tags (https://github.com/mapbender/mapbender-starter/releases)
  phing tarball
- cd /data/git/mapbender-build/artefacts
  cd /data/git/mapbender-build/artefacts
  sudo tar xfz mapbender3-3.0.0build0.tar.gz 
  sudo chmod -R 777 mapbender3-3.0.0build0
