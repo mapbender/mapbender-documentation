@@ -5,7 +5,7 @@ Feature Info (Infoabfrage)
 
 Dieses Element stellt die Infoabfrage bereit, die mit WMS Services funktioniert.
 
-.. image:: ../../../../../figures/featureinfo.png
+.. image:: ../../../../../figures/feature_info.png
      :scale: 80
 
 Konfiguration
