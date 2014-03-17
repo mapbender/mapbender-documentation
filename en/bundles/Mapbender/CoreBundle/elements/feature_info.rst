@@ -5,7 +5,7 @@ Feature Info
 
 This element provides feature info capabilities to Mapbender3. It works for WMS services.
 
-.. image:: ../../../../../figures/featureinfo.png
+.. image:: ../../../../../figures/feature_info.png
      :scale: 80
 
 Configuration
