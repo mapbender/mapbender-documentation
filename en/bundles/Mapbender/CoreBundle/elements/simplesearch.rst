@@ -9,8 +9,12 @@ expects to receive a JSON-formatted data back which inclucdes a label and a geom
 
 Geometry data can be encoded as WKT or in GeoJSON format.
 
+
 Configuration
 =============
+
+.. image:: ../../../../../figures/simplesearch_configuration.png
+     :scale: 80
 
 YAML-Definition:
 
