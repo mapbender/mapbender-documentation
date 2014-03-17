@@ -11,6 +11,9 @@ Die Geometriedaten können in WKT oder in GeoJSON-Format codiert werden.
 Konfiguration
 =============
 
+.. image:: ../../../../../figures/simplesearch_configuration.png
+     :scale: 80
+
 YAML-Definition:
 
 .. code-block:: yaml
