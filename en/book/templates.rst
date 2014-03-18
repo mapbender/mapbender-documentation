@@ -14,7 +14,7 @@ There are 4 steps you have to follow on the way to your own template.
 * create your own bundle
 * create a template php-file to register your template
 * create your own twig-file
-* create your own css-files
+* create your own css-file(s)
 * register your bundle in app/AppKernel.php
 * use your template in yml-configuration or choose it through the administration
 
@@ -35,8 +35,7 @@ This is how the structure can look like:
  src/Workshop/DemoBundle
                         /Resources
                                   /public
-                                         demo_fullscreen.css
-                                         demo_theme.css   
+                                         demo_fullscreen.css  
                                          /imgage
                                              workshop.ico
                                              workshop_logo.png
@@ -52,7 +51,7 @@ This is how the structure can look like:
 Create a new namespace 
 **************************
 
-The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template.
+The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template and to your css-file(s).
 
 .. code-block:: bash
 
@@ -71,9 +70,23 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
  {
    return 'DemoFullscreen';
  }
+ ....
+
+ static public function listAssets()
+ {
+    $assets = array(
+        'css' => array('@MapbenderCoreBundle/Resources/public/sass/theme/mapbender3.scss',
+                       '@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss','@WorkshopDemoBundle/Resources/public/demo_fullscreen.css'),
+        'js' => array('@FOMCoreBundle/Resources/public/js/widgets/popup.js',
+                      '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
+                      '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js'),
+        'trans' => array()
+    );
+    return $assets;
+ }
 
  ...
- ->render('WorkshopDemoBundle:Template:demo_fullscreen.html.twig',
+ ->render('WorkshopDemoBundle:Template:demo_fullscreen.html.twig',...
 
 
 
@@ -104,17 +117,82 @@ The easiest way to create your own twig file is to copy an existing twig, save i
 Create your own css-file
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The css-files are located in application/mapbender/src/Mapbender/CoreBundle/Resources/public/css. Create your own css file and edit the content.
+Create an empty css-file and fill it with content. From Mapbender3 veriosn 3.0.3.0 you only have to define the parts that have to look different from the default style of the element.
+
+Your file could be named like this: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css and have the following definition:
 
 .. code-block:: bash
 
- cd fom/src/FOM/CoreBundle/Resources/public/css/frontend
+ .toolBar {
+   background-color: rgba(0, 29, 122, 0.8);
+ }
 
- # css for frame (container position)
- copy the file fullscreen.css to  src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css
+ .toolPane {
+   background-color: rgba(0, 29, 122, 0.8);
+ }
+ 
+ .sidePane {
+   overflow: visible;
+   background-image: url("");
+   background-color: #eff7e9;
+ }
+ 
+ .sidePane.opened {
+     width: 350px;
+ }
+ 
+ .logoContainer {
+   background-color: white;
+   background-image: url("");
+   -webkit-box-shadow: 0px 0px 3px #0028AD;
+   -moz-box-shadow: 0px 0px 3px #0028AD;
+   box-shadow: 0px 0px 3px #0028AD;
+ }
+ 
+ .sidePaneTabItem {
+    background-color: #0028AD;
+ }
+ 
+ .layer-opacity-handle {
+     background-color: #0028AD;
+ }
+ 
+ .mb-element-overview .toggleOverview {
+     background-color: #0028AD;
+ }
+ 
+ .button, .tabContainerAlt .tab {
+     background-color: #0028AD;
+ } 
+ 
+ .iconPrint:before {
+   /*content: "\f02f"; }*/
+   content:url("image/print.png");
+ }
+ 
+ .popup {
+   background-color: #eff7e9;
+   background-image: url("");
+ }
+ 
+ .pan{
+   background-color: rgba(0, 93, 83, 0.9);
+ }
 
- # css for colors, fonts, icons
- copy the file mapbender3_theme.css to src/Workshop/DemoBundle/Resources/public/demo_theme.css
+The result of these few lines of css will look like this:
+
+.. image:: ../../figures/workshop_application.png
+     :scale: 80
+
+When you open your new application a css-file will be created at:
+
+* web/assets/WorkshopDemoBundle__demo_fullscreen__css.css
+
+If you do further edits at your css file you may delete the generated css file in the assets directory to see the changes. You also have to clear the browser cache.
+
+.. code-block:: bash
+
+ sudo rm -f web/assets/WorkshopDemoBundle__demo_fullscreen__css.css
 
 
 Register your template
@@ -130,19 +208,22 @@ To register your template you have to create a file at
  cp Fullscreen.php mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php
 
 
-Add the fully qualified Template class name to your Bundles setup class getTemplates function:
+Add your new css-file to the listAssets function as last array-entry:
 
 .. code-block:: php
 
-    public function getAssets($type)
-    {
-        parent::getAssets($type);
-        $assets = array(
-            'css' => array('@WorkshopDemoBundle/Resources/public/css/demo_theme_demo.css,@WorkshopDemo/Resources/public/css/demo_fullscreen.css'),
-            'js' => array(),
-        );
 
-        return $assets[$type];
+    static public function listAssets()
+    {
+        $assets = array(
+            'css' => array('@MapbenderCoreBundle/Resources/public/sass/theme/mapbender3.scss',
+                           '@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss','@WorkshopDemoBundle/Resources/public/demo_fullscreen.css'),
+            'js' => array('@FOMCoreBundle/Resources/public/js/widgets/popup.js',
+                          '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
+                          '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js'),
+            'trans' => array()
+        );
+        return $assets;
     }
 
 
@@ -161,12 +242,6 @@ Add the fully qualified Template class name to your Bundles setup class getTempl
                             'application' => $this->application));
     }
 
-Edit your twig-file and refer to the new css-files
-
-.. code-block:: yaml
-
-  <link rel="stylesheet" href="{{ asset('bundles/workshopdemo/css/demo_theme.css') }}">
-  <link rel="stylesheet" href="{{ asset('bundles/workshopdemo/css/demo_fullscreen.css') }}">
 
 
 Use your new template in mapbender.yml
@@ -217,12 +292,19 @@ Before your new template will show up you have to register your bundle in the fi
 
         );
 
+Add write access to the web-directory for your webserver user. 
+
+.. code-block:: yaml
+
+    chmod ug+w web
+
+
 Update the web-directory. Each bundle has it's own assets - CSS files, JavaScript files, images and more -
 but these need to be copied into the public web folder:
 
 .. code-block:: yaml
 
-    app/console assets:install web
+    chmod ug+w web
 
 
 Alternatively, as a developer, you might want to use the symlink switch on that command to
@@ -237,17 +319,14 @@ directories way easier.
 Now your template should show up in the list.
 
 
+
 How to change your design?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You have to edit the following files, if want to change the design
 
 * twig - changes in the structure (like - delete a component like sidebar), refer to a logo
-* demo_theme.css - changes in the structure - position and size of content or footer
 * demo_fullscreen.css - changes of color, icons, fonts
-
-Notice: 
-In demo_fullscreen.css the beginning of the file is concerned for browser specific css. Do not edit this part. The part you can edit starts at row 430.
 
 
 How to change the logo?
@@ -282,7 +361,7 @@ How to change the title and favicon?
 How to change the buttons?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mapbender3 uses Fonts from the FontAwesome collection have a look at your demo_theme.css (or mapbender3_theme.css)
+Mapbender3 uses Fonts from the FontAwesome collection:
 
 .. code-block:: yaml
 
@@ -294,12 +373,12 @@ Mapbender3 uses Fonts from the FontAwesome collection have a look at your demo_t
    font-style: normal; }
 
 
-In the file demo_theme.css the font images are refered like this:
+In your css-file you can refer to a font images like this:
 
 .. code-block:: yaml
 
   .iconPrint:before {
-    content: "\f02f";
+    content: "\f02f";}
 
 If you want to use an image you could place the image in your bundle and refer to it like this
 
