@@ -9,7 +9,7 @@ This document will show you how to create a Workshop DemoBundle for demonstratio
 How to create your own template?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are 4 steps you have to follow on the way to your own template.
+There are some steps you have to follow on the way to your own template.
 
 * create your own bundle
 * create a template php-file to register your template
@@ -32,8 +32,9 @@ This is how the structure can look like:
 
 .. code-block:: bash
 
- src/Workshop/DemoBundle
-                        /Resources
+ src/Workshop/DemoBundle/
+                    WorkshopDemoBundle.php 
+                    /Resources
                                   /public
                                          demo_fullscreen.css  
                                          /imgage
@@ -100,7 +101,7 @@ In the template file you define the name of your template, the regions that you 
 
 
 Create your own twig-file
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You find the twig-files at the following path:
 
@@ -110,14 +111,16 @@ The easiest way to create your own twig file is to copy an existing twig, save i
 
 .. code-block:: bash
 
- cd mapbender/src/Workshop/DemoBundle/Resources/views/Template 
- use an existing template and copy it to fullscreen_demo.html.twig
+ cd mapbender/src/Workshop/DemoBundle/Resources/views/Template
+ use the existing template from mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig and copy it to fullscreen_demo.html.twig
 
 
 Create your own css-file
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create an empty css-file and fill it with content. From Mapbender3 veriosn 3.0.3.0 you only have to define the parts that have to look different from the default style of the element.
+Create an empty css-file and fill it with content. From Mapbender3 version 3.0.3.0 you only have to define the parts that have to lookdifferent from the default style of the element.
+
+Firebug can help you to find out the styles you want to change.
 
 Your file could be named like this: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css and have the following definition:
 
@@ -304,7 +307,7 @@ but these need to be copied into the public web folder:
 
 .. code-block:: yaml
 
-    chmod ug+w web
+    app/console assets:install web
 
 
 Alternatively, as a developer, you might want to use the symlink switch on that command to
@@ -330,7 +333,7 @@ You have to edit the following files, if want to change the design
 
 
 How to change the logo?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The logo (default is the Mapbender3 logo) can be changed in the parameters.yml. Which causes a global change. 
 
@@ -347,7 +350,7 @@ Or in the twig file:
 
 
 How to change the title and favicon?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: yaml
 
@@ -359,7 +362,7 @@ How to change the title and favicon?
 
 
 How to change the buttons?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mapbender3 uses Fonts from the FontAwesome collection:
 
