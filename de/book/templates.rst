@@ -128,11 +128,11 @@ Ihre css-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/publ
 .. code-block:: bash
 
  .toolBar {
-   background-color: rgba(0, 29, 122, 0.8);
+   background-color: rgba(0, 29, 122, 0.8) !important;
  }
 
  .toolPane {
-   background-color: rgba(0, 29, 122, 0.8);
+   background-color: rgba(0, 29, 122, 0.8) !important;
  }
  
  .sidePane {
@@ -146,8 +146,8 @@ Ihre css-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/publ
  }
  
  .logoContainer {
-   background-color: white;
-   background-image: url("");
+   background-color: white !important;
+   background-image: url("") !important;
    -webkit-box-shadow: 0px 0px 3px #0028AD;
    -moz-box-shadow: 0px 0px 3px #0028AD;
    box-shadow: 0px 0px 3px #0028AD;

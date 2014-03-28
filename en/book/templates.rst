@@ -127,11 +127,11 @@ Your file could be named like this: src/Workshop/DemoBundle/Resources/public/dem
 .. code-block:: bash
 
  .toolBar {
-   background-color: rgba(0, 29, 122, 0.8);
+   background-color: rgba(0, 29, 122, 0.8) !important;
  }
 
  .toolPane {
-   background-color: rgba(0, 29, 122, 0.8);
+   background-color: rgba(0, 29, 122, 0.8) !important;
  }
  
  .sidePane {
@@ -145,11 +145,11 @@ Your file could be named like this: src/Workshop/DemoBundle/Resources/public/dem
  }
  
  .logoContainer {
-   background-color: white;
-   background-image: url("");
-   -webkit-box-shadow: 0px 0px 3px #0028AD;
-   -moz-box-shadow: 0px 0px 3px #0028AD;
-   box-shadow: 0px 0px 3px #0028AD;
+   background-color: white !important;
+   background-image: url("") !important;
+   -webkit-box-shadow: 0px 0px 3px #0028AD !important;
+   -moz-box-shadow: 0px 0px 3px #0028AD !important;
+   box-shadow: 0px 0px 3px #0028AD !important;
  }
  
  .sidePaneTabItem {
