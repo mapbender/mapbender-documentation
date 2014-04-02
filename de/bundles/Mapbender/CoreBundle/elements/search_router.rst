@@ -29,7 +29,7 @@ Element Definition im Web Administrationstool im Textfeld configuration:
 
     class: Mapbender\CoreBundle\Component\SQLSearchEngine
     class_options:
-        connection: search_db
+        connection: germany
         relation: ortschaften
         attributes:
             - gid
@@ -58,39 +58,49 @@ YAML-Definition in der mapbender.yml Datei:
 
 .. code-block:: yaml
 
-   target: map  # für die Ergebnisanzeige
-   asDialog: true  # true, false im Dialog rendern
-   timeoutFactor:  2  # timeout Faktor (multipliziert mit automatischem Verschiebungfaktor), um die automatische Vervollständigung direkt nach dem Start der Suche zu verhindern
-   routes:      # Sammlung von Suchrouten
-       demo_a:  # maschinenlesbarer Name
-           title: Demo A  # von Menschen lesbarer Name
-           class: Mapbender\CoreBundle\Component\SQLSearchEngine  # aktuelle Suchmaschine
-           class_options:  # die class-options werden zur Suchmaschine weitergeleitet
-               connection: ~  # verwendeter DBAL Verbindungsname, verwenden Sie ~ für den Standardnamen
-               relation: test.demo_a  # ausgewählte Relation, Sie können Unterabfragen verwenden
-               attributes: [id, name]  #  Array von Spalten, die ausgewählt werden können, Ausdrücke (expressions) sind möglich
-               geometry_attribute: geom  # Name der Geometriespalte für die Suchanfrage
-           form:  # Suchformularkonfiguration
-               the_name:  # Feldname, verwenden Sie Relationsspaltennamen für die Abfrage oder anderes für geteilte Felder (siehe unten)
-                   type: text  # Feldtyp, normalerweise Text oder Integer
-                   options:  # Feld Optionen
-                       required: true  # für HTML5 erforderliche Attribute, Standard ist true
-                       label: Custom Label  #  Fügen Sie eine benutzerdefinierte Beschriftung ein, ansonsten wird der Feldname als Beschriftung verwendet     
-                       attr:  # HTML Attribute
-                           data-autocomplete: on  # automatische Datenvervollständigung, Standard ist on (eingeschaltet)
-                   split: [name, zusatz]  # optionales Feld, kann geteilt werden
-                   autocomplete-key: id  # Spaltenname, der als automatisch vervollständigter Schlüssel zurückgegeben wird (statt eines Spaltenwertes)
-                   compare: ~  # Siehe unten Vergleichsmodus
-           results:
-               view: table  # aktuelle Ergebnisansicht
-               headers:  #    Hash des Tabellen-Headers und die entsprechenden Ergebnisspalten
-                   id: ID  # Spaltenname -> Header Beschriftung
-                   name: # Name
-               callback:  #  Was soll beim Klick/Mousover passieren
-                   event: click  # Ereignis, auf das gehört werden soll (Klick oder Mouseover)
+   target: map  # for result visualization
+   asDialog: true  # render inside a dialog or not
+   timeoutFactor:  2  # timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started
+   routes:      # collection of search routes
+       demo_a:  # machine readable name
+           title: Demo A  # human readable title
+           class: Mapbender\CoreBundle\Component\SQLSearchEngine  # Search engine to use
+           class_options:  # these are forwarded to the search engine
+               connection: search_db  # DBAL connection name to use, use ~ for the default one
+               relation: test.demo_a  # Relation to select from, you can use subqueries
+               attributes: [id, name]  # array of columns to select, expressions are possible
+               geometry_attribute: geom  # name of the geometry column to query
+           form:  # search form configuration
+               the_name:  # field name, use relation column name to query or anything else for splitted fields (see below)
+                   type: text  # field type, usually text or integer
+                   options:  # field options
+                       required: true  # HTML5 required attribute
+                       label: Custom Label  # Enter a custom label, otherwise the label will be derived off the field name
+                       attr:  # HTML attributes to inject
+                           data-autocomplete: on  # this triggers autocomplete
+                           data-autocomplete-distinct: on  # This forces DISTINCT select
+                           data-autocomplete-using: field_a,field_b  # comma-separated list of other field values to use in WHERE clause for autocomplete
+                   split: [name, zusatz]  # optional field contents, might be split
+                   autocomplete-key: id  # column name to return as autocomplete key instead of column value
+                   compare: ~  # See note below for compare modes
+               my_select:
+                   type: choice
                    options:
-                       buffer: 10  # Wert des Puffers für die Geometrie des Ergebnisses, bevor gezoomt wird
-                       minScale: ~  # Maßstabsbeschränkung für das Zoomen
+                       empty_value: Please select a sex
+                       choices:
+                           m: Male
+                           f: Female
+                           u: Unknown
+           results:
+               view: table  # only result view type for now
+               headers:  # hash of table headers and the corresponding result columns
+                   id: ID  # column name -> header label
+                   name: Name
+               callback:  # What to do on hover/click
+                   event: click  # result row event to listen for (click or mouseover)
+                   options:
+                       buffer: 10  # buffer result geometry with this (map units) before zooming
+                       minScale: ~  # scale restrictions for zooming, ~ for none
                        maxScale: ~
 
                        
