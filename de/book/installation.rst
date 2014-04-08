@@ -186,12 +186,21 @@ Sie können die Anwendungen, die in der mapbender.yml definiert sind, in die Dat
 Prüfen Sie die Schreibberechtigungen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Weisen Sie die Dateien dem Apache Benutzer (www-data) zu.
+
+.. code-block:: yaml
+
+ chmod -R ugo+r /var/www/mapbender3
+ chown -R www-data:www-data /var/www/mapbender3
+
+
 Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
 
 .. code-block:: yaml
 
- chmod -R o+w /var/www/mapbender3/app/cache
- chmod -R o+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/app/cache
+ chmod -R ug+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/web/assets
 
 
 Prüfen Sie Symfony config.php
@@ -247,7 +256,7 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weise
 
 .. code-block:: yaml
 
- chmod -R uga+r /var/www/mapbender3
+ chmod -R ugo+r /var/www/mapbender3
  chown -R www-data:www-data /var/www/mapbender3
 
 Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten.
@@ -280,12 +289,13 @@ Prüfen Sie die config.php erneut
 
 * http://localhost/mapbender3/config.php
 
-Sie müssen Schreibrechte für die Verzeichnisse app/cache und app/logs vergeben.
+Sie müssen Schreibrechte für die Verzeichnisse app/cache und app/logs sowie web/assets vergeben.
 
 .. code-block:: yaml
 
- chmod -R o+w /var/www/mapbender3/app/cache
- chmod -R o+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/app/cache
+ chmod -R ug+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/web/assets
 
 
 Sie können Mapbender3 nun nutzen. Starten Sie Mapbender3 im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen.
@@ -474,10 +484,11 @@ Aktualisieren Sie Ihre Mapbender Datenbank
  app/console assets:install web
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
- chmod -R uga+r /var/www/mapbender3"
- chown -R www-data:www-data /var/www/mapbender3"
+ chmod -R ugo+r /var/www/mapbender3
+ chown -R www-data:www-data /var/www/mapbender3
 
  # Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
- chmod -R o+w /var/www/mapbender3/app/cache
- chmod -R o+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/app/cache
+ chmod -R ug+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/web/assets
 

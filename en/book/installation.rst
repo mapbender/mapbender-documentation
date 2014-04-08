@@ -193,12 +193,21 @@ Importing applications from mapbender.yml into a database occurs using the comma
 Write permission
 ^^^^^^^^^^^^^^^^
 
-You have to set write permission to app/cache and app/logs.
+Set owner, group and rights. Assign the files to the Apache user (www-data).
 
 .. code-block:: yaml
 
- chmod -R o+w /var/www/mapbender3/app/cache
- chmod -R o+w /var/www/mapbender3/app/logs
+ chmod -R ugo+r /var/www/mapbender3
+ chown -R www-data:www-data /var/www/mapbender3
+
+
+You have to set write permission to app/cache and app/logs and web/assets.
+
+.. code-block:: yaml
+
+ chmod -R ug+w /var/www/mapbender3/app/cache
+ chmod -R ug+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/web/assets
 
 
 Check Symfonys config.php
@@ -252,8 +261,9 @@ Set owner, group and rights. Assign the files to the Apache user (www-data).
 
 .. code-block:: yaml
 
- chmod -R uga+r /var/www/mapbender3
+ chmod -R ugo+r /var/www/mapbender3
  chown -R www-data:www-data /var/www/mapbender3
+ chmod -R ug+w /var/www/mapbender3/web/assets
 
 Adapt the configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create.
 
