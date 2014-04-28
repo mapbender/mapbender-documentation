@@ -96,6 +96,7 @@ YAML-Definition for mapbender.yml:
                headers:  # hash of table headers and the corresponding result columns
                    id: ID  # column name -> header label
                    name: Name
+               styleMap: ~  # See below
                callback:  # What to do on hover/click
                    event: click  # result row event to listen for (click or mouseover)
                    options:
@@ -117,6 +118,51 @@ engine has the following modes:
 * **ilike**: uses two-sided case-insensitive like
 * ilike-left: uses left-sided case-insensitive like
 * ilike-right: uses right-sided case-insensitive like
+
+
+Result feature styling
+----------------------
+
+By default, the result features are styled using the default styles OpenLayers provides. This gives the
+well-known orange look and blue look for the selected feature. If you want to override that, you can
+provide a styleMap configuration for the results like this:
+
+.. code-block:: yaml
+
+    results:
+        styleMap:
+            default:
+                fillOpacity: 0
+            select:
+                fillOpacity: 0.4
+
+This will not draw polygon interiors, but only their outlines in default mode. The selected feature will
+have it's interior drawn with 60% transparency.
+
+The default style properties will override the properties OpenLayers uses for the default style, therefore
+you only need to set properties you wish to change. If you omit the default part, OpenLayers default style
+will be used as is.
+
+A similar logic applies to the select style – any property you provide will override the corresponding
+property of the *final* default style. Therefore the example above will *not* yield a blue look for the
+selected feature!
+
+Keep in mind to quote hex color codes as the pound sign will otherwise be treated as a inline comment!
+
+A more elaborate example with green (hollow) features and the selected one in red:
+
+.. code-block:: yaml
+
+    results:
+        styleMap:
+            default:
+                strokeColor: '#00ff00'
+                strokeOpacity: 1
+                fillOpacity: 0
+            select:
+                strokeColor: '#ff0000'
+                fillColor: '#ff0000'
+                fillOpacity: 0.4
 
 
 Class, Widget & Style
