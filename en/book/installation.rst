@@ -494,7 +494,7 @@ Have a look at the steps as commands
  cp /var/www/mapbender3_save/app/config/config.yml /var/www/mapbender3/app/config/config.yml 
  
  # manual step
- # merge parameters.yml, config.yml and if used mapbender.yml back to the new installation
+ # merge parameters.yml, config.ymls and if used mapbender.yml back to the new installation
  
  # change the accessrights and owner of the files
  chmod -R uga+r /var/www/mapbender3
