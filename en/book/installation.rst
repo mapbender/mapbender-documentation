@@ -287,7 +287,8 @@ Run the app/console commands
  app/console init:acl
  app/console assets:install web
  app/console fom:user:resetroot
- app/console doctrine:fixtures:load  --append
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
 Installation of Mapbender3 is done. 
 
@@ -299,8 +300,9 @@ You have to set write permission to app/cache and app/logs
 
 .. code-block:: yaml
 
- chmod -R o+w /var/www/mapbender3/app/cache
- chmod -R o+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/app/cache
+ chmod -R ug+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/web/assets
 
 
 You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
@@ -424,6 +426,24 @@ config.yml
 
 **Notice:** You need a mailer for self-registration and reset password functionality (see parameters.yml).
 
+If you use a proxy you have to add the proxy settings to config.yml at section *ows_proxy3_core*.
+
+This is how the configiration could look like:
+
+.. code-block:: yaml
+
+ows_proxy3_core:
+    logging: true
+    obfuscate_client_ip: true
+    proxy:
+        host: myproxy
+        port: 8080
+        connecttimeout: 60
+        timeout: 90
+        noproxy:
+            - 192.168.1.123
+
+
 
 mapbender.yml
 ------------------
@@ -495,6 +515,7 @@ Update your Mapbender database
  chown -R www-data:www-data /var/www/mapbender3
 
  # You have to set write permission to app/cache and app/logs.
- chmod -R o+w /var/www/mapbender3/app/cache
- chmod -R o+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/app/cache
+ chmod -R ug+w /var/www/mapbender3/app/logs
+ chmod -R ug+w /var/www/mapbender3/web/assets
 

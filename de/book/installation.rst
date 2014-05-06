@@ -281,7 +281,8 @@ Setzen Sie die app/console Befehle ab
  app/console init:acl
  app/console assets:install web
  app/console fom:user:resetroot
- app/console doctrine:fixtures:load  --append
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
 Hiermit ist die Installation von Mapbender3 fertig. 
 
@@ -343,6 +344,7 @@ Prüfen Sie, ob der ALIAS erreichbar ist:
 Öffnen Sie das Symfony Welcome Script config.php. Das Skript prüft, ob alle notwendigen Komponenten installiert wurden und ob die Konfiguration erfolgte. Sofern noch Probleme vorliegen, sollten diese behoben werden.
  
 * http://localhost/mapbender3/config.php
+
 
 .. image:: ../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
@@ -417,6 +419,24 @@ config.yml
 
 **Hinweis:** Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
 
+Sofern Sie einen Proxy verwenden, müssen Sie diesen in der Datei config.yml im Bereich *ows_proxy3_core* angeben.
+
+Eine Konfiguration könnte wie folgt aussehen:
+
+.. code-block:: yaml
+
+ows_proxy3_core:
+    logging: true
+    obfuscate_client_ip: true
+    proxy:
+        host: myproxy
+        port: 8080
+        connecttimeout: 60
+        timeout: 90
+        noproxy:
+            - 192.168.1.123
+
+
 
 mapbender.yml
 ------------------
@@ -470,8 +490,8 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # vergleichen Sie die Dateien parameters.yml, config.yml und sofern verwendet die mapbender.yml
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
- chmod -R uga+r /var/www/mapbender3"
- chown -R www-data:www-data /var/www/mapbender3"
+ chmod -R uga+r /var/www/mapbender3
+ chown -R www-data:www-data /var/www/mapbender3
 
 
 Aktualisieren Sie Ihre Mapbender Datenbank
