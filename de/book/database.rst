@@ -1,6 +1,15 @@
 Konfiguration der Datenbank
 ############################
 
+.. _doctrine:
+Doctrine
+*************
+Mapbender3 verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und beitet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht. 
+Auf der `Doctrine Projektseite <http://www.doctrine-project.org/>`_ finden sich weitere Informationen.
+
+Database Definition
+********************
+
 Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgendermaßen aus:
 
 .. code-block:: yaml
@@ -27,6 +36,7 @@ Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Paramet
 * pdo_oci - Oracle PDO driver
 
 Die Parameter sollten selbsterklärend sein. Der %database_path% ist der Pfad zur Datei der  SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, löschen Sie bitte den Parameter trotzdem nicht aus der parameters.yml. Es würde ein Fehler erzeugt
+
 
 Verwendung mehrerer Datenbanken
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,3 +86,5 @@ The definition of the database variables is done in the file **parameters.yml**.
     database2_path:     ~
     database2_user:     postgres
     database2_password: postgres
+
+
