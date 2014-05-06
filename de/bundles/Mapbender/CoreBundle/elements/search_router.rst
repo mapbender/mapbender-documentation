@@ -96,6 +96,7 @@ YAML-Definition in der mapbender.yml Datei:
                headers:  # hash of table headers and the corresponding result columns
                    id: ID  # column name -> header label
                    name: Name
+               styleMap: ~  # See below
                callback:  # What to do on hover/click
                    event: click  # result row event to listen for (click or mouseover)
                    options:
@@ -103,12 +104,10 @@ YAML-Definition in der mapbender.yml Datei:
                        minScale: ~  # scale restrictions for zooming, ~ for none
                        maxScale: ~
 
-                       
 Vergleichsmodus
 --------------------------
 
 Jedes Feld kann für einen Vergleichsmodus bestimmt werden, welcher von der Engine ausgewertet wird, wenn die Suchabfrage gestellt wird. Die SQL Suche Engine hat die folgenden Modi:
-
 
 * exact: genauer Vergleich, Schlüssel = Wert (key = val)
 * iexact: Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
@@ -118,7 +117,50 @@ Jedes Feld kann für einen Vergleichsmodus bestimmt werden, welcher von der Engi
 * **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
 * ilike-left: linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
 * ilike-right: rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
-                       
+
+Styling der Ergebnisse
+---------------------------
+
+Standardmäßig werden die Ergebnisse in der Karte in dem default-OpenLayers
+ Style angezeigt, d.h. orange für die Treffer und blau für selektierte Objekte.
+
+Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfiguration übergeben, die wie folgt aussehen könnte:
+
+.. code-block:: yaml
+
+    results:
+        styleMap:
+            default:
+                fillOpacity: 0
+            select:
+                fillOpacity: 0.4
+
+Die Definition zeichnet nicht die Füllung von Polygonen, sondern nur die Umrandung, da die Füllung transparent gesetzt wird. Selektierte Objekte werden dagegen mit einer Transparenz von 60% gezeichnet.
+
+Die default-Angaben überschreiben die OpenLayers-Standardangaben. Daher müssen Sie lediglich die Angaben setzen, die Sie überschreiben möchten. Wenn Sie die Angaben weglassen wird der OpenLayers default-Stil verwendet.
+
+Die gleiche Logik wird beim select-Stil verfolgt. Jede Angabe, die Sie machen überschreibt die Angaben des *finalen* default Stils. 
+Therefore the example above will *not* yield a blue look for the
+selected feature!
+
+Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
+
+
+Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selektierte Objekt in rot dar:
+
+.. code-block:: yaml
+
+    results:
+        styleMap:
+            default:
+                strokeColor: '#00ff00'
+                strokeOpacity: 1
+                fillOpacity: 0
+            select:
+                strokeColor: '#ff0000'
+                fillColor: '#ff0000'
+                fillOpacity: 0.4
+
 
 Class, Widget & Style
 =====================
