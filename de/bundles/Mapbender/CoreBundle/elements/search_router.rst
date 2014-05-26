@@ -43,6 +43,7 @@ Element Definition im Web Administrationstool im Textfeld configuration:
             compare: exact
     results:
         view: table
+        count: true
         headers:
             gid: ID
             ortsname: Name
@@ -93,6 +94,7 @@ YAML-Definition in der mapbender.yml Datei:
                            u: Unknown
            results:
                view: table  # only result view type for now
+               count: true # Anzahl der Treffer anzeigen
                headers:  # hash of table headers and the corresponding result columns
                    id: ID  # column name -> header label
                    name: Name
