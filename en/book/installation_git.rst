@@ -17,6 +17,7 @@ For git-based installations you also need:
 * cURL    - command line tool for transferring data with URL syntax, supporting HTTP, HTTPS and more
 * pear    - PHP Extension and Application Repository 
 * Phing   - `Phing <http://www.phing.info/>`_ Is Not GNU make; it's a PHP project build system or build tool based on ​Apache Ant.
+* php5-dev - Of course the files for PHP5 module development.
 
 
 Cloning the Repository
