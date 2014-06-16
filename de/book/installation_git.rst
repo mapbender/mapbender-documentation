@@ -14,6 +14,7 @@ Für die Gitt-basierte Installation benötigen Sie:
 * cURL    - kommandozeilen basiertes Tool für die Übertragung von Daten über URL Syntax,unterstützt HTTP, HTTPS und mehr
 * pear    - PHP Erweiterung und Anwendungs-Repository 
 * Phing   - `Phing <http://www.phing.info/>`_ ist nicht GNU make; es ist ein  PHP Projekt Build System oder Build-Werkzeug basierend auf ​Apache Ant.
+* php5-dev - Und natürlich die Dateien zur Entwicklung von PHP5-Modulen.
 
 
 Klonen des Repositories
