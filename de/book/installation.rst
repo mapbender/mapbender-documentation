@@ -34,7 +34,7 @@ Installationspakete werden als komprimierte Pakete ausgegeben und sind auf der D
 
 Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichnis Ihrer Wahl. Stellen Sie sicher, dass der Webserver auf das gerade dekomprimierte Webverzeichnis in dem Mapbender Verzeichnis zeigt. Sorgen Sie dafür, dass *app.php* als Verzeichnis-Index eingestellt ist.
 
-Beispiel für eine Apache ALIAS Konfiguration in der Datei /etc/apache2/conf.d/mapbender3
+Beispiel für eine Apache ALIAS Konfiguration in der Datei /etc/apache2/conf.d/mapbender3 (bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
 
 .. code-block:: yaml
 
@@ -228,7 +228,7 @@ Installieren Sie die notwendigen Komponenten:
   apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
 
 
-Erstellen Sie den Apache ALIAS. Legen Sie die Datei /etc/apache2/conf.d/mapbender3 mit dem folgenden Inhalt an und starten Sie den Apache Server neu.
+Erstellen Sie den Apache ALIAS. Legen Sie die Datei /etc/apache2/conf.d/mapbender3 mit dem folgenden Inhalt an und starten Sie den Apache Server neu. Apache 2.4 benutzt andere Direktiven für die Access Control (zum Beispiel: "Require all granted"). Für Details schauen Sie bitte in die `Apache Documentation: Upgrading to 2.4 from 2.2 <http://httpd.apache.org/docs/2.4/upgrading.html>`_.
 
 .. code-block:: yaml
 
@@ -325,7 +325,7 @@ Installieren Sie die notwendigen Komponenten:
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
 
-Erstellen Sie den Apache ALIAS. Legen Sie die Datei /etc/apache2/conf.d/mapbender3 mit dem folgenden Inhalt an und starten Sie den Apache Server neu.
+Erstellen Sie den Apache ALIAS. Legen Sie die Datei /etc/apache2/conf.d/mapbender3 mit dem folgenden Inhalt an und starten Sie den Apache Server neu (bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
 
 .. code-block:: yaml
 

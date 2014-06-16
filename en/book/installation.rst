@@ -38,7 +38,7 @@ sure your Webserver points to the web directory inside the mapbender3 directory
 you just uncompressed. You will also need to make sure that the default
 directory index is *app.php*.
 
-Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender3
+Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender3. Apache 2.4 uses different directives for Access Control (for example: "Require all granted"). Please see the `Apache documentation: Upgrading to 2.4 from 2.2 <http://httpd.apache.org/docs/2.4/upgrading.html>`_ for details.
 
 .. code-block:: yaml
 
@@ -233,7 +233,7 @@ Install necessary components:
   apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
 
 
-Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart your Apache server
+Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart your Apache server (keep in mind, that Apache 2.4 uses `different directives for Access Control <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
 
 .. code-block:: yaml
 
@@ -331,7 +331,7 @@ Install necessary components:
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
 
-Configure the Apache ALIAS and restart your Apache server
+Configure the Apache ALIAS and restart your Apache server (keep in mind, that Apache 2.4 uses `different directives for Access Control <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
 
 .. code-block:: yaml
 
