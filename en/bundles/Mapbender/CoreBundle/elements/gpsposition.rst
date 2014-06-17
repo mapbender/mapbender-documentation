@@ -24,6 +24,7 @@ YAML-Definition:
    target: map            # Id of Map element to query
    autoStart: false	  # true/false, default is false
    refreshinterval: 5000  # refresh interval in ms, default is 5000 ms
+   follow: true           # default false, true refreshs the map for every received GPS position received, only use with WMS in tiled mode
 
 Class, Widget & Style
 ======================

@@ -25,6 +25,8 @@ YAML-Definition:
    target: map            # ID des Kartenelements
    autoStart: false       # true, wenn diese Funktion beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
    refreshinterval: 5000  # Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
+   follow: true           # Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu. Sollte nur mit WMS Dienten im gekachelten Modus verwendet werden, da sonst bei jeder Neupositionierung ein neuer Kartenrequest geschickt wird
+
 
 Class, Widget & Style
 ======================
