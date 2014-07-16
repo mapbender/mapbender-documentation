@@ -273,4 +273,43 @@ You can update all your Pear packages with
 
 	sudo pear upgrade-all
 
+Using the quick_install.py script
+#################################
 
+A Python script to quickly install a mapbender-starter is provided with the
+mapbender-starter itself. You can download that script, which offers a number
+of command line arguments:
+
+- branch: by default, the develop branch is used, but you can specify any branch
+- directory: by default the directory mapbender3_BRANCH will be used, but that
+  can be specified as well.
+- admin user: the default admin account (root <root@example.com> / root) can be
+  changed as well.
+
+You can download the script or just pass it's URL to curl to fetch it and pipe
+the result trough Python. The later is demonstrated in the examples section
+below.
+
+Examples
+********
+
+http://bit.ly/1tQvo5i is the shortened URL for
+https://raw.githubusercontent.com/mapbender/mapbender-starter/develop/bin/quick_install.py
+
+- Install develop branch into mapbender3_develop
+  
+  .. code-block:: sh
+
+    curl -sSL http://bit.ly/1tQvo5i | python
+
+- Install foo branch into /tmp/bar
+  
+  .. code-block:: sh
+
+    curl -sSL http://bit.ly/1tQvo5i | python - --dir=/tmp/bar foo
+
+- Install develop branch, but use admin <admin@example.com> with password admin
+  
+  .. code-block:: sh
+
+    curl -sSL http://bit.ly/1tQvo5i | python - --username=admin --useremail=admin@example.com --userpassword=admin
