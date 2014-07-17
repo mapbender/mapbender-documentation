@@ -107,9 +107,9 @@ For a "sidepane" region are "tabs" and "accordion" properties supported.
 * "tabs" orders mapbender elements in tabs
 * "accordion" displays mapbender elements as an accordion list
 
-In the template file you define the function "getRegionsProperties".
+For adding you define the function "getRegionsProperties" in the template file.
 
-For configuration you check an option  at your application's configuration.
+For configuration you check an option in your application's configuration.
 
 .. code-block:: bash
 
