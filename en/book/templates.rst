@@ -100,6 +100,40 @@ In our example the template file is called FullscreenDemo.php. You find it at sr
 In the template file you define the name of your template, the regions that you want to provide and refer to a twig file.
 
 
+Adding properties for your "sidepane" region
+*************************************************************************
+
+For a "sidepane" region are "tabs" and "accordion" properties supported.
+* "tabs" orders mapbender elements in tabs
+* "accordion" displays mapbender elements as an accordion list
+
+In the template file you define the function "getRegionsProperties".
+
+For configuration you check an option  at your application's configuration.
+
+.. code-block:: bash
+
+
+/**
+ * @inheritdoc
+ */
+public static function getRegionsProperties()
+{
+    return array(
+        'sidepane' => array(
+            'tabs' => array(
+                'name' => 'tabs',
+                'label' => 'mb.manager.template.region.tabs.label'),
+            'accordion' => array(
+                'name' => 'accordion',
+                'label' => 'mb.manager.template.region.accordion.label')
+        )
+    );
+}
+
+
+
+
 Create your own twig-file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
