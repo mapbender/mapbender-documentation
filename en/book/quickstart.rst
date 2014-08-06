@@ -125,6 +125,8 @@ Create a new application by providing basic information about your application. 
 
 #. define an URL title which will be used in the URL to open te application. It can be the same as the title
 
+#. Select a png-file to choose Screenshot for the application overview.
+
 #. choose a template for your application
 
 #. choose the button **Create** to create the application

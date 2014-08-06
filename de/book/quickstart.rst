@@ -124,6 +124,8 @@ Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen e
 
 #. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu starten. Er kann identisch zum Titel sein.
 
+#. Selektieren Sie eine png-Datei und wählen Sie so einen Screenshot für die Anwendungsübersicht.
+
 #. Wählen Sie eine Layoutvorlage für die Anwendung.
 
 #. Betätigen Sie die Schaltfläche **Create**, um die Anwendung zu erzeugen.
