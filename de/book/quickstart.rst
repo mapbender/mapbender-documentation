@@ -77,7 +77,7 @@ Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über d
 Die Willkommensseite
 ================================================================================
 
-#. Die Willkommensseite listet die öffentlichen Anwendungen auf, die von allen Benutzern aufgerufen werden können. Die Anwendungen werden mit Screenshot, Titel und Beschreibung aufgelistet.
+#. Die Willkommensseite listet die öffentlichen Anwendungen auf, die von allen Benutzern aufgerufen werden können. Die Anwendungen werden mit Vorschaubild, Titel und Beschreibung aufgelistet.
 
 #. Sie können die Anwendung per Klick auf den Titel oder den Startbutton aufrufen.
 
@@ -124,7 +124,7 @@ Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen e
 
 #. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu starten. Er kann identisch zum Titel sein.
 
-#. Selektieren Sie eine png-Datei und wählen Sie so einen Screenshot für die Anwendungsübersicht.
+#. Laden Sie eine png-Datei und definieren so ein Vorschaubild für die Anwendungsübersicht.
 
 #. Wählen Sie eine Layoutvorlage für die Anwendung.
 

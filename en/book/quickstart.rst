@@ -78,7 +78,7 @@ Symfony offers a developer mode with lot of information about your application (
 Welcome page
 ================================================================================
 
-#. The Welcome page lists applications that are public and can be used by all users. The applications are listed with a little screenshot, a title and a description.
+#. The Welcome page lists applications that are public and can be used by all users. The applications are listed with a screenshot, a title and a description.
 
 #. You can open an application by click on the title or the start button.
 
@@ -125,7 +125,7 @@ Create a new application by providing basic information about your application. 
 
 #. define an URL title which will be used in the URL to open te application. It can be the same as the title
 
-#. Select a png-file to choose Screenshot for the application overview.
+#. upload an image file as screenshot for the application overview
 
 #. choose a template for your application
 
