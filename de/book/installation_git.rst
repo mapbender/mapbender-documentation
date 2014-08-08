@@ -186,6 +186,8 @@ Folgende Schritte müssen durchgeführt werden:
  cd mapbender-starter
  git pull
  git submodule update --init --recursive
+ cd application
+  ./composer.phar update --dev
  app/console doctrine:schema:update
 
 
