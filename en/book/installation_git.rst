@@ -214,6 +214,7 @@ There are following steps you have to do to stay up-to-date
  git pull
  git submodule update --init --recursive
  cd application
+ ./composer.phar update --dev 
  app/console doctrine:schema:update
 
 
