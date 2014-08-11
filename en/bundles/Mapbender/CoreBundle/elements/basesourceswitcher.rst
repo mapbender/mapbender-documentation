@@ -28,7 +28,10 @@ YAML-Definition:
     tooltip: 'BaseSourceSwitcher'                       # text to use as tooltip
     target: map                                         # Id of Map element
     sourcesets:                                         # List of sourcesets
-        - { title: sourcesetname, sources: [sourceId]}	# sourceset: title, sources list of sources
+        - { title: sourcesetname, group: groupname,
+            sources: [sourceId]}                        # sourceset: title,
+                                                          group: (optional) group name to group of sourcesets by "group name"
+                                                          sources list of sources
         
 
 Class, Widget & Style
