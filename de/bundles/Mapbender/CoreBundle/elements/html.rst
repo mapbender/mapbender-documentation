@@ -5,8 +5,24 @@ HTML-Element
 
 Über das HTML-Element kann generisches HTML an einer beliebigen Stelle in der Anwendung definiert werden.
 
+.. image:: ../../../../../figures/html_editor.png
+     :scale: 80
+
+
 Configuration
 =============
+
+Fügen Sie beispielsweise ein Bild in Ihre Anwendung ein:
+
+.. code-block:: yaml
+
+    <img src='http://mapbender3.org/sites/default/files/OSGeo_project.png' height='60px'>
+
+
+.. image:: ../../../../../figures/html_result_application.png
+     :scale: 80
+
+
 
 YAML-Definition:
 

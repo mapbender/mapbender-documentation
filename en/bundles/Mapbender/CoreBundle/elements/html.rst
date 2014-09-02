@@ -5,8 +5,23 @@ HTML Element
 
 This element allows you to add generic HTML anywhere in your application.
 
+.. image:: ../../../../../figures/html_editor.png
+     :scale: 80
+
+
 Configuration
 =============
+
+For example you can add an image to your application:
+
+.. code-block:: yaml
+
+    <img src='http://mapbender3.org/sites/default/files/OSGeo_project.png' height='60px'>
+
+
+.. image:: ../../../../../figures/html_result_application.png
+     :scale: 80
+
 
 YAML-Definition:
 
