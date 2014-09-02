@@ -3,7 +3,9 @@
 BaseSourceSwitcher (Wechseln der Hintergrundkarten)
 *********************************************************************
 
-Mit diesem Element kann zwischen vordefinierten Hintergrundkarten gewechselt werden. 
+Mit diesem Element kann zwischen vordefinierten Hintergrundkarten (basesources) gewechselt werden. 
+
+Zu jedem Sourceset kann eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
 .. image:: ../../../../../figures/basesourceswitcher.png
      :scale: 80
