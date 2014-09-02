@@ -5,6 +5,8 @@ Wie werden eigene Vorlagen (templates) erzeugt?
 
 Mapbender3 beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Vorlage mit Ihrem eigenen Corporate Design verwendet werden. Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im  Mapbender CoreBundle (application/mapbender/src/Mapbender/CoreBundle). Für eigene Vorlagen sollten Sie ein eigenes Bundle verwenden, um Probleme bei einem Upgrade zu vermeiden.
 
+Ab der Version 3.0.4.0 kann der Stil einer Anwendung über den css-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter :doc:`Wie kann der Stil einer Anwendung mit dem css-Editor angepasst werden? <css>`.
+
 
 Wie werden eigene Vorlagen (templates) erzeugt?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

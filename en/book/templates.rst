@@ -6,6 +6,9 @@ How to create your own Template?
 Mapbender3 comes with application templates you can use. But usually you want to use your own template with your own corporate design. 
 This document will show you how to create a Workshop DemoBundle for demonstration purposes.
 
+From version 3.0.4.0 on you can change the style of your application with the css-Editor. You find the documentation about the css-editor at :doc:`How to change the style of your application with the css-editor? <css>`.
+
+
 How to create your own template?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -112,7 +115,6 @@ For adding you define the function "getRegionsProperties" in the template file.
 For configuration you check an option in your application's configuration.
 
 .. code-block:: bash
-
 
 /**
  * @inheritdoc
