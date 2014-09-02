@@ -1,9 +1,9 @@
 .. _html:
 
-HTML Element
+HTML-Element
 ************
 
-This element allows you to add generic HTML anywhere in your application.
+Über das HTML-Element kann generisches HTML an einer beliebigen Stelle in der Anwendung definiert werden.
 
 Configuration
 =============
@@ -38,17 +38,17 @@ JavaScript Signals
 None.
 
 
-Examples
+Beispiele
 ==================
 
-Add an image
+Einfügen eines Bildes
 
 .. code-block:: yaml
 
    <img src='http://mapbender3.org/sites/default/files/OSGeo_project.png'>
 
 
-Add an Link
+Einfügen eines Links
 
 .. code-block:: yaml
 
