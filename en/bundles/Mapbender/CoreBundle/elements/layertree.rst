@@ -31,7 +31,7 @@ YAML-Definition:
    titleMaxLength: 20           # max length of layer title, default is 20  
    showBaseSource: true         # show base layer, default is true
    showHeader: true             # shows a headline which counts the number of services  
-   menu: [opacity,zoomtolayer]  # show contextmenu for the layer (like opacity, zoom to layer), default is menu: []
+   menu: [opacity,zoomtolayer,metadata]  # show contextmenu for the layer (like opacity, zoom to layer, metadata), default is menu: []
    layerRemove: false           # default is false
 
 Class, Widget & Style
