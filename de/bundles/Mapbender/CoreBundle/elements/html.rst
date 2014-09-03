@@ -5,7 +5,7 @@ HTML-Element
 
 Über das HTML-Element kann generisches HTML an einer beliebigen Stelle in der Anwendung definiert werden.
 
-.. image:: ../../../../../figures/html_editor.png
+.. image:: ../../../../../figures/html.png
      :scale: 80
 
 

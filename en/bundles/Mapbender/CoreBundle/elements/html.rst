@@ -5,7 +5,7 @@ HTML Element
 
 This element allows you to add generic HTML anywhere in your application.
 
-.. image:: ../../../../../figures/html_editor.png
+.. image:: ../../../../../figures/html.png
      :scale: 80
 
 
