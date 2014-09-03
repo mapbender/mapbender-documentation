@@ -7,7 +7,7 @@ Mapbender3 verfügt ab der Version 3.0.4.0 über einen css-Editor zur Anpassung 
 
 Mit Hife von Firebug können Sie die bestehende Definition ermitteln, in den css-Editor kopieren und hier anpassen.
 
-.. image:: ../../../../../figures/css_editor.png
+.. image:: ../../figures/css_editor.png
      :scale: 80
 
 Über das folgende css können Sie die Farbe der Toolbar und Navigationleiste anpassen. Außerdem setzen Sie die Hintergrundfarbe und Breite der Seitenleiste (sidepane).
@@ -36,7 +36,7 @@ Mit Hife von Firebug können Sie die bestehende Definition ermitteln, in den css
      width: 350px;
  }
 
-.. image:: ../../../../../figures/css_editor_result_application.png
+.. image:: ../../figures/css_editor_result_application.png
      :scale: 80
 
 Bis zur Mapbender3 Version 3.0.3.2 müssten eigene Templates mit css-Dateien erzeugt werden, um den Standardstil anzupassen. Der neue css-Editor ermöglicht es, einfach Stil-Anpassungen der Anwendung vorzunehmen. Die Dokumentation zur Erstellung eigener Templates finden Sie unter :doc:`Wie werden eigene Vorlagen (templates) erzeugt? <templates>`.

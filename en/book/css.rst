@@ -7,7 +7,7 @@ From Mapbender3 version 3.0.4.0 you find a css-editor for every application whic
 
 Firebug can help you to find out the css-classes you want to change.
 
-.. image:: ../../../../../figures/css_editor.png
+.. image:: ../../figures/css_editor.png
      :scale: 80
 
 With the following css you can change the color of the toolbar and navigation toolbar. You also set the background and width of the sidepane.
@@ -36,7 +36,7 @@ With the following css you can change the color of the toolbar and navigation to
      width: 350px;
  }
 
-.. image:: ../../../../../figures/css_editor_result_application.png
+.. image:: ../../figures/css_editor_result_application.png
      :scale: 80
 
 Until Mapbender3 Version 3.0.3.2 you had to create your own template with your own css-file to overwrite the default style. The new css-Editor makes styling much easier. The documentation to create your own templates you find at :doc:`How to create your own Template? <templates>`.
