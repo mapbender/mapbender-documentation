@@ -56,11 +56,11 @@ is also possible.
 Configuration
 ****************
 
-Using the web installer
+..Using the web installer
 -----------------------
 
-Configuration right inside your browser is not yet available. Please use the
-command line method below for now.
+..Configuration right inside your browser is not yet available. Please use the
+..command line method below for now.
 
 Using the command line
 ----------------------
@@ -478,15 +478,15 @@ Have a look at the steps as commands
 .. code-block:: yaml
 
  # Download the new version
- wget -O http://mapbender3.org/builds/mapbender3-3.0.1.tar.gz /tmp/build_mapbender3/
- tar xfz /tmp/build_mapbender3/mapbender3-3.0.tar.gz
+ wget -O http://mapbender3.org/builds/mapbender3-3.0.4.0.tar.gz /tmp/build_mapbender3/
+ tar xfz /tmp/build_mapbender3/mapbender3-3.0.4.0.tar.gz
  
  # save the old version
  mv -R /var/www/mapbender3 /var/www/mapbender3_save
  
  # get the code of the new version
- cp -R /tmp/build_mapbender3/mapbender3-3.0.1 /var/www/
- mv /var/www/mapbender3-3.0.1 /var/www/mapbender3
+ cp -R /tmp/build_mapbender3/mapbender3-3.0.4.0 /var/www/
+ mv /var/www/mapbender3-3.0.4.0 /var/www/mapbender3
  
  # copy your old configuration files to the new version
  cp /var/www/mapbender3_save/app/config/parameters.yml /var/www/mapbender3/app/config/parameters.yml
@@ -495,6 +495,9 @@ Have a look at the steps as commands
  
  # manual step
  # merge parameters.yml, config.ymls and if used mapbender.yml back to the new installation
+ # if you have individual templates: merge the templates with the new Mapbender version
+ # if you use screenshots: copy the screenshots from the old version back to mapbender3/web/uploads
+ # if you use your own print templates: copy them back to mapbender3/app/Resources/MapbenderPrintBundle/templates/
  
  # change the accessrights and owner of the files
  chmod -R uga+r /var/www/mapbender3
@@ -511,7 +514,7 @@ Update your Mapbender database
  app/console assets:install web
  
  # change the access rights and owner of the files
- chmod -R uga+r /var/www/mapbender3
+ chmod -R ugo+r /var/www/mapbender3
  chown -R www-data:www-data /var/www/mapbender3
 
  # You have to set write permission to app/cache and app/logs.

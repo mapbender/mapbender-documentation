@@ -79,7 +79,7 @@ Die Willkommensseite
 
 #. Die Willkommensseite listet die öffentlichen Anwendungen auf, die von allen Benutzern aufgerufen werden können. Die Anwendungen werden mit Vorschaubild, Titel und Beschreibung aufgelistet.
 
-#. Sie können die Anwendung per Klick auf den Titel oder den Startbutton aufrufen.
+#. Sie können die Anwendung per Klick auf den Titel, das Vorschaubild oder den Startbutton aufrufen.
 
 #. Bevor Sie Mapbender administrieren können, müssen Sie sich anmelden.
 
@@ -101,6 +101,7 @@ Die Anwendungsübersicht bietet folgende Funktionen:
 
 
  * Titel und Beschreibung
+ * Vorschaubild zur Anwendung (sofern bereitgestellt)
  * Link zur Anwendung
  * Button, um die Anwendung zu kopieren
  * Button, um die Anwendung zu bearbeiten
@@ -203,9 +204,9 @@ Germany demo
 
 http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS 
 
-WhereGroup OSM WMS (siehe auch http://www.wheregroup.com/de/osmwms)
+WhereGroup OSM WMS
 
-http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.1.1
+http://osm-demo.wheregroup.com/service
 
 Omniscale OSM WMS (siehe auch http://osm.omniscale.de/)
 http://osm.omniscale.net/proxy/service?
@@ -252,10 +253,12 @@ Servicekonfiguration
 * exceptionformat - wählen Sie das Format für Fehlermeldungen
 * opacity - wählen Sie die Opazität (Deckkraft) in Prozent
 * visible
-* proxy - bei Aktivierung wird der Dienst über den Proxy angefordert
+* basesource
+* proxy - bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
 * transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
-* tiled - Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt.
-
+* tiled - Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
+* BBOX factor
+* tile buffer
 
 Layerkonfiguration
 
@@ -266,7 +269,7 @@ Layerkonfiguration
 * info allow - Infoabfrage wird für diesen Layer zugelassen
 * info on - Layer Infoabfrage wird beim Start aktiviert
 * minscale / maxscale - Der Maßstabsbereich, in dem der Layer angezeigt wird.
-* toggle
+* toggle - aufklappen beim Start der Anwendung
 * reorder - Ebenen können über drag&drop in der Anwendung verschoben werden
 * ... -> öffnet einen Dialog mit weiteren Informationen
 * name - Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
@@ -304,11 +307,13 @@ Beispiele für Elemente, die Mapbender3 anbietet:
 
 * About Dialog
 * Activity Indicator
+* BaseSourceSwitcher
 * Button
 * Coordinates Display
 * Copyright
 * Feature Info
 * GPS-Position
+* HTML
 * Legend
 * Layertree - Table of Content
 * Map
@@ -317,11 +322,15 @@ Beispiele für Elemente, die Mapbender3 anbietet:
 * Ruler Line/Area
 * Scale Selector
 * ScaleBar
+* SimpleSearch
 * Search Router
 * SRS Selector
 * Spatial Reference System Selector (SRS Selector)
 * Navigation Toolbar (Zoombar)
 * WMS Loader
+* WMC Editor
+* WMC Loader
+* WMC List 
 
 Sie finden detaillierte Informationen zu jedem Element unter `MapbenderCoreBundle Element Dokumentation <http://doc.mapbender3.org/en/bundles/Mapbender/CoreBundle/index.html>`_ , `MapbenderWmcBundle Element Dokumentation <../bundles/Mapbender/WmcBundle/index.html>`_ und `MapbenderWmsBundle Element Dokumentation <../bundles/Mapbender/WmsBundle/index.html>`_.
 
