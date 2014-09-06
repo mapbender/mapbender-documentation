@@ -20,7 +20,6 @@ Mapbender3 benötigt die folgenden Komponenten:
 * PHP GD (php5-gd) für den Druck
 * PHP FileInfo für den Druck zur Prüfung der Bilder
 
-
 Um optional eine andere Datenbank als die vorkonfigurierte SQLite zu verwenden, wird eine PHP-Erweiterung benötigt, die von Doctrine unterstützt wird:
 `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. 
 
@@ -54,10 +53,10 @@ Konfiguration
 
 
 
-Verwendung des Web-Installer
----------------------------------------
+..Verwendung des Web-Installer
+..---------------------------------------
 
-Die Konfiguration direkt über den Browser ist bisher nicht verfügbar. Bitte benutzen Sie derzeit die kommandozeilenbasierte Methode.
+..Die Konfiguration direkt über den Browser ist bisher nicht verfügbar. Bitte benutzen Sie derzeit die kommandozeilenbasierte Methode.
 
 
 
@@ -258,6 +257,7 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weise
 
  chmod -R ugo+r /var/www/mapbender3
  chown -R www-data:www-data /var/www/mapbender3
+ chmod -R ug+w /var/www/mapbender3/web/assets
 
 Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten.
 
@@ -471,15 +471,15 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 .. code-block:: yaml
 
  # Laden Sie die neue Version herunter
- wget -O http://mapbender3.org/builds/mapbender3-3.0.1.tar.gz /tmp/build_mapbender3/
- tar xfz /tmp/build_mapbender3/mapbender3-3.0.tar.gz
+ wget -O http://mapbender3.org/builds/mapbender3-3.0.4.0.tar.gz /tmp/build_mapbender3/
+ tar xfz /tmp/build_mapbender3/mapbender3-3.0.4.0.tar.gz
  
  # Sichern Sie die alte Version
  mv -R /var/www/mapbender3 /var/www/mapbender3_save
  
  # Aktivieren Sie den Code der neuen Version
- cp -R /tmp/build_mapbender3/mapbender3-3.0.1 /var/www/
- mv /var/www/mapbender3-3.0.1 /var/www/mapbender3
+ cp -R /tmp/build_mapbender3/mapbender3-3.0.4.0 /var/www/
+ mv /var/www/mapbender3-3.0.4.0 /var/www/mapbender3
  
  # copy your old configuration files to the new version
  cp /var/www/mapbender3_save/app/config/parameters.yml /var/www/mapbender3/app/config/parameters.yml
@@ -488,6 +488,11 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  
  # händisch müssen Sie nun die Konfigirationsdateien auf neue Parameter überprüfen
  # vergleichen Sie die Dateien parameters.yml, config.yml und sofern verwendet die mapbender.yml
+ # sofern Sie eigene Templates angelegt haben, vergeleichen Sie diese mit der neuen Mapbender Version
+ # sofern Sie Vorschaubilder hochgeladen haben: kopieren Sie diese von der alten Version wieder nach mapbender3/web/uploads
+ # sofern Sie eigene Druckvorlagen verwenden: kopieren Sie diese wieder nach mapbender3/app/Resources/MapbenderPrintBundle/templates/
+
+
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
  chmod -R uga+r /var/www/mapbender3
