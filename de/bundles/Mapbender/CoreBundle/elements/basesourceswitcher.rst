@@ -31,7 +31,11 @@ YAML-Definition:
     tooltip:                                            # Text des Tooltips
     target: map                                         # ID des Kartenelements
     sourcesets:                                         # Liste der Sourcesets.
-        - { title: sourcesetname, sources: [sourceId]}	# sourceset: title, sources list of sources
+        - { title: sourcesetname, group: groupname,
+            sources: [sourceId]}                        # sourceset: Titel,
+                                                          group: (optional) Gruppenname der Gruppen der Sourcesets über "group name"
+                                                          sources Liste der Sources
+        
         
 
 Class, Widget & Style
