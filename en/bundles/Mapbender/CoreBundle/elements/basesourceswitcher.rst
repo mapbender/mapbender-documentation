@@ -32,8 +32,8 @@ YAML-Definition:
     sourcesets:                                         # List of sourcesets
         - { title: sourcesetname, group: groupname,
             sources: [sourceId]}                        # sourceset: title,
-                                                          group: (optional) group name to group of sourcesets by "group name"
-                                                          sources list of sources
+                                                        # group: (optional) group name to group of sourcesets by "group name"
+                                                        # sources list of sources
         
 
 Class, Widget & Style
