@@ -33,8 +33,8 @@ YAML-Definition:
     sourcesets:                                         # Liste der Sourcesets.
         - { title: sourcesetname, group: groupname,
             sources: [sourceId]}                        # sourceset: Titel,
-                                                          group: (optional) Gruppenname der Gruppen der Sourcesets über "group name"
-                                                          sources Liste der Sources
+                                                        # group: (optional) Gruppenname der Gruppen der Sourcesets über "group name"
+                                                        # sources Liste der Sources
         
         
 
