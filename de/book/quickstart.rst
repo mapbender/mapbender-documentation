@@ -150,13 +150,6 @@ Löschen einer Anwendung
 ================================================================================
 Sie können eine Anwendung aus der Liste :menuselection:`Applications` über den :menuselection:`+-Button` löschen. Nur die Anwendung wird gelöscht, nicht die Dienste, die in der Anwendung eingebunden waren.
 
-..
-  NOCH NICHT IMPLEMENTIERT
-  Exportieren einer Anwendung
-  ================================================================================
-  Sie können eine Anwendung als SQL-Skript über :menuselection:`Applications --> Export  application (SQL)` exportieren. Das SQL-Skript beinhaltet alle Definitionen der Anwendungselemente und kann in eine andere Mapbenderinstallation importiert werden.
-
-  .. tip:: Der Export einer Anwendung beinhaltet weder die Informationen über die Dienste noch über die Benutzer und Gruppen.
 
 Exportieren und mportieren von Anwendungen und Daten
 ================================================================================
