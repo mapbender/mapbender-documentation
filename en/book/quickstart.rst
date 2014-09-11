@@ -155,10 +155,17 @@ You can delete an application from the menu item :menuselection:`Applications` w
 Export / Import applications and sources
 ================================================================================
 You can export applications as JSON or YAML with :menuselection:`Applications --> Export. You can chose one or more applications to export and you can also export the sources which are published in the applications.
+
+  .. image:: ../../figures/mapbender3_application_export.png
+     :scale: 80
+
 The exportfile contains all the definitions of the application/s (sources) and can be imported via :menuselection:`Applications --> Import` in another Mapbender3 installation or in the same installation. 
 
+  .. image:: ../../figures/mapbender3_application_import.png
+     :scale: 80
 
-Management of Data Sources
+
+Verwaltung von Datenquellen
 =================================
 Mapbender can handle different Services like OGC WMS or OGC WMTS or OGC WFS. Every Service has to be handled differently. The administration provides an administration interface for every source (at the moment only WMS).
 
