@@ -151,14 +151,11 @@ Delete an application
 ================================================================================
 You can delete an application from the menu item :menuselection:`Applications` with the :menuselection:`+-button`.
 
-..
-  NOT IMPLEMENTED YET
-  Export an application
-  ================================================================================
-  You can export an application as SQL with :menuselection:`Applications --> Export  application (SQL)`. The SQL contains all the definitions of the application elements and can be imported in another Mapbender installation. 
 
-  .. tip:: The export of an application does not contain the service information and the informations about user and group access.
-
+Export / Import applications and sources
+================================================================================
+You can export applications as JSON or YAML with :menuselection:`Applications --> Export. You can chose one or more applications to export and you can also export the sources which are published in the applications.
+The exportfile contains all the definitions of the application/s (sources) and can be imported via :menuselection:`Applications --> Import` in another Mapbender3 installation or in the same installation. 
 
 
 Management of Data Sources

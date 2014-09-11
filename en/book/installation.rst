@@ -325,6 +325,7 @@ Install necessary components:
 .. code-block:: yaml
 
  extension=php_curl.dll
+ extension=php_fileinfo.dll
  extension=php_gd2.dll
  extension=php_intl.dll
  extension=php_pdo_pgsql.dll
@@ -509,6 +510,10 @@ Update your Mapbender database
 .. code-block:: yaml
 
  cd /var/www/mapbender3/
+
+ # for update from version 3.0.3.x to 3.0.4.0 on PostgreSQL you have to run the following SQL before you run app/console doctrine:schema:update --force
+ # ALTER TABLE fom_profile_basic DROP CONSTRAINT fom_profile_basic_pkey;
+
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
  app/console assets:install web

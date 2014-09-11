@@ -319,6 +319,7 @@ Installieren Sie die notwendigen Komponenten:
 .. code-block:: yaml
 
  extension=php_curl.dll
+ extension=php_fileinfo.dll
  extension=php_gd2.dll
  extension=php_intl.dll
  extension=php_pdo_pgsql.dll
@@ -483,7 +484,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  
  # copy your old configuration files to the new version
  cp /var/www/mapbender3_save/app/config/parameters.yml /var/www/mapbender3/app/config/parameters.yml
- cp /var/www/mapbender3/app/config/parameters.yml /var/www/mapbender3/app/config/config.yml-dist
+ cp /var/www/mapbender3/app/config/config.yml /var/www/mapbender3/app/config/config.yml-dist
  cp /var/www/mapbender3_save/app/config/config.yml /var/www/mapbender3/app/config/config.yml 
  
  # händisch müssen Sie nun die Konfigirationsdateien auf neue Parameter überprüfen
@@ -504,6 +505,11 @@ Aktualisieren Sie Ihre Mapbender Datenbank
 .. code-block:: yaml
 
  cd /var/www/mapbender3/
+
+ # Beim Update von der Version 3.0.3.x nach 3.0.4.0 auf PostgreSQL müssen Sie das folgende SQL auf der Datenbank absetzen,
+ # bevor Sie app/console doctrine:schema:update --force ausführen.
+ # ALTER TABLE fom_profile_basic DROP CONSTRAINT fom_profile_basic_pkey;
+
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
  app/console assets:install web
