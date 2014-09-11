@@ -165,7 +165,7 @@ The exportfile contains all the definitions of the application/s (sources) and c
      :scale: 80
 
 
-Verwaltung von Datenquellen
+Management of Data Sources
 =================================
 Mapbender can handle different Services like OGC WMS or OGC WMTS or OGC WFS. Every Service has to be handled differently. The administration provides an administration interface for every source (at the moment only WMS).
 
