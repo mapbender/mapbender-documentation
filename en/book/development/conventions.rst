@@ -153,24 +153,24 @@ How to build a new Mapbender3 build
  cd mapbender-build
  git submodule update --init --recursive
  phing deps
- git tag -a v3.0.0.1 -m "Mapbender bugfix release Version 3.0.0.1 read changes https://github.com/mapbender/mapbender/issues?milestone=3"  
+ git tag -a v3.0.4.0 -m "Mapbender bugfix release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
  git tag
- git push --tags (https://github.com/mapbender/mapbender-starter/releases)
+ git push --tags (will be shown at https://github.com/mapbender/mapbender-starter/releases)
  phing tarball
  cd /data/git/mapbender-build/artefacts
- sudo tar xfz mapbender3-3.0.0build0.tar.gz 
- sudo chmod -R 777 mapbender3-3.0.0build0
- sudo mv mapbender3-3.0.0build0 mapbender3-3.0.0.1
- rm -R /data/git/mapbender-build/artefacts/mapbender3-3.0.0.1/app/config/parameters.yml
- rm -R /data/git/mapbender-build/artefacts/mapbender3-3.0.0.1/documentation/
- cp -R /data/git/mapbender-documentation/output/*  /data/git/mapbender-build/artefacts/mapbender3-3.0.0.1/documentation/
- create tar.gz with right name for example mapbender3-3.0.0.1.tar.gz
+ sudo tar xfz mapbender3-3.0.3build1.tar.gz 
+ sudo chmod -R 777 mapbender3-3.0.3build1
+ sudo mv mapbender3-3.0.3build1 mapbender3-3.0.4.0
+ rm -R /data/git/mapbender-build/artefacts/mapbender3-3.0.4.0/app/config/parameters.yml
+ rm -R /data/git/mapbender-build/artefacts/mapbender3-3.0.4.0/documentation/*
+ cp -R /data/git/mapbender-documentation/output/*  /data/git/mapbender-build/artefacts/mapbender3-3.0.4.0/documentation/
+ create tar.gz with right name for example mapbender3-3.0.4.0.tar.gz
  move file to /sites/www.mapbender3.org/builds
  update Roadmap: milestones, features, date on http://mapbender3.org/roadmap
  write release mail to mapbender-user and mapbender-dev 
  only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
  twitter on https://twitter.com/mapbender
- update demo.mapbender3.org and sandbox.mapbender3.org
+ update http://demo.mapbender3.org and http://sandbox.mapbender3.org
 
  
 
