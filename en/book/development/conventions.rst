@@ -153,7 +153,20 @@ How to build a new Mapbender3 build
  cd mapbender-build
  git submodule update --init --recursive
  phing deps
- git tag -a v3.0.4.0 -m "Mapbender bugfix release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
+ cd application/mapbender
+ git tag -a v3.0.4.0 -m "Mapbender release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
+ git push --tags 
+ # tag submodules
+ cd ../../application/fom
+ git tag -a v3.0.4.0 -m "Mapbender release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
+ git push --tags 
+ #
+ cd ../../application/owsproxy3
+ git tag -a v3.0.4.0 -m "Mapbender release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
+ git push --tags 
+ # tab mapbender-starter
+ cd ../..
+ git tag -a v3.0.4.0 -m "Mapbender release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
  git tag
  git push --tags (will be shown at https://github.com/mapbender/mapbender-starter/releases)
  phing tarball
