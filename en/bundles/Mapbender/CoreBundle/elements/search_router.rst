@@ -17,11 +17,11 @@ Configuration
 
 You need a button to show this element. See :doc:`button` for inherited configuration options.
 
-The SearcRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
+The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
 
 You can define Searches (Routes) with the + Button. Each Search has a titel which will show up in the search form in a selectbox where you can choose the search you want to use.
 
-The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the desihn of the form and of the result table.
+The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
 Element definition in web interface in the configuration area:
 
