@@ -152,7 +152,9 @@ visiblelayers to turn the layer visible:
 
 
 .. codeblock
+
   ?visiblelayers=<serviceid>/<layerid>
+
 
 You may pass multiple such layers, seperated by comma.
 
@@ -169,15 +171,24 @@ If you pass more than one POI, the map will zoom to 150% of the POIs bounding.
 
 To pass a single POI, use the following URL format:
 
+.. codeblock
+
    ?poi[point]=363374,5621936&po[label]=Label&poi[scale]=5000
+
 
 To pass multiple POIs, use the following format:
 
+.. codeblock
+
    ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
+
 
 Passing BBOX
 ------------
 
 You can pass a BBOX to zoom to by using the following URL query parameter:
 
+.. codeblock
+
    ?bbox=364286,5622263,365979,5622806
+

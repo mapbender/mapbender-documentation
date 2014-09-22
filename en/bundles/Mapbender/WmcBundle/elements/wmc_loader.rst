@@ -82,6 +82,7 @@ If you have a WMC with the id <wmcid> you may pass the URL parameter wmcid to lo
 
 
 .. codeblock
+
   ?wmcid=<wmcid>
 
 

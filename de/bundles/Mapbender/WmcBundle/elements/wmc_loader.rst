@@ -70,8 +70,8 @@ JavaScript Signals
 --------
 
 
-Controlling by URL
-==================
+Kontrolle über den Aufruf
+=====================================
 
 WMC per ID laden
 ------------------
@@ -82,6 +82,7 @@ Beim Aufruf der Anwendung wird die <wmcid> über den Parameter *wmcid* der URL a
 
 
 .. codeblock
+
   ?wmcid=<wmcid>
 
 
