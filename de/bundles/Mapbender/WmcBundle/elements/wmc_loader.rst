@@ -70,3 +70,19 @@ JavaScript Signals
 --------
 
 
+Controlling by URL
+==================
+
+WMC per ID laden
+------------------
+
+Im Element WMC Loader muss die Option *Id Loader* aktiviert sein, um das Laden eines WMCs über die URL zu erlauben.
+
+Beim Aufruf der Anwendung wird die <wmcid> über den Parameter *wmcid* der URL angefügt:
+
+
+.. codeblock
+  ?wmcid=<wmcid>
+
+
+
