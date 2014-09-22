@@ -151,7 +151,7 @@ Ebenen sichtbar machen
 
 Sie können die ID der Ebene mit der ID <layerid> und des Dienstes <serviceid> in der URL als parameter übergeben, um einen Layer in der Startansicht zu aktivieren.
 
-.. codeblock
+.. code-block:: php
 
   ?visiblelayers=<serviceid>/<layerid>
 
@@ -171,14 +171,14 @@ Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der
 
 Format für die Übergabe eines Punktes:
 
-.. codeblock
+.. code-block:: php
 
    ?poi[point]=363374,5621936&po[label]=Label&poi[scale]=5000
 
 
 Für die Übergabe vieler Punkte wird das folgende Format verwendet:
 
-.. codeblock
+.. code-block:: php
 
    ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
 
@@ -188,7 +188,7 @@ Rechteck (BBOX) übergeben
 
 Es kann ein Rechteck (BBOX) beim Start übergeben werden. Es wird dann auf dieses Rechteck gezoomt. Der Aufruf sieht wie folgt aus:
 
-.. codeblock
+.. code-block:: php
 
    ?bbox=364286,5622263,365979,5622806
 

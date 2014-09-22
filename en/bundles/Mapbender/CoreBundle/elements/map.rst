@@ -151,7 +151,7 @@ If you have a Layer with the id <layerid> in a service with the id <serviceid> y
 visiblelayers to turn the layer visible:
 
 
-.. codeblock
+.. code-block:: php
 
   ?visiblelayers=<serviceid>/<layerid>
 
@@ -171,14 +171,14 @@ If you pass more than one POI, the map will zoom to 150% of the POIs bounding.
 
 To pass a single POI, use the following URL format:
 
-.. codeblock
+.. code-block:: php
 
    ?poi[point]=363374,5621936&po[label]=Label&poi[scale]=5000
 
 
 To pass multiple POIs, use the following format:
 
-.. codeblock
+.. code-block:: php
 
    ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
 
@@ -188,7 +188,7 @@ Passing BBOX
 
 You can pass a BBOX to zoom to by using the following URL query parameter:
 
-.. codeblock
+.. code-block:: php
 
    ?bbox=364286,5622263,365979,5622806
 

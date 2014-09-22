@@ -81,7 +81,7 @@ Im Element WMC Loader muss die Option *Id Loader* aktiviert sein, um das Laden e
 Beim Aufruf der Anwendung wird die <wmcid> über den Parameter *wmcid* der URL angefügt:
 
 
-.. codeblock
+.. code-block:: php
 
   ?wmcid=<wmcid>
 

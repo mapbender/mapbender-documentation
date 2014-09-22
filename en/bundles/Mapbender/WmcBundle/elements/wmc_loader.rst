@@ -81,7 +81,7 @@ To allow loading by ID you have to enable *Id Loader* in the configuration of th
 If you have a WMC with the id <wmcid> you may pass the URL parameter wmcid to load the WMC:
 
 
-.. codeblock
+.. code-block:: php
 
   ?wmcid=<wmcid>
 
