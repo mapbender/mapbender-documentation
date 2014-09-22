@@ -141,3 +141,43 @@ JavaScript Signals
 ==================
 
 Keine.
+
+
+Kontrolle über den Aufruf
+=====================================
+
+Ebenen sichtbar machen
+------------------------
+
+Sie können die ID der Ebene mit der ID <layerid> und des Dienstes <serviceid> in der URL als parameter übergeben, um einen Layer in der Startansicht zu aktivieren.
+
+.. codeblock
+  ?visiblelayers=<serviceid>/<layerid>
+
+Es können mehrere Layer Komma separiert übergeben werden.
+
+Punkte übergeben
+------------------------
+
+Sie können einen oder mehrere Punkte in der URL übergeben. Jeder Punkt verfügt dabei über die folgenden Parameter:
+
+- Punkt (point): Koordinatenpaar, die Werte werden mit Komma getrennt (zwingend)
+- Beschriftung (label): Beschriftung, die angezeigt werden soll (optional)
+- Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional. Die Angabe ist nur bei der Anzeige eines Punktes sinnvoll)
+
+Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der Gesamt-Boundingbox.
+
+Format für die Übergabe eines Punktes:
+
+   ?poi[point]=363374,5621936&po[label]=Label&poi[scale]=5000
+
+Für die Übergabe vieler Punkte wird das folgende Format verwendet:
+
+   ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
+
+Rechteck (BBOX) übergeben
+------------------------------------------------
+
+Es kann ein Rechteck (BBOX) beim Start übergeben werden. Es wird dann auf dieses Rechteck gezoomt. Der Aufruf sieht wie folgt aus:
+
+   ?bbox=364286,5622263,365979,5622806
