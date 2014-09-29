@@ -92,7 +92,7 @@ The definition of the database variables is done in the file **parameters.yml**.
     database2_driver:   pdo_pgsql
     database2_host:     localhost
     database2_port:     5432
-    database2_name:     geodatabase
+    database2_name:     search_db
     database2_path:     ~
     database2_user:     postgres
     database2_password: postgres

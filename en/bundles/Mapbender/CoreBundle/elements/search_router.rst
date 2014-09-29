@@ -29,7 +29,7 @@ Element definition in web interface in the configuration area:
 
     class: Mapbender\CoreBundle\Component\SQLSearchEngine
     class_options:
-        connection: germany
+        connection: search_db
         relation: ortschaften
         attributes:
             - gid
@@ -105,6 +105,7 @@ YAML-Definition for mapbender.yml:
                        buffer: 10  # buffer result geometry with this (map units) before zooming
                        minScale: ~  # scale restrictions for zooming, ~ for none
                        maxScale: ~
+
 
 Compare modes
 -------------
@@ -206,3 +207,122 @@ JavaScript Signals
 ==================
 
 None.
+
+
+Example
+==================
+
+Example with autocomplete and individual result style:
+
+.. code-block:: yaml
+
+   Create or Replace view brd.qry_gn250_p_ortslage as Select gid, name, gemeinde, bundesland, oba, ewz_ger,  hoehe_ger ,geom from brd.gn250_p where oba = 'AX_Ortslage' order by name;
+
+
+.. code-block:: yaml
+
+	class: Mapbender\CoreBundle\Component\SQLSearchEngine
+	class_options:
+	    connection: search_db
+	    relation: brd.qry_gn250_p_ortslage
+	    attributes:
+		- gid
+		- name
+		- gemeinde
+		- bundesland
+		- ewz_ger
+		- hoehe_ger
+	    geometry_attribute: geom
+	form:
+	    name:
+		type: text
+		options:
+		    required: false
+		    label: Name
+		    attr:
+		        data-autocomplete: on
+		compare: ilike
+	    gemeinde:
+		type: text
+		options:
+		    required: false
+		compare: ilike
+	results:
+	    view: table
+	    count: true
+	    headers:
+		name: Name
+		gemeinde: Gemeinde
+		bundesland: Bundesland
+		ewz_ger: Einwohner
+		hoehe_ger: Höhe
+	    callback:
+		event: click
+		options:
+		    buffer: 1000
+		    minScale: null
+		    maxScale: null
+	    styleMap:
+		default:
+		    strokeColor: '#00ff00'
+		    strokeOpacity: 1
+		    fillOpacity: 0
+		select:
+		    strokeColor: '#ff0000'
+		    fillColor: '#ff0000'
+		    fillOpacity: 0.8
+
+Example with selectbox:
+
+.. code-block:: yaml
+
+   Create or Replace view brd.qry_gn250_p as Select gid, name, gemeinde, bundesland, oba, geom from brd.gn250_p where oba = 'AX_Ortslage' OR oba = 'AX_Wasserlauf' order by name;
+
+.. code-block:: yaml
+
+	class: Mapbender\CoreBundle\Component\SQLSearchEngine
+	class_options:
+	    connection: search_db
+	    relation: brd.qry_gn250_p_ortslage
+	    attributes:
+		- gid
+		- name
+		- gemeinde
+		- bundesland
+		- oba
+	    geometry_attribute: geom
+	form:
+	    oba:
+		type: choice
+		options:
+		    empty_value: 'Bitte wählen...'
+		    choices:
+		        AX_Ortslage: Ort
+		        AX_Wasserlauf: 'Gewässer'
+	    name:
+		type: text
+		options:
+		    required: false
+		    label: Name
+		    attr:
+		        data-autocomplete: on
+		compare: ilike
+	    gemeinde:
+		type: text
+		options:
+		    required: false
+		compare: ilike
+	results:
+	    view: table
+	    count: true
+	    headers:
+		name: Name
+		gemeinde: Gemeinde
+		bundesland: Bundesland
+	    callback:
+		event: click
+		options:
+		    buffer: 1000
+		    minScale: null
+		    maxScale: null
+
