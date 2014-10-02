@@ -20,12 +20,13 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8  # Example Solr URL
-   query_key: q                                                                 # The query parameter key to append
-   query_ws_replace: 
-   query_format: '%s'
-   token_regex_in: '([a-zA-Z]{3,})'
-   token_regex_out: '$1*'
+   query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8   # Example Solr URL
+   query_key: q                                                                  # The query parameter key to append
+   query_ws_replace:                                                             # Parameter name to send search term with.
+   query_format: '%s'                                                            # Simpe search format.
+   token_regex: [^a-zA-Z0-9äöüÄÖÜß]                                              # Tokenizer split regexp.
+   token_regex_in: ([a-zA-ZäöüÄÖÜß]{3,})                                         # Tokenizer search regexp.
+   token_regex_out: '$1*'                                                        # Tokenizer replace regexp.
    collection_path: response.docs                                                # Can be a dotted attribute path to extract from the query result.                                             
    label_attribute: label                                                        # Name of the attribute to use for entry labeling
    geom_attribute: geom                                                          # Name of the geometry data attribute
