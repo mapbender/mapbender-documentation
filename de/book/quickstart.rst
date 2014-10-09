@@ -439,6 +439,33 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
      :scale: 80
 
 
+Einer URL Punkte (POIs) übergeben
+============================================================
+Sie können einen oder mehrere Punkte (POIS) in der URL übergeben. Jeder Punkt verfügt dabei über die folgenden Parameter:
+
+- Punkt (point): Koordinatenpaar, die Werte werden mit Komma getrennt (zwingend)
+- Beschriftung (label): Beschriftung, die angezeigt werden soll (optional)
+- Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional. Die Angabe ist nur bei der Anzeige eines Punktes sinnvoll)
+
+Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der Gesamt-Boundingbox.
+
+Format für die Übergabe eines Punktes:
+
+.. code-block:: php
+
+   ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+   z.B.: http://mapbender3.org/application/demo_basic?poi[point]=2563616,5631457&po[label]=Büro&poi[scale]=2500
+
+
+Für die Übergabe vieler Punkte wird das folgende Format verwendet:
+
+.. code-block:: php
+
+   ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
+
+
+
+
 Weitere Aufgaben
 ================================================================================
 
