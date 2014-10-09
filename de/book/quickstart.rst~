@@ -464,6 +464,8 @@ Für die Übergabe vieler Punkte wird das folgende Format verwendet:
    ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
 
 
+  .. image:: ../../figures/poi_schule.png
+     :scale: 80
 
 
 Weitere Aufgaben
