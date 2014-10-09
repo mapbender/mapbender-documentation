@@ -173,7 +173,7 @@ To pass a single POI, use the following URL format:
 
 .. code-block:: php
 
-   ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+   ?poi[point]=363374,5621936&po[label]=Label&poi[scale]=5000
 
 
 To pass multiple POIs, use the following format:
