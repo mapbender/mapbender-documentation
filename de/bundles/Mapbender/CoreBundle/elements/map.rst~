@@ -173,7 +173,7 @@ Format für die Übergabe eines Punktes:
 
 .. code-block:: php
 
-   ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+   ?poi[point]=363374,5621936&po[label]=Label&poi[scale]=5000
 
 
 Für die Übergabe vieler Punkte wird das folgende Format verwendet:
