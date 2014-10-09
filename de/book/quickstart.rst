@@ -452,10 +452,11 @@ Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der
 Format für die Übergabe eines Punktes:
 
 * ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
-* z.B.: http://localhost/mapbender3/app_dev.php//application/demo_basic?poi[point]=2563616,5631457&po[label]=Schule&poi[scale]=2500
+
 
   .. image:: ../../figures/poi_schule.png
      :scale: 80
+
 
 Für die Übergabe vieler Punkte wird das folgende Format verwendet:
 
