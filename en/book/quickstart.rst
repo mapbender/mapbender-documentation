@@ -438,7 +438,7 @@ Assign an Application to a User/Group
      :scale: 80
 
 Passing POIs
-------------
+======================================
 
 You can pass one or more POIs in the URL. Each POI has the following parameters:
 
