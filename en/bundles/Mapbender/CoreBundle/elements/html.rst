@@ -4,6 +4,7 @@ HTML Element
 ************
 
 This element allows you to add generic HTML anywhere in your application.
+In the generic HTML the following variables are available: "application" (Entity Application), "entity" (Entity HTMLElement) and "configuration".
 
 .. image:: ../../../../../figures/html.png
      :scale: 80
@@ -27,7 +28,7 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-    content: <p>Hello, World!</p>
+    content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # in the content variables: "application", "entity" und "configuration" beinhalten are available.
     classes: my-special-css-class
    
 
