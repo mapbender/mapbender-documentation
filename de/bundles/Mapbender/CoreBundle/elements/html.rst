@@ -4,6 +4,7 @@ HTML-Element
 ************
 
 Über das HTML-Element kann generisches HTML an einer beliebigen Stelle in der Anwendung definiert werden.
+Im generischen HTML stehen zur Verfügung folgende Variablen: "application" (Entity Application), "entity" (Entity HTMLElement) und "configuration".
 
 .. image:: ../../../../../figures/html.png
      :scale: 80
@@ -28,7 +29,7 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-    content: <p>Hello, World!</p>
+    content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # content kann Variablen: "application", "entity" und "configuration" beinhalten.
     classes: my-special-css-class
    
 
