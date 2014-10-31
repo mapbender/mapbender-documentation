@@ -53,12 +53,15 @@ File location
 Das Bild des Nordpfeils ("North arrow") befindet sich unter images/. Sie können das Bild des Nordpfeils auch durch ein anderes Bild ersetzen.
 
 **print templates**
-Die Vorlagen befinden sich unter app/Resources/MapbenderPrintBundle/templates/. Sie können ihre eigene Druckvorlage erstellen.
+Die Vorlagen befinden sich unter app/Resources/MapbenderPrintBundle/templates/. Sie können eigene Druckvorlagen erstellen.
 
 
 Erstellen eines individuellen Vorlage
 =======================================
-Um eine individuelle Druckvorlage zu erstellen, kopieren Sie eine vorhandene Druckvorlage (ODG-Datei) und bearbeiten diese. Sie können auch eine neue Libre Office Draw-Datei erzeugen. Die Vorlage kann feste Objekte wie ein Logo, ein Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine Ebene für die dynamischen Elemente wie die Karte, der Nordpfeil, der Maßstab, das Datum und optionale Felder erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene in der Libre Office Draw-Datei. Fügen Sie die Ebene in Libre Office Draw folgendermaßen hinzu: **Menü: Einfügen -> Ebene... -> definieren Sie einen Namen für die Ebene und wählen Sie die Option nicht druckbar**.
+Um eine individuelle Druckvorlage zu erstellen, kopieren Sie eine vorhandene Druckvorlage (ODG-Datei) und bearbeiten diese. Sie können auch eine neue Libre Office Draw-Datei erzeugen. Die Vorlage kann feste Objekte wie ein Logo, ein Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine Ebene für die dynamischen Elemente wie die Karte, die Übersichtskarte, der Nordpfeil, der Maßstab, das Datum und optionale Felder erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene in der Libre Office Draw-Datei. Fügen Sie die Ebene in Libre Office Draw folgendermaßen hinzu: **Menü: Einfügen -> Ebene... -> definieren Sie einen Namen für die Ebene und wählen Sie die Option nicht druckbar**.
+
+.. image:: ../../../../../figures/print_template_odg.png
+     :scale: 80
 
 Definieren Sie Bereiche für die Karte, den Nordpfeil, den Maßstab, das Datum und optionale Felder. Die Objekte müssen Namen haben wie map, scale, date, title (Definition über das Kontext Menü).
 
