@@ -25,6 +25,21 @@
   :alt: project logo
   :align: right
 
+
+
+.. raw:: pdf
+
+    SetPageCounter 0 
+
+.. |date| date::
+
+
+.. contents:: Table of Contents
+
+.. raw:: pdf
+
+    PageBreak
+
 ########################
 Mapbender3 Quickstart 
 ########################
@@ -69,7 +84,7 @@ Hinweise zur Installation von Mapbender3 finden Sie unter http://doc.mapbender3.
 Starten Sie Mapbender
 ================================================================================
 
-#. Wählen Sie :menuselection:`Mapbender` aus dem Startmenü oder besuchen Sie http://localhost/mapbender3/app.php
+#. Wählen Sie ``Mapbender`` aus dem Startmenü oder besuchen Sie http://localhost/mapbender3/app.php
 
 
 #. Die Anwendung braucht eine kurze Zeit, um zu starten.
@@ -253,7 +268,7 @@ Nach dem erfolgreichen Hochladen eines WMS möchten Sie diesen zu einer Anwendun
 
 #. Wählen Sie  |mapbender3-button-edit| ``Anwendungen -->Editier-Button --> Layerset``.
 
-#. Wählen Sie den ``Button`` |mapbender3-button-add|, um ein Layerset hinzuzufügen. Ein Layerset präsentiert mehrere Layer (ein möglicher Name könnte main oder overview sein)
+#. Wählen Sie den ``Button`` |mapbender3-button-add|, um ein Layerset hinzuzufügen. Ein Layerset präsentiert mehrere Layer (mögliche Namen können main für die Hauptkarte und overview für die Übersichtskarte sein)
 
 #. Jetzt können Sie Dienste zum Layerset hinzufügen.
 
@@ -291,7 +306,7 @@ Dienstekonfiguration
 * proxy - bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
 * transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
 * tiled - Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
-* BBOX factor - bei Anforderung von Kacheln. Wert 0 - es werden keine zusätzlichen Kacheln außerhalb angefodert
+* BBOX factor - bei Anforderung von Kacheln. Wert 0 - es werden keine zusätzlichen Kacheln außerhalb angefordert
 * tile buffer - 1 nur der sichtbare Bereich wird angefordert, 1.25 es wird eine größere Karte angefordert
 
 
@@ -319,7 +334,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
   .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Wählen Sie  |mapbender3-button-edit| ``Anwendungen --> Editier-Button --> Layers --> `` |mapbender3-button-add| ``-Button``, um eine Übersicht über die Mapbender3-Elemente zu erhalten.
+#. Wählen Sie |mapbender3-button-edit| ``Anwendungen --> Editier-Button --> Layers --> Button`` |mapbender3-button-add|, um eine Übersicht über die Mapbender3-Elemente zu erhalten.
 
 #. Wählen Sie ein Element aus der Liste aus.
 
@@ -425,7 +440,7 @@ Benutzer einer Gruppe zuweisen
 
 #. Wählen Sie einen oder mehrere Benutzer über ``Users`` aus, die Sie der Gruppe zuweisen wollen.
 
-#. Weisen Sie einen Benutzer über ``Users -->`` |mapbender3-button-edit| ``-Button--> Groups`` einer Gruppe zu.
+#. Weisen Sie einen Benutzer über |mapbender3-button-edit| ``Users --> Edit-Button--> Groups`` einer Gruppe zu.
 
 
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
@@ -452,7 +467,7 @@ Weisen Sie einem Benutzer über ``Users --> Edit your User --> Security`` Rechte
 
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 ============================================================
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen -->`` |mapbender3-button-edit| ``-Button``
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Button`` |mapbender3-button-edit| 
 
 #. Wählen Sie ``Sicherheit`` (``Security``)
 

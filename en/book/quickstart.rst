@@ -2,9 +2,25 @@
 
 :Author: OSGeo-Live
 :Author: Astrid Emde
-:Version: osgeo-live7.0
+:Version: osgeo-live8.5
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
+:Date: |date| 
+
+  .. |mapbender3-button-show| image:: ../../figures/mapbender3_button_show.png
+
+  .. |mapbender3-button-copy| image:: ../../figures/mapbender3_button_copy.png
+
+  .. |mapbender3-button-publish| image:: ../../figures/mapbender3_button_publish.png
+
+  .. |mapbender3-button-edit| image:: ../../figures/mapbender3_button_edit.png
+
+  .. |mapbender3-button-delete| image:: ../../figures/mapbender3_button_delete.png
+
+  .. |mapbender3-button-add| image:: ../../figures/mapbender3_button_add.png
+
+  .. |mapbender3-button-key| image:: ../../figures/mapbender3_button_key.png
+
 
 .. image:: ../../_static/mapbender3_logo.png
   :scale: 100 %
@@ -47,12 +63,12 @@ This is how a Mapbender application can look like:
 
 Installation
 ===============
-For the installation of Mapbender3 have a look at :doc:`installation <installation>`.
+For the installation of Mapbender3 have a look at http://doc.mapbender3.org/en/book/installation.html.
 
 Start Mapbender
 ================================================================================
 
-#. Choose  :menuselection:`Mapbender` from the start menu or visit http://localhost/mapbender3/app.php
+#. Choose  ``Mapbender`` from the start menu or visit http://localhost/mapbender3/app.php
 
 
 #. The application will take a few moments to start up
@@ -91,7 +107,7 @@ Welcome page
   .. image:: ../../figures/mapbender3_welcome.png
      :scale: 80
 
-After successful login you are directed to the :guilabel:`Mapbender administration`.
+After successful login you are directed to the ``Mapbender administration``.
 
 
 
@@ -104,11 +120,10 @@ The Application overview provides the following functionality:
  * title and description
  * screenshot for the application (if provided)
  * link to the application
- * button to duplicate the application
- * button to edit the application
- * button to publish/unpublish the application
- * button to delete the application
- * button to create a new application
+ * |mapbender3-button-copy| button to duplicate the application
+ * |mapbender3-button-edit| button to edit the application
+ * |mapbender3-button-publish| button to publish/unpublish the application
+ * |mapbender3-button-delete| button to delete the application
  * with the filter textfield you can search for applications
 
   .. image:: ../../figures/mapbender3_application_overview.png
@@ -120,21 +135,22 @@ Create an individual application
 
 Create a new application by providing basic information about your application. After that you use the edit mode to add elements, layers and security.
 
-#. choose :menuselection:`Applications --> New Application`
+#. choose ``Applications --> New Application``
 
 #. define a title and description for your application
 
-#. define an URL title which will be used in the URL to open te application. It can be the same as the title
+#. define an URL title which will be used in the URL to open the application. It can be the same as the titlebut should not contain spaces.
 
 #. upload an image file as screenshot for the application overview
 
-#. choose a template for your application
+#. choose a template for your application. The template defines the structure of the application. Mapbender3 provides some templates for you (Fullscreen, Classic..). You also can define your own template.
 
 #. choose the button **Create** to create the application
 
-#. click the :menuselection:`Edit-Button` at the new application to edit the application
+#. click the ``Edit-Button`` |mapbender3-button-edit| at the new application to edit the application
 
-#. your application is set up. Now you need a WMS to be displayed in your application. This will be described in the section **WMS Management**.
+
+Your application is set up. Now you need Elementes (modules) like (map, legend, navigation) and WMS to populate your application.
 
   .. image:: ../../figures/mapbender3_create_application.png
      :scale: 80
@@ -144,57 +160,59 @@ Create a new application by providing basic information about your application. 
 
 Copy or rename an application
 ================================================================================
-You also can create a new application by copying an existing application. Every application with write access can be copied. It provides a button to duplicate the application with all the services. The new application will get a derived name which can be changed in the next step.
+You also can create a new application by copying an existing application. Every application with write access can be copied. It provides a button |mapbender3-button-copy| to duplicate the application with all the services. The new application will get a derived name which can be changed in the next step.
 
 
 Delete an application
 ================================================================================
-You can delete an application from the menu item :menuselection:`Applications` with the :menuselection:`+-button`.
+You can delete an application from the menu item ``Applications`` with the |mapbender3-button-delete|-button.
 
 
 Export / Import applications and sources
 ================================================================================
-You can export applications as JSON or YAML with :menuselection:`Applications --> Export. You can chose one or more applications to export and you can also export the sources which are published in the applications.
+You can export applications as JSON or YAML with ``Applications --> Export``. You can chose one or more applications to export and you can also export the sources which are published in the applications.
 
   .. image:: ../../figures/mapbender3_application_export.png
      :scale: 80
 
-The exportfile contains all the definitions of the application/s (sources) and can be imported via :menuselection:`Applications --> Import` in another Mapbender3 installation or in the same installation. 
+The exportfile contains all the definitions of the application/s (sources) and can be imported via ``Applications --> Import`` in another Mapbender3 installation or in the same installation. 
 
   .. image:: ../../figures/mapbender3_application_import.png
      :scale: 80
 
 
 Management of Data Sources
-=================================
+================================================================================
 Mapbender can handle different Services like OGC WMS or OGC WMTS or OGC WFS. Every Service has to be handled differently. The administration provides an administration interface for every source (at the moment only WMS).
 
 
 Service Repository overview
-=============================
+================================================================================
 
-#. Go to :guilabel:`Services` and have a look at the Service repository.
+#. Go to ``Services`` and have a look at the Service repository.
 
 #. You get an overview on the Sources that are loaded in your Mapbender.
 
-#. Type (f.e WMS, WMTS), Title, Description offer first information about the services.
+#. Type (f.e WMS), Title, Description offer first information about the services.
 
-#. On click on the button :menuselection:`View-Button` you get further information about the source.
+#. On click on the button |mapbender3-button-show| ``View-Button`` you get further information about the source.
 
-#. With the button :menuselection:`Delete-Button` you can delete the source from your repository.
+#. With the button |mapbender3-button-delete| ``Delete-Button`` you can delete the source from your repository.
 
 
 Loading Web Map Services
 ================================================================================
-You can load OGC Web Map Services (WMS) to your application.
+You can load OGC Web Map Services (WMS) to your application. Mapbender3 supports Version 1.1.1 and 1.3.0.
 
 A WMS returns an XML-file when the getCapabilities document is requested. This information is parsed by Mapbender and Mapbender gets all the necessary information about the service from this XML
 
 .. tip:: You should first check the Capabilities document in your browser before you try to load it with Mapbender
 
-#. Choose menu item :menuselection:`Services --> Add Service` or use the +-Button. Link to the WMS getCapabilities URL in the text field :menuselection:`Serviceurl`. 
+#. Choose menu item ``Services --> Add Service`` or use the |mapbender3-button-show|-button. Link to the WMS getCapabilities URL in the text field ``Serviceurl``. 
 
 #. Enter username and password if your service needs authentication.
+
+#. You can  chose ``only valid`` to load only services that follow the OGC WMS schema. Services that do not follow the schema may cause problems.
 
 #. Hit **Load** to load the Service to the repository.
 
@@ -223,16 +241,16 @@ http://osm.omniscale.net/proxy/service?
 
 
 Add Service to Application
-==========================
+================================================================================
 After the successfull upload of a WMS you want to add your WMS to an application.
 
-#. Choose :menuselection:`Applications --> edit-Button --> Layers --> Edit-Button`. 
+#. Choose |mapbender3-button-edit| ``Applications --> edit-Button --> Layers --> Edit-Button``. 
 
-#. Click on the :menuselection:`+-button` to add a layerset, which represents a collection of layers (a possible name could be main)
+#. Click on the |mapbender3-button-add| ``-button`` to add a layerset, which represents a collection of layers (a possible names can be main for the main map and overview for the overview map)
 
 #. Now you can add layer to the layerset
 
-#. Click on the :menuselection:`+-button` at your new layerset to add a Service.
+#. Click on the ``button`` |mapbender3-button-add| at your new layerset to add a Service.
 
 #. You can change the order of the Services in your application by drag & drop.
 	
@@ -243,7 +261,7 @@ Configure your WMS
 ================================================================================
 You can configure the WMS for your specific application. Maybe you don't want to provide all layers or you want to change the order or titles of the layer or disable the feature info or change the maxscale for a layer.
 
-#. Choose :menuselection:`Applications --> edit-Button --> Layers --> edit-Button` to configure the Service Instance.
+#. Choose |mapbender3-button-edit| ``Applications --> edit-Button --> Layers --> edit-Button`` to configure the Service Instance.
 
 #. You will see a table with the layers of the Service. 
 
@@ -259,12 +277,12 @@ Service configuration
 * exceptionformat - choose the format for exceptions
 * opacity - choose opacity in percent
 * visible
-* basesource
+* basesource - should the Service be handled as BaseSource (BaseSources can be shown/hided in the layertree)
 * proxy - if active the service will be requested by Mapbender and not directly
 * transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
 * tiled - you can request a WMS in tiles, default is not tiled (may be a good choice if you map is very big an the WMS service does not support the width/height)
-* BBOX factor
-* tile buffer
+* BBOX factor - if you use tiled: value 0 - no additional tiles outside the displayed area are requested
+* tile buffer - 1 - the maprequest uses a the size of the mapwindow. 1.25 (default) - maprequest uses a bigger size as the mapwindows size 
 
 Layer configuration
 
@@ -282,14 +300,16 @@ Layer configuration
 * style - if a WMS provides more than one style you can choose a different style than the default style
 
 
+
+
 Add Elements to your application
-================================
+================================================================================
 Mapbender offers a set of elements. You can add the elements to your application. You have different regions (Toolbar, Sidepane, Content, Footer) to which you can add elements.
 
   .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Choose :menuselection:`Applications --> edit-Button --> Layers --> Button +` to get an overview over the elements Mapbender3 provides.
+#. Choose |mapbender3-button-edit| ``Applications --> edit-Button --> Layers --> Button`` |mapbender3-button-add| to get an overview over the elements Mapbender3 provides.
 
 #. Choose an element from the list.
 
@@ -306,9 +326,6 @@ Now you should get an idea how easy it is to change a Mapbender application with
   .. image:: ../../figures/mapbender3_application_elements.png
      :scale: 80
 
-.. NOT IMPLEMENTED YET 
- When you select an element for example **map** you see that the element has a set of attributes. These attributes are HTML attributes. By defining a Mapbender element you define an HTML element. On start of your application Mapbender will create an HTML page from all defined elements.
-
 Examples for elements Mapbender3 offers:
 
 * About Dialog
@@ -323,6 +340,7 @@ Examples for elements Mapbender3 offers:
 * Legend
 * Layertree - Table of Content
 * Map
+* Meetingpoint (POI)
 * Overview
 * PrintClient
 * Ruler Line/Area
@@ -338,7 +356,7 @@ Examples for elements Mapbender3 offers:
 * WMC Loader
 * WMC List 
 
-You find detailed information on every element at the `MapbenderCoreBundle element documentation <../bundles/Mapbender/CoreBundle/index.html>`_, `MapbenderWmcBundle element documentation <../bundles/Mapbender/WmcBundle/index.html>`_ and `MapbenderWmsBundle element documentation <../bundles/Mapbender/WmsBundle/index.html>`_.
+You find detailed information on every element at the `MapbenderCoreBundle element documentation <http://doc.mapbender3.org/en/bundles/Mapbender/CoreBundle/index.html>`_, `MapbenderWmcBundle element documentation <http://doc.mapbender3.org/en/bundles/Mapbender/WmcBundle/index.html>`_ and `MapbenderWmsBundle element documentation <http://doc.mapbender3.org/en/bundles/Mapbender/WmsBundle/index.html>`_.
 
 
 Try it yourself
@@ -353,13 +371,13 @@ Try it yourself
 
 
 User and group management
-=========================
+================================================================================
 An access to Mapbender requires authentication. Only public applications can be used by everyone. 
 
 A user has permissions to access one or a set of applications and services.
 
 .. NOT IMPLEMENTED YET
-  There is no inherent difference between roles like :guilabel:`guest`, :guilabel:`operator` or :guilabel:`administrator`. The :guilabel:`role` of a user depends on the functionality and services the user has access through his applications.
+  There is no inherent difference between roles like :``guest``, ``operator`` or ``administrator``. The ``role`` of a user depends on the functionality and services the user has access through his applications.
 
 
 Create a user
@@ -373,7 +391,7 @@ Create a user
 
 #. Save your new user.
 
-#. You can provide more information about the user in the tab :menuselection:`Profile`.
+#. You can provide more information about the user in the tab ``Profile``.
 
 .. image:: ../../figures/mapbender3_create_user.png
      :scale: 80 
@@ -381,7 +399,7 @@ Create a user
 
 Create a group
 ================================================================================
-#. Create a group by :guilabel:`New Group`. 
+#. Create a group by ``New Group``. 
 
 #. Define a name and a description for your group.
 
@@ -391,18 +409,18 @@ Create a group
 Assign users to group
 ================================================================================
 
-#. Assign a user to a group by :guilabel:`Users --> Groups`. 
+#. Assign a user to a group by ``Users --> Groups``. 
 
 #. Choose one or more users you want to add to the group at :menuselection:`Users`.
 
-#. Assign a user by :menuselection:`Users --> Edit-Button--> Groups` to a group. 
+#. Assign a user by  |mapbender3-button-edit| ``Users --> Edit-Button--> Groups`` to a group. 
 
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
      :scale: 80
  
 
 Roles
-======
+================================================================================
 Mapbender3 provides different rights. They refer to the Symfony ACL System http://symfony.com/doc/2.1/cookbook/security/acl_advanced.html#built-in-permission-map
 
 * view - Whether someone is allowed to view the object.
@@ -412,33 +430,53 @@ Mapbender3 provides different rights. They refer to the Symfony ACL System http:
 * master - Whether someone is allowed to perform all of the above actions, and in addition is allowed to grant any of the above permissions to others.
 * owner - Whether someone owns the object. An owner can perform any of the above actions and grant master and owner permissions.
 
-#. Assign roles to a user by :menuselection:`Users --> Edit your User --> Security`.
+#. Assign roles to a user by ``Users --> Edit your User --> Security``.
 
   .. image:: ../../figures/mapbender3_roles.png
      :scale: 80 
 
 
 Assign an Application to a User/Group
-======================================
-#. Edit your application by :menuselection:`Application --> Edit-Button`.
+================================================================================
+#. Edit your application by ``Application --> Edit-Button`` |mapbender3-button-edit| .
 
-#. Choose :menuselection:`Security`
+#. Choose ``Security``
 
-#. Set permission like view edit delete operator master owner 
+#. Set permission like view, edit, delete, operator, master, owner 
 
 #. Assign a user/group to the application
 
 #. Test your configuration!
 
-#. Logout from Mapbender by :menuselection:`Logout`.
+#. Logout from Mapbender by ``Logout``.
 
 #. Login as the new user
 
   .. image:: ../../figures/mapbender3_security.png
      :scale: 80
 
-Passing POIs
-======================================
+Assign single elements to a User/Group
+================================================================================
+#. Edit your application by ``Application --> Edit-Button`` |mapbender3-button-edit| .
+
+#. Choose ``Layout``
+
+#. Every element has a |mapbender3-button-key| ``-Button``
+
+#. Chose the |mapbender3-button-key| ``-Button`` from the element, that should be only availale for special users / groups
+
+#. Set permission like view, edit, delete, operator, master, owner 
+
+#. Assign a user/group to the element
+
+#. Test your configuration!
+
+
+Start Application at a defined position
+============================================================
+
+You can open an application at a defined location. This can be done by poi or polygon. You also can add textes in the request.
+
 
 You can pass one or more POIs in the URL. Each POI has the following parameters:
 
@@ -452,6 +490,7 @@ To pass a single POI, use the following URL format:
 
 * ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
 
+* http://demo.mapbender3.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
 
   .. image:: ../../figures/poi_school.png
      :scale: 80
@@ -489,8 +528,9 @@ You find tutorials at
 
   http://doc.mapbender3.org
 
-  http://api.mapbender3.org
+API-Documentation
 
+  http://api.mapbender3.org
 
 Get to know Mapbender on 
 	
