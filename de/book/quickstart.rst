@@ -1,8 +1,24 @@
 :Author: OSGeo-Live
 :Author: Astrid Emde
-:Version: osgeo-live7.0
+:Version: osgeo-live8.5
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
+:Date: |date| 
+
+  .. |mapbender3-button-show| image:: ../../figures/mapbender3_button_show.png
+
+  .. |mapbender3-button-copy| image:: ../../figures/mapbender3_button_copy.png
+
+  .. |mapbender3-button-publish| image:: ../../figures/mapbender3_button_publish.png
+
+  .. |mapbender3-button-edit| image:: ../../figures/mapbender3_button_edit.png
+
+  .. |mapbender3-button-delete| image:: ../../figures/mapbender3_button_delete.png
+
+  .. |mapbender3-button-add| image:: ../../figures/mapbender3_button_add.png
+
+  .. |mapbender3-button-key| image:: ../../figures/mapbender3_button_key.png
+
 
 .. image:: ../../_static/mapbender3_logo.png
   :scale: 100 %
@@ -17,14 +33,15 @@ Mapbender ist ein web-basiertes Geoportal Framework zum Veröffentlichen, Regist
 
 Administrationsoberflächen ermöglichen es Administratoren Karten- und Datendienste zu verwalten und zu kategorisieren. Über die Administration können einzelnen Benutzern und Gruppen Zugriffe gewährt werden.
 
-Mapbender3 ist die nächste Version in der Mapbender Serie. Es wurde unter Verwendung moderner Webtechnologien komplett neu geschrieben. Die Grundlage bildet Symfony2, die brandneue Version des erfolgreichen Symfony PHP Web Application Framework.
+Mapbender3 ist die nächste Version in der Mapbender Serie. Es wurde unter Verwendung moderner Webtechnologien komplett neu geschrieben. Die Grundlage bildet Symfony2, das erfolgreiche PHP Web Application Framework. Auf der Clientseite finden Sie OpenLayers und jQuery (UI) verbunden über MapQuery.
 
-Auf der Clientseite finden Sie OpenLayers und jQuery (UI) verbunden über MapQuery.
+Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Frameworks fortgesetzt.
 
-Mit dieser neuen Code-Grundlage setzen wir die Mapbender Idee eines Geoportal Frameworks fort.
   * Anwendungen können direkt im Browser erstellt und konfiguriert werden.
   * Dienste wie WMS können in einem Service Repository verwaltet und mit Anwendungen verbunden werden. 
   * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
+  * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
+
 
 Sie brauchen nichts weiter als einen Standard Webbrowser für diesen Schnellstart.
 
@@ -46,7 +63,8 @@ Eine Mapbender Anwendung kann wie folgt aussehen:
 Installation
 ===============
 
-Hinweise zur Installation von Mapbender finden Sie unter http://doc.mapbender3.org/en/book/installation.html.
+Hinweise zur Installation von Mapbender3 finden Sie unter http://doc.mapbender3.org/en/book/installation.html.
+
 
 Starten Sie Mapbender
 ================================================================================
@@ -83,14 +101,14 @@ Die Willkommensseite
 
 #. Bevor Sie Mapbender administrieren können, müssen Sie sich anmelden.
 
-#. Klicken Sie auf das Mapbender-Logo links, um die Loginseite aufzurufen.
+#. Klicken Sie auf den Link **Anmelden** oben rechts, um die Loginseite aufzurufen.
 
-#. Sie können sich mit dem Benutzer anmelden, der während der Installation erzeugt wurde. Er kann :guilabel:`root` heißen mit dem Kennwort :guilabel:`root` (Dies ist der Standardbenutzer/Kennwort nach der Installation von Mapbender auf der OSGeo-Live. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben. Löschen Sie den Benutzer :guilabel:`root` nicht.).
+#. Sie können sich mit dem Benutzer anmelden, der während der Installation erzeugt wurde. Er kann ``root`` heißen mit dem Kennwort ``root`` (Dies ist der Standardbenutzer/Kennwort nach der Installation von Mapbender auf der OSGeo-Live. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben. Löschen Sie den Benutzer ``root`` nicht.).
   
   .. image:: ../../figures/mapbender3_welcome.png
      :scale: 80
 
-Nach erfolgreicher Anmeldung werden Sie zur :guilabel:`Mapbender Administration` weiter geleitet.
+Nach erfolgreicher Anmeldung werden Sie zur ``Mapbender Administration`` weiter geleitet.
 
 
 Anwendungsübersicht
@@ -99,15 +117,13 @@ Nach der Anmeldung werden Sie zur Anwendungsübersicht (:guilabel:`Applications`
 
 Die Anwendungsübersicht bietet folgende Funktionen:
 
-
  * Titel und Beschreibung
  * Vorschaubild zur Anwendung (sofern bereitgestellt)
- * Link zur Anwendung
- * Button, um die Anwendung zu kopieren
- * Button, um die Anwendung zu bearbeiten
- * Button zum Veröffentlichen der Anwendung
- * Button, um eine neue Anwendung anzulegen
- * Button, um die Anwendung zu löschen
+ * Link zur Anwendung |mapbender3-button-show|
+ * |mapbender3-button-copy| Button, um die Anwendung zu kopieren
+ * |mapbender3-button-edit| Button, um die Anwendung zu bearbeiten
+ * |mapbender3-button-publish| Button zum Veröffentlichen der Anwendung
+ * |mapbender3-button-delete| Button, um die Anwendung zu löschen
  * mit dem Filtertextfeld kann nach Anwendungen gesucht werden
 
   .. image:: ../../figures/mapbender3_application_overview.png
