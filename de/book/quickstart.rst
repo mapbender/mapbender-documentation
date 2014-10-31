@@ -251,7 +251,7 @@ Fügen Sie Dienste zur Anwendung hinzu
 ===========================================
 Nach dem erfolgreichen Hochladen eines WMS möchten Sie diesen zu einer Anwendung hinzufügen.
 
-#. Wählen Sie ``Anwendungen -->`` |mapbender3-button-edit| ``-Button --> Layerset``.
+#. Wählen Sie  |mapbender3-button-edit| ``Anwendungen -->Editier-Button --> Layerset``.
 
 #. Wählen Sie den ``Button`` |mapbender3-button-add|, um ein Layerset hinzuzufügen. Ein Layerset präsentiert mehrere Layer (ein möglicher Name könnte main oder overview sein)
 
@@ -269,7 +269,7 @@ Konfiguration von Diensten
 ================================================================================
 Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie nicht alle Ebenen anzeigen oder Sie möchten die Reihenfolge oder den Titel der Ebenen ändern, die Info-Abfrage für einzelne Ebenen verhindern oder den Maximalmaßstab ändern.
 
-#. Wählen Sie ``Anwendung --> `` |mapbender3-button-edit| ``-Button --> Layerset --> `` |mapbender3-button-edit| ``-Button``, um eine Instanz zu konfigurieren.
+#. Wählen Sie |mapbender3-button-edit|  ``Anwendung --> Editier-Button --> Layerset --> Editier-Button``, um eine Instanz zu konfigurieren.
 
 #. Sie sehen eine Tabelle mit den Layern des Dienstes.
 
@@ -319,7 +319,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
   .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Wählen Sie ``Anwendungen --> `` |mapbender3-button-edit| ``-Button --> Layers --> `` |mapbender3-button-add| ``-Button``, um eine Übersicht über die Mapbender3-Elemente zu erhalten.
+#. Wählen Sie  |mapbender3-button-edit| ``Anwendungen --> Editier-Button --> Layers --> `` |mapbender3-button-add| ``-Button``, um eine Übersicht über die Mapbender3-Elemente zu erhalten.
 
 #. Wählen Sie ein Element aus der Liste aus.
 
@@ -421,11 +421,12 @@ Gruppen anlegen
 Benutzer einer Gruppe zuweisen
 ================================================================================
 
-#. Weisen Sie einen Benutzer einer Gruppe über :guilabel:`Users --> Groups` zu. 
+#. Weisen Sie einen Benutzer einer Gruppe über ``Users --> Groups`` zu. 
 
-#. Wählen Sie einen oder mehrere Benutzer über :menuselection:`Users` aus, die Sie der Gruppe zuweisen wollen.
+#. Wählen Sie einen oder mehrere Benutzer über ``Users`` aus, die Sie der Gruppe zuweisen wollen.
 
-#. Weisen Sie einen Benutzer über :menuselection:`Users --> Edit-Button--> Groups` einer Gruppe zu.
+#. Weisen Sie einen Benutzer über ``Users -->`` |mapbender3-button-edit| ``-Button--> Groups`` einer Gruppe zu.
+
 
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
      :scale: 80
