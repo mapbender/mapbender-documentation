@@ -113,7 +113,7 @@ Nach erfolgreicher Anmeldung werden Sie zur ``Mapbender Administration`` weiter 
 
 Anwendungsübersicht
 ================================================================================
-Nach der Anmeldung werden Sie zur Anwendungsübersicht (:guilabel:`Applications`) mit einer Liste von den für Sie freigegebenen Anwendungen weiter geleitet.
+Nach der Anmeldung werden Sie zur Anwendungsübersicht (``Applications``) mit einer Liste der für Sie freigegebenen Anwendungen weiter geleitet.
 
 Die Anwendungsübersicht bietet folgende Funktionen:
 
@@ -126,6 +126,7 @@ Die Anwendungsübersicht bietet folgende Funktionen:
  * |mapbender3-button-delete| Button, um die Anwendung zu löschen
  * mit dem Filtertextfeld kann nach Anwendungen gesucht werden
 
+
   .. image:: ../../figures/mapbender3_application_overview.png
      :scale: 80
 
@@ -133,28 +134,31 @@ Die Anwendungsübersicht bietet folgende Funktionen:
 Erstellen Sie eine eigene Anwendung
 ================================================================================
 
-Erstellen Sie eine neue Anwendung, indem Sie einige grundlegende Informationen eingeben. Anschließend können Sie den Editiermodus verwenden, um Elemente, Layer und Sicherheitseinstellungen zu verwalten.
+Erstellen Sie eine neue Anwendung, indem Sie einen Titel, eine Beschreibung sowie einen URL-Titel eingeben. Anschließend können Sie die Anwendung bearbeiten und Elemente, Themen, Stil (CSS-Editor) und Sicherheitseinstellungen zu verwalten.
 
-#. Wählen Sie :menuselection:`Applications --> New Application`
+#. Wählen Sie ``Anwendungen --> Neue Anwendung``
 
 #. Geben Sie einen Titel und eine Beschreibung der Anwendung ein
 
-#. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu starten. Er kann identisch zum Titel sein.
+#. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu starten. Er kann identisch zum Titel sein und sollte keine Leer- und Sonderzeichen enthalten.
 
 #. Laden Sie eine png-Datei und definieren so ein Vorschaubild für die Anwendungsübersicht.
 
-#. Wählen Sie eine Layoutvorlage für die Anwendung.
+#. Wählen Sie eine Layoutvorlage für die Anwendung. Die Vorlage bestimmt den Aufbau der Anwendung. Mapbender3 stellt Ihnen einige Vorlagen (Templates) zur Verfügung (Fullscreen, Classic..). Sie können aber auch eigene Vorlagen anlegen.
 
 #. Betätigen Sie die Schaltfläche **Create**, um die Anwendung zu erzeugen.
 
-#. Gehen Sie zu :menuselection:`Edit-Button` neben der Anwendung und wählen Sie die neue Anwendung aus.
+#. Über den ``Bearbeiten-Button`` |mapbender3-button-edit| neben der Anwendung können Sie nun weitere Bearbeitungen durchführen.
 
-#. Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. ein Kartenelement, Navigation, Legende) und Kartendienste.
+
+Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. ein Kartenelement, Navigation, Legende) und Kartendienste, um die Anwendung mit Leben zu füllen.
+
 
   .. image:: ../../figures/mapbender3_create_application.png
      :scale: 80
 
-.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter http://doc.mapbender3.org/en/book/templates.html
+
+.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen im online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter http://doc.mapbender3.org/en/book/templates.html
 
 
 Kopieren und Umbenennen einer Anwendung
