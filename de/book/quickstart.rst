@@ -74,7 +74,7 @@ Eine Mapbender Anwendung kann wie folgt aussehen:
   .. image:: ../../figures/mapbender3_basic_application.png
      :scale: 80
 
-
+menusel
 Installation
 ===============
 
