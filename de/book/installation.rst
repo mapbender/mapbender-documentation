@@ -53,10 +53,10 @@ Konfiguration
 
 
 
-..Verwendung des Web-Installer
-..---------------------------------------
-
-..Die Konfiguration direkt über den Browser ist bisher nicht verfügbar. Bitte benutzen Sie derzeit die kommandozeilenbasierte Methode.
+.. 
+  Verwendung des Web-Installer
+  ---------------------------------------
+  Die Konfiguration direkt über den Browser ist bisher nicht verfügbar. Bitte benutzen Sie derzeit die kommandozeilenbasierte Methode.
 
 
 
@@ -81,8 +81,8 @@ Diese Schritte können mit dem console-Hilfsprogramm von Symfonie2 durchgeführt
   | angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis app/db und die
   | SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP-
   | Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit
-  |  anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib-
-  |  und Leserechte zugewiesen haben. 
+  | anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib-
+  | und Leserechte zugewiesen haben. 
 
 
 Anpassen der Konfigurationsdatei
@@ -200,6 +200,7 @@ Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
  chmod -R ug+w /var/www/mapbender3/app/cache
  chmod -R ug+w /var/www/mapbender3/app/logs
  chmod -R ug+w /var/www/mapbender3/web/assets
+ chmod -R ug+w /var/www/mapbender3/web/uploads
 
 
 Prüfen Sie Symfony config.php
@@ -258,6 +259,7 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weise
  chmod -R ugo+r /var/www/mapbender3
  chown -R www-data:www-data /var/www/mapbender3
  chmod -R ug+w /var/www/mapbender3/web/assets
+ chmod -R ug+w /var/www/mapbender3/web/uploads
 
 Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten.
 
@@ -297,6 +299,7 @@ Sie müssen Schreibrechte für die Verzeichnisse app/cache und app/logs sowie we
  chmod -R ug+w /var/www/mapbender3/app/cache
  chmod -R ug+w /var/www/mapbender3/app/logs
  chmod -R ug+w /var/www/mapbender3/web/assets
+ chmod -R ug+w /var/www/mapbender3/web/uploads
 
 
 Sie können Mapbender3 nun nutzen. Starten Sie Mapbender3 im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen.
@@ -443,7 +446,7 @@ mapbender.yml
 ------------------
 Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die mapbender.yml Datei oder über die Mapbender3 Administration im Browser.
 
-* Das Mapbender Team stellt mit jeder Version eine aktuelle mapbender.yml mit den Elementdefinitionen zur Verfügung.
+* Das Mapbender Team stellt mit jeder Version eine mapbender.yml mit Demoanwendungen mit den aktuellen Elementdefinitionen zur Verfügung (Sie können die Anwendungen deaktivieren indem Sie published: false setzen oder indem Sie die Datei leeren).
 * Anwendungen, die in der mapbender.yml definiert werden, können nicht über die Mapbender3 Administration im Browser bearbeitet werden.
 * Sie können allerdings die Anwendungen über einen app/console Befehl in die Datenbank übertragen.
 
@@ -522,4 +525,5 @@ Aktualisieren Sie Ihre Mapbender Datenbank
  chmod -R ug+w /var/www/mapbender3/app/cache
  chmod -R ug+w /var/www/mapbender3/app/logs
  chmod -R ug+w /var/www/mapbender3/web/assets
+ chmod -R ug+w /var/www/mapbender3/web/uploads
 

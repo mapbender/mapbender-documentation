@@ -56,11 +56,11 @@ is also possible.
 Configuration
 ****************
 
-..Using the web installer
------------------------
+.. 
+  Using the web installer
+  -----------------------
+  Configuration right inside your browser is not yet available. Please use the command line method below for now.
 
-..Configuration right inside your browser is not yet available. Please use the
-..command line method below for now.
 
 Using the command line
 ----------------------
@@ -208,7 +208,7 @@ You have to set write permission to app/cache and app/logs and web/assets.
  chmod -R ug+w /var/www/mapbender3/app/cache
  chmod -R ug+w /var/www/mapbender3/app/logs
  chmod -R ug+w /var/www/mapbender3/web/assets
-
+ chmod -R ug+w /var/www/mapbender3/web/uploads
 
 Check Symfonys config.php
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -264,6 +264,7 @@ Set owner, group and rights. Assign the files to the Apache user (www-data).
  chmod -R ugo+r /var/www/mapbender3
  chown -R www-data:www-data /var/www/mapbender3
  chmod -R ug+w /var/www/mapbender3/web/assets
+ chmod -R ug+w /var/www/mapbender3/web/uploads
 
 Adapt the configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create.
 
@@ -303,6 +304,7 @@ You have to set write permission to app/cache and app/logs
  chmod -R ug+w /var/www/mapbender3/app/cache
  chmod -R ug+w /var/www/mapbender3/app/logs
  chmod -R ug+w /var/www/mapbender3/web/assets
+ chmod -R ug+w /var/www/mapbender3/web/uploads
 
 
 You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
@@ -450,9 +452,9 @@ mapbender.yml
 ------------------
 You can configure an applications on two ways. In the mapbender.yml file or with the browser in the Mapbender3 backend.
 
-* The Mapbender Team provides an up-to-date mapbender.yml with element all parameters with every new version.
+* The Mapbender Team provides an up-to-date mapbender.yml with demo applications. New elements with their parameters are added to this configuration in every new version (You can disable the applications by setting published: false or you can empty the mapbender.yml file)
 * applications that are defined in the mapbender.yml are not editable in the backend
-* you can import the applications to the database with an app/console command
+* you can import the applications to the database with the following app/console command
 
 .. code-block:: yaml
 
@@ -526,4 +528,5 @@ Update your Mapbender database
  chmod -R ug+w /var/www/mapbender3/app/cache
  chmod -R ug+w /var/www/mapbender3/app/logs
  chmod -R ug+w /var/www/mapbender3/web/assets
+ chmod -R ug+w /var/www/mapbender3/web/uploads
 
