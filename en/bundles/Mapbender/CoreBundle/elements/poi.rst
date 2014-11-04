@@ -22,7 +22,8 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   target: map # Only target (map element) is needed
+    target: map                             # only map-element is possible
+    body: 'Please take a look at this POI'  # define a text to display
 
 
 Class, Widget & Style

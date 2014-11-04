@@ -21,7 +21,8 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   target: map # Nur das Map-Element wird benötigt.
+    target: map                             # only mapp-element is possible
+    body: 'Setzen Sie per Klick einen Treffpunkt'  # definieren Sie einen Text für den Dialog
 
 
 Class, Widget & Style
