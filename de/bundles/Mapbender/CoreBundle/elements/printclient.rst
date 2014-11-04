@@ -35,10 +35,20 @@ YAML-Definition:
     rotatable: true                             	# true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
     optional_fields:                            # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
         title:                                  # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
-            label: Title                        # Beschriftung des optionalen Feldes
+            label: Titel                        # Beschriftung des optionalen Feldes
             type: text                          # Typ des optionalen Feldes
-            options:                            # 
+            options:                            
                 required: true                  # erforderlich: true or false
+        comment1:
+            label: Kommentar 1
+            options: { required: false }
+        comment2:
+            label: Kommentar 2
+            options: { required: false }
+        bearbeiter:
+            label: Bearbeiter
+            options: { required: true }
+    replace_pattern:
 
 Class, Widget & Style
 ======================
@@ -63,7 +73,17 @@ Um eine individuelle Druckvorlage zu erstellen, kopieren Sie eine vorhandene Dru
 .. image:: ../../../../../figures/print_template_odg.png
      :scale: 80
 
-Definieren Sie Bereiche für die Karte, den Nordpfeil, den Maßstab, das Datum und optionale Felder. Die Objekte müssen Namen haben wie map, scale, date, title (Definition über das Kontext Menü).
+Definieren Sie Bereiche für die Karte, den Nordpfeil, den Maßstab, das Datum und optionale Felder. 
+
+Die folgenden Bereiche liegenstandard mäßig vor:
+
+* map
+* scale
+* scalebar
+* date
+* overview
+
+Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter) und fügen Sie diese auch in die Open Office Draw Datei ein.
 
 Exportieren Sie die Vorlage als PDF unter dem gleichen Namen wie die ODG-Datei. Verwenden Sie den Namen ohne Dateierweiterung in der Druck yml-Definition.
 

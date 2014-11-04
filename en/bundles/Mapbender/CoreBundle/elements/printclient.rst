@@ -34,7 +34,18 @@ YAML-Definition:
         title:                                  # name of the optional fields, default is null (no optional fields are defined)
             label: Title                        # label of the optional field    
             options:                            # 
-                required: true                  # true or false
+                required: false                  # true or false
+        comment1:
+            label: Comment 1
+            options: { required: false }
+        comment2:
+            label: Comment 2
+            options: { required: false }
+        editor:
+            label: Editor
+            options: { required: true }
+    replace_pattern:
+
 
 Class, Widget & Style
 ============================
@@ -46,7 +57,7 @@ Class, Widget & Style
 File location
 ===============
 **northarrow**
-The "North arrow" image is located at images/. You can replace the "North arrow" image to use a different image as northarrow.
+The "North arrow" image is located at app/Resources/MapbenderPrintBundle/images/. You can replace the "North arrow" image to use a different image as northarrow.
 
 **print templates**
 You find the print templates at app/Resources/MapbenderPrintBundle/templates/. Create your own print template to provide an individual output for your application.
@@ -59,7 +70,17 @@ To create an individual print template use an existing print template odg-file o
 .. image:: ../../../../../figures/print_template_odg.png
      :scale: 80
 
-Define areas for the map, northarrow, scale, date and optional fields. The objects have to have names like map, scale, date, title (definition through the context menu).
+Define areas for the map, northarrow, scale, date and optional fields. 
+
+The following objects are available from Mapbender: 
+
+* map
+* scale
+* scalebar
+* date
+* overview
+
+You can define optional fields in the element definition (like title, comment, editor) and add them to the Open Office Draw file.
 
 Export the template to pdf under the same name as the odg file. Use the name without extension in your print yml-definition.
 
