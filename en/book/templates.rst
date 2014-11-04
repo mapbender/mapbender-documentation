@@ -19,7 +19,7 @@ There are some steps you have to follow on the way to your own template.
 * create your own twig-file
 * create your own css-file(s)
 * register your bundle in app/AppKernel.php
-* use your template in yml-configuration or choose it through the administration
+* use your template in yml-configuration or choose it through the administration (for new applications) or change the template path for an existing application in your database in table *mb_core_application* in column *template*
 
 Notice: We already prepared a Workshop/DemoBundle that you can use as a template. You can download it here:
 
@@ -327,7 +327,7 @@ Before your new template will show up you have to register your bundle in the fi
             new Mapbender\CoreBundle\MapbenderCoreBundle(),
             ...
 
-	    new Workshop\DemoBundle\WorkshopDemoBundle(),
+	        new Workshop\DemoBundle\WorkshopDemoBundle(),
 
         );
 
@@ -355,7 +355,11 @@ directories way easier.
    app/console assets:install web --symlink --relative
 
 
-Now your template should show up in the list.
+Now your template should show up in the template list when you create a new application.
+
+You can change the template for existing applications in the table *mb_core_application* in column *template*.
+
+For the WorkshopDemoBundle you can change *Mapbender\CoreBundle\Template\Fullscreen* to *Workshop\DemoBundle\WorkshopDemoBundle*.
 
 
 

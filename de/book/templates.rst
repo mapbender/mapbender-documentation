@@ -18,7 +18,7 @@ Folgende vier Schritte sind nötig:
 * Erzeugen einer eigenen twig-Datei
 * Erzeugen eigener css-Datei(en)
 * Registrierung des Bundles in der Datei app/AppKernel.php
-* Verwenden der neuen Vorlage in der mapbender.yml oder über die Administration
+* Verwenden der neuen Vorlage in der mapbender.yml oder über die Administration (für neue Anwendungen) oder ändern Sie den Eintrag der Spalte *template* in der Datenbank in der Tabelle *mb_core_application*
 
 Notice: Es wurde ein Workshop/DemoBundle vorbereitet, das als Template verwendet werden kann. Es steht unter dem folgenden Link zum Download:
 
@@ -322,8 +322,11 @@ symlink werden die Dateien nicht kopiert. Es wird stattdessen ein symbolischer L
    app/console assets:install web --symlink --relative
 
 
-Jetzt sollte die neue Vorlage in der Liste erscheinen.
+Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste erscheinen.
 
+Für bereits existierende Anwendungen kann das Template über die Mapbender Datenbank in der Tabelle *mb_core_application* in der Spalte *template* angepasst werden.
+
+Für das *WorkshopDemoBundle* wird statt des Eintrags *Mapbender\CoreBundle\Template\Fullscreen* der Eintrag *Workshop\DemoBundle\WorkshopDemoBundle* angegeben.
 
 
 Wie kann das Design verändert werden?
@@ -333,6 +336,7 @@ Die folgenden Dateien müssen bearbeitet werden:
 
 * twig - verändert die Struktur (z.B. - Löschen einer Komponente wie die Sidebar)
 * demo_fullscreen.css  - verändert die Farben, Icons, Schriften
+
 
 Wie kann das Logo verändert werden?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
