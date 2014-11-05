@@ -517,17 +517,17 @@ Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der
 
 Format für die Übergabe eines Punktes:
 
-* ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+* ?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
-* http://demo.mapbender3.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+* http://demo.mapbender3.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
-  .. image:: ../../figures/poi_schule.png
+  .. image:: ../../figures/mapbender3_position_poi_label.png
      :scale: 80
 
 
 Für die Übergabe vieler Punkte wird das folgende Format verwendet:
 
-* ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Bonn
+* ?poi[0][point]=363374,5621936&poi[0][label]=Hello&poi[1][point]=366761,5623022&poi[1][label]=World
 
 
 

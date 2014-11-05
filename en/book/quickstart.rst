@@ -488,17 +488,17 @@ If you pass more than one POI, the map will zoom to 150% of the POIs bounding.
 
 To pass a single POI, use the following URL format:
 
-* ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+* ?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
-* http://demo.mapbender3.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+* http://demo.mapbender3.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
-  .. image:: ../../figures/poi_school.png
+  .. image:: ../../figures/mapbender3_position_poi_label.png
      :scale: 80
 
 
 To pass multiple POIs, use the following format:
 
-* ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
+* ?poi[0][point]=363374,5621936&poi[0][label]=Hello%201&poi[1][point]=366761,5623022&poi[1][label]=World
 
 
 Things to try
