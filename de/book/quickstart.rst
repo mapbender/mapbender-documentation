@@ -26,19 +26,6 @@
   :align: right
 
 
-
-.. raw:: pdf
-
-    SetPageCounter 0 
-
-.. |date| date::
-
-.. contents:: Table of Contents
-
-.. raw:: pdf
-
-    PageBreak
-
 ########################
 Mapbender3 Quickstart 
 ########################
