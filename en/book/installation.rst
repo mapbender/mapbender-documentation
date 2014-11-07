@@ -19,6 +19,7 @@ Mapbender3 needs the following components in order to run:
 * PHP Internationalization (php5-intl)
 * PHP GD (php5-gd) for printing
 * PHP FileInfo for printing to check image format
+* APACHE mod_rewrite 
 
 Optionally, in order to use a database other than the preconfigured SQLite one,
 you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_.
@@ -36,9 +37,29 @@ for download at the `download <http://mapbender3.org/download>`_ page.
 After downloading, extract the package in a directory of your choice. Then make
 sure your Webserver points to the web directory inside the mapbender3 directory
 you just uncompressed. You will also need to make sure that the default
-directory index is *app.php*.
+directory index is *app.php*. Use Apache REWRITE (install *mod_rewrite*) to access Mapbender3 without *app.php* in the URL.
 
 Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender3. Apache 2.4 uses different directives for Access Control (for example: "Require all granted"). Please see the `Apache documentation: Upgrading to 2.4 from 2.2 <http://httpd.apache.org/docs/2.4/upgrading.html>`_ for details.
+
+Apache 2.4 configuration:
+
+.. code-block:: yaml
+
+ Alias /mapbender3 /var/www/mapbender3/web/
+ <Directory /var/www/mapbender3/web/>
+  Options MultiViews FollowSymLinks
+  DirectoryIndex app.php
+  Require all granted
+ 
+  RewriteEngine On
+  RewriteBase /mapbender3/
+  RewriteCond %{ENV:REDIRECT_STATUS} ^$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+ </Directory>
+
+Apache 2.2 configuration:
 
 .. code-block:: yaml
 
@@ -49,6 +70,16 @@ Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender
     Order allow,deny
     Allow from all
   </Directory>
+
+.. code-block:: yaml
+  
+  # for Debian based distributions
+  # Debian basierte Distributionen
+  sudo a2enmod rewrite
+ 
+  #Windows activate module rewrite in httpd.conf
+  LoadModule rewrite_module modules/mod_rewrite.so
+
 
 A :doc:`Git-based <installation_git>` installation - mainly for developers -
 is also possible.
@@ -232,18 +263,29 @@ Install necessary components:
 
   apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
 
+Load Apache module rewrite:
+
+.. code-block:: yaml
+
+  sudo a2enmod rewrite
 
 Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart your Apache server (keep in mind, that Apache 2.4 uses `different directives for Access Control <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
 
 .. code-block:: yaml
 
-  ALIAS /mapbender3 /var/www/mapbender3/web/
-  <Directory /var/www/mapbender3/web/>
-    Options MultiViews
-    DirectoryIndex app.php
-    Order allow,deny
-    Allow from all
-  </Directory>
+ Alias /mapbender3 /var/www/mapbender3/web/
+ <Directory /var/www/mapbender3/web/>
+  Options MultiViews FollowSymLinks
+  DirectoryIndex app.php
+  Require all granted
+ 
+  RewriteEngine On
+  RewriteBase /mapbender3/
+  RewriteCond %{ENV:REDIRECT_STATUS} ^$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+ </Directory>
 
 Check the ALIAS is working
 
@@ -323,6 +365,7 @@ Install necessary components:
 
  * add the path to your  PHP-bin directory to the PATH variable 
  * activate the PHP extensions in your php.ini configuration file
+ * load the Apache module rewrite
 
 .. code-block:: yaml
 
@@ -334,17 +377,28 @@ Install necessary components:
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
 
+.. code-block:: yaml
+
+    # Windows: edit file httpd.conf and restart apache
+    LoadModule rewrite_module modules/mod_rewrite.so
+
 Configure the Apache ALIAS and restart your Apache server (keep in mind, that Apache 2.4 uses `different directives for Access Control <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
 
 .. code-block:: yaml
 
-  ALIAS /mapbender3 c:/mapbender3/web/
-  <Directory c:/mapbender3/web/>
-    Options MultiViews
-    DirectoryIndex app.php
-    Order allow,deny
-    Allow from all
-  </Directory>
+ Alias /mapbender3 c:/mapbender3/web/
+ <Directory c:/mapbender3/web/>
+  Options MultiViews FollowSymLinks
+  DirectoryIndex app.php
+  Require all granted
+ 
+  RewriteEngine On
+  RewriteBase /mapbender3/
+  RewriteCond %{ENV:REDIRECT_STATUS} ^$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+ </Directory>
 
 Check the ALIAS is working
 
@@ -435,16 +489,16 @@ This is how the configiration could look like:
 
 .. code-block:: yaml
 
-ows_proxy3_core:
-    logging: true
-    obfuscate_client_ip: true
-    proxy:
-        host: myproxy
-        port: 8080
-        connecttimeout: 60
-        timeout: 90
-        noproxy:
-            - 192.168.1.123
+    ows_proxy3_core:
+        logging: true
+        obfuscate_client_ip: true
+        proxy:
+            host: myproxy
+            port: 8080
+            connecttimeout: 60
+            timeout: 90
+            noproxy:
+                - 192.168.1.123
 
 
 
