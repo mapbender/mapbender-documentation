@@ -75,10 +75,11 @@ Define areas for the map, northarrow, scale, date and optional fields.
 The following objects are available from Mapbender: 
 
 * map
+* overview
 * scale
 * scalebar
 * date
-* overview
+* northarrow (Nordpfeil)
 
 You can define optional fields in the element definition (like title, comment, editor) and add them to the Open Office Draw file.
 
