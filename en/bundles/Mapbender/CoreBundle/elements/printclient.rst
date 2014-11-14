@@ -44,7 +44,13 @@ YAML-Definition:
         editor:
             label: Editor
             options: { required: true }
-    replace_pattern:
+    replace_pattern:                            # You can modify the maprequest for printing
+            -                                   # you can add additional parameters like map_resolution (for MapServer)
+                default: { 288: '&map_resolution=288' }
+            -
+                pattern: 'stadtplan.xml'        # or you can request a different service which is optimized for printing
+                replacement: { 288: 'stadtplan_4.xml' }
+    
 
 
 Class, Widget & Style

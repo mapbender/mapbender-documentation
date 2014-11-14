@@ -48,7 +48,12 @@ YAML-Definition:
         bearbeiter:
             label: Bearbeiter
             options: { required: true }
-    replace_pattern:
+    replace_pattern:                            # Für den Druck kann der Kartenaufruf verändert werden. 
+            -                                   # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
+                default: { 288: '&map_resolution=288' }
+            -
+                pattern: 'stadtplan.xml'        # oder es können für den Druck optimierte Dienste angefordert werden.
+                replacement: { 288: 'stadtplan_4.xml' }
 
 Class, Widget & Style
 ======================
