@@ -29,11 +29,13 @@ YAML-Definition:
    tooltip: 'Load configuration'        # text to use as tooltip
    target: map                          # name of map element  
    components:  ['idloader', 'listloader', 'wmcloader'] # select components from 
-                                        # idloader (load configuration by id on start of application), 
-                                        # listloader (load configuration from a list), 
-                                        # wmcloader (load from a file
-   keepSources: false                   # keep the sources that are already loaded in an application,
+                                        # idloader - load configuration by id on start of application like ?wmcid=<wmcid>
+                                        # listloader - load configuration from a list
+                                        # wmcloader - load from a file
+   keepSources: false                   # defines what should happen with the services of the application
                                         # default false
+                                        # BaseSources - keep only the sources marked as BaseSource in the application
+                                        # AllSources -  keep the sources that are already loaded in the application
    keepExtent: false                    # keeps the actual extent, default is false (will apply the 
                                         # extent of the configuration)
 

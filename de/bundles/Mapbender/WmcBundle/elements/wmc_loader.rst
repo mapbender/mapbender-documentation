@@ -29,11 +29,13 @@ YAML-Definition:
    tooltip: 'Load configuration'        # Text des Tooltips
    target: map                          # Name des Kartenelements 
    components:  ['idloader', 'listloader', 'wmcloader'] # Komponenten:
-                                        # idloader (läd die Konfiguration per ID beim Start der Applikation), 
-                                        # listloader (läd die Konfiguration von einer Liste), 
-                                        # wmcloader (läd die Konfiguration von einer Datei
-   keepSources: false                   # behält die Dienste, die bereits geladen sind, in der Applikation.
-                                        # Standard ist false
+                                        # idloader - lädt die Konfiguration per ID beim Start der Applikation z.B. ?wmcid=<wmcid>
+                                        # listloader - lädt die Konfiguration aus einer Liste
+                                        # wmcloader - lädt die Konfiguration aus einer Datei
+   keepSources: false                   # definiert, was mit den Diensten in der Applikation geschehen soll
+                                        # Standard ist false (no)
+                                        # BaseSources - behält nur die als BaseSource markierten Dienste in der Anwendung
+                                        # AllSources - behält die Dienste, die bereits geladen sind, in der Anwendung
    keepExtent: false                    # behält den aktuellen Extent, Standard ist false 
                                         # (erscheint im Extent der Konfiguration)
 
