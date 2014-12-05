@@ -3,9 +3,10 @@
 BaseSourceSwitcher
 ***********************
 
-BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch over between the predefined source sets. 
+BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch over between the predefined source sets. For every sourceset a button will be displayed in the client. Notice that only one button can be active.
 
 You have the possibility to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
+
 
 .. image:: ../../../../../figures/basesourceswitcher.png
      :scale: 80
@@ -16,7 +17,7 @@ Configuration
 The configuration occurs in 2 steps: 
 
 * Create a BaseSourceSwitcher Element with Title, Tooltip and Target
-* Add Sourceset/s
+* Add Sourceset/s with one or more sources and definition of a group (optional)
 
 .. image:: ../../../../../figures/basesourceswitcher_configuration.png
      :scale: 80

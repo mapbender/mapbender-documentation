@@ -1,9 +1,9 @@
 .. _basesourceswitcher:
 
-BaseSourceSwitcher (Wechseln der Hintergrundkarten)
+BaseSourceSwitcher (Themenwechsel)
 *********************************************************************
 
-Mit diesem Element kann zwischen vordefinierten Hintergrundkarten (basesources) gewechselt werden. 
+Mit diesem Element kann zwischen vordefinierten Themen (BaseSources) z.B. Hintergrundkarten gewechselt werden. Über Buttons kann zwischen den Themen gewechselt werden. Es kann dabei immer nur ein Thema aktiv sein.
 
 Zu jedem Sourceset kann eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
@@ -15,8 +15,8 @@ Konfiguration
 
 Die Konfiguration geschieht in zwei Schritten:
 
-* Erzeugen eines Elements zum Wechseln der Hintergrundkarten mit Titel, Tooltip und Target
-* Hinzufügen einer oder mehrerer Quellen
+* Erzeugen eines Elements zum Wechseln der vordefinierten Themen mit Titel, Tooltip und Target
+* Hinzufügen von Themen mit einer oder mehrerer Quellen und optionaler Definition einer Gruppe
 
 
 .. image:: ../../../../../figures/basesourceswitcher_configuration.png
