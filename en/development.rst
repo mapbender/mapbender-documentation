@@ -8,6 +8,7 @@ The Developer's Book
    book/development/apidocumentation
    book/development/frontend_architecture
    book/development/elements
+   book/development/element_generate
    book/development/requestresponse
    book/development/bundle
    book/development/proxy

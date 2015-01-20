@@ -14,7 +14,6 @@ Content
    book/database.rst
    book/translation.rst
    book/templates.rst
-   book/elements.rst
    book/css.rst
    book/quickstart.rst
    book/glossary.rst
