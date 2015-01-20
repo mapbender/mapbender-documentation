@@ -114,5 +114,5 @@ http://www.openstreetmap.org/export#map=15/50.7311/7.0985
 
   
  _mapClickWorker: function(coordinates) {
-        ##TODO###http://www.openstreetmap.org/export#map=15/' + coordinates.world.x + '/' + coordinates.world.y
+        window.open('http://www.openstreetmap.org/export#map=15/' + coordinates.world.y + '/' + coordinates.world.x);
     }
