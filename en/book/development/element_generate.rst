@@ -1,4 +1,4 @@
-.. _elements:
+.. _element_generate:
 
 How to create your own Element?
 ################################

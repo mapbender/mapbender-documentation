@@ -1,4 +1,4 @@
-.. _elements:
+.. _element_generate:
 
 Wie werden eigene Elemente erzeugt?
 #################################################
