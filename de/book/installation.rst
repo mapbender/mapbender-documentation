@@ -37,6 +37,7 @@ Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichn
 Beispiel für eine Apache ALIAS Konfiguration in der Datei /etc/apache2/conf.d/mapbender3 (bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
 
 Apache 2.4 Konfiguration:
+
 .. code-block:: yaml
 
  Alias /mapbender3 /var/www/mapbender3/web/
