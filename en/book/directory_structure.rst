@@ -63,8 +63,8 @@ vendor
 * directory where all the Bundles which are used from Symfony are found. Resources are used by Symfony using the Autoloading.
 
 
-tranlations
-***********
+translations
+*************
 The translation is stored in xliff-textfiles. Every language needs an xliff-file like messages.de.xliff for the german translation.
 
 * mapbender/src/Mapbender/CoreBundle/Resources/translations/
