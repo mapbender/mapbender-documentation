@@ -190,6 +190,8 @@ Here are some commands to help to find information:
  app/console doctrine               - lists all functions from Doctrine 
  app/console mapbender              - lists all functions from mapbender 
  app/console help assets:install    - help for a special command
+
+Learn how to generate Mapbender elements with *app/console mapbender:generate:element* at :doc:`Wie können eigene Elemente erzeugt werden? <element_generate>`.
         
 ..
  Package Build Tools

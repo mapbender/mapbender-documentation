@@ -163,6 +163,9 @@ Hier finden Sie einige Kommandos zum Auffinden von Informationen:
  app/console doctrine               - Anzeige aller Funktionen von Doctrine 
  app/console mapbender              - Anzeige aller Funktionen von Mapbender
  app/console help assets:install    - Anzeige der Hilfe zu speziellen Kommandos
+
+
+Lernen Sie wie Sie eigene Elemente über *app/console mapbender:generate:element* erzeugen können :doc:`How to create your own Element? <element_generate>`.
         
 ..
  Package Build Tools
