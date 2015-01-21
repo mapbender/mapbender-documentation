@@ -21,9 +21,10 @@ Für Mapbender3 wird `Twig <http://twig.sensiolabs.org/>`_ verwendet. Eine einfa
     <div id="{{ id }}" class="mb-element mb-element-myclass"></div>
 
 Mehrere Angaben müssen gesetzt werden: 
-* Die ID, die von Mapbender3 generiert wird, muss gesetzt werden. 
-* Allgemeine mb-element-Klasse 
-* und Klasse für spezielle Element.
+
+* id (wird von Mapbender3 generiert)
+* allgemeine mb-element-Klasse 
+* spezielle Klasse für das Element
 
 JavaScript Widgets
 ++++++++++++++++++
@@ -92,7 +93,7 @@ Das grundlegende Gerüst sieht folgendermaßen aus:
 
     })(jQuery);
 
-Für das Event Handling wird jQuery.proxy verwendet, um sicherzustellen, dass ein Rückruf im richtigen Kontext gewährleistet wird:
+Für das Event Handling wird jQuery.proxy verwendet, um sicherzustellen, dass ein der Callback im richtigen Kontext gewährleistet wird:
 
 
 .. code-block:: javascript
@@ -103,7 +104,7 @@ Für das Event Handling wird jQuery.proxy verwendet, um sicherzustellen, dass ei
 
     // ...
 
-In diesem Fall ist "this" innerhalb der clickCallback Methode das This, das als der zweite Parameter übergeben wird (in der Regel die Widget Instanz) und nicht das HTML_Element, das das Event angestoßen hat.
+In diesem Fall ist "this" innerhalb der clickCallback Methode das This, das als der zweite Parameter übergeben wird (in der Regel die Widget Instanz) und nicht das HTML-Element, das das Event angestoßen hat.
 
 Kommunikation zwischen Elementen
 ********************************
@@ -114,12 +115,12 @@ Es gibt eine aktive und passive Kommunikation zwischen den Widgets. Die aktive K
 
     var otherElement = $('#element-13').mbMyClass('methodA', parameterA, parameterB);
 
-Dies ist eine Standard-jQuery UI und selbsterklärend. Es ist die Frage, wie Sie die anderen HTML-Elemente erkennen? Um ein Element zu selektieren wird bevorzugt die ID verwendet. Diese ID's werden jedoch zur Laufzeit von Mapbender3 generiert, wenn die Anwendung startet, so dass sie nicht davon ausgehen können, dass die ID immer gleich ist. Glücklicherweise können Sie in der Konfiguration eine Element-ID, als eine Target-Option für ein Element, übergeben. Diese wird mit der ID dieses Target-Elements' HTML-Element überschrieben, so dass Sie in Ihrem Widget-Code auf die richtige ID "this.options.target" zugreifen können. 
+Dies ist eine Standard-jQuery UI Syntax und selbsterklärend. Es ist die Frage, wie Sie die anderen HTML-Elemente erkennen? Um ein Element zu selektieren wird bevorzugt die ID verwendet. Diese ID's werden jedoch zur Laufzeit von Mapbender3 generiert, wenn die Anwendung startet, so dass sie nicht davon ausgehen können, dass die ID immer gleich ist. Glücklicherweise können Sie in der Konfiguration eine Element-ID als eine Target-Option für ein anderes Element übergeben. Diese wird mit der Laufzeit-ID des Target-Elements des HTML-Element überschrieben, so dass Sie in Ihrem Widget-Code auf die richtige ID "this.options.target" zugreifen können. 
 
 .. code-block:: javascript
 
     $('#' + this.options.target).mbMyClass('methodA', parameterA, parameterB);
 
-Die passive Kommunikation wird verwendet, um Ereignisse anderer Targets anzumelden. Sie müssen das HTML-Element kennen und können nun dem anderen Widget lauschen, um Ihr Widget abzurufen. Dieses wird mit Standard-jjQuery-Events vorgenomme:
+Die passive Kommunikation wird verwendet, um Ereignisse anderer Targets anzumelden. Sie müssen das HTML-Element kennen und können nun dem anderen Widget lauschen, um ihr Widget abzurufen. Dieses wird mit Standard-jQuery-Events vorgenommen:
 
 Wenn Sie die  "_trigger"-Methode mit jQuery UI Widget Factory bereitstellen ...
