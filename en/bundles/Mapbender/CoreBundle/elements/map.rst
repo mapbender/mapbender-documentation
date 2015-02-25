@@ -158,6 +158,30 @@ visiblelayers to turn the layer visible:
 
 You may pass multiple such layers, seperated by comma.
 
+The layerid and serviceid values are specific to an application. You can get
+the layerid and serviceid in the specific application, namely in the
+layerset and there in a layer. Each layer has an icon with three small dots
+on the right side. Click on the icon and a popup window will appear.
+
+.. image:: ../../../../../figures/wms_instance_layer_id.png
+     :scale: 80
+
+The first value lists the internal SourceID and SourceLayerId (31-591). The
+seconds value lists the InstanceID and InstanceLayerId, that we want to use
+now (73-836).
+
+Use this values for the "visibleLayers" parameter in your URL, and seperate them by a slash.
+
+For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836
+
+If you have two layers that are not visible by default, put the two values
+of layerid and serviceid into the URL and seperate them by a comma.
+
+For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
+
+
+
+
 Passing POIs
 ------------
 
