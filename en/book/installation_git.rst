@@ -27,7 +27,7 @@ Get the code from the git repository. Cloning is easy, just issue the following 
 
 .. code-block:: yaml
 
-	git clone -b develop git://github.com/mapbender/mapbender-starter
+	git clone -b develop git://github.com/mapbender/mapbender-starter mapbender3
 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-starter
@@ -44,6 +44,7 @@ directory of your cloned repository:
 
 .. code-block:: yaml
 
+    cd mapbender3/application
 	git submodule update --init --recursive
 
 
@@ -82,6 +83,8 @@ update Pear:
 
     sudo pear config-set auto_discover 1
     sudo pear upgrade-all
+      Enable full APC compatibility [yes] : yes
+      Enable internal debugging in APCu [no] : yes 
 
 
 Then let's get Phing:
@@ -138,6 +141,8 @@ Next steps from Installation
 ****************************
 
 Now follow the steps that are described in  :doc:`Installation <installation>`:
+
+Please note that the git based code has an additional directory *application* (mapbender3/application/...). 
 
 * Adapting the configuration file parameters.yml
 * Creating the database
@@ -275,6 +280,8 @@ You can update all your Pear packages with
 .. code-block:: yaml
 
 	sudo pear upgrade-all
+      Enable full APC compatibility [yes] : yes
+      Enable internal debugging in APCu [no] : yes 
 
 Using the quick_install.py script
 #################################

@@ -39,7 +39,9 @@ sure your Webserver points to the web directory inside the mapbender3 directory
 you just uncompressed. You will also need to make sure that the default
 directory index is *app.php*. Use Apache REWRITE (install *mod_rewrite*) to access Mapbender3 without *app.php* in the URL.
 
-Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender3. Apache 2.4 uses different directives for Access Control (for example: "Require all granted"). Please see the `Apache documentation: Upgrading to 2.4 from 2.2 <http://httpd.apache.org/docs/2.4/upgrading.html>`_ for details.
+Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender3.conf (Apache 2.2) or /etc/apache2/conf-enabled/mapbender3.conf (Apache 2.4). Please create this file and make sure that Apache has the right to read the file.
+
+Apache 2.4 uses different directives for Access Control (for example: "Require all granted"). Please see the `Apache documentation: Upgrading to 2.4 from 2.2 <http://httpd.apache.org/docs/2.4/upgrading.html>`_ for details.
 
 Apache 2.4 configuration:
 
@@ -118,7 +120,15 @@ understand, before continuing:
   | all these files with other permissions. So make sure you give the PHP
   | process write access to these files. See last step below.
 
-The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender-starter/application/ else mapbender-starter/).
+**Notice:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender3/application/ else mapbender3/).
+
+.. code-block:: yaml
+
+   cd mapbender3/
+   or for git based installation 
+   cd mapbender3/application
+
+
 
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -228,18 +238,18 @@ Set owner, group and rights. Assign the files to the Apache user (www-data).
 
 .. code-block:: yaml
 
- chmod -R ugo+r /var/www/mapbender3
- chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R ugo+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
 
 
 You have to set write permission to app/cache and app/logs and web/assets.
 
 .. code-block:: yaml
 
- chmod -R ug+w /var/www/mapbender3/app/cache
- chmod -R ug+w /var/www/mapbender3/app/logs
- chmod -R ug+w /var/www/mapbender3/web/assets
- chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender3/app/cache
+ sudo chmod -R ug+w /var/www/mapbender3/app/logs
+ sudo chmod -R ug+w /var/www/mapbender3/web/assets
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
 Check Symfonys config.php
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -261,7 +271,7 @@ Install necessary components:
 
 .. code-block:: yaml
 
-  apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
+  sudo apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
 
 Load Apache module rewrite:
 
@@ -269,7 +279,9 @@ Load Apache module rewrite:
 
   sudo a2enmod rewrite
 
-Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3 and restart your Apache server (keep in mind, that Apache 2.4 uses `different directives for Access Control <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
+Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3.conf (or for Apache 2.4 /etc/apache2/sites-enabled/mapbender3.conf) and restart your Apache server (keep in mind, that Apache 2.4 uses `different directives for Access Control <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
+
+Example ALIAS Apache 2.4
 
 .. code-block:: yaml
 
@@ -303,10 +315,10 @@ Set owner, group and rights. Assign the files to the Apache user (www-data).
 
 .. code-block:: yaml
 
- chmod -R ugo+r /var/www/mapbender3
- chown -R www-data:www-data /var/www/mapbender3
- chmod -R ug+w /var/www/mapbender3/web/assets
- chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ugo+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R ug+w /var/www/mapbender3/web/assets
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
 Adapt the configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create.
 
@@ -343,10 +355,10 @@ You have to set write permission to app/cache and app/logs
 
 .. code-block:: yaml
 
- chmod -R ug+w /var/www/mapbender3/app/cache
- chmod -R ug+w /var/www/mapbender3/app/logs
- chmod -R ug+w /var/www/mapbender3/web/assets
- chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender3/app/cache
+ sudo chmod -R ug+w /var/www/mapbender3/app/logs
+ sudo chmod -R ug+w /var/www/mapbender3/web/assets
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
 
 You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
@@ -557,8 +569,8 @@ Have a look at the steps as commands
  # if you use your own print templates: copy them back to mapbender3/app/Resources/MapbenderPrintBundle/templates/
  
  # change the accessrights and owner of the files
- chmod -R uga+r /var/www/mapbender3
- chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R uga+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
 
 
 Update your Mapbender database
@@ -575,12 +587,12 @@ Update your Mapbender database
  app/console assets:install web
  
  # change the access rights and owner of the files
- chmod -R ugo+r /var/www/mapbender3
- chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R ugo+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
 
  # You have to set write permission to app/cache and app/logs.
- chmod -R ug+w /var/www/mapbender3/app/cache
- chmod -R ug+w /var/www/mapbender3/app/logs
- chmod -R ug+w /var/www/mapbender3/web/assets
- chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender3/app/cache
+ sudo chmod -R ug+w /var/www/mapbender3/app/logs
+ sudo chmod -R ug+w /var/www/mapbender3/web/assets
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
