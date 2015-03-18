@@ -34,9 +34,11 @@ Installationspakete werden als komprimierte Pakete ausgegeben und sind auf der D
 
 Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichnis Ihrer Wahl. Stellen Sie sicher, dass der Webserver auf das gerade dekomprimierte Webverzeichnis in dem Mapbender Verzeichnis zeigt. Sorgen Sie dafür, dass *app.php* als Verzeichnis-Index eingestellt ist.
 
-Beispiel für eine Apache ALIAS Konfiguration in der Datei /etc/apache2/conf.d/mapbender3 (bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
+Beispiel für eine Apache ALIAS Konfiguration in der Datei /etc/apache2/conf.d/mapbender3.conf (Apache 2.2) oder /etc/apache2/conf-enabled/mapbender3.conf (Apache 2.4). Legen Sie diese Datei an und berechtigen Sie Apache diese zu lesen.
 
-Apache 2.4 Konfiguration:
+Bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_
+
+Apache 2.4 Konfiguration: 
 
 .. code-block:: yaml
 
@@ -115,6 +117,14 @@ Diese Schritte können mit dem console-Hilfsprogramm von Symfonie2 durchgeführt
   | Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit
   | anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib-
   | und Leserechte zugewiesen haben. 
+
+**Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender3/application/ andernfalls mapbender3/).
+
+.. code-block:: yaml
+
+   cd mapbender3/
+   oder für die git-basierte Installation 
+   cd mapbender3/application
 
 
 Anpassen der Konfigurationsdatei
@@ -221,18 +231,18 @@ Weisen Sie die Dateien dem Apache Benutzer (www-data) zu.
 
 .. code-block:: yaml
 
- chmod -R ugo+r /var/www/mapbender3
- chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R ugo+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
 
 
 Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
 
 .. code-block:: yaml
 
- chmod -R ug+w /var/www/mapbender3/app/cache
- chmod -R ug+w /var/www/mapbender3/app/logs
- chmod -R ug+w /var/www/mapbender3/web/assets
- chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender3/app/cache
+ sudo chmod -R ug+w /var/www/mapbender3/app/logs
+ sudo chmod -R ug+w /var/www/mapbender3/web/assets
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
 
 Prüfen Sie Symfony config.php
@@ -293,10 +303,10 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weise
 
 .. code-block:: yaml
 
- chmod -R ugo+r /var/www/mapbender3
- chown -R www-data:www-data /var/www/mapbender3
- chmod -R ug+w /var/www/mapbender3/web/assets
- chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ugo+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R ug+w /var/www/mapbender3/web/assets
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
 Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten.
 
@@ -333,10 +343,10 @@ Sie müssen Schreibrechte für die Verzeichnisse app/cache und app/logs sowie we
 
 .. code-block:: yaml
 
- chmod -R ug+w /var/www/mapbender3/app/cache
- chmod -R ug+w /var/www/mapbender3/app/logs
- chmod -R ug+w /var/www/mapbender3/web/assets
- chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender3/app/cache
+ sudo chmod -R ug+w /var/www/mapbender3/app/logs
+ sudo chmod -R ug+w /var/www/mapbender3/web/assets
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
 
 Sie können Mapbender3 nun nutzen. Starten Sie Mapbender3 im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen.
@@ -372,7 +382,9 @@ Installieren Sie die notwendigen Komponenten:
     # unter Windows Datei httpd.conf (Kommentar # entfernen) und Apache neu starten
     LoadModule rewrite_module modules/mod_rewrite.so
 
-Erstellen Sie den Apache ALIAS. Legen Sie die Datei /etc/apache2/conf.d/mapbender3 mit dem folgenden Inhalt an und starten Sie den Apache Server neu (bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
+Erstellen Sie den Apache ALIAS. Legen Sie die Datei /etc/apache2/conf.d/mapbender3.conf (oder für Apache 2.4 /etc/apache2/sites-enabled/mapbender3.conf) mit dem folgenden Inhalt an und starten Sie den Apache Server neu (bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
+
+Beispiel ALIAS für Apache 2.4
 
 .. code-block:: yaml
 
@@ -548,8 +560,8 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
- chmod -R uga+r /var/www/mapbender3
- chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R uga+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
 
 
 Aktualisieren Sie Ihre Mapbender Datenbank
@@ -567,12 +579,12 @@ Aktualisieren Sie Ihre Mapbender Datenbank
  app/console assets:install web
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
- chmod -R ugo+r /var/www/mapbender3
- chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R ugo+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
 
  # Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
- chmod -R ug+w /var/www/mapbender3/app/cache
- chmod -R ug+w /var/www/mapbender3/app/logs
- chmod -R ug+w /var/www/mapbender3/web/assets
- chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender3/app/cache
+ sudo chmod -R ug+w /var/www/mapbender3/app/logs
+ sudo chmod -R ug+w /var/www/mapbender3/web/assets
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 

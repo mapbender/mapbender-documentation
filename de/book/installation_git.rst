@@ -24,7 +24,7 @@ Klonen ist einfach, geben Sie das folgende Kommando auf Ihrer Shell ein:
 
 .. code-block:: yaml
 
-	git clone -b develop git://github.com/mapbender/mapbender-starter
+	git clone -b develop git://github.com/mapbender/mapbender-starter mapbender3
 
 Entwickler, die Zugriff auf den Code haben möchten, müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-starter
 
@@ -36,6 +36,7 @@ Die Starter-Applikation enthält nicht die Mapbender3 bundles, diese sind in ein
 
 .. code-block:: yaml
 
+    cd mapbender3/application
 	git submodule update --init --recursive
 
 
@@ -70,6 +71,8 @@ Dann muss Pear gezeigt werden, wie ein Autodiscover seiner Repositories erzeugt 
 
     sudo pear config-set auto_discover 1
     sudo pear upgrade-all
+      Enable full APC compatibility [yes] : yes
+      Enable internal debugging in APCu [no] : yes 
 
 
 Dann wird Phing installiert:
@@ -111,6 +114,8 @@ Die nächsten Schritte der Installation
 **************************************
 
 Folgen Sie nun den Schritten, die unter :doc:`Installation <installation>` beschrieben werden.:
+
+**Hinweis:** Beachten Sie dabei, dass Mapbender3 in dem git-basierten Aufbau über eines zusätzliches Verzeichnis *application* verfügt (mapbender3/application/...). Dieses zuätzliche Verzeichnis muss bei den Befehlen beachtet werden.
 
 * Anpassung der Konfigurationsdatei parameters.yml
 * Erzeugen der Datenbank

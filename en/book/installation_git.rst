@@ -142,7 +142,7 @@ Next steps from Installation
 
 Now follow the steps that are described in  :doc:`Installation <installation>`:
 
-Please note that the git based code has an additional directory *application* (mapbender3/application/...). 
+**Notice:** Please note that the git based code has an additional directory *application* (mapbender3/application/...). 
 
 * Adapting the configuration file parameters.yml
 * Creating the database
