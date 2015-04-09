@@ -24,6 +24,8 @@ YAML-Definition:
    target: ~               # Id of Map element to query
    autoOpen: false         # true/false open when application is started, default: false
    deactivateOnClose: true # true/false to deactivate the functionality after closing the result dialog, default is true
+   width: 700              # width of the dialog, default is 700
+   height: 700             # height of the dialog, default is 500
 
 Class, Widget & Style
 ============================

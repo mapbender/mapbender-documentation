@@ -24,6 +24,8 @@ YAML-Definition:
    target: ~               # ID des Kartenelements
    autoOpen: false         # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird, der Standardwert ist false.
    deactivateOnClose: true # true/false um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren, der Standardwert ist true
+   width: 700              # Breite des Dialogs, Standardwert: 700 px
+   height: 700             # Höhe des Dialog, Standardwert: 500 px
 
 Class, Widget & Style
 ============================
