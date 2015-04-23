@@ -20,11 +20,21 @@ YAML-Definition:
 
    query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8   # Beispiel Solr URL
    query_key: q                                                                  # Der Suchparameterschlüssel, der angehängt wird
+   query_ws_replace:                                                             # Parameter name to send search term with.
+   query_format: '%s'                                                            # Simpe search format.
+   token_regex: [^a-zA-Z0-9äöüÄÖÜß]                                              # Tokenizer split regexp.
+   token_regex_in: ([a-zA-ZäöüÄÖÜß]{3,})                                         # Tokenizer search regexp.
+   token_regex_out: '$1*'                                                        # Tokenizer replace regexp.
    collection_path: response.docs                                                # Es kann ein Attributspfad sein, der vom Abfrageergebnis extrahiert wird.
-   label_attribute: label                                                        # Name des Attributs, das für die Beschriftung verwendet wird.
+   label_attribute: label                                                        # Name of the attribute to use for entry labeling
    geom_attribute: geom                                                          # Name der Attribute der Geometriedaten 
    geom_format: WKT                                                              # Geometiedatenformat,kann WKT oder GeoJSON sein
-   delay: 300                                                                    # Automatische Vervollständigungs-Verzögerung. 0 wird zum Ausschalten der Automatischen Vervollständigung verwendet.
+   delay: 300                                                                    # Automatische Vervollständigungs-Verzögerung. 0   result_buffer: 50                                                             # buffer result geometry with this (map units) before zooming
+   result_minscale: 1000                                                         # scale restrictions for zooming, ~ for none
+   result_maxscale: 5000
+   result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png
+   result_icon_offset: 20                                                      
+   
 
 Class, Widget & Style
 =========================
