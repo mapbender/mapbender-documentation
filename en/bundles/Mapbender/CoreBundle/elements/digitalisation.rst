@@ -64,28 +64,28 @@ YAML-Definition for mapbender.yml:
                                              title: Basic Information
                                              items:
                                                  - type: label
-                                                   text: 'Please give information about the poi.'
+                                                   title: 'Please give information about the poi.'
                                                  - type: input
-                                                   text: Name
+                                                   title: Name
                                                    name: name
                                                  - type: select                       # element type definition
-                                                   text: select some types            # labeling (optional)
+                                                   title: select some types            # labeling (optional)
                                                    name: type                         # reference to table column (optional)
                                                    options: [1: pub, 2: bar, 3: pool] # definition of the options (key, value)
                                                    mandatory: true                    # true - field has to be set. Else you can't save the object. Regular expressions are possible too - see below.
-                                                   mandatoryText: Please chose a type! # define a text that will be displayed if the field is not set.
+                                                   mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
                                                  - type: input
-                                                   text: Abstract
+                                                   title: Abstract
                                                    name: abstract
                                                  - type: checkbox
-                                                   text: is public
+                                                   title: is public
                                                    name: public
                                                    checked: false
                                                  - type: input
-                                                   text: last modified
+                                                   title: last modified
                                                    name: date
                                                  - type: input                    # element type definition
-                                                   text: Title for the field      # labeling (optional)
+                                                   title: Title for the field      # labeling (optional)
                                                    mandatory: true                # mandatpory field (optional)
                                                    name: column_name              # reference to table column (optional)
                                                    cssClass: 'input-css'          # additional css definition (optional)
@@ -112,7 +112,7 @@ Definition of a textfield (type input)
 .. code-block:: yaml
 
                                                  - type: input                    # element type definition
-                                                   text: Title for the field      # labeling (optional)
+                                                   title: Title for the field      # labeling (optional)
                                                    mandatory: true                # mandatpory field (optional)
                                                    name: column_name              # reference to table column (optional)
                                                    cssClass: 'input-css'          # additional css definition (optional)
@@ -125,7 +125,7 @@ Definition of a selectbox or multiselect (type select)
 .. code-block:: yaml
 
                                                  - type: select                     # element type definition
-                                                   text: select some types          # labeling (optional)
+                                                   title: select some types          # labeling (optional)
                                                    name: type_multi                 # reference to table column (optional)                    
                                                    multiple: true                   # define a multiselect, default is false
                                                    options:                         # definition of the options (key, value)
@@ -135,7 +135,7 @@ Definition of a selectbox or multiselect (type select)
                                                        4: garden
                                                        5: playground
                                                  - type: select                       # element type definition
-                                                   text: select some types            # labeling (optional)
+                                                   title: select some types            # labeling (optional)
                                                    name: type                         # reference to table column (optional)
                                                    options: [1: pub, 2: bar, 3: pool] # definition of the options (key, value)
 
@@ -145,7 +145,7 @@ Definition of a text (type label)
 .. code-block:: yaml
 
                                                  - type: label                        # element type definition
-                                                   text: 'Please give information about the poi.' # define a text 
+                                                   title: 'Please give information about the poi.' # define a text 
 
 
 Definition of a mandatory field
@@ -155,7 +155,7 @@ Definition of a mandatory field
                                                    mandatory: true                    # true - field has to be set. Else you can't save the object. Regular expressions are possible too - see below.
 
                                                    mandatory: /^\w+$/gi               # You can define a regular expression to check the input for a field. You can check f.e. for email or numbers. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
-                                                   mandatoryText: Please chose a type! # define a text that will be displayed if the field is not set.
+                                                   mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
 
 
 Definition of a file upload field
