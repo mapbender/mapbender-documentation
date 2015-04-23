@@ -35,8 +35,8 @@ YAML-Definition:
    result_buffer: 50                                                             # buffer result geometry with this (map units) before zooming
    result_minscale: 1000                                                         # scale restrictions for zooming, ~ for none
    result_maxscale: 5000
-   result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png
-   result_icon_offset: 20                                                      
+   result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png # icon to display as result marker
+   result_icon_offset: -6,-38                                                    # Offset x and y for the Icon
    
 
 Class, Widget & Style
