@@ -111,16 +111,21 @@ YAML-Definition:
 
    .. code-block:: yaml
 
-      title: layertree             # title of layertree
-      target: ~                    # Id of the Map element to query   
-      type: ~                      # type of layertree
-      displaytype: tree            # only tree in 3.0, future will offer list
-      useAccordion: false          # default is false
-      autoOpen: false              # true/false open when application is started, default is false
-      titleMaxLength: 20           # max length of layer title, default is 20  
-      showBaseSource: true         # show base layer, default is true
-      showHeader: true             # shows a headline which counts the number of services  
-      menu: [opacity,zoomtolayer,metadata,removelayer]  # show contextmenu for the layer (like opacity, zoom to layer, metadata, remove layer), default is menu: []
+    title: layertree             # title of layertree
+    target: ~                    # Id of the Map element to query   
+    type: ~                      # type of layertree, element or dialog
+    autoOpen: false              # true/false open when application is started, default is false
+    useTheme: null
+    displaytype: tree            # only tree in 3.0, future will offer list
+    titleMaxLength: 20           # max length of layer title, default is 20  
+
+    showBaseSource: true         # show base layer, default is true
+    showHeader: true             # shows a headline which counts the number of services  
+    menu: [opacity,zoomtolayer,metadata,removelayer]  # show contextmenu for the layer (like opacity, zoom to layer, metadata, remove layer), default is menu: []
+    hideInfo: null               #
+    hideNotToggleable: null      #
+    hideSelect: null             #
+    themes: {  }                 #   
 
 Class, Widget & Style
 ======================
