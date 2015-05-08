@@ -26,6 +26,10 @@ YAML-Definition:
    deactivateOnClose: true # true/false um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren, der Standardwert ist true
    width: 700              # Breite des Dialogs, Standardwert: 700 px
    height: 700             # Höhe des Dialog, Standardwert: 500 px
+   printResult: false      # Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann. Standardwert ist false.
+   showOriginal: null      # Der Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
+   onlyValid: null         # Standardwert ist false.
+
 
 Class, Widget & Style
 ============================
