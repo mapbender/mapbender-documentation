@@ -16,6 +16,8 @@ Konfiguration
 
 Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration.
 
+Anmerkung: Der Parameter "nur valide" hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender3 das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender3 als nicht valide. Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
+
 YAML-Definition:
 
 .. code-block:: yaml
