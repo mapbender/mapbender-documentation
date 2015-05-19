@@ -75,7 +75,7 @@ Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **config.yml**:
                     charset:  UTF8
 
 
-The definition of the database variables is done in the file **parameters.yml**.
+Die Definition der Datenbank Variablen wird in der **parameters.yml** Datei vorgenommen.
 
 .. code-block:: yaml
 
