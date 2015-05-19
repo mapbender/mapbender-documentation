@@ -16,6 +16,8 @@ Configuration
 
 You need a button to show this element. See :doc:`button` for inherited configuration options.
 
+Note: The parameter "Only valid" highly depends on the format of the GetFeatureInfo response. Example UMN: as long as the template defines a correct HTML head and body element (for example by referencing a header and footer file), Mapbender3 will interpret the result as valid. Are these head and body elements missing, Mapbender will interpret the result as not valid. Please make sure, that the GetFeatureInfo Response is a valid HTML.
+
 YAML-Definition:
 
 .. code-block:: yaml
