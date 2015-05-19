@@ -1,6 +1,6 @@
-.. _digitalisation:
+.. _digitizer:
 
-Digitalisation
+Digitizer
 **********************************
 
 <Put short description - 5-6 sentences - here>
