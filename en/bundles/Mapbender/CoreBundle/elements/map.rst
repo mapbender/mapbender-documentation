@@ -216,3 +216,33 @@ You can pass a BBOX to zoom to by using the following URL query parameter:
 
    ?bbox=364286,5622263,365979,5622806
 
+
+Passing SRS
+------------
+
+You can pass a favorite EPSG code you want to use on start of the application by URL query parameter:
+
+.. code-block:: php
+
+   ?srs=EPSG:4326
+
+
+Passing CENTER
+----------------
+
+You can pass a coordinate. The application will open and display the coordinate in the center.
+
+.. code-block:: php
+
+   ?center=364286,5622263
+
+
+more start parameter
+--------------------------
+
+The elments WMSLoader and WMCLoader provide also parameter you can user on start. Have a look at the element discription for further information.
+
+
+
+
+
