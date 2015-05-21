@@ -24,6 +24,13 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+
+Documentation for older version
+====================================
+
+* http://doc.mapbender3.org/3.0.4/
+
+
 Download
 ========
 
