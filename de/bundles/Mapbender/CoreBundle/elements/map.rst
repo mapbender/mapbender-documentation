@@ -217,3 +217,31 @@ Es kann ein Rechteck (BBOX) beim Start übergeben werden. Es wird dann auf diese
 
    ?bbox=364286,5622263,365979,5622806
 
+
+SRS (Projektion) übergeben
+----------------------------------
+
+Es kann eine gewünschte Projektion für den Start der Anwendung übergeben werden.
+
+.. code-block:: php
+
+   ?srs=EPSG:4326
+
+
+
+Center - zentrieren der Anwendung
+------------------------------------------------
+
+Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentriert werden soll.
+
+.. code-block:: php
+
+   ?center=364286,5622263
+
+
+Weitere Startparameter
+--------------------------
+
+Die Elemente WMSLoader und WMCLoader stellen ebenfalls parameter zur Verfügung, die beim Start einer Anwendung übergeben werden können. Schauen Sie sich für nähere Informationen die Dokumentation dieser Elemente an.
+
+
