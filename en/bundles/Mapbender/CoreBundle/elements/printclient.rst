@@ -30,6 +30,8 @@ YAML-Definition:
         - { dpi: 72 , label: Draft (72dpi)}		# 72 - dpi value, Draft - label
         - { dpi: 288,  label: Document (288dpi)}	# 288 - dpi value, Document - label
     rotatable: true                             	# true/false use true for rotation, default is true
+    legend: true                        # true/false, default is false
+    file_prefix: mapbender3             # define the file prefix for the pdf that is generated (file_prefix_date.pdf will be created)
     optional_fields:            		# define optional fields (example title-field)
         title:                                  # name of the optional fields, default is null (no optional fields are defined)
             label: Title                        # label of the optional field    
