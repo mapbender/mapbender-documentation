@@ -242,6 +242,6 @@ Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentr
 Weitere Startparameter
 --------------------------
 
-Die Elemente WMSLoader und WMCLoader stellen ebenfalls parameter zur Verfügung, die beim Start einer Anwendung übergeben werden können. Schauen Sie sich für nähere Informationen die Dokumentation dieser Elemente an.
+Die Elemente WMS Loader und WMC Loader stellen ebenfalls parameter zur Verfügung, die beim Start einer Anwendung übergeben werden können. Schauen Sie sich für nähere Informationen die Dokumentation dieser Elemente an.
 
 
