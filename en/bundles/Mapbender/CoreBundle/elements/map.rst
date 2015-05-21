@@ -240,7 +240,7 @@ You can pass a coordinate. The application will open and display the coordinate 
 more start parameter
 --------------------------
 
-The elments WMSLoader and WMCLoader provide also parameter you can user on start. Have a look at the element discription for further information.
+The elments WMS Loader and WMC Loader provide also parameter you can user on start. Have a look at the element discription for further information.
 
 
 
