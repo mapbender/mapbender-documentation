@@ -1,6 +1,6 @@
 .. _digitizer:
 
-Digitizer
+Digitalisierung (Digitizer) 
 **********************************
 
 <Put short description - 5-6 sentences - here>
@@ -8,7 +8,7 @@ Digitizer
 .. image:: ../../../../../figures/digitizer.png
      :scale: 80
 
-Configuration
+Konfiguration
 =============
 
 .. image:: ../../../../../figures/digitizer_configuration.png
@@ -93,7 +93,7 @@ YAML-Definition for mapbender.yml:
                                                    placeholder: 'please edit this field' # placeholder appears in the field as
 
 
-Definition of the popup
+Definition Popup
 
 .. code-block:: yaml
 
@@ -107,7 +107,7 @@ Definition of the popup
                                     # position: {at: "left+20px",  my: "left top-460px"}
 
 
-Definition of a textfield (type input)
+Definition von Textfeldern (type input)
 
 .. code-block:: yaml
 
@@ -120,7 +120,7 @@ Definition of a textfield (type input)
                                                    placeholder: 'please edit this field' # placeholder appears in the field as information (optional)
 
 
-Definition of a selectbox or multiselect (type select) 
+Definition von Auswahlboxen (selectbox oder multiselect (type select))
 
 .. code-block:: yaml
 
@@ -140,7 +140,7 @@ Definition of a selectbox or multiselect (type select)
                                                    options: [1: pub, 2: bar, 3: pool] # definition of the options (key, value)
 
 
-Definition of a text (type label)
+Definition von Texten (type label)
 
 .. code-block:: yaml
 
@@ -148,7 +148,7 @@ Definition of a text (type label)
                                                    title: 'Please give information about the poi.' # define a text 
 
 
-Definition of a mandatory field
+Definition von Pflichtfeldern
 
 .. code-block:: yaml
 
@@ -158,7 +158,7 @@ Definition of a mandatory field
                                                    mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
 
 
-Definition of a file upload field
+Definition von Feldern für den Dateiupload
 
 .. code-block:: yaml
    
@@ -166,7 +166,7 @@ Definition of a file upload field
                                                         type: upload
 
 
-Definition of a datepicker
+Definition von Datumfeldern (Datepicker)
 
 .. code-block:: yaml
 
