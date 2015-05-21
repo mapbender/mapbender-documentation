@@ -270,21 +270,51 @@ You can configure the WMS for your specific application. Maybe you don't want to
 .. image:: ../../figures/mapbender3_wms_application_settings.png
   :scale: 80
 
-Service configuration
+**Service configuration:**
 
-* format - choose the format for getMap-Requests
-* infoformat - choose the format for getFeatureInfo-Requests
-* exceptionformat - choose the format for exceptions
-* opacity - choose opacity in percent
-* visible
-* basesource - should the Service be handled as BaseSource (BaseSources can be shown/hided in the layertree)
-* proxy - if active the service will be requested by Mapbender and not directly
-* transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
-* tiled - you can request a WMS in tiles, default is not tiled (may be a good choice if you map is very big an the WMS service does not support the width/height)
+* Format - choose the format for getMap-Requests
+* Infoformat - choose the format for getFeatureInfo-Requests
+* Exceptionformat - choose the format for exceptions
+* Opacity - choose opacity in percent
+* Tile buffer - 1 - the maprequest uses a the size of the mapwindow. 1.25 (default) - maprequest uses a bigger size as the mapwindows size 
 * BBOX factor - if you use tiled: value 0 - no additional tiles outside the displayed area are requested
-* tile buffer - 1 - the maprequest uses a the size of the mapwindow. 1.25 (default) - maprequest uses a bigger size as the mapwindows size 
+* Visible
+* BaseSource - should the Service be handled as BaseSource (BaseSources can be shown/hided in the layertree)
+* Proxy - if active the service will be requested by Mapbender and not directly
+* Transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
+* Tiled - you can request a WMS in tiles, default is not tiled (may be a good choice if you map is very big an the WMS service does not support the width/height)
 
-Layer configuration
+
+**Vendor Specific Parameter:**
+
+You can define Vendor Specific Parameters in a layerset instance to add them
+to a WMS request. This principle follows Multi-Dimensions in the WMS
+specification.
+
+You can use Vendor Specific Parameters in Mapbender3 for example to add the
+user- and group information of the logged-in user to a WMS request. You can
+also add hard coded values.
+
+The following example shows the definition of the parameter "group" which
+transfers the group-value of the logged-in user.
+
+.. image:: ../../figures/mapbender3_vendor_specific_parameter.png
+           :scale: 80
+      
+
+
+* Type: „single“, „multiple“, „interval“ (multiple values in dimensions)
+* Name: parameter name of the WMS request.
+* Default: the default value.
+* Extent: available values (multiple as a comma seperated list).
+* Vstype: Mapbender3 specific variables. Group (groups), User (users), Simple.
+* Hidden: If this value is set, requests are send via a server so that the parameters are not directly visible.
+
+Currently, the element can be used to transfer user- and groupinformation,
+e.g. for a user the $id$ and for groups the value $group$.
+
+
+**Layer configuration:**
 
 * title - layer title from Service information
 * active (on/off) - enable/disable a layer for this individual application

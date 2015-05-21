@@ -281,22 +281,50 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
   :scale: 80
 
 
-Dienstekonfiguration
+**Dienstekonfiguration:**
 
-* format - wählen Sie das Format für den getMap-Requests
-* infoformat - wählen Sie das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
-* exceptionformat - wählen Sie das Format für Fehlermeldungen
-* opacity - wählen Sie die Opazität (Deckkraft) in Prozent
-* visible - 
-* basesource - soll der Dienst als BaseSource behandelt werden (BaseSources können beim Ebenenbaum ein-/ausgeblendet werden)
-* proxy - bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
-* transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
-* tiled - Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
+* Format - wählen Sie das Format für den getMap-Requests
+* Infoformat - wählen Sie das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
+* Exceptionformat - wählen Sie das Format für Fehlermeldungen
+* Opacity - wählen Sie die Opazität (Deckkraft) in Prozent
+* Tile buffer - 1 nur der sichtbare Bereich wird angefordert, 1.25 es wird eine größere Karte angefordert
 * BBOX factor - bei Anforderung von Kacheln. Wert 0 - es werden keine zusätzlichen Kacheln außerhalb angefordert
-* tile buffer - 1 nur der sichtbare Bereich wird angefordert, 1.25 es wird eine größere Karte angefordert
+* Visible - 
+* BaseSource - soll der Dienst als BaseSource behandelt werden (BaseSources können beim Ebenenbaum ein-/ausgeblendet werden)
+* Proxy - bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
+* Transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
+* Tiled - Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
+
+  
+**Vendor Specific Parameter:**
+
+In einer Layerset Instanz können Vendor Specific Parameter angegeben werden,
+die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der
+multi-dimensionalen Daten in der WMS Spezifikation.
+
+In Mapbender3 können die Vendor Specific Parameter genutzt werden, z.B. um
+User und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu
+hängen. Es können auch feste Werte übermittelt werden.
+
+Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
+Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
+
+.. image:: ../../figures/mapbender3_vendor_specific_parameter.png
+           :scale: 80
+
+* Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
+* Name: Parameter Name im WMS Request.
+* Default: Standardwert.
+* Extent: Verfügbare Werte (bei Multiple als kommaseparierte Liste).
+* Vstype: Mapbender spezifische Variablen: Gruppe (groups), User (users), Simple.
+* Hidden: Wenn der Wert gesetzt ist, werden die Anfragen serverseitig versendet, so dass die Parameter nicht direkt sichtbar sind.
+
+Momentan eignet sich das Element, um Benutzer und Gruppeninformationen
+weiterzugeben, z.B. für Benutzer die $id$ und für Gruppen den Parameter
+$groups$.
 
 
-Layerkonfiguration
+**Layerkonfiguration:**
 
 * title - Layertitel der Service Information (der Titel ist anpassbar)
 * active (on/off) - deaktiviert ein Thema in dieser Anwendung
