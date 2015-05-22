@@ -228,6 +228,22 @@ Definition of the popup
                                     # position: {at: "left+20px",  my: "left top-460px"}
 
 
+Definition of tabs (type tabs)
+
+.. code-block:: yaml
+
+        formItems:
+           - type: tabs
+             children:
+               - type: form
+                 title: Basic information
+                 css: {padding: 10px}
+                 children:
+                     - type: label
+                       title: Welcome to the digitize demo. Try the new Mapbender3 feature!
+                       ...
+
+
 Definition of a textfield (type input)
 
 .. code-block:: yaml
