@@ -11,6 +11,9 @@ The Digitizer-Element offers komples editing functionality:
   * add vertices (lines, polygons)
   * generation of enclaves, exclaves, circles and ellipses
 
+.. image:: ../../../../../figures/digitizer.png
+     :scale: 80
+
 You can define very complex formss for the attributes.
 
 The following option for the construction of the forms are available:
@@ -30,11 +33,8 @@ The following option for the construction of the forms are available:
   * Help textes
 
 
-.. image:: ../../../../../figures/digitizer.png
-     :scale: 70
-
 .. image:: ../../../../../figures/digitizer_with_tabs.png
-     :scale: 70
+     :scale: 80
 
 Configuration
 =============
@@ -64,6 +64,8 @@ YAML-Definition for the element digitizer in mapbender.yml:
 
 
 YAML-Definition for the element digitizer in the textarea schemes:
+
+.. code-block:: yaml
 
     poi:
         label: point digitizing

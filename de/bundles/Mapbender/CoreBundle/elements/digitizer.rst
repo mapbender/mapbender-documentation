@@ -13,6 +13,9 @@ Das Digitizer-Element bietet komplexe Editier­funktionalitäten an:
 
 In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten sehr komplexe Formulare generiert werden. Hierbei wurde sich an den Möglichkeiten, die in Mapbender 2.x zur Verfügung stehen, orientiert.
 
+.. image:: ../../../../../figures/digitizer.png
+     :scale: 80
+
 Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 
   * Definition von mehreren Datenquellen für die Erfassung (diese werden über eine Selectbox zur Auswahl angeboten)
@@ -29,11 +32,9 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
   * Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe des Feldinhalts
   * Hilfetexte
 
-.. image:: ../../../../../figures/digitizer.png
-     :scale: 70
 
 .. image:: ../../../../../figures/digitizer_with_tabs.png
-     :scale: 70
+     :scale: 80
 
 Konfiguration
 =============
@@ -63,6 +64,8 @@ YAML-Definition für das Element digitizer in der sidepane in der mapbender.yml:
 
 
 YAML-Definition für das Element digitizer in der Textarea unter schemes:
+
+.. code-block:: yaml
 
     poi:
         label: point digitizing
