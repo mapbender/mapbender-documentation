@@ -169,8 +169,30 @@ Definition of a text (type label)
 
 .. code-block:: yaml
 
-                                                 - type: label                        # element type definition
+                                                 - type: label                        # element type definition, will write a text
                                                    title: 'Please give information about the poi.' # define a text 
+
+Definition of a textarea (type textarea)
+
+                                                 - type: textarea
+                                                   title: Bestandsaufnahme Bemerkung
+
+
+Definition of a breakline (type breakline)
+
+.. code-block:: yaml
+
+                                                 - type: breakline                     # element type definition, will draw a line 
+
+
+Definition of a checkbox (type checkbox)
+
+.. code-block:: yaml
+
+                                                 - type:  checkbox 
+                                                   title: Is this true?
+                                                   name:  public
+                                                   value: true
 
 
 Definition of a mandatory field
@@ -180,6 +202,11 @@ Definition of a mandatory field
                                                    mandatory: true                    # true - field has to be set. Else you can't save the object. Regular expressions are possible too - see below.
 
                                                    mandatory: /^\w+$/gi               # You can define a regular expression to check the input for a field. You can check f.e. for email or numbers. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
+                                                   # Check if input is a number
+                                                   mandatory: /^[0-9]+$/
+                                                   mandatoryText: Bitte die Zahl Eingeben!
+
+
                                                    mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
 
 
@@ -201,10 +228,22 @@ Definition of a datepicker
                                                         format: YYYY-MM-DD             # define a dateformat (optional), default is YYYY-MM-DD
 
 
+Toolset types
+--------------------
 
-Feature styling
-----------------------
-* have a look at SearchRouter
+  * drawPoint - draw point
+  * drawLine - draw a line
+  * drawPolygon - draw polygon
+  * drawRectangle - draw rectangle
+  * drawCircle - draw circle
+  * drawEllipse - draw ellipse
+  * drawDonut - draw a donut (enclave)
+  * modifyFeature - move vertices of a geometry
+  * moveFeature - move geometry
+  * selectFeature - geometry de/select
+  * removeSelected - delete selected geometry
+  * removeAll - remove all geometries
+
 
 
 Class, Widget & Style

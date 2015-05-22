@@ -200,9 +200,21 @@ Definition von Datumfeldern (Datepicker)
 
 
 
-Feature styling
-----------------------
-* have a look at SearchRouter
+Toolset types
+--------------------
+
+  * drawPoint - Punkt erstellen
+  * drawLine - Line erstellen
+  * drawPolygon - Polygone erstellen
+  * drawRectangle - Rechteck erstellen
+  * drawCircle - Circle erstellen
+  * drawEllipse - Ellipse erstellen
+  * drawDonut - Donut erstellen oder die bestehende Geometrien editieren
+  * modifyFeature - Geometrien einzelne Punkte verschieben
+  * moveFeature - Geometrien verschieben
+  * selectFeature - Geometrien de/selektieren
+  * removeSelected - die selektierten löschen
+  * removeAll - alle Löschen (aus dem Layer)
 
 
 Class, Widget & Style
