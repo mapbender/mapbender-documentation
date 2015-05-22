@@ -47,7 +47,7 @@ The definition of the digitizer is done in YAML syntax in the textarea configura
 
 Element definition in web interface in the configuration area:
 
-YAML-Definition for mapbender.yml:
+YAML-Definition for the element digitizer in mapbender.yml:
 
 .. code-block:: yaml
 
@@ -57,65 +57,161 @@ YAML-Definition for mapbender.yml:
                         title: Digitalisation
                         target: map
                         schemes:
-                            poi:
-                                label: poi
-                                featureType: 
-                                    connection: digi
-                                    table: poi
-                                    uniqueId: gid
-                                    geomType: point
-                                    geomField: geom
-                                    srid: 4326
-                                    sqlFilter: type = 1 AND name = 'A'
-                                    fields: [gid,name,type,abstract,public,date,type_multi]
-                                openFormAfterEdit: true
-                                popup: 
-                                    # Options description: 
-                                    # http://api.jqueryui.com/dialog/
-                                    title: POI
-                                    height: 400
-                                    width: 500
-                                    # modal: true
-                                    # position: {at: "left+20px",  my: "left top-460px"}
-                                tableFields:
-                                    gid:
-                                        label: Number
-                                    name:
-                                        label: Name
-                                formItems:
-                                     - type: tabs
-                                       items:
-                                           - type: form
-                                             title: Basic Information
-                                             items:
-                                                 - type: label
-                                                   title: 'Please give information about the poi.'
-                                                 - type: input
-                                                   title: Name
-                                                   name: name
-                                                 - type: select                       # element type definition
-                                                   title: select some types            # labeling (optional)
-                                                   name: type                         # reference to table column (optional)
-                                                   options: [1: pub, 2: bar, 3: pool] # definition of the options (key, value)
-                                                   mandatory: true                    # true - field has to be set. Else you can't save the object. Regular expressions are possible too - see below.
-                                                   mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
-                                                 - type: input
-                                                   title: Abstract
-                                                   name: abstract
-                                                 - type: checkbox
-                                                   title: is public
-                                                   name: public
-                                                   checked: false
-                                                 - type: input
-                                                   title: last modified
-                                                   name: date
-                                                 - type: input                    # element type definition
-                                                   title: Title for the field      # labeling (optional)
-                                                   mandatory: true                # mandatpory field (optional)
-                                                   name: column_name              # reference to table column (optional)
-                                                   cssClass: 'input-css'          # additional css definition (optional)
-                                                   value: 'default Text'          # define a default value  (optional)
-                                                   placeholder: 'please edit this field' # placeholder appears in the field as
+                            ...
+
+
+YAML-Definition for the element digitizer in the textarea schemes:
+
+    poi:
+        label: point digitizing
+        maxResults: 1500
+        featureType:
+            connection: search_db
+            table: poi
+            uniqueId: gid
+            geomType: point
+            geomField: geom
+            srid: 4326
+        openFormAfterEdit: true
+        popup:
+            title: point test suite
+            width: 500px
+        tableFields: {gid: {label: Nr.}, name: {label: Name}}
+        formItems:
+           - type: tabs
+             children:
+               - type: form
+                 title: Basic information
+                 css: {padding: 10px}
+                 children:
+                     - type: label
+                       title: Welcome to the digitize demo. Try the new Mapbender3 feature!
+                     - type: input
+                       title: Name
+                       mandatory: true
+                       name: name
+                       mandatoryText: Please give a name to the poi.
+                       infoText: "Help: Please give a name to the new object."
+                     - type: input
+                       title: Title
+                       mandatory: false
+                       name: title
+                       mandatoryText: Please give a title to the poi.
+                     - type: textArea
+                       name: abstract
+                       title: Abstract
+                       placeholder: 'please edit this field'
+                     - type: select
+                       title: Type
+                       name: type
+                       options: {A:A, B:B, C:C, D:D, E:E}
+                     - type: breakLine
+               - type: form
+                 title: Personal information
+                 css: {padding: 10px}
+                 children:
+                     - type: label
+                       title: Please give us some information about yourself.
+                     - type: fieldSet
+                       children:
+                           - type: input
+                             title: Firstname
+                             name: firstname
+                             css: {width: 30%}
+                           - type: input
+                             title: Lastname
+                             name: lastname
+                             css: {width: 30%}
+                           - type: input
+                             title: E-Mail
+                             name: email
+                             css: {width: 40%}
+                     - type: select
+                       multiple: true
+                       title: Interests
+                       name: interests
+                       options: {maps:maps, reading:reading, swimming:swimming, dancing:dancing, beer:beer, flowers:flowers}
+                     - type: date
+                       title: favorite Date
+                       name: date_favorite
+                       mandatory: true
+                       css: {width: 25%}
+                     - type: breakLine
+                     - type: breakLine
+                     - type: checkbox
+                       name: public
+                       value: true
+                       title: public (this new object is public)               
+    line:
+        label: line digitizing
+        maxResults: 1500
+        featureType:
+            connection: search_db
+            table: lines
+            uniqueId: gid
+            geomType: line
+            geomField: geom
+            srid: 4326
+        openFormAfterEdit: true
+        popup:
+            title: line test suite
+            width: 500px
+        tableFields: {gid: {label: Nr.}, name: {label: Name}}
+        formItems:
+           - type: form
+             title: Basic information
+             css: {padding: 10px}
+             children:
+                 - type: label
+                   title: Welcome to the digitize demo. Try the new Mapbender3 feature!
+                 - type: input
+                   title: Name
+                   mandatory: true
+                   name: name
+                   mandatoryText: Please give a name to the new object.
+                   infoText: "Help: Please give a name to the new object."
+                 - type: select
+                   title: Type
+                   name: type
+                   options: {A:A, B:B, C:C, D:D, E:E}
+    polygon:
+        label: polygon digitizing
+        maxResults: 1500
+        featureType:
+            connection: search_db
+            table: polygons
+            uniqueId: gid
+            geomType: polygon
+            geomField: geom
+            srid: 4326
+        openFormAfterEdit: true
+        allowDelete: false
+        toolset:
+            - type: drawPolygon
+            - type: drawRectangle
+            - type: drawDonut
+            - type: removeSelected 
+        popup:
+            title: polygon test suite
+            width: 500px
+        tableFields: {gid: {label: Nr.}, name: {label: Name}}
+        formItems:
+           - type: form
+             title: Basic information
+             css: {padding: 10px}
+             children:
+                 - type: label
+                   title: Welcome to the digitize demo. Try the new Mapbender3 feature!
+                 - type: input
+                   title: Name
+                   mandatory: true
+                   name: name
+                   mandatoryText: Please give a name to the new object.
+                   infoText: "Help: Please give a name to the new object."
+                 - type: select
+                   title: Type
+                   name: type
+                   options: {A:A, B:B, C:C, D:D, E:E}     
 
 
 Definition of the popup
@@ -214,22 +310,20 @@ Definition of a file upload field
 
 .. code-block:: yaml
    
-                                                    element:
-                                                        type: upload
+                                                    type: upload
 
 
 Definition of a datepicker
 
 .. code-block:: yaml
 
-                                                    element:
-                                                        type: datepicker               # on click in the textfield a datepicker will open
-                                                        value: 2015-01-01              # define a start value for the datepicker (optional)
-                                                        format: YYYY-MM-DD             # define a dateformat (optional), default is YYYY-MM-DD
+                                                    type: datepicker               # on click in the textfield a datepicker will open
+                                                    value: 2015-01-01              # define a start value for the datepicker (optional)
+                                                    format: YYYY-MM-DD             # define a dateformat (optional), default is YYYY-MM-DD
 
 
 Toolset types
---------------------
+
 
   * drawPoint - draw point
   * drawLine - draw a line
@@ -244,6 +338,27 @@ Toolset types
   * removeSelected - delete selected geometry
   * removeAll - remove all geometries
 
+Definition of toolset types
+
+.. code-block:: yaml
+
+    polygon:
+        label: polygon digitizing
+        maxResults: 1500
+        featureType:
+            connection: search_db
+            table: polygons
+            uniqueId: gid
+            geomType: polygon
+            geomField: geom
+            srid: 4326
+        openFormAfterEdit: true
+        allowDelete: false
+        toolset:
+            - type: drawPolygon
+            - type: drawRectangle
+            - type: drawDonut
+            - type: removeSelected
 
 
 Class, Widget & Style
