@@ -3,8 +3,31 @@
 Digitalisierung (Digitizer) 
 **********************************
 
-<Put short description - 5-6 sentences - here>
+Das Digitizer-Element ermöglicht den Aufbau von Erfassungsoberflächen. Derzeit kann über eine YAML-Definition eine Erfassungsmaske für Punkte, Linien oder Flächen aufgebaut werden. Dabei wird bisher PostgreSQL als Datenquelle unterstützt. Oracle und SpatiaLite sind experimentell verfügbar. Die Entwicklung wurde so durchgeführt, dass die Erfassung auch auf andere Datenquellen wie z.B. OGC WFS erweitert werden kann.
 
+Das Digitizer-Element bietet komplexe Editier­funktionalitäten an:
+
+  * Verschieben von Objekten
+  * Einfügen von Stützpunkten (Linien, Flächen)
+  * Erfassung von Flächen mit Enklaven und/oder Exklaven sowie Kreisen und Ellipsen
+
+In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten sehr komplexe Formulare generiert werden. Hierbei wurde sich an den Möglichkeiten, die in Mapbender 2.x zur Verfügung stehen, orientiert.
+
+Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
+
+  * Definition von mehreren Datenquellen für die Erfassung (diese werden über eine Selectbox zur Auswahl angeboten)
+  * Als Datenquelle kann eine Tabelle angesprochen werden, wobei auch nur eine Auswahl der Daten über einen Filter herangezogen werden kann
+  * Textfelder
+  * Selectboxen, Multiselectboxen (Füllen der Auswahlbox über eine feste Definition von Werten in der YAML-Definition oder über ein Select auf eine Tabelle)
+  * Radiobuttons, Checkboxen
+  * Textblöcke
+  * Datumsauswahl
+  * Dateiupload
+  * Definition von Reitern
+  * Definition von Trennlinien
+  * Definition von beschreibenden Texten
+  * Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe des Feldinhalts
+  * Hilfetexte
 .. image:: ../../../../../figures/digitizer.png
      :scale: 80
 

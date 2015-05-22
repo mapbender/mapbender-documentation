@@ -3,7 +3,32 @@
 Digitizer
 **********************************
 
-<Put short description - 5-6 sentences - here>
+Das Digitizer-Element ermöglicht den Aufbau von Erfassungsoberflächen. Derzeit kann über eine YAML-Definition eine Erfassungsmaske für Punkte, Linien oder Flächen aufgebaut werden. Dabei wird bisher PostgreSQL als Datenquelle unterstützt. Oracle und SpatiaLite sind experimentell verfügbar. Die Entwicklung wurde so durchgeführt, dass die Erfassung auch auf andere Datenquellen wie z.B. OGC WFS erweitert werden kann.
+
+The Digitizer-Element offers komples editing functionality:
+
+  * move objects
+  * add vertices (lines, polygons)
+  * generation of enclaves, exclaves, circles and ellipses
+
+You can define very complex formss for the attributes.
+
+The following option for the construction of the forms are available:
+
+  * define more then one feature types for digitalisation. You can switch from one feature type to the other with a select box
+  * use a table as source. You can also define a filter to get a subset of the table
+  * textfields
+  * Selectboxes, Multiselectboxes
+  * Radiobuttons, Checkboxes
+  * Textareas
+  * Datepicker
+  * File upload
+  * Definition of tabs
+  * Definition breaklines
+  * Definition of Text 
+  * Mandatory fields, regular expressions to valida the content are possible
+  * Help textes
+
 
 .. image:: ../../../../../figures/digitizer.png
      :scale: 80
