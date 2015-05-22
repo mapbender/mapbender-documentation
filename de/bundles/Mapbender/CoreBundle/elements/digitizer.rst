@@ -291,6 +291,8 @@ Definition von Texten (type label)
 
 Definition of a textarea (type textarea)
 
+.. code-block:: yaml
+
                                                  - type: textarea
                                                    title: Bestandsaufnahme Bemerkung
 
