@@ -117,7 +117,7 @@ YAML-Definition:
     autoOpen: false              # true/false open when application is started, default is false
     useTheme: null
     displaytype: tree            # only tree in 3.0, future will offer list
-    titleMaxLength: 20           # max length of layer title, default is 20  
+    titlemaxlength: 20           # max length of layer title, default is 20  
 
     showBaseSource: true         # show base layer, default is true
     showHeader: true             # shows a headline which counts the number of services  

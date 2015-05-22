@@ -19,14 +19,17 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: GPS-Position  # Text des Tooltips
-   label: true            # false/true, um den Button zu beschriften. Der Standardwert ist true.
-   icon: gpsposition      # Symbol für den Button
-   target: map            # ID des Kartenelements
-   autoStart: false       # true, wenn diese Funktion beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
-   refreshinterval: 5000  # Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
-   follow: true           # Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu. Sollte nur mit WMS Diensten im gekachelten Modus verwendet werden, da sonst bei jeder Neupositionierung ein neuer Kartenrequest geschickt wird
-   average: 1             # berechnet den Mittelwert der unter average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1
+    tooltip: GPS-Position  # Text des Tooltips
+    label: true            # false/true, um den Button zu beschriften. Der Standardwert ist true.
+    icon: gpsposition      # Symbol für den Button
+    target: map            # ID des Kartenelements
+    autoStart: false       # true, wenn diese Funktion beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
+    refreshinterval: 5000  # Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
+    follow: true           # Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu. Sollte nur mit WMS Diensten im gekachelten Modus verwendet werden, da sonst bei jeder Neupositionierung ein neuer Kartenrequest geschickt wird
+    average: 1             # berechnet den Mittelwert der unter average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1
+    centerOnFirstPosition: true
+    zoomToAccuracy: false
+    zoomToAccuracyOnFirstPosition: true
 
 
 Class, Widget & Style

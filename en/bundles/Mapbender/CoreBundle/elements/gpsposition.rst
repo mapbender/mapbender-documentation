@@ -18,14 +18,17 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: GPS-Position  # text to use as tooltip
-   label: true            # true/false to label button, default is true
-   icon: gpsposition      # icon to display on button
-   target: map            # Id of Map element to query
-   autoStart: false	  # true/false, default is false
-   refreshinterval: 5000  # refresh interval in ms, default is 5000 ms
-   follow: true           # default false, true refreshs the map for every received GPS position received, only use with WMS in tiled mode
-   average: 1             # calculates the average of the last at parameter average defined amount of received GPS coordinates, default 1
+    tooltip: GPS-Position  # text to use as tooltip
+    label: true            # true/false to label button, default is true
+    icon: gpsposition      # icon to display on button
+    target: map            # Id of Map element to query
+    autoStart: false	  # true/false, default is false
+    refreshinterval: 5000  # refresh interval in ms, default is 5000 ms
+    follow: true           # default false, true refreshs the map for every received GPS position received, only use with WMS in tiled mode
+    average: 1             # calculates the average of the last at parameter average defined amount of received GPS coordinates, default 1
+    centerOnFirstPosition: true
+    zoomToAccuracy: false
+    zoomToAccuracyOnFirstPosition: true
 
 Class, Widget & Style
 ======================
