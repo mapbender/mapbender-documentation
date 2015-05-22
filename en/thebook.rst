@@ -16,5 +16,6 @@ Content
    book/templates.rst
    book/css.rst
    book/quickstart.rst
+   book/mapbender_templates.rst
    book/glossary.rst
 

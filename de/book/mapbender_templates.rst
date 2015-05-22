@@ -1,12 +1,12 @@
 .. _mapbender_templates:
 
-Mapbender templates
+Mapbender Templates
 ##########################
 
-Get to know the Mapbender templates.
+Lernen Sie die Mapbender Templates, die bei der Installation mitgeliefert werden, kennen.
 
 
-Mobile template
+Mobile Template
 *********************
 
 
