@@ -28,8 +28,12 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
   * Definition von beschreibenden Texten
   * Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe des Feldinhalts
   * Hilfetexte
+
 .. image:: ../../../../../figures/digitizer.png
-     :scale: 80
+     :scale: 70
+
+.. image:: ../../../../../figures/digitizer_with_tabs.png
+     :scale: 70
 
 Konfiguration
 =============

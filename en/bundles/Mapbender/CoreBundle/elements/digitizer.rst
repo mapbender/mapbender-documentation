@@ -31,7 +31,10 @@ The following option for the construction of the forms are available:
 
 
 .. image:: ../../../../../figures/digitizer.png
-     :scale: 80
+     :scale: 70
+
+.. image:: ../../../../../figures/digitizer_with_tabs.png
+     :scale: 70
 
 Configuration
 =============
