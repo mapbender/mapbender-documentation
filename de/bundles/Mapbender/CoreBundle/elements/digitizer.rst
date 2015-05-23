@@ -262,24 +262,42 @@ Definition von Textfeldern (type input)
                                                    placeholder: 'please edit this field' # placeholder appears in the field as information (optional)
 
 
+
 Definition von Auswahlboxen (selectbox oder multiselect (type select))
 
 .. code-block:: yaml
 
                                                  - type: select                     # element type definition
-                                                   title: select some types          # labeling (optional)
-                                                   name: type_multi                 # reference to table column (optional)                    
-                                                   multiple: true                   # define a multiselect, default is false
+                                                   title: select some types         # labeling (optional)
+                                                   name: my_type                    # reference to table column (optional)                    
+                                                   multiple: false                  # define a multiselect, default is false
                                                    options:                         # definition of the options (key, value)
                                                        1: pub
                                                        2: bar
                                                        3: pool
                                                        4: garden
                                                        5: playground
+
+
+.. code-block:: yaml
+
                                                  - type: select                       # element type definition
-                                                   title: select some types            # labeling (optional)
-                                                   name: type                         # reference to table column (optional)
+                                                   title: select some types           # labeling (optional)
+                                                   name: my_type                      # reference to table column (optional)
+                                                   multiple: true                     # define a multiselect, default is false
                                                    options: [1: pub, 2: bar, 3: pool] # definition of the options (key, value)
+
+
+Füllen der Auswahlboxen über eine SQL Abfrage
+
+.. code-block:: yaml
+
+                                                 - type: select                     # element type definition
+                                                   title: select some types         # labeling (optional)
+                                                   name: my_type                    # reference to table column
+                                                   connection: connectionName       # Define a connection selectbox via SQL
+                                                   sql: 'SELECT DISTINCT keyName, value FROM tableName' # get the options of the
+
 
 
 Definition von Texten (type label)
@@ -331,11 +349,21 @@ Definition von Pflichtfeldern
 Definition von Feldern für den Dateiupload
 
 .. code-block:: yaml
-   
-                                                    type: upload
+  
+                    - type: upload
+                      title: upload an image
+                      name: file1
+                      path: digitizer           # base location is "web/uploads", like this the files are saved at web/uploads/digitizer, also absolute path is possible like /data/webgis/digitizer
+                      format: %gid%-%name% (%name% is file1, %gid% - is ID fieldname)
+                      url:  /digitizer/         # optional, if ALIAS is defined
+                      allowedFormats: [jpg,png,gif,pdf]
 
 
 Definition von Datumfeldern (Datepicker)
+
+
+.. image:: ../../../../../figures/digitizer_datepicker.png
+     :scale: 80
 
 .. code-block:: yaml
 

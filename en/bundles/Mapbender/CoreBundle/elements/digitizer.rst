@@ -267,19 +267,36 @@ Definition of a selectbox or multiselect (type select)
 .. code-block:: yaml
 
                                                  - type: select                     # element type definition
-                                                   title: select some types          # labeling (optional)
-                                                   name: type_multi                 # reference to table column (optional)                    
-                                                   multiple: true                   # define a multiselect, default is false
+                                                   title: select some types         # labeling (optional)
+                                                   name: my_type                    # reference to table column (optional)                    
+                                                   multiple: false                  # define a multiselect, default is false
                                                    options:                         # definition of the options (key, value)
                                                        1: pub
                                                        2: bar
                                                        3: pool
                                                        4: garden
                                                        5: playground
+
+
+.. code-block:: yaml
+
                                                  - type: select                       # element type definition
-                                                   title: select some types            # labeling (optional)
-                                                   name: type                         # reference to table column (optional)
+                                                   title: select some types           # labeling (optional)
+                                                   name: my_type                      # reference to table column (optional)
+                                                   multiple: true                     # define a multiselect, default is false
                                                    options: [1: pub, 2: bar, 3: pool] # definition of the options (key, value)
+
+
+Get the options for the select box via SQL
+
+.. code-block:: yaml
+
+                                                 - type: select                     # element type definition
+                                                   title: select some types         # labeling (optional)
+                                                   name: my_type                    # reference to table column
+                                                   connection: connectionName       # Define a connection selectbox via SQL
+                                                   sql: 'SELECT DISTINCT keyName, value FROM tableName' # get the options of the
+
 
 
 Definition of a text (type label)
@@ -329,20 +346,30 @@ Definition of a mandatory field
                                                    mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
 
 
-Definition of a file upload field
-
-.. code-block:: yaml
-   
-                                                    type: upload
-
 
 Definition of a datepicker
+
+.. image:: ../../../../../figures/digitizer_datepicker.png
+     :scale: 80
 
 .. code-block:: yaml
 
                                                     type: datepicker               # on click in the textfield a datepicker will open
                                                     value: 2015-01-01              # define a start value for the datepicker (optional)
                                                     format: YYYY-MM-DD             # define a dateformat (optional), default is YYYY-MM-DD
+
+
+Definition of a file upload field
+
+.. code-block:: yaml
+  
+                    - type: upload
+                      title: upload an image
+                      name: file1
+                      path: digitizer           # base location is "web/uploads", like this the files are saved at web/uploads/digitizer, also absolute path is possible like /data/webgis/digitizer
+                      format: %gid%-%name% (%name% is file1, %gid% - is ID fieldname)
+                      url:  /digitizer/         # optional, if ALIAS is defined
+                      allowedFormats: [jpg,png,gif,pdf]
 
 
 Toolset types
