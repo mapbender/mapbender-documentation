@@ -372,6 +372,25 @@ Definition von Datumfeldern (Datepicker)
                                                     format: YYYY-MM-DD             # define a dateformat (optional), default is YYYY-MM-DD
 
 
+Definition von Gruppierungen (type: fieldSet)
+
+.. code-block:: yaml
+
+                     - type: fieldSet
+                       children:
+                           - type: input
+                             title: Firstname
+                             name: firstname
+                             css: {width: 30%}
+                           - type: input
+                             title: Lastname
+                             name: lastname
+                             css: {width: 30%}
+                           - type: input
+                             title: E-Mail
+                             name: email
+                             css: {width: 40%}
+
 Toolset types
 
   * drawPoint - Punkt erstellen
