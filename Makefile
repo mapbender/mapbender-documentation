@@ -1,0 +1,2 @@
+build:
+	sphinx-build . output
