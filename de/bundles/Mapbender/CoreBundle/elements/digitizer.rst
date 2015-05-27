@@ -42,15 +42,15 @@ Konfiguration
 .. image:: ../../../../../figures/digitizer_configuration.png
      :scale: 80
 
-You can use the element in the sidepane or as a dialog with a button.
+Das Element kann in der Sidepane eingebettet oder über eine Schaltfläche als Dialog aufgerufen werden.
 
-The Ditigitzer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
+Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren. Mehr zu diesem Thema finden Sie unter http://doc.mapbender3.org/de/book/database.html
 
-The definition of the digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behaviour.
+Die Definition des Digitizers wird in einer YAML syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 
-Element definition in web interface in the configuration area:
+Die Element Definitionen im Web-interface sind:
 
-YAML-Definition für das Element digitizer in der sidepane in der mapbender.yml:
+YAML-Definition für das Element digitizer in der Sidepane in der mapbender.yml:
 
 .. code-block:: yaml
 
@@ -220,6 +220,7 @@ YAML-Definition für das Element digitizer in der Textarea unter schemes:
 
 
 Definition Popup
+----------------
 
 .. code-block:: yaml
 
@@ -234,6 +235,7 @@ Definition Popup
 
 
 Definition on Dateireitern (type tabs)
+--------------------------------------
 
 .. code-block:: yaml
 
@@ -250,6 +252,7 @@ Definition on Dateireitern (type tabs)
 
 
 Definition von Textfeldern (type input)
+.......................................
 
 .. code-block:: yaml
 
@@ -264,6 +267,7 @@ Definition von Textfeldern (type input)
 
 
 Definition von Auswahlboxen (selectbox oder multiselect (type select))
+----------------------------------------------------------------------
 
 .. code-block:: yaml
 
@@ -289,6 +293,7 @@ Definition von Auswahlboxen (selectbox oder multiselect (type select))
 
 
 Füllen der Auswahlboxen über eine SQL Abfrage
+---------------------------------------------
 
 .. code-block:: yaml
 
@@ -301,6 +306,7 @@ Füllen der Auswahlboxen über eine SQL Abfrage
 
 
 Definition von Texten (type label)
+----------------------------------
 
 .. code-block:: yaml
 
@@ -315,6 +321,7 @@ Definition of a textarea (type textarea)
                                                    title: Bestandsaufnahme Bemerkung
 
 Definition of a breakline (type breakline)
+------------------------------------------
 
 .. code-block:: yaml
 
@@ -322,6 +329,7 @@ Definition of a breakline (type breakline)
 
 
 Definition of a checkbox (type checkbox)
+----------------------------------------
 
 .. code-block:: yaml
 
@@ -332,6 +340,7 @@ Definition of a checkbox (type checkbox)
 
 
 Definition von Pflichtfeldern
+-----------------------------
 
 .. code-block:: yaml
 
@@ -347,6 +356,7 @@ Definition von Pflichtfeldern
 
 
 Definition von Feldern für den Dateiupload
+------------------------------------------
 
 .. code-block:: yaml
   
@@ -360,6 +370,7 @@ Definition von Feldern für den Dateiupload
 
 
 Definition von Datumfeldern (Datepicker)
+----------------------------------------
 
 
 .. image:: ../../../../../figures/digitizer_datepicker.png
@@ -373,6 +384,7 @@ Definition von Datumfeldern (Datepicker)
 
 
 Definition von Gruppierungen (type: fieldSet)
+---------------------------------------------
 
 .. code-block:: yaml
 
@@ -391,6 +403,9 @@ Definition von Gruppierungen (type: fieldSet)
                              name: email
                              css: {width: 40%}
 
+Definition von Toolset Types
+----------------------------
+                             
 Toolset types
 
   * drawPoint - Punkt erstellen
@@ -406,6 +421,7 @@ Toolset types
   * removeSelected - die selektierten löschen
   * removeAll - alle Löschen (aus dem Layer)
 
+    
 Definition of toolset types
 
 .. code-block:: yaml
@@ -428,6 +444,48 @@ Definition of toolset types
             - type: drawDonut
             - type: removeSelected
 
+
+Definition des aktuellen Kartenausschnitts
+------------------------------------------
+
+searchType:
+
+* all
+* currentExtent (default)
+
+.. code-block:: yaml
+
+    openFormAfterEdit: true
+    searchType: currentExtent # currentExtent|all - default is currentExtent
+    featureType:
+        connection: search_db
+        table: lines
+        uniqueId: gid
+        geomType: line
+        geomField: geom
+        srid: 4326
+        fields: "*" 
+
+
+Definition des Verhaltens des Popup
+-----------------------------------
+
+Bei true (default): nach dem Anlegen einer Geometrie wird sofort das Formular zur Sachdateneingabe geöffnet.
+
+.. code-block:: yaml
+
+    poi:
+        label: point digitizing
+        maxResults: 1500
+        featureType:
+            [...]
+        openFormAfterEdit: true
+        popup:
+            [...]
+
+        
+
+        
 
 Class, Widget & Style
 ===========================

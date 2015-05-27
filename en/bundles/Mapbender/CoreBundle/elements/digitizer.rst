@@ -3,18 +3,20 @@
 Digitizer
 **********************************
 
-Das Digitizer-Element ermöglicht den Aufbau von Erfassungsoberflächen. Derzeit kann über eine YAML-Definition eine Erfassungsmaske für Punkte, Linien oder Flächen aufgebaut werden. Dabei wird bisher PostgreSQL als Datenquelle unterstützt. Oracle und SpatiaLite sind experimentell verfügbar. Die Entwicklung wurde so durchgeführt, dass die Erfassung auch auf andere Datenquellen wie z.B. OGC WFS erweitert werden kann.
+The Digitizer element allows building editing-interfaces. Currently you can build up your interface for point, line and point editing with a YAML-definition. Right now PostgreSQL is supported as a database. Oracle and SpatialLize can be used experimentally. The development of the data-sources allow other data sources so that it can be extended to support - for example - OGC WFS services.
 
-The Digitizer-Element offers komples editing functionality:
+The Digitizer-Element offers complex editing functionality:
 
   * move objects
   * add vertices (lines, polygons)
   * generation of enclaves, exclaves, circles and ellipses
 
+You can define very complex formss for the attributes. This follows the capabilities of Mapbender 2.x.
+
+    
+
 .. image:: ../../../../../figures/digitizer.png
      :scale: 80
-
-You can define very complex formss for the attributes.
 
 The following option for the construction of the forms are available:
 
@@ -220,6 +222,7 @@ YAML-Definition for the element digitizer in the textarea schemes:
 
 
 Definition of the popup
+-----------------------
 
 .. code-block:: yaml
 
@@ -234,6 +237,7 @@ Definition of the popup
 
 
 Definition of tabs (type tabs)
+------------------------------
 
 .. code-block:: yaml
 
@@ -250,6 +254,7 @@ Definition of tabs (type tabs)
 
 
 Definition of a textfield (type input)
+--------------------------------------
 
 .. code-block:: yaml
 
@@ -262,7 +267,8 @@ Definition of a textfield (type input)
                                                    placeholder: 'please edit this field' # placeholder appears in the field as information (optional)
 
 
-Definition of a selectbox or multiselect (type select) 
+Definition of a selectbox or multiselect (type select)
+------------------------------------------------------
 
 .. code-block:: yaml
 
@@ -288,6 +294,7 @@ Definition of a selectbox or multiselect (type select)
 
 
 Get the options for the select box via SQL
+------------------------------------------
 
 .. code-block:: yaml
 
@@ -300,6 +307,7 @@ Get the options for the select box via SQL
 
 
 Definition of a text (type label)
+---------------------------------
 
 .. code-block:: yaml
 
@@ -307,6 +315,7 @@ Definition of a text (type label)
                                                    title: 'Please give information about the poi.' # define a text 
 
 Definition of a textarea (type textarea)
+----------------------------------------
 
 .. code-block:: yaml
 
@@ -315,6 +324,7 @@ Definition of a textarea (type textarea)
 
 
 Definition of a breakline (type breakline)
+------------------------------------------
 
 .. code-block:: yaml
 
@@ -322,6 +332,7 @@ Definition of a breakline (type breakline)
 
 
 Definition of a checkbox (type checkbox)
+----------------------------------------
 
 .. code-block:: yaml
 
@@ -332,6 +343,7 @@ Definition of a checkbox (type checkbox)
 
 
 Definition of a mandatory field
+-------------------------------
 
 .. code-block:: yaml
 
@@ -348,6 +360,7 @@ Definition of a mandatory field
 
 
 Definition of a datepicker
+--------------------------
 
 .. image:: ../../../../../figures/digitizer_datepicker.png
      :scale: 80
@@ -360,6 +373,7 @@ Definition of a datepicker
 
 
 Definition of element groups (type: fieldSet)
+---------------------------------------------
 
 .. code-block:: yaml
 
@@ -380,6 +394,7 @@ Definition of element groups (type: fieldSet)
 
 
 Definition of a file upload field
+---------------------------------
 
 .. code-block:: yaml
   
@@ -392,7 +407,11 @@ Definition of a file upload field
                       allowedFormats: [jpg,png,gif,pdf]
 
 
+Definition of toolset types
+---------------------------
+
 Toolset types
+
 
 
   * drawPoint - draw point
@@ -429,6 +448,49 @@ Definition of toolset types
             - type: drawRectangle
             - type: drawDonut
             - type: removeSelected
+
+
+Definition of current extent
+----------------------------
+
+searchType:
+
+* all
+* currentExtent (default)
+
+.. code-block:: yaml
+
+    openFormAfterEdit: true
+    searchType: currentExtent # currentExtent|all - default is currentExtent
+    featureType:
+        connection: search_db
+        table: lines
+        uniqueId: gid
+        geomType: line
+        geomField: geom
+        srid: 4326
+        fields: "*" 
+
+
+Definition of popup behaviour
+-----------------------------
+
+Set to true (default): after creating a geometry the form popup is opened automatically to insert the attribute data.
+
+.. code-block:: yaml
+
+    poi:
+        label: point digitizing
+        maxResults: 1500
+        featureType:
+            [...]
+        openFormAfterEdit: true
+        popup:
+            [...]
+
+
+
+        
 
 
 Class, Widget & Style
