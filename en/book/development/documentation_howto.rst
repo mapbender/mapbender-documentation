@@ -32,7 +32,7 @@ https://github.com/mapbender/mapbender-documentation/
 Developers granted secure access to the code must use the SSH-URL of the
 repository to get the files and be able to push: 
 
-.. code-block:: none 
+.. code-block:: bash 
 
    git clone git@github.com:mapbender/mapbender-documentation
 
@@ -81,14 +81,14 @@ We generate the webside code from the rst-files using Sphinx.
 To build the website locally, you need to install Sphinx. In Debian-based distributions this is done via:
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
   apt-get install sphinx-common
 
 Additionally, a Sphinx extension for Symfony2 is used as a submodule, so a
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
   git submodule update --init --recursive
 
@@ -97,7 +97,7 @@ is also required.
 You can then build the documentation by running
 
 
-.. code-block:: none
+.. code-block:: bash
 
   sphinx-build . output
 
@@ -137,7 +137,7 @@ In this example we assume, that you are a developer and just added a new element
 
 Here are the steps you have to do:
 
-.. code-block:: yaml
+.. code-block:: bash
 
   # get the documentation files from github
   cd /data
