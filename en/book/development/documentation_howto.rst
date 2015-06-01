@@ -3,7 +3,7 @@
 How to write Mapbender3 Documentation?
 ######################################
 
-Mapbender3 Documentation webside
+Mapbender3 Documentation website
 ********************************
 
 You find the Mapbender3 Documentation at:
@@ -101,7 +101,7 @@ You can then build the documentation by running
 
   sphinx-build . output
 
-or by using the supplied generate.sh shell script.
+or by using the supplied Makefile or the generate.sh shell script.
 
 
 How to write documentation? 
@@ -163,3 +163,16 @@ Here are the steps you have to do:
 
   # get the actual files from the mapbender-documentation repository
   git pull
+
+
+  
+Working with reStructured Text (rst)
+************************************
+
+For more info for rst-files and reStructured Text, take a look at these documentations:
+
+* `Wikipedia reStructured Text <http://en.wikipedia.org/wiki/ReStructuredText>`_
+* `reStructured Text on docutils at SourceForge <http://docutils.sourceforge.net/rst.html>`_
+* `Quick reStructuredText <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+
+
