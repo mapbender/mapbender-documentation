@@ -51,9 +51,10 @@ Configuration in the map element
 The second step is the configuration of the main map. You define here which
 layersets should be shown for the map display. The layerset "overview" for
 example should not be used for the main map. Here you can also define how
-the layersets should be ordered in the layertree. Therefore you can
-rearrange the order via drag & drop (project data above the german-wide
-data).
+the layersets should be ordered in the layertree and in the map. Therefore
+you can rearrange the order via drag & drop (project data above the
+german-wide data). Please mind that themes at the top might cover underlying
+themes.
 
 .. image:: ../../../../../figures/layertree/layertree_configuration_map.png
            :scale: 80

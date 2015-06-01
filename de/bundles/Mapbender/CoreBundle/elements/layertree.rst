@@ -53,8 +53,10 @@ Der zweite Schritt ist die Konfiguration der Hauptkarte (Main Map). Hier
 gibt man an, welche Layersets in der Kartenansicht verwendet werden
 sollen. Der Layerset "overview" wird beispielsweise nicht in der Hauptkarte
 angezeigt.  In diesem Schritt wird auch die Reihenfolge definiert, in der
-die Layersets im Layertree erscheinen sollen. Daher können diese per Drag &
-Drop verschoben werden ("Projektdaten" über den "Deutschlandweiten Daten").
+die Layersets im Layertree und in der Karte erscheinen sollen. Daher können
+diese per Drag & Drop verschoben werden ("Projektdaten" über den
+"Deutschlandweiten Daten"). Bitte achten Sie darauf, dass die weiter oben
+definierten Themen die darunter liegenden überdecken können.
 
 .. image:: ../../../../../figures/layertree/layertree_configuration_map.png
            :scale: 80
