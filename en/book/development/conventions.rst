@@ -149,41 +149,65 @@ How to build a new Mapbender3 build
 
 .. code-block:: bash
 
- git clone -b develop git@github.com:mapbender/mapbender-starter mapbender-build
+ # clone the source-code from the release branch
+ git clone -b release/3.0.5 git@github.com:mapbender/mapbender-starter mapbender-build
+
+ # change to the directory
  cd mapbender-build
  git submodule update --init --recursive
  phing deps
+
+ # tagging
  cd application/mapbender
- git tag -a v3.0.4.0 -m "Mapbender release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
- git push --tags 
+ git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ git push --tags
+ 
  # tag submodules
  cd ../../application/fom
- git tag -a v3.0.4.0 -m "Mapbender release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
- git push --tags 
- #
+ git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ git push --tags
+ 
+ # tag owsproxy3
  cd ../../application/owsproxy3
- git tag -a v3.0.4.0 -m "Mapbender release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
- git push --tags 
- # tab mapbender-starter
- cd ../..
- git tag -a v3.0.4.0 -m "Mapbender release Version 3.0.4.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.4.0"  
+ git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ git push --tags
+ 
+ # tag mapbender-starter
+ cd ../../
+ git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
  git tag
  git push --tags (will be shown at https://github.com/mapbender/mapbender-starter/releases)
+
+ # use phing to create the tarball
  phing tarball
- cd /data/git/mapbender-build/artefacts
- sudo tar xfz mapbender3-3.0.3build1.tar.gz 
- sudo chmod -R 777 mapbender3-3.0.3build1
- sudo mv mapbender3-3.0.3build1 mapbender3-3.0.4.0
- rm -R /data/git/mapbender-build/artefacts/mapbender3-3.0.4.0/app/config/parameters.yml
- rm -R /data/git/mapbender-build/artefacts/mapbender3-3.0.4.0/documentation/*
- cp -R /data/git/mapbender-documentation/output/*  /data/git/mapbender-build/artefacts/mapbender3-3.0.4.0/documentation/
- create tar.gz with right name for example mapbender3-3.0.4.0.tar.gz
- move file to /sites/www.mapbender3.org/builds
- update Roadmap: milestones, features, date on http://mapbender3.org/roadmap
- write release mail to mapbender-user and mapbender-dev 
- only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
- twitter on https://twitter.com/mapbender
- update http://demo.mapbender3.org and http://sandbox.mapbender3.org
+
+ # change to the artefacts directory, where phing created the tarball
+ cd artefacts/
+
+ # untar the archive to change some files
+ tar -xvf mapbender3-3.0.5build1.tar.gz 
+
+ # that step should not be neccessary: sudo chmod -R 777 mapbender3-3.0.5build1
+
+ # change the name of the directory
+ mv mapbender3-3.0.5build1 mapbender3-3.0.5.0
+
+ # remove some files in that directory
+ rm -R mapbender3-3.0.5.0/app/config/parameters.yml
+ rm -Rf mapbender3-3.0.5.0/documentation/*
+
+ # copy the actual documentation output
+ cp -R /data/git/mapbender-documentation/output/*  mapbender3-3.0.5.0/documentation/
+ 
+ # create tar.gz with right name for example mapbender3-3.0.5.0.tar.gz
+ tar -czvf mapbender3-3.0.5.0.tar.gz mapbender3-3.0.5/
+  
+* move file to /sites/www.mapbender3.org/builds
+* update Roadmap: milestones, features, date on http://mapbender3.org/roadmap
+* write release mail to mapbender-user and mapbender-dev 
+* only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
+* twitter on https://twitter.com/mapbender
+* update http://demo.mapbender3.org and http://sandbox.mapbender3.org
 
  
 
@@ -192,4 +216,4 @@ How to build a new Mapbender3 build
 Documentation conventions
 **************************
 
-* have a look at `How to write Mapbender3 Documentation? <documentation_howto>`
+* have a look at `How to write Mapbender3 Documentation? <documentation_howto>`_
