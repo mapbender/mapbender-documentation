@@ -388,6 +388,7 @@ Install necessary components:
  extension=php_pdo_pgsql.dll
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
+ extension=php_openssl.dll
 
 .. code-block:: yaml
 

@@ -364,7 +364,7 @@ Installationsbeispiel für Windows
 Installieren Sie die notwendigen Komponenten:
 
  * fügen Sie den Pfad zum PHP-bin Verzeichnis zu Ihrer PATH Variable hinzu 
- * aktivieren Sie die PHP Erweiterunge in der php.ini Konfigurationsdatei
+ * aktivieren Sie die PHP Erweiterungen in der php.ini Konfigurationsdatei
  * laden Sie das Apache Modul rewrite
 
 .. code-block:: yaml
@@ -376,6 +376,7 @@ Installieren Sie die notwendigen Komponenten:
  extension=php_pdo_pgsql.dll
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
+ extension=php_openssl.dll
 
 .. code-block:: yaml
 
