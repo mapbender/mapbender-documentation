@@ -30,7 +30,8 @@ with the attempts and starts with one second for the first failure:
     7. 64s
     8. 128s
     9. 256s
-    …
+    10. ...
+
 
 After that time, the user may try to login again.
 
