@@ -15,4 +15,5 @@ Inhalt
    book/css.rst
    book/quickstart.rst
    book/mapbender_templates.rst
+   book/versions.rst
 
