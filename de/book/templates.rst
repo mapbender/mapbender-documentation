@@ -56,6 +56,53 @@ Erzeugen eines neuen Namespaces
 Die Datei WorkshopDemoBundle.php erzeugt den Namespace für das Bundle 
 und referenziert auf das Template und zu den eigenen css-Datei(en).
 
+
+.. code-block:: php
+
+    <?php
+    /*
+     * This file is part of the Mapbender 3 project.
+     *
+     * For the full copyright and license information, please view the LICENSE
+     * file that was distributed with this source code.
+     */
+    namespace Workshop\DemoBundle;
+    use Mapbender\CoreBundle\Component\MapbenderBundle;
+    /**
+     * WorkshopDemo
+     *
+     * @author Astrid Emde
+     */
+    class WorkshopDemoBundle extends MapbenderBundle
+    {
+        /**
+         * @inheritdoc
+         */
+        public function getTemplates()
+        {
+            return array('Workshop\DemoBundle\Template\DemoFullscreen');
+        }
+        /**
+         * @inheritdoc
+         */
+        public function getElements()
+        {
+            return array(
+                
+            );
+        }
+    }
+
+
+
+Anlegen der eigenen Template-Datei 
+*************************************************
+
+In unserem Beispiel heißt die Template-Datei FullscreenDemo.php. Sie befindet sich unter src/Workshop/DemoBundle/Template/FullscreenDemo.php.
+
+In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete Twig-datei definiert.
+
+
 .. code-block:: bash
 
  <?php
@@ -94,14 +141,6 @@ und referenziert auf das Template und zu den eigenen css-Datei(en).
 
 
 
-Anlegen der eigenen Template-Datei 
-*************************************************
-
-In unserem Beispiel heißt die Template-Datei FullscreenDemo.php. Sie befindet sich unter src/Workshop/DemoBundle/Template/FullscreenDemo.php.
-
-In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete Twig-datei definiert.
-
-
 Eigene twig-Datei erzeugen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -114,7 +153,9 @@ Kopieren Sie eine existierende twig-Datei, speichern Sie diese unter einem neuen
 .. code-block:: bash
 
  cd mapbender/src/Workshop/DemoBundle/Resources/views/Template
- verwenden Sie mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig und kopieren Sie diese nach fullscreen_demo.html.twig
+
+
+Verwenden Sie mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig und kopieren Sie diese nach fullscreen_demo.html.twig
 
 
 Eigene css-Datei erzeugen
@@ -127,7 +168,7 @@ Mit Hife von Firebug können Sie die bestehende Definition ermitteln, in Ihre cs
 
 Ihre css-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css und die folgende Definition enthalten:
 
-.. code-block:: bash
+.. code-block:: css
 
  .toolBar {
    background-color: rgba(0, 29, 122, 0.8) !important;
@@ -272,7 +313,7 @@ Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
 * mapbender/app/AppKernel.php
 
-.. code-block:: yaml
+.. code-block:: php
 
  class AppKernel extends Kernel
  {
@@ -300,7 +341,7 @@ Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
 Setzen Sie Schreibrechte wür das web-Verzeichnis für Ihren WebServer-Benutzer. 
 
-.. code-block:: yaml
+.. code-block:: bash
 
     chmod ug+w web
 
@@ -308,7 +349,7 @@ Setzen Sie Schreibrechte wür das web-Verzeichnis für Ihren WebServer-Benutzer.
 Aktualsieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - CSS Dateien, JavaScript Dateien, Bilder und mehr -
 diese müssen in das öffentliche web-Verzeichnis kopiert werden:
 
-.. code-block:: yaml
+.. code-block:: bash
 
     app/console assets:install web
 
@@ -317,7 +358,7 @@ Alternativ, als Entwickler, verwenden Sie vielleicht lieber symbolische Links.
 Der Befehl kann wie folgt aufgerufen werden. Mit der Option 
 symlink werden die Dateien nicht kopiert. Es wird stattdessen ein symbolischer Link erzeugt. Dies erleichtert das Editieren innerhalb des Bundels.
 
-.. code-block:: yaml
+.. code-block:: bash
 
    app/console assets:install web --symlink --relative
 
@@ -350,7 +391,7 @@ Das Logo (Standard ist das Mapbender3 Logo) kann in der Datei parameters.yml ang
 
 Das Logo kann auch in der twig-Datei angepasst werden:
 
-.. code-block:: yaml
+.. code-block:: html
 
  <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />	
 
@@ -372,7 +413,7 @@ Wie können Buttons geänert werden?
 
 Mapbender3 verwendet Schrift-Icons auf der FontAwesome Collection:
 
-.. code-block:: yaml
+.. code-block:: css
 
  @font-face {
    font-family: 'FontAwesome';
@@ -384,14 +425,14 @@ Mapbender3 verwendet Schrift-Icons auf der FontAwesome Collection:
 
 In your css-file you can refer to a font images like this:
 
-.. code-block:: yaml
+.. code-block:: css
 
   .iconPrint:before {
     content: "\f02f";}
 
 If you want to use an image you could place the image in your bundle and refer to it like this
 
-.. code-block:: yaml
+.. code-block:: css
 
   .iconPrint:before {
    content:url("imgage/print.png");}

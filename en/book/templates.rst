@@ -57,7 +57,55 @@ Create a new namespace
 
 The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template and to your css-file(s).
 
-.. code-block:: bash
+
+.. code-block:: php
+
+    <?php
+    /*
+     * This file is part of the Mapbender 3 project.
+     *
+     * For the full copyright and license information, please view the LICENSE
+     * file that was distributed with this source code.
+     */
+    namespace Workshop\DemoBundle;
+    use Mapbender\CoreBundle\Component\MapbenderBundle;
+    /**
+     * WorkshopDemo
+     *
+     * @author Astrid Emde
+     */
+    class WorkshopDemoBundle extends MapbenderBundle
+    {
+        /**
+         * @inheritdoc
+         */
+        public function getTemplates()
+        {
+            return array('Workshop\DemoBundle\Template\DemoFullscreen');
+        }
+        /**
+         * @inheritdoc
+         */
+        public function getElements()
+        {
+            return array(
+                
+            );
+        }
+    }
+
+
+
+
+Create your own template file
+*************************************************
+
+In our example the template file is called FullscreenDemo.php. You find it at src/Workshop/DemoBundle/Template/FullscreenDemo.php.
+
+In the template file you define the name of your template, the regions that you want to provide and refer to a twig file.
+
+
+.. code-block:: php
 
  <?php
 
@@ -94,15 +142,6 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
 
 
 
-
-Create your own template file
-*************************************************
-
-In our example the template file is called FullscreenDemo.php. You find it at src/Workshop/DemoBundle/Template/FullscreenDemo.php.
-
-In the template file you define the name of your template, the regions that you want to provide and refer to a twig file.
-
-
 Adding properties for your "sidepane" region
 *************************************************************************
 
@@ -114,24 +153,25 @@ For adding you define the function "getRegionsProperties" in the template file.
 
 For configuration you check an option in your application's configuration.
 
-.. code-block:: bash
 
-/**
- * @inheritdoc
- */
-public static function getRegionsProperties()
-{
-    return array(
-        'sidepane' => array(
-            'tabs' => array(
-                'name' => 'tabs',
-                'label' => 'mb.manager.template.region.tabs.label'),
-            'accordion' => array(
-                'name' => 'accordion',
-                'label' => 'mb.manager.template.region.accordion.label')
-        )
-    );
-}
+.. code-block:: php
+
+    /**
+      @inheritdoc
+     */
+    public static function getRegionsProperties()
+    {
+        return array(
+            'sidepane' => array(
+                'tabs' => array(
+                    'name' => 'tabs',
+                    'label' => 'mb.manager.template.region.tabs.label'),
+                'accordion' => array(
+                    'name' => 'accordion',
+                    'label' => 'mb.manager.template.region.accordion.label')
+            )
+        );
+    }
 
 
 
@@ -148,7 +188,8 @@ The easiest way to create your own twig file is to copy an existing twig, save i
 .. code-block:: bash
 
  cd mapbender/src/Workshop/DemoBundle/Resources/views/Template
- use the existing template from mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig and copy it to fullscreen_demo.html.twig
+
+Use the existing template from mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig and copy it to fullscreen_demo.html.twig
 
 
 Create your own css-file
@@ -160,7 +201,7 @@ Firebug can help you to find out the styles you want to change.
 
 Your file could be named like this: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css and have the following definition:
 
-.. code-block:: bash
+.. code-block:: css
 
  .toolBar {
    background-color: rgba(0, 29, 122, 0.8) !important;
@@ -305,7 +346,7 @@ Before your new template will show up you have to register your bundle in the fi
 
 * mapbender/app/AppKernel.php
 
-.. code-block:: yaml
+.. code-block:: php
 
  class AppKernel extends Kernel
  {
@@ -333,7 +374,7 @@ Before your new template will show up you have to register your bundle in the fi
 
 Add write access to the web-directory for your webserver user. 
 
-.. code-block:: yaml
+.. code-block:: bash
 
     chmod ug+w web
 
@@ -341,7 +382,7 @@ Add write access to the web-directory for your webserver user.
 Update the web-directory. Each bundle has it's own assets - CSS files, JavaScript files, images and more -
 but these need to be copied into the public web folder:
 
-.. code-block:: yaml
+.. code-block:: bash
 
     app/console assets:install web
 
@@ -350,7 +391,7 @@ Alternatively, as a developer, you might want to use the symlink switch on that 
 symlink instead of copy. This will make editing assets inside the bundle
 directories way easier.
 
-.. code-block:: yaml
+.. code-block:: bash
 
    app/console assets:install web --symlink --relative
 
@@ -384,7 +425,7 @@ The logo (default is the Mapbender3 logo) can be changed in the parameters.yml. 
 
 Or in the twig file:
 
-.. code-block:: yaml
+.. code-block:: html
 
  <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />	
 
@@ -406,7 +447,7 @@ How to change the buttons?
 
 Mapbender3 uses Fonts from the FontAwesome collection:
 
-.. code-block:: yaml
+.. code-block:: css
 
  @font-face {
    font-family: 'FontAwesome';
@@ -418,14 +459,14 @@ Mapbender3 uses Fonts from the FontAwesome collection:
 
 In your css-file you can refer to a font images like this:
 
-.. code-block:: yaml
+.. code-block:: css
 
   .iconPrint:before {
     content: "\f02f";}
 
 If you want to use an image you could place the image in your bundle and refer to it like this
 
-.. code-block:: yaml
+.. code-block:: css
 
   .iconPrint:before {
    content:url("imgage/print.png");}
