@@ -14,9 +14,8 @@ Configuration
 .. image:: ../../../../../figures/feature_info_configuration.png
      :scale: 80
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
-
 Note: The parameter "Only valid" highly depends on the format of the GetFeatureInfo response. Example UMN: as long as the template defines a correct HTML head and body element (for example by referencing a header and footer file), Mapbender3 will interpret the result as valid. Are these head and body elements missing, Mapbender will interpret the result as not valid. Please make sure, that the GetFeatureInfo Response is a valid HTML.
+
 
 YAML-Definition:
 
@@ -31,6 +30,13 @@ YAML-Definition:
    printResult: false      # offer a link to print the result of the featureInfo, default: false
    showOriginal: null      # show the css-style of the original feature info result, default: false
    onlyValid: null         # , default: false
+
+
+You need a button to show this element. See :doc:`button` for inherited configuration options. The following screenshot shows an example for a FeatureInfo Button which is shown activated as long the FeatureInfo dialog is displayed.
+
+
+.. image:: ../../../../../figures/feature_info_button.png
+     :scale: 80
 
 
 Class, Widget & Style

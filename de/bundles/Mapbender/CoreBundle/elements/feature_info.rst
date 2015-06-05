@@ -14,9 +14,8 @@ Konfiguration
 .. image:: ../../../../../figures/feature_info_configuration.png
      :scale: 80
 
-Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration.
-
 Anmerkung: Der Parameter "nur valide" hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender3 das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender3 als nicht valide. Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
+
 
 YAML-Definition:
 
@@ -32,6 +31,14 @@ YAML-Definition:
    showOriginal: null      # Der Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
    onlyValid: null         # Standardwert ist false.
 
+
+Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der als aktiviert angezeigt wird, so lange der FeatureInfo Dialog geöffnet ist.
+
+
+.. image:: ../../../../../figures/feature_info_button.png
+     :scale: 80
+
+   
 
 Class, Widget & Style
 ============================
