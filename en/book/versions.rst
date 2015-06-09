@@ -55,6 +55,10 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
                   logging:               "%kernel.debug%"
                   profiling:             "%kernel.debug%" 
 
+
+**Known Issues**
+
+* After copying an application from Mapbender 3.0.4.x you have to set the layerset in the map/overview element.
  
 
 Milestone 3.0.4.1

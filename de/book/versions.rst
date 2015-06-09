@@ -44,6 +44,11 @@ Release Datum: xx-05-2015
                     profiling:             "%kernel.debug%" 
 
 
+**Bekannte Probleme**
+
+* Beim Kopieren einer Anwendung von Mapbender 3.0.4.x muss in der Map/Overview der jeweilige Layerset neu gesetzt werden.
+                    
+
 Milestone 3.0.4.1
 -----------------
 
