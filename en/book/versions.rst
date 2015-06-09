@@ -21,21 +21,21 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
 
 * **Print with legend:** The print element supports the print-out of the legend on a seperate page. This can be set with a checkbox.
 
-* **Configurable layertree:** The layertree supports the usage of more than one layerset. You have to adjust the map element to define which layersets should be shown and the layertree element itself. The usage is documented at [13].
-
-* **Improved FeatureInfo dialog:** You can set a) the width and height of the FeatureInfo dialog, b) if the dialog should show the original format of the WMS and c) if it should only open if a valid entry is found (otherwise a messagebox is displayed). See the documentation at [15].
+* **Configurable layertree:** The layertree supports the usage of more than one layerset. You have to adjust the map element to define which layersets should be shown and the layertree element itself. The usage is documented `on the Layertree page <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_.
+  
+* **Improved FeatureInfo dialog:** You can set a) the width and height of the FeatureInfo dialog, b) if the dialog should show the original format of the WMS and c) if it should only open if a valid entry is found (otherwise a messagebox is displayed). See the documentation of the `FeatureInfo Dialog <../bundles/Mapbender/CoreBundle/elements/feature_info.html>`_.
 
 * **Mobile template:** A new modern mobile template is provided.
 
 * **SASS Compiler:** Architectual changes are made at the SASS compiler which leads to a more performant interface.
 
-* **Vendor Specific Parameters:** A WMS layer instance supports the definition of Vendor Specific Parameters that are added to the WMS request. You can define hard coded values or the user or group information of the logged-in user. See the documentation at [14] for details.
+* **Vendor Specific Parameters:** A WMS layer instance supports the definition of Vendor Specific Parameters that are added to the WMS request. You can define hard coded values or the user or group information of the logged-in user. See the documentation of `Vendor Specific Parameters <../book/quickstart.html#configure-your-wms>`_ for details.
 
 * **Expanded functionality of HTML elements with a form-builder:** This approach is used in the Digitizer to provide the forms for attribute editing.
 
 * **New button colletion:** The new buttons are based on a new font, the old buttons are available under the "FontAwesome" name.
 
-* **Starting mapbender with URL parameters:** Mapbender3 can be started with URL parameters. See the documentation at [16]
+* **Starting mapbender with URL parameters:** Mapbender3 can be started with URL parameters. See the documentation of `URL parameters <../bundles/Mapbender/CoreBundle/elements/map.html#controlling-by-url>`_.
 
 * Symfony updated to 2.3.29.
 
