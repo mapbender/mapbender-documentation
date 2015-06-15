@@ -27,9 +27,9 @@ YAML-Definition:
     refreshinterval: 5000  # Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
     follow: true           # Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu. Sollte nur mit WMS Diensten im gekachelten Modus verwendet werden, da sonst bei jeder Neupositionierung ein neuer Kartenrequest geschickt wird
     average: 1             # berechnet den Mittelwert der unter average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1
-    centerOnFirstPosition: true
-    zoomToAccuracy: false
-    zoomToAccuracyOnFirstPosition: true
+    centerOnFirstPosition: true  # Zentriert die Karte auf die erstermittelte Position
+    zoomToAccuracy: false   # Zoomt auf die ermittelte Koordinate nach Messgenauigkeit
+    zoomToAccuracyOnFirstPosition: true # Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position
 
 
 Class, Widget & Style

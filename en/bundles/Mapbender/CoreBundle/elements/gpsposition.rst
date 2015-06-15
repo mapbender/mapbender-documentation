@@ -26,9 +26,9 @@ YAML-Definition:
     refreshinterval: 5000  # refresh interval in ms, default is 5000 ms
     follow: true           # default false, true refreshs the map for every received GPS position received, only use with WMS in tiled mode
     average: 1             # calculates the average of the last at parameter average defined amount of received GPS coordinates, default 1
-    centerOnFirstPosition: true
-    zoomToAccuracy: false
-    zoomToAccuracyOnFirstPosition: true
+    centerOnFirstPosition: true # center map only on first received gps position
+    zoomToAccuracy: false  # zoom map according to received gps position accuracy
+    zoomToAccuracyOnFirstPosition: true # zoom map according to first received gps position accuracy
 
 Class, Widget & Style
 ======================
