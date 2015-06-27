@@ -3,9 +3,9 @@ Versionshistorie
 
 `English Version of this document. <../../en/book/versions.html>`_
 
-Die Übersicht der Milestones finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
+Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
-Future Milestones: Details finden sich unter https://github.com/mapbender/mapbender/issues
+Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender/mapbender/issues
 
  
 Milestone 3.0.5.0
@@ -15,18 +15,30 @@ Release Datum: xx-05-2015
 
 Übersicht der Änderungen finden Sie unter:  https://github.com/mapbender/mapbender-starter/blob/develop/CHANGELOG.md
 
-* WMS Aktualisierung
-* Digitalisierung
-* Druck mit Legende
-* konfigurierbarer Layerbaum
-* Mobiles Template
-* SASS Compiler
-* addvendorspecific
-* erweiterte Funktion des HTML Elements durch den Formularbuilder
-* Neue Button Kollektion
-* verbessertes Verhalten des featureInfo-Dialoges (Stilvorgaben erhalten, Reiter nur bei Treffern öffnen, Angabe Breite/Höhe des Dialogs)
-* Startparameter (Wechsel srs, poi, bbox, center)
-* Symfony Update 2.3.27
+* **WMS neuladen:** WMS Quellen können nun neugeladen werden, wenn sich deren Strutkur geändert hat.
+
+* **Digitalisierung:** Im Rahmen des Releases wurde das neue Element Digitizer eingeführt. Über dieses kann durch eine YAML-Definition eine Erfassungsmaske für Punkte, Linien oder Flächen aufgebaut werden. Dabei wird wie bisher PostgreSQL als Datenquelle unterstützt. Oracle und SpatiaLite sind experimentell verfügbar. Die Entwicklung wurde so durchgeführt, dass die Erfassung auch auf andere Datenquellen wie z.B. OGC WFS erweitert werden kann.
+
+* **Druck mit Legende:** Im Druck ist es nun möglich, die Legende auf einer separaten Seite auszugeben. Die Ausgabe kann über eine Checkbox gesteuert werden.
+
+* **Konfigurierbarer Layerbaum:** Der Layerbaum unterstützt nun mehr als ein layerset. Sie müssen das Kartenelement anpassen, um die Layersets festzulegen, die angezeigt werden sollen sowie den Layerbaum selbt. Die Dokumentation befindet sich unter `auf der Seite zum Layertree <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_.
+
+* **Verbesserte Infoausgabe:** Die Ausgabe der Infoabfrage wurde für die neue Version verbessert. So bleiben nun die Stile der Infoabfrage erhalten. Dienste, die keine Antwort liefern, werden nicht über einen Reiter angezeigt. Es erfolgen Meldungen, wenn keine Antwort geliefert wurde.
+
+* **Mobiles Template:** In mehreren Projektlösungen haben wir uns bereits mit einer mobilen Lösung auf Basis von Mapbender3 auseinandergesetzt. Nun wird diese Lösung als Mapbender Mobile Template in der neuen Version 3.0.5.0 zur Verfügung gestellt.   Sie finden eine neue Demo-Anwendung in der mapbender.yml mit Namen Mapbender Mobile (mapbender_mobile). Diese können Sie als Vorlage für Ihre Lösung verwenden. In der `Release-Demo <http://demo.mapbender3.org/>`_ kann die Anwendung „Mapbender Mobile“ getestet werden.
+
+* **SASS Compiler:** Änderungen an der Architektur bezüglich des SASS Compilers führen zu einer performanteren Oberfläche.
+
+* **Vendor Specific Parameter:** Eine WMS Layer Instanz unterstützt nun die Angabe von Vendor Specific Parametern, die an einen WMS Request angehangen werden. Die Werte können fest vergeben werden oder auf die User- und Gruppeninformation des angemeldeten Benutzers zurückgreifen. Dokumentation ist unter dem Abschnitt `Vendor Specific Parameters <../book/quickstart.html#konfiguration-von-diensten>`_ verfügbar.
+
+* **Formular-Builder:** In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten sehr komplexe Formulare generiert werden. Hierbei wurde sich an den Möglichkeiten, die in Mapbender 2.x zur Verfügung stehen, orientiert.
+
+* **Neue Schaltflächen:** Einige Schaltflächen basieren auf einer neuen Schriftart, die alten Schaltflächen sind noch mit dem Namen FontAwesome verfügbar.
+
+* **URL Parameter:** Mapbender3 kann mit Startparametern aufgerufen werden. Eine Liste der Parameter findet sich in der Dokumentation zu den `URL Parametern <../bundles/Mapbender/CoreBundle/elements/map.html#kontrolle-uber-den-aufruf>`_.
+
+* Symfony Update auf 2.3.29.
+
 
 **Änderungen in der config.yml:**
 
@@ -43,6 +55,11 @@ Release Datum: xx-05-2015
                     logging:               "%kernel.debug%"
                     profiling:             "%kernel.debug%" 
 
+
+**Bekannte Probleme**
+
+* Beim Kopieren einer Anwendung von Mapbender 3.0.4.x muss in der Map/Overview der jeweilige Layerset neu gesetzt werden.
+                    
 
 Milestone 3.0.4.1
 -----------------
