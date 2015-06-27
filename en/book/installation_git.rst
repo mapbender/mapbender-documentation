@@ -44,7 +44,7 @@ directory of your cloned repository:
 
 .. code-block:: yaml
 
-    cd mapbender3/application
+    cd mapbender3
 	git submodule update --init --recursive
 
 
@@ -130,11 +130,20 @@ So, first install Composer (more information at http://getcomposer.org/download/
     curl -sS https://getcomposer.org/installer | php
 
 
-And afterwards install the runtime dependencies like Symfony and Doctrine:
+Create a configuration file called parameters.yml. Copy the file application/app/config/parameters.yml-dist.
+
 
 .. code-block:: yaml
 
-	phing deps
+  cd application/app/config/
+  cp parameters.yml-dist parameters.yml
+
+
+And afterwards get the runtime dependencies like Symfony and Doctrine:
+
+.. code-block:: yaml
+
+  ./composer.phar update 
 
 
 Next steps from Installation

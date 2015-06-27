@@ -36,7 +36,7 @@ Die Starter-Applikation enthält nicht die Mapbender3 bundles, diese sind in ein
 
 .. code-block:: yaml
 
-    cd mapbender3/application
+    cd mapbender3
 	git submodule update --init --recursive
 
 
@@ -96,18 +96,27 @@ Symfony2 benötigt ein neueres PHPUnit als z.B. Ubuntu 12.04 enthält. Pear wird
 
 Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
 
-Wenn Sie die Abhängigkeiten installiert haben, erhalten Sie einen Überblick der verfügbaren build-Tasks über:
+Daher muss zuerst der Composer installiert werden (weitere Information unter http://getcomposer.org/download/):
 
 .. code-block:: yaml
 
-    phing -l
+    curl -sS https://getcomposer.org/installer | php
 
 
-Der ersten Task, den Sie benötigen, ist der debs task. Dieser benötigt `Composer <http://getcomposer.org>`_, um die Laufzeit-Abhängigkeiten wie Symfony und Doctrine zu installieren.
+Erzeugen Sie eine Konfigurationsdatei mit Namen parameters.yml. Kopieren Sie dazu die Datei application/app/config/parameters.yml-dist.
 
 .. code-block:: yaml
 
-    phing deps
+  cd application/app/config/
+  cp parameters.yml-dist parameters.yml
+
+
+And afterwards get the runtime dependencies like Symfony and Doctrine:
+
+.. code-block:: yaml
+
+  ./composer.phar update 
+
 
 
 Die nächsten Schritte der Installation
