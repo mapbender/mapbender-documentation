@@ -11,7 +11,7 @@ Future Milestones: For details have a look at https://github.com/mapbender/mapbe
 Milestone 3.0.5.0
 -----------------
 
-Release Date: xx-05-2015
+Release Date: 01.07.2015
 
 For details have a look at:  https://github.com/mapbender/mapbender-starter/blob/develop/CHANGELOG.md
 
