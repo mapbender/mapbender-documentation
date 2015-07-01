@@ -130,13 +130,13 @@ So, first install Composer (more information at http://getcomposer.org/download/
     curl -sS https://getcomposer.org/installer | php
 
 
-Create a configuration file called parameters.yml. Copy the file application/app/config/parameters.yml-dist.
+Create a configuration file called parameters.yml. Copy the file application/app/config/parameters.yml.dist.
 
 
 .. code-block:: yaml
 
   cd application/app/config/
-  cp parameters.yml-dist parameters.yml
+  cp parameters.yml.dist parameters.yml
 
 
 And afterwards get the runtime dependencies like Symfony and Doctrine:
