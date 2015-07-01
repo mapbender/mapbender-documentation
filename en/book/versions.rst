@@ -37,7 +37,9 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
 
 * **Starting mapbender with URL parameters:** Mapbender3 can be started with URL parameters. See the documentation of `URL parameters <../bundles/Mapbender/CoreBundle/elements/map.html#controlling-by-url>`_.
 
-* Symfony updated to 2.3.29.
+* New translations for Portuguese and Russian.
+  
+* Symfony updated to 2.3.30.
 
 
 **Changes in config.yml:**
