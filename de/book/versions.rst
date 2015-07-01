@@ -11,7 +11,7 @@ Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender
 Milestone 3.0.5.0
 -----------------
 
-Release Datum: xx-05-2015
+Release Datum: 01.07.2015
 
 Übersicht der Änderungen finden Sie unter:  https://github.com/mapbender/mapbender-starter/blob/develop/CHANGELOG.md
 
