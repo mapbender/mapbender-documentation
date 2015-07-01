@@ -103,12 +103,12 @@ Daher muss zuerst der Composer installiert werden (weitere Information unter htt
     curl -sS https://getcomposer.org/installer | php
 
 
-Erzeugen Sie eine Konfigurationsdatei mit Namen parameters.yml. Kopieren Sie dazu die Datei application/app/config/parameters.yml-dist.
+Erzeugen Sie eine Konfigurationsdatei mit Namen parameters.yml. Kopieren Sie dazu die Datei application/app/config/parameters.yml.dist.
 
 .. code-block:: yaml
 
   cd application/app/config/
-  cp parameters.yml-dist parameters.yml
+  cp parameters.yml.dist parameters.yml
 
 
 And afterwards get the runtime dependencies like Symfony and Doctrine:
