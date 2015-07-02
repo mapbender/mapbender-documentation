@@ -13,7 +13,7 @@ PHP
 
 `ApiGen <http://apigen.org>`_ - wird verwendet, um die API-Dokumentation zu generieren. Sie müssen nur docblocks in den Code einfügen. Ein Beispiel für eine Klasse mit docblock-Kommentaren:
 
-.. literalinclude:: ../../../../src/Mapbender/Example.php
+.. literalinclude:: Example.php
     :language: html+php
     :linenos:
 

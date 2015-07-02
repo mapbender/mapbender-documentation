@@ -16,11 +16,11 @@ PHP
 have to do is to insert docblocks in your code. Below you find an example class
 with docbblock annotations:
 
-.. literalinclude:: ../../../../src/Mapbender/Example.php
+.. literalinclude:: Example.php
     :language: html+php
     :linenos:
 
-Have a look at the docblocks at `Example.php<https://github.com/mapbender/mapbender-documentation/blob/master/de/book/development/Example.php>`_.
+Have a look at the docblocks at `Example.php <https://github.com/mapbender/mapbender-documentation/blob/master/de/book/development/Example.php>`_.
 
 
 JavaScript
