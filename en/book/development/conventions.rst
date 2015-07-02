@@ -196,11 +196,15 @@ How to build a new Mapbender3 build
  rm -R mapbender3-3.0.5.0/app/config/parameters.yml
  rm -Rf mapbender3-3.0.5.0/documentation/*
 
+ # tag the documentation
+ cd /data/git/mapbender-documentation/
+ git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ 
  # copy the actual documentation output
  cp -R /data/git/mapbender-documentation/output/*  mapbender3-3.0.5.0/documentation/
  
  # create tar.gz with right name for example mapbender3-3.0.5.0.tar.gz
- tar -czvf mapbender3-3.0.5.0.tar.gz mapbender3-3.0.5/
+ tar -czvf mapbender3-3.0.5.0.tar.gz mapbender3-3.0.5.0/
   
 * move file to /sites/www.mapbender3.org/builds
 * update Roadmap: milestones, features, date on http://mapbender3.org/roadmap
