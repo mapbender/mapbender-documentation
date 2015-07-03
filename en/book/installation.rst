@@ -20,6 +20,7 @@ Mapbender3 needs the following components in order to run:
 * PHP GD (php5-gd) for printing
 * PHP FileInfo for printing to check image format
 * APACHE mod_rewrite 
+* OpenSSL
 
 Optionally, in order to use a database other than the preconfigured SQLite one,
 you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_.
@@ -271,7 +272,7 @@ Install necessary components:
 
 .. code-block:: yaml
 
-  sudo apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
+  sudo apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl openssl
 
 Load Apache module rewrite:
 
@@ -340,7 +341,7 @@ Run the app/console commands
  app/console doctrine:database:create
  app/console doctrine:schema:create
  app/console init:acl
- app/console assets:install web
+ 
  app/console fom:user:resetroot
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
@@ -596,4 +597,4 @@ Update your Mapbender database
  sudo chmod -R ug+w /var/www/mapbender3/app/logs
  sudo chmod -R ug+w /var/www/mapbender3/web/assets
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
-
+app/console assets:install web

@@ -20,6 +20,7 @@ Mapbender3 benötigt die folgenden Komponenten:
 * PHP GD (php5-gd) für den Druck
 * PHP FileInfo für den Druck zur Prüfung der Bilder
 * APACHE mod_rewrite
+* OpenSSL
 
 Um optional eine andere Datenbank als die vorkonfigurierte SQLite zu verwenden, wird eine PHP-Erweiterung benötigt, die von Doctrine unterstützt wird:
 `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. 
@@ -267,7 +268,7 @@ Installieren Sie die notwendigen Komponenten:
 
 .. code-block:: yaml
 
-  apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl
+  apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl openssl
 
 Laden Sie das Apache Modul rewrite:
 
