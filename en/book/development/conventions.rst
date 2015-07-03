@@ -205,8 +205,12 @@ How to build a new Mapbender3 build
  
  # create tar.gz with right name for example mapbender3-3.0.5.0.tar.gz
  tar -czvf mapbender3-3.0.5.0.tar.gz mapbender3-3.0.5.0/
+
+ # create zip with right name for example mapbender3-3.0.5.0.zip
+ gzip -r mapbender3-3.0.5.0 mapbender3-3.0.5.0.zip
   
-* move file to /sites/www.mapbender3.org/builds
+* move tar.gz and zip file to /sites/www.mapbender3.org/builds
+* edit actual release link http://mapbender3.org/en/download (english and german page) http://mapbender3.org/de/download
 * update Roadmap: milestones, features, date on http://mapbender3.org/roadmap
 * write release mail to mapbender-user and mapbender-dev 
 * only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
