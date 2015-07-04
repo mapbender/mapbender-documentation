@@ -38,11 +38,13 @@ Mapbender3 ist die nächste Version in der Mapbender Serie. Es wurde unter Verwe
 
 Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Frameworks fortgesetzt.
 
-  * Anwendungen können direkt im Browser erstellt und konfiguriert werden.
+  * Anwendungen können direkt im Browser erstellt, konfiguriert, gestylt werden.
   * Dienste wie WMS können in einem Service Repository verwaltet und mit Anwendungen verbunden werden. 
   * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
   * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
-
+  * Suchen (SQL oder Solr) können konfiguriert werden.
+  * Anwendungen zur Digitalisierung können aufgebaut werden
+  * Ein Mobiles Template kann für das Erstellen von Anwendung für Smartphones und Tablets verwendet werden
 
 Sie brauchen nichts weiter als einen Standard Webbrowser für diesen Schnellstart.
 
