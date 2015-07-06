@@ -3,7 +3,7 @@
 Zoom to Coordinate
 **********************************
 
-This element offers a dialog where you can type in coordinates of different projections. The coordinate will be transformed to the actual projection of the map and will center the position.
+This element offers a dialog where you can type in coordinates of different projections. The coordinate will be transformed to the actual projection of the map and the position will be centered with a marker.
 
 .. image:: ../../../../../figures/zoomcoordinate.png
      :scale: 80
@@ -22,7 +22,8 @@ YAML-Definition:
    prefix_projection: 'projection'      # prefix for the projections
    prefix_x: 'x'                        # prefix for input column x-coordinate
    prefix_y: 'y'                        # prefix for input column y-coordinate
-   type: 'element'                      # choose position of the element (element for sidepane or dialog for popup)
+   type: 'element'                      # choose position of the element (element for sidepane
+                                          or dialog for popup)
    target: ~                            # Id/Name of Map element to query
 
 
