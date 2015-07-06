@@ -3,7 +3,7 @@
 Zoom to Coordinate
 **********************************
 
-This element offers a dialog where you can type in coordinates of different projections.  The coordinate will be transform to the actual projection of the map and will center the position.
+This element offers a dialog where you can type in coordinates of different projections. The coordinate will be transformed to the actual projection of the map and will center the position.
 
 .. image:: ../../../../../figures/zoomcoordinate.png
      :scale: 80
