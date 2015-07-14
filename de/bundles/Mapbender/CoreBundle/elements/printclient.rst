@@ -1,11 +1,17 @@
 ﻿PrintClient (Druck)
 ***********************
 
-Mit dem Druck kann ein definierter Bereich der Karte ausgedruckt werden. Gewählt werden können Eigenschaften, die für den Ausdruck benötigt wird, wie eine Vorlage, das Format und der Maßstab.
-Der Ausdruck kann auch gedreht werden.
+Mapbender3 bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen Client verschiedene Auswahlmöglichkeiten zur Verfügung:
 
-Bitte beachten Sie, dass sich der Druck noch im Aufbau befindet.
+ * Auswahl Maßstab
+ * Auswahl Qualität
+ * Drehung des Aussschnitts
+ * Ausdruck Legende
+ * Optional können freie Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden
 
+Der Druck greift auf Druckvorlagen zu, die individuell angepasst werden können. In den Druckvorlagen können Bereiche für Datum, Maßstab (Text und Balken), Übersichtskarte und Nordpfeil definiert werden.
+
+Mapbender3 bringt bereits eine Kollektion von Druckvorlagen (LibreOffice Draw Dateien in den Formaten A4 bis A0) mit, die individuell angepasst werden können.
 
 .. image:: ../../../../../figures/print_client.png
      :scale: 80
@@ -16,31 +22,31 @@ Konfiguration
 .. image:: ../../../../../figures/print_client_configuration.png
      :scale: 80
 
-Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration.
+Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden. Siehe unter :doc:`button` für die Konfiguration.
 
 
 YAML-Definition:
 
 .. code-block:: yaml
 
-    target: map                            	# ID des Kartenelements
-    autoOpen: false				# true, wenn das Druckfenster beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
+    target: map                    # ID des Kartenelements
+    autoOpen: false				   # true, wenn das Druckfenster beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
     templates:
         - { template: a4portrait, label: A4 Portrait, format: a4}	# Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
         - { template: a4landscape, label: A4 Landscape, format: a4} 	# Vorlagebeschriftung im Druckdialog, Format (A4,A3,...) wird definiert
-    scales: [5000, 10000, 25000]        		# Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
-    quality_levels:					# die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
+    scales: [5000, 10000, 25000]   # Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
+    quality_levels:				   # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
         - { dpi: 72 , label: Draft (72dpi)}		# die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
         - { dpi: 288,  label: Document (288dpi)}	# es können weitere dpi-Werte angegeben werden
     rotatable: true                             	# true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
-    legend: true                        # true/false, der Standardwert ist false
-    file_prefix: mapbender3             # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
-    optional_fields:                            # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
-        title:                                  # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
-            label: Titel                        # Beschriftung des optionalen Feldes
-            type: text                          # Typ des optionalen Feldes
+    legend: true                   # true/false, der Standardwert ist false
+    file_prefix: mapbender3        # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
+    optional_fields:               # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
+        title:                     # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
+            label: Titel           # Beschriftung des optionalen Feldes
+            type: text             # Typ des optionalen Feldes
             options:                            
-                required: true                  # erforderlich: true or false
+                required: true     # erforderlich: true or false
         comment1:
             label: Kommentar 1
             options: { required: false }
@@ -50,8 +56,8 @@ YAML-Definition:
         bearbeiter:
             label: Bearbeiter
             options: { required: true }
-    replace_pattern:                            # Für den Druck kann der Kartenaufruf verändert werden. 
-            -                                   # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
+    replace_pattern:               # Für den Druck kann der Kartenaufruf verändert werden. 
+            -                      # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
                 default: { 288: '&map_resolution=288' }
             -
                 pattern: 'stadtplan.xml'        # oder es können für den Druck optimierte Dienste angefordert werden.
@@ -67,10 +73,10 @@ Class, Widget & Style
 File location
 ===============
 **northarrow**
-Das Bild des Nordpfeils ("North arrow") befindet sich unter images/. Sie können das Bild des Nordpfeils auch durch ein anderes Bild ersetzen.
+Das Bild des Nordpfeils ("North arrow") befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Sie können das Bild des Nordpfeils auch durch ein anderes Bild ersetzen.
 
 **print templates**
-Die Vorlagen befinden sich unter app/Resources/MapbenderPrintBundle/templates/. Sie können eigene Druckvorlagen erstellen.
+Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Sie können eigene Druckvorlagen erstellen.
 
 
 Erstellen eines individuellen Vorlage
@@ -97,3 +103,7 @@ Exportieren Sie die Vorlage als PDF unter dem gleichen Namen wie die ODG-Datei. 
 
 Das Druck-Skript liest die Informationen (Position, Größe, Schriftgröße, Ausrichtung) aus der ODG-Datei aus und verwendet ebenfalls das PDF-Dokument mit den festen Objekten. Aus beiden und den aktuellen Karten wird dann eine PDF-Druckdatei erstellt.
 
+
+Konfiguration des Elements
+==================================
+Gehen Sie in der Administration von Mapbender3 zu Ihrer Anwendung und erzeugen Sie ein Element **Druck** (Beachten Sie: Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden).
