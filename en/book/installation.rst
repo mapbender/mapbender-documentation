@@ -35,8 +35,12 @@ Download
 Installation packages are distributed as compressed packages and are available
 for download at the `download <http://mapbender3.org/download>`_ page.
 
-After downloading, extract the package in a directory of your choice. Then make
-sure your Webserver points to the web directory inside the mapbender3 directory
+After downloading, extract the package in a directory of your choice. In this installation daocumentation we assume that the package is extracted in the directory /var/www.
+
+Apache ALIAS
+********************
+
+Then make sure your Webserver points to the web directory inside the mapbender3 directory
 you just uncompressed. You will also need to make sure that the default
 directory index is *app.php*. Use Apache REWRITE (install *mod_rewrite*) to access Mapbender3 without *app.php* in the URL.
 
@@ -535,10 +539,13 @@ Update Mapbender3 to a newer Version
 To update Mapbender3 you have to do the following steps:
 
 * get the new version from http://mapbender3.org/builds/ or nightlies from http://mapbender3.org/builds/nightly/
-* save your configuration files and your old Mapbender
+* save your configuration files (parameters.yml and config.yml) and your old Mapbender (files and database)
 * replace the new files 
-* merge your configuration files (check for new parameters)
+* merge your configuration files (check for new parameters and changes)
 * update your Mapbender database
+* copy the screenshots from you ald Mapbender version from /web/uploads/ to the folder /web/uploads Verzeichnis of your new installation
+* Templates: If you are using your own template you have to compare your scripts with the new scripts (are there any changes?)
+* print templates: if you use your own print templates: copy them back to app/Resources/MapbenderPrintBundle/templates/.
 * That's all! Have a look at your new Mapbender version
 
 
@@ -565,25 +572,17 @@ Have a look at the steps as commands
  cp /var/www/mapbender3_save/app/config/config.yml /var/www/mapbender3/app/config/config.yml 
  
  # manual step
- # merge parameters.yml, config.ymls and if used mapbender.yml back to the new installation
- # if you have individual templates: merge the templates with the new Mapbender version
+ # merge parameters.yml, config.yml and if used mapbender.yml 
  # if you use screenshots: copy the screenshots from the old version back to mapbender3/web/uploads
+ # if you have individual templates: merge the templates with the new Mapbender version
  # if you use your own print templates: copy them back to mapbender3/app/Resources/MapbenderPrintBundle/templates/
  
  # change the accessrights and owner of the files
  sudo chmod -R uga+r /var/www/mapbender3
  sudo chown -R www-data:www-data /var/www/mapbender3
-
-
-Update your Mapbender database
-
-.. code-block:: yaml
-
+ 
+ # Update your Mapbender database
  cd /var/www/mapbender3/
-
- # for update from version 3.0.3.x to 3.0.4.0 on PostgreSQL you have to run the following SQL before you run app/console doctrine:schema:update --force
- # ALTER TABLE fom_profile_basic DROP CONSTRAINT fom_profile_basic_pkey;
-
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
  app/console assets:install web
@@ -597,4 +596,41 @@ Update your Mapbender database
  sudo chmod -R ug+w /var/www/mapbender3/app/logs
  sudo chmod -R ug+w /var/www/mapbender3/web/assets
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
-app/console assets:install web
+ 
+ # export the web directory
+ app/console assets:install web
+
+
+Update Example for Windows
+------------------------------------
+ 
+.. code-block:: yaml
+
+ # Download the new version http://mapbender3.org/builds/
+   
+ # Save the old version (files and database)
+   
+ # Copy the configuration files (parameters.yml and config.yml) to your new Mapbender version. 
+ # You have to check the configuration files for changes (new parameter, other changes)
+
+ # Call the app/console commands with php.exe
+ # You have to open a windows console to send the commands
+ c:
+ cd mapbender3
+ 
+ # Update your Mapbender database
+ php.exe app/console doctrine:schema:update --dump-sql
+ php.exe app/console doctrine:schema:update --force
+  
+ # Import the applications from mapbender.yml to your database to get to know about the latest developments
+ php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+ php.exe app/console assets:install web
+
+ # Delete your cache and the logdateien at mapbender3/app/cache und mapbender3/app/logs
+
+ # if you use screenshots: copy the screenshots from the old version back to mapbender3/web/uploads
+ # if you have individual templates: merge the templates with the new Mapbender version
+ # if you use your own print templates: copy them back to mapbender3/app/Resources/MapbenderPrintBundle/templates/
+ 
+
+

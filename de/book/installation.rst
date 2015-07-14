@@ -33,7 +33,12 @@ Download
 
 Installationspakete werden als komprimierte Pakete ausgegeben und sind auf der Download-Seite verfügbar unter http://mapbender3.org/download.
 
-Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichnis Ihrer Wahl. Stellen Sie sicher, dass der Webserver auf das gerade dekomprimierte Webverzeichnis in dem Mapbender Verzeichnis zeigt. Sorgen Sie dafür, dass *app.php* als Verzeichnis-Index eingestellt ist.
+Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichnis Ihrer Wahl. In dieser Installationsbeschreibung wird davon ausgegangen, dass die Dateien unter /var/www ausgepackt werden.
+
+Apache ALIAS
+********************
+
+Stellen Sie sicher, dass der Webserver auf das gerade dekomprimierte Webverzeichnis in dem Mapbender Verzeichnis zeigt. Sorgen Sie dafür, dass *app.php* als Verzeichnis-Index eingestellt ist.
 
 Beispiel für eine Apache ALIAS Konfiguration in der Datei /etc/apache2/conf.d/mapbender3.conf (Apache 2.2) oder /etc/apache2/conf-enabled/mapbender3.conf (Apache 2.4). Legen Sie diese Datei an und berechtigen Sie Apache diese zu lesen.
 
@@ -428,7 +433,7 @@ Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/paramet
     database_user:     postgres
     database_password: 1xyz45ab
 
-Rufen Sie die app/console Befehle über die php.exe auf.
+Rufen Sie die app/console Befehle über die php.exe auf. Hierzu müssen Sie ein Standardeingabefenster öffnen.
 
 .. code-block:: yaml
  
@@ -524,10 +529,13 @@ Aktualisierung von Mapbender3 auf eine neuere Version
 Um Mapbender3 zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
 * Laden Sie die neuste Version von http://mapbender3.org/builds/ herunter. Aktuelle Snapshots finden Sie unter http://mapbender3.org/builds/nightly/
-* Sichern Sie Ihre Konfigurationsdateien und ihre alte Mapbender Version
-* Ersetzen Sie die Dateien durch die neuen Mapbender Skripte
-* Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter.
+* Sichern Sie Ihre Konfigurationsdateien (parameters.yml und config.yml) und Ihre alte Mapbender Version (Dateien und Datenbank)
+* Ersetzen Sie die Dateien durch die neuen Mapbender Dateien
+* Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen.
 * Aktualisieren Sie Ihre Mapbender Datenbank
+* Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von /web/uploads/ in das /web/uploads Verzeichnis Ihrer neuen Mapbender Version
+* Wenn Sie eigenen Templates verwenden sollten, müssen Sie Ihre Templates mit denen der neuen Version vergleichen (kam es zu Änderungen?)
+* Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
 * Das war's auch schon! Schauen Sie sich Ihre neue Mapbender3 Version an.
 
 
@@ -548,7 +556,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  cp -R /tmp/build_mapbender3/mapbender3-3.0.4.0 /var/www/
  mv /var/www/mapbender3-3.0.4.0 /var/www/mapbender3
  
- # copy your old configuration files to the new version
+ # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
  cp /var/www/mapbender3_save/app/config/parameters.yml /var/www/mapbender3/app/config/parameters.yml
  cp /var/www/mapbender3/app/config/config.yml /var/www/mapbender3/app/config/config.yml-dist
  cp /var/www/mapbender3_save/app/config/config.yml /var/www/mapbender3/app/config/config.yml 
@@ -559,25 +567,18 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # sofern Sie Vorschaubilder hochgeladen haben: kopieren Sie diese von der alten Version wieder nach mapbender3/web/uploads
  # sofern Sie eigene Druckvorlagen verwenden: kopieren Sie diese wieder nach mapbender3/app/Resources/MapbenderPrintBundle/templates/
 
-
- 
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
  sudo chmod -R uga+r /var/www/mapbender3
  sudo chown -R www-data:www-data /var/www/mapbender3
 
-
-Aktualisieren Sie Ihre Mapbender Datenbank
-
-.. code-block:: yaml
-
+ # Aktualisieren Sie Ihre Mapbender Datenbank
  cd /var/www/mapbender3/
-
- # Beim Update von der Version 3.0.3.x nach 3.0.4.0 auf PostgreSQL müssen Sie das folgende SQL auf der Datenbank absetzen,
- # bevor Sie app/console doctrine:schema:update --force ausführen.
- # ALTER TABLE fom_profile_basic DROP CONSTRAINT fom_profile_basic_pkey;
-
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
+
+ # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
  app/console assets:install web
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
@@ -589,4 +590,37 @@ Aktualisieren Sie Ihre Mapbender Datenbank
  sudo chmod -R ug+w /var/www/mapbender3/app/logs
  sudo chmod -R ug+w /var/www/mapbender3/web/assets
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
+
+
+Aktualisierungsbeispiel für Windows
+------------------------------------
+ 
+.. code-block:: yaml
+
+ # Laden Sie die neue Version herunter http://mapbender3.org/builds/
+  
+ # Sichern Sie die alte Version (Dateien und Datenbank)
+ 
+ # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
+ # vorher müssen Sie diese händisch auf neue Parameter und Änderungen überprüfen
+ 
+ # Rufen Sie die app/console Befehle über die php.exe auf.
+ # Hierzu müssen Sie ein Standardeingabefenster öffnen.
+ c:
+ cd mapbender3
+ 
+ # Aktualisieren Sie Ihre Mapbender Datenbank
+ php.exe app/console doctrine:schema:update --dump-sql
+ php.exe app/console doctrine:schema:update --force
+  
+ # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
+ php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+ php.exe app/console assets:install web
+
+ # Löschen Sie den Cache und die Logdateien unter mapbender3/app/cache und mapbender3/app/logs
+
+ # sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version
+ # sofern Sie Vorschaubilder hochgeladen haben: kopieren Sie diese von der alten Version wieder nach mapbender3/web/uploads
+ # sofern Sie eigene Druckvorlagen verwenden: kopieren Sie diese wieder nach mapbender3/app/Resources/MapbenderPrintBundle/templates/
+
 
