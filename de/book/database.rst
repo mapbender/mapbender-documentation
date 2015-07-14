@@ -4,6 +4,7 @@ Konfiguration der Datenbank
 .. _doctrine:
 Doctrine
 *************
+
 Mapbender3 verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und beitet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht. 
 Auf der `Doctrine Projektseite <http://www.doctrine-project.org/>`_ finden sich weitere Informationen.
 
