@@ -21,6 +21,7 @@ Konfiguration
 * Tooltip: Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird. 
 
 
+
 YAML-Definition:
 
 .. code-block:: yaml
