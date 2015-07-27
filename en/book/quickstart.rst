@@ -40,6 +40,7 @@ Mapbender3 is the next version in the Mapbender series. It is rewritten from the
 On the client-side expect to find OpenLayers and jQuery (UI) nicely glued together by MapQuery.
 
 With this new code base we will continue the Mapbender idea of being a Geoportal Framework:
+
   * Applications can be setup, configured and styled right from within the browser
   * Services like WMS can be managed inside a service repository and linked to applications
   * Rights management are easy to maintain, for individual users and groups, whether you store them inside the database or in an LDAP. 
