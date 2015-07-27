@@ -13,6 +13,13 @@ Configuration
 .. image:: ../../../../../figures/activity_indicator_configuration.png
      :scale: 80
 
+* Title: Title of the element
+* Tooltip: The text entered as a tooltip will be indicated by hovering over the element with the mouse cursor a longer time.
+* Activity class: CSS class to indicate activity (Ajax or tile)
+* Ajax activity class: CSS class to indicate Ajax activity
+* Tile activiy class: CSS class to indicate tile loading activity
+
+
 YAML-Definition:
 
 .. code-block:: yaml
