@@ -38,7 +38,7 @@ Mapbender3 ist die nächste Version in der Mapbender Serie. Es wurde unter Verwe
 
 Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Frameworks fortgesetzt.
 
-  * Anwendungen können direkt im Browser erstellt, konfiguriert, gestylt werden.
+  * Anwendungen können direkt im Browser erstellt, konfiguriert und gestylt werden.
   * Dienste wie WMS können in einem Service Repository verwaltet und mit Anwendungen verbunden werden. 
   * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
   * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
@@ -46,7 +46,7 @@ Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Framewor
   * Anwendungen zur Digitalisierung können aufgebaut werden
   * Ein Mobiles Template kann für das Erstellen von Anwendung für Smartphones und Tablets verwendet werden
 
-Sie brauchen nichts weiter als einen Standard Webbrowser für diesen Schnellstart.
+Sie brauchen nichts weiter als einen Standard Webbrowser für diesen Schnellstart (Quickstart).
 
 Dieser Quickstart beschreibt, wie Sie:
 
@@ -79,6 +79,9 @@ Starten Sie Mapbender
 
 Falls Sie Schwierigkeiten haben, Mapbender zu starten, überprüfen Sie ob der Apache Web Server und die PostgreSQL Datenbank laufen.
 
+  .. image:: ../../figures/mapbender3_app_dev.png
+     :scale: 80
+
 
 Starten Sie Mapbender im Entwicklungsmodus über app_dev.php
 ==============================================================
@@ -91,8 +94,6 @@ Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über d
 
 #. Schauen Sie sich an, welche Information im Entwicklungsmodus angezeigt werden.
 
-  .. image:: ../../figures/mapbender3_symfony_profiler.png
-     :scale: 80
 
 
 Die Willkommensseite
@@ -116,13 +117,13 @@ Nach erfolgreicher Anmeldung werden Sie zur ``Mapbender Administration`` weiter 
 
 Anwendungsübersicht
 ================================================================================
-Nach der Anmeldung werden Sie zur Anwendungsübersicht (``Applications``) mit einer Liste der für Sie freigegebenen Anwendungen weiter geleitet.
+Nach der Anmeldung werden Sie zur Anwendungsübersicht (``Anwendungen/ Applications``) mit einer Liste der für Sie freigegebenen Anwendungen weiter geleitet.
 
 Die Anwendungsübersicht bietet folgende Funktionen:
 
  * Titel und Beschreibung
  * Vorschaubild zur Anwendung (sofern bereitgestellt)
- * Link zur Anwendung |mapbender3-button-show|
+ * |mapbender3-button-show| Link zur Anwendung
  * |mapbender3-button-copy| Button, um die Anwendung zu kopieren
  * |mapbender3-button-edit| Button, um die Anwendung zu bearbeiten
  * |mapbender3-button-publish| Button zum Veröffentlichen der Anwendung
@@ -139,22 +140,22 @@ Erstellen Sie eine eigene Anwendung
 
 Erstellen Sie eine neue Anwendung, indem Sie einen Titel, eine Beschreibung sowie einen URL-Titel eingeben. Anschließend können Sie die Anwendung bearbeiten und Elemente, Themen, Stil (CSS-Editor) und Sicherheitseinstellungen zu verwalten.
 
-#. Wählen Sie ``Anwendungen --> Neue Anwendung``
+#. Wählen Sie ``Anwendungen --> Neue Anwendung (Applications --> New Application)``
 
 #. Geben Sie einen Titel und eine Beschreibung der Anwendung ein
 
 #. Geben Sie einen URL-Titel an, der in der URL benutzt wird, um die Anwendung zu starten. Er kann identisch zum Titel sein und sollte keine Leer- und Sonderzeichen enthalten.
 
-#. Laden Sie eine png-Datei und definieren so ein Vorschaubild für die Anwendungsübersicht.
+#. Laden Sie eine Bilddatei und definieren so ein Vorschaubild für die Anwendungsübersicht.
 
-#. Wählen Sie eine Layoutvorlage für die Anwendung. Die Vorlage bestimmt den Aufbau der Anwendung. Mapbender3 stellt Ihnen einige Vorlagen (Templates) zur Verfügung (Fullscreen, Classic..). Sie können aber auch eigene Vorlagen anlegen.
+#. Wählen Sie eine Layoutvorlage für die Anwendung. Die Vorlage bestimmt den Aufbau der Anwendung. Mapbender3 stellt Ihnen einige Vorlagen (Templates) zur Verfügung (Fullscreen, Classic,...). Sie können aber auch eigene Vorlagen anlegen.
 
-#. Betätigen Sie die Schaltfläche **Create**, um die Anwendung zu erzeugen.
+#. Betätigen Sie die Schaltfläche **Speichern (Create)**, um die Anwendung zu erzeugen.
 
 #. Über den ``Bearbeiten-Button`` |mapbender3-button-edit| neben der Anwendung können Sie nun weitere Bearbeitungen durchführen.
 
 
-Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. ein Kartenelement, Navigation, Legende) und Kartendienste, um die Anwendung mit Leben zu füllen.
+Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Kartendienste, um die Anwendung mit Leben zu füllen.
 
 
   .. image:: ../../figures/mapbender3_create_application.png
@@ -166,25 +167,25 @@ Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. ein Karteneleme
 
 Kopieren und Umbenennen einer Anwendung
 ================================================================================
-Sie können eine neue Anwendung auch durch Kopieren einer vorhandenen erzeugen. Jede Anwendung, auf die Sie schreibend zugreifen können, verfügt über den Button kopieren |mapbender3-button-copy|. Beim Kopieren wird die Anwendung mitsamt der Dienste kopiert. Die kopierte Anwendung erhält einen abgeleiteten Namen, den Sie im nächsten Schritt anpassen können.
+Sie können eine neue Anwendung auch durch Kopieren einer vorhandenen erzeugen. Jede Anwendung, auf die Sie schreibend zugreifen können, verfügt über den Button Anwendung duplizieren |mapbender3-button-copy|. Beim Kopieren wird die Anwendung mitsamt der Dienste kopiert. Die kopierte Anwendung erhält einen abgeleiteten Namen, den Sie im nächsten Schritt anpassen können.
 
 
 
 Löschen einer Anwendung
 ================================================================================
-Sie können eine Anwendung aus der Liste ``Applications`` über den |mapbender3-button-delete|-Button löschen. Es wird lediglich die Anwendung gelöscht. Die Dienste sind weiterhin im Dienste-Repository vorhanden.
+Sie können eine Anwendung aus der Liste ``Anwendungen`` über den |mapbender3-button-delete|-Button löschen. Es wird lediglich die Anwendung gelöscht. Die Dienste sind weiterhin im Dienste-Repository vorhanden.
 
 
 
 Exportieren und Importieren von Anwendungen und Daten
 ================================================================================
-Sie können eine Anwendung als  JSON oder YAML über ``Applications --> Export`` exportieren. Für den Export können ein oder mehrere Anwendungen ausgewählt werden. Die Datenquellen können ebenfalls beim Export ausgegeben werden.
+Sie können eine Anwendung als  JSON oder YAML über ``Anwendungen --> Exportieren (Applications --> Export)``exportieren. Für den Export können ein oder mehrere Anwendungen ausgewählt werden. Die Datenquellen können ebenfalls beim Export ausgegeben werden.
 
   .. image:: ../../figures/mapbender3_application_export.png
      :scale: 80
 
 
-Die Export-Datei beinhaltet alle Definitionen, die zum Aufbau der Anwendung (Datenquellen) erforderlich sind. Die Export-Datei kann über ``Applications --> Import`` in andere Mapbender3 Installationen oder in die gleiche Installation geladen werden.
+Die Export-Datei beinhaltet alle Definitionen, die zum Aufbau der Anwendung (Datenquellen) erforderlich sind. Die Export-Datei kann über ``Anwendungen --> Importieren (Applications --> Import)`` in andere Mapbender3 Installationen oder in die gleiche Installation geladen werden.
 
 
   .. image:: ../../figures/mapbender3_application_import.png
@@ -196,7 +197,7 @@ Verwaltung von Datenquellen
 Mapbender soll verschiedene Dienste wie OGC WMS, OGC WMTS oder OGC WFS verwalten. Jeder Service muss dabei anders verwaltet werden. In der Administration ist dabei für jede Quelle eine eigene Administrationsmöglichkeit (im Moment lediglich WMS) vorgesehen.
 
 
-Service Repository
+Service Repository (Datenquellen)
 ====================================
 
 #. Gehen Sie auf ``Datenquelle (Services)`` und schauen sich die Dienstquellen an.
@@ -218,13 +219,13 @@ Ein WMS liefert ein XML, wenn das getCapabilities-Dokument angefordert wird. Die
 
 .. tip:: Sie sollten das Capabilities-Dokument zuerst in Ihrem Browser überprüfen, bevor Sie versuchen, den Dienst in Mapbender zu laden.
 
-#. Wählen Sie ``Datenquelle --> Neue Datenquelle`` (``Sources --> Add Source``). Geben Sie den Link zur WMS getCapabilities URL in das Textfeld ``Dienste-URL`` (``Service URL``) ein.
+#. Wählen Sie ``Datenquelle --> Neue Datenquelle (Sources --> Add Source)`` oder nutzen sie den |mapbender3-button-add| ``Button`` um eine neue Datenquelle hinzuzufügen. Geben Sie den Link zur WMS getCapabilities URL in das Textfeld ``Dienste-URL`` (``Service URL``) ein.
 
 #. Geben Sie Benutzername und Kennwort ein, sofern der Dienst eine Authentifizierung benötigt.
 
-#. Über die Auswahl ``only valid`` können Sie Dienste laden, die dem WMS Schema folgen. Dienste, die diesem Schema nicht folgen, könnten vielleicht Probleme in der Anzeige hervorrufen.
+#. Über die Auswahl ``nur valid (only valid)`` können Sie Dienste laden, die dem WMS Schema folgen. Dienste, die diesem Schema nicht folgen, könnten vielleicht Probleme in der Anzeige hervorrufen.
 
-#. Klicken Sie **Load**, um den Dienst in das Repository zu laden.
+#. Klicken Sie **Laden (Load)**, um den Dienst in das Repository zu laden.
 
 #. Nach erfolgreicher Registrierung des Dienstes zeigt Mapbender eine Übersicht der Informationen an, die der Dienst geliefert hat.
 
@@ -254,9 +255,9 @@ Fügen Sie Dienste zur Anwendung hinzu
 ===========================================
 Nach dem erfolgreichen Hochladen eines WMS möchten Sie diesen zu einer Anwendung hinzufügen.
 
-#. Wählen Sie  |mapbender3-button-edit| ``Anwendungen -->Editier-Button --> Layerset``.
+#. Wählen Sie  ``Anwendungen -->`` |mapbender3-button-edit| ``Editier-Button --> Layerset``.
 
-#. Wählen Sie den ``Button`` |mapbender3-button-add|, um ein Layerset hinzuzufügen. Ein Layerset präsentiert mehrere Layer (mögliche Namen können main für die Hauptkarte und overview für die Übersichtskarte sein)
+#. Wählen Sie den ``Button`` |mapbender3-button-add|, um ein Layerset hinzuzufügen. Ein Layerset präsentiert mehrere Layer (mögliche Namen können "main" für die Hauptkarte und "overview" für die Übersichtskarte sein)
 
 #. Jetzt können Sie Dienste zum Layerset hinzufügen.
 
@@ -270,9 +271,9 @@ Nach dem erfolgreichen Hochladen eines WMS möchten Sie diesen zu einer Anwendun
 
 Konfiguration von Diensten
 ================================================================================
-Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie nicht alle Ebenen anzeigen oder Sie möchten die Reihenfolge oder den Titel der Ebenen ändern, die Info-Abfrage für einzelne Ebenen verhindern oder den Maximalmaßstab ändern.
+Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie nicht alle Ebenen anzeigen oder Sie möchten die Reihenfolge oder den Titel der Ebenen ändern, die Info-Abfrage für einzelne Ebenen verhindern oder den Minimal-/Maximalmaßstab ändern.
 
-#. Wählen Sie |mapbender3-button-edit|  ``Anwendung --> Editier-Button --> Layerset --> Editier-Button``, um eine Instanz zu konfigurieren.
+#. Wählen Sie  ``Anwendung -->`` |mapbender3-button-edit| ``Editier-Button --> Layerset --> Editier-Button``, um eine Instanz zu konfigurieren.
 
 #. Sie sehen eine Tabelle mit den Layern des Dienstes.
 
@@ -285,17 +286,18 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
 
 **Dienstekonfiguration:**
 
+* Titel - Name der bei der Anwendung angezeigt wird
 * Format - wählen Sie das Format für den getMap-Requests
 * Infoformat - wählen Sie das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
 * Exceptionformat - wählen Sie das Format für Fehlermeldungen
 * Opacity - wählen Sie die Opazität (Deckkraft) in Prozent
-* Tile buffer - 1 nur der sichtbare Bereich wird angefordert, 1.25 es wird eine größere Karte angefordert
-* BBOX factor - bei Anforderung von Kacheln. Wert 0 - es werden keine zusätzlichen Kacheln außerhalb angefordert
-* Visible - 
+* Kachel-Puffer (Tile buffer) - 1 nur der sichtbare Bereich wird angefordert, 1.25 es wird eine größere Karte angefordert
+* BBOX-Faktor - bei Anforderung von Kacheln. Wert 0 - es werden keine zusätzlichen Kacheln außerhalb angefordert
+* Sichtbarkeit (Visible) - soll der Dienst sichtbar sein
 * BaseSource - soll der Dienst als BaseSource behandelt werden (BaseSources können beim Ebenenbaum ein-/ausgeblendet werden)
 * Proxy - bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
-* Transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
-* Tiled - Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
+* Transparenz - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
+* Gekachelt (Tiled) - Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
 
   
 **Vendor Specific Parameter:**
@@ -305,7 +307,7 @@ die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der
 multi-dimensionalen Daten in der WMS Spezifikation.
 
 In Mapbender3 können die Vendor Specific Parameter genutzt werden, z.B. um
-User und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu
+Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu
 hängen. Es können auch feste Werte übermittelt werden.
 
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
@@ -328,18 +330,18 @@ $groups$.
 
 **Layerkonfiguration:**
 
-* title - Layertitel der Service Information (der Titel ist anpassbar)
-* active (on/off) - deaktiviert ein Thema in dieser Anwendung
-* select allow - Layer ist auswählbar im Ebenenbaum
-* select on - Layer ist bei Anwendungsstart aktiv
-* info allow - Infoabfrage wird für diesen Layer zugelassen
-* info on - Layer Infoabfrage wird beim Start aktiviert
-* minscale / maxscale - Maßstabsbereich, in dem der Layer angezeigt wird.
-* toggle - aufklappen beim Start der Anwendung
-* reorder - Ebenen können über drag&drop in der Anwendung verschoben werden
+* Titel - Layertitel der Service Information (der Titel ist anpassbar)
+* Aktiv an/aus (active on/off) - aktiviert/ deaktiviert ein Thema in dieser Anwendung
+* Auswählen erlauben (select allow) - Layer wird angezeigt und ist auswählbar im Ebenenbaum
+* Auswählen an (select on) - Layer ist bei Anwendungsstart aktiv
+* Info erlauben (info allow) - Infoabfrage wird für diesen Layer zugelassen
+* Info an (info on) - Layer Infoabfrage wird beim Start aktiviert
+* Minimaler/ Maximaler Maßstab (minsc / maxsc) - Maßstabsbereich, in dem der Layer angezeigt wird.
+* Aufklappen (toggle) - aufklappen beim Start der Anwendung
+* Sortieren (reorder) - Ebenen können über drag&drop in der Anwendung verschoben werden
 * ... -> öffnet einen Dialog mit weiteren Informationen
 * name - Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
-* style - wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den default Stil wählen.
+* Style - wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den standard (default) Stil wählen.
 
 
 
@@ -350,7 +352,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
   .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Wählen Sie |mapbender3-button-edit| ``Anwendungen --> Editier-Button --> Layers --> Button`` |mapbender3-button-add|, um eine Übersicht über die Mapbender3-Elemente zu erhalten.
+#. Wählen Sie ``Anwendungen -->`` |mapbender3-button-edit| ``Editier-Button --> Layouts --> Button`` |mapbender3-button-add|, um eine Übersicht über die Mapbender3-Elemente zu erhalten.
 
 #. Wählen Sie ein Element aus der Liste aus.
 
@@ -362,34 +364,36 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
 
 #. Schauen Sie sich Ihre Anwendung an. Öffnen Sie Ihre Anwendung über den Button |mapbender3-button-show|.
 
+Jetzt sollten sie eine Idee davon haben, wie einfach es ist eine Mapbender-Anwendung ohne Codes zu verändern.
+
 
   .. image:: ../../figures/mapbender3_application_elements.png
      :scale: 80
 
 Beispiele für Elemente, die Mapbender3 anbietet:
 
-* About Dialog 
-* Activity Indicator - Aktivitätsanzeige
-* BaseSourceSwitcher - Hintergrund wechseln
+* Über Mapbender-Dialog (About Dialog)- zeigt Informationen über Mapbender an 
+* Aktivitätsanzeige (Activity Indicator) - zeigt HTTP-Aktivität an
+* Hintergrund wechseln (BaseSourceSwitcher) - Hintergründe können definiert und gewechselt werden
 * Button 
-* Coordinates Display - Koordinatenanzeige
-* Copyright
+* Koordinatenanzeige (Coordinates Display) - zeigt Mausposition in den Kartenkoordinaten an
+* Copyright- zeigt Nutzungsbedingungen an
 * Feature Info - Informationsausgabe (getFeatureInfo)
-* GPS-Position - Positionierung der Karte über den aktuellen Standort
+* GPS-Position - Button zur Anzeige der GPS-Position
 * HTML - Element zur freien Definition von HTML zur Einbindung von Bilder, Texten, Links
-* Image Export - Bild kann als png oder jpg exportiert werden
-* Legend - Anzeige der Legende der Dienste
+* Bildexport (Image Export) - Bild kann als png oder jpg exportiert werden
+* Legende - Anzeige der Legende der Dienste und Themen
 * Layertree - Ebenenbaum
-* Map - Karte
-* Meetingpoint (POI) - Treffpunkt generiert eine URL, über die eine Anwendung mit Hinweistext positioniert werden kann
-* Overview - Übersichtskarte
-* PrintClient - Druck
-* Ruler Line/Area - Linien- und Flächenmessung
-* Scale Selector - Auswahl des Maßstabs über eine Auswahlbox
-* ScaleBar - Maßstabsleiste
-* SimpleSearch - Einfache Suche über SOLR
-* Search Router - konfigurierbare Suche über SQL
-* Spatial Reference System Selector (SRS Selector) - Auswahl der Projektion über eine Auswahlbox 
+* Karte (Map)
+* Meetingpoint (POI) - Treffpunkt wird mit Hinweistexten generiert und über eine URL verschickt
+* Übersicht (Overview) - zeigt eine kleine Übersichtskarte
+* Druck (PrintClient) - Druckdialog
+* Linien- und Flächenmessung (Ruler Line/Area) - Linien- und Flächenzeichnung, Dialog der Messung
+* Maßstabsauswahl (Scale Selector) - Auswahl des Maßstabs über eine Auswahlbox
+* Maßstabsleiste (ScaleBar) - Anzeige des aktuellen Maßstabs
+* Einfache Suche (SimpleSearch) - Einfache Suche über SOLR
+* Suche (Search Router) - konfigurierbare Suche über SQL
+* SRS Auswahl (Spatial Reference System Selector) - Auswahl der Projektion (SRS) über eine Auswahlbox 
 * Navigation Toolbar (Zoombar)
 * WMS Loader - Laden von OGC WMS Diensten über ein Textfeld (getCapabilities-URL)
 * WMC Editor - Speichern von Themenplänen
@@ -403,11 +407,11 @@ Versuchen Sie es selber
 ================================================================================
 
 * Fügen Sie ein Kartenelement (Map-Element) zum content-Bereich Ihrer Anwendung hinzu.
-* Fügen Sie ein Inhaltsverzeichnis (Layertree) zum content-Bereich Ihrer Anwendung hinzu.
+* Fügen Sie ein Ebenenbaum (Layertree) zum content-Bereich Ihrer Anwendung hinzu.
 * Fügen Sie einen Button in die Toolbar, der den Layertree öffnet.
-* Fügen Sie das Navigationselement (Navigation Toolbar) in den content-Bereich hinzu
+* Fügen Sie das Navigationswerkzeug (Navigation Toolbar) in den content-Bereich hinzu
 * Fügen Sie ein Copyright-Element hinzu und ändern Sie den Copyright-Text.
-* Fügen Sie einen SRS Selector in den Footer-Bereich ein.
+* Fügen Sie eine SRS Auswahl (SRS Selector) in den Footer-Bereich ein.
 
 
 
@@ -418,13 +422,13 @@ Der Zugriff auf eine Mapbender Anwendung benötigt Authentifizierung. Nur öffen
 Ein Benutzer kann die Berechtigungen bekommen, um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
 
 .. NOCH NICHT IMPLEMENTIERT
-  Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie ``guest``, ``operator`` oder ``administrator`. Die ``role`` eines Benutzers beruht auf den Funktionen und des Diensten, aud die der Benutzer durch diese Anwendung Zugriff hat.
+  Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie ``guest``, ``operator`` oder ``administrator``. Die ``role`` eines Benutzers beruht auf den Funktionen und des Diensten, aud die der Benutzer durch diese Anwendung Zugriff hat.
 
 
 Benutzer anlegen
 ================================================================================
 
-#. Um einen Benutzer anzulegen, gehen Sie zu ``New User`` oder wählen Sie den ``Button`` |mapbender3-button-add|.
+#. Um einen Benutzer anzulegen, gehen Sie zu ``Benutzerverwaltung --> Benutzer --> Neuer Benutzer (User control --> User --> New User)`` oder wählen Sie den ``Button`` |mapbender3-button-add|.
 
 #. Wählen Sie einen Namen und ein Kennwort für Ihren Benutzer. 
 
@@ -442,7 +446,7 @@ Benutzer anlegen
 
 Gruppen anlegen
 ================================================================================
-#. Erzeugen Sie eine Gruppe über  ``New Group``. 
+#. Erzeugen Sie eine Gruppe über  ``Gruppen --> Neue Gruppen (Group --> New Group)``. 
 
 #. Wählen Sie einen Namen und eine Beschreibung für Ihre Gruppe.
 
@@ -452,11 +456,11 @@ Gruppen anlegen
 Benutzer einer Gruppe zuweisen
 ================================================================================
 
-#. Weisen Sie einen Benutzer einer Gruppe über ``Users --> Groups`` zu. 
+#. Weisen Sie einen Benutzer einer Gruppe über `` Benutzer --> Gruppen (Users --> Groups)`` zu. 
 
-#. Wählen Sie einen oder mehrere Benutzer über ``Users`` aus, die Sie der Gruppe zuweisen wollen.
+#. Wählen Sie einen oder mehrere Benutzer über ``Benutzer (Users)`` aus, die Sie der Gruppe zuweisen wollen.
 
-#. Weisen Sie einen Benutzer über |mapbender3-button-edit| ``Users --> Edit-Button--> Groups`` einer Gruppe zu.
+#. Weisen Sie einen Benutzer über ``Benutzer -->`` |mapbender3-button-edit| ``Editier-Button--> Gruppen`` einer Gruppe zu.
 
 
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
@@ -475,7 +479,7 @@ Mapbender3 bietet verschiedene Rechte an, die Sie vergeben können. Diese beruhe
 * owner - Besitzer, darf alles. Darf master und owner Recht vergeben.
 
 
-Weisen Sie einem Benutzer über ``Users --> Edit your User --> Security`` Rechte zu.
+Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherheit (Users --> Edit your User --> Security) `` Rechte zu.
 
   .. image:: ../../figures/mapbender3_roles.png
      :scale: 80 
@@ -483,11 +487,11 @@ Weisen Sie einem Benutzer über ``Users --> Edit your User --> Security`` Rechte
 
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 ============================================================
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Button`` |mapbender3-button-edit| 
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Editier-Button`` |mapbender3-button-edit| 
 
-#. Wählen Sie ``Sicherheit`` (``Security``)
+#. Wählen Sie ``Sicherheit (Security)``
 
-#. Veröffentlichen Sie Ihre Anwendung über die Auswahl **aktiviert** unter ``Sicherheit`` oder den Button zur Veröffentlichung |mapbender3-button-publish| 
+#. Veröffentlichen Sie Ihre Anwendung über die Auswahl **aktiviert** unter ``Sicherheit`` oder den Button zur Veröffentlichung |mapbender3-button-publish| bei der Anwendungsübersicht
 
 #. Setzen Sie Berechtigungen wie view, edit, delete, operator, master, owner
 
@@ -507,13 +511,15 @@ Zuweisen einzelner Elemente zu Benutzern/Gruppen
 ============================================================
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Der Zugriff kann darüberhinaus für einzelne Elemente noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen. 
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen -->`` |mapbender3-button-edit| ``-Button``
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen -->`` |mapbender3-button-edit| ``Editier-Button``
 
-#. Wählen Sie ``Layout``
+#. Wählen Sie ``Layouts``
 
 #. Jedes Element verfügt über einen |mapbender3-button-key| ``-Button``
 
 #. Wählen Sie den |mapbender3-button-key| ``-Button`` zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll
+
+#. Setzen Sie Berechtigungen wie view, edit, delete, operator, master, owner
 
 #. Weisen Sie das Element Benutzern/Gruppen zu
 
@@ -528,11 +534,11 @@ Sie können dabei einen oder mehrere Punkte (POIS) in der URL übergeben. Jeder 
 
 - Punkt (point): Koordinatenpaar, die Werte werden mit Komma getrennt (zwingend)
 - Beschriftung (label): Beschriftung, die angezeigt werden soll (optional)
-- Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional. Die Angabe ist nur bei der Anzeige eines Punktes sinnvoll)
+- Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional, Angabe ist nur bei der Anzeige eines Punktes sinnvoll)
 
-Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der Gesamt-Boundingbox.
+Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der POI-Boundingbox.
 
-Format für die Übergabe eines Punktes:
+Format für die Übergabe eines einzelnen Punktes:
 
 * ?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 

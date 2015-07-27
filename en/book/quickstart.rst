@@ -35,9 +35,7 @@ Mapbender is a web based geoportal framework to publish, register, view, navigat
 
 Management interfaces empower administrators who need to maintain and categorize map and feature services and grant access to individuals, groups and other services. 
 
-Mapbender3 is the next version in the Mapbender series. It is rewritten from the ground up, using modern web technologies. The foundation is laid by Symfony 2, the brand-new version of the successful Symfony PHP web application framework.
-
-On the client-side expect to find OpenLayers and jQuery (UI) nicely glued together by MapQuery.
+Mapbender3 is the next version in the Mapbender series. It is rewritten from the ground up, using modern web technologies. The foundation is laid by Symfony 2, the brand-new version of the successful Symfony PHP web application framework. On the client-side expect to find OpenLayers and jQuery (UI) nicely glued together by MapQuery.
 
 With this new code base we will continue the Mapbender idea of being a Geoportal Framework:
 
@@ -51,7 +49,7 @@ With this new code base we will continue the Mapbender idea of being a Geoportal
 
 You will need nothing but a standard web browser for this quickstart.
 
-This Quick Start describes how to:
+This quickstart describes how to:
 
   * start Mapbender
   * create an application 
@@ -103,11 +101,11 @@ Welcome page
 
 #. You can open an application by click on the title, the screenshot or the start button.
 
-#. Before you can administrate with Mapbender you have to login to get access to the administration.
+#. Before you can administrate with Mapbender you have to log in to get access to the administration.
 
 #. Click on Login at right-top to open the login page.
 
-#. You can login with the user that was generated on installation. It can be ``root`` and password ``root`` (This is the default user and password that you get after installation of Mapbender on OSGeo-Live. Please change the root password if you want to run a productive environment. Please don't delete the user :guilabel:`root`.).
+#. You can log in with the user that was generated on installation. It can be ``root`` and password ``root`` (This is the default user and password that you get after installation of Mapbender on OSGeo-Live. Please change the root password if you want to run a productive environment. Please don't delete the user :guilabel:`root`.).
   
   .. image:: ../../figures/mapbender3_welcome.png
      :scale: 80
@@ -124,7 +122,7 @@ The Application overview provides the following functionality:
 
  * title and description
  * screenshot for the application (if provided)
- * link to the application
+ * |mapbender3-button-show| link to the application
  * |mapbender3-button-copy| button to duplicate the application
  * |mapbender3-button-edit| button to edit the application
  * |mapbender3-button-publish| button to publish/unpublish the application
@@ -138,17 +136,17 @@ The Application overview provides the following functionality:
 Create an individual application
 ================================================================================
 
-Create a new application by providing basic information about your application. After that you use the edit mode to add elements, layers and security.
+Create a new application by providing basic information about your application. After that you use the edit mode to add elements, layers, styles (CSS-Editor) and security settings.
 
 #. choose ``Applications --> New Application``
 
 #. define a title and description for your application
 
-#. define an URL title which will be used in the URL to open the application. It can be the same as the titlebut should not contain spaces.
+#. define an URL title which will be used in the URL to open the application. It can be the same as the title but should not contain spaces.
 
 #. upload an image file as screenshot for the application overview
 
-#. choose a template for your application. The template defines the structure of the application. Mapbender3 provides some templates for you (Fullscreen, Classic..). You also can define your own template.
+#. choose a template for your application. The template defines the structure of the application. Mapbender3 provides some templates for you (Fullscreen, Classic,...). You also can define your own template.
 
 #. choose the button **Create** to create the application
 
@@ -170,7 +168,7 @@ You also can create a new application by copying an existing application. Every 
 
 Delete an application
 ================================================================================
-You can delete an application from the menu item ``Applications`` with the |mapbender3-button-delete|-button.
+You can delete an application from the menu item ``Applications`` with the |mapbender3-button-delete|-button. With this step you only delet the application, the sources are still available.
 
 
 Export / Import applications and sources
@@ -191,10 +189,10 @@ Management of Data Sources
 Mapbender can handle different Services like OGC WMS or OGC WMTS or OGC WFS. Every Service has to be handled differently. The administration provides an administration interface for every source (at the moment only WMS).
 
 
-Service Repository overview
+Source Repository overview
 ================================================================================
 
-#. Go to ``Services`` and have a look at the Service repository.
+#. Go to ``Sources`` and have a look at the Source repository.
 
 #. You get an overview on the Sources that are loaded in your Mapbender.
 
@@ -213,7 +211,7 @@ A WMS returns an XML-file when the getCapabilities document is requested. This i
 
 .. tip:: You should first check the Capabilities document in your browser before you try to load it with Mapbender
 
-#. Choose menu item ``Services --> Add Service`` or use the |mapbender3-button-show|-button. Link to the WMS getCapabilities URL in the text field ``Serviceurl``. 
+#. Choose menu item ``Source --> Add Source`` or use the |mapbender3-button-add|-button in the source repository. Link to the WMS getCapabilities URL in the text field ``Serviceurl``. 
 
 #. Enter username and password if your service needs authentication.
 
@@ -245,13 +243,13 @@ Add Service to Application
 ================================================================================
 After the successfull upload of a WMS you want to add your WMS to an application.
 
-#. Choose |mapbender3-button-edit| ``Applications --> edit-Button --> Layers --> Edit-Button``. 
+#. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layers --> Edit-Button``. 
 
-#. Click on the |mapbender3-button-add| ``-button`` to add a layerset, which represents a collection of layers (a possible names can be main for the main map and overview for the overview map)
+#. Click on the |mapbender3-button-add| ``-button`` to add a layerset, which represents a collection of layers (a possible names can be "main" for the main map and "overview" for the overview map)
 
 #. Now you can add layer to the layerset
 
-#. Click on the ``button`` |mapbender3-button-add| at your new layerset to add a Service.
+#. Click on the |mapbender3-button-add| ``button`` at your new layerset to add a Service.
 
 #. You can change the order of the Services in your application by drag & drop.
 	
@@ -261,9 +259,9 @@ After the successfull upload of a WMS you want to add your WMS to an application
 
 Configure your WMS
 ================================================================================
-You can configure the WMS for your specific application. Maybe you don't want to provide all layers or you want to change the order or titles of the layer or disable the feature info or change the maxscale for a layer.
+You can configure the WMS for your specific application. Maybe you don't want to provide all layers or you want to change the order or titles of the layer or disable the feature info or change the min-/maxscale for a layer.
 
-#. Choose |mapbender3-button-edit| ``Applications --> edit-Button --> Layers --> edit-Button`` to configure the Service Instance.
+#. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layers --> edit-Button`` to configure the Service Instance.
 
 #. You will see a table with the layers of the Service. 
 
@@ -274,16 +272,17 @@ You can configure the WMS for your specific application. Maybe you don't want to
 
 **Service configuration:**
 
+* Title - name shown in the application
 * Format - choose the format for getMap-Requests
 * Infoformat - choose the format for getFeatureInfo-Requests
 * Exceptionformat - choose the format for exceptions
 * Opacity - choose opacity in percent
 * Tile buffer - 1 - the maprequest uses a the size of the mapwindow. 1.25 (default) - maprequest uses a bigger size as the mapwindows size 
 * BBOX factor - if you use tiled: value 0 - no additional tiles outside the displayed area are requested
-* Visible
+* Visible - set the visibility of the request
 * BaseSource - should the Service be handled as BaseSource (BaseSources can be shown/hided in the layertree)
 * Proxy - if active the service will be requested by Mapbender and not directly
-* Transparency - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
+* Transparency - default is active, the source is without a transparent background if it is deactivated (getMap-Request with TRANSPARENT=FALSE)
 * Tiled - you can request a WMS in tiles, default is not tiled (may be a good choice if you map is very big an the WMS service does not support the width/height)
 
 
@@ -323,12 +322,12 @@ e.g. for a user the $id$ and for groups the value $group$.
 * select on - selectable in geodata explorer
 * select allow - layer is active when the application starts
 * info on - layer provides feature info requests, info default activates the feature info functionality
-* info allow 
+* info allow - layer info is active when the application starts
 * minscale / maxscale - the scale range in which the layer should be displayed, 0 means no scale limitation
 * toggle - open folder on start of the application
 * reorder - allows to reorder the layers with drag & drop while using the application
 * ... -> opens a dialog with more information
-* name
+* layers name- layer name of the service information (for getMap-Requests)
 * style - if a WMS provides more than one style you can choose a different style than the default style
 
 
@@ -341,7 +340,7 @@ Mapbender offers a set of elements. You can add the elements to your application
   .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Choose |mapbender3-button-edit| ``Applications --> edit-Button --> Layers --> Button`` |mapbender3-button-add| to get an overview over the elements Mapbender3 provides.
+#. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layouts --> Button`` |mapbender3-button-add| to get an overview over the elements Mapbender3 provides.
 
 #. Choose an element from the list.
 
@@ -351,7 +350,7 @@ Mapbender offers a set of elements. You can add the elements to your application
 
 #. You can change the position of the element via drag & drop
 
-#. Have a look at your application. Open your application from :menuselection:`Applications --> Applications Overview`
+#. Have a look at your application. Open your application choose ``Applications --> Applications Overview --> `` |mapbender3-button-show| ``view-Button``
 
 Now you should get an idea how easy it is to change a Mapbender application without changes in the code. 
 
@@ -415,7 +414,7 @@ A user has permissions to access one or a set of applications and services.
 Create a user
 ================================================================================
 
-#. To create a user go to :guilabel:`New User` or click the :menuselection:`+-Button`.
+#. To create a user go to ``User control --> Users --> New User`` or click the |mapbender3-button-show| ``add-Button``.
 
 #. Choose a name and a password for your user. 
 
@@ -431,7 +430,7 @@ Create a user
 
 Create a group
 ================================================================================
-#. Create a group by ``New Group``. 
+#. Create a group by ``User control --> Group --> New Group``. 
 
 #. Define a name and a description for your group.
 
@@ -474,6 +473,8 @@ Assign an Application to a User/Group
 
 #. Choose ``Security``
 
+#. Publish your application by ``Security --> activated`` or ``Application --> visible`` 
+
 #. Set permission like view, edit, delete, operator, master, owner 
 
 #. Assign a user/group to the application
@@ -491,7 +492,7 @@ Assign single elements to a User/Group
 ================================================================================
 #. Edit your application by ``Application --> Edit-Button`` |mapbender3-button-edit| .
 
-#. Choose ``Layout``
+#. Choose ``Layouts``
 
 #. Every element has a |mapbender3-button-key| ``-Button``
 
@@ -507,7 +508,7 @@ Assign single elements to a User/Group
 Start Application at a defined position
 ============================================================
 
-You can open an application at a defined location. This can be done by poi or polygon. You also can add textes in the request.
+You can open an application at a defined location. This can be done by POI or polygon. You also can add textes in the request.
 
 
 You can pass one or more POIs in the URL. Each POI has the following parameters:
