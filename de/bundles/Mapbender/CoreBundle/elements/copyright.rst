@@ -8,7 +8,7 @@ Dieses Element zeigt das Copyright und die Nutzungsbedingungen ("Terms of use") 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/copyright_configuration.png
+.. image:: ../../../../../figures/de/copyright_configuration.png
      :scale: 80
 
 * Automatisches Öffnen (Autoopen): Schaltet ein/aus, ob das Copyright Fenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: Ausgeschaltet)

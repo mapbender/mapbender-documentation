@@ -15,8 +15,18 @@ Es kann auch definiert werden, ob die Übersichtskarte nach dem Öffnen der Appl
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/overview_configuration.png
+.. image:: ../../../../../figures/de/overview_configuration.png
      :scale: 80
+
+
+* Maximieren: definiert, ob die Applikation beim Start maximiert ist, der Standardwert ist true
+* Fixieren: Bereich der Übersichtskarte kann fixiert werden, der Standardwert ist true
+* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* Tooltip: Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* Layerset: vorher definiertes Layerset, das angezeigt werden soll.
+* Target: Zielelement (Titel(ID)) des Kartenelements. 
+* Anchor: Ausrichtung der Übersicht, Standard ist 'right-top' (rechts oben)
+* Width/ Height: Breite und Höhe der Übersichtskarte
 
 YAML-Definition:
 

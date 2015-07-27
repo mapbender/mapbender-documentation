@@ -11,7 +11,7 @@ Das Koordinatenanzeige-Element zeigt die aktuelle Mausposition in den Kartenkoor
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/coordinates_display_configuration.png
+.. image:: ../../../../../figures/de/coordinates_display_configuration.png
      :scale: 80
 
 * Beschriftung anzeigen (Show title label): Schaltet die Beschriftung an/aus. Die Beschriftung richtet sich nach dem Title.

@@ -5,7 +5,7 @@ BaseSourceSwitcher (Themenwechsel)
 
 Mit diesem Element kann zwischen vordefinierten Themen (BaseSources) z.B. Hintergrundkarten gewechselt werden. Über Buttons kann zwischen den Themen gewechselt werden. Es kann dabei immer nur ein Thema aktiv sein.
 
-Zu jedem Sourceset kann eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
+Zu jeder Datenquelle kann eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
 .. image:: ../../../../../figures/basesourceswitcher.png
      :scale: 80

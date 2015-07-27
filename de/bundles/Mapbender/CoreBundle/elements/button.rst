@@ -5,14 +5,14 @@ Button
 
 Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die `Legende <../elements/legend.html>`_, `Layertree (Layerbaum) <layertree.html>`_, `FeatureInfo (Infoabfrage), Linien- und Flächenberechnung und der Druck benötigen einen Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element nicht in einem Frame definiert wurde.
 
-Button können optional gruppiert werden, so dass nur ein Button in der Gruppe aktiviert ist. Dieses wird im Gruppen-Parameter eingestellt.
+Buttons können optional gruppiert werden, so dass nur ein Button in der Gruppe aktiviert ist. Dieses wird im Gruppen-Parameter eingestellt.
 
 Es kann ein Button definiert werden, der sich auf eine Webseite oder ein Script bezieht.
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/button_configuration.png
+.. image:: ../../../../../figures/de/button_configuration.png
      :scale: 80
 
 * Beschriftung anzeigen (Show button label): Schaltet die Beschriftung des Buttons an/aus.

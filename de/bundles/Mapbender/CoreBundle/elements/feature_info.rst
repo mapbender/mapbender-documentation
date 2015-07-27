@@ -1,6 +1,6 @@
 .. _feature_info:
 
-Feature Info (Infoabfrage)
+Feature Info (Information)
 **************************
 
 Dieses Element stellt die Infoabfrage bereit, die mit WMS Services funktioniert.
@@ -11,10 +11,19 @@ Dieses Element stellt die Infoabfrage bereit, die mit WMS Services funktioniert.
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/feature_info_configuration.png
+.. image:: ../../../../../figures/de/feature_info_configuration.png
      :scale: 80
 
-Anmerkung: Der Parameter "nur valide" hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender3 das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender3 als nicht valide. Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
+
+* Automatisches Öffnen (Autoopen): Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: Ausgeschaltet)
+* Print Result: Ermöglicht den Druck der angezeigten Informationen. 
+* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* Tooltip: Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* Target: Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
+* Type: Auwahl, ob die Info als Element oder Dialog angezeigt werden soll.   
+* Display: Anzeige der Information als Tabs oder in Accordionform.
+* Width/ Height: Größe des Infofeldes
+* nur valide zeigen: Parameter hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender3 das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender3 als nicht valide. Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
 
 
 YAML-Definition:

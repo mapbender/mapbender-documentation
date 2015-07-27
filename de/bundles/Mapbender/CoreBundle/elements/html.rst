@@ -4,25 +4,28 @@ HTML-Element
 ************
 
 Über das HTML-Element kann generisches HTML an einer beliebigen Stelle in der Anwendung definiert werden.
-Im generischen HTML stehen zur Verfügung folgende Variablen: "application" (Entity Application), "entity" (Entity HTMLElement) und "configuration".
+Im generischen HTML stehen zur Verfügung folgende Variablen: "application" (Entity Application), "entity" (Entity HTMLElement) und "configuration". Damit kann beispielsweise ein Bild in die Anwendung eingefügt werden. 
 
-.. image:: ../../../../../figures/html.png
+.. image:: ../../../../../figures/html_result_application.png
      :scale: 80
 
 
 Configuration
 =============
 
-Fügen Sie beispielsweise ein Bild in Ihre Anwendung ein:
+Einfügen eines Bildes in Ihre Anwendung:
 
 .. code-block:: yaml
 
     <img src='http://mapbender3.org/sites/default/files/OSGeo_project.png' height='60px'>
 
 
-.. image:: ../../../../../figures/html_result_application.png
+.. image:: ../../../../../figures/de/html.png
      :scale: 80
 
+* Title: Titel des HTML-Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. 
+* Content: Inhalt des HTML-Elements, z.B. Bild oder Link. Content kann Variablen: "application", "entity" und "configuration" beinhalten.
+* Classes: html-element-inline
 
 
 YAML-Definition:

@@ -8,7 +8,7 @@ Der Aktivitätsindikator (Sanduhr) ist ein einfaches Modul, das Aktivitäten anz
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/activity_indicator_configuration.png
+.. image:: ../../../../../figures/de/activity_indicator_configuration.png
      :scale: 80
 
 * Title: Titel des Elements

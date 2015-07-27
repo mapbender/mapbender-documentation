@@ -7,13 +7,13 @@ Dieses Element rendert einen `Button <../elements/button.html>`_, der einen Dial
 Bisher wird die Mapbender Version angezeigt. Der Button befindet sich in der unteren rechten Ecke in der Fußzeile. In Zukunft kann auch die Lizenz 
 oder kundenspezifische Daten angezeigt werden.
 
-.. image:: ../../../../../figures/about_dialog.png
+.. image:: ../../../../../figures/de/about_dialog.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/about_dialog_configuration.png
+.. image:: ../../../../../figures/de/about_dialog_configuration.png
      :scale: 80
 
 * Beschriftung anzeigen (Show label): Schaltet Text neben dem About Dialog Button ein/aus.
