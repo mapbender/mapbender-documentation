@@ -37,7 +37,9 @@ Release Datum: 01.07.2015
 
 * **URL Parameter:** Mapbender3 kann mit Startparametern aufgerufen werden. Eine Liste der Parameter findet sich in der Dokumentation zu den `URL Parametern <../bundles/Mapbender/CoreBundle/elements/map.html#kontrolle-uber-den-aufruf>`_.
 
-* Symfony Update auf 2.3.29.
+* Neue Übersetzungen für Portugiesisch und Russisch.
+  
+* Symfony Update auf 2.3.30.
 
 
 **Änderungen in der config.yml:**
