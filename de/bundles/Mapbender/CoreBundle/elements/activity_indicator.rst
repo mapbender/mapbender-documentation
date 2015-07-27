@@ -11,12 +11,11 @@ Konfiguration
 .. image:: ../../../../../figures/activity_indicator_configuration.png
      :scale: 80
 
-Element hinzufügen Dialog:
- 	- Title: Titel des Elements
- 	- Tooltip: Der hier eingegebene Text wird angezeigt, wenn der Mauszeiger längere Zeit über dem Element verweilt.
- 	- Activity class: CSS Klasse, die Aktivitäten anzeigt (Ajax oder Kacheln)
- 	- Ajax activity class: CSS Klasse, die Ajax-Aktivitäten anzeigt
- 	- Tile activiy class: CSS Klasse, die Kartenaufrufe anzeigt
+* Title: Titel des Elements
+* Tooltip: Der hier eingegebene Text wird angezeigt, wenn der Mauszeiger längere Zeit über dem Element verweilt.
+* Activity class: CSS Klasse, die Aktivitäten anzeigt (Ajax oder Kacheln)
+* Ajax activity class: CSS Klasse, die Ajax-Aktivitäten anzeigt
+* Tile activiy class: CSS Klasse, die Kartenaufrufe anzeigt
 
 
 YAML-Definition:
