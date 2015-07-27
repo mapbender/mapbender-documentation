@@ -205,7 +205,6 @@ How to build a new Mapbender3 build
  
  # create tar.gz with right name for example mapbender3-3.0.5.0.tar.gz
  tar -czvf mapbender3-3.0.5.0.tar.gz mapbender3-3.0.5.0/
-
  # create zip with right name for example mapbender3-3.0.5.0.zip
  gzip -r mapbender3-3.0.5.0 mapbender3-3.0.5.0.zip
   

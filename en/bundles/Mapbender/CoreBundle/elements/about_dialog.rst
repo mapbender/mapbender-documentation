@@ -3,7 +3,7 @@
 About Dialog
 ************
 
-This element renders a button which shows a simple about dialog, listing Mapbender's version.
+This element renders a `button <../elements/button.html>`_ which shows a simple about dialog, listing Mapbender's version. The button is located in the footer in the lower right corner.
 (Future: Licenses, Custom information page)
 
 .. image:: ../../../../../figures/about_dialog.png
@@ -14,6 +14,11 @@ Configuration
 
 .. image:: ../../../../../figures/about_dialog_configuration.png
      :scale: 80
+
+* Show Label: Enable/Disable about dialog text next to the icon.
+* Title: Text indicated next to the about dialog icon. 
+* Tooltip: Text to use as a tooltip. Appears when hovering over the icon. 
+
 
 YAML-Definition:
 

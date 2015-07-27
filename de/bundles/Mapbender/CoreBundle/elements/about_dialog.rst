@@ -3,8 +3,8 @@
 About Dialog (Über-Dialog)
 ********************************
 
-Dieses Element rendert einen Button, der einen Dialog über Mapbender anzeigt.
-Bisher wird die Mapbender Version angezeigt. In Zukunft kann auch die Lizenz 
+Dieses Element rendert einen `Button <../elements/button.html>`_, der einen Dialog über Mapbender anzeigt.
+Bisher wird die Mapbender Version angezeigt. Der Button befindet sich in der unteren rechten Ecke in der Fußzeile. In Zukunft kann auch die Lizenz 
 oder kundenspezifische Daten angezeigt werden.
 
 .. image:: ../../../../../figures/about_dialog.png
@@ -15,6 +15,11 @@ Konfiguration
 
 .. image:: ../../../../../figures/about_dialog_configuration.png
      :scale: 80
+
+* Beschriftung anzeigen (Show label): Schaltet Text neben dem About Dialog Button ein/aus.
+* Title: Text, der neben dem About Dialog Button angezeigt wird.
+* Tooltip: Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird. 
+
 
 YAML-Definition:
 
