@@ -1,7 +1,7 @@
 ﻿PrintClient (Druck)
 ***********************
 
-Mapbender3 bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen Client verschiedene Auswahlmöglichkeiten zur Verfügung:
+Mapbender3 bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen dem Client verschiedene Auswahlmöglichkeiten zur Verfügung:
 
  * Auswahl Maßstab
  * Auswahl Qualität

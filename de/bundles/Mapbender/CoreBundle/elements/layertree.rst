@@ -120,7 +120,16 @@ YAML-Definition:
 
 .. code-block:: yaml
                 
-   tbd: folgt noch           # Dokumentation wird nachgereicht. ;-)
+  title: layertree             # Titel des Layerbaums
+  target: ~                    # ID des Kartenelements
+  type: ~                      # Typ des Layerbaums
+  displaytype: tree            # In 3.0 gibt es nur den Baum (Tree), in Zukunft wird auch eine Liste angeboten.
+  useAccordion: false          # akkordeonartige Anzeige. Standard ist false
+  autoOpen: false              # true, wenn der Layerbaum beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
+  titleMaxLength: 20           # Maximale Länge des Layertitels, Standard ist 20
+  showBaseSource: true         # Anzeige des Basislayers, der Standardwert ist true
+  showHeader: true             # zeigt eine Überschrift, die die Anzahl der Services zählt, der Standardwert ist true
+  menu: [opacity,zoomtolayer,metadata,removelayer]  # zeigt ein Kontextmenü für den Layer an (wie Opazität, Zoom auf Layer, Anzeige des Metadatendialogs, Layer entfernen), der Standardwert ist menu: [] 
 
 
 ..

@@ -3,18 +3,24 @@
 Line/Area Ruler (Längen und Flächen berechnen)
 ***************
  
- Mit dem Lineal wird eine Linie oder eine Fläche gezeichnet, deren Länge oder Flächeninhalt berechnet wird.
+Mit dem Lineal wird eine Linie oder eine Fläche gezeichnet, deren Länge oder Flächeninhalt berechnet wird.
 
-.. image:: ../../../../../figures/ruler.png
+.. image:: ../../../../../figures/de/ruler.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/ruler_configuration.png
+.. image:: ../../../../../figures/de/ruler_configuration.png
      :scale: 80
 
 Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration.
+
+* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* Tooltip: Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* Target: Zielelement (Kartenelement (ID)) 
+* Type: Typ des Elements, entweder 'line' oder 'area' (misst nur einzelne Linien oder addiert diese zu einer Fläche)
+
 
 YAML-Definition:
 
