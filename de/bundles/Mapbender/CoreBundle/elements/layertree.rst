@@ -3,9 +3,8 @@
 Layertree - Table of Content (Layerbaum)
 ********************************************************
 
-Der Layerbaum zeigt die Layer, die Service-Ordner und ab Version 3.0.5 auch verschiedene Layersets an. Im Layerbaum können einzelne Layer in der Karte aktiviert und deaktiviert werden. 
+Der Layerbaum zeigt die Layer und die Service-Ordner an. Im Layerbaum können einzelne Layer in der Karte aktiviert und deaktiviert werden. 
 Hier kann auch die Infoabfrage für einzelne Layer aktiviert oder deaktiviert werden. 
-
 Die Reihenfolge der Service können geändert und Layer via drag & drop verschoben werden.
 
 Seit Version 3.0.5 erlaubt der Layertree die Anzeige mehrerer Layersets, die als weitere Strukturebene im Baum angezeigt werden. Der folgende Screenshot zeigt das an einem exemplarischen Beispiel:
@@ -21,11 +20,11 @@ Konfiguration
 =============
 
 Um die unterschiedlichen Layersets im Layertree nutzen zu können, sind
-verschiedene Anpassungen notwendig. Diese betreffen:
+verschiedene Anpassungen notwendig. Diese betreffen die:
 
-#. die Einrichtung verscheidener Layersets,
-#. die Einrichtung in der Karte zur Anzeige der Layersets,
-#. die Einrichtung des Layertrees selbst.
+#. Einrichtung verscheidener Layersets,
+#. Einrichtung in der Karte zur Anzeige der Layersets,
+#. Einrichtung des Layertrees selbst.
 
 In dem folgenden Beispiel sind zwei Layersets mit jeweils zwei Instanzen definiert:
 
@@ -61,17 +60,17 @@ definierten Themen die darunter liegenden überdecken können.
 .. image:: ../../../../../figures/layertree/de/layertree_configuration_map.png
            :scale: 80
 
-* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* Layersets: Vorher konfiguriertes Layerset zur Anzeige der Hauptkarte (main map).
-* DPI: Maßeinheit für die Auflösung, Standard ist 72
-* SRS: Spatial Reference System, Koordinatenbezugssystem beim Start der Anwendung. Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
-* Map units: Einheiten der Karte in Meter, Degrees, Feet, Miles oder Inches, Standard ist "degrees" (Grad)
-* Max. Extent: Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert)
-* Start Extent: Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert)
-* Scales (csv): festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma separiert)
-* Max. resolution: auto, bestimmt die Auflösung der Karte
-* OL image path: OpenLayers Bilderpfad, unter dem die Bilder abgespeichert werden (bundles/mapbendercore/mapquery/lib/openlayers/img)
-* Other SRS: weitere auswählbare Projektionen unter denen die Karte noch angezeigt werden kann (werden durch Komma separiert). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Layersets:** Vorher konfiguriertes Layerset zur Anzeige der Hauptkarte (main map).
+* **DPI:** Maßeinheit für die Auflösung, Standard ist 72
+* **SRS:** Spatial Reference System, Koordinatenbezugssystem beim Start der Anwendung. Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
+* **Map units:** Einheiten der Karte in Meter, Degrees, Feet, Miles oder Inches, Standard ist "degrees" (Grad)
+* **Max. Extent:** Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert)
+* **Start Extent:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert)
+* **Scales (csv):** festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma separiert)
+* **Max. resolution:** auto, bestimmt die Auflösung der Karte
+* **OL image path:** OpenLayers Bilderpfad, unter dem die Bilder abgespeichert werden (bundles/mapbendercore/mapquery/lib/openlayers/img)
+* **Other SRS:** weitere auswählbare Projektionen unter denen die Karte noch angezeigt werden kann (werden durch Komma separiert). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
 
 
 Konfiguration des Layertrees
@@ -85,17 +84,17 @@ werden.
            :scale: 80
       
 
-* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* Target: Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
-* Type: Anzeige als Dialog- oder Blockelement, Standard ist Dialog.
-* Displaytype: akkordeonartige Anzeige oder Liste. Standard ist Liste.
-* Titlemaxlength: Angabe der maximalen Zeichenzahl für den Titel der einzelnen Layer
-* Menu: Auswahl von Buttons, die dem Benutzer im Ebenenbaum zur Verfügung gestellt werden können: remove layer (Layer aus der Anwendung entfernen), opacity (Deckkraft der einzelnen Layer verändern), zoom to layer (auf die BBOX des Layers zoomen), metadata (Metadaten des Layers anzeigen) 
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
+* **Type:** Anzeige als Dialog- oder Blockelement, Standard ist Dialog.
+* **Displaytype:** akkordeonartige Anzeige oder Liste. Standard ist Liste.
+* **Titlemaxlength:** Angabe der maximalen Zeichenzahl für den Titel der einzelnen Layer
+* **Menu:** Auswahl von Buttons, die dem Benutzer im Ebenenbaum zur Verfügung gestellt werden können: remove layer (Layer aus der Anwendung entfernen), opacity (Deckkraft der einzelnen Layer verändern), zoom to layer (auf die BBOX des Layers zoomen), metadata (Metadaten des Layers anzeigen) 
 
-* Nicht aufklappbare Ordner ausblenden: Kartenbenen, die nicht mehrere Layer enthalten werden ausgeblendet 
-* Visibility bei Ordnern ausblenden: Deckkraft der Ebenen wird nicht angezeigt und kann nicht verändert werden
-* Info Ausblenden: Informationsabfrage wird deaktiviert
-* Thematische Layer: Ist diese Option ausgeschaltet, benutzt der Layertree nicht mehr die konfigurierten Layersets und zeigt die einzelnen Instanzen in der Hauptebene an.
+* **Nicht aufklappbare Ordner ausblenden:** Kartenbenen, die nicht mehrere Layer enthalten werden ausgeblendet 
+* **Visibility bei Ordnern ausblenden:** Deckkraft der Ebenen wird nicht angezeigt und kann nicht verändert werden
+* **Info Ausblenden:** Informationsabfrage wird deaktiviert
+* **Thematische Layer:** Ist diese Option ausgeschaltet, benutzt der Layertree nicht mehr die konfigurierten Layersets und zeigt die einzelnen Instanzen in der Hauptebene an.
   
 Für die thematischen Layer sind weitere Optionen möglich. Der folgende Screenshot zeigt die vier Möglichkeiten der Anpassung.
 
@@ -117,6 +116,7 @@ Die beiden zusätzlichen Schaltflächen werden in dem folgenden Screenshot darge
 
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
                 
