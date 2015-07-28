@@ -15,6 +15,9 @@ Configuration
 
 Einfügen eines Bildes in Ihre Anwendung:
 
+.. image:: ../../../../../figures/html_result_OSGeo.png
+     :scale: 80
+
 .. code-block:: yaml
 
     <img src='http://mapbender3.org/sites/default/files/OSGeo_project.png' height='60px'>
@@ -23,12 +26,13 @@ Einfügen eines Bildes in Ihre Anwendung:
 .. image:: ../../../../../figures/de/html.png
      :scale: 80
 
-* Title: Titel des HTML-Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. 
-* Content: Inhalt des HTML-Elements, z.B. Bild oder Link. Content kann Variablen: "application", "entity" und "configuration" beinhalten.
-* Classes: html-element-inline
+* **Title:** Titel des HTML-Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden. 
+* **Content:** Inhalt des HTML-Elements, z.B. Bild oder Link. Content kann Variablen: "application", "entity" und "configuration" beinhalten.
+* **Classes:** html-element-inline, CSS-Klasse
 
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -39,8 +43,8 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\HTMLElement
-* Widget: mapbender.mbHTMLElement
+* **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
+* **Widget:** mapbender.mbHTMLElement
 
 HTTP Callbacks
 ==============
