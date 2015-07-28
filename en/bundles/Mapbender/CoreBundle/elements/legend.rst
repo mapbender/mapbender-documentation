@@ -5,7 +5,7 @@ Legend
 
 The legend object shows the legend of the layers that are displayed in the map.
 
-.. image:: ../../../../../figures/legend.png
+.. image:: ../../../../../figures/de/legend.png
      :scale: 80
 
 Configuration
@@ -14,9 +14,19 @@ Configuration
 .. image:: ../../../../../figures/legend_configuration.png
      :scale: 80
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
+* **Autoopen:** open when application is started, default is true.
+* **Hide empty layers:** hide when no legend is available, default is true.
+* **Title:** Title of the element. The title will be listed in "Layouts". 
+* **Tooltip:** Text, that will be indicated if the mouse hovers over the legend for a longer time.
+* **Elementtype:** dialog/blockelement, default is dialog.
+* **Target:** Id of Map element to query.
+* **Generate legend url:** generate GetLegendGraphic-Url if the operation GetLegendGraphic is supported, default is false.
+* **Show source title:** show WMS/ source title, default is true.
+* **Show layer title:** show layer title, default is true.
+* **Show grouped layer title:** show group title for grouped layers, default is true.
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -31,12 +41,14 @@ YAML-Definition:
    showLayerTitle: true                 # true/false show layer title, default is true
    showGroupedLayerTitle: true          # true/false show group title for grouped layers, default is true
 
+You need a button or sidepane to show this element. See :doc:`button` for inherited configuration options.
+
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\Legend
-* Widget: mapbender.element.legend.js
-* Style: mapbender.element.legend.css
+* **Class:** Mapbender\\CoreBundle\\Element\\Legend
+* **Widget:** mapbender.element.legend.js
+* **Style:** mapbender.element.legend.css
 
 HTTP Callbacks
 ==============

@@ -3,7 +3,7 @@
 Layertree - Table of Content
 ****************************
 
-The layertree diplays the layers, the service folders and from version 3.0.5 onwards also different layersets. The layertree allows you to activate/deactivate layers in the map. You can also activate/deactivate the info request for layers.
+The layertree diplays the layers and the service folders. The layertree allows you to activate/deactivate layers in the map. You can also activate/deactivate the info request for layers.
 
 You can change the order of Services and layers via drag & drop.
 
@@ -48,7 +48,7 @@ map.
 Configuration in the map element
 --------------------------------
 
-The second step is the configuration of the main map. You define here which
+The second step is the configuration of the `main map <../elements/map.html>`_ . You define here which
 layersets should be shown for the map display. The layerset "overview" for
 example should not be used for the main map. Here you can also define how
 the layersets should be ordered in the layertree and in the map. Therefore
@@ -58,6 +58,18 @@ themes.
 
 .. image:: ../../../../../figures/layertree/layertree_configuration_map.png
            :scale: 80
+
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Layersets:** refer to a layerset, define the layerset first and refer to it
+* **DPI:** resolution, default is 72.
+* **SRS:** coordinate reference system. Two ways of srs definitions are supported: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
+* **Map units:** units to use degrees/meters, default is deegrees.
+* **Max. Extent:**  maximal map extents (BBOX with min/max x/y).
+* **Start Extent:** map extents for the start of the application (BBOX with min/max x/y).
+* **Scales (csv):** a csv scale list.
+* **Max. resolution:** at the moment only auto is supported, so please do not change.
+* **OL image path:** OpenLayers path of images (bundles/mapbendercore/mapquery/lib/openlayers/img).
+* **Other SRS:** other coordinate reference systems. Two srs definitions are supported: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
 
 
 Configuration of the layertree
@@ -70,12 +82,18 @@ that you have specified in the main map are defined further.
            :scale: 80
       
 
-You can check different options:
 
-* Hide not toggleable
-* Hide visibility by folders
-* Hide info
-* Thematic Layers: If this option is switched off, the layertree does not use the configured layersets and shows all instances on the root level.
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Target:** Id of the Map element to query.
+* **Type:** type of layertree, element or dialog.
+* **Displaytype:** only tree in 3.0, future will offer list.
+* **Titlemaxlength:** max length of layer title, default is 20.
+* **Menu:** show contextmenu for the layer (like opacity, zoom to layer, metadata, remove layer), default is menu: [].
+* **Hide not toggleable:** won't show elements without multiple layers.
+* **Hide visibility by folders:** visibility of the levels is not displayed and can not be changed.
+* **Hide Info:** info is deaktivated.
+* **Thematic Layers:** If this option is switched off, the layertree does not use the configured layersets and shows all instances on the root level.
+
 
 Further options are available if the "thematic layer" option is switched on. The following screenshots shows the four adjustments:
 
@@ -97,11 +115,13 @@ These two additinoal buttons are shown in the following screenshot:
 
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
                 
    tbd: later           #  documentation will be handed in later. ;-)
 
+You can optionally use a button to show this element. See :doc:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
 ..
    .. image:: ../../../../../figures/layertree/layertree_configuration_pre305.png
         :scale: 80
@@ -131,9 +151,9 @@ YAML-Definition:
 Class, Widget & Style
 ======================
 
-* Class: Mapbender\\CoreBundle\\Element\\Layertree
-* Widget: mapbender.element.layertree.js
-* Style: mapbender.elements.css
+* **Class:** Mapbender\\CoreBundle\\Element\\Layertree
+* **Widget:** mapbender.element.layertree.js
+* **Style:** mapbender.elements.css
 
 HTTP Callbacks
 ==============

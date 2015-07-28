@@ -48,7 +48,7 @@ gehabt – für die Anzeige der Übersichtskarte verwendet.
 Konfiguration der Karte
 -----------------------
 
-Der zweite Schritt ist die Konfiguration der Hauptkarte (Main Map). Hier
+Der zweite Schritt ist die Konfiguration der `Hauptkarte <../elements/map.html>`_ . Hier
 gibt man an, welche Layersets in der Kartenansicht verwendet werden
 sollen. Der Layerset "overview" wird beispielsweise nicht in der Hauptkarte
 angezeigt.  In diesem Schritt wird auch die Reihenfolge definiert, in der

@@ -24,9 +24,9 @@ YAML-Definition:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
    units: "degrees"           # units to use degrees/meters, default is deegrees
-   extents: array(
-       max: array(0, 40, 20, 60)
-       start: array(5, 45, 15, 55)) # map extents
+   extents: array(                 
+       max: array(0, 40, 20, 60)    # maximal map extents
+       start: array(5, 45, 15, 55)) # map extents for the start of the application
    scales: "25000000,10000000,5000000,1000000,500000" # a csv scale list
    maxResolution: "auto"      # at the moment only auto is supported, so please do not change
    otherSrs: array(
