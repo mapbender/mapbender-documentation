@@ -20,12 +20,12 @@ Konfiguration
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Icon:** Symbol des Buttons, basierend auf einer CSS Klasse.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Average:** berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1
+* **Average:** berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1.
 * **Refreshinterval:**  Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
 * **Follow:** Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu.
-* **Center on first position:** true zentriert die Karte auf die erstermittelte Position
-* **Zoom to accuracy:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit
-* **Zoom to accuracy on first position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position
+* **Center on first position:** true zentriert die Karte auf die erstermittelte Position.
+* **Zoom to accuracy:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit.
+* **Zoom to accuracy on first position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position.
 
 
 YAML-Definition:

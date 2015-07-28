@@ -20,9 +20,9 @@ Konfiguration
 * **Anchor:** Verankerung des Elements (left-top, left-bottom, right-top, right-bottom). Bestimmt die Position des Elements im Layout. 
 * **Numdigits:** Anzahl der Nachkommastellen der Koordinaten.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Emtpy:** Angezeigter Text, wenn sich die Maus nicht in der Karte befindet (Standard: 'x= - y= -')
-* **Prefix:** Präfix vor der X-Koordinate (Standard 'x= ')
-* **Separator:** Separator nach X- und vor Y-Koordinate (Standard ' y= ')
+* **Emtpy:** Angezeigter Text, wenn sich die Maus nicht in der Karte befindet (Standard: 'x= - y= -').
+* **Prefix:** Präfix vor der X-Koordinate (Standard 'x= ').
+* **Separator:** Separator nach X- und vor Y-Koordinate (Standard ' y= ').
 
 YAML-Definition:
 ----

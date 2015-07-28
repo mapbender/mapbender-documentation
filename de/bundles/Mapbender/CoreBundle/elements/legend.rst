@@ -16,7 +16,7 @@ Konfiguration
 
 
 * **Automatisches Öffnen:** true, wenn die Legende beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
-* **Ebenen ohne Objekte ausblenden:** Layer wird nicht aufgelistet, wenn keine Legende erzeugt werden kann, der Standardwert ist true
+* **Ebenen ohne Objekte ausblenden:** Layer wird nicht aufgelistet, wenn keine Legende erzeugt werden kann, der Standardwert ist true.
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Element type:** Anzeige als Dialog- oder Blockelement, Standard ist Dialog.

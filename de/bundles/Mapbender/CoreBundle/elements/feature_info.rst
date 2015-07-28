@@ -15,9 +15,9 @@ Konfiguration
      :scale: 80
 
 
-* **Automatisches Öffnen (Autoopen):** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: Ausgeschaltet)
+* **Automatisches Öffnen (Autoopen):** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: Ausgeschaltet).
 * **Print Result:** Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann. Standardwert ist false. 
-* **Beim Schließen deaktivieren:** false, um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren, der Standardwert ist true
+* **Beim Schließen deaktivieren:** false, um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren, der Standardwert ist true.
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
