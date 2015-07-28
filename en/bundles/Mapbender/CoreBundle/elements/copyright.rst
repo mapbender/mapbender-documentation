@@ -11,12 +11,13 @@ Configuration
 .. image:: ../../../../../figures/copyright_configuration.png
      :scale: 80
 
-* Autoopen: Enable or disable autoopening of the copyright window, when starting the application. (Default: disabled)
-* Title: Title of the element. It will be indicated next to the button.
-* Tooltip: Text used as a tooltip. It will be indacted when hovering with the mouse cursor over the button. It also used as a header in the copyright window.
-* Content: Content of the copyright window, displayed when clicking on the button (or autoopened by starting the application, if enabled)
+* **Autoopen:** Enable or disable autoopening of the copyright window, when starting the application. (Default: disabled)
+* **Title:** Title of the element. It will be indicated next to the button.
+* **Tooltip:** Text used as a tooltip. It will be indacted when hovering with the mouse cursor over the button. It also used as a header in the copyright window.
+* **Content:** Content of the copyright window, displayed when clicking on the button (or autoopened by starting the application, if enabled)
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -38,9 +39,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\Copyright
-* Widget: mapbender.element.copyright.js
-* Style: mapbender.elements.css
+* **Class:** Mapbender\\CoreBundle\\Element\\Copyright
+* **Widget:** mapbender.element.copyright.js
+* **Style:** mapbender.elements.css
 
 HTTP Callbacks
 ==============

@@ -15,9 +15,6 @@ Configuration
 
 Einfügen eines Bildes in Ihre Anwendung:
 
-.. image:: ../../../../../figures/html_result_OSGeo.png
-     :scale: 80
-
 .. code-block:: yaml
 
     <img src='http://mapbender3.org/sites/default/files/OSGeo_project.png' height='60px'>

@@ -44,7 +44,7 @@ YAML-Definition:
    onlyValid: null         # Standardwert ist false.
 
 
-Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
+Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
 
 
 Class, Widget & Style

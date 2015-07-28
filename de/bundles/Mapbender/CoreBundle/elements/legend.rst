@@ -45,7 +45,7 @@ YAML-Definition:
    showLayerTitle: true                 # true/false zeigt den Layertitel, der Standardwert ist true
    showGroupedLayerTitle: true          # true/false zeigt den Gruppentitel für gruppierte Layer, der Standardwert ist true
 
-Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
+Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
 
 Class, Widget & Style
 ============================

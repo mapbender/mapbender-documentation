@@ -15,7 +15,7 @@ Konfiguration
 .. image:: ../../../../../figures/de/gps_position_configuration.png
      :scale: 80
 
-* **Beschriftung anzeigen (Show button label):** Schaltet die Beschriftung des Buttons an/aus.
+* **Beschriftung anzeigen (Show label):** Schaltet die Beschriftung des Buttons an/aus.
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Icon:** Symbol des Buttons, basierend auf einer CSS Klasse.

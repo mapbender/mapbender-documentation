@@ -15,12 +15,13 @@ Configuration
 .. image:: ../../../../../figures/about_dialog_configuration.png
      :scale: 80
 
-* Show Label: Enable/Disable about dialog text next to the icon.
-* Title: Text indicated next to the about dialog icon. 
-* Tooltip: Text to use as a tooltip. Appears when hovering over the icon. 
+* **Show Label:** Enable/Disable about dialog text next to the icon.
+* **Title:** Text indicated next to the about dialog icon. 
+* **Tooltip:** Text to use as a tooltip. Appears when hovering over the icon. 
 
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -31,9 +32,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\AboutDialog
-* Widget: mapbender.mbAboutDialog
-* Style: mapbender.elements.css
+* **Class:** Mapbender\\CoreBundle\\Element\\AboutDialog
+* **Widget:** mapbender.mbAboutDialog
+* **Style:** mapbender.elements.css
 
 HTTP Callbacks
 ==============

@@ -113,7 +113,7 @@ in der mapbender.yml Datei:
                        minScale: ~  								# Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
                        maxScale: ~
 
-Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
+Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
 
 Vergleichsmodus
 --------------------------

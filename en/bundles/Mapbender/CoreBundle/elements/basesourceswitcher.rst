@@ -16,14 +16,20 @@ Configuration
 
 The configuration occurs in 2 steps: 
 
-* Create a BaseSourceSwitcher Element with Title, Tooltip and Target
-* Add Sourceset/s with one or more sources and definition of a group (optional)
+#. Create a BaseSourceSwitcher Element with Title, Tooltip and Target
+#. Add Sourceset/s with one or more sources and definition of a group (optional)
 
 .. image:: ../../../../../figures/basesourceswitcher_configuration.png
      :scale: 80
 
+* **Title:** Title of the element.
+* **Tooltip:** The text entered as a tooltip will be indicated by hovering over the element with the mouse cursor a longer time.
+* **Target:** Id of Map element, activated after the click.
+* **Instances:** List of Sourcesets, defined by a title and group: (optional) group name to group of sourcesets by "group name" 
+
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -40,8 +46,8 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\BaseSourceSwitcher
-* Widget: mapbender.element.basesourceswitcher.js
+* **Class:** Mapbender\\CoreBundle\\Element\\BaseSourceSwitcher
+* **Widget:** mapbender.element.basesourceswitcher.js
 
 
 HTTP Callbacks

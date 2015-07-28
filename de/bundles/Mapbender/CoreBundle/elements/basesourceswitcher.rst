@@ -26,7 +26,7 @@ Die Konfiguration geschieht in zwei Schritten:
 * **Title:** Text, der neben dem About Dialog Button angezeigt wird.
 * **Tooltip:** Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird. 
 * **Target:** Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
-* **Instancesets:** Themengruppen, die untergeordnete Themenkarten enthalten und als übergeordneter Gruppenname in der Toolbar erscheinen
+* **Instances:** Themengruppen, die untergeordnete Themenkarten enthalten und als übergeordneter Gruppenname in der Toolbar erscheinen
 * **Title, Group:** Name der Themenkarte und Zuweisung zu einer vorher definierten Themengruppe (Instance)
 
 
