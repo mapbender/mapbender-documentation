@@ -3,10 +3,10 @@
 GPS-Position
 ***********************
 
-Dieses Elememt stellt einen Button bereit, der zu ihrer aktuellen Position navigiert und zeigt ein Symbol an dieser Position an. Der Maßstab wird nicht verändert.
+Dieses Elememt stellt einen Button bereit, der zu ihrer aktuellen Position navigiert und zeigt ein Symbol an dieser Position an. Der Maßstab wird dabei nicht verändert, außer durch Aktivierung der Einstellung ``zoom to accuracy (zoom to accuracy on first position)``. 
 
 
-.. image:: ../../../../../figures/gps_position.png
+.. image:: ../../../../../figures/de/gps_position.png
      :scale: 80
 
 Konfiguration
@@ -15,20 +15,21 @@ Konfiguration
 .. image:: ../../../../../figures/de/gps_position_configuration.png
      :scale: 80
 
-* Beschriftung anzeigen (Show button label): Schaltet die Beschriftung des Buttons an/aus.
-* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* Tooltip: Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* Icon: Symbol des Buttons, basierend auf einer CSS Klasse.
-* Target: Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
-* Average: berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1
-* Refreshinterval:  Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
-* Follow: Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu.
-* Center on first position: true zentriert die Karte auf die erstermittelte Position
-* Zoom to accuracy: Zoomt auf die ermittelte Koordinate nach Messgenauigkeit
-* Zoom to accuracy on first position: Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position
+* **Beschriftung anzeigen (Show button label):** Schaltet die Beschriftung des Buttons an/aus.
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* **Icon:** Symbol des Buttons, basierend auf einer CSS Klasse.
+* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
+* **Average:** berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1
+* **Refreshinterval:**  Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
+* **Follow:** Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu.
+* **Center on first position:** true zentriert die Karte auf die erstermittelte Position
+* **Zoom to accuracy:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit
+* **Zoom to accuracy on first position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position
 
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -48,9 +49,9 @@ YAML-Definition:
 Class, Widget & Style
 ======================
 
-* Class: Mapbender\\CoreBundle\\Element\\GpsPosition
-* Widget: mapbender.element.gpsPostion.js
-* Style: mapbender.element.gpsPosition.css
+* **Class:** Mapbender\\CoreBundle\\Element\\GpsPosition
+* **Widget:** mapbender.element.gpsPostion.js
+* **Style:** mapbender.element.gpsPosition.css
 
 HTTP Callbacks
 ==============

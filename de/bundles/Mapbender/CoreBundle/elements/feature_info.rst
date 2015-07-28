@@ -15,18 +15,21 @@ Konfiguration
      :scale: 80
 
 
-* Automatisches Öffnen (Autoopen): Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: Ausgeschaltet)
-* Print Result: Ermöglicht den Druck der angezeigten Informationen. 
-* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* Tooltip: Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* Target: Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
-* Type: Auwahl, ob die Info als Element oder Dialog angezeigt werden soll.   
-* Display: Anzeige der Information als Tabs oder in Accordionform.
-* Width/ Height: Größe des Infofeldes
-* nur valide zeigen: Parameter hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender3 das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender3 als nicht valide. Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
+* **Automatisches Öffnen (Autoopen):** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: Ausgeschaltet)
+* **Print Result:** Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann. Standardwert ist false. 
+* **Beim Schließen deaktivieren:** false, um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren, der Standardwert ist true
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
+* **Type:** Auwahl, ob die Info als Element oder Dialog angezeigt werden soll.   
+* **Display:** Anzeige der Information als Tabs oder in Accordionform.
+* **Width/ Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel)
+* **Original Zeigen:** Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
+* **nur valide zeigen:** Parameter hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender3 das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender3 als nicht valide. Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
 
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -41,20 +44,15 @@ YAML-Definition:
    onlyValid: null         # Standardwert ist false.
 
 
-Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der als aktiviert angezeigt wird, so lange der FeatureInfo Dialog geöffnet ist.
+Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
 
-
-.. image:: ../../../../../figures/feature_info_button.png
-     :scale: 80
-
-   
 
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\FeatureInfo
-* Widget: mapbender.element.featureInfo.js
-* Style: mapbender.elements.css
+* **Class:** Mapbender\\CoreBundle\\Element\\FeatureInfo
+* **Widget:** mapbender.element.featureInfo.js
+* **Style:** mapbender.elements.css
 
 HTTP Callbacks
 ==============

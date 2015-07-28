@@ -3,7 +3,10 @@
 Copyright
 ************
 
-Dieses Element zeigt das Copyright und die Nutzungsbedingungen ("Terms of use") in einem Dialog an.
+Dieses Element zeigt die Nutzungsbedingungen ("Terms of use") in einem Dialog an.
+
+.. image:: ../../../../../figures/de/copyright.png
+     :scale: 80
 
 Konfiguration
 =============
