@@ -6,7 +6,7 @@ Map (Karte)
 MapQuery/OpenLayers basierte Karte.
 Es müssen die Einheiten, der Start und der Max Bereich (extent), die Maßstäbe und die unterstützten Projektionen angegeben werden.
 
-.. image:: ../../../../../figures/map.png
+.. image:: ../../../../../figures/de/map.png
      :scale: 80
 
 Configuration
@@ -15,19 +15,20 @@ Configuration
 .. image:: ../../../../../figures/de/map_configuration.png
      :scale: 80
 
-* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* Layersets: Vorher konfiguriertes Layerset zur Anzeige der Hauptkarte (main map).
-* DPI: Maßeinheit für die Auflösung, Standard ist 72
-* SRS: Spatial Reference System, Koordinatenbezugssystem beim Start der Anwendung. Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
-* Map units: Einheiten der Karte in Meter, Degrees, Feet, Miles oder Inches, Standard ist "degrees" (Grad)
-* Max. Extent: Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert)
-* Start Extent: Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert)
-* Scales (csv): festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma separiert)
-* Max. resolution: auto, bestimmt die Auflösung der Karte
-* OL image path: OpenLayers Bilderpfad, unter dem die Bilder abgespeichert werden (bundles/mapbendercore/mapquery/lib/openlayers/img)
-* Other SRS: weitere auswählbare Projektionen unter denen die Karte noch angezeigt werden kann (werden durch Komma separiert). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Layersets:** Vorher konfiguriertes Layerset zur Anzeige der Hauptkarte (main map).
+* **DPI:** Maßeinheit für die Auflösung, Standard ist 72
+* **SRS:** Spatial Reference System, Koordinatenbezugssystem beim Start der Anwendung. Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
+* **Map units:** Einheiten der Karte in Meter, Degrees, Feet, Miles oder Inches, Standard ist "degrees" (Grad)
+* **Max. Extent:** Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert)
+* **Start Extent:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert)
+* **Scales (csv):** festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma separiert)
+* **Max. resolution:** auto, bestimmt die Auflösung der Karte
+* **OL image path:** OpenLayers Bilderpfad, unter dem die Bilder abgespeichert werden (bundles/mapbendercore/mapquery/lib/openlayers/img)
+* **Other SRS:** weitere auswählbare Projektionen unter denen die Karte noch angezeigt werden kann (werden durch Komma separiert). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -53,9 +54,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\Map
-* Widget: , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
-* Style: mapbender.elements.css, mapquery//lib//openlayers//theme//default//style.css
+* **Class:** Mapbender\\CoreBundle\\Element\\Map
+* **Widget:** , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
+* **Style:** mapbender.elements.css, mapquery//lib//openlayers//theme//default//style.css
 
 HTTP Callbacks
 ==============

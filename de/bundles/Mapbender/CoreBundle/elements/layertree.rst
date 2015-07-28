@@ -136,9 +136,8 @@ YAML-Definition:
    .. image:: ../../../../../figures/layertree/layertree_configuration_pre305.png
         :scale: 80
 
-..
-   Optional kann ein Button für dieses Element verwendet werden. Siehe unter :doc:`button` für die Konfiguration. 
-   Der Layerbaum kann auch als Element definiert werden. Dann wird der Layerbaum in einem frame wie der Sidebar angezeigt.
+Optional kann ein Button für dieses Element verwendet werden. Siehe unter :doc:`button` für die Konfiguration. 
+Der Layerbaum kann auch als Element definiert werden. Dann wird der Layerbaum in einem frame wie der Sidebar angezeigt.
 
 ..
    YAML-Definition:

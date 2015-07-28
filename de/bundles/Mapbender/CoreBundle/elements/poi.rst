@@ -3,7 +3,7 @@
 POI (Treffpunkt)
 **************************
 
-Generiert POI-URLs (Treffpunkt-URLS), verwendbar für das Verschicken per eMail.
+Generiert POI-URLs (Treffpunkt-URLS), verwendbar für das Verschicken eines Koordinatenpunkts per eMail.
 
 .. image:: ../../../../../figures/de/poi.png
      :scale: 80
@@ -17,13 +17,14 @@ Konfiguration
      :scale: 80
      
 
-* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* Tooltip: Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* Body: Dialogtext der nach dem Setzen eines POI angezeigt wird. 
-* Target: definiert das Kartenelement, auf dem der POI gesetzt wird.
-* Use Mailto: nach dem Klick auf die Karte kann der POI Standort per Mail verschickt werden. 
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* **Body:** Dialogtext der nach dem Setzen eines POI angezeigt wird. 
+* **Target:** definiert das Kartenelement, auf dem der POI gesetzt wird.
+* **Use Mailto:** nach dem Klick auf die Karte kann der POI Standort per Mail verschickt werden. 
 
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -34,8 +35,8 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\CoreBundle\Element\POI
-* Widget: mapbender.mbPOI
+* **Class:** Mapbender\CoreBundle\Element\POI
+* **Widget:** mapbender.mbPOI
 
 
 JavaScript API
