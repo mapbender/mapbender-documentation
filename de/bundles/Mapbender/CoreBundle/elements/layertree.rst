@@ -57,7 +57,7 @@ diese per Drag & Drop verschoben werden ("Projektdaten" über den
 "Deutschlandweiten Daten"). Bitte achten Sie darauf, dass die weiter oben
 definierten Themen die darunter liegenden überdecken können.
 
-.. image:: ../../../../../figures/layertree/de/layertree_configuration_map.png
+.. image:: ../../../../../figures/de/layertree_configuration_map.png
            :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
@@ -80,7 +80,7 @@ Der letzte Schritt ist die Konfiguration des Layertrees selbst. Die in der
 Main Map angegebenen Instanzen können im Layertree noch genauer definiert
 werden.
 
-.. image:: ../../../../../figures/layertree/de/layertree_configuration.png
+.. image:: ../../../../../figures/de/layertree_configuration.png
            :scale: 80
       
 

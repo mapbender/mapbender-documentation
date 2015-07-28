@@ -14,7 +14,6 @@ Konfiguration
 .. image:: ../../../../../figures/de/ruler_configuration.png
      :scale: 80
 
-Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration.
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.

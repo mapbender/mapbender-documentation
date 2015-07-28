@@ -18,7 +18,7 @@ Konfiguration
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **MaxWidth:** Maximale Breite des Maßstabsbalkens, der Standardwert ist 200.
-+ **Anchor:** Ausrichtung des Maßstabsbalkens, der Standardwert ist 'right-bottom' (rechts unten).
+* **Anchor:** Ausrichtung des Maßstabsbalkens, der Standardwert ist 'right-bottom' (rechts unten).
 * **Units:** Einheiten des Maßstabsbalkens, 'kilometer' und/oder 'miles'
 
 
