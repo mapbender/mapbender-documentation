@@ -3,7 +3,7 @@
 Search Router
 ***********************
 
-Dieses Element ist eine Such-Frontend Oberfläche für Suchmaschinen-Module. Zur Zeit wird eine generische SQL Suchmaschine unterstützt, weitere Entwicklungen werden folgen (z.B. Lucene Suche)
+Dieses Element ist eine Such-Frontend Oberfläche für Suchmaschinen-Module. Zur Zeit wird eine generische SQL Suchmaschine unterstützt, weitere Entwicklungen werden folgen (z.B. Lucene Suche).
 
 .. image:: ../../../../../figures/search_router.png
      :scale: 80
@@ -11,15 +11,19 @@ Dieses Element ist eine Such-Frontend Oberfläche für Suchmaschinen-Module. Zur
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/search_router_configuration.png
+.. image:: ../../../../../figures/de/search_router_configuration.png
      :scale: 80
-
-Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration.
 
 Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter http://doc.mapbender3.org/de/book/database.html
 
-Es können über den Button + mehrere Suchen (routes) erstellt werden. Jede Suche erhält im Feld titel einen Titel, über den die Suche nachher in einer Auswahlbox selektierbar ist.
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
+* **Dialog:** Erebniswiedergabe in einem Dialogfeld
+* **Timeout factor:** Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
+* **Routes:** Sammlung von Suchrouten
 
+Es können über den Button ``+`` mehrere Suchen (routes) erstellt werden. Jede Suche erhält im Feld ``titel`` einen Titel, über den die Suche nachher in einer Auswahlbox selektierbar ist.
 Die Definition der Suche erfolgt im yaml-Syntax in einem Textfeld. Hier wird die Suchtabelle/Abfrage, die Datenverbindung, der Formularaufbau und die Trefferausgabe definiert. 
 
 
@@ -55,35 +59,38 @@ Element Definition im Web Administrationstool im Textfeld configuration:
                 maxScale: null
 
 
-YAML-Definition in der mapbender.yml Datei:
+YAML-Definition 
+----
+
+in der mapbender.yml Datei:
 
 .. code-block:: yaml
 
-   target: map  # for result visualization
-   asDialog: true  # render inside a dialog or not
-   timeoutFactor:  2  # timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started
-   routes:      # collection of search routes
-       demo_a:  # machine readable name
-           title: Demo A  # human readable title
-           class: Mapbender\CoreBundle\Component\SQLSearchEngine  # Search engine to use
-           class_options:  # these are forwarded to the search engine
-               connection: search_db  # DBAL connection name to use, use ~ for the default one
-               relation: test.demo_a  # Relation to select from, you can use subqueries
-               attributes: [id, name]  # array of columns to select, expressions are possible
-               geometry_attribute: geom  # name of the geometry column to query
-           form:  # search form configuration
-               the_name:  # field name, use relation column name to query or anything else for splitted fields (see below)
-                   type: text  # field type, usually text or integer
-                   options:  # field options
-                       required: true  # HTML5 required attribute
-                       label: Custom Label  # Enter a custom label, otherwise the label will be derived off the field name
-                       attr:  # HTML attributes to inject
-                           data-autocomplete: on  # this triggers autocomplete
-                           data-autocomplete-distinct: on  # This forces DISTINCT select
-                           data-autocomplete-using: field_a,field_b  # comma-separated list of other field values to use in WHERE clause for autocomplete
-                   split: [name, zusatz]  # optional field contents, might be split
-                   autocomplete-key: id  # column name to return as autocomplete key instead of column value
-                   compare: ~  # See note below for compare modes
+   target: map  													# ID des Kartenelements
+   asDialog: true  													# true, Erebniswiedergabe in einem Dialogfeld
+   timeoutFactor:  2  												# Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
+   routes:      													# Sammlung von Suchrouten
+       demo_a:  													# für Maschinen lesbarer Name
+           title: Demo A  											# für Menschen lesbarer Name
+           class: Mapbender\CoreBundle\Component\SQLSearchEngine 	# Suchmaschine, die verwendet werden soll
+           class_options:  											# Diese werden an die Suchmaschine weitergegeben
+               connection: search_db 								# DBAL Verbindungsname, der benutzt werden soll, benutzen sie ~ für default
+               relation: test.demo_a  								# Verbindungsauswahl, Unterabfragen können verwendet werden
+               attributes: [id, name]  								# Liste von Spalten auswählen, expressions are possible
+               geometry_attribute: geom  							# Name der Geometriesplate, die genutzt werden soll
+           form:  													# Einstellungen für das Suchformular 
+               the_name:  											# field name, use relation column name to query or anything else for splitted fields (see below)
+                   type: text  										# Eingabefeld, normalerweise Text oder Zahlen 
+                   options:  										# Einstellungen für das Eingabefeld
+                       required: true  								# HTML5 benötigte Attribute
+                       label: Custom Label  						# benutzerdefinierte Beschriftung eingeben, sont wird die Beschriftung von dem Feldnamen abgeleitet
+                       attr:  										# HTML Attribute
+                           data-autocomplete: on  					# Attribut, um Autovervollständigung zu aktivieren
+                           data-autocomplete-distinct: on  			# Attribut, dass Autovervollständigung aktiviert aber unterscheiden lässt
+                           data-autocomplete-using: field_a,field_b # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden
+                   split: [name, zusatz]  							# optionale Eingabefelder
+                   autocomplete-key: id  							# Spaltenname der wiedergegeben wird, statt des Spalteninhalts 
+                   compare: ~  										# See note below for compare modes
                my_select:
                    type: choice
                    options:
@@ -93,39 +100,39 @@ YAML-Definition in der mapbender.yml Datei:
                            f: Female
                            u: Unknown
            results:
-               view: table  # only result view type for now
-               count: true # Anzahl der Treffer anzeigen
-               headers:  # hash of table headers and the corresponding result columns
-                   id: ID  # column name -> header label
+               view: table  										# Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
+               count: true 											# Anzahl der Treffer anzeigen
+               headers:  											# Bezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
+                   id: ID 											# Spaltenname -> Überschrift
                    name: Name
-               styleMap: ~  # See below
-               callback:  # What to do on hover/click
-                   event: click  # result row event to listen for (click or mouseover)
+               styleMap: ~  									    # siehe unten
+               callback:  											# Was beim Klick und Mauszeiger halten passiert
+                   event: click  									# Ergebnisliste (click oder mouseover)
                    options:
-                       buffer: 10  # buffer result geometry with this (map units) before zooming
-                       minScale: ~  # scale restrictions for zooming, ~ for none
+                       buffer: 10  									# Buffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
+                       minScale: ~  								# Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
                        maxScale: ~
+
+Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
 
 Vergleichsmodus
 --------------------------
 
 Jedes Feld kann für einen Vergleichsmodus bestimmt werden, welcher von der Engine ausgewertet wird, wenn die Suchabfrage gestellt wird. Die SQL Suche Engine hat die folgenden Modi:
 
-* exact: genauer Vergleich, Schlüssel = Wert (key = val)
-* iexact: Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
-* like: Standard, zweiseitiges 'like'
-* like-left: linksseitiges 'like'
-* like-right: rechtsseitiges 'like'
+* **exact:** genauer Vergleich, Schlüssel = Wert (key = val)
+* **iexact:** Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
+* **like:** Standard, zweiseitiges 'like'
+* **like-left:** linksseitiges 'like'
+* **like-right:** rechtsseitiges 'like'
 * **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
-* ilike-left: linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
-* ilike-right: rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
+* **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
+* **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
 
 Styling der Ergebnisse
 ---------------------------
 
-Standardmäßig werden die Ergebnisse in der Karte in dem default-OpenLayers
- Style angezeigt, d.h. orange für die Treffer und blau für selektierte Objekte.
-
+Standardmäßig werden die Ergebnisse in der Karte in dem default-OpenLayers Style angezeigt, d.h. orange für die Treffer und blau für selektierte Objekte.
 Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfiguration übergeben, die wie folgt aussehen könnte:
 
 .. code-block:: yaml
@@ -167,9 +174,9 @@ Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selekt
 Class, Widget & Style
 =====================
 
-* Class: Mapbender\\CoreBundle\\Element\\SearchRouter
-* Widget: mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
-* Style: mapbender.element.searchRouter.css
+* **Class:** Mapbender\\CoreBundle\\Element\\SearchRouter
+* **Widget:** mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
+* **Style:** mapbender.element.searchRouter.css
 
 HTTP Callbacks
 ==============

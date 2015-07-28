@@ -3,18 +3,29 @@
 Navigation Toolbar (Zoombar) (Navigationswerkzeug)
 *********************************************************************
 
-Das Navigationswerkzeug bietet Zoomen und Verschieben an, ähnlich wie bei OpenLayers.
+Das Navigationswerkzeug bietet die Funktionen Zoomen und Verschieben an, ähnlich wie bei OpenLayers.
 
-.. image:: ../../../../../figures/zoom_bar.png
+.. image:: ../../../../../figures/de/zoom_bar.png
      :scale: 100
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/zoom_bar_configuration.png
+.. image:: ../../../../../figures/de/zoom_bar_configuration.png
      :scale: 80
 
+* **Verschiebbar:** Navigationswerkzeug ist verschiebbar oder nicht, Standard ist true
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* **Components:** Komponenten des Navigationswerkzeugs, Standardmäßig wird alles selektiert  
+* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
+* **Step size:** Schrittweite für das Verschieben
+* **Step by pixel:** Schritttyp: Pixel oder Prozent, false = Prozent, Standard ist false
+* **Anchor:** Ausrichtung des Navigationswerkzeugs, Standard ist 'left-top' (oben-links)
+
+
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -33,9 +44,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\ZoomBar
-* Widget: mapbender.element.zoombar.js
-* Style: mapbender.element.zoombar.css
+* **Class:** Mapbender\\CoreBundle\\Element\\ZoomBar
+* **Widget:** mapbender.element.zoombar.js
+* **Style:** mapbender.element.zoombar.css
 
 HTTP Callbacks
 ==============

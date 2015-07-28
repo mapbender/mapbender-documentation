@@ -1,9 +1,9 @@
 .. _scalebar:
 
-ScaleBar (Maßstabsbalken)
+ScaleBar (Maßstabsleiste)
 **************************
 
-Der Maßstabsbalken ist eine schmale Linie, die den aktuellen Maßstab anzeigt.
+Die Maßstabsleiste ist eine schmale Linie, die den aktuellen Maßstab anzeigt.
 
 .. image:: ../../../../../figures/scalebar.png
      :scale: 100
@@ -11,10 +11,19 @@ Der Maßstabsbalken ist eine schmale Linie, die den aktuellen Maßstab anzeigt.
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/scalebar_configuration.png
+.. image:: ../../../../../figures/de/scalebar_configuration.png
      :scale: 80
 
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
+* **MaxWidth:** Maximale Breite des Maßstabsbalkens, der Standardwert ist 200.
++ **Anchor:** Ausrichtung des Maßstabsbalkens, der Standardwert ist 'right-bottom' (rechts unten).
+* **Units:** Einheiten des Maßstabsbalkens, 'kilometer' und/oder 'miles'
+
+
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -30,9 +39,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\ScaleBar
-* Widget: mapbender.element.scalebar.js
-* Style: mapbender.element.scalebar.css
+* **Class:** Mapbender\\CoreBundle\\Element\\ScaleBar
+* **Widget:** mapbender.element.scalebar.js
+* **Style:** mapbender.element.scalebar.css
 
 HTTP Callbacks
 ==============

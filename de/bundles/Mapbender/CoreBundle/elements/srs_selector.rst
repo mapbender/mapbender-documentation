@@ -4,18 +4,24 @@ Spatial Reference System Selector (SRS Selector) (Auswahl des räumlichen Refere
 ************************************************************************************************
 
 Nach der Auswahl eines räumlichen Referenzsystems (SRS) ändert sich das räumliche Referenzsystem in der Karte.
+Beachten Sie: Die Selektbox bietet nur die SRS an, die für das `Kartenelement <../elements/map.html>`_ definiert wurden.
 
-Beachten Sie: Die Selektbox bietet nur die SRS an, die für das Kartenelement definiert wurden.
 
-
-.. image:: ../../../../../figures/srs_selector.png
+.. image:: ../../../../../figures/de/srs_selector.png
      :scale: 100
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/srs_selector_configuration.png
+.. image:: ../../../../../figures/de/srs_selector_configuration.png
      :scale: 80
+
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt. 
+* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
+
+YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -26,9 +32,9 @@ Konfiguration
 Class, Widget & Style
 =====================
 
-* Class: Mapbender\\CoreBundle\\Element\\SrsSelector
-* Widget: mapbender.element.srsselector.js
-* Style: mapbender.elements.css
+* **Class:** Mapbender\\CoreBundle\\Element\\SrsSelector
+* **Widget:** mapbender.element.srsselector.js
+* **Style:** mapbender.elements.css
 
 HTTP Callbacks
 ==============
