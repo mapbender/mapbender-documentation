@@ -22,7 +22,8 @@ Konfiguration
 
 
 
-``YAML-Definition:``
+YAML-Definition:
+----
 
 .. code-block:: yaml
 
