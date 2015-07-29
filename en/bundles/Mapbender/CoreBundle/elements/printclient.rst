@@ -32,7 +32,6 @@ YAML-Definition:
 .. code-block:: yaml
 
     target: map                    # Id of Map element to query
-    autoOpen: false				   # true/false open when application is started, default is false
     templates:
         - { template: a4portrait, label: A4 Portrait, format: a4}	# template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
         - { template: a4landscape, label: A4 Landscape, format: a4} 	# template label in the dialog, format (a4,a3,...) has to be defined 
@@ -42,6 +41,7 @@ YAML-Definition:
         - { dpi: 288,  label: Document (288dpi)}	# 288 - dpi value, Document - label
     rotatable: true                 # true/false use true for rotation, default is true
     legend: true                    # true/false, default is false
+    legend_default_behaviour: false # true/false, if true the legend checkbox is checked by default
     file_prefix: mapbender3         # define the file prefix for the pdf that is generated (file_prefix_date.pdf will be created)
     optional_fields:                # define optional fields (example title-field)
         title:                      # name of the optional fields, default is null (no optional fields are defined)

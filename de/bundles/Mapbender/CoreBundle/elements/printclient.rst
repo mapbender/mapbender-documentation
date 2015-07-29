@@ -47,7 +47,6 @@ YAML-Definition:
 .. code-block:: yaml
 
     target: map                    # ID des Kartenelements
-    autoOpen: false				   # true, wenn das Druckfenster beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
     templates:
         - { template: a4portrait, label: A4 Portrait, format: a4}	# Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
         - { template: a4landscape, label: A4 Landscape, format: a4} 	# Vorlagebeschriftung im Druckdialog, Format (A4,A3,...) wird definiert
@@ -57,6 +56,7 @@ YAML-Definition:
         - { dpi: 288,  label: Document (288dpi)}	# es können weitere dpi-Werte angegeben werden
     rotatable: true                             	# true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
     legend: true                   # true/false, der Standardwert ist false
+    legend_default_behaviour: false # true/false, Legenden Checkbox standardmäßig ausgewählt
     file_prefix: mapbender3        # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
     optional_fields:               # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
         title:                     # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
