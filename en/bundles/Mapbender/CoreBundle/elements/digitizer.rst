@@ -312,7 +312,34 @@ Definition of a text (type label)
 .. code-block:: yaml
 
                                                  - type: label                        # element type definition, will write a text
-                                                   title: 'Please give information about the poi.' # define a text 
+                                                   text: 'Please give information about the poi.' # define a text 
+
+Definition of a text
+-------------------------------
+
+You can define a label and refer to colums of your datasource. You also can use JavaScript.
+
+.. code-block:: yaml
+
+                                                - type:        text                  # element Type definition
+
+                                                  # Label (optional)
+                                                  title:       Name 
+
+                                                  # Name of the field (optional)
+                                                  name:        name 
+
+                                                  # CSS definition (optional)
+                                                  css:         {width: 80%} 
+
+                                                  # CSS class definition (optional)
+                                                  cssClass:    input-css  
+
+                                                  # text definition in JavaScript
+                                                  # data - data is the object, that gives access to all fields.
+                                                  # f.E.: data.id will show the id of the Objekt as text
+                                                  text: data.id + ':' + data.name
+
 
 Definition of a textarea (type textarea)
 ----------------------------------------
@@ -356,6 +383,21 @@ Definition of a mandatory field
 
 
                                                    mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
+
+
+
+Definition of a infotext 
+-------------------------------
+
+An i-Icon will be displayed. On mouse-over the defined infotext will appear. Infotext can be defined for every field type.
+
+.. code-block:: yaml
+
+                                                 - type:  checkbox                        # infotext can be defined for every element type
+                                                   title: Is this true?
+                                                   name:  public
+                                                   value: true
+                                                   infoText: Please read the information. 
 
 
 
@@ -490,7 +532,25 @@ Set to true (default): after creating a geometry the form popup is opened automa
 
 
 
-        
+Definition of rights and behaviour per schema
+--------------------------------------------------
+
+You can define different rights and behaviour for each schema.
+
+.. code-block:: yaml
+
+        poi:
+           allowEditData: true       # true - form data can be changed, default true
+           allowDelete: true         # true - allow delete of feature, default true
+           allowDigitize: true       # true - allow digitizing (create and edit), default true
+           displayPermanent: true    # true - show the feature permanently on the map. false - feature are only displayed, when they are selected and when the element 
+                                     # (tab or dialog) is active, default true
+           displayOnSelect: true     # show features only when the element is active and schema is selected, default true    
+                                     # false - features are displayed if the schema is selected but the element itself is not active
+           openFormAfterEdit: true   # data form will be opened after creation of a geometrie 
+           searchType: currentExtent # currentExtent or all - default is currentExtent
+
+
 
 
 Class, Widget & Style

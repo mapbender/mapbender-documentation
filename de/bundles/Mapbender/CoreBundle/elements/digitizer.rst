@@ -313,8 +313,38 @@ Definition von Texten (type label)
                                                  - type: label                        # element type definition, will write a text
                                                    title: 'Please give information about the poi.' # define a text 
 
-Definition of a textarea (type textarea)
 
+Definition eines Textes
+-------------------------------
+
+Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenquelle zugegriffen werden. Darüber hinaus kann JavaScript verwendet werden.
+
+.. code-block:: yaml
+
+                                                - type:        text# Element Typ Definition
+
+                                                  # Label (optional)
+                                                  title:       Name 
+
+                                                  # Name des Feldes (optional)
+                                                  name:        name 
+
+                                                  # CSS definition (optional)
+                                                  css:         {width: 80%} 
+
+                                                  # CSS Klass definition (optional)
+                                                  cssClass:    input-css  
+
+                                                  # Info-Text
+                                                  infoText: Die Vorname.
+
+                                                  # Text Definition in JavaScript
+                                                  # data - Data ist das Objekt, das alle Felder zur Verfügung stellt.
+                                                  # z.B.: Über data.id wird die ID des Obektes im Text angezeigt.
+                                                  text: data.id + ':' + data.name
+
+Definition of a textarea (type textarea)
+--------------------------------------------------------------
 .. code-block:: yaml
 
                                                  - type: textarea
@@ -353,6 +383,20 @@ Definition von Pflichtfeldern
 
 
                                                    mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
+
+Definition von Informationen zum Datenfeld
+--------------------------------------------
+
+An i-Icon will be displayed. On mouse-over the defined infotext will appear. Infotext can be defined for every field type.
+
+.. code-block:: yaml
+
+                                                 - type:  checkbox 
+                                                   title: Is this true?
+                                                   name:  public
+                                                   value: true
+                                                   infoText: Please read the information. # infotext can be defined for every field type
+
 
 
 Definition von Feldern für den Dateiupload
@@ -484,8 +528,24 @@ Bei true (default): nach dem Anlegen einer Geometrie wird sofort das Formular zu
             [...]
 
         
+Definition von Rechten und Verhalten pro Thema
+--------------------------------------------------
 
-        
+Pro Thema können Rechte vergeben werden. Außerdem kann das Verhalten bestimmt werden.
+
+.. code-block:: yaml
+
+        poi:
+           allowEditData: true       # true - Formulardaten können geändert werden, Standardwert true
+           allowDelete: true         # true - Löschen von Objekten erlauben, Standardwert true
+           allowDigitize: true       # true - Features Digitalisieren auf der Karte (Verändern und Erstellen), Standardwert true
+           displayPermanent: true    # true - dauerhaft anzeigen. false - Thema nur anzeigen, wenn über die Auswahl selektiert und wenn das Element aktiv ist 
+                                     # (Reiter geöffnet oder Dialog geöffnet), Standardtwert true
+           displayOnSelect: true     # Layer Features erst anzeigen, wenn das Element aktiv ist und Schema selektiert ist, Standardwert true.            
+                                     # false - bei aktiven Thema werden die Features, obwohl der Element selbst nicht aktiv ist, trotzdem angezeigt.
+           openFormAfterEdit: true   # Datenformular wird geöffnet, nachdem die Geometrie erfasst wurde, Standardwert true
+           searchType: currentExtent # currentExtent oder all - Standardwert ist currentExtent
+ 
 
 Class, Widget & Style
 ===========================
