@@ -5,8 +5,8 @@ ScaleDisplay
 
 The ScaleDisplay displays the current map scale (1:1K or 1: 1000).
 
-.. image:: ../../../../../figures/scaledisplay.png
-     :scale: 80
+.. image:: ../../../../../figures/de/scaledisplay.png
+     :scale: 100
 
 Configuration
 =============

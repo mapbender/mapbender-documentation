@@ -5,7 +5,7 @@ Legend
 
 The legend object shows the legend of the layers that are displayed in the map.
 
-.. image:: ../../../../../figures/de/legend.png
+.. image:: ../../../../../figures/legend.png
      :scale: 80
 
 Configuration
