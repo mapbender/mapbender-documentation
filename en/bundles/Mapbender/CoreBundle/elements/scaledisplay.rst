@@ -14,7 +14,16 @@ Configuration
 .. image:: ../../../../../figures/scaledisplay_configuration.png
      :scale: 80
 
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Tooltip:** text to use as tooltip.
+* **Target:** Id of Map element to query.
+* **Scale prefix:** prefix, shown with scale.
+* **Unit prefix:** prefix, shown with unit.
+* **Anchor:** scale bar alignment, default is 'right-bottom' (use inline f.e. in sidebar).
+
+
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -27,9 +36,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\ScaleDisplay
-* Widget: mapbender.element.scaledisplay.js
-* Style: mapbender.element.scaledisplay.css
+* **Class:** Mapbender\\CoreBundle\\Element\\ScaleDisplay
+* **Widget:** mapbender.element.scaledisplay.js
+* **Style:** mapbender.element.scaledisplay.css
 
 HTTP Callbacks
 ==============

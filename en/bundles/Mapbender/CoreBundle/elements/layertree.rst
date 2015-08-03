@@ -3,9 +3,7 @@
 Layertree - Table of Content
 ****************************
 
-The layertree diplays the layers and the service folders. The layertree allows you to activate/deactivate layers in the map. You can also activate/deactivate the info request for layers.
-
-You can change the order of Services and layers via drag & drop.
+The layertree diplays the layers and the service folders. The layertree allows you to activate/deactivate layers in the map. You can also activate/deactivate the info request for layers. You can change the order of Services and layers via drag & drop.
 
 Starting with version 3.0.5 the layertree allows to display multiple layersets that are displayed as an additional structural level. The following screenshots shows an example:
 
@@ -28,8 +26,8 @@ To use different layersets in your layertree, you have to adjust different eleme
 
 The following example defines two layersets each with to instances:
 
-* Projektdaten (project data): with the instances ""Schwalmtal" and ""Projekt NL".
-* Deutschlandweite Daten (german wide data): with the instanaces ""bkg" and ""OpenStreetMap (OSM)".
+* Projektdaten (project data): with the instances "Schwalmtal" and "Projekt NL".
+* Deutschlandweite Daten (german wide data): with the instanaces "bkg" and "OpenStreetMap (OSM)".
 
 
 Configuration of the layersets
@@ -119,34 +117,21 @@ YAML-Definition:
 
 .. code-block:: yaml
                 
-   tbd: later           #  documentation will be handed in later. ;-)
-
-You can optionally use a button to show this element. See :doc:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
+  title: layertree             # title of layertree
+  target: ~                    # Id of the Map element to query
+  type: ~                      # type of layertree, element or dialog
+  displaytype: tree            # only tree in 3.0, future will offer list
+  useAccordion: false          # accordion element, default is false
+  autoOpen: false              # true/false open when application is started, default is false
+  titleMaxLength: 20           # max length of layer title, default is 20
+  showBaseSource: true         # show base layer, default is true
+  showHeader: true             # shows a headline which counts the number of services
+  menu: [opacity,zoomtolayer,metadata,removelayer]  # show contextmenu for the layer (like opacity, zoom to layer, metadata, remove layer), default is menu: []
 ..
    .. image:: ../../../../../figures/layertree/layertree_configuration_pre305.png
         :scale: 80
 
-   You can optionally use a button to show this element. See :doc:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
-
-   YAML-Definition:
-
-   .. code-block:: yaml
-
-    title: layertree             # title of layertree
-    target: ~                    # Id of the Map element to query   
-    type: ~                      # type of layertree, element or dialog
-    autoOpen: false              # true/false open when application is started, default is false
-    useTheme: null
-    displaytype: tree            # only tree in 3.0, future will offer list
-    titlemaxlength: 20           # max length of layer title, default is 20  
-
-    showBaseSource: true         # show base layer, default is true
-    showHeader: true             # shows a headline which counts the number of services  
-    menu: [opacity,zoomtolayer,metadata,removelayer]  # show contextmenu for the layer (like opacity, zoom to layer, metadata, remove layer), default is menu: []
-    hideInfo: null               #
-    hideNotToggleable: null      #
-    hideSelect: null             #
-    themes: {  }                 #   
+You can optionally use a button to show this element. See :doc:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
 
 Class, Widget & Style
 ======================

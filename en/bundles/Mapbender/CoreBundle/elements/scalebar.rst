@@ -14,7 +14,15 @@ Configuration
 .. image:: ../../../../../figures/scalebar_configuration.png
      :scale: 80
 
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Tooltip:** text to use as tooltip.
+* **Target:** Id of Map element to query.
+* **MaxWidth:** the max width of the scale bar, default 200.
+* **Anchor:** scale bar alignment, default is 'right-bottom' (use inline f.e. in sidebar).
+* **Units:** scale bar units 'kilometer' and/or 'miles' (ml), default ['km'].
+
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -30,9 +38,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\ScaleBar
-* Widget: mapbender.element.scalebar.js
-* Style: mapbender.element.scalebar.css
+* **Class:** Mapbender\\CoreBundle\\Element\\ScaleBar
+* **Widget:** mapbender.element.scalebar.js
+* **Style:** mapbender.element.scalebar.css
 
 HTTP Callbacks
 ==============

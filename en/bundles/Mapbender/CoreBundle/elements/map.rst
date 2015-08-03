@@ -14,7 +14,21 @@ Configuration
 .. image:: ../../../../../figures/map_configuration.png
      :scale: 80
 
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Layersets:** refer to a layerset, define the layerset first and refer to it (propably main map).
+* **DPI:** resolution, default is 72.
+* **SRS:** coordinate reference system. Two ways of srs definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+* **Map units:** units to use degrees/meters, default is deegrees.
+* **Max. Extent:** maximal map extents.
+* **Start Extent:** map extents for the start of the application.
+* **Scales (csv):** a csv scale list.
+* **Max. resolution:** at the moment only auto is supported, so please do not change.
+* **OL image path:** OpenLayers Bilderpfad, unter dem die Bilder abgespeichert werden (bundles/mapbendercore/mapquery/lib/openlayers/img).
+* **Other SRS:** other coordinate reference systems. Two srs definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+
+
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -40,9 +54,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\Map
-* Widget: , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
-* Style: mapbender.elements.css, mapquery//lib//openlayers//theme//default//style.css
+* **Class:** Mapbender\\CoreBundle\\Element\\Map
+* **Widget:** , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
+* **Style:** mapbender.elements.css, mapquery//lib//openlayers//theme//default//style.css
 
 HTTP Callbacks
 ==============
