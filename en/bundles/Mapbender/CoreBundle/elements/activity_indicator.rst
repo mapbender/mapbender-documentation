@@ -8,7 +8,7 @@ In the default configuration it uses a Font symbol. This can be easily modified 
 widget in the css-file ``fom//src//FOM//CoreBundle//Resources//public//css/frontend//mapbender3_theme.css``.
 
 .. image:: ../../../../../figures/activity_indicator.png
-     :scale: 80
+     :scale: 100
 
 Configuration
 =============
