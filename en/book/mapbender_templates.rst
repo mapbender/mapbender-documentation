@@ -34,7 +34,7 @@ Fullscreen Alternative Template
 ..
 
  .. image:: ../../figures/mapbender_mobile.png
-     :scale: 80
+     :scale: 50
  View a demo of the Mapbender Fullscreen Alternative Template http://demo.mapbender3.org
 
 Regions of the Fullscreen Alternative Template
