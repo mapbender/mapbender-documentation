@@ -11,7 +11,7 @@ Fullscreen Template
 *********************
 
 .. image:: ../../figures/mapbender_fullscreen.png
-     :scale: 80
+     :scale: 50
 
 Schauen Sie sich die Demo zum Mapbender Fullscreen Template an: http://demo.mapbender3.org/application/mapbender_user
 
