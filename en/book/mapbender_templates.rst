@@ -10,7 +10,7 @@ Get to know the Mapbender templates. Mapbender offers some templates ready to us
 Fullscreen Template
 *********************
 
-.. image:: ../../figures/mapbender_mobile.png
+.. image:: ../../figures/mapbender_fullscreen.png
      :scale: 80
 
 View a demo of the Mapbender Fullscreen Template http://demo.mapbender3.org/application/mapbender_user
@@ -25,16 +25,17 @@ Regions of the Fullscreen Template:
 Specials: 
 
   * dark background style of the template
-  * fullscreen display
-  * contains almost all functions of mapbender3
+  * fullscreen display with sidepane
+
 
 Fullscreen Alternative Template
-*********************
+*********************************
 
-.. image:: ../../figures/mapbender_mobile.png
+..
+
+ .. image:: ../../figures/mapbender_mobile.png
      :scale: 80
-
-View a demo of the Mapbender Fullscreen Alternative Template http://demo.mapbender3.org
+ View a demo of the Mapbender Fullscreen Alternative Template http://demo.mapbender3.org
 
 Regions of the Fullscreen Alternative Template
 
@@ -46,17 +47,17 @@ Regions of the Fullscreen Alternative Template
 Specials: 
 
   * light background style of the template
-  * fullscreen display
-  * contains almost all functions of mapbender3
+  * fullscreen display with sidepane
 
 
 Classic Template
 *********************
 
-.. image:: ../../figures/mapbender_fullscreen.png
-     :scale: 80
+..
 
-View a demo of the Mapbender Classic Template http://demo.mapbender3.org
+ .. image:: ../../figures/mapbender_mobile.png
+     :scale: 80
+ View a demo of the Mapbender Classic Template http://demo.mapbender3.org
 
 Regions of the Classic Template
 
@@ -67,14 +68,11 @@ Regions of the Classic Template
 
 Specials: 
 
-  * permanent framework/ structure
-  * classic style without special colour  
-  * contains almost all functions of mapbender3
+  * fixed size of the regions
 
 
 Mobile Template
 *********************
-
 
 .. image:: ../../figures/mapbender_mobile.png
      :scale: 80

@@ -25,16 +25,16 @@ Regionen des Fullscreen Templates:
 Specials: 
 
   * Template mit dunklem Hintergrund 
-  * Großansicht über gesamten Bildschirm
-  * Enthält die meisten Funktionen von Mapbender3
+  * Großansicht mit Seitenleiste
+
 
 Fullscreen Alternative Template
-*********************
+**********************************
 
-.. image:: ../../figures/mapbender_mobile.png
+..
+  .. image:: ../../figures/mapbender_mobile.png
      :scale: 80
-
-Schauen Sie sich die Demo zum Mapbender Fullscreen Alternative Template an: http://demo.mapbender3.org/
+  Schauen Sie sich die Demo zum Mapbender Fullscreen Alternative Template an: http://demo.mapbender3.org/
 
 Regionen des Fullscreen Templates:
 
@@ -46,17 +46,16 @@ Regionen des Fullscreen Templates:
 Specials: 
 
   * Template mit hellem Hintergrund 
-  * Großansicht über gesamten Bildschirm
-  * Enthält die meisten Funktionen von Mapbender3
+  * Großansicht mit Seitenleiste
 
 
 Classic Template
 *********************
 
-.. image:: ../../figures/mapbender_mobile.png
+..
+  .. image:: ../../figures/mapbender_mobile.png
      :scale: 80
-
-Schauen Sie sich die Demo zum Mapbender Classic Template an: http://demo.mapbender3.org/
+  Schauen Sie sich die Demo zum Mapbender Classic Template an: http://demo.mapbender3.org/
 
 Regionen des Fullscreen Templates:
 
@@ -67,8 +66,7 @@ Regionen des Fullscreen Templates:
 
 Specials: 
 
-  * fester Rahmen und Struktur 
-  * Enthält die meisten Funktionen von Mapbender3 
+  * fester Rahmen und Struktur  
 
 
 Mobile template
