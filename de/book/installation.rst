@@ -22,10 +22,9 @@ Mapbender3 benötigt die folgenden Komponenten:
 * APACHE mod_rewrite
 * OpenSSL
 
-Um optional eine andere Datenbank als die vorkonfigurierte SQLite zu verwenden, wird eine PHP-Erweiterung benötigt, die von Doctrine unterstützt wird:
-`Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. 
+Um optional eine andere Datenbank als die vorkonfigurierte SQLite zu verwenden, wird eine PHP-Erweiterung benötigt, die von Doctrine unterstützt wird: `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. Für PostgreSQL beispielsweise php5-pgsql.
 
-Beachten Sie, dass die SQLite Erweiterung auf jeden Fall benötigt wird. Sie benötigen diese, um im Entwicklermodus zu arbeiten, um den Web Installer zu verwenden oder um Profiler-Daten zu erzeugen sowie um Fehler zu analysieren.
+Beachten Sie, dass die SQLite Erweiterung auf jeden Fall benötigt wird. Sie benötigen diese, um im Entwicklermodus zu arbeiten oder um Profiler-Daten zu erzeugen sowie um Fehler zu analysieren.
 
 
 Download 
@@ -40,7 +39,7 @@ Apache ALIAS
 
 Stellen Sie sicher, dass der Webserver auf das gerade dekomprimierte Webverzeichnis in dem Mapbender Verzeichnis zeigt. Sorgen Sie dafür, dass *app.php* als Verzeichnis-Index eingestellt ist.
 
-Beispiel für eine Apache ALIAS Konfiguration in der Datei /etc/apache2/conf.d/mapbender3.conf (Apache 2.2) oder /etc/apache2/conf-enabled/mapbender3.conf (Apache 2.4). Legen Sie diese Datei an und berechtigen Sie Apache diese zu lesen.
+Beispiel für eine Apache ALIAS Konfiguration in der Datei /etc/apache2/conf.d/mapbender3.conf (Apache 2.2) oder /etc/apache2/sites-available/mapbender3.conf (für Apache 2.4. Aktivieren Sie die Seite danach mit "a2ensite mapbender3.conf"). Legen Sie diese Datei an und berechtigen Sie Apache diese zu lesen.
 
 Bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_
 
@@ -75,12 +74,12 @@ Apache 2.2 Konfiguration:
   </Directory>
 
 
-.. code-block:: yaml
+.. code-block:: bash
   
   # Debian basierte Distributionen
   sudo a2enmod rewrite
   
-  #Windows Aktivierung des Moduls rewrite in der httpd.conf
+  # Windows Aktivierung des Moduls rewrite in der httpd.conf
   LoadModule rewrite_module modules/mod_rewrite.so
 
 
@@ -90,15 +89,6 @@ Eine :doc:`Git-basierte <installation_git>`-Installation - vorwiegend für Entwi
 
 Konfiguration
 ******************** 
-
-
-
-.. 
-  Verwendung des Web-Installer
-  ---------------------------------------
-  Die Konfiguration direkt über den Browser ist bisher nicht verfügbar. Bitte benutzen Sie derzeit die kommandozeilenbasierte Methode.
-
-
 
 Verwendung der  Kommandozeile
 ----------------------------------------
@@ -169,11 +159,6 @@ Erzeugen des Datenbankschemas über Symfony2:
 
     app/console doctrine:schema:create
 
-Sie müssen die Tabellen des Sicherheitssystems separat initialisieren:
-
-.. code-block:: yaml
-
-  app/console init:acl
 
 Kopieren des bundles' assets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
@@ -281,17 +266,25 @@ Laden Sie das Apache Modul rewrite:
 
   sudo a2enmod rewrite
 
-Erstellen Sie den Apache ALIAS. Legen Sie die Datei /etc/apache2/conf.d/mapbender3 mit dem folgenden Inhalt an und starten Sie den Apache Server neu. Apache 2.4 benutzt andere Direktiven für die Access Control (zum Beispiel: "Require all granted"). Für Details schauen Sie bitte in die `Apache Documentation: Upgrading to 2.4 from 2.2 <http://httpd.apache.org/docs/2.4/upgrading.html>`_.
+Erstellen Sie den Apache ALIAS: Legen Sie die Datei /etc/apache2/sites-available/mabender3.conf mit dem folgenden Inhalt an. Aktivieren Sie die Seite danach mit "a2ensite mapbender3.conf" und starten Sie den Apache Server neu. 
+
+Beispiel ALIAS Apache 2.4:
 
 .. code-block:: yaml
-
-  ALIAS /mapbender3 /var/www/mapbender3/web/
-  <Directory /var/www/mapbender3/web/>
-    Options MultiViews
-    DirectoryIndex app.php
-    Order allow,deny
-    Allow from all
-  </Directory>
+                
+ Alias /mapbender3 /var/www/mapbender3/web/
+ <Directory /var/www/mapbender3/web/>
+  Options MultiViews FollowSymLinks
+  DirectoryIndex app.php
+  Require all granted
+ 
+  RewriteEngine On
+  RewriteBase /mapbender3/
+  RewriteCond %{ENV:REDIRECT_STATUS} ^$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+ </Directory>
 
 Prüfen Sie, ob der ALIAS erreichbar ist:
 
@@ -333,7 +326,6 @@ Setzen Sie die app/console Befehle ab
  cd /var/www/mapbender3
  app/console doctrine:database:create
  app/console doctrine:schema:create
- app/console init:acl
  app/console assets:install web
  app/console fom:user:resetroot
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
@@ -441,7 +433,6 @@ Rufen Sie die app/console Befehle über die php.exe auf. Hierzu müssen Sie ein 
  cd mapbender3
  php.exe app/console doctrine:database:create
  php.exe app/console doctrine:schema:create
- php.exe app/console init:acl
  php.exe app/console assets:install web
  php.exe app/console fom:user:resetroot
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
