@@ -43,7 +43,7 @@ Anmerkungen zu Windows
 Die Apache Downloads unterscheiden sich nach der Version von Visual Studio, mit der sie kompiliert worden sind und damit nach der geeigneten Version der Microsoft Visual C++ Redistributable. Bei neueren Windows Versionen ist das in der Regel unproblematisch. Es gibt drei unterschiedliche Varianten:
 
 * **VC 14**: Benötigt Visual C++ Redistributable for Visual Studio 2015.
-* **VC 11**: Benötigt Visual C++ Redistributable for Visual Studio 2012.
+* **VC 11**: Benötigt Visual C++ Redistributable for Visual Studio 2012. PHP baut i.d.R. noch auf dieser Version auf.
 * **VC 10**: Benötigt Visual C++ Redistributable for Visual Studio 2008 SP1.
 
 Zusätzlich gibt es 32- und 64-bit Versionen von Apache für Windows. 

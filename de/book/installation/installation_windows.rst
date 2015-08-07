@@ -5,12 +5,13 @@ Installation auf Windows
 
 Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ und installieren Sie die notwendigen Komponenten:
 
- * fügen Sie den Pfad zum PHP-bin Verzeichnis zu Ihrer PATH Variable hinzu 
- * aktivieren Sie die PHP Erweiterungen in der php.ini Konfigurationsdatei
- * laden Sie das Apache Modul rewrite
+* fügen Sie den Pfad zum PHP-bin Verzeichnis zu Ihrer PATH Variable hinzu 
+* aktivieren Sie die PHP Erweiterungen in der php.ini Konfigurationsdatei
+* laden Sie das Apache Modul rewrite
 
 .. code-block:: ini
 
+ # php.ini
  extension=php_curl.dll
  extension=php_fileinfo.dll
  extension=php_gd2.dll
@@ -25,10 +26,20 @@ Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ und installi
     # unter Windows Datei httpd.conf (Kommentar # entfernen) und Apache neu starten
     LoadModule rewrite_module modules/mod_rewrite.so
 
-Erstellen Sie den Apache ALIAS. Legen Sie die Datei /etc/apache2/conf.d/mapbender3.conf (oder für Apache 2.4 /etc/apache2/sites-enabled/mapbender3.conf) mit dem folgenden Inhalt an und starten Sie den Apache Server neu (bitte beachten Sie, dass Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
+Erstellen Sie den Apache Alias. Es gibt für Windows mehrere Möglichkeiten. Eine übersichtliche Möglichkeit ist, eine Datei mapbender3.conf zu erstellen und auf diese in der httpd.conf zu verweisen.
 
-Beispiel ALIAS für Apache 2.4
+* Erstellen Sie einen Unterordner alias im Verzeichnis <apache>/conf. Legen Sie die Datei mapbender3.conf dort ab. (Dieses Verzeichnis können Sie dann auch nutzen, um dort weitere Alias-Definitionen übersichtlich abzulegen.)
+* Verweisen Sie in der Datei httpd.conf (im Verzeichnis <apache>/conf/) auf diese Datei mapbender3.conf.
 
+In der httpd.conf:
+
+.. code-block:: apache
+
+                # Verweis auf Mapbender3 Alias
+                Include "conf/alias/mapbender3.conf"
+
+In der mapbender3.conf:
+  
 .. code-block:: apache
 
  Alias /mapbender3 c:/mapbender3/web/
@@ -45,7 +56,7 @@ Beispiel ALIAS für Apache 2.4
   RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
  </Directory>
 
-Prüfen Sie, ob der ALIAS erreichbar ist:
+Starten Sie den Apache Webserver neu und prüfen Sie, ob der Alias erreichbar ist:
 
 * http://localhost/mapbender3/
 
@@ -65,9 +76,9 @@ Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/paramet
     database_host:     localhost
     database_port:     5432
     database_name:     mapbender3
-    database_path:
+    database_path:     ~
     database_user:     postgres
-    database_password: 1xyz45ab
+    database_password: geheim
 
 Rufen Sie die app/console Befehle über die php.exe auf. Hierzu müssen Sie ein Standardeingabefenster öffnen.
 
