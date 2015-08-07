@@ -22,7 +22,7 @@ The following option for the construction of the forms are available:
 
   * define more then one feature types for digitalisation. You can switch from one feature type to the other with a select box
   * use a table as source. You can also define a filter to get a subset of the table
-  * textfields
+  * Textfields
   * Selectboxes, Multiselectboxes
   * Radiobuttons, Checkboxes
   * Textareas
@@ -71,7 +71,7 @@ YAML-Definition for the element digitizer in the textarea schemes:
 
     poi:
         label: point digitizing
-        maxResults: 1500
+        maxResults: 500
         featureType:
             connection: search_db
             table: poi
@@ -80,10 +80,17 @@ YAML-Definition for the element digitizer in the textarea schemes:
             geomField: geom
             srid: 4326
         openFormAfterEdit: true
+        zoomScaleDenominator: 500
+        allowEditData: true 
+        allowDelete: true
+        allowDigitize: true 
         popup:
             title: point test suite
             width: 500px
-        tableFields: {gid: {label: Nr.}, name: {label: Name}}
+        searchType: currentExtent   # currentExtent|all - default is currentExtent
+        tableFields:
+            gid: {label: Nr. , width: 20%}
+            name: {label: Name , width: 80%}
         formItems:
            - type: tabs
              children:
@@ -163,7 +170,10 @@ YAML-Definition for the element digitizer in the textarea schemes:
         popup:
             title: line test suite
             width: 500px
-        tableFields: {gid: {label: Nr.}, name: {label: Name}}
+        searchType: currentExtent   # currentExtent|all - default is currentExtent
+        tableFields: {
+            gid: {label: Nr. , width: 20%}
+            name: {label: Name , width: 80%}
         formItems:
            - type: form
              title: Basic information
@@ -173,8 +183,8 @@ YAML-Definition for the element digitizer in the textarea schemes:
                    title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                  - type: input
                    title: Name
-                   mandatory: true
                    name: name
+                   mandatory: true
                    mandatoryText: Please give a name to the new object.
                    infoText: "Help: Please give a name to the new object."
                  - type: select
@@ -201,7 +211,10 @@ YAML-Definition for the element digitizer in the textarea schemes:
         popup:
             title: polygon test suite
             width: 500px
-        tableFields: {gid: {label: Nr.}, name: {label: Name}}
+        searchType: currentExtent   # currentExtent|all - default is currentExtent
+        tableFields:
+            gid: {label: Nr. , width: 20%}
+            name: {label: Name , width: 80%}
         formItems:
            - type: form
              title: Basic information
@@ -218,7 +231,31 @@ YAML-Definition for the element digitizer in the textarea schemes:
                  - type: select
                    title: Type
                    name: type
-                   options: {A:A, B:B, C:C, D:D, E:E}     
+                   options: {A:A, B:B, C:C, D:D, E:E}  
+  
+
+Feature basic definition
+--------------------------
+
+.. code-block:: yaml
+
+    poi:
+        label: point digitizing        # Name for the 
+        maxResults: 500
+        featureType:
+            connection: search_db
+            table: poi
+            uniqueId: gid
+            geomType: point
+            geomField: geom
+            srid: 4326
+        openFormAfterEdit: true                #Set to true (default): after creating a geometry the form popup is opened automatically to insert the attribute data.
+        zoomScaleDenominator: 500
+        allowEditData: true 
+        allowDelete: true
+        allowDigitize: true 
+        popup:
+            [...]
 
 
 Definition of the popup
@@ -229,11 +266,32 @@ Definition of the popup
                                 popup: 
                                     # Options description: 
                                     # http://api.jqueryui.com/dialog/
-                                    title: POI                                     # define the title of the popup
+                                    title: POI                       # define the title of the popup
                                     height: 400
                                     width: 500
                                     # modal: true
                                     # position: {at: "left+20px",  my: "left top-460px"}
+
+
+
+Definition of the feature table
+------------------------------------------------------------------------
+
+The Digitizer provides a feature table to navigate to features and select features for editing. The columns are sortable by default. You can define width (% or px) for each column.
+
+* tableFields - define the columns for the feature table. 
+
+* searchType
+* **all** - lists all features in the table
+* **currentExtent** - list only the features displayed in the current extent in the table (default) 
+
+.. code-block:: yaml
+
+        searchType: currentExtent   # currentExtent|all - default is currentExtent
+        tableFields:
+            gid: {label: Nr. , width: 20%}
+            name: {label: Name , width: 80%}
+
 
 
 Definition of tabs (type tabs)
@@ -260,8 +318,9 @@ Definition of a textfield (type input)
 
                                                  - type: input                    # element type definition
                                                    title: Title for the field      # labeling (optional)
-                                                   mandatory: true                # mandatpory field (optional)
                                                    name: column_name              # reference to table column (optional)
+                                                   mandatory: true                # mandatpory field (optional)
+                                                   mandatoryText: You have to provide information.
                                                    cssClass: 'input-css'          # additional css definition (optional)
                                                    value: 'default Text'          # define a default value  (optional)
                                                    placeholder: 'please edit this field' # placeholder appears in the field as information (optional)
@@ -270,6 +329,7 @@ Definition of a textfield (type input)
 Definition of a selectbox or multiselect (type select)
 ------------------------------------------------------
 
+select
 .. code-block:: yaml
 
                                                  - type: select                     # element type definition
@@ -283,7 +343,7 @@ Definition of a selectbox or multiselect (type select)
                                                        4: garden
                                                        5: playground
 
-
+multiselect
 .. code-block:: yaml
 
                                                  - type: select                       # element type definition
@@ -294,7 +354,7 @@ Definition of a selectbox or multiselect (type select)
 
 
 Get the options for the select box via SQL
-------------------------------------------
+--------------------------------------------------
 
 .. code-block:: yaml
 
@@ -302,12 +362,12 @@ Get the options for the select box via SQL
                                                    title: select some types         # labeling (optional)
                                                    name: my_type                    # reference to table column
                                                    connection: connectionName       # Define a connection selectbox via SQL
-                                                   sql: 'SELECT DISTINCT keyName, value FROM tableName' # get the options of the
+                                                   sql: 'SELECT DISTINCT key, value FROM tableName order by value' # get the options of the
 
 
 
 Definition of a text (type label)
----------------------------------
+--------------------------------------------------
 
 .. code-block:: yaml
 
@@ -315,7 +375,7 @@ Definition of a text (type label)
                                                    title: 'Please give information about the poi.' # define a text 
 
 Definition of a textarea (type textarea)
-----------------------------------------
+--------------------------------------------------
 
 .. code-block:: yaml
 
@@ -324,7 +384,7 @@ Definition of a textarea (type textarea)
 
 
 Definition of a breakline (type breakline)
-------------------------------------------
+--------------------------------------------------
 
 .. code-block:: yaml
 
@@ -343,24 +403,21 @@ Definition of a checkbox (type checkbox)
 
 
 Definition of a mandatory field
--------------------------------
+--------------------------------------------------
 
 .. code-block:: yaml
 
                                                    mandatory: true                    # true - field has to be set. Else you can't save the object. Regular expressions are possible too - see below.
+                                                   mandatoryText: Please choose a type! # define a text that will be displayed if the field is not set or is filled with an invalid value.
 
                                                    mandatory: /^\w+$/gi               # You can define a regular expression to check the input for a field. You can check f.e. for email or numbers. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
                                                    # Check if input is a number
                                                    mandatory: /^[0-9]+$/
-                                                   mandatoryText: Bitte die Zahl Eingeben!
-
-
-                                                   mandatorytitle: Please chose a type! # define a text that will be displayed if the field is not set.
-
+                                                   mandatoryText: Only numbers are valid for this field!
 
 
 Definition of a datepicker
---------------------------
+--------------------------------------------------
 
 .. image:: ../../../../../figures/digitizer_datepicker.png
      :scale: 80
@@ -372,8 +429,25 @@ Definition of a datepicker
                                                     format: YYYY-MM-DD             # define a dateformat (optional), default is YYYY-MM-DD
 
 
+Definition of information (type infotext)
+------------------------------------------------------------------------------------------
+
+.. code-block:: yaml
+
+                                                 - type: input                    # element type definition
+                                                   title: Title for the field     # labeling (optional)
+                                                   name: column_name              # reference to table column (optional)
+                                                   mandatory: /^[0-9]+$/          # mandatroy field (optional)
+                                                   mandatoryText: Only numbers are valid for this field!
+                                                   infoText: Please note - only numbers are valid for this field. # Notice which will be displayed by i-symbol
+
+
 Definition of element groups (type: fieldSet)
----------------------------------------------
+--------------------------------------------------
+
+Elements can be grouped together in one row to provide logical connections or save space. To define a group you have to set type fieldSet and afterwards define the children which shall be grouped.
+
+For each children you can define a width to controll the pace for each element.
 
 .. code-block:: yaml
 
@@ -394,38 +468,37 @@ Definition of element groups (type: fieldSet)
 
 
 Definition of a file upload field
----------------------------------
+--------------------------------------------------
 
 .. code-block:: yaml
   
                     - type: upload
                       title: upload an image
                       name: file1
-                      path: digitizer           # base location is "web/uploads", like this the files are saved at web/uploads/digitizer, also absolute path is possible like /data/webgis/digitizer
-                      format: %gid%-%name% (%name% is file1, %gid% - is ID fieldname)
+                      path: digitizer           # base location is "web/uploads", like this the files are saved at web/uploads/digitizer
+                                                # also absolute path is possible like /data/webgis/digitizer
+                      format: %gid%-%name%      # file will be renamed to the definition (%name% is file1, %gid% - is ID fieldname)
                       url:  /digitizer/         # optional, if ALIAS is defined
                       allowedFormats: [jpg,png,gif,pdf]
 
 
 Definition of toolset types
----------------------------
+------------------------------------------------------------------------
 
 Toolset types
 
-
-
-  * drawPoint - draw point
-  * drawLine - draw a line
-  * drawPolygon - draw polygon
-  * drawRectangle - draw rectangle
-  * drawCircle - draw circle
-  * drawEllipse - draw ellipse
-  * drawDonut - draw a donut (enclave)
-  * modifyFeature - move vertices of a geometry
-  * moveFeature - move geometry
-  * selectFeature - geometry de/select
-  * removeSelected - delete selected geometry
-  * removeAll - remove all geometries
+  * **drawPoint** - draw point
+  * **drawLine** - draw a line
+  * **drawPolygon** - draw polygon
+  * **drawRectangle** - draw rectangle
+  * **drawCircle** - draw circle
+  * **drawEllipse** - draw ellipse
+  * **drawDonut** - draw a donut (enclave)
+  * **modifyFeature** - move vertices of a geometry
+  * **moveFeature** - move geometry
+  * **selectFeature** - geometry de/select
+  * **removeSelected** - delete selected geometry
+  * **removeAll** - remove all geometries
 
 Definition of toolset types
 
@@ -450,55 +523,12 @@ Definition of toolset types
             - type: removeSelected
 
 
-Definition of current extent
-----------------------------
-
-searchType:
-
-* all
-* currentExtent (default)
-
-.. code-block:: yaml
-
-    openFormAfterEdit: true
-    searchType: currentExtent # currentExtent|all - default is currentExtent
-    featureType:
-        connection: search_db
-        table: lines
-        uniqueId: gid
-        geomType: line
-        geomField: geom
-        srid: 4326
-        fields: "*" 
-
-
-Definition of popup behaviour
------------------------------
-
-Set to true (default): after creating a geometry the form popup is opened automatically to insert the attribute data.
-
-.. code-block:: yaml
-
-    poi:
-        label: point digitizing
-        maxResults: 1500
-        featureType:
-            [...]
-        openFormAfterEdit: true
-        popup:
-            [...]
-
-
-
-        
-
-
 Class, Widget & Style
 ===========================
 
-* Class: Mapbender\\CoreBundle\\Element\\Digitizer
+* Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
 * Widget: mapbender.element.digitizer.js
-* Style: mapbender.elements.css
+* Style: sass\\element\\digitizer.scss
 
 
 HTTP Callbacks
