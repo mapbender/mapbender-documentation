@@ -374,8 +374,38 @@ Definition von Texten (type label)
                                                  - type: label                        # element type definition, will write a text
                                                    title: 'Please give information about the poi.' # define a text 
 
+
+Definition eines Textes
+-------------------------------
+
+Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenquelle zugegriffen werden. Darüber hinaus kann JavaScript verwendet werden.
+
+.. code-block:: yaml
+
+                                                - type:        text# Element Typ Definition
+
+                                                  # Label (optional)
+                                                  title:       Name 
+
+                                                  # Name des Feldes (optional)
+                                                  name:        name 
+
+                                                  # CSS definition (optional)
+                                                  css:         {width: 80%} 
+
+                                                  # CSS Klass definition (optional)
+                                                  cssClass:    input-css  
+
+                                                  # Info-Text
+                                                  infoText: Die Vorname.
+
+                                                  # Text Definition in JavaScript
+                                                  # data - Data ist das Objekt, das alle Felder zur Verfügung stellt.
+                                                  # z.B.: Über data.id wird die ID des Obektes im Text angezeigt.
+                                                  text: data.id + ':' + data.name
+
 Definition von Textbereichen (type textarea)
---------------------------------------------------
+--------------------------------------------------------------
 
 .. code-block:: yaml
 

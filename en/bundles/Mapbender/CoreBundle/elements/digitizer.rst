@@ -372,7 +372,34 @@ Definition of a text (type label)
 .. code-block:: yaml
 
                                                  - type: label                        # element type definition, will write a text
-                                                   title: 'Please give information about the poi.' # define a text 
+                                                   text: 'Please give information about the poi.' # define a text 
+
+Definition of a text
+-------------------------------
+
+You can define a label and refer to colums of your datasource. You also can use JavaScript.
+
+.. code-block:: yaml
+
+                                                - type:        text                  # element Type definition
+
+                                                  # Label (optional)
+                                                  title:       Name 
+
+                                                  # Name of the field (optional)
+                                                  name:        name 
+
+                                                  # CSS definition (optional)
+                                                  css:         {width: 80%} 
+
+                                                  # CSS class definition (optional)
+                                                  cssClass:    input-css  
+
+                                                  # text definition in JavaScript
+                                                  # data - data is the object, that gives access to all fields.
+                                                  # f.E.: data.id will show the id of the Objekt as text
+                                                  text: data.id + ':' + data.name
+
 
 Definition of a textarea (type textarea)
 --------------------------------------------------
@@ -414,6 +441,21 @@ Definition of a mandatory field
                                                    # Check if input is a number
                                                    mandatory: /^[0-9]+$/
                                                    mandatoryText: Only numbers are valid for this field!
+
+
+Definition of a infotext 
+-------------------------------
+
+An i-Icon will be displayed. On mouse-over the defined infotext will appear. Infotext can be defined for every field type.
+
+.. code-block:: yaml
+
+                                                 - type:  checkbox                        # infotext can be defined for every element type
+                                                   title: Is this true?
+                                                   name:  public
+                                                   value: true
+                                                   infoText: Please read the information. 
+
 
 
 Definition of a datepicker
