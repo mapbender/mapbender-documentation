@@ -15,11 +15,17 @@ Configuration
 .. image:: ../../../../../figures/search_router_configuration.png
      :scale: 80
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
 
 The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
 
-You can define Searches (Routes) with the + Button. Each Search has a titel which will show up in the search form in a selectbox where you can choose the search you want to use.
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Tooltip:** text to use as tooltip.
+* **Target:** Id of Map element to query.
+* **Dialog:** render inside a dialog or not.
+* **Timeout factor:** timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started.
+* **Routes:** ollection of search routes.
+
+You can define Searches (Routes) with the ``+`` Button. Each Search has a titel which will show up in the search form in a selectbox where you can choose the search you want to use.
 
 The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
@@ -55,7 +61,10 @@ Element definition in web interface in the configuration area:
                 maxScale: null
 
 
-YAML-Definition for mapbender.yml:
+YAML-Definition
+----
+
+for mapbender.yml:
 
 .. code-block:: yaml
 
@@ -106,6 +115,7 @@ YAML-Definition for mapbender.yml:
                        minScale: ~  # scale restrictions for zooming, ~ for none
                        maxScale: ~
 
+You need a button to show this element. See :doc:`button` for inherited configuration options.
 
 Compare modes
 -------------
@@ -113,14 +123,14 @@ Compare modes
 Each field can be assigned a compare mode which is evaluated by the engine when building the search query. The SQL search
 engine has the following modes:
 
-* exact: exact comparison (key = val)
-* iexact: case-insensitive comparison
-* like: default, uses two-sided like
-* like-left: uses left-sided like
-* like-right: uses right-sided like
-* **ilike**: uses two-sided case-insensitive like
-* ilike-left: uses left-sided case-insensitive like
-* ilike-right: uses right-sided case-insensitive like
+* **exact:** exact comparison (key = val)
+* **iexact:** case-insensitive comparison
+* **like:** default, uses two-sided like
+* **like-left:** uses left-sided like
+* **like-right:** uses right-sided like
+* **ilike:** uses two-sided case-insensitive like
+* **ilike-left:** uses left-sided case-insensitive like
+* **ilike-right:** uses right-sided case-insensitive like
 
 
 Result feature styling
@@ -171,9 +181,9 @@ A more elaborate example with green (hollow) features and the selected one in re
 Class, Widget & Style
 =====================
 
-* Class: Mapbender\\CoreBundle\\Element\\SearchRouter
-* Widget: mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
-* Style: mapbender.element.searchRouter.css
+* **Class:** Mapbender\\CoreBundle\\Element\\SearchRouter
+* **Widget:** mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
+* **Style:** mapbender.element.searchRouter.css
 
 HTTP Callbacks
 ==============

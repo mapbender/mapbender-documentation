@@ -3,8 +3,7 @@
 Installation
 ############
 
-This document describes all necessary steps in order to get a running
-Mapbender3 installation.
+This document describes all necessary steps in order to get a running Mapbender3 installation.
 
 Prerequisites
 *************
@@ -22,12 +21,9 @@ Mapbender3 needs the following components in order to run:
 * APACHE mod_rewrite 
 * OpenSSL
 
-Optionally, in order to use a database other than the preconfigured SQLite one,
-you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_.
+Optionally, in order to use a database other than the preconfigured SQLite one, you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. For PostgreSQL for example: php5-pgsql.
 
-If you want to use the developer mode, for using the web installer or creating
-profiler data to be used to analyze errors you will still need the SQLite
-extension!
+If you want to use the developer mode or for creating create profiler data to be used to analyze errors you will still need the SQLite extension!
 
 Download
 ********
@@ -44,9 +40,9 @@ Then make sure your Webserver points to the web directory inside the mapbender3 
 you just uncompressed. You will also need to make sure that the default
 directory index is *app.php*. Use Apache REWRITE (install *mod_rewrite*) to access Mapbender3 without *app.php* in the URL.
 
-Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender3.conf (Apache 2.2) or /etc/apache2/conf-enabled/mapbender3.conf (Apache 2.4). Please create this file and make sure that Apache has the right to read the file.
+Example for ALIAS configuration for Apache in file /etc/apache2/conf.d/mapbender3.conf (Apache 2.2) or /etc/apache2/sites-available/mapbender3.conf (for Apache 2.4. Activate the site afterwards with "a2ensite mapbender3.conf"). Please create this file and make sure that Apache has the right to read the file.
 
-Apache 2.4 uses different directives for Access Control (for example: "Require all granted"). Please see the `Apache documentation: Upgrading to 2.4 from 2.2 <http://httpd.apache.org/docs/2.4/upgrading.html>`_ for details.
+Please note that Apache 2.4 uses `different directives for Access Control <http://httpd.apache.org/docs/2.4/upgrading.html>`_.
 
 Apache 2.4 configuration:
 
@@ -78,13 +74,12 @@ Apache 2.2 configuration:
     Allow from all
   </Directory>
 
-.. code-block:: yaml
+.. code-block:: bash
   
   # for Debian based distributions
-  # Debian basierte Distributionen
   sudo a2enmod rewrite
  
-  #Windows activate module rewrite in httpd.conf
+  # Windows activate module rewrite in httpd.conf
   LoadModule rewrite_module modules/mod_rewrite.so
 
 
@@ -174,11 +169,7 @@ Symfony2 will create the database schema for you:
 
     app/console doctrine:schema:create
 
-We also need to initialize the security system's database tables separately:
 
-.. code-block:: yaml
-
-  app/console init:acl
 
 Copying the bundles' assets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -236,7 +227,7 @@ Importing applications from mapbender.yml into a database occurs using the comma
 
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
-Write permission
+Check the write permission
 ^^^^^^^^^^^^^^^^
 
 Set owner, group and rights. Assign the files to the Apache user (www-data).
@@ -256,6 +247,7 @@ You have to set write permission to app/cache and app/logs and web/assets.
  sudo chmod -R ug+w /var/www/mapbender3/web/assets
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
+  
 Check Symfonys config.php
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -284,7 +276,7 @@ Load Apache module rewrite:
 
   sudo a2enmod rewrite
 
-Configure the Apache ALIAS in file /etc/apache2/conf.d/mapbender3.conf (or for Apache 2.4 /etc/apache2/sites-enabled/mapbender3.conf) and restart your Apache server (keep in mind, that Apache 2.4 uses `different directives for Access Control <http://httpd.apache.org/docs/2.4/upgrading.html>`_)
+Configure the Apache ALIAS: Create the file /etc/apache2/sites-available/mapbender3.conf with the content below. Activate the site afterwards with "a2ensite mapbender3.conf" and restart your Apache server.
 
 Example ALIAS Apache 2.4
 
@@ -344,7 +336,6 @@ Run the app/console commands
  cd /var/www/mapbender3
  app/console doctrine:database:create
  app/console doctrine:schema:create
- app/console init:acl
  
  app/console fom:user:resetroot
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
@@ -450,7 +441,6 @@ Run the app/console commands with php. First you have to open a terminal (cmd).
  cd mapbender3
  php.exe app/console doctrine:database:create
  php.exe app/console doctrine:schema:create
- php.exe app/console init:acl
  php.exe app/console assets:install web
  php.exe app/console fom:user:resetroot
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append

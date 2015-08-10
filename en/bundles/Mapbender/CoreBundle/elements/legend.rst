@@ -5,7 +5,7 @@ Legend
 
 The legend object shows the legend of the layers that are displayed in the map.
 
-.. image:: ../../../../../figures/de/legend.png
+.. image:: ../../../../../figures/legend.png
      :scale: 80
 
 Configuration
@@ -41,7 +41,8 @@ YAML-Definition:
    showLayerTitle: true                 # true/false show layer title, default is true
    showGroupedLayerTitle: true          # true/false show group title for grouped layers, default is true
 
-You need a button or sidepane to show this element. See :doc:`button` for inherited configuration options.
+You can optionally use a button to show this element. See :doc:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
+
 
 Class, Widget & Style
 ============================

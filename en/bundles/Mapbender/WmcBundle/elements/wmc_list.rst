@@ -3,7 +3,7 @@
 WMC List
 ***********************
 
-Mapbender can save and edit configurations with the WMC Editor. This configurations can be loaded with the element WMC loader (see WMC Loader).
+Mapbender can save and edit configurations with the WMC Editor. This configurations can be loaded with the element `WMC Loader <../elements/wmc_loader.html>`_.
 
 You can add configurations from the selectbox to your application. 
 
@@ -23,7 +23,13 @@ Configuration
      :scale: 80
 
 
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Tooltip:** text to use as tooltip.
+* **Target:** Id of Map element to query.
+* **Label:** add title as label in front of selectbox, default is false.
+
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -36,9 +42,9 @@ YAML-Definition:
 Class, Widget & Style
 ==============
 
-* Class: Mapbender\\WmcBundle\\Element\\WmcEditor
-* Widget: <Put Widget name here>
-* Style: <Put name of css file here>
+* **Class:** Mapbender\\WmcBundle\\Element\\WmcEditor
+* **Widget:** <Put Widget name here>
+* **Style:** <Put name of css file here>
 
 
 HTTP Callbacks

@@ -9,6 +9,9 @@ expects to receive a JSON-formatted data back which inclucdes a label and a geom
 
 Geometry data can be encoded as WKT or in GeoJSON format.
 
+.. image:: ../../../../../figures/simplesearch.png
+     :scale: 80
+
 
 Configuration
 =============
@@ -16,7 +19,23 @@ Configuration
 .. image:: ../../../../../figures/simplesearch_configuration.png
      :scale: 80
 
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Query URL:** Solr URL for the search.
+* **Query URL key:** The query parameter key to append.
+* **QUery key format:** Simpe search format.
+* **Token search/ replace (JavaScript regex):** Tokenizer split/ search/ replace regexp.
+* **Collection path:** Can be a dotted attribute path to extract from the query result.
+* **Label attribut:** Name of the attribute to use for entry labeling.
+* **Geom attribut:** Name of the geometry data attribute. 
+* **Geom format:** geometry data format, can be WKT or GeoJSON.
+* **Delay:** Autocomplete delay. Use 0 to disable autocomplete.
+* **Result buffer:** buffer result geometry with this (map units) before zooming.
+* **Result minscale/ maxscale:** scale restrictions for zooming, ~ for none.
+* **Result icon url:** icon to display as result marker.
+* **Result ion offset:**  Offset x and y for the Icon.
+
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -42,8 +61,8 @@ YAML-Definition:
 Class, Widget & Style
 =========================
 
-* Class: Mapbender\\PrintBundle\\Element\\SimpleSearch
-* Widget: mapbender.element.simplesearch.js
+* **Class:** Mapbender\\PrintBundle\\Element\\SimpleSearch
+* **Widget:** mapbender.element.simplesearch.js
 
 HTTP Callbacks
 ==============

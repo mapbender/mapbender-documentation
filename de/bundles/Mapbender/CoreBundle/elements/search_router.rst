@@ -19,9 +19,9 @@ Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank i
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Dialog:** Erebniswiedergabe in einem Dialogfeld
-* **Timeout factor:** Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
-* **Routes:** Sammlung von Suchrouten
+* **Dialog:** Erebniswiedergabe in einem Dialogfeld.
+* **Timeout factor:** Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde.
+* **Routes:** Sammlung von Suchrouten.
 
 Es können über den Button ``+`` mehrere Suchen (routes) erstellt werden. Jede Suche erhält im Feld ``titel`` einen Titel, über den die Suche nachher in einer Auswahlbox selektierbar ist.
 Die Definition der Suche erfolgt im yaml-Syntax in einem Textfeld. Hier wird die Suchtabelle/Abfrage, die Datenverbindung, der Formularaufbau und die Trefferausgabe definiert. 

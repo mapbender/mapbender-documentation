@@ -5,6 +5,9 @@ Copyright
 
 The copyright shows a copyright label and terms of use as a dialog.
 
+.. image:: ../../../../../figures/copyright.png
+     :scale: 80
+
 Configuration
 =============
 

@@ -4,7 +4,6 @@ Scale Selector
 ***************
 
 Displays a selctbox with scales. The map scale changes when an value from the selectbox is choosen. 
-
 Notice: The Selectbox offers the scales that are defined for the map-Element.
 
 .. image:: ../../../../../figures/scale_selector.png
@@ -16,7 +15,14 @@ Configuration
 .. image:: ../../../../../figures/scale_selector_configuration.png
      :scale: 80
 
+
+* **show label:** true, um die Maßstabsauswahl zu beschriften. Der Standardwert ist false.
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Tooltip:** text to use as tooltip.
+* **Target:** Id of Map element to query.
+
 YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -27,9 +33,9 @@ YAML-Definition:
 Class, Widget & Style
 ============================
 
-* Class: Mapbender\\CoreBundle\\Element\\ScaleSelector
-* Widget: mapbender.element.scaleselector.js
-* Style: mapbender.elements.css
+* **Class:** Mapbender\\CoreBundle\\Element\\ScaleSelector
+* **Widget:** mapbender.element.scaleselector.js
+* **Style:** mapbender.elements.css
 
 HTTP Callbacks
 ==============

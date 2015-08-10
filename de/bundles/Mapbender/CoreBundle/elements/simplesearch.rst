@@ -7,6 +7,9 @@ SimpleSearch bietet eine einstufige Lösung für Geodatenabfragen an, betrieben 
 
 Die Geometriedaten können in WKT oder in GeoJSON-Format codiert werden.
 
+.. image:: ../../../../../figures/simplesearch.png
+     :scale: 80
+
 
 Konfiguration
 =============

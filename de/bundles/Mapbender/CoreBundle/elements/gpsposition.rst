@@ -6,7 +6,7 @@ GPS-Position
 Dieses Elememt stellt einen Button bereit, der zu ihrer aktuellen Position navigiert und zeigt ein Symbol an dieser Position an. Der Maßstab wird dabei nicht verändert, außer durch Aktivierung der Einstellung ``zoom to accuracy (zoom to accuracy on first position)``. 
 
 
-.. image:: ../../../../../figures/de/gps_position.png
+.. image:: ../../../../../figures/gps_position.png
      :scale: 80
 
 Konfiguration
