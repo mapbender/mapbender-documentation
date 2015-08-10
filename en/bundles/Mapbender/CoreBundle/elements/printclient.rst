@@ -27,6 +27,18 @@ Configuration
 
 You need a button to show this element or you can use it in the sidepane. See :doc:`button` for inherited configuration options.
 
+* **target**: Id of Map element to query
+* **templates**: template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
+* **** - template label in the dialog, format (a4,a3,...) has to be defined 
+* **scales** -  define scales to choose from selectbox or if empty free scale can be defined in a textfield
+* **quality_levels** - define quality levels in dpi
+* **rotatable** - true/false use true for rotation, default is true
+* **legend - true/false, default is false
+* **legend_default_behaviour** - true/false, if true the legend checkbox is checked by default
+* **file_prefix** - define the file prefix for the pdf that is generated (file_prefix_date.pdf will be created)
+* **optional_fields** - define optional fields (example title-field oder comment)
+* **replace_pattern** - You can modify the maprequest for printing. You can add additional parameters like map_resolution (for MapServer)
+
 YAML-Definition:
 
 .. code-block:: yaml

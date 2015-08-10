@@ -25,22 +25,22 @@ Konfiguration
 Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden. Siehe unter :doc:`button` für die Konfiguration.
 
 
-* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* Target: Zielelement (ID des Kartenelements). 
-* Scales: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
-* Drehbar: definiert, ob der Ausdruck gedreht werden kann, der Standardwert ist true
-* Legende drucken: ob auch die Legende der Karte gedruckt werden soll, der Standardwert ist false
-* File prefix: Definition des Dateinames für das PDF
-* quality_levels: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
+* **Title**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Target**: Zielelement (ID des Kartenelements). 
+* **Scales**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
+* **Drehbar**: definiert, ob der Ausdruck gedreht werden kann, der Standardwert ist true
+* **Legende drucken**: ob auch die Legende der Karte gedruckt werden soll, der Standardwert ist false
+* **File prefix**: Definition des Dateinames für das PDF
+* **quality_levels**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
 
-* Template: Verweis auf die Druckvorlage (z.B. a4potrait).
-* Label: Beschriftung des Feldes (z.B. Potrait A4).
-* Format: Ausgabeformat des Templates (z.B. a4).
-* Optional fields: 
-** title: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
-** label: Beschriftung des optionalen Feldes
-** options:{ required: true } : Typ des optionalen Feldes, muss true oder false sein
-* Replace pattern: Für den Druck kann der Kartenaufruf verändert werden und Angaben hinzugefügt werden. 
+* **Template**: Verweis auf die Druckvorlage (z.B. a4potrait).
+* **Label**: Beschriftung des Feldes (z.B. Potrait A4).
+* **Format**: Ausgabeformat des Templates (z.B. a4).
+* **Optionale Felder (optional field)**: 
+** **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
+** **label**: Beschriftung des optionalen Feldes
+** **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein
+* **Replace pattern**: Kartenaufruf kann verändert werden. Angaben können angefügt oder verändert werden
 
 YAML-Definition:
 
