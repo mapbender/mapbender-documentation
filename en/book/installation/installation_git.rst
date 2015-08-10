@@ -9,11 +9,11 @@ instead of the normal download. This guide is based on Ubuntu 12.04. For
 other distributions, you may need to adapt, especially package names like
 sphinx-common.
 
-First check the prerequisites at :doc:`Installation <installation>`. 
+First check the prerequisites at `Installation <systemrequirements.html>`_. 
 
 For git-based installations you also need:
 
-* git     - have a look at the :doc:`Quick primer on using Git <development/git>` to get familiar with git 
+* git     - have a look at the `Quick primer on using Git <../development/git.html>`_ to get familiar with git 
 * cURL    - command line tool for transferring data with URL syntax, supporting HTTP, HTTPS and more
 * pear    - PHP Extension and Application Repository 
 * Phing   - `Phing <http://www.phing.info/>`_ Is Not GNU make; it's a PHP project build system or build tool based on ​Apache Ant.
@@ -149,7 +149,7 @@ And afterwards get the runtime dependencies like Symfony and Doctrine:
 Next steps from Installation
 ****************************
 
-Now follow the steps that are described in  :doc:`Installation <installation>`:
+Now follow the steps that are described in  `Installation <installation_ubuntu.html>`_:
 
 **Notice:** Please note that the git based code has an additional directory *application* (mapbender3/application/...). 
 
@@ -205,7 +205,7 @@ Here are some commands to help to find information:
  app/console mapbender              - lists all functions from mapbender 
  app/console help assets:install    - help for a special command
 
-Learn how to generate Mapbender elements with *app/console mapbender:generate:element* at :doc:`Wie können eigene Elemente erzeugt werden? <element_generate>`.
+Learn how to generate Mapbender elements with *app/console mapbender:generate:element* at `How to create your own Element? <../development/element_generate.html>`_.
         
 ..
  Package Build Tools
@@ -257,7 +257,7 @@ You find the Mapbender3 documentation at github at mapbender-documentation. Get 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-documentation
 
-Read more about :doc:`How to write Mapbender3 Documentation? <development/documentation_howto>`.
+Read more about `How to write Mapbender3 Documentation? <../development/documentation_howto.html>`_.
 
 ApiGen
 ======
@@ -269,7 +269,7 @@ ApiGen
     
 	 sudo pear install pear.apigen.org/apigen
 
-Read more about :doc:`How to write Mapbender3 API Documentation? <development/apidocumentation>`.
+Read more about `How to write Mapbender3 API Documentation? <../development/apidocumentation.html>`_.
 
 
 Troubleshooting
