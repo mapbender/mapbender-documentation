@@ -69,7 +69,7 @@ Prüfen Sie, ob der Alias erreichbar ist:
 Mapbender3 Einrichtung
 -----------------------
 
-Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
+Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (o). Weisen Sie die Skripte dem Apache User (www-data) zu.
 
 .. code-block:: bash
 
@@ -91,7 +91,7 @@ Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/paramet
     database_user:     postgres
     database_password: geheim
  
-Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie am Ende des Dokuments im Kapitel `Details zur Konfiguration von Mapbender3 <configuration.html>`_.
+Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel `Details zur Konfiguration von Mapbender3 <configuration.html>`_.
 
 .. code-block:: bash
 
@@ -111,7 +111,7 @@ Prüfen Sie die config.php erneut
 
 Sie müssen Schreibrechte für die Verzeichnisse app/cache und app/logs sowie web/uploads vergeben.
 
-.. code-block:: yaml
+.. code-block:: bash
 
  sudo chmod -R ug+w /var/www/mapbender3/app/cache
  sudo chmod -R ug+w /var/www/mapbender3/app/logs

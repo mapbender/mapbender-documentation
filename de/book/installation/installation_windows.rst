@@ -28,7 +28,7 @@ Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ und installi
 
 Erstellen Sie den Apache Alias. Es gibt für Windows mehrere Möglichkeiten. Eine übersichtliche Möglichkeit ist, eine Datei mapbender3.conf zu erstellen und auf diese in der httpd.conf zu verweisen.
 
-* Erstellen Sie einen Unterordner alias im Verzeichnis <apache>/conf. Legen Sie die Datei mapbender3.conf dort ab. (Dieses Verzeichnis können Sie dann auch nutzen, um dort weitere Alias-Definitionen übersichtlich abzulegen.)
+* Erstellen Sie einen Unterordner "alias" im Verzeichnis <apache>/conf. Legen Sie die Datei mapbender3.conf dort ab. (Dieses Verzeichnis können Sie dann auch nutzen, um dort weitere Alias-Definitionen übersichtlich abzulegen.)
 * Verweisen Sie in der Datei httpd.conf (im Verzeichnis <apache>/conf/) auf diese Datei mapbender3.conf.
 
 In der httpd.conf:

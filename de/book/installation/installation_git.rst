@@ -179,7 +179,7 @@ Hier finden Sie einige Kommandos zum Auffinden von Informationen:
  app/console help assets:install    - Anzeige der Hilfe zu speziellen Kommandos
 
 
-Lernen Sie wie Sie eigene Elemente über *app/console mapbender:generate:element* erzeugen können `How to create your own Element? <../../en/book/element_generate.html>`.
+Lernen Sie wie Sie eigene Elemente über *app/console mapbender:generate:element* erzeugen können `How to create your own Element? <../../../en/book/development/element_generate.html>`_.
         
 ..
  Package Build Tools

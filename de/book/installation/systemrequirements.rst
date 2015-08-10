@@ -8,7 +8,7 @@ Systemvoraussetzungen
 
 Mapbender3 benötigt die folgenden Komponenten:
 
-* >= PHP 5.4 (php5) 
+* PHP 5.4 oder neuer (php5) 
 * PHP CLI Interpreter (php5-cli) 
 * PHP SQLite Erweiterung (php5-sqlite) 
 * PHP cURL Erweiterung (php5-curl) 
@@ -31,7 +31,7 @@ Auch unter Windows benötigen Sie `PHP <http://www.php.net/>`_ und damit einen P
 
 Wir haben gute Erfahrungen mit den 64-bit Downloads von Apache und PHP gemacht.
 
-* `Apache Download <http://www.apachelounge.com/download/>`_: Die Downloads der Apache Lounge sind für verschiedene Versionen von Windows angepasst. Für neuere Versionen wählen Sie die "VC14" Variante (benötigt die Visual C++ Redistributable für Visual Studio 2015) und die Win64 Version (64-bit).
+* `Apache Download <http://www.apachelounge.com/download/>`_: Die Downloads der Apache Lounge sind für verschiedene Versionen von Windows angepasst. Für neuere Versionen wählen Sie die "VC11" oder "VC14" Variante (benötigt die Visual C++ Redistributable für Visual Studio 2012 bzw. 2015) und die Win64 Version (64-bit).
 
   
 * `PHP Download <http://windows.php.net/download#php-5.6>`_: Wählen Sie die "Thread Safe" Variante des PHP Downloads. als x64 Paket (64-bit).
