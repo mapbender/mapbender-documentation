@@ -25,16 +25,16 @@ Konfiguration
 Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden. Siehe unter :doc:`button` für die Konfiguration.
 
 
-* **Title**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Titel**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Target**: Zielelement (ID des Kartenelements). 
-* **Scales**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
+* **Maßstabsstufen (Scales)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
 * **Drehbar**: definiert, ob der Ausdruck gedreht werden kann, der Standardwert ist true
 * **Legende drucken**: ob auch die Legende der Karte gedruckt werden soll, der Standardwert ist false
+* **Legenden Checkbox aktiv**: Soll die Legenden-Checkbox beim Start aktiv sein
 * **File prefix**: Definition des Dateinames für das PDF
-* **quality_levels**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
-
+* **Qualitätsstufen**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
 * **Template**: Verweis auf die Druckvorlage (z.B. a4potrait).
-* **Label**: Beschriftung des Feldes (z.B. Potrait A4).
+* **Beschriftung (Label)**: Beschriftung des Feldes (z.B. Potrait A4).
 * **Format**: Ausgabeformat des Templates (z.B. a4).
 * **Optionale Felder (optional field)**: 
 ** **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
