@@ -3,7 +3,7 @@
 Installation auf Ubuntu und Debian
 ##################################
 
-Die folgende Installationsanleitung beschreibt die notwendigen Schritte auf einem aktuellen Ubuntu- oder Debian-System. Wir nehmen an, dass Apache 2.4 auf dem System läuft. Eine Dokumentation zu Apache 2.2 findet sich `am Ende des Dokuments <installation_ubuntu.html#einrichtung-fur-apache-2-2>`_. Als Datenbank-Umgebung wird PostgreSQL verwendet.
+Die folgende Installationsanleitung beschreibt die notwendigen Schritte auf einem aktuellen Ubuntu- oder Debian-System. Wir nehmen an, dass Apache 2.4 auf dem System läuft. Eine `Dokumentation zu Apache 2.2 <installation_ubuntu.html#einrichtung-fur-apache-2-2>`_ findet sich am Ende des Dokuments. Als Datenbank-Umgebung wird PostgreSQL verwendet.
 
 Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_. Hier der Weg, wie die notwendigen Komponenten installiert werden können:
 

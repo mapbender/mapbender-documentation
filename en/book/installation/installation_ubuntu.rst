@@ -3,7 +3,7 @@
 Installation auf Ubuntu und Debian
 ##################################
 
-The following Installation manual describes the neccessary steps on a recent Ubuntu or Debian system. We assume that Apache 2.4 is running on the system. A documentation for Apache 2.2 is added `at the end of the document <installation_ubuntu.html#instructions-for-apache-2-2>`_.
+The following Installation manual describes the neccessary steps on a recent Ubuntu or Debian system. We assume that Apache 2.4 is running on the system. A `documentation for Apache 2.2  <installation_ubuntu.html#instructions-for-apache-2-2>`_ is added at the end of the document.
 
 Please take note of the `system requirements <systemrequirements.html>`_. Here is the way to install the neccessary components:
 
