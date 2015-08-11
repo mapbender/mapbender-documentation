@@ -6,14 +6,14 @@ Git-basierte Installation
 
 Wenn Sie sich an der Mapbender3-Entwicklung beteiligen möchten oder aus anderen Gründen die Git Repositories für Mapbender3 verwenden, folgen Sie dieser Anleitung statt des normalen Downloads. Diese Anleitung basiert auf Ubuntu 12.04.  Für andere Distributionen benötigen Sie vielleicht spezielle Pakete wie z.B. sphinx-common.
 
-Prüfen Sie zuerst die Systemvoraussetzungen :doc:`Installation <installation>`. 
+Prüfen Sie zuerst die `Systemvoraussetzungen <systemrequirements.html>`_.
 
-Für die Gitt-basierte Installation benötigen Sie:
+Für die Git-basierte Installation benötigen Sie:
 
-* git     - schauen Sie sich das Dokument :doc:`Quick primer on using Git <development/git>` an, um mit GIt vertraut zu werde 
-* cURL    - kommandozeilen basiertes Tool für die Übertragung von Daten über URL Syntax,unterstützt HTTP, HTTPS und mehr
-* pear    - PHP Erweiterung und Anwendungs-Repository 
-* Phing   - `Phing <http://www.phing.info/>`_ ist nicht GNU make; es ist ein  PHP Projekt Build System oder Build-Werkzeug basierend auf ​Apache Ant.
+* git     - schauen Sie sich das Dokument `Quick primer on using Git <../../../en/book/development/git.html>`_ an, um mit Git vertraut zu werden.
+* cURL    - kommandozeilen basiertes Tool für die Übertragung von Daten über URL Syntax,unterstützt HTTP, HTTPS und mehr.
+* pear    - PHP Erweiterung und Anwendungs-Repository.
+* Phing   - `Phing <http://www.phing.info/>`_ ist nicht GNU make; es ist ein  PHP Projekt Build System oder Build-Werkzeug basierend auf Apache Ant.
 * php5-dev - Und natürlich die Dateien zur Entwicklung von PHP5-Modulen.
 
 
@@ -122,7 +122,7 @@ And afterwards get the runtime dependencies like Symfony and Doctrine:
 Die nächsten Schritte der Installation
 **************************************
 
-Folgen Sie nun den Schritten, die unter :doc:`Installation <installation>` beschrieben werden.:
+Folgen Sie nun den Schritten, die unter `Installation <installation_ubuntu.html>`_ beschrieben werden.:
 
 **Hinweis:** Beachten Sie dabei, dass Mapbender3 in dem git-basierten Aufbau über eines zusätzliches Verzeichnis *application* verfügt (mapbender3/application/...). Dieses zuätzliche Verzeichnis muss bei den Befehlen beachtet werden.
 
@@ -179,7 +179,7 @@ Hier finden Sie einige Kommandos zum Auffinden von Informationen:
  app/console help assets:install    - Anzeige der Hilfe zu speziellen Kommandos
 
 
-Lernen Sie wie Sie eigene Elemente über *app/console mapbender:generate:element* erzeugen können :doc:`How to create your own Element? <element_generate>`.
+Lernen Sie wie Sie eigene Elemente über *app/console mapbender:generate:element* erzeugen können `How to create your own Element? <../../../en/book/development/element_generate.html>`_.
         
 ..
  Package Build Tools
@@ -229,7 +229,7 @@ Sie finden die Mapbender3 Dokumentation auf github unter  mapbender-documentatio
 
 Entwickler mit Schreibrechten müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-documentation
 
-Lesen Sie mehr über :doc:`How to write Mapbender3 Documentation? <development/documentation_howto>`.
+Lesen Sie mehr über `How to write Mapbender3 Documentation? <../../../en/book/development/documentation_howto.html>`_.
 
 ApiGen
 ======
@@ -262,7 +262,7 @@ Mit dem folgenden Befehl können Sie ein Update all Ihrer Pear-Pakete vornehmen:
 	 sudo pear install pear.apigen.org/apigen
 
 
-Lesen Sie mehr über :doc:`How to write Mapbender3 API Documentation? <development/apidocumentation>`.
+Lesen Sie mehr über `How to write Mapbender3 API Documentation? <../../../en/book/development/apidocumentation.html>`_.
 
 
 Troubleshooting
