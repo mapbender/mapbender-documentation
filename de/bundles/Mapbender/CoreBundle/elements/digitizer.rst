@@ -65,7 +65,8 @@ YAML-Definition für das Element digitizer in der Sidepane in der mapbender.yml:
                             ...
 
 
-YAML-Definition für das Element digitizer in der Textarea unter **schemes**:
+YAML-Definition für das Element digitizer in der Textarea unter schemes
+-----------------------------------------------------------------------------------------
 
 .. code-block:: yaml
 
@@ -255,6 +256,72 @@ YAML-Definition für das Element digitizer in der Textarea unter **schemes**:
                    title: Type
                    name: type
                    options: {A: A, B: B, C: C, D: D, E: E}   
+
+
+SQL for the demo tables
+------------------------------
+
+.. code-block:: yaml
+
+    Create table public.poi (
+        gid serial,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        x float,
+        y float,
+        geom geometry(point,4326),
+        CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
+    );
+
+.. code-block:: yaml
+
+    Create table public.lines (
+        gid serial,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        length float,
+        category varchar,
+        x float,
+        y float,
+        geom geometry(linestring,4326),
+        CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
+    ); 
+
+.. code-block:: yaml
+
+    Create table public.polygons (
+        gid serial,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        area float,
+        category varchar,
+        x float,
+        y float,
+        geom geometry(multipolygon,4326),
+        CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
+    );
+    
 
 Basisdefinition
 --------------------------

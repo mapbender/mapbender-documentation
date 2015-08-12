@@ -65,7 +65,8 @@ YAML-Definition for the element digitizer in mapbender.yml:
                             ...
 
 
-YAML-Definition for the element digitizer in the textarea schemes:
+YAML-Definition for the element digitizer in the textarea schemes
+-----------------------------------------------------------------------------------------
 
 .. code-block:: yaml
 
@@ -255,6 +256,50 @@ YAML-Definition for the element digitizer in the textarea schemes:
                    title: Type
                    name: type
                    options: {A: A, B: B, C: C, D: D, E: E} 
+
+
+SQL for the demo tables
+------------------------------
+
+.. code-block:: yaml
+
+    Create table public.poi (
+        gid serial,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        x float,
+        y float,
+        geom geometry(point,4326),
+        CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
+    );
+
+.. code-block:: yaml
+
+    Create table public.lines (
+        gid serial,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        length float,
+        category varchar,
+        x float,
+        y float,
+        geom geometry(linestring,4326),
+        CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
+    ); 
   
 
 Feature basic definition
