@@ -300,6 +300,28 @@ SQL for the demo tables
         geom geometry(linestring,4326),
         CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
     ); 
+
+.. code-block:: yaml
+
+    Create table public.polygons (
+        gid serial,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        area float,
+        category varchar,
+        x float,
+        y float,
+        geom geometry(multipolygon,4326),
+        CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
+    );
+    
   
 
 Feature basic definition
