@@ -84,6 +84,12 @@ YAML-Definition for the element digitizer in the textarea schemes:
         allowEditData: true 
         allowDelete: true
         allowDigitize: true 
+        toolset:
+            - type: drawPoint
+            - type: modifyFeature
+            - type: moveFeature
+            - type: selectFeature
+            - type: removeSelected 
         popup:
             title: point test suite
             width: 500px
@@ -118,7 +124,12 @@ YAML-Definition for the element digitizer in the textarea schemes:
                      - type: select
                        title: Type
                        name: type
-                       options: {A:A, B:B, C:C, D:D, E:E}
+                       options: 
+                           - A:A
+                           - B:B
+                           - C:C
+                           - D:D
+                           - E:E
                      - type: breakLine
                - type: form
                  title: Personal information
@@ -141,10 +152,10 @@ YAML-Definition for the element digitizer in the textarea schemes:
                              name: email
                              css: {width: 40%}
                      - type: select
-                       multiple: true
+                       multiple: false
                        title: Interests
                        name: interests
-                       options: {maps:maps, reading:reading, swimming:swimming, dancing:dancing, beer:beer, flowers:flowers}
+                       options: {maps: maps, reading: reading, swimming: swimming, dancing: dancing, beer: beer, flowers: flowers}
                      - type: date
                        title: favorite Date
                        name: date_favorite
@@ -167,11 +178,18 @@ YAML-Definition for the element digitizer in the textarea schemes:
             geomField: geom
             srid: 4326
         openFormAfterEdit: true
+        allowDelete: true
+        toolset:
+            - type: drawLine
+            - type: modifyFeature
+            - type: moveFeature
+            - type: selectFeature
+            - type: removeSelected 
         popup:
             title: line test suite
             width: 500px
         searchType: currentExtent   # currentExtent|all - default is currentExtent
-        tableFields: {
+        tableFields:
             gid: {label: Nr. , width: 20%}
             name: {label: Name , width: 80%}
         formItems:
@@ -190,7 +208,7 @@ YAML-Definition for the element digitizer in the textarea schemes:
                  - type: select
                    title: Type
                    name: type
-                   options: {A:A, B:B, C:C, D:D, E:E}
+                   options: {A: A, B: B, C: C, D: D, E: E}
     polygon:
         label: polygon digitizing
         maxResults: 1500
@@ -207,6 +225,11 @@ YAML-Definition for the element digitizer in the textarea schemes:
             - type: drawPolygon
             - type: drawRectangle
             - type: drawDonut
+            - type: drawEllipse
+            - type: drawCircle
+            - type: modifyFeature
+            - type: moveFeature
+            - type: selectFeature
             - type: removeSelected 
         popup:
             title: polygon test suite
@@ -231,7 +254,7 @@ YAML-Definition for the element digitizer in the textarea schemes:
                  - type: select
                    title: Type
                    name: type
-                   options: {A:A, B:B, C:C, D:D, E:E}  
+                   options: {A: A, B: B, C: C, D: D, E: E} 
   
 
 Feature basic definition
