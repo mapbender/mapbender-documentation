@@ -25,12 +25,24 @@ Cloning the Repository
 
 Get the code from the git repository. Cloning is easy, just issue the following command in your shell:
 
-.. code-block:: yaml
+.. code-block:: bash
 
-	git clone -b develop git://github.com/mapbender/mapbender-starter mapbender3
+	git clone https://github.com/mapbender/mapbender-starter.git mapbender3
+    cd mapbender3
 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-starter
+
+
+Change to a tag of a Mapbender3 release
+***************************************
+
+To work with a release version of Mapbender3 change to the specific tag. For version 3.0.5.0 for example:
+
+.. code-block:: bash
+
+    git tag -l
+    git checkout v3.0.5.0
 
 
 Fetching the Submodules
@@ -42,9 +54,8 @@ starter repository. To fetch them, issue the following command at the root
 directory of your cloned repository:
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
-    cd mapbender3
 	git submodule update --init --recursive
 
 
@@ -96,19 +107,10 @@ Then let's get Phing:
     sudo pear install phing/phing
 
 
-PHPUnit
-=======
+Composer und PHPUnit
+====================
 
-Symfony2 needs a more recent PHPUnit than for example comes with Ubuntu 12.04.
-So we will use Pear to install PHPUnit:
-
-
-.. code-block:: yaml
-
-	sudo pear install phpunit/PHPUnit
-
-
-Our build scripts need some more dependencies to run unit test, generate
+PHPUnit is delivered with Composer. Our build scripts need some more dependencies to run unit test, generate
 documentation and build installation packages.
 
 Once you have installed the dependencies listed below, you can get an overview
@@ -127,16 +129,16 @@ So, first install Composer (more information at http://getcomposer.org/download/
 
 .. code-block:: yaml
 
+    cd application
     curl -sS https://getcomposer.org/installer | php
 
 
 Create a configuration file called parameters.yml. Copy the file application/app/config/parameters.yml.dist.
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
-  cd application/app/config/
-  cp parameters.yml.dist parameters.yml
+  cp app/config/parameters.yml.dist app/config/parameters.yml
 
 
 And afterwards get the runtime dependencies like Symfony and Doctrine:

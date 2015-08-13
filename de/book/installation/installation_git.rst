@@ -22,11 +22,23 @@ Klonen des Repositories
 
 Klonen ist einfach, geben Sie das folgende Kommando auf Ihrer Shell ein:
 
-.. code-block:: yaml
+.. code-block:: bash
 
-	git clone -b develop git://github.com/mapbender/mapbender-starter mapbender3
+    git clone https://github.com/mapbender/mapbender-starter.git mapbender3
+    cd mapbender3
 
 Entwickler, die Zugriff auf den Code haben möchten, müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-starter
+
+
+Zu einem Tag eines Mapbender3 Releases wechseln
+***********************************************
+
+Um mit einer Release Version von Mapbender3 zu arbeiten, wechseln Sie bitte zu dem spezifischen Tag. Zum Beispiel für Version 3.0.5.0: 
+
+.. code-block:: bash
+
+    git tag -l
+    git checkout v3.0.5.0
 
 
 Submodule abrufen
@@ -34,10 +46,9 @@ Submodule abrufen
 
 Die Starter-Applikation enthält nicht die Mapbender3 bundles, diese sind in einem eigenen Repository gespeichert und werden als Submodule in das Starter-Repository eingefügt. Rufen Sie das folgende Kommando im root-Verzeichnis ihres geklonten Repositories auf.
 
-.. code-block:: yaml
+.. code-block:: bash
 
-    cd mapbender3
-	git submodule update --init --recursive
+    git submodule update --init --recursive
 
 
 cURL
@@ -84,31 +95,24 @@ Dann wird Phing installiert:
     sudo pear install phing/phing
 
 
-PHPUnit
-=======
+Composer und PHPUnit
+====================
 
-Symfony2 benötigt ein neueres PHPUnit als z.B. Ubuntu 12.04 enthält. Pear wird verwendet, um  PHPUnit zu installieren:
-
-
-.. code-block:: yaml
-
-	sudo pear install phpunit/PHPUnit
-
-Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
+PHPUnit wird über den Composer mitgeliefert. Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
 
 Daher muss zuerst der Composer installiert werden (weitere Information unter http://getcomposer.org/download/):
 
 .. code-block:: yaml
 
+    cd application
     curl -sS https://getcomposer.org/installer | php
 
 
 Erzeugen Sie eine Konfigurationsdatei mit Namen parameters.yml. Kopieren Sie dazu die Datei application/app/config/parameters.yml.dist.
 
-.. code-block:: yaml
+.. code-block:: bash
 
-  cd application/app/config/
-  cp parameters.yml.dist parameters.yml
+  cp app/config/parameters.yml.dist app/config/parameters.yml
 
 
 And afterwards get the runtime dependencies like Symfony and Doctrine:
