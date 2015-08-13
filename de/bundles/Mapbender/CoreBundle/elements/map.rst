@@ -16,10 +16,12 @@ Configuration
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Layersets:** Vorher konfiguriertes Layerset zur Anzeige der Hauptkarte (main map).
+* **Layersets:** Vorher konfiguriertes Layersets zur Anzeige der Hauptkarte (Thematische Karte, Hintergrundkarte).
 * **DPI:** Maßeinheit für die Auflösung, Standard ist 72.
 * **SRS:** Spatial Reference System, Koordinatenbezugssystem beim Start der Anwendung. Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
 * **Map units:** Einheiten der Karte in Meter, Degrees, Feet, Miles oder Inches, Standard ist "degrees" (Grad).
+* **Tile size:** Größe der Tiles bei gekachelten Diensten.
+* **Delay before tiles:** Für zukünftige Nutzung von WMS-T bei zeitlichen Parametern (findet z.Z. noch keine Anwendung).
 * **Max. Extent:** Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert).
 * **Start Extent:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert).
 * **Scales (csv):** festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma separiert).
@@ -50,6 +52,8 @@ YAML-Definition:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MEIN SRS TITEL","EPSG:CODE|MEIN SRS TITEL"]
    imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img"   # Pfad der Bilder (images)
+   tileSize: 256             # Kachelgröße
+   wmsTileDelay: 2500        # Delay bei WMS-T (findet z.Z. noch keine Anwendung)
 
 Class, Widget & Style
 ============================

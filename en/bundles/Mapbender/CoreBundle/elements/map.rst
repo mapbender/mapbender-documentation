@@ -18,6 +18,8 @@ Configuration
 * **Layersets:** refer to a layerset, define the layerset first and refer to it (propably main map).
 * **DPI:** resolution, default is 72.
 * **SRS:** coordinate reference system. Two ways of srs definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+* **Tile size:** Size of the tiles of tiled WMS services.
+* **Delay before tiles:** For future use of WMS-T if time parameters are used (actually not applicable).
 * **Map units:** units to use degrees/meters, default is deegrees.
 * **Max. Extent:** maximal map extents.
 * **Start Extent:** map extents for the start of the application.
@@ -50,6 +52,8 @@ YAML-Definition:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MY SRS TITLE","EPSG:CODE|MY SRS TITLE"]
    imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img"   # path of images
+   tileSize: 256             # size of tiles
+   wmsTileDelay: 2500        # delay on WMS-T (actually not applicable)
 
 Class, Widget & Style
 ============================
