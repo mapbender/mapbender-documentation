@@ -8,6 +8,52 @@ You find the milestones at: https://github.com/mapbender/mapbender/milestones
 Future Milestones: For details have a look at https://github.com/mapbender/mapbender/issues
 
 
+Milestone 3.0.5.1
+-----------------
+
+Release Datum: 00.08.2015
+
+**New functions**: in the `Map element <../bundles/Mapbender/CoreBundle/elements/map.html>`_ and in the `Print client <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_:
+
+* Map: OpenLayers TileSize: You can set the tile-size for the map. Default: 256x256.
+* Map: Delay before Tiles: For WMS-T, for example with temporal parameters (in future)
+* Druck: Show coordinates in PDF print
+* Druck: get print scale depending on map-scale
+* Druck: print legend_default_behaviour
+* Druck: add print templates with the + symbol
+* Druck: user-defined logo and text
+
+
+**Bugfixes:**
+
+- Layertree: loading symbol and exclamation mark symbol.
+- Layertree: zoom Symbol not for layers without a BBOX information
+- WMS Reload: FeatureInfo
+- WMS Reload: some WMS couldn't be reloaded.
+- Export/Import of application and miscellaneous bugfixes
+- WMC-Editor and WMC-Load fixes.
+- WMC from a Mapbender 3.0.4.1 application
+- Tile buffer and BBOX buffer fixes
+- FeatureInfo: Fixes in design and when shown as an Accordion Panel
+- FeatureInfo: Print
+- Wrong Jquery-UI link in layerset instance
+- Save Layerset and Save Layout leaves you on the page
+- Classic Template: SCSS corrections
+- Mobile Template: Bootstrap message hides close button
+- Mobile Template: close SearchRouter window
+- Backend: Layerset Filter and +-Buttons doesn't hide everything anymore
+- composer.json upgrade version of Digitizer to 1.0.*
+- Dokumentation of the JS-UI Generator (Form-Generator): https://github.com/eSlider/vis-ui.js
+- Restructured `Installations-Dokumentation <installation.html>`_ and some changes (php-pear, assets-Verzeichnis, init:acl, openssl).
+- Better documentation of the `Mapbender3 Templates <templates.html>`_
+- Better documentation of the `Quickstart <quickstart.html>`_
+
+**Known Issues:**
+
+- After copying an application from Mapbender 3.0.4.x you have to set the layerset in the map/overview element. Please save the map and overview element beforehand.
+- Regional Template removed
+
+
 Milestone 3.0.5.0
 -----------------
 

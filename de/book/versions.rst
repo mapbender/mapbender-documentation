@@ -7,6 +7,54 @@ Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/
 
 Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender/mapbender/issues
 
+
+Milestone 3.0.5.1
+-----------------
+
+Release Datum: 00.08.2015
+
+**Neue Funktionen**: im `Kartenelement <../bundles/Mapbender/CoreBundle/elements/map.html>`_ und beim `Druck Client <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_:
+
+* Map: OpenLayers TileSize: Es kann die Kachelgröße für die Karte angegeben werden. Default: 256x256.
+* Map: Delay before Tiles: Für WMS-T, z.B. bei zeitlichen Parametern (zukünftig)
+* Druck: Koordinatenanzeige in der PDF-Druckausgabe
+* Druck: Übernahme Druckmaßstab abhängig vom Kartenmaßstab
+* Druck: Druck legend_default_behaviour
+* Druck: Hinzufügen von Druckvorlagen über das +-Symbol
+* Druck: Benutzerabhängiges Logo und Text
+
+
+**Bugfixes:**
+
+- Layertree: Lade-Symbol und Ausrufezeichen-Symbol.
+- Layertree: Zoom Symbol nicht bei Layern ohne BBOX-Information
+- WMS Reload: FeatureInfo
+- WMS Reload: Einige WMS konnten sich nicht neuladen lassen.
+- Export/Import von Anwendungen verschiedene Bugfixes
+- WMC-Editor und WMC-Load Fixes.
+- WMC aus einer Mapbender 3.0.4.1 Anwendung
+- Tile Puffer und BBOX Puffer fixes
+- FeatureInfo: Fixes im Design und bei der Anzeige als Accordion Panel
+- FeatureInfo: Drucken
+- Falscher Link Jquery-UI in layerset instance
+- Save Layerset und Save Layout bleibt auf der Seite
+- Classic Template: SCSS korrigiert
+- Mobile Template: Bootstrap Meldung verdeckt Schließen Schaltfläche
+- Mobile Template: SearchRouter Fenster ausblenden
+- Backend: Layerset Filter und +-Buttons verstecken nicht mehr alles
+- composer.json Anpassung Version Digitizer auf 1.0.*
+- Dokumentation des JS-UI Generators (Formular-Generator): https://github.com/eSlider/vis-ui.js
+- Umstrukturierte `Installations-Dokumentation <installation.html>`_ und einige Anpassungen (php-pear, assets-Verzeichnis, init:acl, openssl).
+- Verbesserte Dokumentation der `Mapbender3 Templates <templates.html>`_
+- Verbesserte Dokumentation des `Quickstart <quickstart.html>`_
+
+**Known Issues:**
+
+- Kopieren von alten 3.0.4.1 Anwendungen kopiert nicht die anzuzeigenden Layersets der Map. Bitte speichern Sie vorher das Map und Overview-Element.
+- Regional Template entfernt
+
+
+
  
 Milestone 3.0.5.0
 -----------------
