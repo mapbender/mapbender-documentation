@@ -159,22 +159,22 @@ How to build a new Mapbender3 build
 
  # tagging
  cd application/mapbender
- git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender/blob/release/3.0.5/CHANGELOG.md"
  git push --tags
  
  # tag submodules
  cd ../../application/fom
- git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
  git push --tags
  
  # tag owsproxy3
  cd ../../application/owsproxy3
- git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
  git push --tags
  
  # tag mapbender-starter
  cd ../../
- git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
  git tag
  git push --tags (will be shown at https://github.com/mapbender/mapbender-starter/releases)
 
@@ -190,23 +190,23 @@ How to build a new Mapbender3 build
  # that step should not be neccessary: sudo chmod -R 777 mapbender3-3.0.5build1
 
  # change the name of the directory
- mv mapbender3-3.0.5build1 mapbender3-3.0.5.0
+ mv mapbender3-3.0.5build1 mapbender3-3.0.5.1
 
  # remove some files in that directory
- rm -R mapbender3-3.0.5.0/app/config/parameters.yml
- rm -Rf mapbender3-3.0.5.0/documentation/*
+ rm -R mapbender3-3.0.5.1/app/config/parameters.yml
+ rm -Rf mapbender3-3.0.5.1/documentation/*
 
  # tag the documentation
  cd /data/git/mapbender-documentation/
- git tag -a v3.0.5.0 -m "Mapbender release Version 3.0.5.0 read changes https://github.com/mapbender/mapbender/milestones/3.0.5.0"  
+ git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
  
  # copy the actual documentation output
- cp -R /data/git/mapbender-documentation/output/*  mapbender3-3.0.5.0/documentation/
+ cp -R /data/git/mapbender-documentation/output/*  mapbender3-3.0.5.1/documentation/
  
- # create tar.gz with right name for example mapbender3-3.0.5.0.tar.gz
- tar -czvf mapbender3-3.0.5.0.tar.gz mapbender3-3.0.5.0/
- # create zip with right name for example mapbender3-3.0.5.0.zip
- gzip -r mapbender3-3.0.5.0 mapbender3-3.0.5.0.zip
+ # create tar.gz with right name for example mapbender3-3.0.5.1.tar.gz
+ tar -czvf mapbender3-3.0.5.1.tar.gz mapbender3-3.0.5.1/
+ # create zip with right name for example mapbender3-3.0.5.1.zip
+ gzip -r mapbender3-3.0.5.1 mapbender3-3.0.5.1.zip
   
 * move tar.gz and zip file to /sites/www.mapbender3.org/builds
 * edit actual release link http://mapbender3.org/en/download (english and german page) http://mapbender3.org/de/download

@@ -11,7 +11,7 @@ Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender
 Milestone 3.0.5.1
 -----------------
 
-Release Datum: 00.08.2015
+Release Datum: 26.08.2015
 
 **Neue Funktionen**: im `Kartenelement <../bundles/Mapbender/CoreBundle/elements/map.html>`_ und beim `Druck Client <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_:
 
@@ -41,6 +41,7 @@ Release Datum: 00.08.2015
 - Classic Template: SCSS korrigiert
 - Mobile Template: Bootstrap Meldung verdeckt Schließen Schaltfläche
 - Mobile Template: SearchRouter Fenster ausblenden
+- Mobile Template: Mozilla Firefox Fixes im Layout
 - Backend: Layerset Filter und +-Buttons verstecken nicht mehr alles
 - composer.json Anpassung Version Digitizer auf 1.0.*
 - Dokumentation des JS-UI Generators (Formular-Generator): https://github.com/eSlider/vis-ui.js

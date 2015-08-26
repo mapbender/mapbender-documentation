@@ -11,17 +11,17 @@ Future Milestones: For details have a look at https://github.com/mapbender/mapbe
 Milestone 3.0.5.1
 -----------------
 
-Release Datum: 00.08.2015
+Release Datum: 26.08.2015
 
 **New functions**: in the `Map element <../bundles/Mapbender/CoreBundle/elements/map.html>`_ and in the `Print client <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_:
 
 * Map: OpenLayers TileSize: You can set the tile-size for the map. Default: 256x256.
 * Map: Delay before Tiles: For WMS-T, for example with temporal parameters (in future)
-* Druck: Show coordinates in PDF print
-* Druck: get print scale depending on map-scale
-* Druck: print legend_default_behaviour
-* Druck: add print templates with the + symbol
-* Druck: user-defined logo and text
+* Print: Show coordinates in PDF print
+* Print: get print scale depending on map-scale
+* Print: print legend_default_behaviour
+* Print: add print templates with the + symbol
+* Print: user-defined logo and text
 
 
 **Bugfixes:**
@@ -41,9 +41,10 @@ Release Datum: 00.08.2015
 - Classic Template: SCSS corrections
 - Mobile Template: Bootstrap message hides close button
 - Mobile Template: close SearchRouter window
+- Mobile Template: Mozilla Firefox Fixes on layout
 - Backend: Layerset Filter and +-Buttons doesn't hide everything anymore
 - composer.json upgrade version of Digitizer to 1.0.*
-- Dokumentation of the JS-UI Generator (Form-Generator): https://github.com/eSlider/vis-ui.js
+- Documentation of the JS-UI Generator (Form-Generator): https://github.com/eSlider/vis-ui.js
 - Restructured `Installations-Dokumentation <installation.html>`_ and some changes (php-pear, assets-Verzeichnis, init:acl, openssl).
 - Better documentation of the `Mapbender3 Templates <templates.html>`_
 - Better documentation of the `Quickstart <quickstart.html>`_
