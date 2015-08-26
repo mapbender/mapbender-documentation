@@ -3,9 +3,7 @@
 Installation
 =============
 
-We provide installation instructions for different operating systems. The installation 
-
-Installation mit Symfony Mitteln beschreibt, wie sie Symfony eigene Mechanismen nutzen können um schnell einen Blick auf Mapbender3 zu werfen.
+We provide installation instructions for different operating systems. The installation with Symfony describes how you can use Symfony build-in mechanisms to take a quick look at Mapbender3. 
 
 .. toctree::
    :maxdepth: 1

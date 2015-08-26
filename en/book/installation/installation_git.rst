@@ -107,7 +107,7 @@ Then let's get Phing:
     sudo pear install phing/phing
 
 
-Composer und PHPUnit
+Composer and PHPUnit
 ====================
 
 PHPUnit is delivered with Composer. Our build scripts need some more dependencies to run unit test, generate
@@ -295,7 +295,7 @@ You can update all your Pear packages with
       Enable internal debugging in APCu [no] : yes 
 
 Using the quick_install.py script
-#################################
+*********************************
 
 A Python script to quickly install a mapbender-starter is provided with the
 mapbender-starter itself. You can download that script, which offers a number
@@ -312,7 +312,7 @@ the result trough Python. The later is demonstrated in the examples section
 below.
 
 Examples
-********
+========
 
 http://bit.ly/1tQvo5i is the shortened URL for
 https://raw.githubusercontent.com/mapbender/mapbender-starter/develop/bin/quick_install.py
