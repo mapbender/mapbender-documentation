@@ -27,7 +27,7 @@ Get the code from the git repository. Cloning is easy, just issue the following 
 
 .. code-block:: bash
 
-	git clone https://github.com/mapbender/mapbender-starter.git mapbender3
+    git clone https://github.com/mapbender/mapbender-starter.git mapbender3
     cd mapbender3
 
 Developers granted secure access to the code must use the SSH-URL of the
@@ -277,10 +277,10 @@ Read more about `How to write Mapbender3 API Documentation? <../development/apid
 Troubleshooting
 ***************
 
-* The ApiGen task only works with recent versions of Phing (>= 2.4.12). Check the Phing version with 
+* The ApiGen task only works with recent versions of Phing (>= 2.4.12). Check the Phing version with:
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
               phing -v
 
@@ -288,49 +288,53 @@ Troubleshooting
 You can update all your Pear packages with
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
-	sudo pear upgrade-all
+    sudo pear upgrade-all
       Enable full APC compatibility [yes] : yes
       Enable internal debugging in APCu [no] : yes 
 
-Using the quick_install.py script
-*********************************
+      
+..
+   Using the quick_install.py script
+   *********************************
 
-A Python script to quickly install a mapbender-starter is provided with the
-mapbender-starter itself. You can download that script, which offers a number
-of command line arguments:
+   A Python script to quickly install a mapbender-starter is provided with the
+   mapbender-starter itself. You can download that script, which offers a number
+   of command line arguments:
 
-- branch: by default, the develop branch is used, but you can specify any branch
-- directory: by default the directory mapbender3_BRANCH will be used, but that
-  can be specified as well.
-- admin user: the default admin account (root <root@example.com> / root) can be
-  changed as well.
+   - branch: by default, the develop branch is used, but you can specify any branch
+   - directory: by default the directory mapbender3_BRANCH will be used, but that
+     can be specified as well.
+   - admin user: the default admin account (root <root@example.com> / root) can be
+     changed as well.
 
-You can download the script or just pass it's URL to curl to fetch it and pipe
-the result trough Python. The later is demonstrated in the examples section
-below.
+   You can download the script or just pass it's URL to curl to fetch it and pipe
+   the result trough Python. The later is demonstrated in the examples section
+   below.
 
-Examples
-========
+   Examples
+   ========
 
-http://bit.ly/1tQvo5i is the shortened URL for
-https://raw.githubusercontent.com/mapbender/mapbender-starter/develop/bin/quick_install.py
+   http://bit.ly/1tQvo5i is the shortened URL for
+   https://raw.githubusercontent.com/mapbender/mapbender-starter/develop/bin/quick_install.py
 
-- Install develop branch into mapbender3_develop
-  
-  .. code-block:: sh
+   - Install develop branch into mapbender3_develop
 
-    curl -sSL http://bit.ly/1tQvo5i | python
+     .. code-block:: sh
 
-- Install foo branch into /tmp/bar
-  
-  .. code-block:: sh
+       curl -sSL http://bit.ly/1tQvo5i | python
 
-    curl -sSL http://bit.ly/1tQvo5i | python - --dir=/tmp/bar foo
+   - Install foo branch into /tmp/bar
 
-- Install develop branch, but use admin <admin@example.com> with password admin
-  
-  .. code-block:: sh
+     .. code-block:: sh
 
-    curl -sSL http://bit.ly/1tQvo5i | python - --username=admin --email=admin@example.com --password=admin
+       curl -sSL http://bit.ly/1tQvo5i | python - --dir=/tmp/bar foo
+
+   - Install develop branch, but use admin <admin@example.com> with password admin
+
+     .. code-block:: sh
+
+       curl -sSL http://bit.ly/1tQvo5i | python - --username=admin --email=admin@example.com --password=admin
+
+       

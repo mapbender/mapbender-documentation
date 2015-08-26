@@ -246,14 +246,14 @@ ApiGen
 	 sudo pear install pear.apigen.org/apigen
 
 
+Lesen Sie mehr in `How to write Mapbender3 Documentation? <../../../en/book/development/documentation_howto.html>`_.
+
 Troubleshooting
 ***************
 
-* Die ApiGen-Bestandteile laufen nur in der neusten Version von Phing. 2.4.12  ist ausreichend,  2.4.9 reicht nicht aus! 
-Testen Sie mit: 
+* Die ApiGen-Bestandteile laufen nur mit neueren Versionen von Phing (>= 2.4.12). Testen Sie die Phing Version mit: 
 
-
-.. code-block:: yaml
+.. code-block:: bash
 
               phing -v
 
@@ -261,30 +261,8 @@ Testen Sie mit:
 Mit dem folgenden Befehl können Sie ein Update all Ihrer Pear-Pakete vornehmen: 
 
 
-.. code-block:: yaml
-    
-	 sudo pear install pear.apigen.org/apigen
+.. code-block:: bash
 
-
-Lesen Sie mehr über `How to write Mapbender3 API Documentation? <../../../en/book/development/apidocumentation.html>`_.
-
-
-Troubleshooting
-***************
-
-* The ApiGen task only works with recent versions of Phing (>= 2.4.12). Check the Phing version with 
-
-
-.. code-block:: yaml
-
-              phing -v
-
-
-You can update all your Pear packages with
-
-
-.. code-block:: yaml
-
-	sudo pear upgrade-all
-
-
+    sudo pear upgrade-all
+      Enable full APC compatibility [yes] : yes
+      Enable internal debugging in APCu [no] : yes
