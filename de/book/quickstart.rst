@@ -286,18 +286,18 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
 
 **Dienstekonfiguration:**
 
-* Titel - Name der bei der Anwendung angezeigt wird
-* Format - wählen Sie das Format für den getMap-Requests
-* Infoformat - wählen Sie das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
-* Exceptionformat - wählen Sie das Format für Fehlermeldungen
-* Opacity - wählen Sie die Opazität (Deckkraft) in Prozent
-* Kachel-Puffer (Tile buffer) - 1 nur der sichtbare Bereich wird angefordert, 1.25 es wird eine größere Karte angefordert
-* BBOX-Faktor - bei Anforderung von Kacheln. Wert 0 - es werden keine zusätzlichen Kacheln außerhalb angefordert
-* Sichtbarkeit (Visible) - soll der Dienst sichtbar sein
-* BaseSource - soll der Dienst als BaseSource behandelt werden (BaseSources können beim Ebenenbaum ein-/ausgeblendet werden)
-* Proxy - bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
-* Transparenz - Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
-* Gekachelt (Tiled) - Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
+* Titel: Name der bei der Anwendung angezeigt wird
+* Format: wählen Sie das Format für den getMap-Requests
+* Infoformat: wählen Sie das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
+* Exceptionformat: wählen Sie das Format für Fehlermeldungen
+* Opacity: wählen Sie die Opazität (Deckkraft) in Prozent
+* Kachel-Puffer (Tile buffer): Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen. Default: 0.
+* BBOX-Faktor: Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier kann man angeben, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Default: 1.25 und kann auf 1 gesetzt werden.
+* Sichtbarkeit (Visible): soll der Dienst sichtbar sein
+* BaseSource: soll der Dienst als BaseSource behandelt werden (BaseSources können beim Ebenenbaum ein-/ausgeblendet werden)
+* Proxy: bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
+* Transparenz: Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
+* Gekachelt (Tiled): Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
 
   
 **Vendor Specific Parameter:**
