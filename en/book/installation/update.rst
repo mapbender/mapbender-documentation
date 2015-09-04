@@ -45,7 +45,7 @@ Have a look at the steps as commands
  # if you use your own print templates: copy them back to mapbender3/app/Resources/MapbenderPrintBundle/templates/
  
  # change the accessrights and owner of the files
- sudo chmod -R uga+r /var/www/mapbender3
+ sudo chmod -R ugo+r /var/www/mapbender3
  sudo chown -R www-data:www-data /var/www/mapbender3
  
  # Update your Mapbender database
