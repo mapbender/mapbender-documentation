@@ -60,7 +60,6 @@ Have a look at the steps as commands
  # You have to set write permission to app/cache and app/logs.
  sudo chmod -R ug+w /var/www/mapbender3/app/cache
  sudo chmod -R ug+w /var/www/mapbender3/app/logs
- sudo chmod -R ug+w /var/www/mapbender3/web/assets
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
  
  # export the web directory
