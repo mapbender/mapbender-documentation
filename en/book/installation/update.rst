@@ -35,7 +35,6 @@ Have a look at the steps as commands
  
  # copy your old configuration files to the new version
  cp /var/www/mapbender3_save/app/config/parameters.yml /var/www/mapbender3/app/config/parameters.yml
- cp /var/www/mapbender3/app/config/config.yml /var/www/mapbender3/app/config/config.yml-dist
  cp /var/www/mapbender3_save/app/config/config.yml /var/www/mapbender3/app/config/config.yml 
  
  # manual step
