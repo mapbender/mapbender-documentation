@@ -45,7 +45,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach mapbender3/app/Resources/MapbenderPrintBundle/templates/.
 
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
- sudo chmod -R uga+r /var/www/mapbender3
+ sudo chmod -R ugo+r /var/www/mapbender3
  sudo chown -R www-data:www-data /var/www/mapbender3
 
  # Aktualisieren Sie Ihre Mapbender Datenbank
