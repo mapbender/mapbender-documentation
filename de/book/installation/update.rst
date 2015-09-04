@@ -35,7 +35,6 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
  cp /var/www/mapbender3_save/app/config/parameters.yml /var/www/mapbender3/app/config/parameters.yml
- cp /var/www/mapbender3/app/config/config.yml /var/www/mapbender3/app/config/config.yml-dist
  cp /var/www/mapbender3_save/app/config/config.yml /var/www/mapbender3/app/config/config.yml 
  
  # Händisch müssen Sie nun die Konfigurationsdateien auf neue Parameter überprüfen.
@@ -65,7 +64,6 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
  sudo chmod -R ug+w /var/www/mapbender3/app/cache
  sudo chmod -R ug+w /var/www/mapbender3/app/logs
- sudo chmod -R ug+w /var/www/mapbender3/web/assets
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
 
