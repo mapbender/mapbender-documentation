@@ -55,6 +55,121 @@ YAML-Definition:
    tileSize: 256             # size of tiles
    wmsTileDelay: 2500        # delay on WMS-T (actually not applicable)
 
+
+
+Controlling by URL-parameters
+=============================
+
+Make Layer visible
+------------------
+
+If you have a Layer with the id <layerid> in a service with the id <serviceid> you may pass the URL parameter
+visiblelayers to turn the layer visible:
+
+
+.. code-block:: php
+
+  ?visiblelayers=<serviceid>/<layerid>
+
+
+You may pass multiple such layers, seperated by comma.
+
+The layerid and serviceid values are specific to an application. You can get
+the layerid and serviceid in the specific application, namely in the
+layerset and there in a layer. Each layer has an icon with three small dots
+on the right side. Click on the icon and a popup window will appear.
+
+.. image:: ../../../../../figures/wms_instance_layer_id.png
+     :scale: 80
+
+The first value lists the internal SourceID and SourceLayerId (31-591). The
+seconds value lists the InstanceID and InstanceLayerId, that we want to use
+now (73-836).
+
+Use this values for the "visibleLayers" parameter in your URL, and seperate them by a slash.
+
+For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836
+
+If you have two layers that are not visible by default, put the two values
+of layerid and serviceid into the URL and seperate them by a comma.
+
+For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
+
+
+
+
+Passing POIs
+------------
+
+You can pass one or more POIs in the URL. Each POI has the following parameters:
+
+- point: coordinate pair with values separated by comma (mandatory)
+- label: Label to display (optional)
+- scale: Scale to show POI in (optional, makes only sense with one POI)
+
+If you pass more than one POI, the map will zoom to 150% of the POIs bounding.
+
+To pass a single POI, use the following URL format:
+
+.. code-block:: php
+
+   ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+
+
+To pass multiple POIs, use the following format:
+
+.. code-block:: php
+
+   ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
+
+
+Passing BBOX
+------------
+
+You can pass a BBOX to zoom to by using the following URL query parameter:
+
+.. code-block:: php
+
+   ?bbox=364286,5622263,365979,5622806
+
+
+Passing the scale
+-----------------
+
+You can set the scale from the list of available scales.
+
+.. code-block:: php
+
+   ?scale=1000
+
+
+Passing SRS
+------------
+
+You can pass a favorite EPSG code you want to use on start of the application by URL query parameter:
+
+.. code-block:: php
+
+   ?srs=EPSG:4326
+
+
+Passing CENTER
+----------------
+
+You can pass a coordinate. The application will open and display the coordinate in the center. In this case, you also have to set the SRS
+
+.. code-block:: php
+
+   ?center=364286,5622263
+
+
+more start parameter
+--------------------------
+
+The elments WMS Loader and WMC Loader provide also parameter you can user on start. Have a look at the element discription for further information.
+
+
+
 Class, Widget & Style
 ============================
 
@@ -158,109 +273,3 @@ JavaScript Signals
 ==================
 
 None.
-
-Controlling by URL
-==================
-
-Make Layer visible
-------------------
-
-If you have a Layer with the id <layerid> in a service with the id <serviceid> you may pass the URL parameter
-visiblelayers to turn the layer visible:
-
-
-.. code-block:: php
-
-  ?visiblelayers=<serviceid>/<layerid>
-
-
-You may pass multiple such layers, seperated by comma.
-
-The layerid and serviceid values are specific to an application. You can get
-the layerid and serviceid in the specific application, namely in the
-layerset and there in a layer. Each layer has an icon with three small dots
-on the right side. Click on the icon and a popup window will appear.
-
-.. image:: ../../../../../figures/wms_instance_layer_id.png
-     :scale: 80
-
-The first value lists the internal SourceID and SourceLayerId (31-591). The
-seconds value lists the InstanceID and InstanceLayerId, that we want to use
-now (73-836).
-
-Use this values for the "visibleLayers" parameter in your URL, and seperate them by a slash.
-
-For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836
-
-If you have two layers that are not visible by default, put the two values
-of layerid and serviceid into the URL and seperate them by a comma.
-
-For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
-
-
-
-
-Passing POIs
-------------
-
-You can pass one or more POIs in the URL. Each POI has the following parameters:
-
-- point: coordinate pair with values separated by comma (mandatory)
-- label: Label to display (optional)
-- scale: Scale to show POI in (optional, makes only sense with one POI)
-
-If you pass more than one POI, the map will zoom to 150% of the POIs bounding.
-
-To pass a single POI, use the following URL format:
-
-.. code-block:: php
-
-   ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
-
-
-To pass multiple POIs, use the following format:
-
-.. code-block:: php
-
-   ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
-
-
-Passing BBOX
-------------
-
-You can pass a BBOX to zoom to by using the following URL query parameter:
-
-.. code-block:: php
-
-   ?bbox=364286,5622263,365979,5622806
-
-
-Passing SRS
-------------
-
-You can pass a favorite EPSG code you want to use on start of the application by URL query parameter:
-
-.. code-block:: php
-
-   ?srs=EPSG:4326
-
-
-Passing CENTER
-----------------
-
-You can pass a coordinate. The application will open and display the coordinate in the center.
-
-.. code-block:: php
-
-   ?center=364286,5622263
-
-
-more start parameter
---------------------------
-
-The elments WMS Loader and WMC Loader provide also parameter you can user on start. Have a look at the element discription for further information.
-
-
-
-
-
