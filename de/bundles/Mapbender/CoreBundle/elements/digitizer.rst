@@ -130,11 +130,11 @@ YAML-Definition für das Element digitizer in der Textarea unter schemes
                        title: Type
                        name: type
                        options: 
-                           - A:A
-                           - B:B
-                           - C:C
-                           - D:D
-                           - E:E
+                           - A: A
+                           - B: B
+                           - C: C
+                           - D: D
+                           - E: E
                      - type: breakLine
                - type: form
                  title: Personal information
@@ -278,6 +278,7 @@ SQL for the demo tables
         firstname varchar,
         lastname varchar,
         email varchar,
+        interests varchar,
         x float,
         y float,
         geom geometry(point,4326),
@@ -297,6 +298,7 @@ SQL for the demo tables
         firstname varchar,
         lastname varchar,
         email varchar,
+        interests varchar,
         length float,
         category varchar,
         x float,
@@ -318,12 +320,13 @@ SQL for the demo tables
         firstname varchar,
         lastname varchar,
         email varchar,
+        interests varchar,
         area float,
         category varchar,
         x float,
         y float,
-        geom geometry(multipolygon,4326),
-        CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
+        geom geometry(polygon,4326),
+        CONSTRAINT pk_polygons_gid PRIMARY KEY (gid)
     );
     
 
