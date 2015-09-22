@@ -113,12 +113,17 @@ Die folgenden Bereiche liegen standardmäßig vor:
 * scalebar (Maßstabsleiste)
 * date (Datum in der Form 10.10.2014)
 * northarrow (Nordpfeil)
+* Koordinaten des Druckbereichs
+* dynamisches Bild (gekoppelt an die Gruppe)
+* dynamischer Text (gekoppelt an die Gruppe)
 
 Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die Open Office Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
 
 Exportieren Sie die Vorlage als PDF unter dem gleichen Namen wie die ODG-Datei. Verwenden Sie den Namen ohne Dateierweiterung in der Druck yml-Definition.
 
 Das Druck-Skript liest die Informationen (Position, Größe, Schriftgröße, Ausrichtung) aus der ODG-Datei aus und verwendet ebenfalls das PDF-Dokument mit den festen Objekten. Aus beiden und den aktuellen Karten wird dann eine PDF-Druckdatei erstellt.
+
+Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder (z.B. Logo der Gemeinde) ausgegeben werden. Hierzu gibt es die Platzhalter dynamisches Bild und dynamischer Text. Sofern diese Bereiche im Drucklayout vorliegen wird nach einem Bild mit dem Namen der Gruppe gesucht und dieses im Bereich dynamic_image ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Unter dynamic_text wird die Beschreibung der Gruppe ausgegeben.
 
 
 Konfiguration des Elements
