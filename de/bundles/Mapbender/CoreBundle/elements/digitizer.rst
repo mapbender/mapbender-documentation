@@ -91,7 +91,6 @@ YAML-Definition für das Element digitizer in der Textarea unter schemes
         allowDigitize: true 
         toolset:
             - type: drawPoint
-            - type: modifyFeature
             - type: moveFeature
             - type: selectFeature
             - type: removeSelected 
@@ -129,12 +128,7 @@ YAML-Definition für das Element digitizer in der Textarea unter schemes
                      - type: select
                        title: Type
                        name: type
-                       options: 
-                           - A: A
-                           - B: B
-                           - C: C
-                           - D: D
-                           - E: E
+                       options: {A: A, B: B, C: C, D: D, E: E}
                      - type: breakLine
                - type: form
                  title: Personal information
@@ -606,6 +600,25 @@ Definition von Feldern für den Dateiupload
                       format: %gid%-%name%      # die Datei wird nach der Definition umbenannt (%name% ist der Dateiname [hier file1], %gid% - ist der Feldname)
                       url:  /digitizer/         # optional, wenn ein ALIAS definiert wurde
                       allowedFormats: [jpg,png,gif,pdf]
+
+
+Definition von Bildern
+--------------------------------------------------
+
+.. code-block:: yaml
+                      
+                    - type: image
+                      # Feature type field name. optional.
+                      # Wenn definiert, wird Pfad zu dem Feld ermittelt und "src" Option ersetzt
+                      name: file_reference
+                      # URL oder Pfad zum Bild auf dem Server
+                      src: "bundles/mapbendercore/image/logo_mb3.png" 
+                      # Optional. Standardwert ist false. Wenn true, wird der "src" Pfad ab dem "/web" Verzeichniss ermittelt.
+                      relative: true
+                      # Image CSS Style
+                      imageCss: {width: 100%}
+                      # Image Container CSS Style
+                      css: {width: 25%}
 
 
 Definition der zur Verfügung stehenden Werkzeuge (Toolset Type)

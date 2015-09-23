@@ -125,12 +125,7 @@ YAML-Definition for the element digitizer in the textarea schemes
                      - type: select
                        title: Type
                        name: type
-                       options: 
-                           - A: A
-                           - B: B
-                           - C: C
-                           - D: D
-                           - E: E
+                       options: {A: A, B: B, C: C, D: D, E: E} 
                      - type: breakLine
                - type: form
                  title: Personal information
@@ -615,6 +610,27 @@ Definition of a file upload field
                       format: %gid%-%name%      # file will be renamed to the definition (%name% is file1, %gid% - is ID fieldname)
                       url:  /digitizer/         # optional, if ALIAS is defined
                       allowedFormats: [jpg,png,gif,pdf]
+
+
+
+Definition of an image
+--------------------------------------------------
+
+.. code-block:: yaml
+                      
+                    - type: image
+                      # Feature type field name. optional.
+                      # if defined the path to the field will be generated and "src" option will be replaced   
+                      name: file_reference
+                      # URL or path to the image on the server
+                      src: "bundles/mapbendercore/image/logo_mb3.png" 
+                      # Optional. Default is false. If true src will be generated relative to "/web".
+                      relative: true
+                      # Image CSS Style
+                      imageCss: {width: 100%}
+                      # Image Container CSS Style
+                      css: {width: 25%}
+
 
 
 Definition of toolset types
