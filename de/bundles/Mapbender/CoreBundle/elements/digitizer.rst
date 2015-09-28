@@ -527,7 +527,7 @@ Definition von Pflichtfeldern
 
 .. code-block:: yaml
 
-                                                   mandatory: true                              # true - Das Feld muss gefüllt werden. Ansonsten kann der datensatz nicht gespeichert werden. Bei der Definition sind auch Reguläre Ausdrücke möglich.
+                                                   mandatory: true                              # true - Das Feld muss gefüllt werden. Ansonsten kann der Datensatz nicht gespeichert werden. Bei der Definition sind auch Reguläre Ausdrücke möglich.
                                                    mandatorytitle: Pflichtfeld - bitte füllen!  # Text der angezeigt wird, wenn das Feld nicht gefüllt wird oder mit einem ungültigen Wert gefüllt wird.
 
                                                    mandatory: /^\w+$/gi               # Es können auch reguläre Ausdrücke angegeben werden, um die Eingabe zu überprüfen (z.B. Email oder numbers) Weitere Informationen unter: http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
@@ -544,9 +544,9 @@ Definition eines Textfelds mit Datumsauswahl
 
 .. code-block:: yaml
 
-                                                    type: datepicker               # Textfeld, das eine Datumsauswahl bereitstellt
-                                                    value: 2015-01-01              # Startwert für die Datumsauswahl (optional)
-                                                    format: YYYY-MM-DD             # Datumsformat (optional), Standardformat YYYY-MM-DD
+                                                    type: date              # Textfeld, das eine Datumsauswahl bereitstellt
+                                                    value: 2015-01-01       # Startwert für die Datumsauswahl (optional)
+                                                    format: YYYY-MM-DD      # Datumsformat (optional), Standardformat YYYY-MM-DD
 
 
 Definition von Hilfetexten zu den Eingabefeldern (type infotext)
