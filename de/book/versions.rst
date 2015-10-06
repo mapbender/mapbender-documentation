@@ -8,6 +8,41 @@ Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/
 Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender/mapbender/issues
 
 
+Milestone 3.0.5.2
+-----------------
+
+Release Datum: Oktober 2015 (in Planung)
+
+**Bugfixes:**
+
+- Kopieren von Anwendungen: Rechte und Gruppen werden mit übernommen.
+
+- FOM: Änderungen im Verhalten bei falschen Logins und dem Locking. Es wird nur noch angezeigt, dass der Login fehlgeschlagen ist - unabhängig davon, ob der Benutzer existiert oder nicht.
+
+**Änderungen in der config.yml:**
+
+* Die folgenden Änderungen sind optionale Parameter für das Verhalten des Logins.
+
+    .. code-block:: yaml
+                    
+                    fom_user:
+
+                      # Allow to create user log table on the fly if the table doesn't exits.
+                      # Default: true
+                      auto_create_log_table: true
+
+                      # Time between to check login tries
+                      login_check_log_time: "-5 minutes" 
+
+                      # Login attemps before delay starts
+                      login_attempts_before_delay: 3
+
+                      # Login delay after all attemps are failed
+                      login_delay_after_fail: 2 # Seconds
+
+
+
+
 Milestone 3.0.5.1
 -----------------
 
