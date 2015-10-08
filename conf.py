@@ -63,7 +63,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Mapbender3'
-copyright = u'2012, The Mapbender Team'
+copyright = u'2015, The Mapbender Team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
