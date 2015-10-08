@@ -1,5 +1,5 @@
-FOMUserBundle - Users and Security
-===================================
+FOMUserBundle - Benutzer und Absicherung
+========================================
 
 .. toctree::
    :maxdepth: 1
@@ -9,3 +9,4 @@ FOMUserBundle - Users and Security
    roles_groups
    security
    examples
+
