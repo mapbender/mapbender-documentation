@@ -20,23 +20,33 @@ Kommando den Benutzer zurücksetzen: fom:user:resetroot.
 Login Fehler
 ------------
 
-Login Fehler schließen den Account nicht dauerhaft aus. Vielmehr wird der
-Account für eine bestimmte Zeit ausgeschlossen (gelockt), abhängig von der
-Anzahl der fehlerhaften Login-Versuche in einem bestimmten Zeitraum. Die
-Zeit, in der der Nutzer ausgeschlossen ist, wächst exponentiell mit der
-Anzahl der Fehlversuche und startet bei einer Sekunde beim ersten
-Fehlversuch:
+Fehlerhafte Logins werden mit der Meldung "Login fehlerhaft"
+kommentiert. Aus Sicherheitsgründen wird nicht genannt, ob es am falschen
+Loginnamen oder falschen Passwort liegt. Login Fehler schließen den Account
+nicht dauerhaft aus. Vielmehr wird der Account für eine bestimmte Zeit
+ausgeschlossen (gelockt).
 
-    1. 1s
-    2. 2s
-    3. 4s
-    4. 8s
-    5. 16s
-    6. 32s
-    7. 64s
-    8. 128s
-    9. 256s
-    10. ...
+Die config.yml ermöglicht die Anpassung des Verhaltens:
 
+.. code-block:: yaml
 
-Nach dieser Zeit kann der Benutzer sich wieder anmelden.
+   fom_user:
+
+       # Allow to create user log table on the fly if the table doesn't exits.
+       # Default: true
+       auto_create_log_table: true
+       
+       # Time between to check login tries
+       login_check_log_time: "-5 minutes" 
+       
+       # Login attemps before delay starts
+       login_attempts_before_delay: 3
+       
+       # Login delay after all attemps are failed
+       login_delay_after_fail: 2 # Seconds
+   
+
+* **auto_create_log_table:** Angabe zur Rückwärtskompatibilität (Default: true).
+* **login_check_log_time:** Angabe zur Bereinigung der Login-Failure Tabelle (Default: -5 minutes)
+* **login_attempts_before_delay:** Anzahl der Login Versuche, bevor das Login-Delay greift (Default: 3)
+* **login_delay_after_fail:** Länge des Login-Delays in Sekunden (Default: 2).

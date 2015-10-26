@@ -21,7 +21,7 @@ Release Datum: October 2015 (planned)
 
 **Changes in config.yml:**
 
-* The following changes are optional parameters for the behaviour of the login.
+* The following changes are optional parameters for the behaviour of the login (see also `the chapter in the FOM bundle for details <../bundles/FOM/UserBundle/users.html>`_):
 
     .. code-block:: yaml
                     
