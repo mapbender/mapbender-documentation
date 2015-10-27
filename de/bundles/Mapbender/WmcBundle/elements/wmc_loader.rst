@@ -21,8 +21,19 @@ Konfiguration
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Components:** Komponenten: idloader (lädt die Konfiguration per ID beim Start der Applikation z.B. ?wmcid=<wmcid>), listloader (lädt die Konfiguration aus einer Liste), wmcloader (lädt die Konfiguration aus einer Datei)
-* **Keepsources:** definiert, was mit den Diensten in der Applikation geschehen soll, Standard ist false (BaseSources - behält nur die als BaseSource markierten Dienste in der Anwendung, AllSources - behält die Dienste, die bereits geladen sind, in der Anwendung).
+* **Components:**
+  
+  * Id Loader: lädt die Konfiguration per ID beim Start der Applikation z.B. ?wmcid=<wmcid>,
+  * From List Loader: lädt die Konfiguration aus einer Liste
+  * Wmc Xml Loader: lädt die Konfiguration aus einer Datei
+  * Wmc From Url Loader: lädt das WMC über eine URL ?wmcurl=<wmcurl>
+    
+* **Keepsources:** definiert, was mit den Diensten in der Applikation geschehen soll.
+
+  * no: keine Quellen werden behalten. Alle werden vom WMC überschrieben.
+  * BaseSources: Behält die BaseSources und die anderen werden überschrieben. Z.B. im Zusammenhang mit einem BaseSourceSwitcher.
+  * AllSources: Behält alle Quellen und fügt die Datenquellen aus dem WMC hinzu.
+    
 * **Keep Extent:** behält den aktuellen Extent, Standard ist false (erscheint im Extent der Konfiguration).
 
 YAML-Definition:

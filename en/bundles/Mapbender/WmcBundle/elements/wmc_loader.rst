@@ -21,8 +21,19 @@ Configuration
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Tooltip:** text to use as tooltip.
 * **Target:** Id of Map element to query.
-* **Components:** select components from: idloader (load configuration by id on start of application like ?wmcid=<wmcid>), listloader (load configuration from a list), wmcloader (load from a file)
-* **Keepsources:** defines what should happen with the services of the application, default is false (BaseSources - keep only the sources marked as BaseSource in the application,AllSources -  keep the sources that are already loaded in the application).
+* **Components:** select components from:
+
+  * Id Loader: load configuration by id on start of application like ?wmcid=<wmcid>,
+  * From List Loader: load configuration from a list,
+  * Wmc Xml Loader: load the configuration from a file
+  * Wmc From Url Loader: loads the WMC from a URL, for example: ?wmcurl=<wmcurl>
+    
+* **Keepsources:** defines what should happen with the services of the application
+
+  * no: No Sources are kept. All sources are overridden by the WMC.
+  * BaseSources: Keeps the BaseSources and overrides the other ones. For example in connection with a BaseSourceSwitcher.
+  * AllSources: Keeps all sources and adds the sources from the WMC.
+
 * **Keep Extent:** keeps the actual extent, default is false (will apply the extent of the configuration).
 
 YAML-Definition:
