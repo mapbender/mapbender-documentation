@@ -11,13 +11,33 @@ Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender
 Milestone 3.0.5.2
 -----------------
 
-Release Datum: Oktober 2015 (in Planung)
+Release Datum: 27.10.2015
 
 **Bugfixes:**
 
-- Kopieren von Anwendungen: Rechte und Gruppen werden mit übernommen.
-
+- Kopieren von Anwendungen: Rechte und Gruppen werden mit übernommen. Der Nutzer, der die Anwendung kopiert hat, wird Owner der kopierten Anwendung.
 - FOM: Änderungen im Verhalten bei falschen Logins und dem Locking. Es wird nur noch angezeigt, dass der Login fehlgeschlagen ist - unabhängig davon, ob der Benutzer existiert oder nicht.
+- Korrigierte Fehlermeldung beim Anlegen eines Benutzers mit zu kurzem Passwort.
+- Print: Fix des Replace Patterns.
+- Print: Fix, wenn falsch konigurierter WMS Sonderzeichen (%26) in der Legenden URL hat.
+- Image Export in Firefox.
+- WMC Loader: Einladen von WMC und das Verhalten der BaseSources.
+- BaseSourceSwitcher: Kacheln des nicht sichtbaren Dienstes werden nicht vorgeladen.
+- BaseSourceSwitcher: Wenn eine Gruppe definiert ist, ist nur ein Thema beim Start eingeschaltet.
+- SearchRouter: Fix der Anführungszeichen für Tabellennamen.
+- Anwendungen kopieren: Fix der Suche in der kopierten Anwendung.
+- Simple Search: Return Schaltfläche wird abgefangen.
+- FeatureInfo: Add WMS Funktionaliät und WMS Loader.
+- Icon Polygone in der Toolbar von Anwendungen ist sichtbar.
+- Icons, die nicht auf FontAwesome basieren, funktionieren auch im Mobilen Template.
+- Administration Map Element: Anzeige des Konfigurationsdialogs im Backend beginnt oben.
+- Administration Datenquelle: Keine Formulardaten Vorbelegung durch den Browser für Benutzername und Passwort.
+- Mobile Anwendung: Darstellung unter Firefox für Android.
+- Update 3.0.4.x: FeatureInfo autoopen=true bleibt erhalten.
+- Doku: FOM `UserBundle Übersetzung <../bundles/FOM/UserBundle/index.html>`_ und `Ergänzung bei falschen Benutzer-Logins <../bundles/FOM/UserBundle/users.html>`_.
+- Doku: URL Parameter scale im `Map Element <../bundles/Mapbender/CoreBundle/elements/map.html>`_.
+- Doku: `WMC Loader <../bundles/Mapbender/WmcBundle/elements/wmc_loader.html>`_ und KeepSources.
+
 
 **Änderungen in der config.yml:**
 
