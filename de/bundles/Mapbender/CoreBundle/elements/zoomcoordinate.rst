@@ -3,12 +3,12 @@
 Zoom to Coordinate (Koordinate anzeigen)
 ****************************************
 
-Dieses Elemenet ermöglicht eine vom Koordinatensystem unabhängige Suche nach Koordinaten. Nach Angabe des Koordinatensystems und des Koordinatenpaares werden die Werte auf das aktuelle Koordinatensystem umgerechnet und die entsprechende Stelle auf der Karte zentriert. 
+Dieses Element ermöglicht eine vom Koordinatensystem unabhängige Suche nach Koordinaten. Nach Angabe des Koordinatensystems und des Koordinatenpaares werden die Werte auf das aktuelle Koordinatensystem umgerechnet und die entsprechende Stelle auf der Karte zentriert. 
 
 .. image:: ../../../../../figures/zoomcoordinate.png
      :scale: 80
 
-Configuration
+Konfiguration
 =============
 
 .. image:: ../../../../../figures/zoomcoordinate_configuration.png
