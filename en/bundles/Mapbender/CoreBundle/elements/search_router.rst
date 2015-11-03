@@ -128,9 +128,9 @@ engine has the following modes:
 * **like:** default, uses two-sided like
 * **like-left:** uses left-sided like
 * **like-right:** uses right-sided like
-* **ilike:** uses two-sided case-insensitive like
-* **ilike-left:** uses left-sided case-insensitive like
-* **ilike-right:** uses right-sided case-insensitive like
+* **ilike:** uses two-sided case-insensitive like (*searchstring*)
+* **ilike-left:** uses left-sided case-insensitive like (f.e *searchstring)
+* **ilike-right:** uses right-sided case-insensitive like (f.e searchstring*) 
 
 
 Result feature styling

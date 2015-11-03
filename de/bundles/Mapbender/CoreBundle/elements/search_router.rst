@@ -125,9 +125,9 @@ Jedes Feld kann für einen Vergleichsmodus bestimmt werden, welcher von der Engi
 * **like:** Standard, zweiseitiges 'like'
 * **like-left:** linksseitiges 'like'
 * **like-right:** rechtsseitiges 'like'
-* **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
-* **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
-* **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
+* **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - *searchstring*)
+* **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - *searchstring)
+* **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring*)
 
 Styling der Ergebnisse
 ---------------------------
