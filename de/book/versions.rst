@@ -19,7 +19,7 @@ Release Datum: 27.10.2015
 - FOM: Änderungen im Verhalten bei falschen Logins und dem Locking. Es wird nur noch angezeigt, dass der Login fehlgeschlagen ist - unabhängig davon, ob der Benutzer existiert oder nicht.
 - Korrigierte Fehlermeldung beim Anlegen eines Benutzers mit zu kurzem Passwort.
 - Print: Fix des Replace Patterns.
-- Print: Fix, wenn falsch konigurierter WMS Sonderzeichen (%26) in der Legenden URL hat.
+- Print: Fix, wenn falsch konfigurierter WMS Sonderzeichen (%26) in der Legenden URL hat.
 - Image Export in Firefox.
 - WMC Loader: Einladen von WMC und das Verhalten der BaseSources.
 - BaseSourceSwitcher: Kacheln des nicht sichtbaren Dienstes werden nicht vorgeladen.
@@ -27,10 +27,10 @@ Release Datum: 27.10.2015
 - SearchRouter: Fix der Anführungszeichen für Tabellennamen.
 - Anwendungen kopieren: Fix der Suche in der kopierten Anwendung.
 - Simple Search: Return Schaltfläche wird abgefangen.
-- FeatureInfo: Add WMS Funktionaliät und WMS Loader.
+- FeatureInfo: Add WMS Funktionalität und WMS Loader.
 - Icon Polygone in der Toolbar von Anwendungen ist sichtbar.
 - Icons, die nicht auf FontAwesome basieren, funktionieren auch im Mobilen Template.
-- Administration Map Element: Anzeige des Konfigurationsdialogs im Backend beginnt oben.
+- Administration Map Element: Anzeige des Konfigurationdialogs im Backend beginnt oben.
 - Administration Datenquelle: Keine Formulardaten Vorbelegung durch den Browser für Benutzername und Passwort.
 - Mobile Anwendung: Darstellung unter Firefox für Android.
 - Update 3.0.4.x: FeatureInfo autoopen=true bleibt erhalten.
@@ -41,7 +41,7 @@ Release Datum: 27.10.2015
 
 **Änderungen in der config.yml:**
 
-* Die folgenden Änderungen sind optionale Parameter für das Verhalten des Logins (siehe das `entsprechende Kapitel im FOM Bundle <../bundles/FOM/UserBundle/users.html>`_:
+* Die folgenden Änderungen sind optionale Parameter für das Verhalten des Logins (siehe das `entsprechende Kapitel im FOM Bundle <../bundles/FOM/UserBundle/users.html>`_):
 
     .. code-block:: yaml
                     
