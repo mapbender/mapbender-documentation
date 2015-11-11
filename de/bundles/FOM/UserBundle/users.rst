@@ -17,6 +17,50 @@ die Anmeldedaten vergessen haben sollten, können Sie über ein app/console
 Kommando den Benutzer zurücksetzen: fom:user:resetroot.
 
 
+Password vergessen
+------------------
+
+Falls ein Benutzer sein Passwort vergessen hat, kann er in der Login-Maske
+über den Link "Passwort vergessen" ein neues Passwort anfordern. Dazu gibt
+er dann seinen Benutzernamen oder seine E-Mail Adresse an.
+
+.. image:: ../../../../en/bundles/FOM/UserBundle/user_forgot_password.png
+
+Danach bekommt der Benutzer eine E-Mail mit einem Link, die zu der Seite
+führt, um das Passwort zurückzusetzen. Der Link ist danach nicht mehr
+gültig.
+
+Die Funktionalität kann in der config.yml ausgeschaltet werden.
+
+.. code-block:: yaml
+
+                fom_user:
+                    reset_password: true # true/false
+
+
+
+Registrierung
+-------------
+
+Benutzer können sich an Mapbender3 selbst registrieren. Dafür stellt man in
+der config.yml die Einstellung fom_user:selfregister auf true.
+
+.. code-block:: yaml
+
+                fom_user:
+                    selfregister: false # true/false
+
+Im Login-Dialog erscheint der "Register" Link. Der Benutzer wird zu einer
+Maske geführt, in der er seinen Namen, sein Passwort und seine E-Mail
+Adresse angeben kann.
+
+.. image:: ../../../../en/bundles/FOM/UserBundle/user_self_register.png
+
+Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung
+abschließen kann. Bis zu diesen Zeitpunkt ist er als inaktiver Nutzer in
+Mapbender3 hinterlegt.
+
+
 Login Fehler
 ------------
 

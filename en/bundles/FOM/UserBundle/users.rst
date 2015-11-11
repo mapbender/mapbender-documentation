@@ -13,6 +13,49 @@ and will always be given full access. If all is lost, you can use this user
 to manage everything. And in the event that the credentials for this user are
 also lost, a console command (fom:user:resetroot) is available for resetting.
 
+
+Forgot Password
+---------------
+
+If a user has forgot his/her password, he can use the "Forgot password?"
+link in the Login-screen to request a new one. For that he types in his
+username or e-mail-adress.
+
+.. image:: ../../../../en/bundles/FOM/UserBundle/user_forgot_password.png
+
+After that he gets an e-mail with a link, which leads him to a site where he
+can reset his password. The link isn't valid anymore after this operation.
+
+The functionality can be switched off in the config.yml.
+
+.. code-block:: yaml
+
+                fom_user:
+                    reset_password: true # true/false
+
+
+
+Registering
+-----------
+
+Users can selfregister themselves in Mapbender3. For this you have to adjust
+the setting fom_user:selfregister in the config.yml to true.
+
+.. code-block:: yaml
+
+                fom_user:
+                    selfregister: false # true/false
+
+The Login-dialog contains a "Register" link. This openes a page where the
+user can type in his/her name, password and e-mail adresss.
+
+.. image:: ../../../../en/bundles/FOM/UserBundle/user_self_register.png
+
+
+After that he gets a confirmation mail to complete the registration. Until
+that time he is only managed as inactive user in Mapbender3.
+
+
 Login Failures
 --------------
 
