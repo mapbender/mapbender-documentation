@@ -3,7 +3,7 @@
 Installation auf Windows
 ########################
 
-Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ und installieren Sie die notwendigen Komponenten:
+Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ wo Sie auch die Download-Links für Mapbender3 finden. Installieren Sie die notwendigen Komponenten:
 
 * fügen Sie den Pfad zum PHP-bin Verzeichnis zu Ihrer PATH Variable hinzu 
 * aktivieren Sie die PHP Erweiterungen in der php.ini Konfigurationsdatei
@@ -55,6 +55,8 @@ In der mapbender3.conf:
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
  </Directory>
+
+Wir gehen in diesem Beispiel davon aus, dass Mapbender3 direkt unter **C:/** entpackt wurde (siehe das Kapitel `Systemvoraussetzungen und den Download <systemrequirements.html#download-von-mapbender3>`_ für Details). Sie können auch einfach ein anderes Verzeichnis wählen. Passen Sie dann nur diese Apache mapbender3.conf Datei oben an, indem Sie auf das richtige Verzeichnis verweisen.
 
 Starten Sie den Apache Webserver neu und prüfen Sie, ob der Alias erreichbar ist:
 

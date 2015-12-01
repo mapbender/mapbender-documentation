@@ -51,8 +51,40 @@ Additionally 32- and 64-bit versions of Apache für Windows exist.
 Download of Mapbender3
 **********************
 
-Installation packages are distributed as compressed packages and are available
-for download at the `download <http://mapbender3.org/download>`_ page.
+Installation packages are distributed as compressed packages and are available for download at the `download <http://mapbender3.org/download>`_ page.
 
-After downloading, extract the package in a directory of your choice. In this installation documentation we assume that the package is extracted in the directory /var/www.
+After downloading, extract the package in a directory of your choice. In this installation documentation we assume that the package is extracted in the following directories:
+
+* **/var/www** (for Linux) or
+* **C:/** (for Windows).
+
+For the following installation steps, please rename the unzipped directory (for example: "mapbender3-3.0.5.2") to "mapbender3".
+
+You'll find the next steps of the installation in the following chapters:
+
+* `Installation on Ubuntu and Debian <installation_ubuntu.html>`_
+* `Installation on Windows <installation_windows.html>`_
+
+
+For a quick Test you can also follow the `Installation in the Symfony built-in webserver <installation_symfony.html>`_. The `Git-based installation <installation_git.html>`_ does not require theses Download packages but loads Mapbender3 from the Git-sources. In exchange additional installation steps are neccessary.
+
+
+Directory structure
+-------------------
+
+After unpacking the TAR.GZ- resp. the ZIP-archive, you will see in the Mapbender-folder the following subdirectories:
+
+.. code-block:: bash
+                
+                .
+                ├── apidoc
+                ├── app
+                ├── bin
+                ├── documentation
+                ├── fom
+                ├── mapbender
+                ├── owsproxy
+                ├── src
+                ├── vendor
+                └── web
 

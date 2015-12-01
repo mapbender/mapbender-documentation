@@ -1,23 +1,27 @@
 .. _installation_ubuntu:
 
-Installation auf Ubuntu und Debian
-##################################
+Installation on Ubuntu and Debian
+#################################
 
 The following Installation manual describes the neccessary steps on a recent Ubuntu or Debian system. We assume that Apache 2.4 is running on the system. A `documentation for Apache 2.2  <installation_ubuntu.html#instructions-for-apache-2-2>`_ is added at the end of the document.
 
-Please take note of the `system requirements <systemrequirements.html>`_. Here is the way to install the neccessary components:
+Please take note of the `system requirements <systemrequirements.html>`_, where you can also find the Download links to Mapbender3.
+
+There are also the neccessary components listed that you can install like this:
 
 .. code-block:: bash
 
   sudo apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl openssl
 
-Load Apache rewrite-module:
+Load the Apache rewrite-module:
 
 .. code-block:: bash
 
   sudo a2enmod rewrite
 
-Configure the Apache Alias. We assume that Mapbender3 is unzipped into /var/www/mapbender3. Create the file /etc/apache2/sites-available/mapbender3.conf with the content below. 
+Configure the Apache Alias. We assume that Mapbender3 is unzipped into **/var/www/mapbender3** (see the `System Requirements and Download <systemrequirements.html#download-of-mapbender3>`_ chapter for details). You can easily unpack Mapbender3 to a different directory and only adjust the following file to refer to the right directory.
+
+Create the file **/etc/apache2/sites-available/mapbender3.conf** with the content below. 
 
 .. code-block:: apache
 

@@ -5,8 +5,9 @@ Installation auf Ubuntu und Debian
 
 Die folgende Installationsanleitung beschreibt die notwendigen Schritte auf einem aktuellen Ubuntu- oder Debian-System. Wir nehmen an, dass Apache 2.4 auf dem System läuft. Eine `Dokumentation zu Apache 2.2 <installation_ubuntu.html#einrichtung-fur-apache-2-2>`_ findet sich am Ende des Dokuments. Als Datenbank-Umgebung wird PostgreSQL verwendet.
 
-Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_. Hier der Weg, wie die notwendigen Komponenten installiert werden können:
+Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_, wo Sie auch die Download-Links für Mapbender3 finden.
 
+Dort sind auch die notwendigen Komponenten für Mapbender3 aufgelistet, die Sie folgendermaßen installieren können:
 
 .. code-block:: bash
 
@@ -18,7 +19,10 @@ Laden Sie das Apache Modul rewrite.
 
  sudo a2enmod rewrite
 
-Erstellen Sie den Apache Alias. Wir gehen davon aus, dass Mapbender3 im Verzeichnis /var/www/mapbender3 entpackt wurde. Legen Sie die Datei /etc/apache2/sites-available/mabender3.conf mit dem folgenden Inhalt an. 
+Erstellen Sie den Apache Alias. Wir gehen davon aus, dass Mapbender3 im Verzeichnis **/var/www/mapbender3** entpackt wurde (siehe das Kapitel `Systemvoraussetzungen und den Download <systemrequirements.html#download-von-mapbender3>`_ für Details). Sie können Mapbender3 in ein beliebiges anderes Verzeichnis entpacken und müssen dann nur die folgende Datei anpassen und auf den richtigen Ordner verweisen lassen.
+
+
+Legen Sie die Datei **/etc/apache2/sites-available/mabender3.conf** mit dem folgenden Inhalt an. 
 
 .. code-block:: apache
                 
