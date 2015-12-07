@@ -4,7 +4,7 @@
 Redlining
 *********
 
-Mit dem Element Redlining können temporär verfügbaren Geometrien in der Karte erstellen. Temporär bedeutet, dass die Objekte nicht in einer Datenbank gespeichert werden und beim Neustart der Anwendung verloren gehen.
+Mit dem Element Redlining können temporär verfügbaren Geometrien in der Karte erstellt werden. Temporär bedeutet, dass die Objekte nicht in einer Datenbank gespeichert werden und beim Neustart der Anwendung verloren gehen.
 
 Die gezeichneten Geometrien werden in das Druckbild übernommen. Die Objekte in der Karte können weiter editiert werden. 
 
@@ -13,8 +13,8 @@ Die möglichen Geometrietypen sind:
 * Punkte
 * Linien
 * Polygonen
-* Rechtecke und
-* Texte (Annotations).
+* Rechtecke
+* Texte (Annotations)
 
 .. image:: ../../../../../figures/de/redlining/redlining.png
      :scale: 80
@@ -36,13 +36,13 @@ Konfiguration
 Als Dialog
 ----------
 
-Setrzen Sie den Display type auf "Dialog". Sie benötigen eine Schaltfläche, um das Redlining als Dialog zu öffnen. Wählen Sie z.B. das Sketch Symbol als Toolbar-Icon aus und setzen Sie als Target den Namen des Elements.
+Setzen Sie den Display type auf "Dialog". Sie benötigen eine Schaltfläche, um das Redlining als Dialog zu öffnen. Wählen Sie z.B. das Sketch Symbol als Toolbar-Icon aus und setzen Sie als Target den Namen des Elements.
 
 
 In der Sidepane
 ---------------
 
-Sie können das Redlining auch in die Sidepane positionieren. Setzen Sie den Display type auf "Element".
+Sie können das Redlining auch in die Sidepane positionieren. Setzen Sie **Display** type auf "Element".
 
 
 Nutzung
@@ -55,11 +55,11 @@ Punkte: Wählen Sie die Schaltfläche "Punkt" und setzen Sie einen Punkt in der 
 
 Linie: Wählen Sie die Schaltfläche "Linie" und zeichnen Sie die einzelnen Liniensegmente in der Karte. Mit einem Doppelklick schließen Sie das Zeichnen ab.
 
-Polygon: Wählen Sie die Schaltfläche "Polygon" und zeichnen Sie die einzelnen Vertices in der Karte. Mit einem Doppelklick schließen Sie das Zeichnen ab.
+Polygon: Wählen Sie die Schaltfläche "Polygon" und zeichnen Sie die einzelnen Stützpunkte in der Karte. Mit einem Doppelklick schließen Sie das Zeichnen ab.
 
 Rechteck: Wählen Sie die Schaltfläche "Rechteck" und ziehen Sie einfach ein Rechteck mit der Maus auf.
 
-Text: Wählen Sie die Schaltfläche "Text". Im Dialog erscheint ein Textfeld, in dem Sie ihren Text eingeben können. Danach klicken Sie einfach in die Karte. Am Klickpunkt erscheint der eingegebene Text.
+Text: Wählen Sie die Schaltfläche "Text". Im Dialog erscheint ein Textfeld zur Texteingabe. Danach klicken Sie einfach in die Karte. Am Klickpunkt erscheint der eingegebene Text.
 
 
 Objekte löschen
@@ -78,12 +78,12 @@ Punkte und Texte können verschoben werden, Linien und Polygone nicht.
 .. image:: ../../../../../figures/de/redlining/redlining_modify_point.png
      :scale: 80
 
-Bei Linien und Polygonen können Sie neue Vertices hinzufügen, wenn Sie den Vertex in der Mitte der Kanten-Linie verschieben (der leicht transparent dargestellte Vertex). Vertices können entfernt werden, wenn Sie einen Vertex anklicken und die Entf-Taste drücken.
+Bei Linien und Polygonen können Sie neue Stützpunkte hinzufügen, wenn Sie den Stützpunkt in der Mitte der Kanten-Linie verschieben (der leicht transparent dargestellte Vertex). Stützpunkte können durch anklicken und anschließendes drücken der Entf-Taste entfernt werden.
 
 .. image:: ../../../../../figures/de/redlining/redlining_modify_polygon.png
      :scale: 80
 
-Texte können verschoben werden. Der Ankerpunkt eines Textes befindet sich an der unteren linken Ecke des ersten Buchstaben. Zum Verschieben klicken Sie einfach auf diese Region und verschieben den Text in der Karte. Der Text kann im Nachhinein nicht mehr verändert werden. Bitte löschen Sie den alten Text und setzen Sie einen neuen.
+Texte können verschoben werden. Der Ankerpunkt eines Textes befindet sich an der unteren linken Ecke des ersten Buchstabens. Zum Verschieben klicken Sie einfach auf diese Region und verschieben den Text in der Karte. Der Text kann im Nachhinein nicht mehr verändert werden. Bitte löschen Sie den alten Text und setzen Sie einen neuen.
 
 .. image:: ../../../../../figures/de/redlining/redlining_modify_text.png
      :scale: 80

@@ -12,9 +12,9 @@ The available geometry-types are:
 
 * Points
 * Lines
-* Polygons,
-* Rectangles and
-* Text (Annotations).
+* Polygons
+* Rectangles
+* Text (Annotations)
 
 .. image:: ../../../../../figures/de/redlining/redlining.png
      :scale: 80
@@ -53,13 +53,13 @@ Draw objects
 
 Point: Select the button "Point" and set a point in the map.
 
-Line: Select the button "Line" and draw the individual line-seqments in the map. You can finish the draw with a double-click.
+Line: Select the button "Line" and draw the individual line-segments in the map. You can finish the draw with a double-click.
 
 Polygon: Select the button "Polygon" and draw the individual vertices in the map. You can finish the draw with a double-click.
 
-Rectangle: Select the button "Rechtangle" and simply open up a rectangle with your mouse.
+Rectangle: Select the button "Rectangle" and simply open up a rectangle with your mouse.
 
-Text: Select the button "Text". The dialog will show a textfield where you can set your text. After this, simply klick into the map. Your specified text will appear at the click-point.
+Text: Select the button "Text". The dialog will show a textfield where you can set your text. After this, simply click into the map. Your specified text will appear at the click-point.
 
 
 Delete objects
@@ -83,7 +83,7 @@ You can add new vertices to existing lines or polygons if you move the vertex in
 .. image:: ../../../../../figures/de/redlining/redlining_modify_polygon.png
      :scale: 80
 
-You can move texts. The anchor-point of a text is at the bottom left corner of the first character. To move the text, simply click on that region and move the text in the map. The text cannot be altered after it is set. Please remove the old text object and set a new one.
+You can move text. The anchor-point of a text is at the bottom left corner of the first character. To move the text, simply click on that region and move the text in the map. The text cannot be altered after it is set. Please remove the old text object and set a new one.
 
 .. image:: ../../../../../figures/de/redlining/redlining_modify_text.png
      :scale: 80
