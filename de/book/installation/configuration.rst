@@ -143,6 +143,23 @@ parameters.yml
 
 **Hinweis:** Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
 
+Sofern Sie einen Proxy verwenden, müssen Sie diesen in der Datei parameters.yml im Bereich *OWSProxy Configuration* angeben.
+
+Eine Konfiguration könnte wie folgt aussehen:
+
+.. code-block:: yaml
+
+    # OWSProxy Configuration
+        ows_proxy3_logging: false
+        ows_proxy3_obfuscate_client_ip: true
+        ows_proxy3_host: myproxy
+        ows_proxy3_port: 8080
+        ows_proxy3_connecttimeout: 60
+        ows_proxy3_timeout: 90
+        ows_proxy3_user: ~
+        ows_proxy3_password: ~
+        ows_proxy3_noproxy:
+            - 192.168.1.123
 
 config.yml
 ^^^^^^^^^^
@@ -152,24 +169,6 @@ config.yml
 * framework.session.cookie_httponly: Stellen Sie für HTTP-only session cookies sicher, dass der Parameter framework.session.cookie_httponly auf true steht.
 
 **Hinweis:** Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
-
-Sofern Sie einen Proxy verwenden, müssen Sie diesen in der Datei config.yml im Bereich *ows_proxy3_core* angeben.
-
-Eine Konfiguration könnte wie folgt aussehen:
-
-.. code-block:: yaml
-
-    ows_proxy3_core:
-        logging: true
-        obfuscate_client_ip: true
-        proxy:
-            host: myproxy
-            port: 8080
-            connecttimeout: 60
-            timeout: 90
-            noproxy:
-                - 192.168.1.123
-
 
 
 mapbender.yml
