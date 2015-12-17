@@ -190,3 +190,58 @@ You can configure an applications on two ways. In the mapbender.yml file or with
 .. code-block:: yaml
 
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
+
+
+
+Production- and Development environment and Caching: app.php and app_dev.php
+-----------------------------------------------------------------------------
+
+Mapbender3 provides two environments: a production-environment for the
+general operation and a development-environment in which the application can
+be testet. This concept follows the `"environments" in the Symfony framework
+<http://symfony.com/doc/current/book/configuration.html>`_.
+
+The production-environment is called with the URL
+http://localhost/mapbender3/app.php, the development-environment with the
+URL http://localhost/mapbender3/app_dev.php. The call with app_dev.php is
+and should only be available from localhost.
+
+There are differences in the behaviour of app.php and app_dev.php:
+
+* The cache-mechanism of the development-environment behaves different: Not
+  all files are cached, so that the code-changes are directly
+  visible. Therefore is the usage of the app_dev.php always slower that the
+  production-environment.
+
+  In detail, the development-environment of Mapbender3 does not cache the
+  CSS, JavaScript and Translation files, among others.
+
+  The production-environment caches all theses files and puts them into the
+  app/cache folder.
+
+* The development-environment gives out error-messages and stack-traces out
+  to the user-interface. The production-environment logs them into the file
+  app/log/prod.log.
+
+* The development-environment shows the Symfony Profiler. This tool logs
+  things, that are important for developers but should not be visible for
+  common users.
+
+  .. image:: ../../../figures/symfony_profiler.png
+             :scale: 80
+  
+
+The directory app/cache contains the cache-files. It contains directories
+for each environment (prod and dev) but the mechanism of the dev-cache, as
+described, behaves different.
+
+If changes of the Mapbender3 interface or the code are made, the
+cache-directory (app/cache) has to be cleared to see the changes in the
+application.
+
+The following screenshots shows the location of the cache-directory in
+Mapbender3:
+
+.. image:: ../../../figures/mapbender_cache_directories.png 
+           :scale: 80

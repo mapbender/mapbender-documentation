@@ -183,3 +183,56 @@ Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die mapbe
 .. code-block:: yaml
 
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
+
+
+Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php
+-----------------------------------------------------------------------
+
+Mapbender3 bietet zwei Umgebungen an: eine Produktionsumgebung für den
+normalen Betrieb- und eine Entwicklerumgebung, in dem die Anwendungen
+getestet werden können. Dieses Konzept orientiert sich an den
+`"Environments" im Symfony Framework
+<http://symfony.com/doc/current/book/configuration.html>`_.
+
+Die Produktionsumgebung wird mit der URL http://localhost/mapbender3/app.php
+aufgerufen, die Entwicklungsumgebung mit der URL
+http://localhost/mapbender3/app_dev.php. Der Aufruf über app_dev.php kann
+und sollte nur nur vom localhost erfolgen.
+
+Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
+
+* Der Cache-Mechanismus verhält sich in der Entwicklungsumgebung anders: Es
+  werden nicht alle Dateien gecacht, so dass vorgenommene Änderungen direkt
+  sichtbar sind. Dadurch ist der Aufruf einer Anwendung über app_dev.php
+  immer langsamer als im Produktivbetrieb.
+
+  Im Detail werden in der Entwicklerumgebung von Mapbender3 u.a. die CSS,
+  JavaScript und Übersetzungsdateien nicht gecacht.
+
+  In der Produktionsumgebung werden diese aber in app/cache abgelegt.
+
+* In der Entwicklerumgebung werden Fehlermeldungen und ihr Stacktrace direkt
+  an der Oberfläche angezeigt. In der Produktionsumgebung werden die
+  Fehlermeldungen in die Datei app/log/prod.log geschrieben.
+
+* Die Entwicklungsumgebung zeigt den Symfony Profiler an. Dort werden Dinge
+  protokolliert, die nur für die Entwickler, aber nicht für Außenstehende
+  sichtbar sein sollten.
+
+  .. image:: ../../../figures/symfony_profiler.png
+             :scale: 80
+
+Das Verzeichnis app/cache enthält die einzelnen Cache-Dateien. Es werden
+Verzeichnisse für jede Umgebung (prod und dev) angelegt, das Verhalten des
+dev-Caches ist aber, wie angesprochen, anders.
+
+Bei Änderungen an der Oberfläche oder im Code von Mapbender3 ist das Cache
+Verzeichnis (app/cache) zu leeren, damit die Änderungen in der
+Produktionsumgebung sichtbar werden.
+
+Der folgende Screenshot zeigt den Ort der Cache-Verzeichnisse innerhalb von
+Mapbender3:
+
+.. image:: ../../../figures/mapbender_cache_directories.png 
+           :scale: 80
