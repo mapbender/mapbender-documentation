@@ -47,6 +47,7 @@ Your database configuration in the parameters.yml file could look like this when
     database_user:     postgres
     database_password: secret
 
+Further information is available in the chapter `Configuring the database <../database.html>`_.
 
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^

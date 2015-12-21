@@ -47,6 +47,7 @@ Ihre Datenbankkonfiguration könnte in der parameters.yml könnte folgendermaße
     database_user:     postgres
     database_password: geheim
 
+Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
 
     
 Erzeugen der Datenbank

@@ -80,7 +80,7 @@ Set the write permission for user (u), group (g) and others (a) and rights. Assi
 
 ..  sudo chmod -R ug+w /var/www/mapbender3/web/assets
 
-Adapt the Mapbender3 configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create.
+Adapt the Mapbender3 configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create. Further information is available in the chapter `Configuring the database <../database.html>`_.
 
 .. code-block:: yaml
 

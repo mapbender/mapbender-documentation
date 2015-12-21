@@ -70,7 +70,7 @@ Starten Sie den Apache Webserver neu und prüfen Sie, ob der Alias erreichbar is
 .. image:: ../../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
 
-Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten.
+Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
 
 .. code-block:: yaml
 
