@@ -16,6 +16,9 @@ Konfiguration
 
 Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter http://doc.mapbender3.org/de/book/database.html
 
+Für die Nutzung der unten beschriebenen Suche kann die Datenbank der Digitalisierung genutzt werden. Die Kofigurationen für die Erstellung der Datenbankverbindung finden sich unter :doc:`digitizer`
+
+
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
@@ -70,48 +73,61 @@ in der mapbender.yml Datei:
    asDialog: true  													# true, Erebniswiedergabe in einem Dialogfeld
    timeoutFactor:  2  												# Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
    routes:      													# Sammlung von Suchrouten
-       demo_a:  													# für Maschinen lesbarer Name
-           title: Demo A  											# für Menschen lesbarer Name
-           class: Mapbender\CoreBundle\Component\SQLSearchEngine 	# Suchmaschine, die verwendet werden soll
-           class_options:  											# Diese werden an die Suchmaschine weitergegeben
-               connection: search_db 								# DBAL Verbindungsname, der benutzt werden soll, benutzen sie ~ für default
-               relation: test.demo_a  								# Verbindungsauswahl, Unterabfragen können verwendet werden
-               attributes: [id, name]  								# Liste von Spalten auswählen, expressions are possible
-               geometry_attribute: geom  							# Name der Geometriesplate, die genutzt werden soll
-           form:  													# Einstellungen für das Suchformular 
-               the_name:  											# field name, use relation column name to query or anything else for splitted fields (see below)
-                   type: text  										# Eingabefeld, normalerweise Text oder Zahlen 
-                   options:  										# Einstellungen für das Eingabefeld
-                       required: true  								# HTML5 benötigte Attribute
-                       label: Custom Label  						# benutzerdefinierte Beschriftung eingeben, sont wird die Beschriftung von dem Feldnamen abgeleitet
-                       attr:  										# HTML Attribute
-                           data-autocomplete: on  					# Attribut, um Autovervollständigung zu aktivieren
-                           data-autocomplete-distinct: on  			# Attribut, dass Autovervollständigung aktiviert aber unterscheiden lässt
-                           data-autocomplete-using: field_a,field_b # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden
-                   split: [name, zusatz]  							# optionale Eingabefelder
-                   autocomplete-key: id  							# Spaltenname der wiedergegeben wird, statt des Spalteninhalts 
-                   compare: ~  										# See note below for compare modes
-               my_select:
-                   type: choice
-                   options:
-                       empty_value: Please select a sex
-                       choices:
-                           m: Male
-                           f: Female
-                           u: Unknown
-           results:
-               view: table  										# Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
-               count: true 											# Anzahl der Treffer anzeigen
-               headers:  											# Bezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
-                   id: ID 											# Spaltenname -> Überschrift
-                   name: Name
-               styleMap: ~  									    # siehe unten
-               callback:  											# Was beim Klick und Mauszeiger halten passiert
-                   event: click  									# Ergebnisliste (click oder mouseover)
-                   options:
-                       buffer: 10  									# Buffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
-                       minScale: ~  								# Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
-                       maxScale: ~
+       demo_polygon:  													# für Maschinen lesbarer Name
+			class: Mapbender\CoreBundle\Component\SQLSearchEngine  #  Suchmaschine, die verwendet werden soll
+			class_options:  # Diese werden an die Suchmaschine weitergegeben
+			    connection: digi_suche    # search_db  # DBAL Verbindungsname, der benutzt werden soll, benutzen sie ~ für default
+			    relation: polygons # Verbindungsauswahl, Unterabfragen können verwendet werden
+			    attributes: 
+			        - gid  # Liste von Spalten auswählen, expressions are possible
+			        - name 
+			        - type
+			    geometry_attribute: geom  # Name der Geometriesplate, die genutzt werden soll
+			form:  # Einstellungen für das Suchformular
+			    name:  # Feldname, Spaltenname der genutzt werden soll 
+			        type: text  # Eingabefeld, normalerweise Text oder Zahlen
+			        options:  # Einstellungen für das Eingabefeld
+			            required: false  # HTML5 benötigte Attribute
+			            label: Name  # benutzerdefinierte Beschriftung eingeben, sont wird die Beschriftung von dem Feldnamen abgeleitet
+			            attr:  # HTML5 benötigte Attribute
+			                data-autocomplete: on  # Attribut, um Autovervollständigung zu aktivieren
+			                data-autocomplete-distinct: on  # Attribut, dass Autovervollständigung aktiviert aber unterscheiden lässt
+			                data-autocomplete-using: type   # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden                
+			        compare: ilike  # Siehe unten für weitere Vergleichsformen
+			    type:
+			        type: choice
+			        options:
+			            empty_value: Please select a type.
+			            required: false
+			            choices:
+			                A: A
+			                B: B
+			                C: C
+			                D: D
+			                E: E
+			results:
+			    view: table  # Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
+			    count: true # Anzahl der Treffer anzeigen
+			    headers:  # hBezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
+			        gid: ID  # Spaltenname -> Überschrift
+			        name: Name
+			        type: Type
+			    callback:  # Was beim Klick und Mauszeiger halten passiert
+			        event: click  # Ergebnisliste (click oder mouseover)
+			        options:
+			            buffer: 10    # Puffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
+			            minScale: ~   # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
+                        maxScale: ~
+			    results:
+			        styleMap:  # Siehe unten für weitere Styles
+			            default:
+			                strokeColor: '#00ff00'
+			                strokeOpacity: 1
+			                fillOpacity: 0
+			            select:
+			                strokeColor: '#ff0000'
+			                fillColor: '#ff0000'
+			                fillOpacity: 0.4
 
 Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
 
