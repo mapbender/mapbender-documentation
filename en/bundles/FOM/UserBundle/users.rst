@@ -56,6 +56,26 @@ After that he gets a confirmation mail to complete the registration. Until
 that time he is only managed as inactive user in Mapbender3.
 
 
+Activating of users
+-------------------
+
+Since Mapbender 3.0.5.3. Users can be set activated or deactivated by
+Administrators with the ACL right of at least "operator". For this purpose,
+a checkbox exists in the Edit User dialog.
+
+A user with administration rights cannot activate or deactivate himself.
+
+.. image:: ../../../../en/bundles/FOM/UserBundle/edit_user_activated.png
+
+A user who is deactivated cannot login into Mapbender3 anymore until he gets
+activated again.
+           
+.. image:: ../../../../en/bundles/FOM/UserBundle/user_account_is_disabled.png
+
+Users which have self-registered themselves but have not approved the
+activation mail can now be activated by an administrator.
+
+
 Login Failures
 --------------
 

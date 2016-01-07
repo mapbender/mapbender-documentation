@@ -61,6 +61,28 @@ abschließen kann. Bis zu diesen Zeitpunkt ist er als inaktiver Nutzer in
 Mapbender3 hinterlegt.
 
 
+Aktivieren von Nutzern
+----------------------
+
+Seit Mapbender 3.0.5.3. Benutzer können von Administratoren mit mindestens
+der ACL-Rolle "operator" aktiviert oder deaktiviert werden. Dazu dient der
+Schalter im Edit User Dialog.
+
+Ein Benutzer mit Administrationsrechten kann sich selbst nicht aktivieren
+oder deaktivieren.
+
+.. image:: ../../../../en/bundles/FOM/UserBundle/edit_user_activated.png
+
+Ein Benutzer, der deaktiviert ist, kann sich nicht mehr am Mapbender3
+anmelden, bis er wieder aktiviert wird.
+           
+.. image:: ../../../../en/bundles/FOM/UserBundle/user_account_is_disabled.png
+           
+Benutzer, die sich selbst registriert haben, aber die Freischaltungsmail
+noch nicht bestätigt haben, können so von einem Administrator per Hand
+freigeschaltet werden.
+
+
 Login Fehler
 ------------
 
