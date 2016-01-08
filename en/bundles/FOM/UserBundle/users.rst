@@ -24,7 +24,9 @@ username or e-mail-adress.
 .. image:: ../../../../en/bundles/FOM/UserBundle/user_forgot_password.png
 
 After that he gets an e-mail with a link, which leads him to a site where he
-can reset his password. The link isn't valid anymore after this operation.
+can reset his password. The link isn't valid anymore after this
+operation. The text of the mail can be customized in the
+/FOM/UserBundle/Resources/translations/messages.en.xlf file.
 
 The functionality can be switched off in the config.yml.
 
@@ -54,6 +56,9 @@ user can type in his/her name, password and e-mail adresss.
 
 After that he gets a confirmation mail to complete the registration. Until
 that time he is only managed as inactive user in Mapbender3.
+
+The text of the confirmation mail can be customized in the
+/FOM/UserBundle/Resources/translations/messages.en.xlf file.
 
 
 Activating of users

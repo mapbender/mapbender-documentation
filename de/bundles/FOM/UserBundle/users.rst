@@ -28,7 +28,8 @@ er dann seinen Benutzernamen oder seine E-Mail Adresse an.
 
 Danach bekommt der Benutzer eine E-Mail mit einem Link, die zu der Seite
 führt, um das Passwort zurückzusetzen. Der Link ist danach nicht mehr
-gültig.
+gültig. Der Text der Mail kann in der Datei
+/FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
 
 Die Funktionalität kann in der config.yml ausgeschaltet werden.
 
@@ -59,6 +60,9 @@ Adresse angeben kann.
 Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung
 abschließen kann. Bis zu diesen Zeitpunkt ist er als inaktiver Nutzer in
 Mapbender3 hinterlegt.
+
+Die Texte der Bestätigungsmail können unter
+/FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
 
 
 Aktivieren von Nutzern
