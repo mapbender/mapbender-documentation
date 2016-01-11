@@ -65,7 +65,7 @@ Activating of users
 -------------------
 
 Since Mapbender 3.0.5.3. Users can be set activated or deactivated by
-Administrators with the ACL right of at least "operator". For this purpose,
+Administrators with the User-ACL-right of at least "edit". For this purpose,
 a checkbox exists in the Edit User dialog.
 
 A user with administration rights cannot activate or deactivate himself.

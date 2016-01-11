@@ -69,8 +69,8 @@ Aktivieren von Nutzern
 ----------------------
 
 Seit Mapbender 3.0.5.3. Benutzer können von Administratoren mit mindestens
-der ACL-Rolle "operator" aktiviert oder deaktiviert werden. Dazu dient der
-Schalter im Edit User Dialog.
+der Benutzer ACL-Rolle "edit" aktiviert oder deaktiviert werden. Dazu dient
+der Schalter im Edit User Dialog.
 
 Ein Benutzer mit Administrationsrechten kann sich selbst nicht aktivieren
 oder deaktivieren.
