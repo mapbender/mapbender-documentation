@@ -115,7 +115,9 @@ Erzeugen Sie eine Konfigurationsdatei mit Namen parameters.yml. Kopieren Sie daz
   cp app/config/parameters.yml.dist app/config/parameters.yml
 
 
-And afterwards get the runtime dependencies like Symfony and Doctrine:
+Zur Anpassung der parameters.yml lesen Sie bitte das Kapitel `Anpassen der Konfigurationsdatei <configuration.html#anpassen-der-konfigurationsdatei>`_.
+
+Laden Sie anschließend die Laufzeit-Umgebungen wie Symfony und Doctrine:
 
 .. code-block:: yaml
 
@@ -126,7 +128,7 @@ And afterwards get the runtime dependencies like Symfony and Doctrine:
 Die nächsten Schritte der Installation
 **************************************
 
-Folgen Sie nun den Schritten, die unter `Installation <installation_ubuntu.html>`_ beschrieben werden.:
+Folgen Sie nun den Schritten, die unter `Installation <installation_ubuntu.html>`_ beschrieben werden:
 
 **Hinweis:** Beachten Sie dabei, dass Mapbender3 in dem git-basierten Aufbau über eines zusätzliches Verzeichnis *application* verfügt (mapbender3/application/...). Dieses zuätzliche Verzeichnis muss bei den Befehlen beachtet werden.
 

@@ -140,7 +140,9 @@ Create a configuration file called parameters.yml. Copy the file application/app
 
   cp app/config/parameters.yml.dist app/config/parameters.yml
 
+Please read the chapter `Adapting the configuration file <configuration.html#adapting-the-configuration-file>`_ for details about the adjustments in the parameters.yml file.
 
+  
 And afterwards get the runtime dependencies like Symfony and Doctrine:
 
 .. code-block:: yaml
