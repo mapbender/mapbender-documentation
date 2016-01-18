@@ -25,7 +25,7 @@ Configuration
 * **Follow:** default false, true refreshs the map for every received GPS position received, only use with WMS in tiled mode.
 * **Center on first position:** center map only on first received gps position.
 * **Zoom to accuracy:** zoom map according to received gps position accuracy.
-* **Zoom to accuracy on first position:** Zzoom map according to first received gps position accuracy.
+* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy.
 
 
 YAML-Definition:
