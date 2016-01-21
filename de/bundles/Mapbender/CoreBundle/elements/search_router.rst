@@ -16,21 +16,21 @@ Konfiguration
 
 Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter http://doc.mapbender3.org/de/book/database.html
 
-Für die Nutzung der unten beschriebenen Suche kann die Datenbank der Digitalisierung genutzt werden. Die Kofigurationen für die Erstellung der Datenbankverbindung finden sich unter :doc:`digitizer`
-
+Hinweis: Für die Nutzung der unten beschriebenen Suche kann die Datenbank der Digitalisierung genutzt werden. Die Kofigurationen für die Erstellung der Datenbankverbindung finden sich unter :doc:`digitizer`
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Dialog:** Erebniswiedergabe in einem Dialogfeld.
 * **Timeout factor:** Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde.
+* **Width:** Breite des Dialogs (nur für Dialog, nicht Sidepane)
+* **Height:** Höhe des Dialogs
 * **Routes:** Sammlung von Suchrouten.
 
-Es können über den Button ``+`` mehrere Suchen (routes) erstellt werden. Jede Suche erhält im Feld ``titel`` einen Titel, über den die Suche nachher in einer Auswahlbox selektierbar ist.
+Es können über den Button ``+`` mehrere Suchen (routes) erstellt werden. Jede Suche erhält im Feld ``title`` einen Titel, über den die Suche nachher in einer Auswahlbox selektierbar ist.
 Die Definition der Suche erfolgt im yaml-Syntax in einem Textfeld. Hier wird die Suchtabelle/Abfrage, die Datenverbindung, der Formularaufbau und die Trefferausgabe definiert. 
 
 
-Element Definition im Web Administrationstool im Textfeld configuration:
+Beispiel einer Route-Konfiguration im Textfeld ``Configuration``:
 
 .. code-block:: yaml
 
@@ -63,9 +63,9 @@ Element Definition im Web Administrationstool im Textfeld configuration:
 
 
 YAML-Definition 
-----
+----------------
 
-in der mapbender.yml Datei:
+In der mapbender.yml Datei:
 
 .. code-block:: yaml
 

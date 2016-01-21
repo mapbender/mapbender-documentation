@@ -18,20 +18,19 @@ Configuration
 
 The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
 
-For the use of the below-described search the digitizer database can be used. The configuration for creating the database connection can be found at :doc:`digitizer`.
+Note: For the use of the below-described search the digitizer database can be used. The configuration for creating the database connection can be found at :doc:`digitizer`.
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Tooltip:** text to use as tooltip.
 * **Target:** Id of Map element to query.
-* **Dialog:** render inside a dialog or not.
-* **Timeout factor:** timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started.
-* **Routes:** ollection of search routes.
+* **Dialog:** Render inside a dialog or not.
+* **Timeout factor:** Timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started.
+* **Width:**  Width of the dialog (only for dialog, not sidepane)
+* **Height:**  Height of the dialog (only for dialog, not sidepane)
+* **Routes:** Collection of search routes.
 
-You can define Searches (Routes) with the ``+`` Button. Each Search has a titel which will show up in the search form in a selectbox where you can choose the search you want to use.
+You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox where you can choose the search you want to use. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
-The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
-
-Element definition in web interface in the configuration area:
+Example of a route-configuration in the ``configuration`` area:
 
 .. code-block:: yaml
 
@@ -64,9 +63,9 @@ Element definition in web interface in the configuration area:
 
 
 YAML-Definition
-----
+---------------
 
-for mapbender.yml:
+For mapbender.yml:
 
 .. code-block:: yaml
 
