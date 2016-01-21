@@ -40,8 +40,8 @@ You need a button to show this element or you can use it in the sidepane. See :d
 * **optional_fields** - define optional fields:
 
   * **title**: Name of the optional field, the default value is null (no optional fields are defined).
-  * **label**: label of the optional field.
-  * **options**: { required: true } : type of the optional field. Has to be true or false.
+  * **label**: Label of the optional field.
+  * **options**: { required: true } : Type of the optional field. Has to be true or false.
   
 * **replace_pattern** - You can modify the maprequest for printing. You can add additional parameters like map_resolution (for MapServer)
 
