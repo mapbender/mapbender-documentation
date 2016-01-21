@@ -27,6 +27,7 @@ Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seit
 
 * **Title**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Target**: Zielelement (ID des Kartenelements). 
+* **Type**: element oder dialog, default ist dialog
 * **Scales**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
 * **Drehbar**: definiert, ob der Ausdruck gedreht werden kann, der Standardwert ist true
 * **Legende drucken**: ob auch die Legende der Karte gedruckt werden soll, der Standardwert ist false
@@ -35,7 +36,6 @@ Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seit
 
 * **Template**: Verweis auf die Druckvorlage (z.B. a4potrait).
 * **Label**: Beschriftung des Feldes (z.B. Potrait A4).
-* **Format**: Ausgabeformat des Templates (z.B. a4).
 * **Optionale Felder (optional field)**: 
 ** **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
 ** **label**: Beschriftung des optionalen Feldes
@@ -47,9 +47,10 @@ YAML-Definition:
 .. code-block:: yaml
 
     target: map                    # ID des Kartenelements
+    type: dialog                   # element oder dialog, default ist dialog
     templates:
-        - { template: a4portrait, label: A4 Portrait, format: a4}	# Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
-        - { template: a4landscape, label: A4 Landscape, format: a4} 	# Vorlagebeschriftung im Druckdialog, Format (A4,A3,...) wird definiert
+        - { template: a4portrait, label: A4 Portrait}	# Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
+        - { template: a4landscape, label: A4 Landscape} 	# Vorlagebeschriftung im Druckdialog
     scales: [5000, 10000, 25000]   # Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
     quality_levels:				   # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
         - { dpi: 72 , label: Draft (72dpi)}		# die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung

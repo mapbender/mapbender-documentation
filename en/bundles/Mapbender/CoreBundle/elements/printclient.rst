@@ -28,12 +28,12 @@ Configuration
 You need a button to show this element or you can use it in the sidepane. See :doc:`button` for inherited configuration options.
 
 * **target**: Id of Map element to query
+* **type**: element or dialog, default is dialog
 * **templates**: template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
-* **** - template label in the dialog, format (a4,a3,...) has to be defined 
 * **scales** -  define scales to choose from selectbox or if empty free scale can be defined in a textfield
 * **quality_levels** - define quality levels in dpi
 * **rotatable** - true/false use true for rotation, default is true
-* **legend - true/false, default is false
+* **legend** - true/false, default is false
 * **legend_default_behaviour** - true/false, if true the legend checkbox is checked by default
 * **file_prefix** - define the file prefix for the pdf that is generated (file_prefix_date.pdf will be created)
 * **optional_fields** - define optional fields (example title-field oder comment)
@@ -44,9 +44,10 @@ YAML-Definition:
 .. code-block:: yaml
 
     target: map                    # Id of Map element to query
+    type: dialog                   # element or dialog, default is dialog
     templates:
-        - { template: a4portrait, label: A4 Portrait, format: a4}	# template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
-        - { template: a4landscape, label: A4 Landscape, format: a4} 	# template label in the dialog, format (a4,a3,...) has to be defined 
+        - { template: a4portrait, label: A4 Portrait}	# template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
+        - { template: a4landscape, label: A4 Landscape} 	# template label in the dialog
     scales: [5000, 10000, 25000]    # define scales to choose from selectbox or if empty free scale can be defined in a textfield
     quality_levels:					# define quality levels in dpi
         - { dpi: 72 , label: Draft (72dpi)}		# 72 - dpi value, Draft - label
