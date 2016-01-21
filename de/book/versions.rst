@@ -7,6 +7,110 @@ Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/
 
 Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender/mapbender/issues
 
+
+Milestone 3.0.5.2
+-----------------
+
+Release Datum: 27.10.2015
+
+**Bugfixes:**
+
+- Kopieren von Anwendungen: Rechte und Gruppen werden mit übernommen. Der Nutzer, der die Anwendung kopiert hat, wird Owner der kopierten Anwendung.
+- FOM: Änderungen im Verhalten bei falschen Logins und dem Locking. Es wird nur noch angezeigt, dass der Login fehlgeschlagen ist - unabhängig davon, ob der Benutzer existiert oder nicht.
+- Korrigierte Fehlermeldung beim Anlegen eines Benutzers mit zu kurzem Passwort.
+- Print: Fix des Replace Patterns.
+- Print: Fix, wenn falsch konfigurierter WMS Sonderzeichen (%26) in der Legenden URL hat.
+- Image Export in Firefox.
+- WMC Loader: Einladen von WMC und das Verhalten der BaseSources.
+- BaseSourceSwitcher: Kacheln des nicht sichtbaren Dienstes werden nicht vorgeladen.
+- BaseSourceSwitcher: Wenn eine Gruppe definiert ist, ist nur ein Thema beim Start eingeschaltet.
+- SearchRouter: Fix der Anführungszeichen für Tabellennamen.
+- Anwendungen kopieren: Fix der Suche in der kopierten Anwendung.
+- Simple Search: Return Schaltfläche wird abgefangen.
+- FeatureInfo: Add WMS Funktionalität und WMS Loader.
+- Icon Polygone in der Toolbar von Anwendungen ist sichtbar.
+- Icons, die nicht auf FontAwesome basieren, funktionieren auch im Mobilen Template.
+- Administration Map Element: Anzeige des Konfigurationdialogs im Backend beginnt oben.
+- Administration Datenquelle: Keine Formulardaten Vorbelegung durch den Browser für Benutzername und Passwort.
+- Mobile Anwendung: Darstellung unter Firefox für Android.
+- Update 3.0.4.x: FeatureInfo autoopen=true bleibt erhalten.
+- Doku: FOM `UserBundle Übersetzung <../bundles/FOM/UserBundle/index.html>`_ und `Ergänzung bei falschen Benutzer-Logins <../bundles/FOM/UserBundle/users.html>`_.
+- Doku: URL Parameter scale im `Map Element <../bundles/Mapbender/CoreBundle/elements/map.html>`_.
+- Doku: `WMC Loader <../bundles/Mapbender/WmcBundle/elements/wmc_loader.html>`_ und KeepSources.
+
+
+**Änderungen in der config.yml:**
+
+* Die folgenden Änderungen sind optionale Parameter für das Verhalten des Logins (siehe das `entsprechende Kapitel im FOM Bundle <../bundles/FOM/UserBundle/users.html>`_):
+
+    .. code-block:: yaml
+                    
+                    fom_user:
+
+                      # Allow to create user log table on the fly if the table doesn't exits.
+                      # Default: true
+                      auto_create_log_table: true
+
+                      # Time between to check login tries
+                      login_check_log_time: "-5 minutes" 
+
+                      # Login attemps before delay starts
+                      login_attempts_before_delay: 3
+
+                      # Login delay after all attemps are failed
+                      login_delay_after_fail: 2 # Seconds
+
+
+
+
+Milestone 3.0.5.1
+-----------------
+
+Release Datum: 26.08.2015
+
+**Neue Funktionen**: im `Kartenelement <../bundles/Mapbender/CoreBundle/elements/map.html>`_ und beim `Druck Client <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_:
+
+* Map: OpenLayers TileSize: Es kann die Kachelgröße für die Karte angegeben werden. Default: 256x256.
+* Map: Delay before Tiles: Für WMS-T, z.B. bei zeitlichen Parametern (zukünftig)
+* Druck: Koordinatenanzeige in der PDF-Druckausgabe
+* Druck: Übernahme Druckmaßstab abhängig vom Kartenmaßstab
+* Druck: Druck legend_default_behaviour
+* Druck: Hinzufügen von Druckvorlagen über das +-Symbol
+* Druck: Benutzerabhängiges Logo und Text
+
+
+**Bugfixes:**
+
+- Layertree: Lade-Symbol und Ausrufezeichen-Symbol.
+- Layertree: Zoom Symbol nicht bei Layern ohne BBOX-Information
+- WMS Reload: FeatureInfo
+- WMS Reload: Einige WMS konnten sich nicht neuladen lassen.
+- Export/Import von Anwendungen verschiedene Bugfixes
+- WMC-Editor und WMC-Load Fixes.
+- WMC aus einer Mapbender 3.0.4.1 Anwendung
+- Tile Puffer und BBOX Puffer fixes
+- FeatureInfo: Fixes im Design und bei der Anzeige als Accordion Panel
+- FeatureInfo: Drucken
+- Falscher Link Jquery-UI in layerset instance
+- Save Layerset und Save Layout bleibt auf der Seite
+- Classic Template: SCSS korrigiert
+- Mobile Template: Bootstrap Meldung verdeckt Schließen Schaltfläche
+- Mobile Template: SearchRouter Fenster ausblenden
+- Mobile Template: Mozilla Firefox Fixes im Layout
+- Backend: Layerset Filter und +-Buttons verstecken nicht mehr alles
+- composer.json Anpassung Version Digitizer auf 1.0.*
+- Dokumentation des JS-UI Generators (Formular-Generator): https://github.com/eSlider/vis-ui.js
+- Umstrukturierte `Installations-Dokumentation <installation.html>`_ und einige Anpassungen (php-pear, assets-Verzeichnis, init:acl, openssl).
+- Verbesserte Dokumentation der `Mapbender3 Templates <templates.html>`_
+- Verbesserte Dokumentation des `Quickstart <quickstart.html>`_
+
+**Known Issues:**
+
+- Kopieren von alten 3.0.4.1 Anwendungen kopiert nicht die anzuzeigenden Layersets der Map. Bitte speichern Sie vorher das Map und Overview-Element.
+- Regional Template entfernt
+
+
+
  
 Milestone 3.0.5.0
 -----------------

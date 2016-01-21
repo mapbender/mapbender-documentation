@@ -8,4 +8,4 @@ FOMUserBundle - Users and Security
    users
    roles_groups
    security
-
+   examples

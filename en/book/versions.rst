@@ -8,6 +8,105 @@ You find the milestones at: https://github.com/mapbender/mapbender/milestones
 Future Milestones: For details have a look at https://github.com/mapbender/mapbender/issues
 
 
+Milestone 3.0.5.2
+-----------------
+
+Release Datum: 27.10.2015
+
+**Bugfixes:**
+
+- Copy applications: User-Rights and groups are copied. The user who copied the application becomes owner of the copied application.
+- FOM: Changes in behaviour of wrong logins and user locking. It is only shown that the login failed, independent if the user exists or not.
+- Fixed error message when creating a user with a too short password.
+- Print: Fix of replace pattern.
+- Print: Fix if a wrong configured WMS has special characters (%26) in the legend URL.
+- Image export in Firefox.
+- WMC Loader: Loading WMC and Behaviour of BaseSources.
+- BaseSourceSwitcher: Tiles of a not visible service are not pre-fetched.
+- BaseSourceSwitcher: If a group is defined, only one theme is switched on.
+- SearchRouter: Fix of quotes for table-names.
+- Copy applications: Fix of the search in the copied application.
+- Simple Search: Catch the return key.
+- FeatureInfo: Add WMS functionality and WMS Loader.
+- Icon Polygon is visible in the toolbar of applications.
+- Icons, which are not based on FontAwesome also work in the mobile application.
+- Administration of the map element: The view of the configuration dialog in the backend starts on top.
+- Administration data source: No form data auto-complete from the browser for username and password.
+- Mobile application: Design in Firefox for Android.
+- Update 3.0.4.x: FeatureInfo autoopen=true is kept.
+- Doku: FOM `UserBundle translation <../bundles/FOM/UserBundle/index.html>`_ and `additional information for failed user logins <../bundles/FOM/UserBundle/users.html>`_.
+- Doku: URL parameter scale in `map element <../bundles/Mapbender/CoreBundle/elements/map.html>`_.
+- Doku: `WMC Loader <../bundles/Mapbender/WmcBundle/elements/wmc_loader.html>`_ and KeepSources.
+
+**Changes in config.yml:**
+
+* The following changes are optional parameters for the behaviour of the login (see also `the chapter in the FOM bundle for details <../bundles/FOM/UserBundle/users.html>`_):
+
+    .. code-block:: yaml
+                    
+                    fom_user:
+
+                      # Allow to create user log table on the fly if the table doesn't exits.
+                      # Default: true
+                      auto_create_log_table: true
+
+                      # Time between to check login tries
+                      login_check_log_time: "-5 minutes" 
+
+                      # Login attemps before delay starts
+                      login_attempts_before_delay: 3
+
+                      # Login delay after all attemps are failed
+                      login_delay_after_fail: 2 # Seconds
+
+
+Milestone 3.0.5.1
+-----------------
+
+Release Datum: 26.08.2015
+
+**New functions**: in the `Map element <../bundles/Mapbender/CoreBundle/elements/map.html>`_ and in the `Print client <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_:
+
+* Map: OpenLayers TileSize: You can set the tile-size for the map. Default: 256x256.
+* Map: Delay before Tiles: For WMS-T, for example with temporal parameters (in future)
+* Print: Show coordinates in PDF print
+* Print: get print scale depending on map-scale
+* Print: print legend_default_behaviour
+* Print: add print templates with the + symbol
+* Print: user-defined logo and text
+
+
+**Bugfixes:**
+
+- Layertree: loading symbol and exclamation mark symbol.
+- Layertree: zoom Symbol not for layers without a BBOX information
+- WMS Reload: FeatureInfo
+- WMS Reload: some WMS couldn't be reloaded.
+- Export/Import of application and miscellaneous bugfixes
+- WMC-Editor and WMC-Load fixes.
+- WMC from a Mapbender 3.0.4.1 application
+- Tile buffer and BBOX buffer fixes
+- FeatureInfo: Fixes in design and when shown as an Accordion Panel
+- FeatureInfo: Print
+- Wrong Jquery-UI link in layerset instance
+- Save Layerset and Save Layout leaves you on the page
+- Classic Template: SCSS corrections
+- Mobile Template: Bootstrap message hides close button
+- Mobile Template: close SearchRouter window
+- Mobile Template: Mozilla Firefox Fixes on layout
+- Backend: Layerset Filter and +-Buttons doesn't hide everything anymore
+- composer.json upgrade version of Digitizer to 1.0.*
+- Documentation of the JS-UI Generator (Form-Generator): https://github.com/eSlider/vis-ui.js
+- Restructured `Installations-Dokumentation <installation.html>`_ and some changes (php-pear, assets-Verzeichnis, init:acl, openssl).
+- Better documentation of the `Mapbender3 Templates <templates.html>`_
+- Better documentation of the `Quickstart <quickstart.html>`_
+
+**Known Issues:**
+
+- After copying an application from Mapbender 3.0.4.x you have to set the layerset in the map/overview element. Please save the map and overview element beforehand.
+- Regional Template removed
+
+
 Milestone 3.0.5.0
 -----------------
 

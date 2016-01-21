@@ -22,9 +22,9 @@ Configuration
 * **Anchor:** Anchoring of the element (left-top, left-bottom, right-top, right-bottom). Determines the position of the element in the layout.
 * **Numdigits:** Number of decimal digits of the coordinates.
 * **Target:** ID of the map element to which the element refers.
-* **Emtpy:** Text displayed when the mouse is not in the map (default: 'x = - y = -')
-* **Prefix:** Prefix in front of the X-coordinate (Standard '= x')
-* **Separator:** Separator following the X-coordinate and before Y-coordinate (default: ' y= ')
+* **Emtpy:** Text displayed when the mouse is not in the map (default: 'x = - y = -').
+* **Prefix:** Prefix in front of the X-coordinate (Standard '= x').
+* **Separator:** Separator following the X-coordinate and before Y-coordinate (default: ' y= ').
 
 
 YAML-Definition:

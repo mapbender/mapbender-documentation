@@ -15,8 +15,7 @@ general, 7 are used most often:
 - Create     : Create a new object
 - Edit       : Edit an existing object
 - Delete     : Delete an existing object
-- Undelete   : Undelete an object marked as deleted
-- Operator   : View, Create, Edit, Delete and Undelete permission
+- Operator   : View, Create, Edit, and Delete permission
 - Master     : Operator permission, can manage all permissions up to operator level.
 - Owner      : Master permission, can grant master permission as well.
 

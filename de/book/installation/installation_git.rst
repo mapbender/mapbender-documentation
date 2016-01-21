@@ -6,14 +6,14 @@ Git-basierte Installation
 
 Wenn Sie sich an der Mapbender3-Entwicklung beteiligen möchten oder aus anderen Gründen die Git Repositories für Mapbender3 verwenden, folgen Sie dieser Anleitung statt des normalen Downloads. Diese Anleitung basiert auf Ubuntu 12.04.  Für andere Distributionen benötigen Sie vielleicht spezielle Pakete wie z.B. sphinx-common.
 
-Prüfen Sie zuerst die Systemvoraussetzungen :doc:`Installation <installation>`. 
+Prüfen Sie zuerst die `Systemvoraussetzungen <systemrequirements.html>`_.
 
-Für die Gitt-basierte Installation benötigen Sie:
+Für die Git-basierte Installation benötigen Sie:
 
-* git     - schauen Sie sich das Dokument :doc:`Quick primer on using Git <development/git>` an, um mit GIt vertraut zu werde 
-* cURL    - kommandozeilen basiertes Tool für die Übertragung von Daten über URL Syntax,unterstützt HTTP, HTTPS und mehr
-* pear    - PHP Erweiterung und Anwendungs-Repository 
-* Phing   - `Phing <http://www.phing.info/>`_ ist nicht GNU make; es ist ein  PHP Projekt Build System oder Build-Werkzeug basierend auf ​Apache Ant.
+* git     - schauen Sie sich das Dokument `Quick primer on using Git <../../../en/book/development/git.html>`_ an, um mit Git vertraut zu werden.
+* cURL    - kommandozeilen basiertes Tool für die Übertragung von Daten über URL Syntax,unterstützt HTTP, HTTPS und mehr.
+* pear    - PHP Erweiterung und Anwendungs-Repository.
+* Phing   - `Phing <http://www.phing.info/>`_ ist nicht GNU make; es ist ein  PHP Projekt Build System oder Build-Werkzeug basierend auf Apache Ant.
 * php5-dev - Und natürlich die Dateien zur Entwicklung von PHP5-Modulen.
 
 
@@ -22,11 +22,23 @@ Klonen des Repositories
 
 Klonen ist einfach, geben Sie das folgende Kommando auf Ihrer Shell ein:
 
-.. code-block:: yaml
+.. code-block:: bash
 
-	git clone -b develop git://github.com/mapbender/mapbender-starter mapbender3
+    git clone https://github.com/mapbender/mapbender-starter.git mapbender3
+    cd mapbender3
 
 Entwickler, die Zugriff auf den Code haben möchten, müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-starter
+
+
+Zu einem Tag eines Mapbender3 Releases wechseln
+***********************************************
+
+Um mit einer Release Version von Mapbender3 zu arbeiten, wechseln Sie bitte zu dem spezifischen Tag. Zum Beispiel für Version 3.0.5.0: 
+
+.. code-block:: bash
+
+    git tag -l
+    git checkout v3.0.5.0
 
 
 Submodule abrufen
@@ -34,10 +46,9 @@ Submodule abrufen
 
 Die Starter-Applikation enthält nicht die Mapbender3 bundles, diese sind in einem eigenen Repository gespeichert und werden als Submodule in das Starter-Repository eingefügt. Rufen Sie das folgende Kommando im root-Verzeichnis ihres geklonten Repositories auf.
 
-.. code-block:: yaml
+.. code-block:: bash
 
-    cd mapbender3
-	git submodule update --init --recursive
+    git submodule update --init --recursive
 
 
 cURL
@@ -84,34 +95,29 @@ Dann wird Phing installiert:
     sudo pear install phing/phing
 
 
-PHPUnit
-=======
+Composer und PHPUnit
+====================
 
-Symfony2 benötigt ein neueres PHPUnit als z.B. Ubuntu 12.04 enthält. Pear wird verwendet, um  PHPUnit zu installieren:
-
-
-.. code-block:: yaml
-
-	sudo pear install phpunit/PHPUnit
-
-Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
+PHPUnit wird über den Composer mitgeliefert. Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
 
 Daher muss zuerst der Composer installiert werden (weitere Information unter http://getcomposer.org/download/):
 
 .. code-block:: yaml
 
+    cd application
     curl -sS https://getcomposer.org/installer | php
 
 
 Erzeugen Sie eine Konfigurationsdatei mit Namen parameters.yml. Kopieren Sie dazu die Datei application/app/config/parameters.yml.dist.
 
-.. code-block:: yaml
+.. code-block:: bash
 
-  cd application/app/config/
-  cp parameters.yml.dist parameters.yml
+  cp app/config/parameters.yml.dist app/config/parameters.yml
 
 
-And afterwards get the runtime dependencies like Symfony and Doctrine:
+Zur Anpassung der parameters.yml lesen Sie bitte das Kapitel `Anpassen der Konfigurationsdatei <configuration.html#anpassen-der-konfigurationsdatei>`_.
+
+Laden Sie anschließend die Laufzeit-Umgebungen wie Symfony und Doctrine:
 
 .. code-block:: yaml
 
@@ -122,7 +128,7 @@ And afterwards get the runtime dependencies like Symfony and Doctrine:
 Die nächsten Schritte der Installation
 **************************************
 
-Folgen Sie nun den Schritten, die unter :doc:`Installation <installation>` beschrieben werden.:
+Folgen Sie nun den Schritten, die unter `Installation <installation_ubuntu.html>`_ beschrieben werden:
 
 **Hinweis:** Beachten Sie dabei, dass Mapbender3 in dem git-basierten Aufbau über eines zusätzliches Verzeichnis *application* verfügt (mapbender3/application/...). Dieses zuätzliche Verzeichnis muss bei den Befehlen beachtet werden.
 
@@ -179,7 +185,7 @@ Hier finden Sie einige Kommandos zum Auffinden von Informationen:
  app/console help assets:install    - Anzeige der Hilfe zu speziellen Kommandos
 
 
-Lernen Sie wie Sie eigene Elemente über *app/console mapbender:generate:element* erzeugen können :doc:`How to create your own Element? <element_generate>`.
+Lernen Sie wie Sie eigene Elemente über *app/console mapbender:generate:element* erzeugen können `How to create your own Element? <../../../en/book/development/element_generate.html>`_.
         
 ..
  Package Build Tools
@@ -229,7 +235,7 @@ Sie finden die Mapbender3 Dokumentation auf github unter  mapbender-documentatio
 
 Entwickler mit Schreibrechten müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-documentation
 
-Lesen Sie mehr über :doc:`How to write Mapbender3 Documentation? <development/documentation_howto>`.
+Lesen Sie mehr über `How to write Mapbender3 Documentation? <../../../en/book/development/documentation_howto.html>`_.
 
 ApiGen
 ======
@@ -242,14 +248,14 @@ ApiGen
 	 sudo pear install pear.apigen.org/apigen
 
 
+Lesen Sie mehr in `How to write Mapbender3 Documentation? <../../../en/book/development/documentation_howto.html>`_.
+
 Troubleshooting
 ***************
 
-* Die ApiGen-Bestandteile laufen nur in der neusten Version von Phing. 2.4.12  ist ausreichend,  2.4.9 reicht nicht aus! 
-Testen Sie mit: 
+* Die ApiGen-Bestandteile laufen nur mit neueren Versionen von Phing (>= 2.4.12). Testen Sie die Phing Version mit: 
 
-
-.. code-block:: yaml
+.. code-block:: bash
 
               phing -v
 
@@ -257,30 +263,8 @@ Testen Sie mit:
 Mit dem folgenden Befehl können Sie ein Update all Ihrer Pear-Pakete vornehmen: 
 
 
-.. code-block:: yaml
-    
-	 sudo pear install pear.apigen.org/apigen
+.. code-block:: bash
 
-
-Lesen Sie mehr über :doc:`How to write Mapbender3 API Documentation? <development/apidocumentation>`.
-
-
-Troubleshooting
-***************
-
-* The ApiGen task only works with recent versions of Phing (>= 2.4.12). Check the Phing version with 
-
-
-.. code-block:: yaml
-
-              phing -v
-
-
-You can update all your Pear packages with
-
-
-.. code-block:: yaml
-
-	sudo pear upgrade-all
-
-
+    sudo pear upgrade-all
+      Enable full APC compatibility [yes] : yes
+      Enable internal debugging in APCu [no] : yes

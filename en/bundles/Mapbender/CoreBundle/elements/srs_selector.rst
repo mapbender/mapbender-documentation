@@ -4,11 +4,10 @@ Spatial Reference System Selector (SRS Selector)
 ********************************************************
 
 The spatial reference system selector changes the map's spatial reference system.
+Notice: The Selectbox offers the SRS that are defined for the `map element <../elements/map.html>`_.
 
-Notice: The Selectbox offers the SRS that are defined for the map-Element.
 
-
-.. image:: ../../../../../figures/srs_selector.png
+.. image:: ../../../../../figures/de/srs_selector.png
      :scale: 100
 
 Configuration
@@ -16,6 +15,14 @@ Configuration
 
 .. image:: ../../../../../figures/srs_selector_configuration.png
      :scale: 80
+
+* **Show label:** indicates the element.
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Tooltip:** text to use as tooltip.
+* **Target:** Id of Map element to query.
+
+YAML-Definition:
+----
 
 .. code-block:: yaml
 
@@ -26,9 +33,9 @@ Configuration
 Class, Widget & Style
 =====================
 
-* Class: Mapbender\\CoreBundle\\Element\\SrsSelector
-* Widget: mapbender.element.srsselector.js
-* Style: mapbender.elements.css
+* **Class:** Mapbender\\CoreBundle\\Element\\SrsSelector
+* **Widget:** mapbender.element.srsselector.js
+* **Style:** mapbender.elements.css
 
 HTTP Callbacks
 ==============

@@ -15,11 +15,19 @@ Configuration
 .. image:: ../../../../../figures/search_router_configuration.png
      :scale: 80
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
 
 The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
 
-You can define Searches (Routes) with the + Button. Each Search has a titel which will show up in the search form in a selectbox where you can choose the search you want to use.
+For the use of the below-described search the digitizer database can be used. The configuration for creating the database connection can be found at :doc:`digitizer`.
+
+* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Tooltip:** text to use as tooltip.
+* **Target:** Id of Map element to query.
+* **Dialog:** render inside a dialog or not.
+* **Timeout factor:** timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started.
+* **Routes:** ollection of search routes.
+
+You can define Searches (Routes) with the ``+`` Button. Each Search has a titel which will show up in the search form in a selectbox where you can choose the search you want to use.
 
 The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
@@ -55,7 +63,10 @@ Element definition in web interface in the configuration area:
                 maxScale: null
 
 
-YAML-Definition for mapbender.yml:
+YAML-Definition
+----
+
+for mapbender.yml:
 
 .. code-block:: yaml
 
@@ -63,49 +74,63 @@ YAML-Definition for mapbender.yml:
    asDialog: true  # render inside a dialog or not
    timeoutFactor:  2  # timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started
    routes:      # collection of search routes
-       demo_a:  # machine readable name
-           title: Demo A  # human readable title
-           class: Mapbender\CoreBundle\Component\SQLSearchEngine  # Search engine to use
-           class_options:  # these are forwarded to the search engine
-               connection: search_db  # DBAL connection name to use, use ~ for the default one
-               relation: test.demo_a  # Relation to select from, you can use subqueries
-               attributes: [id, name]  # array of columns to select, expressions are possible
-               geometry_attribute: geom  # name of the geometry column to query
-           form:  # search form configuration
-               the_name:  # field name, use relation column name to query or anything else for splitted fields (see below)
-                   type: text  # field type, usually text or integer
-                   options:  # field options
-                       required: true  # HTML5 required attribute
-                       label: Custom Label  # Enter a custom label, otherwise the label will be derived off the field name
-                       attr:  # HTML attributes to inject
-                           data-autocomplete: on  # this triggers autocomplete
-                           data-autocomplete-distinct: on  # This forces DISTINCT select
-                           data-autocomplete-using: field_a,field_b  # comma-separated list of other field values to use in WHERE clause for autocomplete
-                   split: [name, zusatz]  # optional field contents, might be split
-                   autocomplete-key: id  # column name to return as autocomplete key instead of column value
-                   compare: ~  # See note below for compare modes
-               my_select:
-                   type: choice
-                   options:
-                       empty_value: Please select a sex
-                       choices:
-                           m: Male
-                           f: Female
-                           u: Unknown
-           results:
-               view: table  # only result view type for now
-               count: true # show number of results
-               headers:  # hash of table headers and the corresponding result columns
-                   id: ID  # column name -> header label
-                   name: Name
-               styleMap: ~  # See below
-               callback:  # What to do on hover/click
-                   event: click  # result row event to listen for (click or mouseover)
-                   options:
-                       buffer: 10  # buffer result geometry with this (map units) before zooming
-                       minScale: ~  # scale restrictions for zooming, ~ for none
-                       maxScale: ~
+       demo_polygon:       # machine readable name
+			class: Mapbender\CoreBundle\Component\SQLSearchEngine  # Search engine to use
+			class_options:  # these are forwarded to the search engine
+			    connection: search_db    # search_db  # DBAL connection name to use, use ~ for the default one
+			    relation: polygons  # Relation to select from, you can use subqueries
+			    attributes: 
+			        - gid  # array of columns to select, expressions are possible
+			        - name 
+			        - type
+			    geometry_attribute: geom  # name of the geometry column to query
+			form:  # search form configuration
+			    name:  # field name, use relation column name to query or anything else for splitted fields (see below)
+			        type: text  # field type, usually text or integer
+			        options:  # field options
+			            required: false  # HTML5 required attribute
+			            label: Name  # Enter a custom label, otherwise the label will be derived off the field name
+			            attr:  # HTML attributes to inject
+			                data-autocomplete: on  # this triggers autocomplete
+			                data-autocomplete-distinct: on  # This forces DISTINCT select
+			                data-autocomplete-using: type   # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden                
+			        compare: ilike  # See note below for compare modes
+			    type:
+			        type: choice
+			        options:
+			            empty_value: Please select a type.
+			            required: false
+			            choices:
+			                A: A
+			                B: B
+			                C: C
+			                D: D
+			                E: E
+			results:
+			    view: table  # only result view type for now
+			    count: true # show number of results
+			    headers:  # hash of table headers and the corresponding result columns
+			        gid: ID  # column name -> header label
+			        name: Name
+			        type: Type
+			    callback:  # What to do on hover/click
+			        event: click  # result row event to listen for (click or mouseover)
+			        options:
+			            buffer: 10
+			            minScale: ~  # scale restrictions for zooming, ~ for none
+			            maxScale: ~
+			    results:
+			        styleMap:  # See below
+			            default:
+			                strokeColor: '#00ff00'
+			                strokeOpacity: 1
+			                fillOpacity: 0
+			            select:
+			                strokeColor: '#ff0000'
+			                fillColor: '#ff0000'
+			                fillOpacity: 0.4
 
+You need a button to show this element. See :doc:`button` for inherited configuration options.
 
 Compare modes
 -------------
@@ -113,14 +138,14 @@ Compare modes
 Each field can be assigned a compare mode which is evaluated by the engine when building the search query. The SQL search
 engine has the following modes:
 
-* exact: exact comparison (key = val)
-* iexact: case-insensitive comparison
-* like: default, uses two-sided like
-* like-left: uses left-sided like
-* like-right: uses right-sided like
-* **ilike**: uses two-sided case-insensitive like
-* ilike-left: uses left-sided case-insensitive like
-* ilike-right: uses right-sided case-insensitive like
+* **exact:** exact comparison (key = val)
+* **iexact:** case-insensitive comparison
+* **like:** default, uses two-sided like
+* **like-left:** uses left-sided like
+* **like-right:** uses right-sided like
+* **ilike:** uses two-sided case-insensitive like (*searchstring*)
+* **ilike-left:** uses left-sided case-insensitive like (f.e *searchstring)
+* **ilike-right:** uses right-sided case-insensitive like (f.e searchstring*) 
 
 
 Result feature styling
@@ -171,9 +196,9 @@ A more elaborate example with green (hollow) features and the selected one in re
 Class, Widget & Style
 =====================
 
-* Class: Mapbender\\CoreBundle\\Element\\SearchRouter
-* Widget: mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
-* Style: mapbender.element.searchRouter.css
+* **Class:** Mapbender\\CoreBundle\\Element\\SearchRouter
+* **Widget:** mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
+* **Style:** mapbender.element.searchRouter.css
 
 HTTP Callbacks
 ==============

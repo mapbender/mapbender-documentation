@@ -25,17 +25,18 @@ Konfiguration
 Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden. Siehe unter :doc:`button` für die Konfiguration.
 
 
-* **Title**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Titel**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Target**: Zielelement (ID des Kartenelements). 
 * **Type**: element oder dialog, default ist dialog
-* **Scales**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
+* **Maßstabsstufen (Scales)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
 * **Drehbar**: definiert, ob der Ausdruck gedreht werden kann, der Standardwert ist true
 * **Legende drucken**: ob auch die Legende der Karte gedruckt werden soll, der Standardwert ist false
+* **Legenden Checkbox aktiv**: Soll die Legenden-Checkbox beim Start aktiv sein
 * **File prefix**: Definition des Dateinames für das PDF
-* **quality_levels**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
-
+* **Qualitätsstufen**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
 * **Template**: Verweis auf die Druckvorlage (z.B. a4potrait).
-* **Label**: Beschriftung des Feldes (z.B. Potrait A4).
+* **Beschriftung (Label)**: Beschriftung des Feldes (z.B. Potrait A4).
+
 * **Optionale Felder (optional field)**: 
 ** **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
 ** **label**: Beschriftung des optionalen Feldes
@@ -114,12 +115,17 @@ Die folgenden Bereiche liegen standardmäßig vor:
 * scalebar (Maßstabsleiste)
 * date (Datum in der Form 10.10.2014)
 * northarrow (Nordpfeil)
+* Koordinaten des Druckbereichs
+* dynamisches Bild (gekoppelt an die Gruppe)
+* dynamischer Text (gekoppelt an die Gruppe)
 
 Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die Open Office Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
 
 Exportieren Sie die Vorlage als PDF unter dem gleichen Namen wie die ODG-Datei. Verwenden Sie den Namen ohne Dateierweiterung in der Druck yml-Definition.
 
 Das Druck-Skript liest die Informationen (Position, Größe, Schriftgröße, Ausrichtung) aus der ODG-Datei aus und verwendet ebenfalls das PDF-Dokument mit den festen Objekten. Aus beiden und den aktuellen Karten wird dann eine PDF-Druckdatei erstellt.
+
+Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder (z.B. Logo der Gemeinde) ausgegeben werden. Hierzu gibt es die Platzhalter dynamisches Bild und dynamischer Text. Sofern diese Bereiche im Drucklayout vorliegen wird nach einem Bild mit dem Namen der Gruppe gesucht und dieses im Bereich dynamic_image ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Unter dynamic_text wird die Beschreibung der Gruppe ausgegeben.
 
 
 Konfiguration des Elements

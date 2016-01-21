@@ -9,11 +9,11 @@ instead of the normal download. This guide is based on Ubuntu 12.04. For
 other distributions, you may need to adapt, especially package names like
 sphinx-common.
 
-First check the prerequisites at :doc:`Installation <installation>`. 
+First check the prerequisites at `Installation <systemrequirements.html>`_. 
 
 For git-based installations you also need:
 
-* git     - have a look at the :doc:`Quick primer on using Git <development/git>` to get familiar with git 
+* git     - have a look at the `Quick primer on using Git <../development/git.html>`_ to get familiar with git 
 * cURL    - command line tool for transferring data with URL syntax, supporting HTTP, HTTPS and more
 * pear    - PHP Extension and Application Repository 
 * Phing   - `Phing <http://www.phing.info/>`_ Is Not GNU make; it's a PHP project build system or build tool based on ​Apache Ant.
@@ -25,12 +25,24 @@ Cloning the Repository
 
 Get the code from the git repository. Cloning is easy, just issue the following command in your shell:
 
-.. code-block:: yaml
+.. code-block:: bash
 
-	git clone -b develop git://github.com/mapbender/mapbender-starter mapbender3
+    git clone https://github.com/mapbender/mapbender-starter.git mapbender3
+    cd mapbender3
 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-starter
+
+
+Change to a tag of a Mapbender3 release
+***************************************
+
+To work with a release version of Mapbender3 change to the specific tag. For version 3.0.5.0 for example:
+
+.. code-block:: bash
+
+    git tag -l
+    git checkout v3.0.5.0
 
 
 Fetching the Submodules
@@ -42,9 +54,8 @@ starter repository. To fetch them, issue the following command at the root
 directory of your cloned repository:
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
-    cd mapbender3
 	git submodule update --init --recursive
 
 
@@ -96,19 +107,10 @@ Then let's get Phing:
     sudo pear install phing/phing
 
 
-PHPUnit
-=======
+Composer and PHPUnit
+====================
 
-Symfony2 needs a more recent PHPUnit than for example comes with Ubuntu 12.04.
-So we will use Pear to install PHPUnit:
-
-
-.. code-block:: yaml
-
-	sudo pear install phpunit/PHPUnit
-
-
-Our build scripts need some more dependencies to run unit test, generate
+PHPUnit is delivered with Composer. Our build scripts need some more dependencies to run unit test, generate
 documentation and build installation packages.
 
 Once you have installed the dependencies listed below, you can get an overview
@@ -127,18 +129,20 @@ So, first install Composer (more information at http://getcomposer.org/download/
 
 .. code-block:: yaml
 
+    cd application
     curl -sS https://getcomposer.org/installer | php
 
 
 Create a configuration file called parameters.yml. Copy the file application/app/config/parameters.yml.dist.
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
-  cd application/app/config/
-  cp parameters.yml.dist parameters.yml
+  cp app/config/parameters.yml.dist app/config/parameters.yml
 
+Please read the chapter `Adapting the configuration file <configuration.html#adapting-the-configuration-file>`_ for details about the adjustments in the parameters.yml file.
 
+  
 And afterwards get the runtime dependencies like Symfony and Doctrine:
 
 .. code-block:: yaml
@@ -149,7 +153,7 @@ And afterwards get the runtime dependencies like Symfony and Doctrine:
 Next steps from Installation
 ****************************
 
-Now follow the steps that are described in  :doc:`Installation <installation>`:
+Now follow the steps that are described in  `Installation <installation_ubuntu.html>`_:
 
 **Notice:** Please note that the git based code has an additional directory *application* (mapbender3/application/...). 
 
@@ -205,7 +209,7 @@ Here are some commands to help to find information:
  app/console mapbender              - lists all functions from mapbender 
  app/console help assets:install    - help for a special command
 
-Learn how to generate Mapbender elements with *app/console mapbender:generate:element* at :doc:`Wie können eigene Elemente erzeugt werden? <element_generate>`.
+Learn how to generate Mapbender elements with *app/console mapbender:generate:element* at `How to create your own Element? <../development/element_generate.html>`_.
         
 ..
  Package Build Tools
@@ -257,7 +261,7 @@ You find the Mapbender3 documentation at github at mapbender-documentation. Get 
 Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-documentation
 
-Read more about :doc:`How to write Mapbender3 Documentation? <development/documentation_howto>`.
+Read more about `How to write Mapbender3 Documentation? <../development/documentation_howto.html>`_.
 
 ApiGen
 ======
@@ -269,16 +273,16 @@ ApiGen
     
 	 sudo pear install pear.apigen.org/apigen
 
-Read more about :doc:`How to write Mapbender3 API Documentation? <development/apidocumentation>`.
+Read more about `How to write Mapbender3 API Documentation? <../development/apidocumentation.html>`_.
 
 
 Troubleshooting
 ***************
 
-* The ApiGen task only works with recent versions of Phing (>= 2.4.12). Check the Phing version with 
+* The ApiGen task only works with recent versions of Phing (>= 2.4.12). Check the Phing version with:
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
               phing -v
 
@@ -286,49 +290,53 @@ Troubleshooting
 You can update all your Pear packages with
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
-	sudo pear upgrade-all
+    sudo pear upgrade-all
       Enable full APC compatibility [yes] : yes
       Enable internal debugging in APCu [no] : yes 
 
-Using the quick_install.py script
-#################################
+      
+..
+   Using the quick_install.py script
+   *********************************
 
-A Python script to quickly install a mapbender-starter is provided with the
-mapbender-starter itself. You can download that script, which offers a number
-of command line arguments:
+   A Python script to quickly install a mapbender-starter is provided with the
+   mapbender-starter itself. You can download that script, which offers a number
+   of command line arguments:
 
-- branch: by default, the develop branch is used, but you can specify any branch
-- directory: by default the directory mapbender3_BRANCH will be used, but that
-  can be specified as well.
-- admin user: the default admin account (root <root@example.com> / root) can be
-  changed as well.
+   - branch: by default, the develop branch is used, but you can specify any branch
+   - directory: by default the directory mapbender3_BRANCH will be used, but that
+     can be specified as well.
+   - admin user: the default admin account (root <root@example.com> / root) can be
+     changed as well.
 
-You can download the script or just pass it's URL to curl to fetch it and pipe
-the result trough Python. The later is demonstrated in the examples section
-below.
+   You can download the script or just pass it's URL to curl to fetch it and pipe
+   the result trough Python. The later is demonstrated in the examples section
+   below.
 
-Examples
-********
+   Examples
+   ========
 
-http://bit.ly/1tQvo5i is the shortened URL for
-https://raw.githubusercontent.com/mapbender/mapbender-starter/develop/bin/quick_install.py
+   http://bit.ly/1tQvo5i is the shortened URL for
+   https://raw.githubusercontent.com/mapbender/mapbender-starter/develop/bin/quick_install.py
 
-- Install develop branch into mapbender3_develop
-  
-  .. code-block:: sh
+   - Install develop branch into mapbender3_develop
 
-    curl -sSL http://bit.ly/1tQvo5i | python
+     .. code-block:: sh
 
-- Install foo branch into /tmp/bar
-  
-  .. code-block:: sh
+       curl -sSL http://bit.ly/1tQvo5i | python
 
-    curl -sSL http://bit.ly/1tQvo5i | python - --dir=/tmp/bar foo
+   - Install foo branch into /tmp/bar
 
-- Install develop branch, but use admin <admin@example.com> with password admin
-  
-  .. code-block:: sh
+     .. code-block:: sh
 
-    curl -sSL http://bit.ly/1tQvo5i | python - --username=admin --email=admin@example.com --password=admin
+       curl -sSL http://bit.ly/1tQvo5i | python - --dir=/tmp/bar foo
+
+   - Install develop branch, but use admin <admin@example.com> with password admin
+
+     .. code-block:: sh
+
+       curl -sSL http://bit.ly/1tQvo5i | python - --username=admin --email=admin@example.com --password=admin
+
+       

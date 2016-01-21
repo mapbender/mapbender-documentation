@@ -5,7 +5,7 @@ Legende
 
 Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Dabei wird jeder einzelne Layer mit seinen Punkte, Flächen und Linien aufgelistet.
 
-.. image:: ../../../../../figures/de/legend.png
+.. image:: ../../../../../figures/legend.png
      :scale: 80
 
 Konfiguration

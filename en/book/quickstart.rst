@@ -272,18 +272,18 @@ You can configure the WMS for your specific application. Maybe you don't want to
 
 **Service configuration:**
 
-* Title - name shown in the application
-* Format - choose the format for getMap-Requests
-* Infoformat - choose the format for getFeatureInfo-Requests
-* Exceptionformat - choose the format for exceptions
-* Opacity - choose opacity in percent
-* Tile buffer - 1 - the maprequest uses a the size of the mapwindow. 1.25 (default) - maprequest uses a bigger size as the mapwindows size 
-* BBOX factor - if you use tiled: value 0 - no additional tiles outside the displayed area are requested
-* Visible - set the visibility of the request
-* BaseSource - should the Service be handled as BaseSource (BaseSources can be shown/hided in the layertree)
-* Proxy - if active the service will be requested by Mapbender and not directly
-* Transparency - default is active, the source is without a transparent background if it is deactivated (getMap-Request with TRANSPARENT=FALSE)
-* Tiled - you can request a WMS in tiles, default is not tiled (may be a good choice if you map is very big an the WMS service does not support the width/height)
+* Title: name shown in the application
+* Format: choose the format for getMap-Requests
+* Infoformat: choose the format for getFeatureInfo-Requests
+* Exceptionformat: choose the format for exceptions
+* Opacity: choose opacity in percent
+* Tile buffer: This parameter is valid for tiles services and specifies if additional tiles should be requested. If the user pans the map, these tiles are already downloaded and visible. The higher the value the more tiles are requested. Default: 0
+* BBOX-Faktor: This parameter is valid for non-tiled WMS services. You can specify the size of the returned map-image. A value greater than 1 will request a bigger map-image. Default: 1.25, can be set to 1.
+* Visible: set the visibility of the request
+* BaseSource: should the Service be handled as BaseSource (BaseSources can be shown/hided in the layertree)
+* Proxy: if active the service will be requested by Mapbender and not directly
+* Transparency: default is active, the source is without a transparent background if it is deactivated (getMap-Request with TRANSPARENT=FALSE)
+* Tiled: you can request a WMS in tiles, default is not tiled (may be a good choice if you map is very big an the WMS service does not support the width/height)
 
 
 **Vendor Specific Parameter:**

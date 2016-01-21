@@ -29,13 +29,14 @@ You need a button to show this element or you can use it in the sidepane. See :d
 
 * **target**: Id of Map element to query
 * **type**: element or dialog, default is dialog
-* **templates**: template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
 * **scales** -  define scales to choose from selectbox or if empty free scale can be defined in a textfield
-* **quality_levels** - define quality levels in dpi
 * **rotatable** - true/false use true for rotation, default is true
-* **legend** - true/false, default is false
-* **legend_default_behaviour** - true/false, if true the legend checkbox is checked by default
+* **print legend** - true/false, default is false
+* **legend checkbox checked** - (legend_default_behaviour) - true/false, if true the legend checkbox is checked by default
 * **file_prefix** - define the file prefix for the pdf that is generated (file_prefix_date.pdf will be created)
+* **quality_levels** - define quality levels in dpi
+* **templates**: template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
+* **label** - define a template label for the selectbox
 * **optional_fields** - define optional fields (example title-field oder comment)
 * **replace_pattern** - You can modify the maprequest for printing. You can add additional parameters like map_resolution (for MapServer)
 
@@ -112,12 +113,17 @@ The following objects are available from Mapbender:
 * scalebar
 * date
 * northarrow (Nordpfeil)
+* coordinates of the print extent
+* dynamic image (connected to group role)
+* dynamic text (connected to group role)
 
 You can define optional fields in the element definition (like title, comment, editor) and add them to the Open Office Draw file.
 
 Export the template to pdf under the same name as the odg file. Use the name without extension in your print yml-definition.
 
 The print script will read the information (position, size, font size, alignment) from the odg file and will also use the pdf with the fixed objects to generate the new pdf. 
+
+Dependant of the group you can generate prints with different Logo and Text (f.e. the name of the commune and the individual logo). There are two objects which handle this - dynamic_image and dynamic_text. If these objects exists in your print layout Mapbender and you are member of a group Mapbender will look for an Image with the name of the group (groupname.png) and will be displayed in the print in the object dynamic_image. The height of the object will be used to scale the image and the width will be calculated relative to the height. In the object dynamic_text the group description will be printed.
 
 
 Configuration of the element
