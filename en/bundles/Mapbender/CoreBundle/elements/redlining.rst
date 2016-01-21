@@ -61,6 +61,8 @@ Rectangle: Select the button "Rectangle" and simply open up a rectangle with you
 
 Text: Select the button "Text". The dialog will show a textfield where you can set your text. After this, simply click into the map. Your specified text will appear at the click-point.
 
+Once you have clicked the button of one geometry-type, this button is active and you can drob objects on the map. If you want to quit the draw-mode, click again on that button.
+
 
 Delete objects
 --------------
@@ -93,6 +95,12 @@ Zoom to an object
 -----------------
 
 You can zoom to the specific object by clicking on the magnifying glass symbol.
+
+
+Quit the draw-mode
+------------------
+
+If you have finished your drawing, click again on the button of your geometry-type. The button gets inactiv again and a click on the map leads again to the standard behaviour.
 
 
 

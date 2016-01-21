@@ -61,6 +61,8 @@ Rechteck: Wählen Sie die Schaltfläche "Rechteck" und ziehen Sie einfach ein Re
 
 Text: Wählen Sie die Schaltfläche "Text". Im Dialog erscheint ein Textfeld zur Texteingabe. Danach klicken Sie einfach in die Karte. Am Klickpunkt erscheint der eingegebene Text.
 
+Sobald Sie die Schaltfläche eines Geometrietyps geklickt haben, ist die Schaltfläche aktiv und Sie können Objekte in die Karte zeichnen. Wenn Sie den Zeichen-Modus verlassen wollen, klicken Sie wieder auf diese Schaltfläche.
+
 
 Objekte löschen
 ---------------
@@ -93,6 +95,12 @@ Zu Objekten zoomen
 ------------------
 
 Mit dem Lupen-Symbol können Sie zu dem jeweiligen Objekt zoomen.
+
+
+Den Zeichnen-Modus verlassen
+----------------------------
+
+Wenn Sie mit dem Zeichnen fertig sind, klicken Sie wieder auf die Schaltfläche des Geometrietyps, den Sie gezeichnet haben. Die Schaltfläche wird inaktiv und bei einem Klick auf der Karte wird wieder das normale Verhalten ausgeführt.
 
 
 
