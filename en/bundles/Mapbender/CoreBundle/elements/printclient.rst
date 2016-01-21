@@ -37,7 +37,12 @@ You need a button to show this element or you can use it in the sidepane. See :d
 * **quality_levels** - define quality levels in dpi
 * **templates**: template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
 * **label** - define a template label for the selectbox
-* **optional_fields** - define optional fields (example title-field oder comment)
+* **optional_fields** - define optional fields:
+
+  * **title**: Name of the optional field, the default value is null (no optional fields are defined).
+  * **label**: label of the optional field.
+  * **options**: { required: true } : type of the optional field. Has to be true or false.
+  
 * **replace_pattern** - You can modify the maprequest for printing. You can add additional parameters like map_resolution (for MapServer)
 
 YAML-Definition:

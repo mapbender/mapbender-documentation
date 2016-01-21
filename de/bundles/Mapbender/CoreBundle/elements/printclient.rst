@@ -37,10 +37,12 @@ Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seit
 * **Template**: Verweis auf die Druckvorlage (z.B. a4potrait).
 * **Beschriftung (Label)**: Beschriftung des Feldes (z.B. Potrait A4).
 
-* **Optionale Felder (optional field)**: 
-** **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
-** **label**: Beschriftung des optionalen Feldes
-** **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein
+* **Optionale Felder (optional field)**:
+  
+  * **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
+  * **label**: Beschriftung des optionalen Feldes.
+  * **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
+    
 * **Replace pattern**: Kartenaufruf kann verändert werden. Angaben können angefügt oder verändert werden
 
 YAML-Definition:
