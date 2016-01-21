@@ -71,7 +71,9 @@ For mapbender.yml:
 
    target: map  # for result visualization
    asDialog: true  # render inside a dialog or not
-   timeoutFactor:  2  # timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started
+   timeoutFactor:  3  # timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started
+   height: 500 # height of the dialog
+   width: 700 # width of the dialog
    routes:      # collection of search routes
        demo_polygon:       # machine readable name
 			class: Mapbender\CoreBundle\Component\SQLSearchEngine  # Search engine to use

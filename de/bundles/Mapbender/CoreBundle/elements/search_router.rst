@@ -69,9 +69,11 @@ In der mapbender.yml Datei:
 
 .. code-block:: yaml
 
-   target: map  													# ID des Kartenelements
-   asDialog: true  													# true, Erebniswiedergabe in einem Dialogfeld
-   timeoutFactor:  2  												# Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
+   target: map # ID des Kartenelements
+   asDialog: true # true, Erebniswiedergabe in einem Dialogfeld
+   timeoutFactor:  3 # Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
+   height: 500 # Höhe des Dialogs
+   width: 700 # Breite des Dialogs
    routes:      													# Sammlung von Suchrouten
        demo_polygon:  													# für Maschinen lesbarer Name
 			class: Mapbender\CoreBundle\Component\SQLSearchEngine  #  Suchmaschine, die verwendet werden soll
