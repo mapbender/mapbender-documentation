@@ -16,7 +16,7 @@ Konfiguration
 
 Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter http://doc.mapbender3.org/de/book/database.html
 
-Hinweis: Für die Nutzung der unten beschriebenen Suche kann die Datenbank der Digitalisierung genutzt werden. Die Kofigurationen für die Erstellung der Datenbankverbindung finden sich unter :doc:`digitizer`
+**Hinweis**: Für die Nutzung der unten beschriebenen Suche können die Tabellen aus der Digitalisierungs-Demo genutzt werden. Die SQLS für die Erstellung der Tabellen finden sich unter :doc:`digitizer`
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
