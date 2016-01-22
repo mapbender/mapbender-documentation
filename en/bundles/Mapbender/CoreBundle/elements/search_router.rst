@@ -18,7 +18,7 @@ Configuration
 
 The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
 
-Note: For the use of the below-described search the digitizer database can be used. The configuration for creating the database connection can be found at :doc:`digitizer`.
+**Note**: For the use of the below-described search the digitizer tables can be used. The SQL to create the tables can be found at :doc:`digitizer`.
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Target:** Id of Map element to query.
