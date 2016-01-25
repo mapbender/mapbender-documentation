@@ -20,12 +20,12 @@ Configuration
 * **SRS:** coordinate reference system. Two ways of srs definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
 * **Tile size:** Size of the tiles of tiled WMS services.
 * **Delay before tiles:** For future use of WMS-T if time parameters are used (actually not applicable).
-* **Map units:** units to use degrees/meters, default is deegrees.
+* **Map units:** units to use degrees/meters, default is degrees.
 * **Max. Extent:** maximal map extents.
 * **Start Extent:** map extents for the start of the application.
 * **Scales (csv):** a csv scale list.
 * **Max. resolution:** at the moment only auto is supported, so please do not change.
-* **OL image path:** OpenLayers Bilderpfad, unter dem die Bilder abgespeichert werden (bundles/mapbendercore/mapquery/lib/openlayers/img).
+* **OL image path:** OpenLayers image path, at which the images are saved (bundles/mapbendercore/mapquery/lib/openlayers/img).
 * **Other SRS:** other coordinate reference systems. Two srs definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
 
 
@@ -39,7 +39,7 @@ YAML-Definition:
    srs: "EPSG:4326"           # coordinate reference system. Two ways of srs definitions are supported:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
-   units: "degrees"           # units to use degrees/meters, default is deegrees
+   units: "degrees"           # units to use degrees/meters, default is degrees
    extents: array(                 
        max: array(0, 40, 20, 60)    # maximal map extents
        start: array(5, 45, 15, 55)) # map extents for the start of the application
