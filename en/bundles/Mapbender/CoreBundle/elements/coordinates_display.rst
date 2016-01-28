@@ -28,7 +28,7 @@ Configuration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -40,6 +40,19 @@ YAML-Definition:
    prefix: 'x= '                  # show prefix before x-coordinate
    separator: ' y= '              # show separator before y-coordinate
 
+
+CSS-Styling
+===========
+
+The element can be customized with the following CSS-style, for example to increase the width.
+
+.. code-block:: css
+                
+                .mb-element-coordsdisplay { 
+                    width: 500px; 
+                }
+
+   
 Class, Widget & Style
 =====================
 

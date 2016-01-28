@@ -25,7 +25,7 @@ Konfiguration
 * **Separator:** Separator nach X- und vor Y-Koordinate (Standard ' y= ').
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -36,6 +36,19 @@ YAML-Definition:
    empty: 'x= - y= -'             # zeigt diesen Text, wenn die Maus sich nicht in der Karte befindet.
    prefix: 'x= '                  # zeigt ein Präfix vor der X-Koordinate
    separator: ' y= '              # zeigt einen Separator vor der Y-Koordinate
+
+
+CSS-Styling
+===========
+
+Das Element kann über den folgenden CSS-Style angepasst werden, beispielsweise um die Breite zu vergrößern.
+
+.. code-block:: css
+                
+                .mb-element-coordsdisplay { 
+                    width: 500px; 
+                }
+
 
 Class, Widget & Style
 =====================
