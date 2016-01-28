@@ -6,7 +6,7 @@ Scale Selector
 Displays a selctbox with scales. The map scale changes when an value from the selectbox is choosen. 
 Notice: The Selectbox offers the scales that are defined for the map-Element.
 
-.. image:: ../../../../../figures/scale_selector.png
+.. image:: ../../../../../figures/de/scale_selector.png
      :scale: 100
 
 Configuration
@@ -16,13 +16,14 @@ Configuration
      :scale: 80
 
 
-* **show label:** true, um die Maßstabsauswahl zu beschriften. Der Standardwert ist false.
+* **show label:** true, to label the Scale Selector. The default-value is false.
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Tooltip:** text to use as tooltip.
+* **Tooltip:** text to use as tooltip
 * **Target:** Id of Map element to query.
 
+
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -30,6 +31,19 @@ YAML-Definition:
    target: ~         # Id of Map element to query
    label: false      # false/true to label the scale selector, default is false
 
+
+CSS-Styling
+===========
+
+You can overwrite the style of the element, for example the width with the following statement:
+
+.. code-block:: css
+
+                .mb-element-scaleselector.dropdown { 
+                    width: 200px; 
+                 }
+
+   
 Class, Widget & Style
 ============================
 

@@ -22,17 +22,32 @@ Konfiguration
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
    tooltip: "Scale"  # Text des Tooltips
    target: ~         # ID des Kartenelements
    label: false      # false/true, um die Maßstabsauswahl zu beschriften. Der Standardwert ist false.
-   
+
+
+CSS-Styling
+===========
+
+Der Style des Elements (z.B. die Breite) kann mit folgendem CSS-Statement überschrieben werden:
+
+.. code-block:: css
+
+                .mb-element-scaleselector.dropdown { 
+                    width: 200px; 
+                 }
+
+
+
+
 
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\ScaleSelector
 * **Widget:** mapbender.element.scaleselector.js
