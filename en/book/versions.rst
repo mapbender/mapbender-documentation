@@ -16,45 +16,72 @@ Release date: soon
    
 **Bugfixes:**
 
+Notable Modifications:
+
 - Performance: The CSS, JavaScript and Translation files are now held in the Symfony Cache for the `production mode <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_. This can lead to better performance on slower machines. These cache is not used by the `development-mode <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_.
 - The package `eslider/sassc-binaries <https://github.com/eSlider/sassc-binaries>`_ offers now a sassc Compiler for 32-bit Linux systems. This led to a wrong display on 32-bit Linux-Systems (http://lists.osgeo.org/pipermail/mapbender_users/2015-December/004768.html)
-- Redlining: The contents of the Redlining element is visible and Redlining can now be used as a Dialog or an Element in the Sidepane. See also the `documentation of the Redlining Element <../bundles/Mapbender/CoreBundle/elements/redlining.html>`_. The scroll bar for the Geometry-Types in the configuration dialog is now displayed correctly. 
+- Redlining: The contents of the Redlining element is visible and Redlining can now be used as a Dialog or an Element in the Sidepane. See also the `documentation of the Redlining Element <../bundles/Mapbender/CoreBundle/elements/redlining.html>`_. The scroll bar for the Geometry-Types in the configuration dialog is now displayed correctly.
+
+Users and security:
+  
 - Users can be switched active or inactive by an Administrator, who has at least the ACL-user-right "operator". This can be used for users, who have self-registered but not yet activated their account. See the `documentation of user-management <../bundles/FOM/UserBundle/users.html>`_ for details.
 - The text, translations and styles for the Self-Register process and the Password Reset are improved. Also the `Documentation <../bundles/FOM/UserBundle/users.html>`_ is adjusted.
+
+Print and export image:
+  
 - The `Print module <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_ can now also be used in the Sidepane.
+- Print legend: The size of the legend in the print-out was scaled down to improve the quality.
 - Print-templates: The default print-templates have changed. The padding of the dynamic texts to their border and their justification were improved.
 - Print: The Print configuration messed up mandatory (required: true) and optional fields (required: false), if they were used in combination. Optional fields were partly shown as mandatory (Github #380).
 - In some cases Mapbender printed the legend of all WMS-layers, even if the layer was not set active (seen in Mapbender_Users WMS).
+- Export Image: Transparency of tiled and non-tiled services is supported in Export Image.
+
+Copy and import:
+  
 - Copying an application under SQLite and MySQL: There was en error that applications could not be copied if the database was SQLite or MySQL.
 - Errors at the import of application as JSON on MySQL (elements lose their target) was fixed.
-- WMC and thematic layertree: If a WMC is loaded and Keep Sources is set to "no", the thematic layers are now also removed from the layertree.
-- WMS-URL parameter and legend: If a service was loaded with the wms_url parameter, the complete legend was shown. This behaviour is fixed. **Note:** WMS services exists, which define a legend in the root-layer element. According to the WMS-specification, this legend will be inherited by sub-layers who itself haven't defined a legend (for example if they only contain the annotations). The effect is similar in MB3 but the cause is different, so that in these cases a change in the WMS capabilities is needed (define a static legend image for these layers).
-- Coordinate display: The coordinate-element display doesn't show "null" as prefix or separator anymore, although the field was defined as empty. The element has get a fixed with so that the layout in the footer region is more sable. The value can be changed (see the chapter `CSS-customizing of the element <../bundles/Mapbender/CoreBundle/elements/coordinates_display.html>`_).
-- SearchRouter: The content of the result uses the whole space of the dialog and fits itself to changes of the size. In the sidebar the whole height is used. The search router can be configured `with a width and a height <../bundles/Mapbender/CoreBundle/elements/search_router.html>`_.
-- ScaleSelector: The width of the element can be `customized with a CSS-Statement <../bundles/Mapbender/CoreBundle/elements/scale_selector.html>`_ and is no more set to 155 pixel.
-- If all layer in a layerset-instance are set to visible=off they were not visible in the layertree and the legend. This is fixed.
-- Improvements in the styling of the POI dialog if "usemailto" is set to false.
-- Layertree: Titles are now shown per default with a length of 40. The default value has been changed. You can set the `parameter Titlemaxlength in the configuration dialog <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_.
+
+Individual Elements:
+  
+- **WMC** and thematic layertree: If a WMC is loaded and Keep Sources is set to "no", the thematic layers are now also removed from the layertree.
+- **WMS-URL parameter** and legend: If a service was loaded with the wms_url parameter, the complete legend was shown. This behaviour is fixed.
+
+  - *Note:* WMS services exists, which define a legend in the root-layer element. According to the WMS-specification, this legend will be inherited by sub-layers who itself haven't defined a legend (for example if they only contain the annotations). The effect is similar in MB3 but the cause is different, so that in these cases a change in the WMS capabilities is needed (define a static legend image for these layers).
+    
+- **Coordinate display**: The coordinate-element display doesn't show "null" as prefix or separator anymore, although the field was defined as empty. The element has get a fixed with so that the layout in the footer region is more sable. The value can be changed (see the chapter `CSS-customizing of the element <../bundles/Mapbender/CoreBundle/elements/coordinates_display.html>`_).
+- **SearchRouter**: The content of the result uses the whole space of the dialog and fits itself to changes of the size. In the sidebar the whole height is used. The search router can be configured `with a width and a height <../bundles/Mapbender/CoreBundle/elements/search_router.html>`_.
+- **ScaleSelector**: The width of the element can be `customized with a CSS-Statement <../bundles/Mapbender/CoreBundle/elements/scale_selector.html>`_ and is no more set to 155 pixel.
+- If all layer in a **layerset-instance** are set to visible=off they were not visible in the layertree and the legend. This is fixed.
+- Improvements in the styling of the **POI dialog** if "usemailto" is set to false.
+- **Layertree**: Titles are now shown per default with a length of 40. The default value has been changed. You can set the `parameter Titlemaxlength in the configuration dialog <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_.
+- **GPS**: Improvements in the GPS handling.
+
+General changes:
+  
 - Changing the Base Data, the Layout, the Layerset, the CSS and the Security of an application does not change the tab anymore and doesn't jump back to the base data tab.
 - General improvements of the `Digitizer <https://github.com/mapbender/mapbender-digitizer>`_ version 1.0. Version 1.1 is compatible with Mapbender 3.0.5.3.
 - Github files: Small clean up actions in the Github repository to improve the automatic build-processes.
 - Transparency of services: Services with a transparency refreshed with a poor effect, caused by the "transitionEffect" in OpenLayers. The effect was removed.
 - Group filter: The security configuration dialog got improvements at the selection of Groups, if the Groups had the same name but a different suffix.
 - TileSize Parameter in the map configuration was not set in some cases.
-- Display of dialogues under MS Edge 25 (also an error in MS Edge 20).
+- Display of dialogues under Internet Explorer 11 and MS Edge 25 (also an error in MS Edge 20).
 - mapbender.yml: At the initial import of the mapbender.yml the values of GetFeatureInfo are now set to text/html. The mapbender.yml can now customized with Redlining.
 
 
-**General changes:**
+**Change of the Mapbender domains:**
 
-- Change of the Mapbender domains: We have switched the URL www.mapbender.org to the Mapbender3 page. In future, the Mapbender3 page is also available via www.mapbender.org and www.mapbender3.org. Mapbender2 is now available at www.mapbender2.org
+- We have switched the URL www.mapbender.org to the Mapbender3 page. In future, the Mapbender3 page is also available via www.mapbender.org and www.mapbender3.org. Mapbender2 is now available at www.mapbender2.org
  
   - http://www.mapbender.org: Mapbender3,
   - http://www.mapbender3.org: Mapbender3,
   - http://www.mapbender2.org: Mapbender2.
 
+**Known Issues:**
 
+- The Sketch Tool doesn't work correctly and will be built into the `Redlining Tool <../bundles/Mapbender/CoreBundle/elements/redlining.html>`_.
+- Share map doesn't work for Facebook, Twitter und Google+.
 
+  
 
 Milestone 3.0.5.2
 -----------------
