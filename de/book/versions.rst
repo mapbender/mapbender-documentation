@@ -11,7 +11,7 @@ Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender
 Milestone 3.0.5.3
 -----------------
 
-Release Datum: soon
+Release Datum: 04.02.2016
 
    
 **Bugfixes:**
@@ -43,11 +43,12 @@ Kopieren und Import:
 
 Einzelne Elemente:
   
-- **WMC** und Thematischer Ebenenbaum: Wenn ein WMC geladen wird und Keep Sources auf "no" eingestellt ist, werden auch die Thematischen Ebenen aus dem Layerbaum genommen.
+- **WMC** und Thematische Layer: Wenn ein WMC geladen wird und Keep Sources auf "no" eingestellt ist, werden auch die Thematischen Ebenen aus dem Layerbaum genommen.
 - **WMS-URL Parameter** und Legende: Wenn ein Dienst über den wms_url Parameter in die Anwendung geladen wird, wurde die komplette Legende angezeigt und nicht die für die jeweiligen Layer. Dieses Verhalten wurde gefixt.
   
   - *Hinweis*: Es gibt WMS Dienste, die eine Legende im Hauptlayer-Element definieren. Diese wird nach der WMS Spezifikation auf die Layer vererbt, die selbst keine Legende definiert haben (z.B. weil sie nur eine Schrift anzeigen). Der Effekt in MB3 ist ähnlich, die Ursache aber eine andere, so dass in diesem Fall Anpassungen an den Capabilities notwendig sind (für den Layer eine statische Legende definieren).
-    
+
+- **Thematische Layer**: Korrektur im An- und Abschalten von Layern, die in einem eigenen Layerset sind, aber nicht als Thematischer Layer angezeigt werden.
 - **Koordinatendisplay**: Das Element zur Koordinatenanzeige zeigte "null" als Text für den Präfix oder Separator, obwohl diese Felder leer sein sollten. Das Element hat weiterhin eine feste Breite bekommen, so dass das Layout im Footer stabiler wird. Der Wert kann verändert werden (Siehe die `CSS-Anpassungen zu dem Element <../bundles/Mapbender/CoreBundle/elements/coordinates_display.html>`_).
 - **SearchRouter**: Der Inhalt der Ergebnisse füllt nun das gesamte Dialogfenster aus und passt sich an die Größenänderung an. In der Sidebar wird die gesamte Höhe ausgenutzt. Der SearchRouter ist, wenn er als Dialog eingesetzt wird, `in der Höhe und Breite konfigurierbar <../bundles/Mapbender/CoreBundle/elements/search_router.html>`_.
 - **ScaleSelector**: Die Breite des Elements kann mit einem `CSS-Statement verändert werden <../bundles/Mapbender/CoreBundle/elements/scale_selector.html>`_ und ist nicht auf 155 Pixel festgelegt.
@@ -65,7 +66,7 @@ Allgemeine Änderungen:
   wurde entfernt.
 - Gruppenfilter: In dem Konfigurationsdialog zu den Sicherheitseinstellungen wurde die Auswahl von Gruppen verbessert, wenn Gruppen einen gleichem Namen aber unterschiedlichen Suffixe besitzen.
 - TileSize Parameter in der Kartenkonfiguration wird unter Umständen nicht gesetzt.
-- Anzeige und Dialoge unter Internet Explorer 11 und MS Edge 25 (auch ein Fehler in MS Edge 20).
+- Anzeige der Symbole unter Internet Explorer 11 und MS Edge 25 (auch ein Fehler in MS Edge 20).
 - mapbender.yml: Beim initialen Import der mapbender.yml werden die Angaben von GetFeatureInfo nun auf text/html gesetzt. Die mapbender.yml kann nun mit Redlining erweitert werden.
 
  

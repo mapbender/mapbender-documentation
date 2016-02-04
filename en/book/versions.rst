@@ -11,7 +11,7 @@ Future Milestones: For details have a look at https://github.com/mapbender/mapbe
 Milestone 3.0.5.3
 -----------------
 
-Release date: soon
+Release date: 04.02.2016
 
    
 **Bugfixes:**
@@ -47,7 +47,8 @@ Individual Elements:
 - **WMS-URL parameter** and legend: If a service was loaded with the wms_url parameter, the complete legend was shown. This behaviour is fixed.
 
   - *Note:* WMS services exists, which define a legend in the root-layer element. According to the WMS-specification, this legend will be inherited by sub-layers who itself haven't defined a legend (for example if they only contain the annotations). The effect is similar in MB3 but the cause is different, so that in these cases a change in the WMS capabilities is needed (define a static legend image for these layers).
-    
+
+- **Thematic Layer**: Fix in switching layers on and off which are in their own Layerset but not displayed as a thematic layer.
 - **Coordinate display**: The coordinate-element display doesn't show "null" as prefix or separator anymore, although the field was defined as empty. The element has get a fixed with so that the layout in the footer region is more sable. The value can be changed (see the chapter `CSS-customizing of the element <../bundles/Mapbender/CoreBundle/elements/coordinates_display.html>`_).
 - **SearchRouter**: The content of the result uses the whole space of the dialog and fits itself to changes of the size. In the sidebar the whole height is used. The search router can be configured `with a width and a height <../bundles/Mapbender/CoreBundle/elements/search_router.html>`_.
 - **ScaleSelector**: The width of the element can be `customized with a CSS-Statement <../bundles/Mapbender/CoreBundle/elements/scale_selector.html>`_ and is no more set to 155 pixel.
@@ -64,7 +65,7 @@ General changes:
 - Transparency of services: Services with a transparency refreshed with a poor effect, caused by the "transitionEffect" in OpenLayers. The effect was removed.
 - Group filter: The security configuration dialog got improvements at the selection of Groups, if the Groups had the same name but a different suffix.
 - TileSize Parameter in the map configuration was not set in some cases.
-- Display of dialogues under Internet Explorer 11 and MS Edge 25 (also an error in MS Edge 20).
+- Display of symbols in Internet Explorer 11 and MS Edge 25 (also an error in MS Edge 20).
 - mapbender.yml: At the initial import of the mapbender.yml the values of GetFeatureInfo are now set to text/html. The mapbender.yml can now customized with Redlining.
 
 
