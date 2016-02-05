@@ -159,26 +159,31 @@ How to build a new Mapbender3 build
 
  # tagging
  cd application/mapbender
- git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender/blob/release/3.0.5/CHANGELOG.md"
  git push --tags
  
  # tag submodules
  cd ../../application/fom
- git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
  git push --tags
  
  # tag owsproxy3
  cd ../../application/owsproxy3
- git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
  git push --tags
  
  # tag mapbender-starter
  cd ../../
- git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
  git tag
  git push --tags (will be shown at https://github.com/mapbender/mapbender-starter/releases)
 
+ # run composer.phar update
+ cd application
+ ./composer.phar update
+
  # use phing to create the tarball
+ cd ..
  phing tarball
 
  # change to the artefacts directory, where phing created the tarball
@@ -190,33 +195,32 @@ How to build a new Mapbender3 build
  # that step should not be neccessary: sudo chmod -R 777 mapbender3-3.0.5build1
 
  # change the name of the directory
- mv mapbender3-3.0.5build1 mapbender3-3.0.5.1
+ mv mapbender3-3.0.5build1 mapbender3-3.0.5.3
 
  # remove some files in that directory
- rm -R mapbender3-3.0.5.1/app/config/parameters.yml
- rm -Rf mapbender3-3.0.5.1/documentation/*
+ rm -R mapbender3-3.0.5.3/app/config/parameters.yml
+ rm -Rf mapbender3-3.0.5.3/documentation/*
 
  # tag the documentation
  cd /data/git/mapbender-documentation/
- git tag -a v3.0.5.1 -m "Mapbender release Version 3.0.5.1 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
  
  # copy the actual documentation output
- cp -R /data/git/mapbender-documentation/output/*  mapbender3-3.0.5.1/documentation/
+ cp -R /data/git/mapbender-documentation/output/*  mapbender3-3.0.5.3/documentation/
  
- # create tar.gz with right name for example mapbender3-3.0.5.1.tar.gz
- tar -czvf mapbender3-3.0.5.1.tar.gz mapbender3-3.0.5.1/
- # create zip with right name for example mapbender3-3.0.5.1.zip
- zip -r mapbender3-3.0.5.1.zip mapbender3-3.0.5.1/
+ # create tar.gz with right name for example mapbender3-3.0.5.3.tar.gz
+ tar -czvf mapbender3-3.0.5.3.tar.gz mapbender3-3.0.5.3/
+ # create zip with right name for example mapbender3-3.0.5.3.zip
+ zip -r mapbender3-3.0.5.3.zip mapbender3-3.0.5.3/
   
 * move tar.gz and zip file to /sites/www.mapbender3.org/builds
 * edit actual release link http://mapbender3.org/en/download (english and german page) http://mapbender3.org/de/download
-* update Roadmap: milestones, features, date on http://mapbender3.org/roadmap
+* update Roadmap: milestones, features, date on http://mapbender3.org/roadmap and http://doc.mapbender3.org/en/book/versions.html
 * write release mail to mapbender-user and mapbender-dev 
 * only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
 * twitter on https://twitter.com/mapbender
 * update http://demo.mapbender3.org and http://sandbox.mapbender3.org
-
- 
+* create a version based installation http://3053.mapbender3.org
 
 
 
