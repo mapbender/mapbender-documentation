@@ -624,7 +624,7 @@ Definition von Bildern
 Definition der zur Verfügung stehenden Werkzeuge (Toolset Type)
 ------------------------------------------------------------------------
 
-Wrkzeugliste
+Werkzeugliste
 
   * **drawPoint** - Punkt erstellen
   * **drawLine** - Line erstellen
