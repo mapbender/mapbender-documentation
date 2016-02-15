@@ -189,7 +189,14 @@ Please notice that you might have to activate the :command:`FollowSymLinks` opti
     DirectoryIndex app.php
     Order allow,deny
     Allow from all
-  </Directory>
+
+    RewriteEngine On
+    RewriteBase /mapbender3/
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+ </Directory>
 
 
 Learn more about app/console

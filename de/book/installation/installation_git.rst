@@ -164,7 +164,14 @@ Bitte beachten Sie, dass Sie die Option :command:`FollowSymLinks` in der Apache 
     DirectoryIndex app.php
     Order allow,deny
     Allow from all
-  </Directory>
+    
+    RewriteEngine On
+    RewriteBase /mapbender3/
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+ </Directory>
 
 
 Lernen Sie mehr über app/console
