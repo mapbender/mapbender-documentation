@@ -134,25 +134,32 @@ To learn more about Mapbender3 have a look at the `Mapbender3 Quickstart <../qui
 Instructions for Apache 2.2
 ---------------------------
 
-Unlike Apache 2.4 you have to place the mapbender3.conf file for Apache 2.2 into the directory /etc/apache2/conf.d/
+Some versions of Debian support for Apache 2.2 to drop the mapbender3.conf file into the directory ``/etc/apache2/sites-available`` and the activation with the command ``a2ensite``. Depending on the operating-system the file has to be placed into the directory ``/etc/apache2/conf.d/``.
 
-Apache 2.2 configuration:
+Activate the Rewrite-Modul of Apache.
+
+.. code-block:: bash
+
+ sudo a2enmod rewrite
+
+Unlike version 2.4, Apache 2.2 uses other directives and other default values (``Order`` and ``Allow``, ``AllowOverride``) that has to be written into the mapbender3.conf file. These differences are explained in the `Upgrade-Guide from Apache 2.2 to Apache 2.4 <http://httpd.apache.org/docs/2.4/upgrading.html>`_.
+
+Apache 2.2 configuration ``mapbender3.conf``:
 
 .. code-block:: apache
 
   ALIAS /mapbender3 /var/www/mapbender3/web/
   <Directory /var/www/mapbender3/web/>
-    Options MultiViews
+    Options MultiViews FollowSymLinks
     DirectoryIndex app.php
+    AllowOverride none
     Order allow,deny
     Allow from all
-    
+
     RewriteEngine On
     RewriteBase /mapbender3/
     RewriteCond %{ENV:REDIRECT_STATUS} ^$
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
- </Directory>
-
-Please note that Apache 2.2 uses `different Access Control directives than Apache 2.4 <http://httpd.apache.org/docs/2.4/upgrading.html>`_ (Allow from all).
+  </Directory>
