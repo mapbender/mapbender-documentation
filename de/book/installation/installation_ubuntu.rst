@@ -151,7 +151,15 @@ Apache 2.2 Konfiguration:
     DirectoryIndex app.php
     Order allow,deny
     Allow from all
-  </Directory>
+    
+    RewriteEngine On
+    RewriteBase /mapbender3/
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+ </Directory>
+
 
 
 Bitte beachten Sie dabei, dass Apache 2.2 im Gegensatz zu Apache 2.4 `andere Direktiven zur Access Control verwendet <http://httpd.apache.org/docs/2.4/upgrading.html>`_ (Allow from all).
