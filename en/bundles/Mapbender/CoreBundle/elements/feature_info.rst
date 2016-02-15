@@ -24,7 +24,10 @@ Configuration
 * **Display:** Display of the information, Tabs or Accordion. 
 * **Width/ Height:** width/ height of the dialog in px, default is 700/500.
 * **Show original:** show the css-style of the original feature info result, default is false.
-* **Only valid:** The parameter "Only valid" highly depends on the format of the GetFeatureInfo response. Example UMN: as long as the template defines a correct HTML head and body element (for example by referencing a header and footer file), Mapbender3 will interpret the result as valid. Are these head and body elements missing, Mapbender will interpret the result as not valid. Please make sure, that the GetFeatureInfo Response is a valid HTML.
+* **Only valid:** The parameter "Only valid" highly depends on the format of the GetFeatureInfo response. Example UMN: as long as the template defines a correct HTML head and body element (for example by referencing a header and footer file), Mapbender3 will interpret the result as valid. Are these head and body elements missing, Mapbender will interpret the result as not valid.
+
+  * Please make sure, that the GetFeatureInfo Response is a valid HTML.
+  * If you have defined ``text/plan`` as output-format, the switch ``only valid`` must not be activated because ``text/plain`` doesn't return valid HTML.
 
 **Note:** It is possible to load WMS services dynmically into the application Via the information response of a FeatureInfo dialog. The WMS Loader is used for that feature. For further information take a look in the chapter `How to add a WMS by defining a link <../../WmsBundle/elements/wms_loader.html#how-to-add-a-wms-by-defining-a-link>`_.
 
