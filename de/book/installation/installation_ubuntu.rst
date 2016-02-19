@@ -81,7 +81,6 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (o). Weise
  sudo chown -R www-data:www-data /var/www/mapbender3
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
-.. sudo chmod -R ug+w /var/www/mapbender3/web/assets
 
 Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
 
@@ -121,7 +120,6 @@ Sie müssen Schreibrechte für die Verzeichnisse app/cache und app/logs sowie we
  sudo chmod -R ug+w /var/www/mapbender3/app/logs
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
-.. sudo chmod -R ug+w /var/www/mapbender3/web/assets
 
 Sie können Mapbender3 nun nutzen.
 
