@@ -25,7 +25,10 @@ Konfiguration
 * **Display:** Anzeige der Information als Tabs oder in Accordionform.
 * **Width/ Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel)
 * **Original Zeigen:** Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
-* **nur valide zeigen:** Parameter hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender3 das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender3 als nicht valide. Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
+* **nur valide zeigen:** Parameter hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender3 das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender3 als nicht valide.
+
+  * Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
+  * Wenn sie ``text/plan`` als Ausgabeformat definieren, darf der Schalter ``only valid`` nicht aktiviert sein, da ``text/plain`` kein valides HTML zurückgibt.
 
 **Hinweis:** Über die Informationsabfrage des FeatureInfo Dialogs können der Anwendung dynamisch WMS Dienste hinzugefügt werden. Hierfür wird der WMS Loader genutzt. Für nähere Informationen siehe das Kapitel `Hinzufügen eines WMS über einen definierten Link <../../WmsBundle/elements/wms_loader.html#hinzufugen-eines-wms-uber-einen-definierten-link>`_.
 
