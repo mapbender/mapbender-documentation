@@ -34,12 +34,12 @@ Konfiguration
 * **Collection path:** Dies kann ein Attributspfad sein, der vom Abfrageergebnis extrahiert wird (z.B. ``response.docs``).
 * **Label attribut:** Attrubutname der zur Beschriftung genutzt wird (z.B. ``label``).
 * **Geom attribut:** Name der Attribute der Geometriedaten (z.B. ``geom``).
-* **Geom format:** Geometiedatenformat,kann WKT oder GeoJSON sein (z.B. ``WKT``).
+* **Geom format:** Geodatenformat, kann WKT oder GeoJSON sein (z.B. ``WKT``).
 * **Delay:** Automatische Vervollständigungs-Verzögerung (z.B. ``300``).
-* **Result buffer:** Buffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen (z.B. ``10``).
-* **Result minscale/ maxscale:** Maßstabsbegrenzung beim Zoomen (z.B. ``1000`` und ``5000``).
+* **Result buffer:** Puffert das Objekt (in Karteneinheiten) vor dem Zoomen (z.B. ``10``).
+* **Result minscale/ maxscale:** Maßstabsbegrenzung beim Zoomen (z.B. ``1000`` und ``5000``). ~ wenn keine Begrenzung gewünscht wird.
 * **Result icon url:** Symbol, das zur Trefferanzeige verwendet werden soll (z.B. ``http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png``).
-* **Result icon offset:** Offset x und y des Symbols (z.B. ``0,0``).
+* **Result icon offset:** Abstand x und y des Symbols (z.B. ``-6,-38`` für das Stecknadel-Icon).
 
 
 
@@ -48,17 +48,17 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8   # Beispiel Solr URL
+   query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8   # Solr URL (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
    query_key: q                                                                  # Der Suchparameterschlüssel, der angehängt wird
-   query_ws_replace:                                                             # Parameter Name to send search term with.
+   query_ws_replace:                                                             # Pattern zum Austausch von Leerzeichen.
    query_format: '%s'                                                            # Einfaches Suchformat.
    token_regex: [^a-zA-Z0-9äöüÄÖÜß]                                              # Tokenizer split regexp.
    token_regex_in: ([a-zA-ZäöüÄÖÜß]{3,})                                         # Tokenizer search regexp.
    token_regex_out: '$1*'                                                        # Tokenizer replace regexp.
    collection_path: response.docs                                                # Es kann ein Attributspfad sein, der vom Abfrageergebnis extrahiert wird.
-   label_attribute: label                                                        # Attrubutname der zur Beschriftung genutzt wird 
-   geom_attribute: geom                                                          # Name der Attribute der Geometriedaten 
-   geom_format: WKT                                                              # Geometiedatenformat,kann WKT oder GeoJSON sein
+   label_attribute: label                                                        # Attributname, der für die Trefferausgabe genutzt wird 
+   geom_attribute: geom                                                          # Name des Attributs der Geometriedaten 
+   geom_format: WKT                                                              # Geodatenformat, kann WKT oder GeoJSON sein
    delay: 300                                                                    # Automatische Vervollständigungs-Verzögerung. 0   result_buffer: 50                                                             # Buffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
    result_minscale: 1000                                                         # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
    result_maxscale: 5000

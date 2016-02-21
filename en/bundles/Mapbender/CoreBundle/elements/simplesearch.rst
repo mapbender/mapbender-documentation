@@ -42,7 +42,7 @@ Configuration
 * **Result buffer:** buffer result geometry with this (map units) before zooming (e.g. ``10``).
 * **Result minscale/ maxscale:** scale restrictions for zooming, ~ for none  (e.g. ``1000`` und ``5000``).
 * **Result icon url:** icon to display as result marker (e.g. ``http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png``).
-* **Result ion offset:**  Offset x and y for the Icon (e.g. ``0,0``).
+* **Result icon offset:**  Offset x and y for the icon (e.g. ``0,0``).
 
 
   
@@ -53,7 +53,7 @@ YAML-Definition:
 
    query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8   # Example Solr URL
    query_key: q                                                                  # The query parameter key to append
-   query_ws_replace:                                                             # Parameter name to send search term with.
+   query_ws_replace:                                                             # Pattern for replacing white spaces.
    query_format: '%s'                                                            # Simple search format.
    token_regex: [^a-zA-Z0-9äöüÄÖÜß]                                              # Tokenizer split regexp.
    token_regex_in: ([a-zA-ZäöüÄÖÜß]{3,})                                         # Tokenizer search regexp.
@@ -67,7 +67,7 @@ YAML-Definition:
    result_minscale: 1000                                                         # scale restrictions for zooming, ~ for none
    result_maxscale: 5000
    result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png # icon to display as result marker
-   result_icon_offset: -6,-38                                                    # Offset x and y for the Icon
+   result_icon_offset: -6,-38                                                    # Offset x and y for the icon
    
 
 Class, Widget & Style
