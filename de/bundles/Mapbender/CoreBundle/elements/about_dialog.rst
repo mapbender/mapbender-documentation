@@ -3,9 +3,7 @@
 About Dialog (Über-Dialog)
 ********************************
 
-Dieses Element rendert einen `Button <../elements/button.html>`_, der einen Dialog über Mapbender anzeigt.
-Bisher wird die Mapbender Version angezeigt. Der Button befindet sich in der unteren rechten Ecke in der Fußzeile oder der oberen rechten Ecke in der Toolbar, abhängig von der Zuweisung im Layout. In Zukunft kann auch die Lizenz 
-oder kundenspezifische Daten angezeigt werden.
+Dieses Element rendert einen `Button <../elements/button.html>`_, der einen Dialog mit der aktuellen Mapbender Version anzeigt. Der Button kann im Standard-Tempalte wie gehabt in der Toolbar verwendet werden oder auch in die Footer Region positioniert werden.
 
 .. image:: ../../../../../figures/de/about_dialog.png
      :scale: 80
@@ -23,14 +21,16 @@ Konfiguration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
+   title: 'Über Mapbender3'     # Text, der neben dem About Dialog Button angezeigt wird
    tooltip: 'Über Mapbender3'   # Text des Tooltips
    label: true                  # false/true, um den Button zu beschriften. Der Standardwert ist true.
    icon: 'abouticon'            # Symbol für den Button
 
+   
 Class, Widget & Style
 ======================
 
