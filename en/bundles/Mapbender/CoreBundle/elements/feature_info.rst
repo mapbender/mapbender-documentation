@@ -34,22 +34,26 @@ Configuration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
+   title: FeaureInfo       # Titel des Elements
    tooltip: Feature Info   # text to use as tooltip
-   target: ~               # Id of Map element to query
-   autoOpen: false         # true/false open when application is started, default: false
+   type: dialog            # Default und mandatory: dialog.
+   target: map             # Id of Map element to query
+   autoActivate: false     # true/false open when application is started, default: false
    deactivateOnClose: true # true/false to deactivate the functionality after closing the result dialog, default is true
-   width: 700              # width of the dialog, default is 700
-   height: 700             # height of the dialog, default is 500
+   onlyValid: null         # require correct HTML format of response, default: false
    printResult: false      # offer a link to print the result of the featureInfo, default: false
-   showOriginal: null      # show the css-style of the original feature info result, default: false
-   onlyValid: null         # , default: false
+   showOriginal: false     # show the css-style of the original feature info result, default: false
+   displayType: tabs       # Default and mandatory: tabs
+   width: 700              # width of the dialog in pixels, default is 700
+   height: 500             # height of the dialog in pixels, default is 500
 
 
 You need a button to show this element. See :doc:`button` for inherited configuration options. 
+
 
 Class, Widget & Style
 ============================

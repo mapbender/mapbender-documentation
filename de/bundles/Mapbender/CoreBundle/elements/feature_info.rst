@@ -35,26 +35,29 @@ Konfiguration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
+   title: FeaureInfo       # Titel des Elements
    tooltip: Feature Info   # Text des Tooltips
-   target: ~               # ID des Kartenelements
-   autoOpen: false         # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird, der Standardwert ist false.
+   type: dialog            # Default und mandatory: dialog. 
+   target: map             # ID des Kartenelements
+   autoActivate: false     # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird, der Standardwert ist false.
    deactivateOnClose: true # true/false um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren, der Standardwert ist true
-   width: 700              # Breite des Dialogs, Standardwert: 700 px
-   height: 700             # Höhe des Dialog, Standardwert: 500 px
+   onlyValid: false        # Korrekte HTML Ausgabe erfordern. Standardwert ist false.
    printResult: false      # Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann. Standardwert ist false.
-   showOriginal: null      # Der Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
-   onlyValid: null         # Standardwert ist false.
+   showOriginal: false     # Der Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
+   displayType: tabs       # Default und mandatory: tabs
+   width: 700              # Breite des Dialogs in Pixel, Standardwert: 700
+   height: 500             # Höhe des Dialog in Pixel, Standardwert: 500
 
 
 Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
 
 
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\FeatureInfo
 * **Widget:** mapbender.element.featureInfo.js
