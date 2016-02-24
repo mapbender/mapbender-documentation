@@ -34,6 +34,53 @@ Konfiguration
 
 
 
+Anzeige als Original und gestyled
+---------------------------------
+
+Mit der Option "Original zeigen" wird die Original-Darstellung des FeatureInfo Responses genutzt. Ist die Option deaktiviert, wird versucht eine einheitliche Darstellung in Mapbender zu erreichen.
+
+Beispiel Original:
+
+.. image:: ../../../../../figures/feature_info_original.png
+     :scale: 80
+
+Beispiel gestyled:
+
+.. image:: ../../../../../figures/feature_info_not_original.png
+     :scale: 80             
+
+
+
+Anzeige als Tabs und Accordion
+------------------------------
+
+Mit dem Schalter "Type" können die Responses mehrerer Dienste in unterschiedlichen Tabs oder als Accordion angezeigt werden.
+
+Beispiel Tabs:
+
+.. image:: ../../../../../figures/feature_info_tabs.png
+     :scale: 80
+
+Beispiel Accordion:
+
+.. image:: ../../../../../figures/feature_info_accordion.png
+     :scale: 80
+
+
+
+Button-Konfiguration
+--------------------
+
+Für das Element wird ein Button verwendet. Siehe das Kapitel :doc:`button` für die generelle Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der so lange aktiviert ist, bis er vom Benutzer wieder deaktiviert wird. Eine weitere Möglichkeit, ihn zu deaktivieren wäre den FeatureInfo Dialog zu schließen, wenn dieser die Option die Option "Deactivate on Close" angeschaltet hat.
+
+* **Group:** featureinfo
+* **Deactivate:** deactivate
+
+.. image:: ../../../../../figures/feature_info_button.png
+     :scale: 80
+
+
+
 YAML-Definition:
 ----------------
 
@@ -51,15 +98,6 @@ YAML-Definition:
    displayType: tabs       # tabs/accordion Default: tabs
    width: 700              # Breite des Dialogs in Pixel, Standardwert: 700
    height: 500             # Höhe des Dialog in Pixel, Standardwert: 500
-
-
-Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der so lange aktiviert ist, bis er vom Benutzer wieder deaktiviert wird. Eine weitere Möglichkeit, ihn zu deaktivieren wäre den FeatureInfo Dialog zu schließen, wenn dieser die Option die Option "Deactivate on Close" angeschaltet hat.
-
-* **Group:** featureinfo
-* **Deactivate:** deactivate
-
-.. image:: ../../../../../figures/feature_info_button.png
-     :scale: 80
 
 
 

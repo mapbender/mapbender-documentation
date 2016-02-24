@@ -33,6 +33,54 @@ Configuration
 
 
 
+Display as original and styled
+------------------------------
+
+With the option "Show Original" the original design of the FeatureInfo Response is used. If the option is deactivated, Mapbender tries to achieve an uniform representation.
+
+Example original:
+
+.. image:: ../../../../../figures/feature_info_original.png
+     :scale: 80
+
+Example styled:
+
+.. image:: ../../../../../figures/feature_info_not_original.png
+     :scale: 80             
+
+
+
+
+Display as tabs and accordion
+-----------------------------
+
+With the switch "type" the responses of multiple services are displayed either in different tabs or in an accordion.
+
+Example tabs:
+
+.. image:: ../../../../../figures/feature_info_tabs.png
+     :scale: 80
+
+Example accordion:
+
+.. image:: ../../../../../figures/feature_info_accordion.png
+     :scale: 80
+
+
+
+Button-Configuration
+--------------------
+
+You need a button to show this element. See :doc:`button` for the general configuration options. The following screen shot shows an example for a FeatureInfo Button which is activated the whole time until the user deactivates it. Another possibility is to close the FeatureInfo dialog, if that is configured with the option "deactivate on close".
+
+* **Group:** featureinfo
+* **Deactivate:** deactivate
+
+.. image:: ../../../../../figures/feature_info_button.png
+     :scale: 80
+
+
+
 YAML-Definition:
 ----------------
 
@@ -50,15 +98,6 @@ YAML-Definition:
    displayType: tabs       # tabs/accordion Default: tabs
    width: 700              # width of the dialog in pixels, default is 700
    height: 500             # height of the dialog in pixels, default is 500
-
-
-You need a button to show this element. See :doc:`button` for the general configuration options. The following screen shot shows an example for a FeatureInfo Button which is activated the whole time until the user deactivates it. Another possibility is to close the FeatureInfo dialog, if that is configured with the option "deactivate on close".
-
-* **Group:** featureinfo
-* **Deactivate:** deactivate
-
-.. image:: ../../../../../figures/feature_info_button.png
-     :scale: 80
 
 
 
