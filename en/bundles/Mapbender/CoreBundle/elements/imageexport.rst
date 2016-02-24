@@ -1,9 +1,9 @@
 .. _imageexport:
 
 ImageExport
-***********************
+***********
 
-Image Export allows you to export your current mapview. You can choose png or jpeg format.
+Image Export allows you to export your current map-view. You can choose png or jpeg format.
 
 .. image:: ../../../../../figures/image_export.png
      :scale: 80
@@ -18,16 +18,16 @@ Configuration
 * **Target:** Target element (Title(ID)) of the button.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
-   target: ~                        # Id of Map element to query
+   target: ~                        # Id of Map element to query (e.g. map)
 
 You need a button to show this element. See :doc:`button` for inherited configuration options.
 
 Class, Widget & Style
-=========================
+=====================
 
 * **Class:** Mapbender\\PrintBundle\\Element\\ImageExport
 * **Widget:** mapbender.element.imageExport.js
