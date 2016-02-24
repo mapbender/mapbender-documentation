@@ -1,22 +1,22 @@
 ﻿PrintClient (Druck)
-***********************
+*******************
 
 Mapbender3 bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen dem Client verschiedene Auswahlmöglichkeiten zur Verfügung:
 
- * Auswahl Maßstab
- * Auswahl Qualität
- * Drehung des Aussschnitts
- * Ausdruck Legende
- * Optional können freie Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden
+ * Auswahl Maßstab,
+ * Auswahl Qualität,
+ * Drehung des Ausschnitts,
+ * Ausdruck Legende.
+ * Optional können freie Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden.
 
-Der Druck greift auf Druckvorlagen zu, die individuell angepasst werden können. In den Druckvorlagen können Bereiche für Datum, Maßstab (Text und Balken), Übersichtskarte und Nordpfeil definiert werden.
+Der Druck greift auf Druckvorlagen zu, die individuell angepasst werden können. In den Druckvorlagen können Bereiche für Datum, Maßstab (Text und Maßstabsbalken), Übersichtskarte und Nordpfeil definiert werden.
 
 Mapbender3 bringt bereits eine Kollektion von Druckvorlagen (LibreOffice Draw Dateien in den Formaten A4 bis A0) mit, die individuell angepasst werden können.
 
 .. image:: ../../../../../figures/de/print_client.png
      :scale: 80
 
-Der PrintClient kann sowohl als Dialog als auch als Element in der Sidebar verwendet werden. Wenn er sich in der Sidebar befindet, müssen Sie zuerst den Druckrahmen aktivieren, um den Druck starten zu können. Wenn Sie fertig sind, müssen Sie den Druckrahmen wieder deaktiveren, damit die Karte wieder wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
+Der PrintClient kann sowohl als Dialog als auch als Element in der Sidebar verwendet werden. Wenn er sich in der Sidebar befindet, müssen Sie zuerst den Druckrahmen aktivieren, um den Druck starten zu können. Wenn Sie fertig sind, müssen Sie den Druckrahmen wieder deaktivieren, damit die Karte wieder wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
 
 .. image:: ../../../../../figures/de/print_client_sidebar.png
      :scale: 80
@@ -50,9 +50,12 @@ Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seit
   * **label**: Beschriftung des optionalen Feldes.
   * **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
     
-* **Replace pattern**: Kartenaufruf kann verändert werden. Angaben können angefügt oder verändert werden
+* **Replace pattern**: Kartenaufruf kann verändert werden. Angaben können angefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer).
 
+
+  
 YAML-Definition:
+----------------
 
 .. code-block:: yaml
 
@@ -99,7 +102,7 @@ Class, Widget & Style
 
 
 File location
-===============
+=============
 **northarrow**
 Das Bild des Nordpfeils ("North arrow") befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Sie können das Bild des Nordpfeils auch durch ein anderes Bild ersetzen.
 
@@ -108,7 +111,7 @@ Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/
 
 
 Erstellen eines individuellen Vorlage
-=======================================
+=====================================
 Um eine individuelle Druckvorlage zu erstellen, kopieren Sie eine vorhandene Druckvorlage (ODG-Datei) und bearbeiten diese. Sie können auch eine neue Libre Office Draw-Datei erzeugen. Die Vorlage kann feste Objekte wie ein Logo, ein Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine Ebene für die dynamischen Elemente wie die Karte, die Übersichtskarte, der Nordpfeil, der Maßstab, das Datum und optionale Felder erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene in der Libre Office Draw-Datei. Fügen Sie die Ebene in Libre Office Draw folgendermaßen hinzu: **Menü: Einfügen -> Ebene... -> definieren Sie einen Namen für die Ebene und wählen Sie die Option nicht druckbar**.
 
 .. image:: ../../../../../figures/print_template_odg.png
@@ -138,5 +141,5 @@ Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder (z.B. Logo 
 
 
 Konfiguration des Elements
-==================================
+==========================
 Gehen Sie in der Administration von Mapbender3 zu Ihrer Anwendung und erzeugen Sie ein Element **Druck** (Beachten Sie: Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden).

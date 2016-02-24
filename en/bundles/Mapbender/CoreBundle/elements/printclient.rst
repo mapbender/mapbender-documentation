@@ -1,16 +1,13 @@
 ﻿PrintClient
-***********************
+***********
 
-Print Client allows you to print a defined area of your map. You can choose a template, a format and a scale you want to use for printing. You can allow to rotate the area you want to print.
+Mapbender3 offers a PDF print, which print a defined area of the map. Before you print you can choose via the client these different possibilities:
 
-
-Mapbender3 offers a PDF print, which print a defined area of the map. In the client you can choose different possibilities before you print:
-
- * Select scale
- * Select quality
- * Rotate the print frame
- * Print legend
- * Optional you can define individual input fields (f.e. title, comment, notice), which will also be printed in the pdf
+ * Select scale,
+ * Select quality,
+ * Rotate the print frame,
+ * Print legend.
+ * Optional you can define individual input fields (f.e. title, comment, notice) which will also be printed in the pdf.
 
 The print element uses print templates, which can be modified individually. In the print templates you can define regions for date, scale (text or scalebar), overview map and north arrow.
 
@@ -19,7 +16,7 @@ Mapbender3 contains already a collection of print templates (LibreOffice Draw fi
 .. image:: ../../../../../figures/print_client.png
      :scale: 80
 
-The PrintClient can be used both as a dialog and an element as part of the sidebar. If it is part of the sidebar, you have to activate the Print Frame first to start the print. If you have finished, you have to deactivate the Print Frame again to use the map again as usuual (when used as a dialog this happens automatically by opening and closing the dialog window).
+The PrintClient can be used both as a dialog and an element as part of the sidebar. If it is part of the sidebar, you have to activate the Print Frame first to start the print. If you have finished, you have to deactivate the Print Frame again to use the map again as usual (when used as a dialog this happens automatically by opening and closing the dialog window).
 
 .. image:: ../../../../../figures/print_client_sidebar.png
      :scale: 80
@@ -33,6 +30,7 @@ Configuration
 
 You need a button to show this element or you can use it in the sidepane. See :doc:`button` for inherited configuration options.
 
+* **title**: Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. The title will be displayed besides the button if "Show label" is activated.
 * **target**: Id of Map element to query
 * **type**: element or dialog, default is dialog
 * **scales** -  define scales to choose from select-box or if empty free scale can be defined in a text-field
@@ -49,9 +47,12 @@ You need a button to show this element or you can use it in the sidepane. See :d
   * **label**: Label of the optional field.
   * **options**: { required: true } : Type of the optional field. Has to be true or false.
   
-* **replace_pattern** - You can modify the map-request for printing. You can add additional parameters like map_resolution (for MapServer)
+* **replace_pattern** - You can modify the map-request for printing. You can add additional parameters like map_resolution (for MapServer).
 
+
+  
 YAML-Definition:
+----------------
 
 .. code-block:: yaml
 
@@ -92,14 +93,14 @@ YAML-Definition:
 
 
 Class, Widget & Style
-============================
+=====================
 
 * Class: Mapbender\\CoreBundle\\Element\\PrintClient
 * Widget: mapbender.element.printClient.js
 
 
 File location
-===============
+=============
 **northarrow**
 The "North arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. You can replace the "North arrow" image to use a different image as northarrow.
 
@@ -108,7 +109,7 @@ You find the print templates at **app/Resources/MapbenderPrintBundle/templates/*
 
 
 Create your individual templates
-==================================
+================================
 To create an individual print template use an existing print template odg-file or create a new LibreOffice Draw file. Your template can have fixed objects like your logo, copyright or print information. In addition you have to create a layer for the dynamic elements like map, overview, northarrow, scale, date and optional fields. The dynamic layer is an additional non printable layer in your LibreOffice Draw file. Add this layer with **Menu -> Add -> Layer -> define a name for the layer and choose the option not printable**.
 
 .. image:: ../../../../../figures/print_template_odg.png
@@ -123,7 +124,7 @@ The following objects are available from Mapbender:
 * scale
 * scalebar
 * date
-* northarrow (Nordpfeil)
+* northarrow
 * coordinates of the print extent
 * dynamic image (connected to group role)
 * dynamic text (connected to group role)
@@ -138,7 +139,7 @@ Dependent of the group you can generate prints with different Logo and Text (f.e
 
 
 Configuration of the element
-==================================
+============================
 Go to your application an create a new element **printclient** (Please note: You need a button to show this element or you can use it in the sidepane.)
 
 
