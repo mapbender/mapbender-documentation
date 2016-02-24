@@ -21,7 +21,7 @@ Konfiguration
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Type:** Auwahl, ob die Info als Element oder Dialog angezeigt werden soll.   
+* **Type:** Auwahl, ob die Info als Element oder Dialog angezeigt werden soll. Default und mandatory: Dialog.
 * **Display:** Anzeige der Information als Tabs oder in Accordionform.
 * **Width/ Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel)
 * **Original Zeigen:** Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
@@ -48,12 +48,19 @@ YAML-Definition:
    onlyValid: false        # Korrekte HTML Ausgabe erfordern. Standardwert ist false.
    printResult: false      # Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann. Standardwert ist false.
    showOriginal: false     # Der Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
-   displayType: tabs       # Default und mandatory: tabs
+   displayType: tabs       # tabs/accordion Default: tabs
    width: 700              # Breite des Dialogs in Pixel, Standardwert: 700
    height: 500             # Höhe des Dialog in Pixel, Standardwert: 500
 
 
-Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
+Für das Element wird ein Button verwendet. Siehe unter :doc:`button` für die Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der so lange aktiviert ist, bis er vom Benutzer wieder deaktiviert wird. Eine weitere Möglichkeit, ihn zu deaktivieren wäre den FeatureInfo Dialog zu schließen, wenn dieser die Option die Option "Deactivate on Close" angeschaltet hat.
+
+* **Group:** featureinfo
+* **Deactivate:** deactivate
+
+.. image:: ../../../../../figures/feature_info_button.png
+     :scale: 80
+
 
 
 Class, Widget & Style

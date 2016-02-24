@@ -20,7 +20,7 @@ Configuration
 * **Title:** Title of the element. It will be indicated next to the button.
 * **Tooltip:** Text used as a tooltip. It will be indacted when hovering with the mouse cursor over the button. It also used as a header in the copyright window.
 * **Target:** Id of Map element to query.
-* **Type:** Type of the information, Element or Dialog.   
+* **Type:** Type of the information, Element or Dialog. Default and mandatory: Dialog.
 * **Display:** Display of the information, Tabs or Accordion. 
 * **Width/ Height:** width/ height of the dialog in px, default is 700/500.
 * **Show original:** show the css-style of the original feature info result, default is false.
@@ -47,12 +47,19 @@ YAML-Definition:
    onlyValid: null         # require correct HTML format of response, default: false
    printResult: false      # offer a link to print the result of the featureInfo, default: false
    showOriginal: false     # show the css-style of the original feature info result, default: false
-   displayType: tabs       # Default and mandatory: tabs
+   displayType: tabs       # tabs/accordion Default: tabs
    width: 700              # width of the dialog in pixels, default is 700
    height: 500             # height of the dialog in pixels, default is 500
 
 
-You need a button to show this element. See :doc:`button` for inherited configuration options. 
+You need a button to show this element. See :doc:`button` for the general configuration options. The following screen shot shows an example for a FeatureInfo Button which is activated the whole time until the user deactivates it. Another possibility is to close the FeatureInfo dialog, if that is configured with the option "deactivate on close".
+
+* **Group:** featureinfo
+* **Deactivate:** deactivate
+
+.. image:: ../../../../../figures/feature_info_button.png
+     :scale: 80
+
 
 
 Class, Widget & Style
