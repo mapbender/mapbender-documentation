@@ -91,3 +91,109 @@ JavaScript Signals
 ==================
 
 None.
+
+
+How to setup Solr:
+==================
+
+Installation
+------------
+
+Download Apache Solr and extract it to any folder. After successfully extracting the file Solr can be installed as a service in a Linux system by calling solr/bin/install_solr_service.sh.
+
+* **Download**: http://lucene.apache.org/solr/
+* **Documentation**: http://lucene.apache.org/solr/resources.html#documentation 
+
+**Installing** Apache Solr via the terminal in the data directory: 
+
+.. code-block:: yaml
+    cd /data
+    wget http://apache.lauf-forum.at/lucene/solr/5.4.1/solr-5.4.1.tgz
+    tar -zxvf solr-5.4.1.tgz
+    cd solr-5.4.1/
+
+
+Start and stop
+---------------
+
+You can start and stop Solr via the terminal by the following commands:
+
+* **Start Solr:**
+** /sites/solr-5.4.1/bin/solr start -s /sites/solr_data
+* **Stop Solr:**  
+** /sites/solr-5.4.1/bin/solr stop -all
+
+
+Solr-Core
+---------
+
+The Solr home folder is the area in which the various Solr-Cores for the search are located. 
+
+Der Solr-Home Ordner ist der Bereich, in dem sich die verschiedenen Solr-Kerne für die Suche befinden. The configuration is performed in the following file:
+
+File: /opt/solr-home/solr.xml
+
+Enter the following XML-block in the file:
+
+.. code-block:: yaml
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <solr></solr>
+
+For the cores create a folder under data/solr_data. Each core consists of the three configuration files: 
+* **core.properties**
+* **solrconfig.xml** 
+* **schema.xml** 
+
+By core.properties the core of Solr is recognized as a core. The solrconfig.xml describes the features of the core. The schema.xml describes the construction of the index.
+
+Adaptation of configuration files under /data/solr_data/places(/conf): 
+* core.properties
+* solrconfig.xml
+* schema.xml
+
+Solr example
+------------
+
+The directiory /solr-5.4.1/example contains Solr examples. Each example is contained in a 
+separate directory. To run a specific example, do:
+
+  bin/solr -e <EXAMPLE> where <EXAMPLE> is one of:
+  
+    cloud        : SolrCloud example
+    dih          : Data Import Handler (rdbms, mail, rss, tika)
+    schemaless   : Schema-less example (schema is inferred from data during indexing)
+    techproducts : Kitchen sink example providing comprehensive examples of Solr features
+
+PostgreSQL-Data Connection
+--------------------------
+
+Adaptation of the Data Connection in the configutation files under data/solr_data/places/config:
+* solrconfig.xml
+* data-config.xml
+
+* download matching PostgreSQL driver: 
+** https://jdbc.postgresql.org/download.html
+
+.. code-block:: yaml
+    cd /sites/solr_data/places/
+    wget https://jdbc.postgresql.org/download/postgresql-9.1-903.jdbc4.jar
+
+
+Solr-scheme
+-----------
+
+The Solr-scheme consists of the following parts:
+* **Fields** (field)
+* **Field types** (fieldType)
+* **Specifying an ID-Field** by uniqueKey 
+
+
+Secure Jetty
+-------------
+
+Release of certain IP addresses to access the Jetti. Configuration under solr/etc/jetty.xml:
+
+.. code-block:: yaml
+    <Set name="host"><SystemProperty name="jetty.host" /></Set>
+    <Set name="port"><SystemProperty name="jetty.port" default="8983"/></Set>
+
