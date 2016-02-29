@@ -108,6 +108,8 @@ Laden Sie Apache Solr herunter und entpacken Sie es in einen beliebigen Ordner. 
     tar -zxvf solr-5.4.1.tgz
     cd solr-5.4.1/
 
+Apache Solr läuft auf Java 7 oder höher, Java 8 ist kompatibel und kann einige Performance-Verbesserungen bringen. Bei der Verwendung von Oracle Java 7 oder 7 OpenJDK sollten Sie sich sicher sein, dass Sie die GA 147 oder Update-Versionen U40, U45 und U51 nicht verwenden. Wir empfehlen u55 oder höher zu verwenden.
+
 
 Start und Stopp
 ---------------
