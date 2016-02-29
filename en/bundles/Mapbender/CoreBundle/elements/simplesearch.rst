@@ -103,10 +103,12 @@ Download Apache Solr and extract it to any folder. After successfully extracting
 
 * **Download**: http://lucene.apache.org/solr/
 * **Documentation**: http://lucene.apache.org/solr/resources.html#documentation 
+* **Quickstart**: http://lucene.apache.org/solr/quickstart.html
 
-**Installing** Apache Solr via the terminal in the data directory: 
+**Installing** Apache Solr via the terminal f.e. in the data directory: 
 
 .. code-block:: yaml
+
     cd /data
     wget http://apache.lauf-forum.at/lucene/solr/5.4.1/solr-5.4.1.tgz
     tar -zxvf solr-5.4.1.tgz
@@ -118,10 +120,15 @@ Start and stop
 
 You can start and stop Solr via the terminal by the following commands:
 
-* **Start Solr:**
-** /sites/solr-5.4.1/bin/solr start -s /sites/solr_data
-* **Stop Solr:**  
-** /sites/solr-5.4.1/bin/solr stop -all
+**Start Solr:**
+.. code-block:: yaml
+
+  /data/solr-5.4.1/bin/solr start -s /data/solr-5.4.1/server/solr
+
+**Stop Solr:**  
+.. code-block:: yaml
+
+   /data/solr-5.4.1/bin/solr stop -all
 
 
 Solr-Core
@@ -131,11 +138,12 @@ The Solr home folder is the area in which the various Solr-Cores for the search 
 
 Der Solr-Home Ordner ist der Bereich, in dem sich die verschiedenen Solr-Kerne für die Suche befinden. The configuration is performed in the following file:
 
-File: /opt/solr-home/solr.xml
+File: solr-5.4.1/server/solr/solr.xml
 
 Enter the following XML-block in the file:
 
 .. code-block:: yaml
+
     <?xml version="1.0" encoding="UTF-8" ?>
     <solr></solr>
 
@@ -146,7 +154,7 @@ For the cores create a folder under data/solr_data. Each core consists of the th
 
 By core.properties the core of Solr is recognized as a core. The solrconfig.xml describes the features of the core. The schema.xml describes the construction of the index.
 
-Adaptation of configuration files under /data/solr_data/places(/conf): 
+Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/basic_configs/conf: 
 * core.properties
 * solrconfig.xml
 * schema.xml
@@ -157,6 +165,8 @@ Solr example
 The directiory /solr-5.4.1/example contains Solr examples. Each example is contained in a 
 separate directory. To run a specific example, do:
 
+.. code-block:: yaml
+
   bin/solr -e <EXAMPLE> where <EXAMPLE> is one of:
   
     cloud        : SolrCloud example
@@ -164,18 +174,42 @@ separate directory. To run a specific example, do:
     schemaless   : Schema-less example (schema is inferred from data during indexing)
     techproducts : Kitchen sink example providing comprehensive examples of Solr features
 
-PostgreSQL-Data Connection
---------------------------
+To test this function run the following command in the terminal: 
+.. code-block:: yaml
+
+    /data/solr-5.4.1/bin/solr start -e techproducts
+and go to http://localhost:8983/solr. 
+
+/data/solr-5.4.1/server/solr: 
+Default solr.solr.home directory where Solr will create core directories; must contain solr.xml
+
+/data/solr-5.4.1/server/solr/configsets: 
+Directories containing different configuration options for running Solr.
+* basic_configs: Bare minimum configuration settings needed to run Solr.
+* example is under /data/solr-5.4.1/server/solr/configsets/basic_configs
+
+
+Indexing Solr XML
+-----------------
+
+Use the example data in /solr-5.4.1./example/exampledocs/*.xml to index the example Solr XML files.
+
+
+Indexing Solr PostgreSQL-Data
+------------------------------
+
+Import records from a PostgreSQL-database using the Data Import Handler.
 
 Adaptation of the Data Connection in the configutation files under data/solr_data/places/config:
 * solrconfig.xml
 * data-config.xml
 
-* download matching PostgreSQL driver: 
-** https://jdbc.postgresql.org/download.html
+* download matching PostgreSQL-driver: 
+* https://jdbc.postgresql.org/download.html
 
 .. code-block:: yaml
-    cd /sites/solr_data/places/
+
+    cd /data/solr_data/places/
     wget https://jdbc.postgresql.org/download/postgresql-9.1-903.jdbc4.jar
 
 
@@ -183,6 +217,7 @@ Solr-scheme
 -----------
 
 The Solr-scheme consists of the following parts:
+
 * **Fields** (field)
 * **Field types** (fieldType)
 * **Specifying an ID-Field** by uniqueKey 
@@ -194,6 +229,7 @@ Secure Jetty
 Release of certain IP addresses to access the Jetti. Configuration under solr/etc/jetty.xml:
 
 .. code-block:: yaml
+
     <Set name="host"><SystemProperty name="jetty.host" /></Set>
     <Set name="port"><SystemProperty name="jetty.port" default="8983"/></Set>
 

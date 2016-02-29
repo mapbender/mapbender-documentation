@@ -96,10 +96,12 @@ Installation
 Laden Sie Apache Solr herunter und entpacken Sie es in einen beliebigen Ordner. Nach dem erfolgreichen Entpacken der Datei kann Solr durch den Aufruf von solr/bin/install_solr_service.sh als Service in einem Linux-System installiert werden.
 * **Download**: http://lucene.apache.org/solr/
 * **Dokumentation**: http://lucene.apache.org/solr/resources.html#documentation 
+* **Quickstart**: http://lucene.apache.org/solr/quickstart.html
 
 **Installation** von Apache Solr über das Terminal im data-Verzeichnis: 
 
 .. code-block:: yaml
+
     cd /data
     wget http://apache.lauf-forum.at/lucene/solr/5.4.1/solr-5.4.1.tgz
     tar -zxvf solr-5.4.1.tgz
@@ -112,9 +114,13 @@ Start und Stopp
 Sie können durch die folgende Befehle Solr über das Terminal starten und stoppen:
 
 * **Start Solr:**
-** /sites/solr-5.4.1/bin/solr start -s /sites/solr_data
+.. code-block:: yaml
+
+  /data/solr-5.4.1/bin/solr start -s /data/solr-5.4.1/server/solr
 * **Solr Stop:**  
-** /sites/solr-5.4.1/bin/solr stop -all
+.. code-block:: yaml
+
+  /data/solr-5.4.1/bin/solr stop -all
 
 
 Solr-Core
@@ -122,11 +128,12 @@ Solr-Core
 
 Der Solr-Home Ordner ist der Bereich, in dem sich die verschiedenen Solr-Kerne für die Suche befinden. Die Minimalkonfiguration wird in folgender Datei vorgenommen:
 
-Datei: /opt/solr-home/solr.xml
+Datei: solr-5.4.1/server/solr/solr.xml
 
 Tragen Sie den folgenden XML-Block in die Datei ein:
 
 .. code-block:: yaml
+
     <?xml version="1.0" encoding="UTF-8" ?>
     <solr></solr>
 
@@ -137,7 +144,7 @@ Für die Anlage der Kerne erstellen Sie einen Ordner unter data/solr_data. Jeder
 
 Durch die core.properties wird der Core von Solr als Kern erkannt. Die solrconfig.xml beschreibt den Funktionsumfang den dieser Kern mit sich bringt. Und die schema.xml beschreibt den Aufbau des Index.
 
-Eventuelle Anpassung der Konfigurationsdateien unter /data/solr_data/places(/conf): 
+Eventuelle Anpassung der Konfigurationsdateien unter /data/solr-5.4.1/server/solr/configsets/basic_configs/conf: 
 * core.properties
 * solrconfig.xml
 * schema.xml
@@ -146,6 +153,7 @@ Solr example
 ------------
 
 Das Verzeichnis /solr-5.4.1/example enthählt Beispiele für Solr. Jedes Beispiel ist in einem seperaten Verzeichnis abegelegt. Um ein bestimmtes Beispiel auszuführen, geben Sie den folgenden Befehl im Terminal ein:
+.. code-block:: yaml
 
   bin/solr -e <EXAMPLE> where <EXAMPLE> is one of:
   
@@ -154,18 +162,41 @@ Das Verzeichnis /solr-5.4.1/example enthählt Beispiele für Solr. Jedes Beispie
     schemaless   : Schemaloses Beispiel (Schema wird durch die Daten währen dem Indizieren abgeleitet)
     techproducts : Beispiele für umfassende Funktionen von Solr
 
+Um ein Beispiele zu testen geben Sie den folgenden Befehl in das Terminal ein: 
+.. code-block:: yaml
+
+    /data/solr-5.4.1/bin/solr start -e techproducts
+und gehen Sie zu http://localhost:8983/solr. 
+ 
+Das Standardverzeichnis für die Cores ist /data/solr-5.4.1/server/solr; dieses Verzeichnis muss die solr.xml enthalten. 
+
+/data/solr-5.4.1/server/solr/configsets: 
+Diese Verzeichnis enthält verschiedene Konfigurationsoptionen, um Solr auszuführen.
+* basic_configs: Basiskonfiguration für eiene minimale Solr-Ausführung.
+* Beispiel liegt unter /data/solr-5.4.1/server/solr/configsets/basic_configs
+
+
+Indexing Solr XML
+-----------------
+
+Nutzen Sie die Beispieldaten unter /solr-5.4.1./example/exampledocs/*.xml , um die Solr XML-Dateien zu indizieren.
+
+
 
 PostgreSQL-Datenverbindung
 --------------------------
+
+Importiere Datensätze aus einer PostgreSQL-Datenbank, über den Data Import Handler.
 
 Eventuelle Anpassung der Datenverbindung in den Konfigurationsdateien unter data/solr_data/places/config:
 * solrconfig.xml
 * data-config.xml
 
 * passenden PostgreSQL-Treiber downloaden: 
-** https://jdbc.postgresql.org/download.html
+* https://jdbc.postgresql.org/download.html
 
 .. code-block:: yaml
+
     cd /sites/solr_data/places/
     wget https://jdbc.postgresql.org/download/postgresql-9.1-903.jdbc4.jar
 
@@ -174,6 +205,7 @@ Solr-Schema
 -----------
 
 Ein Solr-Schema besteht aus des folgenden Teilen:
+
 * **Feldern** (field)
 * **Feldtypen** (fieldType)
 * **Angabe eines ID-Feldes** per uniqueKey 
@@ -187,6 +219,7 @@ Jetty absichern
 Freigabe bestimmter IP Adressen für den Zugriff in der Jetti-Konfiguration unter solr/etc/jetty.xml
 
 .. code-block:: yaml
+
     <Set name="host"><SystemProperty name="jetty.host" /></Set>
     <Set name="port"><SystemProperty name="jetty.port" default="8983"/></Set>
 
