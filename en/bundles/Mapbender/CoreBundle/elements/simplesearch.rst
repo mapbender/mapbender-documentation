@@ -121,14 +121,16 @@ Start and stop
 You can start and stop Solr via the terminal by the following commands:
 
 **Start Solr:**
+
 .. code-block:: yaml
 
-  /data/solr-5.4.1/bin/solr start -s /data/solr-5.4.1/server/solr
+    /data/solr-5.4.1/bin/solr start -s /data/solr-5.4.1/server/solr
 
 **Stop Solr:**  
+
 .. code-block:: yaml
 
-   /data/solr-5.4.1/bin/solr stop -all
+    /data/solr-5.4.1/bin/solr stop -all
 
 
 Solr-Core
@@ -147,7 +149,8 @@ Enter the following XML-block in the file:
     <?xml version="1.0" encoding="UTF-8" ?>
     <solr></solr>
 
-For the cores create a folder under data/solr_data. Each core consists of the three configuration files: 
+For the cores create a folder under data/solr_data. Each core consists of the three configuration files:
+
 * **core.properties**
 * **solrconfig.xml** 
 * **schema.xml** 
@@ -155,6 +158,7 @@ For the cores create a folder under data/solr_data. Each core consists of the th
 By core.properties the core of Solr is recognized as a core. The solrconfig.xml describes the features of the core. The schema.xml describes the construction of the index.
 
 Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/basic_configs/conf: 
+
 * core.properties
 * solrconfig.xml
 * schema.xml
@@ -167,24 +171,28 @@ separate directory. To run a specific example, do:
 
 .. code-block:: yaml
 
-  bin/solr -e <EXAMPLE> where <EXAMPLE> is one of:
-  
-    cloud        : SolrCloud example
-    dih          : Data Import Handler (rdbms, mail, rss, tika)
-    schemaless   : Schema-less example (schema is inferred from data during indexing)
-    techproducts : Kitchen sink example providing comprehensive examples of Solr features
+    bin/solr -e <EXAMPLE> where <EXAMPLE> is one of:
+    
+      cloud        : SolrCloud example
+      dih          : Data Import Handler (rdbms, mail, rss, tika)
+      schemaless   : Schema-less example (schema is inferred from data during indexing)
+      techproducts : Kitchen sink example providing comprehensive examples of Solr features
 
 To test this function run the following command in the terminal: 
+
 .. code-block:: yaml
 
     /data/solr-5.4.1/bin/solr start -e techproducts
+
 and go to http://localhost:8983/solr. 
 
-/data/solr-5.4.1/server/solr: 
-Default solr.solr.home directory where Solr will create core directories; must contain solr.xml
+/data/solr-5.4.1/server/solr:
+
+* Default solr.solr.home directory where Solr will create core directories; must contain solr.xml
 
 /data/solr-5.4.1/server/solr/configsets: 
-Directories containing different configuration options for running Solr.
+
+* Directories containing different configuration options for running Solr.
 * basic_configs: Bare minimum configuration settings needed to run Solr.
 * example is under /data/solr-5.4.1/server/solr/configsets/basic_configs
 
@@ -201,6 +209,7 @@ Indexing Solr PostgreSQL-Data
 Import records from a PostgreSQL-database using the Data Import Handler.
 
 Adaptation of the Data Connection in the configutation files under data/solr_data/places/config:
+
 * solrconfig.xml
 * data-config.xml
 
