@@ -7,7 +7,6 @@ Content
    :maxdepth: 2
 
    book/installation.rst
-   book/installation_git.rst
    book/components.rst
    book/directory_structure.rst
    book/concepts.rst

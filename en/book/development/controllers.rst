@@ -46,6 +46,7 @@ To get an overview off all defined routes by using the console command
 The command lists all routes with their names, allowed methods and URL pattern. To get more information about a particular route, give it's name to the command:
 
 .. code-block:: yaml
+
  app/console router:debug mapbender_core_user_login
 
  [router] Route "mapbender_core_user_login"

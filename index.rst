@@ -10,7 +10,6 @@ Please choose a language of your choice:
 
    English <en/index>
    Deutsch <de/index>
-   mapbender/TODOs
 
 You find the Mapbender3 API Documentation at:
 

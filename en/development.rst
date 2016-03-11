@@ -18,4 +18,3 @@ The Developer's Book
    book/development/git
    book/development/conventions.rst
    book/development/documentation_howto.rst
-   ../fom/documentation/en/index
