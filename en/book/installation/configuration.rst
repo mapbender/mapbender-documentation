@@ -246,3 +246,94 @@ Mapbender3:
 
 .. image:: ../../../figures/mapbender_cache_directories.png 
            :scale: 80
+
+
+
+Logging in Mapbender3
+---------------------
+
+The Log-Level is defined in the files ``config_dev.yml`` and ``config_prod.yml``. These files are placed in the folder ``application/app/config/``. The config-files are for the different environments (see `production- and development environment <configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_).
+
+For the development-environment (at the development on local systems) Mapbender3 is called with ``app_dev.php`` and therefore the file ``config_dev.yml`` is responsible. In the production-environment, where the ``app.php`` file is used, the configuration from ``config_prod.yml`` is applied.
+
+
+Loglevel
+^^^^^^^^
+
+Overall, 6 log-levels are used:
+
+* DEBUG (100): Detailed debug information.
+* INFO (200): Interesting events. Examples: User logs in, SQL logs.
+* NOTICE (250): Normal but significant events.
+* WARNING (300): Exceptional occurrences that are not errors. Examples: Use of deprecated APIs, poor use of an API, undesirable things that are not necessarily wrong.
+* ERROR (400): Runtime errors that do not require immediate action but should typically be logged and monitored.
+* CRITICAL (500): Critical conditions. Example: Application component unavailable, unexpected exception.
+* ALERT (550): Action must be taken immediately. Example: Entire website down, database unavailable, etc. This should trigger the SMS alerts and wake you up.
+* EMERGENCY (600): Emergency: system is unusable.
+
+This description of the log-level is analog to the `IETF Syslog Protocol <http://tools.ietf.org/html/rfc5424>`_.
+
+
+config_dev.yml
+^^^^^^^^^^^^^^
+
+You find the responsible part of the ``config_dev.yml`` in the section "monolog":
+
+.. code-block:: yaml
+                
+    monolog:
+        handlers:
+            main:
+                type:  stream
+                path:  %kernel.logs_dir%/%kernel.environment%.log
+                level: debug
+            firephp:
+                type:  firephp
+                level: info
+
+Two "handler" are described: ``main`` und ``firephp``.
+
+* **main:** The handler ``main`` is set to the log-level ``debug`` and streams all entries in a file which is defined unter ``path``. This file is defined with variables which means that the file ``dev.log`` is placed under the folder ``application/app/logs/``.
+
+* **firephp:** The handler ``firephp`` can communicate with an appropriate  Extension of the web browser. The developer can therefore see the debug-messaged directly in the web browser without opening the log files.
+
+These are the preferred settings for development tasks.
+
+
+
+config_prod.yml
+^^^^^^^^^^^^^^^
+
+.. code-block:: yaml
+
+    monolog:
+        handlers:
+            main:
+                type:         fingers_crossed
+                action_level: error
+                handler:      nested
+            nested:
+                type:  stream
+                path:  "%kernel.logs_dir%/%kernel.environment%.log"
+                level: debug
+
+
+This settings lead to a two-step logging. Here we have also two handlers: ``main`` and ``nested``.
+
+* **main:** The ``main`` handler ist a type ``fingers-crossed`` and set to the ``error`` level. This means, the error is only active when an error occurs.
+
+* **nested:** The ``main``-Handler calls the ``nested`` handler, which writes the entries into the ``prod.log`` file.
+
+  Per default the handler is set to ``debug`` so that on an error also the debug-messages are written into the ``prod.log`` file.
+
+  If you want to disable the debug-messages you can set here also the log-level ``error``.
+
+
+**Further links:**
+
+* In the package "monolog":
+  
+  * `Using Monolog <https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md>`_
+  * `Handlers, Formatters and Processors <https://github.com/Seldaek/monolog/blob/master/doc/02-handlers-formatters-processors.md>`_
+  
+* `Symfony, Monolog and different log types <http://www.whitewashing.de/2012/08/26/symfony__monolog_and_different_log_types.html>`_. Blog-entry by Benjamin Eberlei.
