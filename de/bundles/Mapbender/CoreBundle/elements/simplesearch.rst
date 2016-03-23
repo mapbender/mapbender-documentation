@@ -326,7 +326,7 @@ Anpassung der Datenverbindung in den Konfigurationsdateien unter data/solr_data/
 UpdateHandler
 --------------
 
-Der UpdateHandler muss in der olrconfig.xml unter data/solr_data/places/config angepasst werden, dann können Sie mit dem folgenden Befehl Dokumente an Solr schicken. 
+Der UpdateHandler muss in der solrconfig.xml unter data/solr_data/places/config angepasst werden, dann können Sie mit dem folgenden Befehl Dokumente an Solr schicken. 
 
 Beispiel csv: 
 
