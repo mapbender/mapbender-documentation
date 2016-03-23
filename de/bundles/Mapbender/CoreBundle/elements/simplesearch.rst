@@ -19,7 +19,8 @@ Konfiguration
 
 .. image:: ../../../../../figures/de/simplesearch_configuration_b.png
      :scale: 80
-             
+
+
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Query URL:** Solr URL, an die der eingegebene Suchbegriff gesendet wird (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
 * **Query URL key:** Der Suchparameterschlüssel, der angehängt wird (z.B. ``q``).
@@ -59,7 +60,8 @@ YAML-Definition:
    label_attribute: label                                                        # Attributname, der für die Trefferausgabe genutzt wird 
    geom_attribute: geom                                                          # Name des Attributs der Geometriedaten 
    geom_format: WKT                                                              # Geodatenformat, kann WKT oder GeoJSON sein
-   delay: 300                                                                    # Automatische Vervollständigungs-Verzögerung. 0   result_buffer: 50                                                             # Buffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
+   delay: 300                                                                    # Automatische Vervollständigungs-Verzögerung. 0   
+   result_buffer: 50                                                             # Buffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
    result_minscale: 1000                                                         # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
    result_maxscale: 5000
    result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png # Marker, der zur Trefferanzeige verwendet werden soll
@@ -128,6 +130,9 @@ Sie können durch die folgende Befehle Solr über das Terminal starten und stopp
 
     /data/solr-5.4.1/bin/solr stop -all
 
+* **Solr-Administrationsseite:** 
+** für die Verwaltung der Cores
+** http://localhost:8983/solr
 
 Solr-Core
 ---------
@@ -143,19 +148,91 @@ Tragen Sie den folgenden XML-Block in die Datei ein:
     <?xml version="1.0" encoding="UTF-8" ?>
     <solr></solr>
 
-Für die Anlage der Kerne erstellen Sie einen Ordner unter data/solr_data. Jeder Core besteht aus den drei Konfigurationsdateien: 
+
+Die solr.xml identifiziert das Verzeichniss als Solr-Ordner mit den Cores. Hier können auch die eigenen Solr-Cores abgelegt werden. Da wir jedoch unabhängig von der Solr-Version arbeiten wollen legen wir uns im folgenden ein seperates Verzeichniss mit den Kernen an. Falls Sie diesen Schritt nicht durchführen wollen, dann führen Sie die folgende Anleitung in dem Verzeichnis solr-5.4.1/server/solr/ durch. 
+
+
+Eigener Solr-Core
+------------------
+
+Für die Anlage eigener Kerne erstellen Sie einen Ordner unter data/solr_data und kopieren Sie die *solr.yml* aus dem Verzeichnis /data/solr-5.4.1/server/solr in dieses Verzeichnis (data/solr_data/solr.yml). Dann erstellen Sie einen neuen Ordner für ihren Core. Im folgenden wurde der Core *places* unter data/solr_data/places genutzt. 
+
+Jeder Core besteht aus drei unentbehrlichen Konfigurationsdateien: 
 
 * **core.properties**
+** Durch die core.properties wird der Core von Solr als Kern erkannt
 * **solrconfig.xml** 
+** Die solrconfig.xml beschreibt den Funktionsumfang den dieser Kern mit sich bringt
 * **schema.xml**
+** Die schema.xml beschreibt den Aufbau des Index
 
-Durch die core.properties wird der Core von Solr als Kern erkannt. Die solrconfig.xml beschreibt den Funktionsumfang den dieser Kern mit sich bringt. Und die schema.xml beschreibt den Aufbau des Index.
 
-Eventuelle Anpassung der Konfigurationsdateien unter /data/solr-5.4.1/server/solr/configsets/basic_configs/conf: 
+Kopieren Sie sich die Konfigurationsdateien aus dem Verzeichniss /data/solr-5.4.1/server/solr/configsets/basic_configs in das Verzeichniss des Cores unter data/solr_data/places oder legen Sie diese neu an mit den folgenden Inhalten:
 
 * core.properties
+** ablegen unter data/solr_data/places/core.properties
+** Anpassung der core.properties: 
+** Fügen Sie hier den folgenden Konfigurations-Block ein:
+
+.. code-block:: yaml
+
+    name=places
+    shard=${shard:}
+    collection=${collection:places}
+    config=${solrconfig:solrconfig.xml}
+    schema=${schema:schema.xml}
+    coreNodeName=${coreNodeName:}
+
 * solrconfig.xml
+** ablegen unter /data/solr_data/places/conf/solrconfig.xml
+** Anpassung der solrconfig.xml:
+** Fügen Sie hier den folgenden YML-Block ein:
+
+.. code-block:: yaml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <config>
+        <luceneMatchVersion>5.4.0</luceneMatchVersion>
+        <dataDir>${solr.data.dir:}</dataDir>
+
+        <schemaFactory class="ClassicIndexSchemaFactory" />
+
+        <!-- RequestHandler zum abfragen des Index -->
+        <requestHandler name="/select" class="solr.SearchHandler" />
+
+        <!-- RequestHandler zum indizieren von Daten -->
+        <requestHandler name="/update" class="solr.UpdateRequestHandler" />
+    </config>
+
 * schema.xml
+** ablegen unter /data/solr_data/places/conf/schema.xml
+** Anpassung der schema.xml:
+** Fügen Sie hier den folgenden YML-Block ein:
+.. code-block:: yaml
+
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <schema name="places" version="1.5">
+        <!-- FIELDS -->
+        <field indexed="true" multiValued="false" name="id" required="true" stored="true" type="string"/>
+        <field indexed="true" multiValued="false" name="text" required="true" stored="true" type="string"/>
+
+        <uniqueKey>id</uniqueKey>
+
+        <!-- FIELD TYPES -->
+        <fieldType class="solr.StrField" name="string" sortMissingLast="true"/>
+    </schema>
+
+
+Falls Sie bestimmte Wörter als *Stopwords* markieren wollen, dann können sie diese als Liste in einer Datei unter /data/solr_data/places/conf/stopwords.txt speichern. Sinnvoll sind hier Worter wie z.B.: als, auf, im, in usw.
+
+Nun können Sie Solr mit den eigenen Kernen neustarten. Nutzen Sie dazu den obigen Befehl zum Stoppen und dann den folgenden angepassten Befehl mit dem neuen Core-Verzeichnis:
+
+* **Start Solr:**
+
+.. code-block:: yaml
+
+    /data/solr-5.4.1/bin/solr start -s /data/solr_data
+
 
 Solr example
 ------------
@@ -191,27 +268,71 @@ Das Standardverzeichnis für die Cores ist /data/solr-5.4.1/server/solr; dieses 
 Indexing Solr XML
 -----------------
 
-Nutzen Sie die Beispieldaten unter /solr-5.4.1./example/exampledocs/*.xml , um die Solr XML-Dateien zu indizieren.
+Nutzen Sie die Beispieldaten unter /solr-5.4.1./example/exampledocs/*.xml oder eigene Daten, um die Solr XML-Dateien zu indizieren.
+
+Für die Indexierung haben Sie zwei Möglichkeiten: 
+
+* **DataImportHandler**
+** zur Einrichtung einer PostgreSQL-Datenverbindung
+* **UpdateHandler**
+** um Daten über HTTP Post direkt an Solr zu senden
 
 
+DataImportHandler
+--------------------
 
-PostgreSQL-Datenverbindung
---------------------------
+Importiere Datensätze aus einer **PostgreSQL-Datenbank**, über den Data Import Handler.
 
-Importiere Datensätze aus einer PostgreSQL-Datenbank, über den Data Import Handler.
-
-Eventuelle Anpassung der Datenverbindung in den Konfigurationsdateien unter data/solr_data/places/config:
+Für 
+Anpassung der Datenverbindung in den Konfigurationsdateien unter data/solr_data/places/config:
 
 * solrconfig.xml
 * data-config.xml
+** Angabe der Datenverbindung: 
+
+.. code-block:: yaml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <dataConfig>
+        <dataSource
+            type="JdbcDataSource"
+            driver="org.postgresql.Driver"
+            readOnly="true"
+            autoCommit="false"
+            transactionIsolation="TRANSACTION_READ_COMMITTED"
+            holdability="CLOSE_CURSORS_AT_COMMIT"
+            url="jdbc:postgresql://localhost:5432/datenbankname"
+            user="postgres"
+            password=" " />
+        <document>
+            <entity name="places" query="SELECT * FROM schema.tabelle">
+                <field column="gid" name="gid" />
+                <field column="text" name="text" />
+                <field column="label" name="label" />
+                <field column="geom" name="geom" />
+            </entity>
+        </document>
+    </dataConfig>
 
 * passenden PostgreSQL-Treiber downloaden: 
-* https://jdbc.postgresql.org/download.html
+** Download unter https://jdbc.postgresql.org/download.html
 
 .. code-block:: yaml
 
     cd /sites/solr_data/places/
     wget https://jdbc.postgresql.org/download/postgresql-9.1-903.jdbc4.jar
+
+
+UpdateHandler
+--------------
+
+Der UpdateHandler muss in der olrconfig.xml unter data/solr_data/places/config angepasst werden, dann können Sie mit dem folgenden Befehl Dokumente an Solr schicken. 
+
+Beispiel csv: 
+
+.. code-block:: yaml
+
+    /opt/solr/bin/post -c places /opt/schulung/data/germany.csv
 
 
 Solr-Schema
@@ -225,11 +346,13 @@ Ein Solr-Schema besteht aus des folgenden Teilen:
 
 
 
-
 Jetty absichern
 ---------------
 
-Freigabe bestimmter IP Adressen für den Zugriff in der Jetti-Konfiguration unter solr/etc/jetty.xml
+Um den Apache Solr nach Außen abzusichern müssen Sie den Jetty konfigurieren. 
+
+* Freigabe bestimmter IP Adressen für den Zugriff in der Jetti-Konfiguration 
+* Anpassung unter solr/etc/jetty.xml
 
 .. code-block:: yaml
 

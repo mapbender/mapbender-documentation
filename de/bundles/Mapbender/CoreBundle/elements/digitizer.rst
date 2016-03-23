@@ -44,7 +44,7 @@ Konfiguration
 .. image:: ../../../../../figures/digitizer_configuration.png
      :scale: 80
 
-Das Element kann in der Sidepane eingebettet oder über eine Schaltfläche als Dialog aufgerufen werden.
+Das Element kann in der Sidepane eingebettet werden.
 
 * Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * Target: Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.

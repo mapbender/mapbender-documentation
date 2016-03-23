@@ -134,6 +134,10 @@ You can start and stop Solr via the terminal by the following commands:
 
     /data/solr-5.4.1/bin/solr stop -all
 
+* **Solr-Administration page:** 
+** for the management of the cores
+** http://localhost:8983/solr
+
 
 Solr-Core
 ---------
@@ -150,20 +154,99 @@ Enter the following XML-block in the file:
 
     <?xml version="1.0" encoding="UTF-8" ?>
     <solr></solr>
+ 
 
-For the cores create a folder under data/solr_data. Each core consists of the three configuration files:
+The solr.xml identifies the directory as a Solr-folder containing the cores. Here you can store your own Solr cores. However, since we want to operate independently of the Solr version we create a separate directory with the cores. If you want to skip this step, then perform the following instructions in the directory solr-5.4.1/server/solr.
+
+
+Your Solr-Core
+---------------
+
+
+Für die Anlage eigener Kerne erstellen Sie einen Ordner unter data/solr_data und kopieren Sie die *solr.yml* aus dem Verzeichnis /data/solr-5.4.1/server/solr in dieses Verzeichnis (data/solr_data/solr.yml). Dann erstellen Sie einen neuen Ordner für ihren Core. Im folgenden wurde der Core *places* unter data/solr_data/places genutzt. 
+
+For the cores create a folder under data/solr_data and copy the *solr.yml* from the directory /data/solr-5.4.1/server/solr in this directory (data/solr_data/solr.yml). Then create a new folder for your core. For this documentation we used the core *places* among data/solr_data/places.
+
+
+Each core consists of the three configuration files:
 
 * **core.properties**
+** By core.properties the core of Solr is recognized as a core
 * **solrconfig.xml** 
-* **schema.xml** 
+** The solrconfig.xml describes the features of the core
+* **schema.xml**
+** The schema.xml describes the construction of the index 
 
-By core.properties the core of Solr is recognized as a core. The solrconfig.xml describes the features of the core. The schema.xml describes the construction of the index.
+Copy the configuration files from the directory /data/solr-5.4.1/server/solr/configsets/basic_configs in the directiory of the core under data/solr_data/places or insert it on your own with the following contents:
 
 Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/basic_configs/conf: 
 
 * core.properties
+** data/solr_data/places/core.properties
+** Adapting core.properties: 
+** Put in the following configuration block:
+
+.. code-block:: yaml
+
+    name=places
+    shard=${shard:}
+    collection=${collection:places}
+    config=${solrconfig:solrconfig.xml}
+    schema=${schema:schema.xml}
+    coreNodeName=${coreNodeName:}
+
+
 * solrconfig.xml
+** /data/solr_data/places/conf/solrconfig.xml
+** Adapting solrconfig.xml:
+** Put in the following configuration block:
+
+.. code-block:: yaml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <config>
+        <luceneMatchVersion>5.4.0</luceneMatchVersion>
+        <dataDir>${solr.data.dir:}</dataDir>
+
+        <schemaFactory class="ClassicIndexSchemaFactory" />
+
+        <!-- RequestHandler to use the Index -->
+        <requestHandler name="/select" class="solr.SearchHandler" />
+
+        <!-- RequestHandler to identify Data -->
+        <requestHandler name="/update" class="solr.UpdateRequestHandler" />
+    </config>
+
+
 * schema.xml
+** /data/solr_data/places/conf/schema.xml
+** Adapting schema.xml:
+** Put in the following configuration block:
+.. code-block:: yaml
+
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <schema name="places" version="1.5">
+        <!-- FIELDS -->
+        <field indexed="true" multiValued="false" name="id" required="true" stored="true" type="string"/>
+        <field indexed="true" multiValued="false" name="text" required="true" stored="true" type="string"/>
+
+        <uniqueKey>id</uniqueKey>
+
+        <!-- FIELD TYPES -->
+        <fieldType class="solr.StrField" name="string" sortMissingLast="true"/>
+    </schema>
+
+If you want to save certain words as *Stopwords*, you can save them as a list in a file under /data/solr_data/places/conf/stopwords.txt.
+
+Falls Sie bestimmte Wörter als *Stopwords* markieren wollen, dann können sie diese als Liste in einer Datei unter /data/solr_data/places/conf/stopwords.txt speichern. Meaningful are here words as e.g .: as, on, in, etc.
+
+Now you can restart Solr with your own core. Use the command we mentioned above to stop and then the following customized command to start the with the new Core:
+
+* **Start Solr:**
+
+.. code-block:: yaml
+
+    /data/solr-5.4.1/bin/solr start -s /data/solr_data
 
 Solr example
 ------------
@@ -202,11 +285,20 @@ and go to http://localhost:8983/solr.
 Indexing Solr XML
 -----------------
 
-Use the example data in /solr-5.4.1./example/exampledocs/*.xml to index the example Solr XML files.
+Use the example data in /solr-5.4.1./example/exampledocs/*.xml or your own data to index the example Solr XML files.
 
 
-Indexing Solr PostgreSQL-Data
-------------------------------
+For the indexing, you have two options: 
+
+* **DataImportHandler**
+** establishing a PostgreSQL data connection
+* **UpdateHandler**
+** to send data via HTTP post directly to Solr
+
+
+DataImportHandler
+------------------
+
 
 Import records from a PostgreSQL-database using the Data Import Handler.
 
@@ -214,6 +306,31 @@ Adaptation of the Data Connection in the configutation files under data/solr_dat
 
 * solrconfig.xml
 * data-config.xml
+* configurate the PostgreSQL data connection:
+
+.. code-block:: yaml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <dataConfig>
+        <dataSource
+            type="JdbcDataSource"
+            driver="org.postgresql.Driver"
+            readOnly="true"
+            autoCommit="false"
+            transactionIsolation="TRANSACTION_READ_COMMITTED"
+            holdability="CLOSE_CURSORS_AT_COMMIT"
+            url="jdbc:postgresql://localhost:5432/databasename"
+            user="postgres"
+            password=" " />
+        <document>
+            <entity name="places" query="SELECT * FROM schema.tablee">
+                <field column="gid" name="gid" />
+                <field column="text" name="text" />
+                <field column="label" name="label" />
+                <field column="geom" name="geom" />
+            </entity>
+        </document>
+    </dataConfig>
 
 * download matching PostgreSQL-driver: 
 * https://jdbc.postgresql.org/download.html
@@ -223,6 +340,18 @@ Adaptation of the Data Connection in the configutation files under data/solr_dat
     cd /data/solr_data/places/
     wget https://jdbc.postgresql.org/download/postgresql-9.1-903.jdbc4.jar
 
+
+
+UpdateHandler
+--------------
+
+You must adjust the UpdateHandler in the solrconfig.xml under data/solr_data/places/config, then you can send documents with the following command to Solr. 
+
+Example csv: 
+
+.. code-block:: yaml
+
+    /opt/solr/bin/post -c places /opt/training/data/germany.csv
 
 Solr-scheme
 -----------
@@ -237,7 +366,11 @@ The Solr-scheme consists of the following parts:
 Secure Jetty
 -------------
 
-Release of certain IP addresses to access the Jetti. Configuration under solr/etc/jetty.xml:
+
+In order to secure the Apache Solr outward you must configure the Jetty Security. 
+
+* Release of certain IP addresses to access the Jetti 
+* Configuration under solr/etc/jetty.xml
 
 .. code-block:: yaml
 

@@ -44,7 +44,7 @@ Configuration
 .. image:: ../../../../../figures/digitizer_configuration.png
      :scale: 80
 
-You can use the element in the sidepane or as a dialog with a button.
+You can use the element in the sidepane.
 
 The Ditigitzer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender3.org/en/book/database.html
 
