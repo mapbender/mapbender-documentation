@@ -131,8 +131,8 @@ Sie können durch die folgende Befehle Solr über das Terminal starten und stopp
     /data/solr-5.4.1/bin/solr stop -all
 
 * **Solr-Administrationsseite:** 
-** für die Verwaltung der Cores
-** http://localhost:8983/solr
+* für die Verwaltung der Cores
+* http://localhost:8983/solr
 
 Solr-Core
 ---------
@@ -160,19 +160,19 @@ Für die Anlage eigener Kerne erstellen Sie einen Ordner unter data/solr_data un
 Jeder Core besteht aus drei unentbehrlichen Konfigurationsdateien: 
 
 * **core.properties**
-** Durch die core.properties wird der Core von Solr als Kern erkannt
+* Durch die core.properties wird der Core von Solr als Kern erkannt
 * **solrconfig.xml** 
-** Die solrconfig.xml beschreibt den Funktionsumfang den dieser Kern mit sich bringt
+* Die solrconfig.xml beschreibt den Funktionsumfang den dieser Kern mit sich bringt
 * **schema.xml**
-** Die schema.xml beschreibt den Aufbau des Index
+* Die schema.xml beschreibt den Aufbau des Index
 
 
 Kopieren Sie sich die Konfigurationsdateien aus dem Verzeichniss /data/solr-5.4.1/server/solr/configsets/basic_configs in das Verzeichniss des Cores unter data/solr_data/places oder legen Sie diese neu an mit den folgenden Inhalten:
 
-* core.properties
-** ablegen unter data/solr_data/places/core.properties
-** Anpassung der core.properties: 
-** Fügen Sie hier den folgenden Konfigurations-Block ein:
+* **core.properties**
+* ablegen unter data/solr_data/places/core.properties
+* Anpassung der core.properties: 
+* Fügen Sie hier den folgenden Konfigurations-Block ein:
 
 .. code-block:: yaml
 
@@ -183,10 +183,10 @@ Kopieren Sie sich die Konfigurationsdateien aus dem Verzeichniss /data/solr-5.4.
     schema=${schema:schema.xml}
     coreNodeName=${coreNodeName:}
 
-* solrconfig.xml
-** ablegen unter /data/solr_data/places/conf/solrconfig.xml
-** Anpassung der solrconfig.xml:
-** Fügen Sie hier den folgenden YML-Block ein:
+* **solrconfig.xml**
+* ablegen unter /data/solr_data/places/conf/solrconfig.xml
+* Anpassung der solrconfig.xml:
+* Fügen Sie hier den folgenden YML-Block ein:
 
 .. code-block:: yaml
 
@@ -204,10 +204,11 @@ Kopieren Sie sich die Konfigurationsdateien aus dem Verzeichniss /data/solr-5.4.
         <requestHandler name="/update" class="solr.UpdateRequestHandler" />
     </config>
 
-* schema.xml
-** ablegen unter /data/solr_data/places/conf/schema.xml
-** Anpassung der schema.xml:
-** Fügen Sie hier den folgenden YML-Block ein:
+* **schema.xml**
+* ablegen unter /data/solr_data/places/conf/schema.xml
+* Anpassung der schema.xml:
+* Fügen Sie hier den folgenden YML-Block ein:
+
 .. code-block:: yaml
 
     <?xml version="1.0" encoding="UTF-8" ?>
@@ -273,9 +274,9 @@ Nutzen Sie die Beispieldaten unter /solr-5.4.1./example/exampledocs/*.xml oder e
 Für die Indexierung haben Sie zwei Möglichkeiten: 
 
 * **DataImportHandler**
-** zur Einrichtung einer PostgreSQL-Datenverbindung
+* zur Einrichtung einer PostgreSQL-Datenverbindung
 * **UpdateHandler**
-** um Daten über HTTP Post direkt an Solr zu senden
+* um Daten über HTTP Post direkt an Solr zu senden
 
 
 DataImportHandler
@@ -283,12 +284,11 @@ DataImportHandler
 
 Importiere Datensätze aus einer **PostgreSQL-Datenbank**, über den Data Import Handler.
 
-Für 
-Anpassung der Datenverbindung in den Konfigurationsdateien unter data/solr_data/places/config:
+Für die Anpassung der Datenverbindung in den Konfigurationsdateien unter data/solr_data/places/config:
 
-* solrconfig.xml
-* data-config.xml
-** Angabe der Datenverbindung: 
+* **solrconfig.xml**
+* **data-config.xml**
+* Angabe der Datenverbindung: 
 
 .. code-block:: yaml
 
@@ -315,7 +315,7 @@ Anpassung der Datenverbindung in den Konfigurationsdateien unter data/solr_data/
     </dataConfig>
 
 * passenden PostgreSQL-Treiber downloaden: 
-** Download unter https://jdbc.postgresql.org/download.html
+* Download unter https://jdbc.postgresql.org/download.html
 
 .. code-block:: yaml
 

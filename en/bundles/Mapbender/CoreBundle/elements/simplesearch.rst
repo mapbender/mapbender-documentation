@@ -135,8 +135,8 @@ You can start and stop Solr via the terminal by the following commands:
     /data/solr-5.4.1/bin/solr stop -all
 
 * **Solr-Administration page:** 
-** for the management of the cores
-** http://localhost:8983/solr
+* for the management of the cores
+* http://localhost:8983/solr
 
 
 Solr-Core
@@ -171,20 +171,20 @@ For the cores create a folder under data/solr_data and copy the *solr.yml* from 
 Each core consists of the three configuration files:
 
 * **core.properties**
-** By core.properties the core of Solr is recognized as a core
+* By core.properties the core of Solr is recognized as a core
 * **solrconfig.xml** 
-** The solrconfig.xml describes the features of the core
+* The solrconfig.xml describes the features of the core
 * **schema.xml**
-** The schema.xml describes the construction of the index 
+* The schema.xml describes the construction of the index 
 
 Copy the configuration files from the directory /data/solr-5.4.1/server/solr/configsets/basic_configs in the directiory of the core under data/solr_data/places or insert it on your own with the following contents:
 
 Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/basic_configs/conf: 
 
-* core.properties
-** data/solr_data/places/core.properties
-** Adapting core.properties: 
-** Put in the following configuration block:
+* **core.properties**
+* data/solr_data/places/core.properties
+* Adapting core.properties: 
+* Put in the following configuration block:
 
 .. code-block:: yaml
 
@@ -196,10 +196,10 @@ Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/
     coreNodeName=${coreNodeName:}
 
 
-* solrconfig.xml
-** /data/solr_data/places/conf/solrconfig.xml
-** Adapting solrconfig.xml:
-** Put in the following configuration block:
+* **solrconfig.xml**
+* /data/solr_data/places/conf/solrconfig.xml
+* Adapting solrconfig.xml:
+* Put in the following configuration block:
 
 .. code-block:: yaml
 
@@ -218,10 +218,11 @@ Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/
     </config>
 
 
-* schema.xml
-** /data/solr_data/places/conf/schema.xml
-** Adapting schema.xml:
-** Put in the following configuration block:
+* **schema.xml**
+* /data/solr_data/places/conf/schema.xml
+* Adapting schema.xml:
+* Put in the following configuration block:
+
 .. code-block:: yaml
 
     <?xml version="1.0" encoding="UTF-8" ?>
@@ -291,9 +292,9 @@ Use the example data in /solr-5.4.1./example/exampledocs/*.xml or your own data 
 For the indexing, you have two options: 
 
 * **DataImportHandler**
-** establishing a PostgreSQL data connection
+* establishing a PostgreSQL data connection
 * **UpdateHandler**
-** to send data via HTTP post directly to Solr
+* to send data via HTTP post directly to Solr
 
 
 DataImportHandler
@@ -304,8 +305,8 @@ Import records from a PostgreSQL-database using the Data Import Handler.
 
 Adaptation of the Data Connection in the configutation files under data/solr_data/places/config:
 
-* solrconfig.xml
-* data-config.xml
+* **solrconfig.xml**
+* **data-config.xml**
 * configurate the PostgreSQL data connection:
 
 .. code-block:: yaml
