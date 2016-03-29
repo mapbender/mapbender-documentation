@@ -183,8 +183,8 @@ Please notice that you might have to activate the :command:`FollowSymLinks` opti
 
 .. code-block:: yaml
 
-  Alias /mapbender3 /var/www/mapbender3/web/
-  <Directory /var/www/mapbender3/web/>
+  Alias /mapbender3 /var/www/mapbender-starter/application/web/
+  <Directory /var/www/mapbender-starter/application/web/>
     Options MultiViews FollowSymLinks
     DirectoryIndex app.php
     Order allow,deny
