@@ -100,7 +100,15 @@ Composer und PHPUnit
 
 PHPUnit wird über den Composer mitgeliefert. Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
 
-Daher muss zuerst der Composer installiert werden (weitere Information unter http://getcomposer.org/download/):
+Sobald Sie die unten aufgeführten Abhängigkeiten installiert haben, können Sie sich über die folgende Eingabe einen Überblick über die verfügbaren Aufgaben verschaffen:
+
+.. code-block:: yaml
+
+   phing -l
+
+
+Daher muss zuerst der Composer: für die Laufzeit-Abhängigkeiten, wie
+Symfony und Doctrine installieren werden (weitere Information unter http://getcomposer.org/download/):
 
 .. code-block:: yaml
 
