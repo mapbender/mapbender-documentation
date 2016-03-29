@@ -13,10 +13,30 @@ Sie sollten einige Dinge wissen, um an der Mapbender3-Entwicklung mitwirken zu k
   <http://symfony.com/doc/current/index.html>`_ dort erfahren Sie mehr über Controller, Vorlagen usw.
 * Docblock-Anmerkungen: Es wird ApiGen zu Erstellung der Dokumentation verwendet. 
   :doc:`Erfahren Sie mehr <apidocumentation>`.
-* JavaScript: jQuery wird viel genutzt, hier kommt v.a. die jQuery UI Widget Factory zum Einsatz. Das Verständnis davon ist essentiell, um JavaScript-Code zu schreiben. 
+* JavaScript: jQuery wird viel genutzt, hier kommt v.a. die jQuery UI Widget Factory zum Einsatz. Das Verständnis davon ist essentiell, um JavaScript-Code zu schreiben.
+
+
+Installation
+************
+
+Die Installation aus den Git-Quellen ist im Kapitel `Git-basierte Installation <../installation/installation_git.html>`_ beschrieben.
+
+  
 
 Wo gibt es Hilfe?
 *****************
+
+Mailinglisten
+
+* `Mapbender3-Developer und -Anwender Mailingliste <http://mapbender3.org/?q=de/node/16>`_
+
+Bibliotheken und Frameworks:
+
+* `Symfony framework <http://www.symfony.com/>`_
+* `PHPUnit documentation <https://phpunit.de/>`_
+* `Composer documentation <https://getcomposer.org/doc/>`_
+* `General GitHub documentation <https://help.github.com/>`_
+* `GitHub pull request documentation <https://help.github.com/send-pull-requests/>`_
 
 
 Themen
