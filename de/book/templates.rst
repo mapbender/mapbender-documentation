@@ -1,15 +1,15 @@
 .. _templates:
 
 Wie werden eigene Vorlagen (templates) erzeugt?
-################################################################
+###############################################
 
-Mapbender3 beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Vorlage mit Ihrem eigenen Corporate Design verwendet werden. Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im  Mapbender CoreBundle (application/mapbender/src/Mapbender/CoreBundle). Für eigene Vorlagen sollten Sie ein eigenes Bundle verwenden, um Probleme bei einem Upgrade zu vermeiden.
+Mapbender3 beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Vorlage mit Ihrem eigenen Corporate Design verwendet werden. Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im Mapbender CoreBundle (application/mapbender/src/Mapbender/CoreBundle). Für eigene Vorlagen sollten Sie ein eigenes Bundle verwenden, um Probleme bei einem Upgrade zu vermeiden.
 
 Ab der Version 3.0.4.0 kann der Stil einer Anwendung über den css-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter :doc:`Wie kann der Stil einer Anwendung mit dem css-Editor angepasst werden? <css>`.
 
 
-Wie werden eigene Vorlagen (templates) erzeugt?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wie werden eigene Vorlagen (Templates) erzeugt?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Folgende vier Schritte sind nötig:
 
@@ -38,7 +38,7 @@ Die Struktur kann wie folgt aussehen:
                     /Resources
                                   /public
                                          demo_fullscreen.css  
-                                         /imgage
+                                         /image
                                              workshop.ico
                                              workshop_logo.png
                                              print.png
@@ -51,10 +51,9 @@ Die Struktur kann wie folgt aussehen:
 
 
 Erzeugen eines neuen Namespaces 
-*********************************
+*******************************
 
-Die Datei WorkshopDemoBundle.php erzeugt den Namespace für das Bundle 
-und referenziert auf das Template und zu den eigenen css-Datei(en).
+Die Datei WorkshopDemoBundle.php erzeugt den Namespace für das Bundle und referenziert auf das Template und zu den eigenen css-Datei(en).
 
 
 .. code-block:: php
@@ -96,11 +95,11 @@ und referenziert auf das Template und zu den eigenen css-Datei(en).
 
 
 Anlegen der eigenen Template-Datei 
-*************************************************
+**********************************
 
 In unserem Beispiel heißt die Template-Datei FullscreenDemo.php. Sie befindet sich unter src/Workshop/DemoBundle/Template/FullscreenDemo.php.
 
-In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete Twig-datei definiert.
+In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete twig-Datei definiert.
 
 
 .. code-block:: bash
@@ -148,7 +147,7 @@ In der Template-Datei wir der Name des Templates, die Regionen die angelegt werd
 
 
 Eigene twig-Datei erzeugen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die twig-Dateien sind im folgenden Verzeichnis gespeichert:
 
@@ -165,12 +164,12 @@ Verwenden Sie mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullsc
 
 
 Eigene css-Datei erzeugen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Erzeugen Sie eine leere css-Datei und geben Sie in dieser nur die css-Definitionen an. 
 Ab der Mapbender3 Version 3.0.3.0 muss lediglich das css definiert werden, das vom Standard der Elemente abweicht.
 
-Mit Hife von Firebug können Sie die bestehende Definition ermitteln, in Ihre css-Datei kopieren und hier anpassen.
+Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre css-Datei kopieren und hier anpassen.
 
 Ihre css-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css und die folgende Definition enthalten:
 
@@ -241,8 +240,7 @@ Beim Laden der neuen Anwendung wird eine css-Datei im web/assets-Verzeichnis ang
 
 * web/assets/WorkshopDemoBundle__demo_fullscreen__css.css
 
-Wenn Sie die css-Datei weiter bearbeiten müssen Sie die unter web/asstes generierte Datei löschen, damit diese neu geschrieben wird 
-und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
+Wenn Sie die css-Datei weiter bearbeiten müssen Sie die unter web/assets generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
  
 .. code-block:: bash
 
@@ -250,7 +248,7 @@ und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert w
 
 
 Registrieren Sie Ihre Vorlage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Um Ihre Vorlage zu registrieren, müssen Sie eine Datei erzeugen unter: 
 
@@ -304,7 +302,7 @@ Fügen Sie die neue css-Datei in der Funktion listAssets als letzten Eintrag ein
 
 
 Verwenden der neuen Vorlage in der mapbender.yml
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Jetzt kann die Vorlage in der mapbender.yml, in der die Anwendung konfiguriert wird, verwendet werden. 
 
@@ -317,8 +315,10 @@ Sie finden die mapbender.yml unter:
   "template:   Workshop\DemoBundle\Template\DemoFullscreen"
 
 
+
 Verwenden der neuen Vorlage in der Mapbender Administration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Wenn Sie eine neue Anwendung mit der Mapbender3-Administration erzeugen, können Sie eine Vorlage (Template) auswählen.
 
 Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
@@ -351,24 +351,21 @@ Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
         );
 
-Setzen Sie Schreibrechte wür das web-Verzeichnis für Ihren WebServer-Benutzer. 
+Setzen Sie Schreibrechte für das web-Verzeichnis für Ihren Webserver-Benutzer. 
 
 .. code-block:: bash
 
     chmod ug+w web
 
 
-Aktualsieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - CSS Dateien, JavaScript Dateien, Bilder und mehr -
-diese müssen in das öffentliche web-Verzeichnis kopiert werden:
+Aktualisieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - CSS Dateien, JavaScript Dateien, Bilder und mehr - diese müssen in das öffentliche web-Verzeichnis kopiert werden:
 
 .. code-block:: bash
 
     app/console assets:install web
 
 
-Alternativ, als Entwickler, verwenden Sie vielleicht lieber symbolische Links. 
-Der Befehl kann wie folgt aufgerufen werden. Mit der Option 
-symlink werden die Dateien nicht kopiert. Es wird stattdessen ein symbolischer Link erzeugt. Dies erleichtert das Editieren innerhalb des Bundels.
+Alternativ, als Entwickler, verwenden Sie vielleicht lieber symbolische Links. Der Befehl kann wie folgt aufgerufen werden. Mit der Option symlink werden die Dateien nicht kopiert. Es wird stattdessen ein symbolischer Link erzeugt. Dies erleichtert das Editieren innerhalb des Bundles.
 
 .. code-block:: bash
 
@@ -383,7 +380,7 @@ Für das *WorkshopDemoBundle* wird statt des Eintrags *Mapbender\CoreBundle\Temp
 
 
 Wie kann das Design verändert werden?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die folgenden Dateien müssen bearbeitet werden:
 
@@ -392,7 +389,7 @@ Die folgenden Dateien müssen bearbeitet werden:
 
 
 Wie kann das Logo verändert werden?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Das Logo (Standard ist das Mapbender3 Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender3 Installation aus.
 
@@ -408,8 +405,10 @@ Das Logo kann auch in der twig-Datei angepasst werden:
  <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />	
 
 
-Wie kann der Anwendungstitle und das favicon angepasst werden?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wie kann der Anwendungstitel und das favicon angepasst werden?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Der Anwendungstitel und das favicon kann auch in der twig-Datei angepasst werden:
 
 .. code-block:: yaml
 
@@ -420,8 +419,8 @@ Wie kann der Anwendungstitle und das favicon angepasst werden?
 
 
 
-Wie können Buttons geänert werden?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wie können Buttons geändert werden?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mapbender3 verwendet Schrift-Icons auf der FontAwesome Collection:
 
@@ -435,14 +434,14 @@ Mapbender3 verwendet Schrift-Icons auf der FontAwesome Collection:
    font-style: normal; }
 
 
-In your css-file you can refer to a font images like this:
+In der CSS-Datei können Sie zu den Icons der Schriftart folgendermaßen verweisen:
 
 .. code-block:: css
 
   .iconPrint:before {
     content: "\f02f";}
 
-If you want to use an image you could place the image in your bundle and refer to it like this
+Wenn Sie ein Bild nutzen möchten, legen Sie dieses am Besten in Ihrem Bundle ab und referenzieren es auf die folgende Art und Weise:
 
 .. code-block:: css
 
@@ -451,13 +450,12 @@ If you want to use an image you could place the image in your bundle and refer t
 
 
 Probieren Sie es aus
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+
 * Laden Sie das Workshop/DemoBundle herunter: https://github.com/mapbender/mapbender-workshop 
 * Verändern Sie die Farbe oder ein Icon.
 * Verändern Sie die Größe Ihres Icons.
-* Verändern Sie die Farbe der Toobar.
+* Verändern Sie die Farbe der Toolbar.
 * Verwenden Sie ein Bild anstatt eines Schrift-Icons für einen Button.
 * Verändern Sie die Position der Übersicht.
-
 * Schauen Sie in die Workshop-Dateien, um zu sehen wie es funktioniert.
-

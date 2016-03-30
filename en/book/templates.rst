@@ -27,7 +27,7 @@ Notice: We already prepared a Workshop/DemoBundle that you can use as a template
 
 
 Create your own bundle
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 User bundles are stored in the src-directory. 
 
@@ -53,7 +53,7 @@ This is how the structure can look like:
 
 
 Create a new namespace 
-**************************
+***********************
 
 The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template and to your css-file(s).
 
@@ -98,7 +98,7 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
 
 
 Create your own template file
-*************************************************
+*****************************
 
 In our example the template file is called FullscreenDemo.php. You find it at src/Workshop/DemoBundle/Template/FullscreenDemo.php.
 
@@ -150,12 +150,12 @@ In the template file you define the name of your template, the regions that you 
 
 
 Adding properties for your "sidepane" region
-*************************************************************************
+********************************************
 
 For a "sidepane" region are "tabs" and "accordion" properties supported.
 
-* "tabs" orders mapbender elements in tabs
-* "accordion" displays mapbender elements as an accordion list
+* "tabs" orders Mapbender elements in tabs
+* "accordion" displays Mapbender elements as an accordion list
 
 For adding you define the function "getRegionsProperties" in the template file.
 
@@ -185,7 +185,7 @@ For configuration you check an option in your application's configuration.
 
 
 Create your own twig-file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You find the twig-files at the following path:
 
@@ -201,9 +201,9 @@ Use the existing template from mapbender/src/Mapbender/CoreBundle/Resources/view
 
 
 Create your own css-file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create an empty css-file and fill it with content. From Mapbender3 version 3.0.3.0 you only have to define the parts that have to lookdifferent from the default style of the element.
+Create an empty css-file and fill it with content. From Mapbender3 version 3.0.3.0 you only have to define the parts that have to look different from the default style of the element.
 
 Firebug can help you to find out the styles you want to change.
 
@@ -352,8 +352,10 @@ You find the mapbender.yml at:
   "template:   Workshop\DemoBundle\Template\DemoFullscreen"
 
 
+
 Register your bundle in app/AppKernel.php
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 When you create a new application through the Mapbender3 administration you have to choose a template you want to use. 
 
 Before your new template will show up you have to register your bundle in the file app/AppKernel.php
@@ -428,7 +430,7 @@ You have to edit the following files, if want to change the design
 
 
 How to change the logo?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The logo (default is the Mapbender3 logo) can be changed in the parameters.yml. Which causes a global change. 
 
@@ -445,7 +447,9 @@ Or in the twig file:
 
 
 How to change the title and favicon?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can adjust the title and the favicon also in the twig-file:
 
 .. code-block:: yaml
 
@@ -457,7 +461,7 @@ How to change the title and favicon?
 
 
 How to change the buttons?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mapbender3 uses Fonts from the FontAwesome collection:
 
@@ -488,12 +492,12 @@ If you want to use an image you could place the image in your bundle and refer t
 
 Try this out
 ~~~~~~~~~~~~
+
 * you can download the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop 
 * change the color of your icons
 * change the size of your icons
-* change the color of the toobar
+* change the color of the toolbar
 * use an image instead of a font-icon for your button
 * move the position of your overview to the left
-
 * Have a look at the workshop files to see how it works
 
