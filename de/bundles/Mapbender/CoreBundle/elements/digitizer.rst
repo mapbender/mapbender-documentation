@@ -599,7 +599,7 @@ Definition von Feldern für den Dateiupload
                                                 # ein absoluter Pfad ist ebenso möglich wie /data/webgis/digitizer
                       format: %gid%-%name%      # die Datei wird nach der Definition umbenannt (%name% ist der Dateiname [hier file1], %gid% - ist der Feldname)
                       url:  /digitizer/         # optional, wenn ein ALIAS definiert wurde
-                      allowedFormats: [jpg,png,gif,pdf]
+                      allowedFormats: [jpg,png,gif]
 
 
 Definition von Bildern
