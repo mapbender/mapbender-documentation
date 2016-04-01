@@ -609,7 +609,7 @@ Definition of a file upload field
                                                 # also absolute path is possible like /data/webgis/digitizer
                       format: %gid%-%name%      # file will be renamed to the definition (%name% is file1, %gid% - is ID fieldname)
                       url:  /digitizer/         # optional, if ALIAS is defined
-                      allowedFormats: [jpg,png,gif,pdf]
+                      allowedFormats: [jpg,png,gif]
 
 
 
