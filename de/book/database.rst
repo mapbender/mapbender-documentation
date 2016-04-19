@@ -14,7 +14,7 @@ Beispiele zur Einrichtung finden sich in den `Installationsanleitungen <installa
 Doctrine
 *************
 
-Mapbender3 verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und beitet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht. 
+Mapbender3 verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht. 
 Auf der `Doctrine Projektseite <http://www.doctrine-project.org/>`_ finden sich weitere Informationen.
 
 
@@ -27,21 +27,27 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgenderma�
 
     doctrine:
         dbal:
-            driver:   %database_driver%
-            host:     %database_host%
-            port:     %database_port%
-            dbname:   %database_name%
-            path:     %database_path%
-            user:     %database_user%
-            password: %database_password%
-            charset:  UTF8
-            logging: %kernel.debug%
-            profiling: %kernel.debug%
+            default_connection: default
+            connections:
+                # Datenbankverbindung default
+                default:
+                    driver:   %database_driver%
+                    host:     %database_host%
+                    port:     %database_port%
+                    dbname:   %database_name%
+                    path:     %database_path%
+                    user:     %database_user%
+                    password: %database_password%
+                    charset:  UTF8
+                    logging: %kernel.debug%
+                    profiling: %kernel.debug%
         orm:
             auto_generate_proxy_classes: %kernel_debug%
             auto_mapping:true
 
-Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Parameter. Diese Parameter werden von der  parameters.yml geladen. Um die Art der Datenbank zu ändern, müssen daher die Parameterwerte in der parameters.yml verändert werden.
+Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Parameter. Diese Parameter werden aus der parameters.yml geladen. Um die Verbdinung zur Datenbank zu ändern, müssen daher die Parameterwerte in der parameters.yml verändert werden.
+
+Der Parameter die "default_connection" gibt die Datebankverbindung an, die standardmäßig von Mapbender3 verwendet werden soll (``default_connection: default``).
 
 * database_driver: Der Datenbanktreiber. Mögliche Werte sind:
 
@@ -57,23 +63,21 @@ Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Paramet
 * database_port: Der Port, auf dem die Datenbank lauscht (z.B. 5432 für PostgreSQL).
 * database_name: Der Name der Datenbank (z.B. mapbender3). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <installation.html>`_ für Details.
 * database_path: Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, löschen Sie bitte den Parameter trotzdem nicht aus der parameters.yml, sondern schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
-* database_user: Username für die Verbindung zur Datenbank.
+* database_user: Benutzername für die Verbindung zur Datenbank.
 * database_password: Das Passwort des Datenbankbenutzers.
 * charset: Die Kodierung, die die Datenbank verwendet.
-* logging:  Die Option sorgt dafür, das alle SQL’s nicht mehr geloggt werden (Standardwert: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
+* logging:  Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standardwert: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
 * profiling: Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standardwert: %kernel.debug%)
 
 
 Verwendung mehrerer Datenbanken
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mit Mapbender3 können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender3-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender3-Bundle gehört.
+Mit Mapbender3 können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender3-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender3-Bundle gehört. EIne zweite Datenbank benötigen Sie ebenfalls für die Geodatensuche (über den SearchRouter) und die Datenerfassung (Digitizer). Die Geodaten sollten grundsätzlich in einer anderen DAtenbank vorgehalten werden und nicht in der Mapbender3 Datenbank.
 
-Es gibt eine Standard-Datenbankverbindung, die vom Mapbender3 verwendet wird.
+Die Standard-Datenbankverbindung (``default_connection: default``) wird von Mapbender3 verwendet.
 
-Wenn Sie eine andere Datenbank verwenden möchten, müssen Sie eine zweite Datenbankverbindung mit einem anderen Namen definieren und diese verwenden.
-
-* Geben Sie als zusätzlichen Parameter die "default_connection" an, also die Datenbankverbindung, die standardmäßig von Mapbender3 verwendet werden soll (z.B. ``default_connection: default`` oder ``default_connection: search_db``).
+Wenn Sie eine weitere Datenbank verwenden möchten, müssen Sie eine zweite Datenbankverbindung mit einem anderen Namen definieren.
 
 Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **config.yml**:
 
@@ -109,7 +113,7 @@ Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **config.yml**:
                     profiling: %kernel.debug%
 
 
-Die Definition der Datenbank Variablen wird in der **parameters.yml** Datei vorgenommen.
+Die Definition der Datenbank Variablen (Angabe der Zugangsinformationen) wird in der **parameters.yml** Datei vorgenommen.
 
 .. code-block:: yaml
                 
@@ -132,4 +136,4 @@ Die Definition der Datenbank Variablen wird in der **parameters.yml** Datei vorg
         database2_user:     postgres
         database2_password: postgres
 
-
+In den Elementen SearchRouter und Digitizer kann nun auf die Datenbankverbindung (connection) mit dem Namen **search_db** verwiesen werden.
