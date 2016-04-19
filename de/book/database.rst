@@ -47,7 +47,7 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgenderma�
 
 Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Variablen. Diese Variablen werden aus der parameters.yml geladen. Um die Verbindung zur Datenbank zu ändern, müssen daher die Werte der Variablen in der parameters.yml verändert werden.
 
-Der Parameter die "default_connection" gibt die Datebankverbindung an, die standardmäßig von Mapbender3 verwendet werden soll (``default_connection: default``).
+Der Parameter "default_connection" gibt die Datenbankverbindung an, die standardmäßig von Mapbender3 verwendet werden soll (``default_connection: default``).
 
 * database_driver: Der Datenbanktreiber. Mögliche Werte sind:
 
