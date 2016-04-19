@@ -355,9 +355,9 @@ Definition Popup
                                 popup: 
                                     # Options description: 
                                     # http://api.jqueryui.com/dialog/
-                                    title: POI                       # define the title of the popup
-                                    height: 400
-                                    width: 500
+                                    title: POI     # Definition des Titels des Popups
+                                    height: 400    # Höhe Popup
+                                    width: 500     # Breite Popup
                                     # modal: true
                                     # position: {at: "left+20px",  my: "left top-460px"}
 
@@ -376,9 +376,9 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 
 .. code-block:: yaml
 
-        searchType: currentExtent   # currentExtent|all - default is currentExtent
-        tableFields:
-            gid: {label: Nr. , width: 20%}
+        searchType: currentExtent   # currentExtent|all - Standard ist currentExtent
+        tableFields:    # Definition der Spalten für die Objekttabelle
+            gid: {label: Nr. , width: 20%}    # Datenspalte, label - Beschriftung, css z.B. Angabe der Breite
             name: {label: Name , width: 80%}
 
 
@@ -389,12 +389,12 @@ Definition von Dateireitern (type tabs)
 .. code-block:: yaml
 
         formItems:
-           - type: tabs
-             children:
+           - type: tabs                      # Type tabs erzeugt Reiter
+             children:                       # tabs enthält Unterobjekte (children) vom Type form
                - type: form
-                 title: Basic information
-                 css: {padding: 10px}
-                 children:
+                 title: Basic information    # Titel des Reiters
+                 css: {padding: 10px}        
+                 children:                   
                      - type: label
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
@@ -405,14 +405,15 @@ Definition von Textfeldern (type input)
 
 .. code-block:: yaml
 
-                                                 - type: input                    # element type definition
-                                                   title: Title for the field      # labeling (optional)
-                                                   name: column_name              # reference to table column (optional)
-                                                   mandatory: true                # mandatpory field (optional)
-                                                   mandatoryText: You have to provide information.
+                                                 - type: input                    # Typ Textfeld
+                                                   title: Title for the field     # Beschriftung
+                                                   name: column_name              # Referenz zur Tabellenspalte
+                                                   mandatory: true                # Pflichtfeld (optional)
+                                                   mandatoryText: You have to provide information. # Text sofern Pflichtfeld nicht gefüllt ist
+                                                   infoText: 'Bitte geben Sie einen Wert an' # Definition eines Informationstextes
                                                    cssClass: 'input-css'          # additional css definition (optional)
-                                                   value: 'default Text'          # define a default value  (optional)
-                                                   placeholder: 'please edit this field' # placeholder appears in the field as information (optional)
+                                                   value: 'default Text'          # Definition eines default-Wertes  (optional)
+                                                   placeholder: 'please edit this field' # Platzhalter, der vor der Eingabe erscheint (optional)
 
 
 Definition von Auswahlboxen (selectbox oder multiselect [type select])
@@ -421,11 +422,11 @@ Definition von Auswahlboxen (selectbox oder multiselect [type select])
 select - ein Eintrag kann ausgewählt werden
 .. code-block:: yaml
 
-                                                 - type: select                     # element type definition
-                                                   title: select some types         # labeling (optional)
-                                                   name: my_type                    # reference to table column (optional)                    
-                                                   multiple: false                  # define a multiselect, default is false
-                                                   options:                         # definition of the options (key, value)
+                                                 - type: select                     # Typ Auswahlbox
+                                                   title: select some types         # Beschriftung (optional)
+                                                   name: my_type                    # Referenz zur Tabellenspalte                   
+                                                   multiple: false                  # Definition einer Mehrfachauswahl (multiselect), Standard ist false
+                                                   options:                         # Definition der Optionen (key, value)
                                                        1: pub
                                                        2: bar
                                                        3: pool
@@ -447,11 +448,11 @@ Füllen der Auswahlboxen über eine SQL Abfrage
 
 .. code-block:: yaml
 
-                                                 - type: select                     # element type definition
-                                                   title: select some types         # labeling (optional)
-                                                   name: my_type                    # reference to table column
-                                                   connection: connectionName       # Define a connection selectbox via SQL
-                                                   sql: 'SELECT DISTINCT key, value FROM tableName order by value' # get the options of the
+                                                 - type: select                     # Typ Auswahlbox
+                                                   title: select some types         # Beschriftung (optional)
+                                                   name: my_type                    # Referenz zu Tabellenspalte
+                                                   connection: connectionName       # Definition einer Datenbankverbindung (connection)
+                                                   sql: 'SELECT DISTINCT key, value FROM tableName order by value' # Definition SQL, Abfrage der Werte key und value
 
 
 
@@ -460,8 +461,8 @@ Definition von Texten (type label)
 
 .. code-block:: yaml
 
-                                                 - type: label                        # element type definition, will write a text
-                                                   title: 'Please give information about the poi.' # define a text 
+                                                 - type: label      # Typ Label schreibt einen Text
+                                                   title: 'Please give information about the poi.' # Definition eines Textes
 
 
 Definition eines Textes
@@ -471,7 +472,7 @@ Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenque
 
 .. code-block:: yaml
 
-                                                - type:        text# Element Typ Definition
+                                                - type: text      # Typ text zur Generierung von dynamischen Texten
 
                                                   # Label (optional)
                                                   title:       Name 
@@ -479,26 +480,25 @@ Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenque
                                                   # Name des Feldes (optional)
                                                   name:        name 
 
-                                                  # CSS definition (optional)
+                                                  # CSS Definition (optional)
                                                   css:         {width: 80%} 
 
-                                                  # CSS Klass definition (optional)
+                                                  # CSS Klass Definition (optional)
                                                   cssClass:    input-css  
-
-                                                  # Info-Text
-                                                  infoText: Die Vorname.
 
                                                   # Text Definition in JavaScript
                                                   # data - Data ist das Objekt, das alle Felder zur Verfügung stellt.
                                                   # z.B.: Über data.id wird die ID des Obektes im Text angezeigt.
                                                   text: data.id + ':' + data.name
 
-Definition von Textbereichen (type textarea)
+Definition von Textbereichen (type textArea)
 --------------------------------------------------------------
 
 .. code-block:: yaml
 
-                                                 - type: textarea
+                                                 - type: textArea      # Typ erzeugt einen Textbereich
+                                                   rows: 4             # Anzahl der Zeilen für den Textbereich
+                                                   name: beschreibung  # Tabellenspalte  
                                                    title: Bestandsaufnahme Bemerkung
 
 
@@ -507,7 +507,7 @@ Definition of a Trennlinien (type breakline)
 
 .. code-block:: yaml
 
-                                                 - type: breakline                     # fügt eine Trennlinie ein
+                                                 - type: breakline      # fügt eine Trennlinie ein
 
 
 Definition von Checkboxen (type checkbox)
@@ -527,9 +527,11 @@ Definition von Pflichtfeldern
 .. code-block:: yaml
 
                                                    mandatory: true                              # true - Das Feld muss gefüllt werden. Ansonsten kann der Datensatz nicht gespeichert werden. Bei der Definition sind auch Reguläre Ausdrücke möglich.
+                                                   
                                                    mandatorytitle: Pflichtfeld - bitte füllen!  # Text der angezeigt wird, wenn das Feld nicht gefüllt wird oder mit einem ungültigen Wert gefüllt wird.
-
+                                                   
                                                    mandatory: /^\w+$/gi               # Es können auch reguläre Ausdrücke angegeben werden, um die Eingabe zu überprüfen (z.B. Email oder numbers) Weitere Informationen unter: http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
+                                                   
                                                    # Prüfung, ob die Eingabe eine Zahl ist
                                                    mandatory: /^[0-9]+$/
                                                    mandatoryText: Bitte eine Zahl eingeben!
@@ -555,7 +557,7 @@ Definition von Hilfetexten zu den Eingabefeldern (type infotext)
 
                                                  - type: input                    # Elementtyp
                                                    title: Title for the field     # Beschriftung (optional)
-                                                   name: column_name              # reference to table column (optional)
+                                                   name: column_name              # Tabellenspalte (optional)
                                                    mandatory: /^[0-9]+$/
                                                    mandatoryText: Bitte eine Zahl eingeben!
                                                    infoText: In dieses Feld dürfen nur Zahlen eingegeben werden # Hinweistext, der angezeigt wird über i-Symbol.
@@ -638,7 +640,7 @@ Werkzeugliste
   * **removeSelected** - die selektierten löschen
   * **removeAll** - alle Löschen (aus dem Layer)
 
-Definition of toolset types
+Definition der für die Erfassung verwendeten Toolset Typen
 
 .. code-block:: yaml
 
