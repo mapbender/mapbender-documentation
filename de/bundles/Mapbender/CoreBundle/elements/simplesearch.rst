@@ -3,7 +3,7 @@
 SimpleSearch
 ************
 
-SimpleSearch bietet eine einstufige Lösung für Geodatenabfragen an, betrieben wird diese z.B. von Solr. Es wird ein Eingabefeld verwendet, welches direkt in die Toolbar eingebunden werden kann. Es sendet den eingegebenen Suchbegriff an eine konfigurierbare URL. Diese empfängt JSON-formatierte Daten, welche eine Beschriftung und Geometrieattribute für jeden Eintrag beinhaltet.
+SimpleSearch bietet eine Einfeldsuche oder Schlagwortsuche. Die Suchanfrage erfolgt dabei an einen Suchdienst z.B. Solr. Es wird ein Eingabefeld angeboten, welches direkt in die Toolbar oder in der Seitenleiste (Sidepane) eingebunden werden kann. SimpleSearch sendet den eingegebenen Suchbegriff an eine konfigurierbare URL und empfängt JSON-formatierte Daten, welche eine Beschriftung und Geometrieattribute für jeden Eintrag beinhalten.
 
 Die Geometriedaten können in WKT oder in GeoJSON-Format codiert werden.
 
@@ -24,7 +24,7 @@ Konfiguration
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Query URL:** Solr URL, an die der eingegebene Suchbegriff gesendet wird (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
 * **Query URL key:** Der Suchparameterschlüssel, der angehängt wird (z.B. ``q``).
-* **Query Whitespace replacement pattern:** Pattern zum Austausch von Leerzeichen.
+* **Query Whitespace replacement pattern:** Muster zum Austausch von Leerzeichen.
 * **Query key format:** Einfaches Suchformat (z.B. ``%s``).
 * **Token search/ replace (JavaScript regex):** Tokenizer spaltet/ sucht/ ersetzt regexp.
 
@@ -33,14 +33,14 @@ Konfiguration
   * Token replace, z.B.: ``$1*``
     
 * **Collection path:** Dies kann ein Attributspfad sein, der vom Abfrageergebnis extrahiert wird (z.B. ``response.docs``).
-* **Label attribut:** Attrubutname der zur Beschriftung genutzt wird (z.B. ``label``).
-* **Geom attribut:** Name der Attribute der Geometriedaten (z.B. ``geom``).
+* **Label attribut:** Attributname der zur Beschriftung genutzt wird (z.B. ``label``).
+* **Geom attribut:** Attributname der Geodaten (z.B. ``geom``).
 * **Geom format:** Geodatenformat, kann WKT oder GeoJSON sein (z.B. ``WKT``).
 * **Delay:** Automatische Vervollständigungs-Verzögerung (z.B. ``300``).
 * **Result buffer:** Puffert das Objekt (in Karteneinheiten) vor dem Zoomen (z.B. ``10``).
 * **Result minscale/ maxscale:** Maßstabsbegrenzung beim Zoomen (z.B. ``1000`` und ``5000``). ~ wenn keine Begrenzung gewünscht wird.
 * **Result icon url:** Symbol, das zur Trefferanzeige verwendet werden soll (z.B. ``http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png``).
-* **Result icon offset:** Abstand x und y des Symbols (z.B. ``-6,-38`` für das Stecknadel-Icon).
+* **Result icon offset:** Versatz x und y des Symbols (z.B. ``-6,-38`` für das Stecknadel-Icon).
 
 
 
@@ -61,11 +61,11 @@ YAML-Definition
    geom_attribute: geom                                                          # Name des Attributs der Geometriedaten 
    geom_format: WKT                                                              # Geodatenformat, kann WKT oder GeoJSON sein
    delay: 300                                                                    # Automatische Vervollständigungs-Verzögerung. 0   
-   result_buffer: 50                                                             # Buffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
+   result_buffer: 50                                                             # Puffert den Treffer in Karteneinheiten vor dem Zoomen
    result_minscale: 1000                                                         # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
    result_maxscale: 5000
    result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png # Marker, der zur Trefferanzeige verwendet werden soll
-   result_icon_offset: -6,-38                                                    # Offset x und y des Symbols
+   result_icon_offset: -6,-38                                                    # Versatz x und y des Symbols
    
 
 So richten Sie Solr ein:
@@ -128,13 +128,13 @@ Tragen Sie den folgenden XML-Block in die Datei ein:
     <solr></solr>
 
 
-Die solr.xml identifiziert das Verzeichniss als Solr-Ordner mit den Cores. Hier können auch die eigenen Solr-Cores abgelegt werden. Da wir jedoch unabhängig von der Solr-Version arbeiten wollen legen wir uns im folgenden ein seperates Verzeichniss mit den Kernen an. Falls Sie diesen Schritt nicht durchführen wollen, dann führen Sie die folgende Anleitung in dem Verzeichnis solr-5.4.1/server/solr/ durch. 
+Die solr.xml identifiziert das Verzeichniss als Solr-Ordner mit den Cores. Hier können auch die eigenen Solr-Cores abgelegt werden. Da wir jedoch unabhängig von der Solr-Version arbeiten wollen legen wir uns im folgenden ein separates Verzeichniss mit den Kernen an. Falls Sie diesen Schritt nicht durchführen wollen, dann führen Sie die folgende Anleitung in dem Verzeichnis solr-5.4.1/server/solr/ durch. 
 
 
 Eigener Solr-Core
 ------------------
 
-Für die Anlage eigener Kerne erstellen Sie einen Ordner unter data/solr_data und kopieren Sie die *solr.yml* aus dem Verzeichnis /data/solr-5.4.1/server/solr in dieses Verzeichnis (data/solr_data/solr.yml). Dann erstellen Sie einen neuen Ordner für ihren Core. Im folgenden wurde der Core *places* unter data/solr_data/places genutzt. 
+Für die Anlage eigener Kerne erstellen Sie einen Ordner unter /data/solr_data und kopieren Sie die *solr.yml* aus dem Verzeichnis /data/solr-5.4.1/server/solr in dieses Verzeichnis (/data/solr_data/solr.yml). Dann erstellen Sie einen neuen Ordner für ihren Kerne. Im Folgenden wurde der Core *places* unter /data/solr_data/places genutzt. 
 
 Jeder Core besteht aus drei unentbehrlichen Konfigurationsdateien: 
 
@@ -146,10 +146,10 @@ Jeder Core besteht aus drei unentbehrlichen Konfigurationsdateien:
 * Die schema.xml beschreibt den Aufbau des Index
 
 
-Kopieren Sie sich die Konfigurationsdateien aus dem Verzeichniss /data/solr-5.4.1/server/solr/configsets/basic_configs in das Verzeichniss des Cores unter data/solr_data/places oder legen Sie diese neu an mit den folgenden Inhalten:
+Kopieren Sie sich die Konfigurationsdateien aus dem Verzeichniss /data/solr-5.4.1/server/solr/configsets/basic_configs in das Verzeichniss des Cores unter /data/solr_data/places oder legen Sie diese neu an mit den folgenden Inhalten:
 
 * **core.properties**
-* ablegen unter data/solr_data/places/core.properties
+* ablegen unter /data/solr_data/places/core.properties
 * Anpassung der core.properties: 
 * Fügen Sie hier den folgenden Konfigurations-Block ein:
 
@@ -186,7 +186,7 @@ Kopieren Sie sich die Konfigurationsdateien aus dem Verzeichniss /data/solr-5.4.
 * **schema.xml**
 * ablegen unter /data/solr_data/places/conf/schema.xml
 * Anpassung der schema.xml:
-* Fügen Sie hier den folgenden YML-Block ein:
+* Fügen Sie hier den folgenden YAML-Block ein:
 
 .. code-block:: yaml
 
@@ -203,7 +203,7 @@ Kopieren Sie sich die Konfigurationsdateien aus dem Verzeichniss /data/solr-5.4.
     </schema>
 
 
-Falls Sie bestimmte Wörter als *Stopwords* markieren wollen, dann können sie diese als Liste in einer Datei unter /data/solr_data/places/conf/stopwords.txt speichern. Sinnvoll sind hier Worter wie z.B.: als, auf, im, in usw.
+Falls Sie bestimmte Wörter als *Stopwords* markieren wollen, dann können Sie diese als Liste in einer Datei unter /data/solr_data/places/conf/stopwords.txt speichern. Sinnvoll sind hier Worter wie z.B.: als, auf, im, in usw.
 
 Nun können Sie Solr mit den eigenen Kernen neustarten. Nutzen Sie dazu den obigen Befehl zum Stoppen und dann den folgenden angepassten Befehl mit dem neuen Core-Verzeichnis:
 
@@ -217,7 +217,7 @@ Nun können Sie Solr mit den eigenen Kernen neustarten. Nutzen Sie dazu den obig
 Solr example
 ------------
 
-Das Verzeichnis /solr-5.4.1/example enthählt Beispiele für Solr. Jedes Beispiel ist in einem seperaten Verzeichnis abegelegt. Um ein bestimmtes Beispiel auszuführen, geben Sie den folgenden Befehl im Terminal ein:
+Das Verzeichnis /solr-5.4.1/example enthält Beispiele für Solr. Jedes Beispiel ist in einem seperaten Verzeichnis abgelegt. Um ein bestimmtes Beispiel auszuführen, geben Sie den folgenden Befehl im Terminal ein:
 
 .. code-block:: yaml
 
@@ -228,7 +228,7 @@ Das Verzeichnis /solr-5.4.1/example enthählt Beispiele für Solr. Jedes Beispie
       schemaless   : Schemaloses Beispiel (Schema wird durch die Daten währen dem Indizieren abgeleitet)
       techproducts : Beispiele für umfassende Funktionen von Solr
 
-Um ein Beispiele zu testen geben Sie den folgenden Befehl in das Terminal ein: 
+Um ein Beispiele zu testen geben Sie den folgenden Befehl im Terminal ein: 
 
 .. code-block:: yaml
 
@@ -241,7 +241,7 @@ Das Standardverzeichnis für die Cores ist /data/solr-5.4.1/server/solr; dieses 
 /data/solr-5.4.1/server/solr/configsets: 
 
 * Diese Verzeichnis enthält verschiedene Konfigurationsoptionen, um Solr auszuführen.
-* basic_configs: Basiskonfiguration für eiene minimale Solr-Ausführung.
+* basic_configs: Basiskonfiguration für eine minimale Solr-Ausführung.
 * Beispiel liegt unter /data/solr-5.4.1/server/solr/configsets/basic_configs
 
 
@@ -263,7 +263,7 @@ DataImportHandler
 
 Importiere Datensätze aus einer **PostgreSQL-Datenbank**, über den Data Import Handler.
 
-Für die Anpassung der Datenverbindung in den Konfigurationsdateien unter data/solr_data/places/config:
+Für die Anpassung der Datenverbindung in den Konfigurationsdateien unter /data/solr_data/places/config:
 
 * **solrconfig.xml**
 * **data-config.xml**
@@ -293,7 +293,7 @@ Für die Anpassung der Datenverbindung in den Konfigurationsdateien unter data/s
         </document>
     </dataConfig>
 
-* passenden PostgreSQL-Treiber downloaden: 
+* passenden PostgreSQL-Treiber downloaden und im core oder im Unterverzeichnis lib ablegen: 
 * Download unter https://jdbc.postgresql.org/download.html
 
 .. code-block:: yaml
@@ -305,7 +305,7 @@ Für die Anpassung der Datenverbindung in den Konfigurationsdateien unter data/s
 UpdateHandler
 --------------
 
-Der UpdateHandler muss in der solrconfig.xml unter data/solr_data/places/config angepasst werden, dann können Sie mit dem folgenden Befehl Dokumente an Solr schicken. 
+Der UpdateHandler muss in der solrconfig.xml unter /data/solr_data/places/config angepasst werden. Anschließend können Sie mit dem folgenden Befehl Dokumente an Solr schicken. 
 
 Beispiel csv: 
 
@@ -317,7 +317,7 @@ Beispiel csv:
 Solr-Schema
 -----------
 
-Ein Solr-Schema besteht aus des folgenden Teilen:
+Ein Solr-Schema besteht aus den folgenden Teilen:
 
 * **Feldern** (field)
 * **Feldtypen** (fieldType)
@@ -328,9 +328,9 @@ Ein Solr-Schema besteht aus des folgenden Teilen:
 Jetty absichern
 ---------------
 
-Um den Apache Solr nach Außen abzusichern müssen Sie den Jetty konfigurieren. 
+Um den Apache Solr nach Außen abzusichern, müssen Sie Jetty konfigurieren. 
 
-* Freigabe bestimmter IP Adressen für den Zugriff in der Jetti-Konfiguration 
+* Freigabe bestimmter IP Adressen für den Zugriff in der Jetty-Konfiguration 
 * Anpassung unter solr/etc/jetty.xml
 
 .. code-block:: yaml
