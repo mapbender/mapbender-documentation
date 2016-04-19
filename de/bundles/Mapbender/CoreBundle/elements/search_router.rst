@@ -197,14 +197,6 @@ Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selekt
                 fillOpacity: 0.4
 
 
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\SearchRouter
-* **Widget:** mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
-* **Style:** mapbender.element.searchRouter.css
-
-
 Beispiele
 ==================
 
@@ -322,7 +314,16 @@ Beispiel mit Auswahlbox:
 		    buffer: 1000
 		    minScale: null
 		    maxScale: null
-		    
+
+
+
+Class, Widget & Style
+=====================
+
+* **Class:** Mapbender\\CoreBundle\\Element\\SearchRouter
+* **Widget:** mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
+* **Style:** mapbender.element.searchRouter.css
+
 
 HTTP Callbacks
 ==============
