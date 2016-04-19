@@ -45,7 +45,7 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgenderma�
             auto_generate_proxy_classes: %kernel_debug%
             auto_mapping:true
 
-Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Parameter. Diese Parameter werden aus der parameters.yml geladen. Um die Verbdinung zur Datenbank zu ändern, müssen daher die Parameterwerte in der parameters.yml verändert werden.
+Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Variablen. Diese Variablen werden aus der parameters.yml geladen. Um die Verbindung zur Datenbank zu ändern, müssen daher die Werte der Variablen in der parameters.yml verändert werden.
 
 Der Parameter die "default_connection" gibt die Datebankverbindung an, die standardmäßig von Mapbender3 verwendet werden soll (``default_connection: default``).
 
