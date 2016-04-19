@@ -46,8 +46,8 @@ Configuration
 
 
   
-YAML-Definition:
-----
+YAML-Definition
+--------------------
 
 .. code-block:: yaml
 
@@ -70,30 +70,8 @@ YAML-Definition:
    result_icon_offset: -6,-38                                                    # Offset x and y for the icon
    
 
-Class, Widget & Style
-=========================
 
-* **Class:** Mapbender\\CoreBundle\\Element\\SimpleSearch
-* **Widget:** mapbender.element.simplesearch.js
-
-HTTP Callbacks
-==============
-
-- /search: Widget proxy which then queries configured URL. In dev-mode the final query URL will be returned as a
-  x-mapbender-simplesearch-url header for easier debugging.
-
-JavaScript API
-==============
-
-None.
-
-JavaScript Signals
-==================
-
-None.
-
-
-How to setup Solr:
+How to setup Solr
 ==================
 
 Installation
@@ -144,8 +122,6 @@ Solr-Core
 
 The Solr home folder is the area in which the various Solr-Cores for the search are located. 
 
-Der Solr-Home Ordner ist der Bereich, in dem sich die verschiedenen Solr-Kerne für die Suche befinden. The configuration is performed in the following file:
-
 File: solr-5.4.1/server/solr/solr.xml
 
 Enter the following XML-block in the file:
@@ -162,8 +138,6 @@ The solr.xml identifies the directory as a Solr-folder containing the cores. Her
 Your Solr-Core
 ---------------
 
-
-Für die Anlage eigener Kerne erstellen Sie einen Ordner unter data/solr_data und kopieren Sie die *solr.yml* aus dem Verzeichnis /data/solr-5.4.1/server/solr in dieses Verzeichnis (data/solr_data/solr.yml). Dann erstellen Sie einen neuen Ordner für ihren Core. Im folgenden wurde der Core *places* unter data/solr_data/places genutzt. 
 
 For the cores create a folder under data/solr_data and copy the *solr.yml* from the directory /data/solr-5.4.1/server/solr in this directory (data/solr_data/solr.yml). Then create a new folder for your core. For this documentation we used the core *places* among data/solr_data/places.
 
@@ -238,8 +212,6 @@ Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/
     </schema>
 
 If you want to save certain words as *Stopwords*, you can save them as a list in a file under /data/solr_data/places/conf/stopwords.txt.
-
-Falls Sie bestimmte Wörter als *Stopwords* markieren wollen, dann können sie diese als Liste in einer Datei unter /data/solr_data/places/conf/stopwords.txt speichern. Meaningful are here words as e.g .: as, on, in, etc.
 
 Now you can restart Solr with your own core. Use the command we mentioned above to stop and then the following customized command to start the with the new Core:
 
@@ -378,3 +350,24 @@ In order to secure the Apache Solr outward you must configure the Jetty Security
     <Set name="host"><SystemProperty name="jetty.host" /></Set>
     <Set name="port"><SystemProperty name="jetty.port" default="8983"/></Set>
 
+Class, Widget & Style
+=========================
+
+* **Class:** Mapbender\\CoreBundle\\Element\\SimpleSearch
+* **Widget:** mapbender.element.simplesearch.js
+
+HTTP Callbacks
+==============
+
+- /search: Widget proxy which then queries configured URL. In dev-mode the final query URL will be returned as a
+  x-mapbender-simplesearch-url header for easier debugging.
+
+JavaScript API
+==============
+
+None.
+
+JavaScript Signals
+==================
+
+None.

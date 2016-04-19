@@ -44,7 +44,7 @@ Konfiguration
 
 
 
-YAML-Definition:
+YAML-Definition
 ----------------
 
 .. code-block:: yaml
@@ -67,27 +67,6 @@ YAML-Definition:
    result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png # Marker, der zur Trefferanzeige verwendet werden soll
    result_icon_offset: -6,-38                                                    # Offset x und y des Symbols
    
-
-Class, Widget & Style
-=========================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\SimpleSearch
-* **Widget:** mapbender.element.simplesearch.js
-
-HTTP Callbacks
-==============
-
-- /search: Proxy-Element, welches die konfigurierbare URL abfragt. Im Entwicklungsmodus wird die endgültige Abfrage-URL zum einfachen Debugging als ein x-mapbender-simplesearch-url Header zurückgegeben.
-
-JavaScript API
-==============
-
-Keine.
-
-JavaScript Signals
-==================
-
-Keine.
 
 So richten Sie Solr ein:
 ========================
@@ -359,3 +338,24 @@ Um den Apache Solr nach Außen abzusichern müssen Sie den Jetty konfigurieren.
     <Set name="host"><SystemProperty name="jetty.host" /></Set>
     <Set name="port"><SystemProperty name="jetty.port" default="8983"/></Set>
 
+
+Class, Widget & Style
+=========================
+
+* **Class:** Mapbender\\CoreBundle\\Element\\SimpleSearch
+* **Widget:** mapbender.element.simplesearch.js
+
+HTTP Callbacks
+==============
+
+- /search: Proxy-Element, welches die konfigurierbare URL abfragt. Im Entwicklungsmodus wird die endgültige Abfrage-URL zum einfachen Debugging als ein x-mapbender-simplesearch-url Header zurückgegeben.
+
+JavaScript API
+==============
+
+Keine.
+
+JavaScript Signals
+==================
+
+Keine.
