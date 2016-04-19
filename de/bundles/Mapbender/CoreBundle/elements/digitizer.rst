@@ -11,7 +11,7 @@ Das Digitizer-Element bietet komplexe Editier­funktionalitäten an:
   * Einfügen von Stützpunkten (Linien, Flächen)
   * Erfassung von Flächen mit Enklaven und/oder Exklaven sowie Kreisen und Ellipsen
 
-In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten sehr komplexe Formulare generiert werden. Hierbei wurde sich an den Möglichkeiten, die in Mapbender 2.x zur Verfügung stehen, orientiert.
+In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten sehr komplexe Formulare generiert werden.
 
     
 
@@ -52,11 +52,10 @@ Das Element kann in der Sidepane eingebettet werden.
 
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren. Mehr zu diesem Thema finden Sie unter http://doc.mapbender3.org/de/book/database.html
 
-Die Definition des Digitizers wird in einer YAML syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
+Die Definition des Digitizers wird in YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 
-Die Element Definitionen im Web-interface sind:
-
-YAML-Definition für das Element digitizer in der Sidepane in der mapbender.yml:
+YAML-Definition für das Element digitizer in der Sidepane in der mapbender.yml
+-----------------------------------------------------------------------------------------
 
 .. code-block:: yaml
 
@@ -343,7 +342,7 @@ Basisdefinition
         zoomScaleDenominator: 500
         allowEditData: true 
         allowDelete: true
-        allowDigitize: true 
+        allowDigitize: true
         popup:
             [...]
 
