@@ -83,7 +83,7 @@ To build the website locally, you need to install Sphinx. In Debian-based distri
 
 .. code-block:: bash
 
-  apt-get install sphinx-common
+  apt-get install python-sphinx
 
 Additionally, a Sphinx extension for Symfony2 is used as a submodule, so a
 
