@@ -15,6 +15,7 @@
         {"name": "Justin Penka"}
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "fabpot/sphinx-php": "1.0.*"
     }
 }
