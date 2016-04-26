@@ -1,11 +1,15 @@
 {
-    "name": "mapbender/documentation",
-    "description": "Mapbender3 documenation",
+    "name": "mapbender/mapquery",
+    "description": "Mapbender3 map query library",
     "keywords": ["mapbender", "documentation"],
     "type": "library",
     "license": "MIT",
     "authors": [
-        {"name": "Astrid Emde"}
+        {"name": "Christoph Baudson"},
+        {"name": "Christian Wygoda"},
+        {"name": "Drew Wells"},
+        {"name": "Christian Kaatz"},
+        {"name": "Justin Penka"}
     ],
     "require": {
         "php": ">=5.3.0"
