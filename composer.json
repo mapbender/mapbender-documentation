@@ -5,6 +5,9 @@
     "type": "library",
     "license": "MIT",
     "authors": [
+        {"name": "Volker Mische <volker.mische@gmail.com>"},
+        {"name": "Anne Blankert <anne.blankert@geodan.nl>"},
+        {"name": "Steven Ottens <smo@minst.net>"},
         {"name": "Christoph Baudson"},
         {"name": "Christian Wygoda"},
         {"name": "Drew Wells"},
