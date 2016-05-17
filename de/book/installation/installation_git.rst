@@ -51,66 +51,13 @@ Die Starter-Applikation enthält nicht die Mapbender3 bundles, diese sind in ein
     git submodule update --init --recursive
 
 
-cURL
-====
 
-Das build-System benutzt cURL, um einige Remote-Komponenten abzurufen. Dazu müssen Sie das cURL-Kommandozeilen-Werkzeug installieren:
+Composer
+********
 
-.. code-block:: yaml
+Mapbender3 benötigt weitere Bibliotheken für die Laufzeit-Abhängigkeiten, wie z.B. Symfony und Doctrine. Daher muss zuerst der Composer eingerichtet und ausgeführt werden (weitere Information unter http://getcomposer.org/download/):
 
-	sudo apt-get install curl
-
-.. _phing:
-
-
-Build-Management mit Phing
-****************************
-
-
-Das Build-Management wird mit Phing vorgenommen, welches die Pear-Bibliothek benötigt. Zunächst muss Pear installiert werden.  Hier wird ein Debian-basiertes System verwendet:
-
-
-.. code-block:: yaml
-
-    sudo apt-get install php-pear
-
-
-Dann muss Pear gezeigt werden, wie ein Autodiscover seiner Repositories erzeugt wird.  Vorsichtshalber wird ein Update von Pear gemacht.
-
-
-.. code-block:: yaml
-
-    sudo pear config-set auto_discover 1
-    sudo pear upgrade-all
-      Enable full APC compatibility [yes] : yes
-      Enable internal debugging in APCu [no] : yes 
-
-
-Dann wird Phing installiert:
-
-
-.. code-block:: yaml
-
-    sudo pear channel-discover pear.phing.info 
-    sudo pear install phing/phing
-
-
-Composer und PHPUnit
-====================
-
-PHPUnit wird über den Composer mitgeliefert. Die Build-Skripte  benötigen weitere Abhängigkeiten, um Unit-Tests durchzuführen, die Dokumentation zu generieren und die Installationspakete zu erstellen.
-
-Sobald Sie die unten aufgeführten Abhängigkeiten installiert haben, können Sie sich über die folgende Eingabe einen Überblick über die verfügbaren Aufgaben verschaffen:
-
-.. code-block:: yaml
-
-   phing -l
-
-
-Daher muss zuerst der Composer: für die Laufzeit-Abhängigkeiten, wie
-Symfony und Doctrine installieren werden (weitere Information unter http://getcomposer.org/download/):
-
-.. code-block:: yaml
+.. code-block:: bash
 
     cd application
     curl -sS https://getcomposer.org/installer | php
@@ -127,7 +74,7 @@ Zur Anpassung der parameters.yml lesen Sie bitte das Kapitel `Anpassen der Konfi
 
 Laden Sie anschließend die Laufzeit-Umgebungen wie Symfony und Doctrine:
 
-.. code-block:: yaml
+.. code-block:: bash
 
   ./composer.phar update 
 
@@ -156,7 +103,7 @@ Referenzieren Sie auf der Verzeichnis web über einen Symbolischen Link
 Als Entwickler werden Sie es bevorzugen, über einen Symbolischen Link auf das Verzeichnis web zu verweisen statt die DAteien zu kopieren. 
 Dies vereinfacht das Editieren von Assets innerhalb der Bundle-Verzeichnisse.
 
-.. code-block:: yaml
+.. code-block:: bash
 
     app/console assets:install web --symlink --relative
 
@@ -164,7 +111,7 @@ Dies vereinfacht das Editieren von Assets innerhalb der Bundle-Verzeichnisse.
 Bitte beachten Sie, dass Sie die Option :command:`FollowSymLinks` in der Apache Directory Definition angeben müssen:
 
 
-.. code-block:: yaml
+.. code-block:: apache
 
   Alias /mapbender3 /var/www/mapbender-starter/application/web/
   <Directory /var/www/mapbender-starter/application/web/>
@@ -190,7 +137,7 @@ Lesen Sie mehr in der Symfony Dokumentation über `Console Commands <http://symf
 
 Hier finden Sie einige Kommandos zum Auffinden von Informationen:
 
-.. code-block:: yaml
+.. code-block:: bash
 
  app/console                        - lists all assets
  app/console help                   - Anzeige der Hilfe
@@ -202,14 +149,10 @@ Hier finden Sie einige Kommandos zum Auffinden von Informationen:
 
 Lernen Sie wie Sie eigene Elemente über *app/console mapbender:generate:element* erzeugen können `How to create your own Element? <../../../en/book/development/element_generate.html>`_.
         
-..
- Package Build Tools
- ===================
-
- TODO: Skipped for now, KMQ has the knowledge.
 
 Aktualisierung der Installation
-===============================
+*******************************
+
 Da die Entwicklungen voranschreiten, wollen Sie ihren Code aktuell halten. 
 
 Folgende Schritte müssen durchgeführt werden:
@@ -219,7 +162,7 @@ Folgende Schritte müssen durchgeführt werden:
 * Aktualisieren Sie die Datenbank, um gegebenenfalls neue Strukturen (Tabellen, Spalten) zu erzeugen
 
 
-.. code-block:: yaml
+.. code-block:: bash
  
  cd mapbender-starter
  git pull
@@ -231,20 +174,20 @@ Folgende Schritte müssen durchgeführt werden:
 
 .. _installation_sphinx:
 
-Sphinx
-======
+Sphinx (Dokumentation)
+**********************
 
 Sphinx wird für die Dokumentation benötigt, die Sie gerade lesen. In Debian-basierten Systemen wird Sphinx folgendermaßen installiert.
 
 
-.. code-block:: yaml
+.. code-block:: bash
 
-   sudo apt-get install sphinx-common
+   sudo apt-get install python-sphinx
 
 
 Sie finden die Mapbender3 Dokumentation auf github unter  mapbender-documentation. Sie könnnen den Klon über den Befehl holen: 
 
-.. code-block:: yaml
+.. code-block:: bash
 
 	git clone git://github.com/mapbender/mapbender-documentation
 
@@ -253,33 +196,49 @@ Entwickler mit Schreibrechten müssen die SSH-URL verwenden: git@github.com:mapb
 Lesen Sie mehr über `How to write Mapbender3 Documentation? <../../../en/book/development/documentation_howto.html>`_.
 
 ApiGen
-======
+******
 
-`ApiGen <http://apigen.org>`_ ist der API-Dokumentations-Generator erster Wahl. Es wird auch mit Pear installiert: 
+`ApiGen <http://apigen.org>`_ ist der API-Dokumentations-Generator erster Wahl. Es wird mit Pear (php-pear) installiert: 
 
 
-.. code-block:: yaml
+.. code-block:: bash
     
 	 sudo pear install pear.apigen.org/apigen
-
-
+     
 Lesen Sie mehr in `How to write Mapbender3 Documentation? <../../../en/book/development/documentation_howto.html>`_.
+
 
 Troubleshooting
 ***************
 
-* Die ApiGen-Bestandteile laufen nur mit neueren Versionen von Phing (>= 2.4.12). Testen Sie die Phing Version mit: 
+* Die ApiGen-Bestandteile laufen nur mit neueren Versionen von Phing (>= 2.4.12), welches die Pear-Bibliothek benötigt. Zunächst muss Pear installiert werden.  Hier wird ein Debian-basiertes System verwendet:
+
+.. code-block:: bash
+
+    sudo apt-get install php-pear
+
+
+Dann muss Pear gezeigt werden, wie ein Autodiscover seiner Repositories erzeugt wird.  Vorsichtshalber wird ein Update von Pear gemacht.
+
+.. code-block:: bash
+
+    sudo pear config-set auto_discover 1
+    
+    sudo pear upgrade-all
+      Enable full APC compatibility [yes] : yes
+      Enable internal debugging in APCu [no] : yes 
+
+Dann wird Phing installiert:
+
+.. code-block:: bash
+
+    sudo pear channel-discover pear.phing.info 
+    sudo pear install phing/phing
+
+Testen Sie die Phing Version mit: 
 
 .. code-block:: bash
 
               phing -v
 
 
-Mit dem folgenden Befehl können Sie ein Update all Ihrer Pear-Pakete vornehmen: 
-
-
-.. code-block:: bash
-
-    sudo pear upgrade-all
-      Enable full APC compatibility [yes] : yes
-      Enable internal debugging in APCu [no] : yes
