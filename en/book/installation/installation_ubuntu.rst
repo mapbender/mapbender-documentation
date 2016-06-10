@@ -13,6 +13,14 @@ There are also the neccessary components listed that you can install like this:
 
   sudo apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl openssl
 
+
+For PHP 7
+
+.. code-block:: ini
+
+  sudo apt-get install apache2 libapache2-mod-php php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip
+
+
 Load the Apache rewrite-module:
 
 .. code-block:: bash
@@ -30,16 +38,14 @@ Create the file **/etc/apache2/sites-available/mapbender3.conf** with the conten
   Options MultiViews FollowSymLinks
   DirectoryIndex app.php
   Require all granted
- 
+   
   RewriteEngine On
   RewriteBase /mapbender3/
-  RewriteCond %{ENV:REDIRECT_STATUS} ^$
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+  RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
-Activate the site afterwards with
+Aktivieren Sie danch die Seite mit
 
 .. code-block:: bash
    a2ensite mapbender3.conf
@@ -122,7 +128,7 @@ You can start using Mapbender3 now.
 
 * http://localhost/mapbender3/
 
-**Notice:** Click on the Mapbender3 logo to get to the login page. Log in with the new user you created. 
+Click on the Login-link at top-right to get to the login page. Log in with the new user you created. 
 
 You can open the developer mode when you run app_dev.php: http://localhost/mapbender3/app_dev.php
 
@@ -153,11 +159,9 @@ Apache 2.2 configuration ``mapbender3.conf``:
     AllowOverride none
     Order allow,deny
     Allow from all
-
+    
     RewriteEngine On
     RewriteBase /mapbender3/
-    RewriteCond %{ENV:REDIRECT_STATUS} ^$
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
-  </Directory>
+    RewriteRule ^(.*)$ app.php [QSA,L]
+ </Directory>

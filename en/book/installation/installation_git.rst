@@ -13,7 +13,7 @@ For the Git-based installations you also need:
 * cURL    - command line tool for transferring data with URL syntax, supporting HTTP, HTTPS and more
 * pear    - PHP Extension and Application Repository 
 * Phing   - `Phing <http://www.phing.info/>`_ Is Not GNU make; it's a PHP project build system or build tool based on ​Apache Ant.
-* php5-dev - Of course the files for PHP5 module development.
+* php-dev - Of course the files for PHP5 module development.
 
 
 Cloning the Repository
@@ -30,15 +30,23 @@ Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-starter
 
 
-Change to a tag of a Mapbender3 release
-***************************************
-
-To work with a release version of Mapbender3 change to the specific tag. For version 3.0.5.0 for example:
+Clone a branch directly wit -b
 
 .. code-block:: bash
 
-    git tag -l
-    git checkout v3.0.5.0
+    git clone https://github.com/mapbender/mapbender-starter.git -b release/3.0.5 mapbender3
+    cd mapbender3
+
+
+Change to a tag of a Mapbender3 release
+***************************************
+
+To work with a release branch of Mapbender3 change to the specific tag. For branch release/3.0.5 for example:
+
+.. code-block:: bash
+
+    git branch -a
+    git checkout release/3.0.5
 
 
 Fetching the Submodules
@@ -121,13 +129,11 @@ Please notice that you might have to activate the :command:`FollowSymLinks` opti
     DirectoryIndex app.php
     Order allow,deny
     Allow from all
-
+    
     RewriteEngine On
     RewriteBase /mapbender3/
-    RewriteCond %{ENV:REDIRECT_STATUS} ^$
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+    RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
 
@@ -169,7 +175,7 @@ There are following steps you have to do to stay up-to-date
  git pull
  git submodule update --init --recursive
  cd application
- ./composer.phar update --dev 
+ ./composer.phar update --dev
  app/console doctrine:schema:update
 
 
@@ -235,7 +241,6 @@ We then tell Pear where to autodiscover it's repositories and for good measure, 
       Enable internal debugging in APCu [no] : yes 
 
 Then let's get Phing:
-
 
 .. code-block:: bash
 

@@ -14,7 +14,7 @@ Für die Git-basierte Installation benötigen Sie:
 * cURL    - kommandozeilen basiertes Tool für die Übertragung von Daten über URL Syntax,unterstützt HTTP, HTTPS und mehr.
 * pear    - PHP Erweiterung und Anwendungs-Repository.
 * Phing   - `Phing <http://www.phing.info/>`_ ist nicht GNU make; es ist ein  PHP Projekt Build System oder Build-Werkzeug basierend auf Apache Ant.
-* php5-dev - Und natürlich die Dateien zur Entwicklung von PHP5-Modulen.
+* php-dev - Und natürlich die Dateien zur Entwicklung von PHP5-Modulen.
 
 
 Klonen des Repositories
@@ -30,15 +30,23 @@ Klonen ist einfach, geben Sie das folgende Kommando auf Ihrer Shell ein:
 Entwickler, die Zugriff auf den Code haben möchten, müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-starter
 
 
-Zu einem Tag eines Mapbender3 Releases wechseln
-***********************************************
-
-Um mit einer Release Version von Mapbender3 zu arbeiten, wechseln Sie bitte zu dem spezifischen Tag. Zum Beispiel für Version 3.0.5.0: 
+Klonen Sie direkt einen bestimmten Branch mit -b
 
 .. code-block:: bash
 
-    git tag -l
-    git checkout v3.0.5.0
+    git clone https://github.com/mapbender/mapbender-starter.git -b release/3.0.5 mapbender3
+    cd mapbender3
+
+
+Zu einem Tag eines Mapbender3 Releases wechseln
+***********************************************
+
+Um mit einer Release Branch von Mapbender3 zu arbeiten, wechseln Sie bitte zu dem spezifischen Tag. Zum Beispiel den Branch release/3.0.5: 
+
+.. code-block:: bash
+
+    git branch -a
+    git checkout release/3.0.5
 
 
 Submodule abrufen
@@ -122,10 +130,8 @@ Bitte beachten Sie, dass Sie die Option :command:`FollowSymLinks` in der Apache 
     
     RewriteEngine On
     RewriteBase /mapbender3/
-    RewriteCond %{ENV:REDIRECT_STATUS} ^$
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+    RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
 
@@ -168,7 +174,7 @@ Folgende Schritte müssen durchgeführt werden:
  git pull
  git submodule update --init --recursive
  cd application
-  ./composer.phar update --dev
+ ./composer.phar update --dev
  app/console doctrine:schema:update
 
 

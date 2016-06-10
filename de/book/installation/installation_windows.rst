@@ -21,6 +21,16 @@ Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ wo Sie auch 
  extension=php_pgsql.dll
  extension=php_openssl.dll
 
+
+For PHP 7
+
+.. code-block:: ini
+
+ # php.ini
+ # Download PHP Zip http://pecl.php.net/package/zip/1.13.2/windows
+ extension=php_zip.dll
+  
+
 .. code-block:: apache
 
     # unter Windows Datei httpd.conf (Kommentar # entfernen) und Apache neu starten
@@ -50,10 +60,8 @@ In der mapbender3.conf:
  
   RewriteEngine On
   RewriteBase /mapbender3/
-  RewriteCond %{ENV:REDIRECT_STATUS} ^$
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+  RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
 Wir gehen in diesem Beispiel davon aus, dass Mapbender3 direkt unter **C:/** entpackt wurde (siehe das Kapitel `Systemvoraussetzungen und den Download <systemrequirements.html#download-von-mapbender3>`_ für Details). Sie können auch einfach ein anderes Verzeichnis wählen. Passen Sie dann nur diese Apache mapbender3.conf Datei oben an, indem Sie auf das richtige Verzeichnis verweisen.

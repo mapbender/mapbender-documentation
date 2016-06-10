@@ -13,6 +13,14 @@ Dort sind auch die notwendigen Komponenten für Mapbender3 aufgelistet, die Sie 
 
  apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl openssl
 
+
+Paketliste bie Verwendung von PHP 7
+
+.. code-block:: ini
+
+  sudo apt-get install apache2 libapache2-mod-php php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip
+
+
 Laden Sie das Apache Modul rewrite.
 
 .. code-block:: bash
@@ -31,13 +39,11 @@ Legen Sie die Datei **/etc/apache2/sites-available/mabender3.conf** mit dem folg
   Options MultiViews FollowSymLinks
   DirectoryIndex app.php
   Require all granted
- 
+   
   RewriteEngine On
   RewriteBase /mapbender3/
-  RewriteCond %{ENV:REDIRECT_STATUS} ^$
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+  RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
 Aktivieren Sie danch die Seite mit
@@ -55,7 +61,6 @@ Laden Sie den Apache Server neu.
 
 Überprüfung
 -----------
- 
 
 Prüfen Sie, ob der Alias erreichbar ist:
 
@@ -126,7 +131,7 @@ Sie können Mapbender3 nun nutzen.
 * http://localhost/mapbender3/
 
 
-**Hinweis:** Klicken Sie auf den Login-Link oben rechts, um zur Abmeldung zu gelangen. Melden Sie sich mit dem neu erstellten Benutzer an.
+**Hinweis:** Klicken Sie auf den Anmelden-Link oben rechts, um zur Abmeldung zu gelangen. Melden Sie sich mit dem neu erstellten Benutzer an.
 
 Starten Sie Mapbender3 im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen: http://localhost/mapbender3/app_dev.php
 
@@ -158,14 +163,9 @@ Apache 2.2 Konfiguration ``mapbender3.conf``:
     AllowOverride none
     Order allow,deny
     Allow from all
-
+    
     RewriteEngine On
     RewriteBase /mapbender3/
-    RewriteCond %{ENV:REDIRECT_STATUS} ^$
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
-  </Directory>
-
-
-
+    RewriteRule ^(.*)$ app.php [QSA,L]
+ </Directory>
