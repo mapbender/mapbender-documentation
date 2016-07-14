@@ -125,8 +125,7 @@ Bitte beachten Sie, dass Sie die Option :command:`FollowSymLinks` in der Apache 
   <Directory /var/www/mapbender-starter/application/web/>
     Options MultiViews FollowSymLinks
     DirectoryIndex app.php
-    Order allow,deny
-    Allow from all
+    Require all granted
     
     RewriteEngine On
     RewriteBase /mapbender3/
