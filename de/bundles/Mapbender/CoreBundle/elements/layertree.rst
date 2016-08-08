@@ -190,7 +190,11 @@ Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert w
 
            Kontextmenü der Layer im Layertree.
 
-Der Slider im Layertree Menü **[1]** erscheint durch die Funktion *Opacity*. Hierüber lässt sich durch das Verschieben des grünen Kästchens die Deckkraft der einzelnen Layer bestimmen. Die prozentuale Deckkraft wird als ganze Zahl in dem Kästchen angezeigt. Über einen Klick auf das Infoblatt im Layertree Menü **[2]** können die Metadaten des Layers angezeigt werden. Falls der Dienst Metadaten enthält, werden diese in einem neuen Dialog dargestellt. Der Klick auf das "x" im Layertree Menü **[3]** ermöglicht das Entfernen eines Layers aus der Anwendung für die Dauer der Sitzung. 
+Der Slider im Layertree Menü **[1]** erscheint durch die Funktion *Opacity*. Hierüber lässt sich durch das Verschieben des grünen Kästchens die Deckkraft der einzelnen Layer bestimmen. Die prozentuale Deckkraft wird als ganze Zahl in dem Kästchen angezeigt.
+
+Über einen Klick auf das Infoblatt im Layertree Menü **[2]** können die Metadaten des Layers angezeigt werden. Falls der Dienst Metadaten enthält, werden diese in einem neuen Dialog dargestellt.
+
+Der Klick auf das "x" im Layertree Menü **[3]** ermöglicht das Entfernen eines Layers aus der Anwendung für die Dauer der Sitzung. 
 
 .. figure:: ../../../../../figures/layertree/layertree_menu_map.png
            :scale: 80
