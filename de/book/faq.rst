@@ -34,7 +34,7 @@ A: Es gibt zwei Parameter in der php.ini, mit der die Zugriffe auf die Oracle Da
 
 Des weiteren stellen Sie in der config.yml in der jeweiligen Datenbank-Verbindung den persistent Parameter auf true.
 
-.. code:: yaml
+.. code-block:: yaml
 
    persistent=true
 
@@ -44,16 +44,23 @@ Meine Anwendung kann nicht kopiert werden
 
 F: Ich habe eine komplexe Anwendung und möchte Sie kopieren. Das schlägt fehl.
 
-A: Eine mögliche Ursache ist, dass PHP nicht das Arbeiten mit großen Dateien (YAML-Export/Import, etc.) erlaubt. Das tritt v.a. bei Fast-CGI auf. Dafür dient der PHP Parameter MaxRequestLen, den Sie in der mod_fcgi.conf anpassen können.
 
-.. code:: ini
+A: Eine mögliche Ursache ist, dass PHP nicht das Arbeiten mit großen Dateien (YAML-Export/Import, etc.) erlaubt. Das tritt v.a. bei Fast-CGI auf. Dafür dient der PHP Parameter MaxRequestLen, den Sie in der Konfiguration von FCGI anpassen können.
 
+.. code-block:: ini
+
+   # mod_fcgi.conf (Windows)
    # set value to 2 MB
    MaxRequestLen = 2000000
+   
+   # fcgid.conf (Linux)
+   # set value to 2 MB
+   MaxRequestLen 2000000
+
 
 Analog dazu können Sie die PHP-Werte in der php.ini überprüfen:
 
-.. code:: php
+.. code-block:: ini
 
    max_execution_time = 240
    memory_limit = 1024M
