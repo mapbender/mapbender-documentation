@@ -3,9 +3,13 @@ SPHINXBUILD = sphinx-build
 PAPER       =
 BUILDDIR    = output
 SRCDIR      = .
+LATEXDIR    = build/latex
 
-build:
+html:
 	$(SPHINXBUILD) $(SRCDIR) $(BUILDDIR)
+
+latex:
+	$(SPHINXBUILD) -b latex $(SRCDIR) $(LATEXDIR)
 
 clean:
 	rm -rf $(BUILDDIR)/*
