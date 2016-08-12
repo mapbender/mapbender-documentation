@@ -591,4 +591,4 @@ Mapbender kennenlernen unter
 
 Beteiligen Sie sich
 
-	http://www.mapbender.org/Community
+	http://www.mapbender3.org/community/

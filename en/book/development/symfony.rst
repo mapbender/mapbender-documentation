@@ -10,5 +10,4 @@ http://symfony.com/
 
 Documentation
 *************
-* http://symfony.com/symfony-in-five-minutes 
-* TheBook http://symfony.com/doc/current/book/index.html
+* Symfony documentation: http://symfony.com/doc/current/index.html

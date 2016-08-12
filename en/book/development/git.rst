@@ -21,9 +21,8 @@ Git reference and Git Cheat Sheets
 ==================================
 Get to know more about Git. Have a look at the git reference and the Git Cheat Sheets
 * http://gitref.org/
-* http://blog.fournova.com/2011/06/git-cheat-sheet/
+* https://www.git-tower.com/blog/git-cheat-sheet/
 * https://help.github.com/
-* https://help.github.com/articles/where-can-i-learn-more-about-git-and-github
 * Get familiar with the git workflow :https://help.github.com/articles/what-is-a-good-git-workflow
 
 

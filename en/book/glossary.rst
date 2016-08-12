@@ -115,7 +115,7 @@ This glossary is under construction.
 	Phing is a PHP project build system or build tool based on ​Apache Ant.
 
         .. seealso::
-            `Phing <http://doc.mapbender3.org/mapbender/documentation/book/en/installation_git.html#build-management-using-phing>`_
+            Phing
 	    - http://www.phing.info
 
     Profiler

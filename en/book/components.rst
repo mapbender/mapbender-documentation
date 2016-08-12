@@ -41,7 +41,6 @@ Here comes just a list of some components Symfony offers:
 
 The project has a very good documentation 
 
-* http://symfony.com/symfony-in-five-minutes 
 * TheBook http://symfony.com/doc/current/book/index.html
 
 
@@ -57,7 +56,7 @@ OpenLayers is a powerfull software for web maps. It supports lot of data sources
 
 Read more about OpenLayers at http://openlayers.org/
 
-You find example applications with OpenLayers at http://openlayers.org/dev/examples/
+You find example applications with OpenLayers at http://dev.openlayers.org/examples/
 
 
 MapQuery

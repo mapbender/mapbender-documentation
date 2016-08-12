@@ -78,7 +78,7 @@ Issues (bugs and features) are administrated in the **mapbender**-repository at:
 
 We create a milestone for every version of Mapbender3:
 
-*  https://github.com/mapbender/mapbender/issues/milestones
+*  https://github.com/mapbender/mapbender/milestones
 
 There are some rules you should keep in mind:
 
