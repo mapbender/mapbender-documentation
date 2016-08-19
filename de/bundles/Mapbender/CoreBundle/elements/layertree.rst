@@ -18,13 +18,13 @@ Funktionen
 * Abfrage der Metadaten eines Layers
 
 
-.. |Simpel| figure:: ../../../../../figures/layertree/layertree_example_dialog.png
+.. figure:: ../../../../../figures/layertree/layertree_example_dialog.png
            :scale: 80
            :alt: Einfacher Layertree mit einem Layerset und Layer als Dialog
 
            Einfacher Layertree mit einem Layerset und Layer als Dialog, über einen Button eingebunden.
 
-.. |Komplex| figure:: ../../../../../figures/layertree/layertree_example_sidepane.png
+.. figure:: ../../../../../figures/layertree/layertree_example_sidepane.png
            :scale: 80
            :alt: Komplexer Layertree mit mehreren Layersets in der Seitenleiste, unterteilt in thematischen Gruppen. 
 
@@ -88,7 +88,7 @@ Im Folgenden gehen wir eine beispielhafte Konfiguration eines Layertrees mit Bas
 In dem folgenden Beispiel ist ein **Layerset** mit einer Instanz definiert:
 
 * Layerset World: 
-	* Instanz `OSM Demodienst <http://osm-demo.wheregroup.com/service?>`_
+  * Instanz `OSM Demodienst <http://osm-demo.wheregroup.com/service?>`_
 
 Die Instanz des OSM-Demodienstes ist bei der Installation automatisch dabei. Diese muss nun nurnoch über den Reiter "Layersets" in ein bestehendes Layerset eingebunden werden. In dem folgenden Beispiel wurde das Layerset "YAML-main" in "World" umbenannt. 
 Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <../entities/layerset.html>`_ weiterhelfen. 
@@ -151,9 +151,9 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
            Type-Angabe für die Anzeige des Layertrees.
 
 :Dialog: 
-	Der Type *Dialog* muss gewählt werden, wenn der Layertree über einen Button eingebunden wird und sich das Konfigurations-Element in dem Content-Bereich befindet.
+  Der Type *Dialog* muss gewählt werden, wenn der Layertree über einen Button eingebunden wird und sich das Konfigurations-Element in dem Content-Bereich befindet.
 :Element:
-	Für die Einbindung des Layertrees in dem Sidepane-Bereich muss der Type *Element* gewählt werden.
+  Für die Einbindung des Layertrees in dem Sidepane-Bereich muss der Type *Element* gewählt werden.
 
 .. figure:: ../../../../../figures/layertree/layertree_type_map.png
            :scale: 80
@@ -245,11 +245,11 @@ Im Folgenden gehen wir eine komplexe beispielhafte Konfiguration eines Layertree
 In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen definiert:
 
 * Layerset Project NRW:
-	* Instanz `DTK50 NRW <http://www.wms.nrw.de/geobasis/wms_nw_dtk50?>`_ 
-	* Instanz `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?>`_
+  * Instanz `DTK50 NRW <http://www.wms.nrw.de/geobasis/wms_nw_dtk50?>`_ 
+  * Instanz `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?>`_
 * Layerset World: 
-	* Instanz `OSM Demodienst <http://osm-demo.wheregroup.com/service?>`_ 
-	* Instanz `GEBCO <http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?>`_ 
+  * Instanz `OSM Demodienst <http://osm-demo.wheregroup.com/service?>`_ 
+  * Instanz `GEBCO <http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?>`_ 
 
 
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Info s.o. oder in der Doku der `Layersets <../entities/layerset.html>`_ und `Dienste <../entities/source.html>`_).
