@@ -12,14 +12,26 @@ Mapbender3 benötigt die folgenden Komponenten:
 * PHP CLI Interpreter (php5-cli) 
 * PHP SQLite Erweiterung (php5-sqlite) 
 * PHP cURL Erweiterung (php5-curl) 
-* PHP Alternative PHP Cache (php-apc, for PHP 7 php-apcu)
+* PHP Alternative PHP Cache (php-apc)
 * PHP Internationalisierungserweiterung (php5-intl)
 * PHP GD für den Druck (php5-gd)
 * PHP FileInfo für den Druck zur Prüfung der Bilder
 * APACHE mod_rewrite
 * OpenSSL
+
+
+PHP 7
+-----
+
+Mapbender3 unterstützt auch PHP 7. Sie benötigen die oben beschriebenen PHP-Bibliotheken für PHP 7 und zusätzlich die folgenden:
+
 * PHP Zip (php-zip) for PHP 7
 * PHP XML (php-xml) for PHP 7
+* PHP Cache für PHP 7: php-apcu statt php-apc
+
+
+Datenbanken
+-----------
 
 Um optional eine andere Datenbank als die vorkonfigurierte SQLite zu verwenden, wird eine PHP-Erweiterung benötigt, die von Doctrine unterstützt wird: `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. Für PostgreSQL beispielsweise php5-pgsql.
 
@@ -35,10 +47,8 @@ Wir haben gute Erfahrungen mit den 64-bit Downloads von Apache und PHP gemacht.
 
 * `Apache Download <http://www.apachelounge.com/download/>`_: Die Downloads der Apache Lounge sind für verschiedene Versionen von Windows angepasst. Für neuere Versionen wählen Sie die "VC11" oder "VC14" Variante (benötigt die Visual C++ Redistributable für Visual Studio 2012 bzw. 2015) und die Win64 Version (64-bit).
 
-  
 * `PHP Download <http://windows.php.net/download#php-5.6>`_: Wählen Sie die "Thread Safe" Variante des PHP Downloads. als x64 Paket (64-bit).
 
-* PHP 7 Download PHP Zip http://pecl.php.net/package/zip/1.13.2/windows
 
 Anmerkungen zu Windows
 ----------------------

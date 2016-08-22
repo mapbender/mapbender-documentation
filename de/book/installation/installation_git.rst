@@ -14,11 +14,11 @@ Für die Git-basierte Installation benötigen Sie:
 * cURL    - kommandozeilen basiertes Tool für die Übertragung von Daten über URL Syntax,unterstützt HTTP, HTTPS und mehr.
 * pear    - PHP Erweiterung und Anwendungs-Repository.
 * Phing   - `Phing <http://www.phing.info/>`_ ist nicht GNU make; es ist ein  PHP Projekt Build System oder Build-Werkzeug basierend auf Apache Ant.
-* php-dev - Und natürlich die Dateien zur Entwicklung von PHP5-Modulen.
+* php5-dev - Und natürlich die Dateien zur Entwicklung von PHP5-Modulen.
 
 
 Klonen des Repositories
-*************************
+***********************
 
 Klonen ist einfach, geben Sie das folgende Kommando auf Ihrer Shell ein:
 
@@ -30,23 +30,24 @@ Klonen ist einfach, geben Sie das folgende Kommando auf Ihrer Shell ein:
 Entwickler, die Zugriff auf den Code haben möchten, müssen die SSH-URL verwenden: git@github.com:mapbender/mapbender-starter
 
 
+Git-Branches und die Möglichkeiten
+**********************************
+
+Sie haben mehrere Möglichkeiten, die Github Quellen auszuchecken:
+
+* master: Der master-Branch enthält die zuletzt veröffentlichte stabile Version.
+* Tags: Wir taggen die Versionen im Source-Code, so dass Sie auch die aktuelle und vorherige Versionen selbst auschecken können.
+* release/3.0.5: Der Release-Branch enthält die aktuellen Bugfixes, auf denen der nächste 3.0.5 Release aufbauen wird.
+* release/3.0.6: Dieser Release-Branch wird die zukünftige Version beinhalten und enthält die Fixes des 3.0.5 Branches und neue Funktionalitäten. Dieser Branch wird z.Z. nicht für den Einsatz empfohlen. 
+* release/3.1: Dieser Branch wird die zukünftige Version 3.1 beinhalten inklusive neuer Funktionen für die zukünftige Mapbender 3.1 Version. Dieser Branch wird z.Z. nicht für den Einsatz empfohlen.
+
+
 Klonen Sie direkt einen bestimmten Branch mit -b
 
 .. code-block:: bash
 
     git clone https://github.com/mapbender/mapbender-starter.git -b release/3.0.5 mapbender3
     cd mapbender3
-
-
-Zu einem Tag eines Mapbender3 Releases wechseln
-***********************************************
-
-Um mit einer Release Branch von Mapbender3 zu arbeiten, wechseln Sie bitte zu dem spezifischen Tag. Zum Beispiel den Branch release/3.0.5: 
-
-.. code-block:: bash
-
-    git branch -a
-    git checkout release/3.0.5
 
 
 Submodule abrufen

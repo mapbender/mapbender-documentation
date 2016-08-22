@@ -14,7 +14,7 @@ There are also the neccessary components listed that you can install like this:
   sudo apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl openssl
 
 
-For PHP 7
+List of packages for PHP 7:
 
 .. code-block:: ini
 

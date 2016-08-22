@@ -13,7 +13,7 @@ For the Git-based installations you also need:
 * cURL    - command line tool for transferring data with URL syntax, supporting HTTP, HTTPS and more
 * pear    - PHP Extension and Application Repository 
 * Phing   - `Phing <http://www.phing.info/>`_ Is Not GNU make; it's a PHP project build system or build tool based on ​Apache Ant.
-* php-dev - Of course the files for PHP5 module development.
+* php5-dev - Of course the files for PHP5 module development.
 
 
 Cloning the Repository
@@ -30,23 +30,22 @@ Developers granted secure access to the code must use the SSH-URL of the
 repository: git@github.com:mapbender/mapbender-starter
 
 
-Clone a branch directly wit -b
+Git-branches and the possibilities
+**********************************
+
+* master: The master-branch contains the current stabile version.
+* Tags: We tag the releases in the source-code so you have the ability to check out the recent and the previous versions for yourself.
+* release/3.0.5: This release branch contains the current bugfixes on which the next 3.0.5 release is built upon.
+* release/3.0.6: This release-branch will contain the next version and includes the bugfixes of 3.0.5 and new functionality. At this time we don't recommend to use this branch.
+* release/3.1: This branch will contain the future 3.1 version including new functionality. At this time we don't recommend to use this branch.
+
+
+Clone a branch directly with -b
 
 .. code-block:: bash
 
     git clone https://github.com/mapbender/mapbender-starter.git -b release/3.0.5 mapbender3
     cd mapbender3
-
-
-Change to a tag of a Mapbender3 release
-***************************************
-
-To work with a release branch of Mapbender3 change to the specific tag. For branch release/3.0.5 for example:
-
-.. code-block:: bash
-
-    git branch -a
-    git checkout release/3.0.5
 
 
 Fetching the Submodules

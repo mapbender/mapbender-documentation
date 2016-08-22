@@ -22,12 +22,11 @@ Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ wo Sie auch 
  extension=php_openssl.dll
 
 
-For PHP 7
+Zusätzlich für PHP 7:
 
 .. code-block:: ini
 
  # php.ini
- # Download PHP Zip http://pecl.php.net/package/zip/1.13.2/windows
  extension=php_zip.dll
   
 
