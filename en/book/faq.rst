@@ -45,6 +45,7 @@ My application cannot be duplicated
 Q: I made a highly complex application and want to duplicate it, but it does not work.
 
 A: A possible reason for this is that php does not allow a workflow with big files (YAML-export/import/etc.). The problem occurs especially in FastCGI. Just adjust the php parameter MaxRequestLen (you can do that in the configuration of FCGI).
+
 .. code-block:: ini
 
    # mod_fcgi.conf (Windows)
