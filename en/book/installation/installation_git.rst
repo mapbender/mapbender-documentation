@@ -26,8 +26,7 @@ Get the code from the git repository. Cloning is easy, just issue the following 
     git clone https://github.com/mapbender/mapbender-starter.git mapbender3
     cd mapbender3
 
-Developers granted secure access to the code must use the SSH-URL of the
-repository: git@github.com:mapbender/mapbender-starter
+If you have granted secure access you can use the SSH-URL: git@github.com:mapbender/mapbender-starter
 
 
 Git-branches and the possibilities
@@ -40,12 +39,22 @@ Git-branches and the possibilities
 * release/3.1: This branch will contain the future 3.1 version including new functionality. At this time we don't recommend to use this branch.
 
 
-Clone a branch directly with -b
+Therefore you can checkout different versions of Mapbender:
+
+If you want to use the current version, check out the master-branch, like described above.
+
+If you want to have a specific version, clone the repository and checkout a tag, for example 3.0.5.3:
+
+.. code-block:: bash
+
+                git tag -l
+                git checkout v3.0.5.3
+
+If you want to checkout the current 3.0.5 code, which will lead to the next 3.0.5.x version, clone the release/3.0.5 branch directly with -b
 
 .. code-block:: bash
 
     git clone https://github.com/mapbender/mapbender-starter.git -b release/3.0.5 mapbender3
-    cd mapbender3
 
 
 Fetching the Submodules
