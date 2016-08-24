@@ -61,7 +61,7 @@ The text of the confirmation mail can be customized in the
 /FOM/UserBundle/Resources/translations/messages.en.xlf file.
 
 
-Activating of users
+Activation of users
 -------------------
 
 Since Mapbender 3.0.5.3. Users can be set activated or deactivated by
@@ -79,6 +79,18 @@ activated again.
 
 Users which have self-registered themselves but have not approved the
 activation mail can now be activated by an administrator.
+
+
+Managing users with the security key feature
+--------------------------------------------
+
+Inside every Mapbender application, there is a possibility to adjust the rights of certain users and maintain visibility of what they are allowed to do. You can set these preferences in the "Layouts"-tab.
+
+Next to every element is a security key. If you click on the key, you can adjust the certain rights of each user. Just add users who should gain access to the element with the "+" symbol in the pop-up window. A set checkmark next to the user account provides the essential rights for the respective user.
+
+After setting specific access rights, the security key turns red. If you hover over the key with the cursor, you will see the names of the users who have rights to the element.
+
+.. image:: ../../../../en/bundles/FOM/UserBundle/element_security_key_popup.png
 
 
 Login Failures
