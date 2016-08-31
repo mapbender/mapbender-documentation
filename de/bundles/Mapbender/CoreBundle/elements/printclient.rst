@@ -133,6 +133,12 @@ Die folgenden Bereiche liegen standardmäßig vor:
 
 Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die Open Office Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
 
+Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen habe, z.B. Kommentarfelt muss "comment" heißen. Zum Bennenen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Objekte müssen über Menü "Ändern" --> Name --> Name angeben angepasst werden. 
+
+.. image:: ../../../../../figures/de/print_template_name.png
+    :scale: 80
+
+
 Exportieren Sie die Vorlage als PDF unter dem gleichen Namen wie die ODG-Datei. Verwenden Sie den Namen ohne Dateierweiterung in der Druck yml-Definition.
 
 Das Druck-Skript liest die Informationen (Position, Größe, Schriftgröße, Ausrichtung) aus der ODG-Datei aus und verwendet ebenfalls das PDF-Dokument mit den festen Objekten. Aus beiden und den aktuellen Karten wird dann eine PDF-Druckdatei erstellt.

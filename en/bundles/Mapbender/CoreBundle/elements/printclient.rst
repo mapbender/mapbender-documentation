@@ -130,6 +130,9 @@ The following objects are available from Mapbender:
 * dynamic text (connected to group role)
 
 You can define optional fields in the element definition (like title, comment, editor) and add them to the Open Office Draw file.
+When creating dynamic text each property must have the appropriate name, for example commet must have the name "comment". For naming fields, it is not enough to edit the content of the text field. You need to edit the object name by clicking menue "edit" --> name --> edit name. 
+
+Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen habe, z.B. Kommentarfelt muss "comment" heißen. Zum Bennenen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Objekte müssen über Menü "Ändern" --> Name --> Name angeben angepasst werden. 
 
 Export the template to pdf under the same name as the odg file. Use the name without extension in your print yml-definition.
 
