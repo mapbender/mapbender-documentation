@@ -133,7 +133,7 @@ Die folgenden Bereiche liegen standardmäßig vor:
 
 Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die Open Office Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
 
-Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen habe, z.B. Kommentarfelt muss "comment" heißen. Zum Bennenen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Objekte müssen über Menü "Ändern" --> Name --> Name angeben angepasst werden. 
+Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen haben, z.B. das Kommentarfeld **comment1** muss auch in der Vorlage **comment1** heißen. Zum Bennenen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Felder müssen selektiert und über **Menü "Ändern" --> Name...** angepasst werden. 
 
 .. image:: ../../../../../figures/de/print_template_name.png
     :scale: 80
