@@ -14,7 +14,7 @@ A: To solve the problem, navigate to the php parameter `max-input_vars <http://p
 
 .. code-block:: ini
 
-   ;; 1000 (default) oder höher
+   ;; 1000 (default) or more
    max_input_vars = 1000 
 
 
