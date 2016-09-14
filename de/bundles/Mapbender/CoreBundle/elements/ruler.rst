@@ -1,7 +1,7 @@
 .. _ruler:
 
 Line/Area Ruler (Längen und Flächen berechnen)
-***************
+**********************************************
  
 Mit dem Lineal wird eine Linie oder eine Fläche gezeichnet, deren Länge oder Flächeninhalt berechnet wird.
 
@@ -22,7 +22,7 @@ Konfiguration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

@@ -1,7 +1,7 @@
 .. _coordinates_display:
 
 Coordinates Display
-********************
+*******************
 
 The coordinates display element shows your mouse position in map coordinates.
 The coordinates are dependent on the selected spatial reference system which may be changed in the 

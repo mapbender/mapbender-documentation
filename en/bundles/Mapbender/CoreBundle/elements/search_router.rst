@@ -145,7 +145,7 @@ engine has the following modes:
 * **like-left:** uses left-sided like
 * **like-right:** uses right-sided like
 * **ilike:** uses two-sided case-insensitive like (*searchstring*)
-* **ilike-left:** uses left-sided case-insensitive like (f.e *searchstring)
+* **ilike-left:** uses left-sided case-insensitive like (f.e *searchstring*)
 * **ilike-right:** uses right-sided case-insensitive like (f.e searchstring*) 
 
 

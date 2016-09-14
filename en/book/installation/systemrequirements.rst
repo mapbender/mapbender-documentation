@@ -4,7 +4,7 @@ System requirements and download
 ################################
 
 System requirements
-*************
+*******************
 
 Mapbender3 needs the following components in order to run:
 

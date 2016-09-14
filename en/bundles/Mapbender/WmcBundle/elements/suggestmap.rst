@@ -25,7 +25,7 @@ Configuration
 * **Receiver:** element to use (E-Mail, Facebook, Twitter, Google+)
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -41,7 +41,7 @@ You need a button to show this element. See :ref:`button_en` for inherited confi
 
 
 Class, Widget & Style
-==============
+=====================
 
 * **Class:** Mapbender\\WmcBundle\\Element\\SuggestMap
 * **Widget:** <Put Widget name here>
@@ -53,7 +53,7 @@ HTTP Callbacks
 
 
 <action>
---------------------------------
+--------
 
 
 

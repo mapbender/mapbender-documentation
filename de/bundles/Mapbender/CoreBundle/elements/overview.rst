@@ -36,7 +36,7 @@ Der Konfigurationsdialog:
 * **Width/ Height:** Breite und Höhe der Übersichtskarte.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

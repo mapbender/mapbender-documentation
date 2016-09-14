@@ -26,7 +26,7 @@ Configuration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -35,7 +35,7 @@ YAML-Definition:
 
 
 Class, Widget & Style
-=========================
+=====================
 
 * **Class:** Mapbender\CoreBundle\Element\POI
 * **Widget:** mapbender.mbPOI

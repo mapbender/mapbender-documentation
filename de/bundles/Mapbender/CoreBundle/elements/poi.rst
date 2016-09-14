@@ -24,7 +24,7 @@ Konfiguration
 * **Use Mailto:** nach dem Klick auf die Karte kann der POI Standort per Mail verschickt werden. 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

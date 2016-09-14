@@ -1,7 +1,7 @@
 .. _wmc_loader:
 
 WMC Loader
-***********************
+**********
 
 Mapbender can save configurations (see `WMC Editor <../elements/wmc_editor.html>`_). This configurations can be loaded with the element WMC loader.
 
@@ -37,7 +37,7 @@ Configuration
 * **Keep Extent:** keeps the actual extent, default is false (will apply the extent of the configuration).
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -58,7 +58,7 @@ YAML-Definition:
 You can configure this module as a selectbox or dialog. When you use dialog then you need a button to show this element. See :ref:`button_en` for inherited configuration options.
 
 Class, Widget & Style
-==============
+=====================
 
 * **Class:** Mapbender\\WmcBundle\\Element\\WmcLoader
 * **Widget:** <Put Widget name here>
@@ -70,7 +70,7 @@ HTTP Callbacks
 
 
 <action>
---------------------------------
+--------
 
 
 

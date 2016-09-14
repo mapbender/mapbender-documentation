@@ -21,7 +21,7 @@ Konfiguration
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

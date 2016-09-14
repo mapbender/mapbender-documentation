@@ -48,6 +48,7 @@ Create the file **/etc/apache2/sites-available/mapbender3.conf** with the conten
 Aktivieren Sie danch die Seite mit
 
 .. code-block:: bash
+                
    a2ensite mapbender3.conf
 
 Reload your Apache server.

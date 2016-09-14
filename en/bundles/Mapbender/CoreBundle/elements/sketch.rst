@@ -1,7 +1,7 @@
 .. _sketch:
 
 Sketch
-***********************
+******
 
 The Sketch element adds a vector layer in the map and enables geometry objects to draw.
 
@@ -20,7 +20,7 @@ Configuration
 * **Types:** list of supported sketch types.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -32,13 +32,13 @@ YAML-Definition:
 You need a button to show this element. See :ref:`button` for inherited configuration options.
 
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\Sketch
 * **Widget:** mapbender.element.sketch.js
 
 HTTP Callbacks
-=====================
+==============
 
 None.
 

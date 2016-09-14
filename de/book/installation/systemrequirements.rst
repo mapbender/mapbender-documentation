@@ -4,7 +4,7 @@ Systemvoraussetzungen und Download
 ##################################
 
 Systemvoraussetzungen
-***************
+*********************
 
 Mapbender3 benötigt die folgenden Komponenten:
 

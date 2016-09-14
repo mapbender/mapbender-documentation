@@ -137,8 +137,9 @@ How to write documentation?
 ***************************
 We write documentation for elements, entities, services.
 
+
 Images (figures)
-***************
+****************
 Images for the documentation are **all** located at
 
 * mapbender-documentation/figures

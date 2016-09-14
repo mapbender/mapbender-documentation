@@ -384,7 +384,7 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 
 
 Definition von Dateireitern (type tabs)
---------------------------------------
+---------------------------------------
 
 .. code-block:: yaml
 

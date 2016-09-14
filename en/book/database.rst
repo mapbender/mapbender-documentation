@@ -14,11 +14,13 @@ You can find examples for the Configuration in our `Installation Instructions <i
 .. _doctrine:
 
 Doctrine
-*************
+********
+
 In Mapbender3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>`_ and read more.
 
+
 Database definition
-********************
+*******************
 
 The standard database definition in the config.yml looks like this:
 

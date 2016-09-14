@@ -1,7 +1,7 @@
 .. _basesourceswitcher:
 
 BaseSourceSwitcher
-***********************
+******************
 
 BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch over between the predefined source sets. For every sourceset a button will be displayed in the client. Notice that only one button can be active.
 
@@ -29,7 +29,7 @@ The configuration occurs in 2 steps:
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

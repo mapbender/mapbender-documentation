@@ -1,12 +1,12 @@
 FAQ - Frequently Asked Questions
-=============================
+================================
 
 
 Performance
 -----------
 
 Working with large wms clients
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Q: During the upload of large wms into an application (e.g. wms with more than 100 layers), the configuration of the `Layerset-Instance <../de/bundles/Mapbender/CoreBundle/entities/layerset.html>`_ only takes and presents an incorrect amount of layers. In addition, the wms instance cannot be saved. Why?
 
@@ -20,7 +20,7 @@ A: To solve the problem, navigate to the php parameter `max-input_vars <http://p
 
 
 The access to an Oracle database is too slow
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Q: Mapbender seems to have a poor performance while accessing Oracle
 databases. I noticed this because queries need more time than usual. Can I accelerate the process?
@@ -40,7 +40,7 @@ Furthermore, change the respective persistent database connection parameter in c
 
 
 My application cannot be duplicated
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Q: I made a highly complex application and want to duplicate it, but it does not work.
 

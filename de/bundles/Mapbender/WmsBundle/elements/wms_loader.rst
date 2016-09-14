@@ -1,7 +1,7 @@
 .. _wms_loader:
 
 WMS Loader
-***********************
+**********
 
 Mit diesem Element können WMS per getCapabilities-Request geladen werden.
 Es kann WMS 1.1.1 und  WMS 1.3.0 geladen werden.
@@ -27,7 +27,7 @@ Konfiguration
 * **Defaultinfoformat:** Standard Infoformat ist text/html, weitere Möglichkeiten: text/xml, text/plain.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -43,7 +43,7 @@ YAML-Definition:
 Für das Element wird ein Button verwendet. Siehe unter :ref:`button` für die Konfiguration.
 
 Hinzufügen eines WMS über einen definierten Link
-========================================================================
+================================================
 
 Mapbender kann ein WMS über einen definierten Link hinzugefügt werden, z.B. zum Beispiel über die Informationsabfrage oder über Suchergebnisse.
 
@@ -74,7 +74,7 @@ Der Link sollte folgendermaßen aussehen:
    
 
 Class, Widget & Style
-=======================
+=====================
 
 * **Class:** Mapbender\\WmsBundle\\Element\\WmsLoader
 * **Widget:** 

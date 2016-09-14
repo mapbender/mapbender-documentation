@@ -30,7 +30,7 @@ Konfiguration
 * **Label:** Titel als Beschriftung der Selektbox. Standard ist false.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -42,7 +42,7 @@ YAML-Definition:
 
 
 Class, Widget & Style
-==============
+=====================
 
 * **Class:** Mapbender\\WmcBundle\\Element\\WmcEditor
 * **Widget:** <Put Widget name here>

@@ -22,7 +22,7 @@ Configuration
 * **Target:** Id of Map element to query.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

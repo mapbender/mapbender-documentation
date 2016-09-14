@@ -31,7 +31,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony
 
 
 Anpassen der Konfigurationsdatei
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei app/config/parameters.yml gespeichert. In dieser Datei wird YAML Syntax verwendet. Achten Sie darauf **keine** Tabulatoren für Einrückungen zu verwenden. Verwenden Sie stattdessen Leerzeichen.
 
@@ -339,4 +339,4 @@ Mittels des PHP-Parameters `max-input_vars <http://php.net/manual/de/info.config
 .. code-block:: ini
 
    ;; 1000 (default) oder höher
-   max_input_vars = 1000 
+   max_input_vars = 1000

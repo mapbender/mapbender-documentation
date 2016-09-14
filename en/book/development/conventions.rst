@@ -111,15 +111,14 @@ There are some rules you should keep in mind:
 
 
 Version conventions
-********************
+*******************
 The Mapbender3 version is defined by a four digit numbering system, seperated by dots.
 
 3.0.10.20
 
 * The **first** digit is constant and represents the Mapbender3 software cycle.
 
-* The **second** digit describes all new features and major changes in Mapbender3, with
-the highest difficulty level of a update process.
+* The **second** digit describes all new features and major changes in Mapbender3, with the highest difficulty level of a update process.
 
 * The **third** digit describes new features and minor changes, which can be easily updated.
 

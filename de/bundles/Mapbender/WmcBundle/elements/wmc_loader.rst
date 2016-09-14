@@ -37,7 +37,7 @@ Konfiguration
 * **Keep Extent:** behält den aktuellen Extent, Standard ist false (erscheint im Extent der Konfiguration).
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -59,7 +59,7 @@ Das Element kann als Selektbox oder als Dialog konfiguriert werden. Wenn das Ele
      
 
 Class, Widget & Style
-==============
+=====================
 
 * **Class:** Mapbender\\WmcBundle\\Element\\WmcLoader
 * **Widget:** <Put Widget name here>

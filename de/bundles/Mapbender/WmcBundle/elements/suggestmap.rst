@@ -23,7 +23,7 @@ Konfiguration
 * **Receiver:** Medium, das genutzt wird (E-Mail, Facebook, Twitter, Google+)
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -38,7 +38,7 @@ YAML-Definition:
 Für das Element wird ein Button benötigt. Siehe unter :ref:`button_de` für die Konfiguration.
 
 Class, Widget & Style
-==============
+=====================
 
 * **Class:** Mapbender\\WmcBundle\\Element\\SuggestMap
 * **Widget:** <Put Widget name here>

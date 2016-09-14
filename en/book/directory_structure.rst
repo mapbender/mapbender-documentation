@@ -4,7 +4,7 @@ Directory structure in Mapbender3
 #################################
 
 app
-******************************
+***
 This directory contains:
 
 * the php-Cache (app/cache)
@@ -17,19 +17,19 @@ This directory contains:
 
 
 bin
-******************************
+***
 
 * is not in use at the moment. Here you can deposit e.g. installation scripts.
 
 
 mapbender
-******************************
+*********
 
 * provides the mapbender-specific bundles and the Mapbender3 code.
 
 
 web
-****************************** 
+***
 
 This directory has to be published by the webserver. The ALIAS has to refer to this directory. 
 
@@ -40,7 +40,7 @@ It controlls:
 
 
 web/bundles
-****************************** 
+***********
 
 * here the static resources of the single bundles are stored.
 * the following command copies the resources from the bundles to the folder. 
@@ -53,13 +53,13 @@ web/bundles
 
 
 src
-****************************** 
+***
 
-* directory for applications specific bundles (similar to the former x_-directories in Mapbender 2.x)
+* directory for applications specific bundles (similar to the former x-directories in Mapbender 2.x)
 
 
 vendor
-****************************** 
+******
 * directory where all the Bundles which are used from Symfony are found. Resources are used by Symfony using the Autoloading.
 
 

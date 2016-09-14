@@ -20,7 +20,7 @@ Konfiguration
 * **Content:** Inhalt des Copyright Fensters. Dieser wird angezeigt, wenn das Element per Click aktiviert wird (oder bei Start der Anwendung wenn die "automatisches Öffnen" Option aktiviert wurde).
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

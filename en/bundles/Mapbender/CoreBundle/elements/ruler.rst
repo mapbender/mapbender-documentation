@@ -20,7 +20,7 @@ Configuration
 * **Type:** choose type of element: line or area.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

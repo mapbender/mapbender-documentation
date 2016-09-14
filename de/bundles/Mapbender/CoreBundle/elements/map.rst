@@ -30,7 +30,7 @@ Konfiguration
 * **Other SRS:** weitere auswählbare Projektionen unter denen die Karte noch angezeigt werden kann (werden durch Komma separiert). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

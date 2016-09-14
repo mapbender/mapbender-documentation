@@ -227,8 +227,7 @@ Read more about `How to write Mapbender3 API Documentation? <../development/apid
 Troubleshooting
 ***************
 
-* The ApiGen task only works with recent versions of Phing (>= 2.4.12) which needs the Pear-Library. So, first
-we need to get Pear, we are assuming a Debian-based system here:
+* The ApiGen task only works with recent versions of Phing (>= 2.4.12) which needs the Pear-Library. So, first we need to get Pear, we are assuming a Debian-based system here:
 
 
 .. code-block:: bash

@@ -31,7 +31,7 @@ Die Konfiguration geschieht in zwei Schritten:
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

@@ -1,7 +1,7 @@
 .. _element_generate:
 
 Wie können eigene Elemente erzeugt werden?
-#################################################
+##########################################
 
 Mapbender3 bietet einen app/console-Befehl zur Erzeugung von Elementen. 
 
@@ -18,7 +18,7 @@ Im Folgenden soll am Beispiel eines map-klick-Elementes das Erzeugen und die Anp
 
 
 Die Arbeitsschritte zum Erzeugen von eigenen Elementen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Arbeitsschritte auf dem Weg zum eigenen Element.
 
@@ -71,7 +71,7 @@ Nach diesen Schritten liegt das neue Bundle im Verzeichnis src vor. Außerdem wu
 
 
 Eigene Elemente über app/console generieren
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Auflistung der Mapbender app/console Befehle:
 
@@ -115,10 +115,10 @@ Es wird eine Übersicht über die erfolgte Aktion ausgegeben. Es wurde eine PHP-
 
 
 Anpassung des eigenen Elements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Anpassung des Titels und der Beschreibung
-******************************************************
+*****************************************
 
 In der PHP-Datei finden Sie zahlreiche Funktionen. Ändern Sie den return-Wert der Funktionen *getClassTitle()* und *getClassDescription()*.
 
@@ -137,7 +137,7 @@ In der PHP-Datei finden Sie zahlreiche Funktionen. Ändern Sie den return-Wert d
 
 
 Registrierung des neuen Elements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ein Element kann registriert werden, indem es in der Funktion *getElements()* in der Datei src/Workshop/DemoBundle/WorkshopDemoBundle.php aufgeführt wird. Nach der Erstellung liegt diese Funktion vorerst nicht vor. Fügen Sie diese ein. Außerdem muss die Referenz zum MapbernderCoreBundle eingetragen werden (use Mapbender\\CoreBundle...). Sie müssen weiterhin angeben, dass die Klasse, das MapbenderBundle erweitert.
 
@@ -164,13 +164,13 @@ Durch diesen Eintrag kann das Element im Backend bei der Anwendungskonfiguration
 
 
 Element zu einer Anwendung hinzufügen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Erstellen Sie eine Anwendung und fügen Sie das neue Element zu der Anwendung hinzu. Sie finden das Element unter dem Element-Titel in der Liste der Elemente. Beachten Sie, dass die anschließende Konfiguration des Elementes im YAML-Syntax erfolgt. Wenn Sie das Karten-Element (map) als *target* verwenden möchten, müssen Sie die ID des Kartenelements ermitteln. Dies kann beispielsweise über Firebug erfolgen.
 
 
 Ändern der Aktion des Klick-Ereignisses
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wenn Sie ein map-click-Element erzeugen reagiert dieses auf das Klick-Ereignis mit einer Aktion. Diese Aktion kann modifiziert werden. Schauen Sie sich dazu die JQuery widget Datei an (mapbender/src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js). 
 
@@ -178,8 +178,9 @@ Hier finden Sie die Funktion *_mapClickHandler()*, die die Koordinaten des Klick
 
 Sie können die Aktion der Funktion  *_mapClickWorker()* anpassen.
 
-Standarddefinition der Funktion *_mapClickWorker*
-------------------------------------------------------
+
+Standarddefinition der Funktion mapClickWorker
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -192,8 +193,8 @@ Standarddefinition der Funktion *_mapClickWorker*
     }
 
 
-Angepassung der Funktion *_mapClickWorker()* zum Aufruf einer URL
-----------------------------------------------------------------------------------
+Angepassung der Funktion mapClickWorker() zum Aufruf einer URL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Alternativ kann beispielsweise ein neues Fenster mit einer URL geöffnet und die Koordinaten als Parameter übergeben werden. So können Sie beispielsweise OpenStreetMap aufrufen und die Koordinate des Klickereignisses zentrieren.
 
@@ -204,4 +205,4 @@ http://www.openstreetmap.org/export#map=15/50.7311/7.0985
  _mapClickWorker: function(coordinates) {
         window.open('http://www.openstreetmap.org/export#map=15/' + coordinates.world.y + '/' + coordinates.world.x);
     }
-src/Workshop/DemoBundle/WorkshopDemoBundle.php
+  src/Workshop/DemoBundle/WorkshopDemoBundle.php

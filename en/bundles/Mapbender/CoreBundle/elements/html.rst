@@ -28,7 +28,7 @@ For example you can add an image to your application:
 * **Classes:** html-element-inline, my-special-css-class
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -37,7 +37,7 @@ YAML-Definition:
    
 
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
 * **Widget:** mapbender.mbHTMLElement
@@ -59,7 +59,7 @@ None.
 
 
 Examples
-==================
+========
 
 Add an image
 

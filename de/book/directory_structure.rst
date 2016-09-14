@@ -4,7 +4,7 @@ Verzeichnisstruktur in Mapbender3
 #################################
 
 app
-******************************
+***
 Dieses Verzeichnis beinhaltet:
 
 * php-Cache (app/cache)
@@ -17,19 +17,19 @@ Dieses Verzeichnis beinhaltet:
 
 
 bin
-******************************
+***
 
 * wird im Moment nicht verwendet. Hier können z.B. Installationsskripte abgelegt werden.
 
 
 mapbender
-******************************
+*********
 
 * liefert die mapbender-spezifischen Bundles und den Mapbender3-Code
 
 
 web
-****************************** 
+***
 
 Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Der ALIAS muss auf dieses Verzeichnis verweisen.
 
@@ -42,7 +42,7 @@ Es kontrolliert:
 
 
 web/bundles
-****************************** 
+***********
 
 * Hier sind die statischen Ressourcen der einzelnen Bundles gespeichert.
 * Das folgende Kommando kopiert die Ressourcen von den Bundles zu dem Ordner. 
@@ -55,18 +55,18 @@ web/bundles
 
 
 src
-****************************** 
+***
 
-* Verzeichnis für anwendungsspezifische Bundles (ähnlich der x_-directories in Mapbender 2.x)
+* Verzeichnis für anwendungsspezifische Bundles (ähnlich der x-directories in Mapbender 2.x)
 
 
 vendor
-****************************** 
+******
 * Verzeichnis, in dem alle Bundles, die von Symfony verwendet werden, gespeichert werden. Resourcen werden von Symfony durch das Autoladen verwendet.
 
 
 Übersetzungen
-**********************
+*************
 Die Übersetzung wird in xliff-Textdateien gespeichert. Jede Sprache benötigt eine xliff-Datei wie z.B. messages.de.xliff für die deutsche Übersetzung
 
 * mapbender/src/Mapbender/CoreBundle/Resources/translations/
