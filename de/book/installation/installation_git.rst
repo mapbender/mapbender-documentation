@@ -92,9 +92,20 @@ Zur Anpassung der parameters.yml lesen Sie bitte das Kapitel `Anpassen der Konfi
 
 Laden Sie anschließend die Laufzeit-Umgebungen wie Symfony und Doctrine:
 
+Sie können entweder ``composer install`` oder ``composer update`` ausführen.
+
 .. code-block:: bash
 
-  ./composer.phar update 
+  ./composer.phar install
+
+``Composer Install`` greift auf die Dateien ``composer.lock`` zu, die wir mitliefern und die feste Versionen der einzelnen Pakete zieht.
+
+
+.. code-block:: bash
+
+  ./composer.phar update
+
+``Composer update`` greift auf die Datei ``composer.json`` zu und lädt die jeweils aktuellen Versionszweige der Pakete, wie wir sie in der ``composer.json`` definiert haben.
 
 
 

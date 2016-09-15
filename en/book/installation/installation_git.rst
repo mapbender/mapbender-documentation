@@ -93,9 +93,22 @@ Please read the chapter `Adapting the configuration file <configuration.html#ada
 
 And afterwards get the runtime dependencies like Symfony and Doctrine:
 
+You can either run ``composer install`` or ``composer update``.
+
 .. code-block:: bash
 
-  ./composer.phar update 
+  ./composer.phar install
+
+``Composer install`` uses the ``composer.lock`` file, that we ship out in the repository, and downloads fixed versions of the several packages.
+
+
+
+.. code-block:: bash
+
+  ./composer.phar update
+
+
+``Composer update`` uses the ``composer.update`` file and downloads each current version-branch of the packages, as we defined it in the ``composer.json`` file."
 
 
 Next steps from Installation
