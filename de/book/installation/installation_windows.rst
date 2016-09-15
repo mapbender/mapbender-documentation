@@ -28,6 +28,7 @@ Zusätzlich für PHP 7:
 
  # php.ini
  extension=php_zip.dll
+ extension=php_mbstring.dll
   
 
 .. code-block:: apache
