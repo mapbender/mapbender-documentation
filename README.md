@@ -21,7 +21,7 @@ https://github.com/mapbender/mapbender-documentation/blob/master/en/book/develop
 To build the website locally, you need to install Sphinx, in Debian-based
 distributions a
 
-    apt-get install sphinx-common
+    apt-get install python-sphinx
 
 should usually suffice.
 
@@ -35,7 +35,7 @@ You can then build the documentation by running
 
     sphinx-build . output
 
-or by using the supplied generate.sh shell script.
+or by using the supplied Makefile or generate.sh shell script.
 
 Have fun!
 
