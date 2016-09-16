@@ -28,6 +28,7 @@ Additional for PHP 7:
 
  # php.ini
  extension=php_zip.dll
+ extension=php_bz2.dll
  extension=php_mbstring.dll
   
 

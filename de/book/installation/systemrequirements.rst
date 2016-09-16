@@ -25,10 +25,11 @@ PHP 7
 
 Mapbender3 unterstützt auch PHP 7. Sie benötigen die oben beschriebenen PHP-Bibliotheken für PHP 7 und zusätzlich die folgenden:
 
-* PHP Zip (php-zip) for PHP 7
-* PHP XML (php-xml) for PHP 7
-* PHP Multibyte String (php-mbstring) für PHP 7
-* PHP Cache für PHP 7: php-apcu statt php-apc
+* PHP Zip (php-zip)
+* PHP BZ2 (php-bz2)
+* PHP XML (php-xml)
+* PHP Multibyte String (php-mbstring)
+* PHP Cache: php-apcu statt php-apc
 
 
 Datenbanken

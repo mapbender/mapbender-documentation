@@ -18,7 +18,7 @@ Paketliste bie Verwendung von PHP 7:
 
 .. code-block:: ini
 
-  sudo apt-get install php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring
+  sudo apt-get install php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
 
 Laden Sie das Apache Modul rewrite.
