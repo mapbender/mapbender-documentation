@@ -593,7 +593,7 @@ Definition von Feldern für den Dateiupload
 
 .. code-block:: yaml
   
-                    - type: upload
+                    - type: file
                       title: upload an image
                       name: file1
                       path: digitizer           # "web/uploads" ist der Basispfad, nach dieser Definition werden die Dateien nach web/uploads/digitizer hochgeladen
