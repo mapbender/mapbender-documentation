@@ -602,7 +602,7 @@ Definition of a file upload field
 
 .. code-block:: yaml
   
-                    - type: upload
+                    - type: file
                       title: upload an image
                       name: file1
                       path: digitizer           # base location is "web/uploads", like this the files are saved at web/uploads/digitizer
