@@ -127,9 +127,9 @@ Die folgenden Bereiche liegen standardmäßig vor:
 * scalebar (Maßstabsleiste)
 * date (Datum in der Form 10.10.2014)
 * northarrow (Nordpfeil)
-* Koordinaten des Druckbereichs
-* dynamisches Bild (gekoppelt an die Gruppe)
-* dynamischer Text (gekoppelt an die Gruppe)
+* extent_ur_y, extent_ur_x, extent_ll_x, extent_ll_y (Koordinaten des Druckbereichs)
+* dynamic_image (dynamisches Bild - gekoppelt an die Gruppe)
+* dynamic_text (dynamischer Text - gekoppelt an die Gruppe)
 
 Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die Open Office Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
 
