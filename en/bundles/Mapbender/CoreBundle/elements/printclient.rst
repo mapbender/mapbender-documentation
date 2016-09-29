@@ -125,9 +125,9 @@ The following objects are available from Mapbender:
 * scalebar
 * date
 * northarrow
-* coordinates of the print extent
-* dynamic image (connected to group role)
-* dynamic text (connected to group role)
+* extent_ur_y, extent_ur_x, extent_ll_x, extent_ll_y (coordinates of the print extent)
+* dynamic_image (connected to group role)
+* dynamic_text (connected to group role)
 
 You can define optional fields in the element definition (like title, comment, editor) and add them to the Open Office Draw file.
 
