@@ -18,6 +18,7 @@ Mapbender3 needs the following components in order to run:
 * PHP FileInfo for printing to check image format
 * APACHE mod_rewrite 
 * OpenSSL
+* For development, particular the phantomjs helper, you need also the BZ2 extension. (php-bz2)
 
 
 PHP 7

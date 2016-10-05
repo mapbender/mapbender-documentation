@@ -22,6 +22,15 @@ Please take note of the `system requirements <systemrequirements.html>`_ where y
  extension=php_openssl.dll
 
 
+For development:
+
+.. code-block:: ini
+
+ # php.ini
+ extension=php_bz2.dll
+
+ 
+
 Additional for PHP 7:
 
 .. code-block:: ini

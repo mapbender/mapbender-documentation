@@ -22,6 +22,14 @@ Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ wo Sie auch 
  extension=php_openssl.dll
 
 
+Für die Entwicklung:
+
+.. code-block:: ini
+
+ # php.ini
+ extension=php_bz2.dll
+
+
 Zusätzlich für PHP 7:
 
 .. code-block:: ini
