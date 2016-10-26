@@ -31,7 +31,7 @@ Mapbender3 unterstützt auch PHP 7. Sie benötigen die oben beschriebenen PHP-Bi
 * PHP Multibyte String (php-mbstring)
 * PHP Cache: php-apcu statt php-apc
 
-Die aktuelle Version von Mapbender3 (3.0.5.3) unterstützt PHP7 noch nicht vollständig. Falls Sie hier Probleme haben, können Sie entweder of PHP5.6 downgraden, oder eine "Nightly" Version von Mapbender3 installieren.
+Die aktuelle Version von Mapbender3 (3.0.5.3) unterstützt PHP7 noch nicht vollständig. Falls Sie hier Probleme haben, können Sie entweder auf PHP5.6 downgraden, oder eine "Nightly" Version von Mapbender3 installieren.
 
 Datenbanken
 -----------
