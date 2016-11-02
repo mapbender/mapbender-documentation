@@ -27,6 +27,13 @@ List of packages for PHP 7:
 .. code-block:: ini
 
   sudo apt-get install apache2 libapache2-mod-php php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
+  
+
+Enable PHP 7 in Apache
+
+.. code-block:: ini
+
+  a2enmod php7.0
 
 
 Load the Apache rewrite-module:
