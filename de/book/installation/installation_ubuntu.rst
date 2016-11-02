@@ -28,6 +28,13 @@ Paketliste bie Verwendung von PHP 7:
   sudo apt-get install php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
 
+Aktivierung von PHP 7 in Apache
+
+.. code-block:: ini
+
+  a2enmod php7.0  
+
+
 Laden Sie das Apache Modul rewrite.
 
 .. code-block:: bash
