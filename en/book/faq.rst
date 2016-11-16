@@ -1,6 +1,32 @@
 FAQ - Frequently Asked Questions
 ================================
 
+General
+-------
+
+F: I would like to know in which applications a specific WMS service is registered. Is there a way to achive that?
+
+A: Until we provide this information in the Administration Interface, this statement may help you:
+
+.. code-block:: sql
+
+                SELECT mb_core_application.* from mb_core_application, mb_core_layerset, mb_core_sourceinstance, mb_wms_wmsinstance, mb_wms_wmssource, mb_core_source
+                where
+                -- applications and their layersets
+                mb_core_application.id = mb_core_layerset.application_id and
+                -- layersets and their instances
+                mb_core_layerset.id = mb_core_sourceinstance.layerset and
+                -- layerset-instances and wms-instance
+                mb_core_sourceinstance.id = mb_wms_wmsinstance.id and
+                -- wms-instance and wms-source
+                mb_wms_wmsinstance.wmssource = mb_wms_wmssource.id and
+                -- wms-source and mb3-core source
+                mb_wms_wmssource.id = mb_core_source.id and
+                mb_core_source.id = <id_of_the_wms>;
+
+
+For the ID <id_of_the_wms> go to the Data Source page and take the number which is assigned to the specific WMS.
+
 
 Performance
 -----------

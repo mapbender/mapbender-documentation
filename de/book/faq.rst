@@ -1,6 +1,33 @@
 FAQ - Häufig gestellte Fragen
 =============================
 
+Allgemein
+---------
+
+F: Ich würde gerne wissen, in welchen Anwendungen ein bestimmter WMS Dienst eingebaut ist. Gibt es einen Weg das herauszufinden?
+
+A: Bis wir die Information an der Oberfläche anbieten, hilft Ihnen folgendes SQL Statement:
+
+.. code-block:: sql
+
+                SELECT mb_core_application.* from mb_core_application, mb_core_layerset, mb_core_sourceinstance, mb_wms_wmsinstance, mb_wms_wmssource, mb_core_source
+                where
+                -- Anwendungen und ihre Layersets
+                mb_core_application.id = mb_core_layerset.application_id and
+                -- Layersets und ihre Instanzen
+                mb_core_layerset.id = mb_core_sourceinstance.layerset and
+                -- Layerset-Instanzen und die WMS-Instanz
+                mb_core_sourceinstance.id = mb_wms_wmsinstance.id and
+                -- WMS-Instanz und WMS-Source
+                mb_wms_wmsinstance.wmssource = mb_wms_wmssource.id and
+                -- WMS-Source und MB3-Core Source
+                mb_wms_wmssource.id = mb_core_source.id and
+                mb_core_source.id = <id_of_the_wms>;
+
+
+Als ID <id_of_the_wms> geben Sie die Nummer ein, die auf der Seite der Datenquellen dem jeweiligen WMS zugeordnet ist.
+
+
 
 Performance
 -----------
