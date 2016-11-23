@@ -3,7 +3,7 @@
 Installation on Ubuntu and Debian
 #################################
 
-The following Installation manual describes the neccessary steps on a recent Ubuntu or Debian system. We assume that Apache 2.4 is running on the system. A `documentation for Apache 2.2  <installation_ubuntu.html#instructions-for-apache-2-2>`_ is added at the end of the document.
+The following Installation manual describes the neccessary steps on a recent Ubuntu or Debian system. We assume that Apache 2.4 is running on the system. Notes on `PHP 7 <installation_ubuntu.html#php-7>`_  and `Apache 2.2  <installation_ubuntu.html#instructions-for-apache-2-2>`_ are added below. This example uses PostgreSQL as database system.
 
 Please take note of the `system requirements <systemrequirements.html>`_, where you can also find the Download links to Mapbender3.
 
@@ -19,21 +19,6 @@ Additionally for development:
 .. code-block:: bash
 
  apt-get install php5-bz2
-
-  
-
-List of packages for PHP 7:
-
-.. code-block:: ini
-
-  sudo apt-get install apache2 libapache2-mod-php php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
-  
-
-Enable PHP 7 in Apache
-
-.. code-block:: ini
-
-  a2enmod php7.0
 
 
 Load the Apache rewrite-module:
@@ -73,6 +58,55 @@ Reload your Apache server.
  service apache2 reload
 
 
+PHP 7
+-----
+ 
+PHP 7 needs additional packages. The list of packages for PHP 7:
+
+.. code-block:: bash
+
+  sudo apt-get install apache2 libapache2-mod-php php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
+  
+
+Enable PHP 7 in Apache
+
+.. code-block:: bash
+
+  a2enmod php7.0
+
+
+Instructions for Apache 2.2
+---------------------------
+
+Some versions of Debian support for Apache 2.2 to drop the mapbender3.conf file into the directory ``/etc/apache2/sites-available`` and the activation with the command ``a2ensite``. Depending on the operating-system the file has to be placed into the directory ``/etc/apache2/conf.d/``.
+
+Activate the Rewrite-Modul of Apache.
+
+.. code-block:: bash
+
+ sudo a2enmod rewrite
+
+Unlike version 2.4, Apache 2.2 uses other directives and other default values (``Order`` and ``Allow``, ``AllowOverride``) that has to be written into the mapbender3.conf file. These differences are explained in the `Upgrade-Guide from Apache 2.2 to Apache 2.4 <http://httpd.apache.org/docs/2.4/upgrading.html>`_.
+
+Apache 2.2 configuration ``mapbender3.conf``:
+
+.. code-block:: apache
+
+  ALIAS /mapbender3 /var/www/mapbender3/web/
+  <Directory /var/www/mapbender3/web/>
+    Options MultiViews FollowSymLinks
+    DirectoryIndex app.php
+    AllowOverride none
+    Order allow,deny
+    Allow from all
+    
+    RewriteEngine On
+    RewriteBase /mapbender3/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ app.php [QSA,L]
+ </Directory>
+
+ 
 Check
 -----
 
@@ -149,35 +183,3 @@ Click on the Login-link at top-right to get to the login page. Log in with the n
 You can open the developer mode when you run app_dev.php: http://localhost/mapbender3/app_dev.php
 
 To learn more about Mapbender3 have a look at the `Mapbender3 Quickstart <../quickstart.html>`_.
-
-
-Instructions for Apache 2.2
----------------------------
-
-Some versions of Debian support for Apache 2.2 to drop the mapbender3.conf file into the directory ``/etc/apache2/sites-available`` and the activation with the command ``a2ensite``. Depending on the operating-system the file has to be placed into the directory ``/etc/apache2/conf.d/``.
-
-Activate the Rewrite-Modul of Apache.
-
-.. code-block:: bash
-
- sudo a2enmod rewrite
-
-Unlike version 2.4, Apache 2.2 uses other directives and other default values (``Order`` and ``Allow``, ``AllowOverride``) that has to be written into the mapbender3.conf file. These differences are explained in the `Upgrade-Guide from Apache 2.2 to Apache 2.4 <http://httpd.apache.org/docs/2.4/upgrading.html>`_.
-
-Apache 2.2 configuration ``mapbender3.conf``:
-
-.. code-block:: apache
-
-  ALIAS /mapbender3 /var/www/mapbender3/web/
-  <Directory /var/www/mapbender3/web/>
-    Options MultiViews FollowSymLinks
-    DirectoryIndex app.php
-    AllowOverride none
-    Order allow,deny
-    Allow from all
-    
-    RewriteEngine On
-    RewriteBase /mapbender3/
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ app.php [QSA,L]
- </Directory>
