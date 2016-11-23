@@ -4,6 +4,9 @@ FAQ - Frequently Asked Questions
 General
 -------
 
+Services and their usage in applications
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 F: I would like to know in which applications a specific WMS service is registered. Is there a way to achive that?
 
 A: Until we provide this information in the Administration Interface, this statement may help you:

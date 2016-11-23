@@ -4,6 +4,9 @@ FAQ - Häufig gestellte Fragen
 Allgemein
 ---------
 
+Dienste und in welchen Anwendungen sie genutzt werden
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 F: Ich würde gerne wissen, in welchen Anwendungen ein bestimmter WMS Dienst eingebaut ist. Gibt es einen Weg das herauszufinden?
 
 A: Bis wir die Information an der Oberfläche anbieten, hilft Ihnen folgendes SQL Statement:
