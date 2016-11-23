@@ -8,6 +8,121 @@ Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/
 Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender/mapbender/issues
 
 
+Milestone 3.0.5.4
+-----------------
+
+Relase Datum: soon
+
+**Bugfixes:**
+
+- Layerset löschen führt in einigen Fällen zu einem korrupten Map-Element und falschem Layertree
+
+- Anpassungen Exception Format an GetMap und GetFeatureInfo (Github-Issue 400)
+- Administrationsoberfläche YAML Editierung (Github-Issue 350)
+
+- Delay beim Wechsel von Layern gefixt
+- GetMap Request bei veränderter Reihenfolge der Layer im TOC
+- Fix für WMS support 1.3.0
+- Anpassungen in der mapbender.yml und der WMS Version
+- Ablage von YML-Anwendungen in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml
+
+- Anpassungen POI-Koordinate: Transformation und SRS, Nachkommastellen
+- Fix POI XSS
+
+- GPS: Kein Signal Fehlermeldung (Chrome und https)
+- GPS: Verschieben der Karte nur bei erster Positionsbestimmung
+
+- Anpassungen Zoombar und Internet Explorer Kompatibilität
+- Anpassungen OverviewMap und Internet Explorer Kompatibilität
+- Import Funktionalität unter MS Egde (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
+
+**FOM und Absicherung:**
+
+- Anzeige von Benutzern, die Zugriff auf ein Element in der Anwendung haben
+- Überarbeitung des Secure Elements Dialogs
+
+
+**verschiedenes**
+
+- Anpassung Design FeatureInfo bei Anzeige als Accordion und wenn nicht als Source angezeigt
+- Verschieben von Popups innerhalb einer Anwendung
+- Anpassungen WMC Edit Dialoggröße und XSS
+
+- Leere Auswahl bei Drop-Down Feldern (wie Target eines Buttons)
+- Anpassungen WMS Scale, ScaleHint und Min/Max Werte beim Öffnen einer Layerset-Instance
+- Anzeige des WMS-Titels in den Metadaten des TOC bei aktualisiertem WMS
+- Anzeige des Applikations-Logos in der Konfiguration
+- Anpassungen Simple Search und SearchRouter
+- Anpassungen Druck: Farbe bei variablen Texten
+- Anpassung Layer-Styles beim GetMap und GetFeatureInfo Request
+
+- Fehlermeldung bei falsch konfigurierter Layerset-Instance
+
+
+- Druck: Einführung von setasign/pdf als Alternative zu toooni/fpdf
+- Druck: Fehlermeldung bei fehlendem Drucktemplate
+- DPI Wert der Karte wieder per Default auf 72 gesetzt
+- Messen von Linien und Flächen in WGS84 (EPSG:4326)
+
+
+- Anpassung Anzeige der Element ACL
+
+- WMS Aktualisierung: Entfernen von User/Passwort Browser Autocomplete
+- Anzeige der Nachkommastellen im Coordinates-Display
+
+
+
+- Anpassungen, Erweiterungen EPSG import
+- Layer Maßstäbe (fix default visibility for a layer)
+- remove of DataSource Monitor icon (3.0.6.0)
+- Administration: Bewegung über Tabulator-Taste
+- Optimierung der Konfigurationsoberfläche
+- Anzeige der Source-ID in Anwendungen
+
+- Anpassungen und Vereinfachung der Styles des FullScreenTemplate
+- Prüfung der CSS Angaben in der Anwendungskonfiguration
+- Verbesserung Caching Mechanismen
+- Optimierungen Export / Kopieren
+- Vereinfachung bei der Erstellung neuer Elemente
+
+
+
+**Mobiles Template**
+- Anpassungen Mobile Template
+- Fix handle mobile template button click if target isn't defined
+- Set mobile icon label font weight to normal
+- Fix and improve mobile template button handling
+- Fix register mobile application event handler on "moveend"
+
+**Digitizer**
+- Digitizer: Druck von Multipolygonen
+- Objekte erscheinen nicht im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
+- Close Button Anpassung
+
+**Form Genrator:**
+- Anpassungen FormGenerator (Add HTMLElement handling  of service and DataStore configuration)
+
+
+**Architektur:**
+- PHP 7 Unterstützung
+- Übersetzungen von XML nach YAML
+- Anpassungen ElementGenerator
+- Ermittlung von Benutzerrollen
+- Composer Einträge mit https
+- Verschiedene Verbesserungen an Controllern und Bundles.
+- Doctrine generate Kommandos als deprecated markiert
+- Doctrine assets:dump Kommando als deprecated markiert
+
+**Dokumentation**
+- FAQ hinzugefügt.
+
+
+**config.yml Anpassungen**
+
+TODO
+
+
+
 Milestone 3.0.5.3
 -----------------
 
