@@ -56,7 +56,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 Through the use of the **Layersets**, the desired layers are included in the application. The instances are the references to the individual WMS services. With the plus-button **[1]** new Layersets can be created. Then, new layers can be integrated in the application by adding the existing instances **[2]**. The Layerset "overview " **[3]** is -as usual- used for displaying the overview map. 
 For a detailed documentation on how the services can be integrated correctly, please head for to the documentation of the `Layersets <../entities/layerset.html>`_ and `sources <../entities/source.html>`_. 
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_layerset.png
+.. figure:: ../../../../../figures/layertree/layertree_configuration_layerset_en.png
            :scale: 80
            :alt: Configuration of various Layersets for integration into the Layertree.
 
