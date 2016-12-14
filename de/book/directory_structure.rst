@@ -16,16 +16,85 @@ Dieses Verzeichnis beinhaltet:
 * die Kommandozeilen-Anwendungen für Pflege und Management (app/console)
 
 
+app/config
+----------
+
+Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis app/config. Zwei Dateien sind dabei von besonderer Bedeutung:
+
+
+* parameters.yml: Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die Datenbank des MB3-Repositories und Datenbanken, auf denen die einzelnen Elemente verweisen (z.B. für die Suche, die Digitalisierung, etc.).
+
+  Hier wird die Standardsprache der Oberfläche festgelegt, sowie Cookie- und Proxy-Einstellungen definiert.
+
+* config.yml: Diese Datei enthält grundlegende Architektur-Vorgaben von MB3. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert.
+
+  **Wichtig**: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen.
+
+  Desweiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
+
+
+app/config/applications
+-----------------------
+
+Ab Mapbender 3.0.5.3 können die als YAML definierten Anwendungen in das Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien. Sie ersetzen die vormals eine Datei mapbender.yml. Weitere YAML basierende Anwendungen können in dieses Verzeichnis abgelegt werden.
+
+  
+
 bin
 ***
 
-* wird im Moment nicht verwendet. Hier können z.B. Installationsskripte abgelegt werden.
+Hier sind links zu den folgenden Binaries hinterlegt:
+
+* apigen
+* composer
+* coveralls
+* doctrine
+* doctrine.php
+* phantomjs
+* phing
+* phpunit
+
+
+documentation
+*************
+
+Verzeichnis für diese Dokumentation
+
+
+fom
+***
+
+Verzeichnis des `FOM Submoduls <https://github.com/mapbender/fom>`_. 
 
 
 mapbender
 *********
 
-* liefert die mapbender-spezifischen Bundles und den Mapbender3-Code
+Verzeichnis des `Mapbender Submoduls <https://github.com/mapbender/mapbender>`_. Liefert die Mapbender-spezifischen Bundles und den Mapbender3-Code.
+
+
+
+mapbender/...../translations
+----------------------------
+
+Verzeichnis: mapbender/src/Mapbender/CoreBundle/Resources/translations/
+
+
+Die Übersetzungen werden in `XLIFF Textdateien <https://en.wikipedia.org/wiki/XLIFF>`_ gespeichert. Jede Sprache benötigt eine xliff-Datei wie z.B. messages.de.xlf für die deutsche Übersetzung
+
+
+
+owsproxy
+********
+
+Verzeichnis des `OWSProxy Submoduls <https://github.com/mapbender/owsproxy3>`_.
+
+
+vendor
+******
+
+Verzeichnis für externe Bibliotheken (vom Compser geladen) und weitere Mapbender Module (u.a. Digitizer, Mapbender-Icons).
+
 
 
 web
@@ -42,7 +111,7 @@ Es kontrolliert:
 
 
 web/bundles
-***********
+-----------
 
 * Hier sind die statischen Ressourcen der einzelnen Bundles gespeichert.
 * Das folgende Kommando kopiert die Ressourcen von den Bundles zu dem Ordner. 
@@ -63,10 +132,3 @@ src
 vendor
 ******
 * Verzeichnis, in dem alle Bundles, die von Symfony verwendet werden, gespeichert werden. Resourcen werden von Symfony durch das Autoladen verwendet.
-
-
-Übersetzungen
-*************
-Die Übersetzung wird in xliff-Textdateien gespeichert. Jede Sprache benötigt eine xliff-Datei wie z.B. messages.de.xliff für die deutsche Übersetzung
-
-* mapbender/src/Mapbender/CoreBundle/Resources/translations/

@@ -16,16 +16,84 @@ This directory contains:
 * the command line application for maintaining and management tasks (app/console)
 
 
+app/config
+----------
+
+Basic configuration files of Mapbender are placed in the app/config directory. Two files are of particular importance:
+
+* parameters.yml: The most basic parameters of Mapbender are defined here. For example the database of the MB3-repository and the databases on which some elements rely on (like Search or Digitizer).
+
+  The default language of the interface has to be defined here as cookie- and proxy-settings. 
+
+* config.yml: This file contains basic configuration of the arhcitecture. Also you'll find many parameters defined as wildcards for the parameters.yml
+
+  **Important**: Each database that is defined in the parameters.yml has to be defined as a wildcard in config.yml.
+
+  Furthermore the file defines which configuration has to be loaded for the productive and development mode.
+
+
+  
+app/config/applications
+-----------------------
+
+Since Mapbender 3.0.5.3 the directory app/config/applications contains all applications that are defined in a YAML file. The known example-applications "Mapbender mobile", "Mapbender Demo Map" and "Mapbender Demo Map basic" are now placed there as single files. They replace the former single file mapbender.yml. Additional applications can be placed in this directory.
+
+
+
 bin
 ***
 
-* is not in use at the moment. Here you can deposit e.g. installation scripts.
+Here are symlinks to the following binaries placed:
+
+* apigen
+* composer
+* coveralls
+* doctrine
+* doctrine.php
+* phantomjs
+* phing
+* phpunit
+
+
+documentation
+*************
+
+Folder for this documentation.
+
+
+fom
+***
+
+Directory of the `FOM submodule <https://github.com/mapbender/fom>`_.
 
 
 mapbender
 *********
 
-* provides the mapbender-specific bundles and the Mapbender3 code.
+Directory of the `Mapbender submodule <https://github.com/mapbender/mapbender>`_. Provides the mapbender-specific bundles and the Mapbender3 code.
+
+
+mapbender/...../translations
+----------------------------
+
+Directory: mapbender/src/Mapbender/CoreBundle/Resources/translations/
+
+The translations are stored in `XLIFF textfiles <https://en.wikipedia.org/wiki/XLIFF>`_. Every language needs an xliff-file like messages.en.xlf for the English translation.
+
+
+
+owsproxy
+********
+
+Directory of the `OWSProxy submodule <https://github.com/mapbender/owsproxy3>`_.
+
+
+
+vendor
+******
+
+Directory for external libraries (loaded by composer) and further Mapbender modules (a.o. Digitizer, Mapbender-Icons).
+
 
 
 web
@@ -40,7 +108,7 @@ It controlls:
 
 
 web/bundles
-***********
+-----------
 
 * here the static resources of the single bundles are stored.
 * the following command copies the resources from the bundles to the folder. 
@@ -61,10 +129,3 @@ src
 vendor
 ******
 * directory where all the Bundles which are used from Symfony are found. Resources are used by Symfony using the Autoloading.
-
-
-translations
-*************
-The translation is stored in xliff-textfiles. Every language needs an xliff-file like messages.de.xliff for the german translation.
-
-* mapbender/src/Mapbender/CoreBundle/Resources/translations/
