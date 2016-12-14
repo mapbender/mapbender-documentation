@@ -26,6 +26,24 @@ Konfiguration
 
 
 
+Icons
+-----
+
+Für einige Symbole können zwei verschiedene Icon-Typen ausgewählt werden.
+
+* Ein Symbol basierend auf einer Grafik (z.B. "About"),
+* Ein Symbol basierend auf einer Schrift (z.B. "About (Font Awesome)").
+
+Letztere basieren auf einem `IconSet <https://github.com/mapbender/icons>`_, das mit dem Mapbender als Modul ausgeliefert wird. Wir empfehlen die Verwendung der Symbole aus dieser Bibliothek.
+
+
+Mehr Informationen dazu unter:
+
+* https://github.com/mapbender/icons
+* http://rawgit.com/mapbender/icons/master/demo.html
+
+
+  
 YAML-Definition:
 ----------------
 

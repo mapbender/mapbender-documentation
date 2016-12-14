@@ -25,6 +25,24 @@ Configuration
 * **Deactivate:** Method that is invoked when the button is disabled.
 
 
+Icons
+-----
+
+For some symbols you can choose between two different types of icons:
+
+* A symbol based on a graphic (e.g. "About"),
+* A symbol based on a font (e.g. "About (Font Awesome)").
+
+The latter are based on a `IconSet <https://github.com/mapbender/icons>`_, which is delivered with Mapbender as a module. We recommend to use the symbols from this library.
+
+
+More information on that topic:
+
+* https://github.com/mapbender/icons
+* http://rawgit.com/mapbender/icons/master/demo.html
+
+
+
 YAML-Definition:
 ----------------
 
