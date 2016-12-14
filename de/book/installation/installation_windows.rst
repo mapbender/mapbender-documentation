@@ -75,7 +75,107 @@ In der mapbender3.conf:
 
 Wir gehen in diesem Beispiel davon aus, dass Mapbender3 direkt unter **C:/** entpackt wurde (siehe das Kapitel `Systemvoraussetzungen und den Download <systemrequirements.html#download-von-mapbender3>`_ für Details). Sie können auch einfach ein anderes Verzeichnis wählen. Passen Sie dann nur diese Apache mapbender3.conf Datei oben an, indem Sie auf das richtige Verzeichnis verweisen.
 
-Starten Sie den Apache Webserver neu und prüfen Sie, ob der Alias erreichbar ist:
+Starten Sie den Apache Webserver neu.
+
+
+Optionale Features
+==================
+
+Mit den folgenden Schritten kann die Performance unter Windows gesteigert werden.
+
+
+SASS Compiler
+-------------
+
+Der SASS Compiler ist Bestandteil von Mapbender 3.0.5 und seit der Version 3.0.5.4 sorgt ein Filter dafür, dass die generierten CSS Anweisungen in eine temporäre Datei abgelagert und nicht in einer Pipe ausgeliefert werden.
+
+
+
+WinCache PHP (optional)
+-----------------------
+
+Die Windows Cache (WinCache) Erweiterung für PHP ein PHP-Beschleuniger, der verwendet wird, um die Geschwindigkeit von PHP-Anwendungen zu erhöhen. Die Erweiterung enthält PHP opcode cache, user data cache, session cache, file system cache und relative path cache.
+
+
+Informationen dazu unter:
+
+- https://www.iis.net/downloads/microsoft/wincache-extension
+- https://sourceforge.net/projects/wincache/
+
+**WinCache Installation**
+
+- Download: https://sourceforge.net/projects/wincache/
+- Der Download ist ein selbst extrahierendes Archiv (.exe)
+
+.. code-block:: txt
+                
+                To install and enable the extension, use the following steps:
+                Unpack the package that is appropriate for the PHP version you are using.
+                Copy the php_wincache.dll file into the PHP extensions folder. Typically this folder is called "ext" and it is located in the same folder with all PHP binary files. For example:
+                "C:\Program Files\PHP\ext".
+                Using a text editor, open the php.ini file, which is usually located in the same folder where all PHP binary files are. For example:
+                "C:\Program Files\PHP\php.ini".
+                Add the following line at the end of the php.ini file:
+                extension = php_wincache.dll
+                Save and close the php.ini file.
+
+
+**session.handler auf WinCache umstellen:**
+
+.. code-block:: txt
+                
+                To change the location of the session file use session.save_path directive.
+                sesion.save_handler = wincache
+                session.save_path = C:\inetpub\tmp\session\
+
+
+**wincache.reroute_enabled aktivieren**
+
+.. code-block:: txt
+                
+                The reroutes are not enabled by default. To enable them, set the reroute_enabled directive in either the php.ini or the .user.ini.
+                wincache.reroute_enabled = 1
+
+
+OpCache (optional)
+------------------
+
+OpCache ist eine PHP-Erweiterung, die seit PHP >= 5.5.5 zwar ausgelifert, aber per Voreinstellung nicht freigeschaltet ist.
+
+Mehr info: https://www.sitepoint.com/understanding-opcache/
+
+
+**OPcache Installation**
+
+- http://php.net/manual/de/book.opcache.php
+
+In der php.ini:
+
+.. code-block:: ini
+                
+                [opcache]
+                ; Determines if Zend OPCache is enabled
+                opcache.enable=1
+ 
+                ; Determines if Zend OPCache is enabled for the CLI version of PHP
+                ;opcache.enable_cli=0
+ 
+                ; The OPcache shared memory storage size.
+                opcache.memory_consumption=64
+                ; The amount of memory for interned strings in Mbytes.
+                opcache.interned_strings_buffer=4
+                ; The maximum number of keys (scripts) in the OPcache hash table.
+                ; Only numbers between 200 and 100000 are allowed.
+                opcache.max_accelerated_files=2000
+                ; The maximum percentage of "wasted" memory until a restart is scheduled.
+                opcache.max_wasted_percentage=5
+                
+
+
+Überprüfung
+===========
+
+und prüfen Sie, ob der Alias erreichbar ist:
 
 * http://localhost/mapbender3/
 
@@ -113,7 +213,11 @@ Rufen Sie die app/console Befehle über die php.exe auf. Hierzu müssen Sie ein 
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
 
-Hiermit ist die Installation von Mapbender3 fertig. 
+Hiermit ist die Installation von Mapbender3 fertig.
+
+
+
+
 
 Prüfen Sie die config.php erneut 
 
