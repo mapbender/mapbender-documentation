@@ -5,37 +5,50 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
-Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender/mapbender/issues
 
-
-Milestone 3.0.5.4
+Milestone next
 -----------------
 
 Relase Datum: soon
 
-**Bugfixes:**
+**Bugfixes und Features:**
 
-- Layerset löschen führt in einigen Fällen zu einem korrupten Map-Element und falschem Layertree
+- Das Messen zeigt die Koordinaten live an, d.h. beim Bewegen der Maus werden schon jeweils die erreichten Segment- und Gesamtlängen angezeigt.
+- Die Messergebnisse werden nun von oben hinzugefügt. Damit steht das aktuelle Messergebnis sichtbar an oberster Stelle und muss nicht gescrollt werden.
+- Der Login Dialog (Registrierung, Password vergessen) wurde für mobile Geräte optimiert, um den Zugriff auf gesicherte mobile Anwendungen zu erleichtern.
+- Neu hinzugefügte Layerset Instances sind nun nicht mehr per Default als Basesource markiert.
+  
+- Das Löschen von Layersets führte in einigen Fällen zu einem korrupten Map-Element und falschem Layertree
 
-- Anpassungen Exception Format an GetMap und GetFeatureInfo (Github-Issue 400)
-- Administrationsoberfläche YAML Editierung (Github-Issue 350)
+- Anpassungen und Vereinfachung der Styles des FullScreenTemplate
+- Einführung der Prüfung der CSS Angaben in der Anwendungskonfiguration
 
 - Delay beim Wechsel von Layern gefixt
-- GetMap Request bei veränderter Reihenfolge der Layer im TOC
+- Gefixter GetMap Request bei veränderter Reihenfolge der Layer im TOC
 - Fix für WMS support 1.3.0
-- Anpassungen in der mapbender.yml und der WMS Version
-- Ablage von YML-Anwendungen in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml
+- Fix für geschützte WMS Dienste bei GetMap, GetFeatureInfo, Print, Export und Legende
+- Fix des WMS Parameters Exception Format bei GetMap und GetFeatureInfo Request (Github-Issue 400)
+- Fixes bei den Layer-Styles im GetMap und GetFeatureInfo Request
+
+- Ablage von YML-Anwendungen in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml und Anpassungen in der WMS Version
+- Administrationsoberfläche YAML Editierung und Umformatierungen nach dem Speichern (Github-Issue 350)
 
 - Anpassungen POI-Koordinate: Transformation und SRS, Nachkommastellen
-- Fix POI XSS
+- Fix eines XSS Fehlers im POI Dialog
+- Fix in POI Dialog, wenn useMailto = false
 
-- GPS: Kein Signal Fehlermeldung (Chrome und https)
-- GPS: Verschieben der Karte nur bei erster Positionsbestimmung
+- GPS: Fehlermeldungen, wenn kein Signal und Abhängigkeit von Chrome-Browsern und https.
+- GPS: Verschieben der Karte nur bei erster Positionsbestimmung.
 
-- Anpassungen Zoombar und Internet Explorer Kompatibilität
-- Anpassungen OverviewMap und Internet Explorer Kompatibilität
-- Import Funktionalität unter MS Egde (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
+- Internet Explorer Kompatibilität: Anpassungen Zoombar.
+- Internet Explorer Kompatibilität: Anpassungen OverviewMap
+- MS Egde Kompatibilität: Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
 
+- Verbesserung der Performance bei *einigen* Installation unter Windows durch WinCachePHP und PHP Opcache (für Details siehe `Installation unter Windows <installation/installation_windows.html>`_)
+
+- Kopieren von Anwendungen für Benutzer, die nicht root sind (ACL Application: owner, Benutzer: owner, Berechtigungen ACLs: owner, Element: owner, Gruppen: owner, Service Source: owner, spezifische Anwendung: owner)
+
+  
 **FOM und Absicherung:**
 
 - Anzeige von Benutzern, die Zugriff auf ein Element in der Anwendung haben
@@ -48,78 +61,97 @@ Relase Datum: soon
 - Verschieben von Popups innerhalb einer Anwendung
 - Anpassungen WMC Edit Dialoggröße und XSS
 
-- Leere Auswahl bei Drop-Down Feldern (wie Target eines Buttons)
+- Backend: Target-Feld: Leere Auswahl bei Drop-Down Feldern.
 - Anpassungen WMS Scale, ScaleHint und Min/Max Werte beim Öffnen einer Layerset-Instance
 - Anzeige des WMS-Titels in den Metadaten des TOC bei aktualisiertem WMS
 - Anzeige des Applikations-Logos in der Konfiguration
 - Anpassungen Simple Search und SearchRouter
 - Anpassungen Druck: Farbe bei variablen Texten
-- Anpassung Layer-Styles beim GetMap und GetFeatureInfo Request
 
 - Fehlermeldung bei falsch konfigurierter Layerset-Instance
 
-
 - Druck: Einführung von setasign/pdf als Alternative zu toooni/fpdf
-- Druck: Fehlermeldung bei fehlendem Drucktemplate
-- DPI Wert der Karte wieder per Default auf 72 gesetzt
+- Druck: Fix der Fehlermeldung bei fehlendem Drucktemplate
 - Messen von Linien und Flächen in WGS84 (EPSG:4326)
-
 
 - Anpassung Anzeige der Element ACL
 
 - WMS Aktualisierung: Entfernen von User/Passwort Browser Autocomplete
 - Anzeige der Nachkommastellen im Coordinates-Display
 
-
-
 - Anpassungen, Erweiterungen EPSG import
-- Layer Maßstäbe (fix default visibility for a layer)
-- remove of DataSource Monitor icon (3.0.6.0)
+- Layer Maßstäbe und Fix der Default Visibility eines Layers
+- Entfernen des Data Source Monitor Icon (kommt in Version "Next")
 - Administration: Bewegung über Tabulator-Taste
-- Optimierung der Konfigurationsoberfläche
+- Verbesserung der Konfigurationsoberfläche
 - Anzeige der Source-ID in Anwendungen
 
-- Anpassungen und Vereinfachung der Styles des FullScreenTemplate
-- Prüfung der CSS Angaben in der Anwendungskonfiguration
 - Verbesserung Caching Mechanismen
-- Optimierungen Export / Kopieren
+- Verbesserungen Export / Kopieren
 - Vereinfachung bei der Erstellung neuer Elemente
 
 
 
 **Mobiles Template**
-- Anpassungen Mobile Template
-- Fix handle mobile template button click if target isn't defined
-- Set mobile icon label font weight to normal
-- Fix and improve mobile template button handling
-- Fix register mobile application event handler on "moveend"
+
+- Generelle Verbesserungen des Mobilen Templates
+- Fix für einen Button, wenn dieser nur auf einen Link verweist.
+- Fix für das Icon Label und der Schriftdicke normal
+- Verbesserungen des Button Handlings allgemein
+- Fix des event handlers ""on moveend"
 
 **Digitizer**
+
 - Digitizer: Druck von Multipolygonen
-- Objekte erscheinen nicht im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
-- Close Button Anpassung
+- Objekte erscheinen nicht mehr im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
+- Objekte mit einer Linienbreite von 0 werden im Druck nicht mehr sichtbar.
+- Close Schaltfläche Anpassung
 
 **Form Genrator:**
-- Anpassungen FormGenerator (Add HTMLElement handling  of service and DataStore configuration)
+
+- Anpassungen: Hinzufügen des HTMLElement handling  für Services und  DataStore Konfiguration.
 
 
 **Architektur:**
+
 - PHP 7 Unterstützung
-- Übersetzungen von XML nach YAML
 - Anpassungen ElementGenerator
-- Ermittlung von Benutzerrollen
+- Ermitteln von Benutzerrollen
 - Composer Einträge mit https
 - Verschiedene Verbesserungen an Controllern und Bundles.
 - Doctrine generate Kommandos als deprecated markiert
 - Doctrine assets:dump Kommando als deprecated markiert
+- Aktualisierung JOII Bibliothek
+- Ablage von Symlinks zu verschiedenen Binaries im bin Verzeichnis
 
 **Dokumentation**
-- FAQ hinzugefügt.
+
+- `FAQ <faq.html>`_ der Dokumentation hinzugefügt.
 
 
 **config.yml Anpassungen**
 
-TODO
+DBAL-Parameter:
+
+- default_connection: Bei mehreren Einträgen definiert die default_connection, die Standardverbindung der MB3-Datenbank.
+- persistent: Persistente Verbindungen zur Datenbank zwecks Performance (Oracle)
+  
+.. code-block:: yaml
+
+   doctrine:
+     dbal:
+       default_connection: default    
+         connections:
+           default:
+             ...
+             persistent: true
+                
+
+**mapbender-starter/application/app/config/applications/**
+
+Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Beispiel sind die drei bekannten Anwendungen Mapbender-User, Mapbeder-User-Basic und Mapbender-Mobile abgelegt.
+            
+Dieses Release ist Uli gewidmet, der den ersten Pixel in Mapbender programmiert hat `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
 
 
 
