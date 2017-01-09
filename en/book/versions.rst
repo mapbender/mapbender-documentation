@@ -30,6 +30,9 @@ Relase Datum: soon
 - Fixes for the WMS parameter Exception Format for the GetMap and GetFeatureInfo Request (Github-Issue 400)
 - Fixes of Layer-Styles for GetMap und GetFeatureInfo request.
 
+- Print: Color can be set for variable texts.
+- Print: Printout of the legend, if the service is built in with the proxy.
+
 - Saving of YML applications in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml and adjustments in their referenced WMS Version
 - Fixes in administration interface of the YAML edititing after Saving (Github-Issue 350)
 
@@ -66,10 +69,8 @@ Relase Datum: soon
 - Display of WMS Title in the metadata of the TOC, when the WMS was updated.
 - Display of the application logo in the Configuration.
 - Display Issues of Simple Search and Search Router.
-- Print: Color for variable texts.
 
 - Fixes for error messages on a wrong configured Layerset-Instance.
-
 
 - Print: Introduction of setasign/pdf instead of toooni/fpdf
 - Print: Fix of error messages on a missing print-template
