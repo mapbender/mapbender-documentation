@@ -46,8 +46,8 @@ Konfiguration
 
 Das Element kann in der Sidepane eingebettet werden.
 
-* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* Target: Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
+* Title: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Elemente voneinander zu unterscheiden.
+* Target: Zielelement (Titel(ID)) der Karte.
 * Schemes: YAML-Definition für das Element digitizer
 
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren. Mehr zu diesem Thema finden Sie unter http://doc.mapbender3.org/de/book/database.html
@@ -272,7 +272,10 @@ SQL for the demo tables
         lastname varchar,
         email varchar,
         interests varchar,
-        x float,
+        user_name varchar,
+	group_name varchar,
+	modification_date date,
+	x float,
         y float,
         geom geometry(point,4326),
         CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
@@ -294,6 +297,9 @@ SQL for the demo tables
         interests varchar,
         length float,
         category varchar,
+	user_name varchar,
+	group_name varchar,
+	modification_date date,
         x float,
         y float,
         geom geometry(linestring,4326),
@@ -316,6 +322,9 @@ SQL for the demo tables
         interests varchar,
         area float,
         category varchar,
+	user_name varchar,
+	group_name varchar,
+	modification_date date,
         x float,
         y float,
         geom geometry(polygon,4326),
