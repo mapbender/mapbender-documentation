@@ -556,7 +556,7 @@ Definition of a datepicker
 
                                                     type: datep              # on click in the textfield a datepicker will open
                                                     value: 2015-01-01        # define a start value for the datepicker (optional)
-                                                    format: YYYY-MM-DD       # define a dateformat (optional), default is YYYY-MM-DD
+                                                    dateFormat: YYYY-MM-DD       # define a dateformat (optional), default is YYYY-MM-DD
 
 
 Definition of information (type infotext)
