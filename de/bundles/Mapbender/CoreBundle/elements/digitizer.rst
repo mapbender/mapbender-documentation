@@ -547,7 +547,7 @@ Definition eines Textfelds mit Datumsauswahl
 
                                                     type: date              # Textfeld, das eine Datumsauswahl bereitstellt
                                                     value: 2015-01-01       # Startwert für die Datumsauswahl (optional)
-                                                    format: YYYY-MM-DD      # Datumsformat (optional), Standardformat YYYY-MM-DD
+                                                    dateFormat: YYYY-MM-DD      # Datumsformat (optional), Standardformat YYYY-MM-DD
 
 
 Definition von Hilfetexten zu den Eingabefeldern (type infotext)
