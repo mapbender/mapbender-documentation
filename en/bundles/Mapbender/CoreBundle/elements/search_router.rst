@@ -84,7 +84,7 @@ For mapbender.yml:
 			        - gid  # array of columns to select, expressions are possible
 			        - name 
 			        - type
-			    geometry_attribute: geom  # name of the geometry column to query
+			    geometry_attribute: geom  # name of the geometry column to query. Note: projection of geom has to be the same as map-Element projection
 			form:  # search form configuration
 			    name:  # field name, use relation column name to query or anything else for splitted fields (see below)
 			        type: text  # field type, usually text or integer
