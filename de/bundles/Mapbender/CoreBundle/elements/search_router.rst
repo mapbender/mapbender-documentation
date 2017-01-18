@@ -84,7 +84,7 @@ In der mapbender.yml Datei:
 			        - gid  # Liste von Spalten auswählen, expressions are possible
 			        - name 
 			        - type
-			    geometry_attribute: geom  # Name der Geometriesplate, die genutzt werden soll
+			    geometry_attribute: geom  # Name der Geometriesplate, die genutzt werden soll. Achtung: Projektion muss mit Projektion des map-Elements übereinstimmen
 			form:  # Einstellungen für das Suchformular
 			    name:  # Feldname, Spaltenname der genutzt werden soll 
 			        type: text  # Eingabefeld, normalerweise Text oder Zahlen
