@@ -68,6 +68,15 @@ Example accordion:
 
 
 
+Printing the results
+--------------------
+
+The switch "print Result" allows you to print the output of the FeatureInfo. A Print button will appear on the FeatureInfo dialogue. The printing is done with the printing dialogue of the webbrowser.
+
+To have all images and background-colors in your print-out you should check the printing-settings of your webbrowser: You can check in Firefox the option "Print background". In Chrome-based browsers the option is called "Background graphics". The used fonts can vary on a print-out as PDF and depends on the specific viewer. Furthermore most webbrowser modify the pages a bit before print-out to save ink/toner.
+
+
+
 Button-Configuration
 --------------------
 
