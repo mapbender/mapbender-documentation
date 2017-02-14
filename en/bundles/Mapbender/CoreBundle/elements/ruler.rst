@@ -3,7 +3,7 @@
 Line/Area Ruler
 ***************
 
-Ruler to draw a line/area and display length/area in a dialog.
+The ruler is used to draw a line or area and display length/area in a dialog.Selecting a type determines whether the element measures lines or areas. Each Ruler-element can only measure either lines or areas.
 
 .. image:: ../../../../../figures/ruler.png
      :scale: 80
@@ -18,6 +18,7 @@ Configuration
 * **Tooltip:** text to use as tooltip.
 * **Target:** Id of Map element to query.
 * **Type:** choose type of element: line or area.
+* **Immediate:** Select whether the calculated lengths are displayed immediately or only after the click in the map.
 
 YAML-Definition:
 ----
@@ -27,8 +28,11 @@ YAML-Definition:
    tooltip: "ruler"   # text to use as tooltip
    target: ~          # Id of Map element to query
    type: 'line'       # choose type line or area
+   immediate: 'false' # True: Display the calculated lengths immediately. False: The calculated lengths are displayed only after clicking. Default: False.
+
 
 You need a button to show this element. See :doc:`button` for inherited configuration options.
+To use both functions (measuring areas and lines) in an application, you need two buttons that are in a group.
 
 Class, Widget & Style
 =====================
