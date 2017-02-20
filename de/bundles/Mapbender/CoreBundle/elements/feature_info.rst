@@ -68,6 +68,15 @@ Beispiel Accordion:
 
 
 
+Ausdruck der Resultate
+----------------------
+
+Mit dem Schalter "print Result" kann die Information des FeatureInfo ausgedruckt werden. Eine Druck Schaltfläche ist dann in dem Feature-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
+
+Um alle Bilder und Hintergrundfarben des im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: Im Firefox kann man die Option "Hintergrund drucken" im Druckoptionendialog anschalten, in Chrome basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Desweiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
+
+             
+
 Button-Konfiguration
 --------------------
 

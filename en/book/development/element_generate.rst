@@ -15,7 +15,7 @@ The following example show the generation and modification of a map-click elemen
 
 
 The steps to create your own Element?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are some steps you have to follow on the way to your own element.
 
@@ -26,7 +26,7 @@ There are some steps you have to follow on the way to your own element.
 
 
 Use app/console to generate your own bundle
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Find out more about the command with help:
 
@@ -67,7 +67,7 @@ After this steps you new bundle is available at src. The bundle is already regis
 
 
 Use app/console to generate a new element
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Find out more about the command with help:
 
@@ -97,10 +97,10 @@ Follow up actions
 Read about adapting your bare-bone element at http://doc.mapbender3.org/en/book/development/element_generate.html
 
 Edit your new element for your needs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Change the title and description in the php file
-******************************************************
+************************************************
 
 You will find several functions in the php file. Change the return value of the functions *getClassTitle()* and *getClassDescription()*.
 
@@ -119,7 +119,7 @@ You will find several functions in the php file. Change the return value of the 
 
 
 Register the new Element
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can register an element by adding it to the function *getElements()* in the file src/Workshop/DemoBundle/WorkshopDemoBundle.php. After creation of the bundle this function does not exist. You also have to refer to the MapbenderBundle and define that your  extends the MapbenderBundle.
 
@@ -146,14 +146,14 @@ This will make the element available in the backend when you configure your appl
 
 
 Add the new element to an application
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a new application and add your element to the new application.
 Note that the configuration for your generated element is done in YAML syntax. If you want to use the map-element as target you have to find out the id of the map-element (f.e. via firebug inspect).
 
 
 Change the action on Click event
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you generated a map-click element you get an event on click and an action. The action can be modified. Have a look in the JQuery widget file (mapbender/src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js). 
 
@@ -162,8 +162,8 @@ You will find the function *_mapClickHandler()* that determines the coordinates 
 You can modify the action of the function *_mapClickWorker()*.
 
 
-Default definition of *_mapClickWorker()*
-------------------------------------------
+Default definition of _mapClickWorker()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -176,8 +176,8 @@ Default definition of *_mapClickWorker()*
     }
 
 
-modified *_mapClickWorker()* opens OpenStreetMap
-------------------------------------------------
+modified _mapClickWorker() opens OpenStreetMap
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Alternatively you could open a new window with an URL and add the coordinates as parameters. You can open OpenStreetMap and center to the coordinates of the click event.
 
 http://www.openstreetmap.org/export#map=15/50.7311/7.0985

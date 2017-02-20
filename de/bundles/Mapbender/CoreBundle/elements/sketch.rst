@@ -20,7 +20,7 @@ Konfiguration
 * **Types:** Liste der unterstützten Zeichenarten 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

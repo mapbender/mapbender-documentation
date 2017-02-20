@@ -17,7 +17,7 @@ Documentation
 *************
 Read more about Twig in Twig documentation the http://twig.sensiolabs.org/.
 
-You find a good introduction in the Symfony2 TheBook **Creating and using Templates** http://symfony.com/doc/current/book/index.html
+You find a good introduction in the Symfony2 documentation **Creating and using Templates** http://symfony.com/doc/current/templating.html
 
  
 Twig Syntax

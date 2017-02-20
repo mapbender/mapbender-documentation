@@ -14,6 +14,13 @@ You can define the size of your overview window and a position. Refer to a layer
 Configuration
 =============
 
+The Overview element must be placed in the Configuration underneath the Map element.
+
+.. image:: ../../../../../figures/overview_configuration_dependency_map.png
+   :scale: 80
+
+The configuration dialog:
+
 .. image:: ../../../../../figures/overview_configuration.png
      :scale: 80
 
@@ -28,7 +35,7 @@ Configuration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

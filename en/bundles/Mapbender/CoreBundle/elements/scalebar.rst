@@ -22,7 +22,7 @@ Configuration
 * **Units:** scale bar units 'kilometer' and/or 'miles' (ml), default ['km'].
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

@@ -26,7 +26,7 @@ Configuration
 * **Show grouped layer title:** show group title for grouped layers, default is true.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

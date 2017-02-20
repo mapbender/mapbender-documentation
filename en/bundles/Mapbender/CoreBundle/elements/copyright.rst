@@ -1,7 +1,7 @@
 .. _copyright:
 
 Copyright
-************
+*********
 
 The copyright shows a copyright label and terms of use as a dialog.
 
@@ -20,7 +20,7 @@ Configuration
 * **Content:** Content of the copyright window, displayed when clicking on the button (or autoopened by starting the application, if enabled)
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

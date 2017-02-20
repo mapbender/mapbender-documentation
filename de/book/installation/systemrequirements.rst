@@ -4,7 +4,7 @@ Systemvoraussetzungen und Download
 ##################################
 
 Systemvoraussetzungen
-***************
+*********************
 
 Mapbender3 benötigt die folgenden Komponenten:
 
@@ -18,6 +18,24 @@ Mapbender3 benötigt die folgenden Komponenten:
 * PHP FileInfo für den Druck zur Prüfung der Bilder
 * APACHE mod_rewrite
 * OpenSSL
+* Für die Entwicklung, speziell durch das phantomjs Hilfspaket, wird außerdem die BZ2 Extension benötigt (php-bz2)
+
+
+PHP 7
+-----
+
+Mapbender3 unterstützt auch PHP 7. Sie benötigen die oben beschriebenen PHP-Bibliotheken für PHP 7 und zusätzlich die folgenden:
+
+* PHP Zip (php-zip)
+* PHP BZ2 (php-bz2)
+* PHP XML (php-xml)
+* PHP Multibyte String (php-mbstring)
+* PHP Cache: php-apcu statt php-apc
+
+Die aktuelle Version von Mapbender3 (3.0.5.3) unterstützt PHP7 noch nicht vollständig. Falls Sie hier Probleme haben, können Sie entweder auf PHP5.6 downgraden, oder eine "Nightly" Version von Mapbender3 installieren.
+
+Datenbanken
+-----------
 
 Um optional eine andere Datenbank als die vorkonfigurierte SQLite zu verwenden, wird eine PHP-Erweiterung benötigt, die von Doctrine unterstützt wird: `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. Für PostgreSQL beispielsweise php5-pgsql.
 
@@ -33,7 +51,6 @@ Wir haben gute Erfahrungen mit den 64-bit Downloads von Apache und PHP gemacht.
 
 * `Apache Download <http://www.apachelounge.com/download/>`_: Die Downloads der Apache Lounge sind für verschiedene Versionen von Windows angepasst. Für neuere Versionen wählen Sie die "VC11" oder "VC14" Variante (benötigt die Visual C++ Redistributable für Visual Studio 2012 bzw. 2015) und die Win64 Version (64-bit).
 
-  
 * `PHP Download <http://windows.php.net/download#php-5.6>`_: Wählen Sie die "Thread Safe" Variante des PHP Downloads. als x64 Paket (64-bit).
 
 

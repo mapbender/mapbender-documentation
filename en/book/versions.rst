@@ -5,7 +5,155 @@ Version history
 
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
-Future Milestones: For details have a look at https://github.com/mapbender/mapbender/issues
+
+Milestone next
+-----------------
+
+Relase Datum: soon
+
+**Bugfixes und Features:**
+
+- Measuring shows the coordinates directly, by moving the mouse the caluclated lengths of the segment are displayed live.
+- New measuring results are shown on Top. The current result is visible at first place and you don't need to scroll.
+- The login-dialog (resgistragion, forgotten password) is optimized for mobile devices to achive a better workflow to secured mobile applications.
+- New added layerset instances are now per default not marked as basesource. 
+
+- Deleting a layerset led in some cases to a corrupt map element and a wrong layertree.
+
+- Adjustments and Simplification of the general style of the FullScreenTemplate
+- Introduction of the check of the CSS statements in a application
+  
+- Fix in the delay when switching layers.
+- Fix in GetMap request if the layer order was changed manually in the TOC.
+- Fix for WMS support 1.3.0
+- Fix for secured WMS services on GetMap, GetFeatureInfo, Print, Export and Legend.
+- Fixes for the WMS parameter Exception Format for the GetMap and GetFeatureInfo Request (Github-Issue 400)
+- Fixes of Layer-Styles for GetMap und GetFeatureInfo request.
+
+- Print: Color can be set for variable texts.
+- Print: Printout of the legend, if the service is built in with the proxy.
+
+- Saving of YML applications in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml and adjustments in their referenced WMS Version
+- Fixes in administration interface of the YAML edititing after Saving (Github-Issue 350)
+
+- Fixes in POI-Coordinate: Transformation and SRS and the trailing digits after the comma.
+- Fix of a XSS error in POI dialog
+- Fix in POI dialog, if useMailto is set to false
+
+- GPS: Error messages if no GPS signal and the dependency to Chrome-browser and https.
+- GPS: Pan the map only on first position.
+
+- Internet Explorer Compatibility: Adjustments in the Zoombar.
+- Internet Explorer Compatibility: Adjustments in the OverviewMap
+- MS Egde Compatibility: Trying to fix the Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
+
+- Improvement of the performance on *some* Windows installations through  WinCachePHP and PHP Opcache (for details see `Installation under Windows <installation/installation_windows.html>`_)
+
+- Copying of applications through users who are not root (ACL Application: owner, Users: owner, ACLs: owner, Element: owner, Groups: owner, Service Source: owner, specific applications: owner)
+
+  
+**FOM and Security:**
+
+- Show users on the key icon of an elements who have an access on this element
+- Rework of the Secure Elements dialog.
+
+
+**miscellaneous**
+
+- Design and presentation of the FeatureInfo dialog if shown as Accordion. Also if shown as "not from source".
+- Drag of Popups in an application.
+- WMS Editor: Adjustments in size. XSS fix.
+
+- Backend: Target field: Empty option of a Drop-Down field.
+- Adjustments of WMS Scale, ScaleHint and Min/Max values when a Layerset-Instance is opened.
+- Display of WMS Title in the metadata of the TOC, when the WMS was updated.
+- Display of the application logo in the Configuration.
+- Display Issues of Simple Search and Search Router.
+
+- Fixes for error messages on a wrong configured Layerset-Instance.
+
+- Print: Introduction of setasign/pdf instead of toooni/fpdf
+- Print: Fix of error messages on a missing print-template
+- Measuring of lines and polygons in  WGS84 (EPSG:4326)
+
+- Adjustments of display of the element ACL
+
+- WMS Update: remove user/password from web-browser autocomplete
+- Display of number of digits in coordinates-display.
+
+- Adjustments and extending EPSG import
+- fix default visibility for a layer and the scale
+- remove of DataSource Monitor icon (comes in version "next")
+- Administration: Movement on the tabs with the tab-key
+- Improvement of the display of the configuration interface
+- Display of Source-ID in applications
+
+- Improvements of Caching Mechanisms
+- Improvements of Export and Copy mechanism.
+- Improvements for the creation of new elements.
+
+
+
+**Mobile template**
+
+- General improvements of the mobile template.
+- Fix handle mobile template button click if target isn't defined
+- Set mobile icon label font weight to normal
+- Fix and improve mobile template button handling
+- Fix register mobile application event handler "on moveend"
+
+**Digitizer**
+
+- Digitizer: Printing of Multipolygons
+- Objects don't appear in the printout if they are not displayed in the Digitizer.
+- Objects with a line-width of 0 are now not shown anymore in the printout.
+- Adjustments of the Close Button.
+
+**Form Genrator:**
+
+- Adjustments: Add HTMLElement handling  of service and DataStore configuration.
+
+
+**Architektur:**
+
+- PHP 7 Support
+- Adjustments of the ElementGenerator
+- Determining of user-roles
+- Composer entries with https
+- Adjustments of Controllers and Bundles.
+- Doctrine generate Kommandos are marked deprecated
+- Doctrine assets:dump Kommando is marked deprecated
+- Update of the JOII Bibliothek
+- Intriduction of symblinks to the different binaries in the bin directory of mapbender-starter
+
+**Dokumentation**
+- Introduction of the `FAQ <faq.html>`_.
+
+
+**config.yml Anpassungen**
+
+DBAL-Parameter:
+
+- default_connection: If more database entries are defined, this parameter
+- persistent: Persistent connections to the database for performance reasons (Oracle)
+  
+.. code-block:: yaml
+
+   doctrine:
+     dbal:
+       default_connection: default    
+         connections:
+           default:
+             ...
+             persistent: true
+                
+
+**mapbender-starter/application/app/config/applications/**
+
+Directory where YAML-based application definition are stored. As an example the well-known applications Mapbender-User, Mapbeder-User-Basic and Mapbender-Mobile are placed here.
+            
+This release is dedicated to Uli, who programmed the first pixel in Mapbender `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
+
 
 
 Milestone 3.0.5.3

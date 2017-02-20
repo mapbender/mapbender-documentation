@@ -30,7 +30,7 @@ Configuration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

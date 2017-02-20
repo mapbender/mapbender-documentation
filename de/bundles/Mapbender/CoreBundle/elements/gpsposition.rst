@@ -34,7 +34,7 @@ Konfiguration
 
 
 YAML-Definition:
-----
+----------------
 
 Das Element wird als Button in die Toolbar eingefügt.
 

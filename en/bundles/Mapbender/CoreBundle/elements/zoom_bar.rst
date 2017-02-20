@@ -24,7 +24,7 @@ Configuration
 * **Anchor:** navigation toolbar alignment, default is 'left-top' (use inline f.e. in sidebar).
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

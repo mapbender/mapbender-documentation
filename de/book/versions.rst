@@ -5,7 +5,156 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
-Zukünftige Meilensteine: Details finden sich unter https://github.com/mapbender/mapbender/issues
+
+Milestone next
+-----------------
+
+Relase Datum: soon
+
+**Bugfixes und Features:**
+
+- Das Messen zeigt die Koordinaten live an, d.h. beim Bewegen der Maus werden schon jeweils die erreichten Segment- und Gesamtlängen angezeigt.
+- Die Messergebnisse werden nun von oben hinzugefügt. Damit steht das aktuelle Messergebnis sichtbar an oberster Stelle und muss nicht gescrollt werden.
+- Der Login Dialog (Registrierung, Password vergessen) wurde für mobile Geräte optimiert, um den Zugriff auf gesicherte mobile Anwendungen zu erleichtern.
+- Neu hinzugefügte Layerset Instances sind nun nicht mehr per Default als Basesource markiert.
+  
+- Das Löschen von Layersets führte in einigen Fällen zu einem korrupten Map-Element und falschem Layertree
+
+- Anpassungen und Vereinfachung der Styles des FullScreenTemplate
+- Einführung der Prüfung der CSS Angaben in der Anwendungskonfiguration
+
+- Delay beim Wechsel von Layern gefixt
+- Gefixter GetMap Request bei veränderter Reihenfolge der Layer im TOC
+- Fix für WMS support 1.3.0
+- Fix für geschützte WMS Dienste bei GetMap, GetFeatureInfo, Print, Export und Legende
+- Fix des WMS Parameters Exception Format bei GetMap und GetFeatureInfo Request (Github-Issue 400)
+- Fixes bei den Layer-Styles im GetMap und GetFeatureInfo Request
+
+- Druck: Farbe kann bei variablen Texten eingefügt werden.
+- Druck: Druck der Legende, wenn der Dienst über einen Proxy eingebaut wird.
+
+- Ablage von YML-Anwendungen in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml und Anpassungen in der WMS Version
+- Administrationsoberfläche YAML Editierung und Umformatierungen nach dem Speichern (Github-Issue 350)
+
+- Anpassungen POI-Koordinate: Transformation und SRS, Nachkommastellen
+- Fix eines XSS Fehlers im POI Dialog
+- Fix in POI Dialog, wenn useMailto = false
+
+- GPS: Fehlermeldungen, wenn kein Signal und Abhängigkeit von Chrome-Browsern und https.
+- GPS: Verschieben der Karte nur bei erster Positionsbestimmung.
+
+- Internet Explorer Kompatibilität: Anpassungen Zoombar.
+- Internet Explorer Kompatibilität: Anpassungen OverviewMap
+- MS Egde Kompatibilität: Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
+
+- Verbesserung der Performance bei *einigen* Installation unter Windows durch WinCachePHP und PHP Opcache (für Details siehe `Installation unter Windows <installation/installation_windows.html>`_)
+
+- Kopieren von Anwendungen für Benutzer, die nicht root sind (ACL Application: owner, Benutzer: owner, Berechtigungen ACLs: owner, Element: owner, Gruppen: owner, Service Source: owner, spezifische Anwendung: owner)
+
+  
+**FOM und Absicherung:**
+
+- Anzeige von Benutzern, die Zugriff auf ein Element in der Anwendung haben
+- Überarbeitung des Secure Elements Dialogs
+
+
+**verschiedenes**
+
+- Anpassung Design FeatureInfo bei Anzeige als Accordion und wenn nicht als Source angezeigt
+- Verschieben von Popups innerhalb einer Anwendung
+- Anpassungen WMC Edit Dialoggröße und XSS
+
+- Backend: Target-Feld: Leere Auswahl bei Drop-Down Feldern.
+- Anpassungen WMS Scale, ScaleHint und Min/Max Werte beim Öffnen einer Layerset-Instance
+- Anzeige des WMS-Titels in den Metadaten des TOC bei aktualisiertem WMS
+- Anzeige des Applikations-Logos in der Konfiguration
+- Anpassungen Simple Search und SearchRouter
+
+- Fehlermeldung bei falsch konfigurierter Layerset-Instance
+
+- Druck: Einführung von setasign/pdf als Alternative zu toooni/fpdf
+- Druck: Fix der Fehlermeldung bei fehlendem Drucktemplate
+- Messen von Linien und Flächen in WGS84 (EPSG:4326)
+
+- Anpassung Anzeige der Element ACL
+
+- WMS Aktualisierung: Entfernen von User/Passwort Browser Autocomplete
+- Anzeige der Nachkommastellen im Coordinates-Display
+
+- Anpassungen, Erweiterungen EPSG import
+- Layer Maßstäbe und Fix der Default Visibility eines Layers
+- Entfernen des Data Source Monitor Icon (kommt in Version "Next")
+- Administration: Bewegung über Tabulator-Taste
+- Verbesserung der Konfigurationsoberfläche
+- Anzeige der Source-ID in Anwendungen
+
+- Verbesserung Caching Mechanismen
+- Verbesserungen Export / Kopieren
+- Vereinfachung bei der Erstellung neuer Elemente
+
+
+
+**Mobiles Template**
+
+- Generelle Verbesserungen des Mobilen Templates
+- Fix für einen Button, wenn dieser nur auf einen Link verweist.
+- Fix für das Icon Label und der Schriftdicke normal
+- Verbesserungen des Button Handlings allgemein
+- Fix des event handlers ""on moveend"
+
+**Digitizer**
+
+- Digitizer: Druck von Multipolygonen
+- Objekte erscheinen nicht mehr im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
+- Objekte mit einer Linienbreite von 0 werden im Druck nicht mehr sichtbar.
+- Close Schaltfläche Anpassung
+
+**Form Genrator:**
+
+- Anpassungen: Hinzufügen des HTMLElement handling  für Services und  DataStore Konfiguration.
+
+
+**Architektur:**
+
+- PHP 7 Unterstützung
+- Anpassungen ElementGenerator
+- Ermitteln von Benutzerrollen
+- Composer Einträge mit https
+- Verschiedene Verbesserungen an Controllern und Bundles.
+- Doctrine generate Kommandos als deprecated markiert
+- Doctrine assets:dump Kommando als deprecated markiert
+- Aktualisierung JOII Bibliothek
+- Ablage von Symlinks zu verschiedenen Binaries im bin Verzeichnis
+
+**Dokumentation**
+
+- `FAQ <faq.html>`_ der Dokumentation hinzugefügt.
+
+
+**config.yml Anpassungen**
+
+DBAL-Parameter:
+
+- default_connection: Bei mehreren Einträgen definiert die default_connection, die Standardverbindung der MB3-Datenbank.
+- persistent: Persistente Verbindungen zur Datenbank zwecks Performance (Oracle)
+  
+.. code-block:: yaml
+
+   doctrine:
+     dbal:
+       default_connection: default    
+         connections:
+           default:
+             ...
+             persistent: true
+                
+
+**mapbender-starter/application/app/config/applications/**
+
+Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Beispiel sind die drei bekannten Anwendungen Mapbender-User, Mapbeder-User-Basic und Mapbender-Mobile abgelegt.
+            
+Dieses Release ist Uli gewidmet, der den ersten Pixel in Mapbender programmiert hat `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
+
 
 
 Milestone 3.0.5.3

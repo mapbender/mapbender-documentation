@@ -29,7 +29,7 @@ Einfügen eines Bildes in Ihre Anwendung:
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

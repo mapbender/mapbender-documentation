@@ -1,7 +1,7 @@
 .. _wmc_editor:
 
 WMC Editor
-***********************
+**********
 
 Mapbender can save and edit configurations with the WMC Editor. This configurations can be loaded with the element `WMC Loader <../elements/wmc_loader.html>`_.
 
@@ -31,7 +31,7 @@ Configuration
 * **Accessgroups:** define groups that can use the WMC Editor.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -43,7 +43,7 @@ YAML-Definition:
 You need a button to show this element. See :ref:`button_en` for inherited configuration options.
 
 Class, Widget & Style
-==============
+=====================
 
 * **Class:** Mapbender\\WmcBundle\\Element\\WmcEditor
 * **Widget:** <Put Widget name here>

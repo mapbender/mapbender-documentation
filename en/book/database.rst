@@ -14,11 +14,13 @@ You can find examples for the Configuration in our `Installation Instructions <i
 .. _doctrine:
 
 Doctrine
-*************
+********
+
 In Mapbender3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>`_ and read more.
 
+
 Database definition
-********************
+*******************
 
 The standard database definition in the config.yml looks like this:
 
@@ -26,16 +28,19 @@ The standard database definition in the config.yml looks like this:
 
     doctrine:
         dbal:
-            driver:   %database_driver%
-            host:     %database_host%
-            port:     %database_port%
-            dbname:   %database_name%
-            path:     %database_path%
-            user:     %database_user%
-            password: %database_password%
-            charset:  UTF8
-            logging: %kernel.debug%
-            profiling: %kernel.debug%
+            default_connection: default     
+            connections:
+                default:        
+                driver:   %database_driver%
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   %database_name%
+                path:     %database_path%
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8
+                logging: %kernel.debug%
+                profiling: %kernel.debug%
         orm:
             auto_generate_proxy_classes: %kernel_debug%
             auto_mapping:true

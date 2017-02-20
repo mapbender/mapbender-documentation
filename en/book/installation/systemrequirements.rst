@@ -4,7 +4,7 @@ System requirements and download
 ################################
 
 System requirements
-*************
+*******************
 
 Mapbender3 needs the following components in order to run:
 
@@ -18,6 +18,24 @@ Mapbender3 needs the following components in order to run:
 * PHP FileInfo for printing to check image format
 * APACHE mod_rewrite 
 * OpenSSL
+* For development, particular the phantomjs helper, you need also the BZ2 extension. (php-bz2)
+
+
+PHP 7
+-----
+
+Mapbender3 supports also PHP 7. You'll need the above listed libraries for PHP 7 and the following additional ones:
+
+* PHP Zip (php-zip)
+* PHP Bz2 (php-bz2)
+* PHP XML (php-xml)
+* PHP Multibyte String (php-mbstring)
+* PHP Cache: php-apcu instead of php-apc
+
+The current stable version of Mapbender3 (3.0.5.3) is not yet completely compatible with PHP7. If you experience issues, you can downgrade to PHP5.6, or use a nightly build.
+
+Databases
+---------
 
 Optionally, in order to use a database other than the preconfigured SQLite one, you need a matching PHP extension supported by `Doctrine <http://www.doctrine-project.org/projects/dbal.html>`_. For PostgreSQL for example: php5-pgsql.
 

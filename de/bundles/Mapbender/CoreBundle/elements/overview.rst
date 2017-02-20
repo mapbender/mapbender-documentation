@@ -15,6 +15,13 @@ Es kann auch definiert werden, ob die Übersichtskarte nach dem Öffnen der Appl
 Konfiguration
 =============
 
+Die Übersichtskarte muss in der Konfiguration unterhalb der Karte (map) platziert werden.
+
+.. image:: ../../../../../figures/overview_configuration_dependency_map.png
+   :scale: 80
+
+Der Konfigurationsdialog:
+
 .. image:: ../../../../../figures/de/overview_configuration.png
      :scale: 80
 
@@ -29,7 +36,7 @@ Konfiguration
 * **Width/ Height:** Breite und Höhe der Übersichtskarte.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

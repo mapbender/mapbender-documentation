@@ -27,20 +27,19 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgendermaÃ
 
     doctrine:
         dbal:
-            default_connection: default
+            default_connection: default     
             connections:
-                # Datenbankverbindung default
-                default:
-                    driver:   %database_driver%
-                    host:     %database_host%
-                    port:     %database_port%
-                    dbname:   %database_name%
-                    path:     %database_path%
-                    user:     %database_user%
-                    password: %database_password%
-                    charset:  UTF8
-                    logging: %kernel.debug%
-                    profiling: %kernel.debug%
+                default:        
+                driver:   %database_driver%
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   %database_name%
+                path:     %database_path%
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8
+                logging: %kernel.debug%
+                profiling: %kernel.debug%
         orm:
             auto_generate_proxy_classes: %kernel_debug%
             auto_mapping:true

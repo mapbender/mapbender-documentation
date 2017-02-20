@@ -27,7 +27,7 @@ Configuration
 * **Default infoformat:** default infoformat is text/html, further possibilities: text/xml, text/plain.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 

@@ -127,11 +127,17 @@ Die folgenden Bereiche liegen standardmäßig vor:
 * scalebar (Maßstabsleiste)
 * date (Datum in der Form 10.10.2014)
 * northarrow (Nordpfeil)
-* Koordinaten des Druckbereichs
-* dynamisches Bild (gekoppelt an die Gruppe)
-* dynamischer Text (gekoppelt an die Gruppe)
+* extent_ur_y, extent_ur_x, extent_ll_x, extent_ll_y (Koordinaten des Druckbereichs)
+* dynamic_image (dynamisches Bild - gekoppelt an die Gruppe)
+* dynamic_text (dynamischer Text - gekoppelt an die Gruppe)
 
 Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die Open Office Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
+
+Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen haben, z.B. das Kommentarfeld **comment1** muss auch in der Vorlage **comment1** heißen. Zum Bennenen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Felder müssen selektiert und über **Menü Ändern --> Name...** angepasst werden. 
+
+.. image:: ../../../../../figures/de/print_template_name.png
+    :scale: 80
+
 
 Exportieren Sie die Vorlage als PDF unter dem gleichen Namen wie die ODG-Datei. Verwenden Sie den Namen ohne Dateierweiterung in der Druck yml-Definition.
 

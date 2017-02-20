@@ -3,7 +3,7 @@
 POI (MeetingPoint)
 ***********************
 
-Generate POI-URLs (aka meeting point) suitable for sending by e-mail.
+Generate POI-URLs (aka meeting point) suitable for sending by e-mail. The point is projected and displayed in the coordinate-system of the map.
 
 
 .. image:: ../../../../../figures/poi.png
@@ -26,7 +26,7 @@ Configuration
 
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -35,7 +35,7 @@ YAML-Definition:
 
 
 Class, Widget & Style
-=========================
+=====================
 
 * **Class:** Mapbender\CoreBundle\Element\POI
 * **Widget:** mapbender.mbPOI

@@ -125,11 +125,17 @@ The following objects are available from Mapbender:
 * scalebar
 * date
 * northarrow
-* coordinates of the print extent
-* dynamic image (connected to group role)
-* dynamic text (connected to group role)
+* extent_ur_y, extent_ur_x, extent_ll_x, extent_ll_y (coordinates of the print extent)
+* dynamic_image (connected to group role)
+* dynamic_text (connected to group role)
 
 You can define optional fields in the element definition (like title, comment, editor) and add them to the Open Office Draw file.
+
+When creating dynamic text each property must have the appropriate name, for example the filed **comment1** must have the name **comment1** in the Open Office Draw file. For naming fields, it is not enough to edit the content of the textfield. You need to edit the object name. Selct the textfiled and go to **menue edit --> name...** to change the name.
+
+.. image:: ../../../../../figures/de/print_template_name.png
+    :scale: 80
+
 
 Export the template to pdf under the same name as the odg file. Use the name without extension in your print yml-definition.
 

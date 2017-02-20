@@ -244,3 +244,9 @@ div.viewcode-block:target {
     border-top: 1px solid #ac9;
     border-bottom: 1px solid #ac9;
 }
+
+p.caption {
+    font-style: italic;
+    margin-top: 0.3em;
+    font-size: 0.9em;
+}

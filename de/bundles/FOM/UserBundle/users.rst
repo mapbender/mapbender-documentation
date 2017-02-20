@@ -17,7 +17,7 @@ die Anmeldedaten vergessen haben sollten, können Sie über ein app/console
 Kommando den Benutzer zurücksetzen: fom:user:resetroot.
 
 
-Password vergessen
+Passwort vergessen
 ------------------
 
 Falls ein Benutzer sein Passwort vergessen hat, kann er in der Login-Maske
@@ -85,6 +85,18 @@ anmelden, bis er wieder aktiviert wird.
 Benutzer, die sich selbst registriert haben, aber die Freischaltungsmail
 noch nicht bestätigt haben, können so von einem Administrator per Hand
 freigeschaltet werden.
+
+
+Usermanagement über Sicherheitsschlüsselabfrage
+-----------------------------------------------
+
+Innerhalb jeder Mapbender-Applikation besteht zusätzlich die Möglichkeit der Rechtevergabeanpassung. Im Tab "Layouts" findet sich diese Einstellung in Form eines Schlüssels neben jedem Element.
+
+Um anzupassen, ob jemand Zugriff auf das Element hat, muss zunächst auf den Schlüssel geklickt werden. Im Anschluss kann ein Nutzer hinzugefügt werden. Dies geschieht über das "+"-Symbol.
+
+Ein gesetzter Haken neben dem entsprechenden Nutzeraccount erlaubt dem jeweiligen Nutzer den Zugriff. Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
+
+.. image:: ../../../../en/bundles/FOM/UserBundle/element_security_key_popup.png
 
 
 Login Fehler
