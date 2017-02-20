@@ -1,7 +1,9 @@
 .. _digitizer:
 
 Digitizer
-**********************************
+*********
+
+This documentation refers to Digitizer 1.1.x.
 
 The Digitizer element allows building editing-interfaces. Currently you can build up your interface for point, line and polygon editing with a YAML-definition. 
 Right now PostgreSQL is supported as a database. Oracle and SpatialLite can be used experimentally. The development of the digitizer allows other data sources so that it can be extended to support - for example - OGC WFS services.

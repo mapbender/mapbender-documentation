@@ -1,7 +1,9 @@
 .. _digitizer:
 
 Digitalisierung (Digitizer)
-**********************************
+***************************
+
+Diese Dokumentation gilt für Digitizer 1.1.x.
 
 Das Digitizer-Element ermöglicht den Aufbau von Erfassungsoberflächen. Derzeit kann über eine YAML-Definition eine Erfassungsmaske für Punkte, Linien oder Flächen aufgebaut werden.
 Dabei wird bisher PostgreSQL als Datenquelle unterstützt. Oracle und SpatiaLite sind experimentell verfügbar. Die Entwicklung wurde so durchgeführt, dass die Erfassung auch auf andere Datenquellen wie z.B. OGC WFS erweitert werden kann.
