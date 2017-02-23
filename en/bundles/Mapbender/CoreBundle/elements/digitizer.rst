@@ -1,7 +1,7 @@
 .. _digitizer:
 
 Digitizer
-**********************************
+*********
 
 The Digitizer element allows building editing-interfaces. Currently you can build up your interface for point, line and polygon editing with a YAML-definition. 
 Right now PostgreSQL is supported as a database. Oracle and SpatialLite can be used experimentally. The development of the digitizer allows other data sources so that it can be extended to support - for example - OGC WFS services.
@@ -98,26 +98,10 @@ The functionality of the built-in features and additional functions are explaine
         allowDelete: true
         allowDigitize: true
         useContextMenu: true
-        clustering:
-              -
-                  scale: 10000
-                  distance: 60
-              -
-                  scale: 2500
-                  distance: 40
-              -
-                  scale: 1000
-                  distance: 20
-              -
-                  scale: 500
-                  distance: 1
-                  disable: true
         toolset:
             - type: drawPoint
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: point test suite
             width: 500px
@@ -327,7 +311,7 @@ The functionality of the built-in features and additional functions are explaine
 
 
 SQL for the demo tables
-------------------------------
+-----------------------
 
 The following SQL commands must be executed in your database. You create three demo tables so that the individual functions can be tested using the YAML definition shown above.
 
@@ -439,7 +423,7 @@ Definition of the popup
 
 .. code-block:: yaml
 
-        popup:             # Define the form as a popup. Further experimental adaptations here: http://api.jqueryui.com/dialog/
+        popup:             # Define the form as a popup. See http://api.jqueryui.com/dialog/
             title: POI     # Definition of the popup title
             height: 400    # height of the popup
             width: 500     # width of the popup
@@ -460,7 +444,7 @@ The width of the individual columns can optionally be specified in percent or pi
 
 .. code-block:: yaml
 
-        searchType: currentExtent   # all - lists all features in the table, currentExten - list only the features displayed in the current extent in the table (default) 
+        searchType: currentExtent   # [currentExtent | all] currentExtent lists only the features displayed in the current extent in the table (default). all lists all features in the table.
         tableFields:                # definition of the colums to be displayed
             gid: {label: Nr. , width: 20%} # [table column]: {label: [label text], width: [css-definition, like width]}  # Definition of a column
             name: {label: Name , width: 80%}

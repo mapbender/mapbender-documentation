@@ -1,12 +1,12 @@
 .. _digitizer:
 
 Digitalisierung (Digitizer)
-**********************************
+***************************
 
 Das Digitizer-Element ermöglicht den Aufbau von Erfassungsoberflächen. Derzeit kann über eine YAML-Definition eine Erfassungsmaske für Punkte, Linien oder Flächen aufgebaut werden.
 Dabei wird bisher PostgreSQL als Datenquelle unterstützt. Oracle und SpatiaLite sind experimentell verfügbar. Die Entwicklung wurde so durchgeführt, dass die Erfassung auch auf andere Datenquellen wie z.B. OGC WFS erweitert werden kann.
 
-Das Digitizer-Element bietet komplexe Editier­funktionalitäten an:
+Das Digitizer-Element bietet komplexe Editierfunktionalitäten an:
 
 * Verschieben von Objekten
 * Einfügen von Stützpunkten (Linien, Flächen)
@@ -48,16 +48,16 @@ Das Element wird in der Sidepane eingebettet.
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Elemente voneinander zu unterscheiden.
 * **Target:** Zielelement (Titel(ID)) der Karte.
-* **Schemes:** YAML-Definition für das Element digitizer
+* **Schemes:** YAML-Definition für das Element "digitizer"
 
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
 Mehr zu diesem Thema finden Sie unter http://doc.mapbender3.org/de/book/database.html
 
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
-Falls Sie den genauen Fehler reproduzieren möchten, sollten Sie die Seite über app_dev.php aurufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
+Falls Sie den genauen Fehler reproduzieren möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
 
-YAML-Definition für das Element digitizer in der Sidepane in der mapbender.yml:
+YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml:
 
 .. code-block:: yaml
 
@@ -71,7 +71,7 @@ YAML-Definition für das Element digitizer in der Sidepane in der mapbender.yml:
 
 
 YAML-Definition für das Element digitizer in der Textarea unter schemes
------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 In dem folgenden YAML-Block ist die beispielhafte Definition für drei Erfassungsoberflächen enthalten. Kopieren Sie den folgenden Block in Ihr Digitizer-Element, um die Erfassung von Punkten, Linien und Polygonen zu testen.
 Vorher müssen Sie die Datenbankverbindung und die drei Demo-Tabellen anlegen. Die SQL-Befehle für das Anlegen der Tabellen finden Sie weiter unten.
@@ -96,26 +96,10 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
         allowDelete: true
         allowDigitize: true
         useContextMenu: true
-        clustering:
-              -
-                  scale: 10000
-                  distance: 60
-              -
-                  scale: 2500
-                  distance: 40
-              -
-                  scale: 1000
-                  distance: 20
-              -
-                  scale: 500
-                  distance: 1
-                  disable: true
         toolset:
             - type: drawPoint
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: point test suite
             width: 500px
@@ -325,12 +309,12 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
 
 
 SQL für die Demo-Tabellen
-------------------------------
+-------------------------
 
-Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie legen drei Demo-Tabellen an, damit mit der oben gezeigte YAML-Definition die einzelnen Funktionen getestet werden können.
+Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie legen drei Demo-Tabellen an, damit mit der oben gezeigte YAML-Definition die einzelnen Funktionen getestet werden können. Die PostGIS Extension muss aktiviert sein.
 
 
-.. code-block:: yaml
+.. code-block:: sql
 
     Create table public.poi (
         gid serial,
@@ -355,7 +339,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: yaml
+.. code-block:: sql
 
     Create table public.lines (
         gid serial,
@@ -382,7 +366,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: yaml
+.. code-block:: sql
 
     Create table public.polygons (
         gid serial,
@@ -411,7 +395,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
 
 
 Basisdefinition
---------------------------
+---------------
 
 .. code-block:: yaml
 
@@ -439,7 +423,7 @@ Definition Popup
 
 .. code-block:: yaml
 
-        popup:                  # Definition des Formularfensters als PopUp-Fenster. Weitere experimentelle Anpassungsmöglichkeiten unter http://api.jqueryui.com/dialog/
+        popup:                  # Definition des Formularfensters als PopUp-Fenster. Siehe http://api.jqueryui.com/dialog/
             title: POI     # Definition des Titels vom Formularfensters
             height: 400    # Höhe des Formularfensters
             width: 500     # Breite des Formularfensters
@@ -450,7 +434,7 @@ Definition Popup
 
 
 Definition der Objekttabelle
-------------------------------------------------------------------------
+----------------------------
 
 Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte gezoomt werden und das Bearbeitsformular kann geöffnet werden. Die Objekttabelle ist sortierbar. Die Breite der einzelnen Spalten kann optional in Prozent oder Pixeln angegeben werden.
 
@@ -459,7 +443,7 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 
 .. code-block:: yaml
 
-        searchType: currentExtent   # currentExtent listet alle Objekte im derzeitigen Kartenausschnitt. All listet alle Objekte in der Tabelle. Standard ist currentExtent.
+        searchType: currentExtent   # [currentExtent|all] currentExtent listet alle Objekte im derzeitigen Kartenausschnitt. all listet alle Objekte in der Tabelle. Standard ist currentExtent.
         tableFields:    # Definition der Spalten für die Objekttabelle
             gid: {label: Nr. , width: 20%}    # [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe z.B. Angabe der Breite]}  # Definition einer Spalte
             name: {label: Name , width: 80%}
@@ -467,7 +451,7 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 
 
 Definition von Dateireitern (type tabs)
---------------------------------------
+---------------------------------------
 
 .. code-block:: yaml
 
