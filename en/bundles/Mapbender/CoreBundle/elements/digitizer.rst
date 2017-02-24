@@ -488,7 +488,7 @@ By defining a selectbox, predefined values ​​can be used in the form.
 You can choose between a selectbox with a selectable entry (type select) or a multiselectbox with several selectable entries (type multiselect).
 
 
-1) **select** - one selectable entry
+**(1) select - one selectable entry**
 
 .. code-block:: yaml
 
@@ -503,10 +503,38 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
                                                        4: garden
                                                        5: playground
 
-2) **multiselect** - several selectable entries
+**(2) multiselect - several selectable entries**
 
-The use of the Multiselect-Box is still experimental. When storing entries, only numbers are stored (eg selection a and b -> 1,2).
-You can not specify the label (example: options: [1: pub, 2: bar, 3: pool]).
+The Multiselect-Box is activated by the attribute "multiple: true". You can choose multiple entries in the selectbox. The usage and their requirements of the database may vary. In general with the example above, you can switch the "interests" in the POIs to multiselects. The database fields is still a character varying.
+
+
+.. code-block:: yaml
+
+                -
+                  type: select
+                  multiple: true
+                  title: Interests
+                  name: interests
+                  options:
+                    maps: maps
+                    reading: reading
+                    swimming: swimming
+                    dancing: dancing
+                    beer: beer
+                    flowers: flowers
+
+The SQL (if maps and reading were chosen):
+
+.. code-block:: sql
+
+                gisdb=> select interests from poi where gid=3;
+                interests
+                --------------
+                maps,reading
+                (1 row)
+
+On saving the keywords are saved in the database (for example: "dancing: Tanzen" and "flowers: Blumen" stores "dancing,flowers").
+
 
 .. code-block:: yaml
 
@@ -514,15 +542,15 @@ You can not specify the label (example: options: [1: pub, 2: bar, 3: pool]).
                                                    title: select some types           # labeling (optional)
                                                    name: my_type                      # reference to table column (optional)
                                                    multiple: true                     # define a multiselect, default is false
-                                                   options: [a,b,c] # definition of the options (key, value)
-
-                                                   # Example of a list using Paramter seperator
-                                                   separatator: ','
-                                                   fieldType: 'array'
-                                                   options:  ['Prof.','Dr.', 'med.', 'jur.','vet.','habil.']
+                                                   options:
+                                                     a: a                             # definition of the options (key, value)
+                                                     b: b
+                                                     c: c
 
 
 **Get the options for the selectbox via SQL**
+
+Wir a SQL request, the values of the selectbox can be directly pulled from the database. In this case, the key value mapping is not possible and only the indices of the entries can be stored.
 
 .. code-block:: yaml
 

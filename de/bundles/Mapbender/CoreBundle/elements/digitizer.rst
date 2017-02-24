@@ -488,7 +488,7 @@ Definition von Auswahlboxen (selectbox oder multiselect [type select])
 Durch die Definition einer Auswahlbox können vordefinierte Werte im Formular genutzt werden.
 Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und einer Auswahlbox mit mehreren auswählbaren Einträgen (type multiselect) unterschieden.
 
-1) **select** - ein Eintrag kann ausgewählt werden
+**(1) select - ein Eintrag kann ausgewählt werden**
 
 .. code-block:: yaml
 
@@ -503,10 +503,37 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
                                                        4: garden
                                                        5: playground
 
-2) **multiselect** - mehrere Einträge können ausgewählt werden
+**(2) multiselect - mehrere Einträge können ausgewählt werden**
 
-Die Nutzung der Multiselect-Box ist noch experimentell. Bei dem Abspeichern von Einträgen werden nur Zahlen abgespeichert (Bsp.: Auswahl a und b --> 1,2).
-Es kann keine Angabe zur Beschriftung gemacht werden (Bsp.: options:  [1: pub,2: bar, 3: pool]).
+Multiselect-Box wird durch das attribute "multiple: true" aktiviert. Es können mehrere Einträge ausgewählt werden. Die Nutzung und die Voraussetzungen der Datenbank können da variieren. Bei dem oben beschriebenen Beispiel können die Interessen in den POI als Multiobjekte abgespeichert werden. Das Datenbankfeld ist weiterhin  ein character varying.
+
+.. code-block:: yaml
+
+                -
+                  type: select
+                  multiple: true
+                  title: Interests
+                  name: interests
+                  options:
+                    maps: maps
+                    reading: reading
+                    swimming: swimming
+                    dancing: dancing
+                    beer: beer
+                    flowers: flowers
+
+Das SQL (wenn maps und reading abgespeichert wurden):
+
+.. code-block:: sql
+
+                gisdb=> select interests from poi where gid=3;
+                interests
+                --------------
+                maps,reading
+                (1 row)
+
+
+Beim Abspeichern von Einträgen werden die Schlüsselwörter in der Datenbank abgelegt (Bsp.: "dancing: Tanzen" und "flowers: Blumen" speichert "dancing,flowers").
 
 .. code-block:: yaml
 
@@ -515,15 +542,15 @@ Es kann keine Angabe zur Beschriftung gemacht werden (Bsp.: options:  [1: pub,2:
                                                    title: Wählen Sie einen Typ aus    # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: my_type                      # Referenz zur Tabellenspalte
                                                    multiple: true                     # Definition einer Mehrfachauswahl (multiselect), Standard ist false
-                                                   options: [a,b,c]                   # Definition der Optionen (key: value)
-
-                                                   # Beispielhafte Angabe einer Liste über Paramter seperator
-                                                   separatator: ','
-                                                   fieldType: 'array'
-                                                   options:  ['Prof.','Dr.', 'med.', 'jur.','vet.','habil.']
+                                                   options:
+                                                     a: a                             # Definition der Optionen (key: value)
+                                                     b: b
+                                                     c: c
 
 
 **Füllen der Auswahlboxen über eine SQL Abfrage**
+
+Mit einer SQL Abfrage können die Werte direkt aus der Datenbank gezogen werden. Dabei ist zu beachten, dass die key-value zuordnungen wegfallen und nur noch die Indizes abgespeichert werden.
 
 .. code-block:: yaml
 
@@ -700,7 +727,7 @@ Für die Ansicht von eingebundenen Bildern kann das Bild-Element dazugenommen we
 Definition der Bildanzeige
 -----------------------------
 
-Für die Ansicht von einem Bilde in dem Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
+Für die Ansicht von einem Bild in dem Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
 Bilder, die durch das Element Dateiupload in einer Tabellenspalte vermerkt sind können somit auch direkt eingebunden und angezeigt werden.
 Das Bild lässt sich durch die Angabe von den beiden Parametern src und name angeben.
 * **src**: Url-Pfad oder Dateipfad (kann relativer Pfad sein)
@@ -1021,5 +1048,3 @@ JavaScript Signals
 
 <signal>
 --------
-
-
