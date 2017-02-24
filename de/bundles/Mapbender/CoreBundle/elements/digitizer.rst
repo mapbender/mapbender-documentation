@@ -450,8 +450,8 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 
 
 
-Definition von Dateireitern (type tabs)
----------------------------------------
+Dateireiter (type tabs)
+-----------------------
 
 .. code-block:: yaml
 
@@ -467,8 +467,8 @@ Definition von Dateireitern (type tabs)
                        ...
 
 
-Definition von Textfeldern (type input)
-.......................................
+Textfelder (type input)
+-----------------------
 
 .. code-block:: yaml
 
@@ -482,8 +482,8 @@ Definition von Textfeldern (type input)
                                                    placeholder: 'please edit this field' # Platzhalter, der vor der Eingabe erscheint (optional)
 
 
-Definition von Auswahlboxen (selectbox oder multiselect [type select])
--------------------------------------------------------------------------
+Auswahlboxen (selectbox oder multiselect [type select])
+-------------------------------------------------------
 
 Durch die Definition einer Auswahlbox können vordefinierte Werte im Formular genutzt werden.
 Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und einer Auswahlbox mit mehreren auswählbaren Einträgen (type multiselect) unterschieden.
@@ -562,8 +562,8 @@ Mit einer SQL Abfrage können die Werte direkt aus der Datenbank gezogen werden.
 
 
 
-Definition von Texten (type label)
---------------------------------------------------
+Texte/Label (type label)
+------------------------
 
 .. code-block:: yaml
 
@@ -571,8 +571,8 @@ Definition von Texten (type label)
                                                    title: 'Please give information about the poi.' # Definition eines nicht bearbeitbaren Textes.
 
 
-Definition eines Textes (type text)
--------------------------------
+Texte (type text)
+-----------------
 
 Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenquelle zugegriffen werden, dazu wird JavaScript verwendet.
 
@@ -587,8 +587,8 @@ Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenque
                                                   # data - Angabe, dass Datenbankfeld aus der Tabelle angesprochen wird.
                                                   # z.B.: data.gid --> Anzeige der ID der Geometrie im Textfeld
 
-Definition von Textbereichen zur Eingabe (type textArea)
---------------------------------------------------------------
+Textbereiche (type textArea)
+----------------------------
 
 Ähnlich zum Textfeld über type input (siehe oben) können hier Textbereiche erzeugt werden, die bei type textArea mehrere Zeilen umfassen können.
 
@@ -600,16 +600,16 @@ Definition von Textbereichen zur Eingabe (type textArea)
                                                    title: Bestandsaufnahme Bemerkung # Beschriftung (optional)
 
 
-Definition von Trennlinien (type breakline)
---------------------------------------------------
+Trennlinien (type breakline)
+----------------------------
 
 .. code-block:: yaml
 
                                                  - type: breakline      # fügt eine einfache Trennlinie ein
 
 
-Definition von Checkboxen (type checkbox)
---------------------------------------------------
+Checkboxen (type checkbox)
+--------------------------
 
 .. code-block:: yaml
 
@@ -621,8 +621,8 @@ Definition von Checkboxen (type checkbox)
 
 
 
-Definition von Pflichtfeldern
---------------------------------------------------
+Pflichtfelder
+-------------
 
 Die Hinweise für ein Pflichtfeld erscheinen über dem jeweiligen Feldern. Bei einer fehlenden Angabe in einem definierten Pflichtfeld wird dieses rot umrandet und (wenn vorher definiert) erscheinen Hinweise. Das Objekt kann nicht gespeichert werden, wenn Pflichtangaben fehlen.
 
@@ -643,8 +643,8 @@ Hier erscheint keine Fehlermeldung außerhalb des Formulars. Der Erfasser muss d
                                                    mandatoryText: Bitte eine Zahl eingeben!
 
 
-Definition eines Textfelds mit Datumsauswahl
---------------------------------------------------
+Datumsauswahl (type date)
+-------------------------
 
 .. image:: ../../../../../figures/digitizer_datepicker.png
      :scale: 80
@@ -663,8 +663,8 @@ Fallls der Parameter dateFormat genutzt wird für eine andere Ansicht oder Abspe
 
 
 
-Definition von Hilfetexten zu den Eingabefeldern
-------------------------------------------------------------------------------------------
+Hilfetexten zu den Eingabefeldern (Attribut infoText)
+-----------------------------------------------------
 
 Anders als bei Hifetexten zu den Pflichtfeldern kann der Infotext über jedem Feld erscheinen, unabhängig davon, ob dieses ein Pflichtfeld ist oder nicht. Bei der Angabe infotext: [Text] erscheint ein Info-Button über dem jeweiligen Feld.
 Der Klick auf diesen Button öffnet den angegebenen Informationstext.
@@ -676,8 +676,8 @@ Der Klick auf diesen Button öffnet den angegebenen Informationstext.
                                                    infoText: In dieses Feld dürfen nur Zahlen eingegeben werden  # Hinweistext, der angezeigt wird über i-Symbol.
 
 
-Definition von Gruppierungen (type: fieldSet)
---------------------------------------------------
+Gruppierungen (type: fieldSet)
+------------------------------
 
 Elemente können in einer Zeile gruppiert werden, um logische Einheiten zu bilden oder um Platz zu sparen. Hierbei muss ein fieldSet definiert werden. Anschließend können die Elemente der Gruppe unter children angegeben werden.
 Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Aufteilung der Zeile für die angegebenen Elemente zu kontrollieren.
@@ -701,8 +701,8 @@ Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Au
 
 
 
-Definition von Feldern für den Dateiupload
---------------------------------------------------
+Dateiupload (type file)
+-----------------------
 
 Über den Dateiupload können Dateien durch die Angabe in einer Datenbankspalte im Formular verknüpft werden. Dazu werden die hochgeladenen Dateien im Mapbender3 gespeichert und der Pfad in der Spalte vermerkt.
 Der Speicherpfad und der Name der abgespeicherten Dateien kann bis jetzt nicht verändert werden. Der Dateiupload speichert immer in das gleiche Verzeichnis.
@@ -724,12 +724,15 @@ Für die Ansicht von eingebundenen Bildern kann das Bild-Element dazugenommen we
 
 
 
-Definition der Bildanzeige
------------------------------
+Bildanzeige (type image)
+------------------------
 
-Für die Ansicht von einem Bild in dem Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
+Für die Ansicht eines Bildes im Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
+
 Bilder, die durch das Element Dateiupload in einer Tabellenspalte vermerkt sind können somit auch direkt eingebunden und angezeigt werden.
+
 Das Bild lässt sich durch die Angabe von den beiden Parametern src und name angeben.
+
 * **src**: Url-Pfad oder Dateipfad (kann relativer Pfad sein)
 * **name**: Url-Pfad oder Dateipfad wird aus der Tabellenspalte übernommen (kann kein relativer Pfad sein)
 * Anagbe von name und src zusammen: Der Inhalt der Datenbankspalte aus name wird genommen. Falls die Spalte leer ist wird die src-Angabe genutzt.
@@ -749,15 +752,17 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
                         height: 50%             # Angabe von width und height ist besser für die Ansicht, sonst werden Teile eventuell abgeschnitten.
                       css: {width: 25%}         # Image Container CSS Style: Skaliert bei Angabe von imagecss wieder runter, daher nicht empfohlen.
 
-Achtung: Wenn nur name und nicht name und src angegeben wird, erscheint bei leeren Spalteneinträgen ein Bild aus dem vorherigen Dateneintrag.
+**Achtung**: Wenn nur name und nicht name und src angegeben wird, erscheint bei leeren Spalteneinträgen ein Bild aus dem vorherigen Dateneintrag.
+
 Dynamische Pfade (z.B. "bundles/mapbendercore/image/[nr].png" oder 'bundles/mapbendercore/image/' + data.image_reference) können nicht angegeben werden.
+
 Eine Möglichkeit das zu Umgehen wäre ein Trigger, der in die Datenbankspalte beim Insert den Pfad und den Inhalt eines Tabellenfeldes als Name zusammenführt.
 
 
 Definition der zur Verfügung stehenden Werkzeuge (Toolset Type)
-------------------------------------------------------------------------
+---------------------------------------------------------------
 
-Werkzeugliste
+Werkzeugliste:
 
 * **drawPoint** - Punkt erstellen
 * **drawLine** - Line erstellen
@@ -768,8 +773,8 @@ Werkzeugliste
 * **drawDonut** - Donut erstellen oder die bestehende Geometrien editieren
 * **modifyFeature** - einzelne Knotenpunkte bei Geometrien verschieben
 * **moveFeature** - Geometrien verschieben
-* **selectFeature** - Geometrien de-/selektieren
-* **removeSelected** - die selektierten Geometrien löschen
+* **selectFeature** - Geometrien de-/selektieren (experimentell)
+* **removeSelected** - die selektierten Geometrien löschen (experimentell)
 * **removeAll** - Vorsicht: alle Geometrien aus der Tabelle löschen
 
 Definition der für die Erfassung verwendeten Toolset Typen
@@ -777,17 +782,7 @@ Definition der für die Erfassung verwendeten Toolset Typen
 .. code-block:: yaml
 
     polygon:
-        label: polygon digitizing
-        maxResults: 1500
-        featureType:
-            connection: search_db
-            table: polygons
-            uniqueId: gid
-            geomType: polygon
-            geomField: geom
-            srid: 4326
-        openFormAfterEdit: true
-        allowDelete: false
+        [...]
         toolset:
             - type: drawPolygon
             - type: drawRectangle
@@ -795,8 +790,8 @@ Definition der für die Erfassung verwendeten Toolset Typen
             - type: removeSelected
 
 
-Definition der Tabellensuche (inline Search)
-------------------------------------------------------------------------
+Suche in den Tabellen (inline Search)
+-------------------------------------
 
 Über die Suche können Begriffe in der Tabelle gesucht werden.
 Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eines Suchbegriffs werden alle Spalten dieser Tabelle durchsucht und deren Ergebnisse angezeigt.
@@ -810,8 +805,8 @@ Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eine
 
 
 
-Definition des Kontextmenüs (Context Menu)
------------------------------------------------
+Kontextmenü
+-----------
 
 Über das Kontextmenü kann ein Objekt auf der Karte näher betrachtet werden.
 Nach der Aktivierung kann man über den rechten Mausklick auf einem Objekt ein Kontextmenü öffnen.
@@ -825,6 +820,8 @@ Elemente des Kontextmenüs:
 * **Bearbeiten:** Informationen zu dem Objekt verändern. Klick öffnet die Digitalisieroberfläche.
 * **Löschen:** Löscht das ausgewählte Objekt.
 
+Ist die korrespondierende `Basisdefinition <#basisdefinition>`_ (allowEditData, allowDelete) nicht definiert, stehen diese auch im Kontextmenü nicht zur Verfügung. In dem oben stehenden Beispiel steht für die Polygone die Löschen-Funktion nicht zur Verfügung.
+
 
 .. code-block:: yaml
 
@@ -834,11 +831,13 @@ Elemente des Kontextmenüs:
       ...
 
 
-Definition des Clustering
-------------------------------
+Clustering (experimentell)
+--------------------------
 
 Über das Clustering können die Objekte auf der Karte zusammengefasst werden.
 Abhängig von der definerten Distanz und Zoomstufe werden unterschiedlich viele Objekte zusammengeführt.
+
+Durch die Komplexität des Clusterings können sich in zukünftigen Versionen noch Änderungen an der Funktion und der Syntax ergeben, so dass wir dieses Feature bislang als experimentell kennzeichnen. Abhängigkeiten existieren zu der Anzeige der Features für den aktuellen Ausschnitt/den gesamten Bereich und den unterschiedlichen Geometrietypen.
 
 
 .. image:: ../../../../../figures/digitizer_clustering.png
@@ -873,8 +872,8 @@ Definition der Clusterelemente:
 
 
 
-Definition zur Sicherung von Feldern und Speichern von Benutzerdaten
-----------------------------------------------------------------------
+Sicherung von Feldern und Speichern von Benutzerdaten
+-----------------------------------------------------
 
 Über die Definition der Nutzerrollen, Gruppen u.ä. können die Daten nach vordefinierten Angaben abgesichert werden. Dazu ist die Angabe eines Datenbank-Feldes mit den entsprechenden Informationen, z.B: Nutzerrollen nötig.
 
@@ -889,8 +888,8 @@ Es gibt mehrere Events, die genutzt werden können, um entweder Daten nur für b
 
 Die Events können in ähnlicher Form auch bei den Sachdaten ohne Geometrien im DataStore genutzt werden. Dazu mehr unter der Seite des Data Managers :doc:`data_manager`.
 
-Achtung: Die Events sind eine experimentelle Entwicklung und sollten mit Vorsicht eingebunden werden.
-Die korrekte Abstimmung der Events aufeinander wurde noch nicht vollständig getestet, daher kann es zu Fehlverhalten kommen.
+**Anmerkung:** Die Events sind noch in der Entwicklung und sollten mit Voraussicht eingebunden werden.
+Die korrekte Abstimmung der Events aufeinander und ihre Abhängigkeiten sind noch nicht vollständig fertiggestellt und können sich in zukünftigen Versionen ändern.
 
 .. code-block:: yaml
 
@@ -912,8 +911,8 @@ Die korrekte Abstimmung der Events aufeinander wurde noch nicht vollständig get
                 $feature->setAttribute('group_name', implode(',',$userRoles));
 
 
-Definition der DataStore-Verbindung
---------------------------------------
+DataStore-Verbindung
+--------------------
 
 Um die Sachdaten ohne Geometrien aus einem DataManager-Element in dem Digitizer anzuzeigen und zu bearbeiten kann man eine Verbindung zu einem bestehenden DataStore einrichten.
 Dazu muss ein select-Feld mit Angabe der DataStore-Verbindung eingefügt werden.
@@ -991,8 +990,8 @@ In sämtlichen Events steht das user-Object $user und die userRolen $userRoles z
 Zusätzlich steht in den remove- und save-Events noch das orignal Datenbankobject $originData zur Verfügung.
 
 
-Definition der Darstellung (Styles)
---------------------------------------
+Darstellung (Styles)
+--------------------
 
 Über die Angabe eines Styles kann definiert werden, wie die Objekte angezeigt werden.
 *Default* definiert dabei die normale Darstellung der Objekte auf der Karte und *Select* die Darstellung der ausgewählten Objekte.
@@ -1019,7 +1018,7 @@ Definition der Darstellung (Styles)
 
 
 Class, Widget & Style
-===========================
+=====================
 
 * Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
 * Widget: mapbender.element.digitizer.js
@@ -1032,7 +1031,7 @@ HTTP Callbacks
 
 
 <action>
---------------------------------
+--------
 
 
 JavaScript API

@@ -73,7 +73,7 @@ YAML-Definition for the element digitizer in mapbender.yml:
 
 
 YAML-Definition for the element digitizer in the textarea schemes
------------------------------------------------------------------------------------------
+-----------------------------------------------------------------
 
 In the following YAML block, the example definition for three digitizer forms is included. Copy the following block into your digitizer element to test the capture of points, lines, and polygons.
 You must first create the database connection and the three demo tables. The SQL commands for creating the tables can be found below.
@@ -395,7 +395,7 @@ The following SQL commands must be executed in your database. You create three d
     );
 
 Feature basic definition
---------------------------
+------------------------
 
 .. code-block:: yaml
 
@@ -434,7 +434,7 @@ Definition of the popup
 
 
 Definition of the feature table
-------------------------------------------------------------------------
+-------------------------------
 
 The digitizer provides an object table. This can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
 The width of the individual columns can optionally be specified in percent or pixels.
@@ -450,8 +450,8 @@ The width of the individual columns can optionally be specified in percent or pi
             name: {label: Name , width: 80%}
 
 
-Definition of tabs (type tabs)
-------------------------------
+Tabs (type tabs)
+----------------
 
 .. code-block:: yaml
 
@@ -466,8 +466,8 @@ Definition of tabs (type tabs)
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
 
-Definition of a textfield (type input)
---------------------------------------
+Textfields (type input)
+-----------------------
 
 .. code-block:: yaml
 
@@ -481,10 +481,10 @@ Definition of a textfield (type input)
                                                    placeholder: 'please edit this field' # placeholder appears in the field as information (optional)
 
 
-Definition of a selectbox (selectbox or multiselect [type select])
--------------------------------------------------------------------------
+Selectbox (selectbox or multiselect [type select])
+--------------------------------------------------
 
-By defining a selectbox, predefined values ​​can be used in the form.
+By defining a selectbox, predefined values can be used in the form.
 You can choose between a selectbox with a selectable entry (type select) or a multiselectbox with several selectable entries (type multiselect).
 
 
@@ -562,16 +562,16 @@ Wir a SQL request, the values of the selectbox can be directly pulled from the d
 
 
 
-Definition of a text (type label)
---------------------------------------------------
+Text/Label (type label)
+-----------------------
 
 .. code-block:: yaml
 
                                                  - type: label                        # element type definition, label writes a non-editable text to the form window.
                                                    text: 'Please give information about the poi.' # define a text 
 
-Definition of a text
--------------------------------
+Text (type text)
+----------------
 
 Texts can be defined as a label in the form. In this case, fields of the data source can be accessed by using JavaScript.
 
@@ -587,8 +587,8 @@ Texts can be defined as a label in the form. In this case, fields of the data so
                                                   # z.B.: data.id + ':' + data.name
 
 
-Definition of a textarea (type textarea)
---------------------------------------------------
+Textareas (type textarea)
+-------------------------
 
 Similar to the text field via type input (see above), text areas can be created that can contain several lines using type textArea.
 
@@ -600,16 +600,16 @@ Similar to the text field via type input (see above), text areas can be created 
                                                    title: Bestandsaufnahme Bemerkung # Label (optional)
 
 
-Definition of a breakline (type breakline)
---------------------------------------------------
+Breaklines (type breakline)
+---------------------------
 
 .. code-block:: yaml
 
                                                  - type: breakline                     # element type definition, will draw a line 
 
 
-Definition of a checkbox (type checkbox)
-----------------------------------------
+Checkboxes (type checkbox)
+--------------------------
 
 .. code-block:: yaml
 
@@ -620,8 +620,8 @@ Definition of a checkbox (type checkbox)
 
 
 
-Definition of a mandatory field
---------------------------------------------------
+Mandatory fields
+----------------
 
 The notes for a mandatory field appear above the used fields. In the case of a missing entry in a defined mandatory field, this will be marked in red and (if defined) a speech bubble will appear. The object can not be saved if mandatory data is missing.
 
@@ -646,8 +646,8 @@ No error message appears outside the form. The applicant has to check the inform
 
 
 
-Definition of a datepicker
---------------------------------------------------
+Datepicker (type date)
+----------------------
 
 .. image:: ../../../../../figures/digitizer_datepicker.png
      :scale: 80
@@ -666,8 +666,8 @@ If the parameter dateFormat is used with a different dateFormat, a table field i
 
 
 
-Definition of information (type infotext)
-------------------------------------------------------------------------------------------
+Helptexts to the form-elements (attribute infotext)
+---------------------------------------------------
 
 The infotext can appear over every field, regardless of whether this is a mandatory field or not. If a infotext is specified, an info button appears above the field. Clicking on this button opens the information text.
 
@@ -677,8 +677,10 @@ The infotext can appear over every field, regardless of whether this is a mandat
 
                                                    infoText:  Please note - only numbers are valid for this field. # Notice which will be displayed by i-symbol
 
-Definition of element groups (type: fieldSet)
---------------------------------------------------
+
+
+Element groups (type: fieldSet)
+-------------------------------
 
 Elements can be grouped together in one row to provide logical connections or save space. To define a group you have to set type fieldSet and afterwards define the children which shall be grouped.
 
@@ -702,8 +704,10 @@ For each children you can define a width to controll the pace for each element.
                              css: {width: 40%}
 
 
-Definition of a file upload field
---------------------------------------------------
+
+
+File upload (type file)
+-----------------------
 
 The file upload can be used to link files to a database column in the form. To do this, the uploaded files are stored in Mapbender3 and the path is noted in the column.
 The storage path and the name of the stored files can not yet be changed. The file upload always saves to the same directory.
@@ -721,14 +725,18 @@ The image-element can be added to view the uploaded images.
 
                       # Experimental parameters:
                       #accept: image/*          # Pre-selection of elements in the image format (window for file upload opens with restriction filter) 
-                                                # Stores e.g. png and does not save pdf/txt. Caution: No error message appears in the wrong format! 
+                                                # Stores e.g. png and does not save pdf/txt. Caution: No error message appears in the wrong format!
 
-Definition of an image
---------------------------------------------------
+
+Images (type image)
+-------------------
 
 The image-element can be used to view an picture in the form. You can display images by specifying a URL in a database field or URL using the src parameter.
+
 Images, which are marked by the element file in a table column can thus also directly integrated and displayed.
+
 The image can be specified by specifying the two parameters src and name.
+
 * **src**: Url-path or file path (can be relative path)
 * **name**: Url-path or file path from the table column (can't be relative path)
 * definition of name and src together: The content of the database column from name is taken. If the column is empty, the src is used.
@@ -747,14 +755,18 @@ The image can be specified by specifying the two parameters src and name.
                         height: 50%             # Specifying width and height is better for the view, otherwise parts may be truncated.
                       css: {width: 25%}         # ImageContainer CSS Style: Scaled down when specifying with imagecss, therefore not recommended.
 
-Caution: If only name and not name and src are specified, the wrong image appears from the previous data entry, if the column is empty.
+**Caution**: If only name and not name and src are specified, the wrong image appears from the previous data entry, if the column is empty.
+
 Dynamic paths (eg "bundles/mapbendercore/image/[nr].png" or 'bundles/mapbendercore/image/' + data.image_reference) can not be specified.
+
 One way to work around this is to create a trigger that will merge the path and contents of a table field into the database column.
 
-Definition of toolset types
-------------------------------------------------------------------------
 
-Toolset types
+
+Definition of the available toolsets (Toolset Type)
+---------------------------------------------------
+
+Toolset types:
 
 * **drawPoint** - draw point
 * **drawLine** - draw a line
@@ -765,8 +777,8 @@ Toolset types
 * **drawDonut** - draw a donut (enclave)
 * **modifyFeature** - move vertices of a geometry
 * **moveFeature** - move geometry
-* **selectFeature** - geometry de-/select
-* **removeSelected** - delete selected geometry
+* **selectFeature** - geometry de-/select (experimental)
+* **removeSelected** - delete selected geometry (experimental)
 * **removeAll** - Caution: remove all geometries from the table
 
 YAML-Definition of toolset types
@@ -774,17 +786,7 @@ YAML-Definition of toolset types
 .. code-block:: yaml
 
     polygon:
-        label: polygon digitizing
-        maxResults: 1500
-        featureType:
-            connection: search_db
-            table: polygons
-            uniqueId: gid
-            geomType: polygon
-            geomField: geom
-            srid: 4326
-        openFormAfterEdit: true
-        allowDelete: false
+        [...]
         toolset:
             - type: drawPolygon
             - type: drawRectangle
@@ -792,8 +794,8 @@ YAML-Definition of toolset types
             - type: removeSelected
 
 
-Definition of inline Search
-------------------------------------------------------------------------
+Search in the tables (inline Search)
+------------------------------------
 
 You can use the inline search to search for a element in the table. 
 The activated element displays a search bar above the table. It shows all the search results for records of the table.
@@ -807,8 +809,8 @@ The activated element displays a search bar above the table. It shows all the se
 
 
 
-Definition of the Context Menu
-------------------------------------------------------------------------
+Context Menu
+------------
 
 Using the context menu, an object on the map can be considered in more detail.
 After the activation you can open a context menu via the right mouse click on an object or cluster.
@@ -820,8 +822,9 @@ Items of the Context Menu:
 
 * **Zoom to:** Zoom to the map extent of the object
 * **Edit features:** Edit the features of the objekt. Opens the digitizer dialog. 
-* **Remove:** Remove the selected object. 
+* **Remove:** Remove the selected object.
 
+If the corresponding `basic definition <#feature-basic-definition>`_ (allowEditData, allowDelete) not defined, then they are also not available in the Context Menu. In the above example the delete function is not available for the polygons.
 
 .. code-block:: yaml
 
@@ -832,11 +835,13 @@ Items of the Context Menu:
 
 
 
-Definition of Clustering
-------------------------------------------------------------------------
+Clustering (experimental)
+-------------------------
 
 By clustering the objects can be combined on the map. 
 Depending on the defined distance and zoom level different numbers of objects can be clustered.
+
+Due to the complexity of the Clustering, future versions may have changes in functionality and syntax, so we define that still as experimental. Dependencies are to the display of features in the current extent/all areas and the different geometry types.
 
 .. image:: ../../../../../figures/digitizer_clustering.png
      :scale: 80
@@ -869,8 +874,8 @@ Definition of the cluster element:
       ...
 
 
-Definition for securing fields and storing user data
-------------------------------------------------------
+Securing fields and storing user data
+-------------------------------------
 
 By defining the user roles, groups etc. the data can be protected according to predefined fields. The specification of a database field with the appropriate information is necessary.
 
@@ -885,6 +890,8 @@ There are several events that can be used to either make data accessible to only
 
 The events can also be used in the DataStore in a similar form.
 Die Events können in ähnlicher Form auch bei den Sachdaten ohne Geometrien im DataStore genutzt werden. More info can be found on the :doc:`data_manager`.
+
+**Note:** The events are still in development and should be used with caution. The correct matching of the events and their dependencies are not yet finished and may be changed in future versions.
 
 .. code-block:: yaml
 
@@ -906,8 +913,8 @@ Die Events können in ähnlicher Form auch bei den Sachdaten ohne Geometrien im 
                 $feature->setAttribute('group_name', implode(',',$userRoles));
 
 
-Definition of DataStore connection
---------------------------------------
+DataStore connection
+--------------------
 
 To display arttribute data without geometries of an DataManager element and edit them, you can set up a connection to an existing DataStore.
 For this, a select-box must be added stating the DataStore connection.
@@ -982,8 +989,8 @@ Extract from the parameters.yml:
 In all events, the user-object $user and the user-role $userRoles are available. In the remove- and save-functions is still the orignal database-object $originData available.
 
 
-Definition of Styles
-------------------------------------------------------------------------
+Design and Styles
+-----------------
 
 By specifying a style the way the objects are displayed on the map can be defined. 
 *Default* defines the normal display of the objects on the map and *Select* defines the appearance of the selected objects.
@@ -1011,7 +1018,7 @@ By specifying a style the way the objects are displayed on the map can be define
 
 
 Class, Widget & Style
-===========================
+=====================
 
 * Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
 * Widget: mapbender.element.digitizer.js
@@ -1024,7 +1031,7 @@ HTTP Callbacks
 
 
 <action>
---------------------------------
+--------
 
 
 JavaScript API
