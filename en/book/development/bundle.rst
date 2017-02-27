@@ -3,37 +3,8 @@
 How to create a Bundle?
 #######################
 
-A Bundle is created by the command
-
-   :command:`app/console init:bundle '<Namespace>' <directory normally below src>`
-
-Example:
-    :command:`app/console init:bundle 'Vendor' HelloBundle`
-
-A new directory was created at:
-    mapbender3/application/src/Vendor/HelloBundle
-
-
-Autoloading
-***********
-When you activate a Bundle you have to tell the system, in which directory(s) the classes of the Bundles are stored. 
-
-This is done by the **app/autoload.php**.
-
-The function **registerNamespaces** the array is enlarged by the registered directories.
-
-.. code-block:: javascript
-
- $loader->registerNamespaces(array(
-    //...
-     'Mapbender'        => __DIR__.'/../mapbender/src'
- ));
-
-The row means that the system will look for the namespace **Mapbender** at first in the directory **Mapbender** below mapbender/src.
-
-In this case the class Mapbender\\CoreBundle\\Component\\Element should be loaded. 
-
-Also the namespace-component (devided by \) will be interpreted as a directory name and the closing classname (Element) will be interpreted as a file. So in this case **Element.php** will be expected.
+Yo can read developer contribution guide about what is a module an how to create new bundle:
+https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#bundle-creation
 
 
 How to activate a Bundle?
