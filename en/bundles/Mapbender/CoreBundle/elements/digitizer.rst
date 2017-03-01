@@ -874,43 +874,66 @@ Definition of the cluster element:
       ...
 
 
-Securing fields and storing user data
--------------------------------------
+Events
+------
 
-By defining the user roles, groups etc. the data can be protected according to predefined fields. The specification of a database field with the appropriate information is necessary.
+Different events exist that can be associated to a feature to manipulate attributes before or after an action.
 
-There are several events that can be used to either make data accessible to only certain persons or to store certain user information:
+* **onBeforeSave**: Event before the storage of a new/ modified information
+* **onAfterSave**: Event after the storage of a new/ modified information
 
-* **onBeforeSave**: Event before the storage of new/ modified information
-* **onBeforeSearch**: Event before the search in SearchField of the digitizer
+* **onBeforeUpdate**: Event before the update of a modified information
+* **onAfterUpdate**: Event after the update of a modified information
+  
+* **onBeforeSearch**: Event before the search in the SearchField of the digitizer
+* **onAfterSearch**: Event after the search in the SearchField of the digitizer
+ 
 * **onBeforeRemove**: Event before deleting data
-* **onAfterSearch**: Event after the search in SearchField of the digitizer
-* **onAfterSave**: Event after the storage of new/ modified informationn
 * **onAfterRemove**: Event after deleting data
 
-The events can also be used in the DataStore in a similar form.
-Die Events können in ähnlicher Form auch bei den Sachdaten ohne Geometrien im DataStore genutzt werden. More info can be found on the :doc:`data_manager`.
+In difference to the Save-events, the update-events work only on an update of the data, not on creation.
+
+The events can be used in similar form in the DataStore for data without geometries. More info can be found on the :doc:`data_manager`.
 
 **Note:** The events are still in development and should be used with caution. The correct matching of the events and their dependencies are not yet finished and may be changed in future versions.
 
+The following sections show some examples.
+
+**Storage of attibute data in an additional attribute-columns:**
+
+This example shows how data can be stored in an additional attribute-column after saving. In this case it is done with two geometry-columns "geom" and "geom2". When saving, the data of "geom" should be saved in the field "geom2".
+
+Depending on the use-case the onBeforeInsert or the onBeforeUpdate event can be used.
+
+At the time of the saving-process the new geometry doesn't yet persist in the database. Therefore it cannot be accessed as a feature but only via the corresponding "item", an internal Digitizer structure. This "item" are based on the formular and the defined attribute fields.
+
 .. code-block:: yaml
 
-    poi:
-        label: point digitizing
-        inlineSearch: true
-        maxResults: 500
-        featureType:
-            connection: search_db
-            table: poi
-            uniqueId: gid
-            geomType: point
-            geomField: geom
-            srid: 4326
-            events:        # Store the user name, group name and modification time after saving an object
-              onBeforeSave: | 
-                $feature->setAttribute('user_name', $user->getUsername()); 
-                $feature->setAttribute('modification_date', date('Y-m-d'));
-                $feature->setAttribute('group_name', implode(',',$userRoles));
+                events:
+                  onBeforeInsert: $item['geom2'] = $item['geom'];
+                  onBeforeUpdate: $item['geom2'] = $item['geom'];
+
+
+In this event the value of "geom2" is overwritten with the value of "geom".
+
+
+**Storage of different geometry-types:**
+
+The above scenario can be extended to a slightly constructed example in which simultaneously different geometry types shall be saved. With the help of PostGIS lines are interpolated to points. The Digitizer can use an event to fire the according SQL statement.
+
+.. code-block:: yaml
+                
+                events:
+                  onBeforeInsert: |
+                    $sql = "SELECT 
+                    ST_Line_Interpolate_Point('".$item['geomline']."'::geometry, 1) as geom";
+                    $stmnt = $this->getConnection()->prepare($sql);
+                    $stmnt->execute();
+                    $result  = $stmnt->fetchAll();
+                    $item['geompoi'] = $result[0]['geom'];
+
+The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL Statement and deliver it to the SQL-Connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
+
 
 
 DataStore connection

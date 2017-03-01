@@ -853,7 +853,7 @@ Definition der Clusterelemente:
 .. code-block:: yaml
 
   poi:
-      ...
+      [...]
       clustering:
           -
               scale: 10000        # Zoomstufe
@@ -868,48 +868,72 @@ Definition der Clusterelemente:
               scale: 500
               distance: 1
               disable: true       # Schaltet Clustering für die Zoomstufe ab
-      ...
+      [...]
 
 
+Events
+------
 
-Sicherung von Feldern und Speichern von Benutzerdaten
------------------------------------------------------
-
-Über die Definition der Nutzerrollen, Gruppen u.ä. können die Daten nach vordefinierten Angaben abgesichert werden. Dazu ist die Angabe eines Datenbank-Feldes mit den entsprechenden Informationen, z.B: Nutzerrollen nötig.
-
-Es gibt mehrere Events, die genutzt werden können, um entweder Daten nur für bestimmte Personen zugänglich zu machen, oder bestimmte Benutzerdaten bei dem Editieren von Daten zu speichern:
+Es gibt mehrere Events, die zu einem Feature zugeordnet werden können, um Attribute vor oder nach der Aktion zu manipulieren.
 
 * **onBeforeSave**: Event vor dem Speichern von neuen/ veränderten Informationen
-* **onBeforeSearch**: Event vor dem Suchen in SearchField des Digitizers
-* **onBeforeRemove**: Event vor dem Löschen von Daten
-* **onAfterSearch**: Event nach dem Suchen in SearchField des Digitizers
 * **onAfterSave**: Event nach dem Speichern von neuen/ veränderten Informationen
+
+* **onBeforeUpdate**: Event vor der Aktualisierung von veränderten Informationen
+* **onAfterUpdate**: Event nach der Aktualisierung von veränderten Informationen
+
+* **onBeforeSearch**: Event vor dem Suchen in SearchField des Digitizers
+* **onAfterSearch**: Event nach dem Suchen in SearchField des Digitizers
+
+* **onBeforeRemove**: Event vor dem Löschen von Daten
 * **onAfterRemove**: Event nach dem Löschen von Daten
 
+Im Unterschied zu den Save-Events arbeiten die Update-Events nur bei einer Aktualisierung der Daten, nicht bei einer Erstellung.
+  
 Die Events können in ähnlicher Form auch bei den Sachdaten ohne Geometrien im DataStore genutzt werden. Dazu mehr unter der Seite des Data Managers :doc:`data_manager`.
 
 **Anmerkung:** Die Events sind noch in der Entwicklung und sollten mit Voraussicht eingebunden werden.
 Die korrekte Abstimmung der Events aufeinander und ihre Abhängigkeiten sind noch nicht vollständig fertiggestellt und können sich in zukünftigen Versionen ändern.
 
+Im folgenden einige Anwendungsbeispiele.
+
+
+**Speichern von Sachdaten in zusätzlichen Attributspalten:**
+
+Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit den Spalten "geom" und "geom2". Beim Speichern sollen die Daten von geom in das Feld geom2 geschrieben werden.
+
+Man kann das Event je nach Anwendungsfall bei onBeforeInsert oder onBeforeUpdate eintragen.
+
+Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Datenbank ist, kann man auf sie nicht als Feature zugreifen, sondern nur über das jeweilige "item", eine interne Digitizer Speicherstruktur. Diese "item" orientieren sich am Formular und den dort angegebenen Attributen. 
+
 .. code-block:: yaml
 
-    poi:
-        label: point digitizing
-        inlineSearch: true
-        maxResults: 500
-        featureType:
-            connection: search_db
-            table: poi
-            uniqueId: gid
-            geomType: point
-            geomField: geom
-            srid: 4326
-            events:        # Speichern des Benutzernamens, Gruppennames und des Änderungsdatums nach dem Speichern eines Objekts
-              onBeforeSave: |
-                $feature->setAttribute('user_name', $user->getUsername());
-                $feature->setAttribute('modification_date', date('Y-m-d'));
-                $feature->setAttribute('group_name', implode(',',$userRoles));
+                events:
+                  onBeforeInsert: $item['geom2'] = $item['geom'];
+                  onBeforeUpdate: $item['geom2'] = $item['geom'];
 
+Bei dem Event wird der Wert des Feldes "geom2" mit dem Wert des Feldes "geom" überschrieben.
+
+                  
+**Speichern unterschiedlicher Geometrietypen:**
+
+Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
+
+.. code-block:: yaml
+                
+                events:
+                  onBeforeInsert: |
+                    $sql = "SELECT 
+                    ST_Line_Interpolate_Point('".$item['geomline']."'::geometry, 1) as geom";
+                    $stmnt = $this->getConnection()->prepare($sql);
+                    $stmnt->execute();
+                    $result  = $stmnt->fetchAll();
+                    $item['geompoi'] = $result[0]['geom'];
+
+Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, greift man über das "item" auf die Geometrie (geomline). Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
+
+
+               
 
 DataStore-Verbindung
 --------------------
@@ -939,29 +963,6 @@ Dazu muss ein select-Feld mit Angabe der DataStore-Verbindung eingefügt werden.
 
 .. image:: ../../../../../figures/digitizer_datamanager_popup.png
      :scale: 80
-
-**Definition der Nutzerrollen für den DataStore**
-
-
-Über die Definition der Nutzerrollen können die Daten nach Benutzerrollen gesichert werden. Dazu ist im ersten Schritt die Angabe eines Datenbank-Feldes mit den Nutzerrollen nötig.
-
-.. code-block:: yaml
-
-        - type: select
-          id: interests_datastore
-          name: interests_datastore
-          dataStore:
-              connection: search_db           # Verbindung zum DataStore Element
-              table: public.interests_datastore
-              uniqueId: gid
-              fields: [name, sports , healthy, comment]
-            popupItems:
-               - name: User_Roles              # Sicherung der Daten nach Benutzerrollen durch Angabe des DB-Feldes
-                 title: 'Nutzerrollen'
-                 type: select
-                 service:
-                     serviceName: security.context
-                     method: getRolesAsArray
 
 
 **Definition des DataStores für die Verbindung**
