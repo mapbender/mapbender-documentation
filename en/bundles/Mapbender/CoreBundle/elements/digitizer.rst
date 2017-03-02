@@ -710,8 +710,20 @@ File upload (type file)
 -----------------------
 
 The file upload can be used to link files to a database column in the form. To do this, the uploaded files are stored in Mapbender3 and the path is noted in the column.
-The storage path and the name of the stored files can not yet be changed. The file upload always saves to the same directory.
-Path: http://localhost/mapbender3/uploads/featureTypes/[table_name]/file_reference/[filename].png
+
+The storage path and the name of the stored files can not yet be changed. The file upload always saves to the same directory and is  built up from the parameters:
+
+* tablename
+* columnname
+* filename
+
+The filesystem path is:
+
+* <mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png
+
+The linked URL store in the database column is:
+
+* http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png
 
 The image-element can be added to view the uploaded images.
 
@@ -725,7 +737,7 @@ The image-element can be added to view the uploaded images.
 
                       # Experimental parameters:
                       #accept: image/*          # Pre-selection of elements in the image format (window for file upload opens with restriction filter) 
-                                                # Stores e.g. png and does not save pdf/txt. Caution: No error message appears in the wrong format!
+                                                # Other file-formats can be still uploaded
 
 
 Images (type image)

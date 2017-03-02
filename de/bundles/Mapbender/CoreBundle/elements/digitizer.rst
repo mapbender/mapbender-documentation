@@ -705,8 +705,22 @@ Dateiupload (type file)
 -----------------------
 
 Über den Dateiupload können Dateien durch die Angabe in einer Datenbankspalte im Formular verknüpft werden. Dazu werden die hochgeladenen Dateien im Mapbender3 gespeichert und der Pfad in der Spalte vermerkt.
-Der Speicherpfad und der Name der abgespeicherten Dateien kann bis jetzt nicht verändert werden. Der Dateiupload speichert immer in das gleiche Verzeichnis.
-Pfad: http://localhost/mapbender3/uploads/featureTypes/[tabellenname]/file_reference/[dateiname].png
+
+Der Speicherpfad und der Name der abgespeicherten Dateien kann bis jetzt nicht verändert werden. Der Dateiupload speichert immer in das gleiche Verzeichnis und baut sich aus den Parametern:
+
+* Tabellenname
+* Spaltenname
+* Dateiname
+
+auf.
+
+Das Verzeichnis ist:
+
+* <mapbender>/web/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+
+Die in der Datenbank verlinkte URL ist:
+
+* http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
 
 Für die Ansicht von eingebundenen Bildern kann das Bild-Element dazugenommen werden.
 
@@ -720,7 +734,7 @@ Für die Ansicht von eingebundenen Bildern kann das Bild-Element dazugenommen we
 
                       # Experimentelle Parameter:
                       #accept: image/*          # Vorauswahl von Elementen im Image-Format (Fenster für Dateiupload öffnet sich mit Einschränkungsfilter)
-                                                # Speichert z.B. png und speichert nicht pdf/txt. Achtung: Es erscheint keine Fehlermeldung beim falschen Format!
+                                                # Es können jedoch weiterhin auch andere Dateiformate hochgeladen werden.
 
 
 
