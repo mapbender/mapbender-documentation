@@ -900,8 +900,6 @@ Different events exist that can be associated to a feature to manipulate attribu
 
 In difference to the Save-events, the update-events work only on an update of the data, not on creation.
 
-The events can be used in similar form in the DataStore for data without geometries. More info can be found on the :doc:`data_manager`.
-
 **Note:** The events are still in development and should be used with caution. The correct matching of the events and their dependencies are not yet finished and may be changed in future versions.
 
 The following sections show some examples.
@@ -941,82 +939,6 @@ The above scenario can be extended to a slightly constructed example in which si
 
 The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL Statement and deliver it to the SQL-Connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
 
-
-
-DataStore connection
---------------------
-
-To display arttribute data without geometries of an DataManager element and edit them, you can set up a connection to an existing DataStore.
-For this, a select-box must be added stating the DataStore connection.
-
-.. code-block:: yaml
-
-        - type: select
-          id: interests_datastore
-          name: interests_datastore
-          dataStore:          # Connection to the DataManager element
-            id: interests          # DataStore ID
-            text: name
-            uniqueId: gid
-            editable: true    # true enables the editing of attribute data
-            popupItems:                 # dialog form
-              - { name: name, title: Name, type: input }
-              - { name: sports, title: Sportart, type: input }
-              - { name: healthy, title: Gesund, type: input }
-              - { name: comment, title: Kommentar, type: input }
-
-.. image:: ../../../../../figures/digitizer_datamanager.png
-     :scale: 80
-
-.. image:: ../../../../../figures/digitizer_datamanager_popup.png
-     :scale: 80
-
-**Definition of user roles for the DataStore**
-
-With the help of user roles data can be saved. You can secure the data by specifying the database field of the user roles.
-
-.. code-block:: yaml
-
-        - type: select
-          id: interests_datastore
-          name: interests_datastore
-          dataStore:          # Connection to the DataManager element
-              connection: search_db
-              table: public.interests_datastore
-              uniqueId: gid
-              fields: [name, sports , healthy, comment]
-            popupItems:
-               - name: User_Roles              # Securing the data by user roles by specifying the DB-field
-                 title: 'user roles'
-                 type: select
-                 service:
-                     serviceName: security.context
-                     method: getRolesAsArray
-
-
-**Definition of datastores for connection**
-
-Now, the definition of datastores for the correct display of the data in the Digitizer element is shown. Here the fields and records can be secured to a group or user.
-The Digitizer can automatically write the username, group and moddate in specifiable fields.The saving and deleting of an attribute is only possible if the user belongs to a particular group / role.
-
-Extract from the parameters.yml:
-
-.. code-block:: yaml
-
-    dataStores:
-         interests:
-            connection: search_db
-            table: interests_datastore
-            uniqueId: gid
-            fields: [name, sports, healthy, comment]                                 # table fields to use for the datastore 
-            events:
-              onBeforeSave: |
-                  $item["user_name"] = $user->getUsername();                         # storing the username of the object
-              onBeforeUpdate:
-                  $item["user_name"] = $user->getUsername();
-
-
-In all events, the user-object $user and the user-role $userRoles are available. In the remove- and save-functions is still the orignal database-object $originData available.
 
 
 Design and Styles

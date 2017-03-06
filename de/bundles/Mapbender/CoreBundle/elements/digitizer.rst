@@ -903,8 +903,6 @@ Es gibt mehrere Events, die zu einem Feature zugeordnet werden können, um Attri
 
 Im Unterschied zu den Save-Events arbeiten die Update-Events nur bei einer Aktualisierung der Daten, nicht bei einer Erstellung.
   
-Die Events können in ähnlicher Form auch bei den Sachdaten ohne Geometrien im DataStore genutzt werden. Dazu mehr unter der Seite des Data Managers :doc:`data_manager`.
-
 **Anmerkung:** Die Events sind noch in der Entwicklung und sollten mit Voraussicht eingebunden werden.
 Die korrekte Abstimmung der Events aufeinander und ihre Abhängigkeiten sind noch nicht vollständig fertiggestellt und können sich in zukünftigen Versionen ändern.
 
@@ -945,63 +943,6 @@ Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleic
 
 Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, greift man über das "item" auf die Geometrie (geomline). Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
 
-
-               
-
-DataStore-Verbindung
---------------------
-
-Um die Sachdaten ohne Geometrien aus einem DataManager-Element in dem Digitizer anzuzeigen und zu bearbeiten kann man eine Verbindung zu einem bestehenden DataStore einrichten.
-Dazu muss ein select-Feld mit Angabe der DataStore-Verbindung eingefügt werden.
-
-
-.. code-block:: yaml
-
-        - type: select
-          id: interests_datastore
-          name: interests_datastore
-          dataStore:                    # Verbindung zum DataStore Element
-            id: interests               # DataStore ID
-            text: name
-            uniqueId: gid
-            editable: true              # true aktiviert das Editieren der Sachdaten
-            popupItems:                 # Elemente im Dialog
-              - { name: name, title: Name, type: input }
-              - { name: sports, title: Sportart, type: input }
-              - { name: healthy, title: Gesund, type: input }
-              - { name: comment, title: Kommentar, type: input }
-
-.. image:: ../../../../../figures/digitizer_datamanager.png
-     :scale: 80
-
-.. image:: ../../../../../figures/digitizer_datamanager_popup.png
-     :scale: 80
-
-
-**Definition des DataStores für die Verbindung**
-
-Im folgenden wird die Definition des DataStores für die korrekte Anzeige der Daten im Digitizer-Element gezeigt. Hier können die Felder und Datensätze gegen eine Gruppe oder einen User abgesichert werden.
-Der Digitizer kann Benutzer (username), Gruppe und Datum (moddate) automatisch in spezifizierbare Felder schreiben. Das Abspeichern und Löschen eines Datensatzes ist nur möglich wenn der User einer bestimmten Gruppe/ Rolle angehört.
-
-Angaben in der parameters.yml:
-
-.. code-block:: yaml
-
-    dataStores:
-         interests:
-            connection: search_db
-            table: interests_datastore
-            uniqueId: gid
-            fields: [name, sports, healthy, comment]                                 # table fields to use for the datastore
-            events:
-              onBeforeSave: |
-                  $item["user_name"] = $user->getUsername();                         # storing the username of the object
-              onBeforeUpdate:
-                  $item["user_name"] = $user->getUsername();
-
-
-In sämtlichen Events steht das user-Object $user und die userRolen $userRoles zur Verfügung.
-Zusätzlich steht in den remove- und save-Events noch das orignal Datenbankobject $originData zur Verfügung.
 
 
 Darstellung (Styles)
