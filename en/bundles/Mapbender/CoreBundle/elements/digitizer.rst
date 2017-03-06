@@ -197,8 +197,6 @@ The functionality of the built-in features and additional functions are explaine
             - type: drawLine
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: line test suite
             width: 500px
@@ -258,8 +256,6 @@ The functionality of the built-in features and additional functions are explaine
             - type: drawCircle
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: polygon test suite
             width: 500px
@@ -775,17 +771,17 @@ Definition of the available toolsets (Toolset Type)
 
 Toolset types:
 
-* **drawPoint** - draw point
-* **drawLine** - draw a line
-* **drawPolygon** - draw polygon
-* **drawRectangle** - draw rectangle
-* **drawCircle** - draw circle
-* **drawEllipse** - draw ellipse
-* **drawDonut** - draw a donut (enclave)
-* **modifyFeature** - move vertices of a geometry
-* **moveFeature** - move geometry
-* **selectFeature** - geometry de-/select (experimental)
-* **removeSelected** - delete selected geometry (experimental)
+* **drawPoint** - Draw point
+* **drawLine** - Draw a line
+* **drawPolygon** - Draw polygon
+* **drawRectangle** - Draw rectangle
+* **drawCircle** - Draw circle
+* **drawEllipse** - Draw ellipse
+* **drawDonut** - Draw a Donut (enclave)
+* **modifyFeature** - Move vertices of a geometry
+* **moveFeature** - Move geometry
+* **selectFeature** - Geometry de-/select (experimental). There is no interaction with the table yet and the available workflows are limited to the Delete operation.
+* **removeSelected** - delete selected geometry (experimental). Deletes all objects selected in the map.
 * **removeAll** - Caution: remove all geometries from the table
 
 YAML-Definition of toolset types

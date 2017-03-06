@@ -199,8 +199,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
             - type: drawLine
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: line test suite
             width: 500px
@@ -260,8 +258,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
             - type: drawCircle
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: polygon test suite
             width: 500px
@@ -786,8 +782,8 @@ Werkzeugliste:
 * **drawDonut** - Donut erstellen oder die bestehende Geometrien editieren
 * **modifyFeature** - einzelne Knotenpunkte bei Geometrien verschieben
 * **moveFeature** - Geometrien verschieben
-* **selectFeature** - Geometrien de-/selektieren (experimentell)
-* **removeSelected** - die selektierten Geometrien löschen (experimentell)
+* **selectFeature** - Geometrien de-/selektieren (experimentell). Es findet noch keine Interaktion mit der Tabelle statt und die zur Verfügung stehenden Workflows beschränken sich auf das Löschen.
+* **removeSelected** - die selektierten Geometrien löschen (experimentell). Löscht alle in der Karte selektierten Objekte.
 * **removeAll** - Vorsicht: alle Geometrien aus der Tabelle löschen
 
 Definition der für die Erfassung verwendeten Toolset Typen
