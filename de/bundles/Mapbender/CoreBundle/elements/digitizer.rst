@@ -4,6 +4,7 @@ Digitalisierung (Digitizer)
 ***************************
 
 Das Digitizer-Element ermöglicht den Aufbau von Erfassungsoberflächen. Derzeit kann über eine YAML-Definition eine Erfassungsmaske für Punkte, Linien oder Flächen aufgebaut werden.
+
 Dabei wird bisher PostgreSQL als Datenquelle unterstützt. Oracle und SpatiaLite sind experimentell verfügbar. Die Entwicklung wurde so durchgeführt, dass die Erfassung auch auf andere Datenquellen wie z.B. OGC WFS erweitert werden kann.
 
 Das Digitizer-Element bietet komplexe Editierfunktionalitäten an:
@@ -41,10 +42,13 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 Konfiguration
 =============
 
+Das Element kann nur in der Sidepane eingebettet werden.
+
+
 .. image:: ../../../../../figures/digitizer_configuration.png
      :scale: 80
 
-Das Element wird in der Sidepane eingebettet.
+
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Elemente voneinander zu unterscheiden.
 * **Target:** Zielelement (Titel(ID)) der Karte.
@@ -57,17 +61,6 @@ Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier defi
 Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
 Falls Sie den genauen Fehler reproduzieren möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
 
-YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml:
-
-.. code-block:: yaml
-
-                sidepane:
-                    digitizer:
-                        class: Mapbender\DigitizerBundle\Element\Digitizer
-                        title: Digitalisation
-                        target: map
-                        schemes:
-                            ...
 
 
 YAML-Definition für das Element digitizer in der Textarea unter schemes
@@ -453,6 +446,8 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 Dateireiter (type tabs)
 -----------------------
 
+Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu dient das formItem type "tabs".
+
 .. code-block:: yaml
 
         formItems:
@@ -722,7 +717,7 @@ Die in der Datenbank verlinkte URL ist:
 
 * http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
 
-Für die Ansicht von eingebundenen Bildern kann das Bild-Element dazugenommen werden.
+
 
 .. code-block:: yaml
 
@@ -736,10 +731,17 @@ Für die Ansicht von eingebundenen Bildern kann das Bild-Element dazugenommen we
                       #accept: image/*          # Vorauswahl von Elementen im Image-Format (Fenster für Dateiupload öffnet sich mit Einschränkungsfilter)
                                                 # Es können jedoch weiterhin auch andere Dateiformate hochgeladen werden.
 
+**Anmerkungen:** Es wird momentan noch ein "thumbnail" Verzeichnis angelegt, dass eine kleinere Version der Bilder beinhaltet. Dieses wird in weiteren Entwicklungsphasen noch verändert.
+
+Für die Ansicht von hochgeladenen Bildern kann die Bildanzeige dazugenommen werden.
+
 
 
 Bildanzeige (type image)
 ------------------------
+
+.. image:: ../../../../../figures/digitizer_image.png
+     :scale: 80
 
 Für die Ansicht eines Bildes im Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
 
@@ -749,7 +751,7 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
 
 * **src**: Url-Pfad oder Dateipfad (kann relativer Pfad sein)
 * **name**: Url-Pfad oder Dateipfad wird aus der Tabellenspalte übernommen (kann kein relativer Pfad sein)
-* Anagbe von name und src zusammen: Der Inhalt der Datenbankspalte aus name wird genommen. Falls die Spalte leer ist wird die src-Angabe genutzt.
+* Anagbe von **name** und **src** zusammen: Der Inhalt der Datenbankspalte aus name wird genommen. Falls die Spalte leer ist wird die src-Angabe genutzt.
 
 
 .. code-block:: yaml
@@ -757,14 +759,11 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
                     - type: image               # Type image für das Anzeigen von Bildern
                       name: file_reference      # Referenz zur Datenbankspalte. Wenn definiert, wird der Pfad oder die URL in dem Feld ermittelt und "src" Option ersetzt
                       src: "bundles/mapbendercore/image/logo_mb3.png"  # Angabe eines Pfades oder URL zu einem Bild. Falls der relative Pfad genutzt wird muss relative: true stehen.
-                      relative: true            # Optional. Standardwert ist false. Wenn true, wird der "src" Pfad ab dem "/web" Verzeichniss ermittelt.
-                      enlargeImage: true        # Bild wird beim Klick auf das Vorschaubild auf Originalgröße/maximale Auflösung vergrößert. Achtung: keine Skalierung auf die Bildschirmgröße.
+                      enlargeImage: true        # Bild wird beim Klick auf das Vorschaubild auf Originalgröße/maximale Auflösung vergrößert. Es wird nicht auf die Bildschirmgröße skaliert.
 
                       # Experimentelle Angaben zum Styling
                       imageCss:
-                        width: 50%              # Image CSS Style: Skaliert das Vorschaubild in dem Formular, abweichend von der Originalgröße in Prozent.
-                        height: 50%             # Angabe von width und height ist besser für die Ansicht, sonst werden Teile eventuell abgeschnitten.
-                      css: {width: 25%}         # Image Container CSS Style: Skaliert bei Angabe von imagecss wieder runter, daher nicht empfohlen.
+                        width: 100%              # Image CSS Style: Skaliert das Vorschaubild in dem Formular, abweichend von der Originalgröße in Prozent.
 
 **Achtung**: Wenn nur name und nicht name und src angegeben wird, erscheint bei leeren Spalteneinträgen ein Bild aus dem vorherigen Dateneintrag.
 
@@ -933,7 +932,7 @@ Bei dem Event wird der Wert des Feldes "geom2" mit dem Wert des Feldes "geom" ü
 
 Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
 
-.. code-block:: yaml
+.. code-block:: sql
                 
                 events:
                   onBeforeInsert: |
@@ -1031,6 +1030,23 @@ Darstellung (Styles)
       ...
 
 
+YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml
+================================================================================
+
+Dieser Codeabschnitt zeigt, wie das Digitizer Element in eine auf einer
+YAML-Datei basierende Anwendung eingebaut werden kann.
+
+.. code-block:: yaml
+
+                sidepane:
+                    digitizer:
+                        class: Mapbender\DigitizerBundle\Element\Digitizer
+                        title: Digitalisation
+                        target: map
+                        schemes:
+                            ...
+
+
 
 Class, Widget & Style
 =====================
@@ -1039,26 +1055,3 @@ Class, Widget & Style
 * Widget: mapbender.element.digitizer.js
 * Style: sass\\element\\digitizer.scss
 
-
-HTTP Callbacks
-==============
-
-
-
-<action>
---------
-
-
-JavaScript API
-==============
-
-
-<function>
-----------
-
-
-JavaScript Signals
-==================
-
-<signal>
---------

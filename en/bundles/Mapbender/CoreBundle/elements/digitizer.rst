@@ -4,7 +4,8 @@ Digitizer
 *********
 
 The Digitizer element allows building editing-interfaces. Currently you can build up your interface for point, line and polygon editing with a YAML-definition. 
-Right now PostgreSQL is supported as a database. Oracle and SpatialLite can be used experimentally. The development of the digitizer allows other data sources so that it can be extended to support - for example - OGC WFS services.
+
+Right now PostgreSQL is supported as a database. Oracle and SpatialLite can be used experimentally. The development of the Digitizer allows other data sources so that it can be extended to support - for example - OGC WFS services.
 
 The Digitizer-Element offers complex editing functionality:
 
@@ -20,7 +21,7 @@ In connection with the digitization, very complex forms can be generated for the
 
 The following option for the construction of the forms are available:
 
-* define more then one feature types for digitalisation. You can switch from one feature type to the other with a select box
+* define more then one feature types for digitization. You can switch from one feature type to the other with a select box
 * use a table as source. You can also define a filter to get a subset of the table
 * Textfields
 * Selectboxes, Multiselectboxes
@@ -31,7 +32,7 @@ The following option for the construction of the forms are available:
 * Definition of tabs
 * Definition breaklines
 * Definition of Text 
-* Mandatory fields, regular expressions to valida the content are possible
+* Mandatory fields, regular expressions to valid the content are possible
 * Help texts
 
 
@@ -41,41 +42,29 @@ The following option for the construction of the forms are available:
 Configuration
 =============
 
+You can only use the element in the sidepane.
+
 .. image:: ../../../../../figures/digitizer_configuration.png
      :scale: 80
 
-You can use the element in the sidepane.
 
 * **Title:** Title of the element. This is displayed in the layouts list and allows you to define several elements.
 * **Target:** (ID) of the map.
-* **Schemes:** YAML-Definition of the element digitiizer
+* **Schemes:** YAML-Definition of the element Digitizer
 
 The Ditigitzer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. 
 Read more about this at http://doc.mapbender3.org/en/book/database.html
 
-The definition of the digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behaviour.
+The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
 If errors occur in the database, fields or form, various error messages appear. Via the normal call and app.php comes a general error message.
 If you want to reproduce the exact error, you should call the page via app_dev.php. In this case, detailed error messages about the error behavior appear.
 
-Element definition in web interface in the configuration area:
-
-YAML-Definition for the element digitizer in mapbender.yml:
-
-.. code-block:: yaml
-
-                sidepane:
-                    digitizer:
-                        class: Mapbender\DigitizerBundle\Element\Digitizer
-                        title: Digitalisation
-                        target: map
-                        schemes:
-                            ...
 
 
-YAML-Definition for the element digitizer in the textarea schemes
+YAML-Definition for the element Digitizer in the textarea schemes
 -----------------------------------------------------------------
 
-In the following YAML block, the example definition for three digitizer forms is included. Copy the following block into your digitizer element to test the capture of points, lines, and polygons.
+In the following YAML block, the example definition for three Digitizer forms is included. Copy the following block into your Digitizer element to test the capture of points, lines, and polygons.
 You must first create the database connection and the three demo tables. The SQL commands for creating the tables can be found below.
 The functionality of the built-in features and additional functions are explained in more detail in this example.
 
@@ -400,7 +389,7 @@ Feature basic definition
 .. code-block:: yaml
 
     poi:
-        label: point digitizing        # label of the digitizer popup
+        label: point digitizing        # label of the Digitizer popup
         maxResults: 500                # maximal results of the table
         featureType:                   # connection to the database from the parameters/config.yml
             connection: search_db
@@ -436,7 +425,7 @@ Definition of the popup
 Definition of the feature table
 -------------------------------
 
-The digitizer provides an object table. This can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
+The Digitizer provides an object table. This can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
 The width of the individual columns can optionally be specified in percent or pixels.
 
 * tableFields - define the columns for the feature table. 
@@ -452,6 +441,8 @@ The width of the individual columns can optionally be specified in percent or pi
 
 Tabs (type tabs)
 ----------------
+
+Form elements can be placed unto different Tabs. The formItem type "tabs" is used for this.
 
 .. code-block:: yaml
 
@@ -721,11 +712,9 @@ The filesystem path is:
 
 * <mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png
 
-The linked URL store in the database column is:
+The linked URL stored in the database column is:
 
 * http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png
-
-The image-element can be added to view the uploaded images.
 
 .. code-block:: yaml
 
@@ -740,8 +729,16 @@ The image-element can be added to view the uploaded images.
                                                 # Other file-formats can be still uploaded
 
 
+**Anmerkungen:** At this time, a "thumbnail" directory is created, which includes a smaller version of an image file. In future development this will be changed.
+
+A possibility to show the uploaded images is the image-element.
+
+
 Images (type image)
 -------------------
+
+.. image:: ../../../../../figures/digitizer_image.png
+     :scale: 80
 
 The image-element can be used to view an picture in the form. You can display images by specifying a URL in a database field or URL using the src parameter.
 
@@ -759,13 +756,11 @@ The image can be specified by specifying the two parameters src and name.
                       name: file_reference      # Reference to the database column. If defined, the path or URL in the field can be used and replaces "src" option
                       src: "bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to an image. If the path is relative use relative: true.
                       relative: true            # Optional. Default value is false. If true, the "src" path is determined from the "/web" directory.
-                      enlargeImage: true        # Image is enlarged to original size/ maximum resolution by clicking on the preview image. Caution: No scaling to screen size.
+                      enlargeImage: true        # Image is enlarged to original size/ maximum resolution by clicking on the preview image. It is not scaled to screen size.
 
                       # Experimental information about styling
                       imageCss:
-                        width: 50%              # Image CSS Style: Scales the preview image in the form, different from the original size in percent.
-                        height: 50%             # Specifying width and height is better for the view, otherwise parts may be truncated.
-                      css: {width: 25%}         # ImageContainer CSS Style: Scaled down when specifying with imagecss, therefore not recommended.
+                        width: 100%              # Image CSS Style: Scales the preview image in the form, different from the original size in percent.
 
 **Caution**: If only name and not name and src are specified, the wrong image appears from the previous data entry, if the column is empty.
 
@@ -833,7 +828,7 @@ After the activation you can open a context menu via the right mouse click on an
 Items of the Context Menu: 
 
 * **Zoom to:** Zoom to the map extent of the object
-* **Edit features:** Edit the features of the objekt. Opens the digitizer dialog. 
+* **Edit features:** Edit the features of the objekt. Opens the Digitizer dialog. 
 * **Remove:** Remove the selected object.
 
 If the corresponding `basic definition <#feature-basic-definition>`_ (allowEditData, allowDelete) not defined, then they are also not available in the Context Menu. In the above example the delete function is not available for the polygons.
@@ -897,8 +892,8 @@ Different events exist that can be associated to a feature to manipulate attribu
 * **onBeforeUpdate**: Event before the update of a modified information
 * **onAfterUpdate**: Event after the update of a modified information
   
-* **onBeforeSearch**: Event before the search in the SearchField of the digitizer
-* **onAfterSearch**: Event after the search in the SearchField of the digitizer
+* **onBeforeSearch**: Event before the search in the SearchField of the Digitizer
+* **onAfterSearch**: Event after the search in the SearchField of the Digitizer
  
 * **onBeforeRemove**: Event before deleting data
 * **onAfterRemove**: Event after deleting data
@@ -933,7 +928,7 @@ In this event the value of "geom2" is overwritten with the value of "geom".
 
 The above scenario can be extended to a slightly constructed example in which simultaneously different geometry types shall be saved. With the help of PostGIS lines are interpolated to points. The Digitizer can use an event to fire the according SQL statement.
 
-.. code-block:: yaml
+.. code-block:: sql
                 
                 events:
                   onBeforeInsert: |
@@ -1001,8 +996,8 @@ With the help of user roles data can be saved. You can secure the data by specif
 
 **Definition of datastores for connection**
 
-Now, the definition of datastores for the correct display of the data in the digitizer element is shown. Here the fields and records can be secured to a group or user.
-The digitizer can automatically write the username, group and moddate in specifiable fields.The saving and deleting of an attribute is only possible if the user belongs to a particular group / role.
+Now, the definition of datastores for the correct display of the data in the Digitizer element is shown. Here the fields and records can be secured to a group or user.
+The Digitizer can automatically write the username, group and moddate in specifiable fields.The saving and deleting of an attribute is only possible if the user belongs to a particular group / role.
 
 Extract from the parameters.yml:
 
@@ -1051,6 +1046,24 @@ By specifying a style the way the objects are displayed on the map can be define
       ...
 
 
+YAML-Definition for the element Digitizer in mapbender.yml
+==========================================================
+
+This code-snippet shows how to include the Digitizer into a YAML-file based application.
+
+.. code-block:: yaml
+
+                sidepane:
+                    digitizer:
+                        class: Mapbender\DigitizerBundle\Element\Digitizer
+                        title: Digitalisation
+                        target: map
+                        schemes:
+                            ...
+
+
+
+
 
 Class, Widget & Style
 =====================
@@ -1058,29 +1071,4 @@ Class, Widget & Style
 * Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
 * Widget: mapbender.element.digitizer.js
 * Style: sass\\element\\digitizer.scss
-
-
-HTTP Callbacks
-==============
-
-
-
-<action>
---------
-
-
-JavaScript API
-==============
-
-
-<function>
-----------
-
-
-JavaScript Signals
-==================
-
-<signal>
---------
-
 
