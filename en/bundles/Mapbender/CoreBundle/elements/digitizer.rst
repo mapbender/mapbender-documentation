@@ -39,8 +39,8 @@ The following option for the construction of the forms are available:
 .. image:: ../../../../../figures/digitizer_with_tabs.png
      :scale: 80
 
-Configuration
-=============
+Setup
+=====
 
 You can only use the element in the sidepane.
 
@@ -89,7 +89,6 @@ The functionality of the built-in features and additional functions are explaine
         useContextMenu: true
         toolset:
             - type: drawPoint
-            - type: modifyFeature
             - type: moveFeature
         popup:
             title: point test suite
@@ -300,9 +299,9 @@ SQL for the demo tables
 
 The following SQL commands must be executed in your database. You create three demo tables so that the individual functions can be tested using the YAML definition shown above.
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.poi (
+    create table public.poi (
         gid serial,
         name varchar,
         type varchar,
@@ -325,9 +324,9 @@ The following SQL commands must be executed in your database. You create three d
         CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.lines (
+    create table public.lines (
         gid serial,
         name varchar,
         type varchar,
@@ -352,9 +351,9 @@ The following SQL commands must be executed in your database. You create three d
         CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.polygons (
+    create table public.polygons (
         gid serial,
         name varchar,
         type varchar,
@@ -379,28 +378,125 @@ The following SQL commands must be executed in your database. You create three d
         CONSTRAINT pk_polygons_gid PRIMARY KEY (gid)
     );
 
+
+
+Usage
+=====
+
+General
+-------
+
+The Digitizer allows the editing of FeatureTypes. These are based on points, lines and polygon-geometries and their attribute-data. The attribute-data is displayed in the formular of the Digitizer. The geometry-editing is done via the map.
+
+
+Create geometries
+-----------------
+
+Every FeatureType can unlock several `Toolsets <#definition-of-the-available-toolsets-toolset-type>`_ that can be used in the button-bar of the Digitizer.
+
+
+For example in the FeatureType "poi" the toolset "drawPoint" unlocks the button to create a new point, the toolset "modifyFeature" unlocks the move-button.
+
+
+.. image:: ../../../../../figures/digitizer_buttons_poi.png
+     :scale: 80
+
+
+
+Save, Delete, Cancel
+--------------------
+
+Three buttons are available in the attribute-dialog: Save, Delete and Cancel.
+
+*Saving* changes only happens, if the "Save" button in the attribute-dialog is pressed. A move of the geometry alone doesn't save the feature directly (to avoid unnecessary stores into the database). It is mandatory to open the attribute-dialog and to click Save, yet.
+
+.. image:: ../../../../../figures/digitizer_save_delete_cancel.png
+     :scale: 80
+
+* **Save:** Saves the geometry and the attribute-data into the database.
+* **Delet:** Deletes the data.
+* **Cancel:** Doesn't save and delete the data, but keeps the geometry for further editing in the internal storage. The geometry is still present in the map and can be adjusted (for example with polygons). Attribute data is not stored.
+
+Several options exit in the `basic definitions <#feature-basic-definition>`_, to customize the behaviour.
+
+* allowEditData: Show the Save button.
+* allowDelete: Show the Delete button.
+* allowCancelButton: Show the Cancel button.
+* allowDeleteByCancelNewGeometry: Behaviour of the Cancel button.
+
+The *Delete* of a feature can be done with the dialog and from the table.
+
+
+Vertices
+--------
+
+Editing polygons allows you to edit, move and delete vertices. The "edit vertices" button expects you to select a polygon. It will then be shown with its vertices.
+
+.. image:: ../../../../../figures/digitizer_edit_vertices.png
+           :scale: 80
+
+The existing vertices are displayed opaque, possible new vertices are always in the middle of an edge, are light transparent and can be added by clicking on them.
+
+Existing vertices can be deleted with the Delete-Key of the keyboard. To do this, move your mouse-pointer over a vertex and press the Del-key. *Note:* If the deletion of a vertex doesn't work in the first place, a click with the right mouse-button on the map may help. Especially with activated context-menu some events can currently get stuck.
+
+
+
+Configuration
+=============
+
+The following chapters explain the individual components of the Digitizer that build up the base-structure and which can be used in the formular.
+
+
 Feature basic definition
 ------------------------
+
+A basic definition, here for the poi-example, may look like the following snippet:
 
 .. code-block:: yaml
 
     poi:
-        label: point digitizing        # label of the Digitizer popup
-        maxResults: 500                # maximal results of the table
-        featureType:                   # connection to the database from the parameters/config.yml
+        label: point digitizing
+        maxResults: 500
+        featureType:
             connection: search_db
             table: poi
             uniqueId: gid
             geomType: point
             geomField: geom
             srid: 4326
-        openFormAfterEdit: true        # Set to true (default): after creating a geometry the form popup is opened automatically to insert the attribute data.
+        openFormAfterEdit: true
         zoomScaleDenominator: 500
-        allowEditData: true            # Allow or disable functions to edit or remove data.
+        allowEditData: true
         allowDelete: true
-        allowDigitize: true 
+        allowDigitize: true
+        [...]
         popup:
             [...]
+
+The possible options are:
+
+* **label:** Label of the Digitizer popup
+* **maxResults:** Maximum number of results
+* **featureType:** Connection to the database
+
+  * connection: Name of the database-connection from the parameters/config.yml
+  * table: Table-name in which the FeatureTypes are stored
+  * uniqueId: Column-name with the unique identifier
+  * geomType: Geometry-type
+  * geomField: Column-name in which the geometry is stored
+  * srid: Coordinate-system in EPSG-code
+
+* **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data. [true/false] Standard is true.
+* **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
+* **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. If true, the Save button is visible.
+* **allowDigitize:** Allow to save data [true/false].
+  * **allowDelete:** Allow to delete data [true/false]. The Delete button is visible.
+* **allowDigitize:** Allow to create new features [true/false]. if false, no Digitizer buttons will occur (new Point, move, etc.).
+* **useContextMenu:** Show the context-menu of a feature. [true/false]
+* **allowCancelButton:** Show the Cancel button [true/false]. See `Save, Delete, Cancel <#save-delete-cancel>`_.
+* **allowDeleteByCancelNewGeometry:** If true: When you create a new feature, the Cancel button will behave like the Delete button: The feature is removed from the map and the table. This is not the case if you edit an existing feature. [true/false]
+* **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
+
 
 
 Definition of the popup
@@ -824,7 +920,7 @@ After the activation you can open a context menu via the right mouse click on an
 Items of the Context Menu: 
 
 * **Zoom to:** Zoom to the map extent of the object
-* **Edit features:** Edit the features of the objekt. Opens the Digitizer dialog. 
+* **Edit features:** Edit the features of the object. Opens the Digitizer dialog.
 * **Remove:** Remove the selected object.
 
 If the corresponding `basic definition <#feature-basic-definition>`_ (allowEditData, allowDelete) not defined, then they are also not available in the Context Menu. In the above example the delete function is not available for the polygons.
