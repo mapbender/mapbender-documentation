@@ -87,7 +87,7 @@ Mit den folgenden Schritten kann die Performance unter Windows gesteigert werden
 SASS Compiler
 -------------
 
-Der SASS Compiler ist Bestandteil von Mapbender 3.0.5 und seit der Version 3.0.5.4 sorgt ein Filter dafür, dass die generierten CSS Anweisungen in eine temporäre Datei abgelagert und nicht in einer Pipe ausgeliefert werden.
+Der SASS Compiler ist Bestandteil von Mapbender 3.0.5 und seit Version 3.0.6.0 sorgt ein Filter dafür, dass die generierten CSS Anweisungen in eine temporäre Datei abgelagert und nicht in einer Pipe ausgeliefert werden.
 
 
 

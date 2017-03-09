@@ -89,10 +89,7 @@ The following steps may lead to a better performance under some Windows installa
 SASS Compiler
 -------------
 
-The SASS compiler is part of Mapbender since version 3.0.5 and 
-
-
-Der SASS Compiler ist Bestandteil von Mapbender 3.0.5 und contains a filter since version 3.0.5.4 which makes sure that the generated CSS statements are stored in a temporary file instead of delivering it out in a pipe.
+The SASS compiler is part of Mapbender since version 3.0.5 and contains und contains a filter since version 3.0.6.0 which makes sure that the generated CSS statements are stored in a temporary file instead of delivering it out in a pipe.
 
 
 WinCache PHP (optional)
@@ -101,6 +98,7 @@ WinCache PHP (optional)
 The Windows Cache Extension for PHP is a PHP accelerator that is used to increase the speed of PHP applications running on Windows and Windows Server. The extension included PHP opcode cache, user data cache, session cache, file system cache and relative path cache.
 
 Further information under:
+
 - https://www.iis.net/downloads/microsoft/wincache-extension
 - https://sourceforge.net/projects/wincache/
 
