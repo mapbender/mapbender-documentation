@@ -506,7 +506,7 @@ Definition Popup
 
 .. code-block:: yaml
 
-        popup:                  # Definition des Formularfensters als PopUp-Fenster. Siehe http://api.jqueryui.com/dialog/
+        popup:                  # Definition des Formularfensters als PopUp-Fenster. Weitere experimentelle Anpassungsmöglichkeiten unter http://api.jqueryui.com/dialog/
             title: POI     # Definition des Titels vom Formularfensters
             height: 400    # Höhe des Formularfensters
             width: 500     # Breite des Formularfensters

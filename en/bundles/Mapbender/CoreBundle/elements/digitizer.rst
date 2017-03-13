@@ -504,7 +504,7 @@ Definition of the popup
 
 .. code-block:: yaml
 
-        popup:             # Define the form as a popup. See http://api.jqueryui.com/dialog/
+        popup:             # Define the form as a popup. Further experimental adaptations here: http://api.jqueryui.com/dialog/
             title: POI     # Definition of the popup title
             height: 400    # height of the popup
             width: 500     # width of the popup
@@ -821,7 +821,7 @@ The linked URL stored in the database column is:
                                                 # Other file-formats can be still uploaded
 
 
-**Anmerkungen:** At this time, a "thumbnail" directory is created, which includes a smaller version of an image file. In future development this will be changed.
+**Notes:** At this time, a "thumbnail" directory is created, which includes a smaller version of an image file. In future development this will be changed.
 
 A possibility to show the uploaded images is the image-element.
 
