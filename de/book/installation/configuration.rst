@@ -327,16 +327,3 @@ Mit diesen Einstellungen wird ein zweistufiges Logging erreicht. Auch hier haben
   * `Handlers, Formatters and Processors <https://github.com/Seldaek/monolog/blob/master/doc/02-handlers-formatters-processors.md>`_ (englisch)
   
 * `Symfony, Monolog and different log types <http://www.whitewashing.de/2012/08/26/symfony__monolog_and_different_log_types.html>`_. Blogeintrag von Benjamin Eberlei (englisch).
-
-
-Arbeiten mit größeren WMS Diensten
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Beim Laden von größeren WMS (z.B. mehr als 100 Layer) in eine Anwendung werden in der Konfiguration der `Layerset-Instance <../de/bundles/Mapbender/CoreBundle/entities/layerset.html>`_  nur Teile der Layer übernommen und die WMS Instance kann auch nicht abgespeichert werden.
-
-Mittels des PHP-Parameters `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_ kann die Zahl der Eingabe Variablen erhöht werden. Der Standardwert liegt (je nach PHP Version) bei 1000. Die Zahl der Eingabe Variablen ist bei einem WMS mit vielen Layern sehr hoch, vergleichbar mit der Anzahl der Auswahlmöglichkeiten innerhalb des WMS-Instance Dialogs. Setzen Sie in dem Fall den Parameter hoch, beispielsweise auf 2000. Die Zahl hängt direkt mit der Anzahl der Layer im WMS zusammen.
-
-.. code-block:: ini
-
-   ;; 1000 (default) oder höher
-   max_input_vars = 1000 
