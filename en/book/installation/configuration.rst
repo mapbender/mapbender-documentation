@@ -337,16 +337,3 @@ This settings lead to a two-step logging. Here we have also two handlers: ``main
   * `Handlers, Formatters and Processors <https://github.com/Seldaek/monolog/blob/master/doc/02-handlers-formatters-processors.md>`_
   
 * `Symfony, Monolog and different log types <http://www.whitewashing.de/2012/08/26/symfony__monolog_and_different_log_types.html>`_. Blog-entry by Benjamin Eberlei.
-
-
-Working with large wms clients
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-During the upload of large wms into an application (e.g. wms with more than 100 layers), the configuration of the `Layerset-Instance <../de/bundles/Mapbender/CoreBundle/entities/layerset.html>`_ only takes and presents an incorrect amount of layers and the wms instance cannot be saved.
-
-To solve the problem, navigate to the php parameter `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_. It defines the number of possible input variables. The default value is 1000 (depending on the php version). In a wms with many layers, the number of input values is higher than the default value. You have to change the parameter to a higher value (e.g. 2000). Notice that the number is directly dependent to the amount of layers in a wms.
-
-.. code-block:: ini
-
-   ;; 1000 (default) or more
-   max_input_vars = 1000 
