@@ -1,7 +1,7 @@
 .. _ruler:
 
-Line/Area Ruler (Längen und Flächen berechnen)
-**********************************************
+Ruler: Linien-/Flächenmessung  (Line/Area Ruler)
+************************************************
  
 Mit dem Lineal wird eine Linie oder eine Fläche gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst. Jedes eingebundene Ruler-Element kann nur entweder Linien oder Flächen messen. 
 
