@@ -11,6 +11,21 @@ Milestone next
 
 Relase Datum: soon
 
+**Architecture:**
+
+- Mapbender, FOM and OWSProxy excluded into Modules. They are now bind in composer.json
+- Documentation ist part of the composer.
+- PHP 7 Support
+- Adjustments of the ElementGenerator
+- Determining of user-roles
+- Composer entries with https
+- Adjustments of Controllers and Bundles.
+- Doctrine generate Kommandos are marked deprecated
+- Doctrine assets:dump Kommando is marked deprecated
+- Update of the JOII Bibliothek
+- Intriduction of symblinks to the different binaries in the bin directory of mapbender-starter
+
+
 **Bugfixes und Features:**
 
 - Measuring shows the coordinates directly, by moving the mouse the caluclated lengths of the segment are displayed live.
@@ -28,7 +43,8 @@ Relase Datum: soon
 - Fix for WMS support 1.3.0
 - Fix for secured WMS services on GetMap, GetFeatureInfo, Print, Export and Legend.
 - Fixes for the WMS parameter Exception Format for the GetMap and GetFeatureInfo Request (Github-Issue 400)
-- Fixes of Layer-Styles for GetMap und GetFeatureInfo request.
+- Fixes of Layer-Styles for GetMap und GetFeatureInfo request
+- Default Tile Size for the Map set to 512 (was 256)
 
 - Print: Color can be set for variable texts.
 - Print: Printout of the legend, if the service is built in with the proxy.
@@ -109,26 +125,14 @@ Relase Datum: soon
 - Objects with a line-width of 0 are now not shown anymore in the printout.
 - Adjustments of the Close Button.
 
-**Form Genrator:**
+**Form Generator:**
 
 - Adjustments: Add HTMLElement handling  of service and DataStore configuration.
 
-
-**Architektur:**
-
-- PHP 7 Support
-- Adjustments of the ElementGenerator
-- Determining of user-roles
-- Composer entries with https
-- Adjustments of Controllers and Bundles.
-- Doctrine generate Kommandos are marked deprecated
-- Doctrine assets:dump Kommando is marked deprecated
-- Update of the JOII Bibliothek
-- Intriduction of symblinks to the different binaries in the bin directory of mapbender-starter
-
 **Dokumentation**
-- Introduction of the `FAQ <faq.html>`_.
 
+- Introduction of the `FAQ <faq.html>`_.
+- Introduction of Contributing Guide for `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ and `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender itself and FOM will follow. This is the main documentation for developers and contributors of Mapbender.
 
 **config.yml Anpassungen**
 
@@ -153,6 +157,9 @@ DBAL-Parameter:
 Directory where YAML-based application definition are stored. As an example the well-known applications Mapbender-User, Mapbeder-User-Basic and Mapbender-Mobile are placed here.
             
 This release is dedicated to Uli, who programmed the first pixel in Mapbender `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
+
+**app/console doctrine:schema:update**
+
 
 
 
