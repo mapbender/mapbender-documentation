@@ -3,6 +3,18 @@ API-Dokumentation
 
 Die Mapbender3 API Dokumentation findet sich unter http://api.mapbender3.org/.
 
+Die API Dokumentation wird mit Mapbender mitgeliefert und kann über den folgenden Befehl erstllt werden:
+
+.. code-block:: yaml
+
+                bin/composer docs
+
+Die Dokumentation ist dann vergfügbar unter: http://localhost:8000/docs/api/ und die Mapbender-Dokumentation unter: http://localhost:8000/docs/
+
+Bitte lesen Sie den `Contributing Guide zu den Details des eingebauten Symfony-Webservers <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#start-web-server>`_.
+
+Für die Nutzung innerhalb von Apache oder Nginx müssen eventuell die Dateirechte im Web-Verzeichnis von Mapbender angepasst werden.
+
 
 
 Wie wird die Mapbender3 API Dokumentation erstellt?

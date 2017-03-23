@@ -3,6 +3,12 @@
 Understanding Elements
 ######################
 
+*Note*: This guide is under complete restructuring. We will provide a new documentation in the Contributing Guite in our Git-Repository:
+
+`https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#elements <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#elements>`_.
+
+
+
 Parts of an Elements
 ********************
 
@@ -10,6 +16,7 @@ PHP Class
 +++++++++
 
 TODO
+
 
 Twig Template
 +++++++++++++
