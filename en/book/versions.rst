@@ -122,6 +122,7 @@ Relase Datum: soon
 
 - Digitizer: Printing of Multipolygons
 - Objects don't appear in the printout if they are not displayed in the Digitizer.
+- MinScale restriction added
 - Objects with a line-width of 0 are now not shown anymore in the printout.
 - Adjustments of the Close Button.
 

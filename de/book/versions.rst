@@ -121,6 +121,7 @@ Relase Datum: soon
 
 - Digitizer: Druck von Multipolygonen
 - Objekte erscheinen nicht mehr im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
+- MinScale Einschränkung hinzugefügt
 - Objekte mit einer Linienbreite von 0 werden im Druck nicht mehr sichtbar.
 - Close Schaltfläche Anpassung
 
