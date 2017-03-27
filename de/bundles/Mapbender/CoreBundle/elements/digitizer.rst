@@ -459,6 +459,7 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
     poi:
         label: point digitizing
         maxResults: 500
+        minScale: 5000
         featureType:
             connection: search_db
             table: poi
@@ -479,6 +480,7 @@ Die möglichen Optionen sind:
 
 * **label:** Beschriftung mit dem Namen der Erfassungsoberfläche
 * **maxResults:** maximale Trefferanzahl
+* **minScale:** Minimaler Maßstab, ab dem die Features in der Karte angezeigt werden (z.B. minscale: 5000 = Anzeige ab einem Maßstab über 1:5000, beim rauszoomen)
 * **featureType:** Verbindung zur Datenbank
 
   * connection: Name der Datenbank-Verbindung aus der parameters/config.yml

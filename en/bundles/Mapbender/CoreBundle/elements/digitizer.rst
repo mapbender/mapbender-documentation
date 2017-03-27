@@ -457,6 +457,7 @@ A basic definition, here for the poi-example, may look like the following snippe
     poi:
         label: point digitizing
         maxResults: 500
+        minScale: 5000
         featureType:
             connection: search_db
             table: poi
@@ -476,6 +477,7 @@ A basic definition, here for the poi-example, may look like the following snippe
 The possible options are:
 
 * **label:** Label of the Digitizer popup
+* **minScale:** Minimum scale, where the features should be displayed in the map (e.g. minscale: 5000 = show from a scale 'over' 1:5000, when zooming out).
 * **maxResults:** Maximum number of results
 * **featureType:** Connection to the database
 
