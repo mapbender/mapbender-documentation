@@ -80,6 +80,7 @@ Relase Datum: soon
 
 - Show users on the key icon of an elements who have an access on this element
 - Rework of the Secure Elements dialog.
+- User with the role View for services are allowed to view the Metadata and to load the services into an application.
 
 
 **miscellaneous**
@@ -117,7 +118,6 @@ Relase Datum: soon
 - Improvements for the creation of new elements.
 
 
-
 **Mobile template**
 
 - General improvements of the mobile template.
@@ -125,6 +125,7 @@ Relase Datum: soon
 - Set mobile icon label font weight to normal
 - Fix and improve mobile template button handling
 - Fix register mobile application event handler "on moveend"
+
 
 **Digitizer**
 
@@ -134,14 +135,18 @@ Relase Datum: soon
 - Objects with a line-width of 0 are now not shown anymore in the printout.
 - Adjustments of the Close Button.
 
+
 **Form Generator:**
 
 - Adjustments: Add HTMLElement handling  of service and DataStore configuration.
+
 
 **Dokumentation**
 
 - Introduction of the `FAQ <faq.html>`_.
 - Introduction of Contributing Guide for `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ and `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender itself and FOM will follow. This is the main documentation for developers and contributors of Mapbender.
+- Better Layertree documentation
+
 
 **config.yml Anpassungen**
 
@@ -166,6 +171,7 @@ DBAL-Parameter:
 Directory where YAML-based application definition are stored. As an example the well-known applications Mapbender-User, Mapbeder-User-Basic and Mapbender-Mobile are placed here.
             
 This release is dedicated to Uli, who programmed the first pixel in Mapbender `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
+
 
 **app/console doctrine:schema:update**
 

@@ -80,6 +80,7 @@ Relase Datum: soon
 
 - Anzeige von Benutzern, die Zugriff auf ein Element in der Anwendung haben
 - Überarbeitung des Secure Elements Dialogs
+- Benutzer mit der Rolle View bei Diensten dürfen Metadaten sehen und Dienste in eine Anwendung einladen.
 
 
 **verschiedenes**
@@ -143,6 +144,7 @@ Relase Datum: soon
 
 - `FAQ <faq.html>`_ der Dokumentation hinzugefügt.
 - Einführung der Contributing Guide für `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ und `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender selbst und FOM werden folgen. Dies sind die Einstiegsdokumentationen für Entwickler und Mitwirkenden von Mapbender.
+- Ausführlichere Layertree Dokumentation
 
 **config.yml Anpassungen**
 
