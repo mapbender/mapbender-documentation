@@ -3,6 +3,9 @@
 Installation on Ubuntu and Debian
 #################################
 
+Preparation
+-----------
+
 The following Installation manual describes the neccessary steps on a recent Ubuntu or Debian system. We assume that Apache 2.4 is running on the system. Notes on `PHP 7 <installation_ubuntu.html#php-7>`_  and `Apache 2.2  <installation_ubuntu.html#instructions-for-apache-2-2>`_ are added below. This example uses PostgreSQL as database system.
 
 Please take note of the `system requirements <systemrequirements.html>`_, where you can also find the Download links to Mapbender3.
@@ -56,6 +59,67 @@ Reload your Apache server.
 .. code-block:: bash
 
  service apache2 reload
+
+Configuration of Mapbender3 
+---------------------------
+
+Set the write permission for user (u), group (g) and others (a) and rights. Assign the files to the Apache user (www-data).
+
+.. code-block:: bash
+
+ sudo chmod -R ugo+r /var/www/mapbender3
+ sudo chown -R www-data:www-data /var/www/mapbender3
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
+
+
+Adapt the Mapbender3 configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create. Further information is available in the chapter `Configuring the database <../database.html>`_.
+
+.. code-block:: yaml
+
+    database_driver:   pdo_pgsql
+    database_host:     localhost
+    database_port:     5432
+    database_name:     mapbender3
+    database_path:     ~
+    database_user:     postgres
+    database_password: secret
+ 
+Run the app/console commands. You find detailed information for this commands in the chapter `Details of the configuration of Mapbender3 <configuration.html>`_.
+
+.. code-block:: bash
+
+ cd /var/www/mapbender3
+ app/console doctrine:database:create
+ app/console doctrine:schema:create
+ app/console assets:install web
+ app/console fom:user:resetroot
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
+Installation of Mapbender3 is done. 
+
+Check the config.php again:
+
+* http://localhost/mapbender3/config.php
+
+You have to set write permission to app/cache, app/logs and web/uploads.
+
+.. code-block:: bash
+
+ sudo chmod -R ug+w /var/www/mapbender3/app/cache
+ sudo chmod -R ug+w /var/www/mapbender3/app/logs
+ sudo chmod -R ug+w /var/www/mapbender3/web/uploads
+
+
+You can start using Mapbender3 now.
+
+* http://localhost/mapbender3/
+
+Click on the Login-link at top-right to get to the login page. Log in with the new user you created. 
+
+You can open the developer mode when you run app_dev.php: http://localhost/mapbender3/app_dev.php
+
+To learn more about Mapbender3 have a look at the `Mapbender3 Quickstart <../quickstart.html>`_.
 
 
 PHP 7
@@ -121,65 +185,3 @@ Open Symfony´s Welcome Script config.php. This script checks whether all necess
 
 .. image:: ../../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
-
-
-Configuration of Mapbender3 
----------------------------
-
-Set the write permission for user (u), group (g) and others (a) and rights. Assign the files to the Apache user (www-data).
-
-.. code-block:: bash
-
- sudo chmod -R ugo+r /var/www/mapbender3
- sudo chown -R www-data:www-data /var/www/mapbender3
- sudo chmod -R ug+w /var/www/mapbender3/web/uploads
-
-
-Adapt the Mapbender3 configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create. Further information is available in the chapter `Configuring the database <../database.html>`_.
-
-.. code-block:: yaml
-
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender3
-    database_path:     ~
-    database_user:     postgres
-    database_password: secret
- 
-Run the app/console commands. You find detailed information for this commands in the chapter `Details of the configuration of Mapbender3 <configuration.html>`_.
-
-.. code-block:: bash
-
- cd /var/www/mapbender3
- app/console doctrine:database:create
- app/console doctrine:schema:create
- app/console assets:install web
- app/console fom:user:resetroot
- app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
- app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-
-Installation of Mapbender3 is done. 
-
-Check the config.php again:
-
-* http://localhost/mapbender3/config.php
-
-You have to set write permission to app/cache, app/logs and web/uploads.
-
-.. code-block:: bash
-
- sudo chmod -R ug+w /var/www/mapbender3/app/cache
- sudo chmod -R ug+w /var/www/mapbender3/app/logs
- sudo chmod -R ug+w /var/www/mapbender3/web/uploads
-
-
-You can start using Mapbender3 now.
-
-* http://localhost/mapbender3/
-
-Click on the Login-link at top-right to get to the login page. Log in with the new user you created. 
-
-You can open the developer mode when you run app_dev.php: http://localhost/mapbender3/app_dev.php
-
-To learn more about Mapbender3 have a look at the `Mapbender3 Quickstart <../quickstart.html>`_.
