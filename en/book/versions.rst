@@ -14,24 +14,25 @@ Relase Datum: soon
 **Architecture:**
 
 - Mapbender, FOM and OWSProxy excluded into Modules. They are now bind in composer.json
-- Documentation ist part of the composer.
+- Documentation is part of the composer.
 - PHP 7 Support
 - Adjustments of the ElementGenerator
 - Determining of user-roles
 - Composer entries with https
 - Adjustments of Controllers and Bundles.
-- Doctrine generate Kommandos are marked deprecated
-- Doctrine assets:dump Kommando is marked deprecated
-- Update of the JOII Bibliothek
-- Intriduction of symblinks to the different binaries in the bin directory of mapbender-starter
+- Doctrine generate commands are marked deprecated
+- Doctrine assets:dump command is marked deprecated
+- Update of the JOII library
+- introduction of symblinks to the different binaries in the bin directory of mapbender-starter
+- composer shipped in application/bin directory
 
 
 **Bugfixes und Features:**
 
-- Measuring shows the coordinates directly, by moving the mouse the caluclated lengths of the segment are displayed live.
+- Measuring shows the coordinates directly, by moving the mouse the calculated lengths of the segment are displayed live.
 - New measuring results are shown on Top. The current result is visible at first place and you don't need to scroll.
-- The login-dialog (resgistragion, forgotten password) is optimized for mobile devices to achive a better workflow to secured mobile applications.
-- New added layerset instances are now per default not marked as basesource. 
+- The login-dialog (registration, forgotten password) is optimized for mobile devices to achieve a better workflow to secured mobile applications.
+- New added layerset instances are now per default not marked as base-source. 
 
 - Deleting a layerset led in some cases to a corrupt map element and a wrong layertree.
 
@@ -48,9 +49,14 @@ Relase Datum: soon
 
 - Print: Color can be set for variable texts.
 - Print: Printout of the legend, if the service is built in with the proxy.
+- Print: Services registered with PNG8 could not be printed or exported in some cases. The types image/png8 and image/png mode=24bit is not supported.
+- Print: In some cases, the legend wasn't printed if OWSProxy was activated
+
+- BaseSourceSwitcher: Duplicate request on WMS which was not visible and where the BaseSourceSwitcher was used as a menu.
+- Unneccessary requests on specifc WMS configurations with scale.
 
 - Saving of YML applications in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml and adjustments in their referenced WMS Version
-- Fixes in administration interface of the YAML edititing after Saving (Github-Issue 350)
+- Fixes in administration interface of the YAML editing after saving (Github-Issue 350)
 
 - Fixes in POI-Coordinate: Transformation and SRS and the trailing digits after the comma.
 - Fix of a XSS error in POI dialog
@@ -58,6 +64,8 @@ Relase Datum: soon
 
 - GPS: Error messages if no GPS signal and the dependency to Chrome-browser and https.
 - GPS: Pan the map only on first position.
+
+- User-Interface: Scrolling of a drop-down list in backend, for example the icons for the buttons, did also scroll the background.
 
 - Internet Explorer Compatibility: Adjustments in the Zoombar.
 - Internet Explorer Compatibility: Adjustments in the OverviewMap

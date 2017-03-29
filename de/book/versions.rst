@@ -24,6 +24,8 @@ Relase Datum: soon
 - Doctrine assets:dump Kommando als deprecated markiert
 - Aktualisierung JOII Bibliothek
 - Ablage von Symlinks zu verschiedenen Binaries im bin Verzeichnis
+- Composer abgelegt im application/bin Verzeichnis
+
 
 **Bugfixes und Features:**
 
@@ -47,6 +49,11 @@ Relase Datum: soon
 
 - Druck: Farbe kann bei variablen Texten eingefügt werden.
 - Druck: Druck der Legende, wenn der Dienst über einen Proxy eingebaut wird.
+- Druck: Dienste, die mit PNG8 registriert wurden, konnten in einigen Fällen nicht exportiert oder gedruckt werden. Die Typen image/png8 und image/png mode=24bit werden nun unterstützt.
+- Druck: In einigen Fällen wurde die Legende nicht ausgegeben, wenn OWSProxy aktiviert war
+
+- BaseSourceSwitcher: Mehrere Requests an einen WMS der auf nicht sichtbar gesetzt war, wenn der BaseSourceSwitcher als Menü angezeigt wurde.
+- Überflüssige WMS Anfragen an bestimmte WMS, abhängig vom Maßstab.
 
 - Ablage von YML-Anwendungen in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml und Anpassungen in der WMS Version
 - Administrationsoberfläche YAML Editierung und Umformatierungen nach dem Speichern (Github-Issue 350)
@@ -57,6 +64,8 @@ Relase Datum: soon
 
 - GPS: Fehlermeldungen, wenn kein Signal und Abhängigkeit von Chrome-Browsern und https.
 - GPS: Verschieben der Karte nur bei erster Positionsbestimmung.
+
+- User-Interface: Scrollen der Dropdownliste im Backend, z.B. bei den Icons für Buttons, scrollte auch den Hintergrund.
 
 - Internet Explorer Kompatibilität: Anpassungen Zoombar.
 - Internet Explorer Kompatibilität: Anpassungen OverviewMap
@@ -116,6 +125,7 @@ Relase Datum: soon
 - Fix für das Icon Label und der Schriftdicke normal
 - Verbesserungen des Button Handlings allgemein
 - Fix des event handlers ""on moveend"
+
 
 **Digitizer**
 
