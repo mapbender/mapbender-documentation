@@ -124,6 +124,8 @@ Relase Datum: soon
 - Improvements of Export and Copy mechanism.
 - Improvements for the creation of new elements.
 
+- Restructuring of DataManager and DataSource since `version 1.0.2 of data-manager <https://github.com/mapbender/data-manager/releases/tag/1.0.2>`_.
+
 
 **Mobile template**
 
