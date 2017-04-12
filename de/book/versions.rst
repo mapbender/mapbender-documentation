@@ -72,6 +72,8 @@ Relase Datum: soon
 
 - "Only valid" Checkbox beim `Einladen eines WMS <../bundles/Mapbender/CoreBundle/entities/source.html>`_ ist nun standardmäßig nicht mehr aktiviert.
 
+- Der `SearchRouter <../bundles/Mapbender/CoreBundle/entities/search_router.html>`_ zeigt, wenn er in der Sidepane eingebettet ist, die Schaltflächen Suche und Reset.
+
 - Internet Explorer Kompatibilität: Anpassungen Zoombar.
 - Internet Explorer Kompatibilität: Anpassungen OverviewMap
 - MS Egde Kompatibilität: Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
