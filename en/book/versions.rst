@@ -26,6 +26,8 @@ Relase Datum: soon
 - Introduction of symblinks to the different binaries in the bin directory of mapbender-starter
 - Composer shipped in application/bin directory
 - Check in the Composer-installation, if the SASS Compiler Binaries are executable. If not, they are set executable.
+- New Composer commands for documentation: Generate API documentation only: bin/composer gen-api-docs
+- New Composer commands for documentation: Generate User-documentation only: bin/composer gen-user-docs
 
 
 **Bugfixes und Features:**

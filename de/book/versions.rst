@@ -26,6 +26,8 @@ Relase Datum: soon
 - Ablage von Symlinks zu verschiedenen Binaries im bin Verzeichnis
 - Composer abgelegt im application/bin Verzeichnis
 - Check in der Composer-Installation, ob die SASS Compiler Binaries ausführbar sind. Falls nicht, werden sie ausführbar gesetzt.
+- Neue Composer-Kommandos zum Generieren der Dokumentation: Nur API Dokumentation generieren: bin/composer gen-api-docs
+- Neue Composer-Kommandos zum Generieren der Dokumentation: Nur Benutzerdokumentation generieren: bin/composer gen-user-docs
 
 **Bugfixes und Features:**
 
