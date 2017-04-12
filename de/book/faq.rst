@@ -95,3 +95,13 @@ Analog dazu können Sie die PHP-Werte in der php.ini überprüfen:
    max_execution_time = 240
    memory_limit = 1024M
    upload_max_filesize = 2M
+
+
+Entwicklung und manuelle Updates von Modulen
+--------------------------------------------
+
+F: Wie kann ich einen speziellen Branch des Mapbender Moduls auschecken und testen? Wie bekomme ich das wieder rückgängig? Hilft mir Composer dabei?
+
+A: Möglichkeit 1: In das Verzeichnis application/mapbender gehen und den speziellen Branch auschecken. Danach wieder den aktuellen Branch auschecken. Leeren Sie das Cache Verzeichnis zwischendurch (app/cache für Symfony 2, var/cache für das kommende Symfony 3))
+
+Möglichkeit 2: Im Composer: "mapbender/mapbender": "dev-fix/meinfix" eintragen und ein Composer Update ausführen. Dabei werden aber auch alle anderen Vendor-Pakete aktualisiert (für Developer ist das OK). Rückgängig wieder mit der Angabe des vorherigen Branches. Dazu nochmal in appliaction/mapbender gehen und den Branch mit der Hand auschecken.

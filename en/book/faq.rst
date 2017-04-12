@@ -86,10 +86,20 @@ A: A possible reason for this is that php does not allow a workflow with big fil
    MaxRequestLen 2000000
 
 
-Simutaneously, you should check the php values in php.ini:
+Simultaneously, you should check the php values in php.ini:
 
 .. code-block:: ini
 
    max_execution_time = 240
    memory_limit = 1024M
    upload_max_filesize = 2M
+
+
+Development and manual updates of modules
+-----------------------------------------
+
+Q: How can I checkout a specific branch of the Mapbender module and test it? How can I revert this again? Does Composer help me with that?
+
+A: Alternative 1: Go in the directory application/mapbender and checkout the specific branch. After your tests, checkout the original branch again. Do not forget to clear the cache directory (app/cache for Symfony 2, var/cache for the upcoming Symfony 3).
+
+Alternative 2: Change the entry in composer: "mapbender/mapbender": "dev-fix/meinfix" and do a Composer Update. Keep in mind that with that step all other vendor packages will be updated (that's OK for developers). To go back, specify the original branch. In addition go back to application/mapbender and checkout the original branch by hand.
