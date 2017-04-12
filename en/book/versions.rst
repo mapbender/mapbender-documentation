@@ -129,6 +129,8 @@ Relase Datum: soon
 - Improvements of Export and Copy mechanism.
 - Improvements for the creation of new elements.
 
+- Remove the provide ext-ldap statement in Composer. The components are released from the core. We will build in the LDAP module in version 3.0.7.
+
 - Restructuring of DataManager and DataSource since `version 1.0.2 of data-manager <https://github.com/mapbender/data-manager/releases/tag/1.0.2>`_.
 
 

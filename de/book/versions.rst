@@ -29,6 +29,7 @@ Relase Datum: soon
 - Neue Composer-Kommandos zum Generieren der Dokumentation: Nur API Dokumentation generieren: bin/composer gen-api-docs
 - Neue Composer-Kommandos zum Generieren der Dokumentation: Nur Benutzerdokumentation generieren: bin/composer gen-user-docs
 
+
 **Bugfixes und Features:**
 
 - Das Messen zeigt die Koordinaten live an, d.h. beim Bewegen der Maus werden schon jeweils die erreichten Segment- und Gesamtlängen angezeigt.
@@ -127,6 +128,8 @@ Relase Datum: soon
 - Verbesserung Caching Mechanismen
 - Verbesserungen Export / Kopieren
 - Vereinfachung bei der Erstellung neuer Elemente
+
+- Entfernen des provide ext-ldap Statements in Composer. Die Komponenten wurden ausgelagert. Wir werden die LDAP Module in Version 3.0.7 einbauen.
 
 - Restrukturierung von DataManager und DataSource seit der `Version 1.0.2 des data-manager <https://github.com/mapbender/data-manager/releases/tag/1.0.2>`_.
 
