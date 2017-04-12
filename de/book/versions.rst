@@ -74,8 +74,8 @@ Relase Datum: soon
 
 - Der `SearchRouter <../bundles/Mapbender/CoreBundle/entities/search_router.html>`_ zeigt, wenn er in der Sidepane eingebettet ist, die Schaltflächen Suche und Reset.
 
-- Internet Explorer Kompatibilität: Anpassungen Zoombar.
-- Internet Explorer Kompatibilität: Anpassungen OverviewMap
+- Internet Explorer Kompatibilität: Anpassungen `Zoombar <../bundles/Mapbender/CoreBundle/elements/zoom_bar.html>`_.
+- Internet Explorer Kompatibilität: Anpassungen `OverviewMap <../bundles/Mapbender/CoreBundle/elements/overview.html>`_.
 - MS Egde Kompatibilität: Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
 
 - Verbesserung der Performance bei *einigen* Installation unter Windows durch WinCachePHP und PHP Opcache (für Details siehe `Installation unter Windows <installation/installation_windows.html>`_)
@@ -85,7 +85,7 @@ Relase Datum: soon
   
 **FOM und Absicherung:**
 
-- Anzeige von Benutzern, die Zugriff auf ein Element in der Anwendung haben
+- `Anzeige von Benutzern <../bundles/FOM/UserBundle/users.html>`_, die Zugriff auf ein Element in der Anwendung haben.
 - Überarbeitung des Secure Elements Dialogs
 - Benutzer mit der Rolle View bei Diensten dürfen Metadaten sehen und Dienste in eine Anwendung einladen.
 
@@ -138,7 +138,7 @@ Relase Datum: soon
 
 **Digitizer**
 
-- Digitizer: Druck von Multipolygonen
+- `Digitizer <../bundles/Mapbender/CoreBundle/elements/digitizer.html>`_: Druck von Multipolygonen
 - Objekte erscheinen nicht mehr im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
 - MinScale Einschränkung hinzugefügt
 - Objekte mit einer Linienbreite von 0 werden im Druck nicht mehr sichtbar.
@@ -153,7 +153,7 @@ Relase Datum: soon
 - `FAQ <faq.html>`_ der Dokumentation hinzugefügt.
 - Einführung der Contributing Guide für `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ und `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender selbst und FOM werden folgen. Dies sind die Einstiegsdokumentationen für Entwickler und Mitwirkenden von Mapbender.
 - Die Developer Dokumentation wird dort aktualisiert und aus dieser Benutzerdokumentation schrittweise überführt. Somit wird in der Zukunft diese Dokumentation hier sich mehr an die Anwender richten, während die Entwickler ihre Dokumentation direkt im Source-Code der einzelnen Module finden.
-- Ausführlichere Layertree Dokumentation
+- Ausführlichere `Layertree <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_ Dokumentation
 
 **config.yml Anpassungen**
 
