@@ -123,3 +123,19 @@ F: Ich bekomme einen Fehler beim Drucken. Ich habe in das Log geschaut (app/logs
                 at /srv/mapbender-starter/application/mapbender/src/Mapbender/PrintBundle/Component/PrintService.php line 310
 
 A: Bitte stellen Sie sicher, dass Sie die php5-gd Bibliothek installiert haben.
+
+
+Deprecation Notices bei composer oder bootstrap Script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: Ich bekomme beim Ausführen von bootstrap bzw. von composer Update eine Deprecation Warnung:
+
+.. code-block:: php
+                
+                Deprecation Notice: The callback ComposerBootstrap::checkConfiguration declared at
+                /srv//mapbender-starter/application/src/ComposerBootstrap.php accepts a Composer\Script\CommandEvent
+                but post-update-cmd events use a Composer\Script\Event instance.
+                Please adjust your type hint accordingly, see https://getcomposer.org/doc/articles/scripts.md#event-classes
+                in phar:///srv/mapbender-starter/composer.phar/src/Composer/EventDispatcher/EventDispatcher.php:290
+
+A: Das ist abhängig von der PHP Version, auf der Sie diese Kommandos aufrufen und taucht bei PHP Versionen < 7 auf.
