@@ -154,6 +154,7 @@ Relase Datum: soon
 
 - Introduction of the `FAQ <faq.html>`_.
 - Introduction of Contributing Guide for `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ and `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender itself and FOM will follow. This is the main documentation for developers and contributors of Mapbender.
+- The developer documentation will be maintained there and be transferred step-by-step from this user-documentation. So in the future this documentation here will be more for users and the developers have their documentation directly in the source code of the different modules.
 - Better Layertree documentation
 
 
