@@ -149,7 +149,7 @@ How to build a new Mapbender3 build
 .. code-block:: bash
 
  # clone the source-code from the release branch
- git clone -b release/3.0.5 git@github.com:mapbender/mapbender-starter mapbender-build
+ git clone -b release/3.0.6 git@github.com:mapbender/mapbender-starter mapbender-build
 
  # change to the directory
  cd mapbender-build
@@ -158,28 +158,27 @@ How to build a new Mapbender3 build
 
  # tagging
  cd application/mapbender
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.x.x -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender/blob/release/3.0.6/CHANGELOG.md"
  git push --tags
  
  # tag submodules
  cd ../../application/fom
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.x.x -m "Mapbender release Version 3.0.x.x read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CHANGELOG.md"
  git push --tags
  
  # tag owsproxy3
  cd ../../application/owsproxy3
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.x.x -m "Mapbender release Version 3.0.x.x read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CHANGELOG.md"
  git push --tags
  
  # tag mapbender-starter
  cd ../../
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.x.x -m "Mapbender release Version 3.0.x.x read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CHANGELOG.md"
  git tag
  git push --tags (will be shown at https://github.com/mapbender/mapbender-starter/releases)
 
  # run composer.phar update
  cd application
- ./composer.phar update
 
  # use phing to create the tarball
  cd ..
@@ -189,12 +188,12 @@ How to build a new Mapbender3 build
  cd artefacts/
 
  # untar the archive to change some files
- tar -xvf mapbender3-3.0.5build1.tar.gz 
+ tar -xvf mapbender3-3.0.6build1.tar.gz 
 
  # that step should not be neccessary: sudo chmod -R 777 mapbender3-3.0.5build1
 
  # change the name of the directory
- mv mapbender3-3.0.5build1 mapbender3-3.0.5.3
+ mv mapbender3-3.0.6build1 mapbender3-3.0.6.0
 
  # remove some files in that directory
  rm -R mapbender3-3.0.5.3/app/config/parameters.yml
@@ -202,7 +201,7 @@ How to build a new Mapbender3 build
 
  # tag the documentation
  cd /data/git/mapbender-documentation/
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
+ git tag -a v3.0.x.x -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CHANGELOG.md"
  
  # copy the actual documentation output
  cp -R /data/git/mapbender-documentation/output/*  mapbender3-3.0.5.3/documentation/
