@@ -25,7 +25,7 @@ Relase Datum: soon
 - Aktualisierung JOII Bibliothek
 - Ablage von Symlinks zu verschiedenen Binaries im bin Verzeichnis
 - Composer abgelegt im application/bin Verzeichnis
-
+- Check in der Composer-Installation, ob die SASS Compiler Binaries ausführbar sind. Falls nicht, werden sie ausführbar gesetzt.
 
 **Bugfixes und Features:**
 
@@ -96,6 +96,8 @@ Relase Datum: soon
 - Verschieben von Popups innerhalb einer Anwendung
 - Anpassungen WMC Edit Dialoggröße und XSS
 
+- YAML basierende Anwendungen können die Sidebar anpassen: align (left/right), closed (true/false), width (px/em/%)
+
 - Backend: Target-Feld: Leere Auswahl bei Drop-Down Feldern.
 - Anpassungen WMS Scale, ScaleHint und Min/Max Werte beim Öffnen einer Layerset-Instance
 - Anzeige des WMS-Titels in den Metadaten des TOC bei aktualisiertem WMS
@@ -142,7 +144,7 @@ Relase Datum: soon
 - Objekte erscheinen nicht mehr im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
 - MinScale Einschränkung hinzugefügt
 - Objekte mit einer Linienbreite von 0 werden im Druck nicht mehr sichtbar.
-- Close Schaltfläche Anpassung
+- Anpassungen der Close Schaltfläche: "allowCancelButton" und "allowDeleteByCancelNewGeometry".
 
 **Form Generator:**
 

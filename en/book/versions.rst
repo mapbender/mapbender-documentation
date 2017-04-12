@@ -23,8 +23,9 @@ Relase Datum: soon
 - Doctrine generate commands are marked deprecated
 - Doctrine assets:dump command is marked deprecated
 - Update of the JOII library
-- introduction of symblinks to the different binaries in the bin directory of mapbender-starter
-- composer shipped in application/bin directory
+- Introduction of symblinks to the different binaries in the bin directory of mapbender-starter
+- Composer shipped in application/bin directory
+- Check in the Composer-installation, if the SASS Compiler Binaries are executable. If not, they are set executable.
 
 
 **Bugfixes und Features:**
@@ -96,6 +97,8 @@ Relase Datum: soon
 - Drag of Popups in an application.
 - WMS Editor: Adjustments in size. XSS fix.
 
+- YAML based applications can adjust the sidebar: align (left/right), closed (true/false), width (px/em/%)
+
 - Backend: Target field: Empty option of a Drop-Down field.
 - Adjustments of WMS Scale, ScaleHint and Min/Max values when a Layerset-Instance is opened.
 - Display of WMS Title in the metadata of the TOC, when the WMS was updated.
@@ -142,7 +145,7 @@ Relase Datum: soon
 - Objects don't appear in the printout if they are not displayed in the Digitizer.
 - MinScale restriction added
 - Objects with a line-width of 0 are now not shown anymore in the printout.
-- Adjustments of the Close Button.
+- Adjustments of the Close Button: "allowCancelButton" and "allowDeleteByCancelNewGeometry".
 
 
 **Form Generator:**
