@@ -32,7 +32,9 @@ Relase Datum: soon
 - Measuring shows the coordinates directly, by moving the mouse the calculated lengths of the segment are displayed live.
 - New measuring results are shown on Top. The current result is visible at first place and you don't need to scroll.
 - The login-dialog (registration, forgotten password) is optimized for mobile devices to achieve a better workflow to secured mobile applications.
-- New added layerset instances are now per default not marked as base-source. 
+- New added layerset instances are now per default not marked as base-source.
+
+- The `Copyright element popup <../bundles/Mapbender/CoreBundle/elements/copyright.html>`_ can be defined with a height and a width.
 
 - Deleting a layerset led in some cases to a corrupt map element and a wrong layertree.
 
@@ -169,8 +171,6 @@ DBAL-Parameter:
 **mapbender-starter/application/app/config/applications/**
 
 Directory where YAML-based application definition are stored. As an example the well-known applications Mapbender-User, Mapbeder-User-Basic and Mapbender-Mobile are placed here.
-            
-This release is dedicated to Uli, who programmed the first pixel in Mapbender `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
 
 
 **app/console doctrine:schema:update**

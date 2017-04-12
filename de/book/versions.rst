@@ -33,7 +33,9 @@ Relase Datum: soon
 - Die Messergebnisse werden nun von oben hinzugefügt. Damit steht das aktuelle Messergebnis sichtbar an oberster Stelle und muss nicht gescrollt werden.
 - Der Login Dialog (Registrierung, Password vergessen) wurde für mobile Geräte optimiert, um den Zugriff auf gesicherte mobile Anwendungen zu erleichtern.
 - Neu hinzugefügte Layerset Instances sind nun nicht mehr per Default als Basesource markiert.
-  
+
+- Das `Copyright Element Popup <../bundles/Mapbender/CoreBundle/elements/copyright.html>`_ kann mit einer Höhe und Breite definiert werden.
+
 - Das Löschen von Layersets führte in einigen Fällen zu einem korrupten Map-Element und falschem Layertree
 
 - Anpassungen und Vereinfachung der Styles des FullScreenTemplate
@@ -167,9 +169,6 @@ DBAL-Parameter:
 **mapbender-starter/application/app/config/applications/**
 
 Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Beispiel sind die drei bekannten Anwendungen Mapbender-User, Mapbeder-User-Basic und Mapbender-Mobile abgelegt.
-            
-Dieses Release ist Uli gewidmet, der den ersten Pixel in Mapbender programmiert hat `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
-
 
 **app/console doctrine:schema:update**
 
