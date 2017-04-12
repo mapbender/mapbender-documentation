@@ -48,6 +48,7 @@ Relase Datum: soon
 - Fix des WMS Parameters Exception Format bei GetMap und GetFeatureInfo Request (Github-Issue 400)
 - Fixes bei den Layer-Styles im GetMap und GetFeatureInfo Request
 - Default Tile Size bei der Kartenkomponente auf 512 gesetzt (war 256)
+- WMS Keyword Begrenzung (war: 255 Zeichen) ist geändert. Der Spaltentyp wurde auf "text" geändert. Das Kommando app/console doctrine:schema:update ist notwendig, um die MB3-Datenbank einer Vorversion zu aktualisieren,
 
 - Druck: Farbe kann bei variablen Texten eingefügt werden.
 - Druck: Druck der Legende, wenn der Dienst über einen Proxy eingebaut wird.

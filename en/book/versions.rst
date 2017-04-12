@@ -48,6 +48,7 @@ Relase Datum: soon
 - Fixes for the WMS parameter Exception Format for the GetMap and GetFeatureInfo Request (Github-Issue 400)
 - Fixes of Layer-Styles for GetMap und GetFeatureInfo request
 - Default Tile Size for the Map set to 512 (was 256)
+- WMS Keyword limit (was: 255 characters) is changed. The column-type is now "text". The command app/console doctrine:schema:update is necessary to update the Mapbender database of a previous version.
 
 - Print: Color can be set for variable texts.
 - Print: Printout of the legend, if the service is built in with the proxy.
