@@ -69,6 +69,8 @@ Relase Datum: soon
 
 - User-Interface: Scrolling of a drop-down list in backend, for example the icons for the buttons, did also scroll the background.
 
+- "Only valid" Checkbox on `loading a  WMS <../bundles/Mapbender/CoreBundle/entities/source.html>`_ is now per default not activated anymore.
+
 - Internet Explorer Compatibility: Adjustments in the Zoombar.
 - Internet Explorer Compatibility: Adjustments in the OverviewMap
 - MS Egde Compatibility: Trying to fix the Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
