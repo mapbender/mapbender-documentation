@@ -8,11 +8,10 @@ Systemvoraussetzungen
 
 Mapbender3 benötigt die folgenden Komponenten:
 
-* PHP 5.4 oder neuer (php5) 
+* PHP 5.5.4 oder neuer (php5) 
 * PHP CLI Interpreter (php5-cli) 
 * PHP SQLite Erweiterung (php5-sqlite) 
 * PHP cURL Erweiterung (php5-curl) 
-* PHP Alternative PHP Cache (php-apc)
 * PHP Internationalisierungserweiterung (php5-intl)
 * PHP GD für den Druck (php5-gd)
 * PHP FileInfo für den Druck zur Prüfung der Bilder
@@ -31,8 +30,6 @@ Mapbender3 unterstützt auch PHP 7. Sie benötigen die oben beschriebenen PHP-Bi
 * PHP XML (php-xml)
 * PHP Multibyte String (php-mbstring)
 * PHP Cache: php-apcu statt php-apc
-
-Die aktuelle Version von Mapbender3 (3.0.5.3) unterstützt PHP7 noch nicht vollständig. Falls Sie hier Probleme haben, können Sie entweder auf PHP5.6 downgraden, oder eine "Nightly" Version von Mapbender3 installieren.
 
 Datenbanken
 -----------
