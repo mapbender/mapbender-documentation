@@ -143,9 +143,38 @@ The print script will read the information (position, size, font size, alignment
 
 Dependent of the group you can generate prints with different Logo and Text (f.e. the name of the commune and the individual logo). There are two objects which handle this - dynamic_image and dynamic_text. If these objects exists in your print layout Mapbender and you are member of a group Mapbender will look for an Image with the name of the group (groupname.png) and will be displayed in the print in the object dynamic_image. The height of the object will be used to scale the image and the width will be calculated relative to the height. In the object dynamic_text the group description will be printed.
 
+**Printing elements in front of the map-element**
+
+In order for the map-element to be as large as possible and to avoid white or empty areas, elements can be placed in front of the map image to prevent that space is lost through white areas. This is particularly useful in the case of large printing formats, such as DIN A1, which have a comparatively wide border.
+
+To use this function, the templates have to be adapted and transparent PDF templates have to be created.
+
+Adapt templates:
+
+* Reorder elements in front of white background
+
+  - Arrange elements in the foreground
+
+    + Right click Arrange --> To the front
+
+  - Arrange map-element in the background
+
+    + Right click Arrange --> To the back
+
+* Select all 
+
+  - Press CTRL + A 
+
+* Print selection as PDF
+
+  -  Export as PDF
+
+  -  Selection instead of All
+ 
 
 Configuration of the element
 ============================
+
 Go to your application an create a new element **printclient** (Please note: You need a button to show this element or you can use it in the sidepane.)
 
 

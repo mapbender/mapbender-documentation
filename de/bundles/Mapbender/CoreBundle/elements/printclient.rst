@@ -145,7 +145,36 @@ Das Druck-Skript liest die Informationen (Position, Größe, Schriftgröße, Aus
 
 Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder (z.B. Logo der Gemeinde) ausgegeben werden. Hierzu gibt es die Platzhalter dynamisches Bild und dynamischer Text. Sofern diese Bereiche im Drucklayout vorliegen wird nach einem Bild mit dem Namen der Gruppe gesucht und dieses im Bereich dynamic_image ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Unter dynamic_text wird die Beschreibung der Gruppe ausgegeben.
 
+**Druck von Elementen vor dem Kartenbild**
+
+Damit beim Druck der Kartenbereich möglichst groß ist und wenig Platz durch weiße oder leere Bereiche verloren geht können Elemente vor das Kartenbild gelegt werden. Besonders hilfreich ist dies vorallem bei großen Druckformaten, wie DIN A1, die einen verhältnissmäßig breiten weißen Rand aufweisen. 
+
+Für die Nutzung dieser Funktion müssen die Templates angepasst und transparente PDF-Vorlagen erzeugt werden. 
+
+Templates anpassen:
+
+* Elemente neu anordnen, am besten vor weißem Hintergrund
+
+  - Anordnung der Elemente im Vordergrund
+
+    + Rechtsklick Anordnen -> Ganz nach vorne
+
+  - Anordnung Karte = ganz nach hinten
+
+    + Rechtsklick Anordnen -> Ganz nach hinten
+
+* Alles selektieren
+
+  - STRG + A drücken
+
+* Selektion als PDF drucken
+
+  - Exportieren als PDF
+
+  - Bereich Auswahl statt Alle
+
 
 Konfiguration des Elements
 ==========================
+
 Gehen Sie in der Administration von Mapbender3 zu Ihrer Anwendung und erzeugen Sie ein Element **Druck** (Beachten Sie: Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden).
