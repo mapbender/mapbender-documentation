@@ -19,7 +19,7 @@ Die Konfiguration geschieht in zwei Schritten:
 #. Hinzufügen von Themen mit einer oder mehrerer Quellen und optionaler Definition einer Gruppe
 
 
-.. image:: ../../../../../figures/basesourceswitcher_configuration.png
+.. image:: ../../../../../figures/de/basesourceswitcher_de.png
      :scale: 80
      
 
@@ -27,8 +27,12 @@ Die Konfiguration geschieht in zwei Schritten:
 * **Tooltip:** Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird. 
 * **Target:** Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
 * **Instances:** Themengruppen, die untergeordnete Themenkarten enthalten und als übergeordneter Gruppenname in der Toolbar erscheinen
-* **Title, Group:** Name der Themenkarte und Zuweisung zu einer vorher definierten Themengruppe (Instance)
 
+In dem Konfigurationsbeispiel sieht man, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden kann. Durch eine Group-Angabe können Gruppen gebildet werden, die dann über die Dropdown-Liste zusammengefasst werden. 
+
+* **Title**: Name der Themenkarte
+* **Group**: Optionale Zuweisung zu einer vorher definierten Themengruppe
+* **Instances**: Quellen für die Themenkarte
 
 YAML-Definition:
 ----------------

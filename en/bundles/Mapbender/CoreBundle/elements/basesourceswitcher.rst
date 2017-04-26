@@ -27,6 +27,11 @@ The configuration occurs in 2 steps:
 * **Target:** Id of Map element, activated after the click.
 * **Instances:** List of Sourcesets, defined by a title and group: (optional) group name to group of sourcesets by "group name" 
 
+In the configuration example you can see that either one, none or several entries per instanceset can be selected. You can created groups, which are then grouped together in the drop-down list.
+
+* **Title**: Title of the BaseSource
+* **Group**: Optionaly group name to group of sourcesets by "group name"
+* **Instances**: Sources for the BaseSource
 
 YAML-Definition:
 ----------------
