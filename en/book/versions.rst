@@ -13,9 +13,10 @@ Relase Datum: soon
 
 **Architecture:**
 
+- System Requirement PHP: 5.5.4 or higher.
+- Support of PHP 7.
 - Mapbender, FOM and OWSProxy excluded into Modules. They are now bind in composer.json
 - Documentation is part of the composer.
-- PHP 7 Support
 - Adjustments of the ElementGenerator
 - Determining of user-roles
 - Composer entries with https
@@ -28,6 +29,7 @@ Relase Datum: soon
 - Check in the Composer-installation, if the SASS Compiler Binaries are executable. If not, they are set executable.
 - New Composer commands for documentation: Generate API documentation only: bin/composer gen-api-docs
 - New Composer commands for documentation: Generate User-documentation only: bin/composer gen-user-docs
+- Use of own forks of open-sans, joii, compass-mixins and codemirror libraries.
 
 
 **Bugfixes und Features:**
@@ -48,10 +50,13 @@ Relase Datum: soon
 - Fix in GetMap request if the layer order was changed manually in the TOC.
 - Fix for WMS support 1.3.0
 - Fix for secured WMS services on GetMap, GetFeatureInfo, Print, Export and Legend.
+- Fix for secured WMS services where the username or password included a hash-character.  
 - Fixes for the WMS parameter Exception Format for the GetMap and GetFeatureInfo Request (Github-Issue 400)
 - Fixes of Layer-Styles for GetMap und GetFeatureInfo request
 - Default Tile Size for the Map set to 512 (was 256)
 - WMS Keyword limit (was: 255 characters) is changed. The column-type is now "text". The command app/console doctrine:schema:update is necessary to update the Mapbender database of a previous version.
+- Fix when importing YAML based applications and creating duplicate WMS data-sources.
+- Fix on minimal and maximal scale hint on WMS services.
 
 - Print: Color can be set for variable texts.
 - Print: Printout of the legend, if the service is built in with the proxy.
@@ -97,7 +102,8 @@ Relase Datum: soon
 
 - Design and presentation of the FeatureInfo dialog if shown as Accordion. Also if shown as "not from source".
 - Drag of Popups in an application.
-- WMS Editor: Adjustments in size. XSS fix.
+- WMC Editor: Adjustments in size. XSS fix.
+- Fix of translations
 
 - YAML based applications can adjust the sidebar: align (left/right), closed (true/false), width (px/em/%)
 

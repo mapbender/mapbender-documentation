@@ -13,9 +13,10 @@ Relase Datum: soon
 
 **Architektur:**
 
+- Systemvoraussetzung PHP: 5.5.4 oder höher
+- Unterstützung von PHP 7.
 - Mapbender, FOM and OWSProxy als Module ausgelagert. Sie sind nun in der composer.json eingebunden.
 - Die Dokumentation ist Teil des Composers.
-- PHP 7 Unterstützung
 - Anpassungen ElementGenerator
 - Ermitteln von Benutzerrollen
 - Composer Einträge mit https
@@ -28,6 +29,7 @@ Relase Datum: soon
 - Check in der Composer-Installation, ob die SASS Compiler Binaries ausführbar sind. Falls nicht, werden sie ausführbar gesetzt.
 - Neue Composer-Kommandos zum Generieren der Dokumentation: Nur API Dokumentation generieren: bin/composer gen-api-docs
 - Neue Composer-Kommandos zum Generieren der Dokumentation: Nur Benutzerdokumentation generieren: bin/composer gen-user-docs
+- Verweis auf eigene Forks von open-sans, joii, compass-mixins und codemirror Bibliotheken.
 
 
 **Bugfixes und Features:**
@@ -48,10 +50,13 @@ Relase Datum: soon
 - Gefixter GetMap Request bei veränderter Reihenfolge der Layer im TOC
 - Fix für WMS support 1.3.0
 - Fix für geschützte WMS Dienste bei GetMap, GetFeatureInfo, Print, Export und Legende
+- Fix für geschützte WMS Dienste, bei denen im Username oder Passwort ein Hashzeichen vorkommt.
 - Fix des WMS Parameters Exception Format bei GetMap und GetFeatureInfo Request (Github-Issue 400)
 - Fixes bei den Layer-Styles im GetMap und GetFeatureInfo Request
 - Default Tile Size bei der Kartenkomponente auf 512 gesetzt (war 256)
 - WMS Keyword Begrenzung (war: 255 Zeichen) ist geändert. Der Spaltentyp wurde auf "text" geändert. Das Kommando app/console doctrine:schema:update ist notwendig, um die MB3-Datenbank einer Vorversion zu aktualisieren,
+- Fix beim Import von YAML Anwendungen und der Erstellung von Duplikaten bei WMS Datenquellen.
+- Fix bei Minimal und Maximal Scale Hint Angaben eines WMS Dienstes.
 
 - Druck: Farbe kann bei variablen Texten eingefügt werden.
 - Druck: Druck der Legende, wenn der Dienst über einen Proxy eingebaut wird.
@@ -98,6 +103,7 @@ Relase Datum: soon
 - Anpassung Design FeatureInfo bei Anzeige als Accordion und wenn nicht als Source angezeigt
 - Verschieben von Popups innerhalb einer Anwendung
 - Anpassungen WMC Edit Dialoggröße und XSS
+- Fix in den Übersetzungen
 
 - YAML basierende Anwendungen können die Sidebar anpassen: align (left/right), closed (true/false), width (px/em/%)
 
