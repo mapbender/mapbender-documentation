@@ -12,7 +12,6 @@ Mapbender3 needs the following components in order to run:
 * PHP CLI interpreter (php5-cli)
 * PHP SQLite extension (php5-sqlite)
 * PHP cURL extension (php5-curl)
-* PHP Alternative PHP Cache (php-apc)
 * PHP Internationalization (php5-intl)
 * PHP GD for printing (php5-gd)
 * PHP FileInfo for printing to check image format
