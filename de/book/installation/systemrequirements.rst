@@ -72,7 +72,7 @@ Installationspakete von Mapbender3 werden als komprimierte Pakete ausgegeben und
 Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichnis Ihrer Wahl. In dieser Installationsbeschreibung wird davon ausgegangen, dass die Dateien unter
 
 * **/var/www** (für Linux) oder
-* **C:/** (für Windows) ausgepackt werden.
+* **C:/** (für Windows, nicht empfehlenswert, der Einfachheit halber) ausgepackt werden.
 
 Benennen Sie für die weitere Installationsanleitung das entpackte Verzechnis (z.B.: "mapbender3-3.0.5.2") nach "mapbender3" um.
 

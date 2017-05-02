@@ -71,7 +71,7 @@ Installation packages are distributed as compressed packages and are available f
 After downloading, extract the package in a directory of your choice. In this installation documentation we assume that the package is extracted in the following directories:
 
 * **/var/www** (for Linux) or
-* **C:/** (for Windows).
+* **C:/** (for Windows, not recommended, for this doku only).
 
 For the following installation steps, please rename the unzipped directory (for example: "mapbender3-3.0.5.2") to "mapbender3".
 
