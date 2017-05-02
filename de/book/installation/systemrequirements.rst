@@ -67,7 +67,7 @@ Zusätzlich gibt es 32- und 64-bit Versionen von Apache für Windows.
 Download von Mapbender3
 ***********************
 
-Installationspakete von Mapbender3 werden als komprimierte Pakete ausgegeben und sind auf der Download-Seite verfügbar unter http://mapbender3.org/download.
+Installationspakete von Mapbender3 werden als komprimierte Pakete ausgegeben und sind auf der `Download-Seite <http://mapbender3.org/download>`_ verfügbar.
 
 Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichnis Ihrer Wahl. In dieser Installationsbeschreibung wird davon ausgegangen, dass die Dateien unter
 
@@ -92,10 +92,8 @@ Nach dem Entpacken des TAR.GZ- bzw des ZIP-Archivs finden Sie in dem Mapbender-V
 .. code-block:: bash
                 
                 .
-                ├── apidoc
                 ├── app
                 ├── bin
-                ├── documentation
                 ├── fom
                 ├── mapbender
                 ├── owsproxy

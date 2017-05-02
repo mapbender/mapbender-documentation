@@ -93,14 +93,11 @@ After unpacking the TAR.GZ- resp. the ZIP-archive, you will see in the Mapbender
 .. code-block:: bash
                 
                 .
-                ├── apidoc
                 ├── app
                 ├── bin
-                ├── documentation
                 ├── fom
                 ├── mapbender
                 ├── owsproxy
                 ├── src
                 ├── vendor
                 └── web
-
