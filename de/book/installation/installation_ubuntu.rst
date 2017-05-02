@@ -3,10 +3,21 @@
 Installation auf Ubuntu und Debian
 ##################################
 
+Der schnelle Weg und die vorkonfigurierte Datenbank
+---------------------------------------------------
+
+Die folgende Installationsanleitung beschreibt die notwendigen Schritte auf einem aktuellen Ubuntu- oder Debian-System mit PHP 5.5 oder 5.6.  Wir nehmen an, dass Apache 2.4 auf dem System läuft. Anmerkungen `zu PHP 7 <installation_ubuntu.html#php-7>`_ und `zu Apache 2.2 <installation_ubuntu.html#einrichtung-fur-apache-2-2>`_ finden sich weiter unten.
+
+Falls Sie einen schnellen Test ohne Einrichtung eines Webservers bevorzugen, schauen Sie in das Kapitel `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
+
+Mapbender wird seit Version 3.0.6.0 mit einer vorkonfigurierten Datenbank auf Basis von SQLite mitgeliefert, in der schon Anwendungen realisiert sind (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**). Die Datenbank enthält die Mapbender-Konfiguration, wie Anwendungen, Nutzer und registrierte Dienste, sie enthält keine Geodaten.
+
+Falls Sie eine andere Datenbank wie PostgreSQL vorliegen haben und nutzen möchten, finden Sie im Kapitel `Mapbender Einrichtung auf PostgreSQL <#mapbender-einrichtung-auf-postgresql>`_ die notwendigen Schritte.
+
+
+
 Vorbereitung
 ------------
-
-Die folgende Installationsanleitung beschreibt die notwendigen Schritte auf einem aktuellen Ubuntu- oder Debian-System mit PHP 5.5 oder 5.6.  Wir nehmen an, dass Apache 2.4 auf dem System läuft. Anmerkungen `zu PHP 7 <installation_ubuntu.html#php-7>`_ und `zu Apache 2.2 <installation_ubuntu.html#einrichtung-fur-apache-2-2>`_ finden sich weiter unten. Als Datenbank-Umgebung wird in diesem Beispiel PostgreSQL verwendet.
 
 Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_, wo Sie auch die Download-Links für Mapbender3 finden.
 
@@ -14,7 +25,7 @@ Dort sind auch die notwendigen Komponenten für Mapbender3 aufgelistet, die Sie 
 
 .. code-block:: bash
 
- apt-get install php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl curl openssl
+ apt-get install php5 php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl curl openssl
 
 
 Zusätzlich für die Entwicklung:
@@ -30,8 +41,14 @@ Laden Sie das Apache Modul rewrite.
 
  sudo a2enmod rewrite
 
-Erstellen Sie den Apache Alias. Wir gehen davon aus, dass Mapbender3 im Verzeichnis **/var/www/mapbender3** entpackt wurde (siehe das Kapitel `Systemvoraussetzungen und den Download <systemrequirements.html#download-von-mapbender3>`_ für Details). Sie können Mapbender3 in ein beliebiges anderes Verzeichnis entpacken und müssen dann nur die folgende Datei anpassen und auf den richtigen Ordner verweisen lassen.
 
+
+Entpacken und im Webserver registrieren
+---------------------------------------
+
+Entpacken Sie das Mapbender3 Archiv (tar.gz oder zip) beispielsweise im Verzeichnis **/var/www/mapbender3** (siehe das Kapitel `Systemvoraussetzungen und den Download <systemrequirements.html#download-von-mapbender3>`_ für Details).
+
+Erstellen Sie den Apache Alias. Sie können Mapbender3 in ein beliebiges anderes Verzeichnis entpacken und müssen dann nur die folgende Datei anpassen und auf den richtigen Ordner verweisen lassen.
 
 Legen Sie die Datei **/etc/apache2/sites-available/mabender3.conf** mit dem folgenden Inhalt an. 
 
@@ -49,7 +66,7 @@ Legen Sie die Datei **/etc/apache2/sites-available/mabender3.conf** mit dem folg
   RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
-Aktivieren Sie danch die Seite mit
+Aktivieren Sie danach die Seite mit:
 
 .. code-block:: bash
 
@@ -62,11 +79,10 @@ Laden Sie den Apache Server neu.
  service apache2 reload
 
 
+Verzeichnisrechte
+-----------------
 
-Mapbender3 Einrichtung
------------------------
-
-Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (o). Weisen Sie die Skripte dem Apache User (www-data) zu.
+Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (o). Weisen Sie die Rechte dem Apache User (www-data) zu.
 
 .. code-block:: bash
 
@@ -74,8 +90,45 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (o). Weise
  sudo chown -R www-data:www-data /var/www/mapbender3
  sudo chmod -R ug+w /var/www/mapbender3/web/uploads
 
+ # wenn Sie die vorkonfigurierte dateibasierte Datenbank nutzen möchten
+ sudo chmod -R ug+w app/db/demo.sqlite
 
-Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
+
+Der Apache Nutzer benötigt v.a. Schreibrechte auf app/cache, app/logs, web/uploads und app/db/demo.sqlite (wenn Sie die mitgelieferte dateibasierte Datenbank nutzen möchten) und Leserechte auf dem web Verzeichnis.
+
+
+ 
+Start
+-----
+
+Sie können nun auf Ihre Mapbender3 Installation mit **http://hostname/mapbender3/** zugreifen.
+
+
+
+Anmelden am Mapbender
+---------------------
+  
+Klicken Sie auf den Anmelden-Link oben rechts, um zur Anmeldung zu gelangen. Melden Sie sich mit dem neu erstellten Benutzer an. Per Voreinstellung lauten die Anmeldedaten root/root.
+
+Starten Sie Mapbender3 im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen: http://localhost/mapbender3/app_dev.php
+
+Wenn Sie mehr über Mapbender3 erfahren möchten, schauen Sie sich das `Mapbender3 Quickstart Dokument <../quickstart.html>`_ an.
+
+
+ 
+Mapbender Einrichtung auf PostgreSQL
+------------------------------------
+
+Falls Sie die Mapbender3 Konfiguration in einer anderen Datenbank statt der SQLite Datenbank ablegen möchten (und da spricht nichts dagegen), sind hier die notwendigen Schritte beschrieben. Als Datenbank-Umgebung wird in diesem Beispiel PostgreSQL verwendet.
+
+Sie benötigen den PHP-PostgreSQL Treiber.
+
+.. code-block:: bash
+
+   apt-get install php5-pgsql
+ 
+
+Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
 
 .. code-block:: yaml
 
@@ -94,38 +147,12 @@ Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im 
  cd /var/www/mapbender3
  app/console doctrine:database:create
  app/console doctrine:schema:create
- app/console assets:install web
+ # app/console assets:install web # nicht notwendig
  app/console fom:user:resetroot
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
-Hiermit ist die Installation von Mapbender3 fertig. 
-
-Prüfen Sie die config.php erneut 
-
-* http://localhost/mapbender3/config.php
-
-Sie müssen Schreibrechte für die Verzeichnisse app/cache und app/logs sowie web/uploads vergeben.
-
-.. code-block:: bash
-
- sudo chmod -R ug+w /var/www/mapbender3/app/cache
- sudo chmod -R ug+w /var/www/mapbender3/app/logs
- sudo chmod -R ug+w /var/www/mapbender3/web/uploads
-
-
-Sie können Mapbender3 nun nutzen.
-
-* http://localhost/mapbender3/
-
-
-**Hinweis:** Klicken Sie auf den Anmelden-Link oben rechts, um zur Abmeldung zu gelangen. Melden Sie sich mit dem neu erstellten Benutzer an.
-
-Starten Sie Mapbender3 im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen: http://localhost/mapbender3/app_dev.php
-
-
-Wenn Sie mehr über Mapbender3 erfahren möchten, schauen Sie sich das `Mapbender3 Quickstart Dokument <../quickstart.html>`_ an.
-
+Hiermit ist die Konfiguration von Mapbender3 für PostgreSQL fertig und Sie enthält nun auch die drei Beispielanwendung wie auch die unterstützten EPSG-codes.
 
 
 
@@ -136,14 +163,22 @@ Für PHP 7 werden weitere Quellen benötigt. Die Paketliste bei Verwendung von P
 
 .. code-block:: bash
 
-  sudo apt-get install php php-pgsql php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
+  sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
+
+Zur Nutzung von PostgreSQL zusätzlich:
+
+.. code-block:: bash
+
+   sudo apt install php-pgsql
+  
 
 Zusätzlich muss PHP 7 in Apache aktiviert werden:
 
 .. code-block:: bash
 
   a2enmod php7.0
+
 
 
 Einrichtung für Apache 2.2
@@ -194,5 +229,3 @@ Prüfen Sie, ob der Alias erreichbar ist:
 
 .. image:: ../../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80
-
-
