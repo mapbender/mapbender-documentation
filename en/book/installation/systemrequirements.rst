@@ -29,7 +29,6 @@ Mapbender3 supports also PHP 7. You'll need the above listed libraries for PHP 7
 * PHP Bz2 (php-bz2)
 * PHP XML (php-xml)
 * PHP Multibyte String (php-mbstring)
-* PHP Cache: php-apcu instead of php-apc
 
 
 Databases
