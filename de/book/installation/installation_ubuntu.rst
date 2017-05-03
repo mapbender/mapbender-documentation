@@ -25,14 +25,14 @@ Dort sind auch die notwendigen Komponenten für Mapbender3 aufgelistet, die Sie 
 
 .. code-block:: bash
 
- apt-get install php5 php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl curl openssl
+ apt install php5 php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl curl openssl
 
 
 Zusätzlich für die Entwicklung:
  
 .. code-block:: bash
 
- apt-get install php5-bz2
+ apt install php5-bz2
 
 
 Laden Sie das Apache Modul rewrite.
@@ -98,15 +98,10 @@ Der Apache Nutzer benötigt v.a. Schreibrechte auf app/cache, app/logs, web/uplo
 
 
  
-Start
------
+Start und Anmelden am Mapbender
+-------------------------------
 
 Sie können nun auf Ihre Mapbender3 Installation mit **http://hostname/mapbender3/** zugreifen.
-
-
-
-Anmelden am Mapbender
----------------------
   
 Klicken Sie auf den Anmelden-Link oben rechts, um zur Anmeldung zu gelangen. Melden Sie sich mit dem neu erstellten Benutzer an. Per Voreinstellung lauten die Anmeldedaten root/root.
 
@@ -125,7 +120,7 @@ Sie benötigen den PHP-PostgreSQL Treiber.
 
 .. code-block:: bash
 
-   apt-get install php5-pgsql
+   apt install php5-pgsql
  
 
 Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
@@ -156,6 +151,44 @@ Hiermit ist die Konfiguration von Mapbender3 für PostgreSQL fertig und Sie enth
 
 
 
+Mapbender Einrichtung auf MySQL
+-------------------------------
+
+Die Einrichtung von Mapbender auf MySQL ist ähnlich der auf PostgreSQL, Sie benötigen nur einen anderen PHP-Treiber und einen anderen Parameter in der parameters.yml. Falls Sie also die Mapbender3 Konfiguration in einer anderen Datenbank statt der SQLite Datenbank ablegen möchten (und da spricht nichts dagegen), sind hier die notwendigen Schritte beschrieben.
+
+Sie benötigen den PHP-MySQL Treiber.
+
+.. code-block:: bash
+
+   apt install php-mysql
+
+
+Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
+
+.. code-block:: yaml
+
+                    database_driver:   pdo_mysql
+                    database_host:     localhost
+                    database_port:     3306
+                    database_name:     mapbender3
+                    database_path:     null
+                    database_user:     root
+                    database_password: Tr0ub4dor&3
+
+Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel `Details zur Konfiguration von Mapbender3 <configuration.html>`_.
+
+.. code-block:: bash
+
+ cd /var/www/mapbender3
+ app/console doctrine:database:create
+ app/console doctrine:schema:create
+ # app/console assets:install web # nicht notwendig
+ app/console fom:user:resetroot
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
+
+
 PHP 7
 -----
 
@@ -163,7 +196,7 @@ Für PHP 7 werden weitere Quellen benötigt. Die Paketliste bei Verwendung von P
 
 .. code-block:: bash
 
-  sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
+  sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
 
 
 Zur Nutzung von PostgreSQL zusätzlich:
@@ -171,6 +204,13 @@ Zur Nutzung von PostgreSQL zusätzlich:
 .. code-block:: bash
 
    sudo apt install php-pgsql
+
+
+Für MySQL:
+
+.. code-block:: bash
+
+   sudo apt install php-mysql
   
 
 Zusätzlich muss PHP 7 in Apache aktiviert werden:

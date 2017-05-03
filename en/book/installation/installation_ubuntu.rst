@@ -25,14 +25,14 @@ There are also the neccessary components listed that you can install like this:
 
 .. code-block:: bash
 
-  sudo apt-get install php5 php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl curl openssl
+  sudo apt install php5 php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl curl openssl
 
 
 Additionally for development:
  
 .. code-block:: bash
 
- apt-get install php5-bz2
+ apt install php5-bz2
 
 
 Load the Apache rewrite-module:
@@ -97,15 +97,10 @@ Set the write permission for user (u), group (g) and others (a) and rights. Assi
 The Apache user needs especially write-access to app/cache, app/logs, web/uploads and app/db/demo.sqlite (if you want to use the preconfigured file-based database). The user needs also read-access to the web-directory.
 
 
-Start
------
+Start and login into Mapbender
+------------------------------
 
 You can now access your Mapbender3 installation with **http://hostname/mapbender3/**.
-
-
-
-Login into Mapbender
---------------------
 
 Click on the Login-link at top-right to get to the login page. Log in with the new user you created. Per default the login-data is root/root.
 
@@ -118,14 +113,14 @@ To learn more about Mapbender3 have a look at the `Mapbender3 Quickstart <../qui
 Mapbender deployment on PostgreSQL
 ----------------------------------
 
-If you want to store the Mapbender3 Configuration in another database than the SQLite one (and there is nothing wrong with that), please follow the next steps. We assume here PostgreSQL as database system.
+If you want to store the Mapbender3 configuration in another database than the SQLite one (and there is nothing wrong with that), please follow the next steps. We assume here PostgreSQL as database system.
 
 
 You need the PHP-PostgreSQL driver
 
 .. code-block:: bash
 
-   apt-get install php5-pgsql
+   apt install php5-pgsql
 
 
 Adapt the Mapbender3 configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create and use. Further information is available in the chapter `Configuring the database <../database.html>`_.
@@ -156,6 +151,45 @@ Now the configuration of Mapbender3 for PostgreSQL is done and it contains now a
 
 
 
+Mapbender deployment on MySQL
+-----------------------------
+
+Deployment of Mapbender for MySQL is similar to the one for PostgreSQL. You only need another PHP-driver and another parameter in the parameters.yml. So, if you want to store the Mapbender3 configuration in another database than the SQLite one (and there is nothing wrong with that), please follow the next steps.
+
+
+You need the PHP-MySQL driver
+
+.. code-block:: bash
+
+   apt install php-mysql
+
+
+Adapt the Mapbender3 configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create and use. Further information is available in the chapter `Configuring the database <../database.html>`_.
+
+.. code-block:: yaml
+
+                    database_driver:   pdo_mysql
+                    database_host:     localhost
+                    database_port:     3306
+                    database_name:     mapbender3
+                    database_path:     null
+                    database_user:     root
+                    database_password: Tr0ub4dor&3
+
+Run the app/console commands. You find detailed information for this commands in the chapter `Details of the configuration of Mapbender3 <configuration.html>`_.
+
+.. code-block:: bash
+
+ cd /var/www/mapbender3
+ app/console doctrine:database:create
+ app/console doctrine:schema:create
+ # app/console assets:install web # nicht notwendig
+ app/console fom:user:resetroot
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
+
+
 PHP 7
 -----
  
@@ -163,7 +197,7 @@ PHP 7 needs additional packages. The list of packages for PHP 7:
 
 .. code-block:: bash
 
-  sudo apt-get install apache2 libapache2-mod-php php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
+  sudo apt install apache2 libapache2-mod-php php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
   
 
 To use PostgreSQL:
@@ -173,11 +207,19 @@ To use PostgreSQL:
    sudo apt install php-pgsql
 
 
+For MySQL:
+
+.. code-block:: bash
+
+   sudo apt install php-mysql
+
+
 Enable PHP 7 in Apache
 
 .. code-block:: bash
 
   a2enmod php7.0
+
 
 
 Instructions for Apache 2.2
