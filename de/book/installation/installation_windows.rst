@@ -219,6 +219,7 @@ In der php.ini:
                 ; The maximum percentage of "wasted" memory until a restart is scheduled.
                 opcache.max_wasted_percentage=5
                 
+Symfony empfiehlt, den **opcache.max_accelerated_files** Wert höher zu setzen: http://symfony.com/doc/3.1/performance.html#optimizing-all-the-files-used-by-symfony
 
 
 
