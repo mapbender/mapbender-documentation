@@ -24,16 +24,16 @@ Indices and tables
 * :ref:`search`
 
 
-Documentation for older version
-====================================
+Sourcecode of this documentation
+================================
 
-* http://doc.mapbender3.org/3.0.4/
+* https://github.com/mapbender/mapbender-documentation
 
 
-Download
-========
+Download of Mapbender3
+======================
 
-  http://mapbender3.org/download
+* http://mapbender3.org/download
 
 
 Find out more
