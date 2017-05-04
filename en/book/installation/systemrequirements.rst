@@ -48,7 +48,7 @@ We have good experiences with the 64-bit downloads of Apache und PHP.
 
 * `Apache Download <http://www.apachelounge.com/download/>`_: The downloads of the Apache Lounge are customized for different Versions of Windows. For newer versions choose the "VC11" or "VC14" variant (this requires the Visual C++ Redistributable für Visual Studio 2012 resp. 2015) and the Win64 version (64-bit).
 
-* `PHP Download <http://windows.php.net/download#php-5.6>`_: Choose the "Thread Safe" variant of the PHP downloads as the x64 version (64-bit).
+* `PHP Download <http://windows.php.net/download#php-5.6>`_: Choose the "Non Thread Safe" variant of the PHP downloads as the x64 version (64-bit).
 
 
 Comments on Windows

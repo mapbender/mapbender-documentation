@@ -90,6 +90,8 @@ Relase Datum: soon
 
 - Verbesserung der Performance bei *einigen* Installation unter Windows durch WinCachePHP und PHP Opcache (für Details siehe `Installation unter Windows <installation/installation_windows.html>`_)
 
+- Änderung der Systemvoraussetzungen: Für Windows ist die "Non-Thread-Safe" Variante von PHP notwendig!
+
 - Kopieren von Anwendungen für Benutzer, die nicht root sind (ACL Application: owner, Benutzer: owner, Berechtigungen ACLs: owner, Element: owner, Gruppen: owner, Service Source: owner, spezifische Anwendung: owner)
 
   
