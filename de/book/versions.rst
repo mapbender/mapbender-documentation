@@ -80,6 +80,8 @@ Relase Datum: soon
 
 - "Only valid" Checkbox beim `Einladen eines WMS <../bundles/Mapbender/CoreBundle/entities/source.html>`_ ist nun standardmäßig nicht mehr aktiviert.
 
+- Umformatierte Meldungen, wenn die Schemata eines WMS beim Hinzufügen nicht zugreifbar sind.
+
 - Der `SearchRouter <../bundles/Mapbender/CoreBundle/entities/search_router.html>`_ zeigt, wenn er in der Sidepane eingebettet ist, die Schaltflächen Suche und Reset.
 
 - Internet Explorer Kompatibilität: Anpassungen `Zoombar <../bundles/Mapbender/CoreBundle/elements/zoom_bar.html>`_.
