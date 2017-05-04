@@ -20,6 +20,7 @@ Please take note of the `system requirements <systemrequirements.html>`_ where y
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
  extension=php_openssl.dll
+ extension=php_mbstring.dll
 
 
 For development:
@@ -38,7 +39,6 @@ Additional for PHP 7:
  # php.ini
  extension=php_zip.dll
  extension=php_bz2.dll
- extension=php_mbstring.dll
   
 
 .. code-block:: apache

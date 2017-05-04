@@ -14,6 +14,7 @@ Mapbender3 needs the following components in order to run:
 * PHP cURL extension (php5-curl)
 * PHP Internationalization (php5-intl)
 * PHP GD for printing (php5-gd)
+* PHP Multibyte String (php5-mbstring)
 * PHP FileInfo for printing to check image format
 * APACHE mod_rewrite 
 * OpenSSL
@@ -28,7 +29,6 @@ Mapbender3 supports also PHP 7. You'll need the above listed libraries for PHP 7
 * PHP Zip (php-zip)
 * PHP Bz2 (php-bz2)
 * PHP XML (php-xml)
-* PHP Multibyte String (php-mbstring)
 
 
 Databases

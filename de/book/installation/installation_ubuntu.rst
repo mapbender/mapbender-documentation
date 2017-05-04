@@ -25,7 +25,7 @@ Dort sind auch die notwendigen Komponenten für Mapbender3 aufgelistet, die Sie 
 
 .. code-block:: bash
 
- apt install php5 php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl curl openssl
+ apt install php5 php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl php5-mbstring curl openssl
 
 
 Zusätzlich für die Entwicklung:
