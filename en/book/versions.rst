@@ -204,6 +204,7 @@ Directory where YAML-based application definition are stored. As an example the 
 
                 $ app/console doctrine:schema:update --dump-sql
                 ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
+                ALTER TABLE mb_core_keyword ALTER value DROP DEFAULT;
 
 
 

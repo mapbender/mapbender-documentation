@@ -200,6 +200,7 @@ Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Bei
 
                 $ app/console doctrine:schema:update --dump-sql
                 ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
+                ALTER TABLE mb_core_keyword ALTER value DROP DEFAULT;
 
 
 
