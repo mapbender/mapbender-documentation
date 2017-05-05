@@ -9,7 +9,7 @@ Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/
 Version 3.0.6.0
 ---------------
 
-Relase Datum: 05.05.2017
+Release Datum: 05.05.2017
 
 **Architektur:**
 
