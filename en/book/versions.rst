@@ -6,7 +6,7 @@ Version history
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
 
-Milestone next
+Milestone 3.0.6.0
 -----------------
 
 Relase Datum: 05.05.2017
