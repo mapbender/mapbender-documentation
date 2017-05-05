@@ -9,7 +9,7 @@ You find the milestones at: https://github.com/mapbender/mapbender/milestones
 Version 3.0.6.0
 ---------------
 
-Release Datum: 05.05.2017
+Release date: 05.05.2017
 
 **Architecture:**
 
