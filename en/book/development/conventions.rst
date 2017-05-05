@@ -150,6 +150,23 @@ How to build a new Mapbender3 build
 
 * Update version number in parameters.yml and push
 
+* Tagging: Tag at Github. You have nice capabilities for creating good tags and descriptions.
+
+  * Mapbender
+  * OWSProxy
+  * FOM
+  * Mapbender-starter
+  * Documentation
+
+* Create Pull-request to merge release branch into master
+
+  * Mapbender
+  * OWSProxy
+  * FOM
+  * Mapbender-starter
+  * Documentation
+
+
 * Clone the source-code from the release branch
 
   .. code-block:: bash
@@ -168,13 +185,12 @@ How to build a new Mapbender3 build
               
                   sh bootstrap
 
-* Tagging
+* Generate the docs
 
-  * Mapbender
-  * OWSProxy
-  * FOM
-  * Mapbender-starter
-  * Documentation
+  .. code-block:: bash
+                    
+                  bin/composer docs
+
 
 * Create the ZIP/Tar.gz
 
