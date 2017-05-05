@@ -9,7 +9,7 @@ You find the milestones at: https://github.com/mapbender/mapbender/milestones
 Milestone next
 -----------------
 
-Relase Datum: soon
+Relase Datum: 05.05.2017
 
 **Architecture:**
 
