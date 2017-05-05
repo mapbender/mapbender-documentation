@@ -155,7 +155,8 @@ Relase Datum: 05.05.2017
 
 **Digitizer**
 
-- `Digitizer <../bundles/Mapbender/CoreBundle/elements/digitizer.html>`_: Printing of Multipolygons
+- Update `Digitizer <../bundles/Mapbender/CoreBundle/elements/digitizer.html>`_ to version 1.1.
+- Printing of Multipolygons.
 - Objects don't appear in the printout if they are not displayed in the Digitizer.
 - MinScale restriction added
 - Objects with a line-width of 0 are now not shown anymore in the printout.

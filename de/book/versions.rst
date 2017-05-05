@@ -155,7 +155,8 @@ Relase Datum: 05.05.2017
 
 **Digitizer**
 
-- `Digitizer <../bundles/Mapbender/CoreBundle/elements/digitizer.html>`_: Druck von Multipolygonen
+- Update `Digitizer <../bundles/Mapbender/CoreBundle/elements/digitizer.html>`_ auf Version 1.1.
+- Druck von Multipolygonen.
 - Objekte erscheinen nicht mehr im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
 - MinScale Einschränkung hinzugefügt
 - Objekte mit einer Linienbreite von 0 werden im Druck nicht mehr sichtbar.
