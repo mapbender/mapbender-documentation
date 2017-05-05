@@ -20,8 +20,11 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
+
+.. * :ref:`modindex`
+
+
 
 
 Sourcecode of this documentation
@@ -36,8 +39,8 @@ Download of Mapbender3
 * http://mapbender3.org/download
 
 
-Find out more
-=============
+External links
+==============
 
 .. image:: https://www.ohloh.net/p/mapbender/widgets/project_partner_badge.gif
   :scale: 80 %
