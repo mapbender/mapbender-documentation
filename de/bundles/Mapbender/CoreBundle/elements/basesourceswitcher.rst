@@ -44,10 +44,10 @@ Der BaseSourceSwitcher kann in der Sidepane mit einer Kartenvorschau eingebunden
 Das Styling wird über CSS angepasst. Als Vorbereitung werden Screenshots der Hintergrundkarten mit der Größe 110x110px erstellt und im web-Verzeichnis abgelegt (Screenshots müssen von Außen erreichbar sein).
 Danach wird der BaseSourceSwitcher, wie in „Konfiguration“ beschrieben, in die Sidepane eingebunden. Die Einbindung mit Kartenvorschau funktioniert nur in der Sidepane und nicht in der Toolbar! Zusätzlich müssen alle Gruppierungen entfernt werden, falls diese vorher genutzt wurden.
 
-Anschließend wird die CSS-Vorlage (siehe unten) in der Anwendung unter dem Tag „CSS“ eingebunden. Um die Vorlage an die eigene Anwendung anzupassen, müssen die Nummern der data-sourcesets und die Bildpfade je Dienst verändert werden.
-Die passenden Nummern für das Layerset finden Sie in dem Tag „Layersets“ unter ID (gebraucht wird lediglich die InstanceID).
+Anschließend wird die CSS-Vorlage (siehe unten) in der Anwendung unter dem Tab „CSS“ eingebunden. Um die Vorlage an die eigene Anwendung anzupassen, müssen die Nummern der data-sourcesets und die Bildpfade je Dienst verändert werden.
+Die passenden Nummern für das Layerset finden Sie in dem Tab „Layersets“ unter ID (gebraucht wird lediglich die InstanceID).
 
-CSS-Vorlage
+CSS-Vorlage:
 -----------
 
 .. code-block:: css
