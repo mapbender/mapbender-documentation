@@ -6,6 +6,21 @@ Versionshistorie
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
 
+Version 3.0.6.1
+---------------
+
+Release Datum: 23.05.2017
+
+**Bugfixes:**
+
+- Druck zeigte falsche Maßstäbe im Kartendisplay.
+- Spezifische WMS konnten nicht gedruckt werden, wenn sie als HTTP Antwort image/pntg; charset-iso... übertragen haben.
+- Backend: FOM Dialoge mit vielen Einträgen machten die Checkboxen unbenutzbar.
+- config.php wieder zurück im mapbender-starter.
+- Aktualisierung des bin/composer Kommandos zum Bauen von Mapbender.
+
+
+
 Version 3.0.6.0
 ---------------
 
