@@ -9,7 +9,7 @@ Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/
 Version 3.0.6.1
 ---------------
 
-Release Datum: 23.05.2017
+Release Datum: 24.05.2017
 
 **Bugfixes:**
 
@@ -18,6 +18,11 @@ Release Datum: 23.05.2017
 - Backend: FOM Dialoge mit vielen Einträgen machten die Checkboxen unbenutzbar.
 - config.php wieder zurück im mapbender-starter.
 - Aktualisierung des bin/composer Kommandos zum Bauen von Mapbender.
+- Style-Fix bei Administrations-Dialog des Basesource-Switcher.
+- WmcEditor Standard Parameter für Breite und Höhe eingetragen.
+- Aktualisierung Startseite Dokumentation.
+- Kleine Styling Verbesserungen im Backend.
+- Kleine Säuberungen des Code.
 
 
 

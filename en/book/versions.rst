@@ -9,7 +9,7 @@ You find the milestones at: https://github.com/mapbender/mapbender/milestones
 Version 3.0.6.1
 ---------------
 
-Release Datum: 23.05.2017
+Release Datum: 24.05.2017
 
 **Bugfixes:**
 
@@ -18,6 +18,11 @@ Release Datum: 23.05.2017
 - Backend: FOM dialogues with many entries made checkboxes unusable.
 - config.php back in mapbender-starter.
 - Update bin/composer build command for building Mapbender.
+- Style-Fix for administrations-dialog of Basesource-switcher.
+- Add WmcEditor Default Parameters for width and height.
+- Update landing-page of this documentation.
+- Some minor styling changes in backend.
+- Some cleanup.
 
 
 
