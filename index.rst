@@ -25,13 +25,28 @@ Indices and tables
 .. * :ref:`modindex`
 
 
-
-
 Sourcecode of this documentation
 ================================
 
 * https://github.com/mapbender/mapbender-documentation
 
+
+Online version of this documentation
+====================================
+
+* http://doc.mapbender3.org/
+* http://docs.mapbender3.org/current/
+
+
+Other versions of this documentation
+====================================
+
+* http://docs.mapbender3.org/3060
+* http://docs.mapbender3.org/3053
+* http://docs.mapbender3.org/3052
+* http://docs.mapbender3.org/3051
+* http://docs.mapbender3.org/3050
+* http://docs.mapbender3.org/304
 
 Download of Mapbender3
 ======================
@@ -39,8 +54,8 @@ Download of Mapbender3
 * http://mapbender3.org/download
 
 
-External links
-==============
+-----
+
 
 .. image:: https://www.ohloh.net/p/mapbender/widgets/project_partner_badge.gif
   :scale: 80 %
