@@ -148,7 +148,7 @@ How to build a new Mapbender3 build
 
 * Update Changelog.md for mapbender-starter, mapbender, owsproxy, fom.
 
-* Update version number in parameters.yml and push
+* Update version number in parameters.yml.dist and push
 
 * Tagging: Tag at Github. You have nice capabilities for creating good tags and descriptions.
 
