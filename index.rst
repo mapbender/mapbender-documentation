@@ -20,24 +20,27 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
-
-Documentation for older version
-====================================
-
-* http://doc.mapbender3.org/3.0.4/
+.. * :ref:`modindex`
 
 
-Download
-========
-
-  http://mapbender3.org/download
 
 
-Find out more
-=============
+Sourcecode of this documentation
+================================
+
+* https://github.com/mapbender/mapbender-documentation
+
+
+Download of Mapbender3
+======================
+
+* http://mapbender3.org/download
+
+
+External links
+==============
 
 .. image:: https://www.ohloh.net/p/mapbender/widgets/project_partner_badge.gif
   :scale: 80 %

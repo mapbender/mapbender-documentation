@@ -144,82 +144,53 @@ Release
 How to build a new Mapbender3 build
 ************************************
 
-* update version number in parameters.yml and push
+* Update http://doc.mapbender3.org/en/book/versions.html
 
-.. code-block:: bash
+* Update Changelog.md for mapbender-starter, mapbender, owsproxy, fom.
 
- # clone the source-code from the release branch
- git clone -b release/3.0.5 git@github.com:mapbender/mapbender-starter mapbender-build
+* Update version number in parameters.yml and push
 
- # change to the directory
- cd mapbender-build
- git submodule update --init --recursive
- phing deps
+* Clone the source-code from the release branch
 
- # tagging
- cd application/mapbender
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender/blob/release/3.0.5/CHANGELOG.md"
- git push --tags
- 
- # tag submodules
- cd ../../application/fom
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
- git push --tags
- 
- # tag owsproxy3
- cd ../../application/owsproxy3
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
- git push --tags
- 
- # tag mapbender-starter
- cd ../../
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
- git tag
- git push --tags (will be shown at https://github.com/mapbender/mapbender-starter/releases)
+  .. code-block:: bash
+                
+                  git clone -b release/3.0.6 git@github.com:mapbender/mapbender-starter
 
- # run composer.phar update
- cd application
- ./composer.phar update
+*  Change to the directory
 
- # use phing to create the tarball
- cd ..
- phing tarball
+   .. code-block:: bash
+                
+                   cd mapbender-starter/application
 
- # change to the artefacts directory, where phing created the tarball
- cd artefacts/
+* Bootstrap
 
- # untar the archive to change some files
- tar -xvf mapbender3-3.0.5build1.tar.gz 
+  .. code-block:: bash
+              
+                  sh bootstrap
 
- # that step should not be neccessary: sudo chmod -R 777 mapbender3-3.0.5build1
+* Tagging
 
- # change the name of the directory
- mv mapbender3-3.0.5build1 mapbender3-3.0.5.3
+  * Mapbender
+  * OWSProxy
+  * FOM
+  * Mapbender-starter
+  * Documentation
 
- # remove some files in that directory
- rm -R mapbender3-3.0.5.3/app/config/parameters.yml
- rm -Rf mapbender3-3.0.5.3/documentation/*
+* Create the ZIP/Tar.gz
 
- # tag the documentation
- cd /data/git/mapbender-documentation/
- git tag -a v3.0.5.3 -m "Mapbender release Version 3.0.5.3 read changes https://github.com/mapbender/mapbender-starter/blob/release/3.0.5/CHANGELOG.md"
- 
- # copy the actual documentation output
- cp -R /data/git/mapbender-documentation/output/*  mapbender3-3.0.5.3/documentation/
- 
- # create tar.gz with right name for example mapbender3-3.0.5.3.tar.gz
- tar -czvf mapbender3-3.0.5.3.tar.gz mapbender3-3.0.5.3/
- # create zip with right name for example mapbender3-3.0.5.3.zip
- zip -r mapbender3-3.0.5.3.zip mapbender3-3.0.5.3/
+  .. code-block:: bash
+
+                  bin/composer build
+
+                  bin/composer build zip
   
-* move tar.gz and zip file to /sites/www.mapbender3.org/builds
-* edit actual release link http://mapbender3.org/en/download (english and german page) http://mapbender3.org/de/download
-* update Roadmap: milestones, features, date on http://mapbender3.org/roadmap and http://doc.mapbender3.org/en/book/versions.html
-* write release mail to mapbender-user and mapbender-dev 
-* only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
-* twitter on https://twitter.com/mapbender
-* update http://demo.mapbender3.org and http://sandbox.mapbender3.org
-* create a version based installation http://3053.mapbender3.org
+* Move TAR.GZ and ZIP file to /sites/www.mapbender3.org/builds
+* Edit actual release link http://mapbender3.org/en/download (english) and http://mapbender3.org/de/download (german)
+* Write release mail to mapbender-user and mapbender-dev 
+* Only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
+* Twitter on https://twitter.com/mapbender
+* Update http://demo.mapbender3.org and http://sandbox.mapbender3.org
+* Create a version based installation http://3053.mapbender3.org
 
 
 

@@ -6,17 +6,40 @@ Version history
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
 
-Milestone next
------------------
+Version 3.0.6.0
+---------------
 
-Relase Datum: soon
+Release date: 05.05.2017
+
+**Architecture:**
+
+- System Requirement PHP: 5.5.4 or higher.
+- Support of PHP 7.
+- Mapbender, FOM and OWSProxy excluded into Modules. They are now bind in composer.json
+- Documentation is part of the composer.
+- Adjustments of the ElementGenerator
+- Determining of user-roles
+- Composer entries with https
+- Adjustments of Controllers and Bundles.
+- Doctrine generate commands are marked deprecated
+- Doctrine assets:dump command is marked deprecated
+- Update of the JOII library
+- Introduction of symblinks to the different binaries in the bin directory of mapbender-starter
+- Composer shipped in application/bin directory
+- Check in the Composer-installation, if the SASS Compiler Binaries are executable. If not, they are set executable.
+- New Composer commands for documentation: Generate API documentation only: bin/composer gen-api-docs
+- New Composer commands for documentation: Generate User-documentation only: bin/composer gen-user-docs
+- Use of own forks of open-sans, joii, compass-mixins and codemirror libraries.
+
 
 **Bugfixes und Features:**
 
-- Measuring shows the coordinates directly, by moving the mouse the caluclated lengths of the segment are displayed live.
+- Measuring shows the coordinates directly, by moving the mouse the calculated lengths of the segment are displayed live.
 - New measuring results are shown on Top. The current result is visible at first place and you don't need to scroll.
-- The login-dialog (resgistragion, forgotten password) is optimized for mobile devices to achive a better workflow to secured mobile applications.
-- New added layerset instances are now per default not marked as basesource. 
+- The login-dialog (registration, forgotten password) is optimized for mobile devices to achieve a better workflow to secured mobile applications.
+- New added layerset instances are now per default not marked as base-source.
+
+- The `Copyright element popup <../bundles/Mapbender/CoreBundle/elements/copyright.html>`_ can be defined with a height and a width.
 
 - Deleting a layerset led in some cases to a corrupt map element and a wrong layertree.
 
@@ -27,14 +50,24 @@ Relase Datum: soon
 - Fix in GetMap request if the layer order was changed manually in the TOC.
 - Fix for WMS support 1.3.0
 - Fix for secured WMS services on GetMap, GetFeatureInfo, Print, Export and Legend.
+- Fix for secured WMS services where the username or password included a hash-character.  
 - Fixes for the WMS parameter Exception Format for the GetMap and GetFeatureInfo Request (Github-Issue 400)
-- Fixes of Layer-Styles for GetMap und GetFeatureInfo request.
+- Fixes of Layer-Styles for GetMap und GetFeatureInfo request
+- Default Tile Size for the Map set to 512 (was 256)
+- WMS Keyword limit (was: 255 characters) is changed. The column-type is now "text". The command app/console doctrine:schema:update is necessary to update the Mapbender database of a previous version.
+- Fix when importing YAML based applications and creating duplicate WMS data-sources.
+- Fix on minimal and maximal scale hint on WMS services.
 
 - Print: Color can be set for variable texts.
 - Print: Printout of the legend, if the service is built in with the proxy.
+- Print: Services registered with PNG8 could not be printed or exported in some cases. The types image/png8 and image/png mode=24bit is not supported.
+- Print: In some cases, the legend wasn't printed if OWSProxy was activated
+
+- BaseSourceSwitcher: Duplicate request on WMS which was not visible and where the BaseSourceSwitcher was used as a menu.
+- Unneccessary requests on specifc WMS configurations with scale.
 
 - Saving of YML applications in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml and adjustments in their referenced WMS Version
-- Fixes in administration interface of the YAML edititing after Saving (Github-Issue 350)
+- Fixes in administration interface of the YAML editing after saving (Github-Issue 350)
 
 - Fixes in POI-Coordinate: Transformation and SRS and the trailing digits after the comma.
 - Fix of a XSS error in POI dialog
@@ -43,26 +76,40 @@ Relase Datum: soon
 - GPS: Error messages if no GPS signal and the dependency to Chrome-browser and https.
 - GPS: Pan the map only on first position.
 
-- Internet Explorer Compatibility: Adjustments in the Zoombar.
-- Internet Explorer Compatibility: Adjustments in the OverviewMap
+- User-Interface: Scrolling of a drop-down list in backend, for example the icons for the buttons, did also scroll the background.
+
+- "Only valid" Checkbox on `loading a  WMS <../bundles/Mapbender/CoreBundle/entities/source.html>`_ is now per default not activated anymore.
+
+ - Reformatted messages if the schemes of a WMS are not accessible when adding a WMS.
+
+- The `SearchRouter <../bundles/Mapbender/CoreBundle/entities/search_router.html>`_ shows, if placed in the sidebar, the Search and Reset buttons.
+
+- Internet Explorer Compatibility: Adjustments in the `Zoombar <../bundles/Mapbender/CoreBundle/elements/zoom_bar.html>`_..
+- Internet Explorer Compatibility: Adjustments in the `OverviewMap <../bundles/Mapbender/CoreBundle/elements/overview.html>`_.
 - MS Egde Compatibility: Trying to fix the Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
 
 - Improvement of the performance on *some* Windows installations through  WinCachePHP and PHP Opcache (for details see `Installation under Windows <installation/installation_windows.html>`_)
+
+- Change in System-Requirement for Windows: For PHP, the "Non-Thread-Safe" version is needed!
 
 - Copying of applications through users who are not root (ACL Application: owner, Users: owner, ACLs: owner, Element: owner, Groups: owner, Service Source: owner, specific applications: owner)
 
   
 **FOM and Security:**
 
-- Show users on the key icon of an elements who have an access on this element
+- `Show the users  <../bundles/FOM/UserBundle/users.html>`_ who have a access on an element in an application.
 - Rework of the Secure Elements dialog.
+- User with the role View for services are allowed to view the Metadata and to load the services into an application.
 
 
 **miscellaneous**
 
 - Design and presentation of the FeatureInfo dialog if shown as Accordion. Also if shown as "not from source".
 - Drag of Popups in an application.
-- WMS Editor: Adjustments in size. XSS fix.
+- WMC Editor: Adjustments in size. XSS fix.
+- Fix of translations
+
+- YAML based applications can adjust the sidebar: align (left/right), closed (true/false), width (px/em/%)
 
 - Backend: Target field: Empty option of a Drop-Down field.
 - Adjustments of WMS Scale, ScaleHint and Min/Max values when a Layerset-Instance is opened.
@@ -92,6 +139,9 @@ Relase Datum: soon
 - Improvements of Export and Copy mechanism.
 - Improvements for the creation of new elements.
 
+- Remove the provide ext-ldap statement in Composer. The components are released from the core. We will build in the LDAP module in version 3.0.7.
+
+- Restructuring of DataManager and DataSource since `version 1.0.2 of data-manager <https://github.com/mapbender/data-manager/releases/tag/1.0.2>`_.
 
 
 **Mobile template**
@@ -102,32 +152,28 @@ Relase Datum: soon
 - Fix and improve mobile template button handling
 - Fix register mobile application event handler "on moveend"
 
+
 **Digitizer**
 
-- Digitizer: Printing of Multipolygons
+- Update `Digitizer <../bundles/Mapbender/CoreBundle/elements/digitizer.html>`_ to version 1.1.
+- Printing of Multipolygons.
 - Objects don't appear in the printout if they are not displayed in the Digitizer.
+- MinScale restriction added
 - Objects with a line-width of 0 are now not shown anymore in the printout.
-- Adjustments of the Close Button.
+- Adjustments of the Close Button: "allowCancelButton" and "allowDeleteByCancelNewGeometry".
 
-**Form Genrator:**
+
+**Form Generator:**
 
 - Adjustments: Add HTMLElement handling  of service and DataStore configuration.
 
 
-**Architektur:**
-
-- PHP 7 Support
-- Adjustments of the ElementGenerator
-- Determining of user-roles
-- Composer entries with https
-- Adjustments of Controllers and Bundles.
-- Doctrine generate Kommandos are marked deprecated
-- Doctrine assets:dump Kommando is marked deprecated
-- Update of the JOII Bibliothek
-- Intriduction of symblinks to the different binaries in the bin directory of mapbender-starter
-
 **Dokumentation**
+
 - Introduction of the `FAQ <faq.html>`_.
+- Introduction of Contributing Guide for `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ and `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender itself and FOM will follow. This is the main documentation for developers and contributors of Mapbender.
+- The developer documentation will be maintained there and be transferred step-by-step from this user-documentation. So in the future this documentation here will be more for users and the developers have their documentation directly in the source code of the different modules.
+- Better `Layertree <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_ documentation
 
 
 **config.yml Anpassungen**
@@ -151,8 +197,15 @@ DBAL-Parameter:
 **mapbender-starter/application/app/config/applications/**
 
 Directory where YAML-based application definition are stored. As an example the well-known applications Mapbender-User, Mapbeder-User-Basic and Mapbender-Mobile are placed here.
-            
-This release is dedicated to Uli, who programmed the first pixel in Mapbender `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
+
+
+**app/console doctrine:schema:update**
+
+.. code-block:: sql
+
+                $ app/console doctrine:schema:update --dump-sql
+                ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
+                ALTER TABLE mb_core_keyword ALTER value DROP DEFAULT;
 
 
 

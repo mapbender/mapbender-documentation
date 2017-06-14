@@ -1,6 +1,11 @@
 Elemente verstehen
 ##################
 
+*Anmerkung*: Dieser Guide wird überarbeitet. Wir werden eine neue Dokumentation im Contributing Guide für Entwickler bereitstellen, der sich im Git-Repository befindet:
+
+`https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#elements <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#elements>`_.
+
+
 Bereiche der Elemente
 **********************
 
@@ -8,6 +13,7 @@ PHP Class
 +++++++++
 
 TODO
+
 
 Twig Template
 +++++++++++++

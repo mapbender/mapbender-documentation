@@ -20,6 +20,7 @@ Please take note of the `system requirements <systemrequirements.html>`_ where y
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
  extension=php_openssl.dll
+ extension=php_mbstring.dll
 
 
 For development:
@@ -38,7 +39,6 @@ Additional for PHP 7:
  # php.ini
  extension=php_zip.dll
  extension=php_bz2.dll
- extension=php_mbstring.dll
   
 
 .. code-block:: apache
@@ -89,10 +89,51 @@ The following steps may lead to a better performance under some Windows installa
 SASS Compiler
 -------------
 
-The SASS compiler is part of Mapbender since version 3.0.5 and 
+The SASS compiler is part of Mapbender since version 3.0.5 and contains und contains a filter since version 3.0.6.0 which makes sure that the generated CSS statements are stored in a temporary file instead of delivering it out in a pipe.
 
 
-Der SASS Compiler ist Bestandteil von Mapbender 3.0.5 und contains a filter since version 3.0.5.4 which makes sure that the generated CSS statements are stored in a temporary file instead of delivering it out in a pipe.
+mod_fcgid
+---------
+
+"mod_fcgid" is an Apache handler that is recommended for Windows Installations with Apache, because server requests can be executed parallel. These instructions are an offer for your deployment, although many other varaiants exist, which we cannot cover in this documentation.
+
+The common way to register PHP in Apache is as a module:
+
+.. code-block:: apache
+
+                # LoadModule php5_module "c:/bin/php/5.6.30/php5apache2_4.dll"
+                # AddHandler application/x-httpd-php .php
+
+                # configure the path to php.ini
+                # PHPIniDir "c:/bin/php/5.6.30"
+
+This way is substituded with the FCGID method. It needs some preparation since them module is not shipped with Apache installations out of the box.
+
+* Website: https://httpd.apache.org/mod_fcgid/
+* Download for Windows (VC 11, please mind your dependencies): https://www.apachelounge.com/download/VC11/ and there the **modules-...zip** file.
+* Unzip the mod_fcgid.so file from the archive into the module-directory of Apache.
+
+Adjust the httpd.conf:
+
+.. code-block:: apache
+
+                # FCGI
+                LoadModule fcgid_module "modules/mod_fcgid.so"
+                FcgidInitialEnv PHPRC "c:/bin/php/5.6.30"
+                AddHandler fcgid-script .php
+                FcgidWrapper "c:/bin/php/5.6.30/php-cgi.exe" .php
+
+
+In the Mapbender-Apache-Site file (mapbender.conf), add the "ExecCGI" parameter, for example:
+
+.. code-block:: apache
+
+                <Directory c:/srv/mapbender3-starter-3.0.6.0/web/>
+                    [...]
+                    Options MultiViews FollowSymLinks ExecCGI
+                    [...]
+                </Directory>
+
 
 
 WinCache PHP (optional)
@@ -101,6 +142,7 @@ WinCache PHP (optional)
 The Windows Cache Extension for PHP is a PHP accelerator that is used to increase the speed of PHP applications running on Windows and Windows Server. The extension included PHP opcode cache, user data cache, session cache, file system cache and relative path cache.
 
 Further information under:
+
 - https://www.iis.net/downloads/microsoft/wincache-extension
 - https://sourceforge.net/projects/wincache/
 
@@ -156,6 +198,9 @@ In php.ini:
 .. code-block:: ini
                 
                 [opcache]
+                ; Pfad zur php_opcache.dll
+                zend_extension=C:/bin/php/5.6.30/ext/php_opcache.dll
+
                 ; Determines if Zend OPCache is enabled
                 opcache.enable=1
  
@@ -171,7 +216,8 @@ In php.ini:
                 opcache.max_accelerated_files=2000
                 ; The maximum percentage of "wasted" memory until a restart is scheduled.
                 opcache.max_wasted_percentage=5
-                
+
+Symfony recommends, to increase the **opcache.max_accelerated_files** value: http://symfony.com/doc/3.1/performance.html#optimizing-all-the-files-used-by-symfony
 
                 
 

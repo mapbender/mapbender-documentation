@@ -56,14 +56,14 @@ databases. I noticed this because queries need more time than usual. Can I accel
 
 A: There are two parameters in php.ini which may tweak the performance of Mapbender with Oracle databases: `oci8.max_persistent <http://php.net/manual/de/oci8.configuration.php#ini.oci8.max-persistent>`_ and `oci8.default_prefetch <http://php.net/manual/de/oci8.configuration.php#ini.oci8.default-prefetch>`_. Adjust these parameters to:
 
-.. code-block:: ini
+.. code-block:: bash
 
    oci8.max_persistent = 15
    oci8.default_prefetch = 100000
 
 Furthermore, change the respective persistent database connection parameter in config.yml to true.
 
-.. code-block:: yaml
+.. code-block:: bash
 
    persistent=true
 
@@ -75,7 +75,7 @@ Q: I made a highly complex application and want to duplicate it, but it does not
 
 A: A possible reason for this is that php does not allow a workflow with big files (YAML-export/import/etc.). The problem occurs especially in FastCGI. Just adjust the php parameter MaxRequestLen (you can do that in the configuration of FCGI).
 
-.. code-block:: ini
+.. code-block:: bash
 
    # mod_fcgi.conf (Windows)
    # set value to 2 MB
@@ -86,10 +86,56 @@ A: A possible reason for this is that php does not allow a workflow with big fil
    MaxRequestLen 2000000
 
 
-Simutaneously, you should check the php values in php.ini:
+Simultaneously, you should check the php values in php.ini:
 
-.. code-block:: ini
+.. code-block:: bash
 
    max_execution_time = 240
    memory_limit = 1024M
    upload_max_filesize = 2M
+
+
+Development and manual updates of modules
+-----------------------------------------
+
+Q: How can I checkout a specific branch of the Mapbender module and test it? How can I revert this again? Does Composer help me with that?
+
+A: Alternative 1: Go in the directory application/mapbender and checkout the specific branch. After your tests, checkout the original branch again. Do not forget to clear the cache directory (app/cache for Symfony 2, var/cache for the upcoming Symfony 3).
+
+Alternative 2: Change the entry in composer: "mapbender/mapbender": "dev-fix/meinfix" and do a Composer Update. Keep in mind that with that step all other vendor packages will be updated (that's OK for developers). To go back, specify the original branch. In addition go back to application/mapbender and checkout the original branch by hand.
+
+
+Installation
+------------
+
+Attempted to call function "imagecreatefrompng"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: I get an error when printing. I have looked into the logfiles (app/logs/prod.log) and found something like this:
+
+.. code-block:: php
+
+                CRITICAL - Uncaught PHP Exception Symfony\Component\Debug\Exception\UndefinedFunctionException:
+                "Attempted to call function "imagecreatefrompng"
+                from namespace "Mapbender\PrintBundle\Component"."
+                at /srv/mapbender-starter/application/mapbender/src/Mapbender/PrintBundle/Component/PrintService.php line 310
+
+A: Please make sure you have installed the php5-gd library.
+
+
+
+
+Deprecation Notices at composer or bootstrap Script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: I get a deprecation warning when I call bootstrap or composer update:
+
+.. code-block:: php
+                
+                Deprecation Notice: The callback ComposerBootstrap::checkConfiguration declared at
+                /srv//mapbender-starter/application/src/ComposerBootstrap.php accepts a Composer\Script\CommandEvent
+                but post-update-cmd events use a Composer\Script\Event instance.
+                Please adjust your type hint accordingly, see https://getcomposer.org/doc/articles/scripts.md#event-classes
+                in phar:///srv/mapbender-starter/composer.phar/src/Composer/EventDispatcher/EventDispatcher.php:290
+
+A: This depends on the PHP version the system in running on and occurs on PHP versions < 7.

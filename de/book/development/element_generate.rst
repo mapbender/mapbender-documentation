@@ -3,6 +3,11 @@
 Wie können eigene Elemente erzeugt werden?
 ##########################################
 
+*Anmerkung*: Diese Anleitung wird gerade überarbeitet. Wir werden eine neue Dokumentation im Contributing Guide für Entwickler im Git-Repository bereitstellen:
+
+`https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_.
+
+
 Mapbender3 bietet einen app/console-Befehl zur Erzeugung von Elementen. 
 
 Hierbei können vier verschiedene Typen von Elementen generiert werden:

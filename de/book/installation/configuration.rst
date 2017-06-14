@@ -70,8 +70,8 @@ Erzeugen des Datenbankschemas über Symfony2:
     app/console doctrine:schema:create
 
     
-Kopieren des Bundles assets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+Kopieren des Asset Bundles
+^^^^^^^^^^^^^^^^^^^^^^^^^^ 
 
 Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien, Bilder und mehr – diese müssen in das öffentliche web-Verzeichnis kopiert werden:
 

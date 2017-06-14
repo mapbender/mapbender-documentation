@@ -36,7 +36,7 @@ Basic configuration files of Mapbender are placed in the app/config directory. T
 app/config/applications
 -----------------------
 
-Since Mapbender 3.0.5.3 the directory app/config/applications contains all applications that are defined in a YAML file. The known example-applications "Mapbender mobile", "Mapbender Demo Map" and "Mapbender Demo Map basic" are now placed there as single files. They replace the former single file mapbender.yml. Additional applications can be placed in this directory.
+The directory app/config/applications contains all applications that are defined in a YAML file. The known example-applications "Mapbender mobile", "Mapbender Demo Map" and "Mapbender Demo Map basic" are now placed there as single files. Since version 3.0.6 they replace the former single file mapbender.yml. Additional applications can be placed in this directory and are automatically recognized by Mapbender3.
 
 
 

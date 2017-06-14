@@ -8,13 +8,13 @@ Systemvoraussetzungen
 
 Mapbender3 benötigt die folgenden Komponenten:
 
-* PHP 5.4 oder neuer (php5) 
+* PHP 5.5.4 oder neuer (php5) 
 * PHP CLI Interpreter (php5-cli) 
 * PHP SQLite Erweiterung (php5-sqlite) 
 * PHP cURL Erweiterung (php5-curl) 
-* PHP Alternative PHP Cache (php-apc)
 * PHP Internationalisierungserweiterung (php5-intl)
 * PHP GD für den Druck (php5-gd)
+* PHP Multibyte String (php5-mbstring)
 * PHP FileInfo für den Druck zur Prüfung der Bilder
 * APACHE mod_rewrite
 * OpenSSL
@@ -29,10 +29,7 @@ Mapbender3 unterstützt auch PHP 7. Sie benötigen die oben beschriebenen PHP-Bi
 * PHP Zip (php-zip)
 * PHP BZ2 (php-bz2)
 * PHP XML (php-xml)
-* PHP Multibyte String (php-mbstring)
-* PHP Cache: php-apcu statt php-apc
 
-Die aktuelle Version von Mapbender3 (3.0.5.3) unterstützt PHP7 noch nicht vollständig. Falls Sie hier Probleme haben, können Sie entweder auf PHP5.6 downgraden, oder eine "Nightly" Version von Mapbender3 installieren.
 
 Datenbanken
 -----------
@@ -51,7 +48,7 @@ Wir haben gute Erfahrungen mit den 64-bit Downloads von Apache und PHP gemacht.
 
 * `Apache Download <http://www.apachelounge.com/download/>`_: Die Downloads der Apache Lounge sind für verschiedene Versionen von Windows angepasst. Für neuere Versionen wählen Sie die "VC11" oder "VC14" Variante (benötigt die Visual C++ Redistributable für Visual Studio 2012 bzw. 2015) und die Win64 Version (64-bit).
 
-* `PHP Download <http://windows.php.net/download#php-5.6>`_: Wählen Sie die "Thread Safe" Variante des PHP Downloads. als x64 Paket (64-bit).
+* `PHP Download <http://windows.php.net/download#php-5.6>`_: Wählen Sie die "Non Thread Safe" Variante des PHP Downloads. als x64 Paket (64-bit).
 
 
 Anmerkungen zu Windows
@@ -70,12 +67,12 @@ Zusätzlich gibt es 32- und 64-bit Versionen von Apache für Windows.
 Download von Mapbender3
 ***********************
 
-Installationspakete von Mapbender3 werden als komprimierte Pakete ausgegeben und sind auf der Download-Seite verfügbar unter http://mapbender3.org/download.
+Installationspakete von Mapbender3 werden als komprimierte Pakete ausgegeben und sind auf der `Download-Seite <http://mapbender3.org/download>`_ verfügbar.
 
 Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichnis Ihrer Wahl. In dieser Installationsbeschreibung wird davon ausgegangen, dass die Dateien unter
 
 * **/var/www** (für Linux) oder
-* **C:/** (für Windows) ausgepackt werden.
+* **C:/** (für Windows, nicht empfehlenswert, der Einfachheit halber) ausgepackt werden.
 
 Benennen Sie für die weitere Installationsanleitung das entpackte Verzechnis (z.B.: "mapbender3-3.0.5.2") nach "mapbender3" um.
 
@@ -95,14 +92,11 @@ Nach dem Entpacken des TAR.GZ- bzw des ZIP-Archivs finden Sie in dem Mapbender-V
 .. code-block:: bash
                 
                 .
-                ├── apidoc
                 ├── app
                 ├── bin
-                ├── documentation
                 ├── fom
                 ├── mapbender
                 ├── owsproxy
                 ├── src
                 ├── vendor
                 └── web
-

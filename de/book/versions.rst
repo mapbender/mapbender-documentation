@@ -6,10 +6,31 @@ Versionshistorie
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
 
-Milestone next
------------------
+Version 3.0.6.0
+---------------
 
-Relase Datum: soon
+Release Datum: 05.05.2017
+
+**Architektur:**
+
+- Systemvoraussetzung PHP: 5.5.4 oder höher
+- Unterstützung von PHP 7.
+- Mapbender, FOM and OWSProxy als Module ausgelagert. Sie sind nun in der composer.json eingebunden.
+- Die Dokumentation ist Teil des Composers.
+- Anpassungen ElementGenerator
+- Ermitteln von Benutzerrollen
+- Composer Einträge mit https
+- Verschiedene Verbesserungen an Controllern und Bundles.
+- Doctrine generate Kommandos als deprecated markiert
+- Doctrine assets:dump Kommando als deprecated markiert
+- Aktualisierung JOII Bibliothek
+- Ablage von Symlinks zu verschiedenen Binaries im bin Verzeichnis
+- Composer abgelegt im application/bin Verzeichnis
+- Check in der Composer-Installation, ob die SASS Compiler Binaries ausführbar sind. Falls nicht, werden sie ausführbar gesetzt.
+- Neue Composer-Kommandos zum Generieren der Dokumentation: Nur API Dokumentation generieren: bin/composer gen-api-docs
+- Neue Composer-Kommandos zum Generieren der Dokumentation: Nur Benutzerdokumentation generieren: bin/composer gen-user-docs
+- Verweis auf eigene Forks von open-sans, joii, compass-mixins und codemirror Bibliotheken.
+
 
 **Bugfixes und Features:**
 
@@ -17,7 +38,9 @@ Relase Datum: soon
 - Die Messergebnisse werden nun von oben hinzugefügt. Damit steht das aktuelle Messergebnis sichtbar an oberster Stelle und muss nicht gescrollt werden.
 - Der Login Dialog (Registrierung, Password vergessen) wurde für mobile Geräte optimiert, um den Zugriff auf gesicherte mobile Anwendungen zu erleichtern.
 - Neu hinzugefügte Layerset Instances sind nun nicht mehr per Default als Basesource markiert.
-  
+
+- Das `Copyright Element Popup <../bundles/Mapbender/CoreBundle/elements/copyright.html>`_ kann mit einer Höhe und Breite definiert werden.
+
 - Das Löschen von Layersets führte in einigen Fällen zu einem korrupten Map-Element und falschem Layertree
 
 - Anpassungen und Vereinfachung der Styles des FullScreenTemplate
@@ -27,11 +50,21 @@ Relase Datum: soon
 - Gefixter GetMap Request bei veränderter Reihenfolge der Layer im TOC
 - Fix für WMS support 1.3.0
 - Fix für geschützte WMS Dienste bei GetMap, GetFeatureInfo, Print, Export und Legende
+- Fix für geschützte WMS Dienste, bei denen im Username oder Passwort ein Hashzeichen vorkommt.
 - Fix des WMS Parameters Exception Format bei GetMap und GetFeatureInfo Request (Github-Issue 400)
 - Fixes bei den Layer-Styles im GetMap und GetFeatureInfo Request
+- Default Tile Size bei der Kartenkomponente auf 512 gesetzt (war 256)
+- WMS Keyword Begrenzung (war: 255 Zeichen) ist geändert. Der Spaltentyp wurde auf "text" geändert. Das Kommando app/console doctrine:schema:update ist notwendig, um die MB3-Datenbank einer Vorversion zu aktualisieren,
+- Fix beim Import von YAML Anwendungen und der Erstellung von Duplikaten bei WMS Datenquellen.
+- Fix bei Minimal und Maximal Scale Hint Angaben eines WMS Dienstes.
 
 - Druck: Farbe kann bei variablen Texten eingefügt werden.
 - Druck: Druck der Legende, wenn der Dienst über einen Proxy eingebaut wird.
+- Druck: Dienste, die mit PNG8 registriert wurden, konnten in einigen Fällen nicht exportiert oder gedruckt werden. Die Typen image/png8 und image/png mode=24bit werden nun unterstützt.
+- Druck: In einigen Fällen wurde die Legende nicht ausgegeben, wenn OWSProxy aktiviert war
+
+- BaseSourceSwitcher: Mehrere Requests an einen WMS der auf nicht sichtbar gesetzt war, wenn der BaseSourceSwitcher als Menü angezeigt wurde.
+- Überflüssige WMS Anfragen an bestimmte WMS, abhängig vom Maßstab.
 
 - Ablage von YML-Anwendungen in application/app/config/applications: mapbender_mobile.yml, mapbender_user_basic.yml, mapbender_user.yml und Anpassungen in der WMS Version
 - Administrationsoberfläche YAML Editierung und Umformatierungen nach dem Speichern (Github-Issue 350)
@@ -43,19 +76,30 @@ Relase Datum: soon
 - GPS: Fehlermeldungen, wenn kein Signal und Abhängigkeit von Chrome-Browsern und https.
 - GPS: Verschieben der Karte nur bei erster Positionsbestimmung.
 
-- Internet Explorer Kompatibilität: Anpassungen Zoombar.
-- Internet Explorer Kompatibilität: Anpassungen OverviewMap
+- User-Interface: Scrollen der Dropdownliste im Backend, z.B. bei den Icons für Buttons, scrollte auch den Hintergrund.
+
+- "Only valid" Checkbox beim `Einladen eines WMS <../bundles/Mapbender/CoreBundle/entities/source.html>`_ ist nun standardmäßig nicht mehr aktiviert.
+
+- Umformatierte Meldungen, wenn die Schemata eines WMS beim Hinzufügen nicht zugreifbar sind.
+
+- Der `SearchRouter <../bundles/Mapbender/CoreBundle/entities/search_router.html>`_ zeigt, wenn er in der Sidepane eingebettet ist, die Schaltflächen Suche und Reset.
+
+- Internet Explorer Kompatibilität: Anpassungen `Zoombar <../bundles/Mapbender/CoreBundle/elements/zoom_bar.html>`_.
+- Internet Explorer Kompatibilität: Anpassungen `OverviewMap <../bundles/Mapbender/CoreBundle/elements/overview.html>`_.
 - MS Egde Kompatibilität: Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
 
 - Verbesserung der Performance bei *einigen* Installation unter Windows durch WinCachePHP und PHP Opcache (für Details siehe `Installation unter Windows <installation/installation_windows.html>`_)
+
+- Änderung der Systemvoraussetzungen: Für Windows ist die "Non-Thread-Safe" Variante von PHP notwendig!
 
 - Kopieren von Anwendungen für Benutzer, die nicht root sind (ACL Application: owner, Benutzer: owner, Berechtigungen ACLs: owner, Element: owner, Gruppen: owner, Service Source: owner, spezifische Anwendung: owner)
 
   
 **FOM und Absicherung:**
 
-- Anzeige von Benutzern, die Zugriff auf ein Element in der Anwendung haben
+- `Anzeige von Benutzern <../bundles/FOM/UserBundle/users.html>`_, die Zugriff auf ein Element in der Anwendung haben.
 - Überarbeitung des Secure Elements Dialogs
+- Benutzer mit der Rolle View bei Diensten dürfen Metadaten sehen und Dienste in eine Anwendung einladen.
 
 
 **verschiedenes**
@@ -63,6 +107,9 @@ Relase Datum: soon
 - Anpassung Design FeatureInfo bei Anzeige als Accordion und wenn nicht als Source angezeigt
 - Verschieben von Popups innerhalb einer Anwendung
 - Anpassungen WMC Edit Dialoggröße und XSS
+- Fix in den Übersetzungen
+
+- YAML basierende Anwendungen können die Sidebar anpassen: align (left/right), closed (true/false), width (px/em/%)
 
 - Backend: Target-Feld: Leere Auswahl bei Drop-Down Feldern.
 - Anpassungen WMS Scale, ScaleHint und Min/Max Werte beim Öffnen einer Layerset-Instance
@@ -92,6 +139,9 @@ Relase Datum: soon
 - Verbesserungen Export / Kopieren
 - Vereinfachung bei der Erstellung neuer Elemente
 
+- Entfernen des provide ext-ldap Statements in Composer. Die Komponenten wurden ausgelagert. Wir werden die LDAP Module in Version 3.0.7 einbauen.
+
+- Restrukturierung von DataManager und DataSource seit der `Version 1.0.2 des data-manager <https://github.com/mapbender/data-manager/releases/tag/1.0.2>`_.
 
 
 **Mobiles Template**
@@ -102,34 +152,26 @@ Relase Datum: soon
 - Verbesserungen des Button Handlings allgemein
 - Fix des event handlers ""on moveend"
 
+
 **Digitizer**
 
-- Digitizer: Druck von Multipolygonen
+- Update `Digitizer <../bundles/Mapbender/CoreBundle/elements/digitizer.html>`_ auf Version 1.1.
+- Druck von Multipolygonen.
 - Objekte erscheinen nicht mehr im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
+- MinScale Einschränkung hinzugefügt
 - Objekte mit einer Linienbreite von 0 werden im Druck nicht mehr sichtbar.
-- Close Schaltfläche Anpassung
+- Anpassungen der Close Schaltfläche: "allowCancelButton" und "allowDeleteByCancelNewGeometry".
 
-**Form Genrator:**
+**Form Generator:**
 
 - Anpassungen: Hinzufügen des HTMLElement handling  für Services und  DataStore Konfiguration.
-
-
-**Architektur:**
-
-- PHP 7 Unterstützung
-- Anpassungen ElementGenerator
-- Ermitteln von Benutzerrollen
-- Composer Einträge mit https
-- Verschiedene Verbesserungen an Controllern und Bundles.
-- Doctrine generate Kommandos als deprecated markiert
-- Doctrine assets:dump Kommando als deprecated markiert
-- Aktualisierung JOII Bibliothek
-- Ablage von Symlinks zu verschiedenen Binaries im bin Verzeichnis
 
 **Dokumentation**
 
 - `FAQ <faq.html>`_ der Dokumentation hinzugefügt.
-
+- Einführung der Contributing Guide für `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ und `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender selbst und FOM werden folgen. Dies sind die Einstiegsdokumentationen für Entwickler und Mitwirkenden von Mapbender.
+- Die Developer Dokumentation wird dort aktualisiert und aus dieser Benutzerdokumentation schrittweise überführt. Somit wird in der Zukunft diese Dokumentation hier sich mehr an die Anwender richten, während die Entwickler ihre Dokumentation direkt im Source-Code der einzelnen Module finden.
+- Ausführlichere `Layertree <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_ Dokumentation
 
 **config.yml Anpassungen**
 
@@ -152,8 +194,15 @@ DBAL-Parameter:
 **mapbender-starter/application/app/config/applications/**
 
 Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Beispiel sind die drei bekannten Anwendungen Mapbender-User, Mapbeder-User-Basic und Mapbender-Mobile abgelegt.
-            
-Dieses Release ist Uli gewidmet, der den ersten Pixel in Mapbender programmiert hat `. <https://assets.toggl.com/images/toggl-how-to-save-the-princess-in-8-programming-languages.jpg>`_
+
+**app/console doctrine:schema:update**
+
+.. code-block:: sql
+
+                $ app/console doctrine:schema:update --dump-sql
+                ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
+                ALTER TABLE mb_core_keyword ALTER value DROP DEFAULT;
+
 
 
 

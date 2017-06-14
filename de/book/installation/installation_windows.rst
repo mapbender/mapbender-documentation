@@ -20,6 +20,7 @@ Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ wo Sie auch 
  extension=php_pdo_sqlite.dll
  extension=php_pgsql.dll
  extension=php_openssl.dll
+ extension=php_mbstring.dll
 
 
 Für die Entwicklung:
@@ -37,7 +38,6 @@ Zusätzlich für PHP 7:
  # php.ini
  extension=php_zip.dll
  extension=php_bz2.dll
- extension=php_mbstring.dll
   
 
 .. code-block:: apache
@@ -87,7 +87,52 @@ Mit den folgenden Schritten kann die Performance unter Windows gesteigert werden
 SASS Compiler
 -------------
 
-Der SASS Compiler ist Bestandteil von Mapbender 3.0.5 und seit der Version 3.0.5.4 sorgt ein Filter dafür, dass die generierten CSS Anweisungen in eine temporäre Datei abgelagert und nicht in einer Pipe ausgeliefert werden.
+Der SASS Compiler ist Bestandteil von Mapbender 3.0.5 und seit Version 3.0.6.0 sorgt ein Filter dafür, dass die generierten CSS Anweisungen in eine temporäre Datei abgelagert und nicht in einer Pipe ausgeliefert werden.
+
+
+
+mod_fcgid
+---------
+
+Der Handler "mod_fcgid" ist für Windows Installationen mit Apache empfehlenswert, weil darüber Serveranfragen parallel ausgeführt werden können. Diese Anleitung ist ein Vorschlag des Deployments, es gibt dabei aber auch mehrere Variationen, auf die wir im Rahmen dieser Doku nicht eingehen können.
+
+Der gängige Weg ist, PHP einfach als Modul in den Apache einzuhängen:
+
+.. code-block:: apache
+
+                # LoadModule php5_module "c:/bin/php/5.6.30/php5apache2_4.dll"
+                # AddHandler application/x-httpd-php .php
+
+                # configure the path to php.ini
+                # PHPIniDir "c:/bin/php/5.6.30"
+
+
+Diese Methode wird gegen die FCGID Methode ausgetauscht. Sie benötigt etwas Vorbereitung, da das Modul nicht automatisch bei den Apache Installationen mitgegeben wird.
+
+* Webseite: https://httpd.apache.org/mod_fcgid/
+* Download für Windows (VC 11, bitte Abhängigkeit beachten): https://www.apachelounge.com/download/VC11/ und dort die **modules-...zip** Datei.
+* Entpacken Sie die mod_fcgid.so Datei aus dem Archiv in das module-Verzeichnis von Apache.
+
+In der httpd.conf:
+
+.. code-block:: apache
+
+                # FCGI
+                LoadModule fcgid_module "modules/mod_fcgid.so"
+                FcgidInitialEnv PHPRC "c:/bin/php/5.6.30"
+                AddHandler fcgid-script .php
+                FcgidWrapper "c:/bin/php/5.6.30/php-cgi.exe" .php
+
+
+Fügen Sie in der Mapbender-Apache-Site Datei (mapbender.conf), den "ExecCGI" Parameter hinzu, zum Beispiel:
+
+.. code-block:: apache
+
+                <Directory c:/srv/mapbender3-starter-3.0.6.0/web/>
+                    [...]
+                    Options MultiViews FollowSymLinks ExecCGI
+                    [...]
+                </Directory>
 
 
 
@@ -151,9 +196,13 @@ Mehr info: https://www.sitepoint.com/understanding-opcache/
 
 In der php.ini:
 
+
 .. code-block:: ini
                 
                 [opcache]
+                ; Pfad zur php_opcache.dll
+                zend_extension=C:/bin/php/5.6.30/ext/php_opcache.dll
+
                 ; Determines if Zend OPCache is enabled
                 opcache.enable=1
  
@@ -170,6 +219,8 @@ In der php.ini:
                 ; The maximum percentage of "wasted" memory until a restart is scheduled.
                 opcache.max_wasted_percentage=5
                 
+Symfony empfiehlt, den **opcache.max_accelerated_files** Wert höher zu setzen: http://symfony.com/doc/3.1/performance.html#optimizing-all-the-files-used-by-symfony
+
 
 
 Überprüfung

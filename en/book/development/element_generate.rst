@@ -2,6 +2,12 @@
 
 How to create your own Element?
 ################################
+
+*Note*: This guide is under complete restructuring. We will provide a new documentation in the Contributing Guite in our Git-Repository:
+
+`https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_.
+
+
 Mapbender3 offers an app/console command to create different elements:
 
 * general elements

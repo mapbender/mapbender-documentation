@@ -8,13 +8,13 @@ System requirements
 
 Mapbender3 needs the following components in order to run:
 
-* PHP 5.4 or later (php5)
+* PHP 5.5.4 or later (php5)
 * PHP CLI interpreter (php5-cli)
 * PHP SQLite extension (php5-sqlite)
 * PHP cURL extension (php5-curl)
-* PHP Alternative PHP Cache (php-apc)
 * PHP Internationalization (php5-intl)
 * PHP GD for printing (php5-gd)
+* PHP Multibyte String (php5-mbstring)
 * PHP FileInfo for printing to check image format
 * APACHE mod_rewrite 
 * OpenSSL
@@ -29,10 +29,7 @@ Mapbender3 supports also PHP 7. You'll need the above listed libraries for PHP 7
 * PHP Zip (php-zip)
 * PHP Bz2 (php-bz2)
 * PHP XML (php-xml)
-* PHP Multibyte String (php-mbstring)
-* PHP Cache: php-apcu instead of php-apc
 
-The current stable version of Mapbender3 (3.0.5.3) is not yet completely compatible with PHP7. If you experience issues, you can downgrade to PHP5.6, or use a nightly build.
 
 Databases
 ---------
@@ -51,7 +48,7 @@ We have good experiences with the 64-bit downloads of Apache und PHP.
 
 * `Apache Download <http://www.apachelounge.com/download/>`_: The downloads of the Apache Lounge are customized for different Versions of Windows. For newer versions choose the "VC11" or "VC14" variant (this requires the Visual C++ Redistributable für Visual Studio 2012 resp. 2015) and the Win64 version (64-bit).
 
-* `PHP Download <http://windows.php.net/download#php-5.6>`_: Choose the "Thread Safe" variant of the PHP downloads as the x64 version (64-bit).
+* `PHP Download <http://windows.php.net/download#php-5.6>`_: Choose the "Non Thread Safe" variant of the PHP downloads as the x64 version (64-bit).
 
 
 Comments on Windows
@@ -74,7 +71,7 @@ Installation packages are distributed as compressed packages and are available f
 After downloading, extract the package in a directory of your choice. In this installation documentation we assume that the package is extracted in the following directories:
 
 * **/var/www** (for Linux) or
-* **C:/** (for Windows).
+* **C:/** (for Windows, not recommended, for this doku only).
 
 For the following installation steps, please rename the unzipped directory (for example: "mapbender3-3.0.5.2") to "mapbender3".
 
@@ -95,14 +92,11 @@ After unpacking the TAR.GZ- resp. the ZIP-archive, you will see in the Mapbender
 .. code-block:: bash
                 
                 .
-                ├── apidoc
                 ├── app
                 ├── bin
-                ├── documentation
                 ├── fom
                 ├── mapbender
                 ├── owsproxy
                 ├── src
                 ├── vendor
                 └── web
-

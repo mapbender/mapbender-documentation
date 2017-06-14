@@ -56,7 +56,7 @@ F: Beim Zugriff auf Oracle-Datenbanken reagiert Mapbender teilweise recht langsa
 
 A: Es gibt zwei Parameter in der php.ini, mit der die Zugriffe auf die Oracle Datenbanken verbessert werden können: `oci8.max_persistent <http://php.net/manual/de/oci8.configuration.php#ini.oci8.max-persistent>`_ und `oci8.default_prefetch <http://php.net/manual/de/oci8.configuration.php#ini.oci8.default-prefetch>`_. Passen Sie diese an.
 
-.. code-block:: ini
+.. code-block:: bash
 
    oci8.max_persistent = 15
    oci8.default_prefetch = 100000
@@ -64,7 +64,7 @@ A: Es gibt zwei Parameter in der php.ini, mit der die Zugriffe auf die Oracle Da
 
 Des weiteren stellen Sie in der config.yml in der jeweiligen Datenbank-Verbindung den persistent Parameter auf true.
 
-.. code-block:: yaml
+.. code-block:: bash
 
    persistent=true
 
@@ -77,7 +77,7 @@ F: Ich habe eine komplexe Anwendung und möchte Sie kopieren. Das schlägt fehl.
 
 A: Eine mögliche Ursache ist, dass PHP nicht das Arbeiten mit großen Dateien (YAML-Export/Import, etc.) erlaubt. Das tritt v.a. bei Fast-CGI auf. Dafür dient der PHP Parameter MaxRequestLen, den Sie in der Konfiguration von FCGI anpassen können.
 
-.. code-block:: ini
+.. code-block:: bash
 
    # mod_fcgi.conf (Windows)
    # set value to 2 MB
@@ -90,8 +90,52 @@ A: Eine mögliche Ursache ist, dass PHP nicht das Arbeiten mit großen Dateien (
 
 Analog dazu können Sie die PHP-Werte in der php.ini überprüfen:
 
-.. code-block:: ini
+.. code-block:: bash
 
    max_execution_time = 240
    memory_limit = 1024M
    upload_max_filesize = 2M
+
+
+Entwicklung und manuelle Updates von Modulen
+--------------------------------------------
+
+F: Wie kann ich einen speziellen Branch des Mapbender Moduls auschecken und testen? Wie bekomme ich das wieder rückgängig? Hilft mir Composer dabei?
+
+A: Möglichkeit 1: In das Verzeichnis application/mapbender gehen und den speziellen Branch auschecken. Danach wieder den aktuellen Branch auschecken. Leeren Sie das Cache Verzeichnis zwischendurch (app/cache für Symfony 2, var/cache für das kommende Symfony 3))
+
+Möglichkeit 2: Im Composer: "mapbender/mapbender": "dev-fix/meinfix" eintragen und ein Composer Update ausführen. Dabei werden aber auch alle anderen Vendor-Pakete aktualisiert (für Developer ist das OK). Rückgängig wieder mit der Angabe des vorherigen Branches. Dazu nochmal in appliaction/mapbender gehen und den Branch mit der Hand auschecken.
+
+
+Installation
+------------
+
+Attempted to call function "imagecreatefrompng"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: Ich bekomme einen Fehler beim Drucken. Ich habe in das Log geschaut (app/logs/prod.log) und da steht so ungefähr folgendes drin.
+
+.. code-block:: php
+
+                CRITICAL - Uncaught PHP Exception Symfony\Component\Debug\Exception\UndefinedFunctionException:
+                "Attempted to call function "imagecreatefrompng"
+                from namespace "Mapbender\PrintBundle\Component"."
+                at /srv/mapbender-starter/application/mapbender/src/Mapbender/PrintBundle/Component/PrintService.php line 310
+
+A: Bitte stellen Sie sicher, dass Sie die php5-gd Bibliothek installiert haben.
+
+
+Deprecation Notices bei composer oder bootstrap Script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: Ich bekomme beim Ausführen von bootstrap bzw. von composer Update eine Deprecation Warnung:
+
+.. code-block:: php
+                
+                Deprecation Notice: The callback ComposerBootstrap::checkConfiguration declared at
+                /srv//mapbender-starter/application/src/ComposerBootstrap.php accepts a Composer\Script\CommandEvent
+                but post-update-cmd events use a Composer\Script\Event instance.
+                Please adjust your type hint accordingly, see https://getcomposer.org/doc/articles/scripts.md#event-classes
+                in phar:///srv/mapbender-starter/composer.phar/src/Composer/EventDispatcher/EventDispatcher.php:290
+
+A: Das ist abhängig von der PHP Version, auf der Sie diese Kommandos aufrufen und taucht bei PHP Versionen < 7 auf.

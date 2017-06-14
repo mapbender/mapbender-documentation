@@ -60,7 +60,6 @@ Dieser Quickstart beschreibt, wie Sie:
 Eine Mapbender Anwendung kann wie folgt aussehen:
 
   .. image:: ../../figures/mapbender3_basic_application.png
-     :scale: 80
 
 
 Installation
@@ -80,7 +79,6 @@ Starten Sie Mapbender
 Falls Sie Schwierigkeiten haben, Mapbender zu starten, überprüfen Sie ob der Apache Web Server und die PostgreSQL Datenbank laufen.
 
   .. image:: ../../figures/mapbender3_app_dev.png
-     :scale: 80
 
 
 Starten Sie Mapbender im Entwicklungsmodus über app_dev.php
@@ -88,7 +86,6 @@ Starten Sie Mapbender im Entwicklungsmodus über app_dev.php
 Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über die Anwendung an (Logging, Fehlermeldungen, Datenbankabfragen, Speicherverbrauch, Zeit und mehr). Dieser Modus ist nur über localhost verfügbar.
 
   .. image:: ../../figures/mapbender3_app_dev.png
-     :scale: 80
 
 #. Start des Entwicklungsmodus: http://localhost/mapbender3/app_dev.php
 
@@ -110,7 +107,6 @@ Die Willkommensseite
 #. Sie können sich mit dem Benutzer anmelden, der während der Installation erzeugt wurde. Er kann ``root`` heißen mit dem Kennwort ``root`` (Dies ist der Standardbenutzer/Kennwort nach der Installation von Mapbender auf der OSGeo-Live. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben. Löschen Sie den Benutzer ``root`` nicht.).
   
   .. image:: ../../figures/mapbender3_welcome.png
-     :scale: 80
 
 Nach erfolgreicher Anmeldung werden Sie zur ``Mapbender Administration`` weiter geleitet.
 
@@ -132,7 +128,6 @@ Die Anwendungsübersicht bietet folgende Funktionen:
 
 
   .. image:: ../../figures/mapbender3_application_overview.png
-     :scale: 80
 
 
 Erstellen Sie eine eigene Anwendung
@@ -159,7 +154,6 @@ Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. Kartenelement, 
 
 
   .. image:: ../../figures/mapbender3_create_application.png
-     :scale: 80
 
 
 .. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen im online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter http://doc.mapbender3.org/en/book/templates.html
@@ -182,14 +176,12 @@ Exportieren und Importieren von Anwendungen und Daten
 Sie können eine Anwendung als  JSON oder YAML über ``Anwendungen --> Exportieren (Applications --> Export)``exportieren. Für den Export können ein oder mehrere Anwendungen ausgewählt werden. Die Datenquellen können ebenfalls beim Export ausgegeben werden.
 
   .. image:: ../../figures/mapbender3_application_export.png
-     :scale: 80
 
 
 Die Export-Datei beinhaltet alle Definitionen, die zum Aufbau der Anwendung (Datenquellen) erforderlich sind. Die Export-Datei kann über ``Anwendungen --> Importieren (Applications --> Import)`` in andere Mapbender3 Installationen oder in die gleiche Installation geladen werden.
 
 
   .. image:: ../../figures/mapbender3_application_import.png
-     :scale: 80
 
 
 Verwaltung von Datenquellen
@@ -230,7 +222,6 @@ Ein WMS liefert ein XML, wenn das getCapabilities-Dokument angefordert wird. Die
 #. Nach erfolgreicher Registrierung des Dienstes zeigt Mapbender eine Übersicht der Informationen an, die der Dienst geliefert hat.
 
   .. image:: ../../figures/mapbender3_wms_load.png
-     :scale: 80
 
 
 Hier sind einige Beispiel WMS:
@@ -267,7 +258,6 @@ Nach dem erfolgreichen Hochladen eines WMS möchten Sie diesen zu einer Anwendun
 
 
   .. image:: ../../figures/mapbender3_add_source_to_application.png
-     :scale: 80
 
 Konfiguration von Diensten
 ================================================================================
@@ -281,7 +271,6 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
 
 
 .. image:: ../../figures/mapbender3_wms_application_settings.png
-  :scale: 80
 
 
 **Dienstekonfiguration:**
@@ -314,7 +303,6 @@ Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
 Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
 .. image:: ../../figures/mapbender3_vendor_specific_parameter.png
-           :scale: 80
 
 * Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
 * Name: Parameter Name im WMS Request.
@@ -350,7 +338,6 @@ Fügen Sie Elemente zu Ihrer Anwendung hinzu
 Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwendung aufbauen können. Ihre Anwendung verfügt wiederum über verschiedene Bereiche (Toolbar, Sidepane, Content, Footer), die Sie mit Elementen bestücken können.
 
   .. image:: ../../figures/mapbender3_application_add_element.png
-     :scale: 80
 
 #. Wählen Sie ``Anwendungen -->`` |mapbender3-button-edit| ``Editier-Button --> Layouts --> Button`` |mapbender3-button-add|, um eine Übersicht über die Mapbender3-Elemente zu erhalten.
 
@@ -368,7 +355,6 @@ Jetzt sollten sie eine Idee davon haben, wie einfach es ist eine Mapbender-Anwen
 
 
   .. image:: ../../figures/mapbender3_application_elements.png
-     :scale: 80
 
 Beispiele für Elemente, die Mapbender3 anbietet:
 
@@ -440,7 +426,6 @@ Benutzer anlegen
 
 
   .. image:: ../../figures/mapbender3_create_user.png
-     :scale: 80 
 
 
 
@@ -464,7 +449,6 @@ Benutzer einer Gruppe zuweisen
 
 
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
-     :scale: 80
  
 
 Rechte
@@ -482,7 +466,6 @@ Mapbender3 bietet verschiedene Rechte an, die Sie vergeben können. Diese beruhe
 Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherheit (Users --> Edit your User --> Security) `` Rechte zu.
 
   .. image:: ../../figures/mapbender3_roles.png
-     :scale: 80 
 
 
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
@@ -504,7 +487,6 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 #. Melden Sie sich unter der neuen Benutzerbezeichnung an
 
   .. image:: ../../figures/mapbender3_security.png
-     :scale: 80
 
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
@@ -545,7 +527,6 @@ Format für die Übergabe eines einzelnen Punktes:
 * http://demo.mapbender3.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
   .. image:: ../../figures/mapbender3_position_poi_label.png
-     :scale: 80
 
 
 Für die Übergabe vieler Punkte wird das folgende Format verwendet:
