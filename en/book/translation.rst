@@ -146,6 +146,10 @@ Repositories
 
 * https://github.com/mapbender/mapbender/
 * https://github.com/mapbender/mapbender-digitizer/
+* https://github.com/mapbender/fom
+* https://github.com/mapbender/data-manager/
+https://github.com/mapbender/data-source
+https://github.com/mapbender/map-tools/
 
 
 Since Git is a distributed versioning system, it is very convenient for each developer/contributor to have a personal public copy of the "official" repository (also known as fork). 
@@ -153,6 +157,19 @@ Since Git is a distributed versioning system, it is very convenient for each dev
 Web hosting services like GitLab or GitHub provide this option if you visit the main code repository and press the button "Fork". This way the developer can make changes to a personal isolated repository. Then one can ask the rest of the developers to review the code and merge accordingly through a "pull request".
 
 After forking the official repositories, your working repositories are: https://github.com/your_id/mapbender and https://github.com/your_id/mapbender
+
+
+Github - editing on GitHub
+=========================================
+
+* you can edit files directly on GitHub.
+* navigate to the file f.e https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/CoreBundle/Resources/translations/messages.de.yml
+* edit the file
+* save changes and create a new branch for this commit and start a pull request
+
+
+git - working on the command line
+=========================================
 
 On Linux systems get the source code locally using:
 
