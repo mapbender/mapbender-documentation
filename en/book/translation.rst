@@ -100,7 +100,7 @@ Create yml-files for your language
 *************************************
 If your language is not translated yet, it is easy to add a new language.
 
-* Check the translation directories and create a new file by copying the english locale
+* Check the translation directories and create a new file by copying the english locale (messages.en.yml)
 * translate
 * set locale in your parameters.yml to the new language
 * clear your cache
