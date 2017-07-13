@@ -1,7 +1,7 @@
 .. _translation:
 
 Translation in Mapbender3
-######################################
+#########################
 
 Mapbender3 uses the translator service which is a Symfony component. You get more information at the `Symfony Translation Documentation <http://symfony.com/doc/2.8/book/translation.html>`_ and `Translator Class Documentation <http://api.symfony.com/2.8/Symfony/Component/Translation.html>`_ . 
 
@@ -31,11 +31,11 @@ yml-files for translations
 ****************************
 The translations can be stored in different formats. We use yml-format for Mapbender3. 
 
-We use place holder for every text f.e. **mb.core.featureinfo.popup.btn.ok**. Like this you can define different tranlsation for the same word which accurs in different modules.
+We use place holder for every text e.g. **mb.core.featureinfo.popup.btn.ok**. Like this you can define different translations for the same word which occurs in different modules.
 
 We translate the place holder to different languages. English is the default language that we provide. It is also defined as the fallback language in the parameters.yml file. The fallback language will be used if you define a language in parameters.yml that does not exist.
 
-This is how a translation file messages.de.yml for german translation could look like.
+This is how a translation file messages.de.yml for German translation could look like.
 
 .. code-block:: yaml
 
@@ -97,18 +97,20 @@ Check whether translations (yml-files) for your language exist
 
 
 Create yml-files for your language
-*************************************
+**********************************
+
 If your language is not translated yet, it is easy to add a new language.
 
-* Check the translation directories and create a new file by copying the english locale (messages.en.yml)
+* Check the translation directories and create a new file by copying the English locale (messages.en.yml)
 * translate
 * set locale in your parameters.yml to the new language
 * clear your cache
-* if everything is fine with your new language give the files to the Mapbender3 commnity - best would be a pull request or send the files to mapbender@osgeo.org
+* if everything is fine with your new language give the files to the Mapbender3 community - best would be a pull request or send the files to mapbender@osgeo.org
 
 
 Naming conventions and locations
-********************************** 
+**********************************
+
 Symfony looks for translation files in the following directories in the following order:
 
 * the <kernel root directory>/Resources/translations
@@ -128,19 +130,20 @@ The naming convention is **domain.locale.loader**.
 
 Share your translations with the Mapbender3 community!
 ******************************************************
+
 Supporting more and more language would be great for Mapbender3. The Mapbender project would be happy if you could share your translations with the community.
 
 This is what you have to do:
 
 * Option 1: send the new yml-files for your language to the Mapbender developer (mapbender@osgeo.org) or 
 
-* Option 2: create a pull request on github
+* Option 2: create a pull request on GitHub.
 
 We prefer option 2.
 
 
 How to translate and make a pull request
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Repositories 
 
@@ -160,7 +163,7 @@ After forking the official repositories, your working repositories are: https://
 
 
 Github - editing on GitHub
-=========================================
+==========================
 
 * you can edit files directly on GitHub.
 * navigate to the file f.e https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/CoreBundle/Resources/translations/messages.de.yml
@@ -169,7 +172,7 @@ Github - editing on GitHub
 
 
 git - working on the command line
-=========================================
+=================================
 
 On Linux systems get the source code locally using:
 
@@ -254,5 +257,3 @@ create a file
     git add <file>
     git commit -m "commit message"
     git push origin master
-
-
