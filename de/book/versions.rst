@@ -5,6 +5,21 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
+Version 3.0.6.2
+---------------
+
+Release Datum: dd.mm.2017
+
+**Bugfixes:**
+
+
+
+
+**Zusätzliche Update Schritte:**
+
+- Führen Sie nochmals den Befehl ``app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`` aus. Es werden zwei neue Koordinatensysteme (EPSG:4839|ETRS89 / LCC Germany (N-E) und EPSG:5243|ETRS89 / LCC Germany (E-N)) der Mapbender Tabelle ``mb_core_srs`` hinzugefügt.
+
+
 
 Version 3.0.6.1
 ---------------
