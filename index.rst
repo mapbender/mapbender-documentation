@@ -41,6 +41,7 @@ Online version of this documentation
 Other versions of this documentation
 ====================================
 
+* https://docs.mapbender3.org/3062
 * https://docs.mapbender3.org/3061
 * https://docs.mapbender3.org/3060
 * https://docs.mapbender3.org/3053
