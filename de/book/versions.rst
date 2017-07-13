@@ -12,12 +12,26 @@ Release Datum: dd.mm.2017
 
 **Bugfixes:**
 
-
+* Kommando, um den Imagepfad in bestehenden Map-Elementen zu aktualisieren (#530)
+* Übersetzung Drucken im FeatureInfo Schaltfläche (#552)
+* Legende in Druck-Client (#559)
+* ScaleHint bei Sublayern von 1:1 korrigiert (#565)
+* SRS: Definitionen aktualisiert (#550, #562) und YAML-Standard-Anwendungen angepasst (#561)
+* Verbreiterung der Titel-Spalte bei Layerset-Instanzen (#559)
+* Koordinaten-Reihenfolge bei Anfragen an WMS 1.3.0 gefixt (#529)
+* Anpassungen Default-Wert "immediate" bei Messtool (#538)
+* Anpassungen an der Doku bei den Translations.
 
 
 **Zusätzliche Update Schritte:**
 
-- Führen Sie nochmals den Befehl ``app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`` aus. Es werden zwei neue Koordinatensysteme (EPSG:4839|ETRS89 / LCC Germany (N-E) und EPSG:5243|ETRS89 / LCC Germany (E-N)) der Mapbender Tabelle ``mb_core_srs`` hinzugefügt.
+**(1) Aktualisierung der EPSG-Codes**
+
+Führen Sie nochmals den Befehl ``app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`` aus. Es werden zwei neue Koordinatensysteme (EPSG:4839|ETRS89 / LCC Germany (N-E) und EPSG:5243|ETRS89 / LCC Germany (E-N)) der Mapbender Tabelle ``mb_core_srs`` hinzugefügt.
+
+**(2) Aktualisierung der Parameter im Map-Control**
+
+Führen Sie den Befehl ``app/console mapbender:upgrade:database`` aus, um den OL-ImagePath Parameter des Map-Controls anzupassen: Von ``bundles/mapbendercore/mapquery/lib/openlayers/img`` nach ``components/mapquery/lib/openlayers/img``. Andernfalls werden Sie bei der Nutzung des POI-Elements bzw. dem Aufruf des Mapbenders mit dem poi-Parameter, keine Sprechblase sehen. Beispiel: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
 
 
 
