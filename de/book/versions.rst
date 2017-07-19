@@ -8,20 +8,22 @@ Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/
 Version 3.0.6.2
 ---------------
 
-Release Datum: dd.mm.2017
+Release Datum: 20.07.2017
 
 **Bugfixes:**
 
-* Kommando, um den Imagepfad in bestehenden Map-Elementen zu aktualisieren (#530)
-* Übersetzung Drucken im FeatureInfo Schaltfläche (#552)
-* Legende in Druck-Client (#559)
-* ScaleHint bei Sublayern von 1:1 korrigiert (#565)
-* SRS: Definitionen aktualisiert (#550, #562) und YAML-Standard-Anwendungen angepasst (#561)
-* Verbreiterung der Titel-Spalte bei Layerset-Instanzen (#559)
+* Search Router: Fehler mit OpenLayers gefixt (#543)
+* Search Router: Auto Close nach dem Klick in der mobilen Anwendung (#548)
 * Koordinaten-Reihenfolge bei Anfragen an WMS 1.3.0 gefixt (#529)
+* Druck: Darstellung von Punkten und Labels bei hochauflösendem Druck (#573, #574, #492)
+* Abspeichern von WMC im WMC Editor Dialog (#577)
+* ScaleHint bei Sublayern von 1:1 korrigiert (#565)
+* Verbreiterung der Titel-Spalte bei Layerset-Instanzen (#559)
+* Kommando, um den Imagepfad in bestehenden Map-Elementen zu aktualisieren (#530) 
+* Übersetzung Drucken Schaltfläche im FeatureInfo Dialog (#552)
 * Anpassungen Default-Wert "immediate" bei Messtool (#538)
+* SRS: Definitionen aktualisiert (#550, #562) und YAML-Standard-Anwendungen angepasst (#561)
 * Anpassungen an der Doku bei den Translations.
-
 
 **Zusätzliche Update Schritte:**
 
@@ -31,7 +33,7 @@ Führen Sie nochmals den Befehl ``app/console doctrine:fixtures:load --fixtures=
 
 **(2) Aktualisierung der Parameter im Map-Control**
 
-Führen Sie den Befehl ``app/console mapbender:upgrade:database`` aus, um den OL-ImagePath Parameter des Map-Controls anzupassen: Von ``bundles/mapbendercore/mapquery/lib/openlayers/img`` nach ``components/mapquery/lib/openlayers/img``. Andernfalls werden Sie bei der Nutzung des POI-Elements bzw. dem Aufruf des Mapbenders mit dem poi-Parameter, keine Sprechblase sehen. Beispiel: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
+Führen Sie den Befehl ``app/console mapbender:upgrade:database`` aus, um den OL-ImagePath Parameter des Map-Controls anzupassen: Von ``bundles/mapbendercore/mapquery/lib/openlayers/img`` nach ``components/mapquery/lib/openlayers/img``. Das ist notwendig, falls Sie das POI-Elements nutzen bzw. Mapbender mit dem poi-Parameter aufrufen und keine Sprechblase für den POI sehen. Beispiel: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
 
 
 

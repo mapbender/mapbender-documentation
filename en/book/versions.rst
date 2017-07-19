@@ -5,11 +5,42 @@ Version history
 
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
+Version 3.0.6.2
+---------------
+
+Release date: 20.07.2017
+
+**Bugfixes:**
+
+* Search Router: Error with OpenLayers fixed (#543)
+* Search Router: Auto Close after Click in mobile application (#548)
+* Coordinate order (axis order) on requests to WMS 1.3.0 fixed (#529)
+* Print: Rendering of points and labels on high-resolution Print (#573, #574, #492)
+* Saving of WMC in WMC editor dialog (#577)
+* ScaleHint for sub-layers of 1:1 fixed (#565)
+* Widen the Title-Columns on Layerset-Instances (#559)
+* Command to update the image-path in existing map-elements (#530) 
+* Translation of Print-button in FeatureInfo dialog (#552)
+* Change of default-value of "immediate" in measure-tools (#538)
+* SRS: Update of definitions (#550, #562) and update of YAML standard applications (#561)
+* Update documentation for handling of translations.
+
+**Additional update steps:**
+
+**(1) Update of EPSG-Codes**
+
+Execute again the command ``app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append``. Two new coordinate-systems are added to the Mapbender database-table ``mb_core_srs``: EPSG:4839|ETRS89 / LCC Germany (N-E) and EPSG:5243|ETRS89 / LCC Germany (E-N)).
+
+**(2) Update of parameters im Map-Control**
+
+Execute the command ``app/console mapbender:upgrade:database``, to update the OL-imagePath Parameter from ``bundles/mapbendercore/mapquery/lib/openlayers/img`` to ``components/mapquery/lib/openlayers/img``. This is necessary if you use the POI-Elements or call Mapbender with the poi-parameter and see no bubble-icon for the poi. Example: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
+
+
 
 Version 3.0.6.1
 ---------------
 
-Release Datum: 24.05.2017
+Release date: 24.05.2017
 
 **Bugfixes:**
 
