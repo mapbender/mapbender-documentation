@@ -5,6 +5,57 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
+Version 3.0.6.2
+---------------
+
+Release Datum: 20.07.2017
+
+**Bugfixes:**
+
+* Search Router: Fehler mit OpenLayers gefixt (#543)
+* Search Router: Auto Close nach dem Klick in der mobilen Anwendung (#548)
+* Koordinaten-Reihenfolge bei Anfragen an WMS 1.3.0 gefixt (#529)
+* Druck: Darstellung von Punkten und Labels bei hochauflösendem Druck (#573, #574, #492)
+* Abspeichern von WMC im WMC Editor Dialog (#577)
+* ScaleHint bei Sublayern von 1:1 korrigiert (#565)
+* Verbreiterung der Titel-Spalte bei Layerset-Instanzen (#559)
+* Kommando, um den Imagepfad in bestehenden Map-Elementen zu aktualisieren (#530) 
+* Übersetzung Drucken Schaltfläche im FeatureInfo Dialog (#552)
+* Anpassungen Default-Wert "immediate" bei Messtool (#538)
+* SRS: Definitionen aktualisiert (#550, #562) und YAML-Standard-Anwendungen angepasst (#561)
+* Anpassungen an der Doku bei den Translations.
+
+**Zusätzliche Update Schritte:**
+
+**(1) Aktualisierung der EPSG-Codes**
+
+Führen Sie nochmals den Befehl ``app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`` aus. Es werden zwei neue Koordinatensysteme (EPSG:4839|ETRS89 / LCC Germany (N-E) und EPSG:5243|ETRS89 / LCC Germany (E-N)) der Mapbender Tabelle ``mb_core_srs`` hinzugefügt.
+
+**(2) Aktualisierung der Parameter im Map-Control**
+
+Führen Sie den Befehl ``app/console mapbender:upgrade:database`` aus, um den OL-ImagePath Parameter des Map-Controls anzupassen: Von ``bundles/mapbendercore/mapquery/lib/openlayers/img`` nach ``components/mapquery/lib/openlayers/img``. Das ist notwendig, falls Sie das POI-Elements nutzen bzw. Mapbender mit dem poi-Parameter aufrufen und keine Sprechblase für den POI sehen. Beispiel: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
+
+
+
+Version 3.0.6.1
+---------------
+
+Release Datum: 24.05.2017
+
+**Bugfixes:**
+
+- Druck zeigte falsche Maßstäbe im Kartendisplay.
+- Spezifische WMS konnten nicht gedruckt werden, wenn sie als HTTP Antwort image/pntg; charset-iso... übertragen haben.
+- Backend: FOM Dialoge mit vielen Einträgen machten die Checkboxen unbenutzbar.
+- config.php wieder zurück im mapbender-starter.
+- Aktualisierung des bin/composer Kommandos zum Bauen von Mapbender.
+- Style-Fix bei Administrations-Dialog des Basesource-Switcher.
+- WmcEditor Standard Parameter für Breite und Höhe eingetragen.
+- Aktualisierung Startseite Dokumentation.
+- Kleine Styling Verbesserungen im Backend.
+- Kleine Säuberungen des Code.
+
+
 
 Version 3.0.6.0
 ---------------
