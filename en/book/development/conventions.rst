@@ -144,6 +144,8 @@ Release
 How to build a new Mapbender3 build
 ************************************
 
+* Resolve and close all tickets for the relevant milestone: https://github.com/mapbender/mapbender/milestones
+
 * Update http://doc.mapbender3.org/en/book/versions.html
 
 * Update Changelog.md for mapbender-starter, mapbender, owsproxy, fom.
@@ -204,7 +206,7 @@ How to build a new Mapbender3 build
   
 * Move TAR.GZ and ZIP file to /sites/www.mapbender3.org/builds
 * Update symbolic links ("version".zip and "version".tar.gz and current.tar.gz and current.zip)
-* Move current doc to docs.mapbender3.org
+* Move current doc to docs.mapbender3.org (get it from web/docs. Remove the api folder).
 * Edit actual release link http://mapbender3.org/en/download (english) and http://mapbender3.org/de/download (german)
 * Write release mail to mapbender-user and mapbender-dev 
 * Only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
