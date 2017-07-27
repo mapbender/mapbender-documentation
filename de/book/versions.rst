@@ -33,7 +33,7 @@ Führen Sie nochmals den Befehl ``app/console doctrine:fixtures:load --fixtures=
 
 **(2) Aktualisierung der Parameter im Map-Control**
 
-Führen Sie den Befehl ``app/console mapbender:upgrade:database`` aus, um den OL-ImagePath Parameter des Map-Controls anzupassen: Von ``bundles/mapbendercore/mapquery/lib/openlayers/img`` nach ``components/mapquery/lib/openlayers/img``. Das ist notwendig, falls Sie das POI-Elements nutzen bzw. Mapbender mit dem poi-Parameter aufrufen und keine Sprechblase für den POI sehen. Beispiel: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
+Führen Sie den Befehl ``app/console mapbender:upgrade:database`` aus, um den OL-ImagePath Parameter des Map-Controls anzupassen: Von ``bundles/mapbendercore/mapquery/lib/openlayers/img`` nach ``components/mapquery/lib/openlayers/img``. Das ist notwendig, falls Sie das POI-Element nutzen bzw. Mapbender mit dem poi-Parameter aufrufen und keine Sprechblase für den POI sehen. Beispiel: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
 
 
 
