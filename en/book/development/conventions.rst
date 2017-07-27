@@ -148,7 +148,26 @@ How to build a new Mapbender3 build
 
 * Update Changelog.md for mapbender-starter, mapbender, owsproxy, fom.
 
-* Update version number in parameters.yml and push
+* Update version number in parameters.yml.dist and push
+
+* Update version number in composer.json
+
+* Tagging: Tag at Github. You have nice capabilities for creating good tags and descriptions.
+
+  * Mapbender
+  * OWSProxy
+  * FOM
+  * Mapbender-starter
+  * Documentation
+
+* Create Pull-request to merge release branch into master
+
+  * Mapbender
+  * OWSProxy
+  * FOM
+  * Mapbender-starter
+  * Documentation
+
 
 * Clone the source-code from the release branch
 
@@ -168,13 +187,12 @@ How to build a new Mapbender3 build
               
                   sh bootstrap
 
-* Tagging
+* Generate the docs
 
-  * Mapbender
-  * OWSProxy
-  * FOM
-  * Mapbender-starter
-  * Documentation
+  .. code-block:: bash
+                    
+                  bin/composer docs
+
 
 * Create the ZIP/Tar.gz
 
@@ -185,6 +203,8 @@ How to build a new Mapbender3 build
                   bin/composer build zip
   
 * Move TAR.GZ and ZIP file to /sites/www.mapbender3.org/builds
+* Update symbolic links ("version".zip and "version".tar.gz and current.tar.gz and current.zip)
+* Move current doc to docs.mapbender3.org
 * Edit actual release link http://mapbender3.org/en/download (english) and http://mapbender3.org/de/download (german)
 * Write release mail to mapbender-user and mapbender-dev 
 * Only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
