@@ -5,6 +5,18 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
+Version 3.0.6.3
+---------------
+
+Release Datum: 27.07.2017
+
+**Bugfixes:**
+
+* Regression: Koordinaten-Reihenfolge bei Anfragen an WMS 1.3.0 gefixt. Koordinatensysteme mit getauschter Axis-Orientation werden von der Karte, Druck und Export unterstützt. (#529)
+* Regression: ScaleHint bei WMS Diensten korrigiert. Einige WMS Dienste mit einem Scale in den Capabilities konnten nicht in die Anwendung eingeladen werden. (#584)
+
+
+
 Version 3.0.6.2
 ---------------
 
