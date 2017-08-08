@@ -3,6 +3,33 @@
 Installation auf Windows
 ########################
 
+Wir zeigen Ihnen hier zwei Möglichkeiten, Mapbender3 auf Windows einzurichten. Die `Erste nutzt das MS4W Paket <#installation-uber-das-ms4w-paket>`_ und die darin enthaltene Mapbender Version. Die `zweite Möglichkeit ist die manuelle Installation <#manuelle-installation>`_, bei denen Sie die Anpassungen an PHP und Apache selbst vornehmen und Mapbender per Hand entpacken.
+
+EXE-Installationsdateien für den offiziellen Mapbender bieten wir bislang nicht an, da diese den Mapbender zwar in ein Verzeichnis entpacken kann, die Anpassungen aber an den vorhandenen PHP und Webserver (Apache/Nginx) Installationen vorgenommen werden müssen.
+
+
+Installation über das MS4W Paket
+--------------------------------
+
+Mapbender3 ist Teil von `MS4W (Mapserver for Windows) <http://www.ms4w.com/>`_ und kann über dieses Paket installiert werden, inklusive Mapserver, Apache, GDAL, PHP und anderen. Dabei handelt es sich mehr oder weniger um eine Standard Release Version von Mapbender3, die in die MS4W Umgebung von Apache/PHP eingebunden ist.
+
+Wenn Sie das EXE-Installationsprogramm herunterladen, können Sie Mapbender aus einer Liste der Anwendungen auswählen:
+
+.. image:: ../../../figures/installation/ms4w_installer.png
+     :scale: 80
+
+Falls Sie sich für das ZIP von MS4W entschieden haben, müssen wie Mapbender3 per Hand von der `MS4W Download Seite <http://www.ms4w.com/>`_ herunterladen und in das MS4W Verzeichnis entpacken.
+
+.. image:: ../../../figures/installation/ms4w_packages.png
+     :scale: 80
+
+Bitte schauen Sie auf `der MS4W Homepage <http://ms4w.com>`_ für weitere Details zu MS4W.
+
+
+
+Manuelle Installation
+---------------------
+
 Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_ wo Sie auch die Download-Links für Mapbender3 finden. Installieren Sie die notwendigen Komponenten:
 
 * fügen Sie den Pfad zum PHP-bin Verzeichnis zu Ihrer PATH Variable hinzu 
