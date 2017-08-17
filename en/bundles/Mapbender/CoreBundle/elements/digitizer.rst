@@ -498,7 +498,14 @@ The possible options are:
 * **allowCancelButton:** Show the Cancel button [true/false]. See `Save, Delete, Cancel <#save-delete-cancel>`_.
 * **allowDeleteByCancelNewGeometry:** If true: When you create a new feature, the Cancel button will behave like the Delete button: The feature is removed from the map and the table. This is not the case if you edit an existing feature. [true/false]
 * **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
+* **allowLocate:** Navigation to a feature via the tabs-keyboard-button, simple for operation without mouse. [True / false]
+* **allowChangeVisibility:** Allow to change the visibility of all hits in the map (visible / invisible). [true/false] 
+* **showVisibilityNavigation:** Change the visibility of a hit in the map (visible / invisible). [true/false]
+* **allowCustomerStyle:** Allow user-specific styles for features in the map. [true/false]
 
+* **displayPermanent:** Layers are displayed permanently (with explicit, active or select) [true/false]
+.. * **displayOnSelect:** ???????
+.. * **oneInstanceEdit**: true ??????
 
 
 Definition of the popup
@@ -524,6 +531,11 @@ The width of the individual columns can optionally be specified in percent or pi
 
 * tableFields - define the columns for the feature table. 
 * searchType **all** or **currentExtent**
+* **showExtendSearchSwitch:** Activate or deactivate the display of the searchType selectbox for searching in the curret extent [true/false]
+* **view:** Settings for the object result table
+   * Detailed information on possible configurations under https://datatables.net/reference/option/
+   * **type**: Templatename [table]
+   * **settings**: Settings for the functions of the result table *(Newly added, not fully documented!)*
 
 .. code-block:: yaml
 
@@ -531,6 +543,16 @@ The width of the individual columns can optionally be specified in percent or pi
         tableFields:                # definition of the colums to be displayed
             gid: {label: Nr. , width: 20%} # [table column]: {label: [label text], width: [css-definition, like width]}  # Definition of a column
             name: {label: Name , width: 80%}
+        view:
+            type: table
+            settings:
+                info: true
+                processing: false
+                ordering: true
+                paging: true
+                selectable: false
+                autoWidth: false
+                order: [[1, "asc"]]  # 0 | 1 | 2 presort columns
 
 
 Tabs (type tabs)
@@ -908,6 +930,7 @@ The activated element displays a search bar above the table. It shows all the se
       inlineSearch: true      # true: allows the search in the table, default is true
       ...
 
+The advanced search (parameter search) is possible instead of the simple search (parameter inlineSearch). More about this search function can be found at `Search via Digitizer <search_digitizer.html>`_ .
 
 
 Context Menu
@@ -1042,25 +1065,42 @@ By specifying a style the way the objects are displayed on the map can be define
 *Default* defines the normal display of the objects on the map and *Select* defines the appearance of the selected objects.
 
 
+.. image:: ../../../../../figures/digitizer_style.png
+     :scale: 80
+
 .. code-block:: yaml
 
   poi:
       ...
       styles:
           default:
-              strokeWidth: 2
-              strokeColor: '#0e6a9e'
-              fillColor: '#1289CD'
+              graphic: true
+              strokeWidth: 5
+              strokeColor: "transparent"
+              fillColor:  '#c0c0c0'
               fillOpacity: 1
               fillWidth: 2
+              # label: ${name} ${type}
+              # labelOutlineColor: '#eeeeee'
               pointRadius: 10
           select:
-              strokeWidth: 3
-              strokeColor: '#0e6a9e'
+              strokeWidth: 1
+              strokeColor: "#0e6a9e"
               fillOpacity: 0.7
+              strokeColor: "#0e6a9e"
+              label: ${name} ${type}
               pointRadius: 10
       ...
 
+* **strokeColor:** Color of the border line [color value/transparent]
+* **strokeWidth:** Width of the border line [numeric]
+* **strokeOpacity:** Transparency of the border line [0-1]
+* **fillOpacity:** Transparency of the filling [0-1]
+* **fillColor:** Color of the filling [color value/transparent]
+* **fillWidth:** Width of the filling [numeric]
+* **pointRadius:** Radius around the center [numeric]
+* **label:** Labeling the object with fixed values ​​and / or DB fields, e.g. "ID ${nummmer}"
+* **labelOutlineColor:** Color of the border from the label [color value/transparent]
 
 YAML-Definition for the element Digitizer in mapbender.yml
 ==========================================================

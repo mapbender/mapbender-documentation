@@ -1068,7 +1068,7 @@ Darstellung (Styles)
 *Default* definiert dabei die normale Darstellung der Objekte auf der Karte und *Select* die Darstellung der ausgewählten Objekte.
 
 
-.. image:: ../../../../../figures/digi_style.png
+.. image:: ../../../../../figures/digitizer_style.png
      :scale: 80
 
 .. code-block:: yaml
@@ -1097,13 +1097,13 @@ Darstellung (Styles)
 
 * **strokeColor:** Farbe der Umrandungslinie [Farbwert/transparent]
 * **strokeWidth:** Breite der Umrandungslinie [numeric]
-* **fillOpacity:** Transparenz der Umrandungslinie [0-1]
+* **strokeOpacity:** Transparenz der Umrandungslinie [0-1]
 * **fillColor:** Farbe der Füllung [Farbwert/transparent]
 * **fillWidth:** Breite der Füllung [numeric]
 * **fillOpacity:** Transparenz der Füllung [0-1]
-* **pointRadius:** Radius um den Mittelpunkt ? [numeric]
+* **pointRadius:** Radius um den Mittelpunkt [numeric]
 * **label:** Beschriftung des Objekts mit festen Werten und/oder DB-Feldern, z.B. "ID ${nummmer}"
-* **labelOutlineColor:** Farbe der Umrandung von der Beschriftung [Farbwert/transparen
+* **labelOutlineColor:** Farbe der Umrandung von der Beschriftung [Farbwert/transparent]
 
 YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml
 ================================================================================

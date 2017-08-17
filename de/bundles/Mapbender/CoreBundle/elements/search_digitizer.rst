@@ -17,7 +17,7 @@ Für eine komplexere Suche können weitere Parameter angegeben werden, die das F
 Vorteil dieser Suche ist vor Allem, dass das Koordinatensystem während der Suche geändert werden kann. Dies ist nicht bei dem `SearchRouter <search_router.html>`_ möglich. 
 
 
-.. image:: ../../../../../figures/digi_search.png
+.. image:: ../../../../../figures/digitizer_search.png
      :scale: 50 %
 
 
@@ -26,62 +26,130 @@ YAML-Definition für die Suche im Element digitizer in der Textarea unter scheme
 
 .. code-block:: yaml
 
-  poi:
-      ...
-      inlineSearch: false                         # Deaktivieren der simplen Suche auf der Trefferliste
-      search:
-        mandatory:                  # Pflichtangabe bei der Abfrage (reguläre Ausdrücke erlaubt)
-            name: .+
-            type: .+      
-        form:
-          - type: select
-            title: Type
-            name: type
-            value: A
+  poi_search:
+    label: 'Punktsuche (nach Name und Typ)'
+    featureType:
+      connection: search_db
+      table: public.poi
+      geomType: point
+      geomField: geom
+      srid: 4326
+      uniqueId: gid
+    popup:
+      title: 'Ergebnis Punktsuche'
+      width: 400px
+    zoomScaleDenominator: 500
+    maxResults: 1000
+    displayOnSelect: true
+    searchType: all
+    showExtendSearchSwitch: false
+    oneInstanceEdit: false
+    allowLocate: false
+    allowDigitize: true
+    allowEditData: false
+    allowDelete: false
+    allowChangeVisibility: false
+    allowCustomerStyle: false
+    showVisibilityNavigation: false
+    useContextMenu: true
+    displayPermanent: true
+    displayOnInactive: true
+    inlineSearch: false
+    toolset: {  }
+    search:
+      mandatory:
+        type: .+
+        title: .+
+      form:
+        - type: select
+          name: type
+          value: A
+          sql: |
+            SELECT
+              DISTINCT type,
+              type
+            FROM poi
+            ORDER by type ASC  
+          connection: search_db
+        - type: select
+          name: title
+          placeholder: Punktname
+          allowClear: true
+          multiple: true
+          language: de
+          minimumInputLength: 1
+          ajax:
+            delay: 100
             connection: search_db
-                sql: |
-                    SELECT
-                    DISTINCT type
-                    FROM public.poi
-                    ORDER by type ASC
-          - type: select
-            name: name
-            title: 'Name(n)'
-            placeholder: Punktname
-            multiple: true
-            minimumInputLength: 1
-            formatSearching: 'Der Name wird gesucht...'
-            ajax: 
-                delay: 100
-                connection: search_db
-                sql: |
-                    SELECT  "name"
-                    FROM    "poi"
-                    WHERE   "name" LIKE '$name'
-                    AND (
-                        LOWER ("name") LIKE LOWER ('$name%')
-                        OR LOWER ("name") LIKE LOWER ('%%$name%')
-                        )
-                    GROUP BY "name"
-                    ORDER BY LOWER ("name") LIKE LOWER ('$name%') DESC
-                    LIMIT 10
-        conditions:
-          - type: sql
-            operator: and
-            code:  |
-               "type" like '$type'
-          - type: sql-array
-            key: name
-            code:  |
-               "name" LIKE '$value%' OR "name" LIKE '%%$value%'
-            operator: OR
+            sql: |
+              SELECT  "name"
+              FROM    "poi"
+              -- Search only in one district, not everywear
+              WHERE   "type" LIKE '$type'
+              -- Try to find by 'name%' and '%%name%'
+              AND (
+                LOWER ("name") LIKE LOWER ('$title%')
+                OR LOWER ("name") LIKE LOWER ('%%$title%')
+              )
+              -- Group street names
+              GROUP BY "name"
+              -- Sort by 'name%' first not '%%name%'
+              ORDER BY LOWER ("name") LIKE LOWER ('$title%') DESC
+              -- Max results count
+              LIMIT 15
+      conditions:
+        - type: sql
+          operator: and
+          code: |
+            "type" like '$type'
+        - type: sql-array
+          operator: OR      
+          key: title
+          code: |
+            "name" LIKE '$value%' OR "name" LIKE '%%$value%'
+    view:
+      type: table
+      settings:
+        info: true
+        processing: false
+        ordering: true
+        paging: true
+        pageLength: 12
+        selectable: true
+        autoWidth: false
+        order: [[1, "asc"]]
+    tableFields:
+      name:
+        label: Punktname
+        width: 60%
+      type:
+        label: Typ
+        width: 40%
+        align: right
+    styles:
+      default:
+        graphic: true
+        strokeWidth: 2
+        strokeColor: '#648296'
+        fillColor: '#7b9fb7'
+        fillOpacity: 0.7
+        fillWidth: 2
+        pointRadius: 10
+      select:
+        strokeWidth: 3
+        strokeColor: '#000000'
+        fillOpacity: 1
+        fillColor: '#435e70'
+        fillWidth: 5
+        label: '${name} ${type}'
+        pointRadius: 15
       ...
 
-* **mandatory:** Pflichtangabe können bei der Abfrage definiert werden. Bei dem Beispiel muss z.B. erst eine Angabe der Ortsnamen und Straßennamen erfüllt sein, bevor ein Treffer in der Liste angezeigt wird. Möglich sind hier reguläre Ausdrücke, wie .+ (beide Abfragen müssen mind. eine Angabe haben, die mind. 1 oder mehr Zeichen enthält). 
+* **mandatory:** Pflichtangabe können bei der Abfrage definiert werden. Bei dem Beispiel muss z.B. erst eine Angabe des Typs und Punktnamen erfüllt sein, bevor ein Treffer in der Liste angezeigt wird. Möglich sind hier reguläre Ausdrücke, wie .+ (beide Abfragen müssen mind. eine Angabe haben, die mind. 1 oder mehr Zeichen enthält). 
 * **multiple:** Auswahl mehrerer Suchbegriffe erlauben, z.B. mehrere Straßen [true/false]
 
 
-.. image:: ../../../../../figures/digi_search_multiple.png
+.. image:: ../../../../../figures/digitizer_search_multiple.png
      :scale: 80
 
 .. [funktioniert noch nicht]* **maximumSelectionSize**: Maximale Angabe von Suchbegriffen [numeric] bei der Angabe von multiple: true.
@@ -101,7 +169,7 @@ Bedingungen (conditions) für Abfragen können fest vergeben werden.
 * **code: ** Angabe von Code, der erfüllt werden muss bei einer Abfrage zu dem angegebenen Schlüsselwert (key)
 * **key:** Schlüsselwert für die Abfrage, der im Codebereich referenziert wird
 
-.. image:: ../../../../../figures/digi_search_select.png
+.. image:: ../../../../../figures/digitizer_search_select.png
      :scale: 80
 
 .. code-block:: yaml
