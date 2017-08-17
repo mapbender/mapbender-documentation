@@ -506,6 +506,11 @@ Die möglichen Optionen sind:
 * **showVisibilityNavigation:** Ändern der Sichtbarkeit von einem Treffer in der Karte (Sichtbar/nicht sichtbar). [true/false]
 * **allowCustomerStyle:** Erlauben benutzerspezifischer Styles für Elemente in der Karte. [true/false]
 
+
+.. image:: ../../../../../figures/digitizer_stylemanager.png
+           :scale: 80
+
+
 * **displayPermanent:** Layer werden dauerhaft (bei explicit, active oder select) angezeigt [true/false]
 .. * **displayOnSelect:** ???????
 .. * **oneInstanceEdit**: true ??????

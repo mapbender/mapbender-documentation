@@ -503,6 +503,9 @@ The possible options are:
 * **showVisibilityNavigation:** Change the visibility of a hit in the map (visible / invisible). [true/false]
 * **allowCustomerStyle:** Allow user-specific styles for features in the map. [true/false]
 
+.. image:: ../../../../../figures/digitizer_stylemanager.png
+           :scale: 80
+
 * **displayPermanent:** Layers are displayed permanently (with explicit, active or select) [true/false]
 .. * **displayOnSelect:** ???????
 .. * **oneInstanceEdit**: true ??????
