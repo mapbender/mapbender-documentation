@@ -479,28 +479,36 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
 Die möglichen Optionen sind:
 
 * **label:** Beschriftung mit dem Namen der Erfassungsoberfläche
-* **maxResults:** maximale Trefferanzahl
+* **maxResults:** maximale Trefferanzahl, default Wert ist 1000
 * **minScale:** Minimaler Maßstab, ab dem die Features in der Karte angezeigt werden (z.B. minscale: 5000 = Anzeige ab einem Maßstab über 1:5000, beim rauszoomen)
 * **featureType:** Verbindung zur Datenbank
 
   * connection: Name der Datenbank-Verbindung aus der parameters/config.yml
   * table: Name der Tabelle, in der das FeatureType gespeichert wird
-  * uniqueId: Name der Spalte mit dem eindeutigen Identifier
+  * uniqueId: Name der Spalte mit dem eindeutigen Identifier, default bei keiner Angabe ist [id]
   * geomType: Geometrietyp
   * geomField: Attributspalte, in der die Geometrie liegt.
   * srid: Koordinatensystem im EPSG-Code
 
 * **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular. [true/false] Standard ist true.
 * **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird.
+.. sinvoll wäre hier eien Angabe von Parameter zoom: dynamic / [zoomstufe]
 * **allowEditData:** Daten dürfen editiert werden [true/false]. Es erscheint eine Speichern Schaltfläche.
 * **allowDigitize:** Daten dürfen gespeichert werden. [true/false]
 * **allowDelete:** Daten dürfen gelöscht werden. [true/false]. Es erscheint eine Löschen Schaltfläche.
 * **allowDigitize:** Daten dürfen neu erstellt werden. [true/false]. Bei false erscheinen keine Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.).
-* **useContextMenu:** Anzeige des Kontextmenü eines Features. [true/false]
+* **useContextMenu:** Anzeige des Kontextmenü eines Features durch Rechtsklick auf der Karte. [true/false]
 * **allowCancelButton:** Zeigt die Abbrechen Schaltfläche. [true/false]. Siehe `Speichern, Löschen, Abbrechen <#speichern-loschen-abbrechen>`_.
 * **allowDeleteByCancelNewGeometry:** Wenn auf true gestellt: Beim Neuanlegen eines Features verhält sich der Abbrechen Knopf wie der Löschen Knopf: Das Feature wird aus der Karte und der Tabelle entfernt. Dies gilt nicht bei dem Ändern eines vorhandenen Features. [true/false]
 * **displayOnInactive:** Der aktuellen FeatureType wird weiterhin auf der Karte angezeigt, auch wenn der Digitizer in der Sidepane (Accordion, Tabs) nicht mehr aktiviert ist. [true/false]. Die Option ist, wenn angeschaltet, ein wenig tricky, da auch die einzelnen Digitizer Events noch aktiviert sind, für erfahrene Anwendern aber durchaus hilfreich.
+* **allowLocate:** Navigation zu einem Feature hin über die Bedienung mit der Tabs-Taste, sinvoll für die Bedienung ohne Maus. [true/false]
+* **allowChangeVisibility:** Ändern der Sichtbarkeit von allen Treffern in der Karte (Sichtbar/nicht sichtbar). [true/false] 
+* **showVisibilityNavigation:** Ändern der Sichtbarkeit von einem Treffer in der Karte (Sichtbar/nicht sichtbar). [true/false]
+* **allowCustomerStyle:** Erlauben benutzerspezifischer Styles für Elemente in der Karte. [true/false]
 
+* **displayPermanent:** Layer werden dauerhaft (bei explicit, active oder select) angezeigt [true/false]
+.. * **displayOnSelect:** ???????
+.. * **oneInstanceEdit**: true ??????
 
 
 Definition Popup
@@ -523,16 +531,32 @@ Definition der Objekttabelle
 
 Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte gezoomt werden und das Bearbeitsformular kann geöffnet werden. Die Objekttabelle ist sortierbar. Die Breite der einzelnen Spalten kann optional in Prozent oder Pixeln angegeben werden.
 
-* tableFields - Definition der Spalten für die Objekttabelle.
-* searchType **all** oder **currentExtent**
+* **tableFields:** Definition der Spalten für die Objekttabelle.
+   * Definition einer Spalte: [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe z.B. Angabe der Breite]}  # Definition einer Spalte
+* **searchType:** Suchbereich in der Karte, Anzeige aller Objekttreffer in der Tabelle oder nur aller Objekttreffer in dem derzeitigen Kartenausschnitt [all / currentExtent], default currentExtent
+* **showExtendSearchSwitch:** Anzeige der searchType Selectbox zur Suche im Kartenausschnitt aktivieren oder deaktivieren [true/false]
+* **view:** Einstellungen zu der Objekttabelle
+   * Detaillierte Informationen zu möglichen Angaben unter https://datatables.net/reference/option/
+   * **type**: Templatename [table]
+   * **settings**: Einstellungen zum Funktionsumfang der Objekttabelle *(neu hinzugefügt, noch nicht vollst. dokumentiert!)*
 
 .. code-block:: yaml
 
-        searchType: currentExtent   # [currentExtent|all] currentExtent listet alle Objekte im derzeitigen Kartenausschnitt. all listet alle Objekte in der Tabelle. Standard ist currentExtent.
-        tableFields:    # Definition der Spalten für die Objekttabelle
-            gid: {label: Nr. , width: 20%}    # [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe z.B. Angabe der Breite]}  # Definition einer Spalte
+        searchType: currentExtent
+        showExtendSearchSwitch: true
+        tableFields:
+            gid: {label: Nr. , width: 20%}
             name: {label: Name , width: 80%}
-
+        view:
+            type: table
+            settings:
+                info: true
+                processing: false
+                ordering: true
+                paging: true
+                selectable: false
+                autoWidth: false
+                order: [[1, "asc"]]  # Spalte 0 | 1 | 2 vorsortieren
 
 
 Dateireiter (type tabs)
@@ -908,7 +932,7 @@ Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eine
       inlineSearch: true      # Suche in den Tabellenspalten, Standard ist true
       ...
 
-
+Die erweiterte Suche (Parameter search) ist statt der simplen Suche (Parameter inlineSearch) möglich. Mehr zu dieser Suchfunktion findet sich unter `Suche per Digitizer <search_digitizer.html>`_ .
 
 Kontextmenü
 -----------
@@ -1043,25 +1067,43 @@ Darstellung (Styles)
 Über die Angabe eines Styles kann definiert werden, wie die Objekte angezeigt werden.
 *Default* definiert dabei die normale Darstellung der Objekte auf der Karte und *Select* die Darstellung der ausgewählten Objekte.
 
+
+.. image:: ../../../../../figures/digi_style.png
+     :scale: 80
+
 .. code-block:: yaml
 
   poi:
       ...
       styles:
           default:
-              strokeWidth: 2
-              strokeColor: '#0e6a9e'
-              fillColor: '#1289CD'
+              graphic: true
+              strokeWidth: 5
+              strokeColor: "transparent"
+              fillColor:  '#c0c0c0'
               fillOpacity: 1
               fillWidth: 2
+              # label: ${name} ${type}
+              # labelOutlineColor: '#eeeeee'
               pointRadius: 10
           select:
-              strokeWidth: 3
-              strokeColor: '#0e6a9e'
+              strokeWidth: 1
+              strokeColor: "#0e6a9e"
               fillOpacity: 0.7
+              strokeColor: "#0e6a9e"
+              label: ${name} ${type}
               pointRadius: 10
       ...
 
+* **strokeColor:** Farbe der Umrandungslinie [Farbwert/transparent]
+* **strokeWidth:** Breite der Umrandungslinie [numeric]
+* **fillOpacity:** Transparenz der Umrandungslinie [0-1]
+* **fillColor:** Farbe der Füllung [Farbwert/transparent]
+* **fillWidth:** Breite der Füllung [numeric]
+* **fillOpacity:** Transparenz der Füllung [0-1]
+* **pointRadius:** Radius um den Mittelpunkt ? [numeric]
+* **label:** Beschriftung des Objekts mit festen Werten und/oder DB-Feldern, z.B. "ID ${nummmer}"
+* **labelOutlineColor:** Farbe der Umrandung von der Beschriftung [Farbwert/transparen
 
 YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml
 ================================================================================
