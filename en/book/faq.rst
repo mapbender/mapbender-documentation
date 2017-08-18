@@ -28,7 +28,24 @@ A: Until we provide this information in the Administration Interface, this state
                 mb_core_source.id = <id_of_the_wms>;
 
 
-For the ID <id_of_the_wms> go to the Data Source page and take the number which is assigned to the specific WMS.
+For the ID ``id_of_the_wms`` go to the Data Source page and take the number which is assigned to the specific WMS.
+
+
+app.php und app_dev.php: What purpose do they have?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please take a look at the `Details of the configuration of Mapbender3 <installation/configuration.html>`_, in chapter `Production- and Development environment and Caching: app.php and app_dev.php <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_.
+
+In general you'll use the app.php file. Only if you develop something (TWIG-files, CSS or JS-files) or for debugging, you'll open Mapbender with the app_dev.php.
+
+
+What is this cache and when do I have to clear it?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Also for this question, please take a look at the `Details of the configuration of Mapbender3 <installation/configuration.html>`_, in chapter `Production- and Development environment and Caching: app.php and app_dev.php <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_.
+
+You'll delete the contents of the ``mapbender/app/cache/`` directory, not the folder itself. In detail the ``prod`` and - if present - the ``dev`` directory.
+
 
 
 Performance

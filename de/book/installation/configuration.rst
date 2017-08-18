@@ -105,10 +105,10 @@ Sie können auch den Modus "silent" verwenden, wenn Sie ein Skript nutzen möcht
     app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
 
 
-Einfügen den SRS Parameter
+Einfügen der SRS Parameter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Fügen Sie die Informationen zu SRS Parametern über den folgenden Aufruf in die Datenbank:
+Fügen Sie die Informationen zu den Koordinatensystemen über den folgenden Aufruf in die Datenbank:
 
 .. code-block:: yaml
 
