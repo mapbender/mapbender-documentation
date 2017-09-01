@@ -10,11 +10,12 @@ Erweiterte Suche in Tabellen (search)
 =====================================
 
 Im Folgenden werden die einzelnen Bestandteile für die Suche über den Digitizer erklärt, die die Grundstruktur ausmachen und die in dem Formular eingebettet werden können.
-<br>
 
-Die erweiterte Suche (Parameter search) auf der Datenbanktabelle ist zusätzlich zu der simplen Suche (Parameter inlineSearch) in der Trefferliste möglich. <br>
-Für eine komplexere Suche können weitere Parameter angegeben werden, die das Finden bestimmter Fachinformationen in der Tabelle erleichtern. <br>
-Vorteil dieser Suche ist vor Allem, dass das Koordinatensystem während der Suche geändert werden kann. Dies ist nicht bei dem `SearchRouter <search_router.html>`_ möglich. 
+Die erweiterte Suche (Parameter search) auf der Datenbanktabelle ist zusätzlich zu der simplen Suche (Parameter inlineSearch) in der Trefferliste möglich.
+
+Für eine komplexere Suche können weitere Parameter angegeben werden, die das Finden bestimmter Fachinformationen in der Tabelle erleichtern.
+
+Vorteil dieser Suche ist vor allem, dass das Koordinatensystem während der Suche geändert werden kann. Dies ist nicht bei dem `SearchRouter <search_router.html>`_ möglich. 
 
 
 .. image:: ../../../../../figures/digitizer_search.png
@@ -145,7 +146,7 @@ YAML-Definition für die Suche im Element digitizer in der Textarea unter scheme
         pointRadius: 15
       ...
 
-* **mandatory:** Pflichtangabe können bei der Abfrage definiert werden. Bei dem Beispiel muss z.B. erst eine Angabe des Typs und Punktnamen erfüllt sein, bevor ein Treffer in der Liste angezeigt wird. Möglich sind hier reguläre Ausdrücke, wie .+ (beide Abfragen müssen mind. eine Angabe haben, die mind. 1 oder mehr Zeichen enthält). 
+* **mandatory:** Pflichtangabe, können bei der Abfrage definiert werden. Bei dem Beispiel muss z.B. erst eine Angabe des Typs und Punktnamen erfüllt sein, bevor ein Treffer in der Liste angezeigt wird. Möglich sind hier reguläre Ausdrücke, wie .+ (beide Abfragen müssen mind. eine Angabe haben, die mind. 1 oder mehr Zeichen enthält). 
 * **multiple:** Auswahl mehrerer Suchbegriffe erlauben, z.B. mehrere Straßen [true/false]
 
 
@@ -158,7 +159,7 @@ YAML-Definition für die Suche im Element digitizer in der Textarea unter scheme
 * **sql:** Angabe einer SQL-Abfrage für die Suchfelder. Eine saubere und durchdachte SQL-Abfrage bewirkt die Ausgabe der Treffer in einer sinvollen Reihenfolge, z.B. erst Treffer, die den Suchbegriff an erster Stelle haben und nicht mitten im Treffer. Nutzung von **name** im SQL möglich.
 * **name:** Variable, die in der SQL-Abfrage genutzt werden kann, z.B. $post_ortsname. Dadurch ist die SQL-Abfrage gegen Angriffe von Außen besser abgesichert.
 * **value:** Vorgabewert aus den Werten in der Spalte, der bei keiner aktiven Angabe eines Wertes für die Suche genutzt wird.
-* **formatSearching:** Platzhalter während die Suche läuft
+* **formatSearching:** Platzhalter, während die Suche läuft.
 
 Suchbedingungen (conditions)
 ----------------------------
@@ -166,7 +167,7 @@ Suchbedingungen (conditions)
 Bedingungen (conditions) für Abfragen können fest vergeben werden. 
 * **type:** Abfragetyp für die Bedingung [sql, php]
 * **operator:** SQL-Verbindungstyp von Abfragen [AND, OR]
-* **code: ** Angabe von Code, der erfüllt werden muss bei einer Abfrage zu dem angegebenen Schlüsselwert (key)
+* **code:** Angabe von Code, der erfüllt werden muss bei einer Abfrage zu dem angegebenen Schlüsselwert (key)
 * **key:** Schlüsselwert für die Abfrage, der im Codebereich referenziert wird
 
 .. image:: ../../../../../figures/digitizer_search_select.png
