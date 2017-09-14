@@ -10,11 +10,11 @@ Erweiterte Suche in Tabellen (search)
 =====================================
 
 Im Folgenden werden die einzelnen Bestandteile für die Suche über den Digitizer erklärt, die die Grundstruktur ausmachen und die in dem Formular eingebettet werden können.
-
+<br>
 Die erweiterte Suche (Parameter search) auf der Datenbanktabelle ist zusätzlich zu der simplen Suche (Parameter inlineSearch) in der Trefferliste möglich.
-
+<br>
 Für eine komplexere Suche können weitere Parameter angegeben werden, die das Finden bestimmter Fachinformationen in der Tabelle erleichtern.
-
+<br>
 Vorteil dieser Suche ist vor allem, dass das Koordinatensystem während der Suche geändert werden kann. Dies ist nicht bei dem `SearchRouter <search_router.html>`_ möglich. 
 
 
@@ -53,8 +53,6 @@ YAML-Definition für die Suche im Element digitizer in der Textarea unter scheme
     allowCustomerStyle: false
     showVisibilityNavigation: false
     useContextMenu: true
-    displayPermanent: true
-    displayOnInactive: true
     inlineSearch: false
     toolset: {  }
     search:
@@ -155,11 +153,18 @@ YAML-Definition für die Suche im Element digitizer in der Textarea unter scheme
 
 .. [funktioniert noch nicht]* **maximumSelectionSize**: Maximale Angabe von Suchbegriffen [numeric] bei der Angabe von multiple: true.
 * **minimumInputLength:** Minimale Anzahl an Zeichen für den Start der Suchanfrage. [numeric]
+* **placeholder:** Platzhalter für das Feld für die Anzeige vor der Eingabe
+* **allowClear:** Erlaubt das Löschen von allen Suchbegriffen. [true/false] Standardwert ist true.
+* **multiple:** Erlaubt mehrere Suchbegriffe im Suchfeld. [true/false] Standardwert ist true.
+* **language:** Angabe der Sprache, z.B. de
+* **value:** Vorgabewert aus den Werten in der Spalte, der bei keiner aktiven Angabe eines Wertes für die Suche genutzt wird.
+* **zoomScale:** Suchmaßstab für die Suche (Zoomt zum angegebenen Maßstab, z.B. 2000).
+
+Ajax-Angaben: 
 * **delay:** Wartezeitraum, bis die Suchanfrage abgeschickt wird (in Milisekunden), erleichtert Suche bei langsamen Tippen. [true/false]
 * **sql:** Angabe einer SQL-Abfrage für die Suchfelder. Eine saubere und durchdachte SQL-Abfrage bewirkt die Ausgabe der Treffer in einer sinvollen Reihenfolge, z.B. erst Treffer, die den Suchbegriff an erster Stelle haben und nicht mitten im Treffer. Nutzung von **name** im SQL möglich.
 * **name:** Variable, die in der SQL-Abfrage genutzt werden kann, z.B. $post_ortsname. Dadurch ist die SQL-Abfrage gegen Angriffe von Außen besser abgesichert.
-* **value:** Vorgabewert aus den Werten in der Spalte, der bei keiner aktiven Angabe eines Wertes für die Suche genutzt wird.
-* **formatSearching:** Platzhalter, während die Suche läuft.
+
 
 Suchbedingungen (conditions)
 ----------------------------

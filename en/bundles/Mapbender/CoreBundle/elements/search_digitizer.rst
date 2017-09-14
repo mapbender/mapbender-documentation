@@ -51,8 +51,6 @@ YAML-Definition for the element Digitizer in the textarea schemes
     allowCustomerStyle: false
     showVisibilityNavigation: false
     useContextMenu: true
-    displayPermanent: true
-    displayOnInactive: true
     inlineSearch: false
     toolset: {  }
     search:
@@ -153,11 +151,18 @@ YAML-Definition for the element Digitizer in the textarea schemes
 
 .. [does not work yet]* **maximumSelectionSize**: Maximum specification of search terms  [numeric] when specified multiple: true.
 * **minimumInputLength:** Minimum number of characters to start the search. [numeric]
+* **placeholder:** Placeholder for the search field.
+* **allowClear:** Allows to delete the input in the search field. [true/false] default is true.
+* **multiple:** Allows to insert multiple seach requests in the search field. [true/false] default is true.
+* **language:** Define the language, e.g. de
+* **value:** Default value from the values ​​in the column that is used when you don't define a search parameter.
+* **zoomScale:** Zoomscale for the search (zoomt to the defined scale, e.g. 2000).
+
+Ajax-Definitions: 
 * **delay:** Waiting period until the search request is sent (in milliseconds), facilitates search with slow typing. [true/false]
 * **sql:** Specify an SQL query for the search fields. A clean and thoughtful SQL query causes the output of the hits in a sinful order, e.g. display first results that have the search term in the first place and not in the middle of the hit. Use of **name** in SQL possible.
 * **name:** Variable that can be used in the SQL query, e.g. $title. This makes the SQL query more secure against attacks from outside.
-* **value:** Default value from the values ​​in the column that is used when you don't define a search parameter.
-* **formatSearching:** Placeholder while the search is running
+
 
 Search Conditions
 ----------------------------

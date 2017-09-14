@@ -34,7 +34,8 @@ The following option for the construction of the forms are available:
 * Definition of Text 
 * Mandatory fields, regular expressions to valid the content are possible
 * Help texts
-
+* Duplicate features
+* Refresh after save
 
 .. image:: ../../../../../figures/digitizer_with_tabs.png
      :scale: 80
@@ -490,9 +491,9 @@ The possible options are:
 
 * **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data. [true/false] Standard is true.
 * **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
-* **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. If true, the Save button is visible.
+* **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. The Save button is always visible.
 * **allowDigitize:** Allow to save data [true/false].
-  * **allowDelete:** Allow to delete data [true/false]. The Delete button is visible.
+* **allowDelete:** Allow to delete data [true/false]. The Delete button is always visible.
 * **allowDigitize:** Allow to create new features [true/false]. if false, no Digitizer buttons will occur (new Point, move, etc.).
 * **useContextMenu:** Show the context-menu of a feature. [true/false]
 * **allowCancelButton:** Show the Cancel button [true/false]. See `Save, Delete, Cancel <#save-delete-cancel>`_.
@@ -502,13 +503,15 @@ The possible options are:
 * **allowChangeVisibility:** Allow to change the visibility of all hits in the map (visible / invisible). [true/false] 
 * **showVisibilityNavigation:** Change the visibility of a hit in the map (visible / invisible). [true/false]
 * **allowCustomerStyle:** Allow user-specific styles for features in the map. [true/false]
+* **displayPermanent:** Layers are displayed permanently (with explicit, active or select) [true/false]
+* **displayOnInactive:** Objects are not displayed until the element is active and the schema is selected. If it is set to "false" and Schema is active, the objects are displayed even though the element itself is not active.[true/false] default is false.
+.. * **displayOnSelect:** ???????
+.. * **oneInstanceEdit**: Allow to edit features in multiple popups or allwo only one popup. [true/false] default is true.
 
 .. image:: ../../../../../figures/digitizer_stylemanager.png
            :scale: 80
 
-* **displayPermanent:** Layers are displayed permanently (with explicit, active or select) [true/false]
-.. * **displayOnSelect:** ???????
-.. * **oneInstanceEdit**: true ??????
+
 
 
 Definition of the popup
@@ -532,8 +535,9 @@ Definition of the feature table
 The Digitizer provides an object table. This can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
 The width of the individual columns can optionally be specified in percent or pixels.
 
-* tableFields - define the columns for the feature table. 
-* searchType **all** or **currentExtent**
+* **tableFields:** define the columns for the feature table. 
+   * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
+* **searchType:** search extent in the map, display of all features in the result table or only features displayed in the current extent [all / currentExtent], default is currentExtent
 * **showExtendSearchSwitch:** Activate or deactivate the display of the searchType selectbox for searching in the curret extent [true/false]
 * **view:** Settings for the object result table
    * Detailed information on possible configurations under https://datatables.net/reference/option/
@@ -542,9 +546,9 @@ The width of the individual columns can optionally be specified in percent or pi
 
 .. code-block:: yaml
 
-        searchType: currentExtent   # [currentExtent | all] currentExtent lists only the features displayed in the current extent in the table (default). all lists all features in the table.
-        tableFields:                # definition of the colums to be displayed
-            gid: {label: Nr. , width: 20%} # [table column]: {label: [label text], width: [css-definition, like width]}  # Definition of a column
+        searchType: currentExtent
+        tableFields:
+            gid: {label: Nr. , width: 20%}
             name: {label: Name , width: 80%}
         view:
             type: table
@@ -555,7 +559,7 @@ The width of the individual columns can optionally be specified in percent or pi
                 paging: true
                 selectable: false
                 autoWidth: false
-                order: [[1, "asc"]]  # 0 | 1 | 2 presort columns
+                order: [[1, "asc"]]  # 1 | 2 presort columns
 
 
 Tabs (type tabs)
@@ -575,6 +579,55 @@ Form elements can be placed unto different Tabs. The formItem type "tabs" is use
                      - type: label
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
+
+For each input field the CSS-behavior and styling informations can be assigned, regardless of the type. This can be used, for example, to highlight important fields or to fill an attribute field when editing another field.
+
+parameters: 
+* load, focus, blur
+* input, change, paste
+* click, dblclick, contextmenu
+* keydown, keypress, keyup
+* dragstart, ondrag, dragover, drop
+* mousedown, mouseenter, mouseleave, mousemove, mouseout, mouseover, mouseup
+* touchstart, touchmove, touchend, touchcancel
+
+.. code-block:: yaml
+
+        formItems:
+           - type: tabs
+             children:
+               - type: form
+                 [...]
+                     - type: input
+                       name: firstname
+                       title: Firstname
+                       css: {width: 30%}
+                       input: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            var datenkennungField = form.find("[name='datenkennung']");
+                            datenkennungField.val(inputField.val());
+                       focus: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            form.css("background-color","#ffc0c0");
+                       blur: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            form.css("background-color","transparent");
+                     - type: date
+                       name: date
+                       title: Date
+                       css: {width: 30%}
+                       # Highlight the year if you edit the date-field and autom. insert the year from the date
+                       change: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            var yearField = form.find("[name='year']");
+                            var year = inputField.val().match(/\d+$/)[0];
+                            yearField.val(year);
+                            yearField.css("background-color","#ffc0c0");
+
 
 Textfields (type input)
 -----------------------
@@ -1000,6 +1053,56 @@ Definition of the cluster element:
               disable: true       # disable clustering at defined zoomlevel
       ...
 
+Map-Refresh after save
+----------------------
+After saving an object, the refresh can be activated using the *refreshLayersAfterFeatureSave* option. This parameter is used to reload the defined layer instances in the map-element. This makes changes regarded to WMS services directly visible in the map.
+
+If the YAML application is used in the /application folder, it can be specified by unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
+
+.. image:: ../../../../../figures/layerinstance_id.png
+     :scale: 80
+
+
+.. code-block:: yaml
+
+  poi:
+      [...]
+       refreshLayersAfterFeatureSave:  # If no entry is made in this area no map refresh is carried out after saving 
+         - 17
+         - 18
+         - osm        # specify by unique name only with applications in app/config/application
+      [...]
+
+
+Duplicate features
+------------------
+
+Already captured object can be duplicated. This is done via a duplicate-button within the popup of the current selected already existing feature, via the context menu and the hit table.
+In order for the new object to be recognized better in the map, a color highlighting can be defined here.
+
+The Duplicate button can be activated depending on a specific attribute value. This means that only when the corresponding attribute has a specific value (date> 0) the duplicate function works.
+
+* **data**: Define default values for attributes.
+* **rules**: Rule based duplicating ( only if the filter/rule is active the object can be duplicated).
+* **style**: Styling of the duplicated feature ( more at Design and Styles)
+
+.. code-block:: yaml
+
+  poi:
+      [...]
+       copy: # If no specification is made in this area you can't duplicate objects
+       # Enable copy/clone/duplicate feature
+         enable: true
+         data:
+           date: 2017
+         rules:
+           - feature.attributes.id > 10
+         style:
+           label: "Dupliziertes Objekt"
+           fillColor: "#ff0000"
+           fillOpacity: 1
+           strokeWidth: 4
+           strokeColor: "#660033"
 
 Events
 ------
@@ -1059,6 +1162,27 @@ The above scenario can be extended to a slightly constructed example in which si
 
 The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL Statement and deliver it to the SQL-Connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
 
+Buttons
+-------
+
+Further buttons can be defined for the popup forms. The events by clicking on the button can be freely defined by JavaScript. Thus, for example, mailto data can be generated for the integration of a mail.
+
+.. code-block:: yaml
+
+  poi:
+      ...
+        popup:
+            title: polygon test suite
+            width: 500p
+            # resizible: true
+            buttons:
+              - text: Nachricht an Messung
+                click: |
+                  var body = encodeURI("Sehr geehrter Herr/Frau xx,"+"\nLink:"+location.href);
+                  location.href = "mailto:vorname.nachname@mail.com?subject=Neue Bearbeitung im WebGIS&body=Mail an den Bearbeiter für die Geschwindigkeitsmessung und für die weitere Bearbeitung.";
+              - text: Nachricht an Auswertung
+                click: |
+                 location.href = "mailto:andriy.oblivantsev@gmail.com&subject=test&body=really?";
 
 
 Design and Styles
@@ -1098,9 +1222,9 @@ By specifying a style the way the objects are displayed on the map can be define
 * **strokeColor:** Color of the border line [color value/transparent]
 * **strokeWidth:** Width of the border line [numeric]
 * **strokeOpacity:** Transparency of the border line [0-1]
-* **fillOpacity:** Transparency of the filling [0-1]
 * **fillColor:** Color of the filling [color value/transparent]
 * **fillWidth:** Width of the filling [numeric]
+* **fillOpacity:** Transparency of the filling [0-1]
 * **pointRadius:** Radius around the center [numeric]
 * **label:** Labeling the object with fixed values ​​and / or DB fields, e.g. "ID ${nummmer}"
 * **labelOutlineColor:** Color of the border from the label [color value/transparent]
@@ -1119,8 +1243,6 @@ This code-snippet shows how to include the Digitizer into a YAML-file based appl
                         target: map
                         schemes:
                             ...
-
-
 
 
 

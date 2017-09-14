@@ -34,7 +34,8 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 * Definition von beschreibenden Texten zur Information
 * Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe bestimmter Feldinhalte
 * Hilfetexte
-
+* Duplizieren von Objekten
+* Karten Refresh nach Speichern
 
 .. image:: ../../../../../figures/digitizer_with_tabs.png
      :scale: 80
@@ -491,29 +492,27 @@ Die möglichen Optionen sind:
   * srid: Koordinatensystem im EPSG-Code
 
 * **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular. [true/false] Standard ist true.
-* **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird.
-.. sinvoll wäre hier eien Angabe von Parameter zoom: dynamic / [zoomstufe]
-* **allowEditData:** Daten dürfen editiert werden [true/false]. Es erscheint eine Speichern Schaltfläche.
+* **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird.Standardwert ist 100
+* **allowEditData:** Daten dürfen editiert und gespeichert werden [true/false]. Es erscheint immer eine Speichern Schaltfläche.
 * **allowDigitize:** Daten dürfen gespeichert werden. [true/false]
 * **allowDelete:** Daten dürfen gelöscht werden. [true/false]. Es erscheint eine Löschen Schaltfläche.
-* **allowDigitize:** Daten dürfen neu erstellt werden. [true/false]. Bei false erscheinen keine Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.).
+* **allowDigitize:** Daten dürfen verändert und neu erstellt werden. [true/false]. Es erscheint immer die Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.). Das Speichern ist jedoch nicht möglich.
 * **useContextMenu:** Anzeige des Kontextmenü eines Features durch Rechtsklick auf der Karte. [true/false]
 * **allowCancelButton:** Zeigt die Abbrechen Schaltfläche. [true/false]. Siehe `Speichern, Löschen, Abbrechen <#speichern-loschen-abbrechen>`_.
 * **allowDeleteByCancelNewGeometry:** Wenn auf true gestellt: Beim Neuanlegen eines Features verhält sich der Abbrechen Knopf wie der Löschen Knopf: Das Feature wird aus der Karte und der Tabelle entfernt. Dies gilt nicht bei dem Ändern eines vorhandenen Features. [true/false]
 * **displayOnInactive:** Der aktuellen FeatureType wird weiterhin auf der Karte angezeigt, auch wenn der Digitizer in der Sidepane (Accordion, Tabs) nicht mehr aktiviert ist. [true/false]. Die Option ist, wenn angeschaltet, ein wenig tricky, da auch die einzelnen Digitizer Events noch aktiviert sind, für erfahrene Anwendern aber durchaus hilfreich.
 * **allowLocate:** Navigation zu einem Feature hin über die Bedienung mit der Tabs-Taste, sinvoll für die Bedienung ohne Maus. [true/false]
-* **allowChangeVisibility:** Ändern der Sichtbarkeit von allen Treffern in der Karte (Sichtbar/nicht sichtbar). [true/false] 
+* **allowChangeVisibility:** Ändern der Sichtbarkeit von allen Treffern in der Karte (Sichtbar/nicht sichtbar). [true/false]
 * **showVisibilityNavigation:** Ändern der Sichtbarkeit von einem Treffer in der Karte (Sichtbar/nicht sichtbar). [true/false]
 * **allowCustomerStyle:** Erlauben benutzerspezifischer Styles für Elemente in der Karte. [true/false]
+* **displayPermanent:** Layer werden dauerhaft (bei explicit, active oder select) angezeigt. [true/false] Standardwert ist false.
+* **displayOnInactive:** Objekte werden erst wenn das Element aktiv ist und das Schema selektiert ist angezeigt. Wenn auf "false" ist und Schema aktiv ist, werden die Objekte, obwohl das Element selbst nicht aktiv ist troztdem angezeigt. [true/false] Standardwert ist false.
+.. * **displayOnSelect:** ???????
+.. * **oneInstanceEdit**: Erlaubt das Editieren von Objekten in mehreren Popup-Fenstern oder Erlaubt nur ein Popup-Fenster. [true/false] Standardwert ist true.
 
 
 .. image:: ../../../../../figures/digitizer_stylemanager.png
            :scale: 80
-
-
-* **displayPermanent:** Layer werden dauerhaft (bei explicit, active oder select) angezeigt [true/false]
-.. * **displayOnSelect:** ???????
-.. * **oneInstanceEdit**: true ??????
 
 
 Definition Popup
@@ -561,7 +560,7 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
                 paging: true
                 selectable: false
                 autoWidth: false
-                order: [[1, "asc"]]  # Spalte 0 | 1 | 2 vorsortieren
+                order: [[1, "asc"]] # Spalte 1 | 2 vorsortieren
 
 
 Dateireiter (type tabs)
@@ -581,6 +580,55 @@ Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu d
                      - type: label
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
+
+Bei jedem Eingabefeldkönnen unabhänig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit kann man beispielsweise wichtige Felder hervorheben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld füllen. 
+
+Verhaltensparameter: 
+* load, focus, blur
+* input, change, paste
+* click, dblclick, contextmenu
+* keydown, keypress, keyup
+* dragstart, ondrag, dragover, drop
+* mousedown, mouseenter, mouseleave, mousemove, mouseout, mouseover, mouseup
+* touchstart, touchmove, touchend, touchcancel
+
+.. code-block:: yaml
+
+        formItems:
+           - type: tabs
+             children:
+               - type: form
+                 [...]
+                     - type: input
+                       name: firstname
+                       title: Firstname
+                       css: {width: 30%}
+                       input: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            var datenkennungField = form.find("[name='datenkennung']");
+                            datenkennungField.val(inputField.val());
+                       focus: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            form.css("background-color","#ffc0c0");
+                       blur: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            form.css("background-color","transparent");
+                     - type: date
+                       name: date
+                       title: Datum
+                       css: {width: 30%}
+                       # Hervorhebung des Jahres bei Änderung des Datum-Feldes und autom. Füllen des Jahres aus dem Datum
+                       change: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            var yearField = form.find("[name='year']");
+                            var year = inputField.val().match(/\d+$/)[0];
+                            yearField.val(year);
+                            yearField.css("background-color","#ffc0c0");
+
 
 
 Textfelder (type input)
@@ -1005,6 +1053,60 @@ Definition der Clusterelemente:
       [...]
 
 
+Karten-Refresh nach Speichern
+-----------------------------
+
+Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option *refreshLayersAfterFeatureSave* aktiviert werden. Über diesen Parameter werden die definierten Layer-Instanzen aus dem Map-Element neu geladen. Damit werden Änderungen in WMS-Diensten direkt in der Karte sichtbar.
+
+Wenn YAML-Anwendung unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen. 
+
+
+.. image:: ../../../../../figures/layerinstance_id.png
+     :scale: 80
+
+
+.. code-block:: yaml
+
+  poi:
+      [...]
+       refreshLayersAfterFeatureSave:  # bei keiner Angabe in diesem Bereich erfolgt kein Karten-Refresh nach Speichern
+         - 17
+         - 18
+         - osm        # Namensangabe nur bei Anwendungen unter app/config/application möglich
+      [...]
+
+
+Duplizieren von Objekten
+------------------------
+
+Bereits erfasste Objekt können dupliziert werden. Dies geht über einen Duplizieren-Button innerhalb des Erfassungsfensters des aktuellen selektierten bereits vorhandenen Features, über das Context-Menu und die Treffertabelle. 
+Damit das neue Objekt in der Karte besser erkannt werden kann ist hier eine farbliche Hervorhebung definierbar. 
+
+Der Duplizieren-Button kann in Abhängigkeit von einem bestimmten Attribut-Wert aktiviert werden. Dies bedeutet, dass nur wenn das entsprechende Attribut einen bestimmten Wert hat (date > 0), erscheint die Duplizieren-Funktion. 
+
+* **data**: Angabe von Standardwerten für Attributfelder
+* **rules**: regelbasiertes Duplizieren (nur wenn die Regel zutrifft darf das Objekt dupliziert werden).
+* **style**: Styling des kopierten Objekts (mehr dazu s.u. unter dem Bereich Darstellung)
+
+.. code-block:: yaml
+
+  poi:
+      [...]
+       copy: # bei keiner Angabe in diesem Bereich können keine Objekte dupliziert werden
+       # Enable copy/clone/duplicate feature
+         enable: true
+         data:
+           date: 2017
+         rules:
+           - feature.attributes.id > 10
+         style:
+           label: "Dupliziertes Objekt"
+           fillColor: "#ff0000"
+           fillOpacity: 1
+           strokeWidth: 4
+           strokeColor: "#660033"
+
+
 Events
 ------
 
@@ -1064,6 +1166,28 @@ Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleic
 
 Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, greift man über das "item" auf die Geometrie (geomline). Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
 
+Buttons
+-------
+
+Für die Erfassungsformulare können weitere Buttons definiert werden. Die Events beim Klick auf den Button können frei per JavaScript definiert werden. Somit können beispielsweise mailto-Angaben für die Einbindung einer Mail generiert werden. 
+
+.. code-block:: yaml
+
+  poi:
+      ...
+        popup:
+            title: polygon test suite
+            width: 500p
+            # resizible: true
+            buttons:
+              - text: Nachricht an Messung
+                click: |
+                  var body = encodeURI("Sehr geehrter Herr/Frau xx,"+"\nLink:"+location.href);
+                  location.href = "mailto:vorname.nachname@mail.com?subject=Neue Bearbeitung im WebGIS&body=Mail an den Bearbeiter für die Geschwindigkeitsmessung und für die weitere Bearbeitung.";
+              - text: Nachricht an Auswertung
+                click: |
+                 location.href = "mailto:andriy.oblivantsev@gmail.com&subject=test&body=really?";
+
 
 
 Darstellung (Styles)
@@ -1083,17 +1207,17 @@ Darstellung (Styles)
       styles:
           default:
               graphic: true
-              strokeWidth: 5
-              strokeColor: "transparent"
-              fillColor:  '#c0c0c0'
+              strokeWidth: 2
+              strokeColor: '#0e6a9e' # "transparent"
+              fillColor: '#1289CD'
               fillOpacity: 1
               fillWidth: 2
               # label: ${name} ${type}
               # labelOutlineColor: '#eeeeee'
               pointRadius: 10
           select:
-              strokeWidth: 1
-              strokeColor: "#0e6a9e"
+              strokeWidth: 3
+              strokeColor: '#0e6a9e'
               fillOpacity: 0.7
               strokeColor: "#0e6a9e"
               label: ${name} ${type}
