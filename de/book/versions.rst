@@ -5,6 +5,18 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
+Version 3.0.6.3
+---------------
+
+Release Datum: 27.07.2017
+
+**Bugfixes:**
+
+* Regression: Koordinaten-Reihenfolge bei Anfragen an WMS 1.3.0 gefixt. Koordinatensysteme mit getauschter Axis-Orientation werden von der Karte, Druck und Export unterstützt. (#529)
+* Regression: ScaleHint bei WMS Diensten korrigiert. Einige WMS Dienste mit einem Scale in den Capabilities konnten nicht in die Anwendung eingeladen werden. (#584)
+
+
+
 Version 3.0.6.2
 ---------------
 
@@ -33,7 +45,7 @@ Führen Sie nochmals den Befehl ``app/console doctrine:fixtures:load --fixtures=
 
 **(2) Aktualisierung der Parameter im Map-Control**
 
-Führen Sie den Befehl ``app/console mapbender:upgrade:database`` aus, um den OL-ImagePath Parameter des Map-Controls anzupassen: Von ``bundles/mapbendercore/mapquery/lib/openlayers/img`` nach ``components/mapquery/lib/openlayers/img``. Das ist notwendig, falls Sie das POI-Elements nutzen bzw. Mapbender mit dem poi-Parameter aufrufen und keine Sprechblase für den POI sehen. Beispiel: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
+Führen Sie den Befehl ``app/console mapbender:upgrade:database`` aus, um den OL-ImagePath Parameter des Map-Controls anzupassen: Von ``bundles/mapbendercore/mapquery/lib/openlayers/img`` nach ``components/mapquery/lib/openlayers/img``. Das ist notwendig, falls Sie das POI-Element nutzen bzw. Mapbender mit dem poi-Parameter aufrufen und keine Sprechblase für den POI sehen. Beispiel: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
 
 
 

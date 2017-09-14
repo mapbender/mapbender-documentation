@@ -5,6 +5,18 @@ Version history
 
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
+Version 3.0.6.3
+---------------
+
+Release Datum: 27.07.2017
+
+**Bugfixes:**
+
+* Regression: Fixed coordinate order at requests to a WMS 1.3.0. Coordinate reference systems with reversed axis-orientation are supported by map, print and export. (#529)
+* Regression: Fixed ScaleHint for WMS services. Some WMS services that defined a Scale in their Capabilities couldn't be put into an application. (#584)
+
+
+
 Version 3.0.6.2
 ---------------
 

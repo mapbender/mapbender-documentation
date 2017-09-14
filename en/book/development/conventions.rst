@@ -181,13 +181,20 @@ How to build a new Mapbender3 build
 
    .. code-block:: bash
                 
-                   cd mapbender-starter/application
+                   cd mapbender-starter
 
 * Bootstrap
 
   .. code-block:: bash
-              
+
                   sh bootstrap
+
+
+*  Change to the directory
+
+   .. code-block:: bash
+
+                   cd application
 
 * Generate the docs
 
