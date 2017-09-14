@@ -62,7 +62,14 @@ Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier defi
 Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
 Falls Sie den genauen Fehler reproduzieren möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
 
+* **debug:** Anzeige von Fehlern, z.B. Syntaxfehler bei SQL [experimentell]
 
+.. code-block:: yaml
+
+    poi:
+        [...]
+        debug: true
+        [...]        
 
 YAML-Definition für das Element digitizer in der Textarea unter schemes
 -----------------------------------------------------------------------
@@ -1087,13 +1094,13 @@ Der Duplizieren-Button kann in Abhängigkeit von einem bestimmten Attribut-Wert 
 * **data**: Angabe von Standardwerten für Attributfelder
 * **rules**: regelbasiertes Duplizieren (nur wenn die Regel zutrifft darf das Objekt dupliziert werden).
 * **style**: Styling des kopierten Objekts (mehr dazu s.u. unter dem Bereich Darstellung)
+* **on**: Events beim Duplizieren
 
 .. code-block:: yaml
 
   poi:
       [...]
        copy: # bei keiner Angabe in diesem Bereich können keine Objekte dupliziert werden
-       # Enable copy/clone/duplicate feature
          enable: true
          data:
            date: 2017
@@ -1105,7 +1112,9 @@ Der Duplizieren-Button kann in Abhängigkeit von einem bestimmten Attribut-Wert 
            fillOpacity: 1
            strokeWidth: 4
            strokeColor: "#660033"
-
+         on:
+           success: widget._openFeatureEditDialog(feature)
+           error: console.error(feature)
 
 Events
 ------
@@ -1195,7 +1204,9 @@ Darstellung (Styles)
 
 Über die Angabe eines Styles kann definiert werden, wie die Objekte angezeigt werden.
 *Default* definiert dabei die normale Darstellung der Objekte auf der Karte und *Select* die Darstellung der ausgewählten Objekte.
-
+* **default**: Definiert die normale Darstellung der Objekte auf der Karte 
+* **select**: Darstellung der ausgewählten Objekte beim Mouseover
+* **selected**: Darstellung der ausgewählten Objekte nach dem Klick Event
 
 .. image:: ../../../../../figures/digitizer_style.png
      :scale: 80
@@ -1207,19 +1218,26 @@ Darstellung (Styles)
       styles:
           default:
               graphic: true
-              strokeWidth: 2
-              strokeColor: '#0e6a9e' # "transparent"
-              fillColor: '#1289CD'
+              strokeWidth: 5
+              strokeColor: "transparent"
+              fillColor:  '#c0c0c0'
               fillOpacity: 1
               fillWidth: 2
               # label: ${name} ${type}
               # labelOutlineColor: '#eeeeee'
               pointRadius: 10
           select:
-              strokeWidth: 3
-              strokeColor: '#0e6a9e'
-              fillOpacity: 0.7
+              strokeWidth: 1
               strokeColor: "#0e6a9e"
+              fillOpacity: 0.7
+              fillColor: "#0e6a9e"
+              label: ${name} ${type}
+              pointRadius: 10
+          selected:
+              strokeWidth: 4
+              strokeColor: "#648296"
+              fillOpacity: 1
+              fillColor: "#eeeeee"              
               label: ${name} ${type}
               pointRadius: 10
       ...

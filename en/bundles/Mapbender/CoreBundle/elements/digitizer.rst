@@ -60,6 +60,14 @@ The definition of the Digitizer is done in YAML syntax in the textarea configura
 If errors occur in the database, fields or form, various error messages appear. Via the normal call and app.php comes a general error message.
 If you want to reproduce the exact error, you should call the page via app_dev.php. In this case, detailed error messages about the error behavior appear.
 
+* **debug:** Display error messages, e.g. syntax error in SQL [experimentel]
+
+.. code-block:: yaml
+
+    poi:
+        [...]
+        debug: true
+        [...]        
 
 
 YAML-Definition for the element Digitizer in the textarea schemes
@@ -1085,13 +1093,13 @@ The Duplicate button can be activated depending on a specific attribute value. T
 * **data**: Define default values for attributes.
 * **rules**: Rule based duplicating ( only if the filter/rule is active the object can be duplicated).
 * **style**: Styling of the duplicated feature ( more at Design and Styles)
+* **on**: Events while duplicating process
 
 .. code-block:: yaml
 
   poi:
       [...]
        copy: # If no specification is made in this area you can't duplicate objects
-       # Enable copy/clone/duplicate feature
          enable: true
          data:
            date: 2017
@@ -1103,6 +1111,9 @@ The Duplicate button can be activated depending on a specific attribute value. T
            fillOpacity: 1
            strokeWidth: 4
            strokeColor: "#660033"
+         on:
+           success: widget._openFeatureEditDialog(feature)
+           error: console.error(feature)
 
 Events
 ------
@@ -1189,7 +1200,9 @@ Design and Styles
 -----------------
 
 By specifying a style the way the objects are displayed on the map can be defined. 
-*Default* defines the normal display of the objects on the map and *Select* defines the appearance of the selected objects.
+* **default**: defines the normal display of the objects on the map 
+* **select**: defines the appearance of the objects while mouseover
+* **selected**: defines the appearance of the objects after klick event
 
 
 .. image:: ../../../../../figures/digitizer_style.png
@@ -1214,7 +1227,14 @@ By specifying a style the way the objects are displayed on the map can be define
               strokeWidth: 1
               strokeColor: "#0e6a9e"
               fillOpacity: 0.7
-              strokeColor: "#0e6a9e"
+              fillColor: "#0e6a9e"
+              label: ${name} ${type}
+              pointRadius: 10
+          selected:
+              strokeWidth: 4
+              strokeColor: "#648296"
+              fillOpacity: 1
+              fillColor: "#eeeeee"              
               label: ${name} ${type}
               pointRadius: 10
       ...
