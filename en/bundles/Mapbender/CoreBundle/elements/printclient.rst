@@ -42,7 +42,7 @@ You need a button to show this element or you can use it in the sidepane. See :d
 * **templates**: template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
 * **label** - define a template label for the select-box
 * **optional_fields** - define optional fields:
-
+  
   * **title**: Name of the optional field, the default value is null (no optional fields are defined).
   * **label**: Label of the optional field.
   * **options**: { required: true } : Type of the optional field. Has to be true or false.
@@ -101,11 +101,10 @@ Class, Widget & Style
 
 File location
 =============
-**northarrow**
-The "North arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. You can replace the "North arrow" image to use a different image as northarrow.
 
-**print templates**
-You find the print templates at **app/Resources/MapbenderPrintBundle/templates/**. Create your own print template to provide an individual output for your application.
+* **northarrow:** The "North arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. You can replace the "North arrow" image to use a different image as northarrow.
+
+* **print templates:** You find the print templates at **app/Resources/MapbenderPrintBundle/templates/**. Create your own print template to provide an individual output for your application.
 
 
 Create your individual templates
@@ -143,7 +142,9 @@ The print script will read the information (position, size, font size, alignment
 
 Dependent of the group you can generate prints with different Logo and Text (f.e. the name of the commune and the individual logo). There are two objects which handle this - dynamic_image and dynamic_text. If these objects exists in your print layout Mapbender and you are member of a group Mapbender will look for an Image with the name of the group (groupname.png) and will be displayed in the print in the object dynamic_image. The height of the object will be used to scale the image and the width will be calculated relative to the height. In the object dynamic_text the group description will be printed.
 
-**Printing elements in front of the map-element**
+
+Printing elements in front of the map-element
+=============================================
 
 In order for the map-element to be as large as possible and to avoid white or empty areas, elements can be placed in front of the map image to prevent that space is lost through white areas. This is particularly useful in the case of large printing formats, such as DIN A1, which have a comparatively wide border.
 
@@ -171,6 +172,58 @@ Adapt templates:
 
   -  Selection instead of All
  
+ 
+ 
+Legend on the first page
+========================
+
+You can integrate the legend next to the map on the first page. This field is not included in the print template by default. To insert the legend you have to modify the ODG print template file. Insert a new dynamic field with the name "legend" on the non printable layer and put it to the desired spot. Go to **Menue: Modify -> Name...**  to change the name of the field to "legend". As final step, you have to export the ODG-file as PDF-file as described above and save it in the same directory. The result could look like this:
+
+.. image:: ../../../../../figures/print_client_example_legend.png
+    :scale: 80
+
+
+Logo on the legendpage
+======================
+
+If the legend should still be created on an additional page, you can put a logo on this second page. This can be achieved with the dynamic element "legendpage_image". You have to create a new field on the non printable layer and change its name to "legendpage_image" (**Menue: Modify -> Name...**). Save the desired logo or image in the directory **app/Resources/MapbenderPrintBundle/images/** and change its name to "legendpage_image.png". The print could contain two pages and look like this:
+
+.. image:: ../../../../../figures/print_client_example_legendpage_image.png
+    :scale: 80
+You can see the legendpage image in the right corner of the second page.
+
+
+Coloured texts
+==============
+
+The text in the print template can be changed in many ways. Besides the size of the font, you can also change the colour of the text. To do so, insert a text field via **Menue: Insert -> Text Box**. If you want to insert it as a dynamic element, you have to insert it on the non printable layer and change its name, for example to "title". To change the colour of the text, select the text in the text field (here: "title"). You can either change the colour in the tab **Properties -> Character**:
+
+.. image:: ../../../../../figures/print_client_example_colour_nav.png
+     :scale: 80
+
+Or you **right-hand click the selected text** and open the dialogue window **Character**. There you can change the colour in the tab **Font Effects -> Font color**.
+
+.. image:: ../../../../../figures/print_client_example_colour_dialog.png
+     :scale: 80
+
+The change of the colour of the dynamic field "title" to blue can look like this:
+
+.. image:: ../../../../../figures/print_client_example_colour.png
+     :scale: 80
+
+The change of the font size works in an analogous manner.
+
+
+Dynamic images and dynamic texts
+================================
+
+Depending on the group, the print can contain different images or descriptions (e.g. logo and name of the commune). This can be achieved through the dynamic elements "dynamic_image" and "dynamic_text". You can insert both elements in the ODG-print template on the non printable layer and change their names (**Menue: Modify -> Name...**). As soon as you’ve put the fields in the print template, Mapbender will look for an image with the name of the group and will display it in the field of the "dynamic_image". The height of the object will be used to scale the image and the width will be calculated relative to the height. You have to save the different images in the directory **app/Resources/MapbenderPrintBundle/images/** with the name of the group (e.g. the name of the group is "Group 1", then the name of the image has to be Group 1.png). The description of the group will be displayed in the field "dynamic_text".
+The print with a group named "Group 1" could look like this:
+
+.. image:: ../../../../../figures/print_client_example_groups.png
+     :scale: 80
+To use this feature, it is required, that you’ve created groups before. How to create groups and users is described in the Mapbender3 documentation in the Mapbender3 Quickstart (https://doc.mapbender3.org/en/book/quickstart.html).
+
 
 Configuration of the element
 ============================
