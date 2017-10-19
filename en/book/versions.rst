@@ -5,10 +5,22 @@ Version history
 
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
+
+Version next
+------------
+
+Release date: TT.MM.JJJJ
+
+**Enhancement**
+
+* More documentation for the `Print module <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_ and the new dynamic features for the print-templates.
+
+
+
 Version 3.0.6.3
 ---------------
 
-Release Datum: 27.07.2017
+Release date: 27.07.2017
 
 **Bugfixes:**
 

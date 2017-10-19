@@ -5,6 +5,16 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
 
+Version next
+------------
+
+Release Datum: TT.MM.JJJJ
+
+**Verbesserungen**
+
+* Erweiterung der Doku zu dem `Print Modul <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_ und den neuen dynamischen Features bei den Drucktemplates.
+
+
 Version 3.0.6.3
 ---------------
 
