@@ -41,10 +41,10 @@ Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seit
 * **Legenden Checkbox aktiv**: Soll die Legenden-Checkbox beim Start aktiv sein
 * **File prefix**: Definition des Dateinames für das PDF
 * **Qualitätsstufen**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
-* **Template**: Verweis auf die Druckvorlage (z.B. a4potrait).
-* **Beschriftung (Label)**: Beschriftung des Feldes (z.B. Potrait A4).
+* **Template**: Verweis auf die Druckvorlage (z.B. a4portrait).
+* **Beschriftung (Label)**: Beschriftung des Feldes (z.B. Portrait A4).
 
-* **Optionale Felder (optional field)**:
+* **Optionale Felder (optional fields)**:
   
   * **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
   * **label**: Beschriftung des optionalen Feldes.
@@ -95,7 +95,7 @@ YAML-Definition:
                 replacement: { 288: 'stadtplan_4.xml' }
 
 Class, Widget & Style
-======================
+=====================
 
 * Class: Mapbender\\CoreBundle\\Element\\PrintClient
 * Widget: mapbender.element.printClient.js
@@ -112,7 +112,7 @@ Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/
 
 Erstellen eines individuellen Vorlage
 =====================================
-Um eine individuelle Druckvorlage zu erstellen, kopieren Sie eine vorhandene Druckvorlage (ODG-Datei) und bearbeiten diese. Sie können auch eine neue Libre Office Draw-Datei erzeugen. Die Vorlage kann feste Objekte wie ein Logo, ein Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine Ebene für die dynamischen Elemente wie die Karte, die Übersichtskarte, der Nordpfeil, der Maßstab, das Datum und optionale Felder erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene in der Libre Office Draw-Datei. Fügen Sie die Ebene in Libre Office Draw folgendermaßen hinzu: **Menü: Einfügen -> Ebene... -> definieren Sie einen Namen für die Ebene und wählen Sie die Option nicht druckbar**.
+Um eine individuelle Druckvorlage zu erstellen, kopieren Sie eine vorhandene Druckvorlage (ODG-Datei) und bearbeiten diese. Sie können auch eine neue LibreOffice Draw-Datei erzeugen. Die Vorlage kann feste Objekte wie ein Logo, ein Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine Ebene für die dynamischen Elemente wie die Karte, die Übersichtskarte, der Nordpfeil, der Maßstab, das Datum und optionale Felder erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene in der LibreOffice Draw-Datei. Fügen Sie die Ebene in LibreOffice Draw folgendermaßen hinzu: **Menü: Einfügen -> Ebene... -> definieren Sie einen Namen für die Ebene und wählen Sie die Option nicht druckbar**.
 
 .. image:: ../../../../../figures/print_template_odg.png
      :scale: 80
@@ -131,23 +131,23 @@ Die folgenden Bereiche liegen standardmäßig vor:
 * dynamic_image (dynamisches Bild - gekoppelt an die Gruppe)
 * dynamic_text (dynamischer Text - gekoppelt an die Gruppe)
 
-Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die Open Office Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
+Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die OpenOffice Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
 
-Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen haben, z.B. das Kommentarfeld **comment1** muss auch in der Vorlage **comment1** heißen. Zum Bennenen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Felder müssen selektiert und über **Menü Ändern --> Name...** angepasst werden. 
+Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen haben, z.B. das Kommentarfeld **comment1** muss auch in der Vorlage **comment1** heißen. Zum Benennen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Felder müssen selektiert und über **Menü Ändern --> Name...** angepasst werden. 
 
 .. image:: ../../../../../figures/de/print_template_name.png
     :scale: 80
 
 
-Exportieren Sie die Vorlage als PDF unter dem gleichen Namen wie die ODG-Datei. Verwenden Sie den Namen ohne Dateierweiterung in der Druck yml-Definition.
+Exportieren Sie die Vorlage als PDF unter dem gleichen Namen wie die ODG-Datei. Verwenden Sie den Namen ohne Dateierweiterung in der Druck YML-Definition.
 
 Das Druck-Skript liest die Informationen (Position, Größe, Schriftgröße, Ausrichtung) aus der ODG-Datei aus und verwendet ebenfalls das PDF-Dokument mit den festen Objekten. Aus beiden und den aktuellen Karten wird dann eine PDF-Druckdatei erstellt.
 
 
 Druck von Elementen vor dem Kartenbild
-========================================
+======================================
 
-Damit beim Druck der Kartenbereich möglichst groß ist und wenig Platz durch weiße oder leere Bereiche verloren geht können Elemente vor das Kartenbild gelegt werden. Besonders hilfreich ist dies vorallem bei großen Druckformaten, wie DIN A1, die einen verhältnissmäßig breiten weißen Rand aufweisen. 
+Damit beim Druck der Kartenbereich möglichst groß ist und wenig Platz durch weiße oder leere Bereiche verloren geht können Elemente vor das Kartenbild gelegt werden. Besonders hilfreich ist dies vorallem bei großen Druckformaten, wie DIN A1, die einen verhältnismäßig breiten weißen Rand aufweisen. 
 
 Für die Nutzung dieser Funktion müssen die Templates angepasst und transparente PDF-Vorlagen erzeugt werden. 
 
@@ -175,15 +175,16 @@ Templates anpassen:
 
 
 Legende auf der ersten Seite
-=============================
+============================
 
-Neben dem Kartenbereich kann die Legende auf der ersten Seite der Druckvorlage integriert werden. Standardmäßig ist dieser Bereich nicht in den Druckvorlagen vorhanden. Für die Integration der Legende wird die Libre Office Draw-Druckvorlage angepasst. Fügen Sie ein neues dynamisches Feld mit dem Namen "legend" auf der nicht druckbaren Ebene ein und platzieren Sie es an der gewünschten Stelle. Die Bezeichnung des Feldes zu "legend" wird über **Menü: Ändern -> Name…** verändert. Sobald das Element platziert und benannt wurde, wird Ihnen an dieser Stelle im Druck die Legende angezeigt. Abschließend müssen Sie die ODG-Datei als PDF exportieren und im gleichen Ordner abspeichern. Die Legende auf der ersten Seite kann wie folgt aussehen:
+Neben dem Kartenbereich kann die Legende auf der ersten Seite der Druckvorlage integriert werden. Standardmäßig ist dieser Bereich nicht in den Druckvorlagen vorhanden. Für die Integration der Legende wird die LibreOffice Draw-Druckvorlage angepasst. Fügen Sie ein neues dynamisches Feld mit dem Namen "legend" auf der nicht druckbaren Ebene ein und platzieren Sie es an der gewünschten Stelle. Die Bezeichnung des Feldes zu "legend" wird über **Menü: Ändern -> Name…** verändert. Sobald das Element platziert und benannt wurde, wird Ihnen an dieser Stelle im Druck die Legende angezeigt. Abschließend müssen Sie die ODG-Datei als PDF exportieren und im gleichen Ordner abspeichern. Die Legende auf der ersten Seite kann wie folgt aussehen:
 
 .. image:: ../../../../../figures/de/print_client_example_legend.png
      :scale: 80
 
+
 Logo auf der Legendenseite
-=============================
+==========================
 
 Sofern die Legende weiterhin auf einer zusätzlichen Seite erzeugt werden soll, können Sie auf dieser zweite Seite ebenfalls ein Logo einbinden. Dies erfolgt über das dynamische Element "legendpage_image" Hierfür fügen Sie ein neues Feld in der nicht druckbaren Ebene ein, das Sie über **Menü: Ändern -> Name...** in "legendpage_image" umbenennen und an gewünschter Stelle platzieren. Das Logo oder Bild, welches Sie dort einfügen möchten, speichern Sie im Ordner **app/Resources/MapbenderPrintBundle/images/** unter dem Namen "legendpage_image.png" ab.
 Das erzeugte PDF kann beispielsweise aus folgenden beiden Seiten bestehen:
@@ -193,7 +194,7 @@ Das erzeugte PDF kann beispielsweise aus folgenden beiden Seiten bestehen:
 Auf der zweiten Seite erscheint das eingefügte Logo.
 
 Farbige Texte
-==============
+=============
 
 Der Text der Druckvorlage kann vielfältig angepasst werden. Neben der Schriftgröße, besteht die Möglichkeit die Farbe des Textes zu verändern. Erzeugen Sie hierfür ein Textfeld über **Menü: Einfügen -> Textfeld**. Tragen Sie den gewünschten Text ein. Möchten Sie diesen Text als dynamisches Element einbinden, fügen Sie dieses auf Ihrer vorher festgelegten nicht druckbaren Ebene ein und benennen es entsprechend. Hier wurde als Beispiel das dynamische Element "title" gewählt. Um den Text oder den Platzhalter zu färben, markieren Sie den Text innerhalb des Textfeldes (hier: "title"). Die Änderung der Farbe können Sie entweder rechts neben Ihrer Vorlage unter dem Reiter **Eigenschaften -> Zeichen** vornehmen.
 
@@ -211,10 +212,10 @@ Analog zu der Veränderung der Schriftfarbe, wird auch die Veränderung der Schr
 
 
 Dynamische Bilder und dynamische Texte
-=======================================
+======================================
 
 Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder oder Beschreibungen (z.B. Logo und Bezeichnung der Gemeinde) ausgegeben werden. Hierzu gibt es die Platzhalter "dynamic_image" und "dynamic_text". Beide Elemente können in der ODG-Druckvorlage in die nicht druckbare Ebene eingefügt, benannt (**Menü: Ändern -> Name...**) und entsprechend platziert werden. Sobald diese Bereiche im Drucklayout vorliegen wird nach einem Bild mit dem Namen der Gruppe gesucht und dieses im Bereich "dynamic_image" ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Die verschiedenen Bilder je Gruppe werden im Ordner **app/Resources/MapbenderPrintBundle/images/** unter dem jeweiligen Namen der Gruppe abgelegt (z.B. Name der Gruppe ist "Gruppe 1", dann lautet der Name des Bildes Gruppe 1.png). Unter "dynamic_text" wird die Beschreibung der Gruppe ausgegeben.
-Ein gruppenabhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie folgt aussehen:
+Ein Gruppen-abhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie folgt aussehen:
 
 .. image:: ../../../../../figures/de/print_client_example_groups.png
      :scale: 80
