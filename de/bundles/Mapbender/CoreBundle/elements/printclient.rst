@@ -88,7 +88,7 @@ YAML-Definition:
             label: Bearbeiter
             options: { required: true }
     replace_pattern:               # Für den Druck kann der Kartenaufruf verändert werden. 
-            -                      # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
+    -                      # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
                 default: { 288: '&map_resolution=288' }
             -
                 pattern: 'stadtplan.xml'        # oder es können für den Druck optimierte Dienste angefordert werden.
@@ -101,13 +101,12 @@ Class, Widget & Style
 * Widget: mapbender.element.printClient.js
 
 
-File location
+Datei Ablagen
 =============
-**northarrow**
-Das Bild des Nordpfeils ("North arrow") befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Sie können das Bild des Nordpfeils auch durch ein anderes Bild ersetzen.
 
-**print templates**
-Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Sie können eigene Druckvorlagen erstellen.
+* **northarrow:** Das Bild des Nordpfeils ("North arrow") befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Sie können das Bild des Nordpfeils auch durch ein anderes Bild ersetzen.
+
+* **print templates:** Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Sie können eigene Druckvorlagen erstellen.
 
 
 Erstellen eines individuellen Vorlage
@@ -131,7 +130,7 @@ Die folgenden Bereiche liegen standardmäßig vor:
 * dynamic_image (dynamisches Bild - gekoppelt an die Gruppe)
 * dynamic_text (dynamischer Text - gekoppelt an die Gruppe)
 
-Sie könne optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die OpenOffice Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
+Sie können optionale Felder über die Element-Konfiguration definieren (wie Titel, Kommentar, Bearbeiter). Diese müssen Sie dann auch in die OpenOffice Draw Datei einfügen. Die dynamisch erstellten Text müssen in der ODG-Datei auf dem nicht druckbaren Bereich abgelegt werden, so dass Sie nicht im Vorlage-PDF ausgegeben werden.
 
 Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen haben, z.B. das Kommentarfeld **comment1** muss auch in der Vorlage **comment1** heißen. Zum Benennen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Felder müssen selektiert und über **Menü Ändern --> Name...** angepasst werden. 
 

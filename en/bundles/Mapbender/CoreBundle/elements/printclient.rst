@@ -42,7 +42,7 @@ You need a button to show this element or you can use it in the sidepane. See :d
 * **templates**: template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
 * **label** - define a template label for the select-box
 * **optional_fields** - define optional fields:
-
+  
   * **title**: Name of the optional field, the default value is null (no optional fields are defined).
   * **label**: Label of the optional field.
   * **options**: { required: true } : Type of the optional field. Has to be true or false.
@@ -102,11 +102,9 @@ Class, Widget & Style
 File location
 =============
 
-**northarrow**
-The "North arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. You can replace the "North arrow" image to use a different image as northarrow.
+* **northarrow:** The "North arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. You can replace the "North arrow" image to use a different image as northarrow.
 
-**print templates**
-You find the print templates at **app/Resources/MapbenderPrintBundle/templates/**. Create your own print template to provide an individual output for your application.
+* **print templates:** You find the print templates at **app/Resources/MapbenderPrintBundle/templates/**. Create your own print template to provide an individual output for your application.
 
 
 Create your individual templates
@@ -144,7 +142,9 @@ The print script will read the information (position, size, font size, alignment
 
 Dependent of the group you can generate prints with different Logo and Text (f.e. the name of the commune and the individual logo). There are two objects which handle this - dynamic_image and dynamic_text. If these objects exists in your print layout Mapbender and you are member of a group Mapbender will look for an Image with the name of the group (groupname.png) and will be displayed in the print in the object dynamic_image. The height of the object will be used to scale the image and the width will be calculated relative to the height. In the object dynamic_text the group description will be printed.
 
-**Printing elements in front of the map-element**
+
+Printing elements in front of the map-element
+=============================================
 
 In order for the map-element to be as large as possible and to avoid white or empty areas, elements can be placed in front of the map image to prevent that space is lost through white areas. This is particularly useful in the case of large printing formats, such as DIN A1, which have a comparatively wide border.
 
