@@ -685,12 +685,12 @@ Similar to the text field via type input (see above), text areas can be created 
                                                    title: Bestandsaufnahme Bemerkung # Label (optional)
 
 
-Breaklines (type breakline)
+Breaklines (type breakLine)
 ---------------------------
 
 .. code-block:: yaml
 
-                                                 - type: breakline                     # element type definition, will draw a line 
+                                                 - type: breakLine                     # element type definition, will draw a line 
 
 
 Checkboxes (type checkbox)
