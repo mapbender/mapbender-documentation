@@ -21,6 +21,10 @@ YAML-Definition:
 
    foo: bar # Example, delete me!
 
+Repository
+=============
+
+* please refer to your repository
 
 Class, Widget & Style
 ===========================
