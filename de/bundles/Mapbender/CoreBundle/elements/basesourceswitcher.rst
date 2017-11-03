@@ -3,7 +3,14 @@
 BaseSourceSwitcher (Themenwechsel)
 *********************************************************************
 
-Mit diesem Element kann zwischen vordefinierten Themen (BaseSources) z.B. Hintergrundkarten gewechselt werden. Über Buttons kann zwischen den Themen gewechselt werden. Es kann dabei immer nur ein Thema aktiv sein.
+Mit diesem Element kann zwischen vordefinierten Themen (BaseSources) z.B. Hintergrundkarten gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets bei dem entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig hier ein Häkchen bei Basesource zu setzen:
+
+
+.. image:: ../../../../../figures/de/basesourceswitcher_basesource.png
+     :scale: 80
+
+
+Über Buttons kann zwischen den verschiedenen Themen gewechselt werden. Es kann dabei immer nur ein Thema aktiv sein.
 
 Zu jeder Datenquelle kann eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
@@ -34,7 +41,7 @@ In dem Konfigurationsbeispiel sieht man, dass entweder ein, kein oder mehrere Ei
 * **Group**: Optionale Zuweisung zu einer vorher definierten Themengruppe
 * **Instances**: Quellen für die Themenkarte
 
-Einbindung in Sidepane
+Einbinden in Sidepane
 -----------------------
 Der BaseSourceSwitcher kann in der Sidepane mit einer Kartenvorschau eingebunden werden. 
 
