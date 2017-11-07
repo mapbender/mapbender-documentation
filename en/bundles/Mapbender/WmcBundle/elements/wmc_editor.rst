@@ -9,7 +9,7 @@ You can add WMC Editor to your application. Notice that the editor needs a butto
 
 The Editor offers the possibility to create and update configurations. You can save configurations with a title, desciption and upload a screenshot.
 
-**Notice:** that all configurations are pubic at the moment. Later in development we want to add access control to this module too.
+**Notice:** All configurations are pubic at the moment. We want to add access control to this module later in development.
 
 
 
