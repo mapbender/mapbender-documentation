@@ -42,34 +42,6 @@ Mehr Informationen dazu unter:
 * https://github.com/mapbender/icons
 * http://rawgit.com/mapbender/icons/master/demo.html
 
-Folgende Icons stehen im Dropdown-Menü im Konfigurationsdialog zum Button der Standardanwendung zur Auswahl:
-
-* About
-* About (FontAwesome)
-* Area ruler
-* Area ruler (FontAwesome)
-* Coordinates (FontAwesome)
-* Feature Info 
-* Feature Info (FontAwesome)
-* GPS (FontAwesome)
-* GPS Target (FontAwesome)
-* Help (FontAwesome)
-* Image Export
-* Image Export (FontAwesome)
-* Layer tree
-* Layer tree (FontAwesome)
-* Legend
-* Legend (FontAwesome)
-* Line ruler
-* POI (FontAwesome)
-* Polygon
-* Print (FontAwesome)
-* Search (FontAwesome)
-* Sketch (FontAwesome)
-* WMC Editor (FontAwesome)
-* WMC Loader (FontAwesome)
-* WMS (FontAwesome)
-
 Konfigurationsbeispiele:
 =========================
 Je nach Ziel der Anwendung werden unterschiedliche Buttons benötigt, die verschiedene Funktionen bieten. Diese können nach Bedarf und Wunsch integriert werden. 
@@ -78,7 +50,7 @@ Buttons können für Features eingebunden werden, die vorher im Content konfigur
 Button für die Legende
 -----------------------
 
-Für Karten sind Legenden sehr hilfreich, da sich so die Betrachter der Karte über den Inhalt informieren können. Die Legende ist in diesem Anwendungsbeispiel im Content als Element type "dialog" eingebunden. Wie eine Legende konfiguriert wird, wird `hier <../elements/legend.rst>`_ beschrieben.
+Für Karten sind Legenden sehr hilfreich, da sich so die Betrachter der Karte über den Inhalt informieren können. Die Legende ist in diesem Anwendungsbeispiel im Content als Element type "dialog" eingebunden. Wie eine Legende konfiguriert wird, wird in der Dokumentation unter `Legende <../elements/legend.html>`_ beschrieben.
 Der Button für eine Legende wird wie folgt eingebunden:
 
 Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Toolbar Bereich das Element Button ausgewählt werden.
@@ -125,7 +97,7 @@ Der Button wird, wie schon der Legendenbutton, über das ``+`` - Zeichen in der 
 .. image:: ../../../../../figures/de/button_distance_dialog.png
      :scale: 80
      
-Im Anwendungsbeispiel ist die Bezeichnung (*Title*) des Buttons "Linienmessung". Der Text "Linien messen" wird beim Platzieren der Maus auf dem Button angezeigt. Als *Icon* wird "Line ruler" gewählt und als *Target* das vorher im Content erstellte Element "Distance". Das Element "Distance" wurde mithilfe der Funktion Linien-/Flächenmessung erstellt und als Linienmessung konfiguriert. Wie das Element Linien-/Flächenmessung konfiguriert wird, wird `hier <../elements/ruler.rst>`_ beschrieben.
+Im Anwendungsbeispiel ist die Bezeichnung (*Title*) des Buttons "Linienmessung". Der Text "Linien messen" wird beim Platzieren der Maus auf dem Button angezeigt. Als *Icon* wird "Line ruler" gewählt und als *Target* das vorher im Content erstellte Element "Distance". Das Element "Distance" wurde mithilfe der Funktion Linien-/Flächenmessung erstellt und als Linienmessung konfiguriert. Wie das Element Linien-/Flächenmessung konfiguriert wird, wird in der Dokumentation unter `Linien-/Flächenmessung <../elements/ruler.html>`_ beschrieben.
 
 Um die Gruppierung mit der Flächenmessung möglich zu machen, wird im Feld *Group* ein Gruppenname vergeben. Hier lautet die Bezeichnung der Gruppe "messen". Dieser Gruppenname wird analog auch bei dem Button für die Flächenmessung eingetragen. Im Feld *Deactivate* wurde "deactivate" eingetragen. So wird die Funktion der Flächenmessung bei erneutem klicken auf den Button beendet.
 Der Button für die Flächenmessung wird analog eingebunden. Der Dialog der Konfiguration des Buttons sieht im Konfigurationsbeispiel wie folgt aus:
