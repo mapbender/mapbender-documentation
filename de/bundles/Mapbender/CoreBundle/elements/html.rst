@@ -33,7 +33,7 @@ Logo mit hinterlegtem Link einbinden:
 --------------------------------------
 Über ein HTML-Element können verschiedene zusätzliche Elemente eingebunden werden. Beispielsweise kann ein Bild oder Logo integriert werden. Aber auch ein einfaches Textelement, oder ein Text- bzw. Bildelement, welches mit einem Link zu einer Webseite hinterlegt ist. Das HTML-Element kann an unterschiedlichen Stellen in der Anwendung eingebunden werden.
 
-In der Anwendung wird das HTML-Element unter dem Reiter Layouts durch das + -Zeichen entweder in der Toolbar, in der Sidepane oder im Footer eingefügt.
+In der Anwendung wird das HTML-Element unter dem Reiter Layouts durch das ``+`` -Zeichen entweder in der Toolbar, in der Sidepane oder im Footer eingefügt.
 
 .. image:: ../../../../../figures/de/html_add_element.png
      :scale: 80
@@ -81,7 +81,7 @@ Mapbender3 wie folgt aus:
 .. image:: ../../../../../figures/de/html_example_application.title_application.png
      :scale: 80
 
-Zuerst muss ein HTML-Element, wie vorher beschrieben über das +-Zeichen, hinzugefügt werden. Um den Titel der Anwendung einzubinden, wird die Variable "application.title" benötigt.
+Zuerst muss ein HTML-Element, wie vorher beschrieben über das ``+`` -Zeichen, hinzugefügt werden. Um den Titel der Anwendung einzubinden, wird die Variable "application.title" benötigt.
 
 .. image:: ../../../../../figures/de/html_example_application.title_dialog.png
      :scale: 80
