@@ -20,6 +20,9 @@ Mapbender3 needs the following components in order to run:
 * OpenSSL
 * For development, particular the phantomjs helper, you need also the BZ2 extension. (php-bz2)
 
+Suse SLES:
+* For SLES and PHP 7 you also need also install php7-zlib separately.
+
 
 PHP 7
 -----
