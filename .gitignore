@@ -6,3 +6,4 @@ build
 _sources
 .doctrees
 .tox
+.projectile
