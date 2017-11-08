@@ -31,7 +31,7 @@ Konfiguration
 
 Konfigurationsbeispiel
 ======================
-Die Hauptkarte (Main Map) wird in der Anwendung unter Layouts im Content integriert. Über das +-Zeichen kann das Element hinzugefügt werden.
+Die Hauptkarte (Main Map) wird in der Anwendung unter Layouts im Content integriert. Über das ``+`` -Zeichen kann das Element hinzugefügt werden.
 
 .. image:: ../../../../../figures/de/add_content.png
      :scale: 80
