@@ -49,12 +49,12 @@ Mithilfe der Komponente **Pan** kann der Anwender durch klicken auf die untersch
 Ist das Navigationswerkzeug wie in der Abbildung eingestellt, wird die Karte bei Klick auf einen Richtungspfeil um 30% verschoben. In der Anwendung sieht ein Klick auf den Pfeil Richtung Norden mit einer Verschiebung von 30% wie folgt aus:
 
 .. image:: ../../../../../figures/de/navigationtoolbar_example_step_30percent.png
-     :scale: 80
+     :scale: 60
 
 Die Komponente **History** besteht aus zwei Pfeilen. Durch klicken auf dem linken Pfeil (zurück) springt die Kartenansicht auf denjenigen Ausschnitt oder diejenige Zoomstufe zurück, die vor Verschieben der Karte sichtbar waren. Der rechte Pfeil (vor) springt auf den aktuelleren Kartenausschnitt bzw. die aktuellere Zoomstufe. Um diese Funktion zu verdeutlichen ist hier ein Beispiel:
 
 .. image:: ../../../../../figures/de/navigationtoolbar_example_history.png
-     :scale: 80
+     :scale: 60
      
 Ausschnitt 1: die Startansicht von der Bonner Innenstadt im Maßstab 1:25.000
 
@@ -68,19 +68,19 @@ Die Komponente **Zoom box** ermöglicht das Aufziehen einer Box mit der Maus. De
 
 
 .. image:: ../../../../../figures/de/navigationtoolbar_example_zoombox.png
-     :scale: 80
+     :scale: 60
 
 Mit der Komponente **Zoom to max extent** kann schnell auf den im `Kartenelement <../elements/map.html>`_ definierten *Max. Extent* gezoomt werden. Zu beachten ist, dass der *Max. Extent* jedoch nur dann sichtbar ist, wenn auch der entsprechende benötigte Maßstab eingestellt ist. Ist es aufgrund der eingestellten Maßstäbe nicht möglich, den gesamten maximalen Ausschnitt zu sehen, wird auf den maximalen Maßstab herausgezoomt. 
 Bei Klick auf *Zoom to max extent* und einem maximalen Maßstab von 1:5.000.000 sieht der Kartenausschnitt wie folgt aus:
 
 .. image:: ../../../../../figures/de/navigationtoolbar_example_maxextent_5mio.png
-     :scale: 80
+     :scale: 60
 
 Bei einem maximalen Maßstab von 1:1.000.000 hingegen würde der Kartenausschnitt bei Klick auf Zoom to max extent so aussehen:
 
 
 .. image:: ../../../../../figures/de/navigationtoolbar_example_maxextent_1mio.png
-     :scale: 80
+     :scale: 60
 
 Mit der Komponente **Zoom in/out** kann durch Klick auf das ``+`` -Zeichen (hineinzoomen) oder durch Klick auf das ``–`` -Zeichen (herauszoomen) gezoomt werden. Der Zoom springt mit Klick auf eine der beiden Schaltflächen auf entweder den nächstgrößeren oder nächstkleineren Maßstab, die vorher im `Kartenelement <../elements/map.html>`_ definiert wurden. Je nachdem, welche Maßstäbe dort angegeben wurden, können größere oder kleinere Sprünge im Zoom eingestellt werden.
 
