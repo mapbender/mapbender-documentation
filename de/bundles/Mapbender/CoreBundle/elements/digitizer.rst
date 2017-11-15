@@ -3,12 +3,11 @@
 Digitalisierung (Digitizer)
 ***************************
 
-Diese Dokumentation gilt für Digitizer 1.1.x.
-
 Das Digitizer-Element ermöglicht den Aufbau von Erfassungsoberflächen. Derzeit kann über eine YAML-Definition eine Erfassungsmaske für Punkte, Linien oder Flächen aufgebaut werden.
+
 Dabei wird bisher PostgreSQL als Datenquelle unterstützt. Oracle und SpatiaLite sind experimentell verfügbar. Die Entwicklung wurde so durchgeführt, dass die Erfassung auch auf andere Datenquellen wie z.B. OGC WFS erweitert werden kann.
 
-Das Digitizer-Element bietet komplexe Editier­funktionalitäten an:
+Das Digitizer-Element bietet komplexe Editierfunktionalitäten an:
 
 * Verschieben von Objekten
 * Einfügen von Stützpunkten (Linien, Flächen)
@@ -40,40 +39,32 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 .. image:: ../../../../../figures/digitizer_with_tabs.png
      :scale: 80
 
-Konfiguration
-=============
+Einrichtung
+===========
+
+Das Element kann nur in der Sidepane eingebettet werden.
+
 
 .. image:: ../../../../../figures/digitizer_configuration.png
      :scale: 80
 
-Das Element wird in der Sidepane eingebettet.
+
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Elemente voneinander zu unterscheiden.
 * **Target:** Zielelement (Titel(ID)) der Karte.
-* **Schemes:** YAML-Definition für das Element digitizer
+* **Schemes:** YAML-Definition für das Element "digitizer"
 
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
 Mehr zu diesem Thema finden Sie unter http://doc.mapbender3.org/de/book/database.html
 
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
-Falls Sie den genauen Fehler reproduzieren möchten, sollten Sie die Seite über app_dev.php aurufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
+Falls Sie den genauen Fehler reproduzieren möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
 
-YAML-Definition für das Element digitizer in der Sidepane in der mapbender.yml:
-
-.. code-block:: yaml
-
-                sidepane:
-                    digitizer:
-                        class: Mapbender\DigitizerBundle\Element\Digitizer
-                        title: Digitalisation
-                        target: map
-                        schemes:
-                            ...
 
 
 YAML-Definition für das Element digitizer in der Textarea unter schemes
------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 In dem folgenden YAML-Block ist die beispielhafte Definition für drei Erfassungsoberflächen enthalten. Kopieren Sie den folgenden Block in Ihr Digitizer-Element, um die Erfassung von Punkten, Linien und Polygonen zu testen.
 Vorher müssen Sie die Datenbankverbindung und die drei Demo-Tabellen anlegen. Die SQL-Befehle für das Anlegen der Tabellen finden Sie weiter unten.
@@ -98,26 +89,9 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
         allowDelete: true
         allowDigitize: true
         useContextMenu: true
-        clustering:
-              -
-                  scale: 10000
-                  distance: 60
-              -
-                  scale: 2500
-                  distance: 40
-              -
-                  scale: 1000
-                  distance: 20
-              -
-                  scale: 500
-                  distance: 1
-                  disable: true
         toolset:
             - type: drawPoint
-            - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: point test suite
             width: 500px
@@ -224,8 +198,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
             - type: drawLine
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: line test suite
             width: 500px
@@ -285,8 +257,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
             - type: drawCircle
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: polygon test suite
             width: 500px
@@ -327,14 +297,14 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
 
 
 SQL für die Demo-Tabellen
-------------------------------
+-------------------------
 
-Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie legen drei Demo-Tabellen an, damit mit der oben gezeigte YAML-Definition die einzelnen Funktionen getestet werden können.
+Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie legen drei Demo-Tabellen an, damit mit der oben gezeigte YAML-Definition die einzelnen Funktionen getestet werden können. Die PostGIS Extension muss aktiviert sein.
 
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.poi (
+    create table public.poi (
         gid serial,
         name varchar,
         type varchar,
@@ -357,9 +327,9 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.lines (
+    create table public.lines (
         gid serial,
         name varchar,
         type varchar,
@@ -384,9 +354,9 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.polygons (
+    create table public.polygons (
         gid serial,
         name varchar,
         type varchar,
@@ -412,28 +382,125 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
     );
 
 
+
+Nutzung
+=======
+
+Allgemein
+---------
+
+Der Digitizer ermöglicht das Editieren von FeatureTypes. Diese basieren auf Punkt, Linien oder Polygongeometrien und ihren Sachdaten. Die Sachdaten werden in dem Formular des Digitizers angezeigt. Das Editieren der Geometrien geschieht über die Karte.
+
+
+Geometrien erstellen
+--------------------
+
+Jeder FeatureType kann unterschiedliche `Toolsets <#definition-der-zur-verfugung-stehenden-werkzeuge-toolset-type>`_ freischalten, die dann in der Schaltflächenleiste des Digitizers sichtbar sind.
+
+In dem FeatureType "poi" wird mit dem "drawPoint" Toolset beispielsweise die Schaltfläche zum Erstellen eines neuen Punktes freigeschaltet, mit dem Toolset "modifyFeature" die Verschieben-Schaltfläche eingeblendet.
+
+
+.. image:: ../../../../../figures/digitizer_buttons_poi.png
+     :scale: 80
+
+
+
+Speichern, Löschen, Abbrechen
+-----------------------------
+
+Es stehen drei Schaltflächen im Dialog zur Verfügung: Speichern, Löschen, Abbrechen.
+
+Das *Speichern* der Änderungen geschieht erst, wenn die Schaltfläche "Speichern" im Attributdialog gedrückt worden ist. Ein Verschieben einer Geometrie alleine speichert das Feature also nicht sofort (um unnötige Änderungen in der Datenbank zu verhindern). Es ist bislang noch notwendig, den Attributdialog zu öffnen und Speichern zu klicken.
+
+.. image:: ../../../../../figures/digitizer_save_delete_cancel.png
+     :scale: 80
+
+* **Speichern:** Speichert die Geometrie und die Attributdaten in die Datenbank.
+* **Löschen:** Löscht die Daten.
+* **Abbrechen:** Speichert und löscht die Daten nicht, behält die Geometrie aber für eine weitere Bearbeitung im internen Speicher. Sie ist weiterhin in der Karte zu sehen und kann angepasst werden (z.B. bei Polygonen). Attributdaten werden nicht vorgehalten.
+
+Es gibt mehrere Optionen in den `Basisdefinitionen <#Basisdefinition>`_, die das Verhalten bestimmen:
+
+* allowEditData: Speichern Schaltfläche anzeigen.
+* allowDelete: Löschen Schaltfläche anzeigen.
+* allowCancelButton: Abbrechen Schaltfläche anzeigen.
+* allowDeleteByCancelNewGeometry: Verhalten des Abbrechen Knopfes.
+
+Das *Löschen* eines Features kann sowohl über den Dialog, als auch die Tabelle geschehen.
+
+
+Vertices
+--------
+
+Das Bearbeiten von Polygonen und Linien erlaubt das Erstellen, Verschieben und Löschen von Vertices. Die Schaltfläche zum Editieren von Vertices erwartet, dass man ein Polygon selektiert. Dieses wird dann mit den Stützpunkten angezeigt.
+
+.. image:: ../../../../../figures/digitizer_edit_vertices.png
+           :scale: 80
+
+Die vorhandenen Stützpunkte werden deckend dargestellt, mögliche neue Stützpunkte befinden sich immer in der Mitte einer Kante, sind leicht transparent dargestellt und können per Klick auf diesen Punkt hinzugefügt werden.
+
+Vorhandene Vertices werden mit der Entfernentaste auf dem Keyboard gelöscht. Dafür bewegt man sich mit dem Mauszeiger über einen Stützpunkt und drückt die Entf-Taste. *Anmerkung*: Falls das Löschen einen Stützpunktes nicht reagiert, hilft ein Klick mit der rechten Maustaste auf die Karte. Speziell mit dem aktivierten Kontextmenü können sich z.Z. noch Events verhaken.
+
+
+
+Konfiguration
+=============
+
+Im Folgenden werden die einzelnen Bestandteile des Digitizers erklärt, die die Grundstruktur ausmachen und die in dem Formular eingebettet werden können.
+
+
 Basisdefinition
---------------------------
+---------------
+
+Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
 
 .. code-block:: yaml
 
     poi:
-        label: point digitizing        # Beschriftung mit dem Namen der Erfassungsoberfläche
-        maxResults: 500                # maximale Trefferanzahl
-        featureType:                   # Verbindung zur Datenbank aus der parameters/config.yml
+        label: point digitizing
+        maxResults: 500
+        minScale: 5000
+        featureType:
             connection: search_db
             table: poi
             uniqueId: gid
             geomType: point
             geomField: geom
             srid: 4326
-        openFormAfterEdit: true        # Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular. Standard ist true.
+        openFormAfterEdit: true
         zoomScaleDenominator: 500
-        allowEditData: true            # Durch Angabe von den Parametern allow[Parameter] wird definiert, ob Daten und Geometrien erfasst und verändert werden dürfen.
+        allowEditData: true
         allowDelete: true
         allowDigitize: true
+        [...]
         popup:
             [...]
+
+Die möglichen Optionen sind:
+
+* **label:** Beschriftung mit dem Namen der Erfassungsoberfläche
+* **maxResults:** maximale Trefferanzahl
+* **minScale:** Minimaler Maßstab, ab dem die Features in der Karte angezeigt werden (z.B. minscale: 5000 = Anzeige ab einem Maßstab über 1:5000, beim rauszoomen)
+* **featureType:** Verbindung zur Datenbank
+
+  * connection: Name der Datenbank-Verbindung aus der parameters/config.yml
+  * table: Name der Tabelle, in der das FeatureType gespeichert wird
+  * uniqueId: Name der Spalte mit dem eindeutigen Identifier
+  * geomType: Geometrietyp
+  * geomField: Attributspalte, in der die Geometrie liegt.
+  * srid: Koordinatensystem im EPSG-Code
+
+* **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular. [true/false] Standard ist true.
+* **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird.
+* **allowEditData:** Daten dürfen editiert werden [true/false]. Es erscheint eine Speichern Schaltfläche.
+* **allowDigitize:** Daten dürfen gespeichert werden. [true/false]
+* **allowDelete:** Daten dürfen gelöscht werden. [true/false]. Es erscheint eine Löschen Schaltfläche.
+* **allowDigitize:** Daten dürfen neu erstellt werden. [true/false]. Bei false erscheinen keine Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.).
+* **useContextMenu:** Anzeige des Kontextmenü eines Features. [true/false]
+* **allowCancelButton:** Zeigt die Abbrechen Schaltfläche. [true/false]. Siehe `Speichern, Löschen, Abbrechen <#speichern-loschen-abbrechen>`_.
+* **allowDeleteByCancelNewGeometry:** Wenn auf true gestellt: Beim Neuanlegen eines Features verhält sich der Abbrechen Knopf wie der Löschen Knopf: Das Feature wird aus der Karte und der Tabelle entfernt. Dies gilt nicht bei dem Ändern eines vorhandenen Features. [true/false]
+* **displayOnInactive:** Der aktuellen FeatureType wird weiterhin auf der Karte angezeigt, auch wenn der Digitizer in der Sidepane (Accordion, Tabs) nicht mehr aktiviert ist. [true/false]. Die Option ist, wenn angeschaltet, ein wenig tricky, da auch die einzelnen Digitizer Events noch aktiviert sind, für erfahrene Anwendern aber durchaus hilfreich.
+
 
 
 Definition Popup
@@ -452,7 +519,7 @@ Definition Popup
 
 
 Definition der Objekttabelle
-------------------------------------------------------------------------
+----------------------------
 
 Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte gezoomt werden und das Bearbeitsformular kann geöffnet werden. Die Objekttabelle ist sortierbar. Die Breite der einzelnen Spalten kann optional in Prozent oder Pixeln angegeben werden.
 
@@ -461,15 +528,17 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 
 .. code-block:: yaml
 
-        searchType: currentExtent   # currentExtent listet alle Objekte im derzeitigen Kartenausschnitt. All listet alle Objekte in der Tabelle. Standard ist currentExtent.
+        searchType: currentExtent   # [currentExtent|all] currentExtent listet alle Objekte im derzeitigen Kartenausschnitt. all listet alle Objekte in der Tabelle. Standard ist currentExtent.
         tableFields:    # Definition der Spalten für die Objekttabelle
             gid: {label: Nr. , width: 20%}    # [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe z.B. Angabe der Breite]}  # Definition einer Spalte
             name: {label: Name , width: 80%}
 
 
 
-Definition von Dateireitern (type tabs)
---------------------------------------
+Dateireiter (type tabs)
+-----------------------
+
+Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu dient das formItem type "tabs".
 
 .. code-block:: yaml
 
@@ -485,8 +554,8 @@ Definition von Dateireitern (type tabs)
                        ...
 
 
-Definition von Textfeldern (type input)
-.......................................
+Textfelder (type input)
+-----------------------
 
 .. code-block:: yaml
 
@@ -500,13 +569,13 @@ Definition von Textfeldern (type input)
                                                    placeholder: 'please edit this field' # Platzhalter, der vor der Eingabe erscheint (optional)
 
 
-Definition von Auswahlboxen (selectbox oder multiselect [type select])
--------------------------------------------------------------------------
+Auswahlboxen (selectbox oder multiselect [type select])
+-------------------------------------------------------
 
 Durch die Definition einer Auswahlbox können vordefinierte Werte im Formular genutzt werden.
 Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und einer Auswahlbox mit mehreren auswählbaren Einträgen (type multiselect) unterschieden.
 
-1) **select** - ein Eintrag kann ausgewählt werden
+**(1) select - ein Eintrag kann ausgewählt werden**
 
 .. code-block:: yaml
 
@@ -521,10 +590,37 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
                                                        4: garden
                                                        5: playground
 
-2) **multiselect** - mehrere Einträge können ausgewählt werden
+**(2) multiselect - mehrere Einträge können ausgewählt werden**
 
-Die Nutzung der Multiselect-Box ist noch experimentell. Bei dem Abspeichern von Einträgen werden nur Zahlen abgespeichert (Bsp.: Auswahl a und b --> 1,2).
-Es kann keine Angabe zur Beschriftung gemacht werden (Bsp.: options:  [1: pub,2: bar, 3: pool]).
+Multiselect-Box wird durch das attribute "multiple: true" aktiviert. Es können mehrere Einträge ausgewählt werden. Die Nutzung und die Voraussetzungen der Datenbank können da variieren. Bei dem oben beschriebenen Beispiel können die Interessen in den POI als Multiobjekte abgespeichert werden. Das Datenbankfeld ist weiterhin  ein character varying.
+
+.. code-block:: yaml
+
+                -
+                  type: select
+                  multiple: true
+                  title: Interests
+                  name: interests
+                  options:
+                    maps: maps
+                    reading: reading
+                    swimming: swimming
+                    dancing: dancing
+                    beer: beer
+                    flowers: flowers
+
+Das SQL (wenn maps und reading abgespeichert wurden):
+
+.. code-block:: sql
+
+                gisdb=> select interests from poi where gid=3;
+                interests
+                --------------
+                maps,reading
+                (1 row)
+
+
+Beim Abspeichern von Einträgen werden die Schlüsselwörter in der Datenbank abgelegt (Bsp.: "dancing: Tanzen" und "flowers: Blumen" speichert "dancing,flowers").
 
 .. code-block:: yaml
 
@@ -533,15 +629,15 @@ Es kann keine Angabe zur Beschriftung gemacht werden (Bsp.: options:  [1: pub,2:
                                                    title: Wählen Sie einen Typ aus    # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: my_type                      # Referenz zur Tabellenspalte
                                                    multiple: true                     # Definition einer Mehrfachauswahl (multiselect), Standard ist false
-                                                   options: [a,b,c]                   # Definition der Optionen (key: value)
-
-                                                   # Beispielhafte Angabe einer Liste über Paramter seperator
-                                                   separatator: ','
-                                                   fieldType: 'array'
-                                                   options:  ['Prof.','Dr.', 'med.', 'jur.','vet.','habil.']
+                                                   options:
+                                                     a: a                             # Definition der Optionen (key: value)
+                                                     b: b
+                                                     c: c
 
 
 **Füllen der Auswahlboxen über eine SQL Abfrage**
+
+Mit einer SQL Abfrage können die Werte direkt aus der Datenbank gezogen werden. Dabei ist zu beachten, dass die key-value zuordnungen wegfallen und nur noch die Indizes abgespeichert werden.
 
 .. code-block:: yaml
 
@@ -553,8 +649,8 @@ Es kann keine Angabe zur Beschriftung gemacht werden (Bsp.: options:  [1: pub,2:
 
 
 
-Definition von Texten (type label)
---------------------------------------------------
+Texte/Label (type label)
+------------------------
 
 .. code-block:: yaml
 
@@ -562,8 +658,8 @@ Definition von Texten (type label)
                                                    title: 'Please give information about the poi.' # Definition eines nicht bearbeitbaren Textes.
 
 
-Definition eines Textes (type text)
--------------------------------
+Texte (type text)
+-----------------
 
 Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenquelle zugegriffen werden, dazu wird JavaScript verwendet.
 
@@ -578,8 +674,8 @@ Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenque
                                                   # data - Angabe, dass Datenbankfeld aus der Tabelle angesprochen wird.
                                                   # z.B.: data.gid --> Anzeige der ID der Geometrie im Textfeld
 
-Definition von Textbereichen zur Eingabe (type textArea)
---------------------------------------------------------------
+Textbereiche (type textArea)
+----------------------------
 
 Ähnlich zum Textfeld über type input (siehe oben) können hier Textbereiche erzeugt werden, die bei type textArea mehrere Zeilen umfassen können.
 
@@ -591,16 +687,16 @@ Definition von Textbereichen zur Eingabe (type textArea)
                                                    title: Bestandsaufnahme Bemerkung # Beschriftung (optional)
 
 
-Definition von Trennlinien (type breakline)
---------------------------------------------------
+Trennlinien (type breakLine)
+----------------------------
 
 .. code-block:: yaml
 
-                                                 - type: breakline      # fügt eine einfache Trennlinie ein
+                                                 - type: breakLine      # fügt eine einfache Trennlinie ein
 
 
-Definition von Checkboxen (type checkbox)
---------------------------------------------------
+Checkboxen (type checkbox)
+--------------------------
 
 .. code-block:: yaml
 
@@ -612,8 +708,8 @@ Definition von Checkboxen (type checkbox)
 
 
 
-Definition von Pflichtfeldern
---------------------------------------------------
+Pflichtfelder
+-------------
 
 Die Hinweise für ein Pflichtfeld erscheinen über dem jeweiligen Feldern. Bei einer fehlenden Angabe in einem definierten Pflichtfeld wird dieses rot umrandet und (wenn vorher definiert) erscheinen Hinweise. Das Objekt kann nicht gespeichert werden, wenn Pflichtangaben fehlen.
 
@@ -634,8 +730,8 @@ Hier erscheint keine Fehlermeldung außerhalb des Formulars. Der Erfasser muss d
                                                    mandatoryText: Bitte eine Zahl eingeben!
 
 
-Definition eines Textfelds mit Datumsauswahl
---------------------------------------------------
+Datumsauswahl (type date)
+-------------------------
 
 .. image:: ../../../../../figures/digitizer_datepicker.png
      :scale: 80
@@ -654,8 +750,8 @@ Fallls der Parameter dateFormat genutzt wird für eine andere Ansicht oder Abspe
 
 
 
-Definition von Hilfetexten zu den Eingabefeldern
-------------------------------------------------------------------------------------------
+Hilfetexten zu den Eingabefeldern (Attribut infoText)
+-----------------------------------------------------
 
 Anders als bei Hifetexten zu den Pflichtfeldern kann der Infotext über jedem Feld erscheinen, unabhängig davon, ob dieses ein Pflichtfeld ist oder nicht. Bei der Angabe infotext: [Text] erscheint ein Info-Button über dem jeweiligen Feld.
 Der Klick auf diesen Button öffnet den angegebenen Informationstext.
@@ -667,8 +763,8 @@ Der Klick auf diesen Button öffnet den angegebenen Informationstext.
                                                    infoText: In dieses Feld dürfen nur Zahlen eingegeben werden  # Hinweistext, der angezeigt wird über i-Symbol.
 
 
-Definition von Gruppierungen (type: fieldSet)
---------------------------------------------------
+Gruppierungen (type: fieldSet)
+------------------------------
 
 Elemente können in einer Zeile gruppiert werden, um logische Einheiten zu bilden oder um Platz zu sparen. Hierbei muss ein fieldSet definiert werden. Anschließend können die Elemente der Gruppe unter children angegeben werden.
 Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Aufteilung der Zeile für die angegebenen Elemente zu kontrollieren.
@@ -692,14 +788,28 @@ Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Au
 
 
 
-Definition von Feldern für den Dateiupload
---------------------------------------------------
+Dateiupload (type file)
+-----------------------
 
 Über den Dateiupload können Dateien durch die Angabe in einer Datenbankspalte im Formular verknüpft werden. Dazu werden die hochgeladenen Dateien im Mapbender3 gespeichert und der Pfad in der Spalte vermerkt.
-Der Speicherpfad und der Name der abgespeicherten Dateien kann bis jetzt nicht verändert werden. Der Dateiupload speichert immer in das gleiche Verzeichnis.
-Pfad: http://localhost/mapbender3/uploads/featureTypes/[tabellenname]/file_reference/[dateiname].png
 
-Für die Ansicht von eingebundenen Bildern kann das Bild-Element dazugenommen werden.
+Der Speicherpfad und der Name der abgespeicherten Dateien kann bis jetzt nicht verändert werden. Der Dateiupload speichert immer in das gleiche Verzeichnis und baut sich aus den Parametern:
+
+* Tabellenname
+* Spaltenname
+* Dateiname
+
+auf.
+
+Das Verzeichnis ist:
+
+* <mapbender>/web/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+
+Die in der Datenbank verlinkte URL ist:
+
+* http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+
+
 
 .. code-block:: yaml
 
@@ -711,19 +821,29 @@ Für die Ansicht von eingebundenen Bildern kann das Bild-Element dazugenommen we
 
                       # Experimentelle Parameter:
                       #accept: image/*          # Vorauswahl von Elementen im Image-Format (Fenster für Dateiupload öffnet sich mit Einschränkungsfilter)
-                                                # Speichert z.B. png und speichert nicht pdf/txt. Achtung: Es erscheint keine Fehlermeldung beim falschen Format!
+                                                # Es können jedoch weiterhin auch andere Dateiformate hochgeladen werden.
+
+**Anmerkungen:** Es wird momentan noch ein "thumbnail" Verzeichnis angelegt, dass eine kleinere Version der Bilder beinhaltet. Dieses wird in weiteren Entwicklungsphasen noch verändert.
+
+Für die Ansicht von hochgeladenen Bildern kann die Bildanzeige dazugenommen werden.
 
 
 
-Definition der Bildanzeige
------------------------------
+Bildanzeige (type image)
+------------------------
 
-Für die Ansicht von einem Bilde in dem Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
+.. image:: ../../../../../figures/digitizer_image.png
+     :scale: 80
+
+Für die Ansicht eines Bildes im Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
+
 Bilder, die durch das Element Dateiupload in einer Tabellenspalte vermerkt sind können somit auch direkt eingebunden und angezeigt werden.
+
 Das Bild lässt sich durch die Angabe von den beiden Parametern src und name angeben.
+
 * **src**: Url-Pfad oder Dateipfad (kann relativer Pfad sein)
 * **name**: Url-Pfad oder Dateipfad wird aus der Tabellenspalte übernommen (kann kein relativer Pfad sein)
-* Anagbe von name und src zusammen: Der Inhalt der Datenbankspalte aus name wird genommen. Falls die Spalte leer ist wird die src-Angabe genutzt.
+* Anagbe von **name** und **src** zusammen: Der Inhalt der Datenbankspalte aus name wird genommen. Falls die Spalte leer ist wird die src-Angabe genutzt.
 
 
 .. code-block:: yaml
@@ -731,24 +851,23 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
                     - type: image               # Type image für das Anzeigen von Bildern
                       name: file_reference      # Referenz zur Datenbankspalte. Wenn definiert, wird der Pfad oder die URL in dem Feld ermittelt und "src" Option ersetzt
                       src: "bundles/mapbendercore/image/logo_mb3.png"  # Angabe eines Pfades oder URL zu einem Bild. Falls der relative Pfad genutzt wird muss relative: true stehen.
-                      relative: true            # Optional. Standardwert ist false. Wenn true, wird der "src" Pfad ab dem "/web" Verzeichniss ermittelt.
-                      enlargeImage: true        # Bild wird beim Klick auf das Vorschaubild auf Originalgröße/maximale Auflösung vergrößert. Achtung: keine Skalierung auf die Bildschirmgröße.
+                      enlargeImage: true        # Bild wird beim Klick auf das Vorschaubild auf Originalgröße/maximale Auflösung vergrößert. Es wird nicht auf die Bildschirmgröße skaliert.
 
                       # Experimentelle Angaben zum Styling
                       imageCss:
-                        width: 50%              # Image CSS Style: Skaliert das Vorschaubild in dem Formular, abweichend von der Originalgröße in Prozent.
-                        height: 50%             # Angabe von width und height ist besser für die Ansicht, sonst werden Teile eventuell abgeschnitten.
-                      css: {width: 25%}         # Image Container CSS Style: Skaliert bei Angabe von imagecss wieder runter, daher nicht empfohlen.
+                        width: 100%              # Image CSS Style: Skaliert das Vorschaubild in dem Formular, abweichend von der Originalgröße in Prozent.
 
-Achtung: Wenn nur name und nicht name und src angegeben wird, erscheint bei leeren Spalteneinträgen ein Bild aus dem vorherigen Dateneintrag.
+**Achtung**: Wenn nur name und nicht name und src angegeben wird, erscheint bei leeren Spalteneinträgen ein Bild aus dem vorherigen Dateneintrag.
+
 Dynamische Pfade (z.B. "bundles/mapbendercore/image/[nr].png" oder 'bundles/mapbendercore/image/' + data.image_reference) können nicht angegeben werden.
+
 Eine Möglichkeit das zu Umgehen wäre ein Trigger, der in die Datenbankspalte beim Insert den Pfad und den Inhalt eines Tabellenfeldes als Name zusammenführt.
 
 
 Definition der zur Verfügung stehenden Werkzeuge (Toolset Type)
-------------------------------------------------------------------------
+---------------------------------------------------------------
 
-Werkzeugliste
+Werkzeugliste:
 
 * **drawPoint** - Punkt erstellen
 * **drawLine** - Line erstellen
@@ -759,8 +878,8 @@ Werkzeugliste
 * **drawDonut** - Donut erstellen oder die bestehende Geometrien editieren
 * **modifyFeature** - einzelne Knotenpunkte bei Geometrien verschieben
 * **moveFeature** - Geometrien verschieben
-* **selectFeature** - Geometrien de-/selektieren
-* **removeSelected** - die selektierten Geometrien löschen
+* **selectFeature** - Geometrien de-/selektieren (experimentell). Es findet noch keine Interaktion mit der Tabelle statt und die zur Verfügung stehenden Workflows beschränken sich auf das Löschen.
+* **removeSelected** - die selektierten Geometrien löschen (experimentell). Löscht alle in der Karte selektierten Objekte.
 * **removeAll** - Vorsicht: alle Geometrien aus der Tabelle löschen
 
 Definition der für die Erfassung verwendeten Toolset Typen
@@ -768,17 +887,7 @@ Definition der für die Erfassung verwendeten Toolset Typen
 .. code-block:: yaml
 
     polygon:
-        label: polygon digitizing
-        maxResults: 1500
-        featureType:
-            connection: search_db
-            table: polygons
-            uniqueId: gid
-            geomType: polygon
-            geomField: geom
-            srid: 4326
-        openFormAfterEdit: true
-        allowDelete: false
+        [...]
         toolset:
             - type: drawPolygon
             - type: drawRectangle
@@ -786,8 +895,8 @@ Definition der für die Erfassung verwendeten Toolset Typen
             - type: removeSelected
 
 
-Definition der Tabellensuche (inline Search)
-------------------------------------------------------------------------
+Suche in den Tabellen (inline Search)
+-------------------------------------
 
 Über die Suche können Begriffe in der Tabelle gesucht werden.
 Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eines Suchbegriffs werden alle Spalten dieser Tabelle durchsucht und deren Ergebnisse angezeigt.
@@ -801,8 +910,8 @@ Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eine
 
 
 
-Definition des Kontextmenüs (Context Menu)
------------------------------------------------
+Kontextmenü
+-----------
 
 Über das Kontextmenü kann ein Objekt auf der Karte näher betrachtet werden.
 Nach der Aktivierung kann man über den rechten Mausklick auf einem Objekt ein Kontextmenü öffnen.
@@ -816,6 +925,8 @@ Elemente des Kontextmenüs:
 * **Bearbeiten:** Informationen zu dem Objekt verändern. Klick öffnet die Digitalisieroberfläche.
 * **Löschen:** Löscht das ausgewählte Objekt.
 
+Ist die korrespondierende `Basisdefinition <#basisdefinition>`_ (allowEditData, allowDelete) nicht definiert, stehen diese auch im Kontextmenü nicht zur Verfügung. In dem oben stehenden Beispiel steht für die Polygone die Löschen-Funktion nicht zur Verfügung.
+
 
 .. code-block:: yaml
 
@@ -825,11 +936,13 @@ Elemente des Kontextmenüs:
       ...
 
 
-Definition des Clustering
-------------------------------
+Clustering (experimentell)
+--------------------------
 
 Über das Clustering können die Objekte auf der Karte zusammengefasst werden.
 Abhängig von der definerten Distanz und Zoomstufe werden unterschiedlich viele Objekte zusammengeführt.
+
+Durch die Komplexität des Clusterings können sich in zukünftigen Versionen noch Änderungen an der Funktion und der Syntax ergeben, so dass wir dieses Feature bislang als experimentell kennzeichnen. Abhängigkeiten existieren zu der Anzeige der Features für den aktuellen Ausschnitt/den gesamten Bereich und den unterschiedlichen Geometrietypen.
 
 
 .. image:: ../../../../../figures/digitizer_clustering.png
@@ -845,7 +958,7 @@ Definition der Clusterelemente:
 .. code-block:: yaml
 
   poi:
-      ...
+      [...]
       clustering:
           -
               scale: 10000        # Zoomstufe
@@ -860,130 +973,72 @@ Definition der Clusterelemente:
               scale: 500
               distance: 1
               disable: true       # Schaltet Clustering für die Zoomstufe ab
-      ...
+      [...]
 
 
+Events
+------
 
-Definition zur Sicherung von Feldern und Speichern von Benutzerdaten
-----------------------------------------------------------------------
-
-Über die Definition der Nutzerrollen, Gruppen u.ä. können die Daten nach vordefinierten Angaben abgesichert werden. Dazu ist die Angabe eines Datenbank-Feldes mit den entsprechenden Informationen, z.B: Nutzerrollen nötig.
-
-Es gibt mehrere Events, die genutzt werden können, um entweder Daten nur für bestimmte Personen zugänglich zu machen, oder bestimmte Benutzerdaten bei dem Editieren von Daten zu speichern:
+Es gibt mehrere Events, die zu einem Feature zugeordnet werden können, um Attribute vor oder nach der Aktion zu manipulieren.
 
 * **onBeforeSave**: Event vor dem Speichern von neuen/ veränderten Informationen
-* **onBeforeSearch**: Event vor dem Suchen in SearchField des Digitizers
-* **onBeforeRemove**: Event vor dem Löschen von Daten
-* **onAfterSearch**: Event nach dem Suchen in SearchField des Digitizers
 * **onAfterSave**: Event nach dem Speichern von neuen/ veränderten Informationen
+
+* **onBeforeUpdate**: Event vor der Aktualisierung von veränderten Informationen
+* **onAfterUpdate**: Event nach der Aktualisierung von veränderten Informationen
+
+* **onBeforeSearch**: Event vor dem Suchen in SearchField des Digitizers
+* **onAfterSearch**: Event nach dem Suchen in SearchField des Digitizers
+
+* **onBeforeRemove**: Event vor dem Löschen von Daten
 * **onAfterRemove**: Event nach dem Löschen von Daten
 
-Die Events können in ähnlicher Form auch bei den Sachdaten ohne Geometrien im DataStore genutzt werden. Dazu mehr unter der Seite des Data Managers :doc:`data_manager`.
+Im Unterschied zu den Save-Events arbeiten die Update-Events nur bei einer Aktualisierung der Daten, nicht bei einer Erstellung.
+  
+**Anmerkung:** Die Events sind noch in der Entwicklung und sollten mit Voraussicht eingebunden werden.
+Die korrekte Abstimmung der Events aufeinander und ihre Abhängigkeiten sind noch nicht vollständig fertiggestellt und können sich in zukünftigen Versionen ändern.
 
-Achtung: Die Events sind eine experimentelle Entwicklung und sollten mit Vorsicht eingebunden werden.
-Die korrekte Abstimmung der Events aufeinander wurde noch nicht vollständig getestet, daher kann es zu Fehlverhalten kommen.
-
-.. code-block:: yaml
-
-    poi:
-        label: point digitizing
-        inlineSearch: true
-        maxResults: 500
-        featureType:
-            connection: search_db
-            table: poi
-            uniqueId: gid
-            geomType: point
-            geomField: geom
-            srid: 4326
-            events:        # Speichern des Benutzernamens, Gruppennames und des Änderungsdatums nach dem Speichern eines Objekts
-              onBeforeSave: |
-                $feature->setAttribute('user_name', $user->getUsername());
-                $feature->setAttribute('modification_date', date('Y-m-d'));
-                $feature->setAttribute('group_name', implode(',',$userRoles));
+Im folgenden einige Anwendungsbeispiele.
 
 
-Definition der DataStore-Verbindung
---------------------------------------
+**Speichern von Sachdaten in zusätzlichen Attributspalten:**
 
-Um die Sachdaten ohne Geometrien aus einem DataManager-Element in dem Digitizer anzuzeigen und zu bearbeiten kann man eine Verbindung zu einem bestehenden DataStore einrichten.
-Dazu muss ein select-Feld mit Angabe der DataStore-Verbindung eingefügt werden.
+Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit den Spalten "geom" und "geom2". Beim Speichern sollen die Daten von geom in das Feld geom2 geschrieben werden.
 
+Man kann das Event je nach Anwendungsfall bei onBeforeInsert oder onBeforeUpdate eintragen.
+
+Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Datenbank ist, kann man auf sie nicht als Feature zugreifen, sondern nur über das jeweilige "item", eine interne Digitizer Speicherstruktur. Diese "item" orientieren sich am Formular und den dort angegebenen Attributen. 
 
 .. code-block:: yaml
 
-        - type: select
-          id: interests_datastore
-          name: interests_datastore
-          dataStore:                    # Verbindung zum DataStore Element
-            id: interests               # DataStore ID
-            text: name
-            uniqueId: gid
-            editable: true              # true aktiviert das Editieren der Sachdaten
-            popupItems:                 # Elemente im Dialog
-              - { name: name, title: Name, type: input }
-              - { name: sports, title: Sportart, type: input }
-              - { name: healthy, title: Gesund, type: input }
-              - { name: comment, title: Kommentar, type: input }
+                events:
+                  onBeforeInsert: $item['geom2'] = $item['geom'];
+                  onBeforeUpdate: $item['geom2'] = $item['geom'];
 
-.. image:: ../../../../../figures/digitizer_datamanager.png
-     :scale: 80
+Bei dem Event wird der Wert des Feldes "geom2" mit dem Wert des Feldes "geom" überschrieben.
 
-.. image:: ../../../../../figures/digitizer_datamanager_popup.png
-     :scale: 80
+                  
+**Speichern unterschiedlicher Geometrietypen:**
 
-**Definition der Nutzerrollen für den DataStore**
+Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
 
+.. code-block:: sql
+                
+                events:
+                  onBeforeInsert: |
+                    $sql = "SELECT 
+                    ST_Line_Interpolate_Point('".$item['geomline']."'::geometry, 1) as geom";
+                    $stmnt = $this->getConnection()->prepare($sql);
+                    $stmnt->execute();
+                    $result  = $stmnt->fetchAll();
+                    $item['geompoi'] = $result[0]['geom'];
 
-Über die Definition der Nutzerrollen können die Daten nach Benutzerrollen gesichert werden. Dazu ist im ersten Schritt die Angabe eines Datenbank-Feldes mit den Nutzerrollen nötig.
-
-.. code-block:: yaml
-
-        - type: select
-          id: interests_datastore
-          name: interests_datastore
-          dataStore:
-              connection: search_db           # Verbindung zum DataStore Element
-              table: public.interests_datastore
-              uniqueId: gid
-              fields: [name, sports , healthy, comment]
-            popupItems:
-               - name: User_Roles              # Sicherung der Daten nach Benutzerrollen durch Angabe des DB-Feldes
-                 title: 'Nutzerrollen'
-                 type: select
-                 service:
-                     serviceName: security.context
-                     method: getRolesAsArray
+Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, greift man über das "item" auf die Geometrie (geomline). Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
 
 
-**Definition des DataStores für die Verbindung**
 
-Im folgenden wird die Definition des DataStores für die korrekte Anzeige der Daten im Digitizer-Element gezeigt. Hier können die Felder und Datensätze gegen eine Gruppe oder einen User abgesichert werden.
-Der Digitizer kann Benutzer (username), Gruppe und Datum (moddate) automatisch in spezifizierbare Felder schreiben. Das Abspeichern und Löschen eines Datensatzes ist nur möglich wenn der User einer bestimmten Gruppe/ Rolle angehört.
-
-Angaben in der parameters.yml:
-
-.. code-block:: yaml
-
-    dataStores:
-         interests:
-            connection: search_db
-            table: interests_datastore
-            uniqueId: gid
-            fields: [name, sports, healthy, comment]                                 # table fields to use for the datastore
-            events:
-              onBeforeSave: |
-                  $item["user_name"] = $user->getUsername();                         # storing the username of the object
-              onBeforeUpdate:
-                  $item["user_name"] = $user->getUsername();
-
-
-In sämtlichen Events steht das user-Object $user und die userRolen $userRoles zur Verfügung.
-Zusätzlich steht in den remove- und save-Events noch das orignal Datenbankobject $originData zur Verfügung.
-
-
-Definition der Darstellung (Styles)
---------------------------------------
+Darstellung (Styles)
+--------------------
 
 Über die Angabe eines Styles kann definiert werden, wie die Objekte angezeigt werden.
 *Default* definiert dabei die normale Darstellung der Objekte auf der Karte und *Select* die Darstellung der ausgewählten Objekte.
@@ -1008,36 +1063,28 @@ Definition der Darstellung (Styles)
       ...
 
 
+YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml
+================================================================================
+
+Dieser Codeabschnitt zeigt, wie das Digitizer Element in eine auf einer
+YAML-Datei basierende Anwendung eingebaut werden kann.
+
+.. code-block:: yaml
+
+                sidepane:
+                    digitizer:
+                        class: Mapbender\DigitizerBundle\Element\Digitizer
+                        title: Digitalisation
+                        target: map
+                        schemes:
+                            ...
+
+
 
 Class, Widget & Style
-===========================
+=====================
 
 * Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
 * Widget: mapbender.element.digitizer.js
 * Style: sass\\element\\digitizer.scss
-
-
-HTTP Callbacks
-==============
-
-
-
-<action>
---------------------------------
-
-
-JavaScript API
-==============
-
-
-<function>
-----------
-
-
-JavaScript Signals
-==================
-
-<signal>
---------
-
 

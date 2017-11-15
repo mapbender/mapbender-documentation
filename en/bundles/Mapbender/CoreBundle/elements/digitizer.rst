@@ -3,10 +3,9 @@
 Digitizer
 *********
 
-This documentation refers to Digitizer 1.1.x.
-
 The Digitizer element allows building editing-interfaces. Currently you can build up your interface for point, line and polygon editing with a YAML-definition. 
-Right now PostgreSQL is supported as a database. Oracle and SpatialLite can be used experimentally. The development of the digitizer allows other data sources so that it can be extended to support - for example - OGC WFS services.
+
+Right now PostgreSQL is supported as a database. Oracle and SpatialLite can be used experimentally. The development of the Digitizer allows other data sources so that it can be extended to support - for example - OGC WFS services.
 
 The Digitizer-Element offers complex editing functionality:
 
@@ -22,7 +21,7 @@ In connection with the digitization, very complex forms can be generated for the
 
 The following option for the construction of the forms are available:
 
-* define more then one feature types for digitalisation. You can switch from one feature type to the other with a select box
+* define more then one feature types for digitization. You can switch from one feature type to the other with a select box
 * use a table as source. You can also define a filter to get a subset of the table
 * Textfields
 * Selectboxes, Multiselectboxes
@@ -33,51 +32,39 @@ The following option for the construction of the forms are available:
 * Definition of tabs
 * Definition breaklines
 * Definition of Text 
-* Mandatory fields, regular expressions to valida the content are possible
+* Mandatory fields, regular expressions to valid the content are possible
 * Help texts
 
 
 .. image:: ../../../../../figures/digitizer_with_tabs.png
      :scale: 80
 
-Configuration
-=============
+Setup
+=====
+
+You can only use the element in the sidepane.
 
 .. image:: ../../../../../figures/digitizer_configuration.png
      :scale: 80
 
-You can use the element in the sidepane.
 
 * **Title:** Title of the element. This is displayed in the layouts list and allows you to define several elements.
 * **Target:** (ID) of the map.
-* **Schemes:** YAML-Definition of the element digitiizer
+* **Schemes:** YAML-Definition of the element Digitizer
 
 The Ditigitzer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. 
 Read more about this at http://doc.mapbender3.org/en/book/database.html
 
-The definition of the digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behaviour.
+The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
 If errors occur in the database, fields or form, various error messages appear. Via the normal call and app.php comes a general error message.
 If you want to reproduce the exact error, you should call the page via app_dev.php. In this case, detailed error messages about the error behavior appear.
 
-Element definition in web interface in the configuration area:
-
-YAML-Definition for the element digitizer in mapbender.yml:
-
-.. code-block:: yaml
-
-                sidepane:
-                    digitizer:
-                        class: Mapbender\DigitizerBundle\Element\Digitizer
-                        title: Digitalisation
-                        target: map
-                        schemes:
-                            ...
 
 
-YAML-Definition for the element digitizer in the textarea schemes
------------------------------------------------------------------------------------------
+YAML-Definition for the element Digitizer in the textarea schemes
+-----------------------------------------------------------------
 
-In the following YAML block, the example definition for three digitizer forms is included. Copy the following block into your digitizer element to test the capture of points, lines, and polygons.
+In the following YAML block, the example definition for three Digitizer forms is included. Copy the following block into your Digitizer element to test the capture of points, lines, and polygons.
 You must first create the database connection and the three demo tables. The SQL commands for creating the tables can be found below.
 The functionality of the built-in features and additional functions are explained in more detail in this example.
 
@@ -100,26 +87,9 @@ The functionality of the built-in features and additional functions are explaine
         allowDelete: true
         allowDigitize: true
         useContextMenu: true
-        clustering:
-              -
-                  scale: 10000
-                  distance: 60
-              -
-                  scale: 2500
-                  distance: 40
-              -
-                  scale: 1000
-                  distance: 20
-              -
-                  scale: 500
-                  distance: 1
-                  disable: true
         toolset:
             - type: drawPoint
-            - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: point test suite
             width: 500px
@@ -226,8 +196,6 @@ The functionality of the built-in features and additional functions are explaine
             - type: drawLine
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: line test suite
             width: 500px
@@ -287,8 +255,6 @@ The functionality of the built-in features and additional functions are explaine
             - type: drawCircle
             - type: modifyFeature
             - type: moveFeature
-            - type: selectFeature
-            - type: removeSelected
         popup:
             title: polygon test suite
             width: 500px
@@ -329,13 +295,13 @@ The functionality of the built-in features and additional functions are explaine
 
 
 SQL for the demo tables
-------------------------------
+-----------------------
 
 The following SQL commands must be executed in your database. You create three demo tables so that the individual functions can be tested using the YAML definition shown above.
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.poi (
+    create table public.poi (
         gid serial,
         name varchar,
         type varchar,
@@ -358,9 +324,9 @@ The following SQL commands must be executed in your database. You create three d
         CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.lines (
+    create table public.lines (
         gid serial,
         name varchar,
         type varchar,
@@ -385,9 +351,9 @@ The following SQL commands must be executed in your database. You create three d
         CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: yaml
+.. code-block:: sql
 
-    Create table public.polygons (
+    create table public.polygons (
         gid serial,
         name varchar,
         type varchar,
@@ -412,28 +378,127 @@ The following SQL commands must be executed in your database. You create three d
         CONSTRAINT pk_polygons_gid PRIMARY KEY (gid)
     );
 
+
+
+Usage
+=====
+
+General
+-------
+
+The Digitizer allows the editing of FeatureTypes. These are based on points, lines and polygon-geometries and their attribute-data. The attribute-data is displayed in the formular of the Digitizer. The geometry-editing is done via the map.
+
+
+Create geometries
+-----------------
+
+Every FeatureType can unlock several `Toolsets <#definition-of-the-available-toolsets-toolset-type>`_ that can be used in the button-bar of the Digitizer.
+
+
+For example in the FeatureType "poi" the toolset "drawPoint" unlocks the button to create a new point, the toolset "modifyFeature" unlocks the move-button.
+
+
+.. image:: ../../../../../figures/digitizer_buttons_poi.png
+     :scale: 80
+
+
+
+Save, Delete, Cancel
+--------------------
+
+Three buttons are available in the attribute-dialog: Save, Delete and Cancel.
+
+*Saving* changes only happens, if the "Save" button in the attribute-dialog is pressed. A move of the geometry alone doesn't save the feature directly (to avoid unnecessary stores into the database). It is mandatory to open the attribute-dialog and to click Save, yet.
+
+.. image:: ../../../../../figures/digitizer_save_delete_cancel.png
+     :scale: 80
+
+* **Save:** Saves the geometry and the attribute-data into the database.
+* **Delet:** Deletes the data.
+* **Cancel:** Doesn't save and delete the data, but keeps the geometry for further editing in the internal storage. The geometry is still present in the map and can be adjusted (for example with polygons). Attribute data is not stored.
+
+Several options exit in the `basic definitions <#feature-basic-definition>`_, to customize the behaviour.
+
+* allowEditData: Show the Save button.
+* allowDelete: Show the Delete button.
+* allowCancelButton: Show the Cancel button.
+* allowDeleteByCancelNewGeometry: Behaviour of the Cancel button.
+
+The *Delete* of a feature can be done with the dialog and from the table.
+
+
+Vertices
+--------
+
+Editing polygons allows you to edit, move and delete vertices. The "edit vertices" button expects you to select a polygon. It will then be shown with its vertices.
+
+.. image:: ../../../../../figures/digitizer_edit_vertices.png
+           :scale: 80
+
+The existing vertices are displayed opaque, possible new vertices are always in the middle of an edge, are light transparent and can be added by clicking on them.
+
+Existing vertices can be deleted with the Delete-Key of the keyboard. To do this, move your mouse-pointer over a vertex and press the Del-key. *Note:* If the deletion of a vertex doesn't work in the first place, a click with the right mouse-button on the map may help. Especially with activated context-menu some events can currently get stuck.
+
+
+
+Configuration
+=============
+
+The following chapters explain the individual components of the Digitizer that build up the base-structure and which can be used in the formular.
+
+
 Feature basic definition
---------------------------
+------------------------
+
+A basic definition, here for the poi-example, may look like the following snippet:
 
 .. code-block:: yaml
 
     poi:
-        label: point digitizing        # label of the digitizer popup
-        maxResults: 500                # maximal results of the table
-        featureType:                   # connection to the database from the parameters/config.yml
+        label: point digitizing
+        maxResults: 500
+        minScale: 5000
+        featureType:
             connection: search_db
             table: poi
             uniqueId: gid
             geomType: point
             geomField: geom
             srid: 4326
-        openFormAfterEdit: true        # Set to true (default): after creating a geometry the form popup is opened automatically to insert the attribute data.
+        openFormAfterEdit: true
         zoomScaleDenominator: 500
-        allowEditData: true            # Allow or disable functions to edit or remove data.
+        allowEditData: true
         allowDelete: true
-        allowDigitize: true 
+        allowDigitize: true
+        [...]
         popup:
             [...]
+
+The possible options are:
+
+* **label:** Label of the Digitizer popup
+* **minScale:** Minimum scale, where the features should be displayed in the map (e.g. minscale: 5000 = show from a scale 'over' 1:5000, when zooming out).
+* **maxResults:** Maximum number of results
+* **featureType:** Connection to the database
+
+  * connection: Name of the database-connection from the parameters/config.yml
+  * table: Table-name in which the FeatureTypes are stored
+  * uniqueId: Column-name with the unique identifier
+  * geomType: Geometry-type
+  * geomField: Column-name in which the geometry is stored
+  * srid: Coordinate-system in EPSG-code
+
+* **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data. [true/false] Standard is true.
+* **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
+* **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. If true, the Save button is visible.
+* **allowDigitize:** Allow to save data [true/false].
+  * **allowDelete:** Allow to delete data [true/false]. The Delete button is visible.
+* **allowDigitize:** Allow to create new features [true/false]. if false, no Digitizer buttons will occur (new Point, move, etc.).
+* **useContextMenu:** Show the context-menu of a feature. [true/false]
+* **allowCancelButton:** Show the Cancel button [true/false]. See `Save, Delete, Cancel <#save-delete-cancel>`_.
+* **allowDeleteByCancelNewGeometry:** If true: When you create a new feature, the Cancel button will behave like the Delete button: The feature is removed from the map and the table. This is not the case if you edit an existing feature. [true/false]
+* **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
+
 
 
 Definition of the popup
@@ -452,9 +517,9 @@ Definition of the popup
 
 
 Definition of the feature table
-------------------------------------------------------------------------
+-------------------------------
 
-The digitizer provides an object table. This can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
+The Digitizer provides an object table. This can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
 The width of the individual columns can optionally be specified in percent or pixels.
 
 * tableFields - define the columns for the feature table. 
@@ -462,14 +527,16 @@ The width of the individual columns can optionally be specified in percent or pi
 
 .. code-block:: yaml
 
-        searchType: currentExtent   # all - lists all features in the table, currentExten - list only the features displayed in the current extent in the table (default) 
+        searchType: currentExtent   # [currentExtent | all] currentExtent lists only the features displayed in the current extent in the table (default). all lists all features in the table.
         tableFields:                # definition of the colums to be displayed
             gid: {label: Nr. , width: 20%} # [table column]: {label: [label text], width: [css-definition, like width]}  # Definition of a column
             name: {label: Name , width: 80%}
 
 
-Definition of tabs (type tabs)
-------------------------------
+Tabs (type tabs)
+----------------
+
+Form elements can be placed unto different Tabs. The formItem type "tabs" is used for this.
 
 .. code-block:: yaml
 
@@ -484,8 +551,8 @@ Definition of tabs (type tabs)
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
 
-Definition of a textfield (type input)
---------------------------------------
+Textfields (type input)
+-----------------------
 
 .. code-block:: yaml
 
@@ -499,14 +566,14 @@ Definition of a textfield (type input)
                                                    placeholder: 'please edit this field' # placeholder appears in the field as information (optional)
 
 
-Definition of a selectbox (selectbox or multiselect [type select])
--------------------------------------------------------------------------
+Selectbox (selectbox or multiselect [type select])
+--------------------------------------------------
 
-By defining a selectbox, predefined values ​​can be used in the form.
+By defining a selectbox, predefined values can be used in the form.
 You can choose between a selectbox with a selectable entry (type select) or a multiselectbox with several selectable entries (type multiselect).
 
 
-1) **select** - one selectable entry
+**(1) select - one selectable entry**
 
 .. code-block:: yaml
 
@@ -521,10 +588,38 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
                                                        4: garden
                                                        5: playground
 
-2) **multiselect** - several selectable entries
+**(2) multiselect - several selectable entries**
 
-The use of the Multiselect-Box is still experimental. When storing entries, only numbers are stored (eg selection a and b -> 1,2).
-You can not specify the label (example: options: [1: pub, 2: bar, 3: pool]).
+The Multiselect-Box is activated by the attribute "multiple: true". You can choose multiple entries in the selectbox. The usage and their requirements of the database may vary. In general with the example above, you can switch the "interests" in the POIs to multiselects. The database fields is still a character varying.
+
+
+.. code-block:: yaml
+
+                -
+                  type: select
+                  multiple: true
+                  title: Interests
+                  name: interests
+                  options:
+                    maps: maps
+                    reading: reading
+                    swimming: swimming
+                    dancing: dancing
+                    beer: beer
+                    flowers: flowers
+
+The SQL (if maps and reading were chosen):
+
+.. code-block:: sql
+
+                gisdb=> select interests from poi where gid=3;
+                interests
+                --------------
+                maps,reading
+                (1 row)
+
+On saving the keywords are saved in the database (for example: "dancing: Tanzen" and "flowers: Blumen" stores "dancing,flowers").
+
 
 .. code-block:: yaml
 
@@ -532,15 +627,15 @@ You can not specify the label (example: options: [1: pub, 2: bar, 3: pool]).
                                                    title: select some types           # labeling (optional)
                                                    name: my_type                      # reference to table column (optional)
                                                    multiple: true                     # define a multiselect, default is false
-                                                   options: [a,b,c] # definition of the options (key, value)
-
-                                                   # Example of a list using Paramter seperator
-                                                   separatator: ','
-                                                   fieldType: 'array'
-                                                   options:  ['Prof.','Dr.', 'med.', 'jur.','vet.','habil.']
+                                                   options:
+                                                     a: a                             # definition of the options (key, value)
+                                                     b: b
+                                                     c: c
 
 
 **Get the options for the selectbox via SQL**
+
+Wir a SQL request, the values of the selectbox can be directly pulled from the database. In this case, the key value mapping is not possible and only the indices of the entries can be stored.
 
 .. code-block:: yaml
 
@@ -552,16 +647,16 @@ You can not specify the label (example: options: [1: pub, 2: bar, 3: pool]).
 
 
 
-Definition of a text (type label)
---------------------------------------------------
+Text/Label (type label)
+-----------------------
 
 .. code-block:: yaml
 
                                                  - type: label                        # element type definition, label writes a non-editable text to the form window.
                                                    text: 'Please give information about the poi.' # define a text 
 
-Definition of a text
--------------------------------
+Text (type text)
+----------------
 
 Texts can be defined as a label in the form. In this case, fields of the data source can be accessed by using JavaScript.
 
@@ -577,8 +672,8 @@ Texts can be defined as a label in the form. In this case, fields of the data so
                                                   # z.B.: data.id + ':' + data.name
 
 
-Definition of a textarea (type textarea)
---------------------------------------------------
+Textareas (type textarea)
+-------------------------
 
 Similar to the text field via type input (see above), text areas can be created that can contain several lines using type textArea.
 
@@ -590,16 +685,16 @@ Similar to the text field via type input (see above), text areas can be created 
                                                    title: Bestandsaufnahme Bemerkung # Label (optional)
 
 
-Definition of a breakline (type breakline)
---------------------------------------------------
+Breaklines (type breakLine)
+---------------------------
 
 .. code-block:: yaml
 
-                                                 - type: breakline                     # element type definition, will draw a line 
+                                                 - type: breakLine                     # element type definition, will draw a line 
 
 
-Definition of a checkbox (type checkbox)
-----------------------------------------
+Checkboxes (type checkbox)
+--------------------------
 
 .. code-block:: yaml
 
@@ -610,8 +705,8 @@ Definition of a checkbox (type checkbox)
 
 
 
-Definition of a mandatory field
---------------------------------------------------
+Mandatory fields
+----------------
 
 The notes for a mandatory field appear above the used fields. In the case of a missing entry in a defined mandatory field, this will be marked in red and (if defined) a speech bubble will appear. The object can not be saved if mandatory data is missing.
 
@@ -636,8 +731,8 @@ No error message appears outside the form. The applicant has to check the inform
 
 
 
-Definition of a datepicker
---------------------------------------------------
+Datepicker (type date)
+----------------------
 
 .. image:: ../../../../../figures/digitizer_datepicker.png
      :scale: 80
@@ -656,8 +751,8 @@ If the parameter dateFormat is used with a different dateFormat, a table field i
 
 
 
-Definition of information (type infotext)
-------------------------------------------------------------------------------------------
+Helptexts to the form-elements (attribute infotext)
+---------------------------------------------------
 
 The infotext can appear over every field, regardless of whether this is a mandatory field or not. If a infotext is specified, an info button appears above the field. Clicking on this button opens the information text.
 
@@ -667,8 +762,10 @@ The infotext can appear over every field, regardless of whether this is a mandat
 
                                                    infoText:  Please note - only numbers are valid for this field. # Notice which will be displayed by i-symbol
 
-Definition of element groups (type: fieldSet)
---------------------------------------------------
+
+
+Element groups (type: fieldSet)
+-------------------------------
 
 Elements can be grouped together in one row to provide logical connections or save space. To define a group you have to set type fieldSet and afterwards define the children which shall be grouped.
 
@@ -692,14 +789,26 @@ For each children you can define a width to controll the pace for each element.
                              css: {width: 40%}
 
 
-Definition of a file upload field
---------------------------------------------------
+
+
+File upload (type file)
+-----------------------
 
 The file upload can be used to link files to a database column in the form. To do this, the uploaded files are stored in Mapbender3 and the path is noted in the column.
-The storage path and the name of the stored files can not yet be changed. The file upload always saves to the same directory.
-Path: http://localhost/mapbender3/uploads/featureTypes/[table_name]/file_reference/[filename].png
 
-The image-element can be added to view the uploaded images.
+The storage path and the name of the stored files can not yet be changed. The file upload always saves to the same directory and is  built up from the parameters:
+
+* tablename
+* columnname
+* filename
+
+The filesystem path is:
+
+* <mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png
+
+The linked URL stored in the database column is:
+
+* http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png
 
 .. code-block:: yaml
 
@@ -711,14 +820,26 @@ The image-element can be added to view the uploaded images.
 
                       # Experimental parameters:
                       #accept: image/*          # Pre-selection of elements in the image format (window for file upload opens with restriction filter) 
-                                                # Stores e.g. png and does not save pdf/txt. Caution: No error message appears in the wrong format! 
+                                                # Other file-formats can be still uploaded
 
-Definition of an image
---------------------------------------------------
+
+**Notes:** At this time, a "thumbnail" directory is created, which includes a smaller version of an image file. In future development this will be changed.
+
+A possibility to show the uploaded images is the image-element.
+
+
+Images (type image)
+-------------------
+
+.. image:: ../../../../../figures/digitizer_image.png
+     :scale: 80
 
 The image-element can be used to view an picture in the form. You can display images by specifying a URL in a database field or URL using the src parameter.
+
 Images, which are marked by the element file in a table column can thus also directly integrated and displayed.
+
 The image can be specified by specifying the two parameters src and name.
+
 * **src**: Url-path or file path (can be relative path)
 * **name**: Url-path or file path from the table column (can't be relative path)
 * definition of name and src together: The content of the database column from name is taken. If the column is empty, the src is used.
@@ -729,34 +850,36 @@ The image can be specified by specifying the two parameters src and name.
                       name: file_reference      # Reference to the database column. If defined, the path or URL in the field can be used and replaces "src" option
                       src: "bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to an image. If the path is relative use relative: true.
                       relative: true            # Optional. Default value is false. If true, the "src" path is determined from the "/web" directory.
-                      enlargeImage: true        # Image is enlarged to original size/ maximum resolution by clicking on the preview image. Caution: No scaling to screen size.
+                      enlargeImage: true        # Image is enlarged to original size/ maximum resolution by clicking on the preview image. It is not scaled to screen size.
 
                       # Experimental information about styling
                       imageCss:
-                        width: 50%              # Image CSS Style: Scales the preview image in the form, different from the original size in percent.
-                        height: 50%             # Specifying width and height is better for the view, otherwise parts may be truncated.
-                      css: {width: 25%}         # ImageContainer CSS Style: Scaled down when specifying with imagecss, therefore not recommended.
+                        width: 100%              # Image CSS Style: Scales the preview image in the form, different from the original size in percent.
 
-Caution: If only name and not name and src are specified, the wrong image appears from the previous data entry, if the column is empty.
+**Caution**: If only name and not name and src are specified, the wrong image appears from the previous data entry, if the column is empty.
+
 Dynamic paths (eg "bundles/mapbendercore/image/[nr].png" or 'bundles/mapbendercore/image/' + data.image_reference) can not be specified.
+
 One way to work around this is to create a trigger that will merge the path and contents of a table field into the database column.
 
-Definition of toolset types
-------------------------------------------------------------------------
 
-Toolset types
 
-* **drawPoint** - draw point
-* **drawLine** - draw a line
-* **drawPolygon** - draw polygon
-* **drawRectangle** - draw rectangle
-* **drawCircle** - draw circle
-* **drawEllipse** - draw ellipse
-* **drawDonut** - draw a donut (enclave)
-* **modifyFeature** - move vertices of a geometry
-* **moveFeature** - move geometry
-* **selectFeature** - geometry de-/select
-* **removeSelected** - delete selected geometry
+Definition of the available toolsets (Toolset Type)
+---------------------------------------------------
+
+Toolset types:
+
+* **drawPoint** - Draw point
+* **drawLine** - Draw a line
+* **drawPolygon** - Draw polygon
+* **drawRectangle** - Draw rectangle
+* **drawCircle** - Draw circle
+* **drawEllipse** - Draw ellipse
+* **drawDonut** - Draw a Donut (enclave)
+* **modifyFeature** - Move vertices of a geometry
+* **moveFeature** - Move geometry
+* **selectFeature** - Geometry de-/select (experimental). There is no interaction with the table yet and the available workflows are limited to the Delete operation.
+* **removeSelected** - delete selected geometry (experimental). Deletes all objects selected in the map.
 * **removeAll** - Caution: remove all geometries from the table
 
 YAML-Definition of toolset types
@@ -764,17 +887,7 @@ YAML-Definition of toolset types
 .. code-block:: yaml
 
     polygon:
-        label: polygon digitizing
-        maxResults: 1500
-        featureType:
-            connection: search_db
-            table: polygons
-            uniqueId: gid
-            geomType: polygon
-            geomField: geom
-            srid: 4326
-        openFormAfterEdit: true
-        allowDelete: false
+        [...]
         toolset:
             - type: drawPolygon
             - type: drawRectangle
@@ -782,8 +895,8 @@ YAML-Definition of toolset types
             - type: removeSelected
 
 
-Definition of inline Search
-------------------------------------------------------------------------
+Search in the tables (inline Search)
+------------------------------------
 
 You can use the inline search to search for a element in the table. 
 The activated element displays a search bar above the table. It shows all the search results for records of the table.
@@ -797,8 +910,8 @@ The activated element displays a search bar above the table. It shows all the se
 
 
 
-Definition of the Context Menu
-------------------------------------------------------------------------
+Context Menu
+------------
 
 Using the context menu, an object on the map can be considered in more detail.
 After the activation you can open a context menu via the right mouse click on an object or cluster.
@@ -809,9 +922,10 @@ After the activation you can open a context menu via the right mouse click on an
 Items of the Context Menu: 
 
 * **Zoom to:** Zoom to the map extent of the object
-* **Edit features:** Edit the features of the objekt. Opens the digitizer dialog. 
-* **Remove:** Remove the selected object. 
+* **Edit features:** Edit the features of the object. Opens the Digitizer dialog.
+* **Remove:** Remove the selected object.
 
+If the corresponding `basic definition <#feature-basic-definition>`_ (allowEditData, allowDelete) not defined, then they are also not available in the Context Menu. In the above example the delete function is not available for the polygons.
 
 .. code-block:: yaml
 
@@ -822,11 +936,13 @@ Items of the Context Menu:
 
 
 
-Definition of Clustering
-------------------------------------------------------------------------
+Clustering (experimental)
+-------------------------
 
 By clustering the objects can be combined on the map. 
 Depending on the defined distance and zoom level different numbers of objects can be clustered.
+
+Due to the complexity of the Clustering, future versions may have changes in functionality and syntax, so we define that still as experimental. Dependencies are to the display of features in the current extent/all areas and the different geometry types.
 
 .. image:: ../../../../../figures/digitizer_clustering.png
      :scale: 80
@@ -859,121 +975,68 @@ Definition of the cluster element:
       ...
 
 
-Definition for securing fields and storing user data
-------------------------------------------------------
+Events
+------
 
-By defining the user roles, groups etc. the data can be protected according to predefined fields. The specification of a database field with the appropriate information is necessary.
+Different events exist that can be associated to a feature to manipulate attributes before or after an action.
 
-There are several events that can be used to either make data accessible to only certain persons or to store certain user information:
+* **onBeforeSave**: Event before the storage of a new/ modified information
+* **onAfterSave**: Event after the storage of a new/ modified information
 
-* **onBeforeSave**: Event before the storage of new/ modified information
-* **onBeforeSearch**: Event before the search in SearchField of the digitizer
+* **onBeforeUpdate**: Event before the update of a modified information
+* **onAfterUpdate**: Event after the update of a modified information
+  
+* **onBeforeSearch**: Event before the search in the SearchField of the Digitizer
+* **onAfterSearch**: Event after the search in the SearchField of the Digitizer
+ 
 * **onBeforeRemove**: Event before deleting data
-* **onAfterSearch**: Event after the search in SearchField of the digitizer
-* **onAfterSave**: Event after the storage of new/ modified informationn
 * **onAfterRemove**: Event after deleting data
 
-The events can also be used in the DataStore in a similar form.
-Die Events können in ähnlicher Form auch bei den Sachdaten ohne Geometrien im DataStore genutzt werden. More info can be found on the :doc:`data_manager`.
+In difference to the Save-events, the update-events work only on an update of the data, not on creation.
+
+**Note:** The events are still in development and should be used with caution. The correct matching of the events and their dependencies are not yet finished and may be changed in future versions.
+
+The following sections show some examples.
+
+**Storage of attibute data in an additional attribute-columns:**
+
+This example shows how data can be stored in an additional attribute-column after saving. In this case it is done with two geometry-columns "geom" and "geom2". When saving, the data of "geom" should be saved in the field "geom2".
+
+Depending on the use-case the onBeforeInsert or the onBeforeUpdate event can be used.
+
+At the time of the saving-process the new geometry doesn't yet persist in the database. Therefore it cannot be accessed as a feature but only via the corresponding "item", an internal Digitizer structure. This "item" are based on the formular and the defined attribute fields.
 
 .. code-block:: yaml
 
-    poi:
-        label: point digitizing
-        inlineSearch: true
-        maxResults: 500
-        featureType:
-            connection: search_db
-            table: poi
-            uniqueId: gid
-            geomType: point
-            geomField: geom
-            srid: 4326
-            events:        # Store the user name, group name and modification time after saving an object
-              onBeforeSave: | 
-                $feature->setAttribute('user_name', $user->getUsername()); 
-                $feature->setAttribute('modification_date', date('Y-m-d'));
-                $feature->setAttribute('group_name', implode(',',$userRoles));
+                events:
+                  onBeforeInsert: $item['geom2'] = $item['geom'];
+                  onBeforeUpdate: $item['geom2'] = $item['geom'];
 
 
-Definition of DataStore connection
---------------------------------------
-
-To display arttribute data without geometries of an DataManager element and edit them, you can set up a connection to an existing DataStore.
-For this, a select-box must be added stating the DataStore connection.
-
-.. code-block:: yaml
-
-        - type: select
-          id: interests_datastore
-          name: interests_datastore
-          dataStore:          # Connection to the DataManager element
-            id: interests          # DataStore ID
-            text: name
-            uniqueId: gid
-            editable: true    # true enables the editing of attribute data
-            popupItems:                 # dialog form
-              - { name: name, title: Name, type: input }
-              - { name: sports, title: Sportart, type: input }
-              - { name: healthy, title: Gesund, type: input }
-              - { name: comment, title: Kommentar, type: input }
-
-.. image:: ../../../../../figures/digitizer_datamanager.png
-     :scale: 80
-
-.. image:: ../../../../../figures/digitizer_datamanager_popup.png
-     :scale: 80
-
-**Definition of user roles for the DataStore**
-
-With the help of user roles data can be saved. You can secure the data by specifying the database field of the user roles.
-
-.. code-block:: yaml
-
-        - type: select
-          id: interests_datastore
-          name: interests_datastore
-          dataStore:          # Connection to the DataManager element
-              connection: search_db
-              table: public.interests_datastore
-              uniqueId: gid
-              fields: [name, sports , healthy, comment]
-            popupItems:
-               - name: User_Roles              # Securing the data by user roles by specifying the DB-field
-                 title: 'user roles'
-                 type: select
-                 service:
-                     serviceName: security.context
-                     method: getRolesAsArray
+In this event the value of "geom2" is overwritten with the value of "geom".
 
 
-**Definition of datastores for connection**
+**Storage of different geometry-types:**
 
-Now, the definition of datastores for the correct display of the data in the digitizer element is shown. Here the fields and records can be secured to a group or user.
-The digitizer can automatically write the username, group and moddate in specifiable fields.The saving and deleting of an attribute is only possible if the user belongs to a particular group / role.
+The above scenario can be extended to a slightly constructed example in which simultaneously different geometry types shall be saved. With the help of PostGIS lines are interpolated to points. The Digitizer can use an event to fire the according SQL statement.
 
-Extract from the parameters.yml:
+.. code-block:: sql
+                
+                events:
+                  onBeforeInsert: |
+                    $sql = "SELECT 
+                    ST_Line_Interpolate_Point('".$item['geomline']."'::geometry, 1) as geom";
+                    $stmnt = $this->getConnection()->prepare($sql);
+                    $stmnt->execute();
+                    $result  = $stmnt->fetchAll();
+                    $item['geompoi'] = $result[0]['geom'];
 
-.. code-block:: yaml
-
-    dataStores:
-         interests:
-            connection: search_db
-            table: interests_datastore
-            uniqueId: gid
-            fields: [name, sports, healthy, comment]                                 # table fields to use for the datastore 
-            events:
-              onBeforeSave: |
-                  $item["user_name"] = $user->getUsername();                         # storing the username of the object
-              onBeforeUpdate:
-                  $item["user_name"] = $user->getUsername();
+The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL Statement and deliver it to the SQL-Connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
 
 
-In all events, the user-object $user and the user-role $userRoles are available. In the remove- and save-functions is still the orignal database-object $originData available.
 
-
-Definition of Styles
-------------------------------------------------------------------------
+Design and Styles
+-----------------
 
 By specifying a style the way the objects are displayed on the map can be defined. 
 *Default* defines the normal display of the objects on the map and *Select* defines the appearance of the selected objects.
@@ -999,36 +1062,29 @@ By specifying a style the way the objects are displayed on the map can be define
       ...
 
 
+YAML-Definition for the element Digitizer in mapbender.yml
+==========================================================
+
+This code-snippet shows how to include the Digitizer into a YAML-file based application.
+
+.. code-block:: yaml
+
+                sidepane:
+                    digitizer:
+                        class: Mapbender\DigitizerBundle\Element\Digitizer
+                        title: Digitalisation
+                        target: map
+                        schemes:
+                            ...
+
+
+
+
 
 Class, Widget & Style
-===========================
+=====================
 
 * Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
 * Widget: mapbender.element.digitizer.js
 * Style: sass\\element\\digitizer.scss
-
-
-HTTP Callbacks
-==============
-
-
-
-<action>
---------------------------------
-
-
-JavaScript API
-==============
-
-
-<function>
-----------
-
-
-JavaScript Signals
-==================
-
-<signal>
---------
-
 
