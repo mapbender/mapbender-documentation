@@ -44,57 +44,20 @@ Keine.
 JavaScript API
 ==============
 
-showHidde
----------
-<>
+- showHidde
+- selectSrs
+- getSelectedSrs
+- isSrsSupported
+- isSrsEnabled
+- disableSrs
+- enableSrs
+- enableOnlySrs
+- getFullSrsObj
+- enableAllSrs
+- disableAllSrs
+- getInnerJoinSrs
+- getInnerJoinArrays
 
-selectSrs
-----------
-<>
-
-getSelectedSrs
-----------------
-<>
-
-isSrsSupported
-----------------
-<>
-
-isSrsEnabled
-----------------
-<>
-
-disableSrs
-----------------
-<>
-
-enableSrs
-----------------
-<>
-
-enableOnlySrs
-----------------
-<>
-
-getFullSrsObj
-----------------
-<>
-
-enableAllSrs
----------------
-<>
-
-disableAllSrs
-----------------
-<>
-
-getInnerJoinSrs
-----------------
-<>
-
-getInnerJoinArrays
-----------------------
-<>
 
 JavaScript Signals
 ==================
