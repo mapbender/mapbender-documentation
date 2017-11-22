@@ -12,10 +12,10 @@ Es müssen die Einheiten, der Start und der Max Bereich (extent), die Maßstäbe
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/map_configuration.png
+.. image:: ../../../../../figures/de/map_dialog.png
      :scale: 80
 
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Layersets:** Vorher konfiguriertes Layersets zur Anzeige der Hauptkarte (Thematische Karte, Hintergrundkarte).
 * **DPI:** Maßeinheit für die Auflösung, Standard ist 72.
 * **SRS:** Spatial Reference System, Koordinatenbezugssystem beim Start der Anwendung. Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
@@ -28,6 +28,29 @@ Konfiguration
 * **Max. resolution:** auto, bestimmt die Auflösung der Karte.
 * **OL image path:** OpenLayers Bilderpfad, unter dem die Bilder abgespeichert werden (bundles/mapbendercore/mapquery/lib/openlayers/img).
 * **Other SRS:** weitere auswählbare Projektionen unter denen die Karte noch angezeigt werden kann (werden durch Komma separiert). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
+
+Konfigurationsbeispiel
+======================
+Die Hauptkarte (Main Map) wird in der Anwendung unter Layouts im Content integriert. Über das ``+`` -Zeichen kann das Element hinzugefügt werden.
+
+.. image:: ../../../../../figures/de/add_content.png
+     :scale: 80
+
+Als Hauptkarte (Main Map) können alle Layersets definiert werden, die vorher in der Anwendung unter Layersets festgelegt wurden. Für dieses Konfigurationsbeispiel sind das folgende Layersets:
+
+.. image:: ../../../../../figures/de/map_example_layersets.png
+     :scale: 80
+
+Die Layersets sind im Konfigurationsdialog des Kartenelements unter *Layersets* (1) sichtbar. Hier können auch mehrere gleichzeitig ausgewählt werden. Diejenigen Layersets, die nicht ausgewählt wurden, können als Overview fungieren.
+
+.. image:: ../../../../../figures/de/map_example_dialog.png
+     :scale: 80
+
+Im Feld *SRS* (2) wird das Koordinatensystem definiert, welches beim Öffnen der Karte verwendet wird. In diesem Beispiel wurde das Koordinatensystem ETRS89/ UTM Zone 32N gewählt. Der EPSG Code lautet 25832. Wenn andere Koordinatensysteme in der Anwendung zur Auswahl stehen sollen, werden diese bei *Other SRS* (6) angegeben. Auch hier wird der EPSG Code verwendet. Es können mehrere EPSG Codes, durch ein Komma getrennt, angegeben werden. In diesem Beispiel wurden zusätzlich folgende EPSG Codes verwendet: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator), 4326 (WGS 84). In der Anwendung kann mithilfe des Elements SRS Auswahl zwischen den hier definierten Koordinatensystemen gewechselt werden. Wie dieses Element eingebunden wird, wird in der Dokumentation unter `SRS Selector <../elements/srs_selector.html>`_ beschrieben.
+
+Das Feld *Max. Extent* (3) gibt den maximalen Kartenbereich an, der vom Nutzer der Anwendung gesehen werden kann. Alles was außerhalb dieser Angabe liegt, kann durch den Anwender nicht gesehen werden. Das Feld *Start Extent* (4) gibt den Startbereich an, der beim Öffnen der Anwendung zu sehen ist. Im Konfigurationsbeispiel wird das Stadtgebiet von Bonn angezeigt.
+
+Im Feld *Scales (csv)* (5) werden die Maßstäbe angegeben, die in der Anwendung genutzt werden können. Soll der Anwender beispielsweise zwar eine Übersichtskarte sehen können, jedoch keine näheren Details, kann der Maßstab auf die gewünschte Zahl begrenzt werden. Zwischen den Maßstäben, die in diesem Feld definiert werden, kann mithilfe des Elements Maßstabsauswahl gewechselt werden. Wie dieses Element eingebunden werden kann, wird in der Dokumentation unter `Scale Selector <../elements/scale_selector.html>`_ beschrieben. Auch mit dem Element Navigationswerkzeug kann zwischen den Maßstäben gewechselt werden, die in der Main Map definiert wurden. Wie dieses Element integriert werden kann, wird in der Dokumentation unter `Navigationswerkzeug <../elements/zoom_bar.html>`_ beschrieben.
 
 YAML-Definition:
 ----------------
