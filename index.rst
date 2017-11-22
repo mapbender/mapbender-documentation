@@ -1,7 +1,7 @@
-Welcome to the Mapbender3 documentation
-#######################################
+Welcome to the Mapbender documentation
+######################################
 
-Mapbender3 Project Page https://mapbender3.org
+Mapbender Project Page https://www.mapbender.org
 
 Please choose a language of your choice:
 
@@ -11,9 +11,9 @@ Please choose a language of your choice:
    English <en/index>
    Deutsch <de/index>
 
-You find the Mapbender3 API Documentation at:
+You find the Mapbender API Documentation at:
 
-  https://api.mapbender3.org
+  https://api.mapbender.org
 
 
 Indices and tables
@@ -34,26 +34,26 @@ Sourcecode of this documentation
 Online version of this documentation
 ====================================
 
-* https://doc.mapbender3.org/
-* https://docs.mapbender3.org/current/
+* https://doc.mapbender.org/
+* https://docs.mapbender.org/current/
 
 
 Other versions of this documentation
 ====================================
 
-* https://docs.mapbender3.org/3062
-* https://docs.mapbender3.org/3061
-* https://docs.mapbender3.org/3060
-* https://docs.mapbender3.org/3053
-* https://docs.mapbender3.org/3052
-* https://docs.mapbender3.org/3051
-* https://docs.mapbender3.org/3050
-* https://docs.mapbender3.org/304
+* https://docs.mapbender.org/3062
+* https://docs.mapbender.org/3061
+* https://docs.mapbender.org/3060
+* https://docs.mapbender.org/3053
+* https://docs.mapbender.org/3052
+* https://docs.mapbender.org/3051
+* https://docs.mapbender.org/3050
+* https://docs.mapbender.org/304
 
-Download of Mapbender3
+Download of Mapbender
 ======================
 
-* https://mapbender3.org/download
+* https://mapbender.org/download
 
 
 -----
@@ -65,7 +65,7 @@ Download of Mapbender3
   :align: right
   :target: https://www.ohloh.net/p/mapbender?ref=sample
    
-.. image:: https://mapbender3.org/sites/default/files/OSGeo_project.png
+.. image:: https://mapbender.org/sites/default/files/OSGeo_project.png
   :scale: 80 %
   :alt: Mapbender is a Project of the OSGeo Foundation
   :align: center

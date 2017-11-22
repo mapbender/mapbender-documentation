@@ -19,7 +19,7 @@ Configuration
 * **Tooltip:** Text, that will be indicated if the mouse hovers over the button for a longer time.
 * **Icon:** Symbol of the button. Based on a CSS class.
 * **Target:** Target element (Title(ID)) of the button. The target element will be triggered by clicking on the button. (e.g.: Print).
-* **Click:** Refers to a website or a script (e.g.: http://mapbender3.org).
+* **Click:** Refers to a website or a script (e.g.: http://mapbender.org).
 * **Group:** Adds the element to a group. Only one button of the group may be activated.
 * **Action:** Method that is invoked when the button is activated. 
 * **Deactivate:** Method that is invoked when the button is disabled.
@@ -53,7 +53,7 @@ YAML-Definition:
     icon: ~       # icon CSS class to use
     label: true   # false/true to label the button, default is true
     target: ~     # title (Id) of target element
-    click:        # refer to a website or script like http://mapbender3.org
+    click:        # refer to a website or script like http://mapbender.org
     group: ~      # group to put the button into. Only one button per group can be active
     action: ~     # method of target to call when button is activated
     deactivate: ~ # method of target to call when button is deactivated

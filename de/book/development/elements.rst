@@ -20,7 +20,7 @@ Twig Template
 
 Jedes Element benötigt ein HTML-Element. In den meisten Fällen kann das ein DIV-Element sein, aber es kann auch komplexer sein.
 
-Für Mapbender3 wird `Twig <http://twig.sensiolabs.org/>`_ verwendet. Eine einfache Twig-Vorlage für ein Element kann wie folgt aussehen:
+Für Mapbender wird `Twig <http://twig.sensiolabs.org/>`_ verwendet. Eine einfache Twig-Vorlage für ein Element kann wie folgt aussehen:
 
 .. code-block:: html+jinja
 
@@ -28,7 +28,7 @@ Für Mapbender3 wird `Twig <http://twig.sensiolabs.org/>`_ verwendet. Eine einfa
 
 Mehrere Angaben müssen gesetzt werden: 
 
-* id (wird von Mapbender3 generiert)
+* id (wird von Mapbender generiert)
 * allgemeine mb-element-Klasse 
 * spezielle Klasse für das Element
 
@@ -52,7 +52,7 @@ Das grundlegende Gerüst sieht folgendermaßen aus:
     //  "mbMyClass" Object im "mapbender"-Namensraum im jQuery-Object  erzeugt (sie werden beide unterschiedlich verwendet). Verwenden Sie ein
     // "mb"-Präfix für Ihre Widget-Namen, damit existierende jQuery-Funktionen nicht überschrieben werden.
     $.widget('mapbender.mbMyClass', {
-                 // Es werden voreingestellte Optionen angelegt, die in der Mapbender3-Konfiguration überschrieben werden kann.
+                 // Es werden voreingestellte Optionen angelegt, die in der Mapbender-Konfiguration überschrieben werden kann.
         //  Es wird später in die PHP-Klasse verschoben.
         // Auf das endgültige options-Objekt kann zugegriffen werden als "this.options". 
 
@@ -121,7 +121,7 @@ Es gibt eine aktive und passive Kommunikation zwischen den Widgets. Die aktive K
 
     var otherElement = $('#element-13').mbMyClass('methodA', parameterA, parameterB);
 
-Dies ist eine Standard-jQuery UI Syntax und selbsterklärend. Es ist die Frage, wie Sie die anderen HTML-Elemente erkennen? Um ein Element zu selektieren wird bevorzugt die ID verwendet. Diese ID's werden jedoch zur Laufzeit von Mapbender3 generiert, wenn die Anwendung startet, so dass sie nicht davon ausgehen können, dass die ID immer gleich ist. Glücklicherweise können Sie in der Konfiguration eine Element-ID als eine Target-Option für ein anderes Element übergeben. Diese wird mit der Laufzeit-ID des Target-Elements des HTML-Element überschrieben, so dass Sie in Ihrem Widget-Code auf die richtige ID "this.options.target" zugreifen können. 
+Dies ist eine Standard-jQuery UI Syntax und selbsterklärend. Es ist die Frage, wie Sie die anderen HTML-Elemente erkennen? Um ein Element zu selektieren wird bevorzugt die ID verwendet. Diese ID's werden jedoch zur Laufzeit von Mapbender generiert, wenn die Anwendung startet, so dass sie nicht davon ausgehen können, dass die ID immer gleich ist. Glücklicherweise können Sie in der Konfiguration eine Element-ID als eine Target-Option für ein anderes Element übergeben. Diese wird mit der Laufzeit-ID des Target-Elements des HTML-Element überschrieben, so dass Sie in Ihrem Widget-Code auf die richtige ID "this.options.target" zugreifen können. 
 
 .. code-block:: javascript
 

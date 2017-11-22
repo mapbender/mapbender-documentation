@@ -3,7 +3,7 @@
 Source (Datenquelle)
 ====================
 
-Über die Datenquellen können Sie OGC-WMS Dienste in der Version 1.1.1 und 1.3.0 in Mapbender3 registrieren.
+Über die Datenquellen können Sie OGC-WMS Dienste in der Version 1.1.1 und 1.3.0 in Mapbender registrieren.
 
 Informationen zum Einbinden von Diensten und der Nutzung in Mapbender finden Sie im `Quickstart Dokument <../../../../book/quickstart.html#laden-von-web-map-services>`_.
 
@@ -22,7 +22,7 @@ Informationen zum Einbinden von Diensten und der Nutzung in Mapbender finden Sie
   * http://www.opengis.net/wms,
   * http://www.w3.org/2001/XMLSchema
 
-  Dienste, die ohne Validitätsüberprüfung registriert wurden, erscheinen in der Diensteliste mit einem Ausrufezeichen. In vielen Fällen funktionieren diese Dienste mit Mapbender3, obwohl sie eigene Schemata eingebunden haben.
+  Dienste, die ohne Validitätsüberprüfung registriert wurden, erscheinen in der Diensteliste mit einem Ausrufezeichen. In vielen Fällen funktionieren diese Dienste mit Mapbender, obwohl sie eigene Schemata eingebunden haben.
 
   .. image:: ../../../../../figures/entities/source_not_valid.png
        :scale: 80

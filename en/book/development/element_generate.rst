@@ -8,7 +8,7 @@ How to create your own Element?
 `https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_.
 
 
-Mapbender3 offers an app/console command to create different elements:
+Mapbender offers an app/console command to create different elements:
 
 * general elements
 * buttons
@@ -100,7 +100,7 @@ You will get a summary of actions
   - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
 
 Follow up actions
-Read about adapting your bare-bone element at http://doc.mapbender3.org/en/book/development/element_generate.html
+Read about adapting your bare-bone element at http://doc.mapbender.org/en/book/development/element_generate.html
 
 Edit your new element for your needs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

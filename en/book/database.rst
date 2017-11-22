@@ -8,7 +8,7 @@ General
 
 To configure the database connection both files, config.yml and paramters.yml are used (see also `the Symfony Documentation <http://symfony.com/doc/current/best_practices/configuration.html>`_). While the config.yml file contains only the placeholders, the values for the database connection are placed in the paramters.yml.
 
-You can find examples for the Configuration in our `Installation Instructions <installation.html>`_, for example in the chapter `Configuration of Mapbender3 on Ubuntu and Debian <installation/installation_ubuntu.html#configuration-of-mapbender3>`_.
+You can find examples for the Configuration in our `Installation Instructions <installation.html>`_, for example in the chapter `Configuration of Mapbender on Ubuntu and Debian <installation/installation_ubuntu.html#configuration-of-mapbender>`_.
 
 
 .. _doctrine:
@@ -16,7 +16,7 @@ You can find examples for the Configuration in our `Installation Instructions <i
 Doctrine
 ********
 
-In Mapbender3 we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>`_ and read more.
+In Mapbender we use Doctrine which is a set of PHP libraries and offers an Object Relational Mapper and a Database Abstraction Layer. Visit the `Doctrine project page <http://www.doctrine-project.org/>`_ and read more.
 
 
 Database definition
@@ -60,7 +60,7 @@ All values encapsulated in % are parameters, loaded from the parameters.yml. The
 
 * database_host: The host, where the database is installed. Either the name (e.g. localhost) or the IP-address (e.g.. 127.0.0.1).
 * database_port: The port, on which the database listens (e.g. 5432 for PostgreSQL).
-* database_name: The Name of the database (e.g. mapbender3). Create the database and the scheme with ``doctrine:database:create`` resp. ``doctrine:schema:create``, see `Installation Instructions <installation.html>`_ for details.
+* database_name: The Name of the database (e.g. mapbender). Create the database and the scheme with ``doctrine:database:create`` resp. ``doctrine:schema:create``, see `Installation Instructions <installation.html>`_ for details.
 * database_path: The %database_path% is the path to a SQLite database. If you don't use a SQLite database, don't delete the parameter from the parameters.yml though. Just put in as a value a tilde (~) or ``null``.
 * database_user: Username for the connection to the database.
 * database_password: The password of the database-user.
@@ -73,14 +73,14 @@ All values encapsulated in % are parameters, loaded from the parameters.yml. The
 Using multiple databases
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using multiple databases is easy with Mapbender3 and advised if you want to separate your own data from Mapbender's. This is useful in a scenario where you have your own custom code provided by an non-Mapbender bundle.
+Using multiple databases is easy with Mapbender and advised if you want to separate your own data from Mapbender's. This is useful in a scenario where you have your own custom code provided by an non-Mapbender bundle.
 
 There's always a default database connection and all Mapbender code assumes that it can access it's data using that default database connection.
 
 So if your code wants to use a different database you have to define a second named database connection and always
 use that named database connection.
 
-* Write the additional parameter "default_connection". This is the database-connection that Mapbender3 uses as the default (e.g. ``default_connection: default`` or ``default_connection: search_db``).
+* Write the additional parameter "default_connection". This is the database-connection that Mapbender uses as the default (e.g. ``default_connection: default`` or ``default_connection: search_db``).
 
 Here is an example for a database connection block in the **config.yml** with two connections:
 
@@ -123,7 +123,7 @@ The definition of the database variables is done in the file **parameters.yml**.
         database_driver:   pdo_pgsql
         database_host:     localhost
         database_port:     5432
-        database_name:     mapbender3
+        database_name:     mapbender
         database_path:     ~
         database_user:     postgres
         database_password: postgres

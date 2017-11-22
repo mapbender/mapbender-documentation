@@ -3,7 +3,7 @@
 Controllers
 #############
 
-This pages gives an quick overview of the controllers used in an Mapbender3 application.
+This pages gives an quick overview of the controllers used in an Mapbender application.
 
 The Front Controller - Using Routes
 ***********************************
@@ -16,7 +16,7 @@ To get an overview off all defined routes by using the console command
 
 .. code-block:: yaml
 
- cd mapbender3/application
+ cd mapbender/application
  app/console router:debug
 
  [router] Current routes
@@ -65,12 +65,12 @@ To learn more about routing, read the `Symfony Book <http://symfony.com/doc/curr
 
 Defining routes using annotations
 *********************************
-In Mapbender3 we use a decentralized route definitions: Instead of writing each and every route in the routing.yml, we import their definition from the controller classes in the activated bundles. This has the advantage of having the definition with the controller function. This should usually be fine and can be - if need arises - easily overwritten by adapting the routing.yml.
-Using the Symfony2 with the SE bundles like Mapbender3 does, routes can therefore be written using annotation comments for each controller function. You can read about the annotation syntax over at the `Symfony2 documentation <http://symfony.com/doc/current/book/index.html>`_.
+In Mapbender we use a decentralized route definitions: Instead of writing each and every route in the routing.yml, we import their definition from the controller classes in the activated bundles. This has the advantage of having the definition with the controller function. This should usually be fine and can be - if need arises - easily overwritten by adapting the routing.yml.
+Using the Symfony2 with the SE bundles like Mapbender does, routes can therefore be written using annotation comments for each controller function. You can read about the annotation syntax over at the `Symfony2 documentation <http://symfony.com/doc/current/book/index.html>`_.
 
-Mapbender3 Controllers
-**********************
-A Mapbender3 installation with use a particular set of controller classes and functions. This chapter will give an short list of these, so you can inspect them more easily.
+Mapbender Controllers
+*********************
+A Mapbender installation with use a particular set of controller classes and functions. This chapter will give an short list of these, so you can inspect them more easily.
 
 Frontend
 ~~~~~~~~
@@ -90,7 +90,7 @@ Elements of an application can provide Ajax endpoints for their client side widg
 
 Backend
 ~~~~~~~
-The backend is handled by the ManagerBundle, which provides (will provide) an consistent backend for managing all aspects of an Mapbender3 application: applications, layers, elements, users, settings.
+The backend is handled by the ManagerBundle, which provides (will provide) an consistent backend for managing all aspects of an Mapbender application: applications, layers, elements, users, settings.
 
 For each section a own controller class exists within this bundle:
 

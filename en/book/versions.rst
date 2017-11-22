@@ -57,7 +57,7 @@ Execute again the command ``app/console doctrine:fixtures:load --fixtures=mapben
 
 **(2) Update of parameters im Map-Control**
 
-Execute the command ``app/console mapbender:upgrade:database``, to update the OL-imagePath Parameter from ``bundles/mapbendercore/mapquery/lib/openlayers/img`` to ``components/mapquery/lib/openlayers/img``. This is necessary if you use the POI-Elements or call Mapbender with the poi-parameter and see no bubble-icon for the poi. Example: https://demo.mapbender3.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
+Execute the command ``app/console mapbender:upgrade:database``, to update the OL-imagePath Parameter from ``bundles/mapbendercore/mapquery/lib/openlayers/img`` to ``components/mapquery/lib/openlayers/img``. This is necessary if you use the POI-Elements or call Mapbender with the poi-parameter and see no bubble-icon for the poi. Example: https://demo.mapbender.org/application/mapbender_user?poi[point]=366164%2C5623183&poi[scale]=25000&poi[label]=Please+take+a+look+at+this+POI%3A
 
 
 

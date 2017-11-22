@@ -3,7 +3,7 @@
 API documentation
 #################
 
-Mapbender3 offers an API documentation at http://api.mapbender3.org/.
+Mapbender offers an API documentation at http://api.mapbender.org/.
 
 The API documentation is shipped with Mapbender and can be created with:
 
@@ -18,8 +18,8 @@ Please see the `Contributing Guide for details on using the built-in server <htt
 For usage in Apache or Nginx, you may have to adjust the access-rights for the generated files in the web-directory of Mapbender.
 
 
-How to write Mapbender3 API Documentation?
-*******************************************
+How to write Mapbender API Documentation?
+*****************************************
 
 PHP
 ~~~~~~

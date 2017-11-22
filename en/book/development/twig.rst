@@ -2,7 +2,7 @@
 
 Twig
 #####
-Symfony follows the template approach and we use this in Mapbender3. Symfony uses a templating engine to generate HTML, CSS or other content. 
+Symfony follows the template approach and we use this in Mapbender. Symfony uses a templating engine to generate HTML, CSS or other content. 
 
 Twig is a templating engine that is packaged in Symfony2 and offers an easy and powerfull way to generate templates. 
 
@@ -10,7 +10,7 @@ A template is a text file that can generate any text based format like HTML, XML
 
 You can use templates to create a layout. You can create a base layout and the overwrite or append any of your layout blocks with individual templates.
 
-Read more about Templates in Mapbender3 at :doc:`How to create your own Template? <../templates>`.
+Read more about Templates in Mapbender at :doc:`How to create your own Template? <../templates>`.
 
 
 Documentation
@@ -62,7 +62,7 @@ Template Name
 *************
 The name of your template should follows the syntax **bundle:controller:template**.
 
-In Mapbender3 we use for example the following twig templates:
+In Mapbender we use for example the following twig templates:
  
 * app/base.html.twig
 * application/mapbender/src/Mapbender/CoreBundle/Resources/views/frontend.html.twig

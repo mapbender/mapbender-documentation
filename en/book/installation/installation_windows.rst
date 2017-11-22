@@ -3,7 +3,7 @@
 Installation on Windows
 #######################
 
-We show you two different options to install Mapbender3 on Windows. The `first one uses the MS4W Package <#install-via-ms3w-package>`_ and the included Mapbender version. The `second one presents the manual installation <#manual-installation>`_, where you unpack Mapbender3 and adjust Apache and PHP by yourself.
+We show you two different options to install Mapbender on Windows. The `first one uses the MS4W Package <#install-via-ms3w-package>`_ and the included Mapbender version. The `second one presents the manual installation <#manual-installation>`_, where you unpack Mapbender and adjust Apache and PHP by yourself.
 
 We don't offer EXE-installers, yet because it might unpack Mapbender to a specific directory but the adjustments have to be made on PHP and Webserver side (Apache/Nginx).
 
@@ -11,14 +11,14 @@ We don't offer EXE-installers, yet because it might unpack Mapbender to a specif
 Install via MS3W package
 ------------------------
 
-Mapbender3 is part of `MS4W (Mapserver for Windows) <http://www.ms4w.com/>`_ and can be installed via this package including Mapserver, Apache, GDAL, PHP among others. It's more or less a release version of Mapbender3 configuried for the MS4W Apache/PHP environment.
+Mapbender is part of `MS4W (Mapserver for Windows) <http://www.ms4w.com/>`_ and can be installed via this package including Mapserver, Apache, GDAL, PHP among others. It's more or less a release version of Mapbender configuried for the MS4W Apache/PHP environment.
 
 If you choose the EXE-Installer, you can select Mapbender from the list of apps:
 
 .. image:: ../../../figures/installation/ms4w_installer.png
      :scale: 80
 
-If you choose the ZIP from MS4W, you have to download and unpack Mapbender3 by hand from `the MS4W download page <http://www.ms4w.com/>`_ and unpack it into the MS4W directory.
+If you choose the ZIP from MS4W, you have to download and unpack Mapbender by hand from `the MS4W download page <http://www.ms4w.com/>`_ and unpack it into the MS4W directory.
 
 .. image:: ../../../figures/installation/ms4w_packages.png
      :scale: 80
@@ -30,7 +30,7 @@ Please refer to `the MS4W homepage <http://ms4w.com>`_ for further details.
 Manual installation
 -------------------
 
-Please take note of the `system requirements <systemrequirements.html>`_ where you can also find the Download links to Mapbender3. Install the neccessary components:
+Please take note of the `system requirements <systemrequirements.html>`_ where you can also find the Download links to Mapbender. Install the neccessary components:
 
  * add the path to your PHP-bin directory to the PATH variable 
  * activate the PHP extensions in your php.ini configuration file
@@ -73,35 +73,35 @@ Additional for PHP 7:
     # Windows: edit file httpd.conf (remove the comment-sign #) and restart apache
     LoadModule rewrite_module modules/mod_rewrite.so
 
-Create the Apache alias. In Windows there are several ways. A clear way is to create a file mapbender3.conf and to refer to that file in Apaches httpd.conf
+Create the Apache alias. In Windows there are several ways. A clear way is to create a file mapbender.conf and to refer to that file in Apaches httpd.conf
 
-* Create a subfolder "alias" in the directory "<apache>/conf". Create the mapbender3.conf file there. (You can use this directory to place additional Alias definition-files for other sites there.)
-* In the httpd.conf (in directory <apache>/conf/)refer to this file mapbender3.conf
+* Create a subfolder "alias" in the directory "<apache>/conf". Create the mapbender.conf file there. (You can use this directory to place additional Alias definition-files for other sites there.)
+* In the httpd.conf (in directory <apache>/conf/)refer to this file mapbender.conf
 
 In httpd.conf:
 
 .. code-block:: apache
 
-                # Refer to Mapbender3 alias
-                Include "conf/alias/mapbender3.conf"
+                # Refer to Mapbender alias
+                Include "conf/alias/mapbender.conf"
 
-In mapbender3.conf:
+In mapbender.conf:
 
 .. code-block:: apache
 
- Alias /mapbender3 c:/mapbender3/web/
- <Directory c:/mapbender3/web/>
+ Alias /mapbender c:/mapbender/web/
+ <Directory c:/mapbender/web/>
   Options MultiViews FollowSymLinks
   DirectoryIndex app.php
   Require all granted
  
   RewriteEngine On
-  RewriteBase /mapbender3/
+  RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
-We assume in this example, that Mapbender3 is unzipped directy under **C:/** (see the `System Requirements and Download <systemrequirements.html#download-of-mapbender3>`_ chapter for details). You can easily choose a different directory and have to adjust the Apache mapbender3.conf file above to the right location.
+We assume in this example, that Mapbender is unzipped directy under **C:/** (see the `System Requirements and Download <systemrequirements.html#download-of-mapbender>`_ chapter for details). You can easily choose a different directory and have to adjust the Apache mapbender.conf file above to the right location.
 
 Restart the Apache webserver.
 
@@ -155,7 +155,7 @@ In the Mapbender-Apache-Site file (mapbender.conf), add the "ExecCGI" parameter,
 
 .. code-block:: apache
 
-                <Directory c:/srv/mapbender3-starter-3.0.6.0/web/>
+                <Directory c:/srv/mapbender-starter-3.0.6.0/web/>
                     [...]
                     Options MultiViews FollowSymLinks ExecCGI
                     [...]
@@ -253,24 +253,24 @@ Check
 
 Check that the Alias is accessible:
 
-* http://localhost/mapbender3/
+* http://localhost/mapbender/
 
 Open Symfony´s Welcome Script config.php. This script checks whether all necessary components are installed and configurations are done. If there are still problems, you should fix them.
  
-* http://localhost/mapbender3/config.php
+* http://localhost/mapbender/config.php
 
 
-.. image:: ../../../figures/mapbender3_symfony_check_configphp.png
+.. image:: ../../../figures/mapbender_symfony_check_configphp.png
      :scale: 80 
 
-Adapt the Mapbender3 configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create. Further information is available in the chapter `Configuring the database <../database.html>`_.
+Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create. Further information is available in the chapter `Configuring the database <../database.html>`_.
 
 .. code-block:: yaml
 
     database_driver:   pdo_pgsql
     database_host:     localhost
     database_port:     5432
-    database_name:     mapbender3
+    database_name:     mapbender
     database_path:     ~
     database_user:     postgres
     database_password: secret
@@ -280,7 +280,7 @@ Run the app/console commands with php. First you have to open a terminal (cmd).
 .. code-block:: text
  
  c:
- cd mapbender3
+ cd mapbender
  php.exe app/console doctrine:database:create
  php.exe app/console doctrine:schema:create
  php.exe app/console assets:install web
@@ -289,18 +289,18 @@ Run the app/console commands with php. First you have to open a terminal (cmd).
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
 
-Installation of Mapbender3 is done. 
+Installation of Mapbender is done. 
 
 Check the config.php again:
 
-* http://localhost/mapbender3/config.php
+* http://localhost/mapbender/config.php
 
 
-You can start using Mapbender3 now. You can open the developer mode when you run app_dev.php.
+You can start using Mapbender now. You can open the developer mode when you run app_dev.php.
 
-* http://localhost/mapbender3/app_dev.php
+* http://localhost/mapbender/app_dev.php
 
 **Notice:** Go to the login link at the right-top and log in with the new user you created. 
 
-To learn more about Mapbender3 have a look at the `Mapbender3 Quickstart <../quickstart.html>`_.
+To learn more about Mapbender have a look at the `Mapbender Quickstart <../quickstart.html>`_.
 

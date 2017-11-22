@@ -1,24 +1,24 @@
 .. _documentation_howto:
 
-How to write Mapbender3 Documentation?
-######################################
+How to write Mapbender Documentation?
+#####################################
 
-Mapbender3 Documentation website
-********************************
+Mapbender Documentation website
+*******************************
 
-You find the Mapbender3 Documentation at:
+You find the Mapbender Documentation at:
 
-http://doc.mapbender3.org
+http://doc.mapbender.org
 
-The Documentation is build from the mapbender-docmentation repository at Github. This repository is used to build and deploy the http://doc.mapbender3.org website on a nightly base. The website code is generated using Sphinx, therefore the documentation source is written in Restructured Text.
+The Documentation is build from the mapbender-docmentation repository at Github. This repository is used to build and deploy the http://doc.mapbender.org website on a nightly base. The website code is generated using Sphinx, therefore the documentation source is written in Restructured Text.
 
-Mapbender3 also provides an API Documentation at:
+Mapbender also provides an API Documentation at:
 
-http://api.mapbender3.org
+http://api.mapbender.org
 
-This API Documentation is generated from the Mapbender3 code. You find information about how to write the Mapbender3 API documentation at :doc:`API documentation <apidocumentation>`.
+This API Documentation is generated from the Mapbender code. You find information about how to write the Mapbender API documentation at :doc:`API documentation <apidocumentation>`.
 
-This HowTo concentrates on the build of the documentation at http://doc.mapbender3.org.
+This HowTo concentrates on the build of the documentation at http://doc.mapbender.org.
 
 
 Edit documentation at Git Repository mapbender-documentation
@@ -149,7 +149,7 @@ Images for the documentation are **all** located at
 
 Quickstart
 **********
-The Mapbender3 Quickstart is a tutorial to get to know Mapbender. It is used on OSGeo-Live too http://live.osgeo.org.
+The Mapbender Quickstart is a tutorial to get to know Mapbender. It is used on OSGeo-Live too http://live.osgeo.org.
 
 If you want to add a new lesson to the Quickstart:
  * add the subject of you lesson at the beginning of the document (This Quick Start describes how to: ...)
@@ -161,7 +161,7 @@ Example for element documentation
 *********************************
 You have to write a new element documentation when a new element with new functionality is added to Mapbender.
 
-In this example we assume, that you are a developer and just added a new element to Mapbender3 code base. We assume your element is called AddWMS and is part of the Mapbender CoreBundle. 
+In this example we assume, that you are a developer and just added a new element to Mapbender code base. We assume your element is called AddWMS and is part of the Mapbender CoreBundle. 
 
 **Now it is time to write the documentation!**
 

@@ -3,7 +3,7 @@
 Installation
 =============
 
-Wir haben die Installationsanleitungen nach Betriebssystemen aufgeteilt. Die Installation im Symfony eigenen Webserver beschreibt, wie sie Symfony eigene Mechanismen nutzen können um schnell einen Blick auf Mapbender3 zu werfen.
+Wir haben die Installationsanleitungen nach Betriebssystemen aufgeteilt. Die Installation im Symfony eigenen Webserver beschreibt, wie sie Symfony eigene Mechanismen nutzen können um schnell einen Blick auf Mapbender zu werfen.
 
 .. toctree::
    :maxdepth: 1

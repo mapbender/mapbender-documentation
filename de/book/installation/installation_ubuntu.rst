@@ -19,9 +19,9 @@ Falls Sie eine andere Datenbank wie PostgreSQL vorliegen haben und nutzen möcht
 Vorbereitung
 ------------
 
-Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_, wo Sie auch die Download-Links für Mapbender3 finden.
+Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_, wo Sie auch die Download-Links für Mapbender finden.
 
-Dort sind auch die notwendigen Komponenten für Mapbender3 aufgelistet, die Sie folgendermaßen installieren können:
+Dort sind auch die notwendigen Komponenten für Mapbender aufgelistet, die Sie folgendermaßen installieren können:
 
 .. code-block:: bash
 
@@ -46,22 +46,22 @@ Laden Sie das Apache Modul rewrite.
 Entpacken und im Webserver registrieren
 ---------------------------------------
 
-Entpacken Sie das Mapbender3 Archiv (tar.gz oder zip) beispielsweise im Verzeichnis **/var/www/mapbender3** (siehe das Kapitel `Systemvoraussetzungen und den Download <systemrequirements.html#download-von-mapbender3>`_ für Details).
+Entpacken Sie das Mapbender Archiv (tar.gz oder zip) beispielsweise im Verzeichnis **/var/www/mapbender** (siehe das Kapitel `Systemvoraussetzungen und den Download <systemrequirements.html#download-von-mapbender>`_ für Details).
 
-Erstellen Sie den Apache Alias. Sie können Mapbender3 in ein beliebiges anderes Verzeichnis entpacken und müssen dann nur die folgende Datei anpassen und auf den richtigen Ordner verweisen lassen.
+Erstellen Sie den Apache Alias. Sie können Mapbender in ein beliebiges anderes Verzeichnis entpacken und müssen dann nur die folgende Datei anpassen und auf den richtigen Ordner verweisen lassen.
 
 Legen Sie die Datei **/etc/apache2/sites-available/mabender3.conf** mit dem folgenden Inhalt an. 
 
 .. code-block:: apache
                 
- Alias /mapbender3 /var/www/mapbender3/web/
- <Directory /var/www/mapbender3/web/>
+ Alias /mapbender /var/www/mapbender/web/
+ <Directory /var/www/mapbender/web/>
   Options MultiViews FollowSymLinks
   DirectoryIndex app.php
   Require all granted
    
   RewriteEngine On
-  RewriteBase /mapbender3/
+  RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
@@ -70,7 +70,7 @@ Aktivieren Sie danach die Seite mit:
 
 .. code-block:: bash
 
- a2ensite mapbender3.conf
+ a2ensite mapbender.conf
 
 Laden Sie den Apache Server neu.
 
@@ -86,9 +86,9 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (o). Weise
 
 .. code-block:: bash
 
- sudo chmod -R ugo+r /var/www/mapbender3
- sudo chown -R www-data:www-data /var/www/mapbender3
- sudo chmod -R ug+w /var/www/mapbender3/web/uploads
+ sudo chmod -R ugo+r /var/www/mapbender
+ sudo chown -R www-data:www-data /var/www/mapbender
+ sudo chmod -R ug+w /var/www/mapbender/web/uploads
 
  # wenn Sie die vorkonfigurierte dateibasierte Datenbank nutzen möchten
  sudo chmod -R ug+w app/db/demo.sqlite
@@ -101,20 +101,20 @@ Der Apache Nutzer benötigt v.a. Schreibrechte auf app/cache, app/logs, web/uplo
 Start und Anmelden am Mapbender
 -------------------------------
 
-Sie können nun auf Ihre Mapbender3 Installation mit **http://hostname/mapbender3/** zugreifen.
+Sie können nun auf Ihre Mapbender Installation mit **http://hostname/mapbender/** zugreifen.
   
 Klicken Sie auf den Anmelden-Link oben rechts, um zur Anmeldung zu gelangen. Melden Sie sich mit dem neu erstellten Benutzer an. Per Voreinstellung lauten die Anmeldedaten root/root.
 
-Starten Sie Mapbender3 im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen: http://localhost/mapbender3/app_dev.php
+Starten Sie Mapbender im Entwicklermodus, indem Sie das Skript app_dev.php aufrufen: http://localhost/mapbender/app_dev.php
 
-Wenn Sie mehr über Mapbender3 erfahren möchten, schauen Sie sich das `Mapbender3 Quickstart Dokument <../quickstart.html>`_ an.
+Wenn Sie mehr über Mapbender erfahren möchten, schauen Sie sich das `Mapbender Quickstart Dokument <../quickstart.html>`_ an.
 
 
  
 Mapbender Einrichtung auf PostgreSQL
 ------------------------------------
 
-Falls Sie die Mapbender3 Konfiguration in einer anderen Datenbank statt der SQLite Datenbank ablegen möchten (und da spricht nichts dagegen), sind hier die notwendigen Schritte beschrieben. Als Datenbank-Umgebung wird in diesem Beispiel PostgreSQL verwendet.
+Falls Sie die Mapbender Konfiguration in einer anderen Datenbank statt der SQLite Datenbank ablegen möchten (und da spricht nichts dagegen), sind hier die notwendigen Schritte beschrieben. Als Datenbank-Umgebung wird in diesem Beispiel PostgreSQL verwendet.
 
 Sie benötigen den PHP-PostgreSQL Treiber.
 
@@ -123,23 +123,23 @@ Sie benötigen den PHP-PostgreSQL Treiber.
    apt install php5-pgsql
  
 
-Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
+Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
 
 .. code-block:: yaml
 
     database_driver:   pdo_pgsql
     database_host:     localhost
     database_port:     5432
-    database_name:     mapbender3
+    database_name:     mapbender
     database_path:     ~
     database_user:     postgres
     database_password: geheim
  
-Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel `Details zur Konfiguration von Mapbender3 <configuration.html>`_.
+Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel `Details zur Konfiguration von Mapbender <configuration.html>`_.
 
 .. code-block:: bash
 
- cd /var/www/mapbender3
+ cd /var/www/mapbender
  app/console doctrine:database:create
  app/console doctrine:schema:create
  # app/console assets:install web # nicht notwendig
@@ -147,14 +147,14 @@ Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im 
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
-Hiermit ist die Konfiguration von Mapbender3 für PostgreSQL fertig und Sie enthält nun auch die drei Beispielanwendung wie auch die unterstützten EPSG-codes.
+Hiermit ist die Konfiguration von Mapbender für PostgreSQL fertig und Sie enthält nun auch die drei Beispielanwendung wie auch die unterstützten EPSG-codes.
 
 
 
 Mapbender Einrichtung auf MySQL
 -------------------------------
 
-Die Einrichtung von Mapbender auf MySQL ist ähnlich der auf PostgreSQL, Sie benötigen nur einen anderen PHP-Treiber und einen anderen Parameter in der parameters.yml. Falls Sie also die Mapbender3 Konfiguration in einer anderen Datenbank statt der SQLite Datenbank ablegen möchten (und da spricht nichts dagegen), sind hier die notwendigen Schritte beschrieben.
+Die Einrichtung von Mapbender auf MySQL ist ähnlich der auf PostgreSQL, Sie benötigen nur einen anderen PHP-Treiber und einen anderen Parameter in der parameters.yml. Falls Sie also die Mapbender Konfiguration in einer anderen Datenbank statt der SQLite Datenbank ablegen möchten (und da spricht nichts dagegen), sind hier die notwendigen Schritte beschrieben.
 
 Sie benötigen den PHP-MySQL Treiber.
 
@@ -163,23 +163,23 @@ Sie benötigen den PHP-MySQL Treiber.
    apt install php-mysql
 
 
-Passen Sie die Mapbender3 Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
+Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
 
 .. code-block:: yaml
 
                     database_driver:   pdo_mysql
                     database_host:     localhost
                     database_port:     3306
-                    database_name:     mapbender3
+                    database_name:     mapbender
                     database_path:     null
                     database_user:     root
                     database_password: Tr0ub4dor&3
 
-Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel `Details zur Konfiguration von Mapbender3 <configuration.html>`_.
+Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel `Details zur Konfiguration von Mapbender <configuration.html>`_.
 
 .. code-block:: bash
 
- cd /var/www/mapbender3
+ cd /var/www/mapbender
  app/console doctrine:database:create
  app/console doctrine:schema:create
  # app/console assets:install web # nicht notwendig
@@ -224,7 +224,7 @@ Zusätzlich muss PHP 7 in Apache aktiviert werden:
 Einrichtung für Apache 2.2
 --------------------------
 
-Einige Debian Versionen unterstützen für Apache 2.2 die Ablage der mapbender3.conf Datei im Verzeichnis ``/etc/apache2/sites-available`` und die Aktivierung über den Befehl ``a2ensite``. Je nach Betriebssystem muss die Datei aber im Verzeichnis ``/etc/apache2/conf.d/`` abgelegt werden.
+Einige Debian Versionen unterstützen für Apache 2.2 die Ablage der mapbender.conf Datei im Verzeichnis ``/etc/apache2/sites-available`` und die Aktivierung über den Befehl ``a2ensite``. Je nach Betriebssystem muss die Datei aber im Verzeichnis ``/etc/apache2/conf.d/`` abgelegt werden.
 
 Aktivieren Sie das Rewrite-Modul von Apache.
 
@@ -232,14 +232,14 @@ Aktivieren Sie das Rewrite-Modul von Apache.
 
  sudo a2enmod rewrite
 
-Im Unterschied zu Apache 2.4 gibt es für Apache 2.2 unterschiedliche Direktiven und andere Standardwerte (``Order`` und ``Allow``, ``AllowOverride``), die in die mapbender3.conf Datei eingetragen werden. Diese Unterschiede sind `im Upgrade-Guide von Apache 2.2 zu Apache 2.4 <http://httpd.apache.org/docs/2.4/upgrading.html>`_ beschrieben.
+Im Unterschied zu Apache 2.4 gibt es für Apache 2.2 unterschiedliche Direktiven und andere Standardwerte (``Order`` und ``Allow``, ``AllowOverride``), die in die mapbender.conf Datei eingetragen werden. Diese Unterschiede sind `im Upgrade-Guide von Apache 2.2 zu Apache 2.4 <http://httpd.apache.org/docs/2.4/upgrading.html>`_ beschrieben.
  
-Apache 2.2 Konfiguration ``mapbender3.conf``:
+Apache 2.2 Konfiguration ``mapbender.conf``:
 
 .. code-block:: apache
 
-  ALIAS /mapbender3 /var/www/mapbender3/web/
-  <Directory /var/www/mapbender3/web/>
+  ALIAS /mapbender /var/www/mapbender/web/
+  <Directory /var/www/mapbender/web/>
     Options MultiViews FollowSymLinks
     DirectoryIndex app.php
     AllowOverride none
@@ -247,7 +247,7 @@ Apache 2.2 Konfiguration ``mapbender3.conf``:
     Allow from all
     
     RewriteEngine On
-    RewriteBase /mapbender3/
+    RewriteBase /mapbender/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
@@ -260,11 +260,11 @@ Apache 2.2 Konfiguration ``mapbender3.conf``:
 
 Prüfen Sie, ob der Alias erreichbar ist:
 
-* http://localhost/mapbender3/
+* http://localhost/mapbender/
 
 Öffnen Sie das Symfony Welcome Script config.php. Das Skript prüft, ob alle notwendigen Komponenten installiert wurden und ob die Konfiguration erfolgte. Sofern noch Probleme vorliegen, sollten diese behoben werden.
  
-* http://localhost/mapbender3/config.php
+* http://localhost/mapbender/config.php
 
 
 .. image:: ../../../figures/mapbender3_symfony_check_configphp.png

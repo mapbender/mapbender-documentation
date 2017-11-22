@@ -1,12 +1,12 @@
 Konzept
-########
+#######
 
-Dieses Kapitel gibt eine Einführung in das Konzept von Mapbender3. Nach dem Lesen sollten Sie den Aufbau von Mapbender3 und ihre Interaktion verstehen.
+Dieses Kapitel gibt eine Einführung in das Konzept von Mapbender. Nach dem Lesen sollten Sie den Aufbau von Mapbender und ihre Interaktion verstehen.
 
 Anwendung
 ===========
 
-Eine Anwendung (Applikation) ist eine einzelne Mapbender3-Konfiguration, die normalerweise als interaktive Webkarte verwendet wird.
+Eine Anwendung (Applikation) ist eine einzelne Mapbender-Konfiguration, die normalerweise als interaktive Webkarte verwendet wird.
 
 Jede Anwendung besteht aus verschiedenen Komponenten:
 
@@ -34,10 +34,10 @@ Jede Anwendung ist eine HTML-Seite. Die Anwendungsvorlage definiert das Basislay
 Frontend
 ========
 
-Das Frontend ist die Anwendungssicht der Mapbender3-Installation. Es beinhaltet die Anwendungsliste und jede Sicht auf die Anwendung. Der Anwender interagiert mit dem Frontend.
+Das Frontend ist die Anwendungssicht der Mapbender-Installation. Es beinhaltet die Anwendungsliste und jede Sicht auf die Anwendung. Der Anwender interagiert mit dem Frontend.
 
 Backend
 =======
 
-Über das Backend wird die Mapbender3-Installation konfiguriert. Es wird auch der Manager genannt. Mit dem Backend können Administratoren Benutzer, Rollen, Dienste, Anwendungen und Elemente verwalten.
+Über das Backend wird die Mapbender-Installation konfiguriert. Es wird auch der Manager genannt. Mit dem Backend können Administratoren Benutzer, Rollen, Dienste, Anwendungen und Elemente verwalten.
 

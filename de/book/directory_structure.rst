@@ -1,7 +1,7 @@
 .. _directory_structure:
 
-Verzeichnisstruktur in Mapbender3
-#################################
+Verzeichnisstruktur in Mapbender
+################################
 
 app
 ***
@@ -36,7 +36,7 @@ Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis app/confi
 app/config/applications
 -----------------------
 
-Als YAML definierten Anwendungen können in dem Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien. Sie ersetzen seit Version 3.0.6 die vormals als eine Datei vorliegende mapbender.yml. Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender3 erkannt.
+Als YAML definierten Anwendungen können in dem Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien. Sie ersetzen seit Version 3.0.6 die vormals als eine Datei vorliegende mapbender.yml. Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
 
   
 
@@ -70,7 +70,7 @@ Verzeichnis des `FOM Submoduls <https://github.com/mapbender/fom>`_.
 mapbender
 *********
 
-Verzeichnis des `Mapbender Submoduls <https://github.com/mapbender/mapbender>`_. Liefert die Mapbender-spezifischen Bundles und den Mapbender3-Code.
+Verzeichnis des `Mapbender Submoduls <https://github.com/mapbender/mapbender>`_. Liefert die Mapbender-spezifischen Bundles und den Mapbender-Code.
 
 
 

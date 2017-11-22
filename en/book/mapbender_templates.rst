@@ -13,7 +13,7 @@ Fullscreen Template
 .. image:: ../../figures/mapbender_fullscreen.png
      :scale: 50
 
-View a demo of the Mapbender Fullscreen Template http://demo.mapbender3.org/application/mapbender_user
+View a demo of the Mapbender Fullscreen Template http://demo.mapbender.org/application/mapbender_user
 
 Regions of the Fullscreen Template:
 
@@ -36,7 +36,7 @@ Fullscreen Alternative Template
  .. image:: ../../figures/mapbender_mobile.png
      :scale: 50
 
-View a demo of the Mapbender Fullscreen Alternative Template http://demo.mapbender3.org
+View a demo of the Mapbender Fullscreen Alternative Template http://demo.mapbender.org
 
 Regions of the Fullscreen Alternative Template
 
@@ -59,7 +59,7 @@ Classic Template
  .. image:: ../../figures/mapbender_mobile.png
      :scale: 80
 
-View a demo of the Mapbender Classic Template http://demo.mapbender3.org
+View a demo of the Mapbender Classic Template http://demo.mapbender.org
 
 Regions of the Classic Template
 
@@ -79,7 +79,7 @@ Mobile Template
 .. image:: ../../figures/mapbender_mobile.png
      :scale: 80
 
-View a demo of the Mapbender Mobile Template http://release.mapbender3.org/application/mapbender_mobile
+View a demo of the Mapbender Mobile Template http://release.mapbender.org/application/mapbender_mobile
 
 Regions of the mobile Template
 
