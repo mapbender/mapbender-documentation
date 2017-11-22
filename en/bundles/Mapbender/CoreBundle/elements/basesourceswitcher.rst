@@ -33,6 +33,74 @@ In the configuration example you can see that either one, none or several entrie
 * **Group**: Optionaly group name to group of sourcesets by "group name"
 * **Instances**: Sources for the BaseSource
 
+Integration into the sidepane
+------------------------------
+The BaseSourceSwitcher can be integrated in the sidepane with a preview of the background-map. 
+
+.. image:: ../../../../../figures/basesourceswitcher_map_preview.png
+     :scale: 80
+
+The styling of the application is adapted via CSS. As a preparation you have to create screenshots of the background maps with the size 110x110px and place them in the web-folder (the screenshots have to be accessible from the outside).
+After that, you have to include the BaseSourceSwitcher in the sidepane, as explained in "Configuration". The inclusion with the preview of the background map only works in the sidepane, not in the toolbar! Additionally you have to remove all groups, if you have previously used them.
+
+Then you have to insert the CSS-defintion in your application under the "CSS" tab. To adapt the CSS-definition to your application you need to change the numbers of the data-sourcesets and the image paths for each service.   
+The numbers for the data-sourcesets can be found in the "Layerset" tab under ID (you only need the InstanceID).
+
+CSS-Definition:
+---------------
+
+.. code-block:: css
+
+     .mb-element-basesourceswitcher li[data-state='active'] {
+          position: static;
+          background-color: #578e2a;
+          color: #578e2a;
+          font-size: 12px;
+          font-weight: 800;
+          padding: 4px;
+          border-right-width: 1px;
+          margin-bottom: 5px;
+          margin-right: 5px; }
+     .mb-element-basesourceswitcher li[data-state=''] {
+          background-color: #ffffff;
+          color: #6fb536;
+          font-weight: 800;
+          font-size: 12px;
+          padding: 4px;
+          margin-bottom: 5px;
+          margin-right: 5px;
+          opacity: 0.4; }
+
+     .mb-element-basesourceswitcher li:hover {
+          border-color: #6fb536;
+          background-color: #6fb536;
+          color: #6fb536;
+          padding: 4px;
+          margin-bottom: 5px;
+          margin-right: 5px;
+          opacity: 1; }
+
+     .mb-element-basesourceswitcher li {
+          position: relative;
+          border-radius: 3px;
+          border: 1px solid;
+          border-color: #848484; }
+  
+     .mb-element-basesourceswitcher li[data-sourceset='8'] {
+          background: url("osm.png");
+          width: 110px;
+          height: 110px; }
+
+     .mb-element-basesourceswitcher li[data-sourceset='11'] {
+          background: url("webatlas_grey.png");
+          width: 110px;
+          height: 110px; }
+
+     .mb-element-basesourceswitcher li[data-sourceset='10'] {
+          background: url("webatlas_color.png");
+          width: 110px;
+          height: 110px; }
+
 YAML-Definition:
 ----------------
 
@@ -46,6 +114,9 @@ YAML-Definition:
             sources: [sourceId]}                        # sourceset: title,
                                                         # group: (optional) group name to group of sourcesets by "group name"
                                                         # sources list of sources
+      sourcesets:                                    
+        - { title: sourcesetname, group: groupname,
+            sources: [sourceId]}  
         
 
 Class, Widget & Style
