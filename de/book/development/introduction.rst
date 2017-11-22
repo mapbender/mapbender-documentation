@@ -1,15 +1,15 @@
 Einführung
 ############
 
-Diese Dokumentation ist an Mapbender3-Entwickler gerichtet und behandelt Themen, die von Mapbender3-Administratoren und -Benutzern nicht benötigt werden.
+Diese Dokumentation ist an Mapbender-Entwickler gerichtet und behandelt Themen, die von Mapbender-Administratoren und -Benutzern nicht benötigt werden.
 
 Dinge, die Sie wissen sollten
 *****************************
 
-Sie sollten einige Dinge wissen, um an der Mapbender3-Entwicklung mitwirken zu können:
+Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu können:
 
 * Objektorientiertes PHP: Verwendet wird PHP 5.3, das volle Objekt-Orientierung anbietet. Es gibt keine einfachen Skripte mehr.
-* Symfony2: Mapbender3 baut auf Sympfony2 auf. Folgen Sie der Anleitung `Symphony
+* Symfony2: Mapbender baut auf Sympfony2 auf. Folgen Sie der Anleitung `Symphony
   <http://symfony.com/doc/current/index.html>`_ dort erfahren Sie mehr über Controller, Vorlagen usw.
 * Docblock-Anmerkungen: Es wird ApiGen zu Erstellung der Dokumentation verwendet. 
   :doc:`Erfahren Sie mehr <apidocumentation>`.
@@ -28,7 +28,7 @@ Wo gibt es Hilfe?
 
 Mailinglisten
 
-* `Mapbender3-Developer und -Anwender Mailingliste <http://mapbender3.org/?q=de/node/16>`_
+* `Mapbender-Developer und -Anwender Mailingliste <http://mapbender.org/?q=de/node/16>`_
 
 Bibliotheken und Frameworks:
 

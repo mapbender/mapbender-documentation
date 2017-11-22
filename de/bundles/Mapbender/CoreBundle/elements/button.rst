@@ -128,7 +128,7 @@ YAML-Definition:
     icon: ~       # Symbol verwendete CSS Klasse
     label: true   # false/true, um den Button zu beschriften. Der Standardwert ist true.
     target: ~     # Titel (Id) des Zielelements
-    click:        # bezieht sich auf eine Webseite oder ein Skript, z.B.: http://mapbender3.org
+    click:        # bezieht sich auf eine Webseite oder ein Skript, z.B.: http://mapbender.org
     group: ~      # Gruppe, in die der Button eingefügt werden soll. Nur ein Button pro Gruppe kann aktiviert sein.
     action: ~     # Methode, die aufgerufen wird, wenn der Button aktiviert wird. 
     deactivate: ~ # Methode, die aufgerufen wird, wenn der Button deaktiviert wird

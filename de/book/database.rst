@@ -6,7 +6,7 @@ Allgemein
 
 Zur Konfiguration der Datenbankverbindung werden die Dateien config.yml und parameters.yml verwendet (siehe auch `die Symfony Dokumentation <http://symfony.com/doc/current/best_practices/configuration.html>`_). Während in der config.yml nur die Platzhalter angegeben werden, werden die Werte in der parameters.yml gefüllt.
 
-Beispiele zur Einrichtung finden sich in den `Installationsanleitungen <installation.html>`_, so z.B. im Kapitel `Einrichtung von Mapbender3 unter Ubuntu oder Debian <installation/installation_ubuntu.html#mapbender3-einrichtung>`_.
+Beispiele zur Einrichtung finden sich in den `Installationsanleitungen <installation.html>`_, so z.B. im Kapitel `Einrichtung von Mapbender unter Ubuntu oder Debian <installation/installation_ubuntu.html#mapbender-einrichtung>`_.
 
 
 .. _doctrine:
@@ -14,7 +14,7 @@ Beispiele zur Einrichtung finden sich in den `Installationsanleitungen <installa
 Doctrine
 *************
 
-Mapbender3 verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht. 
+Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht. 
 Auf der `Doctrine Projektseite <http://www.doctrine-project.org/>`_ finden sich weitere Informationen.
 
 
@@ -46,7 +46,7 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgenderma�
 
 Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Variablen. Diese Variablen werden aus der parameters.yml geladen. Um die Verbindung zur Datenbank zu ändern, müssen daher die Werte der Variablen in der parameters.yml verändert werden.
 
-Der Parameter "default_connection" gibt die Datenbankverbindung an, die standardmäßig von Mapbender3 verwendet werden soll (``default_connection: default``).
+Der Parameter "default_connection" gibt die Datenbankverbindung an, die standardmäßig von Mapbender verwendet werden soll (``default_connection: default``).
 
 * database_driver: Der Datenbanktreiber. Mögliche Werte sind:
 
@@ -60,7 +60,7 @@ Der Parameter "default_connection" gibt die Datenbankverbindung an, die standard
 
 * database_host: Der Host, auf dem die Datenbank läuft. Entweder der Name (z.B. localhost) oder die IP-Adresse (z.B. 127.0.0.1).
 * database_port: Der Port, auf dem die Datenbank lauscht (z.B. 5432 für PostgreSQL).
-* database_name: Der Name der Datenbank (z.B. mapbender3). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <installation.html>`_ für Details.
+* database_name: Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <installation.html>`_ für Details.
 * database_path: Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, löschen Sie bitte den Parameter trotzdem nicht aus der parameters.yml, sondern schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
 * database_user: Benutzername für die Verbindung zur Datenbank.
 * database_password: Das Passwort des Datenbankbenutzers.
@@ -72,9 +72,9 @@ Der Parameter "default_connection" gibt die Datenbankverbindung an, die standard
 Verwendung mehrerer Datenbanken
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mit Mapbender3 können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender3-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender3-Bundle gehört. EIne zweite Datenbank benötigen Sie ebenfalls für die Geodatensuche (über den SearchRouter) und die Datenerfassung (Digitizer). Die Geodaten sollten grundsätzlich in einer anderen DAtenbank vorgehalten werden und nicht in der Mapbender3 Datenbank.
+Mit Mapbender können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender-Bundle gehört. EIne zweite Datenbank benötigen Sie ebenfalls für die Geodatensuche (über den SearchRouter) und die Datenerfassung (Digitizer). Die Geodaten sollten grundsätzlich in einer anderen DAtenbank vorgehalten werden und nicht in der Mapbender Datenbank.
 
-Die Standard-Datenbankverbindung (``default_connection: default``) wird von Mapbender3 verwendet.
+Die Standard-Datenbankverbindung (``default_connection: default``) wird von Mapbender verwendet.
 
 Wenn Sie eine weitere Datenbank verwenden möchten, müssen Sie eine zweite Datenbankverbindung mit einem anderen Namen definieren.
 
@@ -121,7 +121,7 @@ Die Definition der Datenbank Variablen (Angabe der Zugangsinformationen) wird in
         database_driver:   pdo_pgsql
         database_host:     localhost
         database_port:     5432
-        database_name:     mapbender3
+        database_name:     mapbender
         database_path:     ~
         database_user:     postgres
         database_password: postgres

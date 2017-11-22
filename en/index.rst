@@ -1,5 +1,5 @@
-Welcome to Mapbender3's documentation!
-######################################
+Welcome to the Mapbender documentation!
+#######################################
 
 Contents:
 

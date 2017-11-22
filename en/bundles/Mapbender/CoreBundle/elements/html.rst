@@ -16,7 +16,7 @@ For example you can add an image to your application:
 
 .. code-block:: yaml
 
-    <img src='http://mapbender3.org/sites/default/files/OSGeo_project.png' height='60px'>
+    <img src='http://mapbender.org/sites/default/files/OSGeo_project.png' height='60px'>
 
 
 .. image:: ../../../../../figures/html.png
@@ -65,12 +65,12 @@ Add an image
 
 .. code-block:: yaml
 
-   <img src='http://mapbender3.org/sites/default/files/OSGeo_project.png'>
+   <img src='http://mapbender.org/sites/default/files/OSGeo_project.png'>
 
 
 Add an Link
 
 .. code-block:: yaml
 
-  <a href='http://mapbender3.org' target='_blank'>Go to the Mapbender3 Webside</a>
+  <a href='http://mapbender.org' target='_blank'>Go to the Mapbender Website</a>
 

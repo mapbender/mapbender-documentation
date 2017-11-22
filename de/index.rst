@@ -1,5 +1,5 @@
-Willkommen bei der Mapbender3 Dokumentation
-###########################################
+Willkommen bei der Mapbender Dokumentation
+##########################################
 
 Inhalt:
 
@@ -11,7 +11,7 @@ Inhalt:
    development
 
 Indizes und Tabellen
-====================================
+====================
 
 * :ref:`genindex`
 * :ref:`modindex`

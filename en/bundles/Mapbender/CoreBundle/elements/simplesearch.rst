@@ -41,7 +41,7 @@ Configuration
 * **Delay:** Autocomplete delay. Use 0 to disable autocomplete (e.g. ``300``).
 * **Result buffer:** buffer result geometry with this (map units) before zooming (e.g. ``10``).
 * **Result minscale/ maxscale:** scale restrictions for zooming, ~ for none  (e.g. ``1000`` und ``5000``).
-* **Result icon url:** icon to display as result marker (e.g. ``http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png``).
+* **Result icon url:** icon to display as result marker (e.g. ``http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png``).
 * **Result icon offset:**  Offset x and y for the icon (e.g. ``0,0``).
 
 
@@ -66,7 +66,7 @@ YAML-Definition
    result_buffer: 50                                                             # buffer result geometry with this (map units) before zooming
    result_minscale: 1000                                                         # scale restrictions for zooming, ~ for none
    result_maxscale: 5000
-   result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png # icon to display as result marker
+   result_icon_url: http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png # icon to display as result marker
    result_icon_offset: -6,-38                                                    # Offset x and y for the icon
    
 

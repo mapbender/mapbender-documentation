@@ -6,7 +6,7 @@ System requirements and download
 System requirements
 *******************
 
-Mapbender3 needs the following components in order to run:
+Mapbender needs the following components in order to run:
 
 * PHP 5.5.4 or later (php5)
 * PHP CLI interpreter (php5-cli)
@@ -28,7 +28,7 @@ For Suse SLES and PHP 7 you also have to install (extra packages in SLES):
 PHP 7
 -----
 
-Mapbender3 supports also PHP 7. You'll need the above listed libraries for PHP 7 and the following additional ones:
+Mapbender supports also PHP 7. You'll need the above listed libraries for PHP 7 and the following additional ones:
 
 * PHP Zip (php-zip)
 * PHP Bz2 (php-bz2)
@@ -67,17 +67,17 @@ The Apache downloads differ on the version of Visual Studio which was used to co
 Additionally 32- and 64-bit versions of Apache für Windows exist.
 
 
-Download of Mapbender3
-**********************
+Download of Mapbender
+*********************
 
-Installation packages are distributed as compressed packages and are available for download at the `download <http://mapbender3.org/download>`_ page.
+Installation packages are distributed as compressed packages and are available for download at the `download <http://mapbender.org/download>`_ page.
 
 After downloading, extract the package in a directory of your choice. In this installation documentation we assume that the package is extracted in the following directories:
 
 * **/var/www** (for Linux) or
 * **C:/** (for Windows, not recommended, for this doku only).
 
-For the following installation steps, please rename the unzipped directory (for example: "mapbender3-3.0.5.2") to "mapbender3".
+For the following installation steps, please rename the unzipped directory (for example: "mapbender3-3.0.5.2") to "mapbender".
 
 You'll find the next steps of the installation in the following chapters:
 
@@ -85,7 +85,7 @@ You'll find the next steps of the installation in the following chapters:
 * `Installation on Windows <installation_windows.html>`_
 
 
-For a quick Test you can also follow the `Installation in the Symfony built-in webserver <installation_symfony.html>`_. The `Git-based installation <installation_git.html>`_ does not require theses Download packages but loads Mapbender3 from the Git-sources. In exchange additional installation steps are neccessary.
+For a quick Test you can also follow the `Installation in the Symfony built-in webserver <installation_symfony.html>`_. The `Git-based installation <installation_git.html>`_ does not require theses Download packages but loads Mapbender from the Git-sources. In exchange additional installation steps are neccessary.
 
 
 Directory structure

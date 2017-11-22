@@ -4,7 +4,7 @@ Request / Response Workflow
 *Anmerkung:* Wir werden die englische Dokumentation in den `Contributing Guide für Entwickler <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ verschieben.
 
 
-Dieses Dokument erklärt den Request/Response Workflow von Mapbender3. Es existieren drei Abläufe, die bekannt sein sollten:
+Dieses Dokument erklärt den Request/Response Workflow von Mapbender. Es existieren drei Abläufe, die bekannt sein sollten:
 
 * Anwendungs Workflow
 * Element Workflow 

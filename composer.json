@@ -1,6 +1,6 @@
 {
     "name": "mapbender/documentation",
-    "description": "Mapbender3 documentation",
+    "description": "Mapbender documentation",
     "keywords": ["mapbender", "documentation"],
     "type": "library",
     "license": "MIT",

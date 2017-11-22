@@ -3,7 +3,7 @@
 Feature Info
 ************
 
-This element provides feature info capabilities to Mapbender3. It works for WMS services.
+This element provides feature info capabilities to Mapbender. It works for WMS services.
 
 .. image:: ../../../../../figures/feature_info.png
      :scale: 80
@@ -24,7 +24,7 @@ Configuration
 * **Display:** Display of the information, Tabs or Accordion. 
 * **Width/ Height:** width/ height of the dialog in px, default is 700/500.
 * **Show original:** show the css-style of the original feature info result, default is false.
-* **Only valid:** The parameter "Only valid" highly depends on the format of the GetFeatureInfo response. Example UMN: as long as the template defines a correct HTML head and body element (for example by referencing a header and footer file), Mapbender3 will interpret the result as valid. Are these head and body elements missing, Mapbender will interpret the result as not valid.
+* **Only valid:** The parameter "Only valid" highly depends on the format of the GetFeatureInfo response. Example UMN: as long as the template defines a correct HTML head and body element (for example by referencing a header and footer file), Mapbender will interpret the result as valid. Are these head and body elements missing, Mapbender will interpret the result as not valid.
 
   * Please make sure, that the GetFeatureInfo Response is a valid HTML.
   * If you have defined ``text/plan`` as output-format, the switch ``only valid`` must not be activated because ``text/plain`` doesn't return valid HTML.

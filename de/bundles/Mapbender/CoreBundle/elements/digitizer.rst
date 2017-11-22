@@ -55,7 +55,7 @@ Das Element kann nur in der Sidepane eingebettet werden.
 * **Schemes:** YAML-Definition für das Element "digitizer"
 
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
-Mehr zu diesem Thema finden Sie unter http://doc.mapbender3.org/de/book/database.html
+Mehr zu diesem Thema finden Sie unter http://doc.mapbender.org/de/book/database.html
 
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
@@ -120,7 +120,7 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
                  css: {padding: 10px}
                  children:
                      - type: label
-                       title: Welcome to the digitize demo. Try the new Mapbender3 feature!
+                       title: Welcome to the digitize demo. Try the new Mapbender feature!
                      - type: input
                        title: Name
                        mandatory: true
@@ -224,7 +224,7 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
              css: {padding: 10px}
              children:
                  - type: label
-                   title: Welcome to the digitize demo. Try the new Mapbender3 feature!
+                   title: Welcome to the digitize demo. Try the new Mapbender feature!
                  - type: input
                    title: Name
                    name: name
@@ -283,7 +283,7 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
              css: {padding: 10px}
              children:
                  - type: label
-                   title: Welcome to the digitize demo. Try the new Mapbender3 feature!
+                   title: Welcome to the digitize demo. Try the new Mapbender feature!
                  - type: input
                    title: Name
                    mandatory: true
@@ -550,7 +550,7 @@ Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu d
                  css: {padding: 10px}
                  children:                   # Durch mehrere Unterobjekte in Gruppen können Angaben im Formular nebeneinander angeordnet werden.
                      - type: label
-                       title: Welcome to the digitize demo. Try the new Mapbender3 feature!
+                       title: Welcome to the digitize demo. Try the new Mapbender feature!
                        ...
 
 
@@ -791,7 +791,7 @@ Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Au
 Dateiupload (type file)
 -----------------------
 
-Über den Dateiupload können Dateien durch die Angabe in einer Datenbankspalte im Formular verknüpft werden. Dazu werden die hochgeladenen Dateien im Mapbender3 gespeichert und der Pfad in der Spalte vermerkt.
+Über den Dateiupload können Dateien durch die Angabe in einer Datenbankspalte im Formular verknüpft werden. Dazu werden die hochgeladenen Dateien im Mapbender gespeichert und der Pfad in der Spalte vermerkt.
 
 Der Speicherpfad und der Name der abgespeicherten Dateien kann bis jetzt nicht verändert werden. Der Dateiupload speichert immer in das gleiche Verzeichnis und baut sich aus den Parametern:
 

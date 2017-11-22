@@ -3,13 +3,13 @@
 Components
 #####################
 
-Mapbender3 is made up of different components. On the server side we use Symfony2 as a framework which comes along with powerfull components like Doctrine, Twig, Monolog and more.
+Mapbender is made up of different components. On the server side we use Symfony2 as a framework which comes along with powerfull components like Doctrine, Twig, Monolog and more.
 
 On the client side we use OpenLayers, MapQuery and jQuery & jQuery UI.
 
 We have a Mapbender core bundle with the Mapbender basic functionalities. And more Mapbender bundles which are optional.
 
-We offer a Mapbender Starter package. With the Mapbender Starter package you can set up a Mapbender3 installation easily.
+We offer a Mapbender Starter package. With the Mapbender Starter package you can set up a Mapbender installation easily.
 
   .. image:: ../../figures/mapbender3_components.png
      :scale: 60
@@ -67,7 +67,7 @@ MapQuery
   :align: center
   :target: http://mapquery.org/
 
-MapQuery implements a jQuery interface to OpenLayers. It provides a set of mapping related widgets. In Mapbender3 MapQuery is used to interact with OpenLayers.
+MapQuery implements a jQuery interface to OpenLayers. It provides a set of mapping related widgets. In Mapbender MapQuery is used to interact with OpenLayers.
 
 Read more about MapQuery at http://mapquery.org/
 
@@ -88,9 +88,9 @@ jQuery is a feature-rich JavaScript library. jQuery UI is a set of user interfac
  http://jqueryui.com/
 
 
-Mapbender3
+Mapbender
 **********
-Mapbender3 is a collection of bundles. Only the MapbenderCoreBundle and the FOMBundles are mandatory.
+Mapbender is a collection of bundles. Only the MapbenderCoreBundle and the FOMBundles are mandatory.
 
 There are optional bundles like:
 
@@ -111,18 +111,18 @@ It provides jQuery, jQuery UI, OpenLayers and MapQuery for all other Mapbender b
 
 Mapbender Starter
 *****************
-Mapbender Starter is Symfony2 demo project which uses the Mapbender bundles to showcase a Mapbender3 application.
+Mapbender Starter is Symfony2 demo project which uses the Mapbender bundles to showcase a Mapbender application.
 
 It contains demo applications which are defined in the mapbender.yml with WMS, WMTS. It provides a web interface with authentication which provides the possibility to create applications, create users/groups and build up a service repository.
 
-Mapbender Starter can be used as a boiler template to start Mapbender3 projects.
+Mapbender Starter can be used as a boiler template to start Mapbender projects.
 
 
 External Repositories
 *********************
-You find more code connected to Mapbender3 at GitHub, which is not part of the main project. Other providers can offer Bundles for Mapbender3 like the DesktopIntegrationBundle which is provided by `WhereGroup <http://wheregroup.com>`__ and sponsored by customers.
+You find more code connected to Mapbender at GitHub, which is not part of the main project. Other providers can offer Bundles for Mapbender like the DesktopIntegrationBundle which is provided by `WhereGroup <http://wheregroup.com>`__ and sponsored by customers.
 
-WhereGroup offers Bundles for Mapbender3 at:
+WhereGroup offers Bundles for Mapbender at:
  https://github.com/WhereGroup
 
 

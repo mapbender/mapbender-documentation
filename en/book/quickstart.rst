@@ -28,14 +28,14 @@
   :align: right
 
 ########################
-Mapbender3 Quickstart 
+Mapbender Quickstart 
 ########################
 
 Mapbender is a web based geoportal framework to publish, register, view, navigate, monitor and grant secure access to spatial data infrastructure services. 
 
 Management interfaces empower administrators who need to maintain and categorize map and feature services and grant access to individuals, groups and other services. 
 
-Mapbender3 is the next version in the Mapbender series. It is rewritten from the ground up, using modern web technologies. The foundation is laid by Symfony 2, the brand-new version of the successful Symfony PHP web application framework. On the client-side expect to find OpenLayers and jQuery (UI) nicely glued together by MapQuery.
+Mapbender is the next version in the Mapbender series. It is rewritten from the ground up, using modern web technologies. The foundation is laid by Symfony 2, the brand-new version of the successful Symfony PHP web application framework. On the client-side expect to find OpenLayers and jQuery (UI) nicely glued together by MapQuery.
 
 With this new code base we will continue the Mapbender idea of being a Geoportal Framework:
 
@@ -66,7 +66,7 @@ This is how a Mapbender application can look like:
 
 Installation
 ===============
-For the installation of Mapbender3 have a look at http://doc.mapbender3.org/en/book/installation.html.
+For the installation of Mapbender have a look at http://doc.mapbender.org/en/book/installation.html.
 
 Start Mapbender
 ================================================================================
@@ -146,7 +146,7 @@ Create a new application by providing basic information about your application. 
 
 #. upload an image file as screenshot for the application overview
 
-#. choose a template for your application. The template defines the structure of the application. Mapbender3 provides some templates for you (Fullscreen, Classic,...). You also can define your own template.
+#. choose a template for your application. The template defines the structure of the application. Mapbender provides some templates for you (Fullscreen, Classic,...). You also can define your own template.
 
 #. choose the button **Create** to create the application
 
@@ -158,7 +158,7 @@ Your application is set up. Now you need Elementes (modules) like (map, legend, 
   .. image:: ../../figures/mapbender3_create_application.png
      :scale: 80
 
-.. tip:: Please note, that the style-, icon- and layoutconfiguration has to be done in css- and twig-files at the moment. Read more about template generation at http://doc.mapbender3.org/en/book/templates.html
+.. tip:: Please note, that the style-, icon- and layoutconfiguration has to be done in css- and twig-files at the moment. Read more about template generation at http://doc.mapbender.org/en/book/templates.html
 
 
 Copy or rename an application
@@ -178,7 +178,7 @@ You can export applications as JSON or YAML with ``Applications --> Export``. Yo
   .. image:: ../../figures/mapbender3_application_export.png
      :scale: 80
 
-The exportfile contains all the definitions of the application/s (sources) and can be imported via ``Applications --> Import`` in another Mapbender3 installation or in the same installation. 
+The exportfile contains all the definitions of the application/s (sources) and can be imported via ``Applications --> Import`` in another Mapbender installation or in the same installation. 
 
   .. image:: ../../figures/mapbender3_application_import.png
      :scale: 80
@@ -205,7 +205,7 @@ Source Repository overview
 
 Loading Web Map Services
 ================================================================================
-You can load OGC Web Map Services (WMS) to your application. Mapbender3 supports Version 1.1.1 and 1.3.0.
+You can load OGC Web Map Services (WMS) to your application. Mapbender supports Version 1.1.1 and 1.3.0.
 
 A WMS returns an XML-file when the getCapabilities document is requested. This information is parsed by Mapbender and Mapbender gets all the necessary information about the service from this XML
 
@@ -292,7 +292,7 @@ You can define Vendor Specific Parameters in a layerset instance to add them
 to a WMS request. This principle follows Multi-Dimensions in the WMS
 specification.
 
-You can use Vendor Specific Parameters in Mapbender3 for example to add the
+You can use Vendor Specific Parameters in Mapbender for example to add the
 user- and group information of the logged-in user to a WMS request. You can
 also add hard coded values.
 
@@ -308,7 +308,7 @@ transfers the group-value of the logged-in user.
 * Name: parameter name of the WMS request.
 * Default: the default value.
 * Extent: available values (multiple as a comma seperated list).
-* Vstype: Mapbender3 specific variables. Group (groups), User (users), Simple.
+* Vstype: Mapbender specific variables. Group (groups), User (users), Simple.
 * Hidden: If this value is set, requests are send via a server so that the parameters are not directly visible.
 
 Currently, the element can be used to transfer user- and groupinformation,
@@ -340,7 +340,7 @@ Mapbender offers a set of elements. You can add the elements to your application
   .. image:: ../../figures/mapbender3_application_add_element.png
      :scale: 80
 
-#. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layouts --> Button`` |mapbender3-button-add| to get an overview over the elements Mapbender3 provides.
+#. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layouts --> Button`` |mapbender3-button-add| to get an overview over the elements Mapbender provides.
 
 #. Choose an element from the list.
 
@@ -357,7 +357,7 @@ Now you should get an idea how easy it is to change a Mapbender application with
   .. image:: ../../figures/mapbender3_application_elements.png
      :scale: 80
 
-Examples for elements Mapbender3 offers:
+Examples for elements Mapbender offers:
 
 * About Dialog
 * Activity Indicator
@@ -387,7 +387,7 @@ Examples for elements Mapbender3 offers:
 * WMC Loader
 * WMC List 
 
-You find detailed information on every element at the `MapbenderCoreBundle element documentation <http://doc.mapbender3.org/en/bundles/Mapbender/CoreBundle/index.html>`_, `MapbenderWmcBundle element documentation <http://doc.mapbender3.org/en/bundles/Mapbender/WmcBundle/index.html>`_ and `MapbenderWmsBundle element documentation <http://doc.mapbender3.org/en/bundles/Mapbender/WmsBundle/index.html>`_.
+You find detailed information on every element at the `MapbenderCoreBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/CoreBundle/index.html>`_, `MapbenderWmcBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/WmcBundle/index.html>`_ and `MapbenderWmsBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/WmsBundle/index.html>`_.
 
 
 Try it yourself
@@ -452,7 +452,7 @@ Assign users to group
 
 Roles
 ================================================================================
-Mapbender3 provides different rights. They refer to the Symfony ACL System http://symfony.com/doc/2.1/cookbook/security/acl_advanced.html#built-in-permission-map
+Mapbender provides different rights. They refer to the Symfony ACL System http://symfony.com/doc/2.1/cookbook/security/acl_advanced.html#built-in-permission-map
 
 * view - Whether someone is allowed to view the object.
 * edit - Whether someone is allowed to make changes to the object.
@@ -523,7 +523,7 @@ To pass a single POI, use the following URL format:
 
 * ?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
-* http://demo.mapbender3.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
+* http://demo.mapbender.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
   .. image:: ../../figures/mapbender3_position_poi_label.png
      :scale: 80
@@ -547,23 +547,23 @@ Here are some additional challenges for you to try:
 What Next?
 ================================================================================
 
-This is only the first step on the road to using Mapbender3. There is a lot more functionality you can try.
+This is only the first step on the road to using Mapbender. There is a lot more functionality you can try.
 
 Mapbender Project home
 
   http://mapbender.org
 
-Mapbender3 Webside
+Mapbender Website
 
-  http://mapbender3.org/
+  http://mapbender.org/
 
 You find tutorials at
 
-  http://doc.mapbender3.org
+  http://doc.mapbender.org
 
 API-Documentation
 
-  http://api.mapbender3.org
+  http://api.mapbender.org
 
 Get to know Mapbender on 
 	

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Mapbender3 documentation build configuration file, created by
+# Mapbender documentation build configuration file, created by
 # sphinx-quickstart on Sun Jul  8 00:08:58 2012.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -62,7 +62,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Mapbender3'
+project = u'Mapbender'
 copyright = u'2017, The Mapbender Team'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -125,10 +125,10 @@ html_theme_path = ['_theme']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Mapbender3 Documentation'
+html_title = 'Mapbender Documentation'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = 'Mapbender3 Documentation'
+html_short_title = 'Mapbender Documentation'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -186,7 +186,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Mapbender3doc'
+htmlhelp_basename = 'Mapbenderdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -205,7 +205,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Mapbender3.tex', u'Mapbender3 Documentation',
+  ('index', 'Mapbender.tex', u'Mapbender Documentation',
    u'The Mapbender Team', 'manual'),
 ]
 
@@ -235,7 +235,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'mapbender3', u'Mapbender3 Documentation',
+    ('index', 'mapbender', u'Mapbender Documentation',
      [u'The Mapbender Team'], 1)
 ]
 
@@ -249,8 +249,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Mapbender3', u'Mapbender3 Documentation',
-   u'The Mapbender Team', 'Mapbender3', 'One line description of project.',
+  ('index', 'Mapbender', u'Mapbender Documentation',
+   u'The Mapbender Team', 'Mapbender', 'One line description of project.',
    'Miscellaneous'),
 ]
 

@@ -3,7 +3,7 @@
 Wie werden eigene Vorlagen (templates) erzeugt?
 ###############################################
 
-Mapbender3 beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Vorlage mit Ihrem eigenen Corporate Design verwendet werden. Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im Mapbender CoreBundle (application/mapbender/src/Mapbender/CoreBundle). Für eigene Vorlagen sollten Sie ein eigenes Bundle verwenden, um Probleme bei einem Upgrade zu vermeiden.
+Mapbender beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Vorlage mit Ihrem eigenen Corporate Design verwendet werden. Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im Mapbender CoreBundle (application/mapbender/src/Mapbender/CoreBundle). Für eigene Vorlagen sollten Sie ein eigenes Bundle verwenden, um Probleme bei einem Upgrade zu vermeiden.
 
 Ab der Version 3.0.4.0 kann der Stil einer Anwendung über den css-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter :doc:`Wie kann der Stil einer Anwendung mit dem css-Editor angepasst werden? <css>`.
 
@@ -167,7 +167,7 @@ Eigene css-Datei erzeugen
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Erzeugen Sie eine leere css-Datei und geben Sie in dieser nur die css-Definitionen an. 
-Ab der Mapbender3 Version 3.0.3.0 muss lediglich das css definiert werden, das vom Standard der Elemente abweicht.
+Ab der Mapbender Version 3.0.3.0 muss lediglich das css definiert werden, das vom Standard der Elemente abweicht.
 
 Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre css-Datei kopieren und hier anpassen.
 
@@ -319,7 +319,7 @@ Sie finden die mapbender.yml unter:
 Verwenden der neuen Vorlage in der Mapbender Administration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wenn Sie eine neue Anwendung mit der Mapbender3-Administration erzeugen, können Sie eine Vorlage (Template) auswählen.
+Wenn Sie eine neue Anwendung mit der Mapbender-Administration erzeugen, können Sie eine Vorlage (Template) auswählen.
 
 Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
@@ -336,14 +336,14 @@ Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             ....
 
-            // Extra bundles required by Mapbender3/OWSProxy3
+            // Extra bundles required by Mapbender/OWSProxy3
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
             // FoM bundles
             new FOM\CoreBundle\FOMCoreBundle(),
             ...
     
-            // Mapbender3 bundles
+            // Mapbender bundles
             new Mapbender\CoreBundle\MapbenderCoreBundle(),
             ...
 
@@ -391,7 +391,7 @@ Die folgenden Dateien müssen bearbeitet werden:
 Wie kann das Logo verändert werden?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Das Logo (Standard ist das Mapbender3 Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender3 Installation aus.
+Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
@@ -422,7 +422,7 @@ Der Anwendungstitel und das favicon kann auch in der twig-Datei angepasst werden
 Wie können Buttons geändert werden?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mapbender3 verwendet Schrift-Icons auf der FontAwesome Collection:
+Mapbender verwendet Schrift-Icons auf der FontAwesome Collection:
 
 .. code-block:: css
 
