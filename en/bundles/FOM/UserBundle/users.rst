@@ -40,7 +40,7 @@ The functionality can be switched off in the config.yml.
 Registering
 -----------
 
-Users can selfregister themselves in Mapbender. For this you have to adjust
+Users can selfregister themselves in Mapbender3. For this you have to adjust
 the setting fom_user:selfregister in the config.yml to true.
 
 .. code-block:: yaml
@@ -55,7 +55,7 @@ user can type in his/her name, password and e-mail adresss.
 
 
 After that he gets a confirmation mail to complete the registration. Until
-that time he is only managed as inactive user in Mapbender.
+that time he is only managed as inactive user in Mapbender3.
 
 The text of the confirmation mail can be customized in the
 /FOM/UserBundle/Resources/translations/messages.en.xlf file.
@@ -72,7 +72,7 @@ A user with administration rights cannot activate or deactivate himself.
 
 .. image:: ../../../../en/bundles/FOM/UserBundle/edit_user_activated.png
 
-A user who is deactivated cannot login into Mapbender anymore until he gets
+A user who is deactivated cannot login into Mapbender3 anymore until he gets
 activated again.
            
 .. image:: ../../../../en/bundles/FOM/UserBundle/user_account_is_disabled.png

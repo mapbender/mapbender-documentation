@@ -17,7 +17,7 @@ This glossary is under construction.
         ApiGen is a tool used to generate API documentation.
 
         .. seealso::
-            `ApiGen <http://doc.mapbender.org/en/book/installation_git.html#apigen>`_
+            `ApiGen <http://doc.mapbender3.org/en/book/installation_git.html#apigen>`_
 
     Bundle        
 
@@ -159,7 +159,7 @@ This glossary is under construction.
             :ref:`twig`
 
     XLIFF
-        XLIFF is a file format and stands for XML Localization Interchange File Format. The translations can be stored in different formats. We use XLIFF-format for Mapbender. Symfony will take the XLIFF-loader to load and parse the file.
+        XLIFF is a file format and stands for XML Localization Interchange File Format. The translations can be stored in different formats. We use XLIFF-format for Mapbender3. Symfony will take the XLIFF-loader to load and parse the file.
 
         .. seealso::
             :ref:`translation`    

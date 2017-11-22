@@ -19,7 +19,7 @@ Konfiguration
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Icon:** Symbol des Buttons, basierend auf einer CSS Klasse.
 * **Target:** Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird. (Bswp.: Drucken)
-* **Click:** Bezieht sich auf eine Webseite oder ein Skript (z.B.: http://mapbender.org)
+* **Click:** Bezieht sich auf eine Webseite oder ein Skript (z.B.: http://mapbender3.org)
 * **Group:** Hiermit kann das Element einer Gruppe hinzugefügt werden. Aus der Gruppe kann nur ein Button aktiviert sein.
 * **Action:** Methode, die aufgerufen wird, wenn der Button aktiviert wird. 
 * **Deactivate:** Methode, die aufgerufen wird, wenn der Button deaktiviert wird
@@ -54,7 +54,7 @@ YAML-Definition:
     icon: ~       # Symbol verwendete CSS Klasse
     label: true   # false/true, um den Button zu beschriften. Der Standardwert ist true.
     target: ~     # Titel (Id) des Zielelements
-    click:        # bezieht sich auf eine Webseite oder ein Skript, z.B.: http://mapbender.org
+    click:        # bezieht sich auf eine Webseite oder ein Skript, z.B.: http://mapbender3.org
     group: ~      # Gruppe, in die der Button eingefügt werden soll. Nur ein Button pro Gruppe kann aktiviert sein.
     action: ~     # Methode, die aufgerufen wird, wenn der Button aktiviert wird. 
     deactivate: ~ # Methode, die aufgerufen wird, wenn der Button deaktiviert wird

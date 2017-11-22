@@ -1,9 +1,9 @@
 .. _translation:
 
-Translation in Mapbender
-########################
+Translation in Mapbender3
+#########################
 
-Mapbender uses the translator service which is a Symfony component. You get more information at the `Symfony Translation Documentation <http://symfony.com/doc/2.8/book/translation.html>`_ and `Translator Class Documentation <http://api.symfony.com/2.8/Symfony/Component/Translation.html>`_ . 
+Mapbender3 uses the translator service which is a Symfony component. You get more information at the `Symfony Translation Documentation <http://symfony.com/doc/2.8/book/translation.html>`_ and `Translator Class Documentation <http://api.symfony.com/2.8/Symfony/Component/Translation.html>`_ . 
 
 In the code you use the function **trans** to translate a text into another language.
 
@@ -29,7 +29,7 @@ Example for PHP:
 
 yml-files for translations
 ****************************
-The translations can be stored in different formats. We use yml-format for Mapbender. 
+The translations can be stored in different formats. We use yml-format for Mapbender3. 
 
 We use place holder for every text e.g. **mb.core.featureinfo.popup.btn.ok**. Like this you can define different translations for the same word which occurs in different modules.
 
@@ -60,8 +60,8 @@ This is how a translation file messages.de.yml for German translation could look
         aboutdialog:
           content:
             versionprefix: Version
-            learnmore: 'Lernen Sie Mapbender kennen '
-            linktitle: 'Besuchen Sie die offizielle Mapbender Webseite.'
+            learnmore: 'Lernen Sie Mapbender3 kennen '
+            linktitle: 'Besuchen Sie die offizielle Mapbender3 Webseite.'
             website: '- zur Webseite'
             .....        
 
@@ -105,7 +105,7 @@ If your language is not translated yet, it is easy to add a new language.
 * translate
 * set locale in your parameters.yml to the new language
 * clear your cache
-* if everything is fine with your new language give the files to the Mapbender community - best would be a pull request or send the files to mapbender@osgeo.org
+* if everything is fine with your new language give the files to the Mapbender3 community - best would be a pull request or send the files to mapbender@osgeo.org
 
 
 Naming conventions and locations
@@ -128,10 +128,10 @@ The naming convention is **domain.locale.loader**.
 * loader    - defines the loader to load and parse the file. We use YAML
 
 
-Share your translations with the Mapbender community!
-*****************************************************
+Share your translations with the Mapbender3 community!
+******************************************************
 
-Supporting more and more language would be great for Mapbender. The Mapbender project would be happy if you could share your translations with the community.
+Supporting more and more language would be great for Mapbender3. The Mapbender project would be happy if you could share your translations with the community.
 
 This is what you have to do:
 

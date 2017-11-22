@@ -43,7 +43,7 @@ Die Funktionalität kann in der config.yml ausgeschaltet werden.
 Registrierung
 -------------
 
-Benutzer können sich an Mapbender selbst registrieren. Dafür stellt man in
+Benutzer können sich an Mapbender3 selbst registrieren. Dafür stellt man in
 der config.yml die Einstellung fom_user:selfregister auf true.
 
 .. code-block:: yaml
@@ -59,7 +59,7 @@ Adresse angeben kann.
 
 Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung
 abschließen kann. Bis zu diesen Zeitpunkt ist er als inaktiver Nutzer in
-Mapbender hinterlegt.
+Mapbender3 hinterlegt.
 
 Die Texte der Bestätigungsmail können unter
 /FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
@@ -77,7 +77,7 @@ oder deaktivieren.
 
 .. image:: ../../../../en/bundles/FOM/UserBundle/edit_user_activated.png
 
-Ein Benutzer, der deaktiviert ist, kann sich nicht mehr am Mapbender
+Ein Benutzer, der deaktiviert ist, kann sich nicht mehr am Mapbender3
 anmelden, bis er wieder aktiviert wird.
            
 .. image:: ../../../../en/bundles/FOM/UserBundle/user_account_is_disabled.png

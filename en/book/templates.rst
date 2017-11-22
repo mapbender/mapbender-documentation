@@ -3,7 +3,7 @@
 How to create your own Template?
 ################################
 
-Mapbender comes with application templates you can use. But usually you want to use your own template with your own corporate design. 
+Mapbender3 comes with application templates you can use. But usually you want to use your own template with your own corporate design. 
 This document will show you how to create a Workshop DemoBundle for demonstration purposes.
 
 From version 3.0.4.0 on you can change the style of your application with the css-Editor. You find the documentation about the css-editor at :doc:`How to change the style of your application with the css-editor? <css>`.
@@ -203,7 +203,7 @@ Use the existing template from mapbender/src/Mapbender/CoreBundle/Resources/view
 Create your own css-file
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create an empty css-file and fill it with content. From Mapbender version 3.0.3.0 you only have to define the parts that have to look different from the default style of the element.
+Create an empty css-file and fill it with content. From Mapbender3 version 3.0.3.0 you only have to define the parts that have to look different from the default style of the element.
 
 Firebug can help you to find out the styles you want to change.
 
@@ -356,7 +356,7 @@ You find the mapbender.yml at:
 Register your bundle in app/AppKernel.php
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you create a new application through the Mapbender administration you have to choose a template you want to use. 
+When you create a new application through the Mapbender3 administration you have to choose a template you want to use. 
 
 Before your new template will show up you have to register your bundle in the file app/AppKernel.php
 
@@ -373,14 +373,14 @@ Before your new template will show up you have to register your bundle in the fi
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             ....
 
-            // Extra bundles required by Mapbender/OWSProxy3
+            // Extra bundles required by Mapbender3/OWSProxy3
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
             // FoM bundles
             new FOM\CoreBundle\FOMCoreBundle(),
             ...
     
-            // Mapbender bundles
+            // Mapbender3 bundles
             new Mapbender\CoreBundle\MapbenderCoreBundle(),
             ...
 
@@ -432,7 +432,7 @@ You have to edit the following files, if want to change the design
 How to change the logo?
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The logo (default is the Mapbender logo) can be changed in the parameters.yml. Which causes a global change. 
+The logo (default is the Mapbender3 logo) can be changed in the parameters.yml. Which causes a global change. 
 
 .. code-block:: yaml
 
@@ -463,7 +463,7 @@ You can adjust the title and the favicon also in the twig-file:
 How to change the buttons?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mapbender uses Fonts from the FontAwesome collection:
+Mapbender3 uses Fonts from the FontAwesome collection:
 
 .. code-block:: css
 

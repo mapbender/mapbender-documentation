@@ -1,14 +1,14 @@
 Introduction
 ############
 
-This book is targeted at Mapbender developers and will cover useful topics
-not needed by administrators or users of Mapbender installations.
+This book is targeted at Mapbender3 developers and will cover useful topics
+not needed by administrators or users of Mapbender3 installations.
 
 Things you should now
 *********************
 
 There are a couple of things you should be familiar with in order to contribute
-to Mapbender:
+to Mapbender3:
 
 * Object-Orientated PHP: We're using PHP 5.3 which offers full object
   orientation. No simple scripts anymore.
@@ -32,7 +32,7 @@ Getting Help
 
 Malinglists:
 
-* `Mapbender-Developer and -User mailinglist <http://mapbender.org/?q=en/community>`_
+* `Mapbender3-Developer and -User mailinglist <http://mapbender3.org/?q=en/community>`_
 
 
 Libraries and frameworks:

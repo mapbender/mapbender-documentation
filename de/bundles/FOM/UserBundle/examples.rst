@@ -11,7 +11,7 @@ Der Befehl ``app/console fom:user:resetroot`` setzt den User mit der ID 1 zurüc
 
           $ app/console fom:user:resetroot
 
-                Welcome to the Mapbender root account management command  
+                Welcome to the Mapbender3 root account management command  
 
                 Enter the username to use for the root account.
                 Username [root]: root

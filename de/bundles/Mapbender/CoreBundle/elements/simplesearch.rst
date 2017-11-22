@@ -39,7 +39,7 @@ Konfiguration
 * **Delay:** Automatische Vervollständigungs-Verzögerung (z.B. ``300``).
 * **Result buffer:** Puffert das Objekt (in Karteneinheiten) vor dem Zoomen (z.B. ``10``).
 * **Result minscale/ maxscale:** Maßstabsbegrenzung beim Zoomen (z.B. ``1000`` und ``5000``). ~ wenn keine Begrenzung gewünscht wird.
-* **Result icon url:** Symbol, das zur Trefferanzeige verwendet werden soll (z.B. ``http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png``).
+* **Result icon url:** Symbol, das zur Trefferanzeige verwendet werden soll (z.B. ``http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png``).
 * **Result icon offset:** Versatz x und y des Symbols (z.B. ``-6,-38`` für das Stecknadel-Icon).
 
 
@@ -64,7 +64,7 @@ YAML-Definition
    result_buffer: 50                                                             # Puffert den Treffer in Karteneinheiten vor dem Zoomen
    result_minscale: 1000                                                         # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
    result_maxscale: 5000
-   result_icon_url: http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png # Marker, der zur Trefferanzeige verwendet werden soll
+   result_icon_url: http://demo.mapbender3.org/bundles/mapbendercore/image/pin_red.png # Marker, der zur Trefferanzeige verwendet werden soll
    result_icon_offset: -6,-38                                                    # Versatz x und y des Symbols
    
 

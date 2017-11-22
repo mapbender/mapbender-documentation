@@ -1,12 +1,12 @@
 .. _configuration:
 
-Details of the configuration of Mapbender
-=========================================
+Details of the configuration of Mapbender3
+==========================================
 
 Configuration steps
 -------------------
 
-Following we describe the configuration steps of Mapbender a bit further. Configuring your Mapbender installation is made up of the following six steps:
+Following we describe the configuration steps of Mapbender3 a bit further. Configuring your Mapbender3 installation is made up of the following six steps:
 
 * Creating the database
 * Creating the database schema
@@ -15,17 +15,17 @@ Following we describe the configuration steps of Mapbender a bit further. Config
 * Inserting srs parameters (EPSG code definition)
 * Loading the applications of the mapbender.yml to your database
 
-All can be done using the console utility provided by `Symfony2 <http://symfony.com/>`_, on which Mapbender framework is built upon. There's a mayor caveat though you should understand, before continuing:
+All can be done using the console utility provided by `Symfony2 <http://symfony.com/>`_, on which Mapbender3 framework is built upon. There's a mayor caveat though you should understand, before continuing:
 
   | The console utility will write files in the app/cache and app/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
-**Notice:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/ else mapbender/).
+**Notice:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender3/application/ else mapbender3/).
 
 .. code-block:: yaml
 
-   cd mapbender/
+   cd mapbender3/
    or for git based installation 
-   cd mapbender/application
+   cd mapbender3/application
 
 
 
@@ -42,7 +42,7 @@ Your database configuration in the parameters.yml file could look like this when
     database_driver:   pdo_pgsql
     database_host:     localhost
     database_port:     5432
-    database_name:     mapbender
+    database_name:     mapbender3
     database_path:
     database_user:     postgres
     database_password: secret
@@ -103,7 +103,7 @@ The first user - which has all privileges - must be created using the command:
 This will interactively ask all information needed and create the user in the
 database.
 
-Alternatively, there is a silent mode you can use, if you want to use a script to install Mapbender and don't want to be asked for all parameters:
+Alternatively, there is a silent mode you can use, if you want to use a script to install Mapbender3 and don't want to be asked for all parameters:
 
 .. code-block:: yaml
 
@@ -146,7 +146,7 @@ parameters.yml
 
 * database: The parameters starting with **database** are the database connection details. 
 * mailer: The mailer settings start with **mailer**. Use f.e. smtp or sendmail. 
-* locale: You can choose a locale for your application (default is en, de is available). Check http://doc.mapbender.org/en/book/translation.html to find out how to modify translations or how to add a new language.
+* locale: You can choose a locale for your application (default is en, de is available). Check http://doc.mapbender3.org/en/book/translation.html to find out how to modify translations or how to add a new language.
 
 **Notice:** You need a mailer for self-registration and reset password functionality.
 
@@ -182,7 +182,7 @@ config.yml
 mapbender.yml
 ^^^^^^^^^^^^^
 
-You can configure an applications on two ways. In the mapbender.yml file or with the browser in the Mapbender backend.
+You can configure an applications on two ways. In the mapbender.yml file or with the browser in the Mapbender3 backend.
 
 * The Mapbender Team provides an up-to-date mapbender.yml with demo applications. New elements with their parameters are added to this configuration in every new version (You can disable the applications by setting published: false or you can empty the mapbender.yml file)
 * applications that are defined in the mapbender.yml are not editable in the backend
@@ -198,14 +198,14 @@ You can configure an applications on two ways. In the mapbender.yml file or with
 Production- and Development environment and Caching: app.php and app_dev.php
 -----------------------------------------------------------------------------
 
-Mapbender provides two environments: a production-environment for the
+Mapbender3 provides two environments: a production-environment for the
 general operation and a development-environment in which the application can
 be testet. This concept follows the `"environments" in the Symfony framework
 <http://symfony.com/doc/current/book/configuration.html>`_.
 
 The production-environment is called with the URL
-http://localhost/mapbender/app.php, the development-environment with the
-URL http://localhost/mapbender/app_dev.php. The call with app_dev.php is
+http://localhost/mapbender3/app.php, the development-environment with the
+URL http://localhost/mapbender3/app_dev.php. The call with app_dev.php is
 and should only be available from localhost.
 
 There are differences in the behaviour of app.php and app_dev.php:
@@ -215,7 +215,7 @@ There are differences in the behaviour of app.php and app_dev.php:
   visible. Therefore is the usage of the app_dev.php always slower that the
   production-environment.
 
-  In detail, the development-environment of Mapbender does not cache the
+  In detail, the development-environment of Mapbender3 does not cache the
   CSS, JavaScript and Translation files, among others.
 
   The production-environment caches all theses files and puts them into the
@@ -237,24 +237,24 @@ The directory app/cache contains the cache-files. It contains directories
 for each environment (prod and dev) but the mechanism of the dev-cache, as
 described, behaves different.
 
-If changes of the Mapbender interface or the code are made, the
+If changes of the Mapbender3 interface or the code are made, the
 cache-directory (app/cache) has to be cleared to see the changes in the
 application.
 
 The following screenshots shows the location of the cache-directory in
-Mapbender:
+Mapbender3:
 
 .. image:: ../../../figures/mapbender_cache_directories.png 
            :scale: 80
 
 
 
-Logging in Mapbender
---------------------
+Logging in Mapbender3
+---------------------
 
 The Log-Level is defined in the files ``config_dev.yml`` and ``config_prod.yml``. These files are placed in the folder ``application/app/config/``. The config-files are for the different environments (see `production- and development environment <configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_).
 
-For the development-environment (at the development on local systems) Mapbender is called with ``app_dev.php`` and therefore the file ``config_dev.yml`` is responsible. In the production-environment, where the ``app.php`` file is used, the configuration from ``config_prod.yml`` is applied.
+For the development-environment (at the development on local systems) Mapbender3 is called with ``app_dev.php`` and therefore the file ``config_dev.yml`` is responsible. In the production-environment, where the ``app.php`` file is used, the configuration from ``config_prod.yml`` is applied.
 
 
 Loglevel

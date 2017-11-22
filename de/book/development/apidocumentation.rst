@@ -1,7 +1,7 @@
 API-Dokumentation
 #################
 
-Die Mapbender API Dokumentation findet sich unter http://api.mapbender.org/.
+Die Mapbender3 API Dokumentation findet sich unter http://api.mapbender3.org/.
 
 Die API Dokumentation wird mit Mapbender mitgeliefert und kann über den folgenden Befehl erstllt werden:
 
@@ -17,8 +17,8 @@ Für die Nutzung innerhalb von Apache oder Nginx müssen eventuell die Dateirech
 
 
 
-Wie wird die Mapbender API Dokumentation erstellt?
-**************************************************
+Wie wird die Mapbender3 API Dokumentation erstellt?
+****************************************************
 
 PHP
 ***

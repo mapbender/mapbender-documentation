@@ -6,7 +6,7 @@ Systemvoraussetzungen und Download
 Systemvoraussetzungen
 *********************
 
-Mapbender benötigt die folgenden Komponenten:
+Mapbender3 benötigt die folgenden Komponenten:
 
 * PHP 5.5.4 oder neuer (php5) 
 * PHP CLI Interpreter (php5-cli) 
@@ -28,7 +28,7 @@ Für Suse SLES müssen Sie bei PHP 7 zusätzlich noch installieren (extra Pakete
 PHP 7
 -----
 
-Mapbender unterstützt auch PHP 7. Sie benötigen die oben beschriebenen PHP-Bibliotheken für PHP 7 und zusätzlich die folgenden:
+Mapbender3 unterstützt auch PHP 7. Sie benötigen die oben beschriebenen PHP-Bibliotheken für PHP 7 und zusätzlich die folgenden:
 
 * PHP Zip (php-zip)
 * PHP BZ2 (php-bz2)
@@ -68,24 +68,24 @@ Zusätzlich gibt es 32- und 64-bit Versionen von Apache für Windows.
 
 
 
-Download von Mapbender
-**********************
+Download von Mapbender3
+***********************
 
-Installationspakete von Mapbender werden als komprimierte Pakete ausgegeben und sind auf der `Download-Seite <http://mapbender.org/download>`_ verfügbar.
+Installationspakete von Mapbender3 werden als komprimierte Pakete ausgegeben und sind auf der `Download-Seite <http://mapbender3.org/download>`_ verfügbar.
 
 Nach dem Herunterladen extrahieren Sie die komprimierten Pakete in ein Verzeichnis Ihrer Wahl. In dieser Installationsbeschreibung wird davon ausgegangen, dass die Dateien unter
 
 * **/var/www** (für Linux) oder
 * **C:/** (für Windows, nicht empfehlenswert, der Einfachheit halber) ausgepackt werden.
 
-Benennen Sie für die weitere Installationsanleitung das entpackte Verzechnis (z.B.: "mapbender3-3.0.5.2") nach "mapbender" um.
+Benennen Sie für die weitere Installationsanleitung das entpackte Verzechnis (z.B.: "mapbender3-3.0.5.2") nach "mapbender3" um.
 
 Die weiteren Schritte der Installation finden Sie in den folgenden Kapiteln:
 
 * `Installation für Ubuntu und Debian <installation_ubuntu.html>`_
 * `Installation auf Windows <installation_windows.html>`_
 
-Für den schnellen Test können Sie auch die `Installation im Symfony eigenen Webserver <installation_symfony.html>`_ durchführen. Die `Git-basierte Installation <installation_git.html>`_ benötigt diese Download Pakete nicht, sondern lädt sich Mapbender von den Git-Quellen. Dafür sind dort zusätzlich Schritte notwendig.
+Für den schnellen Test können Sie auch die `Installation im Symfony eigenen Webserver <installation_symfony.html>`_ durchführen. Die `Git-basierte Installation <installation_git.html>`_ benötigt diese Download Pakete nicht, sondern lädt sich Mapbender3 von den Git-Quellen. Dafür sind dort zusätzlich Schritte notwendig.
 
 
 Verzeichnisstruktur

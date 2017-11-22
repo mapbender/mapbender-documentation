@@ -1,7 +1,7 @@
 ﻿PrintClient (Druck)
 *******************
 
-Mapbender bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen dem Client verschiedene Auswahlmöglichkeiten zur Verfügung:
+Mapbender3 bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen dem Client verschiedene Auswahlmöglichkeiten zur Verfügung:
 
  * Auswahl Maßstab,
  * Auswahl Qualität,
@@ -11,7 +11,7 @@ Mapbender bietet einen PDF Druck, der einen definierten Bereich der Karte ausdru
 
 Der Druck greift auf Druckvorlagen zu, die individuell angepasst werden können. In den Druckvorlagen können Bereiche für Datum, Maßstab (Text und Maßstabsbalken), Übersichtskarte und Nordpfeil definiert werden.
 
-Mapbender bringt bereits eine Kollektion von Druckvorlagen (LibreOffice Draw Dateien in den Formaten A4 bis A0) mit, die individuell angepasst werden können.
+Mapbender3 bringt bereits eine Kollektion von Druckvorlagen (LibreOffice Draw Dateien in den Formaten A4 bis A0) mit, die individuell angepasst werden können.
 
 .. image:: ../../../../../figures/de/print_client.png
      :scale: 80
@@ -71,7 +71,7 @@ YAML-Definition:
     rotatable: true                             	# true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
     legend: true                   # true/false, der Standardwert ist false
     legend_default_behaviour: false # true/false, Legenden Checkbox standardmäßig ausgewählt
-    file_prefix: mapbender        # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
+    file_prefix: mapbender3        # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
     optional_fields:               # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
         title:                     # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
             label: Titel           # Beschriftung des optionalen Feldes
@@ -218,10 +218,10 @@ Ein Gruppen-abhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie fol
 
 .. image:: ../../../../../figures/de/print_client_example_groups.png
      :scale: 80
-Zur Nutzung dieser Funktion müssen Sie vorher Gruppen erstellen und den Anwendungen die jeweiligen Gruppen zuordnen. Die Funktionsweise der Gruppen- und Benutzerverwaltung finden Sie in der Mapbender Dokumentation im Mapbender Quickstart unter:
-https://doc.mapbender.org/de/book/quickstart.html
+Zur Nutzung dieser Funktion müssen Sie vorher Gruppen erstellen und den Anwendungen die jeweiligen Gruppen zuordnen. Die Funktionsweise der Gruppen- und Benutzerverwaltung finden Sie in der Mapbender3 Dokumentation im Mapbender3 Quickstart unter:
+https://doc.mapbender3.org/de/book/quickstart.html
 
 Konfiguration des Elements
 ==========================
 
-Gehen Sie in der Administration von Mapbender zu Ihrer Anwendung und erzeugen Sie ein Element **Druck** (Beachten Sie: Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden).
+Gehen Sie in der Administration von Mapbender3 zu Ihrer Anwendung und erzeugen Sie ein Element **Druck** (Beachten Sie: Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden).

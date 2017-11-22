@@ -1,7 +1,7 @@
 ﻿PrintClient
 ***********
 
-Mapbender offers a PDF print, which print a defined area of the map. Before you print you can choose via the client these different possibilities:
+Mapbender3 offers a PDF print, which print a defined area of the map. Before you print you can choose via the client these different possibilities:
 
  * Select scale,
  * Select quality,
@@ -11,7 +11,7 @@ Mapbender offers a PDF print, which print a defined area of the map. Before you 
 
 The print element uses print templates, which can be modified individually. In the print templates you can define regions for date, scale (text or scalebar), overview map and north arrow.
 
-Mapbender contains already a collection of print templates (LibreOffice Draw files in formats A4 to A0), which can be modified individually.
+Mapbender3 contains already a collection of print templates (LibreOffice Draw files in formats A4 to A0), which can be modified individually.
 
 .. image:: ../../../../../figures/print_client.png
      :scale: 80
@@ -68,7 +68,7 @@ YAML-Definition:
     rotatable: true                 # true/false use true for rotation, default is true
     legend: true                    # true/false, default is false
     legend_default_behaviour: false # true/false, if true the legend check-box is checked by default
-    file_prefix: mapbender         # define the file prefix for the PDF that is generated (file_prefix_date.pdf will be created)
+    file_prefix: mapbender3         # define the file prefix for the PDF that is generated (file_prefix_date.pdf will be created)
     optional_fields:                # define optional fields (example title-field)
         title:                      # name of the optional fields, default is null (no optional fields are defined)
             label: Title            # label of the optional field    
@@ -222,7 +222,7 @@ The print with a group named "Group 1" could look like this:
 
 .. image:: ../../../../../figures/print_client_example_groups.png
      :scale: 80
-To use this feature, it is required, that you’ve created groups before. How to create groups and users is described in the Mapbender documentation in the Mapbender Quickstart (https://doc.mapbender.org/en/book/quickstart.html).
+To use this feature, it is required, that you’ve created groups before. How to create groups and users is described in the Mapbender3 documentation in the Mapbender3 Quickstart (https://doc.mapbender3.org/en/book/quickstart.html).
 
 
 Configuration of the element

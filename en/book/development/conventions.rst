@@ -1,7 +1,7 @@
 .. _conventions:
 
-Conventions for Mapbender
-#########################
+Conventions for Mapbender3
+##########################
 
 Code conventions
 *****************
@@ -67,7 +67,7 @@ Translation where
 ************************
 
 * conventions to put the files? Groß-Kleinschreibung/ welche Übersetzungen werden generell gepflegt? en/de weitere?
-* also have a look at `Translation in Mapbender <../translation.rst>`
+* also have a look at `Translation in Mapbender3 <../translation.rst>`
 
 
 Issue conventions
@@ -76,7 +76,7 @@ Issues (bugs and features) are administrated in the **mapbender**-repository at:
 
 * https://github.com/mapbender/mapbender/issues
 
-We create a milestone for every version of Mapbender:
+We create a milestone for every version of Mapbender3:
 
 *  https://github.com/mapbender/mapbender/milestones
 
@@ -95,7 +95,7 @@ There are some rules you should keep in mind:
 * when you create a new ticket do not assign it to a milestone or developer, if you are not sure
 
 * **add labels** to your ticket 
-  * bug - describes a bug that orrurs in a special version of Mapbender (add info about the version)
+  * bug - describes a bug that orrurs in a special version of Mapbender3 (add info about the version)
   * feature - new feature
   * enhancement - stands for feature enhancement
   * wip - work in progress
@@ -105,20 +105,20 @@ There are some rules you should keep in mind:
 * **when you close a ticket**, please:
 
   * add a comment in the ticket and **refer to the commit**,
-  * refer to the documentation at http://doc.mapbender.org or a demo if possibile.
+  * refer to the documentation at http://doc.mapbender3.org or a demo if possibile.
 
 
 
 
 Version conventions
 *******************
-The Mapbender version is defined by a four digit numbering system, seperated by dots.
+The Mapbender3 version is defined by a four digit numbering system, seperated by dots.
 
 3.0.10.20
 
-* The **first** digit is constant and represents the Mapbender software cycle.
+* The **first** digit is constant and represents the Mapbender3 software cycle.
 
-* The **second** digit describes all new features and major changes in Mapbender, with the highest difficulty level of a update process.
+* The **second** digit describes all new features and major changes in Mapbender3, with the highest difficulty level of a update process.
 
 * The **third** digit describes new features and minor changes, which can be easily updated.
 
@@ -126,27 +126,27 @@ The Mapbender version is defined by a four digit numbering system, seperated by 
 
 Increase a digit means always a reset for all digits before. For example - 3.0.10.20 -> 3.1.0.0
 
-This numbering system started with Mapbender version 3.0.0.0
+This numbering system started with Mapbender3 version 3.0.0.0
 
 Release
 ********
 
 * check whether all tickets are done
-* build a build - check documentation -> How to build a new Mapbender build 
+* build a build - check documentation -> How to build a new Mapbender3 build 
 * update Roadmap and milestones
-* update demo.mapbender.org
+* update demo.mapbender3.org
 * write release mail (mapbender-user / mapbender-dev / major releases osgeo-announce)
 * twitter
 
 
 
 
-How to build a new Mapbender build
-**********************************
+How to build a new Mapbender3 build
+************************************
 
 * Resolve and close all tickets for the relevant milestone: https://github.com/mapbender/mapbender/milestones
 
-* Update http://doc.mapbender.org/en/book/versions.html
+* Update http://doc.mapbender3.org/en/book/versions.html
 
 * Update Changelog.md for mapbender-starter, mapbender, owsproxy, fom.
 
@@ -211,19 +211,19 @@ How to build a new Mapbender build
 
                   bin/composer build zip
   
-* Move TAR.GZ and ZIP file to /sites/www.mapbender.org/builds
+* Move TAR.GZ and ZIP file to /sites/www.mapbender3.org/builds
 * Update symbolic links ("version".zip and "version".tar.gz and current.tar.gz and current.zip)
-* Move current doc to docs.mapbender.org (get it from web/docs. Remove the api folder).
-* Edit actual release link http://mapbender.org/en/download (english) and http://mapbender.org/de/download (german)
+* Move current doc to docs.mapbender3.org (get it from web/docs. Remove the api folder).
+* Edit actual release link http://mapbender3.org/en/download (english) and http://mapbender3.org/de/download (german)
 * Write release mail to mapbender-user and mapbender-dev 
 * Only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
 * Twitter on https://twitter.com/mapbender
-* Update http://demo.mapbender.org and http://sandbox.mapbender.org
-* Create a version based installation http://3053.mapbender.org
+* Update http://demo.mapbender3.org and http://sandbox.mapbender3.org
+* Create a version based installation http://3053.mapbender3.org
 
 
 
 Documentation conventions
 **************************
 
-* have a look at `How to write Mapbender Documentation? <documentation_howto>`_
+* have a look at `How to write Mapbender3 Documentation? <documentation_howto>`_

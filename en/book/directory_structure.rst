@@ -1,7 +1,7 @@
 .. _directory_structure:
 
-Directory structure in Mapbender
-################################
+Directory structure in Mapbender3
+#################################
 
 app
 ***
@@ -36,7 +36,7 @@ Basic configuration files of Mapbender are placed in the app/config directory. T
 app/config/applications
 -----------------------
 
-The directory app/config/applications contains all applications that are defined in a YAML file. The known example-applications "Mapbender mobile", "Mapbender Demo Map" and "Mapbender Demo Map basic" are now placed there as single files. Since version 3.0.6 they replace the former single file mapbender.yml. Additional applications can be placed in this directory and are automatically recognized by Mapbender.
+The directory app/config/applications contains all applications that are defined in a YAML file. The known example-applications "Mapbender mobile", "Mapbender Demo Map" and "Mapbender Demo Map basic" are now placed there as single files. Since version 3.0.6 they replace the former single file mapbender.yml. Additional applications can be placed in this directory and are automatically recognized by Mapbender3.
 
 
 
@@ -70,7 +70,7 @@ Directory of the `FOM submodule <https://github.com/mapbender/fom>`_.
 mapbender
 *********
 
-Directory of the `Mapbender submodule <https://github.com/mapbender/mapbender>`_. Provides the mapbender-specific bundles and the Mapbender code.
+Directory of the `Mapbender submodule <https://github.com/mapbender/mapbender>`_. Provides the mapbender-specific bundles and the Mapbender3 code.
 
 
 mapbender/...../translations

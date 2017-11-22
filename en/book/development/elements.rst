@@ -24,7 +24,7 @@ Twig Template
 Every Element must have an HTML element it is represented by. In the most basic case, this can be a simple DIV element,
 but this can be complex as needed.
 
-For HTML generation Mapbender uses `Twig <http://twig.sensiolabs.org/>`_. A minimal twig template for an element would
+For HTML generation Mapbender3 uses `Twig <http://twig.sensiolabs.org/>`_. A minimal twig template for an element would
 like this:
 
 .. code-block:: html+jinja
@@ -129,7 +129,7 @@ this:
 
 This is standard jQuery UI stuff and pretty much self-explanatory. The more tricky question is how do you know the
 other's HTML element? As you can see, using the id to select the element is preferred, but these ids are generated
-on the fly by Mapbender when the application is started, so you can't assume that the id is the always the same.
+on the fly by Mapbender3 when the application is started, so you can't assume that the id is the always the same.
 Luckily you can pass a Element id in the configuration as the target options for an Element. This will be replaced
 with the run-time id of that target Elements' HTML element for you, so that in your widget code you can access the
 right id as "this.options.target".

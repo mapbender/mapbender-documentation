@@ -24,8 +24,8 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   title: 'About Mapbender'    # text indicated next to the about dialog icon. 
-   tooltip: 'About Mapbender'  # text to use as tooltip
+   title: 'About Mapbender3'    # text indicated next to the about dialog icon. 
+   tooltip: 'About Mapbender3'  # text to use as tooltip
    label: true                  # false/true to label the button, default is true
    icon: 'icon-about'           # icon to display on button
 

@@ -1,13 +1,13 @@
 .. _configuration:
 
 
-Details zur Konfiguration von Mapbender
-=======================================
+Details zur Konfiguration von Mapbender3
+========================================
 
 Konfigurationsschritte
 ----------------------
 
-Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurationsschritte von Mapbender näher erläutert. Es sind sechs Schritte notwendig:
+Im Folgenden werden die für die Mapbender3-Installation aufgeführten Konfigurationsschritte von Mapbender3 näher erläutert. Es sind sechs Schritte notwendig:
 
 * Erzeugen der Datenbank
 * Erzeugen der Datenbankschemas
@@ -16,17 +16,17 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 * Laden der SRS Parameters (EPSG-Code Definition)
 * Laden der Anwendungen der mapbender.yml Definition in die Datenbank
 
-Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
+Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender3 aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
 
   | Das console-Hilfsprogramm wird Dateien in die Verzeichnisse app/cache und app/logs schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis app/db und die SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP- Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
-**Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ andernfalls mapbender/).
+**Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender3/application/ andernfalls mapbender3/).
 
 .. code-block:: yaml
 
-   cd mapbender/
+   cd mapbender3/
    oder für die git-basierte Installation 
-   cd mapbender/application
+   cd mapbender3/application
 
 
 
@@ -42,7 +42,7 @@ Ihre Datenbankkonfiguration könnte in der parameters.yml könnte folgendermaße
     database_driver:   pdo_pgsql
     database_host:     localhost
     database_port:     5432
-    database_name:     mapbender
+    database_name:     mapbender3
     database_path:
     database_user:     postgres
     database_password: geheim
@@ -98,7 +98,7 @@ Der erste Benutzer, der alle Privilegien hat, wird mit folgendem Kommando erzeug
 
 Dieses Kommando wird interaktiv alle notwendigen Informationen abfragen und den Benutzer in der Datenbank erzeugen.
 
-Sie können auch den Modus "silent" verwenden, wenn Sie ein Skript nutzen möchten, um Mapbender zu installieren und dabei nicht nach Parametern gefragt werden wollen.
+Sie können auch den Modus "silent" verwenden, wenn Sie ein Skript nutzen möchten, um Mapbender3 zu installieren und dabei nicht nach Parametern gefragt werden wollen.
 
 .. code-block:: yaml
 
@@ -140,7 +140,7 @@ parameters.yml
 
 * Datenbank: Parameter, die mit **database** beginnen, definieren die Databankverbindung. 
 * Mailer: Die Mailerangaben starten mit **mailer**. Nutzen Sie z.B. smtp oder sendmail. 
-* Spracheinstellung: Sie können eine Sprache (locale) für Ihre Anwendung angeben (Standardwert ist en, de ist verfügbar). Unter http://doc.mapbender.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue Sprachen hinzugefügt werden können.
+* Spracheinstellung: Sie können eine Sprache (locale) für Ihre Anwendung angeben (Standardwert ist en, de ist verfügbar). Unter http://doc.mapbender3.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue Sprachen hinzugefügt werden können.
 
 **Hinweis:** Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
 
@@ -175,10 +175,10 @@ config.yml
 mapbender.yml
 ^^^^^^^^^^^^^
 
-Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die mapbender.yml Datei oder über die Mapbender Administration im Browser.
+Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die mapbender.yml Datei oder über die Mapbender3 Administration im Browser.
 
 * Das Mapbender Team stellt mit jeder Version eine mapbender.yml mit Demoanwendungen mit den aktuellen Elementdefinitionen zur Verfügung (Sie können die Anwendungen deaktivieren indem Sie published: false setzen oder indem Sie die Datei leeren).
-* Anwendungen, die in der mapbender.yml definiert werden, können nicht über die Mapbender Administration im Browser bearbeitet werden.
+* Anwendungen, die in der mapbender.yml definiert werden, können nicht über die Mapbender3 Administration im Browser bearbeitet werden.
 * Sie können allerdings die Anwendungen über einen app/console Befehl in die Datenbank übertragen.
 
 .. code-block:: yaml
@@ -190,15 +190,15 @@ Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die mapbe
 Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php
 -----------------------------------------------------------------------
 
-Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den
+Mapbender3 bietet zwei Umgebungen an: eine Produktionsumgebung für den
 normalen Betrieb- und eine Entwicklerumgebung, in dem die Anwendungen
 getestet werden können. Dieses Konzept orientiert sich an den
 `"Environments" im Symfony Framework
 <http://symfony.com/doc/current/book/configuration.html>`_.
 
-Die Produktionsumgebung wird mit der URL http://localhost/mapbender/app.php
+Die Produktionsumgebung wird mit der URL http://localhost/mapbender3/app.php
 aufgerufen, die Entwicklungsumgebung mit der URL
-http://localhost/mapbender/app_dev.php. Der Aufruf über app_dev.php kann
+http://localhost/mapbender3/app_dev.php. Der Aufruf über app_dev.php kann
 und sollte nur nur vom localhost erfolgen.
 
 Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
@@ -208,7 +208,7 @@ Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
   sichtbar sind. Dadurch ist der Aufruf einer Anwendung über app_dev.php
   immer langsamer als im Produktivbetrieb.
 
-  Im Detail werden in der Entwicklerumgebung von Mapbender u.a. die CSS,
+  Im Detail werden in der Entwicklerumgebung von Mapbender3 u.a. die CSS,
   JavaScript und Übersetzungsdateien nicht gecacht.
 
   In der Produktionsumgebung werden diese aber in app/cache abgelegt.
@@ -228,23 +228,23 @@ Das Verzeichnis app/cache enthält die einzelnen Cache-Dateien. Es werden
 Verzeichnisse für jede Umgebung (prod und dev) angelegt, das Verhalten des
 dev-Caches ist aber, wie angesprochen, anders.
 
-Bei Änderungen an der Oberfläche oder im Code von Mapbender ist das Cache
+Bei Änderungen an der Oberfläche oder im Code von Mapbender3 ist das Cache
 Verzeichnis (app/cache) zu leeren, damit die Änderungen in der
 Produktionsumgebung sichtbar werden.
 
 Der folgende Screenshot zeigt den Ort der Cache-Verzeichnisse innerhalb von
-Mapbender:
+Mapbender3:
 
 .. image:: ../../../figures/mapbender_cache_directories.png 
            :scale: 80
 
 
-Logging in Mapbender
---------------------
+Logging in Mapbender3
+---------------------
 
 Das Log-Level wird in den Dateien ``config_dev.yml`` und ``config_prod.yml`` definiert. Diese liegen im Ordner ``application/app/config/``. Die config-Dateien sind für die jeweiligen Umgebungen (siehe `Produktions- und Entwicklungsumgebung <configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_) verantwortlich.
 
-In der Entwicklungsumgebung (bei der Entwicklung in lokalen Systemen) wird Mapbender über die ``app_dev.php`` aufgerufen und hier ist die ``config_dev.yml`` verantwortlich. Im Produktivbetrieb, bei der die ``app.php`` eingesetzt wird, kommt die ``config_prod.yml`` zum Einsatz.
+In der Entwicklungsumgebung (bei der Entwicklung in lokalen Systemen) wird Mapbender3 über die ``app_dev.php`` aufgerufen und hier ist die ``config_dev.yml`` verantwortlich. Im Produktivbetrieb, bei der die ``app.php`` eingesetzt wird, kommt die ``config_prod.yml`` zum Einsatz.
 
 
 Loglevel

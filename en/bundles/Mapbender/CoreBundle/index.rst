@@ -2,7 +2,7 @@ MapbenderCoreBundle
 ###################
 
 The CoreBundle contains all basic functionality, including base classes and
-interfaces for the Mapbender API usable by Mapbender and third-party bundles.
+interfaces for the Mapbender3 API usable by Mapbender and third-party bundles.
 
 Elements
 ========

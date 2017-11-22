@@ -3,14 +3,14 @@
 Concepts
 ########
 
-This chapter will introduce you to the main concepts of Mapbender. After
-reading you should have an understanding of the parts Mapbender is made
+This chapter will introduce you to the main concepts of Mapbender3. After
+reading you should have an understanding of the parts Mapbender3 is made
 of and how they interact.
 
 Application
 ===========
 
-The application is a single Mapbender configuration which is usually used
+The application is a single Mapbender3 configuration which is usually used
 as an interactive web map. It's what was called a GUI in Mapbender 2.
 
 Every application consists of several components:
@@ -50,14 +50,14 @@ Think of HTML templates specialised for mobile viewing.
 Frontend
 ========
 
-The frontend is basically the application view of your Mapbender installation.
+The frontend is basically the application view of your Mapbender3 installation.
 This includes the application list and each application view. It's what your
 users will interact with.
 
 Backend
 =======
 
-The backend is where you configure your Mapbender installation. It's called
+The backend is where you configure your Mapbender3 installation. It's called
 the manager and allows your admins to manage users, roles, services,
 applications and elements.
 

@@ -3,7 +3,7 @@
 Source
 ======
 
-With the data sources, you can register OGC WMS in version 1.1.1 and 1.3.0 into Mapbender. 
+With the data sources, you can register OGC WMS in version 1.1.1 and 1.3.0 into Mapbender3. 
 
 Further information about the registration process of services and their usage in Mapbender is available in the `Quickstart document <../../../../book/quickstart.html#loading-web-map-services>`_.
 
@@ -22,7 +22,7 @@ Further information about the registration process of services and their usage i
   * http://www.opengis.net/wms,
   * http://www.w3.org/2001/XMLSchema
 
-  Services which are registered without the check of validity are listed with an exclamation mark. In many cases they work with Mapbender although they have included own schema-files.
+  Services which are registered without the check of validity are listed with an exclamation mark. In many cases they work with Mapbender3 although they have included own schema-files.
 
   .. image:: ../../../../../figures/entities/source_not_valid.png
        :scale: 80

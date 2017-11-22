@@ -14,7 +14,7 @@ Konfiguration
 .. image:: ../../../../../figures/de/search_router_configuration.png
      :scale: 80
 
-Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter http://doc.mapbender.org/de/book/database.html
+Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter http://doc.mapbender3.org/de/book/database.html
 
 **Hinweis**: Für die Nutzung der unten beschriebenen Suche können die Tabellen aus der Digitalisierungs-Demo genutzt werden. Die SQLS für die Erstellung der Tabellen finden sich unter :doc:`digitizer`
 

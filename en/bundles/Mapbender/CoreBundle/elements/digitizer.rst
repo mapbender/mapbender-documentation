@@ -53,7 +53,7 @@ You can only use the element in the sidepane.
 * **Schemes:** YAML-Definition of the element Digitizer
 
 The Ditigitzer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. 
-Read more about this at http://doc.mapbender.org/en/book/database.html
+Read more about this at http://doc.mapbender3.org/en/book/database.html
 
 The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
 If errors occur in the database, fields or form, various error messages appear. Via the normal call and app.php comes a general error message.
@@ -118,7 +118,7 @@ The functionality of the built-in features and additional functions are explaine
                  css: {padding: 10px}
                  children:
                      - type: label
-                       title: Welcome to the digitize demo. Try the new Mapbender feature!
+                       title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                      - type: input
                        title: Name
                        mandatory: true
@@ -222,7 +222,7 @@ The functionality of the built-in features and additional functions are explaine
              css: {padding: 10px}
              children:
                  - type: label
-                   title: Welcome to the digitize demo. Try the new Mapbender feature!
+                   title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                  - type: input
                    title: Name
                    name: name
@@ -281,7 +281,7 @@ The functionality of the built-in features and additional functions are explaine
              css: {padding: 10px}
              children:
                  - type: label
-                   title: Welcome to the digitize demo. Try the new Mapbender feature!
+                   title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                  - type: input
                    title: Name
                    mandatory: true
@@ -548,7 +548,7 @@ Form elements can be placed unto different Tabs. The formItem type "tabs" is use
                  css: {padding: 10px}
                  children:                   # Multiple subobjects in groups can be used to arrange data in the form next to each other
                      - type: label
-                       title: Welcome to the digitize demo. Try the new Mapbender feature!
+                       title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
 
 Textfields (type input)
@@ -794,7 +794,7 @@ For each children you can define a width to controll the pace for each element.
 File upload (type file)
 -----------------------
 
-The file upload can be used to link files to a database column in the form. To do this, the uploaded files are stored in Mapbender and the path is noted in the column.
+The file upload can be used to link files to a database column in the form. To do this, the uploaded files are stored in Mapbender3 and the path is noted in the column.
 
 The storage path and the name of the stored files can not yet be changed. The file upload always saves to the same directory and is  built up from the parameters:
 
