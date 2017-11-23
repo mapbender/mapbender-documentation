@@ -22,7 +22,7 @@ Die Entität wird an den Constructor des Laufzeit-Anwendungsobjektes der Klasse 
 
 Zugriffsprüfungen werden nicht im Mapbender-Service, in der Entität oder in der Anwendung vorgenommen, sondern in der Funktion getApplication des Controllers. Behalten Sie dies im Hinterkopf, wenn Sie Ihren eigenen Controller entwickeln wollen.
 
-.. image:: ../../../figures/http_workflow_application.png
+.. image:: ../../figures/http_workflow_application.png
 
 Element-Rendering-Workflow
 **************************
