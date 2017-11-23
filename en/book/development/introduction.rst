@@ -43,6 +43,11 @@ Libraries and frameworks:
 * `General GitHub documentation <https://help.github.com/>`_
 * `GitHub pull request documentation <https://help.github.com/send-pull-requests/>`_
 
+..
+    github
+    code_convention
+    translations
+    administrations
 
 
 
@@ -53,11 +58,8 @@ Topics
    :maxdepth: 1
 
    git
-   github
    apidocumentation
    requestresponse
-   code_convention
-   translations
    elements
-   administrations
+
 
