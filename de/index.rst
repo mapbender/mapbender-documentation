@@ -7,7 +7,11 @@ Inhalt:
    :maxdepth: 2
 
    installation
-   quickstart
+
+.. toctree::
+   :maxdepth: 1
+
+   quickstart.rst
 
 .. toctree::
    :maxdepth: 3
@@ -18,10 +22,26 @@ Inhalt:
    :maxdepth: 2
 
    customization
+
+.. toctree::
+   :maxdepth: 2
+
    faq
-   versions
+
+.. toctree::
+   :maxdepth: 2
+
    architecture
+
+.. toctree::
+   :maxdepth: 2
+
    development
+
+.. toctree::
+   :maxdepth: 1
+
+   versions
 
 
 
