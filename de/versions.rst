@@ -3,7 +3,7 @@ Versionshistorie
 
 `English Version of this document. <../../en/book/versions.html>`_
 
-Die Übersicht der Meilensteine finden Sie auf Github unter: https://github.com/mapbender/mapbender/milestones
+Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
 Version next
 ------------
