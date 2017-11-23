@@ -9,7 +9,7 @@ Der Aktivitätsindikator (Sanduhr) ist ein einfaches Modul, das Aktivitäten anz
      :scale: 100
 
 Konfiguration
-=============
+-------------
 
 .. image:: ../../../../../figures/de/activity_indicator_configuration.png
      :scale: 80
@@ -31,23 +31,23 @@ YAML-Definition:
     tileActivityClass: mb-activity-tile # CSS Klasse, die Kartenaufrufe anzeigt
 
 Class, Widget & Style
-============================
+---------------------
 
 * **Class:** Mapbender\\CoreBundle\\Element\\ActivityIndicator
 * **Widget:** mapbender.element.activityindicator.js
 * **Style:** mapbender.elements.css
 
 HTTP Callbacks
-==============
+--------------
 
 Keine.
 
 JavaScript API
-==============
+--------------
 
 Keine.
 
 JavaScript Signals
-==================
+------------------
 
 Keine.
