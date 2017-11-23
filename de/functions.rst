@@ -1,15 +1,17 @@
 Funktionen
 ==========
 
+..
+   functions/obsolet.rst
+
 .. toctree::
    :maxdepth: 2
 
+   functions/basic.rst
+   functions/misc.rst
+   functions/search.rst
+   functions/export.rst
+   functions/editing.rst
+   functions/wmc.rst
    functions/backend.rst
    functions/backend/FOM/index.rst
-   functions/basic.rst
-   functions/editing.rst
-   functions/export.rst
-   functions/misc.rst
-   functions/obsolet.rst
-   functions/search.rst
-   functions/wmc.rst

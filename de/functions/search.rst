@@ -1,4 +1,4 @@
-Search
+Suchen
 ======
 
 .. toctree::

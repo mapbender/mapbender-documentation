@@ -24,7 +24,7 @@ Inhalt:
    customization
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    faq
 
@@ -48,6 +48,12 @@ Inhalt:
 
 Indizes und Tabellen
 ====================
+
+.. toctree::
+   :maxdepth: 1
+
+   ../en/book/glossary.rst
+
 
 * :ref:`genindex`
 * :ref:`modindex`
