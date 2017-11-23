@@ -11,7 +11,7 @@ Inhalt:
 .. toctree::
    :maxdepth: 1
 
-   quickstart.rst
+   quickstart
 
 .. toctree::
    :maxdepth: 3
