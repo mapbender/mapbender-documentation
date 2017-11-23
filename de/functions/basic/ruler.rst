@@ -5,13 +5,13 @@ Ruler: Linien-/Flächenmessung  (Line/Area Ruler)
  
 Mit dem Lineal wird eine Linie oder eine Fläche gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst. Jedes eingebundene Ruler-Element kann nur entweder Linien oder Flächen messen. 
 
-.. image:: ../../../../../figures/de/ruler.jpg
+.. image:: ../../../figures/de/ruler.jpg
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/ruler_configuration.jpg
+.. image:: ../../../figures/de/ruler_configuration.jpg
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.

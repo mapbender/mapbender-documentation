@@ -5,13 +5,13 @@ Copyright
 
 Dieses Element zeigt die Nutzungsbedingungen ("Terms of use") in einem Dialog an.
 
-.. image:: ../../../../../figures/de/copyright.png
+.. image:: ../../../figures/de/copyright.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/copyright_configuration.png
+.. image:: ../../../figures/de/copyright_configuration.png
      :scale: 80
 
 * **Automatisches Öffnen (Autoopen):** Schaltet ein/aus, ob das Copyright Fenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: Ausgeschaltet).

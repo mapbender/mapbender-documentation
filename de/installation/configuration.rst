@@ -221,7 +221,7 @@ Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
   protokolliert, die nur für die Entwickler, aber nicht für Außenstehende
   sichtbar sein sollten.
 
-  .. image:: ../../../figures/symfony_profiler.png
+  .. image:: ../../figures/symfony_profiler.png
              :scale: 80
 
 Das Verzeichnis app/cache enthält die einzelnen Cache-Dateien. Es werden
@@ -235,7 +235,7 @@ Produktionsumgebung sichtbar werden.
 Der folgende Screenshot zeigt den Ort der Cache-Verzeichnisse innerhalb von
 Mapbender:
 
-.. image:: ../../../figures/mapbender_cache_directories.png 
+.. image:: ../../figures/mapbender_cache_directories.png 
            :scale: 80
 
 

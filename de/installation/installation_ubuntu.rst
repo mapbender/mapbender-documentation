@@ -267,5 +267,5 @@ Prüfen Sie, ob der Alias erreichbar ist:
 * http://localhost/mapbender/config.php
 
 
-.. image:: ../../../figures/mapbender3_symfony_check_configphp.png
+.. image:: ../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80

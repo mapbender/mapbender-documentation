@@ -9,13 +9,13 @@ Sie können den WMC-Lader ihrer Applikation als Selektbox oder als Button, der e
 
 Wenn Sie eine Konfiguration auswählen, werden die Dienste der Konfiguration in Ihrer vorhandenen Applikation zusammengefügt.
 
-.. image:: ../../../../../figures/wmc_loader.png
+.. image:: ../../../figures/wmc_loader.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/wmc_loader_configuration.png
+.. image:: ../../../figures/wmc_loader_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.

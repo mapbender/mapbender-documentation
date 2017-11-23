@@ -5,13 +5,13 @@ ScaleBar (Maßstabsleiste)
 
 Die Maßstabsleiste ist eine schmale Linie, die den aktuellen Maßstab anzeigt.
 
-.. image:: ../../../../../figures/scalebar.png
+.. image:: ../../../figures/scalebar.png
      :scale: 100
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/scalebar_configuration.png
+.. image:: ../../../figures/de/scalebar_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.

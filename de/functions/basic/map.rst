@@ -6,13 +6,13 @@ Map (Karte)
 MapQuery/OpenLayers basierte Karte.
 Es müssen die Einheiten, der Start und der Max Bereich (extent), die Maßstäbe und die unterstützten Projektionen angegeben werden.
 
-.. image:: ../../../../../figures/de/map.png
+.. image:: ../../../figures/de/map.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/map_dialog.png
+.. image:: ../../../figures/de/map_dialog.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
@@ -33,17 +33,17 @@ Konfigurationsbeispiel
 ======================
 Die Hauptkarte (Main Map) wird in der Anwendung unter Layouts im Content integriert. Über das ``+`` -Zeichen kann das Element hinzugefügt werden.
 
-.. image:: ../../../../../figures/de/add_content.png
+.. image:: ../../../figures/de/add_content.png
      :scale: 80
 
 Als Hauptkarte (Main Map) können alle Layersets definiert werden, die vorher in der Anwendung unter Layersets festgelegt wurden. Für dieses Konfigurationsbeispiel sind das folgende Layersets:
 
-.. image:: ../../../../../figures/de/map_example_layersets.png
+.. image:: ../../../figures/de/map_example_layersets.png
      :scale: 80
 
 Die Layersets sind im Konfigurationsdialog des Kartenelements unter *Layersets* (1) sichtbar. Hier können auch mehrere gleichzeitig ausgewählt werden. Diejenigen Layersets, die nicht ausgewählt wurden, können als Overview fungieren.
 
-.. image:: ../../../../../figures/de/map_example_dialog.png
+.. image:: ../../../figures/de/map_example_dialog.png
      :scale: 80
 
 Im Feld *SRS* (2) wird das Koordinatensystem definiert, welches beim Öffnen der Karte verwendet wird. In diesem Beispiel wurde das Koordinatensystem ETRS89/ UTM Zone 32N gewählt. Der EPSG Code lautet 25832. Wenn andere Koordinatensysteme in der Anwendung zur Auswahl stehen sollen, werden diese bei *Other SRS* (6) angegeben. Auch hier wird der EPSG Code verwendet. Es können mehrere EPSG Codes, durch ein Komma getrennt, angegeben werden. In diesem Beispiel wurden zusätzlich folgende EPSG Codes verwendet: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator), 4326 (WGS 84). In der Anwendung kann mithilfe des Elements SRS Auswahl zwischen den hier definierten Koordinatensystemen gewechselt werden. Wie dieses Element eingebunden wird, wird in der Dokumentation unter `SRS Selector <../elements/srs_selector.html>`_ beschrieben.
@@ -101,7 +101,7 @@ jeweiligen Anwendung und zwar im Layerset und dort in einem Layer. Jeder
 Layer besitzt ein Icon mit drei Punkten auf der rechten Seite. Klicken Sie
 auf die drei Punkte des Layers und ein Popupfenster erscheint.
 
-.. image:: ../../../../../figures/wms_instance_layer_id.png
+.. image:: ../../../figures/wms_instance_layer_id.png
      :scale: 80
 
 Der erste Wert nenn die interne SourceID und SourceLayerId (31-591). Der

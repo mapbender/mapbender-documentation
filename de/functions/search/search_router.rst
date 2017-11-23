@@ -5,13 +5,13 @@ Search Router
 
 Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die Trefferausgabe sind dabei konfigurierbar. Zur Zeit wird eine generische SQL Suche unterstützt, weitere Entwicklungen werden folgen (z.B. WFS, Solr). 
 
-.. image:: ../../../../../figures/search_router.png
+.. image:: ../../../figures/search_router.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/search_router_configuration.png
+.. image:: ../../../figures/de/search_router_configuration.png
      :scale: 80
 
 Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter http://doc.mapbender.org/de/book/database.html
@@ -73,16 +73,16 @@ Für jedes Feld kann ein Vergleichsmodus bestimmt werden, welcher von der Engine
 * **like:** Standard, zweiseitiges 'like'
 * **like-left:** linksseitiges 'like'
 * **like-right:** rechtsseitiges 'like'
-* **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - *searchstring*)
-* **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - *searchstring)
-* **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring*)
+* **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring\*)
+* **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring)
+* **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring\*)
 
 Styling der Ergebnisse
 -----------------------
 
 Standardmäßig werden die Ergebnisse in der Karte in dem default-OpenLayers Style angezeigt, d.h. orange für die Treffer und blau für selektierte Objekte. Das OpenLayer default Styling sieht wie folgt aus:
 
-.. image:: ../../../../../figures/de/search_router_example_colour_orangeblue.png
+.. image:: ../../../figures/de/search_router_example_colour_orangeblue.png
      :scale: 80
 
 Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfiguration übergeben, die wie folgt aussehen könnte:
@@ -108,7 +108,7 @@ Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfigurati
 
 Diese Definition füllt die Polygone nicht, da die Transparenz auf Null gesetzt wurde (fillOpacity: 0). Sie werden lediglich grün umrandet dargestellt. Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt und sind transparent mit einem Faktor von 0.8. Umrandet sind die Objekte mit einer blauen Linie. Diese Farbkonfiguration sieht so aus:
 
-.. image:: ../../../../../figures/de/search_router_example_colour_purplegreen.png
+.. image:: ../../../figures/de/search_router_example_colour_purplegreen.png
      :scale: 80
 
 Die default-Angaben überschreiben die OpenLayers-Standardangaben. Daher müssen Sie lediglich die Angaben setzen, die Sie überschreiben möchten. Wenn Sie die Angaben weglassen wird der OpenLayers default-Stil verwendet.
@@ -132,19 +132,19 @@ Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selekt
                 fillColor: '#ff0000'
                 fillOpacity: 0.4
 
-.. image:: ../../../../../figures/de/search_router_example_colour_redgreen.png
+.. image:: ../../../figures/de/search_router_example_colour_redgreen.png
      :scale: 80
 
 Konfigurationsbeispiele
 ========================
 In diesem Beispiel wurde eine Suche für die Mapbender User konfiguriert. Die Suche wurde in die Sidepane über das ``+`` -Zeichen in der Anwendung unter Layouts, Sidepane hinzugefügt.
 
-.. image:: ../../../../../figures/de/add_sidepane.png
+.. image:: ../../../figures/de/add_sidepane.png
      :scale: 80
 
 Der Konfigurationsdialog zu diesem Konfigurationsbeispiel sieht wie folgt aus:
 
-.. image:: ../../../../../figures/de/search_router_example_dialog.png
+.. image:: ../../../figures/de/search_router_example_dialog.png
      :scale: 80
 
 Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel angezeigt. Da das Element in der Sidepane eingebunden wird und nicht als Button, wurde bei Dialog kein Haken gesetzt. Der *Timeout factor* wurde auf 2 gestellt. In den Feldern *Width* und *Height* stehen zwar Werte, diese werden in der Anwendung jedoch nicht miteinbezogen, da das Element in der Sidepane konfiguriert wird. Es wurde über das ``+`` -Zeichen bei *Routes* eine Suche eingebunden, die die Bezeichnung (*Title*) Mapbender User trägt. In *Configuration* wurde die yaml-Konfiguration des Elements eingefügt. Vollständig lautet diese:
@@ -219,24 +219,24 @@ Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel
 
 Die Suche mit dieser Konfiguration sieht in der Anwendung so aus:
 
-.. image:: ../../../../../figures/de/search_router_example_search.png
+.. image:: ../../../figures/de/search_router_example_search.png
      :scale: 80
 
 Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigurationen in der yaml-Definition auf das Suchformular haben:
 
-.. image:: ../../../../../figures/de/search_router_example_search_description.png
+.. image:: ../../../figures/de/search_router_example_search_description.png
      :scale: 80
 
 Dargestellt ist der Ausschnitt der yaml-Definiton, der das Formular konfiguriert. Tabellenspalten orga, town und usertype werden im Formular verwendet und sind jeweils als die Felder Mapbender User, Stadt und Nutzertyp eingebunden. Mapbender User und Stadt sind jeweils vom type Text. Nutzertyp hingegen gibt Auswahlmöglichkeiten in Form einer Dropdown-Liste vor. Der Text, der angezeigt werden soll, wenn noch nichts ausgewählt wurde, ist hier "Bitte auswählen…" (siehe Nr. **1** – empty_value: ‚Bitte auswählen...‘). Der Titel über den Feldern wird mit label festgelegt (siehe Nr. **2**). Das Attribut data-autocomplete: ‚on‘ bewirkt, dass Vorschläge aus der Datenbank zu dem eingegebenen Begriff vorgegeben und als Dropdown angezeigt werden (siehe Nr. **3**). Da der Vergleichsmodus ilike (compare: ilike) konfiguriert wurde, muss der Begriff nicht exakt eingegeben werden. Die Suche findet ebenfalls Ergebnisse die ähnlich zu dem eingegebenen Begriff sind (siehe Nr. **4** – Wheregr (das g wurde klein geschrieben, trotzdem werden die Ergebnisse WhereGroup mit großem G gefunden)). Bei dem Feldtyp choice werden Auswahlmöglichkeiten vorgegeben. Diese Auswahlmöglichkeiten werden unter choices angegeben (siehe Nr. **5**). In der Tabelle sind die Auswahlmöglichkeiten als Zahlen hinterlegt (1, 2, 3, 4). In diesem Beispiel wurde jeder Zahl ein Text zugeordnet, der in der Dropdown-Liste angezeigt werden soll.
 
 Eine vollständig ausgefüllte Suche nach dem Mapbender User WhereGroup, in der Stadt Bonn, des Nutzertyps Company und deren Ergebnis sieht wie folgt aus:
 
-.. image:: ../../../../../figures/de/search_router_example_search_WG.png
+.. image:: ../../../figures/de/search_router_example_search_WG.png
      :scale: 80
 
 Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigurationen in der yaml-Definition auf die Anzeige der Ergebnisse haben:
 
-.. image:: ../../../../../figures/de/search_router_example_results_description.png
+.. image:: ../../../figures/de/search_router_example_results_description.png
      :scale: 80
 
 Auf dieser Abbildung ist lediglich die Konfiguration der Ergebnisse angezeigt. Die Anzahl der Ergebnisse wird aufgrund von count: true (siehe Nr. **1**) angezeigt. Anschließend werden die Spaltentitel unter headers definiert (siehe Nr. **2**). Hier wird zuerst die Bezeichnung der Spalte in der Tabelle angegeben, so dass definiert wird auf welche Tabellenspalte sich die Ergebnisanzeige bezieht. Nach dem Doppelpunkt wird dann angegeben, welcher Titel in der Anwendung angezeigt werden soll. In dem Block styleMap wird das Styling der Punkte vorgenommen. Der Block default (siehe Nr. **3**) bezieht sieht dabei auf alle Punkte und der Block select (siehe Nr. **4**) nur auf das ausgewählte Objekt.

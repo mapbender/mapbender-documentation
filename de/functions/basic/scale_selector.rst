@@ -7,13 +7,13 @@ Dieses Element zeigt eine Auswahlbox mit Maßstäben an. Der Kartenmaßstab änd
 Beachten Sie: Die Auswahlbox zeigt nur Maßstäbe an, die vorher für das Map Element angegeben wurden.
 
 
-.. image:: ../../../../../figures/de/scale_selector.png
+.. image:: ../../../figures/de/scale_selector.png
      :scale: 100
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/scale_selector_configuration.png
+.. image:: ../../../figures/de/scale_selector_configuration.png
      :scale: 80
 
 * **Beschriftung anzeigen:** true, um die Maßstabsauswahl zu beschriften. Der Standardwert ist false.

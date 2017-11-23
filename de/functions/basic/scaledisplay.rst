@@ -5,14 +5,14 @@ ScaleDisplay (Maßstabsanzeige)
 
 Die Maßstabsanzeige zeigt den aktuellen Maßstab an (1:1K or 1: 1000).
 
-.. image:: ../../../../../figures/de/scaledisplay.png
+.. image:: ../../../figures/de/scaledisplay.png
      :scale: 100
 
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/scaledisplay_configuration.png
+.. image:: ../../../figures/de/scaledisplay_configuration.png
      :scale: 80
 
 

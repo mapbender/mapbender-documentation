@@ -12,17 +12,17 @@ Mit dem Editor können Konfigurationen erzeugt und bearbeitet werden. Es können
 
 
 
-.. image:: ../../../../../figures/wmc_editor.png
+.. image:: ../../../figures/wmc_editor.png
      :scale: 80
 
-.. image:: ../../../../../figures/wmc_editor_2.png
+.. image:: ../../../figures/wmc_editor_2.png
      :scale: 80
 
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/wmc_editor_configuration.png
+.. image:: ../../../figures/wmc_editor_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.

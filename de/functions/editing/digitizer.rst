@@ -16,7 +16,7 @@ Das Digitizer-Element bietet komplexe Editierfunktionalitäten an:
 In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten sehr komplexe Formulare generiert werden.
 
 
-.. image:: ../../../../../figures/digitizer.png
+.. image:: ../../../figures/digitizer.png
      :scale: 80
 
 Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
@@ -36,7 +36,7 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 * Hilfetexte
 
 
-.. image:: ../../../../../figures/digitizer_with_tabs.png
+.. image:: ../../../figures/digitizer_with_tabs.png
      :scale: 80
 
 Einrichtung
@@ -45,7 +45,7 @@ Einrichtung
 Das Element kann nur in der Sidepane eingebettet werden.
 
 
-.. image:: ../../../../../figures/digitizer_configuration.png
+.. image:: ../../../figures/digitizer_configuration.png
      :scale: 80
 
 
@@ -400,7 +400,7 @@ Jeder FeatureType kann unterschiedliche `Toolsets <#definition-der-zur-verfugung
 In dem FeatureType "poi" wird mit dem "drawPoint" Toolset beispielsweise die Schaltfläche zum Erstellen eines neuen Punktes freigeschaltet, mit dem Toolset "modifyFeature" die Verschieben-Schaltfläche eingeblendet.
 
 
-.. image:: ../../../../../figures/digitizer_buttons_poi.png
+.. image:: ../../../figures/digitizer_buttons_poi.png
      :scale: 80
 
 
@@ -412,7 +412,7 @@ Es stehen drei Schaltflächen im Dialog zur Verfügung: Speichern, Löschen, Abb
 
 Das *Speichern* der Änderungen geschieht erst, wenn die Schaltfläche "Speichern" im Attributdialog gedrückt worden ist. Ein Verschieben einer Geometrie alleine speichert das Feature also nicht sofort (um unnötige Änderungen in der Datenbank zu verhindern). Es ist bislang noch notwendig, den Attributdialog zu öffnen und Speichern zu klicken.
 
-.. image:: ../../../../../figures/digitizer_save_delete_cancel.png
+.. image:: ../../../figures/digitizer_save_delete_cancel.png
      :scale: 80
 
 * **Speichern:** Speichert die Geometrie und die Attributdaten in die Datenbank.
@@ -434,7 +434,7 @@ Vertices
 
 Das Bearbeiten von Polygonen und Linien erlaubt das Erstellen, Verschieben und Löschen von Vertices. Die Schaltfläche zum Editieren von Vertices erwartet, dass man ein Polygon selektiert. Dieses wird dann mit den Stützpunkten angezeigt.
 
-.. image:: ../../../../../figures/digitizer_edit_vertices.png
+.. image:: ../../../figures/digitizer_edit_vertices.png
            :scale: 80
 
 Die vorhandenen Stützpunkte werden deckend dargestellt, mögliche neue Stützpunkte befinden sich immer in der Mitte einer Kante, sind leicht transparent dargestellt und können per Klick auf diesen Punkt hinzugefügt werden.
@@ -733,7 +733,7 @@ Hier erscheint keine Fehlermeldung außerhalb des Formulars. Der Erfasser muss d
 Datumsauswahl (type date)
 -------------------------
 
-.. image:: ../../../../../figures/digitizer_datepicker.png
+.. image:: ../../../figures/digitizer_datepicker.png
      :scale: 80
 
 .. code-block:: yaml
@@ -832,7 +832,7 @@ Für die Ansicht von hochgeladenen Bildern kann die Bildanzeige dazugenommen wer
 Bildanzeige (type image)
 ------------------------
 
-.. image:: ../../../../../figures/digitizer_image.png
+.. image:: ../../../figures/digitizer_image.png
      :scale: 80
 
 Für die Ansicht eines Bildes im Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
@@ -916,7 +916,7 @@ Kontextmenü
 Über das Kontextmenü kann ein Objekt auf der Karte näher betrachtet werden.
 Nach der Aktivierung kann man über den rechten Mausklick auf einem Objekt ein Kontextmenü öffnen.
 
-.. image:: ../../../../../figures/digitizer_contextmenu.png
+.. image:: ../../../figures/digitizer_contextmenu.png
      :scale: 80
 
 Elemente des Kontextmenüs:
@@ -945,7 +945,7 @@ Abhängig von der definerten Distanz und Zoomstufe werden unterschiedlich viele 
 Durch die Komplexität des Clusterings können sich in zukünftigen Versionen noch Änderungen an der Funktion und der Syntax ergeben, so dass wir dieses Feature bislang als experimentell kennzeichnen. Abhängigkeiten existieren zu der Anzeige der Features für den aktuellen Ausschnitt/den gesamten Bereich und den unterschiedlichen Geometrietypen.
 
 
-.. image:: ../../../../../figures/digitizer_clustering.png
+.. image:: ../../../figures/digitizer_clustering.png
      :scale: 80
 
 Definition der Clusterelemente:

@@ -5,13 +5,13 @@ Feature Info (Information)
 
 Dieses Element stellt die Infoabfrage bereit, die mit WMS Services funktioniert.
 
-.. image:: ../../../../../figures/feature_info.png
+.. image:: ../../../figures/feature_info.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/feature_info_configuration.png
+.. image:: ../../../figures/de/feature_info_configuration.png
      :scale: 80
 
 
@@ -41,12 +41,12 @@ Mit der Option "Original zeigen" wird die Original-Darstellung des FeatureInfo R
 
 Beispiel Original:
 
-.. image:: ../../../../../figures/feature_info_original.png
+.. image:: ../../../figures/feature_info_original.png
      :scale: 80
 
 Beispiel gestyled:
 
-.. image:: ../../../../../figures/feature_info_not_original.png
+.. image:: ../../../figures/feature_info_not_original.png
      :scale: 80             
 
 
@@ -58,12 +58,12 @@ Mit dem Schalter "Type" können die Responses mehrerer Dienste in unterschiedlic
 
 Beispiel Tabs:
 
-.. image:: ../../../../../figures/feature_info_tabs.png
+.. image:: ../../../figures/feature_info_tabs.png
      :scale: 80
 
 Beispiel Accordion:
 
-.. image:: ../../../../../figures/feature_info_accordion.png
+.. image:: ../../../figures/feature_info_accordion.png
      :scale: 80
 
 
@@ -80,12 +80,12 @@ Um alle Bilder und Hintergrundfarben des im Ausdruck zu erhalten, sollten Sie di
 Button-Konfiguration
 --------------------
 
-Für das Element wird ein Button verwendet. Siehe das Kapitel :doc:`button` für die generelle Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der so lange aktiviert ist, bis er vom Benutzer wieder deaktiviert wird. Eine weitere Möglichkeit, ihn zu deaktivieren wäre den FeatureInfo Dialog zu schließen, wenn dieser die Option die Option "Deactivate on Close" angeschaltet hat.
+Für das Element wird ein Button verwendet. Siehe das Kapitel `Button <button.html>`_ für die generelle Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der so lange aktiviert ist, bis er vom Benutzer wieder deaktiviert wird. Eine weitere Möglichkeit, ihn zu deaktivieren wäre den FeatureInfo Dialog zu schließen, wenn dieser die Option die Option "Deactivate on Close" angeschaltet hat.
 
 * **Group:** featureinfo
 * **Deactivate:** deactivate
 
-.. image:: ../../../../../figures/feature_info_button.png
+.. image:: ../../../figures/feature_info_button.png
      :scale: 80
 
 

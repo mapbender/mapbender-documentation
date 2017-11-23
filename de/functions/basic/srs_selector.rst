@@ -5,13 +5,13 @@ Spatial Reference System Selector (SRS Selector) (Auswahl des räumlichen Refere
 
 Nach der Auswahl eines räumlichen Referenzsystems (SRS) ändert sich das räumliche Referenzsystem in der Karte.
 
-.. image:: ../../../../../figures/de/srs_selector.png
+.. image:: ../../../figures/de/srs_selector.png
      :scale: 100
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/srs_selector_configuration.png
+.. image:: ../../../figures/de/srs_selector_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.

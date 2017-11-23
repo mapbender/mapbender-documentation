@@ -6,7 +6,7 @@ HTML-Element
 Über das HTML-Element kann ein generisches HTML an einer beliebigen Stelle in der Anwendung definiert werden.
 Im generischen HTML stehen folgende Variablen zur Verfügung : "application" (Entity Application), "entity" (Entity HTMLElement) und "configuration". Damit kann beispielsweise ein Bild in die Anwendung eingefügt werden. 
 
-.. image:: ../../../../../figures/html_result_application.png
+.. image:: ../../../figures/html_result_application.png
      :scale: 80
 
 
@@ -20,7 +20,7 @@ Einfügen eines Bildes in Ihre Anwendung:
     <img src='http://mapbender.org/sites/default/files/OSGeo_project.png' height='60px'>
 
 
-.. image:: ../../../../../figures/de/html.png
+.. image:: ../../../figures/de/html.png
      :scale: 80
 
 * **Title:** Titel des HTML-Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden. 
@@ -35,12 +35,12 @@ Logo mit hinterlegtem Link einbinden:
 
 In der Anwendung wird das HTML-Element unter dem Reiter Layouts durch das ``+`` -Zeichen entweder in der Toolbar, in der Sidepane oder im Footer eingefügt.
 
-.. image:: ../../../../../figures/de/html_add_element.png
+.. image:: ../../../figures/de/html_add_element.png
      :scale: 80
 
 Es erscheint der Dialog "Element hinzufügen – HTML". Für dieses Konfigurationsbeispiel sieht der Dialog wie folgt aus:
 
-.. image:: ../../../../../figures/de/html_example_dialog.png
+.. image:: ../../../figures/de/html_example_dialog.png
      :scale: 80
      
 Das HTML-Element, welches hier eingebunden wird hat die Bezeichnung (Title) Mapbender Logo. Im Content wird das gewünschte Element als HTML-Code angegeben und bei Classes wurde die Default-Einstellung html-element-inline übernommen. Der Code für das Anwendungsbeispiel lautet:
@@ -55,17 +55,17 @@ Das Mapbender Logo wird als Bild eingebunden (img src='https://mapbender3.org/si
 
 Das Element kann an unterschiedlichen Positionen eingebunden werden. Beispielsweise in der Toolbar:
 
-.. image:: ../../../../../figures/de/html_example_toolbar.png
+.. image:: ../../../figures/de/html_example_toolbar.png
      :scale: 80
 
 In der Sidepane:
 
-.. image:: ../../../../../figures/de/html_example_sidepane.png
+.. image:: ../../../figures/de/html_example_sidepane.png
      :scale: 80
      
 Und im Footer:
 
-.. image:: ../../../../../figures/de/html_example_footer.png
+.. image:: ../../../figures/de/html_example_footer.png
      :scale: 80
      
      
@@ -78,12 +78,12 @@ Im Mapbender3 besteht die Möglichkeit Variablen in Anwendungen zu verwenden. Al
 Die Anwendung, für die dieses Element konfiguriert wird, sieht im Anwendungsmanager des 
 Mapbender3 wie folgt aus:
 
-.. image:: ../../../../../figures/de/html_example_application.title_application.png
+.. image:: ../../../figures/de/html_example_application.title_application.png
      :scale: 80
 
 Zuerst muss ein HTML-Element, wie vorher beschrieben über das ``+`` -Zeichen, hinzugefügt werden. Um den Titel der Anwendung einzubinden, wird die Variable "application.title" benötigt.
 
-.. image:: ../../../../../figures/de/html_example_application.title_dialog.png
+.. image:: ../../../figures/de/html_example_application.title_dialog.png
      :scale: 80
 
 In diesem Beispiel ist die Bezeichnung (Title) des HTML-Elements "Titel". Im Content wurde folgender Code verwendet:
@@ -97,7 +97,7 @@ Der Titel der Anwendung wurde mit dem Textzusatz "Anwendung" eingebunden. Dieser
 
 Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
-.. image:: ../../../../../figures/de/html_example_application.title.png
+.. image:: ../../../figures/de/html_example_application.title.png
      :scale: 80
 
 **Variable "entity"**
@@ -106,14 +106,14 @@ Die Variable "entity" bindet Parameter des HTML-Elements ein. Wurde beispielswei
 
 Die Konfiguration für das HTML-Element "Titel" und die Variable *{{ entity.title }}* mit dem Textzusatz "HTML-Element" sieht zum Beispiel wie folgt aus:
 
-.. image:: ../../../../../figures/de/html_example_entity.title_dialog.png
+.. image:: ../../../figures/de/html_example_entity.title_dialog.png
      :scale: 80
 
 Die Parameter für das Styling entsprechen der Konfiguration für das vorherige Beispiel des HTML-Elements mit der Variable application.title. Für entity.title wurden lediglich Textzusatz, Variable und Position (margin-right) angepasst.
 
 Dieses Element sieht in der Anwendung wie folgt aus:
 
-.. image:: ../../../../../figures/de/html_example_entity.title.png
+.. image:: ../../../figures/de/html_example_entity.title.png
      :scale: 80
 
 YAML-Definition:

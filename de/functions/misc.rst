@@ -11,4 +11,4 @@ Verschiedenes
    misc/gpsposition.rst
    misc/html.rst
    misc/poi.rst
-   misc/suggestmap.rst
+   misc/wms_loader.rst

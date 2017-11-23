@@ -14,14 +14,14 @@ Ihrer Applikation können Konfigurationen von einer Selektbox hinzugefügt werde
 **Beachten Sie:** Diese Funktion kann nur verwendet werden, wenn ein WMC-Lader vorhanden ist.
 
 
-.. image:: ../../../../../figures/wmc_list.png
+.. image:: ../../../figures/wmc_list.png
      :scale: 80
 
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/wmc_list_configuration.png
+.. image:: ../../../figures/wmc_list_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.

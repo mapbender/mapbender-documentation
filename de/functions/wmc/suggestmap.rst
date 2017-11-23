@@ -8,13 +8,13 @@ Suggest Map
 
 **Beachten Sie:** Alle Konfigurationen sind im Moment öffentlich. In Zukunft soll ACL (Access Control) zu diesem Element hinzugefügt werden.
 
-.. image:: ../../../../../figures/suggestmap.png
+.. image:: ../../../figures/suggestmap.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/suggestmap_configuration.png
+.. image:: ../../../figures/suggestmap_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.

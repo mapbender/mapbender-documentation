@@ -3,31 +3,31 @@
 Coordinates Display (Koordinatenanzeige)
 ****************************************
 
-Das Koordinatenanzeige-Element zeigt die aktuelle Mausposition in den Kartenkoordinaten. Die Koordinaten sind abhängig vom eingestellten räumlichen Referenzsystem, welches im `Spatial Reference System Selector <../elements/srs_selector.html>`_ geändert werden kann.
+Das Koordinatenanzeige-Element zeigt die aktuelle Mausposition in den Kartenkoordinaten. Die Koordinaten sind abhängig vom eingestellten räumlichen Referenzsystem, welches im `Spatial Reference System Selector <./srs_selector.html>`_ geändert werden kann.
 
 So sieht die Koordinatenanzeige für unterschiedliche Koordinatensysteme aus:
 
 ETRS89 / UTM zone 32N (EPSG:25832):
 
-.. image:: ../../../../../figures/de/coordinates_display_etrs89_zone32.png
+.. image:: ../../../figures/de/coordinates_display_etrs89_zone32.png
      :scale: 80
 
 
 DHDN / 3-degree Gauss-Kruger zone 2 (EPSG:31466):
 
-.. image:: ../../../../../figures/de/coordinates_display_gauss_krueger_zone2.png
+.. image:: ../../../figures/de/coordinates_display_gauss_krueger_zone2.png
      :scale: 80
 
 
 WGS 84 (EPSG:4326):
 
-.. image:: ../../../../../figures/de/coordinates_display_wgs84.png
+.. image:: ../../../figures/de/coordinates_display_wgs84.png
      :scale: 80
 
 
 WGS 84 / Pseudo-Mercator (EPSG:3857):
 
-.. image:: ../../../../../figures/de/coordinates_display_wgs84_pseudo_mercator.png
+.. image:: ../../../figures/de/coordinates_display_wgs84_pseudo_mercator.png
      :scale: 80
  
  
@@ -35,7 +35,7 @@ WGS 84 / Pseudo-Mercator (EPSG:3857):
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/coordinates_display_configuration.png
+.. image:: ../../../figures/de/coordinates_display_configuration.png
      :scale: 80
 
 * **Beschriftung anzeigen (Show title label):** Schaltet die Beschriftung an/aus. Die Beschriftung richtet sich nach dem Title.

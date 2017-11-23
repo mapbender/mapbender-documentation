@@ -5,13 +5,13 @@ Legende
 
 Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Dabei wird jeder einzelne Layer mit seinen Punkte, Flächen und Linien aufgelistet.
 
-.. image:: ../../../../../figures/legend.png
+.. image:: ../../../figures/legend.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/legend_configuration.png
+.. image:: ../../../figures/de/legend_configuration.png
      :scale: 80
 
 
@@ -36,19 +36,19 @@ Legende in der Sidepane
 -----------------------
 Die Legende in der Sidepane wird über das ``+`` -Zeichen in der Anwendung unter Layouts, Sidepane eingebunden.
 
-.. image:: ../../../../../figures/de/add_sidepane.png
+.. image:: ../../../figures/de/add_sidepane.png
      :scale: 80
 
 Im Dialogfeld wird das Element "Legende" ausgewählt. Anschließend öffnet sich der Konfigurationsdialog "Element hinzufügen – Legende".
 
-.. image:: ../../../../../figures/de/legend_example_sidepane_dialog.png
+.. image:: ../../../figures/de/legend_example_sidepane_dialog.png
      :scale: 80
 
 Das hier konfigurierte Element hat den Titel "Legende". Es entspricht dem *Element type* "blockelement", da es in der Sidepane fest eingebunden ist. Der *Display type* ist "list" und das *Target* die "Main Map". Die Legende öffnet sich automatisch (Häkchen bei *Automatisches Öffnen*) und blendet die Ebenen aus, in denen keine Objekte vorhanden sind (Häkchen bei *Ebenen ohne Objekte ausblenden*). Der Titel der Ebenen wird angezeigt sowie der Titel der gruppierten Ebenen (Häkchen bei *Titel der Ebene anzeigen* und *Titel der gruppierten Ebene anzeigen*). 
 
 Diese Konfiguration ergibt folgendes Ergebnis in der Anwendung:
 
-.. image:: ../../../../../figures/de/legend_example_sidepane.png
+.. image:: ../../../figures/de/legend_example_sidepane.png
      :scale: 80
 
 Es wird empfohlen, dass die Legende immer als "blockelement" eingebunden wird, wenn diese in der Sidepane angezeigt werden soll. Wird sie als *Element type* "dialog" eingebunden, öffnet sich ein Dialogfeld und die Legende wird nicht in der Sidepane angezeigt. Lediglich die Überschrift "Legende" ist zu sehen. Sofern dieser Dialog geschlossen wurde, ist dieser nicht mehr aufrufbar. Falls die Legende in der Toolbar eingebunden werden soll, empfiehlt es sich diese über einen Button zu konfigurieren und nicht über das Element Legende.
@@ -57,12 +57,12 @@ Legende in der Toolbar
 -----------------------
 Die Legende kann auch als Button in der Toolbar eingebunden werden. Hierfür muss zuerst das Element Legende in der Anwendung unter dem Reiter Layouts im Content integriert werden.
 
-.. image:: ../../../../../figures/de/add_content.png
+.. image:: ../../../figures/de/add_content.png
      :scale: 80
      
 Für das Konfigurationsbeispiel wurden folgende Einstellungen gewählt:
 
-.. image:: ../../../../../figures/de/legend_example_toolbar_dialog.png
+.. image:: ../../../figures/de/legend_example_toolbar_dialog.png
      :scale: 80
 
 Wichtig ist hier den *Element type* auf "dialog" einzustellen. Für das Konfigurationsbeispiel wurde das Häkchen bei *Automatisches Öffnen* entfernt, so dass sich die Legende nur bei aktivem Klicken auf den Button öffnet.
@@ -70,27 +70,27 @@ Sobald dieses Element im Content eingebunden wurde, muss ein Button in der Toolb
 
 Die Konfiguration eines Buttons für die Legende kann wie folgt aussehen:
 
-.. image:: ../../../../../figures/de/legend_example_button.png
+.. image:: ../../../figures/de/legend_example_button.png
      :scale: 80
 
 Mit diesen Einstellungen sieht das Ergebnis in der Anwendung wie folgt aus:
 
-.. image:: ../../../../../figures/de/legend_example_toolbar.png
+.. image:: ../../../figures/de/legend_example_toolbar.png
      :scale: 80
      
 In der Toolbar ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird öffnet sich das Dialogfeld und zeigt die Legende an.
 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
-.. image:: ../../../../../figures/de/legend_example_toolbar_oOTDTETGE.png
+.. image:: ../../../figures/de/legend_example_toolbar_oOTDTETGE.png
      :scale: 80
 
 
-.. image:: ../../../../../figures/de/legend_example_toolbar_TDTETGE.png
+.. image:: ../../../figures/de/legend_example_toolbar_TDTETGE.png
      :scale: 80
      
      
-.. image:: ../../../../../figures/de/legend_example_toolbar_TETGE.png
+.. image:: ../../../figures/de/legend_example_toolbar_TETGE.png
      :scale: 80
 
 YAML-Definition:

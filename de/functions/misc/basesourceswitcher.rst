@@ -6,7 +6,7 @@ BaseSourceSwitcher (Themenwechsel)
 Mit diesem Element kann zwischen vordefinierten Themen (BaseSources) z.B. Hintergrundkarten gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets bei dem entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig hier ein Häkchen bei Basesource zu setzen:
 
 
-.. image:: ../../../../../figures/de/basesourceswitcher_basesource.png
+.. image:: ../../../figures/de/basesourceswitcher_basesource.png
      :scale: 80
 
 
@@ -14,7 +14,7 @@ Mit diesem Element kann zwischen vordefinierten Themen (BaseSources) z.B. Hinter
 
 Zu jeder Datenquelle kann eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
-.. image:: ../../../../../figures/basesourceswitcher.png
+.. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
 
 Konfiguration
@@ -26,7 +26,7 @@ Die Konfiguration geschieht in zwei Schritten:
 #. Hinzufügen von Themen mit einer oder mehrerer Quellen und optionaler Definition einer Gruppe
 
 
-.. image:: ../../../../../figures/de/basesourceswitcher_de.png
+.. image:: ../../../figures/de/basesourceswitcher_de.png
      :scale: 80
      
 
@@ -45,7 +45,7 @@ Einbinden in Sidepane
 -----------------------
 Der BaseSourceSwitcher kann in der Sidepane mit einer Kartenvorschau eingebunden werden. 
 
-.. image:: ../../../../../figures/de/basesourceswitcher_kartenvorschau.png
+.. image:: ../../../figures/de/basesourceswitcher_kartenvorschau.png
      :scale: 80
 
 Das Styling wird über CSS angepasst. Als Vorbereitung werden Screenshots der Hintergrundkarten mit der Größe 110x110px erstellt und im web-Verzeichnis abgelegt (Screenshots müssen von Außen erreichbar sein).
@@ -55,7 +55,7 @@ Anschließend wird die CSS-Vorlage (siehe unten) in der Anwendung unter dem Tab 
 Die passenden Nummern für das Layerset finden Sie in dem Tab „Layersets“ unter ID (gebraucht wird lediglich die InstanceID).
 
 CSS-Vorlage:
------------
+------------
 
 .. code-block:: css
 

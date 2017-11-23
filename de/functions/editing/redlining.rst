@@ -16,14 +16,14 @@ Die möglichen Geometrietypen sind:
 * Rechtecke
 * Texte (Annotations)
 
-.. image:: ../../../../../figures/de/redlining/redlining.png
+.. image:: ../../../figures/de/redlining/redlining.png
      :scale: 80
 
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/redlining/redlining_configuration.png
+.. image:: ../../../figures/de/redlining/redlining_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird von der Schaltfläche referenziert, die das Element öffnen soll.
@@ -77,17 +77,17 @@ Mit dem Stift-Symbol können Sie das jeweilige Objekt verschieben oder veränder
 
 Punkte und Texte können verschoben werden, Linien und Polygone nicht.
 
-.. image:: ../../../../../figures/de/redlining/redlining_modify_point.png
+.. image:: ../../../figures/de/redlining/redlining_modify_point.png
      :scale: 80
 
 Bei Linien und Polygonen können Sie neue Stützpunkte hinzufügen, wenn Sie den Stützpunkt in der Mitte der Kanten-Linie verschieben (der leicht transparent dargestellte Vertex). Stützpunkte können durch anklicken und anschließendes drücken der Entf-Taste entfernt werden.
 
-.. image:: ../../../../../figures/de/redlining/redlining_modify_polygon.png
+.. image:: ../../../figures/de/redlining/redlining_modify_polygon.png
      :scale: 80
 
 Texte können verschoben werden. Der Ankerpunkt eines Textes befindet sich an der unteren linken Ecke des ersten Buchstabens. Zum Verschieben klicken Sie einfach auf diese Region und verschieben den Text in der Karte. Der Text kann im Nachhinein nicht mehr verändert werden. Bitte löschen Sie den alten Text und setzen Sie einen neuen.
 
-.. image:: ../../../../../figures/de/redlining/redlining_modify_text.png
+.. image:: ../../../figures/de/redlining/redlining_modify_text.png
      :scale: 80
 
 

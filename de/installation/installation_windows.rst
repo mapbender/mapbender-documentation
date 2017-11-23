@@ -15,12 +15,12 @@ Mapbender ist Teil von `MS4W (Mapserver for Windows) <http://www.ms4w.com/>`_ un
 
 Wenn Sie das EXE-Installationsprogramm herunterladen, können Sie Mapbender aus einer Liste der Anwendungen auswählen:
 
-.. image:: ../../../figures/installation/ms4w_installer.png
+.. image:: ../../figures/installation/ms4w_installer.png
      :scale: 80
 
 Falls Sie sich für das ZIP von MS4W entschieden haben, müssen wie Mapbender per Hand von der `MS4W Download Seite <http://www.ms4w.com/>`_ herunterladen und in das MS4W Verzeichnis entpacken.
 
-.. image:: ../../../figures/installation/ms4w_packages.png
+.. image:: ../../figures/installation/ms4w_packages.png
      :scale: 80
 
 Bitte schauen Sie auf `der MS4W Homepage <http://ms4w.com>`_ für weitere Details zu MS4W.
@@ -262,7 +262,7 @@ und prüfen Sie, ob der Alias erreichbar ist:
 * http://localhost/mapbender/config.php
 
 
-.. image:: ../../../figures/mapbender3_symfony_check_configphp.png
+.. image:: ../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
 
 Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.

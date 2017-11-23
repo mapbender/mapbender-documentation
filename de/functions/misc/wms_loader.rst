@@ -7,14 +7,14 @@ Mit diesem Element können WMS per getCapabilities-Request geladen werden.
 Es kann WMS 1.1.1 und  WMS 1.3.0 geladen werden.
 
 
-.. image:: ../../../../../figures/wms_loader.png
+.. image:: ../../../figures/wms_loader.png
      :scale: 80
 
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/wms_loader_configuration.png
+.. image:: ../../../figures/wms_loader_configuration.png
      :scale: 80
 
 * **Auto open:** true, wenn das Element beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.

@@ -7,17 +7,17 @@ SimpleSearch bietet eine Einfeldsuche oder Schlagwortsuche. Die Suchanfrage erfo
 
 Die Geometriedaten können in WKT oder in GeoJSON-Format codiert werden.
 
-.. image:: ../../../../../figures/simplesearch.png
+.. image:: ../../../figures/simplesearch.png
      :scale: 80
 
 
 Konfiguration
 =============
 
-.. image:: ../../../../../figures/de/simplesearch_configuration_a.png
+.. image:: ../../../figures/de/simplesearch_configuration_a.png
      :scale: 80
 
-.. image:: ../../../../../figures/de/simplesearch_configuration_b.png
+.. image:: ../../../figures/de/simplesearch_configuration_b.png
      :scale: 80
 
 
@@ -248,7 +248,7 @@ Das Standardverzeichnis für die Cores ist /data/solr-5.4.1/server/solr; dieses 
 Indexing Solr XML
 -----------------
 
-Nutzen Sie die Beispieldaten unter /solr-5.4.1./example/exampledocs/*.xml oder eigene Daten, um die Solr XML-Dateien zu indizieren.
+Nutzen Sie die Beispieldaten unter /solr-5.4.1./example/exampledocs/\*.xml oder eigene Daten, um die Solr XML-Dateien zu indizieren.
 
 Für die Indexierung haben Sie zwei Möglichkeiten: 
 
