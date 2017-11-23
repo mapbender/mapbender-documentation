@@ -1,4 +1,4 @@
-SPHINXOPTS    =
+SPHINXOPTS    = -n
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = output
@@ -8,7 +8,7 @@ SINGLEHTMLDIR = build/singlehtml
 LINKCHECKDIR  = build/linkcheck
 
 html:
-	$(SPHINXBUILD) $(SRCDIR) $(BUILDDIR)
+	$(SPHINXBUILD) $(SPHINXOPTS) $(SRCDIR) $(BUILDDIR)
 
 latex:
 	$(SPHINXBUILD) -b latex $(SRCDIR) $(LATEXDIR)
