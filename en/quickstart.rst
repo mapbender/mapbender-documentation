@@ -7,22 +7,22 @@
 :Thanks: mapbender-user list
 :Date: |date|
 
-  .. |mapbender3-button-show| image:: ../../figures/mapbender3_button_show.png
+  .. |mapbender3-button-show| image:: ../figures/mapbender3_button_show.png
 
-  .. |mapbender3-button-copy| image:: ../../figures/mapbender3_button_copy.png
+  .. |mapbender3-button-copy| image:: ../figures/mapbender3_button_copy.png
 
-  .. |mapbender3-button-publish| image:: ../../figures/mapbender3_button_publish.png
+  .. |mapbender3-button-publish| image:: ../figures/mapbender3_button_publish.png
 
-  .. |mapbender3-button-edit| image:: ../../figures/mapbender3_button_edit.png
+  .. |mapbender3-button-edit| image:: ../figures/mapbender3_button_edit.png
 
-  .. |mapbender3-button-delete| image:: ../../figures/mapbender3_button_delete.png
+  .. |mapbender3-button-delete| image:: ../figures/mapbender3_button_delete.png
 
-  .. |mapbender3-button-add| image:: ../../figures/mapbender3_button_add.png
+  .. |mapbender3-button-add| image:: ../figures/mapbender3_button_add.png
 
-  .. |mapbender3-button-key| image:: ../../figures/mapbender3_button_key.png
+  .. |mapbender3-button-key| image:: ../figures/mapbender3_button_key.png
 
 
-.. image:: ../../_static/mapbender3_logo.png
+.. image:: ../_static/mapbender3_logo.png
   :scale: 100 %
   :alt: project logo
   :align: right
@@ -60,7 +60,7 @@ This quickstart describes how to:
 
 This is how a Mapbender application can look like:
 
-  .. image:: ../../figures/mapbender3_basic_application.png
+  .. image:: ../figures/mapbender3_basic_application.png
      :scale: 80
 
 
@@ -83,14 +83,14 @@ Start Mapbender in the developer mode app_dev.php
 =================================================
 Symfony offers a developer mode with lot of information about your application (logging, exceptions, database queries, memory usage, time and more). This mode is only available from localhost.
 
-  .. image:: ../../figures/mapbender3_app_dev.png
+  .. image:: ../figures/mapbender3_app_dev.png
      :scale: 80
 
 #. Start the developer mode: http://localhost/mapbender3/app_dev.php
 
 #. Have a look at the information that is offered in the developer mode.
 
-  .. image:: ../../figures/mapbender3_symfony_profiler.png
+  .. image:: ../figures/mapbender3_symfony_profiler.png
      :scale: 80
 
 
@@ -107,7 +107,7 @@ Welcome page
 
 #. You can log in with the user that was generated on installation. It can be ``root`` and password ``root`` (This is the default user and password that you get after installation of Mapbender on OSGeo-Live. Please change the root password if you want to run a productive environment. Please don't delete the user :guilabel:`root`.).
 
-  .. image:: ../../figures/mapbender3_welcome.png
+  .. image:: ../figures/mapbender3_welcome.png
      :scale: 80
 
 After successful login you are directed to the ``Mapbender administration``.
@@ -129,7 +129,7 @@ The Application overview provides the following functionality:
  * |mapbender3-button-delete| button to delete the application
  * with the filter textfield you can search for applications
 
-  .. image:: ../../figures/mapbender3_application_overview.png
+  .. image:: ../figures/mapbender3_application_overview.png
      :scale: 80
 
 
@@ -155,7 +155,7 @@ Create a new application by providing basic information about your application. 
 
 Your application is set up. Now you need Elementes (modules) like (map, legend, navigation) and WMS to populate your application.
 
-  .. image:: ../../figures/mapbender3_create_application.png
+  .. image:: ../figures/mapbender3_create_application.png
      :scale: 80
 
 .. tip:: Please note, that the style-, icon- and layoutconfiguration has to be done in css- and twig-files at the moment. Read more about template generation at http://doc.mapbender.org/en/book/templates.html
@@ -175,12 +175,12 @@ Export / Import applications and sources
 ================================================================================
 You can export applications as JSON or YAML with ``Applications --> Export``. You can chose one or more applications to export and you can also export the sources which are published in the applications.
 
-  .. image:: ../../figures/mapbender3_application_export.png
+  .. image:: ../figures/mapbender3_application_export.png
      :scale: 80
 
 The exportfile contains all the definitions of the application/s (sources) and can be imported via ``Applications --> Import`` in another Mapbender installation or in the same installation.
 
-  .. image:: ../../figures/mapbender3_application_import.png
+  .. image:: ../figures/mapbender3_application_import.png
      :scale: 80
 
 
@@ -221,7 +221,7 @@ A WMS returns an XML-file when the getCapabilities document is requested. This i
 
 #. After successfull registration of the service Mapbender will display an overview on the information that was provided by the service.
 
-  .. image:: ../../figures/mapbender3_wms_load.png
+  .. image:: ../figures/mapbender3_wms_load.png
      :scale: 80
 
 
@@ -253,7 +253,7 @@ After the successfull upload of a WMS you want to add your WMS to an application
 
 #. You can change the order of the Services in your application by drag & drop.
 
-  .. image:: ../../figures/mapbender3_add_source_to_application.png
+  .. image:: ../figures/mapbender3_add_source_to_application.png
      :scale: 80
 
 
@@ -267,7 +267,7 @@ You can configure the WMS for your specific application. Maybe you don't want to
 
 #. You can change the order of the layers via drag & drop
 
-.. image:: ../../figures/mapbender3_wms_application_settings.png
+.. image:: ../figures/mapbender3_wms_application_settings.png
   :scale: 80
 
 **Service configuration:**
@@ -299,7 +299,7 @@ also add hard coded values.
 The following example shows the definition of the parameter "group" which
 transfers the group-value of the logged-in user.
 
-.. image:: ../../figures/mapbender3_vendor_specific_parameter.png
+.. image:: ../figures/mapbender3_vendor_specific_parameter.png
            :scale: 80
 
 
@@ -337,7 +337,7 @@ Add Elements to your application
 ================================================================================
 Mapbender offers a set of elements. You can add the elements to your application. You have different regions (Toolbar, Sidepane, Content, Footer) to which you can add elements.
 
-  .. image:: ../../figures/mapbender3_application_add_element.png
+  .. image:: ../figures/mapbender3_application_add_element.png
      :scale: 80
 
 #. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layouts --> Button`` |mapbender3-button-add| to get an overview over the elements Mapbender provides.
@@ -354,7 +354,7 @@ Mapbender offers a set of elements. You can add the elements to your application
 
 Now you should get an idea how easy it is to change a Mapbender application without changes in the code.
 
-  .. image:: ../../figures/mapbender3_application_elements.png
+  .. image:: ../figures/mapbender3_application_elements.png
      :scale: 80
 
 Examples for elements Mapbender offers:
@@ -424,7 +424,7 @@ Create a user
 
 #. You can provide more information about the user in the tab ``Profile``.
 
-.. image:: ../../figures/mapbender3_create_user.png
+.. image:: ../figures/mapbender3_create_user.png
      :scale: 80
 
 
@@ -446,7 +446,7 @@ Assign users to group
 
 #. Assign a user by  |mapbender3-button-edit| ``Users --> Edit-Button--> Groups`` to a group.
 
-  .. image:: ../../figures/mapbender3_assign_user_to_group.png
+  .. image:: ../figures/mapbender3_assign_user_to_group.png
      :scale: 80
 
 
@@ -463,7 +463,7 @@ Mapbender provides different rights. They refer to the Symfony ACL System http:/
 
 #. Assign roles to a user by ``Users --> Edit your User --> Security``.
 
-  .. image:: ../../figures/mapbender3_roles.png
+  .. image:: ../figures/mapbender3_roles.png
      :scale: 80
 
 
@@ -485,7 +485,7 @@ Assign an Application to a User/Group
 
 #. Login as the new user
 
-  .. image:: ../../figures/mapbender3_security.png
+  .. image:: ../figures/mapbender3_security.png
      :scale: 80
 
 Assign single elements to a User/Group
@@ -525,7 +525,7 @@ To pass a single POI, use the following URL format:
 
 * http://demo.mapbender.org/application/mapbender_user?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
-  .. image:: ../../figures/mapbender3_position_poi_label.png
+  .. image:: ../figures/mapbender3_position_poi_label.png
      :scale: 80
 
 

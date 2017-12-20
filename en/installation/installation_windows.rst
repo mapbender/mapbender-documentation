@@ -15,12 +15,12 @@ Mapbender is part of `MS4W (Mapserver for Windows) <http://www.ms4w.com/>`_ and 
 
 If you choose the EXE-Installer, you can select Mapbender from the list of apps:
 
-.. image:: ../../../figures/installation/ms4w_installer.png
+.. image:: ../../figures/installation/ms4w_installer.png
      :scale: 80
 
 If you choose the ZIP from MS4W, you have to download and unpack Mapbender by hand from `the MS4W download page <http://www.ms4w.com/>`_ and unpack it into the MS4W directory.
 
-.. image:: ../../../figures/installation/ms4w_packages.png
+.. image:: ../../figures/installation/ms4w_packages.png
      :scale: 80
 
 Please refer to `the MS4W homepage <http://ms4w.com>`_ for further details.
@@ -260,7 +260,7 @@ Open Symfony´s Welcome Script config.php. This script checks whether all necess
 * http://localhost/mapbender/config.php
 
 
-.. image:: ../../../figures/mapbender3_symfony_check_configphp.png
+.. image:: ../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
 
 Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create. Further information is available in the chapter `Configuring the database <../database.html>`_.

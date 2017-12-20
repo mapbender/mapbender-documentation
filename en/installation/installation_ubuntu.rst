@@ -266,5 +266,5 @@ Open Symfony´s Welcome Script config.php. This script checks whether all necess
 * http://localhost/mapbender/config.php
 
 
-.. image:: ../../../figures/mapbender3_symfony_check_configphp.png
+.. image:: ../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
