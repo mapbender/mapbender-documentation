@@ -1,8 +1,10 @@
-Installation
-============
+Systemvoraussetzungen und Installation
+======================================
+
+Wir haben die Installationsanleitungen nach Betriebssystemen aufgeteilt. Die Installation im Symfony eigenen Webserver beschreibt, wie sie Symfony eigene Mechanismen nutzen können um schnell einen Blick auf Mapbender3 zu werfen.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    installation/systemrequirements.rst
    installation/installation_symfony.rst
