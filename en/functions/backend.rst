@@ -11,3 +11,5 @@ Backend
    :maxdepth: 2
 
    backend/FOM/index.rst
+   backend/ManagerBundle/manager.rst
+   backend/OWSProxy/owsproxy3.rst
