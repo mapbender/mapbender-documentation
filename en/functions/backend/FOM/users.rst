@@ -21,7 +21,7 @@ If a user has forgot his/her password, he can use the "Forgot password?"
 link in the Login-screen to request a new one. For that he types in his
 username or e-mail-adress.
 
-.. image:: ../../../../en/bundles/FOM/UserBundle/user_forgot_password.png
+.. image:: ../../../../en/functions/backend/FOM/user_forgot_password.png
 
 After that he gets an e-mail with a link, which leads him to a site where he
 can reset his password. The link isn't valid anymore after this
@@ -51,7 +51,7 @@ the setting fom_user:selfregister in the config.yml to true.
 The Login-dialog contains a "Register" link. This openes a page where the
 user can type in his/her name, password and e-mail adresss.
 
-.. image:: ../../../../en/bundles/FOM/UserBundle/user_self_register.png
+.. image:: ../../../../en/functions/backend/FOM/user_self_register.png
 
 
 After that he gets a confirmation mail to complete the registration. Until
@@ -70,12 +70,12 @@ a checkbox exists in the Edit User dialog.
 
 A user with administration rights cannot activate or deactivate himself.
 
-.. image:: ../../../../en/bundles/FOM/UserBundle/edit_user_activated.png
+.. image:: ../../../../en/functions/backend/FOM/edit_user_activated.png
 
 A user who is deactivated cannot login into Mapbender anymore until he gets
 activated again.
            
-.. image:: ../../../../en/bundles/FOM/UserBundle/user_account_is_disabled.png
+.. image:: ../../../../en/functions/backend/FOM/user_account_is_disabled.png
 
 Users which have self-registered themselves but have not approved the
 activation mail can now be activated by an administrator.
@@ -90,7 +90,7 @@ Next to every element is a security key. If you click on the key, you can adjust
 
 After setting specific access rights, the security key turns red. If you hover over the key with the cursor, you will see the names of the users who have rights to the element.
 
-.. image:: ../../../../en/bundles/FOM/UserBundle/element_security_key_popup.png
+.. image:: ../../../../en/functions/backend/FOM/element_security_key_popup.png
 
 
 Login Failures

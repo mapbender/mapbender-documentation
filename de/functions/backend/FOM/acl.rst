@@ -47,4 +47,4 @@ Security Identität
 ACEs können entweder mit Benutzern oder Rollen assoziiert werden, um damit
 beide mit einer Security Identität zu kapseln.
 
-.. image:: ../../../../en/bundles/FOM/UserBundle/acl.png
+.. image:: ../../../../en/functions/backend/FOM/acl.png
