@@ -13,16 +13,16 @@ The Editor offers the possibility to create and update configurations. You can s
 
 
 
-.. image:: ../../../../../figures/wmc_editor.png
+.. image:: ../../../figures/wmc_editor.png
      :scale: 80
 
-.. image:: ../../../../../figures/wmc_editor_2.png
+.. image:: ../../../figures/wmc_editor_2.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/wmc_editor_configuration.png
+.. image:: ../../../figures/wmc_editor_configuration.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

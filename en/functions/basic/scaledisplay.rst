@@ -5,13 +5,13 @@ ScaleDisplay
 
 The ScaleDisplay displays the current map scale (1:1K or 1: 1000).
 
-.. image:: ../../../../../figures/de/scaledisplay.png
+.. image:: ../../../figures/de/scaledisplay.png
      :scale: 100
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/scaledisplay_configuration.png
+.. image:: ../../../figures/scaledisplay_configuration.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

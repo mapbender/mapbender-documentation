@@ -7,14 +7,14 @@ Opens a dialog in  which a WMS can be loaded via the getCapabilities-Request.
 You can load WMS 1.1.1 and  WMS 1.3.0.
 
 
-.. image:: ../../../../../figures/wms_loader.png
+.. image:: ../../../figures/wms_loader.png
      :scale: 80
 
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/wms_loader_configuration.png
+.. image:: ../../../figures/wms_loader_configuration.png
      :scale: 80
 
 * **Auto open:** true/false open when application is started, default false.

@@ -8,7 +8,7 @@ The Overview element provides a control of an overview map, similar to the OpenL
 You can define the size of your overview window and a position. Refer to a layerset that you defined before for the services to display in the overview map. The overview map can be fixed or can zoom when you zoom in/out in the main map. You also can define whether the overview map is minimized or maximized on start of the application.
 
 
-.. image:: ../../../../../figures/overview.png
+.. image:: ../../../figures/overview.png
      :scale: 80
 
 Configuration
@@ -16,12 +16,12 @@ Configuration
 
 The Overview element must be placed in the Configuration underneath the Map element.
 
-.. image:: ../../../../../figures/overview_configuration_dependency_map.png
+.. image:: ../../../figures/overview_configuration_dependency_map.png
    :scale: 80
 
 The configuration dialog:
 
-.. image:: ../../../../../figures/overview_configuration.png
+.. image:: ../../../figures/overview_configuration.png
      :scale: 80
 
 * **Maximize:** true/false to open/close on start, default is true.

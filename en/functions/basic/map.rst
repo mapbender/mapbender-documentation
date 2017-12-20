@@ -5,13 +5,13 @@ Map
 
 MapQuery/OpenLayers based map. You have to define the units, the start and max extent, scales and supported projections.
 
-.. image:: ../../../../../figures/map.png
+.. image:: ../../../figures/map.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/map_configuration.png
+.. image:: ../../../figures/map_configuration.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
@@ -79,7 +79,7 @@ the layerid and serviceid in the specific application, namely in the
 layerset and there in a layer. Each layer has an icon with three small dots
 on the right side. Click on the icon and a popup window will appear.
 
-.. image:: ../../../../../figures/wms_instance_layer_id.png
+.. image:: ../../../figures/wms_instance_layer_id.png
      :scale: 80
 
 The first value lists the internal SourceID and SourceLayerId (31-591). The

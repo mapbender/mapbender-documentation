@@ -5,13 +5,13 @@ ScaleBar
 
 The ScaleBar displays a small line indicator representing the current map scale.
 
-.. image:: ../../../../../figures/scalebar.png
+.. image:: ../../../figures/scalebar.png
      :scale: 100
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/scalebar_configuration.png
+.. image:: ../../../figures/scalebar_configuration.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

@@ -9,13 +9,13 @@ You can add WMC Loader to your application as a selectbox or a button which open
 
 When you choose a configuration, the services in the configuration will be merged in your existing application.
 
-.. image:: ../../../../../figures/wmc_loader.png
+.. image:: ../../../figures/wmc_loader.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/wmc_loader_configuration.png
+.. image:: ../../../figures/wmc_loader_configuration.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

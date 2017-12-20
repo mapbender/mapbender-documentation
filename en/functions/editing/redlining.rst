@@ -16,14 +16,14 @@ The available geometry-types are:
 * Rectangles
 * Text (Annotations)
 
-.. image:: ../../../../../figures/de/redlining/redlining.png
+.. image:: ../../../figures/de/redlining/redlining.png
      :scale: 80
 
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/de/redlining/redlining_configuration.png
+.. image:: ../../../figures/de/redlining/redlining_configuration.png
      :scale: 80
 
 * **Title:** Title of the elements. This is referenced by the button which opens the element.
@@ -77,17 +77,17 @@ With the pen-symbol you can move or alter the respective object. The chosen obje
 
 Points and Annotations can be moved to a different position. Lines and Polygon can not be moved.
 
-.. image:: ../../../../../figures/de/redlining/redlining_modify_point.png
+.. image:: ../../../figures/de/redlining/redlining_modify_point.png
      :scale: 80
 
 You can add new vertices to existing lines or polygons if you move the vertex in the middle of an edge (the lightly transparent rendered vertex). You can remove vertices by clicking on a vertex and hitting the Delete-key.
 
-.. image:: ../../../../../figures/de/redlining/redlining_modify_polygon.png
+.. image:: ../../../figures/de/redlining/redlining_modify_polygon.png
      :scale: 80
 
 You can move text. The anchor-point of a text is at the bottom left corner of the first character. To move the text, simply click on that region and move the text in the map. The text cannot be altered after it is set. Please remove the old text object and set a new one.
 
-.. image:: ../../../../../figures/de/redlining/redlining_modify_text.png
+.. image:: ../../../figures/de/redlining/redlining_modify_text.png
      :scale: 80
 
 

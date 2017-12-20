@@ -5,13 +5,13 @@ Copyright
 
 The copyright shows a copyright label and terms of use as a dialog.
 
-.. image:: ../../../../../figures/copyright.png
+.. image:: ../../../figures/copyright.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/copyright_configuration.png
+.. image:: ../../../figures/copyright_configuration.png
      :scale: 80
 
 * **Autoopen:** Enable or disable autoopening of the copyright window, when starting the application. (Default: disabled)

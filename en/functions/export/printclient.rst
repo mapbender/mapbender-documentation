@@ -13,19 +13,19 @@ The print element uses print templates, which can be modified individually. In t
 
 Mapbender contains already a collection of print templates (LibreOffice Draw files in formats A4 to A0), which can be modified individually.
 
-.. image:: ../../../../../figures/print_client.png
+.. image:: ../../../figures/print_client.png
      :scale: 80
 
 The PrintClient can be used both as a dialog and an element as part of the sidebar. If it is part of the sidebar, you have to activate the Print Frame first to start the print. If you have finished, you have to deactivate the Print Frame again to use the map again as usual (when used as a dialog this happens automatically by opening and closing the dialog window).
 
-.. image:: ../../../../../figures/print_client_sidebar.png
+.. image:: ../../../figures/print_client_sidebar.png
      :scale: 80
 
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/print_client_configuration.png
+.. image:: ../../../figures/print_client_configuration.png
      :scale: 80
 
 You need a button to show this element or you can use it in the sidepane. See :doc:`button` for inherited configuration options.
@@ -111,7 +111,7 @@ Create your individual templates
 ================================
 To create an individual print template use an existing print template odg-file or create a new LibreOffice Draw file. Your template can have fixed objects like your logo, copyright or print information. In addition you have to create a layer for the dynamic elements like map, overview, northarrow, scale, date and optional fields. The dynamic layer is an additional non printable layer in your LibreOffice Draw file. Add this layer with **Menu -> Add -> Layer -> define a name for the layer and choose the option not printable**.
 
-.. image:: ../../../../../figures/print_template_odg.png
+.. image:: ../../../figures/print_template_odg.png
      :scale: 80
 
 Define areas for the map, northarrow, scale, date and optional fields. 
@@ -132,7 +132,7 @@ You can define optional fields in the element definition (like title, comment, e
 
 When creating dynamic text each property must have the appropriate name, for example the filed **comment1** must have the name **comment1** in the Open Office Draw file. For naming fields, it is not enough to edit the content of the textfield. You need to edit the object name. Selct the textfiled and go to **menue edit --> name...** to change the name.
 
-.. image:: ../../../../../figures/de/print_template_name.png
+.. image:: ../../../figures/de/print_template_name.png
     :scale: 80
 
 
@@ -179,7 +179,7 @@ Legend on the first page
 
 You can integrate the legend next to the map on the first page. This field is not included in the print template by default. To insert the legend you have to modify the ODG print template file. Insert a new dynamic field with the name "legend" on the non printable layer and put it to the desired spot. Go to **Menue: Modify -> Name...**  to change the name of the field to "legend". As final step, you have to export the ODG-file as PDF-file as described above and save it in the same directory. The result could look like this:
 
-.. image:: ../../../../../figures/print_client_example_legend.png
+.. image:: ../../../figures/print_client_example_legend.png
     :scale: 80
 
 
@@ -188,7 +188,7 @@ Logo on the legendpage
 
 If the legend should still be created on an additional page, you can put a logo on this second page. This can be achieved with the dynamic element "legendpage_image". You have to create a new field on the non printable layer and change its name to "legendpage_image" (**Menue: Modify -> Name...**). Save the desired logo or image in the directory **app/Resources/MapbenderPrintBundle/images/** and change its name to "legendpage_image.png". The print could contain two pages and look like this:
 
-.. image:: ../../../../../figures/print_client_example_legendpage_image.png
+.. image:: ../../../figures/print_client_example_legendpage_image.png
     :scale: 80
 You can see the legendpage image in the right corner of the second page.
 
@@ -198,17 +198,17 @@ Coloured texts
 
 The text in the print template can be changed in many ways. Besides the size of the font, you can also change the colour of the text. To do so, insert a text field via **Menue: Insert -> Text Box**. If you want to insert it as a dynamic element, you have to insert it on the non printable layer and change its name, for example to "title". To change the colour of the text, select the text in the text field (here: "title"). You can either change the colour in the tab **Properties -> Character**:
 
-.. image:: ../../../../../figures/print_client_example_colour_nav.png
+.. image:: ../../../figures/print_client_example_colour_nav.png
      :scale: 80
 
 Or you **right-hand click the selected text** and open the dialogue window **Character**. There you can change the colour in the tab **Font Effects -> Font color**.
 
-.. image:: ../../../../../figures/print_client_example_colour_dialog.png
+.. image:: ../../../figures/print_client_example_colour_dialog.png
      :scale: 80
 
 The change of the colour of the dynamic field "title" to blue can look like this:
 
-.. image:: ../../../../../figures/print_client_example_colour.png
+.. image:: ../../../figures/print_client_example_colour.png
      :scale: 80
 
 The change of the font size works in an analogous manner.
@@ -220,7 +220,7 @@ Dynamic images and dynamic texts
 Depending on the group, the print can contain different images or descriptions (e.g. logo and name of the commune). This can be achieved through the dynamic elements "dynamic_image" and "dynamic_text". You can insert both elements in the ODG-print template on the non printable layer and change their names (**Menue: Modify -> Name...**). As soon as you’ve put the fields in the print template, Mapbender will look for an image with the name of the group and will display it in the field of the "dynamic_image". The height of the object will be used to scale the image and the width will be calculated relative to the height. You have to save the different images in the directory **app/Resources/MapbenderPrintBundle/images/** with the name of the group (e.g. the name of the group is "Group 1", then the name of the image has to be Group 1.png). The description of the group will be displayed in the field "dynamic_text".
 The print with a group named "Group 1" could look like this:
 
-.. image:: ../../../../../figures/print_client_example_groups.png
+.. image:: ../../../figures/print_client_example_groups.png
      :scale: 80
 To use this feature, it is required, that you’ve created groups before. How to create groups and users is described in the Mapbender documentation in the Mapbender Quickstart (https://doc.mapbender.org/en/book/quickstart.html).
 

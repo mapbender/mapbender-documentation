@@ -6,7 +6,7 @@ POI (MeetingPoint)
 Generate POI-URLs (aka meeting point) suitable for sending by e-mail. The point is projected and displayed in the coordinate-system of the map.
 
 
-.. image:: ../../../../../figures/poi.png
+.. image:: ../../../figures/poi.png
      :scale: 80
 
 
@@ -14,7 +14,7 @@ Configuration
 =============
 
 
-.. image:: ../../../../../figures/poi_configuration.png
+.. image:: ../../../figures/poi_configuration.png
      :scale: 80
      
 

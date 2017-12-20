@@ -6,13 +6,13 @@ Scale Selector
 Displays a selctbox with scales. The map scale changes when an value from the selectbox is choosen. 
 Notice: The Selectbox offers the scales that are defined for the map-Element.
 
-.. image:: ../../../../../figures/de/scale_selector.png
+.. image:: ../../../figures/de/scale_selector.png
      :scale: 100
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/scale_selector_configuration.png
+.. image:: ../../../figures/scale_selector_configuration.png
      :scale: 80
 
 

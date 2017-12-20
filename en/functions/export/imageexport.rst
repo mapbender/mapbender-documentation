@@ -5,13 +5,13 @@ ImageExport
 
 Image Export allows you to export your current map-view. You can choose png or jpeg format.
 
-.. image:: ../../../../../figures/image_export.png
+.. image:: ../../../figures/image_export.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/image_export_configuration.png
+.. image:: ../../../figures/image_export_configuration.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. The title will be displayed besides the button if "Show label" is activated.

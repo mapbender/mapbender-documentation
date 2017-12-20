@@ -6,13 +6,13 @@ Search Router
 Search frontend GUI for plugable search engine modules. Right now a generic SQL search engine
 is provided, with more to come (think Lucene enhanced search, etc.)
 
-.. image:: ../../../../../figures/search_router.png
+.. image:: ../../../figures/search_router.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/search_router_configuration.png
+.. image:: ../../../figures/search_router_configuration.png
      :scale: 80
 
 

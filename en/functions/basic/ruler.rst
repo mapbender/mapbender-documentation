@@ -5,13 +5,13 @@ Line/Area Ruler
 
 The ruler is used to draw a line or area and display length/area in a dialog.Selecting a type determines whether the element measures lines or areas. Each Ruler-element can only measure either lines or areas.
 
-.. image:: ../../../../../figures/ruler.jpg
+.. image:: ../../../figures/ruler.jpg
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/ruler_configuration.jpg
+.. image:: ../../../figures/ruler_configuration.jpg
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

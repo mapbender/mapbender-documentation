@@ -5,13 +5,13 @@ Legend
 
 The legend object shows the legend of the layers that are displayed in the map.
 
-.. image:: ../../../../../figures/legend.png
+.. image:: ../../../figures/legend.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/legend_configuration.png
+.. image:: ../../../figures/legend_configuration.png
      :scale: 80
 
 * **Autoopen:** open when application is started, default is true.

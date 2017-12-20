@@ -11,7 +11,7 @@ You can define a button that refers to a website or script using the click param
 Configuration
 =============
 
-.. image:: ../../../../../figures/button_configuration.png
+.. image:: ../../../figures/button_configuration.png
      :scale: 80
 
 * **Show label:** Enable or disable text (title) next to the button.

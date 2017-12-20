@@ -7,13 +7,13 @@ The coordinates display element shows your mouse position in map coordinates.
 The coordinates are dependent on the selected spatial reference system which may be changed in the 
 `Spatial Reference System Selector <../elements/srs_selector.html>`_.
 
-.. image:: ../../../../../figures/coordinates_display.png
+.. image:: ../../../figures/coordinates_display.png
      :scale: 90
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/coordinates_display_configuration.png
+.. image:: ../../../figures/coordinates_display_configuration.png
      :scale: 80
 
 * **Show title label:** Enable or disable text (title).

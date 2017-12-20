@@ -7,7 +7,7 @@ With the data sources, you can register OGC WMS in version 1.1.1 and 1.3.0 into 
 
 Further information about the registration process of services and their usage in Mapbender is available in the `Quickstart document <../../../../book/quickstart.html#loading-web-map-services>`_.
 
-.. image:: ../../../../../figures/entities/source_wms.png
+.. image:: ../../../figures/entities/source_wms.png
      :scale: 80
 
 * **Service URL**: URL to the Capabilities document of the WMS service (z.B.: ``http://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities``)
@@ -24,5 +24,5 @@ Further information about the registration process of services and their usage i
 
   Services which are registered without the check of validity are listed with an exclamation mark. In many cases they work with Mapbender although they have included own schema-files.
 
-  .. image:: ../../../../../figures/entities/source_not_valid.png
+  .. image:: ../../../figures/entities/source_not_valid.png
        :scale: 80

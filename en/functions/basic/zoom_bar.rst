@@ -5,13 +5,13 @@ Navigation Toolbar (Zoombar)
 
 The Navigation Toolbar element provides a control to pan and zoom, similar to the OpenLayers PanZoomBar control. 
 
-.. image:: ../../../../../figures/de/zoom_bar.png
+.. image:: ../../../figures/de/zoom_bar.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/zoom_bar_configuration.png
+.. image:: ../../../figures/zoom_bar_configuration.png
      :scale: 80
 
 * **Draggable:** element is draggable or not, default true.

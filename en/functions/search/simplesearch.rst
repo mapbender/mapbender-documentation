@@ -9,17 +9,17 @@ expects to receive a JSON-formatted data back which includes a label and a geome
 
 Geometry data can be encoded as WKT or in GeoJSON format.
 
-.. image:: ../../../../../figures/simplesearch.png
+.. image:: ../../../figures/simplesearch.png
      :scale: 80
 
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/simplesearch_configuration_a.png
+.. image:: ../../../figures/simplesearch_configuration_a.png
      :scale: 80
 
-.. image:: ../../../../../figures/simplesearch_configuration_b.png
+.. image:: ../../../figures/simplesearch_configuration_b.png
      :scale: 80
 
 

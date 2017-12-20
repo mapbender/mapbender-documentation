@@ -7,13 +7,13 @@ The spatial reference system selector changes the map's spatial reference system
 Notice: The Selectbox offers the SRS that are defined for the `map element <../elements/map.html>`_.
 
 
-.. image:: ../../../../../figures/de/srs_selector.png
+.. image:: ../../../figures/de/srs_selector.png
      :scale: 100
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/srs_selector_configuration.png
+.. image:: ../../../figures/srs_selector_configuration.png
      :scale: 80
 
 * **Show label:** indicates the element.

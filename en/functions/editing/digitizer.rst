@@ -16,7 +16,7 @@ The Digitizer-Element offers complex editing functionality:
 In connection with the digitization, very complex forms can be generated for the acquisition of data.
     
 
-.. image:: ../../../../../figures/digitizer.png
+.. image:: ../../../figures/digitizer.png
      :scale: 80
 
 The following option for the construction of the forms are available:
@@ -36,7 +36,7 @@ The following option for the construction of the forms are available:
 * Help texts
 
 
-.. image:: ../../../../../figures/digitizer_with_tabs.png
+.. image:: ../../../figures/digitizer_with_tabs.png
      :scale: 80
 
 Setup
@@ -44,7 +44,7 @@ Setup
 
 You can only use the element in the sidepane.
 
-.. image:: ../../../../../figures/digitizer_configuration.png
+.. image:: ../../../figures/digitizer_configuration.png
      :scale: 80
 
 
@@ -398,7 +398,7 @@ Every FeatureType can unlock several `Toolsets <#definition-of-the-available-too
 For example in the FeatureType "poi" the toolset "drawPoint" unlocks the button to create a new point, the toolset "modifyFeature" unlocks the move-button.
 
 
-.. image:: ../../../../../figures/digitizer_buttons_poi.png
+.. image:: ../../../figures/digitizer_buttons_poi.png
      :scale: 80
 
 
@@ -410,7 +410,7 @@ Three buttons are available in the attribute-dialog: Save, Delete and Cancel.
 
 *Saving* changes only happens, if the "Save" button in the attribute-dialog is pressed. A move of the geometry alone doesn't save the feature directly (to avoid unnecessary stores into the database). It is mandatory to open the attribute-dialog and to click Save, yet.
 
-.. image:: ../../../../../figures/digitizer_save_delete_cancel.png
+.. image:: ../../../figures/digitizer_save_delete_cancel.png
      :scale: 80
 
 * **Save:** Saves the geometry and the attribute-data into the database.
@@ -432,7 +432,7 @@ Vertices
 
 Editing polygons allows you to edit, move and delete vertices. The "edit vertices" button expects you to select a polygon. It will then be shown with its vertices.
 
-.. image:: ../../../../../figures/digitizer_edit_vertices.png
+.. image:: ../../../figures/digitizer_edit_vertices.png
            :scale: 80
 
 The existing vertices are displayed opaque, possible new vertices are always in the middle of an edge, are light transparent and can be added by clicking on them.
@@ -734,7 +734,7 @@ No error message appears outside the form. The applicant has to check the inform
 Datepicker (type date)
 ----------------------
 
-.. image:: ../../../../../figures/digitizer_datepicker.png
+.. image:: ../../../figures/digitizer_datepicker.png
      :scale: 80
 
 .. code-block:: yaml
@@ -831,7 +831,7 @@ A possibility to show the uploaded images is the image-element.
 Images (type image)
 -------------------
 
-.. image:: ../../../../../figures/digitizer_image.png
+.. image:: ../../../figures/digitizer_image.png
      :scale: 80
 
 The image-element can be used to view an picture in the form. You can display images by specifying a URL in a database field or URL using the src parameter.
@@ -916,7 +916,7 @@ Context Menu
 Using the context menu, an object on the map can be considered in more detail.
 After the activation you can open a context menu via the right mouse click on an object or cluster.
 
-.. image:: ../../../../../figures/digitizer_contextmenu.png
+.. image:: ../../../figures/digitizer_contextmenu.png
      :scale: 80
 
 Items of the Context Menu: 
@@ -944,7 +944,7 @@ Depending on the defined distance and zoom level different numbers of objects ca
 
 Due to the complexity of the Clustering, future versions may have changes in functionality and syntax, so we define that still as experimental. Dependencies are to the display of features in the current extent/all areas and the different geometry types.
 
-.. image:: ../../../../../figures/digitizer_clustering.png
+.. image:: ../../../figures/digitizer_clustering.png
      :scale: 80
 
 Definition of the cluster element: 

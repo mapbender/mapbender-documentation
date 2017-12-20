@@ -10,13 +10,13 @@ Suggest Map
 
 
 
-.. image:: ../../../../../figures/suggestmap.png
+.. image:: ../../../figures/suggestmap.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/suggestmap_configuration.png
+.. image:: ../../../figures/suggestmap_configuration.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

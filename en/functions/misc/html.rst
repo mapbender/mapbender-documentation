@@ -6,7 +6,7 @@ HTML Element
 This element allows you to add generic HTML anywhere in your application.
 In the generic HTML the following variables are available: "application" (Entity Application), "entity" (Entity HTMLElement) and "configuration".
 
-.. image:: ../../../../../figures/html_result_application.png
+.. image:: ../../../figures/html_result_application.png
      :scale: 80
 
 Configuration
@@ -19,7 +19,7 @@ For example you can add an image to your application:
     <img src='http://mapbender.org/sites/default/files/OSGeo_project.png' height='60px'>
 
 
-.. image:: ../../../../../figures/html.png
+.. image:: ../../../figures/html.png
      :scale: 80
 
 

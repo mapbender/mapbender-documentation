@@ -18,13 +18,13 @@ Functions
 * Query the metadata of layers
 
 
-.. figure:: ../../../../../figures/layertree/layertree_example_dialog.png
+.. figure:: ../../../figures/layertree/layertree_example_dialog.png
            :scale: 80
            :alt: simple Layertree integrated as dialogue with a Layerset and Layer
 
            Simple Layertree integrated as dialogue with one Layerset and Layer.
 
-.. figure:: ../../../../../figures/layertree/layertree_example_sidepane.png
+.. figure:: ../../../figures/layertree/layertree_example_sidepane.png
            :scale: 80
            :alt: complex Layertree integrated in the sidebar with multiple Layersets divided into thematic groups
 
@@ -56,7 +56,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 Through the use of the **Layersets**, the desired layers are included in the application. The instances are the references to the individual WMS services. With the plus-button **[1]** new Layersets can be created. Then, new layers can be integrated in the application by adding the existing instances **[2]**. The Layerset "overview " **[3]** is -as usual- used for displaying the overview map. 
 For a detailed documentation on how the services can be integrated correctly, please head for to the documentation of the `Layersets <../entities/layerset.html>`_ and `sources <../entities/source.html>`_. 
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_layerset_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_layerset_en.png
            :scale: 80
            :alt: Configuration of various Layersets for integration into the Layertree.
 
@@ -68,7 +68,7 @@ Here, you define which Layersets you want to use in the map by checking **[1]** 
 In this step, you define the order in which the Layersets appear in your Layertree and the map. You can move the created Layersets from the list [2] by drag & drop. Please notice that the first defined themes can cover underlying themes.
 
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_map_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_map_en.png
            :scale: 80
            :alt:  Configuration in the map ( Map-Element ) to display the Layersets.
 
@@ -95,7 +95,7 @@ The instance of the OSM demosource is automatically included in the installation
 In case of difficulties with the integration, the documentation of the `Layersets <../entities/layerset.html>`_ provides useful information.
 
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_layerset_simple_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple_en.png
            :scale: 80
            :alt: Configuration of a Layerset for integration into the simple Layertree.
 
@@ -105,7 +105,7 @@ In the next step we configure the `Map element <../elements/map.html>`_ to displ
 It is important, that you put a tick in the field of the Layerset "World" **[1]**, so it appears in the application afterwards. If you have questions for further configuration of the `Map element <../elements/map.html>`_  the documentation can help.
 
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_map_simple_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_map_simple_en.png
            :scale: 80 
            :alt:  Configuration in the map ( Map-Element ) to display the Layerset.
 
@@ -116,7 +116,7 @@ The last step is the configuration of the **Layertree**.
 The instances specified in the map element can be defined in more detail with the Layertree. If a predefined application has been copied, the Layertree should work now. If the element is newly created, it can already be used with the default settings without necessary further adjustments. 
 For a better understanding of the functions and their usage we now edit the Layertree-element in the content.
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_1_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
            :alt: Configuration of the simple Layertree in the content.
 
@@ -126,7 +126,7 @@ When configuring the Layersets the function Basesource is activated as default. 
 
 The function **Display Header** [2] allows the inclusion of a headline in the Layertree.
 
-.. figure:: ../../../../../figures/layertree/layertree_header_en.png
+.. figure:: ../../../figures/layertree/layertree_header_en.png
            :scale: 80 
            :alt: Headline in the Layertree.
 
@@ -134,7 +134,7 @@ The function **Display Header** [2] allows the inclusion of a headline in the La
 
 If you activate **Open automatically**, the Layertree is open on default when you start the application and must not be activated by clicking on a button or the unfolding of a sidebar. The **Title** [4] of the element is displayed in the "Layouts"-list and allows you to distinguish between different elements. The **Target** [5] is the ID of the map element. 
 
-.. figure:: ../../../../../figures/layertree/layertree_title_en.png
+.. figure:: ../../../figures/layertree/layertree_title_en.png
            :scale: 80
            :alt: Title of the Layertree in the layout.
 
@@ -145,7 +145,7 @@ By specifying a **Type** [6] the display of the Layertrees can be defined. There
 * *Dialog*
 * *Element*
 
-.. figure:: ../../../../../figures/layertree/layertree_type.png
+.. figure:: ../../../figures/layertree/layertree_type.png
            :scale: 80
 
 
@@ -155,7 +155,7 @@ By specifying a **Type** [6] the display of the Layertrees can be defined. There
   You should choose the type *Element* when the Layertree is integrated via the sidepane. 
 
 
-.. figure:: ../../../../../figures/layertree/layertree_type_map_en.png
+.. figure:: ../../../figures/layertree/layertree_type_map_en.png
            :scale: 80
            :alt: Type specification for the display of the Layertree.
 
@@ -164,7 +164,7 @@ By specifying a **Type** [6] the display of the Layertrees can be defined. There
 
 The **Displaytype** [7] defines the accordion-like display (*Tree*) of the Layertree. By adjusting the maximum number of characters in the field **Titlemaxlength** [8] the title of the individual layers can be limited to a number of characters. This is important for long layer names. After the maximung title length the title is shortened with "...".
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_1_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
            :alt: Setup of a simple layertree in the content-area.
 
@@ -177,7 +177,7 @@ Via the **Menu** [9] a number of buttons can be activated, which are then availa
 * *Zoom to layer* (zoom to the BBOX of the layer)
 * *Metadata* (show the metadata of the layer)
 
-.. figure:: ../../../../../figures/layertree/layertree_menu.png
+.. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
            :alt: Configuration for the context-menu.
 
@@ -185,7 +185,7 @@ Via the **Menu** [9] a number of buttons can be activated, which are then availa
 
 The individual functions can be activated by clicking on the button. All active functions are highlighted in green. In addition next to each layer in the Layertree a symbol of the context menu appears. By clicking on the menu a window pops up and the individual features can be used. The menu can be closed by clicking on the x-button. 
 
-.. figure:: ../../../../../figures/layertree/layertree_menu_map.png
+.. figure:: ../../../figures/layertree/layertree_menu_map.png
            :scale: 80
            :alt: Context menu of the layer in the Layertree.
 
@@ -197,7 +197,7 @@ You can display the metadata of the layer by clicking on the Fact Sheet in the L
 
 A click on the "x" in the Layertree context menu **[3]** allows you to remove a layer from the application for the duration of the session.
 
-.. figure:: ../../../../../figures/layertree/layertree_menu_map.png
+.. figure:: ../../../figures/layertree/layertree_menu_map.png
            :scale: 80
            :alt: Layertree context menu.
 
@@ -206,7 +206,7 @@ A click on the "x" in the Layertree context menu **[3]** allows you to remove a 
 The function **Hide visibility by folders** [11] allows to save the configuration of the opacity. When active, the opacity of the layers is not displayed and can not be changed.
 
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_1_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
            :alt: Configuration of a simple Layertree in the content. 
 
@@ -214,7 +214,7 @@ The function **Hide visibility by folders** [11] allows to save the configuratio
 
 By clicking on the "folder"-icon of the Layertree **[1]** to the left of the instance the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list. The function **Hide not toggleable** [10] allows you to hide layers that don't contain multiple layers.  
 
-.. figure:: ../../../../../figures/layertree/layertree_buttons.png
+.. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
            :alt: Layertree Buttons.
 
@@ -227,7 +227,7 @@ The "i"-icon next to a layer name **[3]** indicates if the FeatureInfo-function 
 The function **Hide info** [12] allows you to disable the FeatureInfo-function. Independent of the settings in the Layerset or source the FeatureInfo-function is no longer possible.
 
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_1_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
            :alt: Configuration of a simple Layertree in the content.
 
@@ -258,7 +258,7 @@ For the configuraion of the Layersets the four services mentioned above were add
 For this example, the above mentioned steps were performed to add the Layerset "World" **[2]** with the instance "osm". Now we add the instance "GEBCO" in this Layerset. 
 To use the thematic grouping we create a new Layerset named "Project NRW" **[3]** and load the two instances "DTK50 NRW" and "Forest NRW" into our new Layerset "Project NRW".  
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_layerset_komplex_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex_en.png
            :scale: 80
            :alt: Configuration of Layersets for thematic Layertree.
 
@@ -270,7 +270,7 @@ Now we configurate the `map element <../elements/map.html>`_  to display the Lay
 It is now important that you set an active checkbox in the Layerset "World" AND Layerset "Project NRW" **[1]**, so that they appear later in the application.
 If you have questions for further configuration of the map, you can view the documentation of the `map element <../elements/map.html>`_.
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_map_komplex_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_map_komplex_en.png
            :scale: 80 
            :alt: Configuration of Layersets for thematic Layertree.
 
@@ -279,7 +279,7 @@ If you have questions for further configuration of the map, you can view the doc
 The last step is the creation of the Layertree itself.
 The instances in the `map element <../elements/map.html>`_  can be defined in more detail via the Layertree. For a general understanding of the functions and introduction tutorial to create a Layertree please note the already declared settings in the workflow for the simple Layertree.
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_1_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
            :alt: Configuration of the simple Layertree.
 
@@ -287,7 +287,7 @@ The instances in the `map element <../elements/map.html>`_  can be defined in mo
 
 For the thematic Layertree we bind the element to the sidebar. For the integration into the Sidepane sector the element needs the type *Element* **[6]**.
 
-.. figure:: ../../../../../figures/layertree/layertree_type.png
+.. figure:: ../../../figures/layertree/layertree_type.png
            :scale: 80
            :alt: Configuration of the type "Element".
 
@@ -296,7 +296,7 @@ For the thematic Layertree we bind the element to the sidebar. For the integrati
 If the option **Thematic layer** is disabled the Layertree ignores the configured Layersets and shows the individual instances without thematic structuring in the main level. However, we want to show the layers of our thematic Layersets, so we activate the function **Thematic layer** [1].
 Since we inserted both Layersets into the `map element <../elements/map.html>`_ of the application, they are now displayed under the **Themes**-area.
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_2_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_2_en.png
            :scale: 80 
            :alt: Configuration of the thematic Layertree in the content.
 
@@ -304,7 +304,7 @@ Since we inserted both Layersets into the `map element <../elements/map.html>`_ 
 
 Thus, to let the **themes** in the application appear as you want, there are several configuration options:
 
-.. figure:: ../../../../../figures/layertree/layertree_configuration_thematic_map_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_thematic_map_en.png
            :scale: 80
 
 
@@ -322,7 +322,7 @@ Thus, to let the **themes** in the application appear as you want, there are sev
 If we keep the default settings in the Theme Set "World" and activate the other options in the Theme Set "Project NRW", the configuration of the element will look like this:
 
 
-.. figure:: ../../../../../figures/layertree/layertree_example_sidepane_config_en.png
+.. figure:: ../../../figures/layertree/layertree_example_sidepane_config_en.png
            :scale: 80
            :alt: Configuration of the thematic Layertree in the content.
 
@@ -330,7 +330,7 @@ If we keep the default settings in the Theme Set "World" and activate the other 
 
 Now we have the Layersets integrated as thematic groups. By configuring the thematic layer, the Layertree appears now like this:
 
-.. figure:: ../../../../../figures/layertree/layertree_example_sidepane.png
+.. figure:: ../../../figures/layertree/layertree_example_sidepane.png
            :scale: 80
            :alt: Configuration of the thematic Layertree in the sidepane.
 
@@ -356,7 +356,7 @@ YAML-Definition:
   showHeader: true             # shows a headline which counts the number of services
   menu: [opacity,zoomtolayer,metadata,removelayer]  # show contextmenu for the layer (like opacity, zoom to layer, metadata, remove layer), default is menu: []
 ..
-   .. image:: ../../../../../figures/layertree/layertree_configuration_pre305.png
+   .. image:: ../../../figures/layertree/layertree_configuration_pre305.png
         :scale: 80
 
 You can optionally use a button to show this element. See :doc:`button` for inherited configuration options. You also can define the layertree with a type element. Then you can display the layertree in a frame like the sidebar.

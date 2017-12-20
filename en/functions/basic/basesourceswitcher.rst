@@ -8,7 +8,7 @@ BaseSourceSwitcher is a button group to change the map's background sources. The
 You have the possibility to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
 
 
-.. image:: ../../../../../figures/basesourceswitcher.png
+.. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
 
 Configuration
@@ -19,7 +19,7 @@ The configuration occurs in 2 steps:
 #. Create a BaseSourceSwitcher Element with Title, Tooltip and Target
 #. Add Sourceset/s with one or more sources and definition of a group (optional)
 
-.. image:: ../../../../../figures/basesourceswitcher_configuration.png
+.. image:: ../../../figures/basesourceswitcher_configuration.png
      :scale: 80
 
 * **Title:** Title of the element.
@@ -37,7 +37,7 @@ Integration into the sidepane
 ------------------------------
 The BaseSourceSwitcher can be integrated in the sidepane with a preview of the background-map. 
 
-.. image:: ../../../../../figures/basesourceswitcher_map_preview.png
+.. image:: ../../../figures/basesourceswitcher_map_preview.png
      :scale: 80
 
 The styling of the application is adapted via CSS. As a preparation you have to create screenshots of the background maps with the size 110x110px and place them in the web-folder (the screenshots have to be accessible from the outside).

@@ -5,13 +5,13 @@ Feature Info
 
 This element provides feature info capabilities to Mapbender. It works for WMS services.
 
-.. image:: ../../../../../figures/feature_info.png
+.. image:: ../../../figures/feature_info.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/feature_info_configuration.png
+.. image:: ../../../figures/feature_info_configuration.png
      :scale: 80
 
 * **Autoopen:** Enable or disable autoopening of the copyright window, when starting the application, default is disabled.
@@ -40,12 +40,12 @@ With the option "Show Original" the original design of the FeatureInfo Response 
 
 Example original:
 
-.. image:: ../../../../../figures/feature_info_original.png
+.. image:: ../../../figures/feature_info_original.png
      :scale: 80
 
 Example styled:
 
-.. image:: ../../../../../figures/feature_info_not_original.png
+.. image:: ../../../figures/feature_info_not_original.png
      :scale: 80             
 
 
@@ -58,12 +58,12 @@ With the switch "type" the responses of multiple services are displayed either i
 
 Example tabs:
 
-.. image:: ../../../../../figures/feature_info_tabs.png
+.. image:: ../../../figures/feature_info_tabs.png
      :scale: 80
 
 Example accordion:
 
-.. image:: ../../../../../figures/feature_info_accordion.png
+.. image:: ../../../figures/feature_info_accordion.png
      :scale: 80
 
 
@@ -85,7 +85,7 @@ You need a button to show this element. See :doc:`button` for the general config
 * **Group:** featureinfo
 * **Deactivate:** deactivate
 
-.. image:: ../../../../../figures/feature_info_button.png
+.. image:: ../../../figures/feature_info_button.png
      :scale: 80
 
 

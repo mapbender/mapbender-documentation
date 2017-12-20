@@ -229,7 +229,7 @@ There are differences in the behaviour of app.php and app_dev.php:
   things, that are important for developers but should not be visible for
   common users.
 
-  .. image:: ../../../figures/symfony_profiler.png
+  .. image:: ../../figures/symfony_profiler.png
              :scale: 80
   
 
@@ -244,7 +244,7 @@ application.
 The following screenshots shows the location of the cache-directory in
 Mapbender:
 
-.. image:: ../../../figures/mapbender_cache_directories.png 
+.. image:: ../../figures/mapbender_cache_directories.png 
            :scale: 80
 
 

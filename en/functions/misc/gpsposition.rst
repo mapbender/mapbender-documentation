@@ -11,13 +11,13 @@ The midpoint shows the probable position of the device, the outer circle the acc
 
 Compatibility: Internet Explorer and MS Edge devliver without a GPS-reciever at the machine imprecise informationen. This behaviour is also observable with other applications.
 
-.. image:: ../../../../../figures/gps_position.png
+.. image:: ../../../figures/gps_position.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/gps_position_configuration.png
+.. image:: ../../../figures/gps_position_configuration.png
      :scale: 80
 
 * **Show label:** Switches the button label on/off.

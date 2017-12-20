@@ -7,13 +7,13 @@ The activity indicator element provides a simple widget showing background activ
 In the default configuration it uses a Font symbol. This can be easily modified by changing the CSS for the 
 widget in the css-file ``fom//src//FOM//CoreBundle//Resources//public//css/frontend//mapbender3_theme.css``.
 
-.. image:: ../../../../../figures/activity_indicator.png
+.. image:: ../../../figures/activity_indicator.png
      :scale: 100
 
 Configuration
 =============
 
-.. image:: ../../../../../figures/activity_indicator_configuration.png
+.. image:: ../../../figures/activity_indicator_configuration.png
      :scale: 80
 
 * **Title:** Title of the element.
