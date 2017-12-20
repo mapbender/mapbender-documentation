@@ -7,9 +7,21 @@ Wir haben die Installationsanleitungen nach Betriebssystemen aufgeteilt. Die Ins
    :maxdepth: 1
 
    installation/systemrequirements.rst
-   installation/installation_symfony.rst
+
+Installationsanleitung und Update in gängigen Systemen
+
+.. toctree::
+   :maxdepth: 1
+
    installation/installation_ubuntu.rst
    installation/installation_windows.rst
-   installation/installation_git.rst
    installation/update.rst
+
+Installation für Fortgeschrittene
+
+.. toctree::
+   :maxdepth: 1
+
+   installation/installation_symfony.rst
+   installation/installation_git.rst
    installation/configuration.rst
