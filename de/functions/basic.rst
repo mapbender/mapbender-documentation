@@ -10,6 +10,7 @@ Basisfunktionen
    basic/layertree.rst
    basic/legend.rst
    basic/activity_indicator.rst
+   basic/basesourceswitcher.rst
    basic/feature_info.rst
    basic/coordinates_display.rst
    basic/ruler.rst
@@ -17,4 +18,3 @@ Basisfunktionen
    basic/scalebar.rst
    basic/scaledisplay.rst
    basic/srs_selector.rst
-

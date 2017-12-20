@@ -6,7 +6,6 @@ Verschiedenes
 
    misc/button.rst
    misc/about_dialog.rst
-   misc/basesourceswitcher.rst
    misc/copyright.rst
    misc/gpsposition.rst
    misc/html.rst
