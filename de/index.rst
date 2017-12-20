@@ -52,9 +52,11 @@ Indizes und Tabellen
 .. toctree::
    :maxdepth: 1
 
-   ../en/book/glossary.rst
+   ../en/glossary.rst
 
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
+
+..
+  * :ref:`modindex`
