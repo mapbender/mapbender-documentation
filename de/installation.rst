@@ -8,7 +8,7 @@ Wir haben die Installationsanleitungen nach Betriebssystemen aufgeteilt. Die Ins
 
    installation/systemrequirements.rst
 
-Installationsanleitung und Update in gängigen Systemen
+Installationsanleitung und Update für Benutzer
 
 .. toctree::
    :maxdepth: 1
@@ -17,7 +17,7 @@ Installationsanleitung und Update in gängigen Systemen
    installation/installation_windows.rst
    installation/update.rst
 
-Installation für Fortgeschrittene
+Installationsanleitung und Details für Entwickler
 
 .. toctree::
    :maxdepth: 1
