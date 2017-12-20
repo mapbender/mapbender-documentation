@@ -5,7 +5,7 @@
 :Version: osgeo-live8.5
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
-:Date: |date| 
+:Date: |date|
 
   .. |mapbender3-button-show| image:: ../../figures/mapbender3_button_show.png
 
@@ -27,13 +27,13 @@
   :alt: project logo
   :align: right
 
-########################
-Mapbender Quickstart 
-########################
+################################################
+Mapbender Quickstart: First steps with Mapbender
+################################################
 
-Mapbender is a web based geoportal framework to publish, register, view, navigate, monitor and grant secure access to spatial data infrastructure services. 
+Mapbender is a web based geoportal framework to publish, register, view, navigate, monitor and grant secure access to spatial data infrastructure services.
 
-Management interfaces empower administrators who need to maintain and categorize map and feature services and grant access to individuals, groups and other services. 
+Management interfaces empower administrators who need to maintain and categorize map and feature services and grant access to individuals, groups and other services.
 
 Mapbender is the next version in the Mapbender series. It is rewritten from the ground up, using modern web technologies. The foundation is laid by Symfony 2, the brand-new version of the successful Symfony PHP web application framework. On the client-side expect to find OpenLayers and jQuery (UI) nicely glued together by MapQuery.
 
@@ -41,7 +41,7 @@ With this new code base we will continue the Mapbender idea of being a Geoportal
 
   * Applications can be setup, configured and styled right from within the browser
   * Services like WMS can be managed inside a service repository and linked to applications
-  * Rights management are easy to maintain, for individual users and groups, whether you store them inside the database or in an LDAP. 
+  * Rights management are easy to maintain, for individual users and groups, whether you store them inside the database or in an LDAP.
   * Search modules (SQL oder Solr) can be configured
   * Applications for digitaliszation can be setup.
   * Mobile template can be used to provide applications for smartphones and tablets
@@ -52,7 +52,7 @@ You will need nothing but a standard web browser for this quickstart.
 This quickstart describes how to:
 
   * start Mapbender
-  * create an application 
+  * create an application
   * load a Web Map Service (OGC WMS)
   * configure WMS
   * create an individual application
@@ -106,7 +106,7 @@ Welcome page
 #. Click on Login at right-top to open the login page.
 
 #. You can log in with the user that was generated on installation. It can be ``root`` and password ``root`` (This is the default user and password that you get after installation of Mapbender on OSGeo-Live. Please change the root password if you want to run a productive environment. Please don't delete the user :guilabel:`root`.).
-  
+
   .. image:: ../../figures/mapbender3_welcome.png
      :scale: 80
 
@@ -178,7 +178,7 @@ You can export applications as JSON or YAML with ``Applications --> Export``. Yo
   .. image:: ../../figures/mapbender3_application_export.png
      :scale: 80
 
-The exportfile contains all the definitions of the application/s (sources) and can be imported via ``Applications --> Import`` in another Mapbender installation or in the same installation. 
+The exportfile contains all the definitions of the application/s (sources) and can be imported via ``Applications --> Import`` in another Mapbender installation or in the same installation.
 
   .. image:: ../../figures/mapbender3_application_import.png
      :scale: 80
@@ -211,7 +211,7 @@ A WMS returns an XML-file when the getCapabilities document is requested. This i
 
 .. tip:: You should first check the Capabilities document in your browser before you try to load it with Mapbender
 
-#. Choose menu item ``Source --> Add Source`` or use the |mapbender3-button-add|-button in the source repository. Link to the WMS getCapabilities URL in the text field ``Serviceurl``. 
+#. Choose menu item ``Source --> Add Source`` or use the |mapbender3-button-add|-button in the source repository. Link to the WMS getCapabilities URL in the text field ``Serviceurl``.
 
 #. Enter username and password if your service needs authentication.
 
@@ -227,9 +227,9 @@ A WMS returns an XML-file when the getCapabilities document is requested. This i
 
 Here are some example WMS:
 
-Germany demo 
+Germany demo
 
-http://wms.wheregroup.com/cgi-bin/germany_workshop.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS 
+http://wms.wheregroup.com/cgi-bin/germany_workshop.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS
 
 WhereGroup OSM WMS
 
@@ -237,13 +237,13 @@ http://osm-demo.wheregroup.com/service
 
 Omniscale OSM WMS (see also http://osm.omniscale.de/)
 http://osm.omniscale.net/proxy/service?
- 
+
 
 Add Service to Application
 ================================================================================
 After the successfull upload of a WMS you want to add your WMS to an application.
 
-#. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layers --> Edit-Button``. 
+#. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layers --> Edit-Button``.
 
 #. Click on the |mapbender3-button-add| ``-button`` to add a layerset, which represents a collection of layers (a possible names can be "main" for the main map and "overview" for the overview map)
 
@@ -252,7 +252,7 @@ After the successfull upload of a WMS you want to add your WMS to an application
 #. Click on the |mapbender3-button-add| ``button`` at your new layerset to add a Service.
 
 #. You can change the order of the Services in your application by drag & drop.
-	
+
   .. image:: ../../figures/mapbender3_add_source_to_application.png
      :scale: 80
 
@@ -263,7 +263,7 @@ You can configure the WMS for your specific application. Maybe you don't want to
 
 #. Choose ``Applications -->`` |mapbender3-button-edit| ``edit-Button --> Layers --> edit-Button`` to configure the Service Instance.
 
-#. You will see a table with the layers of the Service. 
+#. You will see a table with the layers of the Service.
 
 #. You can change the order of the layers via drag & drop
 
@@ -301,7 +301,7 @@ transfers the group-value of the logged-in user.
 
 .. image:: ../../figures/mapbender3_vendor_specific_parameter.png
            :scale: 80
-      
+
 
 
 * Type: „single“, „multiple“, „interval“ (multiple values in dimensions)
@@ -352,7 +352,7 @@ Mapbender offers a set of elements. You can add the elements to your application
 
 #. Have a look at your application. Open your application choose ``Applications --> Applications Overview --> `` |mapbender3-button-show| ``view-Button``
 
-Now you should get an idea how easy it is to change a Mapbender application without changes in the code. 
+Now you should get an idea how easy it is to change a Mapbender application without changes in the code.
 
   .. image:: ../../figures/mapbender3_application_elements.png
      :scale: 80
@@ -385,7 +385,7 @@ Examples for elements Mapbender offers:
 * WMS Loader
 * WMC Editor
 * WMC Loader
-* WMC List 
+* WMC List
 
 You find detailed information on every element at the `MapbenderCoreBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/CoreBundle/index.html>`_, `MapbenderWmcBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/WmcBundle/index.html>`_ and `MapbenderWmsBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/WmsBundle/index.html>`_.
 
@@ -403,7 +403,7 @@ Try it yourself
 
 User and group management
 ================================================================================
-An access to Mapbender requires authentication. Only public applications can be used by everyone. 
+An access to Mapbender requires authentication. Only public applications can be used by everyone.
 
 A user has permissions to access one or a set of applications and services.
 
@@ -416,7 +416,7 @@ Create a user
 
 #. To create a user go to ``User control --> Users --> New User`` or click the |mapbender3-button-show| ``add-Button``.
 
-#. Choose a name and a password for your user. 
+#. Choose a name and a password for your user.
 
 #. Provide an email address for the user.
 
@@ -425,12 +425,12 @@ Create a user
 #. You can provide more information about the user in the tab ``Profile``.
 
 .. image:: ../../figures/mapbender3_create_user.png
-     :scale: 80 
+     :scale: 80
 
 
 Create a group
 ================================================================================
-#. Create a group by ``User control --> Group --> New Group``. 
+#. Create a group by ``User control --> Group --> New Group``.
 
 #. Define a name and a description for your group.
 
@@ -440,15 +440,15 @@ Create a group
 Assign users to group
 ================================================================================
 
-#. Assign a user to a group by ``Users --> Groups``. 
+#. Assign a user to a group by ``Users --> Groups``.
 
 #. Choose one or more users you want to add to the group at :menuselection:`Users`.
 
-#. Assign a user by  |mapbender3-button-edit| ``Users --> Edit-Button--> Groups`` to a group. 
+#. Assign a user by  |mapbender3-button-edit| ``Users --> Edit-Button--> Groups`` to a group.
 
   .. image:: ../../figures/mapbender3_assign_user_to_group.png
      :scale: 80
- 
+
 
 Roles
 ================================================================================
@@ -464,7 +464,7 @@ Mapbender provides different rights. They refer to the Symfony ACL System http:/
 #. Assign roles to a user by ``Users --> Edit your User --> Security``.
 
   .. image:: ../../figures/mapbender3_roles.png
-     :scale: 80 
+     :scale: 80
 
 
 Assign an Application to a User/Group
@@ -473,9 +473,9 @@ Assign an Application to a User/Group
 
 #. Choose ``Security``
 
-#. Publish your application by ``Security --> activated`` or ``Application --> visible`` 
+#. Publish your application by ``Security --> activated`` or ``Application --> visible``
 
-#. Set permission like view, edit, delete, operator, master, owner 
+#. Set permission like view, edit, delete, operator, master, owner
 
 #. Assign a user/group to the application
 
@@ -498,7 +498,7 @@ Assign single elements to a User/Group
 
 #. Chose the |mapbender3-button-key| ``-Button`` from the element, that should be only availale for special users / groups
 
-#. Set permission like view, edit, delete, operator, master, owner 
+#. Set permission like view, edit, delete, operator, master, owner
 
 #. Assign a user/group to the element
 
@@ -565,8 +565,8 @@ API-Documentation
 
   http://api.mapbender.org
 
-Get to know Mapbender on 
-	
+Get to know Mapbender on
+
 	http://projects.mapbender.osgeo.org
 
 Get involved in the project

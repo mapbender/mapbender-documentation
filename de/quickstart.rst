@@ -3,7 +3,7 @@
 :Version: osgeo-live8.5
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
-:Date: |date| 
+:Date: |date|
 
   .. |mapbender3-button-show| image:: ../figures/mapbender3_button_show.png
 
@@ -26,9 +26,9 @@
   :align: right
 
 
-########################
-Mapbender Quickstart 
-########################
+##################################################
+Mapbender Quickstart: Erste Schritte mit Mapbender
+##################################################
 
 Mapbender ist ein web-basiertes Geoportal Framework zum Veröffentlichen, Registrieren, Anzeigen, Navigieren und Überwachen von Diensten, mit der Möglichkeit Dienste gesichert anzubieten.
 
@@ -39,7 +39,7 @@ Mapbender ist die nächste Version in der Mapbender Serie. Es wurde unter Verwen
 Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Frameworks fortgesetzt.
 
   * Anwendungen können direkt im Browser erstellt, konfiguriert und gestylt werden.
-  * Dienste wie WMS können in einem Service Repository verwaltet und mit Anwendungen verbunden werden. 
+  * Dienste wie WMS können in einem Service Repository verwaltet und mit Anwendungen verbunden werden.
   * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
   * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
   * Suchen (SQL oder Solr) können konfiguriert werden.
@@ -105,7 +105,7 @@ Die Willkommensseite
 #. Klicken Sie auf den Link **Anmelden** oben rechts, um die Loginseite aufzurufen.
 
 #. Sie können sich mit dem Benutzer anmelden, der während der Installation erzeugt wurde. Er kann ``root`` heißen mit dem Kennwort ``root`` (Dies ist der Standardbenutzer/Kennwort nach der Installation von Mapbender auf der OSGeo-Live. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben. Löschen Sie den Benutzer ``root`` nicht.).
-  
+
   .. image:: ../figures/mapbender3_welcome.png
 
 Nach erfolgreicher Anmeldung werden Sie zur ``Mapbender Administration`` weiter geleitet.
@@ -226,9 +226,9 @@ Ein WMS liefert ein XML, wenn das getCapabilities-Dokument angefordert wird. Die
 
 Hier sind einige Beispiel WMS:
 
-Germany demo 
+Germany demo
 
-http://wms.wheregroup.com/cgi-bin/germany_workshop.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS 
+http://wms.wheregroup.com/cgi-bin/germany_workshop.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS
 
 WhereGroup OSM WMS
 
@@ -236,7 +236,7 @@ http://osm-demo.wheregroup.com/service
 
 Omniscale OSM WMS (siehe auch http://osm.omniscale.de/)
 http://osm.omniscale.net/proxy/service?
- 
+
 
 .. NOCH NICHT IMPLEMENTIERT
   .. tip:: Erzeugen Sie eine Containeranwendung und laden Sie jeden WMS nur einmal hier hinein. Sie können die WMS aus diesem Container in andere Anwendungen übernehmen. Wenn Sie diesen WMS aktualisieren werden mögliche Änderungen in allen Anwendungen übernommen, die diesen WMS beinhalten. Sie können einen WMS einfach von einer Anwendung zu einer anderen über den Menüeintrag *Link WMS to application* kopieren.
@@ -288,7 +288,7 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
 * Transparenz: Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
 * Gekachelt (Tiled): Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
 
-  
+
 **Vendor Specific Parameter:**
 
 In einer Layerset Instanz können Vendor Specific Parameter angegeben werden,
@@ -358,10 +358,10 @@ Jetzt sollten sie eine Idee davon haben, wie einfach es ist eine Mapbender-Anwen
 
 Beispiele für Elemente, die Mapbender anbietet:
 
-* Über Mapbender-Dialog (About Dialog)- zeigt Informationen über Mapbender an 
+* Über Mapbender-Dialog (About Dialog)- zeigt Informationen über Mapbender an
 * Aktivitätsanzeige (Activity Indicator) - zeigt HTTP-Aktivität an
 * Hintergrund wechseln (BaseSourceSwitcher) - Hintergründe können definiert und gewechselt werden
-* Button 
+* Button
 * Koordinatenanzeige (Coordinates Display) - zeigt Mausposition in den Kartenkoordinaten an
 * Copyright- zeigt Nutzungsbedingungen an
 * Feature Info - Informationsausgabe (getFeatureInfo)
@@ -379,11 +379,11 @@ Beispiele für Elemente, die Mapbender anbietet:
 * Maßstabsleiste (ScaleBar) - Anzeige des aktuellen Maßstabs
 * Einfache Suche (SimpleSearch) - Einfache Suche über SOLR
 * Suche (Search Router) - konfigurierbare Suche über SQL
-* SRS Auswahl (Spatial Reference System Selector) - Auswahl der Projektion (SRS) über eine Auswahlbox 
+* SRS Auswahl (Spatial Reference System Selector) - Auswahl der Projektion (SRS) über eine Auswahlbox
 * Navigation Toolbar (Zoombar)
 * WMS Loader - Laden von OGC WMS Diensten über ein Textfeld (getCapabilities-URL)
 * WMC Editor - Speichern von Themenplänen
-* WMC Loader - Laden von Themenplänen 
+* WMC Loader - Laden von Themenplänen
 * WMC List - Laden von Themenplänen über eine Auswahlbox
 
 Sie finden detaillierte Informationen zu jedem Element unter `MapbenderCoreBundle Element Dokumentation <http://doc.mapbender.org/en/bundles/Mapbender/CoreBundle/index.html>`_ , `MapbenderWmcBundle Element Dokumentation <../bundles/Mapbender/WmcBundle/index.html>`_ und `MapbenderWmsBundle Element Dokumentation <../bundles/Mapbender/WmsBundle/index.html>`_.
@@ -416,7 +416,7 @@ Benutzer anlegen
 
 #. Um einen Benutzer anzulegen, gehen Sie zu ``Benutzerverwaltung --> Benutzer --> Neuer Benutzer (User control --> User --> New User)`` oder wählen Sie den ``Button`` |mapbender3-button-add|.
 
-#. Wählen Sie einen Namen und ein Kennwort für Ihren Benutzer. 
+#. Wählen Sie einen Namen und ein Kennwort für Ihren Benutzer.
 
 #. Geben Sie eine E-Mail-Adresse für den Benutzer an.
 
@@ -431,7 +431,7 @@ Benutzer anlegen
 
 Gruppen anlegen
 ================================================================================
-#. Erzeugen Sie eine Gruppe über  ``Gruppen --> Neue Gruppen (Group --> New Group)``. 
+#. Erzeugen Sie eine Gruppe über  ``Gruppen --> Neue Gruppen (Group --> New Group)``.
 
 #. Wählen Sie einen Namen und eine Beschreibung für Ihre Gruppe.
 
@@ -441,7 +441,7 @@ Gruppen anlegen
 Benutzer einer Gruppe zuweisen
 ================================================================================
 
-#. Weisen Sie einen Benutzer einer Gruppe über `` Benutzer --> Gruppen (Users --> Groups)`` zu. 
+#. Weisen Sie einen Benutzer einer Gruppe über `` Benutzer --> Gruppen (Users --> Groups)`` zu.
 
 #. Wählen Sie einen oder mehrere Benutzer über ``Benutzer (Users)`` aus, die Sie der Gruppe zuweisen wollen.
 
@@ -449,7 +449,7 @@ Benutzer einer Gruppe zuweisen
 
 
   .. image:: ../figures/mapbender3_assign_user_to_group.png
- 
+
 
 Rechte
 ========
@@ -470,7 +470,7 @@ Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherhei
 
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 ============================================================
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Editier-Button`` |mapbender3-button-edit| 
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Editier-Button`` |mapbender3-button-edit|
 
 #. Wählen Sie ``Sicherheit (Security)``
 
@@ -491,7 +491,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
 ============================================================
-Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Der Zugriff kann darüberhinaus für einzelne Elemente noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen. 
+Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Der Zugriff kann darüberhinaus für einzelne Elemente noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
 #. Bearbeiten Sie Ihre Anwendung über ``Anwendungen -->`` |mapbender3-button-edit| ``Editier-Button``
 
@@ -567,7 +567,7 @@ Die API-Dokumentation finden Sie unter
   http://api.mapbender.org
 
 Mapbender kennenlernen unter
-	
+
 	http://projects.mapbender.osgeo.org
 
 Beteiligen Sie sich
