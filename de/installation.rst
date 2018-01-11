@@ -1,3 +1,6 @@
+.. _installation_de:
+
+
 Systemvoraussetzungen und Installation
 ======================================
 
