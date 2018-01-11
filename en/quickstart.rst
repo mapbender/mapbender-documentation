@@ -66,7 +66,7 @@ This is how a Mapbender application can look like:
 
 Installation
 ===============
-For the installation of Mapbender have a look at http://doc.mapbender.org/en/book/installation.html.
+For the installation of Mapbender have a look at `Installation <installation.html>`_.
 
 Start Mapbender
 ================================================================================
@@ -158,7 +158,7 @@ Your application is set up. Now you need Elementes (modules) like (map, legend, 
   .. image:: ../figures/mapbender3_create_application.png
      :scale: 80
 
-.. tip:: Please note, that the style-, icon- and layoutconfiguration has to be done in css- and twig-files at the moment. Read more about template generation at http://doc.mapbender.org/en/book/templates.html
+.. tip:: Please note, that the style-, icon- and layoutconfiguration has to be done in css- and twig-files at the moment. Read more about template generation at `How to create your own Template? <customization/templates.html>`_.
 
 
 Copy or rename an application
@@ -387,7 +387,7 @@ Examples for elements Mapbender offers:
 * WMC Loader
 * WMC List
 
-You find detailed information on every element at the `MapbenderCoreBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/CoreBundle/index.html>`_, `MapbenderWmcBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/WmcBundle/index.html>`_ and `MapbenderWmsBundle element documentation <http://doc.mapbender.org/en/bundles/Mapbender/WmsBundle/index.html>`_.
+You find detailed information on every element at the `Mapbender documentation <index.html>`_.
 
 
 Try it yourself

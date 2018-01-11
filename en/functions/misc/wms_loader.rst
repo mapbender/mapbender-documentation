@@ -40,7 +40,7 @@ YAML-Definition:
    useDeclarative: false                # allow to load service from a link (for example from featureInfo or search) 
                                         # and define the layers to activated, default false 
 
-You need a button to show this element. See :ref:`button_en` for inherited configuration options.
+You need a button to show this element. See `button <button.html>`_ for inherited configuration options.
 
 How to add a WMS by defining a link
 ====================================

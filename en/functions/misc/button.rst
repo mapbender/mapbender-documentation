@@ -3,7 +3,7 @@
 Button
 ******
 
-The button element provides a push button widget. Some elements like `Legend <../elements/legend.html>`_ , `Layertree <layertree.html>`_, `FeatureInfo <feature_info.html>`_, `Line/Area Ruler <ruler.html>`_ and  `PrintClient <printclient.html>`_ need a button to be displayed/activated if not defined in a frame.
+The button element provides a push button widget. Some elements like `Legend <../basic/legend.html>`_ , `Layertree <../basic/layertree.html>`_, `FeatureInfo <../basic/feature_info.html>`_, `Line/Area Ruler <../basic/ruler.html>`_ and  `PrintClient <../export/printclient.html>`_ need a button to be displayed/activated if not defined in a frame.
 
 Buttons optionally can be grouped, so that only one button in a group can be active at any given time. This is done by the group paramter.
 You can define a button that refers to a website or script using the click paramter.

@@ -4,7 +4,7 @@ Suggest Map
 ***********************
 
 
-**Notice:** that you need the element `WMC Editor <../elements/wmc_editor.html>`_ to use this functionality.
+**Notice:** that you need the element `WMC Editor <wmc_editor.html>`_ to use this functionality.
 
 **Notice:** that all configurations are pubic at the moment. Later in development we want to add access control to this module too.
 
@@ -37,7 +37,7 @@ YAML-Definition:
     action: open              #
     deactivate: close         #
 
-You need a button to show this element. See :ref:`button_en` for inherited configuration options.
+You need a button to show this element. See `Button <../misc/button.html>`_ for inherited configuration options.
 
 
 Class, Widget & Style

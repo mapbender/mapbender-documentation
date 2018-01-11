@@ -3,7 +3,7 @@
 WMC List
 ***********************
 
-Mapbender can save and edit configurations with the WMC Editor. This configurations can be loaded with the element `WMC Loader <../elements/wmc_loader.html>`_.
+Mapbender can save and edit configurations with the WMC Editor. This configurations can be loaded with the element `WMC Loader <wmc_loader.html>`_.
 
 You can add configurations from the selectbox to your application. 
 

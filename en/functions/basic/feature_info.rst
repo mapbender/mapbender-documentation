@@ -29,7 +29,7 @@ Configuration
   * Please make sure, that the GetFeatureInfo Response is a valid HTML.
   * If you have defined ``text/plan`` as output-format, the switch ``only valid`` must not be activated because ``text/plain`` doesn't return valid HTML.
 
-**Note:** It is possible to load WMS services dynmically into the application Via the information response of a FeatureInfo dialog. The WMS Loader is used for that feature. For further information take a look in the chapter `How to add a WMS by defining a link <../../WmsBundle/elements/wms_loader.html#how-to-add-a-wms-by-defining-a-link>`_.
+**Note:** It is possible to load WMS services dynmically into the application Via the information response of a FeatureInfo dialog. The WMS Loader is used for that feature. For further information take a look in the chapter `How to add a WMS by defining a link <../misc/wms_loader.html#how-to-add-a-wms-by-defining-a-link>`_.
 
 
 

@@ -17,8 +17,8 @@ Layer-instances contain the options how a WMS is called: image-format, info-form
 Further information
 -------------------
 
-* You can find information about using layersets in the `Quickstart documentation <../../../../book/quickstart.html#configure-your-wms>`_.
+* You can find information about using layersets in the `Quickstart documentation <../../quickstart.html#configure-your-wms>`_.
 
-* The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../elements/layertree.html>`_
+* The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../basic/layertree.html>`_
 
-* Likewise layersets can be switched on or off in the `Map element <../elements/map.html>`_.
+* Likewise layersets can be switched on or off in the `Map element <../basic/map.html>`_.

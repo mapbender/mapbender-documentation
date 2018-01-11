@@ -33,9 +33,9 @@ Functions
 
 To configure the Layer tree there are a few linking points to other elements that must be considered:
 
-* `Layersets <../entities/layerset.html>`_
-* `Map element <../elements/map.html>`_
-* `Sources <../entities/source.html>`_
+* `Layersets <../backend/layerset.html>`_
+* `Map element <../basic/map.html>`_
+* `Sources <../backend/source.html>`_
 
 
 Configuration
@@ -54,7 +54,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 #. Configuration of the Layertree itself
 
 Through the use of the **Layersets**, the desired layers are included in the application. The instances are the references to the individual WMS services. With the plus-button **[1]** new Layersets can be created. Then, new layers can be integrated in the application by adding the existing instances **[2]**. The Layerset "overview " **[3]** is -as usual- used for displaying the overview map. 
-For a detailed documentation on how the services can be integrated correctly, please head for to the documentation of the `Layersets <../entities/layerset.html>`_ and `sources <../entities/source.html>`_. 
+For a detailed documentation on how the services can be integrated correctly, please head for to the documentation of the `layersets <../backend/layerset.html>`_ and `sources <../backend/source.html>`_. 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_en.png
            :scale: 80
@@ -63,7 +63,7 @@ For a detailed documentation on how the services can be integrated correctly, pl
            Configuration of various Layersets for integration into the Layertree.
 
 
-In order to let the new integrated Layersets appear in the application, they must be specified in the `Mapelement <../elements/map.html>`_. 
+In order to let the new integrated Layersets appear in the application, they must be specified in the `Mapelement <../basic/map.html>`_. 
 Here, you define which Layersets you want to use in the map by checking **[1]** the Layersets in the list. The Layerset "overview " for example is not displayed on the main map. 
 In this step, you define the order in which the Layersets appear in your Layertree and the map. You can move the created Layersets from the list [2] by drag & drop. Please notice that the first defined themes can cover underlying themes.
 
@@ -92,7 +92,7 @@ In the example we defined one **Layerset** with one instance:
     * Instance `OSM Demosource <http://osm-demo.wheregroup.com/service?>`_
 
 The instance of the OSM demosource is automatically included in the installation. Now this needs to be integrated into an existing Layerset. Change into the tab "Layersets". In the following example, the Layerset " YAML main" was renamed to " World ". 
-In case of difficulties with the integration, the documentation of the `Layersets <../entities/layerset.html>`_ provides useful information.
+In case of difficulties with the integration, the documentation of the `Layersets <../backend/layerset.html>`_ provides useful information.
 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple_en.png
@@ -101,8 +101,8 @@ In case of difficulties with the integration, the documentation of the `Layerset
 
            Configuration of a Layerset for integration into the simple Layertree.           
 
-In the next step we configure the `Map element <../elements/map.html>`_ to display the Layersets in the **map**. To do this you need to change into the tab "Layouts" and edit the map element in the content. 
-It is important, that you put a tick in the field of the Layerset "World" **[1]**, so it appears in the application afterwards. If you have questions for further configuration of the `Map element <../elements/map.html>`_  the documentation can help.
+In the next step we configure the `Map element <../basic/map.html>`_ to display the Layersets in the **map**. To do this you need to change into the tab "Layouts" and edit the map element in the content. 
+It is important, that you put a tick in the field of the Layerset "World" **[1]**, so it appears in the application afterwards. If you have questions for further configuration of the `Map element <../basic/map.html>`_  the documentation can help.
 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple_en.png
@@ -122,7 +122,7 @@ For a better understanding of the functions and their usage we now edit the Laye
 
            Configuration of the simple Layertree in the content.           
 
-When configuring the Layersets the function Basesource is activated as default. This is important for the `BaseSourceSwitcher <../elements/basesourceswitcher.html>`_, which allows you to switch between predefined themes. By enabling  **Display BaseSources** [1], instances that have been loaded as a base source in the application, are displayed in the Layertree. 
+When configuring the Layersets the function Basesource is activated as default. This is important for the `BaseSourceSwitcher <../basic/basesourceswitcher.html>`_, which allows you to switch between predefined themes. By enabling  **Display BaseSources** [1], instances that have been loaded as a base source in the application, are displayed in the Layertree. 
 
 The function **Display Header** [2] allows the inclusion of a headline in the Layertree.
 
@@ -253,7 +253,7 @@ In the example, we defined two Layerset with two instances each:
   * Instance `OSM Demodienst <http://osm-demo.wheregroup.com/service?>`_ 
   * Instance `GEBCO <http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?>`_ 
 
-For the configuraion of the Layersets the four services mentioned above were added as instances (Detailed information see above or in the documentation of the `Layersets <../entities/layerset.html>`_ and `Sources <../entities/source.html>`_).
+For the configuraion of the Layersets the four services mentioned above were added as instances (Detailed information see above or in the documentation of the `Layersets <../backend/layerset.html>`_ and `Sources <../backend/source.html>`_).
 
 For this example, the above mentioned steps were performed to add the Layerset "World" **[2]** with the instance "osm". Now we add the instance "GEBCO" in this Layerset. 
 To use the thematic grouping we create a new Layerset named "Project NRW" **[3]** and load the two instances "DTK50 NRW" and "Forest NRW" into our new Layerset "Project NRW".  
@@ -266,9 +266,9 @@ To use the thematic grouping we create a new Layerset named "Project NRW" **[3]*
 
 The Layerset should now contain three Layersets. The **Overview** [1] for the overview map, the **World**-Layerset [2] with the world-/ Germany-wide data and the **Project NRW** Layerset [3] with the two regional data sets from NRW. 
 
-Now we configurate the `map element <../elements/map.html>`_  to display the Layersets in the map. To do this we switch to the tab "layout" and edit the feature in the content area.
+Now we configurate the `map element <../basic/map.html>`_  to display the Layersets in the map. To do this we switch to the tab "layout" and edit the feature in the content area.
 It is now important that you set an active checkbox in the Layerset "World" AND Layerset "Project NRW" **[1]**, so that they appear later in the application.
-If you have questions for further configuration of the map, you can view the documentation of the `map element <../elements/map.html>`_.
+If you have questions for further configuration of the map, you can view the documentation of the `map element <../basic/map.html>`_.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_komplex_en.png
            :scale: 80 
@@ -277,7 +277,7 @@ If you have questions for further configuration of the map, you can view the doc
            Configuration of Layersets for thematic Layertree.
 
 The last step is the creation of the Layertree itself.
-The instances in the `map element <../elements/map.html>`_  can be defined in more detail via the Layertree. For a general understanding of the functions and introduction tutorial to create a Layertree please note the already declared settings in the workflow for the simple Layertree.
+The instances in the `map element <../basic/map.html>`_  can be defined in more detail via the Layertree. For a general understanding of the functions and introduction tutorial to create a Layertree please note the already declared settings in the workflow for the simple Layertree.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
@@ -294,7 +294,7 @@ For the thematic Layertree we bind the element to the sidebar. For the integrati
            Configuration of the type "Element".
 
 If the option **Thematic layer** is disabled the Layertree ignores the configured Layersets and shows the individual instances without thematic structuring in the main level. However, we want to show the layers of our thematic Layersets, so we activate the function **Thematic layer** [1].
-Since we inserted both Layersets into the `map element <../elements/map.html>`_ of the application, they are now displayed under the **Themes**-area.
+Since we inserted both Layersets into the `map element <../basic/map.html>`_ of the application, they are now displayed under the **Themes**-area.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_2_en.png
            :scale: 80 

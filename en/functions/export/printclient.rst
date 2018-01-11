@@ -222,7 +222,7 @@ The print with a group named "Group 1" could look like this:
 
 .. image:: ../../../figures/print_client_example_groups.png
      :scale: 80
-To use this feature, it is required, that you’ve created groups before. How to create groups and users is described in the Mapbender documentation in the Mapbender Quickstart (https://doc.mapbender.org/en/book/quickstart.html).
+To use this feature, it is required, that you’ve created groups before. How to create groups and users is described in the Mapbender documentation in the `Mapbender Quickstart <../../quickstart.html>`_.
 
 
 Configuration of the element

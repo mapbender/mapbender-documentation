@@ -16,7 +16,7 @@ Configuration
      :scale: 80
 
 
-The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at http://doc.mapbender.org/en/book/database.html
+The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at `database <../../customization/database.html>`_.
 
 **Note**: For the use of the below-described search the digitizer tables can be used. The SQL to create the tables can be found at :doc:`digitizer`.
 

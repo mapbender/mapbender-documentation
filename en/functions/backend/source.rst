@@ -5,7 +5,7 @@ Source
 
 With the data sources, you can register OGC WMS in version 1.1.1 and 1.3.0 into Mapbender. 
 
-Further information about the registration process of services and their usage in Mapbender is available in the `Quickstart document <../../../../book/quickstart.html#loading-web-map-services>`_.
+Further information about the registration process of services and their usage in Mapbender is available in the `Quickstart document <../../quickstart.html#loading-web-map-services>`_.
 
 .. image:: ../../../figures/entities/source_wms.png
      :scale: 80

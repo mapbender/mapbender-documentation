@@ -54,7 +54,7 @@ Performance
 Working with large wms clients
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: During the upload of large wms into an application (e.g. wms with more than 100 layers), the configuration of the `Layerset-Instance <../de/bundles/Mapbender/CoreBundle/entities/layerset.html>`_ only takes and presents an incorrect amount of layers. In addition, the wms instance cannot be saved. Why?
+Q: During the upload of large wms into an application (e.g. wms with more than 100 layers), the configuration of the `Layerset-Instance <functions/backend/layerset.html>`_ only takes and presents an incorrect amount of layers. In addition, the wms instance cannot be saved. Why?
 
 A: To solve the problem, navigate to the php parameter `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_. It defines the number of possible input variables. The default value is 1000 (depending on the php version). In a wms with many layers, the number of input values is higher than the default value. You have to change the parameter to a higher value (e.g. 2000). Notice that the number is directly dependent to the amount of layers in a wms.
 

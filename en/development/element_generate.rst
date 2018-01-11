@@ -100,7 +100,7 @@ You will get a summary of actions
   - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
 
 Follow up actions
-Read about adapting your bare-bone element at http://doc.mapbender.org/en/book/development/element_generate.html
+Read about adapting your bare-bone element at `generate element <element_generate.html>`_.
 
 Edit your new element for your needs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
