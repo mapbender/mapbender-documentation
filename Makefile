@@ -1,4 +1,4 @@
-SPHINXOPTS    = -n
+SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = output
