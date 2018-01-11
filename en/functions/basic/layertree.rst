@@ -89,7 +89,7 @@ In the following section, we walk through an exemplary configuration of a Layert
 In the example we defined one **Layerset** with one instance:
 
 * Layerset World: 
-    * Instance `OSM Demosource <http://osm-demo.wheregroup.com/service?>`_
+    * Instance `OSM Demosource <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 The instance of the OSM demosource is automatically included in the installation. Now this needs to be integrated into an existing Layerset. Change into the tab "Layersets". In the following example, the Layerset " YAML main" was renamed to " World ". 
 In case of difficulties with the integration, the documentation of the `Layersets <../backend/layerset.html>`_ provides useful information.
@@ -247,11 +247,11 @@ In the following we walk through an exemplary configuration of a Layertree with 
 In the example, we defined two Layerset with two instances each:
 
 * Layerset Project NRW:
-  * Instance `DTK50 NRW <http://www.wms.nrw.de/geobasis/wms_nw_dtk50?>`_ 
-  * Instance `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?>`_
+  * Instance `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+  * Instance `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 * Layerset World: 
-  * Instance `OSM Demodienst <http://osm-demo.wheregroup.com/service?>`_ 
-  * Instance `GEBCO <http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?>`_ 
+  * Instance `OSM Demodienst <http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+  * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
 For the configuraion of the Layersets the four services mentioned above were added as instances (Detailed information see above or in the documentation of the `Layersets <../backend/layerset.html>`_ and `Sources <../backend/source.html>`_).
 
