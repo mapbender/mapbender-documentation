@@ -36,7 +36,7 @@ Bibliotheken und Frameworks:
 * `PHPUnit documentation <https://phpunit.de/>`_
 * `Composer documentation <https://getcomposer.org/doc/>`_
 * `General GitHub documentation <https://help.github.com/>`_
-* `GitHub pull request documentation <https://help.github.com/send-pull-requests/>`_
+* `GitHub pull request documentation <https://help.github.com/articles/creating-a-pull-request/>`_
 
 
 Themen

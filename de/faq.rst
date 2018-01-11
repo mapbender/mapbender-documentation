@@ -54,7 +54,7 @@ Performance
 Arbeiten mit größeren WMS Diensten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Beim Laden von größeren WMS (z.B. mehr als 100 Layer) in eine Anwendung werden in der Konfiguration der `Layerset-Instance <../de/bundles/Mapbender/CoreBundle/entities/layerset.html>`_  nur Teile der Layer übernommen und angezeigt. Die WMS Instance kann auch nicht abgespeichert werden. Warum?
+F: Beim Laden von größeren WMS (z.B. mehr als 100 Layer) in eine Anwendung werden in der Konfiguration der `Layerset-Instance <functions/backend/layerset.html>`_  nur Teile der Layer übernommen und angezeigt. Die WMS Instance kann auch nicht abgespeichert werden. Warum?
 
 A: Mittels des PHP-Parameters `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_ kann die Zahl der Eingabe Variablen erhöht werden. Der Standardwert liegt (je nach PHP Version) bei 1000. Die Zahl der Eingabe Variablen ist bei einem WMS mit vielen Layern sehr hoch, vergleichbar mit der Anzahl der Auswahlmöglichkeiten innerhalb des WMS-Instance Dialogs. Setzen Sie in dem Fall den Parameter hoch, beispielsweise auf 2000. Die Zahl hängt direkt mit der Anzahl der Layer im WMS zusammen.
 

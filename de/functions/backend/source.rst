@@ -5,7 +5,7 @@ Source (Datenquelle)
 
 Über die Datenquellen können Sie OGC-WMS Dienste in der Version 1.1.1 und 1.3.0 in Mapbender registrieren.
 
-Informationen zum Einbinden von Diensten und der Nutzung in Mapbender finden Sie im `Quickstart Dokument <../quickstart.html#laden-von-web-map-services>`_.
+Informationen zum Einbinden von Diensten und der Nutzung in Mapbender finden Sie im `Quickstart Dokument <../../quickstart.html#laden-von-web-map-services>`_.
 
 .. image:: ../../../figures/de/entities/source_wms.png
      :scale: 80

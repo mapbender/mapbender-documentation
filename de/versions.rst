@@ -1,7 +1,7 @@
 Versionshistorie
 ================
 
-`English Version of this document. <../../en/book/versions.html>`_
+`English Version of this document. <../en/versions.html>`_
 
 Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
@@ -12,7 +12,7 @@ Release Datum: TT.MM.JJJJ
 
 **Verbesserungen**
 
-* Erweiterung der Doku zu dem `Print Modul <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_ und den neuen dynamischen Features bei den Drucktemplates.
+* Erweiterung der Doku zu dem `Print Modul <functions/export/printclient.html>`_ und den neuen dynamischen Features bei den Drucktemplates.
 
 
 Version 3.0.6.3
@@ -112,7 +112,7 @@ Release Datum: 05.05.2017
 - Der Login Dialog (Registrierung, Password vergessen) wurde für mobile Geräte optimiert, um den Zugriff auf gesicherte mobile Anwendungen zu erleichtern.
 - Neu hinzugefügte Layerset Instances sind nun nicht mehr per Default als Basesource markiert.
 
-- Das `Copyright Element Popup <../bundles/Mapbender/CoreBundle/elements/copyright.html>`_ kann mit einer Höhe und Breite definiert werden.
+- Das `Copyright Element Popup <functions/misc/copyright.html>`_ kann mit einer Höhe und Breite definiert werden.
 
 - Das Löschen von Layersets führte in einigen Fällen zu einem korrupten Map-Element und falschem Layertree
 
@@ -151,14 +151,14 @@ Release Datum: 05.05.2017
 
 - User-Interface: Scrollen der Dropdownliste im Backend, z.B. bei den Icons für Buttons, scrollte auch den Hintergrund.
 
-- "Only valid" Checkbox beim `Einladen eines WMS <../bundles/Mapbender/CoreBundle/entities/source.html>`_ ist nun standardmäßig nicht mehr aktiviert.
+- "Only valid" Checkbox beim `Einladen eines WMS <functions/backend/source.html>`_ ist nun standardmäßig nicht mehr aktiviert.
 
 - Umformatierte Meldungen, wenn die Schemata eines WMS beim Hinzufügen nicht zugreifbar sind.
 
-- Der `SearchRouter <../bundles/Mapbender/CoreBundle/entities/search_router.html>`_ zeigt, wenn er in der Sidepane eingebettet ist, die Schaltflächen Suche und Reset.
+- Der `SearchRouter <functions/search/search_router.html>`_ zeigt, wenn er in der Sidepane eingebettet ist, die Schaltflächen Suche und Reset.
 
-- Internet Explorer Kompatibilität: Anpassungen `Zoombar <../bundles/Mapbender/CoreBundle/elements/zoom_bar.html>`_.
-- Internet Explorer Kompatibilität: Anpassungen `OverviewMap <../bundles/Mapbender/CoreBundle/elements/overview.html>`_.
+- Internet Explorer Kompatibilität: Anpassungen `Zoombar <functions/basic/zoom_bar.html>`_.
+- Internet Explorer Kompatibilität: Anpassungen `OverviewMap <functions/basic/overview.html>`_.
 - MS Egde Kompatibilität: Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
 
 - Verbesserung der Performance bei *einigen* Installation unter Windows durch WinCachePHP und PHP Opcache (für Details siehe `Installation unter Windows <installation/installation_windows.html>`_)
@@ -170,7 +170,7 @@ Release Datum: 05.05.2017
   
 **FOM und Absicherung:**
 
-- `Anzeige von Benutzern <../bundles/FOM/UserBundle/users.html>`_, die Zugriff auf ein Element in der Anwendung haben.
+- `Anzeige von Benutzern <functions/backend/FOM/users.html>`_, die Zugriff auf ein Element in der Anwendung haben.
 - Überarbeitung des Secure Elements Dialogs
 - Benutzer mit der Rolle View bei Diensten dürfen Metadaten sehen und Dienste in eine Anwendung einladen.
 
@@ -228,7 +228,7 @@ Release Datum: 05.05.2017
 
 **Digitizer**
 
-- Update `Digitizer <../bundles/Mapbender/CoreBundle/elements/digitizer.html>`_ auf Version 1.1.
+- Update `Digitizer <functions/editing/digitizer.html>`_ auf Version 1.1.
 - Druck von Multipolygonen.
 - Objekte erscheinen nicht mehr im Druck, wenn Sie im Digitizer ausgeblendet worden sind.
 - MinScale Einschränkung hinzugefügt
@@ -244,7 +244,7 @@ Release Datum: 05.05.2017
 - `FAQ <faq.html>`_ der Dokumentation hinzugefügt.
 - Einführung der Contributing Guide für `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ und `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender selbst und FOM werden folgen. Dies sind die Einstiegsdokumentationen für Entwickler und Mitwirkenden von Mapbender.
 - Die Developer Dokumentation wird dort aktualisiert und aus dieser Benutzerdokumentation schrittweise überführt. Somit wird in der Zukunft diese Dokumentation hier sich mehr an die Anwender richten, während die Entwickler ihre Dokumentation direkt im Source-Code der einzelnen Module finden.
-- Ausführlichere `Layertree <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_ Dokumentation
+- Ausführlichere `Layertree <functions/basic/layertree.html>`_ Dokumentation
 
 **config.yml Anpassungen**
 
@@ -291,16 +291,16 @@ Besondere Änderungen:
 
 - Performance: Die CSS, JavaScript und Translation Dateien werden nun im `Produktionsmodus <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_ im Symfony Cache gehalten. Dies kann insbesondere bei langsamen Servern zu Performancesteigerungen führen. Die Änderung gilt nicht für den `Entwicklermodus (app_dev.php) <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
 - Das Paket `eslider/sassc-binaries <https://github.com/eSlider/sassc-binaries>`_ bietet nun auch einen sassc Compiler für 32-bit Linux Systeme an. Dies führte zu Anzeigeproblemen unter 32-bit Linux Systemen (http://lists.osgeo.org/pipermail/mapbender_users/2015-December/004768.html)
-- Redlining: Die Inhalte des Redlining Elements sind nun sichtbar und das Element kann sowohl als Dialog als auch Element in der Sidepane verwendet werden. Siehe auch die `Dokumentation zum Redlining Element <../bundles/Mapbender/CoreBundle/elements/redlining.html>`_. Die Scrollbar bei den Geometrie-Types im Konfigurationsdialog wird korrekt angezeigt.
+- Redlining: Die Inhalte des Redlining Elements sind nun sichtbar und das Element kann sowohl als Dialog als auch Element in der Sidepane verwendet werden. Siehe auch die `Dokumentation zum Redlining Element <functions/editing/redlining.html>`_. Die Scrollbar bei den Geometrie-Types im Konfigurationsdialog wird korrekt angezeigt.
 
 Benutzer und Absicherung:
   
-- Benutzer können durch Administratoren, die mindestens das ACL-Benutzerrecht "Operator" besitzen, aktiv oder inaktiv geschaltet werden. Das ist z.B. sinnvoll, wenn Benutzer, die sich selbst registriert sich selbst noch nicht aktiviert haben. Siehe die `Dokumentation zu Benutzern <../bundles/FOM/UserBundle/users.html>`_.
-- Texte, Übersetzungen und Styles bei der Registrierung und dem Passwort Reset wurden angepasst, ebenso die `Dokumentation dazu <../bundles/FOM/UserBundle/users.html>`_
+- Benutzer können durch Administratoren, die mindestens das ACL-Benutzerrecht "Operator" besitzen, aktiv oder inaktiv geschaltet werden. Das ist z.B. sinnvoll, wenn Benutzer, die sich selbst registriert sich selbst noch nicht aktiviert haben. Siehe die `Dokumentation zu Benutzern <functions/backend/FOM/users.html>`_.
+- Texte, Übersetzungen und Styles bei der Registrierung und dem Passwort Reset wurden angepasst, ebenso die `Dokumentation dazu <functions/backend/FOM/users.html>`_
 
 Druck und Export Image:
   
-- Das `Print-Modul <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_ kann nun auch in die Sidepane eingebaut werden.
+- Das `Print-Modul <functions/export/printclient.html>`_ kann nun auch in die Sidepane eingebaut werden.
 - Print Legende: Die Größe der Legende im Ausdruck wurde verkleinert, um die Anzeige zu verbessern.
 - Druckvorlagen: Die Standard-Druckvorlagen sind angepasst worden. Der Abstand der dynamischen Texte wurde verringert und die Ausrichtung verbessert.
 - Druck: In der Druck-Konfiguration wurden in Kombination von notwendigen (required: true) und optionalen Feldern (required: false) die optionalen Felder teilweise als required angezeigt (Github #380).
@@ -320,12 +320,12 @@ Einzelne Elemente:
   - *Hinweis*: Es gibt WMS Dienste, die eine Legende im Hauptlayer-Element definieren. Diese wird nach der WMS Spezifikation auf die Layer vererbt, die selbst keine Legende definiert haben (z.B. weil sie nur eine Schrift anzeigen). Der Effekt in MB3 ist ähnlich, die Ursache aber eine andere, so dass in diesem Fall Anpassungen an den Capabilities notwendig sind (für den Layer eine statische Legende definieren).
 
 - **Thematische Layer**: Korrektur im An- und Abschalten von Layern, die in einem eigenen Layerset sind, aber nicht als Thematischer Layer angezeigt werden.
-- **Koordinatendisplay**: Das Element zur Koordinatenanzeige zeigte "null" als Text für den Präfix oder Separator, obwohl diese Felder leer sein sollten. Das Element hat weiterhin eine feste Breite bekommen, so dass das Layout im Footer stabiler wird. Der Wert kann verändert werden (Siehe die `CSS-Anpassungen zu dem Element <../bundles/Mapbender/CoreBundle/elements/coordinates_display.html>`_).
-- **SearchRouter**: Der Inhalt der Ergebnisse füllt nun das gesamte Dialogfenster aus und passt sich an die Größenänderung an. In der Sidebar wird die gesamte Höhe ausgenutzt. Der SearchRouter ist, wenn er als Dialog eingesetzt wird, `in der Höhe und Breite konfigurierbar <../bundles/Mapbender/CoreBundle/elements/search_router.html>`_.
-- **ScaleSelector**: Die Breite des Elements kann mit einem `CSS-Statement verändert werden <../bundles/Mapbender/CoreBundle/elements/scale_selector.html>`_ und ist nicht auf 155 Pixel festgelegt.
+- **Koordinatendisplay**: Das Element zur Koordinatenanzeige zeigte "null" als Text für den Präfix oder Separator, obwohl diese Felder leer sein sollten. Das Element hat weiterhin eine feste Breite bekommen, so dass das Layout im Footer stabiler wird. Der Wert kann verändert werden (Siehe die `CSS-Anpassungen zu dem Element <functions/basic/coordinates_display.html>`_).
+- **SearchRouter**: Der Inhalt der Ergebnisse füllt nun das gesamte Dialogfenster aus und passt sich an die Größenänderung an. In der Sidebar wird die gesamte Höhe ausgenutzt. Der SearchRouter ist, wenn er als Dialog eingesetzt wird, `in der Höhe und Breite konfigurierbar <functions/search/search_router.html>`_.
+- **ScaleSelector**: Die Breite des Elements kann mit einem `CSS-Statement verändert werden <functions/basic/scale_selector.html>`_ und ist nicht auf 155 Pixel festgelegt.
 - Wenn in einer **Layerset-Instance** alle Layer auf visible=off gestellt sind, waren der Tree und die Legende nicht sichtbar.
 - **POI Dialog** Verbesserungen im Styling, wenn  usemailto auf false gesetzt ist.
-- **Layertree**: Anzeige der Titel nun mit einer Gesamtlänge von 40. Der Default-Wert wurde verändert. Sie können den `Parameter Titlemaxlength anpassen <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_.
+- **Layertree**: Anzeige der Titel nun mit einer Gesamtlänge von 40. Der Default-Wert wurde verändert. Sie können den `Parameter Titlemaxlength anpassen <functions/basic/layertree.html>`_.
 - **GPS**: Verfeinerungen im GPS Tool
 
 Allgemeine Änderungen:
@@ -352,7 +352,7 @@ Allgemeine Änderungen:
     
 **Bekannte Probleme:**
 
-- Das Sketch Tool funktioniert nicht korrekt und wird in Zukunft in das `Redlining Tool <../bundles/Mapbender/CoreBundle/elements/redlining.html>`_ übernommen werden.
+- Das Sketch Tool funktioniert nicht korrekt und wird in Zukunft in das `Redlining Tool <functions/editing/redlining.html>`_ übernommen werden.
 - Karte weiterempfehlen funktioniert nicht für Facebook, Twitter und Google+.
 
     
@@ -383,14 +383,14 @@ Release Datum: 27.10.2015
 - Administration Datenquelle: Keine Formulardaten Vorbelegung durch den Browser für Benutzername und Passwort.
 - Mobile Anwendung: Darstellung unter Firefox für Android.
 - Update 3.0.4.x: FeatureInfo autoopen=true bleibt erhalten.
-- Doku: FOM `UserBundle Übersetzung <../bundles/FOM/UserBundle/index.html>`_ und `Ergänzung bei falschen Benutzer-Logins <../bundles/FOM/UserBundle/users.html>`_.
-- Doku: URL Parameter scale im `Map Element <../bundles/Mapbender/CoreBundle/elements/map.html>`_.
-- Doku: `WMC Loader <../bundles/Mapbender/WmcBundle/elements/wmc_loader.html>`_ und KeepSources.
+- Doku: FOM `UserBundle Übersetzung <functions/backend/FOM/index.html>`_ und `Ergänzung bei falschen Benutzer-Logins <functions/backend/FOM/users.html>`_.
+- Doku: URL Parameter scale im `Map Element <functions/basic/map.html>`_.
+- Doku: `WMC Loader <functions/wmc/wmc_loader.html>`_ und KeepSources.
 
 
 **Änderungen in der config.yml:**
 
-* Die folgenden Änderungen sind optionale Parameter für das Verhalten des Logins (siehe das `entsprechende Kapitel im FOM Bundle <../bundles/FOM/UserBundle/users.html>`_):
+* Die folgenden Änderungen sind optionale Parameter für das Verhalten des Logins (siehe das `entsprechende Kapitel im FOM Bundle <functions/backend/FOM/users.html>`_):
 
     .. code-block:: yaml
                     
@@ -417,7 +417,7 @@ Milestone 3.0.5.1
 
 Release Datum: 26.08.2015
 
-**Neue Funktionen**: im `Kartenelement <../bundles/Mapbender/CoreBundle/elements/map.html>`_ und beim `Druck Client <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_:
+**Neue Funktionen**: im `Kartenelement <functions/basic/map.html>`_ und beim `Druck Client <functions/export/printclient.html>`_:
 
 * Map: OpenLayers TileSize: Es kann die Kachelgröße für die Karte angegeben werden. Default: 256x256.
 * Map: Delay before Tiles: Für WMS-T, z.B. bei zeitlichen Parametern (zukünftig)
@@ -450,7 +450,7 @@ Release Datum: 26.08.2015
 - composer.json Anpassung Version Digitizer auf 1.0.*
 - Dokumentation des JS-UI Generators (Formular-Generator): https://github.com/eSlider/vis-ui.js
 - Umstrukturierte `Installations-Dokumentation <installation.html>`_ und einige Anpassungen (php-pear, assets-Verzeichnis, init:acl, openssl).
-- Verbesserte Dokumentation der `Mapbender3 Templates <templates.html>`_
+- Verbesserte Dokumentation der `Mapbender3 Templates <customization/templates.html>`_
 - Verbesserte Dokumentation des `Quickstart <quickstart.html>`_
 
 **Known Issues:**
@@ -474,7 +474,7 @@ Release Datum: 01.07.2015
 
 * **Druck mit Legende:** Im Druck ist es nun möglich, die Legende auf einer separaten Seite auszugeben. Die Ausgabe kann über eine Checkbox gesteuert werden.
 
-* **Konfigurierbarer Layerbaum:** Der Layerbaum unterstützt nun mehr als ein layerset. Sie müssen das Kartenelement anpassen, um die Layersets festzulegen, die angezeigt werden sollen sowie den Layerbaum selbt. Die Dokumentation befindet sich unter `auf der Seite zum Layertree <../bundles/Mapbender/CoreBundle/elements/layertree.html>`_.
+* **Konfigurierbarer Layerbaum:** Der Layerbaum unterstützt nun mehr als ein layerset. Sie müssen das Kartenelement anpassen, um die Layersets festzulegen, die angezeigt werden sollen sowie den Layerbaum selbt. Die Dokumentation befindet sich unter `auf der Seite zum Layertree <functions/basic/layertree.html>`_.
 
 * **Verbesserte Infoausgabe:** Die Ausgabe der Infoabfrage wurde für die neue Version verbessert. So bleiben nun die Stile der Infoabfrage erhalten. Dienste, die keine Antwort liefern, werden nicht über einen Reiter angezeigt. Es erfolgen Meldungen, wenn keine Antwort geliefert wurde.
 
@@ -482,13 +482,13 @@ Release Datum: 01.07.2015
 
 * **SASS Compiler:** Änderungen an der Architektur bezüglich des SASS Compilers führen zu einer performanteren Oberfläche.
 
-* **Vendor Specific Parameter:** Eine WMS Layer Instanz unterstützt nun die Angabe von Vendor Specific Parametern, die an einen WMS Request angehangen werden. Die Werte können fest vergeben werden oder auf die User- und Gruppeninformation des angemeldeten Benutzers zurückgreifen. Dokumentation ist unter dem Abschnitt `Vendor Specific Parameters <../book/quickstart.html#konfiguration-von-diensten>`_ verfügbar.
+* **Vendor Specific Parameter:** Eine WMS Layer Instanz unterstützt nun die Angabe von Vendor Specific Parametern, die an einen WMS Request angehangen werden. Die Werte können fest vergeben werden oder auf die User- und Gruppeninformation des angemeldeten Benutzers zurückgreifen. Dokumentation ist unter dem Abschnitt `Vendor Specific Parameters <quickstart.html#konfiguration-von-diensten>`_ verfügbar.
 
 * **Formular-Builder:** In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten sehr komplexe Formulare generiert werden. Hierbei wurde sich an den Möglichkeiten, die in Mapbender 2.x zur Verfügung stehen, orientiert.
 
 * **Neue Schaltflächen:** Einige Schaltflächen basieren auf einer neuen Schriftart, die alten Schaltflächen sind noch mit dem Namen FontAwesome verfügbar.
 
-* **URL Parameter:** Mapbender3 kann mit Startparametern aufgerufen werden. Eine Liste der Parameter findet sich in der Dokumentation zu den `URL Parametern <../bundles/Mapbender/CoreBundle/elements/map.html#kontrolle-uber-den-aufruf>`_.
+* **URL Parameter:** Mapbender3 kann mit Startparametern aufgerufen werden. Eine Liste der Parameter findet sich in der Dokumentation zu den `URL Parametern <functions/basic/map.html#kontrolle-uber-den-aufruf>`_.
 
 * Neue Übersetzungen für Portugiesisch und Russisch.
   

@@ -65,7 +65,7 @@ Eine Mapbender Anwendung kann wie folgt aussehen:
 Installation
 ===============
 
-Hinweise zur Installation von Mapbender finden Sie unter http://doc.mapbender.org/en/book/installation.html.
+Hinweise zur Installation von Mapbender finden Sie unter `Installation <installation.html>`_.
 
 
 Starten Sie Mapbender
@@ -156,7 +156,7 @@ Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. Kartenelement, 
   .. image:: ../figures/mapbender3_create_application.png
 
 
-.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen im online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter http://doc.mapbender.org/en/book/templates.html
+.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen im online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter `Wie werden eigene Vorlagen (templates) erzeugt? <customization/templates.html>`_.
 
 
 Kopieren und Umbenennen einer Anwendung
@@ -386,7 +386,7 @@ Beispiele für Elemente, die Mapbender anbietet:
 * WMC Loader - Laden von Themenplänen
 * WMC List - Laden von Themenplänen über eine Auswahlbox
 
-Sie finden detaillierte Informationen zu jedem Element unter `MapbenderCoreBundle Element Dokumentation <http://doc.mapbender.org/en/bundles/Mapbender/CoreBundle/index.html>`_ , `MapbenderWmcBundle Element Dokumentation <../bundles/Mapbender/WmcBundle/index.html>`_ und `MapbenderWmsBundle Element Dokumentation <../bundles/Mapbender/WmsBundle/index.html>`_.
+Sie finden detaillierte Informationen zu jedem Element in der `Mapbender Dokumentation <index.html>`_.
 
 
 Versuchen Sie es selber

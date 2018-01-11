@@ -14,9 +14,9 @@ Konfiguration
 .. image:: ../../../figures/de/search_router_configuration.png
      :scale: 80
 
-Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter http://doc.mapbender.org/de/book/database.html
+Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter `Konfiguration der Datenbank <../../customization/database.html>`_.
 
-**Hinweis**: Für die Nutzung der unten beschriebenen Suche können die Tabellen aus der Digitalisierungs-Demo genutzt werden. Die SQLS für die Erstellung der Tabellen befinden sich in der Dokumentation unter `Digitizer <../elements/digitizer.html>`_.
+**Hinweis**: Für die Nutzung der unten beschriebenen Suche können die Tabellen aus der Digitalisierungs-Demo genutzt werden. Die SQLS für die Erstellung der Tabellen befinden sich in der Dokumentation unter `Digitizer <../editing/digitizer.html>`_.
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und wird neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Target:** Name/ID des Kartenelements, auf das sich das Element bezieht.
@@ -29,7 +29,7 @@ Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank i
 * **Configuration**: Feld für die Konfiguration der Suche (erscheint erst, wenn über das + bei Routes eine Suche hinzugefügt wurde)
 
 Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im yaml-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
-Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter `Button <../elements/button.html>`_.
+Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
 
 Beispiel einer Such-Konfiguration im Textfeld ``Configuration``:

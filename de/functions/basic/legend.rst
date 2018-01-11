@@ -28,7 +28,7 @@ Konfiguration
 * **Titel der Ebene anzeigen:** zeigt den Layertitel, der Standardwert ist true.
 * **Titel der gruppierten Ebenen anzeigen:** zeigt den Gruppenlayertitel für gruppierte Layer, der Standardwert ist true.
 
-Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../elements/button.html>`_.
+Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
 Konfigurationsbeispiele
 =======================
@@ -66,7 +66,7 @@ Für das Konfigurationsbeispiel wurden folgende Einstellungen gewählt:
      :scale: 80
 
 Wichtig ist hier den *Element type* auf "dialog" einzustellen. Für das Konfigurationsbeispiel wurde das Häkchen bei *Automatisches Öffnen* entfernt, so dass sich die Legende nur bei aktivem Klicken auf den Button öffnet.
-Sobald dieses Element im Content eingebunden wurde, muss ein Button in der Toolbar eingefügt werden. Die Konfiguration von Buttons wird in der Mapbender3-Dokumentation unter `Button <../elements/button.html>`_ beschrieben.
+Sobald dieses Element im Content eingebunden wurde, muss ein Button in der Toolbar eingefügt werden. Die Konfiguration von Buttons wird in der Mapbender3-Dokumentation unter `Button <../misc/button.html>`_ beschrieben.
 
 Die Konfiguration eines Buttons für die Legende kann wie folgt aussehen:
 

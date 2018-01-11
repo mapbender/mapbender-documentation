@@ -33,9 +33,9 @@ Funktionen
 
 Zur Konfiguration des Layerbaums gibt es verschiedene Verknüpfungspunkte zu anderen Elementen, die beachtet werden müssen: 
 
-* `Layersets <../entities/layerset.html>`_
-* `Kartenelement <../elements/map.html>`_
-* `Datenquellen <../entities/source.html>`_
+* `Layersets <../backend/layerset.html>`_
+* `Kartenelement <map.html>`_
+* `Datenquellen <../backend/source.html>`_
 
 
 Konfiguration
@@ -55,7 +55,7 @@ Um die unterschiedlichen Layersets im Layertree nutzen zu können, sind verschie
 
 Über die **Layersets** werden die gewünschten Layer in die Anwendung eingebunden. 
 Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den Plus-Button **[1]** können neue Layersets erstellt. In die neuen Layersets können dann neue Layer über das Hinzufügen der bestehenden Instanzen **[2]** eingebunden werden. Das Layerset "overview" **[3]** wird – wie gehabt – für die Anzeige der Übersichtskarte verwendet. 
-Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können findet sich unter der Dokumentation des `Layersets <../entities/layerset.html>`_ und der `Datenquellen <../entities/source.html>`_. 
+Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können findet sich unter der Dokumentation des `Layersets <../backend/layerset.html>`_ und der `Datenquellen <../backend/source.html>`_. 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset.png
            :scale: 80
@@ -63,7 +63,7 @@ Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können fi
 
            Einrichtung verschiedener Layersets für die Einbindung in den Layertree.
 
-Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen müssen diese in dem `Kartenelement <../elements/map.html>`_ angegeben werden. 
+Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen müssen diese in dem `Kartenelement <map.html>`_ angegeben werden. 
 Hier gibt man durch das Ankreuzen **[1]** der Layersets an, welche Layersets in der Kartenansicht verwendet werden sollen. Der Layerset "overview" wird beispielsweise nicht in der Hauptkarte angezeigt.  
 In diesem Schritt wird auch die Reihenfolge definiert, in der die Layersets im Layertree und in der Karte erscheinen sollen. Die erstellten Layersets können in der Auflistung per Drag & Drop verschoben werden. Bitte achten Sie darauf, dass die weiter oben definierten Themen die darunter liegenden Themen überdecken können.
 
@@ -91,7 +91,7 @@ In dem folgenden Beispiel ist ein **Layerset** mit einer Instanz definiert:
   * Instanz `OSM Demodienst <http://osm-demo.wheregroup.com/service?>`_
 
 Die Instanz des OSM-Demodienstes ist bei der Installation automatisch dabei. Diese muss nun nurnoch über den Reiter "Layersets" in ein bestehendes Layerset eingebunden werden. In dem folgenden Beispiel wurde das Layerset "YAML-main" in "World" umbenannt. 
-Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <../entities/layerset.html>`_ weiterhelfen. 
+Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <../backend/layerset.html>`_ weiterhelfen. 
 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple.png
@@ -100,9 +100,9 @@ Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <..
 
            Einrichtung eines Layersets für die Einbindung in den einfachen Layertree.
 
-Als nächstes erfolgt die Einrichtung des `Kartenelements <../elements/map.html>`_  zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement in dem Content-Bereich.
+Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_  zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement in dem Content-Bereich.
 Wichtig ist nun, dass bei dem Bereich Layersets ein Häckchen bei dem Layerset World **[1]** gesetzt ist, damit dieses Layerset später in der Anwendung angezeigt wird. 
-Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <../elements/map.html>`_ weiterhelfen.
+Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple.png
            :scale: 80 
@@ -121,7 +121,7 @@ Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bear
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Bei der Konfiguration der Layersets ist standardisiert das Häckchen Basesource aktiviert. Dieses ist wichtig für den `Themenwechsler <../elements/basesourceswitcher.html>`_, mit dem man zwischen vordefinierten Themen wechseln kann. Über das Häckchen bei **BaseSources anzeigen** [1] werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch in dem Layertree angezeigt.
+Bei der Konfiguration der Layersets ist standardisiert das Häckchen Basesource aktiviert. Dieses ist wichtig für den `Themenwechsler <basesourceswitcher.html>`_, mit dem man zwischen vordefinierten Themen wechseln kann. Über das Häckchen bei **BaseSources anzeigen** [1] werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch in dem Layertree angezeigt.
 
 Die Funktion **Header anzeigen** [2] ermöglicht das Einbinden einer Überschrift in den Themenbaum. 
 
@@ -252,7 +252,7 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
   * Instanz `GEBCO <http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?>`_ 
 
 
-Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Info s.o. oder in der Doku der `Layersets <../entities/layerset.html>`_ und `Dienste <../entities/source.html>`_).
+Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Info s.o. oder in der Doku der `Layersets <../backend/layerset.html>`_ und `Dienste <../backend/source.html>`_).
 
 Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[2]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset noch die Instanz "GEBCO" hinzu. 
 Um die thematische Gruppierung gut nutzen zu können erstellen wir nun ein neues Layerset mit dem Namen "Project NRW" **[3]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein. 
@@ -267,9 +267,9 @@ Um die thematische Gruppierung gut nutzen zu können erstellen wir nun ein neues
 Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die Übersichtskarte, das **World**-Layerset [2] mit den weltweiten/ Deutschlandweiten Daten und das **Project NRW** Layerset [3] mit den zwei regionalen Datensets aus NRW. 
 
 
-Als nächstes erfolgt die Einrichtung des `Kartenelements <../elements/map.html>`_ zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement in dem Content-Bereich.
+Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_ zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement in dem Content-Bereich.
 Wichtig ist nun, dass bei dem Bereich Layersets ein Häckchen bei dem Layerset "World" UND dem Layerset "Project NRW" gesetzt ist **[1]**, damit diese später in der Anwendung angezeigt werden. 
-Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <../elements/map.html>`_ weiterhelfen.
+Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_komplex.png
            :scale: 80 
@@ -278,7 +278,7 @@ Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kart
            Konfiguration des Kartenelements für den thematischen Layertree.
 
 Als letzter Schritt erfolgt die Einrichtung des Layertrees selbst. 
-Die in dem `Kartenelement <../elements/map.html>`_ angegebenen Instanzen können im Layertree noch genauer definiert werden. Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees beachten Sie bitte die in dem Workflow für den simplen Layertree bereits erklärten Einstellungen.
+Die in dem `Kartenelement <map.html>`_ angegebenen Instanzen können im Layertree noch genauer definiert werden. Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees beachten Sie bitte die in dem Workflow für den simplen Layertree bereits erklärten Einstellungen.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
@@ -295,7 +295,7 @@ Für den thematischen Layertree binden wir den Ebenenbaum in diesem Beispiel die
            Einrichtung des Type Element.
 
 Ist die Option **Thematische Layer** ausgeschaltet, benutzt der Layertree nicht die konfigurierten Layersets und zeigt die einzelnen Instanzen ohne thematische Strukturierung in der Hauptebene an. Nun wollen wir jedoch die Layer über unsere thematischen Layersets anzeigen, daher aktivieren wir die Funktion **Thematische Layer** [1]. 
-Da wir in dem `Kartenelement <../elements/map.html>`_ beide Layersets in die Anwendung eingebunden haben, werden diese nun unter dem **Themen**-Bereich angezeigt.
+Da wir in dem `Kartenelement <map.html>`_ beide Layersets in die Anwendung eingebunden haben, werden diese nun unter dem **Themen**-Bereich angezeigt.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_2.png
            :scale: 80 

@@ -4,7 +4,7 @@ WMC List (WMC Liste)
 ***********************
 
 Im Mapbender können mit dem WMC Editor Konfigurationen gespeichert und bearbeitet werden. 
-Diese Konfigurations können mit WMC-Lader geladen werden. Mehr dazu unter `WMC Loader <../elements/wmc_loader.html>`_.
+Diese Konfigurations können mit WMC-Lader geladen werden. Mehr dazu unter `WMC Loader <wmc_loader.html>`_.
 
 Ihrer Applikation können Konfigurationen von einer Selektbox hinzugefügt werden.
 

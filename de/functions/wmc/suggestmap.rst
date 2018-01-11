@@ -4,7 +4,7 @@ Suggest Map
 ***********************
 
 
-**Beachten Sie:** Diese Funktion kann nur verwendet werden, wenn ein `WMC Editor <../elements/wmc_editor.html>`_ vorhanden ist.
+**Beachten Sie:** Diese Funktion kann nur verwendet werden, wenn ein `WMC Editor <wmc_editor.html>`_ vorhanden ist.
 
 **Beachten Sie:** Alle Konfigurationen sind im Moment öffentlich. In Zukunft soll ACL (Access Control) zu diesem Element hinzugefügt werden.
 

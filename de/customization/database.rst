@@ -6,7 +6,7 @@ Allgemein
 
 Zur Konfiguration der Datenbankverbindung werden die Dateien config.yml und parameters.yml verwendet (siehe auch `die Symfony Dokumentation <http://symfony.com/doc/current/best_practices/configuration.html>`_). Während in der config.yml nur die Platzhalter angegeben werden, werden die Werte in der parameters.yml gefüllt.
 
-Beispiele zur Einrichtung finden sich in den `Installationsanleitungen <installation.html>`_, so z.B. im Kapitel `Einrichtung von Mapbender unter Ubuntu oder Debian <installation/installation_ubuntu.html#mapbender-einrichtung>`_.
+Beispiele zur Einrichtung finden sich in den `Installationsanleitungen <../installation.html>`_, so z.B. im Kapitel `Einrichtung von Mapbender unter Ubuntu oder Debian <../installation/installation_ubuntu.html#mapbender-einrichtung>`_.
 
 
 .. _doctrine:
@@ -60,7 +60,7 @@ Der Parameter "default_connection" gibt die Datenbankverbindung an, die standard
 
 * database_host: Der Host, auf dem die Datenbank läuft. Entweder der Name (z.B. localhost) oder die IP-Adresse (z.B. 127.0.0.1).
 * database_port: Der Port, auf dem die Datenbank lauscht (z.B. 5432 für PostgreSQL).
-* database_name: Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <installation.html>`_ für Details.
+* database_name: Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <../installation.html>`_ für Details.
 * database_path: Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, löschen Sie bitte den Parameter trotzdem nicht aus der parameters.yml, sondern schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
 * database_user: Benutzername für die Verbindung zur Datenbank.
 * database_password: Das Passwort des Datenbankbenutzers.

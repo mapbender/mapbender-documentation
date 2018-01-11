@@ -18,7 +18,7 @@ Konfiguration
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt. 
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 
-In der Karte stehen diejenigen Koordinatensysteme in der Selectbox zur Auswahl, die vorher im `Kartenelement <../elements/map.rst>`_ definiert wurden.
+In der Karte stehen diejenigen Koordinatensysteme in der Selectbox zur Auswahl, die vorher im `Kartenelement <map.html>`_ definiert wurden.
 
 YAML-Definition:
 ----------------

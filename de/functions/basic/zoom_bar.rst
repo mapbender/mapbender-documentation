@@ -70,7 +70,7 @@ Die Komponente **Zoom box** ermöglicht das Aufziehen einer Box mit der Maus. De
 .. image:: ../../../figures/de/navigationtoolbar_example_zoombox.png
      :scale: 60
 
-Mit der Komponente **Zoom to max extent** kann schnell auf den im `Kartenelement <../elements/map.html>`_ definierten *Max. Extent* gezoomt werden. Zu beachten ist, dass der *Max. Extent* jedoch nur dann sichtbar ist, wenn auch der entsprechende benötigte Maßstab eingestellt ist. Ist es aufgrund der eingestellten Maßstäbe nicht möglich, den gesamten maximalen Ausschnitt zu sehen, wird auf den maximalen Maßstab herausgezoomt. 
+Mit der Komponente **Zoom to max extent** kann schnell auf den im `Kartenelement <map.html>`_ definierten *Max. Extent* gezoomt werden. Zu beachten ist, dass der *Max. Extent* jedoch nur dann sichtbar ist, wenn auch der entsprechende benötigte Maßstab eingestellt ist. Ist es aufgrund der eingestellten Maßstäbe nicht möglich, den gesamten maximalen Ausschnitt zu sehen, wird auf den maximalen Maßstab herausgezoomt. 
 Bei Klick auf *Zoom to max extent* und einem maximalen Maßstab von 1:5.000.000 sieht der Kartenausschnitt wie folgt aus:
 
 .. image:: ../../../figures/de/navigationtoolbar_example_maxextent_5mio.png
@@ -82,12 +82,12 @@ Bei einem maximalen Maßstab von 1:1.000.000 hingegen würde der Kartenausschnit
 .. image:: ../../../figures/de/navigationtoolbar_example_maxextent_1mio.png
      :scale: 60
 
-Mit der Komponente **Zoom in/out** kann durch Klick auf das ``+`` -Zeichen (hineinzoomen) oder durch Klick auf das ``–`` -Zeichen (herauszoomen) gezoomt werden. Der Zoom springt mit Klick auf eine der beiden Schaltflächen auf entweder den nächstgrößeren oder nächstkleineren Maßstab, die vorher im `Kartenelement <../elements/map.html>`_ definiert wurden. Je nachdem, welche Maßstäbe dort angegeben wurden, können größere oder kleinere Sprünge im Zoom eingestellt werden.
+Mit der Komponente **Zoom in/out** kann durch Klick auf das ``+`` -Zeichen (hineinzoomen) oder durch Klick auf das ``–`` -Zeichen (herauszoomen) gezoomt werden. Der Zoom springt mit Klick auf eine der beiden Schaltflächen auf entweder den nächstgrößeren oder nächstkleineren Maßstab, die vorher im `Kartenelement <map.html>`_ definiert wurden. Je nachdem, welche Maßstäbe dort angegeben wurden, können größere oder kleinere Sprünge im Zoom eingestellt werden.
 
 .. image:: ../../../figures/de/navigationtoolbar_example_zoominout.png
      :scale: 80
 
-Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/out*, indem auch hier das ``+`` und ``–`` -Zeichen zur Verfügung stehen. Zusätzlich besteht diese Komponente aus einer Leiste, die die möglichen Zoomstufen durch auswählbare Punkte anzeigt. Bei Bewegung der Maus über die einzelnen Punkte werden die zugehörigen Maßstäbe angezeigt (siehe Abbildung). Auch hier beziehen sich die Maßstäbe auf die vorher definierten im `Kartenelement <../elements/map.html>`_ . Der ausgefüllte Punkt zeigt an, in welchem Maßstab die Karte aktuell angezeigt wird. Durch klicken auf einen anderen Punkt, springt die Karte direkt zu dem zugehörigen Maßstab.
+Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/out*, indem auch hier das ``+`` und ``–`` -Zeichen zur Verfügung stehen. Zusätzlich besteht diese Komponente aus einer Leiste, die die möglichen Zoomstufen durch auswählbare Punkte anzeigt. Bei Bewegung der Maus über die einzelnen Punkte werden die zugehörigen Maßstäbe angezeigt (siehe Abbildung). Auch hier beziehen sich die Maßstäbe auf die vorher definierten im `Kartenelement <map.html>`_ . Der ausgefüllte Punkt zeigt an, in welchem Maßstab die Karte aktuell angezeigt wird. Durch klicken auf einen anderen Punkt, springt die Karte direkt zu dem zugehörigen Maßstab.
 
 .. image:: ../../../figures/de/navigationtoolbar_example_zoomslider.png
      :scale: 80

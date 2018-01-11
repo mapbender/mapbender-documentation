@@ -30,7 +30,7 @@ Konfiguration
   * Bitte stellen Sie sicher, dass die GetFeatureInfo Antworten valides HTML zurückgeben.
   * Wenn sie ``text/plan`` als Ausgabeformat definieren, darf der Schalter ``only valid`` nicht aktiviert sein, da ``text/plain`` kein valides HTML zurückgibt.
 
-**Hinweis:** Über die Informationsabfrage des FeatureInfo Dialogs können der Anwendung dynamisch WMS Dienste hinzugefügt werden. Hierfür wird der WMS Loader genutzt. Für nähere Informationen siehe das Kapitel `Hinzufügen eines WMS über einen definierten Link <../../WmsBundle/elements/wms_loader.html#hinzufugen-eines-wms-uber-einen-definierten-link>`_.
+**Hinweis:** Über die Informationsabfrage des FeatureInfo Dialogs können der Anwendung dynamisch WMS Dienste hinzugefügt werden. Hierfür wird der WMS Loader genutzt. Für nähere Informationen siehe das Kapitel `Hinzufügen eines WMS über einen definierten Link <../misc/wms_loader.html#hinzufugen-eines-wms-uber-einen-definierten-link>`_.
 
 
 
@@ -80,7 +80,7 @@ Um alle Bilder und Hintergrundfarben des im Ausdruck zu erhalten, sollten Sie di
 Button-Konfiguration
 --------------------
 
-Für das Element wird ein Button verwendet. Siehe das Kapitel `Button <button.html>`_ für die generelle Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der so lange aktiviert ist, bis er vom Benutzer wieder deaktiviert wird. Eine weitere Möglichkeit, ihn zu deaktivieren wäre den FeatureInfo Dialog zu schließen, wenn dieser die Option die Option "Deactivate on Close" angeschaltet hat.
+Für das Element wird ein Button verwendet. Siehe das Kapitel `Button <../misc/button.html>`_ für die generelle Konfiguration. Der folgende Screenshot zeigt ein Beispiel für einen FeatureInfo Button, der so lange aktiviert ist, bis er vom Benutzer wieder deaktiviert wird. Eine weitere Möglichkeit, ihn zu deaktivieren wäre den FeatureInfo Dialog zu schließen, wenn dieser die Option die Option "Deactivate on Close" angeschaltet hat.
 
 * **Group:** featureinfo
 * **Deactivate:** deactivate

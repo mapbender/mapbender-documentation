@@ -3,7 +3,7 @@
 WMC Loader (WMC laden)
 ***********************
 
-Mapbender kann Konfigurationen speichern. Mehr dazu unter `WMC Editor <../elements/wmc_editor.html>`_. Diese Konfigurationen  mit dem Element WMC-Lader geladen werden. 
+Mapbender kann Konfigurationen speichern. Mehr dazu unter `WMC Editor <wmc_editor.html>`_. Diese Konfigurationen  mit dem Element WMC-Lader geladen werden. 
 
 Sie können den WMC-Lader ihrer Applikation als Selektbox oder als Button, der einen Dialog öffnet, hinzufügen.
 

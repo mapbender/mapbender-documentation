@@ -109,7 +109,7 @@ Datei Ablagen
 * **print templates:** Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Sie können eigene Druckvorlagen erstellen.
 
 
-Erstellen eines individuellen Vorlage
+Erstellen einer individuellen Vorlage
 =====================================
 Um eine individuelle Druckvorlage zu erstellen, kopieren Sie eine vorhandene Druckvorlage (ODG-Datei) und bearbeiten diese. Sie können auch eine neue LibreOffice Draw-Datei erzeugen. Die Vorlage kann feste Objekte wie ein Logo, ein Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine Ebene für die dynamischen Elemente wie die Karte, die Übersichtskarte, der Nordpfeil, der Maßstab, das Datum und optionale Felder erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene in der LibreOffice Draw-Datei. Fügen Sie die Ebene in LibreOffice Draw folgendermaßen hinzu: **Menü: Einfügen -> Ebene... -> definieren Sie einen Namen für die Ebene und wählen Sie die Option nicht druckbar**.
 
@@ -223,8 +223,7 @@ Ein Gruppen-abhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie fol
 .. image:: ../../../figures/de/print_client_example_groups.png
      :scale: 80
 
-Zur Nutzung dieser Funktion müssen Sie vorher Gruppen erstellen und den Anwendungen die jeweiligen Gruppen zuordnen. Die Funktionsweise der Gruppen- und Benutzerverwaltung finden Sie in der Mapbender Dokumentation im Mapbender Quickstart unter:
-https://doc.mapbender.org/de/book/quickstart.html
+Zur Nutzung dieser Funktion müssen Sie vorher Gruppen erstellen und den Anwendungen die jeweiligen Gruppen zuordnen. Die Funktionsweise der Gruppen- und Benutzerverwaltung finden Sie in der Mapbender Dokumentation im `Mapbender Quickstart <../../quickstart.html>`_.
 
 Konfiguration des Elements
 ==========================

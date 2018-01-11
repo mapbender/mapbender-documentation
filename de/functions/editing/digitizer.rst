@@ -55,7 +55,7 @@ Das Element kann nur in der Sidepane eingebettet werden.
 * **Schemes:** YAML-Definition für das Element "digitizer"
 
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
-Mehr zu diesem Thema finden Sie unter http://doc.mapbender.org/de/book/database.html
+Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../customization/database.html>`_.
 
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
@@ -419,7 +419,7 @@ Das *Speichern* der Änderungen geschieht erst, wenn die Schaltfläche "Speicher
 * **Löschen:** Löscht die Daten.
 * **Abbrechen:** Speichert und löscht die Daten nicht, behält die Geometrie aber für eine weitere Bearbeitung im internen Speicher. Sie ist weiterhin in der Karte zu sehen und kann angepasst werden (z.B. bei Polygonen). Attributdaten werden nicht vorgehalten.
 
-Es gibt mehrere Optionen in den `Basisdefinitionen <#Basisdefinition>`_, die das Verhalten bestimmen:
+Es gibt mehrere Optionen in den `Basisdefinitionen <#basisdefinition>`_, die das Verhalten bestimmen:
 
 * allowEditData: Speichern Schaltfläche anzeigen.
 * allowDelete: Löschen Schaltfläche anzeigen.

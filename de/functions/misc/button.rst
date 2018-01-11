@@ -3,7 +3,7 @@
 Button
 ******
 
-Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die `Legende <../elements/legend.html>`_, `Layertree (Layerbaum) <layertree.html>`_, `FeatureInfo (Infoabfrage) <../elements/feature_info.html>`_, `Linien- und Flächenberechnung <../elements/ruler.html>`_ und der `Druck <../elements/printclient.html>`_ benötigen einen Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element nicht in einem Frame definiert wurde.
+Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die `Legende <../basic/legend.html>`_, `Layertree (Layerbaum) <../basic/layertree.html>`_, `FeatureInfo (Infoabfrage) <../basic/feature_info.html>`_, `Linien- und Flächenberechnung <../basic/ruler.html>`_ und der `Druck <../export/printclient.html>`_ benötigen einen Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element nicht in einem Frame definiert wurde.
 
 Buttons können optional gruppiert werden, so dass nur ein Button in der Gruppe aktiviert ist. Dieses wird im Gruppen-Parameter eingestellt.
 Es kann außerdem ein Button definiert werden, der sich auf eine Webseite oder ein Script bezieht und bei Aktivierung zu diesem weiterleitet. Bei dem Parameter *Target* stehen nur Funktionen zur Auswahl, die vorher in der Anwendung unter dem Reiter *Layouts* entweder in den Content oder den Footer eingebunden wurden.
@@ -19,7 +19,7 @@ Konfiguration
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Icon:** Symbol des Buttons, basierend auf einer CSS Klasse.
 * **Target:** Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird. (Bswp.: Drucken; hier wird eine Dropdown-Liste aller Features angezeigt, welche vorher in Content, Sidepane oder Footer konfiguriert wurden)
-* **Click:** Bezieht sich auf eine Webseite oder ein Skript (z.B.: http://mapbender3.org). Bei Klick auf den Button öffnet sich die angegebene Webseite.
+* **Click:** Bezieht sich auf eine Webseite oder ein Skript (z.B.: http://mapbender.org). Bei Klick auf den Button öffnet sich die angegebene Webseite.
 * **Group:** Hiermit kann das Element einer Gruppe hinzugefügt werden. Aus dieser Gruppe können nicht mehrere Buttons gleichzeitig aktiviert sein. Wird ein anderer Button aus der Gruppe ausgewählt, wird der vorher ausgewählte automatisch deaktiviert.
 * **Action:** Methode, die aufgerufen wird, wenn der Button aktiviert wird (z.B. activate oder open). 
 * **Deactivate:** Methode, die aufgerufen wird, wenn der Button deaktiviert wird (z.B. deactivate).
@@ -50,7 +50,7 @@ Buttons können für Features eingebunden werden, die vorher im Content konfigur
 Button für die Legende
 -----------------------
 
-Für Karten sind Legenden sehr hilfreich, da sich so die Betrachter der Karte über den Inhalt informieren können. Die Legende ist in diesem Anwendungsbeispiel im Content als Element type "dialog" eingebunden. Wie eine Legende konfiguriert wird, wird in der Dokumentation unter `Legende <../elements/legend.html>`_ beschrieben.
+Für Karten sind Legenden sehr hilfreich, da sich so die Betrachter der Karte über den Inhalt informieren können. Die Legende ist in diesem Anwendungsbeispiel im Content als Element type "dialog" eingebunden. Wie eine Legende konfiguriert wird, wird in der Dokumentation unter `Legende <../basic/legend.html>`_ beschrieben.
 Der Button für eine Legende wird wie folgt eingebunden:
 
 Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Toolbar Bereich das Element Button ausgewählt werden.
@@ -97,7 +97,7 @@ Der Button wird, wie schon der Legendenbutton, über das ``+`` - Zeichen in der 
 .. image:: ../../../figures/de/button_distance_dialog.png
      :scale: 80
      
-Im Anwendungsbeispiel ist die Bezeichnung (*Title*) des Buttons "Linienmessung". Der Text "Linien messen" wird beim Platzieren der Maus auf dem Button angezeigt. Als *Icon* wird "Line ruler" gewählt und als *Target* das vorher im Content erstellte Element "Distance". Das Element "Distance" wurde mithilfe der Funktion Linien-/Flächenmessung erstellt und als Linienmessung konfiguriert. Wie das Element Linien-/Flächenmessung konfiguriert wird, wird in der Dokumentation unter `Linien-/Flächenmessung <../elements/ruler.html>`_ beschrieben.
+Im Anwendungsbeispiel ist die Bezeichnung (*Title*) des Buttons "Linienmessung". Der Text "Linien messen" wird beim Platzieren der Maus auf dem Button angezeigt. Als *Icon* wird "Line ruler" gewählt und als *Target* das vorher im Content erstellte Element "Distance". Das Element "Distance" wurde mithilfe der Funktion Linien-/Flächenmessung erstellt und als Linienmessung konfiguriert. Wie das Element Linien-/Flächenmessung konfiguriert wird, wird in der Dokumentation unter `Linien-/Flächenmessung <../basic/ruler.html>`_ beschrieben.
 
 Um die Gruppierung mit der Flächenmessung möglich zu machen, wird im Feld *Group* ein Gruppenname vergeben. Hier lautet die Bezeichnung der Gruppe "messen". Dieser Gruppenname wird analog auch bei dem Button für die Flächenmessung eingetragen. Im Feld *Deactivate* wurde "deactivate" eingetragen. So wird die Funktion der Flächenmessung bei erneutem klicken auf den Button beendet.
 Der Button für die Flächenmessung wird analog eingebunden. Der Dialog der Konfiguration des Buttons sieht im Konfigurationsbeispiel wie folgt aus:

@@ -4,7 +4,7 @@ WMC Editor
 ***********************
 
 Im Mapbender können mit dem WMC Editor Konfigurationen gespeichert und bearbeitet werden. 
-Diese Konfigurations können mit dem WMC-Lader geladen werden. Mehr dazu unter `WMC Loader <../elements/wmc_loader.html>`_.
+Diese Konfigurations können mit dem WMC-Lader geladen werden. Mehr dazu unter `WMC Loader <wmc_loader.html>`_.
 
 Sie können den WMC-Editor ihrer Applikation hinzufügen. Beachten Sie, dass der WMC-Editor einen Button benötigt.
 
@@ -40,7 +40,7 @@ YAML-Definition:
     target: map           # Name des Kartenelements 
     accessGroups: [0,1]   # definiert Gruppen, die den WMC Editor verwenden können
 
-Für das Element wird ein Button benötigt. Siehe unter :ref:`button_de` für die Konfiguration.
+Für das Element wird ein Button benötigt. Siehe unter `Button <../misc/button.html>`_ für die Konfiguration.
 
 Class, Widget & Style
 =====================
