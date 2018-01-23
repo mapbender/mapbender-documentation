@@ -1,7 +1,7 @@
 .. _layertree:
 
-Layertree - Table of Content (Layerbaum) 
-*****************************************
+Layertree - Table of Content (TOC)
+**********************************
 
 Functions
 =============
