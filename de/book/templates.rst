@@ -15,13 +15,13 @@ Wie werden eigene Vorlagen erzeugt?
 **Schritte für die Einbindung:**
 
 * Erzeugen eines eigenen Bundles
-* Template php-Datei zur Registrierung der eigenen Vorlage erzeugen
-* Erzeugen einer eigenen twig-Datei
-* Erzeugen eigener css-Datei(en)
+* Template PHP-Datei zur Registrierung der eigenen Vorlage erzeugen
+* Erzeugen einer eigenen TWIG-Datei
+* Erzeugen eigener CSS-Datei(en)
 * Registrierung des Bundles in der Datei app/AppKernel.php
 * Verwenden der neuen Vorlage
 
-Die neue Anwendungs-Vorlage kann über verschiende Wege verwendet werden: 
+Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden: 
 
 * Eintrag in der YAML-Datei von der Anwendung (applications/mapbender.yml)
 * Auswahl über die Administration bei einer neuen Anwendung
@@ -96,7 +96,7 @@ Anlegen der eigenen Template-Datei
 
 In unserem Beispiel heißt die Template-Datei FullscreenDemo.php. Sie befindet sich unter src/Workshop/DemoBundle/Template/FullscreenDemo.php.
 
-In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete twig-Datei definiert.
+In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete TWIG-Datei definiert.
 
 
 .. code-block:: bash
@@ -137,14 +137,14 @@ In der Template-Datei wir der Name des Templates, die Regionen die angelegt werd
 
 
 
-Eigene twig-Datei erzeugen
+Eigene TWIG-Datei erzeugen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Die twig-Dateien sind im folgenden Verzeichnis gespeichert:
+Die TWIG-Dateien sind im folgenden Verzeichnis gespeichert:
 
 * mapbender\src\Mapbender\CoreBundle\Resources\views\Template
 
-Kopieren Sie eine existierende twig-Datei, speichern Sie diese unter einem neuen Namen und verändern Sie den Inhalt, z.B. die Farbe.
+Kopieren Sie eine existierende TWIG-Datei, speichern Sie diese unter einem neuen Namen und verändern Sie den Inhalt, z.B. die Farbe.
 
 .. code-block:: bash
 
@@ -154,15 +154,15 @@ Kopieren Sie eine existierende twig-Datei, speichern Sie diese unter einem neuen
 Verwenden Sie mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig und kopieren Sie diese nach fullscreen_demo.html.twig
 
 
-Eigene css-Datei erzeugen (Anwendungen)
+Eigene CSS-Datei erzeugen (Anwendungen)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Erzeugen Sie eine leere css-Datei und geben Sie in dieser nur die css-Definitionen für Ihre Anwendungs-Vorlage an. 
-Ab der Mapbender Version 3.0.3.0 muss lediglich das css definiert werden, das vom Standard der Elemente abweicht.
+Erzeugen Sie eine leere CSS-Datei und geben Sie in dieser nur die CSS-Definitionen für Ihre Anwendungs-Vorlage an. 
+Ab der Mapbender Version 3.0.3.0 muss lediglich das CSS definiert werden, das vom Standard der Elemente abweicht.
 
-Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre css-Datei kopieren und hier anpassen.
+Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
-Ihre css-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css und die folgende Definition enthalten:
+Ihre CSS-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css und die folgende Definition enthalten:
 
 .. code-block:: css
 
@@ -222,16 +222,16 @@ Ihre css-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/publ
    background-color: rgba(0, 93, 83, 0.9);
  }
 
-Das Ergebnis der wenigen Zeilen css sieht dann so aus:
+Das Ergebnis der wenigen Zeilen CSS sieht dann so aus:
 
 .. image:: ../../figures/workshop_application.png
      :scale: 80
 
-Beim Laden der neuen Anwendung wird eine css-Datei im web/assets-Verzeichnis angelegt:
+Beim Laden der neuen Anwendung wird eine CSS-Datei im web/assets-Verzeichnis angelegt:
 
 * web/assets/WorkshopDemoBundle__demo_fullscreen__css.css
 
-Wenn Sie die css-Datei weiter bearbeiten müssen Sie die unter web/assets generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
+Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter web/assets generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
  
 .. code-block:: bash
 
@@ -242,7 +242,7 @@ Wenn Sie die css-Datei weiter bearbeiten müssen Sie die unter web/assets generi
 Styling der Administrationsseiten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Passen Sie die vorhandenen css-Dateivorlagen für die unterschiedlichen Bereiche bitte an: 
+Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche bitte an: 
 
 * login.css : Anpassung des Designs der Login-Oberfläche (Anmelde-Seite)
 * manager.css : Anpassung des Designs der Verwalungs/Administrations-Oberfläche (Anwendungsübersicht u.ä.)
@@ -250,10 +250,10 @@ Passen Sie die vorhandenen css-Dateivorlagen für die unterschiedlichen Bereiche
 
 Ab der Mapbender Version 3.0.3.0 muss lediglich das css definiert werden, das vom Standard der Administrationsoberfläche abweicht.
 
-Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre css-Datei kopieren und hier anpassen.
+Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
-Auf die css-Dateien wird über das FOMManagerBundle und FOMUserBundle referenziert. Diese müssen unter app/Resources/ abgelegt werden. Die bereits enthaltenen Twig-Dateien überschreiben nach der erfolgreichen Einrichtung die Standard-Einstellungen (Vorgaben aus der manager.html.twig Datei). 
-Alternativ kann auch die bisherige Twig-Datei kopiert und angepasst werden. 
+Auf die CSS-Dateien wird über das FOMManagerBundle und FOMUserBundle referenziert. Diese müssen unter app/Resources/ abgelegt werden. Die bereits enthaltenen TWIG-Dateien überschreiben nach der erfolgreichen Einrichtung die Standard-Einstellungen (Vorgaben aus der manager.html.twig Datei). 
+Alternativ kann auch die bisherige TWIG-Datei kopiert und angepasst werden. 
 
 .. code-block:: bash
 
@@ -278,7 +278,7 @@ Um Ihre Vorlage zu registrieren, müssen Sie eine Datei erzeugen unter:
  cd mapbender/src/Mapbender/CoreBundle/Template
  cp Fullscreen.php mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php
 
-Fügen Sie die neue css-Datei in der Funktion listAssets als letzten Eintrag ein:
+Fügen Sie die neue CSS-Datei in der Funktion listAssets als letzten Eintrag ein:
 
 .. code-block:: php
 
@@ -410,7 +410,7 @@ Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml ange
  server_logo:   bundles/workshopdemo/image/workshop_logo.png
 
 
-Das Logo kann auch in der twig-Datei angepasst werden:
+Das Logo kann auch in der TWIG-Datei angepasst werden:
 
 .. code-block:: html
 
@@ -420,7 +420,7 @@ Das Logo kann auch in der twig-Datei angepasst werden:
 Wie kann der Anwendungstitel und das Favicon angepasst werden?
 **************************************************************
 
-Der Anwendungstitel und das favicon kann auch in der twig-Datei angepasst werden:
+Der Anwendungstitel und das Favicon kann auch in der TWIG-Datei angepasst werden:
 
 .. code-block:: yaml
 
