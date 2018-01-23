@@ -2,7 +2,7 @@ Architecture
 ============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    architecture/components
    architecture/directory_structure

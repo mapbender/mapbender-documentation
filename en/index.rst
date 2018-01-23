@@ -29,12 +29,12 @@ Inhalt:
    faq
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    architecture
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    development
 

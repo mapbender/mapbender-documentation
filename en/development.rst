@@ -2,7 +2,7 @@ Development
 ===========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    development/introduction.rst
    development/apidocumentation.rst
