@@ -1,89 +1,73 @@
 .. _coordinate_utility_de:
 
-Koordinaten Utility: Sprung zur Koodinate und Klick Koordinate 
-**************************************************************
+Koordinatenwerkzeug
+*******************
 
-Das Element *Koordinaten Utility* ermöglicht die Ausgabe von einer oder mehreren Koordinatenpunkten. Dazu werden die Koordinaten des Punktes automatisch in das Feld des Werkzeugs eingetragen, nachdem dieser über einen Mausklick an der gewünschten Stelle der Karte gewählt wurde. Dabei können die aufgenommenen Koordinaten direkt in das gewünschte System transformiert werden. Das jeweilige System wird im Fenster ausgewählt und kann mit den entsprechenden Zugriffsrechten im Mapbender-Backend angepasst werden.
+Über das Element *Koordinaten Utility* lassen sich zwei Dinge realisieren:
 
-Zusätzlich besteht bei dem Element die Möglichkeit, die Koordinaten in die Zwischenablage zu kopieren. Diese Funktionalität ist über das Kopier-Symbol rechts der angezeigten Koordinaten zu erreichen.
+1. Man kann zu einem Punkt mithilfe des zugehörigen eingegebenen Koordinatenpunkts springen.
+2. Man kann sich den Klickpunkt aus der Karte anzeigen lassen.
 
-Die Klick-Koordinate kann im Backend über einen Button als Dialog oder direkt in der Seitenleiste als Element eingebunden werden.  
+Beide Funktionen werden über eine Oberfläche realisiert.
 
-
-.. image:: ../../../../../figures/mapcoordinate_klickkoordinate.png
-     :scale: 80     
-
-
-Das Element ermöglicht die Aufnahme von mehreren Koordinatenpunkten. Durch das gedrückt halten von "Strg" können mehrere Koordinatenpunkte übernommen werden, die auch in der Karte angezeigt werden. Diese werden dann kommasepariert aufgelistet, z.B. 365205.40 5621464.56,365772.41 5621758.56.  
-
-
-Konfiguration
-=============
-
-
-**Element Klick-Koordinate**
-
-
-.. image:: ../../../../../figures/mapcoordinate_configuration_klickkoordinate.png
+.. image:: ../../../figures/de/coordinate_utility.png
      :scale: 80
 
+In beiden Fällen ist eine dynamische Koordinatentransformation möglich, so dass auch Punkte anderer Koordinatensysteme eingegeben werden können.
+
+Zusätzlich besteht bei dem Element die Möglichkeit, die Koordinaten in die Zwischenablage zu kopieren.
+
+Das Element bindet man im Mapbender-Backend entweder als Dialog zum Aufruf über einen Button ein, oder als Element in der Seitenleiste.
 
 
-* **Title**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Target**: ID des Kartenelements, auf das sich das Element bezieht.
-* **Type**: Anzeige als Dialog- oder Blockelement.
-* **Srs list**: Eingabe von weiteren EPSG Codes, die nicht im Map-Element aufgelistet sind, für die Transformation der Koordinaten. Muster für Eingabe: EPSG:25832,EPSG:25833
-* **Map's Srs hinzufügen**: EPSG-Codes, die im Kartenelement definiert wurden, werden in der Liste für die Transformation angezeigt.  
-* **Koordinatenausgabe aufklappbar**:  Falls aktiv, erscheint oben rechts ein Button zum Einklappen des oberen Menüs *Koordinatensystem der Ausgabe von Koordinaten* für die Transformation.
+Einrichtung und Konfiguration
+=============================
 
+Fügen Sie das Element `Koordinaten Utility` in den Content Ihrer Anwendung ein.
 
-.. image:: ../../../../../figures/mapcoordinate_klickkoordinate_aufklappbar.png
+.. image:: ../../../figures/de/coordinate_utility_add.png
      :scale: 80
 
+Bei der Einrichtung des Elements haben Sie, neben den Standard Konfigurationsmöglichkeiten, noch weitere Optionen:
 
-* **Koordinatenausgabe geöffnet**:  Falls aktiv, ist die Koordinatenausgabe beim Start des Elements geöffnet.
+.. image:: ../../../figures/de/coordinate_utility_configuration.png
+     :scale: 80
 
+* **Title:** Titel des Elements
+* **Target:** Karte, auf der dieses Element funktioniert (Main Map)
+* **Type:** Dialog oder Element.
+  
+  * **Dialog:** Das Tool befindet sich in dem Content der Anwendung und wird über eine Schaltfläche geöffnet. Es erscheint als Dialog.
+  * **Element:** Das Tool befindet sich in der Sidebar der Anwendung. Dazu muss es als Element deklariert werden.
 
+* **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren soll. Das Feld kann leer gelassen werden.
 
-YAML-Definition:
-================
+* **Koordinatensysteme von der Karte hinzufügen:** Die von dem `Kartenelement  <../basic/map>`_ angegebenen Koordinatensysteme werden automatisch von dem Tool unterstützt. Diese werden in der Karte angegeben und auch im  `SRS Selector  <../basic/srs_selector>`_ unterstützt.
 
-.. code-block:: yaml
+Wenn Sie das Tool als Dialog einbauen, benötigen Sie eine `Schaltfläche  <../misc/button>`_, die in den Toolbar eingefügt wird. Im folgenden eine Beispielkonfiguration der Schaltfläche:
 
-   title: 'Klick-Koordinate'            # Titel, wie Klick-Koordinate
-   type: 'element'                      # Auswahl Positionierung des Elements ( Sidepane(element) oder Popup(dialog))
-   target: ~                            # ID/Name des Elements Karte (map)
+.. image:: ../../../figures/de/coordinate_utility_button.png
+     :scale: 80
 
-
-Für dieses Element wird ein Button benötigt. Siehe unter `Button <../elements/button.html>`_ für die Konfiguration. 
-Die Klick-Koordinate kann auch als Element definiert werden. Dann wird die Ein-/Ausgabe von Koordinaten über einem frame wie der Sidebar angezeigt.
-
-
-Class, Widget & Style
-===========================
-
-Element *Klick-Koordinate*
-
-* Class: Mapbender\MapToolBundle\Element\ClickCoordinate
-* Widget: mapbender.mbClickCoordinate
-* Style: mapbender.element.mapclickcoordinate.scss
+* **Target:** Der Name des Tools, so wie er in dem Content hinterlegt ist (Koordinaten Utility)
 
 
-HTTP Callbacks
-==============
+Benutzung
+=========
 
-<action>
---------------------------------
+.. image:: ../../../figures/de/coordinate_utility.png
+     :scale: 80
 
-JavaScript API
-==============
+**Koordinate abgreifen:**
 
-<function>
-----------
+* Ist das Koordinatenwerkzeug als Dialog geöffnet, reagiert die Karte auf einen Klick. Klicken Sie in die Karte und die Klickkoordinate wird in dem Dialog angezeigt.
+* Ändern Sie das Koordinatensystem im Dialog mit der Drop-Down-Liste. Die Klick-Koordinate wird in diesem angegebenen Koordinatensystem angezeigt.
+* Die untere Zeile zeigt daher die Klickkoordinate noch in dem Original-Koordinatensystem der Karte.
+* Die Schaltfläche hinter jeder Eingabezeile erlauben es, den Koordinatenwert direkt in die Zwischenablage zu kopieren.
 
-JavaScript Signals
-==================
+**Zur Koordinate zoomen:**
 
-<signal>
---------
+* In dem Textfeld können eigene Koordinaten angegeben werden. Diese müssen in dem Koordinatensystem eingegeben werden, welches in der Drop-Down-Liste darüber festgelegt wurde.
+* Über einen Klick auf die Schaltfläche **Karte zentrieren** wird zu dem Punkt gezoomt und dieser mit einem orangenen Symbol angezeigt.
+
 
