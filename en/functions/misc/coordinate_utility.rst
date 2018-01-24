@@ -70,5 +70,3 @@ Using the tool
 
 * The text-field can be used to edit your own coordinates. They must be given in the coordinate-system that is chosen in the upper drop-down list.
 * With a click on the **Center map** button, the map zooms to the given coordinate and shows the position with an orange symbol.
-
-
