@@ -420,16 +420,15 @@ In der mapbender.yml Datei:
 			            buffer: 10    # Puffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
 			            minScale: ~   # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
                         maxScale: ~
-			    results:
-			        styleMap:  # Siehe unten für weitere Styles
-			            default:
-			                strokeColor: '#00ff00'
-			                strokeOpacity: 1
-			                fillOpacity: 0
-			            select:
-			                strokeColor: '#ff0000'
-			                fillColor: '#ff0000'
-			                fillOpacity: 0.4
+               styleMap: # Siehe unten für weitere Styles
+                    default:
+                         strokeColor: '#00ff00'
+                         strokeOpacity: 1
+                         fillOpacity: 0
+                    select:
+                         strokeColor: '#ff0000'
+                         fillColor: '#ff0000'
+                         fillOpacity: 0.4
 
 
 Class, Widget & Style
