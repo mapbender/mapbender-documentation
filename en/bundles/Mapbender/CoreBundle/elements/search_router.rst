@@ -114,22 +114,21 @@ For mapbender.yml:
 			        gid: ID  # column name -> header label
 			        name: Name
 			        type: Type
-			    callback:  # What to do on hover/click
+               callback:  # What to do on hover/click
 			        event: click  # result row event to listen for (click or mouseover)
 			        options:
 			            buffer: 10
 			            minScale: ~  # scale restrictions for zooming, ~ for none
 			            maxScale: ~
-			    results:
-			        styleMap:  # See below
-			            default:
-			                strokeColor: '#00ff00'
-			                strokeOpacity: 1
-			                fillOpacity: 0
-			            select:
-			                strokeColor: '#ff0000'
-			                fillColor: '#ff0000'
-			                fillOpacity: 0.4
+               styleMap:  # See below
+                    default:
+                         strokeColor: '#00ff00'
+                         strokeOpacity: 1
+                         fillOpacity: 0
+                    select:
+                         strokeColor: '#ff0000'
+                         fillColor: '#ff0000'
+                         fillOpacity: 0.4
 
 You need a button to show this element. See :doc:`button` for inherited configuration options.
 
