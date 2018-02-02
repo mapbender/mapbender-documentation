@@ -21,7 +21,7 @@ Mapbender baut auf dem `Symfony <http://symfony.com/>`_ Framework auf und kann d
 
                   app/console server:run
 
-* Mapbender ist danach über die Adresse http://localhost:8000/app.php erreichbar.
+* Mapbender ist danach über folgende URL http://localhost:8000/app.php erreichbar.
 
 
 In Virtuellen Umgebungen

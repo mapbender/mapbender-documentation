@@ -8,12 +8,12 @@ Dinge, die Sie wissen sollten
 
 Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu können:
 
-* Objektorientiertes PHP: Verwendet wird PHP 5.3, das volle Objekt-Orientierung anbietet. Es gibt keine einfachen Skripte mehr.
-* Symfony2: Mapbender baut auf Sympfony2 auf. Folgen Sie der Anleitung `Symphony
+* Objektorientiertes PHP: Verwendet wird PHP > 5.3 welches objektorientierte Programmierung ermöglicht.
+* Symfony2: Mapbender baut auf Symfony2 auf. Folgen Sie der Anleitung `Symfony
   <http://symfony.com/doc/current/index.html>`_ dort erfahren Sie mehr über Controller, Vorlagen usw.
 * Docblock-Anmerkungen: Es wird ApiGen zu Erstellung der Dokumentation verwendet. 
   :doc:`Erfahren Sie mehr <apidocumentation>`.
-* JavaScript: jQuery wird viel genutzt, hier kommt v.a. die jQuery UI Widget Factory zum Einsatz. Das Verständnis davon ist essentiell, um JavaScript-Code zu schreiben.
+* JavaScript: jQuery wird häufig verwendet, vor allem kommt hier die jQuery UI Widget Factory häufig zum Einsatz. Das Verständnis davon ist essentiell, um JavaScript-Code zu schreiben.
 
 
 Installation
