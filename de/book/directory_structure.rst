@@ -36,14 +36,14 @@ Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis app/confi
 app/config/applications
 -----------------------
 
-Als YAML definierten Anwendungen können in dem Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien. Sie ersetzen seit Version 3.0.6 die vormals als eine Datei vorliegende mapbender.yml. Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
+Als YAML definierte Anwendungen können in dem Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien. Diese ersetzen seit Version 3.0.6 die vormals als eine Datei vorliegende mapbender.yml. Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
 
   
 
 bin
 ***
 
-Hier sind links zu den folgenden Binaries hinterlegt:
+Hier sind symbolische Links zu folgenden Binaries hinterlegt:
 
 * apigen
 * composer
@@ -93,7 +93,7 @@ Verzeichnis des `OWSProxy Submoduls <https://github.com/mapbender/owsproxy3>`_.
 vendor
 ******
 
-Verzeichnis für externe Bibliotheken (vom Compser geladen) und weitere Mapbender Module (u.a. Digitizer, Mapbender-Icons).
+Verzeichnis für externe Bibliotheken (vom Composer geladen) und weitere Mapbender Module (u.a. Digitizer, Mapbender-Icons).
 
 
 
@@ -103,9 +103,9 @@ web
 Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Der ALIAS muss auf dieses Verzeichnis verweisen.
 
 
-Es kontrolliert: 
+Es kontrolliert:
 
-* den FrontendController (PHP-Script, welches aufgerufen werden kann). Das sind **app.php** für das Produktiv-System und **app_dev.php** für die Entwicklungsversion. Die Entwicklungsversion beinhaltet z.B. die Instrumente für Performance-Tests. 
+* den FrontendController (PHP-Script, welches aufgerufen werden kann). Das sind **app.php** für die Produktivumgebung und **app_dev.php** für die Entwicklungsversion. Die Entwicklungsversion beinhaltet bspw. die Instrumente für Performance-Tests.
 
 * dieses Verzeichnis beinhaltet die statischen Ressourcen wie css, js, favicon etc.
 
@@ -131,4 +131,4 @@ src
 
 vendor
 ******
-* Verzeichnis, in dem alle Bundles, die von Symfony verwendet werden, gespeichert werden. Resourcen werden von Symfony durch das Autoladen verwendet.
+* Verzeichnis, in dem alle Bundles, die von Symfony verwendet werden, gespeichert werden. Ressourcen werden von Symfony durch das Autoladen verwendet.
