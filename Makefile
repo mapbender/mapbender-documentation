@@ -6,9 +6,10 @@ SRCDIR        = .
 LATEXDIR      = build/latex
 SINGLEHTMLDIR = build/singlehtml
 LINKCHECKDIR  = build/linkcheck
+DISTDIR       = build
 
 html:
-	$(SPHINXBUILD) $(SRCDIR) $(BUILDDIR)
+	$(SPHINXBUILD) $(SPHINXOPTS) $(SRCDIR) $(BUILDDIR)
 
 latex:
 	$(SPHINXBUILD) -b latex $(SRCDIR) $(LATEXDIR)
@@ -18,6 +19,9 @@ singlehtml:
 
 linkcheck:
 	$(SPHINXBUILD) -b linkcheck $(SRCDIR) $(LINKCHECKDIR)
+
+dist:
+	tar -czvf $(DISTDIR)/mapbender-documentation.tgz $(BUILDDIR)
 
 
 clean:

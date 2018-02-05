@@ -1,20 +1,19 @@
-The Developer's Book
-====================
+Development
+===========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   book/development/introduction
-   book/development/apidocumentation
-   book/development/frontend_architecture
-   book/development/elements
-   book/development/element_generate
-   book/development/requestresponse
-   book/development/bundle
-   book/development/proxy
-   book/development/controllers
-   book/development/twig
-   book/development/symfony
-   book/development/git
-   book/development/conventions.rst
-   book/development/documentation_howto.rst
+   development/introduction.rst
+   development/apidocumentation.rst
+   development/elements.rst
+   development/element_generate.rst
+   development/requestresponse.rst
+   development/bundle.rst
+   development/controllers.rst
+   development/conventions.rst
+   development/frontend_architecture.rst
+   development/git.rst
+   development/proxy.rst
+   development/symfony.rst
+   development/twig.rst

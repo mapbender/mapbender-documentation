@@ -1,12 +1,11 @@
-The Developer's Book
-====================
+Entwicklung
+===========
 
 .. toctree::
    :maxdepth: 2
 
-   book/development/introduction
-   book/development/apidocumentation
-   book/development/elements
-   book/development/element_generate
-   book/development/requestresponse
-   ../fom/documentation/de/index
+   development/introduction.rst
+   development/apidocumentation.rst
+   development/elements.rst
+   development/element_generate.rst
+   development/requestresponse.rst
