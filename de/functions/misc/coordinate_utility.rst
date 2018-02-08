@@ -36,7 +36,7 @@ Bei der Einrichtung des Elements haben Sie, neben den Standard Konfigurationsmö
 * **Title:** Titel des Elements
 * **Target:** Karte, auf der dieses Element funktioniert (Main Map)
 * **Type:** Dialog oder Element.
-  
+
   * **Dialog:** Das Tool befindet sich in dem Content der Anwendung und wird über eine Schaltfläche geöffnet. Es erscheint als Dialog.
   * **Element:** Das Tool befindet sich in der Sidebar der Anwendung. Dazu muss es als Element deklariert werden.
 
@@ -69,3 +69,29 @@ Benutzung
 
 * In dem Textfeld können eigene Koordinaten angegeben werden. Diese müssen in dem Koordinatensystem eingegeben werden, welches in der Drop-Down-Liste darüber festgelegt wurde.
 * Über einen Klick auf die Schaltfläche **Karte zentrieren** wird zu dem Punkt gezoomt und dieser mit einem orangenen Symbol angezeigt.
+
+
+YAML-Definition
+===============
+
+.. code-block:: yaml
+
+    coordinatesutility:
+        title: 'Koordinaten Utility'
+        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
+        type: element
+        target: map
+        srsList:
+            -
+                name: 'EPSG:31466'
+                title: '31466'
+            -
+                name: 'EPSG:31468'
+                title: '31468'
+            -
+                name: 'EPSG:25833'
+                title: '25832'
+            -
+                name: 'EPSG:4326'
+                title: '4326'
+                addMapSrsList: true
