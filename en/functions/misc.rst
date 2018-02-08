@@ -5,6 +5,7 @@ Other
    :maxdepth: 2
 
    misc/button.rst
+   misc/coordinate_utility.rst
    misc/about_dialog.rst
    misc/copyright.rst
    misc/gpsposition.rst
