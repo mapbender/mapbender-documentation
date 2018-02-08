@@ -63,7 +63,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Mapbender'
-copyright = u'2017, The Mapbender Team'
+copyright = u'2018, The Mapbender Team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -132,7 +132,7 @@ html_short_title = 'Mapbender Documentation'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = 'mapbender3_logo.png'
+html_logo = 'mapbender_logo.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

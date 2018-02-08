@@ -65,26 +65,6 @@ A: To solve the problem, navigate to the php parameter `max-input_vars <http://p
 
 
 
-The access to an Oracle database is too slow
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Q: Mapbender seems to have a poor performance while accessing Oracle
-databases. I noticed this because queries need more time than usual. Can I accelerate the process?
-
-A: There are two parameters in php.ini which may tweak the performance of Mapbender with Oracle databases: `oci8.max_persistent <http://php.net/manual/de/oci8.configuration.php#ini.oci8.max-persistent>`_ and `oci8.default_prefetch <http://php.net/manual/de/oci8.configuration.php#ini.oci8.default-prefetch>`_. Adjust these parameters to:
-
-.. code-block:: bash
-
-   oci8.max_persistent = 15
-   oci8.default_prefetch = 100000
-
-Furthermore, change the respective persistent database connection parameter in config.yml to true.
-
-.. code-block:: bash
-
-   persistent=true
-
-
 My application cannot be duplicated
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -145,7 +125,7 @@ A: Please make sure you have installed the php5-gd library.
 Deprecation Notices at composer or bootstrap Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: I get a deprecation warning when I call bootstrap or composer update:
+Q: I get a deprecation warning when I call bootstrap or composer update:
 
 .. code-block:: php
                 
@@ -156,3 +136,51 @@ F: I get a deprecation warning when I call bootstrap or composer update:
                 in phar:///srv/mapbender-starter/composer.phar/src/Composer/EventDispatcher/EventDispatcher.php:290
 
 A: This depends on the PHP version the system in running on and occurs on PHP versions < 7.
+
+
+Oracle
+------
+
+Adjustments for Oracle database - point and comma
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Q: I get an error when I run doctrine:schema:create on Oracle. Why?
+
+A: Probably Oracle can't handle the decimal seperators and expects a comma instead of a point (for example 1,25 instead of 1.25). This can be adjusted with the following Snippet at the end of the config.yml (clear cache afterwards).
+
+.. code-block:: yaml
+
+                services:
+                  oracle.session.listener:
+                    class: Doctrine\DBAL\Event\Listeners\OracleSessionInit
+                    tags:
+                      - { name: doctrine.event_listener, event: postConnect }
+
+This is a relation to a service-class provided by Doctrine. After the connection to Oracle, this class sets Session-Variables (ALTER SESSION) so that PHP and Oracle can work together in a better way.
+
+Reasons might be: Language and regional settings of the operating system (for example Windows), settings of the Oracle-client, settings done during the installation of Oracle.
+
+More Information at the Doctrine-page: `http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html <http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html>`_
+
+
+
+
+
+The access to an Oracle database is too slow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Q: Mapbender seems to have a poor performance while accessing Oracle
+databases. I noticed this because queries need more time than usual. Can I accelerate the process?
+
+A: There are two parameters in php.ini which may tweak the performance of Mapbender with Oracle databases: `oci8.max_persistent <http://php.net/manual/de/oci8.configuration.php#ini.oci8.max-persistent>`_ and `oci8.default_prefetch <http://php.net/manual/de/oci8.configuration.php#ini.oci8.default-prefetch>`_. Adjust these parameters to:
+
+.. code-block:: bash
+
+   oci8.max_persistent = 15
+   oci8.default_prefetch = 100000
+
+Furthermore, change the respective persistent database connection parameter in config.yml to true.
+
+.. code-block:: bash
+
+   persistent=true

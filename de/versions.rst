@@ -10,9 +10,59 @@ Version next
 
 Release Datum: TT.MM.JJJJ
 
+**Übersetzen**
+
+
+**Neue Funktionen**
+
+* Änderung des Logos von Mapbender3 zu Mapbender und Änderung des Namens von Mapbender3 zu Mapbender.
+* Dynamisches Laden von Legendenbildern im Legenden-Element.
+
+
 **Verbesserungen**
 
-* Erweiterung der Doku zu dem `Print Modul <functions/export/printclient.html>`_ und den neuen dynamischen Features bei den Drucktemplates.
+* Fix im Scale-Selector, der sich in einigen Fällen nicht aktualisieren wollte.
+
+* Fix im GetLegendGraphic Request auf geschützten Diensten über den Tunnel.
+
+* Fix im Aufruf von Mapbender mit POI-Parameter (#642)
+
+* Fix im Legendenelement bei überlangen Legendenbildern
+
+* Fix im Instance-Tunnel zum Zugriff auf geschützte Dienste
+
+* Fix und Verbesserungen im URL-Signen
+
+* Fix im Druck von PNG8 Karten, wenn das Image Format "image/png; mode=8bit" ist.
+
+* Fix im Druck bei Schriftgrößen
+
+* Fix im Druck, wenn PHP-Notices angeschaltet sind und die yStartPosition fehlte.
+
+* Fix im Backend beim Hinzufügen von Elementen
+
+* Verbesserungen im WMS Backend
+
+* Verbesserung im FOM: Wrong Type Definition in ACL Provider Constructor #641
+
+* Verbesserung im FOM beim SSPI
+
+* Verbesserte Dokumentation zu den Elementen:
+  
+  * Basesourceswitcher
+  * Button
+  * Coordinates Display
+  * HTML-Element
+  * Legend
+  * Map
+  * OverviewMap
+  * Search Router
+  * SRS Selector
+  * Navigation Toolbar
+
+* Dokumentation: Erweiterung zu dem `Print Modul <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_ und den neuen dynamischen Features bei den Drucktemplates.
+
+* Dokumentation: Aufnahme des `MS4W Pakets zur Installation auf Windows <installation/installation_windows.html>`_
 
 
 Version 3.0.6.3
