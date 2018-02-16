@@ -372,14 +372,3 @@ HTTP Callbacks
 ==============
 
 None.
-
-JavaScript API
-==============
-
-open
-----------
-
-Opens the layertree
-
-reload
-----------

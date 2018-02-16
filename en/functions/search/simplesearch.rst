@@ -362,8 +362,3 @@ HTTP Callbacks
 - /search: Widget proxy which then queries configured URL. In dev-mode the final query URL will be returned as a
   x-mapbender-simplesearch-url header for easier debugging.
 
-JavaScript API
-==============
-
-None.
-

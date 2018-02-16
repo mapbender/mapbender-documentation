@@ -55,11 +55,3 @@ HTTP Callbacks
 ==============
 
 None.
-
-JavaScript API
-==============
-
-open
-----------
-
-Shows the legend.

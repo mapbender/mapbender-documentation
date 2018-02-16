@@ -144,16 +144,3 @@ HTTP Callbacks
 ==============
 
 Keine.
-
-JavaScript API
-==============
-
-activate
---------
-
-Aktiviert den Button. Wird über einen Klick aufgerufen, wenn der Button deaktiviert ist.
-
-deactivate
-----------
-
-Deaktiviert den Button. Wird über einen Klick aufgerufen, wenn der Button aktiviert ist oder wenn ein anderer Button der gleichen Gruppe aktiviert ist.

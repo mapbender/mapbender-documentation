@@ -40,20 +40,3 @@ HTTP Callbacks
 ==============
 
 Keine.
-
-JavaScript API
-==============
-
-- showHidde
-- selectSrs
-- getSelectedSrs
-- isSrsSupported
-- isSrsEnabled
-- disableSrs
-- enableSrs
-- enableOnlySrs
-- getFullSrsObj
-- enableAllSrs
-- disableAllSrs
-- getInnerJoinSrs
-- getInnerJoinArrays

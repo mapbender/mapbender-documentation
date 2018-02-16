@@ -45,8 +45,3 @@ about
 -----
 
 Ruft Inhalte des Dialogs auf.
-
-JavaScript API
-==============
-
-Keine.

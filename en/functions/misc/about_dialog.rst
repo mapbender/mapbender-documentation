@@ -44,9 +44,3 @@ about
 -----
 
 Retrieves dialog contents.
-
-JavaScript API
-==============
-
-None.
-

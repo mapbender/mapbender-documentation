@@ -55,11 +55,3 @@ HTTP Callbacks
 --------
 
 Opens a dialog with an editor in which configurations can be saved and edited.
-
-
-JavaScript API
-==============
-
-
-<function>
-----------

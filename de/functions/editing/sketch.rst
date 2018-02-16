@@ -41,17 +41,3 @@ HTTP Callbacks
 =====================
 
 Keine.
-
-JavaScript API
-==============
-
-activate
---------
-
-Aktiviert das Element. Dieses wartet auf einen Mausklick in die Karte, um das Zeichnen zu starten
-
-deactivate
-----------
-
-Deaktiviert das Element.
-
