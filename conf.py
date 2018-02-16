@@ -14,17 +14,17 @@
 import sys, os
 
 # Symfony2 Extension Start
-sys.path.append(os.path.abspath('_exts'))
+#sys.path.append(os.path.abspath('_exts'))
 # adding PhpLexer
-from sphinx.highlighting import lexers
-from pygments.lexers.web import PhpLexer
+#from sphinx.highlighting import lexers
+#from pygments.lexers.web import PhpLexer
 
 # ...
 # add the extensions to the list of extensions
 
 # enable highlighting for PHP code not between ``<?php ... ?>`` by default
-lexers['php'] = PhpLexer(startinline=True)
-lexers['php-annotations'] = PhpLexer(startinline=True)
+#lexers['php'] = PhpLexer(startinline=True)
+#lexers['php-annotations'] = PhpLexer(startinline=True)
 
 # use PHP as the primary domain
 primary_domain = 'php'
@@ -45,9 +45,10 @@ api_url = 'http://api.symfony.com/master/%s'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.coverage',
-    'sensio.sphinx.refinclude', 'sensio.sphinx.configurationblock',
-    'sensio.sphinx.phpcode']
+extensions = ['sphinx.ext.autodoc',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage'
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

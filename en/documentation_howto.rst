@@ -30,15 +30,15 @@ https://github.com/mapbender/mapbender-documentation/
 
 
 Developers granted secure access to the code must use the SSH-URL of the
-repository to get the files and be able to push: 
+repository to get the files and be able to push:
 
-.. code-block:: bash 
+.. code-block:: bash
 
    git clone git@github.com:mapbender/mapbender-documentation
 
 Structure of the documentation
 ********************************************
-We want to provide documentation in different languages. The language we want to support first is english. So every document should be build up in english first. 
+We want to provide documentation in different languages. The language we want to support first is english. So every document should be build up in english first.
 
 Every language (en - english, de - german) has the same file structure.
 
@@ -47,7 +47,7 @@ Every language (en - english, de - german) has the same file structure.
   /mapbender-documentation
     index.rst          # refers to the different languages
     /figures           # images that are included in the documentation
-    /de 
+    /de
       ...
     /en
       index.rst        # refers to TheBook, Developer's Book & the Bundle Documentation
@@ -57,7 +57,7 @@ Every language (en - english, de - german) has the same file structure.
       /book
         ....
         /development
-          ....  
+          ....
       /bundles
           /Mapbender
             /CoreBundle
@@ -66,7 +66,7 @@ Every language (en - english, de - german) has the same file structure.
               /elements
                 legend.rst
                 ...
-              /services    
+              /services
                 ...
             /WmsBundle
               ...
@@ -76,7 +76,7 @@ Every language (en - english, de - german) has the same file structure.
 
 How to build the documentation via Sphinx?
 ******************************************
-We generate the webside code from the rst-files using Sphinx. 
+We generate the webside code from the rst-files using Sphinx.
 
 To build the website locally, you need to install Sphinx. In Debian-based distributions this is done via:
 
@@ -85,17 +85,8 @@ To build the website locally, you need to install Sphinx. In Debian-based distri
 
   apt-get install python-sphinx
 
-Additionally, a Sphinx extension for Symfony2 is used as a submodule, so a
-
-
-.. code-block:: bash
-
-  git submodule update --init --recursive
-
-is also required.
 
 You can then build the documentation by running
-
 
 .. code-block:: bash
 
@@ -133,7 +124,7 @@ To clean the documentation type:
 
 
 
-How to write documentation? 
+How to write documentation?
 ***************************
 We write documentation for elements, entities, services.
 
@@ -161,7 +152,7 @@ Example for element documentation
 *********************************
 You have to write a new element documentation when a new element with new functionality is added to Mapbender.
 
-In this example we assume, that you are a developer and just added a new element to Mapbender code base. We assume your element is called AddWMS and is part of the Mapbender CoreBundle. 
+In this example we assume, that you are a developer and just added a new element to Mapbender code base. We assume your element is called AddWMS and is part of the Mapbender CoreBundle.
 
 **Now it is time to write the documentation!**
 
@@ -174,15 +165,15 @@ Here are the steps you have to do:
   git clone git@github.com:mapbender/mapbender-documentation
   cd /mapbender-documentation/en/bundles/Mapbender/CoreBundle
 
-  # create a rst-file. Use the template for element documentation! 
+  # create a rst-file. Use the template for element documentation!
   cp template_element.rst elements/add_wms.rst
- 
+
   # write the documentation. You find information how and what to write in the documentation in template_element.rst
 
   # build the the documentation locally to see how your documentation looks like
   cd /data/mapbender-documentation/
   sphinx-build . output
-  
+
   # have a look at the documentation in your browser (example location). Is everything ok? Any changes needed?
   file:///data/mapbender-documentation/output/index.html
 
@@ -195,7 +186,7 @@ Here are the steps you have to do:
   git pull
 
 
-  
+
 Working with reStructured Text (rst)
 ************************************
 
@@ -204,5 +195,3 @@ For more info for rst-files and reStructured Text, take a look at these document
 * `Wikipedia reStructured Text <http://en.wikipedia.org/wiki/ReStructuredText>`_
 * `reStructured Text on docutils at SourceForge <http://docutils.sourceforge.net/rst.html>`_
 * `Quick reStructuredText <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
-
-
