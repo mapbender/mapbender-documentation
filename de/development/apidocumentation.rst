@@ -29,10 +29,10 @@ PHP
     :language: html+php
     :linenos:
 
-Schauen Sie sich die Dokumentationsblöcke in der `Example.php <https://github.com/mapbender/mapbender-documentation/blob/master/de/book/development/Example.php>`_ an. 
+Schauen Sie sich die Dokumentationsblöcke in der `Example.php <https://github.com/mapbender/mapbender-documentation/blob/master/de/book/development/Example.php>`_ an.
 
 
 JavaScript
 **********
 
-Bisher wurden keine guten Tools gefunden.
+Bisher wurden keine zufriedenstellenden Tools gefunden.

@@ -3,7 +3,7 @@
 Installation im Symfony eigenen Webserver
 #########################################
 
-Mapbender baut auf dem `Symfony <http://symfony.com/>`_ Framework auf und kann daher den in `Symfony eingebauten Webserver <http://symfony.com/doc/current/cookbook/web_server/built_in.html>`_ nutzen. Das ermöglicht Ihnen einen schnellen Test von Mapbender, ohne eine Integration in einen Webserver vorzunehmen. Dies eignet sich nicht für Produktivumgebungen. In dieser Anleitung wird die SQLite Datenbank verwendet. 
+Mapbender baut auf dem `Symfony <http://symfony.com/>`_ Framework auf und kann daher den in `Symfony eingebauten Webserver <http://symfony.com/doc/current/cookbook/web_server/built_in.html>`_ nutzen. Das ermöglicht Ihnen einen schnellen Test von Mapbender, ohne eine Integration in einen Webserver vorzunehmen. Dies eignet sich nicht für Produktivumgebungen. In dieser Anleitung wird die SQLite Datenbank verwendet.
 
 * Beachten Sie die `Systemvoraussetzungen <systemrequirements.html>`_
 * Laden Sie Mapbender herunter.
@@ -21,7 +21,7 @@ Mapbender baut auf dem `Symfony <http://symfony.com/>`_ Framework auf und kann d
 
                   app/console server:run
 
-* Mapbender ist danach über die Adresse http://localhost:8000/app.php erreichbar.
+* Mapbender ist danach über folgende URL http://localhost:8000/app.php erreichbar.
 
 
 In Virtuellen Umgebungen
@@ -29,7 +29,7 @@ In Virtuellen Umgebungen
 
 Falls Sie Mapbender in einer virtuellen Maschine laufen lassen wollen und über den Hostrechner darauf zugreifen möchten, geben Sie folgenden Befehl ein.
 
-    
+
 .. code-block:: bash
 
                 app/console server:run 0.0.0.0:8000
