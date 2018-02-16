@@ -129,9 +129,3 @@ open
 ----------
 
 Zeigt die Legend.
-
-
-JavaScript Signals
-==================
-
-Keine.

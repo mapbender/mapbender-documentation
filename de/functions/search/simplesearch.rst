@@ -354,8 +354,3 @@ JavaScript API
 ==============
 
 Keine.
-
-JavaScript Signals
-==================
-
-Keine.

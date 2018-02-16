@@ -96,8 +96,3 @@ getInnerJoinSrs
 getInnerJoinArrays
 ----------------------
 <>
-
-JavaScript Signals
-==================
-
-None.

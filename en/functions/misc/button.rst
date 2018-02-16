@@ -82,9 +82,3 @@ deactivate
 ----------
 
 Deactivates button. Gets called on click if button is active or when another button of the same group gets activated.
-
-JavaScript Signals
-==================
-
-None.
-

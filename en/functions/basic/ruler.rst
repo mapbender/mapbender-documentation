@@ -57,8 +57,3 @@ Activates the widget which then waits for mouse click on the map and starts to m
 deactivate
 ----------
 Deactivates the widget.
-
-JavaScript Signals
-==================
-
-None.

@@ -98,8 +98,3 @@ showHidde
 ----------
 
 <>
-
-JavaScript Signals
-==================
-
-Keine.

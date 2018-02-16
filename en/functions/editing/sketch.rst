@@ -54,8 +54,3 @@ deactivate
 ----------
 
 Deactivates the widget.
-
-JavaScript Signals
-==================
-
-None.

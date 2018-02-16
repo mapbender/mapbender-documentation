@@ -383,10 +383,3 @@ Opens the layertree
 
 reload
 ----------
-
-
-JavaScript Signals
-==================
-
-None.
-

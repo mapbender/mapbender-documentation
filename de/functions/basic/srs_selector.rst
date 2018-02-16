@@ -57,9 +57,3 @@ JavaScript API
 - disableAllSrs
 - getInnerJoinSrs
 - getInnerJoinArrays
-
-
-JavaScript Signals
-==================
-
-Keine.

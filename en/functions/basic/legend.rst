@@ -63,9 +63,3 @@ open
 ----------
 
 Shows the legend.
-
-
-JavaScript Signals
-==================
-
-None.

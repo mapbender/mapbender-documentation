@@ -57,8 +57,3 @@ Aktiviert das Modul, welches auf Mausklicks in der Karte wartet und dann die Mes
 deactivate
 ----------
 Deaktiviert das Modul.
-
-JavaScript Signals
-==================
-
-Keine.
