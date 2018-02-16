@@ -151,71 +151,71 @@ Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel
 
 .. code-block:: yaml
 
-	class: Mapbender\CoreBundle\Component\SQLSearchEngine
-	class_options:
-	  connection: demo				# die Datenbank, auf die das Element zugreift
-	  relation: mapbender_user			# die Tabelle, auf die das Element zugreift
-	  attributes:					# entspricht den Tabellenspalten in der Datenbank, die angesprochen werden sollen
-	    - gid
-	    - orga
-	    - town
-	    - usertype
-	  geometry_attribute: the_geom			# Definition der Geometrie Spalte
-	form:						# ab hier beginnt die Konfiguration des Formulars
-	  orga:						# Feld für die Suche nach dem Namen des Mapbender Users
-	    type: text
-	    options:
-	      required: false				# kein Pflichtfeld
-	      label: 'Mapbender User'			# Überschrift über dem Feld
-	      attr:					# zusätzlich definierbare Attribute
-	        data-autocomplete: 'on'			# automatische Vervollständigung des eingetippten Suchbegriffs
-	        data-autocomplete-distinct: 'on'
-	    compare: ilike				# Vergleichsmodus
-	  town:						# Feld für die Suche nach der Stadt
-	    type: text
-	    options:
-	      required: false				# kein Pflichtfeld
-	      label: Stadt				# Überschrift über dem Feld
-	      attr:
-	        data-autocomplete: 'on'
-	        data-autocomplete-distinct: 'on'
-	    compare: ilike
-	  usertype:					# Feld für die Suche nach dem Nutzertyp
-	    type: choice				# Feld mit Auswahlmöglichkeiten als Dropdown
-	    options:
-	      empty_value: 'Bitte auswählen...'		# Text, der angezeigt wird, bevor etwas ausgewählt wurde
-	      choices:					# die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
-	        1: Company
-	        2: Administration
-	        3: University
-	        4: User
-	      required: false				# kein Pflichtfeld
-	      label: Nutzertyp				# Überschrift über dem Feld
-	    compare: exact				# Vergleichsmodus
-	results:					# Konfiguration der Ergebnisanzeige
-	  view: table					# Tabelle ausgeben
-	  count: true					# Anzahl der Ergebnisse anzeigen
-	  headers:					# Titel der Spalte; werden wie folgt angegeben: Spaltenname in der Datenbank: Bezeichnung der Spalte in der Suchausgabe der Anwendung
-	    gid: ID
-	    orga: 'Mapbender User'
-	    town: Stadt
-	  callback:
-	    event: click				# bei Klicken wird das Element selektiert
-	    options:
-	      buffer: 10
-	      minScale: null
-	      maxScale: 10000
-	  styleMap:					# Styling der Punkte in der Karte
-	    default:					# Styling aller angezeigten Punkte
-	      strokeColor: '#003366'
-	      strokeOpacity: 1
-	      fillColor: '#3366cc'
-	      fillOpacity: 0.5
-	    select:					# Styling des selektierten Objekts
-	      strokeColor: '#330000'
-	      strokeOpacity: 1
-	      fillColor: '#800000'
-	      fillOpacity: 0.5
+  class: Mapbender\CoreBundle\Component\SQLSearchEngine
+  class_options:
+    connection: demo        # die Datenbank, auf die das Element zugreift
+    relation: mapbender_user      # die Tabelle, auf die das Element zugreift
+    attributes:          # entspricht den Tabellenspalten in der Datenbank, die angesprochen werden sollen
+      - gid
+      - orga
+      - town
+      - usertype
+    geometry_attribute: the_geom      # Definition der Geometrie Spalte
+  form:            # ab hier beginnt die Konfiguration des Formulars
+    orga:            # Feld für die Suche nach dem Namen des Mapbender Users
+      type: text
+      options:
+        required: false        # kein Pflichtfeld
+        label: 'Mapbender User'      # Überschrift über dem Feld
+        attr:          # zusätzlich definierbare Attribute
+          data-autocomplete: 'on'      # automatische Vervollständigung des eingetippten Suchbegriffs
+          data-autocomplete-distinct: 'on'
+      compare: ilike        # Vergleichsmodus
+    town:            # Feld für die Suche nach der Stadt
+      type: text
+      options:
+        required: false        # kein Pflichtfeld
+        label: Stadt        # Überschrift über dem Feld
+        attr:
+          data-autocomplete: 'on'
+          data-autocomplete-distinct: 'on'
+      compare: ilike
+    usertype:          # Feld für die Suche nach dem Nutzertyp
+      type: choice        # Feld mit Auswahlmöglichkeiten als Dropdown
+      options:
+        empty_value: 'Bitte auswählen...'    # Text, der angezeigt wird, bevor etwas ausgewählt wurde
+        choices:          # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
+          1: Company
+          2: Administration
+          3: University
+          4: User
+        required: false        # kein Pflichtfeld
+        label: Nutzertyp        # Überschrift über dem Feld
+      compare: exact        # Vergleichsmodus
+  results:          # Konfiguration der Ergebnisanzeige
+    view: table          # Tabelle ausgeben
+    count: true          # Anzahl der Ergebnisse anzeigen
+    headers:          # Titel der Spalte; werden wie folgt angegeben: Spaltenname in der Datenbank: Bezeichnung der Spalte in der Suchausgabe der Anwendung
+      gid: ID
+      orga: 'Mapbender User'
+      town: Stadt
+    callback:
+      event: click        # bei Klicken wird das Element selektiert
+      options:
+        buffer: 10
+        minScale: null
+        maxScale: 10000
+    styleMap:          # Styling der Punkte in der Karte
+      default:          # Styling aller angezeigten Punkte
+        strokeColor: '#003366'
+        strokeOpacity: 1
+        fillColor: '#3366cc'
+        fillOpacity: 0.5
+      select:          # Styling des selektierten Objekts
+        strokeColor: '#330000'
+        strokeOpacity: 1
+        fillColor: '#800000'
+        fillOpacity: 0.5
 
 Die Suche mit dieser Konfiguration sieht in der Anwendung so aus:
 
@@ -255,56 +255,56 @@ Beispiel mit Autovervollständigung und individueller Ergebnisanzeige:
 
 .. code-block:: yaml
 
-	class: Mapbender\CoreBundle\Component\SQLSearchEngine
-	class_options:
-	    connection: search_db
-	    relation: brd.qry_gn250_p_ortslage
-	    attributes:
-		- gid
-		- name
-		- gemeinde
-		- bundesland
-		- ewz_ger
-		- hoehe_ger
-	    geometry_attribute: geom
-	form:
-	    name:
-		type: text
-		options:
-		    required: false
-		    label: Name
-		    attr:
-		        data-autocomplete: on
-		compare: ilike
-	    gemeinde:
-		type: text
-		options:
-		    required: false
-		compare: ilike
-	results:
-	    view: table
-	    count: true
-	    headers:
-		name: Name
-		gemeinde: Gemeinde
-		bundesland: Bundesland
-		ewz_ger: Einwohner
-		hoehe_ger: Höhe
-	    callback:
-		event: click
-		options:
-		    buffer: 1000
-		    minScale: null
-		    maxScale: null
-	    styleMap:
-		default:
-		    strokeColor: '#00ff00'
-		    strokeOpacity: 1
-		    fillOpacity: 0
-		select:
-		    strokeColor: '#ff0000'
-		    fillColor: '#ff0000'
-		    fillOpacity: 0.8
+  class: Mapbender\CoreBundle\Component\SQLSearchEngine
+  class_options:
+      connection: search_db
+      relation: brd.qry_gn250_p_ortslage
+      attributes:
+    - gid
+    - name
+    - gemeinde
+    - bundesland
+    - ewz_ger
+    - hoehe_ger
+      geometry_attribute: geom
+  form:
+      name:
+    type: text
+    options:
+        required: false
+        label: Name
+        attr:
+            data-autocomplete: on
+    compare: ilike
+      gemeinde:
+    type: text
+    options:
+        required: false
+    compare: ilike
+  results:
+      view: table
+      count: true
+      headers:
+    name: Name
+    gemeinde: Gemeinde
+    bundesland: Bundesland
+    ewz_ger: Einwohner
+    hoehe_ger: Höhe
+      callback:
+    event: click
+    options:
+        buffer: 1000
+        minScale: null
+        maxScale: null
+      styleMap:
+    default:
+        strokeColor: '#00ff00'
+        strokeOpacity: 1
+        fillOpacity: 0
+    select:
+        strokeColor: '#ff0000'
+        fillColor: '#ff0000'
+        fillOpacity: 0.8
 
 Beispiel mit Auswahlbox:
 
@@ -315,51 +315,51 @@ Beispiel mit Auswahlbox:
 
 .. code-block:: yaml
 
-	class: Mapbender\CoreBundle\Component\SQLSearchEngine
-	class_options:
-	    connection: search_db
-	    relation: brd.qry_gn250_p_ortslage
-	    attributes:
-		- gid
-		- name
-		- gemeinde
-		- bundesland
-		- oba
-	    geometry_attribute: geom
-	form:
-	    oba:
-		type: choice
-		options:
-		    empty_value: 'Bitte wählen...'
-		    choices:
-		        AX_Ortslage: Ort
-		        AX_Wasserlauf: 'Gewässer'
-	    name:
-		type: text
-		options:
-		    required: false
-		    label: Name
-		    attr:
-		        data-autocomplete: on
-		compare: ilike
-	    gemeinde:
-		type: text
-		options:
-		    required: false
-		compare: ilike
-	results:
-	    view: table
-	    count: true
-	    headers:
-		name: Name
-		gemeinde: Gemeinde
-		bundesland: Bundesland
-	    callback:
-		event: click
-		options:
-		    buffer: 1000
-		    minScale: null
-		    maxScale: null
+  class: Mapbender\CoreBundle\Component\SQLSearchEngine
+  class_options:
+      connection: search_db
+      relation: brd.qry_gn250_p_ortslage
+      attributes:
+    - gid
+    - name
+    - gemeinde
+    - bundesland
+    - oba
+      geometry_attribute: geom
+  form:
+      oba:
+    type: choice
+    options:
+        empty_value: 'Bitte wählen...'
+        choices:
+            AX_Ortslage: Ort
+            AX_Wasserlauf: 'Gewässer'
+      name:
+    type: text
+    options:
+        required: false
+        label: Name
+        attr:
+            data-autocomplete: on
+    compare: ilike
+      gemeinde:
+    type: text
+    options:
+        required: false
+    compare: ilike
+  results:
+      view: table
+      count: true
+      headers:
+    name: Name
+    gemeinde: Gemeinde
+    bundesland: Bundesland
+      callback:
+    event: click
+    options:
+        buffer: 1000
+        minScale: null
+        maxScale: null
 
 
 YAML-Definition 
@@ -376,60 +376,60 @@ In der mapbender.yml Datei:
    width: 700 # Breite des Dialogs
    routes:    # Sammlung von Suchrouten
        demo_polygon:  # für Maschinen lesbarer Name
-			class: Mapbender\CoreBundle\Component\SQLSearchEngine  #  Suchmaschine, die verwendet werden soll
-			class_options:  # Diese werden an die Suchmaschine weitergegeben
-			    connection: digi_suche    # search_db  # DBAL Verbindungsname, der benutzt werden soll, benutzen sie ~ für default
-			    relation: polygons # Verbindungsauswahl, Unterabfragen können verwendet werden
-			    attributes: 
-			        - gid  # Liste von Spalten auswählen, expressions are possible
-			        - name 
-			        - type
-			    geometry_attribute: geom  # Name der Geometriesplate, die genutzt werden soll. Achtung: Projektion muss mit Projektion des map-Elements übereinstimmen
-			form:  # Einstellungen für das Suchformular
-			    name:  # Feldname, Spaltenname der genutzt werden soll 
-			        type: text  # Eingabefeld, normalerweise Text oder Zahlen
-			        options:  # Einstellungen für das Eingabefeld
-			            required: false  # HTML5 benötigte Attribute
-			            label: Name  # benutzerdefinierte Beschriftung eingeben, sont wird die Beschriftung von dem Feldnamen abgeleitet
-			            attr:  # HTML5 benötigte Attribute
-			                data-autocomplete: on  # Attribut, um Autovervollständigung zu aktivieren
-			                data-autocomplete-distinct: on  # Attribut, dass Autovervollständigung aktiviert aber unterscheiden lässt
-			                data-autocomplete-using: type   # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden                
-			        compare: ilike  # Siehe unten für weitere Vergleichsformen
-			    type:
-			        type: choice
-			        options:
-			            empty_value: Please select a type.
-			            required: false
-			            choices:
-			                A: A
-			                B: B
-			                C: C
-			                D: D
-			                E: E
-			results:
-			    view: table  # Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
-			    count: true # Anzahl der Treffer anzeigen
-			    headers:  # hBezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
-			        gid: ID  # Spaltenname -> Überschrift
-			        name: Name
-			        type: Type
-			    callback:  # Was beim Klick und Mauszeiger halten passiert
-			        event: click  # Ergebnisliste (click oder mouseover)
-			        options:
-			            buffer: 10    # Puffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
-			            minScale: ~   # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
+      class: Mapbender\CoreBundle\Component\SQLSearchEngine  #  Suchmaschine, die verwendet werden soll
+      class_options:  # Diese werden an die Suchmaschine weitergegeben
+          connection: digi_suche    # search_db  # DBAL Verbindungsname, der benutzt werden soll, benutzen sie ~ für default
+          relation: polygons # Verbindungsauswahl, Unterabfragen können verwendet werden
+          attributes: 
+              - gid  # Liste von Spalten auswählen, expressions are possible
+              - name 
+              - type
+          geometry_attribute: geom  # Name der Geometriesplate, die genutzt werden soll. Achtung: Projektion muss mit Projektion des map-Elements übereinstimmen
+      form:  # Einstellungen für das Suchformular
+          name:  # Feldname, Spaltenname der genutzt werden soll 
+              type: text  # Eingabefeld, normalerweise Text oder Zahlen
+              options:  # Einstellungen für das Eingabefeld
+                  required: false  # HTML5 benötigte Attribute
+                  label: Name  # benutzerdefinierte Beschriftung eingeben, sont wird die Beschriftung von dem Feldnamen abgeleitet
+                  attr:  # HTML5 benötigte Attribute
+                      data-autocomplete: on  # Attribut, um Autovervollständigung zu aktivieren
+                      data-autocomplete-distinct: on  # Attribut, dass Autovervollständigung aktiviert aber unterscheiden lässt
+                      data-autocomplete-using: type   # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden                
+              compare: ilike  # Siehe unten für weitere Vergleichsformen
+          type:
+              type: choice
+              options:
+                  empty_value: Please select a type.
+                  required: false
+                  choices:
+                      A: A
+                      B: B
+                      C: C
+                      D: D
+                      E: E
+      results:
+          view: table  # Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
+          count: true # Anzahl der Treffer anzeigen
+          headers:  # hBezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
+              gid: ID  # Spaltenname -> Überschrift
+              name: Name
+              type: Type
+          callback:  # Was beim Klick und Mauszeiger halten passiert
+              event: click  # Ergebnisliste (click oder mouseover)
+              options:
+                  buffer: 10    # Puffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
+                  minScale: ~   # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
                         maxScale: ~
-			    results:
-			        styleMap:  # Siehe unten für weitere Styles
-			            default:
-			                strokeColor: '#00ff00'
-			                strokeOpacity: 1
-			                fillOpacity: 0
-			            select:
-			                strokeColor: '#ff0000'
-			                fillColor: '#ff0000'
-			                fillOpacity: 0.4
+          results:
+              styleMap:  # Siehe unten für weitere Styles
+                  default:
+                      strokeColor: '#00ff00'
+                      strokeOpacity: 1
+                      fillOpacity: 0
+                  select:
+                      strokeColor: '#ff0000'
+                      fillColor: '#ff0000'
+                      fillOpacity: 0.4
 
 
 Class, Widget & Style
