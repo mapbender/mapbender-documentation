@@ -269,7 +269,7 @@ Für die Anpassung der Datenverbindung in den Konfigurationsdateien unter /data/
 * **data-config.xml**
 * Angabe der Datenverbindung: 
 
-.. code-block:: yaml
+.. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <dataConfig>

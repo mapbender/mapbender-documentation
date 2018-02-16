@@ -110,14 +110,14 @@ Change the title and description in the php file
 
 You will find several functions in the php file. Change the return value of the functions *getClassTitle()* and *getClassDescription()*.
 
-.. code-block:: bash
+.. code-block:: php
 
     public static function getClassTitle() {
         return "MapKlick";
     }
 
 
-.. code-block:: bash
+.. code-block:: php
 
     public static function getClassDescription() {
         return "Generates an Url with the the mapklick coordinates added";
@@ -131,7 +131,7 @@ You can register an element by adding it to the function *getElements()* in the 
 
 This will make the element available in the backend when you configure your application.
 
-.. code-block:: bash
+.. code-block:: html+php
 
  <?php
  
@@ -171,7 +171,7 @@ You can modify the action of the function *_mapClickWorker()*.
 Default definition of _mapClickWorker()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: bash
+.. code-block:: js
 
  _mapClickWorker: function(coordinates) {
         alert('You clicked: ' +
@@ -188,7 +188,7 @@ Alternatively you could open a new window with an URL and add the coordinates as
 
 http://www.openstreetmap.org/export#map=15/50.7311/7.0985
 
-.. code-block:: bash
+.. code-block:: js
   
  _mapClickWorker: function(coordinates) {
         window.open('http://www.openstreetmap.org/export#map=15/' + coordinates.world.y + '/' + coordinates.world.x);
