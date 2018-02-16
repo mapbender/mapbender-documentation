@@ -1,6 +1,6 @@
 # Mapbender Documentation
 
-This is the Mapbender documentation repository. 
+This is the Mapbender documentation repository.
 
 You find the compiled pages of [the latest released version](https://github.com/mapbender/mapbender-documentation/releases) at [https://doc.mapbender.org/](https://doc.mapbender.org/). Other versions of the documentation are also available at [https://docs.mapbender.org/](https://docs.mapbender.org/current/#other-versions-of-this-documentation).
 
@@ -17,12 +17,6 @@ To build the website locally, you need to install Sphinx. Install it in Debian-b
 $ apt install python-sphinx
 ```
 
-Additionally, a Sphinx extension for Symfony2 is used as a submodule, so you need to execute the following command:
-
-```bash
-$ git submodule update --init --recursive
-```
-
 You can then build the documentation by running:
 
 ```bash
@@ -33,4 +27,3 @@ To participate in the documentation, create a fork, work on the [release/3.0.6](
 
 
 Have fun!
-
