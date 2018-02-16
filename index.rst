@@ -50,7 +50,7 @@ Other versions of this documentation
 * https://docs.mapbender.org/3050
 * https://docs.mapbender.org/304
 
-Download of Mapbender
+Download Mapbender
 ======================
 
 * https://mapbender.org/download
