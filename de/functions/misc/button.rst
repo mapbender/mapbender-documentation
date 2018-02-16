@@ -157,9 +157,3 @@ deactivate
 ----------
 
 Deaktiviert den Button. Wird über einen Klick aufgerufen, wenn der Button aktiviert ist oder wenn ein anderer Button der gleichen Gruppe aktiviert ist.
-
-JavaScript Signals
-==================
-
-Keine.
-

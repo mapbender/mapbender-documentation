@@ -82,14 +82,6 @@ JavaScript API
 <function>
 ----------
 
-
-JavaScript Signals
-==================
-
-<signal>
---------
-
-
 Kontrolle über den Aufruf
 =====================================
 

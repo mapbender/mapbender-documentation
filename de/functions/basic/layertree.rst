@@ -402,9 +402,3 @@ open
 
 reload
 ----------
-
-
-JavaScript Signals
-==================
-
-Keine.

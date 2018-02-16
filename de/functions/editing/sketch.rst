@@ -55,7 +55,3 @@ deactivate
 
 Deaktiviert das Element.
 
-JavaScript Signals
-==================
-
-Keine.

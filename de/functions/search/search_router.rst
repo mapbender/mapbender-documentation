@@ -465,8 +465,4 @@ close
 -----
 Wenn das Modul als Dialog konfiguriert wird: close.
 
-JavaScript Signals
-==================
-
-Keine.
 

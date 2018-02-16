@@ -133,8 +133,3 @@ Aktiviert das Modul, welches dann auf einen Mausklick wartet, um die Infoabfrage
 deactivate
 ----------
 Deaktiviert das Modul.
-
-JavaScript Signals
-==================
-
-Keine.

@@ -66,11 +66,3 @@ JavaScript API
 <function>
 ----------
 
-
-JavaScript Signals
-==================
-
-<signal>
---------
-
-
