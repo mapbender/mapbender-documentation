@@ -3,7 +3,7 @@ Welcome to the Mapbender documentation
 
 Mapbender Project Page https://www.mapbender.org
 
-Please choose a language of your choice:
+Please choose your preferred language:
 
 .. toctree::
    :maxdepth: 1
