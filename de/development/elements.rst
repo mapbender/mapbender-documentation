@@ -44,7 +44,7 @@ Dies gewährleistet eine einheitliche Struktur für die Widget-Entwicklung und b
 
 Das grundlegende Gerüst sieht folgendermaßen aus:
 
-.. code-block:: javascript
+.. code-block:: js
 
     (function($) {
 
@@ -102,7 +102,7 @@ Das grundlegende Gerüst sieht folgendermaßen aus:
 Für das Event Handling wird jQuery.proxy verwendet, um sicherzustellen, dass ein der Callback im richtigen Kontext gewährleistet wird:
 
 
-.. code-block:: javascript
+.. code-block:: js
 
     // ...
 
@@ -117,13 +117,13 @@ Kommunikation zwischen Elementen
 
 Es gibt eine aktive und passive Kommunikation zwischen den Widgets. Die aktive Kommunikation, wird genutzt, um eine öffentliche Methode eines anderen Widget abzurufen. Dazu selektieren Sie das HTML-Element des Widgets mit jQuery und rufen die Methode folgendermaßen auf:
 
-.. code-block:: javascript
+.. code-block:: js
 
     var otherElement = $('#element-13').mbMyClass('methodA', parameterA, parameterB);
 
 Dies ist eine Standard-jQuery UI Syntax und selbsterklärend. Es ist die Frage, wie Sie die anderen HTML-Elemente erkennen? Um ein Element zu selektieren wird bevorzugt die ID verwendet. Diese ID's werden jedoch zur Laufzeit von Mapbender generiert, wenn die Anwendung startet, so dass sie nicht davon ausgehen können, dass die ID immer gleich ist. Glücklicherweise können Sie in der Konfiguration eine Element-ID als eine Target-Option für ein anderes Element übergeben. Diese wird mit der Laufzeit-ID des Target-Elements des HTML-Element überschrieben, so dass Sie in Ihrem Widget-Code auf die richtige ID "this.options.target" zugreifen können. 
 
-.. code-block:: javascript
+.. code-block:: js
 
     $('#' + this.options.target).mbMyClass('methodA', parameterA, parameterB);
 

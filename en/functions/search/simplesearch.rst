@@ -85,7 +85,7 @@ Download Apache Solr and extract it to any folder. After successfully extracting
 
 **Installing** Apache Solr via the terminal f.e. in the data directory: 
 
-.. code-block:: yaml
+.. code-block:: bash
 
     cd /data
     wget http://apache.lauf-forum.at/lucene/solr/5.4.1/solr-5.4.1.tgz
@@ -102,13 +102,13 @@ You can start and stop Solr via the terminal by the following commands:
 
 **Start Solr:**
 
-.. code-block:: yaml
+.. code-block:: bash
 
     /data/solr-5.4.1/bin/solr start -s /data/solr-5.4.1/server/solr
 
 **Stop Solr:**  
 
-.. code-block:: yaml
+.. code-block:: bash
 
     /data/solr-5.4.1/bin/solr stop -all
 
@@ -126,7 +126,7 @@ File: solr-5.4.1/server/solr/solr.xml
 
 Enter the following XML-block in the file:
 
-.. code-block:: yaml
+.. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" ?>
     <solr></solr>
@@ -160,7 +160,7 @@ Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/
 * Adapting core.properties: 
 * Put in the following configuration block:
 
-.. code-block:: yaml
+.. code-block:: ini
 
     name=places
     shard=${shard:}
@@ -175,7 +175,7 @@ Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/
 * Adapting solrconfig.xml:
 * Put in the following configuration block:
 
-.. code-block:: yaml
+.. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <config>
@@ -197,7 +197,7 @@ Adaptation of configuration files under /data/solr-5.4.1/server/solr/configsets/
 * Adapting schema.xml:
 * Put in the following configuration block:
 
-.. code-block:: yaml
+.. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" ?>
     <schema name="places" version="1.5">
@@ -217,7 +217,7 @@ Now you can restart Solr with your own core. Use the command we mentioned above 
 
 * **Start Solr:**
 
-.. code-block:: yaml
+.. code-block:: bash
 
     /data/solr-5.4.1/bin/solr start -s /data/solr_data
 
@@ -227,7 +227,7 @@ Solr example
 The directiory /solr-5.4.1/example contains Solr examples. Each example is contained in a 
 separate directory. To run a specific example, do:
 
-.. code-block:: yaml
+.. code-block:: bash
 
     bin/solr -e <EXAMPLE> where <EXAMPLE> is one of:
     
@@ -238,7 +238,7 @@ separate directory. To run a specific example, do:
 
 To test this function run the following command in the terminal: 
 
-.. code-block:: yaml
+.. code-block:: bash
 
     /data/solr-5.4.1/bin/solr start -e techproducts
 
@@ -281,7 +281,7 @@ Adaptation of the Data Connection in the configutation files under data/solr_dat
 * **data-config.xml**
 * configurate the PostgreSQL data connection:
 
-.. code-block:: yaml
+.. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <dataConfig>
@@ -308,7 +308,7 @@ Adaptation of the Data Connection in the configutation files under data/solr_dat
 * download matching PostgreSQL-driver: 
 * https://jdbc.postgresql.org/download.html
 
-.. code-block:: yaml
+.. code-block:: bash
 
     cd /data/solr_data/places/
     wget https://jdbc.postgresql.org/download/postgresql-9.1-903.jdbc4.jar
@@ -322,7 +322,7 @@ You must adjust the UpdateHandler in the solrconfig.xml under data/solr_data/pla
 
 Example csv: 
 
-.. code-block:: yaml
+.. code-block:: bash
 
     /opt/solr/bin/post -c places /opt/training/data/germany.csv
 
@@ -345,7 +345,7 @@ In order to secure the Apache Solr outward you must configure the Jetty Security
 * Release of certain IP addresses to access the Jetti 
 * Configuration under solr/etc/jetty.xml
 
-.. code-block:: yaml
+.. code-block:: xml
 
     <Set name="host"><SystemProperty name="jetty.host" /></Set>
     <Set name="port"><SystemProperty name="jetty.port" default="8983"/></Set>

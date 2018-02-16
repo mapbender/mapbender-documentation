@@ -89,7 +89,7 @@ element class.
 Element widgets can construct the callback URL for use in their Ajax calls
 by using their element id and the path provided in the Mapbender variable:
 
-.. code-block:: javascript
+.. code-block:: js
 
     (function($) {
         $.widget('mapbender.mbDemo', {

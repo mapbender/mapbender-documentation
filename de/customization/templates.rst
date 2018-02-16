@@ -56,7 +56,7 @@ Erzeugen eines neuen Namespaces
 Die Datei WorkshopDemoBundle.php erzeugt den Namespace für das Bundle und referenziert auf das Template und zu den eigenen css-Datei(en).
 
 
-.. code-block:: php
+.. code-block:: html+php
 
     <?php
     /*
@@ -102,7 +102,7 @@ In unserem Beispiel heißt die Template-Datei FullscreenDemo.php. Sie befindet s
 In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete twig-Datei definiert.
 
 
-.. code-block:: bash
+.. code-block:: html+php
 
  <?php
 
@@ -325,7 +325,7 @@ Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
 * mapbender/app/AppKernel.php
 
-.. code-block:: php
+.. code-block:: html+php
 
  class AppKernel extends Kernel
  {

@@ -72,7 +72,7 @@ Q: I made a highly complex application and want to duplicate it, but it does not
 
 A: A possible reason for this is that php does not allow a workflow with big files (YAML-export/import/etc.). The problem occurs especially in FastCGI. Just adjust the php parameter MaxRequestLen (you can do that in the configuration of FCGI).
 
-.. code-block:: bash
+.. code-block:: ini
 
    # mod_fcgi.conf (Windows)
    # set value to 2 MB
@@ -85,7 +85,7 @@ A: A possible reason for this is that php does not allow a workflow with big fil
 
 Simultaneously, you should check the php values in php.ini:
 
-.. code-block:: bash
+.. code-block:: ini
 
    max_execution_time = 240
    memory_limit = 1024M
@@ -174,13 +174,13 @@ databases. I noticed this because queries need more time than usual. Can I accel
 
 A: There are two parameters in php.ini which may tweak the performance of Mapbender with Oracle databases: `oci8.max_persistent <http://php.net/manual/de/oci8.configuration.php#ini.oci8.max-persistent>`_ and `oci8.default_prefetch <http://php.net/manual/de/oci8.configuration.php#ini.oci8.default-prefetch>`_. Adjust these parameters to:
 
-.. code-block:: bash
+.. code-block:: ini
 
    oci8.max_persistent = 15
    oci8.default_prefetch = 100000
 
 Furthermore, change the respective persistent database connection parameter in config.yml to true.
 
-.. code-block:: bash
+.. code-block:: ini
 
    persistent=true

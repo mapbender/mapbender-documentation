@@ -52,7 +52,7 @@ Es bleibt dem element überlassen, seine Logik in der httpAction-Methode zu impl
 
 Element Widgets können die Callback-URL zur Verwendung in ihrem Ajax-Aufruf konstruieren. Dazu wird die Element-ID und der Pfad, der in der Mapbender-Variable bereitgestellt wird,  benötigt:
 
-.. code-block:: javascript
+.. code-block:: js
 
     (function($) {
         $.widget('mapbender.mbDemo', {

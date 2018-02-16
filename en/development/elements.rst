@@ -47,7 +47,7 @@ development and offers
 
 The basic skeleton looks like this:
 
-.. code-block:: javascript
+.. code-block:: js
 
     (function($) {
 
@@ -104,7 +104,7 @@ The basic skeleton looks like this:
 For event handling, jQuery.proxy is your friend to ensure that the callback is guaranteed to be executed in the right
 context:
 
-.. code-block:: javascript
+.. code-block:: js
 
     // ...
 
@@ -123,7 +123,7 @@ There's an active and an passive way to communicate with another widget. The fir
 method of the other widget. For that you need to select the widget's HTML element with jQuery and call the method like
 this:
 
-.. code-block:: javascript
+.. code-block:: js
 
     var otherElement = $('#element-13').mbMyClass('methodA', parameterA, parameterB);
 
@@ -134,7 +134,7 @@ Luckily you can pass a Element id in the configuration as the target options for
 with the run-time id of that target Elements' HTML element for you, so that in your widget code you can access the
 right id as "this.options.target".
 
-.. code-block:: javascript
+.. code-block:: js
 
     $('#' + this.options.target).mbMyClass('methodA', parameterA, parameterB);
 

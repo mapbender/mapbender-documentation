@@ -58,7 +58,7 @@ Create a new namespace
 The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template and to your css-file(s).
 
 
-.. code-block:: php
+.. code-block:: html+php
 
     <?php
     /*
@@ -105,7 +105,7 @@ In our example the template file is called FullscreenDemo.php. You find it at sr
 In the template file you define the name of your template, the regions that you want to provide and refer to a twig file.
 
 
-.. code-block:: php
+.. code-block:: html+php
 
  <?php
 
@@ -362,7 +362,7 @@ Before your new template will show up you have to register your bundle in the fi
 
 * mapbender/app/AppKernel.php
 
-.. code-block:: php
+.. code-block:: html+php
 
  class AppKernel extends Kernel
  {

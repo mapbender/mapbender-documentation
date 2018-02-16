@@ -127,14 +127,14 @@ Anpassung des Titels und der Beschreibung
 
 In der PHP-Datei finden Sie zahlreiche Funktionen. Ändern Sie den return-Wert der Funktionen *getClassTitle()* und *getClassDescription()*.
 
-.. code-block:: bash
+.. code-block:: php
 
     public static function getClassTitle() {
         return "MapKlick";
     }
 
 
-.. code-block:: bash
+.. code-block:: php
 
     public static function getClassDescription() {
         return "Generates an Url with the the mapklick coordinates added";
@@ -148,7 +148,7 @@ Ein Element kann registriert werden, indem es in der Funktion *getElements()* in
 
 Durch diesen Eintrag kann das Element im Backend bei der Anwendungskonfiguration ausgewählt werden.
 
-.. code-block:: bash
+.. code-block:: html+php
 
  <?php
  
@@ -187,7 +187,7 @@ Sie können die Aktion der Funktion  *_mapClickWorker()* anpassen.
 Standarddefinition der Funktion mapClickWorker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: bash
+.. code-block:: js
 
  _mapClickWorker: function(coordinates) {
         alert('You clicked: ' +
@@ -205,7 +205,7 @@ Alternativ kann beispielsweise ein neues Fenster mit einer URL geöffnet und die
 
 http://www.openstreetmap.org/export#map=15/50.7311/7.0985
 
-.. code-block:: bash
+.. code-block:: js
   
  _mapClickWorker: function(coordinates) {
         window.open('http://www.openstreetmap.org/export#map=15/' + coordinates.world.y + '/' + coordinates.world.x);

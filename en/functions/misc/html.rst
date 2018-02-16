@@ -14,7 +14,7 @@ Configuration
 
 For example you can add an image to your application:
 
-.. code-block:: yaml
+.. code-block:: html
 
     <img src='http://mapbender.org/sites/default/files/OSGeo_project.png' height='60px'>
 
@@ -63,14 +63,14 @@ Examples
 
 Add an image
 
-.. code-block:: yaml
+.. code-block:: html
 
    <img src='http://mapbender.org/sites/default/files/OSGeo_project.png'>
 
 
 Add an Link
 
-.. code-block:: yaml
+.. code-block:: html
 
   <a href='http://mapbender.org' target='_blank'>Go to the Mapbender Website</a>
 
