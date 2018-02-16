@@ -52,11 +52,6 @@ JavaScript API
 
 None.
 
-JavaScript Signals
-==================
-
-None.
-
 
 Examples
 ========

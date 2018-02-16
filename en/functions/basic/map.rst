@@ -267,9 +267,3 @@ getAllSrs
 ready
 ----------
 <>
-
-
-JavaScript Signals
-==================
-
-None.

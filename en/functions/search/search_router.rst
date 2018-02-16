@@ -229,11 +229,6 @@ close
 -----
 If configured as dialog, close.
 
-JavaScript Signals
-==================
-
-None.
-
 
 Example
 ==================

@@ -41,8 +41,3 @@ JavaScript API
 ==============
 
 None.
-
-JavaScript Signals
-==================
-
-None.

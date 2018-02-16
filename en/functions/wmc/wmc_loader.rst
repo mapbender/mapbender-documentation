@@ -82,13 +82,6 @@ JavaScript API
 ----------
 
 
-JavaScript Signals
-==================
-
-<signal>
---------
-
-
 Controlling by URL
 ==================
 
