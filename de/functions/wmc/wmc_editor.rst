@@ -1,4 +1,4 @@
-.. _wmc_editor:
+.. _wmc_editor_de:
 
 WMC Editor
 ***********************

@@ -1,4 +1,4 @@
-.. _srs_selector:
+.. _srs_selector_de:
 
 Spatial Reference System Selector (SRS Selector) (Auswahl des räumlichen Referenzsystems)
 ************************************************************************************************

@@ -1,4 +1,4 @@
-.. _feature_info:
+.. _feature_info_de:
 
 Feature Info (Information)
 **************************

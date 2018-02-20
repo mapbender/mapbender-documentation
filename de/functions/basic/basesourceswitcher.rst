@@ -1,4 +1,4 @@
-.. _basesourceswitcher:
+.. _basesourceswitcher_de:
 
 BaseSourceSwitcher (Themenwechsel)
 *********************************************************************

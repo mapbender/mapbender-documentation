@@ -1,4 +1,4 @@
-.. _zoom_bar:
+.. _zoom_bar_de:
 
 Navigation Toolbar (Zoombar) (Navigationswerkzeug)
 *********************************************************************

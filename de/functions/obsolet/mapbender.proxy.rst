@@ -1,3 +1,5 @@
+.. _mapbenderproxy_de:
+
 mapbender.proxy - Mapbender\\CoreBundle\\Component\\ProxyService
 ################################################################
 

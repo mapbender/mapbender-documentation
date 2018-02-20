@@ -1,4 +1,4 @@
-.. _scalebar:
+.. _scalebar_de:
 
 ScaleBar (Maßstabsleiste)
 **************************

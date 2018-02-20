@@ -1,4 +1,4 @@
-.. _ruler:
+.. _ruler_de:
 
 Ruler: Linien-/Flächenmessung  (Line/Area Ruler)
 ************************************************

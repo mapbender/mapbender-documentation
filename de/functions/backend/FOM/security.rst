@@ -1,3 +1,5 @@
+.. _security_de:
+
 Sicherheitskonzepte
 ===================
 

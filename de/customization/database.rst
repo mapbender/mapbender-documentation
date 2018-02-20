@@ -1,3 +1,5 @@
+.. _database_de:
+
 Konfiguration der Datenbank
 ############################
 

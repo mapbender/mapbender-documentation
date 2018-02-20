@@ -1,3 +1,5 @@
+.. _editing_de:
+
 Editierung
 ==========
 

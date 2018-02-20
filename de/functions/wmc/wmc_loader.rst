@@ -1,4 +1,4 @@
-.. _wmc_loader:
+.. _wmc_loader_de:
 
 WMC Loader (WMC laden)
 ***********************

@@ -1,4 +1,4 @@
-.. _update:
+.. _update_de:
 
 Aktualisierung von Mapbender auf eine neuere Version
 ====================================================

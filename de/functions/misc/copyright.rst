@@ -1,4 +1,4 @@
-.. _copyright:
+.. _copyright_de:
 
 Copyright
 ************

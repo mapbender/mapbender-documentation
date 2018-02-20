@@ -1,4 +1,4 @@
-.. _wmc_list:
+.. _wmc_list_de:
 
 WMC List (WMC Liste)
 ***********************

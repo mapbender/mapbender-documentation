@@ -1,4 +1,4 @@
-.. _installation_symfony:
+.. _installation_symfony_de:
 
 Installation im Symfony eigenen Webserver
 #########################################

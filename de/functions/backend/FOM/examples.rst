@@ -1,3 +1,5 @@
+.. _fom_examples_de:
+
 Beispiele
 =========
 

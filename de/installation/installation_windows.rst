@@ -1,4 +1,4 @@
-.. _installation_windows:
+.. _installation_windows_de:
 
 Installation auf Windows
 ########################

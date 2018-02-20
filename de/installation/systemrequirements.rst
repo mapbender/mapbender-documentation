@@ -1,4 +1,4 @@
-.. _systemrequirements:
+.. _systemrequirements_de:
 
 Systemvoraussetzungen und Download
 ##################################

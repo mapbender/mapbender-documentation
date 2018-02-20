@@ -1,3 +1,5 @@
+.. _obsolet_de:
+
 Obsolet
 =======
 

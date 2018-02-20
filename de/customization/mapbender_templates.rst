@@ -1,4 +1,4 @@
-.. _mapbender_templates:
+.. _mapbender_templates_de:
 
 Mapbender Templates
 ##########################

@@ -1,4 +1,4 @@
-.. _activity_indicator:
+.. _activity_indicator_de:
 
 Activity Indicator (Aktivitätsindikator)
 ========================================

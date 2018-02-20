@@ -1,4 +1,4 @@
-.. _templates:
+.. _templates_de:
 
 Wie werden eigene Style-Vorlagen (templates) erzeugt?
 #####################################################

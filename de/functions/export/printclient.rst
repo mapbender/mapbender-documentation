@@ -1,4 +1,6 @@
-﻿PrintClient (Druck)
+﻿.. _printclient_de:
+
+PrintClient (Druck)
 *******************
 
 Mapbender bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen dem Client verschiedene Auswahlmöglichkeiten zur Verfügung:

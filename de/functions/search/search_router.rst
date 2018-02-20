@@ -1,4 +1,4 @@
-.. _search_router:
+.. _search_router_de:
 
 Search Router
 ***********************

@@ -1,4 +1,4 @@
-.. _legend:
+.. _legend_de:
 
 Legende
 ************

@@ -1,3 +1,5 @@
+.. _mapbenderservice_de:
+
 mapbender - Mapbender\\CoreBundle\\Mapbender
 ############################################
 

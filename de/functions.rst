@@ -1,3 +1,5 @@
+.. _functions_de:
+
 Funktionen
 ==========
 

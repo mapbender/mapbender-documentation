@@ -1,4 +1,4 @@
-.. _digitizer:
+.. _digitizer_de:
 
 Digitalisierung (Digitizer)
 ***************************

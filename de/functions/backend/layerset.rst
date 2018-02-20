@@ -1,4 +1,4 @@
-.. _layerset-en:
+.. _layerset_de:
 
 Layersets und Layerset-Instanzen
 ================================

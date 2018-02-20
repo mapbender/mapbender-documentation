@@ -1,3 +1,5 @@
+.. _customization_de:
+
 Anpassungen / Tipps & Tricks
 ============================
 

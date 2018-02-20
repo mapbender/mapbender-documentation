@@ -1,4 +1,4 @@
-.. _source:
+.. _source_de:
 
 Source (Datenquelle)
 ====================

@@ -1,4 +1,4 @@
-.. _scaledisplay:
+.. _scaledisplay_de:
 
 ScaleDisplay (Maßstabsanzeige)
 ********************************

@@ -1,4 +1,4 @@
-.. _coordinates_display:
+.. _coordinates_display_de:
 
 Coordinates Display (Koordinatenanzeige)
 ****************************************

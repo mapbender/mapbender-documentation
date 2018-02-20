@@ -1,3 +1,5 @@
+.. _quickstart_de:
+
 :Author: OSGeo-Live
 :Author: Astrid Emde
 :Version: osgeo-live8.5

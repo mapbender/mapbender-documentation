@@ -1,4 +1,4 @@
-.. _html:
+.. _html_de:
 
 HTML-Element
 ************

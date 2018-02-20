@@ -1,3 +1,5 @@
+.. _apidocumentation_de:
+
 API-Dokumentation
 #################
 

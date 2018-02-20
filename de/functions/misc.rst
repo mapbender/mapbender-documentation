@@ -1,3 +1,5 @@
+.. _misc_de:
+
 Verschiedenes
 =============
 

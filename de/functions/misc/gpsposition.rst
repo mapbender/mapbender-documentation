@@ -1,4 +1,4 @@
-.. _gpspostion:
+.. _gpspostion_de:
 
 GPS-Position
 ************

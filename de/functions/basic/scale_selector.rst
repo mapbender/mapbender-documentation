@@ -1,4 +1,4 @@
-.. _scale_selector:
+.. _scale_selector_de:
 
 Scale Selector (Maßstabsauswahl)
 ************************************************

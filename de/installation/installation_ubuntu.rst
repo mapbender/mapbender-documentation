@@ -1,4 +1,4 @@
-.. _installation_ubuntu:
+.. _installation_ubuntu_de:
 
 Installation auf Ubuntu und Debian
 ##################################

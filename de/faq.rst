@@ -1,3 +1,5 @@
+.. _faq_de:
+
 FAQ - Häufig gestellte Fragen
 =============================
 

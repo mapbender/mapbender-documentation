@@ -1,3 +1,5 @@
+.. _welcome_de:
+
 Willkommen bei der Mapbender Dokumentation
 ##########################################
 

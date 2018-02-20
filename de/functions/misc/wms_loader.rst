@@ -1,4 +1,4 @@
-.. _wms_loader:
+.. _wms_loader_de:
 
 WMS Loader
 **********

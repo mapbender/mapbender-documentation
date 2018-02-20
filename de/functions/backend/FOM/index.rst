@@ -1,3 +1,5 @@
+.. _fom_de:
+
 FOMUserBundle - Benutzer und Absicherung
 ========================================
 

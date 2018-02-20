@@ -1,4 +1,4 @@
-.. _installation_git:
+.. _installation_git_de:
 
 Git-basierte Installation
 ##########################

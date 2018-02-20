@@ -1,4 +1,4 @@
-.. _simplesearch:
+.. _simplesearch_de:
 
 SimpleSearch
 ************

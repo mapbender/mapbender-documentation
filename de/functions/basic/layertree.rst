@@ -1,4 +1,4 @@
-.. _layertree:
+.. _layertree_de:
 
 Layertree - Table of Content (Layerbaum) 
 ****************************************

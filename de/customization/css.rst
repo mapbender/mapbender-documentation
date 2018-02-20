@@ -1,4 +1,4 @@
-.. _css:
+.. _css_de:
 
 Wie kann der Stil einer Anwendung mit dem css-Editor angepasst werden?
 ############################################################################

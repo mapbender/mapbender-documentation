@@ -1,4 +1,4 @@
-.. _suggestmap:
+.. _suggestmap_de:
 
 Suggest Map
 ***********************

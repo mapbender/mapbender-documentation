@@ -1,4 +1,4 @@
-.. _element_generate:
+.. _element_generate_de:
 
 Wie können eigene Elemente erzeugt werden?
 ##########################################

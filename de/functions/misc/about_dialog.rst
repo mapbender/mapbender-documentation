@@ -1,4 +1,4 @@
-.. _about_dialog:
+.. _about_dialog_de:
 
 About Dialog (Über-Dialog)
 ********************************
