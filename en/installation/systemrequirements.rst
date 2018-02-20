@@ -8,7 +8,7 @@ System requirements
 
 Mapbender needs the following components in order to run:
 
-* PHP 5.5.4 or later (php5)
+* PHP 5.6.4 or later (php5)
 * PHP CLI interpreter (php5-cli)
 * PHP SQLite extension (php5-sqlite)
 * PHP cURL extension (php5-curl)
