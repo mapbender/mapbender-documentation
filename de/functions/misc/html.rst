@@ -28,9 +28,11 @@ Einfügen eines Bildes in Ihre Anwendung:
 * **Classes:** html-element-inline, CSS-Klasse
 
 Konfigurationsbeispiele
-============================
+=======================
+
 Logo mit hinterlegtem Link einbinden:
---------------------------------------
+-------------------------------------
+
 Über ein HTML-Element können verschiedene zusätzliche Elemente eingebunden werden. Beispielsweise kann ein Bild oder Logo integriert werden. Aber auch ein einfaches Textelement, oder ein Text- bzw. Bildelement, welches mit einem Link zu einer Webseite hinterlegt ist. Das HTML-Element kann an unterschiedlichen Stellen in der Anwendung eingebunden werden.
 
 In der Anwendung wird das HTML-Element unter dem Reiter Layouts durch das ``+`` -Zeichen entweder in der Toolbar, in der Sidepane oder im Footer eingefügt.
@@ -70,7 +72,8 @@ Und im Footer:
      
      
 Logo mit hinterlegtem Link einbinden:
---------------------------------------
+-------------------------------------
+
 Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden. Als Beispiel wird gezeigt, wie der Titel der Anwendung und des Elements mithilfe eines HTML-Elements eingebunden werden kann.
 
 **Die Variable "application.title"**
@@ -121,12 +124,14 @@ YAML-Definition:
 
 .. code-block:: yaml
 
+    title: 'HTML-Element'
+    class: Mapbender\CoreBundle\Element\HTMLElement   
     content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # content kann Variablen: "application", "entity" und "configuration" beinhalten.
     classes: my-special-css-class
    
 
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
 * **Widget:** mapbender.mbHTMLElement

@@ -32,6 +32,8 @@ YAML-Definition:
 
 .. code-block:: yaml
 
+    title: 'HTML-Element'
+    class: Mapbender\CoreBundle\Element\HTMLElement   
     content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # the variables: "application", "entity" und "configuration" are available in the content.
     classes: my-special-css-class
    
