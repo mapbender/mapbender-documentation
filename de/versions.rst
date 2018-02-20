@@ -1,3 +1,5 @@
+.. _versions_de:
+
 Versionshistorie
 ================
 
@@ -22,47 +24,48 @@ Release Datum: TT.MM.JJJJ
 **Verbesserungen**
 
 * Fix im Scale-Selector, der sich in einigen Fällen nicht aktualisieren wollte.
-
 * Fix im GetLegendGraphic Request auf geschützten Diensten über den Tunnel.
-
 * Fix im Aufruf von Mapbender mit POI-Parameter (#642)
-
 * Fix im Legendenelement bei überlangen Legendenbildern
-
 * Fix im Instance-Tunnel zum Zugriff auf geschützte Dienste
-
 * Fix und Verbesserungen im URL-Signen
-
 * Fix im Druck von PNG8 Karten, wenn das Image Format "image/png; mode=8bit" ist.
-
 * Fix im Druck bei Schriftgrößen
-
 * Fix im Druck, wenn PHP-Notices angeschaltet sind und die yStartPosition fehlte.
-
 * Fix im Backend beim Hinzufügen von Elementen
-
 * Verbesserungen im WMS Backend
-
 * Verbesserung im FOM: Wrong Type Definition in ACL Provider Constructor #641
-
 * Verbesserung im FOM beim SSPI
+
+**Dokumentation**
+
+* Umstrukturierung der Dokumentation: Die einzelnen :ref:`functions_de` sind unterteilt in:
+  
+  * :ref:`basic_de`
+  * :ref:`search_de`
+  * :ref:`export_de`
+  * :ref:`editing_de`
+  * :ref:`wmc_de`
+  * :ref:`backend_de`
+  * :ref:`fom_de`
+  * :ref:`misc_de`
 
 * Verbesserte Dokumentation zu den Elementen:
   
-  * Basesourceswitcher
-  * Button
-  * Coordinates Display
-  * HTML-Element
-  * Legend
-  * Map
-  * OverviewMap
-  * Search Router
-  * SRS Selector
-  * Navigation Toolbar
+  * :ref:`basesourceswitcher_de`
+  * :ref:`button_de`
+  * :ref:`coordinates_display_de`
+  * :ref:`html_de`
+  * :ref:`legend_de`
+  * :ref:`map_de`
+  * :ref:`overview_de`
+  * :ref:`search_router_de`
+  * :ref:`srs_selector_de`
+  * :ref:`zoom_bar_de`
 
-* Dokumentation: Erweiterung zu dem `Print Modul <../bundles/Mapbender/CoreBundle/elements/printclient.html>`_ und den neuen dynamischen Features bei den Drucktemplates.
+* Dokumentation: Erweiterung zu dem :ref:`printclient` und den neuen dynamischen Features bei den Drucktemplates.
 
-* Dokumentation: Aufnahme des `MS4W Pakets zur Installation auf Windows <installation/installation_windows.html>`_
+* Dokumentation: Aufnahme des MS4W Pakets zur Installation unter :ref:`installation_windows_de`
 
 
 Version 3.0.6.3
