@@ -12,30 +12,56 @@ Version next
 
 Release Datum: TT.MM.JJJJ
 
-**Übersetzen**
+**Allgemein**
 
+* Ändern des Mapbender Logos und des Namens: Mapbender3 wurde der Einfachheit halber in Mapbender umbenannt und wir haben sowohl die Texte in der Dokumentation als auch die Logos augetauscht. Unsere URLs hatten wir schon auf http://mapbender.org umgestellt.
+* Mapbender erwartet mindestens PHP > 5.6 zum laufenden Betrieb. PHP 7 wird empfohlen.
 
 **Neue Funktionen**
 
+* Neues Element: :ref:`coordinate_utility_de`
 * Änderung des Logos von Mapbender3 zu Mapbender und Änderung des Namens von Mapbender3 zu Mapbender.
-* Dynamisches Laden von Legendenbildern im Legenden-Element.
-
+* Dynamisches Laden von Legendenbildern im Legenden-Element (PR #605, PR #606)
 
 **Verbesserungen**
 
 * Fix im Scale-Selector, der sich in einigen Fällen nicht aktualisieren wollte.
+
 * Fix im GetLegendGraphic Request auf geschützten Diensten über den Tunnel.
+* Fix und Verbesserungen im URL-Signen (#590)
+
 * Fix im Aufruf von Mapbender mit POI-Parameter (#642)
-* Fix im Legendenelement bei überlangen Legendenbildern
+
+* Fix im Legendenelement bei überlangen Legendenbildern (#640)
+
+
 * Fix im Instance-Tunnel zum Zugriff auf geschützte Dienste
-* Fix und Verbesserungen im URL-Signen
+
+
 * Fix im Druck von PNG8 Karten, wenn das Image Format "image/png; mode=8bit" ist.
-* Fix im Druck bei Schriftgrößen
-* Fix im Druck, wenn PHP-Notices angeschaltet sind und die yStartPosition fehlte.
+* Fix im Druck bei Schriftgrößen (speziell unter Windows bei PHP 7.1)
+* Fix im Druck, wenn PHP-Notices angeschaltet sind und die yStartPosition fehlte (#555)
+
 * Fix im Backend beim Hinzufügen von Elementen
+
 * Verbesserungen im WMS Backend
+
 * Verbesserung im FOM: Wrong Type Definition in ACL Provider Constructor #641
 * Verbesserung im FOM beim SSPI
+
+
+* Verbesserung in den Übersetzungen. Danke an den Code-Sprint der FOSS4G!
+
+
+**Code-Verbesserungen**
+
+* Update auf Symfony 2.8 (siehe PHP Requirements)
+* Doctrine Param Coverter Definitionen (PR #645)
+* WMSLayerSource: getAuthority (PR #542)
+* DimensionsHandler (#610). Dieser kann in den kommenden Versionen veröffentlicht werden. 
+* Adding elements in backend can fail with "Warning: usort(): Array was modified ..." (#586)
+
+
 
 **Dokumentation**
 
