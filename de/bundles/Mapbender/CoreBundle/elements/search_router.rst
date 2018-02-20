@@ -171,6 +171,10 @@ Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfigurati
                 fillColor: '#ff00ff'
                 fillOpacity: 0.8
                 pointRadius: 10
+            temporary:
+                strokeColor: '#0000ff'
+                fillColor: '#0000ff'
+                fillOpacity: 1
 
 Die Definition zeichnet nicht die Füllung von Polygonen, sondern nur die Umrandung, da die Füllung transparent gesetzt wird (fillOpacity: 0). Selektierte Objekte werden dagegen mit einer Opazität gezeichnet.
 
@@ -180,8 +184,9 @@ Die gleiche Logik wird beim select-Stil verfolgt. Jede Angabe, die Sie machen ü
 
 Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
 
+Über den temporary-Stil kann die MouseOver-Farbe gesetzt werden.
 
-Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selektierte Objekt in rot dar:
+Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selektierte Objekt in rot dar. Beim MouseOver erscheint das Objekt in blau:
 
 .. code-block:: yaml
 
@@ -195,6 +200,10 @@ Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selekt
                 strokeColor: '#ff0000'
                 fillColor: '#ff0000'
                 fillOpacity: 0.4
+            temporary:
+                strokeColor: '#0000ff'
+                fillColor: '#0000ff'
+                fillOpacity: 1
 
 
 Beispiele

@@ -131,6 +131,7 @@ For mapbender.yml:
 			                fillColor: '#ff0000'
 			                fillOpacity: 0.4
 
+
 You need a button to show this element. See :doc:`button` for inherited configuration options.
 
 Compare modes
@@ -164,6 +165,10 @@ provide a styleMap configuration for the results like this:
                 fillOpacity: 0
             select:
                 fillOpacity: 0.4
+            temporary:
+                strokeColor: '#0000ff'
+                fillColor: '#0000ff'
+                fillOpacity: 1
 
 This will not draw polygon interiors, but only their outlines in default mode. The selected feature will
 have it's interior drawn with 60% transparency.
@@ -176,9 +181,11 @@ A similar logic applies to the select style – any property you provide will ov
 property of the *final* default style. Therefore the example above will *not* yield a blue look for the
 selected feature!
 
+The temporary-style is used while sketching a feature.
+
 Keep in mind to quote hex color codes as the pound sign will otherwise be treated as a inline comment!
 
-A more elaborate example with green (hollow) features and the selected one in red:
+A more elaborate example with green (hollow) features and the selected one in red. The Object is displayed in blue while sketching a feature in the result list:
 
 .. code-block:: yaml
 
@@ -192,6 +199,10 @@ A more elaborate example with green (hollow) features and the selected one in re
                 strokeColor: '#ff0000'
                 fillColor: '#ff0000'
                 fillOpacity: 0.4
+            temporary:
+                strokeColor: '#0000ff'
+                fillColor: '#0000ff'
+                fillOpacity: 1
 
 
 Class, Widget & Style
@@ -289,14 +300,14 @@ Example with autocomplete and individual result style:
 		    minScale: null
 		    maxScale: null
 	    styleMap:
-		default:
-		    strokeColor: '#00ff00'
-		    strokeOpacity: 1
-		    fillOpacity: 0
-		select:
-		    strokeColor: '#ff0000'
-		    fillColor: '#ff0000'
-		    fillOpacity: 0.8
+		      default:
+		          strokeColor: '#00ff00'
+		          strokeOpacity: 1
+		          fillOpacity: 0
+		      select:
+		          strokeColor: '#ff0000'
+		          fillColor: '#ff0000'
+		          fillOpacity: 0.8
 
 Example with selectbox:
 
