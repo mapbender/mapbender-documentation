@@ -51,7 +51,7 @@ Other versions of this documentation
 * https://docs.mapbender.org/304
 
 Download Mapbender
-======================
+==================
 
 * https://mapbender.org/download
 
