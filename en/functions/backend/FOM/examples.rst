@@ -1,5 +1,7 @@
+.. _fom_examples:
+
 Examples
-=========
+========
 
 Reset User with ID 1
 --------------------
@@ -10,7 +12,7 @@ The command ``app/console fom:user:resetroot`` resets the user with ID 1. This u
 
           $ app/console fom:user:resetroot
 
-                Welcome to the Mapbender root account management command  
+                Welcome to the Mapbender root account management command
 
                 Enter the username to use for the root account.
                 Username [root]: root
@@ -37,7 +39,7 @@ Create new applications
 
 A user who should create new applications has to have the Create right in the ACL "Applications". Once he has this right he can also import and export applications.
 
-To create Layerset Instances, he has to have the right Edit in ACL "Service Source". 
+To create Layerset Instances, he has to have the right Edit in ACL "Service Source".
 
 
 Copy applications

@@ -1,7 +1,9 @@
+.. _roles_groups:
+
 Roles and Groups
 ================
 
-Roles are defined by instances of FOM\\ManagerBundle\\Component\\Bundle using 
+Roles are defined by instances of FOM\\ManagerBundle\\Component\\Bundle using
 the getRoles method. The naming of roles follows the standard Symfony role
 naming scheme, where roles have to be prefixed with "ROLE\_".
 

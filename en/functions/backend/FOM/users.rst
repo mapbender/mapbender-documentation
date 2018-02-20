@@ -1,3 +1,4 @@
+
 Users
 =====
 
@@ -74,7 +75,7 @@ A user with administration rights cannot activate or deactivate himself.
 
 A user who is deactivated cannot login into Mapbender anymore until he gets
 activated again.
-           
+
 .. image:: ../../../../en/functions/backend/FOM/user_account_is_disabled.png
 
 Users which have self-registered themselves but have not approved the
@@ -111,16 +112,16 @@ The config.yml allows to adjust the behaviour:
        # Allow to create user log table on the fly if the table doesn't exits.
        # Default: true
        auto_create_log_table: true
-       
+
        # Time between to check login tries
-       login_check_log_time: "-5 minutes" 
-       
+       login_check_log_time: "-5 minutes"
+
        # Login attemps before delay starts
        login_attempts_before_delay: 3
-       
+
        # Login delay after all attemps are failed
        login_delay_after_fail: 2 # Seconds
-   
+
 
 * **auto_create_log_table:** Backwards compatibility parameter (default: true).
 * **login_check_log_time:** Cleaning of the login-failure table (default: -5 minutes)

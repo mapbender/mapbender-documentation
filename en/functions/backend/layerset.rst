@@ -1,4 +1,4 @@
-.. _layerset-de:
+.. _layerset:
 
 Layerset
 ========

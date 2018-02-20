@@ -1,3 +1,5 @@
+.. _development_introduction:
+
 Introduction
 ############
 
@@ -20,7 +22,7 @@ to Mapbender:
 * JavaScript: We use jQuery a lot and especially the jQuery UI widget factory.
   These are essential to understand to write maintainable JavaScript code.
 
-  
+
 Installation
 ************
 
@@ -61,5 +63,3 @@ Topics
    apidocumentation
    requestresponse
    elements
-
-

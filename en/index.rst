@@ -1,3 +1,5 @@
+.. _welcome:
+
 Welcome to the Mapbender documentation
 ######################################
 

@@ -1,3 +1,6 @@
+.. _fom_manager:
+
+
 Using the FOM Manager
 #####################
 
@@ -31,7 +34,7 @@ You're still responsible to make sure the current user only has access to functi
 does not take care of that and in the standard configuration will only enforce that the user is logged in - nothing
 more!
 
-To embed your controllers in the manager sidebar menu, you'r bundle has to be subclassed of the 
+To embed your controllers in the manager sidebar menu, you'r bundle has to be subclassed of the
 FOM\ManagerBundle\Component\ManagerBundle class. The method getManagerControllers is then used to announce all menu
 entries. Each entries has the following properties:
 
@@ -48,4 +51,3 @@ entries. Each entries has the following properties:
     )
 
 For a good example, check the FOM\UserBundle\FOMUserBundle class.
-

@@ -1,3 +1,5 @@
+.. _fom:
+
 FOMUserBundle - Users and Security
 ===================================
 

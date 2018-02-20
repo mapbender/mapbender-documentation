@@ -1,4 +1,4 @@
-.. _coordinate_utility_en:
+.. _coordinate_utility:
 
 Coordinate Utility
 ******************
@@ -36,7 +36,7 @@ The customization allows - besides the standard-configuration - some additional 
 * **Title:** Title of the element.
 * **Target:** Map on which this tool works (Main Map)
 * **Type:** Dialog or Element.
-  
+
   * **Dialog:** The tool is placed in the Content of the application and is called with a button. The tool is presented as a dialog.
   * **Element:** The tool is placed in the Sidebar of the application. You have to declare it as element.
 

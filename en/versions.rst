@@ -1,3 +1,5 @@
+.. _versions:
+
 Version history
 ===============
 
@@ -43,7 +45,7 @@ Release date: 20.07.2017
 * Saving of WMC in WMC editor dialog (#577)
 * ScaleHint for sub-layers of 1:1 fixed (#565)
 * Widen the Title-Columns on Layerset-Instances (#559)
-* Command to update the image-path in existing map-elements (#530) 
+* Command to update the image-path in existing map-elements (#530)
 * Translation of Print-button in FeatureInfo dialog (#552)
 * Change of default-value of "immediate" in measure-tools (#538)
 * SRS: Update of definitions (#550, #562) and update of YAML standard applications (#561)
@@ -120,12 +122,12 @@ Release date: 05.05.2017
 
 - Adjustments and Simplification of the general style of the FullScreenTemplate
 - Introduction of the check of the CSS statements in a application
-  
+
 - Fix in the delay when switching layers.
 - Fix in GetMap request if the layer order was changed manually in the TOC.
 - Fix for WMS support 1.3.0
 - Fix for secured WMS services on GetMap, GetFeatureInfo, Print, Export and Legend.
-- Fix for secured WMS services where the username or password included a hash-character.  
+- Fix for secured WMS services where the username or password included a hash-character.
 - Fixes for the WMS parameter Exception Format for the GetMap and GetFeatureInfo Request (Github-Issue 400)
 - Fixes of Layer-Styles for GetMap und GetFeatureInfo request
 - Default Tile Size for the Map set to 512 (was 256)
@@ -169,7 +171,7 @@ Release date: 05.05.2017
 
 - Copying of applications through users who are not root (ACL Application: owner, Users: owner, ACLs: owner, Element: owner, Groups: owner, Service Source: owner, specific applications: owner)
 
-  
+
 **FOM and Security:**
 
 - `Show the users  <functions/backend/FOM/users.html>`_ who have a access on an element in an application.
@@ -257,17 +259,17 @@ DBAL-Parameter:
 
 - default_connection: If more database entries are defined, this parameter
 - persistent: Persistent connections to the database for performance reasons (Oracle)
-  
+
 .. code-block:: yaml
 
    doctrine:
      dbal:
-       default_connection: default    
+       default_connection: default
          connections:
            default:
              ...
              persistent: true
-                
+
 
 **mapbender-starter/application/app/config/applications/**
 
@@ -289,7 +291,7 @@ Milestone 3.0.5.3
 
 Release date: 04.02.2016
 
-   
+
 **Bugfixes:**
 
 Notable Modifications:
@@ -299,12 +301,12 @@ Notable Modifications:
 - Redlining: The contents of the Redlining element is visible and Redlining can now be used as a Dialog or an Element in the Sidepane. See also the `documentation of the Redlining Element <functions/editing/redlining.html>`_. The scroll bar for the Geometry-Types in the configuration dialog is now displayed correctly.
 
 Users and security:
-  
+
 - Users can be switched active or inactive by an Administrator, who has at least the ACL-user-right "operator". This can be used for users, who have self-registered but not yet activated their account. See the `documentation of user-management <functions/backend/FOM/users.html>`_ for details.
 - The text, translations and styles for the Self-Register process and the Password Reset are improved. Also the `Documentation <functions/backend/FOM/users.html>`_ is adjusted.
 
 Print and export image:
-  
+
 - The `Print module <functions/export/printclient.html>`_ can now also be used in the Sidepane.
 - Print legend: The size of the legend in the print-out was scaled down to improve the quality.
 - Print-templates: The default print-templates have changed. The padding of the dynamic texts to their border and their justification were improved.
@@ -313,12 +315,12 @@ Print and export image:
 - Export Image: Transparency of tiled and non-tiled services is supported in Export Image.
 
 Copy and import:
-  
+
 - Copying an application under SQLite and MySQL: There was en error that applications could not be copied if the database was SQLite or MySQL.
 - Errors at the import of application as JSON on MySQL (elements lose their target) was fixed.
 
 Individual Elements:
-  
+
 - **WMC** and thematic layertree: If a WMC is loaded and Keep Sources is set to "no", the thematic layers are now also removed from the layertree.
 - **WMS-URL parameter** and legend: If a service was loaded with the wms_url parameter, the complete legend was shown. This behaviour is fixed.
 
@@ -334,7 +336,7 @@ Individual Elements:
 - **GPS**: Improvements in the GPS handling.
 
 General changes:
-  
+
 - Changing the Base Data, the Layout, the Layerset, the CSS and the Security of an application does not change the tab anymore and doesn't jump back to the base data tab.
 - General improvements of the `Digitizer <https://github.com/mapbender/mapbender-digitizer>`_ version 1.0. Version 1.1 is compatible with Mapbender 3.0.5.3.
 - Github files: Small clean up actions in the Github repository to improve the automatic build-processes.
@@ -348,7 +350,7 @@ General changes:
 **Change of the Mapbender domains:**
 
 - We have switched the URL www.mapbender.org to the Mapbender3 page. In future, the Mapbender3 page is also available via www.mapbender.org and www.mapbender3.org. Mapbender2 is now available at www.mapbender2.org
- 
+
   - http://www.mapbender.org: Mapbender3,
   - http://www.mapbender3.org: Mapbender3,
   - http://www.mapbender2.org: Mapbender2.
@@ -358,7 +360,7 @@ General changes:
 - The Sketch Tool doesn't work correctly and will be built into the `Redlining Tool <functions/editing/redlining.html>`_.
 - Share map doesn't work for Facebook, Twitter und Google+.
 
-  
+
 
 Milestone 3.0.5.2
 -----------------
@@ -395,7 +397,7 @@ Release Datum: 27.10.2015
 * The following changes are optional parameters for the behaviour of the login (see also `the chapter in the FOM bundle for details <functions/backend/FOM/users.html>`_):
 
     .. code-block:: yaml
-                    
+
                     fom_user:
 
                       # Allow to create user log table on the fly if the table doesn't exits.
@@ -403,7 +405,7 @@ Release Datum: 27.10.2015
                       auto_create_log_table: true
 
                       # Time between to check login tries
-                      login_check_log_time: "-5 minutes" 
+                      login_check_log_time: "-5 minutes"
 
                       # Login attemps before delay starts
                       login_attempts_before_delay: 3
@@ -473,7 +475,7 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
 * **Print with legend:** The print element supports the print-out of the legend on a seperate page. This can be set with a checkbox.
 
 * **Configurable layertree:** The layertree supports the usage of more than one layerset. You have to adjust the map element to define which layersets should be shown and the layertree element itself. The usage is documented `on the Layertree page <functions/basic/layertree.html>`_.
-  
+
 * **Improved FeatureInfo dialog:** You can set a) the width and height of the FeatureInfo dialog, b) if the dialog should show the original format of the WMS and c) if it should only open if a valid entry is found (otherwise a messagebox is displayed). See the documentation of the `FeatureInfo Dialog <functions/basic/feature_info.html>`_.
 
 * **Mobile template:** A new modern mobile template is provided.
@@ -489,14 +491,14 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
 * **Starting mapbender with URL parameters:** Mapbender3 can be started with URL parameters. See the documentation of `URL parameters <functions/basic/map.html#controlling-by-url>`_.
 
 * New translations for Portuguese and Russian.
-  
+
 * Symfony updated to 2.3.30.
 
 
 **Changes in config.yml:**
 
 * Changes in a dbal connection:
-  
+
   * **logging: false**: This options sets, that *all* SQL statements are not logged. Further information can be found here: http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste/
 
   * **profiling: false**: This option handles the profiling of SQL statements. This option can be switched off in production environments.
@@ -506,13 +508,13 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
   .. code-block:: yaml
 
                   logging:               "%kernel.debug%"
-                  profiling:             "%kernel.debug%" 
+                  profiling:             "%kernel.debug%"
 
 
 **Known Issues**
 
 * After copying an application from Mapbender 3.0.4.x you have to set the layerset in the map/overview element.
- 
+
 
 Milestone 3.0.4.1
 -----------------
@@ -558,7 +560,7 @@ For details have a look at https://github.com/mapbender/mapbender-starter/blob/d
 * added screenshot management to application editing
 * import/export of applications/sources
 * spanish translation
- 
+
 
 Milestone 3.0.3
 ---------------
@@ -581,7 +583,7 @@ For details have a look at: https://github.com/mapbender/mapbender/issues?milest
 * Open application with parameters (f.e. position)
 * ACL for elements
 * Added function for validate WMS GetCapabilities documents
- 
+
 
 Milestone 3.0.2
 ---------------
@@ -593,7 +595,7 @@ For details have a look at https://github.com/mapbender/mapbender/issues?milesto
 * SearchRouter
 * WMC Editor and Loader
 * WMSLoader enhancement to load a WMS from a link
- 
+
 
 Milestone 3.0.1
 ---------------
@@ -607,7 +609,7 @@ For details have a look at https://github.com/mapbender/mapbender/issues?milesto
 * PrintClient Erweiterung Druck EPSG 4326, neue Drucklayouts, Druck A4-A0
 * Catch login failures to avoid  brute force login attempts
 * Bug fixes
- 
+
 
 Milestone 3.0.0.2
 -----------------
@@ -616,7 +618,7 @@ Bugfix-Release Date: 19-07-2013
 
 For details have a look at: https://github.com/mapbender/mapbender/issues?milestone=4
 
- 
+
 
 Milestone 3.0.0.1
 -----------------
@@ -625,7 +627,7 @@ Bugfix-Release Date: 07-06-2013
 
 For details have a look at: https://github.com/mapbender/mapbender/issues?milestone=3
 
- 
+
 
 Milestone 3.0.0.0
 -----------------
@@ -635,7 +637,7 @@ release date: 29-05-2013
 For details have a look at https://github.com/mapbender/mapbender/issues?milestone=1
 
 * Administration Backend for Service, Application, User/Group and security administration
-* Backend-/Frontend Design   
+* Backend-/Frontend Design
 * Security
 * User/Group Administration
 * WMS Administration

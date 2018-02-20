@@ -1,3 +1,5 @@
+.. _faq:
+
 FAQ - Frequently Asked Questions
 ================================
 
@@ -61,7 +63,7 @@ A: To solve the problem, navigate to the php parameter `max-input_vars <http://p
 .. code-block:: ini
 
    ;; 1000 (default) or more
-   max_input_vars = 1000 
+   max_input_vars = 1000
 
 
 
@@ -77,7 +79,7 @@ A: A possible reason for this is that php does not allow a workflow with big fil
    # mod_fcgi.conf (Windows)
    # set value to 2 MB
    MaxRequestLen = 2000000
-   
+
    # fcgid.conf (Linux)
    # set value to 2 MB
    MaxRequestLen 2000000
@@ -128,7 +130,7 @@ Deprecation Notices at composer or bootstrap Script
 Q: I get a deprecation warning when I call bootstrap or composer update:
 
 .. code-block:: php
-                
+
                 Deprecation Notice: The callback ComposerBootstrap::checkConfiguration declared at
                 /srv//mapbender-starter/application/src/ComposerBootstrap.php accepts a Composer\Script\CommandEvent
                 but post-update-cmd events use a Composer\Script\Event instance.

@@ -1,3 +1,5 @@
+.. _printclient:
+
 ﻿PrintClient
 ***********
 
@@ -42,15 +44,15 @@ You need a button to show this element or you can use it in the sidepane. See :d
 * **templates**: template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
 * **label** - define a template label for the select-box
 * **optional_fields** - define optional fields:
-  
+
   * **title**: Name of the optional field, the default value is null (no optional fields are defined).
   * **label**: Label of the optional field.
   * **options**: { required: true } : Type of the optional field. Has to be true or false.
-  
+
 * **replace_pattern** - You can modify the map-request for printing. You can add additional parameters like map_resolution (for MapServer).
 
 
-  
+
 YAML-Definition:
 ----------------
 
@@ -71,8 +73,8 @@ YAML-Definition:
     file_prefix: mapbender         # define the file prefix for the PDF that is generated (file_prefix_date.pdf will be created)
     optional_fields:                # define optional fields (example title-field)
         title:                      # name of the optional fields, default is null (no optional fields are defined)
-            label: Title            # label of the optional field    
-            options:                # 
+            label: Title            # label of the optional field
+            options:                #
                 required: false     # true or false
         comment1:
             label: Comment 1
@@ -89,7 +91,7 @@ YAML-Definition:
             -
                 pattern: 'stadtplan.xml'        # or you can request a different service which is optimized for printing
                 replacement: { 288: 'stadtplan_4.xml' }
-    
+
 
 
 Class, Widget & Style
@@ -114,9 +116,9 @@ To create an individual print template use an existing print template odg-file o
 .. image:: ../../../figures/print_template_odg.png
      :scale: 80
 
-Define areas for the map, northarrow, scale, date and optional fields. 
+Define areas for the map, northarrow, scale, date and optional fields.
 
-The following objects are available from Mapbender: 
+The following objects are available from Mapbender:
 
 * map
 * overview
@@ -138,7 +140,7 @@ When creating dynamic text each property must have the appropriate name, for exa
 
 Export the template to pdf under the same name as the odg file. Use the name without extension in your print yml-definition.
 
-The print script will read the information (position, size, font size, alignment) from the ODG file and will also use the PDF with the fixed objects to generate the new PDF. 
+The print script will read the information (position, size, font size, alignment) from the ODG file and will also use the PDF with the fixed objects to generate the new PDF.
 
 Dependent of the group you can generate prints with different Logo and Text (f.e. the name of the commune and the individual logo). There are two objects which handle this - dynamic_image and dynamic_text. If these objects exists in your print layout Mapbender and you are member of a group Mapbender will look for an Image with the name of the group (groupname.png) and will be displayed in the print in the object dynamic_image. The height of the object will be used to scale the image and the width will be calculated relative to the height. In the object dynamic_text the group description will be printed.
 
@@ -162,18 +164,18 @@ Adapt templates:
 
     + Right click Arrange --> To the back
 
-* Select all 
+* Select all
 
-  - Press CTRL + A 
+  - Press CTRL + A
 
 * Print selection as PDF
 
   -  Export as PDF
 
   -  Selection instead of All
- 
- 
- 
+
+
+
 Legend on the first page
 ========================
 
@@ -229,6 +231,3 @@ Configuration of the element
 ============================
 
 Go to your application an create a new element **printclient** (Please note: You need a button to show this element or you can use it in the sidepane.)
-
-
-
