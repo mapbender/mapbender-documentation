@@ -54,12 +54,3 @@ HTTP Callbacks
 
 <action>
 --------
-
-
-
-JavaScript API
-==============
-
-
-<function>
-----------

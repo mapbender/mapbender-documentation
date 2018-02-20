@@ -64,16 +64,3 @@ HTTP Callbacks
 ==============
 
 None.
-
-JavaScript API
-==============
-
-reset
------
-
-<>
-
-showHidde
-----------
-
-<>

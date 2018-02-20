@@ -218,17 +218,6 @@ Search Ajax endpoint for given search route. Search is implemented using
 Backbone.js with the Mapbender.Search model implemented in
 mapbender.element.searchRouter.Search.js.
 
-JavaScript API
-==============
-
-open
-----
-If configured as dialog, open.
-
-close
------
-If configured as dialog, close.
-
 
 Example
 ==================

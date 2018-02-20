@@ -45,15 +45,3 @@ HTTP Callbacks
 ==============
 
 None.
-
-JavaScript API
-==============
-
-activate
---------
-
-Activates the widget which then waits for mouse click on the map and starts to measure.
-
-deactivate
-----------
-Deactivates the widget.

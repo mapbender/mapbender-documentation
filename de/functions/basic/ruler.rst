@@ -45,15 +45,3 @@ HTTP Callbacks
 ==============
 
 Keine.
-
-JavaScript API
-==============
-
-activate
---------
-
-Aktiviert das Modul, welches auf Mausklicks in der Karte wartet und dann die Messung startet.
-
-deactivate
-----------
-Deaktiviert das Modul.

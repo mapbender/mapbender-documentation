@@ -43,8 +43,3 @@ HTTP Callbacks
 ==============
 
 None.
-
-JavaScript API
-==============
-
-None.

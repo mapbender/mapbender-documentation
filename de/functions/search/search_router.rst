@@ -452,17 +452,3 @@ Automatisch vervollständigter Ajax Endpunkt für die vorgegebene Suchroute. Die
 -----------------
 
 Automatisch vervollständigter Ajax Endpunkt für die vorgegebene Suchroute. Die Suche  wird unter Verwendung von Backbone.js eingesetzt. Das Such-Modul ist implementiert in mapbender.element.searchRouter.Search.js.
-
-
-JavaScript API
-==============
-
-open
-----
-Wenn das Modul als Dialog konfiguriert wird: open.
-
-close
------
-Wenn das Modul als Dialog konfiguriert wird: close.
-
-

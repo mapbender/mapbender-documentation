@@ -58,12 +58,3 @@ HTTP Callbacks
 --------------------------------
 
 Öffnet einen Dialog mit einem Editor, in dem Konfigurationen gespeichert und bearbeitet werden können.
-
-
-JavaScript API
-==============
-
-
-<function>
-----------
-

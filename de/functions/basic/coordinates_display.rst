@@ -85,16 +85,3 @@ HTTP Callbacks
 ==============
 
 Keine.
-
-JavaScript API
-==============
-
-reset
------
-
-<>
-
-showHidde
-----------
-
-<>

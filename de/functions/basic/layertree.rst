@@ -391,14 +391,3 @@ HTTP Callbacks
 ==============
 
 Keine.
-
-JavaScript API
-==============
-
-open
-----------
-
-Öffnet den Layerbaum (layertree)
-
-reload
-----------

@@ -349,8 +349,3 @@ HTTP Callbacks
 ==============
 
 - /search: Proxy-Element, welches die konfigurierbare URL abfragt. Im Entwicklungsmodus wird die endgültige Abfrage-URL zum einfachen Debugging als ein x-mapbender-simplesearch-url Header zurückgegeben.
-
-JavaScript API
-==============
-
-Keine.

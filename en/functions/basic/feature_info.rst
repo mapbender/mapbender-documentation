@@ -121,15 +121,3 @@ HTTP Callbacks
 ==============
 
 None.
-
-JavaScript API
-==============
-
-activate
---------
-
-Activates the widget which then waits for mouse click on the map and starts the feature info queries.
-
-deactivate
-----------
-Deactivates the widget.

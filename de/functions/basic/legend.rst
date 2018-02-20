@@ -121,11 +121,3 @@ HTTP Callbacks
 ==============
 
 Keine.
-
-JavaScript API
-==============
-
-open
-----------
-
-Zeigt die Legend.

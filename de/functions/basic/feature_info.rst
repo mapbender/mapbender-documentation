@@ -121,15 +121,3 @@ HTTP Callbacks
 ==============
 
 Keine.
-
-JavaScript API
-==============
-
-activate
---------
-
-Aktiviert das Modul, welches dann auf einen Mausklick wartet, um die Infoabfrage zu öffnen.
-
-deactivate
-----------
-Deaktiviert das Modul.
