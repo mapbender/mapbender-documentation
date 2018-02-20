@@ -18,7 +18,7 @@ Configuration
 
 The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at `database <../../customization/database.html>`_.
 
-**Note**: For the use of the below-described search the digitizer tables can be used. The SQL to create the tables can be found at :doc:`digitizer`.
+**Note**: For the use of the below-described search the digitizer tables can be used. The SQL to create the tables can be found at :ref:`digitizer`.
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Target:** Id of Map element to query.
@@ -131,7 +131,7 @@ For mapbender.yml:
                       fillColor: '#ff0000'
                       fillOpacity: 0.4
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
+You need a button to show this element. See :ref:`button` for inherited configuration options.
 
 Compare modes
 -------------

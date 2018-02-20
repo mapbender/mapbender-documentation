@@ -30,7 +30,7 @@ Configuration
 .. image:: ../../../figures/print_client_configuration.png
      :scale: 80
 
-You need a button to show this element or you can use it in the sidepane. See :doc:`button` for inherited configuration options.
+You need a button to show this element or you can use it in the sidepane. See :ref:`button` for inherited configuration options.
 
 * **title**: Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. The title will be displayed besides the button if "Show label" is activated.
 * **target**: Id of Map element to query

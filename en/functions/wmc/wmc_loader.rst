@@ -55,7 +55,7 @@ YAML-Definition:
    keepExtent: false                    # keeps the actual extent, default is false (will apply the 
                                         # extent of the configuration)
 
-You can configure this module as a selectbox or dialog. When you use dialog then you need a button to show this element. See :ref:`button_en` for inherited configuration options.
+You can configure this module as a selectbox or dialog. When you use dialog then you need a button to show this element. See :ref:`button` for inherited configuration options.
 
 Class, Widget & Style
 =====================

@@ -143,7 +143,7 @@ This glossary is under construction.
        Sphinx is a tool you can use to generate documentations f.e. html or pdf. 
 
        .. seealso::
-           :ref:`installation_sphinx`
+           :ref:`documentation_howto`
 
     Template
         When we talk about templates we talk about different designs for our applications. 
@@ -168,3 +168,4 @@ This glossary is under construction.
 
     
 
+c

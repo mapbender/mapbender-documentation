@@ -24,7 +24,7 @@ YAML-Definition:
 
    target: ~                        # Id of Map element to query (e.g. map)
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
+You need a button to show this element. See :ref:`button` for inherited configuration options.
 
 Class, Widget & Style
 =====================
