@@ -111,6 +111,7 @@ File location
 
 Create your individual templates
 ================================
+
 To create an individual print template use an existing print template odg-file or create a new LibreOffice Draw file. Your template can have fixed objects like your logo, copyright or print information. In addition you have to create a layer for the dynamic elements like map, overview, northarrow, scale, date and optional fields. The dynamic layer is an additional non printable layer in your LibreOffice Draw file. Add this layer with **Menu -> Add -> Layer -> define a name for the layer and choose the option not printable**.
 
 .. image:: ../../../figures/print_template_odg.png
@@ -192,6 +193,7 @@ If the legend should still be created on an additional page, you can put a logo 
 
 .. image:: ../../../figures/print_client_example_legendpage_image.png
     :scale: 80
+
 You can see the legendpage image in the right corner of the second page.
 
 
@@ -224,6 +226,7 @@ The print with a group named "Group 1" could look like this:
 
 .. image:: ../../../figures/print_client_example_groups.png
      :scale: 80
+
 To use this feature, it is required, that you’ve created groups before. How to create groups and users is described in the Mapbender documentation in the `Mapbender Quickstart <../../quickstart.html>`_.
 
 

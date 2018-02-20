@@ -155,7 +155,7 @@ Verwenden Sie mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullsc
 
 
 Eigene CSS-Datei erzeugen (Anwendungen)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Erzeugen Sie eine leere CSS-Datei und geben Sie in dieser nur die CSS-Definitionen für Ihre Anwendungs-Vorlage an.
 Ab der Mapbender Version 3.0.3.0 muss lediglich das CSS definiert werden, das vom Standard der Elemente abweicht.
@@ -385,13 +385,13 @@ Jetzt kann die Vorlage in der mapbender.yml, in der die Anwendung konfiguriert w
 
 
 2. Einbindung in neue Anwendungen
-******************************
+*********************************
 
 Wenn Sie eine neue Anwendung mit der Mapbender-Administration erzeugen, können Sie eine Vorlage (Template) auswählen.
 
 
 3. Einbindung in bestehende Anwendungen
-************************************
+***************************************
 
 Für bereits existierende Anwendungen kann das Template über die Mapbender Datenbank in der Tabelle *mb_core_application* in der Spalte *template* angepasst werden.
 Für das *WorkshopDemoBundle* wird hier statt des Eintrags *Mapbender\CoreBundle\Template\Fullscreen* der Eintrag *Workshop\DemoBundle\WorkshopDemoBundle* angegeben.

@@ -16,7 +16,7 @@ Mapbender also provides an API Documentation at:
 
 http://api.mapbender.org
 
-This API Documentation is generated from the Mapbender code. You find information about how to write the Mapbender API documentation at :doc:`API documentation <apidocumentation>`.
+This API Documentation is generated from the Mapbender code. You find information about how to write the Mapbender API documentation at :ref:`API documentation <apidocumentation>`.
 
 This HowTo concentrates on the build of the documentation at http://doc.mapbender.org.
 

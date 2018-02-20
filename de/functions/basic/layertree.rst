@@ -358,7 +358,7 @@ YAML-Definition:
    .. figure:: ../../../figures/layertree/layertree_configuration_pre305.png
         :scale: 80
 
-Optional kann ein Button für dieses Element verwendet werden, um es als Dialogfeld einzubinden. Siehe unter :doc:`button` für die Konfiguration. 
+Optional kann ein Button für dieses Element verwendet werden, um es als Dialogfeld einzubinden. Siehe unter :ref:`button_de` für die Konfiguration. 
 Der Layerbaum kann auch als Element definiert werden. Dann wird der Layerbaum in einem frame wie der Sidebar angezeigt.
 
 ..

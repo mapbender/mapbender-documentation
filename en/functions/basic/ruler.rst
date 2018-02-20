@@ -21,7 +21,7 @@ Configuration
 * **Immediate:** Select whether the calculated lengths are displayed immediately or only after the click in the map.
 
 YAML-Definition:
-----
+----------------
 
 .. code-block:: yaml
 
@@ -31,7 +31,7 @@ YAML-Definition:
    immediate: 'false' # True: Display the calculated lengths immediately. False: The calculated lengths are displayed only after clicking. Default: False.
 
 
-You need a button to show this element. See :doc:`button` for inherited configuration options.
+You need a button to show this element. See :ref:`button` for inherited configuration options.
 To use both functions (measuring areas and lines) in an application, you need two buttons that are in a group.
 
 Class, Widget & Style

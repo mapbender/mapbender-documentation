@@ -10,7 +10,7 @@ A template is a text file that can generate any text based format like HTML, XML
 
 You can use templates to create a layout. You can create a base layout and the overwrite or append any of your layout blocks with individual templates.
 
-Read more about Templates in Mapbender at :doc:`How to create your own Template? <../templates>`.
+Read more about Templates in Mapbender at :ref:`templates`.
 
 
 Documentation

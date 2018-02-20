@@ -258,7 +258,7 @@ and go to http://localhost:8983/solr.
 Indexing Solr XML
 -----------------
 
-Use the example data in /solr-5.4.1./example/exampledocs/*.xml or your own data to index the example Solr XML files.
+Use the example data in /solr-5.4.1./example/exampledocs/\*.xml or your own data to index the example Solr XML files.
 
 
 For the indexing, you have two options: 

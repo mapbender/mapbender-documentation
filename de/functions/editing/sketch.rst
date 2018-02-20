@@ -29,7 +29,7 @@ YAML-Definition:
    types: 'circle'                  # Liste der unterstützten Zeichenarten 
    defaultType: 'circle'            # Zeichenart der Skizze (s. Parameter 'types')
 
-Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :doc:`button`.
+Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :ref:`button_de`.
 
 Class, Widget & Style
 ============================
