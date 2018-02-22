@@ -11,23 +11,24 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+import sys
+import os
+import shlex
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
 
 # Symfony2 Extension Start
 #sys.path.append(os.path.abspath('_exts'))
-# adding PhpLexer
-#from sphinx.highlighting import lexers
-#from pygments.lexers.web import PhpLexer
-
-# ...
-# add the extensions to the list of extensions
 
 # enable highlighting for PHP code not between ``<?php ... ?>`` by default
-#lexers['php'] = PhpLexer(startinline=True)
-#lexers['php-annotations'] = PhpLexer(startinline=True)
+lexers['php'] = PhpLexer(startinline=True, linenos=1)
 
 # use PHP as the primary domain
 primary_domain = 'php'
+highlight_language = 'php'
+
+# ...
+# add the extensions to the list of extensions
 
 # set url for API links
 api_url = 'http://api.symfony.com/master/%s'
@@ -114,7 +115,8 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'mapbender3'
+#html_theme = 'mapbender3'
+html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
