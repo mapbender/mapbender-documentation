@@ -21,7 +21,6 @@ Thumbs.db
 
 # PROJECT #
 ######################
-
 build
 _sources
 .doctrees
@@ -29,3 +28,4 @@ _sources
 .projectile
 _exts
 vendor
+composer.phar

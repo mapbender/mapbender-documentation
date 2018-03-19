@@ -118,7 +118,7 @@ In der Template-Datei wir der Name des Templates, die Regionen die angelegt werd
  }
  ....
 
- static public function listAssets()
+ public static function listAssets()
  {
         $assets = array(
             'css' => array('@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss','@WorkshopDemoBundle/Resources/public/demo_fullscreen.css'),
@@ -283,7 +283,7 @@ Fügen Sie die neue CSS-Datei in der Funktion listAssets als letzten Eintrag ein
 .. code-block:: php
 
 
-    static public function listAssets()
+    public static function listAssets()
     {
         $assets = array(
             'css' => array('@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss','@WorkshopDemoBundle/Resources/public/demo_fullscreen.css'),
