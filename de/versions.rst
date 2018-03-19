@@ -19,9 +19,13 @@ Release Datum: TT.MM.JJJJ
 
 **Neue Funktionen**
 
+* QGIS Server Layerreihenfolgende
 * Neues Element: :ref:`coordinate_utility_de`
-* Änderung des Logos von Mapbender3 zu Mapbender und Änderung des Namens von Mapbender3 zu Mapbender.
+* Mouse-Over im SearchRouter
+* GPS Button im POI
 * Dynamisches Laden von Legendenbildern im Legenden-Element (PR #605, PR #606)
+* Änderung des Logos von Mapbender3 zu Mapbender und Änderung des Namens von Mapbender3 zu Mapbender.
+
 
 **Verbesserungen**
 
@@ -51,6 +55,7 @@ Release Datum: TT.MM.JJJJ
 
 
 * Verbesserung in den Übersetzungen. Danke an den Code-Sprint der FOSS4G!
+* Änderung der Übersetzungen von XLIF nach YAML in den Modulen FOM und OWSProxy
 
 
 **Code-Verbesserungen**
