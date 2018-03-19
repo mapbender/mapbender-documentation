@@ -266,3 +266,11 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+# Override RTD_Theme CSS
+# https://github.com/rtfd/sphinx_rtd_theme/issues/117
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # overrides for wide tables in RTD theme
+    ],
+}
