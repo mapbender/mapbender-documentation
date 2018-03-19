@@ -27,3 +27,4 @@ _sources
 .tox
 .projectile
 _exts
+composer.phar
