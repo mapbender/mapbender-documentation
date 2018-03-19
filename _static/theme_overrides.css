@@ -1,0 +1,18 @@
+@media print {
+    @page {
+        margin: 2cm
+    }
+}
+
+.wy-side-nav-search {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.wy-side-nav-search .icon-home {
+    color: #000;
+}
+
+.wy-side-nav-search > div.version {
+    color: #000;
+}

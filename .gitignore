@@ -10,6 +10,7 @@
 ehthumbs.db
 Thumbs.db
 
+
 # Editor and IDE #
 ######################
 .idea
@@ -20,11 +21,11 @@ Thumbs.db
 
 # PROJECT #
 ######################
-
 build
 _sources
 .doctrees
 .tox
 .projectile
 _exts
+vendor
 composer.phar
