@@ -31,6 +31,7 @@ Nach einem weiteren Klick in die Schaltfläche öffnet sich dann das Detailformu
      :scale: 80
 
 Das Element unterstützt die folgenden Zeitvariablen: 
+
 * einzelner Zeitpunkt
 * Liste von Zeitpunkten
 * Zeitintervall 
@@ -123,6 +124,7 @@ Ebenenbaum
 ----------
 
 .. code-block:: yaml
+
         title: Layertree
         class: Mapbender\CoreBundle\Element\Layertree
         configuration:

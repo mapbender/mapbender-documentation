@@ -31,6 +31,7 @@ After another click on the button, the detailed form opens, in which the usage c
      :scale: 80
 
 The element supports the following time variables:
+
 * single time parameter
 * list of times
 * time interval
@@ -125,6 +126,7 @@ Layertree configuration
 -----------------------
 
 .. code-block:: yaml
+
         title: Layertree
         class: Mapbender\CoreBundle\Element\Layertree
         configuration:
