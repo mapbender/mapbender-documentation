@@ -44,10 +44,17 @@ There are two ways to control the time in the map. On the one hand, each service
 Timeslider in context menue
 ---------------------------
 
+The timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the layertree element.
+
+.. image:: ../../../figures/wmst_layertree.png
+     :scale: 80
+
+Nach der Aktivierung in dem Ebenenbaum erscheint ein Zeitslider in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element über die Checkbox aktviert werden. Danch kann über die Maus die Zeitachse verschoben werden. 
+
+After activation in the layertree, a time slider appears in the context menu. To use the time, the element must be activated via the checkbox. Then you can move the timeslider via the mouse.
 
 .. image:: ../../../figures/wmst_context_menu.png
      :scale: 80
-
 
 
 Timeslider as element
