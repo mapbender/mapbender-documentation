@@ -64,9 +64,9 @@ Timeslider as element
 The layers can be controlled by the dimensions handler element via a central slider. This element can be integrated into the sidepane, toolbar and footer.
 The configuration of the dimension handler is done in three steps:
 
-* ** Creating the element **: First the element needs to be created and saved. Afterwards the element closes (see configuration).
-* ** Creating a dimensionsset **: To define a dimensionsset, you need to create a new set in the element via the "+" button. After entering a title, the item must be saved. Then the element closes.
-* ** Definition the slider **: Then you can select the layer instances for the "group" in the element, that you want to control via the slider. Multiselect is supported, but only instances that have the same extent can be combined with each other.
+* **Creating the element**: First the element needs to be created and saved. Afterwards the element closes (see configuration).
+* **Creating a dimensionsset**: To define a dimensionsset, you need to create a new set in the element via the "+" button. After entering a title, the item must be saved. Then the element closes.
+* **Definition the slider**: Then you can select the layer instances for the "group" in the element, that you want to control via the slider. Multiselect is supported, but only instances that have the same extent can be combined with each other.
 When an instance is selected, all instances that do not conform to this default are no longer selectable. In addition, after the first selection of an instance, a slider appears. There you can restrict the extent for the time display.
 
 .. image:: ../../../figures/wmst_element.png
