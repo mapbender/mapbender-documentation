@@ -1,18 +1,62 @@
+/*
+  Print margin for printing.
+  Quickstart Printout as PDF from browser
+ */
 @media print {
     @page {
         margin: 2cm
     }
 }
 
+/*
+ * Background of logo upper left
+ */
 .wy-side-nav-search {
     background-color: #e0e0e0;
     color: #000;
 }
 
+/*
+ * Text of version underneath the logo
+ */
 .wy-side-nav-search .icon-home {
     color: #000;
 }
 
+/*
+ * Text of version underneath the logo
+ */
 .wy-side-nav-search > div.version {
     color: #000;
+}
+
+/*
+ * Menu Color nice blue ($nav-background-color)
+ */
+/* #008fc3 (.wy-nav-side) */
+/* Text: weiß (.wy-menu-vertical a) */
+
+.wy-nav-side {
+    background: #008fc3;
+}
+
+/*
+ * Tip box: BG-Color of title (as in Quickstart)
+ */
+.rst-content .tip .admonition-title {
+    background: #cad400;
+}
+
+/*
+ * Tip box: BG-Color of content (as in Quickstart)
+ */
+.rst-content .tip {
+    background: #f3f3f3;
+}
+
+/*
+ * Search box is squared not rounded
+ */
+.wy-side-nav-search input[type="text"] {
+	border-radius: 0px;
 }
