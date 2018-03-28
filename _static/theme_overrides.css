@@ -31,13 +31,23 @@
 }
 
 /*
- * Menu Color nice blue ($nav-background-color)
+ * Menu Color of inactive entry in nice blue ($nav-background-color)
  */
-/* #008fc3 (.wy-nav-side) */
-/* Text: weiß (.wy-menu-vertical a) */
-
 .wy-nav-side {
     background: #008fc3;
+}
+
+/*
+ * Text of inactive entry in white according to other whites and font-weight
+   according to other menu-entries
+ */
+.wy-menu-vertical a {
+    color: #fcfcfc;
+    font-weight: bold;
+}
+
+.wy-menu-vertical li.current a {
+    color: darkslategray;
 }
 
 /*
