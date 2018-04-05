@@ -3,7 +3,7 @@
 How to create your own Template?
 ################################
 
-Mapbender comes with application templates you can use. But usually you want to use your own template with your own corporate design. 
+Mapbender comes with application templates you can use. But usually you want to use your own template with your own corporate design.
 This document will show you how to create a Workshop DemoBundle for demonstration purposes.
 
 From version 3.0.4.0 on you can change the style of your application with the css-Editor. You find the documentation about the css-editor at :doc:`How to change the style of your application with the css-editor? <css>`.
@@ -23,7 +23,14 @@ There are some steps you have to follow on the way to your own template.
 
 Notice: We already prepared a Workshop/DemoBundle that you can use as a template. You can download it here:
 
-* Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop 
+* Version 3.0.6 or later: https://github.com/mapbender/mapbender-workshop/tree/3.0.6
+* pre Version 3.0.6: https://github.com/mapbender/mapbender-workshop/tree/master
+
+Please save the Bundle like this:
+* Workshop/DemoBundle under mapbender/src/ (mapbender/application/src/ for a Git-Installation)
+* FOMManagerBundle and FOMUserBundle under mapbender/app/Resources/ (mapbender/application/app/Resources/ for a Git-Installation)
+
+If you plan to use this Demobundle, you can jump to registering your Bundle.
 
 
 Create your own bundle
@@ -35,24 +42,24 @@ This is how the structure can look like:
 
 .. code-block:: bash
 
- src/Workshop/DemoBundle/
-                    WorkshopDemoBundle.php 
-                    /Resources
-                                  /public
-                                         demo_fullscreen.css  
-                                         /imgage
-                                             workshop.ico
-                                             workshop_logo.png
-                                             print.png
-                                             ...
-                                  /views
-					/Template								
-                                             fullscreen_demo.html.twig
-                        /Template
-		                DemoFullscreen.php
+src/Workshop/DemoBundle/
+     WorkshopDemoBundle.php
+     /Resources
+          /public
+          demo_fullscreen.css
+          /image
+               workshop.ico
+               workshop_logo.png
+               print.png
+               ...
+          /views
+               /Template
+                    fullscreen_demo.html.twig
+     /Template
+          DemoFullscreen.php
 
 
-Create a new namespace 
+Create a new namespace
 ***********************
 
 The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template and to your css-file(s).
@@ -89,7 +96,7 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
         public function getElements()
         {
             return array(
-                
+
             );
         }
     }
@@ -218,17 +225,17 @@ Your file could be named like this: src/Workshop/DemoBundle/Resources/public/dem
  .toolPane {
    background-color: rgba(0, 29, 122, 0.8) !important;
  }
- 
+
  .sidePane {
    overflow: visible;
    background-image: url("");
    background-color: #eff7e9;
  }
- 
+
  .sidePane.opened {
      width: 350px;
  }
- 
+
  .logoContainer {
    background-color: white !important;
    background-image: url("") !important;
@@ -236,33 +243,33 @@ Your file could be named like this: src/Workshop/DemoBundle/Resources/public/dem
    -moz-box-shadow: 0px 0px 3px #0028AD !important;
    box-shadow: 0px 0px 3px #0028AD !important;
  }
- 
+
  .sidePaneTabItem {
     background-color: #0028AD;
  }
- 
+
  .layer-opacity-handle {
      background-color: #0028AD;
  }
- 
+
  .mb-element-overview .toggleOverview {
      background-color: #0028AD;
  }
- 
+
  .button, .tabContainerAlt .tab {
      background-color: #0028AD;
- } 
- 
+ }
+
  .iconPrint:before {
    /*content: "\f02f"; }*/
    content:url("image/print.png");
  }
- 
+
  .popup {
    background-color: #eff7e9;
    background-image: url("");
  }
- 
+
  .pan{
    background-color: rgba(0, 93, 83, 0.9);
  }
@@ -286,9 +293,9 @@ If you do further edits at your css file you may delete the generated css file i
 Register your template
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To register your template you have to create a file at 
+To register your template you have to create a file at
 
-* mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php 
+* mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php
 
 .. code-block:: bash
 
@@ -348,7 +355,7 @@ You find the mapbender.yml at:
 * app/config
 
 .. code-block:: yaml
-  
+
   "template:   Workshop\DemoBundle\Template\DemoFullscreen"
 
 
@@ -356,7 +363,7 @@ You find the mapbender.yml at:
 Register your bundle in app/AppKernel.php
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you create a new application through the Mapbender administration you have to choose a template you want to use. 
+When you create a new application through the Mapbender administration you have to choose a template you want to use.
 
 Before your new template will show up you have to register your bundle in the file app/AppKernel.php
 
@@ -379,7 +386,7 @@ Before your new template will show up you have to register your bundle in the fi
             // FoM bundles
             new FOM\CoreBundle\FOMCoreBundle(),
             ...
-    
+
             // Mapbender bundles
             new Mapbender\CoreBundle\MapbenderCoreBundle(),
             ...
@@ -388,7 +395,7 @@ Before your new template will show up you have to register your bundle in the fi
 
         );
 
-Add write access to the web-directory for your webserver user. 
+Add write access to the web-directory for your webserver user.
 
 .. code-block:: bash
 
@@ -432,7 +439,7 @@ You have to edit the following files, if want to change the design
 How to change the logo?
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The logo (default is the Mapbender logo) can be changed in the parameters.yml. Which causes a global change. 
+The logo (default is the Mapbender logo) can be changed in the parameters.yml. Which causes a global change.
 
 .. code-block:: yaml
 
@@ -443,7 +450,7 @@ Or in the twig file:
 
 .. code-block:: html
 
- <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />	
+ <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />
 
 
 How to change the title and favicon?
@@ -493,11 +500,10 @@ If you want to use an image you could place the image in your bundle and refer t
 Try this out
 ~~~~~~~~~~~~
 
-* you can download the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop 
+* you can download the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop
 * change the color of your icons
 * change the size of your icons
 * change the color of the toolbar
 * use an image instead of a font-icon for your button
 * move the position of your overview to the left
 * Have a look at the workshop files to see how it works
-

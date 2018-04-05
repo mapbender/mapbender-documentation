@@ -6,7 +6,7 @@ Wie werden eigene Style-Vorlagen (templates) erzeugt?
 Mapbender beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Anwendungs-Vorlagen und Administrationsoberflächen mit Ihrem eigenen Corporate Design verwendet werden.
 Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im Mapbender CoreBundle (application/mapbender/src/Mapbender/CoreBundle). Um Probleme bei einem Upgrade zu vermeiden, sollten Sie für personalisierte Oberflächen ein eigenes Bundle verwenden.
 
-Ab der Version 3.0.4.0 kann der Stil einer einzelner Anwendung auch über den css-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter :doc:`Wie kann der Stil einer Anwendung mit dem css-Editor angepasst werden? <css>`.
+Ab der Version 3.0.4.0 kann der Stil einer einzelner Anwendung auch über den css-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter `Wie kann der Stil einer Anwendung mit dem css-Editor angepasst werden? <css>`.
 
 
 Wie werden eigene Vorlagen erzeugt?
@@ -32,6 +32,13 @@ Für die Einbindung der eigenen Vorlage wurde ein Workshop/DemoBundle vorbereite
 * ab Version 3.0.6 unter https://github.com/mapbender/mapbender-workshop/tree/3.0.6
 * vor Version 3.0.6 unter https://github.com/mapbender/mapbender-workshop/tree/master
 
+Bitte legen sie das Bundle wie folgt ab:
+* Workshop/DemoBundle unter mapbender/src/ (mapbender/application/src/ bei Git-Installation)
+* FOMManagerBundle und FOMUserBundle unter mapbender/app/Resources/ (mapbender/application/app/Resources/ bei Git-Installation)
+
+Im Prinzip sind die nächsten Erstellungsschritte nicht notwendig, wenn sie das Demobundle verwenden wollen.
+In diesem Fall können sie direkt zur Registrierung springen.
+
 
 Erzeugen eines eigenen Bundles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,21 +49,21 @@ Die Struktur kann wie folgt aussehen:
 
 .. code-block:: bash
 
- src/Workshop/DemoBundle/
-                    WorkshopDemoBundle.php
-                    /Resources
-                                  /public
-                                         demo_fullscreen.css
-                                         /image
-                                             workshop.ico
-                                             workshop_logo.png
-                                             print.png
-                                             ...
-                                  /views
-					/Template
-                                             fullscreen_demo.html.twig
-                        /Template
-		                DemoFullscreen.php
+src/Workshop/DemoBundle/
+     WorkshopDemoBundle.php
+     /Resources
+          /public
+          demo_fullscreen.css
+          /image
+               workshop.ico
+               workshop_logo.png
+               print.png
+               ...
+          /views
+               /Template
+                    fullscreen_demo.html.twig
+     /Template
+          DemoFullscreen.php
 
 
 Die folgenden Dateien müssen für das Design bearbeitet werden:
@@ -96,7 +103,7 @@ Anlegen der eigenen Template-Datei
 
 In unserem Beispiel heißt die Template-Datei FullscreenDemo.php. Sie befindet sich unter src/Workshop/DemoBundle/Template/FullscreenDemo.php.
 
-In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete TWIG-Datei definiert.
+In der Template-Datei wird der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete TWIG-Datei definiert.
 
 
 .. code-block:: bash
