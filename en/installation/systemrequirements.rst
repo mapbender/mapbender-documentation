@@ -24,6 +24,9 @@ For Suse SLES and PHP 7 you also have to install (extra packages in SLES):
 * php7-zlib
 * php7-fileinfo
 
+Support PostgreSQL:
+* PostgreSQL version 10 is not yet supported.
+
 
 PHP 7
 -----
