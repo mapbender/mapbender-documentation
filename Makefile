@@ -1,5 +1,5 @@
 .RECIPEPREFIX = >
-SPHINXOPTS    =
+SPHINXOPTS    = -j4
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = output
