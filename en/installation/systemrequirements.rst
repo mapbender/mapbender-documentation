@@ -25,7 +25,7 @@ For Suse SLES and PHP 7 you also have to install (extra packages in SLES):
 * php7-fileinfo
 
 Support PostgreSQL:
-* PostgreSQL version 10 is not yet supported.
+* PostgreSQL version 10 is not yet supported  (Doctrine/DBAL 2.7 includes PostgreSQL 10 support).
 
 
 PHP 7
