@@ -92,7 +92,7 @@ The following example shows the definition of the parameter "group" which transf
 
 The following example shows the currently available configurations for the Vstypes "user" und "groups":
 
-.. image:: ../../../figures/mapbender3_vendor_specific_parameter_full.png
+.. image:: ../../../figures/mapbender3_vendor_specific_parameter_full.jpg
 
 
 * Type: „single“, „multiple“, „interval“ (multiple values in dimensions)

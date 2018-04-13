@@ -90,7 +90,7 @@ In Mapbender können die Vendor Specific Parameter genutzt werden, z.B. um Benut
 
 Das folgende Beispiel zeigt die aktuell verfügbaren Konfigurationsmöglichkeiten für die Vstypes "user" und "groups":
 
-.. image:: ../../../figures/mapbender3_vendor_specific_parameter_full.png
+.. image:: ../../../figures/mapbender3_vendor_specific_parameter_full.jpg
 
 * Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
 * Name: Parameter Name im WMS Request.
