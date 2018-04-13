@@ -286,35 +286,6 @@ You can configure the WMS for your specific application. Maybe you don't want to
 * Tiled: you can request a WMS in tiles, default is not tiled (may be a good choice if you map is very big an the WMS service does not support the width/height)
 
 
-**Vendor Specific Parameter:**
-
-You can define Vendor Specific Parameters in a layerset instance to add them
-to a WMS request. This principle follows Multi-Dimensions in the WMS
-specification.
-
-You can use Vendor Specific Parameters in Mapbender for example to add the
-user- and group information of the logged-in user to a WMS request. You can
-also add hard coded values.
-
-The following example shows the definition of the parameter "group" which
-transfers the group-value of the logged-in user.
-
-.. image:: ../figures/mapbender3_vendor_specific_parameter.png
-           :scale: 80
-
-
-
-* Type: „single“, „multiple“, „interval“ (multiple values in dimensions)
-* Name: parameter name of the WMS request.
-* Default: the default value.
-* Extent: available values (multiple as a comma seperated list).
-* Vstype: Mapbender specific variables. Group (groups), User (users), Simple.
-* Hidden: If this value is set, requests are send via a server so that the parameters are not directly visible.
-
-Currently, the element can be used to transfer user- and groupinformation,
-e.g. for a user the $id$ and for groups the value $group$.
-
-
 **Layer configuration:**
 
 * title - layer title from Service information

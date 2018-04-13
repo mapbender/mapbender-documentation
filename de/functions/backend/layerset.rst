@@ -82,6 +82,26 @@ Die folgende Tabelle fasst das Verhalten nochmal zusammen:
 Damit kann Mapbender auf die unterschiedlichen Art und Weisen reagieren, wie ein WMS Capabilities Dokument aufgebaut hat, indem einfach die Reihenfolge in dem Layerbaum angepasst wird.
 
 
+**Vendor Specific Parameter:**
+
+In einer Layerset Instanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der multi-dimensionalen Daten in der WMS Spezifikation.
+
+In Mapbender können die Vendor Specific Parameter genutzt werden, z.B. um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
+
+Das folgende Beispiel zeigt die aktuell verfügbaren Konfigurationsmöglichkeiten für die Vstypes "user" und "groups":
+
+.. image:: ../figures/mapbender3_vendor_specific_parameter_full.png
+
+* Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
+* Name: Parameter Name im WMS Request.
+* Default: Standardwert.
+* Extent: Verfügbare Werte (bei Multiple als kommaseparierte Liste).
+* Vstype: Mapbender spezifische Variablen: Gruppe (groups), User (users), Simple.
+* Hidden: Wenn der Wert gesetzt ist, werden die Anfragen serverseitig versendet, so dass die Parameter nicht direkt sichtbar sind.
+
+Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzugeben. Für Benutzer kann $id$ und $username$ verwendet werden, für Gruppen nur $groups$.
+
+
 .. _hinweise-layersets:
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen
