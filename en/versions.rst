@@ -8,14 +8,97 @@ Version history
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
 
-Version next
-------------
+Version 3.0.7.0
+---------------
 
-Release date: TT.MM.JJJJ
+Release date: 23.04.2018
 
-**Enhancement**
+**General**
 
-* More documentation for the `Print module <functions/export/printclient.html>`_ and the new dynamic features for the print-templates.
+* Change of the Mapbender logo and the name: Mapbender3 is due to simplicity reasons renamed into Mapbender and we have change all texts in this documentation and the logos. Our URL were changed to http://mapbender.org some time ago.
+* Mapbender requires at least PHP > 5.6 for running. We recommend PHP 7.
+
+**New functions**
+
+* QGIS Server layer ordering, documented at :ref:`layerset`
+* New element: :ref:`coordinate_utility`
+* Mouse-Over in SearchRouter
+* GPS Button in POI
+* Dynamic Loading of legend-images in the legend-element (PR #605, PR #606)
+
+
+**Changes**
+
+* Die default applications are moved to the directory `(application)/app/config/applications`, each in its own file. This includes
+
+  * the Mapbender Demo Map application
+  * the Mapbender Demo Map basic application
+  * the Mapbender mobile application
+
+Additional YAML-applications can be placed there.
+
+
+**Improvements**
+
+* Fix in the scale-selector, which did not want to refresh itself.
+* Fix in the GetLegendGraphic request for a secured service via the tunnel.
+* Fixes and improvements for the URL-signing (#590)
+* Fix in the call of Mapbender with the POI parameter (#642)
+* Fix in the legend-element for oversized legend-images (#640)
+* Fix in instance-tunnel while requesting secured services.
+* Fix printing PNG8 maps if the image format was specified as "image/png; mode=8bit".
+* Fix printing special font-sizes (especially at Windows with PHP 7.1)
+* Fix in printing if PHP notices were switched on in php.ini and the yStartPosition was missing (#555)
+* Fix on adding new elements in the backend
+* Many improvements in the WMS Backend
+* Improvements in FOM: Wrong Type Definition in ACL Provider Constructor #641
+* Improvements in FOM at SSPI
+* Improvements in the translations. Thanks to the Code-Sprint of the FOSS4G!
+* Changes in translations from XLIF to YAML in the modules FOM and OWSProxy
+
+
+**Code-Improvements**
+
+* Update to Symfony 2.8 (please see the PHP requirements)
+* Introduction of the Doctrine Migrations framework
+* Doctrine Param Coverter definitions (PR #645)
+* WMSLayerSource: getAuthority (PR #542)
+* DimensionsHandler (#610). This will be published in the forthcoming versions.
+* Adding elements in backend can fail with "Warning: usort(): Array was modified ..." (#586)
+
+
+
+**Documentation**
+
+* New design of the documentation. We have changed the theme to the Sphinx RTD theme. The documentation is now easily readable on mobile devices. You can also print out specific pages.
+
+* Restructuring of the documentation. The specific :ref:`functions` are sectioned into:
+  
+  * :ref:`basic`
+  * :ref:`search`
+  * :ref:`export`
+  * :ref:`editing`
+  * :ref:`wmc`
+  * :ref:`backend`
+  * :ref:`fom`
+  * :ref:`misc`
+
+* Imrpoved documentation for the elemetns:
+  
+  * :ref:`basesourceswitcher`
+  * :ref:`button`
+  * :ref:`coordinates_display`
+  * :ref:`html`
+  * :ref:`legend`
+  * :ref:`map`
+  * :ref:`overview`
+  * :ref:`search_router`
+  * :ref:`srs_selector`
+  * :ref:`zoom_bar`
+
+* Improvements for the :ref:`printclient` and the new dynamic features on print-templates.
+
+* Included the MS4W package for installation under :ref:`installation_windows`. Please take a look. And thank Jeff McKenna.
 
 
 
