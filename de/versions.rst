@@ -100,6 +100,17 @@ Weitere YAML-Anwendungen können dort hinterlegt werden.
 * Dokumentation: Aufnahme des MS4W Pakets zur Installation unter :ref:`installation_windows_de`. Vielen Dank an Jeff McKenna.
 
 
+**Anmerkungen zum Update**
+
+Bitte führen sie ein **app/console doctrine:schema:update** durch, wenn Sie auf diese Version aktualisieren. Die QGIS-Layerreihenfolge benötigt eine Änderung in der Mapbender-Datenbank. Auch die 255 Zeichen für WMS-Dienste erforderten eine Änderung der Datenbank.
+
+.. code-block:: sql
+
+                $ app/console doctrine:schema:update
+
+
+
+
 Version 3.0.6.3
 ---------------
 

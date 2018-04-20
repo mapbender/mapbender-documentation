@@ -101,6 +101,16 @@ Additional YAML-applications can be placed there.
 * Included the MS4W package for installation under :ref:`installation_windows`. Please take a look. And thank Jeff McKenna.
 
 
+**Notes for the update**
+
+Please call the command **app/console doctrine:schema:update** for the Update to this version. The QGIS layer ordering needs a change in the mapbender database. Also the 255 characters for WMS services require a change of the database.
+
+.. code-block:: sql
+
+                $ app/console doctrine:schema:update
+
+
+  
 
 Version 3.0.6.3
 ---------------
