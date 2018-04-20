@@ -7,10 +7,10 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
-Version next
-------------
+Version 3.0.7.0
+---------------
 
-Release Datum: TT.MM.JJJJ
+Release Datum: 23.04.2018
 
 **Allgemein**
 
@@ -19,56 +19,57 @@ Release Datum: TT.MM.JJJJ
 
 **Neue Funktionen**
 
-* QGIS Server Layerreihenfolgende
+* QGIS Server Layerreihenfolgende, dokumentiert unter der Rubrik :ref:`layerset_de`
 * Neues Element: :ref:`coordinate_utility_de`
 * Mouse-Over im SearchRouter
 * GPS Button im POI
 * Dynamisches Laden von Legendenbildern im Legenden-Element (PR #605, PR #606)
-* Änderung des Logos von Mapbender3 zu Mapbender und Änderung des Namens von Mapbender3 zu Mapbender.
+
+
+**Änderungen**
+
+* Die Standard-Anwendungen befinden sich nun im Verzeichnis `(application)/app/config/applications`, jede in ihrer eigenen Datei. Dazu gehören:
+
+  * Die Mapbender Demo Map Anwendung
+  * Die Mapbender Demo Map basic Anwendung
+  * Die Mapbender mobile Anwendung
+
+Weitere YAML-Anwendungen können dort hinterlegt werden.
 
 
 **Verbesserungen**
 
 * Fix im Scale-Selector, der sich in einigen Fällen nicht aktualisieren wollte.
-
 * Fix im GetLegendGraphic Request auf geschützten Diensten über den Tunnel.
 * Fix und Verbesserungen im URL-Signen (#590)
-
 * Fix im Aufruf von Mapbender mit POI-Parameter (#642)
-
 * Fix im Legendenelement bei überlangen Legendenbildern (#640)
-
-
 * Fix im Instance-Tunnel zum Zugriff auf geschützte Dienste
-
-
 * Fix im Druck von PNG8 Karten, wenn das Image Format "image/png; mode=8bit" ist.
-* Fix im Druck bei Schriftgrößen (speziell unter Windows bei PHP 7.1)
+* Fix im Druck bei speziellen Schriftgrößen (insbesondere unter Windows bei PHP 7.1)
 * Fix im Druck, wenn PHP-Notices angeschaltet sind und die yStartPosition fehlte (#555)
-
 * Fix im Backend beim Hinzufügen von Elementen
-
 * Verbesserungen im WMS Backend
-
 * Verbesserung im FOM: Wrong Type Definition in ACL Provider Constructor #641
 * Verbesserung im FOM beim SSPI
-
-
 * Verbesserung in den Übersetzungen. Danke an den Code-Sprint der FOSS4G!
 * Änderung der Übersetzungen von XLIF nach YAML in den Modulen FOM und OWSProxy
 
 
 **Code-Verbesserungen**
 
-* Update auf Symfony 2.8 (siehe PHP Requirements)
+* Update auf Symfony 2.8 (siehe PHP Voraussetzungen)
+* Einbau des Doctrine Migrations Frameworks
 * Doctrine Param Coverter Definitionen (PR #645)
 * WMSLayerSource: getAuthority (PR #542)
 * DimensionsHandler (#610). Dieser kann in den kommenden Versionen veröffentlicht werden. 
-* Adding elements in backend can fail with "Warning: usort(): Array was modified ..." (#586)
+* Das Hinzufügen von Elementen im Backend konnte zu einem Fehler "Warning: usort(): Array was modified ..." führen (#586)
 
 
 
 **Dokumentation**
+
+* Neues Design der Dokumentation. Wir haben diese auf das Sphinx RTD Thema umgestellt, so dass die Dokumentation auch unter mobilen Geräten leichter lesbar ist. Ein Ausdruck der einzelnen Seiten ist möglich.
 
 * Umstrukturierung der Dokumentation: Die einzelnen :ref:`functions_de` sind unterteilt in:
   
@@ -96,7 +97,7 @@ Release Datum: TT.MM.JJJJ
 
 * Dokumentation: Erweiterung zu dem :ref:`printclient` und den neuen dynamischen Features bei den Drucktemplates.
 
-* Dokumentation: Aufnahme des MS4W Pakets zur Installation unter :ref:`installation_windows_de`
+* Dokumentation: Aufnahme des MS4W Pakets zur Installation unter :ref:`installation_windows_de`. Vielen Dank an Jeff McKenna.
 
 
 Version 3.0.6.3
