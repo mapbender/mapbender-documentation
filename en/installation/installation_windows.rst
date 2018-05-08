@@ -8,7 +8,7 @@ We show you two different options to install Mapbender on Windows. The `first on
 We don't offer EXE-installers, yet because it might unpack Mapbender to a specific directory but the adjustments have to be made on PHP and Webserver side (Apache/Nginx).
 
 
-Install via MS3W package
+Install via MS4W package
 ------------------------
 
 Mapbender is part of `MS4W (Mapserver for Windows) <http://www.ms4w.com/>`_ and can be installed via this package including Mapserver, Apache, GDAL, PHP among others. It's more or less a release version of Mapbender configuried for the MS4W Apache/PHP environment.
