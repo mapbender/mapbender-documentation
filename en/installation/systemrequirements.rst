@@ -21,21 +21,25 @@ Mapbender needs the following components in order to run:
 * For development, particular the phantomjs helper, you need also the BZ2 extension. (php-bz2)
 
 For Suse SLES and PHP 7 you also have to install (extra packages in SLES):
+
 * php7-zlib
 * php7-fileinfo
 
 Support PostgreSQL:
+
 * PostgreSQL version 10 is not yet supported  (Doctrine/DBAL 2.7 includes PostgreSQL 10 support).
 
 
 PHP 7
 -----
 
-Mapbender supports also PHP 7. You'll need the above listed libraries for PHP 7 and the following additional ones:
+Mapbender supports also PHP 7 up to version 7.1. You'll need the above listed libraries for PHP 7 and the following additional ones:
 
 * PHP Zip (php-zip)
 * PHP Bz2 (php-bz2)
 * PHP XML (php-xml)
+
+PHP 7.2 is not yet supported. 
 
 
 Databases
