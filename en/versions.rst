@@ -11,7 +11,7 @@ You find the milestones at: https://github.com/mapbender/mapbender/milestones
 Version 3.0.7.0
 ---------------
 
-Release date: 23.04.2018
+Release date: DD.MM.YYYY
 
 **General**
 
@@ -40,6 +40,7 @@ Additional YAML-applications can be placed there.
 
 **Improvements**
 
+* Fix for creating an application and adding the screenshot.
 * Fix in the scale-selector, which did not want to refresh itself.
 * Fix in the GetLegendGraphic request for a secured service via the tunnel.
 * Fixes and improvements for the URL-signing (#590)
