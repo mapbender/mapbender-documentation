@@ -40,14 +40,22 @@ YAML-Definition:
    useDeclarative: false                # erlaubt einen Dienst über einen Link zu laden (zum Beispiel über die Informationsabfrage oder Suche) 
                                         # und definiert die Layer zu aktivieren, Standard ist false
 
-Für das Element wird ein Button verwendet. Siehe unter :ref:`button` für die Konfiguration.
+Für das Element wird ein Button verwendet. Siehe unter :ref:`button_de` für die Konfiguration.
 
 Hinzufügen eines WMS über einen definierten Link
 ================================================
 
 Mapbender kann ein WMS über einen definierten Link hinzugefügt werden, z.B. zum Beispiel über die Informationsabfrage oder über Suchergebnisse.
 
-Stellen Sie **useDeclarative** in der mapbender.yml auf true oder stellen Sie in diesem Element auf **useDeclarative**
+Aktivieren Sie in dem WMS Loader die Option **use Declarative** (setzen Sie in einer YAML-Anwendung die Option ``useDeclarative`` auf true.
+
+Falls Sie diese Funktion in einem FeatureInfo nutzen (beispielsweise in einem WMS, den Sie selbst unter Ihrer Kontrolle haben), müssen Sie folgende Eigenschaften im :ref:`feature_info_de` Element deaktivieren:
+
+- ``show Original``: deaktiviert (false). Damit wird die FeatureInfo Antwort statt in einem IFrame direkt im Mapbender gerendert und die Funktion und der unten stehende spezielle Link funktionieren.
+
+.. image:: ../../../figures/wms_loader_feature_info_show_riginal.png
+     :scale: 80
+
 
 Der Link sollte folgendermaßen aussehen:
 
