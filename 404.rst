@@ -1,0 +1,22 @@
+.. _page_not_found:
+
+Page not found / Seite nicht gefunden (HTTP 404)
+################################################
+
+
+**Page not found**
+
+Ooops, the page you were looking for was moved or doesn't exist.
+
+Let's get back to the `Main Page <http://doc.mapbender.org/>`_.
+
+-----
+
+**Seite nicht gefunden**
+
+Hoppla, die Seite, die Sie aufrufen wollten, wurde entweder verschoben oder existiert gar nicht.
+
+Lassen Sie uns zur `Hauptseite <http://doc.mapbender.org/>`_ zurückgehen.
+
+
+     
