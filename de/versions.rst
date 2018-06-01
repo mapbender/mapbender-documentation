@@ -10,7 +10,7 @@ Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbe
 Version 3.0.7.0
 ---------------
 
-Release Datum: 23.04.2018
+Release Datum: DD.MM.YYYY
 
 **Allgemein**
 
@@ -39,6 +39,7 @@ Weitere YAML-Anwendungen können dort hinterlegt werden.
 
 **Verbesserungen**
 
+* Fix im Erstellen von Anwendungen und dem Hinzufügen eines Bildes.
 * Fix im Scale-Selector, der sich in einigen Fällen nicht aktualisieren wollte.
 * Fix im GetLegendGraphic Request auf geschützten Diensten über den Tunnel.
 * Fix und Verbesserungen im URL-Signen (#590)

@@ -47,7 +47,15 @@ How to add a WMS by defining a link
 
 You can add a WMS to Mapbender by defining a link f.e. in your WMS featureinfo or your search results.
 
-Set **useDeclarative** true im mapbender.yml or check declarative in administration.
+Activate the option **use Declarative** in the WMS Loader element (in a YAML application set the option ``useDeclarative`` to true).
+
+If you wan to use this functionality in a FeatureInfo (for example with a WMS where you have control of), deactive the following parameter in the :ref:`feature_info` element.
+
+- ``show Original``: deactiviated (false). Now the FeatureInfo response is rendered directly via Mapbender instead of an IFrame and the functionality with the following links will work.
+
+.. image:: ../../../figures/wms_loader_feature_info_show_riginal.png
+     :scale: 80
+
 
 The link has to look like this:
 
