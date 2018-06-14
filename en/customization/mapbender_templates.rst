@@ -28,50 +28,6 @@ Specials:
   * fullscreen display with sidepane
 
 
-Fullscreen Alternative Template
-*******************************
-
-..
-
- .. image:: ../../figures/mapbender_mobile.png
-     :scale: 50
-
-View a demo of the Mapbender Fullscreen Alternative Template http://demo.mapbender.org
-
-Regions of the Fullscreen Alternative Template
-
-  * Toolbar (button region)
-  * Sidepane (layertree, legend, search,...)
-  * Content (map, navigation toolbar, scalebar,...)
-  * Footer (impressum, scaledisplay, ...)
-
-Specials: 
-
-  * light background style of the template
-  * fullscreen display with sidepane
-
-
-Classic Template
-****************
-
-..
-
- .. image:: ../../figures/mapbender_mobile.png
-     :scale: 80
-
-View a demo of the Mapbender Classic Template http://demo.mapbender.org
-
-Regions of the Classic Template
-
-  * Toolbar (button region)
-  * Sidepane (layertree, legend, search,...)
-  * Content (map, navigation toolbar, scalebar,...)
-  * Footer (impressum, scaledisplay, ...)
-
-Specials: 
-
-  * fixed size of the regions
-
 
 Mobile Template
 ***************

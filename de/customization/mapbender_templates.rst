@@ -28,47 +28,6 @@ Specials:
   * Großansicht mit Seitenleiste
 
 
-Fullscreen Alternative Template
-**********************************
-
-..
-  .. image:: ../../figures/mapbender_mobile.png
-     :scale: 50
-  Schauen Sie sich die Demo zum Mapbender Fullscreen Alternative Template an: http://demo.mapbender.org/
-
-Regionen des Fullscreen Templates:
-
-  * Toolbar (Bereich für die Platzierung von Buttons)
-  * Sidepane (Seitenleiste für den Ebenenbaum, Legende, Suche,...)
-  * Content (Karte, Maßstabsleiste,...)
-  * Footer (Fußleiste mit Impressum, Aktivitätsanzeige...)
-
-Specials: 
-
-  * Template mit hellem Hintergrund 
-  * Großansicht mit Seitenleiste
-
-
-Classic Template
-*********************
-
-..
-  .. image:: ../../figures/mapbender_mobile.png
-     :scale: 80
-  Schauen Sie sich die Demo zum Mapbender Classic Template an: http://demo.mapbender.org/
-
-Regionen des Fullscreen Templates:
-
-  * Toolbar (Bereich für die Platzierung von Buttons)
-  * Sidepane (Seitenleiste für den Ebenenbaum, Legende, Suche,...)
-  * Content (Karte, Maßstabsleiste,...)
-  * Footer (Fußleiste mit Impressum, Aktivitätsanzeige...)
-
-Specials: 
-
-  * fester Rahmen und Struktur  
-
-
 Mobile template
 *********************
 
