@@ -8,17 +8,17 @@ Version history
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
 
-Version 3.0.7.0
+Version 3.0.7.2
 ---------------
 
-Release date: DD.MM.YYYY
+Release date: 15.06.2018
 
-**General**
+**General:**
 
 * Change of the Mapbender logo and the name: Mapbender3 is due to simplicity reasons renamed into Mapbender and we have change all texts in this documentation and the logos. Our URL were changed to http://mapbender.org some time ago.
 * Mapbender requires at least PHP > 5.6 for running. We recommend PHP 7.
 
-**New functions**
+**New functions:**
 
 * QGIS Server layer ordering, documented at :ref:`layerset`
 * New element: :ref:`coordinate_utility`
@@ -27,7 +27,7 @@ Release date: DD.MM.YYYY
 * Dynamic Loading of legend-images in the legend-element (PR #605, PR #606)
 
 
-**Changes**
+**Changes:**
 
 * Die default applications are moved to the directory `(application)/app/config/applications`, each in its own file. This includes
 
@@ -38,38 +38,79 @@ Release date: DD.MM.YYYY
 Additional YAML-applications can be placed there.
 
 
-**Improvements**
+**Improvements:**
 
-* Fix for creating an application and adding the screenshot.
-* Fix in the scale-selector, which did not want to refresh itself.
-* Fix in the GetLegendGraphic request for a secured service via the tunnel.
+WMS Loader and WMS Services:
+
+* Improvements in WMS Loader service compatibility, which logic now matches the backend
+* Fix in the GetLegendGraphic request for a secured service via the tunnel
 * Fixes and improvements for the URL-signing (#590)
-* Fix in the call of Mapbender with the POI parameter (#642)
-* Fix in the legend-element for oversized legend-images (#640)
-* Fix in instance-tunnel while requesting secured services.
+* Many improvements in the WMS Backend
+* Fix in instance-tunnel while requesting secured services
+* Fix on accessing WMS services with undefined contact information.
+* Various fixes to displaying and handling min / max scale definition from sublayers vs root layers
+* Fix saving layer order on PostgreSQL
+* Services loaded with WMS Loader and their metadata display. We cannot read the properties, but we don't throw an error anymore.
+
+
+
+Design and CSS:
+  
+* Changed Opacity for zoombar and toolbar to get a unique button color
+* Fix for creating an application and adding the screenshot
+
+
+Print:
+
 * Fix printing PNG8 maps if the image format was specified as "image/png; mode=8bit".
 * Fix printing special font-sizes (especially at Windows with PHP 7.1)
 * Fix in printing if PHP notices were switched on in php.ini and the yStartPosition was missing (#555)
-* Fix on adding new elements in the backend
-* Many improvements in the WMS Backend
+
+
+FOM:
+
 * Improvements in FOM: Wrong Type Definition in ACL Provider Constructor #641
 * Improvements in FOM at SSPI
+
+
+Translations:
+
 * Improvements in the translations. Thanks to the Code-Sprint of the FOSS4G!
 * Changes in translations from XLIF to YAML in the modules FOM and OWSProxy
 
 
-**Code-Improvements**
+Miscellaneous:
+
+* Per default the maximum feature count for GetFeatureInfo is now 1000.
+* Fix in the scale-selector, which did not want to refresh itself
+* Fix in the call of Mapbender with the POI parameter (#642)
+* Fix in the legend-element for oversized legend-images (#640)
+* Fix on adding new elements in the backend
+* Fix foreign key violation error in PostgreSQL when deleting data source (PR#840).
+* Add cookieconsent code for Mapbender
+* Change default prefix for printouts to mapbender
+
+
+**Code-Improvements:**
 
 * Update to Symfony 2.8 (please see the PHP requirements)
 * Introduction of the Doctrine Migrations framework
+* Fix possible URL signing spoof with input URLs missing query parameters.
 * Doctrine Param Coverter definitions (PR #645)
 * WMSLayerSource: getAuthority (PR #542)
-* DimensionsHandler (#610). This will be published in the forthcoming versions.
+* DimensionsHandler (#610). This will be published in the forthcoming versions
 * Adding elements in backend can fail with "Warning: usort(): Array was modified ..." (#586)
+* Element Template and AdminType Fixes (#743)
+* Serialization of MetadataURL (#747)
+* UnitTest and Pre-Conditions (#760)
+* USort und array_multisort with a PHP-bug (#586)
+* Fix strict SCSS warnings when compiling with ruby-sass
+* Fix unbounded growth in "authority" on repeated export / reimport / cloning of applications
+* Bypass (potentially very long) WmsLoader DTD / XSD validation of GetCapabilities document
+* PHP 5.6 compatibility with Migrations
 
 
-
-**Documentation**
+**Documentation:**
 
 * New design of the documentation. We have changed the theme to the Sphinx RTD theme. The documentation is now easily readable on mobile devices. You can also print out specific pages.
 
@@ -84,7 +125,7 @@ Additional YAML-applications can be placed there.
   * :ref:`fom`
   * :ref:`misc`
 
-* Imrpoved documentation for the elemetns:
+* Improved documentation for the elements:
   
   * :ref:`basesourceswitcher`
   * :ref:`button`
@@ -102,13 +143,19 @@ Additional YAML-applications can be placed there.
 * Included the MS4W package for installation under :ref:`installation_windows`. Please take a look. And thank Jeff McKenna.
 
 
-**Notes for the update**
+**Notes for the update:**
 
-Please call the command **app/console doctrine:schema:update** for the Update to this version. The QGIS layer ordering needs a change in the mapbender database. Also the 255 characters for WMS services require a change of the database.
+Please call the command **app/console doctrine:schema:update** for the Update to this version. The QGIS layer ordering needs a change in the Mapbender database. Also the 255 characters for WMS services require a change of the database.
 
 .. code-block:: sql
 
                 $ app/console doctrine:schema:update
+
+
+Version 3.0.7.1 and Version 3.0.7.0
+-----------------------------------
+
+Due to tagging-errors of the code in Github this two Versions were never officially released. It's not a good idea to re-tag the code, so we continued with Version 3.0.7.2.
 
 
   
