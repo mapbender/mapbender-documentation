@@ -227,6 +227,104 @@ Ein Gruppen-abhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie fol
 
 Zur Nutzung dieser Funktion müssen Sie vorher Gruppen erstellen und den Anwendungen die jeweiligen Gruppen zuordnen. Die Funktionsweise der Gruppen- und Benutzerverwaltung finden Sie in der Mapbender Dokumentation im `Mapbender Quickstart <../../quickstart.html>`_.
 
+
+Druck von Information für ein ausgewähltes Objekt
+=================================================
+
+Es können Informationen zu einem Objekt ausgedruckt werden. Ein Objekt kann über die Digitalisierung (Digitizer) oder die Informationsabfrage (FeatureInfo) selektiert werden.
+
+Der feature_type-name und die selektierte object-id wird an den Druck weitergeleitet. Dadurch erhält Mapbender alle Informationen, um zu selektierten Objekt die Sachdaten zu ermitteln und in Feldern im Drucktemplate auszugeben. Im Drucktemplate wurde festgelegt, welche Daten ausgegeben werden sollen.
+
+Im Folgenden wird beschrieben, wie dieses Verhalten konfiguriert werden kann. Die Dokumentation bezieht sich auf die poi Tabelle, die im digitizer-Beispiel verwendet wird.
+
+Sie finden die Konfiguration und ein Beispiel-Drucktemplate im  Workshop/DemoBundle unter https://github.com/mapbender/mapbender-workshop 
+
+Die folgenden Schritte sind müssen durchgeführt werden:
+
+1. Erzeugen Sie ein Drucktemplate, das auf die Objektspalten verweist
+2. Definieren Sie einen featureType und verweisen Sie auf das neue Drucktemplate in Ihrer config.yml
+3. Aufruf des Drucks über die Informationsabfrage
+4. Oder Aufruf des Drucks über die Digitalisierung
+
+
+1. Erzeugen Sie eine Druckvorlage, die auf die Objektspalten verweist
+----------------------------------------------------------------------
+
+Definieren Sie im Drucktemplate ein Textfeld für die Informationen, die Sie für das selektierte Objekt ausdrucken möchten. Der Textfeldname hat immer den Prefix *feature.* gefolgt vom Namen der Spalte.
+
+.. code-block:: yaml
+
+  feature.name for column name of table poi
+
+
+2. Definieren Sie einen featureType und verweisen Sie auf das neue Drucktemplate in der config.yml
+--------------------------------------------------------------------------------------------------
+
+.. code-block:: yaml
+
+ parameters:
+   featureTypes:
+     feature_demo:
+       connection: search_db   # Name der Datenbankverbindung von der config.yml
+       table: public.poi       # Tabellenname, in der sich die Objekte befinden
+       uniqueId: a_gid         # Spaltennname mit der eindeutigen ID
+       geomType: point         # Geometrietyp
+       geomField: geom         # Spaltenname, in der die Geometrie gespeichert ist
+       srid: 4326              # EPSG-Code der Daten
+       print:                  # Drucktemplate für den Druck selektierter Objekte
+         templates:
+        templates:
+          - template: a4_portrait_official_feature_data_demo
+            label: Demo with feature information print (portrait)
+          - template: a4_landscape_official_feature_data_demo
+            label: Demo with feature information print (landscape)
+
+
+3. Aufruf des Drucks über die Informationsabfrage
+-------------------------------------------------
+
+Bemerkung: Die Informationsabfrage (Feature Info) ist die Ausgabe von Informationen von einem OGC WMS Service. Es gibt Informationen zu Objekten an einer Kickposition aus.
+
+Wenn Sie einen WMS konfigurieren, generieren Sie einen Link mit der folgenden Referenz, die den Druck mit Objektinformationen anstößt.
+
+Der folgende Code ist ein Beispiel für ein MapServer FeatureInfo-Template.
+
+.. code-block:: yaml
+
+ <table>
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <tr>
+ <td class="th_quer">Drucken</td>
+ <td><a href="" onclick="parent.$('.mb-element-map').data('mapQuery').olMap.setCenter([[x],[y]]);parent.$('.mb-element-printclient:parent').data('mapbenderMbPrintClient').printDigitizerFeature('feature_demo',[gid]);parent.$('.mb-element-featureinfo:parent').data('mapbenderMbFeatureInfo').deactivate();return false">print feature information</a>
+ </td>
+ </tr>
+ </table>
+
+Die Informationsabfrage (FeatureInfo) öffnet einen Dialog mit dem Link *print feature information*. Wenn Sie auf den Link klicken, öffnet sich ein Druckdialog, der das Drucktemplate für das selektierte Objekt anbietet.
+
+Sie können das gewünschte Gebiet auswählen und ein PDF erzeugen. Das PDF beinhaltet die Informationen für das selektierte Objekt.
+
+
+4. Oder Aufruf des Drucks über die Digitalisierung
+--------------------------------------------------
+
+Sie können diese Funktion auch in die Digitalisierung einbinden. Im Digitalisierungsdialog wird dann ein neuer Button *Drucken* angeboten.
+
+
+Zum Aktivieren der Funktion müssen die folgenden Parameter zur Digitalisierungskonfiguration hinzugefügt werden.
+
+.. code-block:: yaml
+    
+    printable: true
+
+
+Wenn Sie auf den Druckbutton klicken, öffnet sich ein Druckdialog, der das definierte Drucktemplate für das selektierte Objekt zur Verfügung stellt.
+
+Sie können das gewünschte Gebiet auswählen und ein PDF erzeugen. Das PDF beinhaltet die Informationen für das selektierte Objekt.
+
+Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwender nicht daran, den Rahmen in einen Bereich zu verschieben, der nicht das ausgewählte Objekt enthält. Die ausgedruckte Objektinformation passt dann nicht zur Darstellung in der Karte.
+
+
 Konfiguration des Elements
 ==========================
 
