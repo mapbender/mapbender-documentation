@@ -105,6 +105,11 @@ Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfigurati
                 fillColor: '#ff00ff'
                 fillOpacity: 0.8
                 pointRadius: 10
+            temporary:
+                strokeColor: '#0000ff'
+                fillColor: '#0000ff'
+                fillOpacity: 1
+
 
 Diese Definition füllt die Polygone nicht, da die Transparenz auf Null gesetzt wurde (fillOpacity: 0). Sie werden lediglich grün umrandet dargestellt. Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt und sind transparent mit einem Faktor von 0.8. Umrandet sind die Objekte mit einer blauen Linie. Diese Farbkonfiguration sieht so aus:
 
@@ -117,7 +122,9 @@ Die gleiche Logik wird beim select-Stil verfolgt. Jede Angabe, die Sie machen ü
 
 Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
 
-Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selektierte Objekt in rot dar:
+Über den temporary-Stil kann die MouseOver-Farbe gesetzt werden.
+
+Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selektierte Objekt in rot dar. Beim MouseOver erscheint das Objekt in blau:
 
 .. code-block:: yaml
 
@@ -131,6 +138,10 @@ Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selekt
                 strokeColor: '#ff0000'
                 fillColor: '#ff0000'
                 fillOpacity: 0.4
+            temporary:
+                strokeColor: '#0000ff'
+                fillColor: '#0000ff'
+                fillOpacity: 1
 
 .. image:: ../../../figures/de/search_router_example_colour_redgreen.png
      :scale: 80
@@ -216,6 +227,10 @@ Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel
         strokeOpacity: 1
         fillColor: '#800000'
         fillOpacity: 0.5
+      temporary:
+        strokeColor: '#0000ff'
+        fillColor: '#0000ff'
+        fillOpacity: 1
 
 Die Suche mit dieser Konfiguration sieht in der Anwendung so aus:
 
@@ -430,6 +445,10 @@ In der mapbender.yml Datei:
                       strokeColor: '#ff0000'
                       fillColor: '#ff0000'
                       fillOpacity: 0.4
+                  temporary:
+                      strokeColor: '#0000ff'
+                      fillColor: '#0000ff'
+                      fillOpacity: 1                      
 
 
 Class, Widget & Style

@@ -130,6 +130,11 @@ For mapbender.yml:
                       strokeColor: '#ff0000'
                       fillColor: '#ff0000'
                       fillOpacity: 0.4
+                  temporary:
+                      strokeColor: '#0000ff'
+                      fillColor: '#0000ff'
+                      fillOpacity: 1                      
+                      
 
 You need a button to show this element. See :ref:`button` for inherited configuration options.
 
@@ -176,9 +181,11 @@ A similar logic applies to the select style – any property you provide will ov
 property of the *final* default style. Therefore the example above will *not* yield a blue look for the
 selected feature!
 
+The temporary-style is used while sketching a feature.
+
 Keep in mind to quote hex color codes as the pound sign will otherwise be treated as a inline comment!
 
-A more elaborate example with green (hollow) features and the selected one in red:
+A more elaborate example with green (hollow) features and the selected one in red. The Object is displayed in blue while sketching a feature in the result list:
 
 .. code-block:: yaml
 
@@ -192,6 +199,10 @@ A more elaborate example with green (hollow) features and the selected one in re
                 strokeColor: '#ff0000'
                 fillColor: '#ff0000'
                 fillOpacity: 0.4
+            temporary:
+                strokeColor: '#0000ff'
+                fillColor: '#0000ff'
+                fillOpacity: 1                
 
 
 Class, Widget & Style
@@ -244,7 +255,7 @@ Example with autocomplete and individual result style:
     - hoehe_ger
       geometry_attribute: geom
   form:
-      name:
+    name:
     type: text
     options:
         required: false
@@ -281,6 +292,11 @@ Example with autocomplete and individual result style:
         strokeColor: '#ff0000'
         fillColor: '#ff0000'
         fillOpacity: 0.8
+    temporary:
+        strokeColor: '#0000ff'
+        fillColor: '#0000ff'
+        fillOpacity: 1
+        
 
 Example with selectbox:
 
