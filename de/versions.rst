@@ -24,7 +24,7 @@ Release Datum: 15.06.2017
 * Mouse-Over im SearchRouter
 * GPS Button im POI
 * Dynamisches Laden von Legendenbildern im Legenden-Element (PR #605, PR #606)
-
+* Anzeige eines Cookie Banners in Anwendungen. Siehe :ref:`cookieconsent_de`.
 
 **Änderungen:**
 
