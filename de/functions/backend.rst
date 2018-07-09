@@ -8,6 +8,7 @@ Backend
 
    backend/layerset.rst
    backend/source.rst
+   backend/cookieconsent.rst
 
 .. toctree::
    :maxdepth: 2
