@@ -41,7 +41,7 @@ The screenshot above shows the instance ``7/24`` based on a WMS service. The ass
 
 - **Visible:** The service can be set visible with this option.
 
-- **BaseSource:** The service should be treated as BaseSource. This affects the `BaseSourceSwitcher <../basic/basesourceswitcher>`_, which should only display BaseSources, and the `Layertree <../basic/layerertree>`_, where these BaseSources can be hidden. See also the `hints <hints-layersets_>`_ below.
+- **BaseSource:** The service should be treated as BaseSource. This affects the `BaseSourceSwitcher <../basic/basesourceswitcher>`_, which should only display BaseSources, and the `Layertree <../basic/layertree>`_, where these BaseSources can be hidden. See also the `hints <hints-layersets_>`_ below.
 
 - **Proxy:** If activated, the service will be requested via a proxy in Mapbender. See the `hints <hints-layersets_>`_ below.
 
