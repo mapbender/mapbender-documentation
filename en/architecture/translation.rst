@@ -151,8 +151,8 @@ Repositories
 * https://github.com/mapbender/mapbender-digitizer/
 * https://github.com/mapbender/fom
 * https://github.com/mapbender/data-manager/
-https://github.com/mapbender/data-source
-https://github.com/mapbender/map-tools/
+* https://github.com/mapbender/data-source
+* https://github.com/mapbender/map-tools/
 
 
 Since Git is a distributed versioning system, it is very convenient for each developer/contributor to have a personal public copy of the "official" repository (also known as fork). 
