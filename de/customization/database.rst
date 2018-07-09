@@ -11,7 +11,7 @@ Zur Konfiguration der Datenbankverbindung werden die Dateien config.yml und para
 Beispiele zur Einrichtung finden sich in den `Installationsanleitungen <../installation.html>`_, so z.B. im Kapitel `Einrichtung von Mapbender unter Ubuntu oder Debian <../installation/installation_ubuntu.html#mapbender-einrichtung>`_.
 
 
-.. _doctrine:
+.. _doctrine_de:
 
 Doctrine
 *************
