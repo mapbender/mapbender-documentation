@@ -480,7 +480,7 @@ Individual Elements:
 General changes:
 
 - Changing the Base Data, the Layout, the Layerset, the CSS and the Security of an application does not change the tab anymore and doesn't jump back to the base data tab.
-- General improvements of the `Digitizer <https://github.com/mapbender/mapbender-digitizer>`_ version 1.0. Version 1.1 is compatible with Mapbender 3.0.5.3.
+- General improvements of the `Digitizer Code <https://github.com/mapbender/mapbender-digitizer>`_ version 1.0. Version 1.1 is compatible with Mapbender 3.0.5.3.
 - Github files: Small clean up actions in the Github repository to improve the automatic build-processes.
 - Transparency of services: Services with a transparency refreshed with a poor effect, caused by the "transitionEffect" in OpenLayers. The effect was removed.
 - Group filter: The security configuration dialog got improvements at the selection of Groups, if the Groups had the same name but a different suffix.
