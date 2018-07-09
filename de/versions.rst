@@ -470,7 +470,7 @@ Einzelne Elemente:
 Allgemeine Änderungen:
   
 - Bei Änderungen an Grunddaten einer Anwendung, dem Layout, den Layersets, dem CSS und der Sicherheit bleibt man nun in dem jeweiligen Reiter und springt nicht zu den Grunddaten zurück.
-- Allgemeine Verbesserungen im `Digitizer <https://github.com/mapbender/mapbender-digitizer>`_ Version 1.0. Die Version 1.1 ist kompatibel mit Mapbender 3.0.5.3.
+- Allgemeine Verbesserungen im `Digitizer Code <https://github.com/mapbender/mapbender-digitizer>`_ Version 1.0. Die Version 1.1 ist kompatibel mit Mapbender 3.0.5.3.
 - Github Infodateien: Kleine Aufräumarbeiten im Github Repository, um die automatischen Buildprozesse zu verbessern.
 - Transparenz von Diensten: Dienste, die mit einer Transparenz dargestellt werden aktualisierten sich mit einem unschönen Effekt, verursacht durch durch den "transitionEffect" in OpenLayers. Dieser Effekt
   wurde entfernt.
