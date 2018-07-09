@@ -280,7 +280,7 @@ Open Symfony´s Welcome Script config.php. This script checks whether all necess
 .. image:: ../../figures/mapbender3_symfony_check_configphp.png
      :scale: 80 
 
-Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create. Further information is available in the chapter `Configuring the database <../database.html>`_.
+Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create. Further information is available in the chapter `Configuring the database <../customization/database.html>`_.
 
 .. code-block:: yaml
 
