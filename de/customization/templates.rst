@@ -375,7 +375,7 @@ Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste er
 
 
 1. Einbindung in YAML-Anwendungen
-******************************
+*********************************
 
 Jetzt kann die Vorlage in der mapbender.yml, in der die Anwendung konfiguriert wird, verwendet werden. Sie finden die mapbender.yml unter app/config/applications.
 
