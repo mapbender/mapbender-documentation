@@ -66,7 +66,7 @@ Download Mapbender
   :align: right
   :target: https://www.ohloh.net/p/mapbender?ref=sample
    
-.. image:: https://mapbender.org/sites/default/files/OSGeo_project.png
+.. image:: ./figures/OSGeo_project.png
   :width: 200 px
   :alt: Mapbender is a Project of the OSGeo Foundation
   :align: center
