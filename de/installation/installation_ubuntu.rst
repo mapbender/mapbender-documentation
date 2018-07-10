@@ -123,7 +123,7 @@ Sie benötigen den PHP-PostgreSQL Treiber.
    apt install php5-pgsql
  
 
-Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
+Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../customization/database.html>`_.
 
 .. code-block:: yaml
 
