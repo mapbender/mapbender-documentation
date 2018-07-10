@@ -164,7 +164,7 @@ You need the PHP-MySQL driver
    apt install php-mysql
 
 
-Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create and use. Further information is available in the chapter `Configuring the database <../database.html>`_.
+Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create and use. Further information is available in the chapter `Configuring the database <../customization/database.html>`_.
 
 .. code-block:: yaml
 
