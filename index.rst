@@ -11,18 +11,9 @@ Please choose your preferred language:
    English <en/index>
    Deutsch <de/index>
 
-You find the Mapbender API Documentation at:
-
-  https://api.mapbender.org
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
-
-.. * :ref:`modindex`
+..
+   To search in this documentation, please use the searchbox on the left side.
+   An :ref:`genindex` of automatically generated topics is also available.
 
 
 Sourcecode of this documentation
@@ -41,6 +32,7 @@ Online version of this documentation
 Other versions of this documentation
 ====================================
 
+* https://docs.mapbender.org/3073
 * https://docs.mapbender.org/3063
 * https://docs.mapbender.org/3062
 * https://docs.mapbender.org/3061
@@ -50,6 +42,8 @@ Other versions of this documentation
 * https://docs.mapbender.org/3051
 * https://docs.mapbender.org/3050
 * https://docs.mapbender.org/304
+
+* Mapbender API Documentation: https://api.mapbender.org
 
 Download Mapbender
 ==================
@@ -72,6 +66,12 @@ Download Mapbender
   :align: center
   :target: https://www.osgeo.org/
 
+|
 
 
+.. image:: ./figures/mapbender_logo_font.png
+  :width: 400 px
+  :alt: Mapbender
+  :align: center
+  :target: https://www.mapbender.org/
 
