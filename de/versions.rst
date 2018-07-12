@@ -7,10 +7,10 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
-Version 3.0.7.2
+Version 3.0.7.3
 ---------------
 
-Release Datum: 15.06.2017
+Release Datum: 13.07.2017
 
 **Allgemein:**
 
@@ -148,10 +148,10 @@ Bitte führen sie ein **app/console doctrine:schema:update** durch, wenn Sie auf
                 $ app/console doctrine:schema:update
 
 
-Version 3.0.7.1 and Version 3.0.7.0
------------------------------------
+Version 3.0.7.2, 3.0.7.1 und 3.0.7.0
+------------------------------------
 
-Aufgrund von Tagging-Fehlern im Code auf Github wurden diese beiden Versionen nie offiziell veröffentlicht. Da es nicht korrekt ist, Code zu re-taggen, führen wir die Entwicklungslinie mit Version 3.0.7.2 fort.
+Aufgrund von Tagging-Fehlern im Code auf Github wurden diese Versionen nie offiziell veröffentlicht. Da es nicht korrekt ist, Code zu re-taggen, führen wir die Entwicklungslinie mit Version 3.0.7.3 fort.
 
 
 Version 3.0.6.3

@@ -8,10 +8,10 @@ Version history
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
 
-Version 3.0.7.2
+Version 3.0.7.3
 ---------------
 
-Release date: 15.06.2018
+Release date: 13.07.2018
 
 **General:**
 
@@ -153,10 +153,10 @@ Please call the command **app/console doctrine:schema:update** for the Update to
                 $ app/console doctrine:schema:update
 
 
-Version 3.0.7.1 and Version 3.0.7.0
------------------------------------
+Version 3.0.7.2, 3.0.7.1 und 3.0.7.0
+------------------------------------
 
-Due to tagging-errors of the code in Github this two Versions were never officially released. It's not a good idea to re-tag the code, so we continued with Version 3.0.7.2.
+Due to tagging-errors of the code in Github these versions were never officially released. It's not a good idea to re-tag the code, so we continued with Version 3.0.7.3.
 
 
   
