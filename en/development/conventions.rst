@@ -226,4 +226,4 @@ How to build a new Mapbender build
 Documentation conventions
 **************************
 
-* have a look at `How to write Mapbender Documentation? <documentation_howto>`_
+* have a look at `How to write Mapbender Documentation? <../documentation_howto>`_
