@@ -44,21 +44,3 @@ Inhalt:
    :maxdepth: 1
 
    versions
-
-
-
-
-Indizes und Tabellen
-====================
-
-.. toctree::
-   :maxdepth: 1
-
-   ../en/glossary.rst
-
-
-* :ref:`genindex`
-* :ref:`search`
-
-..
-  * :ref:`modindex`

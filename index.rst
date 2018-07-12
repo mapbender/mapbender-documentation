@@ -11,10 +11,6 @@ Please choose your preferred language:
    English <en/index>
    Deutsch <de/index>
 
-..
-   To search in this documentation, please use the searchbox on the left side.
-   An :ref:`genindex` of automatically generated topics is also available.
-
 
 Sourcecode of this documentation
 ================================
