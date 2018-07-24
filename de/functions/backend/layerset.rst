@@ -1,7 +1,7 @@
 .. _layerset_de:
 
 Layersets und Layerset-Instanzen
-================================
+********************************
 
 Ein Layerset ist ein logischer Container, die einen oder mehrere Layerset-Instanzen (WMS Dienste) beinhalten kann. Ein typisches Beispiel sind die Unterscheidung in den Layerset "main" für die Hauptkarte und "overview" für die Übersichtskarte. Sie können weitere Layersets definieren, die optional in der Karte dargestellt werden oder auch im Layertree als eigener Ordner erscheinen (thematische Layer).
 
@@ -10,7 +10,7 @@ Ein Layerset ist ein logischer Container, die einen oder mehrere Layerset-Instan
 
 
 Layerset-Instanzen
-------------------
+==================
 
 Layerset-Instanzen enthalten die Optionen, wie ein WMS angesprochen werden kann: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr.
 
@@ -38,6 +38,8 @@ Der Screenshot zeigt die Instanz ``7/24`` basierend auf einem WMS-Dienst. Die zu
 - **Kachel-Puffer (Tile buffer):** Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen. Default: 0.
 
 - **BBOX-Faktor:** Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier kann man angeben, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Default: 1.25 und kann gerne auf 1 gesetzt werden.
+
+- **Vendor Specific Parameters:** Siehe unten.
 
 - **Sichtbarkeit:** Der Dienst kann mit dieser Schaltfläche sichtbar geschaltet werden.
 
@@ -82,12 +84,41 @@ Die folgende Tabelle fasst das Verhalten nochmal zusammen:
 Damit kann Mapbender auf die unterschiedlichen Art und Weisen reagieren, wie ein WMS Capabilities Dokument aufgebaut hat, indem einfach die Reihenfolge in dem Layerbaum angepasst wird.
 
 
+.. _layer_konfiguration:
+
+Layerkonfiguration
+==================
+
+Über die verschiedenen Checkboxen können Sie verschiedene Einstellungen treffen. Beachten Sie dabei, dass die oberste Checkbox der Liste jeweils für alle Instanzen denselben Status auswählt.
+
+.. image:: ../../../figures/de/layerset_instance.png
+           :scale: 80
+
+
+
+* Titel: Layertitel der Service Information (anpassbar).
+* Aktiv an/aus (active on/off): Aktiviert / deaktiviert ein Thema in dieser Anwendung. Sobald dieser Haken nicht gesetzt ist, werden alle anderen Haken derselben Instanz ignoriert.
+* Auswählen erlauben (select allow): Der Layer ist im Ebenenbaum auswählbar.
+* Auswählen an (select on): Der Layer ist bei Anwendungsstart im Ebenenbaum aktiv.
+* Info erlauben (info allow): Die Infoabfrage wird für diesen Layer zugelassen.
+* Info an (info on): Die Infoabfrage wird beim Start aktiviert.
+* Minimaler/ Maximaler Maßstab (minsc / maxsc): Der Maßstabsbereich, in dem der Layer angezeigt wird.
+* Aufklappen (toggle): Aufklappen des Layers beim Start der Anwendung.
+* Sortieren (reorder): Die Ebenen können über Drag & Drop in der Anwendung verschoben werden.
+
+* ... -> öffnet einen Dialog mit weiteren Informationen:
+* Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar).
+* Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard - (default) - Stil wählen.
+
+
+
 .. _hinweise-layersets:
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen
-----------------------------------------------------------
+==========================================================
 
-**Basesources:**
+Basesources
+-----------
 
 Es gibt viele Möglichkeiten den Layertree zu füllen und mit Basisdiensten zu arbeiten:
 - Z.B. durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
@@ -95,18 +126,41 @@ Es gibt viele Möglichkeiten den Layertree zu füllen und mit Basisdiensten zu a
 
 Für welche Möglichkeit Sie sich entscheiden, hängt ganz von Ihren Vorlieben ab.
 
-**Proxy:**
+Proxy
+-----
 
-Wozu dient dieser Schalter? Die Proxynutzung macht dann Sinn, wenn man vermeiden möchte, dass der Webbrowser als Klient direkt auf den Dienst zugreift, wie dies durch OpenLayer ja standardmäßig passiert. Ist dieser Schalter aktiviert, greift der Mapbender mit seiner URL auf den Dienst zu, verarbeitet die Bilder und stellt sie in der Karte dar. D.h. man kann über Firewalls sehr leicht einen über das Netzwerk-geschützten Dienst anbieten, der nur von dem Webserver angesprochen werden darf, auf dem der Mapbender läuft.
+Wozu dient dieser Schalter? Die Proxynutzung macht dann Sinn, wenn man vermeiden möchte, dass der Webbrowser als Klient direkt auf den Dienst zugreift, wie dies durch OpenLayers ja standardmäßig passiert. Ist dieser Schalter aktiviert, greift der Mapbender mit seiner URL auf den Dienst zu, verarbeitet die Bilder und stellt sie in der Karte dar. D.h. man kann über Firewalls sehr leicht einen über das Netzwerk-geschützten Dienst anbieten, der nur von dem Webserver angesprochen werden darf, auf dem der Mapbender läuft.
 
 
-**Kachelung, Kartengröße und Performance:**
+Kachelung, Kartengröße und Performance
+--------------------------------------
 
 Der Parameter "Gekachelt" wird benutzt, um das Kartenbild in einzelnen Kacheln anzufordern und nicht als ganzes Bild. Das sollte man generell einschalten, wenn man einen `Mapproxy <https://mapproxy.de/>`_ eingebunden hat, der den Dienst gekachelt bereitstellt. Es macht aber auch für normale, ungekachelte Dienste Sinn, da die gefühlte Wartezeit beim Nutzer geringer ist: Das Kartenbild erscheint, obwohl noch nicht alle Kacheln abgerufen worden sind.
 
 Man muss dabei aber beachten: Die Anzahl der Anfragen an einen WMS vergrößert sich rapide: Je nach Bildschirm-Auflösung und eingestellter Kachelgröße im `Kartenelement <../basic/map>`_ werden statt einer viele Anfragen abgeschickt. Die zurückgelieferten Bilder sind zwar nicht besonders groß (normalerweise nimmt man Kachelgrößen von 256x256 oder 512x512 Pixel), aber zahlreich. Auch in Hinblick auf die Verwendung des **Kachel-Puffers**. Es ist also eine Abwägung und eine Fall- zu Fall-Unterscheidung, wie man den Dienst ansprechen möchte. Die Performance kann auch über eigene Maßstabsangaben der Layer gesteigert werden, wenn der Dienst diese etwas zu locker vorgegeben hat.
 
 Es gibt des Weiteren noch hier und da WMS-Dienste, die nur eine maximale Kartenbildgröße unterstützen und mit den hohen Auflösungen die Mapbender anfragen kann nicht zurechtkommen. Das Fullscreen-Template kann auf die maximale Bildschirmbreite gezogen werden und das angeforderte Kartenbild ist dann in etwa der Breite und Höhe des sichtbaren Browserfensters.
+
+
+Vendor Specific Parameter
+-------------------------
+
+In einer Layerset Instanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der multi-dimensionalen Daten in der WMS Spezifikation.
+In Mapbender3 können die Vendor Specific Parameter genutzt werden, um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
+Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
+
+.. image:: ../../../figures/mapbender_vendor_specific_parameter.png
+
+* Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
+* Name: Parameter Name im WMS Request.
+* Default: Standardwert.
+* Extent: Verfügbare Werte (wird unter Multiple als kommaseparierte Liste eingetragen).
+* Vstype: Mapbender-spezifische Variablen: Gruppe (groups), User (users), Simple.
+* Hidden: Wenn dieser Wert gesetzt wird, werden die Anfragen serverseitig versendet, sodass die Parameter nicht direkt sichtbar sind.
+
+Momentan eignet sich das Element, um den Dienst nur an bestimmte Benutzer und Gruppen weiterzugeben. Dies geschieht z.B. für Benutzer über die ``$id$`` und für Gruppen über den Parameter ``$groups$``.
+
+
 
 
 
