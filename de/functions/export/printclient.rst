@@ -273,7 +273,6 @@ Definieren Sie im Drucktemplate ein Textfeld für die Informationen, die Sie fü
        srid: 4326              # EPSG-Code der Daten
        print:                  # Drucktemplate für den Druck selektierter Objekte
          templates:
-        templates:
           - template: a4_portrait_official_feature_data_demo
             label: Demo with feature information print (portrait)
           - template: a4_landscape_official_feature_data_demo
