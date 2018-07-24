@@ -228,7 +228,7 @@ Informationen dazu unter:
 OpCache (optional)
 ------------------
 
-OpCache ist eine PHP-Erweiterung, die seit PHP >= 5.5.5 zwar ausgelifert, aber per Voreinstellung nicht freigeschaltet ist.
+OpCache ist eine PHP-Erweiterung, die seit PHP >= 5.5.5 zwar ausgeliefert, aber per Voreinstellung nicht freigeschaltet ist. Sie beschleunigt die Reaktionszeit von Mapbender.
 
 Mehr info: https://www.sitepoint.com/understanding-opcache/
 
@@ -263,6 +263,9 @@ In der php.ini:
                 opcache.max_wasted_percentage=5
                 
 Symfony empfiehlt, den **opcache.max_accelerated_files** Wert höher zu setzen: http://symfony.com/doc/3.1/performance.html#optimizing-all-the-files-used-by-symfony
+
+Diese Dokumentationsseite von PHP gibt Ihnen eine Empfehlung, welche Cache-Variante Sie unter bestimmten Windows-Voraussetzungen hinzufügen sollten: http://php.net/manual/de/install.windows.recommended.php
+
 
 
 

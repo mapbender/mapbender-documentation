@@ -263,6 +263,9 @@ In php.ini:
 
 Symfony recommends, to increase the **opcache.max_accelerated_files** value: http://symfony.com/doc/3.1/performance.html#optimizing-all-the-files-used-by-symfony
 
+
+The following php website recommends a setting for individual cases:  http://php.net/manual/de/install.windows.recommended.php
+
                 
 
 Check
