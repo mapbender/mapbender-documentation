@@ -22,9 +22,9 @@ Wie werden eigene Vorlagen erzeugt?
 
 Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
 
-* Eintrag in der YAML-Datei von der Anwendung (applications/mapbender.yml)
+* Eintrag in der YAML-Datei von der Anwendung (applications/app/config/applications/\*.yml)
 * Auswahl über die Administration bei einer neuen Anwendung
-* Anpassung bestehender Anwendungen über die Änderung des Spalteneintrags *template* in der Datenbank in der Tabelle *mb_core_application*
+* Anpassung bestehender Anwendungen über die Änderung des Spalteneintrags ``template`` in der Datenbank in der Tabelle ``mb_core_application``.
 
 Für die Einbindung der eigenen Vorlage wurde ein Workshop/DemoBundle vorbereitet, dass als Template für Anwendungen und für das Anpassen der Administrationsoberflächen verwendet werden kann. Laden Sie sich für die folgenden Schritte diese Dateien bitte über dem folgenden Link herunter:
 
@@ -320,8 +320,6 @@ Fügen Sie die neue CSS-Datei in der Funktion listAssets als letzten Eintrag ein
 Verwenden der neuen Vorlage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
 Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
 * mapbender/app/AppKernel.php
@@ -459,3 +457,16 @@ Wenn Sie ein Bild nutzen möchten, legen Sie dieses am Besten in Ihrem Bundle ab
   .iconPrint:before {
     content:url("imgage/print.png");
   }
+
+
+Probieren Sie es aus
+~~~~~~~~~~~~~~~~~~~~~
+
+* Laden Sie das Workshop/DemoBundle herunter: https://github.com/mapbender/mapbender-workshop 
+* Ändern Sie die Farbe Ihrer Icons.
+* Ändern Sie die Größe Ihrer Icons.
+* Ändern Sie die Farbe der Toolbar.
+* Benutzen sie ein Bild anstelle eines Font-Icons für Ihre Buttons.
+* Verschieben Sie die Übersichtskarte auf die linke Seite.
+* Schauen Sie in die Workshop-Dateien, um zu erfahren, wie das funktioniert.
+
