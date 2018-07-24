@@ -17,9 +17,9 @@ Following we describe the configuration steps of Mapbender a bit further. Config
 
 All can be done using the console utility provided by `Symfony2 <http://symfony.com/>`_, on which Mapbender framework is built upon. There's a mayor caveat though you should understand, before continuing:
 
-  | The console utility will write files in the app/cache and app/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
+.. note:: The console utility will write files in the app/cache and app/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
-**Notice:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/ else mapbender/).
+.. note:: **Notice:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/ else mapbender/).
 
 .. code-block:: yaml
 
@@ -31,9 +31,7 @@ All can be done using the console utility provided by `Symfony2 <http://symfony.
 
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Database connection parameters are stored together with some more configuration
-parameters in the file **app/config/parameters.yml**. This file is using YAML
-syntax, so be aware that you can **not** use tabs for indenting. Be careful about this and use whitespaces instead. 
+Database connection parameters are stored together with some more configuration parameters in the file ``app/config/parameters.yml``. This file is using YAML syntax, so be aware that you can **not** use tabs for indenting. Be careful about this and use whitespaces instead. 
 
 Your database configuration in the parameters.yml file could look like this when you use PostgreSQL:
 
@@ -47,7 +45,7 @@ Your database configuration in the parameters.yml file could look like this when
     database_user:     postgres
     database_password: secret
 
-Further information is available in the chapter `Configuring the database <../database.html>`_.
+Further information is available in the chapter :ref:`database`.
 
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^
@@ -71,8 +69,8 @@ Symfony2 will create the database schema for you:
 
 
 
-Copying the bundles' assets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Copying the assets bundles
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each bundle has it's own assets - CSS files, JavaScript files, images and more -
 but these need to be copied into the public web folder:
@@ -109,10 +107,10 @@ Alternatively, there is a silent mode you can use, if you want to use a script t
 
     app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
 
-Inserting srs parameters
+Inserting SRS parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Inserting proj4 srs parameters into a database occurs using the command:
+Inserting Proj4 SRS parameters into a database occurs using the command:
 
 .. code-block:: yaml
 
@@ -148,7 +146,7 @@ parameters.yml
 * mailer: The mailer settings start with **mailer**. Use f.e. smtp or sendmail. 
 * locale: You can choose a locale for your application (default is en, de is available). Check http://doc.mapbender.org/en/book/translation.html to find out how to modify translations or how to add a new language.
 
-**Notice:** You need a mailer for self-registration and reset password functionality.
+.. note:: You need a mailer for self-registration and reset password functionality.
 
 If you use a proxy you have to add the proxy settings to parameters.yml at section *OWSProxy Configuration*.
 
@@ -168,6 +166,28 @@ This is how the configiration could look like:
         ows_proxy3_password: ~
         ows_proxy3_noproxy:
             - 192.168.1.123
+
+**Locales:**
+
+You can choose a locale for your application:
+
+- en: English (default),
+- de: German,
+- es: Spanish,
+- it: Italian,
+- nl: Dutch,
+- pt: Portuguese,
+- ru: Russian.
+
+Check http://doc.mapbender3.org/en/book/translation.html to find out how to modify translations or how to add a new language.
+
+
+**Logo**
+
+To change the logo systemwide, take a look into the Tipps & Tricks section into the chapter :ref:`templates`
+
+
+
 
 config.yml
 ^^^^^^^^^^
@@ -246,6 +266,26 @@ Mapbender:
 
 .. image:: ../../figures/mapbender_cache_directories.png 
            :scale: 80
+
+
+
+Deleting the cache
+------------------
+
+Especially in development or testing environments it may be required to delete the internal symfony cache. You can do this using the following console command:
+
+.. code-block:: bash
+
+                app/console cache:clear
+
+Alternatively, you can remove all data within the Mapbender cache directory by using the following command. Be careful!
+
+.. code-block:: bash
+
+                rm -rf app/cache/*
+
+
+More detailed information regarding the cache can be found under the appropriate symfony documentation page: https://symfony.com/doc/current/console/usage.html
 
 
 

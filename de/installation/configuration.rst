@@ -18,9 +18,9 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 
 Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
 
-  | Das console-Hilfsprogramm wird Dateien in die Verzeichnisse app/cache und app/logs schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis app/db und die SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP- Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
+.. note:: Das console-Hilfsprogramm wird Dateien in die Verzeichnisse app/cache und app/logs schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis app/db und die SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP- Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
-**Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ andernfalls mapbender/).
+.. note:: **Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ andernfalls mapbender/).
 
 .. code-block:: yaml
 
@@ -33,7 +33,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony
 Anpassen der Konfigurationsdatei
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei app/config/parameters.yml gespeichert. In dieser Datei wird YAML Syntax verwendet. Achten Sie darauf **keine** Tabulatoren für Einrückungen zu verwenden. Verwenden Sie stattdessen Leerzeichen.
+Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``app/config/parameters.yml`` gespeichert. In dieser Datei wird YAML Syntax verwendet. Achten Sie darauf **keine** Tabulatoren für Einrückungen zu verwenden. Verwenden Sie stattdessen Leerzeichen.
 
 Ihre Datenbankkonfiguration könnte in der parameters.yml könnte folgendermaßen aussehen, wenn Sie PostgreSQL verwenden:
 
@@ -47,7 +47,7 @@ Ihre Datenbankkonfiguration könnte in der parameters.yml könnte folgendermaße
     database_user:     postgres
     database_password: geheim
 
-Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
+Mehr Informationen dazu finden Sie im Kapitel :ref:`database_de`.
 
     
 Erzeugen der Datenbank
@@ -142,7 +142,7 @@ parameters.yml
 * Mailer: Die Mailerangaben starten mit **mailer**. Nutzen Sie z.B. smtp oder sendmail. 
 * Spracheinstellung: Sie können eine Sprache (locale) für Ihre Anwendung angeben (Standardwert ist en, de ist verfügbar). Unter http://doc.mapbender.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue Sprachen hinzugefügt werden können.
 
-**Hinweis:** Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
+.. note:: Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
 
 Sofern Sie einen Proxy verwenden, müssen Sie diesen in der Datei parameters.yml im Bereich *OWSProxy Configuration* angeben.
 
@@ -161,6 +161,27 @@ Eine Konfiguration könnte wie folgt aussehen:
         ows_proxy3_password: ~
         ows_proxy3_noproxy:
             - 192.168.1.123
+
+
+**Spracheinstellung**
+
+Sie können eine Sprache (locale) für Ihre Anwendung angeben. Folgende Sprachcodes sind dabei verfügbar:
+
+- en für Englisch (Standard),
+- de für Deutsch,
+- es für Spanisch,
+- it für Italienisch,
+- nl für Niederländisch,
+- pt für Portugiesisch,
+- ru für Russisch.
+
+Unter http://doc.mapbender3.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue Sprachen hinzugefügt werden können.
+
+**Logo:**
+
+Um das Logo systemweit zu ändern, schauen Sie bitte in die Tipps & Tricks im Kapitel: :ref:`templates_de`
+
+
 
 config.yml
 ^^^^^^^^^^
@@ -237,6 +258,29 @@ Mapbender:
 
 .. image:: ../../figures/mapbender_cache_directories.png 
            :scale: 80
+
+
+Löschen des Caches
+------------------
+
+Besonders in Entwicklungs-bzw. Testingumgebungen ist unter bestimmten Umständen ein Löschen des umgebungseigenen Symfony-Caches notwendig. Dies können Sie über den folgenden Konsolenbefehl erreichen:
+
+.. code-block:: bash
+
+                app/console cache:clear
+               
+Alternativ können Sie alle Daten innerhalb des Mapbender-Cacheverzeichnisses mithilfe des folgenden Befehls entfernen. Seien Sie vorsichtig!
+
+.. code-block:: bash
+
+                rm -rf app/cache/*
+
+
+Detailliertere Informationen bezüglich des Caches erhalten Sie auch unter der entsprechenden Symfony-Dokumentationsseite: https://symfony.com/doc/current/console/usage.html
+
+
+
+
 
 
 Logging in Mapbender
