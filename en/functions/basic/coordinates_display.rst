@@ -7,8 +7,30 @@ The coordinates display element shows your mouse position in map coordinates.
 The coordinates are dependent on the selected spatial reference system which may be changed in the 
 `Spatial Reference System Selector <srs_selector.html>`_.
 
-.. image:: ../../../figures/coordinates_display.png
-     :scale: 90
+The coordinates display for different coordinate systems looks like this:
+
+ETRS89 / UTM zone 32N (EPSG:25832):
+
+.. image:: ../../../figures/de/coordinates_display_etrs89_zone32.png
+     :scale: 80
+
+
+DHDN / 3-degree Gauss-Kruger zone 2 (EPSG:31466):
+
+.. image:: ../../../figures/de/coordinates_display_gauss_krueger_zone2.png
+     :scale: 80
+
+
+WGS 84 (EPSG:4326):
+
+.. image:: ../../../figures/de/coordinates_display_wgs84.png
+     :scale: 80
+
+
+WGS 84 / Pseudo-Mercator (EPSG:3857):
+
+.. image:: ../../../figures/de/coordinates_display_wgs84_pseudo_mercator.png
+     :scale: 80
 
 Configuration
 =============
