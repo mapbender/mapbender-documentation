@@ -1,9 +1,9 @@
 .. _search_router_de:
 
 Search Router
-***********************
+*************
 
-Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die Trefferausgabe sind dabei konfigurierbar. Zur Zeit wird eine generische SQL Suche unterstützt, weitere Entwicklungen werden folgen (z.B. WFS, Solr). 
+Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die Trefferausgabe sind dabei konfigurierbar. Zur Zeit wird eine SQL Suche unterstützt.
 
 .. image:: ../../../figures/search_router.png
      :scale: 80
@@ -14,9 +14,49 @@ Konfiguration
 .. image:: ../../../figures/de/search_router_configuration.png
      :scale: 80
 
-Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter `Konfiguration der Datenbank <../../customization/database.html>`_.
+Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`database_de`.
 
-**Hinweis**: Für die Nutzung der unten beschriebenen Suche können die Tabellen aus der Digitalisierungs-Demo genutzt werden. Die SQLS für die Erstellung der Tabellen befinden sich in der Dokumentation unter `Digitizer <../editing/digitizer.html>`_.
+Beispiel für eine PostgreSQL Datenbank auf localhost, die gisdb heißt:
+
+Inhalte in der config.yml:
+
+.. code-block:: yaml
+   
+     doctrine:
+         dbal:
+             default_connection: default    
+             connections:
+                 default:
+                     [...]
+                 gisdb:
+                     driver:   %gisdb_database_driver%
+                     host:     %gisdb_database_host%
+                     port:     %gisdb_database_port%
+                     dbname:   %gisdb_database_name%
+                     path:     %gisdb_database_path%
+                     user:     %gisdb_database_user%
+                     password: %gisdb_database_password%
+                     persistent: true
+                     charset:  UTF8
+                     logging: %kernel.debug%
+                     profiling: %kernel.debug%
+
+
+Inhalte in der parameters.yml
+
+.. code-block:: yaml
+
+    parameters:
+        [...]
+        gisdb_database_driver:   pdo_pgsql
+        gisdb_database_host:     localhost
+        gisdb_database_port:     5432
+        gisdb_database_name:     gisdb
+        gisdb_database_path:     null
+        gisdb_database_user:     reader
+        gisdb_database_password: mypassword
+
+
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und wird neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Target:** Name/ID des Kartenelements, auf das sich das Element bezieht.
@@ -28,43 +68,62 @@ Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank i
 * **Title**: Titel der Suche (erscheint erst, wenn über das + bei Routes eine Suche hinzugefügt wurde)
 * **Configuration**: Feld für die Konfiguration der Suche (erscheint erst, wenn über das + bei Routes eine Suche hinzugefügt wurde)
 
-Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im yaml-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
-Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
+Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im YAML-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
+Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
 
 
-Beispiel einer Such-Konfiguration im Textfeld ``Configuration``:
+Example
+-------
+
+Das folgende Beispiel baut auf den Deutschen Geographischen Namenskatalog im Maßstab 1:250.000 des `Bundesamtes für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_ auf. Die Daten wurden in die Tabelle ``gn250_p`` der Datenbank ``gisdb``  (siehe parameters.yml oben) kopiert und eignen sich gut für eine Ortssuche. Die Daten haben viele verschiedene Spalten, u.a.:
+
+- id: Die ID des Datensatzes
+- name: Der Name des Datensatzes
+- kreis: Der Landkreis (nicht für jeden Datensatz vorhanden)
+- oba_wert: Die Art des Features (z.B.. Bahnhof, Museum, etc.)
+
+
+Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
 
 .. code-block:: yaml
 
     class: Mapbender\CoreBundle\Component\SQLSearchEngine
     class_options:
-        connection: search_db
-        relation: ortschaften
-        attributes:
-            - gid
-            - ortsname
-        geometry_attribute: geom
+      connection: gisdb
+      relation: gn250_p
+      attributes:
+        - id
+        - name
+        - kreis
+        - oba_wert
+      geometry_attribute: geom
     form:
-        ortsname:
-            type: text
-            options:
-                required: true
-            compare: exact
+      name:
+        type: text
+        options:
+          required: true
+        compare: ilike
     results:
-        view: table
-        count: true
-        headers:
-            gid: ID
-            ortsname: Name
-        callback:
-            event: click
-            options:
-                buffer: 10
-                minScale: null
-                maxScale: null
+      view: table
+      count: true
+      headers:
+        id: ID
+        name: Name
+        kreis: Landkreis
+        oba_wert: Art
+      callback:
+        event: click
+        options:
+          buffer: 10
+          minScale: null
+          maxScale: null
+
+
+
+
 
 Vergleichsmodus
------------------
+---------------
 
 Für jedes Feld kann ein Vergleichsmodus bestimmt werden, welcher von der Engine verwendet werden soll, wenn die Suchanfrage gestellt wird. Die SQL Suche Engine hat die folgenden Modi:
 
@@ -77,8 +136,11 @@ Für jedes Feld kann ein Vergleichsmodus bestimmt werden, welcher von der Engine
 * **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring)
 * **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring\*)
 
+
+
+
 Styling der Ergebnisse
------------------------
+----------------------
 
 Standardmäßig werden die Ergebnisse in der Karte in dem default-OpenLayers Style angezeigt, d.h. orange für die Treffer und blau für selektierte Objekte. Das OpenLayer default Styling sieht wie folgt aus:
 
@@ -90,6 +152,7 @@ Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfigurati
 .. code-block:: yaml
 
     results:
+        [...]
         styleMap:
             default:
                 strokeColor: '#00ff00'  # Umrandungsfarbe
@@ -105,8 +168,19 @@ Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfigurati
                 fillColor: '#ff00ff'
                 fillOpacity: 0.8
                 pointRadius: 10
+            temporary:
+               strokeColor: '#0000ff'
+               fillColor: '#0000ff'
+               fillOpacity: 1
 
-Diese Definition füllt die Polygone nicht, da die Transparenz auf Null gesetzt wurde (fillOpacity: 0). Sie werden lediglich grün umrandet dargestellt. Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt und sind transparent mit einem Faktor von 0.8. Umrandet sind die Objekte mit einer blauen Linie. Diese Farbkonfiguration sieht so aus:
+Drei verschiedene Styles wurden hier konfiguriert:
+
+- **default**: Der Standard-Style für alle Ergebnisse
+- **select**: Der Style, falls ein Ergebnis angeklickt worden ist.
+- **temporary**: Der Style, falls man mit den Mauszeiger über ein Ergebnis in der Tabelle bewegt.
+
+
+Diese Definition füllt die Kreissymbole nicht, da die Transparenz auf Null gesetzt wurde (fillOpacity: 0). Sie werden lediglich grün umrandet dargestellt. Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt und sind transparent mit einem Faktor von 0.8. Umrandet sind die Objekte mit einer blauen Linie. Die temporären Symbole beim Mouse-Hover über ein Ergebnis sind ausgefüllte blaue Punkte. Diese Farbkonfiguration sieht so aus:
 
 .. image:: ../../../figures/de/search_router_example_colour_purplegreen.png
      :scale: 80
@@ -117,26 +191,11 @@ Die gleiche Logik wird beim select-Stil verfolgt. Jede Angabe, die Sie machen ü
 
 Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
 
-Das folgende Beispiel erzeigt grüne (ungefüllte) Objekte und stellt das selektierte Objekt in rot dar:
 
-.. code-block:: yaml
-
-    results:
-        styleMap:
-            default:
-                strokeColor: '#00ff00'
-                strokeOpacity: 1
-                fillOpacity: 0
-            select:
-                strokeColor: '#ff0000'
-                fillColor: '#ff0000'
-                fillOpacity: 0.4
-
-.. image:: ../../../figures/de/search_router_example_colour_redgreen.png
-     :scale: 80
 
 Konfigurationsbeispiele
 ========================
+
 In diesem Beispiel wurde eine Suche für die Mapbender User konfiguriert. Die Suche wurde in die Sidepane über das ``+`` -Zeichen in der Anwendung unter Layouts, Sidepane hinzugefügt.
 
 .. image:: ../../../figures/de/add_sidepane.png
@@ -147,7 +206,7 @@ Der Konfigurationsdialog zu diesem Konfigurationsbeispiel sieht wie folgt aus:
 .. image:: ../../../figures/de/search_router_example_dialog.png
      :scale: 80
 
-Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel angezeigt. Da das Element in der Sidepane eingebunden wird und nicht als Button, wurde bei Dialog kein Haken gesetzt. Der *Timeout factor* wurde auf 2 gestellt. In den Feldern *Width* und *Height* stehen zwar Werte, diese werden in der Anwendung jedoch nicht miteinbezogen, da das Element in der Sidepane konfiguriert wird. Es wurde über das ``+`` -Zeichen bei *Routes* eine Suche eingebunden, die die Bezeichnung (*Title*) Mapbender User trägt. In *Configuration* wurde die yaml-Konfiguration des Elements eingefügt. Vollständig lautet diese:
+Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel angezeigt. Da das Element in der Sidepane eingebunden wird und nicht als Button, wurde bei Dialog kein Hayken gesetzt. Der *Timeout factor* wurde auf 2 gestellt. In den Feldern *Width* und *Height* stehen zwar Werte, diese werden in der Anwendung jedoch nicht miteinbezogen, da das Element in der Sidepane konfiguriert wird. Es wurde über das ``+`` -Zeichen bei *Routes* eine Suche eingebunden, die die Bezeichnung (*Title*) Mapbender User trägt. In *Configuration* wurde die yaml-Konfiguration des Elements eingefügt. Vollständig lautet diese:
 
 .. code-block:: yaml
 
@@ -216,6 +275,11 @@ Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel
         strokeOpacity: 1
         fillColor: '#800000'
         fillOpacity: 0.5
+      temporary:
+        strokeColor: '#0000ff'
+        fillColor: '#0000ff'
+        fillOpacity: 1
+
 
 Die Suche mit dieser Konfiguration sieht in der Anwendung so aus:
 
@@ -305,6 +369,12 @@ Beispiel mit Autovervollständigung und individueller Ergebnisanzeige:
         strokeColor: '#ff0000'
         fillColor: '#ff0000'
         fillOpacity: 0.8
+    temporary:
+        strokeColor: '#0000ff'
+        fillColor: '#0000ff'
+        fillOpacity: 1
+
+
 
 Beispiel mit Auswahlbox:
 
@@ -430,6 +500,11 @@ In der mapbender.yml Datei:
                       strokeColor: '#ff0000'
                       fillColor: '#ff0000'
                       fillOpacity: 0.4
+                  temporary:
+                     strokeColor: '#0000ff'
+                     fillColor: '#0000ff'
+                     fillOpacity: 1
+
 
 
 Class, Widget & Style
