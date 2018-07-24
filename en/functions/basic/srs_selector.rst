@@ -16,7 +16,6 @@ Configuration
 .. image:: ../../../figures/srs_selector_configuration.png
      :scale: 80
 
-* **Show label:** indicates the element.
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Tooltip:** text to use as tooltip.
 * **Target:** Id of Map element to query.
