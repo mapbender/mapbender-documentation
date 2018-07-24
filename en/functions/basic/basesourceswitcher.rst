@@ -3,10 +3,14 @@
 BaseSourceSwitcher
 ******************
 
-BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch over between the predefined source sets. For every sourceset a button will be displayed in the client. Notice that only one button can be active.
+With this element you can switch between different predefined layers (BaseSources) like background maps. You can define the layer as a BaseSource in the tab "Layersets" in the applcation. You have to edit the layer and set a checkmark at "BaseSource":
+
+.. image:: ../../../figures/de/basesourceswitcher_basesource.png
+     :scale: 80
+
+BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch over between the predefined source sets. For every sourceset a button will be displayed in the client. Only one BaseSource can be active at the same time.
 
 You have the possibility to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
-
 
 .. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
@@ -27,7 +31,7 @@ The configuration occurs in 2 steps:
 * **Target:** Id of Map element, activated after the click.
 * **Instances:** List of Sourcesets, defined by a title and group: (optional) group name to group of sourcesets by "group name" 
 
-In the configuration example you can see that either one, none or several entries per instanceset can be selected. You can created groups, which are then grouped together in the drop-down list.
+In the configuration example you can see that either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list.
 
 * **Title**: Title of the BaseSource
 * **Group**: Optionaly group name to group of sourcesets by "group name"
