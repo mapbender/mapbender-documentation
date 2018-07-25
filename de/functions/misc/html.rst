@@ -4,13 +4,13 @@ HTML-Element
 ************
 
 Über das HTML-Element kann ein generisches HTML an einer beliebigen Stelle in der Anwendung definiert werden.
-Im generischen HTML stehen folgende Variablen zur Verfügung : "application" (Entity Application), "entity" (Entity HTMLElement) und "configuration". Damit kann beispielsweise ein Bild in die Anwendung eingefügt werden. 
+Im generischen HTML stehen folgende Variablen zur Verfügung : "application" (Entity Application), "entity" (Entity HTMLElement) und "configuration". Damit kann beispielsweise ein Bild in die Anwendung eingefügt werden.
 
 .. image:: ../../../figures/html_result_application.png
      :scale: 80
 
 
-Configuration
+Konfiguration
 =============
 
 Einfügen eines Bildes in Ihre Anwendung:
@@ -23,7 +23,7 @@ Einfügen eines Bildes in Ihre Anwendung:
 .. image:: ../../../figures/de/html.png
      :scale: 80
 
-* **Title:** Titel des HTML-Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden. 
+* **Title:** Titel des HTML-Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden.
 * **Content:** Inhalt des HTML-Elements, z.B. Bild oder Link. Content kann Variablen: "application", "entity" und "configuration" beinhalten.
 * **Classes:** html-element-inline, CSS-Klasse
 
@@ -44,13 +44,13 @@ Es erscheint der Dialog "Element hinzufügen – HTML". Für dieses Konfiguratio
 
 .. image:: ../../../figures/de/html_example_dialog.png
      :scale: 80
-     
-Das HTML-Element, welches hier eingebunden wird hat die Bezeichnung (Title) Mapbender Logo. Im Content wird das gewünschte Element als HTML-Code angegeben und bei Classes wurde die Default-Einstellung html-element-inline übernommen. Der Code für das Anwendungsbeispiel lautet:
+
+Das HTML-Element, welches hier eingebunden wird, hat die Bezeichnung (Title) Mapbender Logo. Im Content wird das gewünschte Element als HTML-Code angegeben und bei Classes wurde die Default-Einstellung html-element-inline übernommen. Der Code für das Anwendungsbeispiel lautet:
 
 .. code-block:: yaml
 
-     <a href='http://mapbender.org' target='_blank'> 
-     <img src='https://mapbender.org/sites/default/files/mapbender-logo_webside.png'  
+     <a href='http://mapbender.org' target='_blank'>
+     <img src='https://mapbender.org/sites/default/files/mapbender-logo_webside.png'
      height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
 
 Das Mapbender Logo wird als Bild eingebunden (img src='https://mapbender.org/sites/default/files/mapbender-logo_webside.png'). Zusätzlich wird für das Bild die Höhe (height=‘60px‘) und das Styling definiert. Das Styling (style=) beinhaltet die Hintergrundfarbe und Transparenz (background-color:rgb(255, 255, 255, 0.9)) sowie den Abstand des Bildes zu den Seitenrändern (padding:10px). Außerdem wurde ein Link zur Mapbender Webseite hinterlegt (href='http://mapbender.org'), welche sich beim klicken auf das Bild in einem neuen Tab öffnet (target='_blank').
@@ -64,21 +64,21 @@ In der Sidepane:
 
 .. image:: ../../../figures/de/html_example_sidepane.png
      :scale: 80
-     
+
 Und im Footer:
 
 .. image:: ../../../figures/de/html_example_footer.png
      :scale: 80
-     
-     
-Logo mit hinterlegtem Link einbinden:
--------------------------------------
+
+
+Mit Variablen im HTMl-Element arbeiten:
+---------------------------------------
 
 Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden. Als Beispiel wird gezeigt, wie der Titel der Anwendung und des Elements mithilfe eines HTML-Elements eingebunden werden kann.
 
 **Die Variable "application.title"**
 
-Die Anwendung, für die dieses Element konfiguriert wird, sieht im Anwendungsmanager des 
+Die Anwendung, für die dieses Element konfiguriert wird, sieht im Anwendungsmanager des
 Mapbender wie folgt aus:
 
 .. image:: ../../../figures/de/html_example_application.title_application.png
@@ -96,7 +96,7 @@ In diesem Beispiel ist die Bezeichnung (Title) des HTML-Elements "Titel". Im Con
      <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{  application.title }} </span></b>
 
 
-Der Titel der Anwendung wurde mit dem Textzusatz "Anwendung" eingebunden. Dieser Zusatz ist unabhängig vom Titel der Anwendung und wird vor diesen gesetzt (D.h.: Anwendung + Titel der Anwendung). Durch den Style-Block (style=) wurden die Schriftgröße (font-size:25px), die Schriftfarbe (color:#b6dd18) und die Position (margin-right:50vw) des Titels angepasst. Außerdem wird der Titel fett (<b></b>) angezeigt. Die Variable für den Anwendungstitel wird durch diesen Ausdruck eingebunden: *{{ application.title }}*
+Der Titel der Anwendung wurde mit dem Textzusatz "Anwendung" eingebunden. Dieser Zusatz ist unabhängig vom Titel der Anwendung und wird vor diesen gesetzt (d.h.: Anwendung + Titel der Anwendung). Durch den Style-Block (style=) wurden die Schriftgröße (font-size:25px), die Schriftfarbe (color:#b6dd18) und die Position (margin-right:50vw) des Titels angepasst. Außerdem wird der Titel fett (<b></b>) angezeigt. Die Variable für den Anwendungstitel wird durch diesen Ausdruck eingebunden: *{{ application.title }}*
 
 Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
@@ -125,10 +125,10 @@ YAML-Definition:
 .. code-block:: yaml
 
     title: 'HTML-Element'
-    class: Mapbender\CoreBundle\Element\HTMLElement   
+    class: Mapbender\CoreBundle\Element\HTMLElement
     content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # content kann Variablen: "application", "entity" und "configuration" beinhalten.
     classes: my-special-css-class
-   
+
 
 Class, Widget & Style
 =====================
@@ -156,4 +156,3 @@ Einfügen eines Links
 .. code-block:: yaml
 
   <a href='http://mapbender.org' target='_blank'>Go to the Mapbender Website</a>
-
