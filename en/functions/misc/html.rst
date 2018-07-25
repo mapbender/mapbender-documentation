@@ -30,6 +30,7 @@ You might want to add an image to your application:
 Configuration: Examples
 =======================
 
+
 Add a logo with a link:
 -----------------------
 
@@ -37,12 +38,12 @@ It is possible to include several additional elements via the HTML-element. E.g.
 
 In the backend of your application, head over to the Layouts-tab. Then, simply add the HTML-element to the toolbar, the sidepane or the footer with a single click on the ``+`` -button.
 
-.. image:: ../../../figures/html_add_element.png
+.. image:: ../../../figures/de/html_add_element.png
      :scale: 80
 
 The dialog "Add element - HTML" will pop up. In our example it looks like this:
 
-.. image:: ../../../figures//html_example_dialog.png
+.. image:: ../../../figures/de/html_example_dialog.png
      :scale: 80
 
 Let's include a simple logo. We start by naming the title of the HTML-element: Mapbender Logo. In the content section, it is possible to write plain HTML-code. We refer to our element with the appropriate code. In the classes section, we stick to the default setting (html-element-inline). The HTML-code looks like this:
@@ -57,12 +58,12 @@ As you can see, the mapbender logo is included as a picture in the code (img src
 
 As mentioned, it is possible to include the HTML-element in several locations. Let's look at the toolbar first:
 
-.. image:: ../../../figures/html_example_toolbar.png
+.. image:: ../../../figures/de/html_example_toolbar.png
      :scale: 80
 
 In the sidepane:
 
-.. image:: ../../../figures/html_example_sidepane.png
+.. image:: ../../../figures/de/html_example_sidepane.png
      :scale: 80
 
 In the footer:
@@ -80,26 +81,26 @@ In Mapbender, it is possible to work with variables in applications. The followi
 
 The application manager shows our application like this:
 
-.. image:: ../../../figures/html_example_application.title_application.png
+.. image:: ../../../figures/de/html_example_application.title_application.png
      :scale: 80
 
 First, we add the HTML-element - as mentioned before, this happens by clicking the ``+`` -button. To integrate the title of your application into the element, the variable "application.title" is required.
 
-.. image:: ../../../figures/html_example_application.title_dialog.png
+.. image:: ../../../figures/de/html_example_application.title_dialog.png
      :scale: 80
 
 In this example, the title of the HTML-element is defined as "Title". The content section uses the following code:
 
 .. code-block:: yaml
 
-     <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Application {{  application.title }} </span></b>
+     <b><span style="font-size:25px;color:#b6dd18;margin-right:50px"> Application {{  application.title }} </span></b>
 
 
-To add a bit of spicyness, our application title also has the additional text "Application". This additive is independent from the actual application title and is therefore set before the variable (i.e.: Application + application.title). The style block (style=) modifies the font size (font-size:25px), the font color (color:#b6dd18) and the title positioning (margin-right:50vw). Moreover, the letters are styled bold (<b></b>). As you might have guessed, the variable is mentioned in the following code: *{{ application.title }}*
+To add a bit of spicyness, our application title also has the additional text "Application". This additive is independent from the actual application title and is therefore set before the variable (i.e.: Application + application.title). The style block (style=) modifies the font size (font-size:25px), the font color (color:#b6dd18) and the title positioning (margin-right:50vw). Moreover, the letters are styled bold (<b></b>). As you might have guessed, the variable is mentioned in the following code: *{{ application.title }}* .
 
 The outcome looks like this:
 
-.. image:: ../../../figures/html_example_application.title.png
+.. image:: ../../../figures/de/html_example_application.title.png
      :scale: 80
 
 **Variable "entity"**
@@ -108,14 +109,14 @@ The variable "entity" includes parameters into the HTML-elements. For instance, 
 
 The configuration for the HTML-element "Title" and the variable *{{ entity.title }}* with the additional text "HTML-element" looks like this:
 
-.. image:: ../../../figures/html_example_entity.title_dialog.png
+.. image:: ../../../figures/de/html_example_entity.title_dialog.png
      :scale: 80
 
 The styling is transferred from the first example (application.title). Only the additional text, variable and position (margin-right) were changed for entity.title.
 
 Finally, the element looks like this:
 
-.. image:: ../../../figures/html_example_entity.title.png
+.. image:: ../../../figures/de/html_example_entity.title.png
      :scale: 80
 
 YAML-Definition:

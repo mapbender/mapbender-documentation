@@ -1,7 +1,7 @@
 .. _map:
 
 Map
-***********************
+***
 
 MapQuery/OpenLayers based map.
 You have to define units, start and max. extent, scales and supported projections.
@@ -33,17 +33,17 @@ Configuration: Examples
 ======================
 The Main Map element is included in the content section of the application menu. A map element can be added with the ``+`` -button.
 
-.. image:: ../../../figures/add_content.png
+.. image:: ../../../figures/de/add_content.png
      :scale: 80
 
 All layersets can be included in the Main Map element if they are set in the layersets tab in the application backend before. In this example, these are the following:
 
-.. image:: ../../../figures/map_example_layersets.png
+.. image:: ../../../figures/de/map_example_layersets.png
      :scale: 80
 
 The layersets are visible in the configuration dialog in the *Layersets* (1) section. It is possible to multi-select the desired layers. Unchecked layersets can be used in the overview element (as a overview map) later on.
 
-.. image:: ../../../figures/map_example_dialog.png
+.. image:: ../../../figures/de/map_example_dialog.png
      :scale: 80
 
 The field *SRS* (2) defines the coordinate reference system that is used at application launch. In this example, the coordinate reference system ETRS89/ UTM Zone 32N was chosen. The affiliated ESPG-code is 25832. If the application should support other coordinate systems, simply add those in the *Other SRS* (6) field (enter the EPSG code). It is possible to enter several comma-separated codes. In this example, the following codes are used: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator) and 4326 (WGS 84). Switching between the registered coordinate systems works with the element "SRS Selector". To get more details on the SRS selector, visit `SRS Selector <srs_selector.html>`_ .
