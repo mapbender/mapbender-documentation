@@ -40,7 +40,7 @@ In the backend of your application, head over to the Layouts-tab. Then, simply a
 .. image:: ../../../figures/html_add_element.png
      :scale: 80
 
-The dialogue "Add element - HTML" will pop up. In our example (Mapbender 3.0.7), it looks like this:
+The dialog "Add element - HTML" will pop up. In our example it looks like this:
 
 .. image:: ../../../figures//html_example_dialog.png
      :scale: 80
