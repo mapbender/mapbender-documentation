@@ -243,7 +243,7 @@ Styling der Administrationsseiten
 Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche bitte an:
 
 * login.css : Anpassung des Designs der Login-Oberfläche (Anmelde-Seite)
-* manager.css : Anpassung des Designs der Verwalungs/Administrations-Oberfläche (Anwendungsübersicht u.ä.)
+* manager.css : Anpassung des Designs der Verwaltungs/Administrations-Oberfläche (Anwendungsübersicht u.ä.)
 * password.css : Anpassung des Designs der Passwort-Oberfläche (Passwort vergessen u.ä.)
 
 Ab der Mapbender Version 3.0.3.0 muss lediglich das css definiert werden, das vom Standard der Administrationsoberfläche abweicht.
@@ -438,7 +438,7 @@ Mapbender verwendet Schrift-Icons auf der FontAwesome Collection:
    src: url("../../bundles/fomcore/images/icons/fontawesome-webfont.eot?v=3.0.1");
    src: url("../../bundles/fomcore/images/icons/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../../bundles/fomcore/images/icons/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../../bundles/fomcore/images/icons/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
    font-weight: normal;
-   font-style: normal; 
+   font-style: normal;
  }
 
 
@@ -462,11 +462,10 @@ Wenn Sie ein Bild nutzen möchten, legen Sie dieses am Besten in Ihrem Bundle ab
 Probieren Sie es aus
 ~~~~~~~~~~~~~~~~~~~~~
 
-* Laden Sie das Workshop/DemoBundle herunter: https://github.com/mapbender/mapbender-workshop 
+* Laden Sie das Workshop/DemoBundle herunter: https://github.com/mapbender/mapbender-workshop
 * Ändern Sie die Farbe Ihrer Icons.
 * Ändern Sie die Größe Ihrer Icons.
 * Ändern Sie die Farbe der Toolbar.
 * Benutzen sie ein Bild anstelle eines Font-Icons für Ihre Buttons.
 * Verschieben Sie die Übersichtskarte auf die linke Seite.
 * Schauen Sie in die Workshop-Dateien, um zu erfahren, wie das funktioniert.
-
