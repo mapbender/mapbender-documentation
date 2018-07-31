@@ -521,8 +521,7 @@ Die möglichen Optionen sind:
 
 
 
-* **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. [true/false] Standardwert ist false.
-* **displayOnInactive:** Objekte werden erst wenn das Element aktiv ist und das Schema selektiert ist angezeigt. Wenn auf "false" ist und Schema aktiv ist, werden die Objekte, obwohl das Element selbst nicht aktiv ist troztdem angezeigt. [true/false] Standardwert ist false.
+.. * **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. [true/false] Standardwert ist false.
 
 
 Experimentell:

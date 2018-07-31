@@ -525,8 +525,7 @@ The possible options are:
    .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
-* **displayPermanent:** FeatureTypes are displayed permanently (with explicit, active or select) [true/false]
-* **displayOnInactive:** Objects are not displayed until the element is active and the schema is selected. If it is set to "false" and Schema is active, the objects are displayed even though the element itself is not active.[true/false] default is false.
+.. * **displayPermanent:** FeatureTypes are displayed permanently (with explicit, active or select) [true/false]
 
 
 Experimental:
