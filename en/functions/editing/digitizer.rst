@@ -508,17 +508,38 @@ The possible options are:
 * **allowCancelButton:** Show the Cancel button [true/false]. See `Save, Delete, Cancel <#save-delete-cancel>`_.
 * **allowDeleteByCancelNewGeometry:** If true: When you create a new feature, the Cancel button will behave like the Delete button: The feature is removed from the map and the table. This is not the case if you edit an existing feature. [true/false]
 * **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
-* **allowLocate:** Navigation to a feature via the tabs-keyboard-button, simple for operation without mouse. [True / false]
-* **allowChangeVisibility:** Allow to change the visibility of all hits in the map (visible / invisible). [true/false] 
-* **showVisibilityNavigation:** Change the visibility of a hit in the map (visible / invisible). [true/false]
-* **allowCustomerStyle:** Allow user-specific styles for features in the map. [true/false]
-* **displayPermanent:** Layers are displayed permanently (with explicit, active or select) [true/false]
-* **displayOnInactive:** Objects are not displayed until the element is active and the schema is selected. If it is set to "false" and Schema is active, the objects are displayed even though the element itself is not active.[true/false] default is false.
-.. * **displayOnSelect:** ???????
-.. * **oneInstanceEdit**: Allow to edit features in multiple popups or allwo only one popup. [true/false] default is true.
+* **allowLocate:** Navigation to a feature via the tabs-keyboard-button, simple for operation without mouse. [True / false]. An extra "zoomTo" Button is displayed for each feature.
 
-.. image:: ../../../../../figures/digitizer_stylemanager.png
-           :scale: 80
+   .. image:: ../../../figures/digitizer/allowlocate.png
+              :scale: 80
+
+  
+* **allowChangeVisibility:** Allow to change the visibility of one feature in the map (visible / invisible). [true/false]. An Eye Symbol is displayed, which allows to hide or display each feature indiviudally.
+
+   .. image:: ../../../figures/digitizer/allowchangevisibility.png
+              :scale: 80
+
+  
+* **showVisibilityNavigation:** Allow to change the visibility of all features in the map (visible / invisible). [true/false]
+  
+   .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
+              :scale: 80
+
+* **displayPermanent:** FeatureTypes are displayed permanently (with explicit, active or select) [true/false]
+* **displayOnInactive:** Objects are not displayed until the element is active and the schema is selected. If it is set to "false" and Schema is active, the objects are displayed even though the element itself is not active.[true/false] default is false.
+
+
+Experimental:
+
+* **allowCustomerStyle:** Allow user-specific styles for features in the map [true/false]. This feature is experimental: For each feature you can set unique styles.
+
+ .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
+              :scale: 80
+
+ A style-manager is used to let you set the unique styles.
+
+ .. image:: ../../../figures/digitizer/stylemanager.png
+              :scale: 80
 
 
 
@@ -1064,7 +1085,7 @@ Definition of the cluster element:
 
 Map-Refresh after save
 ----------------------
-After saving an object, the refresh can be activated using the *refreshLayersAfterFeatureSave* option. This parameter is used to reload the defined layer instances in the map-element. This makes changes regarded to WMS services directly visible in the map.
+After saving an object, the refresh can be activated using the *refreshLayersAfterFeatureSave* option. This parameter is used to reload the defined layer instances in the map-element. This makes changes regarded to WMS services directly visible in the map. This event is thrown only if the "Save" button of the attribute dialog is pressed.
 
 If the YAML application is used in the /application folder, it can be specified by unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
 

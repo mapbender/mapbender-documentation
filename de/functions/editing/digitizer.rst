@@ -500,18 +500,42 @@ Die möglichen Optionen sind:
 * **allowCancelButton:** Zeigt die Abbrechen Schaltfläche. [true/false]. Siehe `Speichern, Löschen, Abbrechen <#speichern-loschen-abbrechen>`_.
 * **allowDeleteByCancelNewGeometry:** Wenn auf true gestellt: Beim Neuanlegen eines Features verhält sich der Abbrechen Knopf wie der Löschen Knopf: Das Feature wird aus der Karte und der Tabelle entfernt. Dies gilt nicht bei dem Ändern eines vorhandenen Features. [true/false]
 * **displayOnInactive:** Der aktuellen FeatureType wird weiterhin auf der Karte angezeigt, auch wenn der Digitizer in der Sidepane (Accordion, Tabs) nicht mehr aktiviert ist. [true/false]. Die Option ist, wenn angeschaltet, ein wenig tricky, da auch die einzelnen Digitizer Events noch aktiviert sind, für erfahrene Anwendern aber durchaus hilfreich.
-* **allowLocate:** Navigation zu einem Feature hin über die Bedienung mit der Tabs-Taste, sinvoll für die Bedienung ohne Maus. [true/false]
-* **allowChangeVisibility:** Ändern der Sichtbarkeit von allen Treffern in der Karte (Sichtbar/nicht sichtbar). [true/false]
-* **showVisibilityNavigation:** Ändern der Sichtbarkeit von einem Treffer in der Karte (Sichtbar/nicht sichtbar). [true/false]
-* **allowCustomerStyle:** Erlauben benutzerspezifischer Styles für Elemente in der Karte. [true/false]
-* **displayPermanent:** Layer werden dauerhaft (bei explicit, active oder select) angezeigt. [true/false] Standardwert ist false.
+* **allowLocate:** Navigation zu einem Feature hin über die Bedienung mit der Tabs-Taste, sinvoll für die Bedienung ohne Maus. [true/false]. Es erscheint eine extra "ZoomTo" Schaltfläche zu jeden Feature.
+
+   .. image:: ../../../figures/digitizer/allowlocate.png
+              :scale: 80
+
+  
+* **allowChangeVisibility:** Ändern der Sichtbarkeit von einem Treffer in der Karte (sichtbar/nicht sichtbar). [true/false]. Es wird ein Auge-Symbol zu jedem Feature eingeblendet, mit dem dieses explizit aus- und wieder eingeblendet werden kann.
+
+   .. image:: ../../../figures/digitizer/allowchangevisibility.png
+              :scale: 80
+
+ 
+* **showVisibilityNavigation:** Ändern der Sichtbarkeit von allen Treffern in der Karte (sichtbar/nicht sichtbar). [true/false]
+
+   .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
+              :scale: 80
+
+             
+  
+
+  
+* **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. [true/false] Standardwert ist false.
 * **displayOnInactive:** Objekte werden erst wenn das Element aktiv ist und das Schema selektiert ist angezeigt. Wenn auf "false" ist und Schema aktiv ist, werden die Objekte, obwohl das Element selbst nicht aktiv ist troztdem angezeigt. [true/false] Standardwert ist false.
-.. * **displayOnSelect:** ???????
-.. * **oneInstanceEdit**: Erlaubt das Editieren von Objekten in mehreren Popup-Fenstern oder Erlaubt nur ein Popup-Fenster. [true/false] Standardwert ist true.
 
 
-.. image:: ../../../../../figures/digitizer_stylemanager.png
-           :scale: 80
+Experimentell:
+
+* **allowCustomerStyle:** Erlauben benutzerspezifischer Styles für Elemente in der Karte. [true/false]. Dieses Feature ist noch experimentell: Zu jedem Feature können über ein Symbol die einzelnen Styles verändert werden.
+
+ .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
+              :scale: 80
+
+ Es erscheint ein Style-Manager, mit dem man die einzelnen Features anpassen kann.
+
+ .. image:: ../../../figures/digitizer/stylemanager.png
+              :scale: 80
 
 
 Definition Popup
@@ -1055,12 +1079,12 @@ Definition der Clusterelemente:
 Karten-Refresh nach Speichern
 -----------------------------
 
-Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option *refreshLayersAfterFeatureSave* aktiviert werden. Über diesen Parameter werden die definierten Layer-Instanzen aus dem Map-Element neu geladen. Damit werden Änderungen in WMS-Diensten direkt in der Karte sichtbar.
+Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option ``refreshLayersAfterFeatureSave`` aktiviert werden. Über diesen Parameter werden die definierten Layer-Instanzen aus dem Map-Element neu geladen. Damit werden Änderungen in WMS-Diensten direkt in der Karte sichtbar. Dieses Event wird nur gestartet, wenn der Speichern Knopf aus dem Attributdialog verwendet wird.
 
 Wenn YAML-Anwendung unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen. 
 
 
-.. image:: ../../../../../figures/layerinstance_id.png
+.. image:: ../../../figures/digitizer/layerinstance_id.png
      :scale: 80
 
 
