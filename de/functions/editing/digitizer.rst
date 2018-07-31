@@ -505,22 +505,22 @@ Die möglichen Optionen sind:
    .. image:: ../../../figures/digitizer/allowlocate.png
               :scale: 80
 
-  
+
 * **allowChangeVisibility:** Ändern der Sichtbarkeit von einem Treffer in der Karte (sichtbar/nicht sichtbar). [true/false]. Es wird ein Auge-Symbol zu jedem Feature eingeblendet, mit dem dieses explizit aus- und wieder eingeblendet werden kann.
 
    .. image:: ../../../figures/digitizer/allowchangevisibility.png
               :scale: 80
 
- 
+
 * **showVisibilityNavigation:** Ändern der Sichtbarkeit von allen Treffern in der Karte (sichtbar/nicht sichtbar). [true/false]
 
    .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
-             
-  
 
-  
+
+
+
 * **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. [true/false] Standardwert ist false.
 * **displayOnInactive:** Objekte werden erst wenn das Element aktiv ist und das Schema selektiert ist angezeigt. Wenn auf "false" ist und Schema aktiv ist, werden die Objekte, obwohl das Element selbst nicht aktiv ist troztdem angezeigt. [true/false] Standardwert ist false.
 
@@ -604,9 +604,9 @@ Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu d
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
 
-Bei jedem Eingabefeldkönnen unabhänig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit kann man beispielsweise wichtige Felder hervorheben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld füllen. 
+Bei jedem Eingabefeldkönnen unabhänig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit kann man beispielsweise wichtige Felder hervorheben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld füllen.
 
-Verhaltensparameter: 
+Verhaltensparameter:
 * load, focus, blur
 * input, change, paste
 * click, dblclick, contextmenu
@@ -692,7 +692,7 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
 
 **(2) multiselect - mehrere Einträge können ausgewählt werden**
 
-Multiselect-Box wird durch das attribute "multiple: true" aktiviert. Es können mehrere Einträge ausgewählt werden. Die Nutzung und die Voraussetzungen der Datenbank können da variieren. Bei dem oben beschriebenen Beispiel können die Interessen in den POI als Multiobjekte abgespeichert werden. Das Datenbankfeld ist weiterhin  ein character varying.
+Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können mehrere Einträge ausgewählt werden. Die Nutzung und die Voraussetzungen der Datenbank können da variieren. Bei dem oben beschriebenen Beispiel können die Interessen in den POI als Multiobjekte abgespeichert werden. Das Datenbankfeld ist weiterhin  ein character varying.
 
 .. code-block:: yaml
 
@@ -708,6 +708,12 @@ Multiselect-Box wird durch das attribute "multiple: true" aktiviert. Es können 
                     dancing: dancing
                     beer: beer
                     flowers: flowers
+
+Ab Digitizer 1.2: Für die Mehrfachauswahl wird eine vereinfachte Auswahlmöglichkeit genutzt, die auch die Suche innerhalb der Drop-Down-Liste ermöglicht. Die Navigation durch die Liste ist mit der Tastatur möglich. Mögliche Einträge werden beim Eintippen hevorgehoben. Eine vorhandene Auswahl kann über das kleine "x" Symbol wieder deaktiviert werden.
+
+.. image:: ../../../figures/digitizer/digi_multiselecttool.png
+     :scale: 80
+
 
 Das SQL (wenn maps und reading abgespeichert wurden):
 
@@ -1081,7 +1087,7 @@ Karten-Refresh nach Speichern
 
 Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option ``refreshLayersAfterFeatureSave`` aktiviert werden. Über diesen Parameter werden die definierten Layer-Instanzen aus dem Map-Element neu geladen. Damit werden Änderungen in WMS-Diensten direkt in der Karte sichtbar. Dieses Event wird nur gestartet, wenn der Speichern Knopf aus dem Attributdialog verwendet wird.
 
-Wenn YAML-Anwendung unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen. 
+Wenn YAML-Anwendung unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
 
 
 .. image:: ../../../figures/digitizer/layerinstance_id.png
@@ -1102,10 +1108,10 @@ Wenn YAML-Anwendung unter /application genutzt werden, kann die Angabe per einde
 Duplizieren von Objekten
 ------------------------
 
-Bereits erfasste Objekt können dupliziert werden. Dies geht über einen Duplizieren-Button innerhalb des Erfassungsfensters des aktuellen selektierten bereits vorhandenen Features, über das Context-Menu und die Treffertabelle. 
-Damit das neue Objekt in der Karte besser erkannt werden kann ist hier eine farbliche Hervorhebung definierbar. 
+Bereits erfasste Objekt können dupliziert werden. Dies geht über einen Duplizieren-Button innerhalb des Erfassungsfensters des aktuellen selektierten bereits vorhandenen Features, über das Context-Menu und die Treffertabelle.
+Damit das neue Objekt in der Karte besser erkannt werden kann ist hier eine farbliche Hervorhebung definierbar.
 
-Der Duplizieren-Button kann in Abhängigkeit von einem bestimmten Attribut-Wert aktiviert werden. Dies bedeutet, dass nur wenn das entsprechende Attribut einen bestimmten Wert hat (date > 0), erscheint die Duplizieren-Funktion. 
+Der Duplizieren-Button kann in Abhängigkeit von einem bestimmten Attribut-Wert aktiviert werden. Dies bedeutet, dass nur wenn das entsprechende Attribut einen bestimmten Wert hat (date > 0), erscheint die Duplizieren-Funktion.
 
 * **data**: Angabe von Standardwerten für Attributfelder
 * **rules**: regelbasiertes Duplizieren (nur wenn die Regel zutrifft darf das Objekt dupliziert werden).
@@ -1150,7 +1156,7 @@ Es gibt mehrere Events, die zu einem Feature zugeordnet werden können, um Attri
 * **onAfterRemove**: Event nach dem Löschen von Daten
 
 Im Unterschied zu den Save-Events arbeiten die Update-Events nur bei einer Aktualisierung der Daten, nicht bei einer Erstellung.
-  
+
 **Anmerkung:** Die Events sind noch in der Entwicklung und sollten mit Voraussicht eingebunden werden.
 Die korrekte Abstimmung der Events aufeinander und ihre Abhängigkeiten sind noch nicht vollständig fertiggestellt und können sich in zukünftigen Versionen ändern.
 
@@ -1163,7 +1169,7 @@ Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attri
 
 Man kann das Event je nach Anwendungsfall bei onBeforeInsert oder onBeforeUpdate eintragen.
 
-Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Datenbank ist, kann man auf sie nicht als Feature zugreifen, sondern nur über das jeweilige "item", eine interne Digitizer Speicherstruktur. Diese "item" orientieren sich am Formular und den dort angegebenen Attributen. 
+Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Datenbank ist, kann man auf sie nicht als Feature zugreifen, sondern nur über das jeweilige "item", eine interne Digitizer Speicherstruktur. Diese "item" orientieren sich am Formular und den dort angegebenen Attributen.
 
 .. code-block:: yaml
 
@@ -1173,16 +1179,16 @@ Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Daten
 
 Bei dem Event wird der Wert des Feldes "geom2" mit dem Wert des Feldes "geom" überschrieben.
 
-                  
+
 **Speichern unterschiedlicher Geometrietypen:**
 
 Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
 
 .. code-block:: sql
-                
+
                 events:
                   onBeforeInsert: |
-                    $sql = "SELECT 
+                    $sql = "SELECT
                     ST_Line_Interpolate_Point('".$item['geomline']."'::geometry, 1) as geom";
                     $stmnt = $this->getConnection()->prepare($sql);
                     $stmnt->execute();
@@ -1194,7 +1200,7 @@ Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Eve
 Buttons
 -------
 
-Für die Erfassungsformulare können weitere Buttons definiert werden. Die Events beim Klick auf den Button können frei per JavaScript definiert werden. Somit können beispielsweise mailto-Angaben für die Einbindung einer Mail generiert werden. 
+Für die Erfassungsformulare können weitere Buttons definiert werden. Die Events beim Klick auf den Button können frei per JavaScript definiert werden. Somit können beispielsweise mailto-Angaben für die Einbindung einer Mail generiert werden.
 
 .. code-block:: yaml
 
@@ -1220,7 +1226,7 @@ Darstellung (Styles)
 
 Über die Angabe eines Styles kann definiert werden, wie die Objekte angezeigt werden.
 *Default* definiert dabei die normale Darstellung der Objekte auf der Karte und *Select* die Darstellung der ausgewählten Objekte.
-* **default**: Definiert die normale Darstellung der Objekte auf der Karte 
+* **default**: Definiert die normale Darstellung der Objekte auf der Karte
 * **select**: Darstellung der ausgewählten Objekte beim Mouseover
 * **selected**: Darstellung der ausgewählten Objekte nach dem Klick Event
 
@@ -1253,7 +1259,7 @@ Darstellung (Styles)
               strokeWidth: 4
               strokeColor: "#648296"
               fillOpacity: 1
-              fillColor: "#eeeeee"              
+              fillColor: "#eeeeee"
               label: ${name} ${type}
               pointRadius: 10
       ...
@@ -1292,4 +1298,3 @@ Class, Widget & Style
 * Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
 * Widget: mapbender.element.digitizer.js
 * Style: sass\\element\\digitizer.scss
-

@@ -716,6 +716,12 @@ The Multiselect-Box is activated by the attribute "multiple: true". You can choo
                     beer: beer
                     flowers: flowers
 
+From Digitizer version 1.2: The multiple selection provides an easier mechanism to choose an entry, which also support a kind of search of the drop-down-list. The navigation through the list ist possible via your keyboard. Possible entries are highlighted during typing. An already chosen entry can be removed by clicking the small "x" symbol.
+
+.. image:: ../../../figures/digitizer/digi_multiselecttool.png
+     :scale: 80
+                    
+
 The SQL (if maps and reading were chosen):
 
 .. code-block:: sql
