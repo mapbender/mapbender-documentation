@@ -165,7 +165,14 @@ Reasons might be: Language and regional settings of the operating system (for ex
 More Information at the Doctrine-page: `http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html <http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html>`_
 
 
+Which rights does the Mapbender user need for the Oracle database?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+- Create Sequence
+- Create Session
+- Create Table
+- Create Trigger
+- Create View
 
 
 The access to an Oracle database is too slow

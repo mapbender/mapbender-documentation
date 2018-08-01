@@ -164,6 +164,15 @@ Ursachen können sein: Ländereinstellungen des Betriebssystems sein (z.B. Windo
 Mehr Informationen auf der Doctrine Seite: `http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html <http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html>`_
 
 
+Welche Rechte benötigt der Mapbender User auf der Oracle-Datenbank?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Create Sequence
+- Create Session
+- Create Table
+- Create Trigger
+- Create View
+
 
 Der Zugriff auf Oracle-Datenbanken ist langsam
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
