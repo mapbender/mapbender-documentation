@@ -49,6 +49,8 @@ Um optional eine andere Datenbank als die vorkonfigurierte SQLite zu verwenden, 
 
 Beachten Sie, dass die SQLite Erweiterung auf jeden Fall benötigt wird. Sie benötigen diese, um im Entwicklermodus zu arbeiten oder um Profiler-Daten zu erzeugen sowie um Fehler zu analysieren.
 
+.. note:: **Oracle:** Bitte beachten Sie die Hinweise zu Oracle, die wir in der :ref:`faq_de` zusammengestellt haben.
+
 
 Systemvoraussetzungen Windows
 ******************************

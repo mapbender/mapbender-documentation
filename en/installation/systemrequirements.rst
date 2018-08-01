@@ -49,6 +49,8 @@ Optionally, in order to use a database other than the preconfigured SQLite one, 
 
 If you want to use the developer mode or for creating create profiler data to be used to analyze errors you will still need the SQLite extension!
 
+.. note:: **Oracle:** Please read the hints for Oracle, that we have summarized in our :ref:`faq`.
+
 
 System requirements Windows
 ***************************
