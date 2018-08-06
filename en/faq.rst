@@ -146,7 +146,16 @@ Oracle
 Adjustments for Oracle database - point and comma
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: I get an error when I run doctrine:schema:create on Oracle. Why?
+Q: I get an error when I run doctrine:schema:create on Oracle. Why? The error message is:
+
+.. code-block:: sql
+
+                [Doctrine\DBAL\Exception\DriverException]
+                An exception occurred while executing
+                'CREATE TABLE mb_wms_wmsinstance (id NUMBER(10) NOT NULL,
+                                                  [...]
+                                                  PRIMARY KEY(id))':
+                ORA-01722: Invalid number
 
 A: Probably Oracle can't handle the decimal seperators and expects a comma instead of a point (for example 1,25 instead of 1.25). This can be adjusted with the following Snippet at the end of the config.yml (clear cache afterwards).
 

@@ -145,7 +145,16 @@ Oracle
 Einstellungen für die Oracle Datenbank - Punkt und Komma
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Ich bekomme bei Oracle einen Fehler, wenn ich doctrine:schema:create ausführe. Warum?
+F: Ich bekomme bei Oracle einen Fehler, wenn ich doctrine:schema:create ausführe. Warum? Hier ist meine Fehlermeldung:
+
+.. code-block:: sql
+
+                [Doctrine\DBAL\Exception\DriverException]
+                An exception occurred while executing
+                'CREATE TABLE mb_wms_wmsinstance (id NUMBER(10) NOT NULL,
+                                                  [...]
+                                                  PRIMARY KEY(id))':
+                ORA-01722: Ungültige Zahl
 
 A: Wahrscheinlich kommt Oracle nicht mit den Dezimaltrennern zurecht und erwartet ein Komma, statt einem Punkt (also 1,25 statt 1.25). Das kann man mit folgendem Statement am Ende der config.yml einrichten (Cache danach leeren).
 
