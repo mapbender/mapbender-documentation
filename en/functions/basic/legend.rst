@@ -1,7 +1,7 @@
 .. _legend:
 
 Legend
-************
+******
 
 The legend object shows a legend of the layers that are displayed in the map. Every single layer is listed which includes point, line and/or polygon objects.
 
@@ -41,7 +41,7 @@ If yout want to integrate a legend to the sidepane, click the ``+`` -button in t
 
 Then, choose the element "Legend" in the appearing window. The configurational dialog "Add element – Legend" will open.
 
-.. image:: ../../../figures/de/legend_example_sidepane_dialog.png
+.. image:: ../../../figures/legend_example_sidepane_dialog.png
      :scale: 80
 
 Our configured element has the title "Legend". It is defined as *Elementtype* "blockelement", because it is integrated into the sidepane. *Display type* is set to "list" and *target* is set to "Main Map". The legends opens automatically (set checkbox *Autoopen*) and hides all layers which do not include objects (set checkbox *Hide empty layers*). Moreover, the layer title and the title of all grouped layers appears (set checkboxes *Show layer title* and *Show grouped layer title*).
@@ -62,7 +62,7 @@ The legend element can be integrated with a button in the toolbar. First step: I
 
 In this example, the following settings are chosen:
 
-.. image:: ../../../figures/de/legend_example_toolbar_dialog.png
+.. image:: ../../../figures/legend_example_toolbar_dialog.png
      :scale: 80
 
 As always, it is important to set the *Element type* to the appropriate setting - in this case, "dialog". In our example, the checkbox *Autoopen* is dismissed. Therefore, the legend opens with a click on the button.
@@ -70,7 +70,7 @@ This button has to be implemented into the toolbar section. For detailed instruc
 
 The configuration of a button can look like this:
 
-.. image:: ../../../figures/de/legend_example_button.png
+.. image:: ../../../figures/legend_example_button.png
      :scale: 80
 
 Following the above instructions, the result in the application looks like this:
