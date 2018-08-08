@@ -12,7 +12,7 @@ You have to define units, start and max. extent, scales and supported projection
 Configuration
 =============
 
-.. image:: ../../../figures/map_configuration.png
+.. image:: ../../../figures/de/map_dialog.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
@@ -29,8 +29,10 @@ Configuration
 * **OL image path:** OpenLayers image path, at which the images are saved (bundles/mapbendercore/mapquery/lib/openlayers/img).
 * **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
 
-Configuration: Examples
-======================
+
+Configuration example
+=====================
+
 The Main Map element is included in the content section of the application menu. A map element can be added with the ``+`` -button.
 
 .. image:: ../../../figures/de/add_content.png
@@ -46,12 +48,12 @@ The layersets are visible in the configuration dialog in the *Layersets* (1) sec
 .. image:: ../../../figures/de/map_example_dialog.png
      :scale: 80
 
-The field *SRS* (2) defines the coordinate reference system that is used at application launch. In this example, the coordinate reference system ETRS89/ UTM Zone 32N was chosen. The affiliated ESPG-code is 25832. If the application should support other coordinate systems, simply add those in the *Other SRS* (6) field (enter the EPSG code). It is possible to enter several comma-separated codes. In this example, the following codes are used: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator) and 4326 (WGS 84). Switching between the registered coordinate systems works with the element "SRS Selector". To get more details on the SRS selector, visit `SRS Selector <srs_selector.html>`_ .
+The field *SRS* (2) defines the coordinate reference system that is used at application launch. In this example, the coordinate reference system ETRS89/ UTM Zone 32N was chosen. The affiliated ESPG-code is 25832. If the application should support other coordinate systems, simply add those in the *Other SRS* (6) field (enter the EPSG code). It is possible to enter several comma-separated codes. In this example, the following codes are used: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator) and 4326 (WGS 84). Switching between the registered coordinate systems works with the element "SRS Selector". To get more details on the SRS selector, visit :ref:`scale_selector`.
 
 The field *max. Extent* (3) states the max. zoomable extent of the map application. If there is data outside of the extent, it cannot be seen by the frontend user. The field *start Extent* (4) refers to the extent of the map that is visible when the application is launched in the browser (in the example the city of Bonn).
 
-The field *scales (csv)* (5) defines the scales that are usable in the application. This element can come handy if the user should e.g. see the map, but not too many details of it (just define no possibility to zoom closer than 1:10000). Moreover, it is possible to switch between the defined SRS's with the element scale selector. For further details, view `Scale Selector <scale_selector.html>`_ beschrieben. Alternatively, this can be realized with the navigation toolbar element.
-For further integrational details see `Navigationswerkzeug <zoom_bar.html>`_ .
+The field *scales (csv)* (5) defines the scales that are usable in the application. This element can come handy if the user should e.g. see the map, but not too many details of it (just define no possibility to zoom closer than 1:10000). Moreover, it is possible to switch between the defined SRS's with the element scale selector. For further details, view :ref:`scale_selector`. Alternatively, this can be realized with the navigation toolbar element.
+For further integrational details see :ref:`zoom_bar`.
 
 
 YAML-Definition:
@@ -169,7 +171,7 @@ You can set the scale from the list of available scales.
 
 
 Passing SRS
-------------
+-----------
 
 You can pass a favorite EPSG code you want to use on start of the application by URL query parameter:
 
@@ -178,8 +180,8 @@ You can pass a favorite EPSG code you want to use on start of the application by
    ?srs=EPSG:4326
 
 
-Passing CENTER
-----------------
+Passing Center
+--------------
 
 You can pass a coordinate. The application will open and display the coordinate in the center. In this case, you also have to set the SRS
 
@@ -188,15 +190,15 @@ You can pass a coordinate. The application will open and display the coordinate 
    ?center=364286,5622263
 
 
-more start parameter
---------------------------
+More Start Parameters
+---------------------
 
 The elments WMS Loader and WMC Loader provide also parameter you can user on start. Have a look at the element discription for further information.
 
 
 
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\Map
 * **Widget:** , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js

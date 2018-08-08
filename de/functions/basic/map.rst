@@ -1,7 +1,7 @@
 .. _map_de:
 
 Map (Karte)
-***********************
+***********
 
 MapQuery/OpenLayers basierte Karte.
 Es müssen die Einheiten, der Start und der Max Bereich (extent), die Maßstäbe und die unterstützten Projektionen angegeben werden.
@@ -29,8 +29,10 @@ Konfiguration
 * **OL image path:** OpenLayers Bilderpfad, unter dem die Bilder abgespeichert werden (bundles/mapbendercore/mapquery/lib/openlayers/img).
 * **Other SRS:** weitere auswählbare Projektionen unter denen die Karte noch angezeigt werden kann (werden durch Komma separiert). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
 
+
 Konfigurationsbeispiel
 ======================
+
 Die Hauptkarte (Main Map) wird in der Anwendung unter Layouts im Content integriert. Über das ``+`` -Zeichen kann das Element hinzugefügt werden.
 
 .. image:: ../../../figures/de/add_content.png
@@ -46,11 +48,11 @@ Die Layersets sind im Konfigurationsdialog des Kartenelements unter *Layersets* 
 .. image:: ../../../figures/de/map_example_dialog.png
      :scale: 80
 
-Im Feld *SRS* (2) wird das Koordinatensystem definiert, welches beim Öffnen der Karte verwendet wird. In diesem Beispiel wurde das Koordinatensystem ETRS89/ UTM Zone 32N gewählt. Der EPSG Code lautet 25832. Wenn andere Koordinatensysteme in der Anwendung zur Auswahl stehen sollen, werden diese bei *Other SRS* (6) angegeben. Auch hier wird der EPSG Code verwendet. Es können mehrere EPSG Codes, durch ein Komma getrennt, angegeben werden. In diesem Beispiel wurden zusätzlich folgende EPSG Codes verwendet: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator), 4326 (WGS 84). In der Anwendung kann mithilfe des Elements SRS Auswahl zwischen den hier definierten Koordinatensystemen gewechselt werden. Wie dieses Element eingebunden wird, wird in der Dokumentation unter `SRS Selector <srs_selector.html>`_ beschrieben.
+Im Feld *SRS* (2) wird das Koordinatensystem definiert, welches beim Öffnen der Karte verwendet wird. In diesem Beispiel wurde das Koordinatensystem ETRS89/ UTM Zone 32N gewählt. Der EPSG Code lautet 25832. Wenn andere Koordinatensysteme in der Anwendung zur Auswahl stehen sollen, werden diese bei *Other SRS* (6) angegeben. Auch hier wird der EPSG Code verwendet. Es können mehrere EPSG Codes, durch ein Komma getrennt, angegeben werden. In diesem Beispiel wurden zusätzlich folgende EPSG Codes verwendet: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator), 4326 (WGS 84). In der Anwendung kann mithilfe des Elements SRS Auswahl zwischen den hier definierten Koordinatensystemen gewechselt werden. Wie dieses Element eingebunden wird, wird in der Dokumentation unter :ref:`scale_selector_de` beschrieben.
 
 Das Feld *Max. Extent* (3) gibt den maximalen Kartenbereich an, der vom Nutzer der Anwendung gesehen werden kann. Alles was außerhalb dieser Angabe liegt, kann durch den Anwender nicht gesehen werden. Das Feld *Start Extent* (4) gibt den Startbereich an, der beim Öffnen der Anwendung zu sehen ist. Im Konfigurationsbeispiel wird das Stadtgebiet von Bonn angezeigt.
 
-Im Feld *Scales (csv)* (5) werden die Maßstäbe angegeben, die in der Anwendung genutzt werden können. Soll der Anwender beispielsweise zwar eine Übersichtskarte sehen können, jedoch keine näheren Details, kann der Maßstab auf die gewünschte Zahl begrenzt werden. Zwischen den Maßstäben, die in diesem Feld definiert werden, kann mithilfe des Elements Maßstabsauswahl gewechselt werden. Wie dieses Element eingebunden werden kann, wird in der Dokumentation unter `Scale Selector <scale_selector.html>`_ beschrieben. Auch mit dem Element Navigationswerkzeug kann zwischen den Maßstäben gewechselt werden, die in der Main Map definiert wurden. Wie dieses Element integriert werden kann, wird in der Dokumentation unter `Navigationswerkzeug <zoom_bar.html>`_ beschrieben.
+Im Feld *Scales (csv)* (5) werden die Maßstäbe angegeben, die in der Anwendung genutzt werden können. Soll der Anwender beispielsweise zwar eine Übersichtskarte sehen können, jedoch keine näheren Details (definieren Sie einfach keine Möglichkeit, näher als 1:10000 zu zoomen). Zwischen den Maßstäben, die in diesem Feld definiert werden, kann mithilfe des Elements Maßstabsauswahl gewechselt werden. Wie dieses Element eingebunden werden kann, wird in der Dokumentation unter :ref:`scale_selector_de` beschrieben. Auch mit dem Element Navigationswerkzeug kann zwischen den Maßstäben gewechselt werden, die in der Main Map definiert wurden. Wie dieses Element integriert werden kann, wird in der Dokumentation unter :ref:`zoom_bar_de` beschrieben.
 
 YAML-Definition:
 ----------------
@@ -84,7 +86,7 @@ Kontrolle über URL-Parameter
 ============================
 
 Ebenen sichtbar machen
-------------------------
+----------------------
 
 Sie können die ID der Ebene mit der ID <layerid> und des Dienstes <serviceid> in der URL als parameter übergeben, um einen Layer in der Startansicht zu aktivieren.
 
@@ -121,7 +123,7 @@ Zum Beispiel: http://localhost/mapbender/application/myapp?visiblelayers=73/836,
 
 
 Punkte übergeben
-------------------------
+----------------
 
 Sie können einen oder mehrere Punkte in der URL übergeben. Jeder Punkt verfügt dabei über die folgenden Parameter:
 
@@ -146,7 +148,7 @@ Für die Übergabe vieler Punkte wird das folgende Format verwendet:
 
 
 Rechteck (BBOX) übergeben
-------------------------------------------------
+-------------------------
 
 Es kann ein Rechteck (BBOX) beim Start übergeben werden. Es wird dann auf dieses Rechteck gezoomt. Der Aufruf sieht wie folgt aus:
 
@@ -156,7 +158,7 @@ Es kann ein Rechteck (BBOX) beim Start übergeben werden. Es wird dann auf diese
 
 
 Maßstab übergeben
-------------------
+-----------------
 
 Es kann der gewünschte Maßstab aus der Liste der verfügbaren Maßstäbe übergeben werden.
 
@@ -167,7 +169,7 @@ Es kann der gewünschte Maßstab aus der Liste der verfügbaren Maßstäbe über
 
 
 SRS (Projektion) übergeben
-----------------------------------
+--------------------------
 
 Es kann eine gewünschte Projektion für den Start der Anwendung übergeben werden.
 
@@ -178,7 +180,7 @@ Es kann eine gewünschte Projektion für den Start der Anwendung übergeben werd
 
 
 Center - zentrieren der Anwendung
-------------------------------------------------
+---------------------------------
 
 Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentriert werden soll. Sie benötigen zusätzlich die Angabe der Projektion.
 
@@ -188,14 +190,14 @@ Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentr
 
 
 Weitere Startparameter
---------------------------
+----------------------
 
 Die Elemente WMS Loader und WMC Loader stellen ebenfalls parameter zur Verfügung, die beim Start einer Anwendung übergeben werden können. Schauen Sie sich für nähere Informationen die Dokumentation dieser Elemente an.
 
 
 
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\Map
 * **Widget:** , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
