@@ -1,9 +1,10 @@
 .. _map:
 
 Map
-***********************
+***
 
-MapQuery/OpenLayers based map. You have to define the units, the start and max extent, scales and supported projections.
+MapQuery/OpenLayers based map.
+You have to define units, start and max. extent, scales and supported projections.
 
 .. image:: ../../../figures/map.png
      :scale: 80
@@ -11,22 +12,48 @@ MapQuery/OpenLayers based map. You have to define the units, the start and max e
 Configuration
 =============
 
-.. image:: ../../../figures/map_configuration.png
+.. image:: ../../../figures/de/map_dialog.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Layersets:** refer to a layerset, define the layerset first and refer to it (propably main map).
-* **DPI:** resolution, default is 72.
-* **SRS:** coordinate reference system. Two ways of srs definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+* **Layersets:** Refers to a layerset. Define the layerset first and refer to it.
+* **DPI:** Resolution, default is 72.
+* **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+* **Map units:** Units in which the map is calculated. Choose between meters, degrees, feet, miles or inches. Default is "degrees".
 * **Tile size:** Size of the tiles of tiled WMS services.
-* **Delay before tiles:** For future use of WMS-T if time parameters are used (actually not applicable).
-* **Map units:** units to use degrees/meters, default is degrees.
-* **Max. Extent:** maximal map extents.
-* **Start Extent:** map extents for the start of the application.
-* **Scales (csv):** a csv scale list.
-* **Max. resolution:** at the moment only auto is supported, so please do not change.
+* **Delay before tiles:** For future use of WMS-T, if time parameters are used (feature on hold).
+* **Max. Extent:** Maximal map extent, defined by BBOX parameters.
+* **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
+* **Scales (csv):** a csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
+* **Max. resolution:** Only auto is supported. So please do not change. Defines the resulution of the map.
 * **OL image path:** OpenLayers image path, at which the images are saved (bundles/mapbendercore/mapquery/lib/openlayers/img).
-* **Other SRS:** other coordinate reference systems. Two srs definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+* **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+
+
+Configuration example
+=====================
+
+The Main Map element is included in the content section of the application menu. A map element can be added with the ``+`` -button.
+
+.. image:: ../../../figures/de/add_content.png
+     :scale: 80
+
+All layersets can be included in the Main Map element if they are set in the layersets tab in the application backend before. In this example, these are the following:
+
+.. image:: ../../../figures/de/map_example_layersets.png
+     :scale: 80
+
+The layersets are visible in the configuration dialog in the *Layersets* (1) section. It is possible to multi-select the desired layers. Unchecked layersets can be used in the overview element (as a overview map) later on.
+
+.. image:: ../../../figures/de/map_example_dialog.png
+     :scale: 80
+
+The field *SRS* (2) defines the coordinate reference system that is used at application launch. In this example, the coordinate reference system ETRS89/ UTM Zone 32N was chosen. The affiliated ESPG-code is 25832. If the application should support other coordinate systems, simply add those in the *Other SRS* (6) field (enter the EPSG code). It is possible to enter several comma-separated codes. In this example, the following codes are used: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator) and 4326 (WGS 84). Switching between the registered coordinate systems works with the element "SRS Selector". To get more details on the SRS selector, visit :ref:`scale_selector`.
+
+The field *max. Extent* (3) states the max. zoomable extent of the map application. If there is data outside of the extent, it cannot be seen by the frontend user. The field *start Extent* (4) refers to the extent of the map that is visible when the application is launched in the browser (in the example the city of Bonn).
+
+The field *scales (csv)* (5) defines the scales that are usable in the application. This element can come handy if the user should e.g. see the map, but not too many details of it (just define no possibility to zoom closer than 1:10000). Moreover, it is possible to switch between the defined SRS's with the element scale selector. For further details, view :ref:`scale_selector`. Alternatively, this can be realized with the navigation toolbar element.
+For further integrational details see :ref:`zoom_bar`.
 
 
 YAML-Definition:
@@ -40,7 +67,7 @@ YAML-Definition:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
    units: "degrees"           # units to use degrees/meters, default is degrees
-   extents: array(                 
+   extents: array(
        max: array(0, 40, 20, 60)    # maximal map extents
        start: array(5, 45, 15, 55)) # map extents for the start of the application
    scales: "25000000,10000000,5000000,1000000,500000" # a csv scale list
@@ -63,7 +90,7 @@ Controlling by URL-parameters
 Make Layer visible
 ------------------
 
-If you have a Layer with the id <layerid> in a service with the id <serviceid> you may pass the URL parameter
+If you have a layer with the id <layerid> in a service with the id <serviceid>, you may pass the URL parameter
 visiblelayers to turn the layer visible:
 
 
@@ -72,7 +99,7 @@ visiblelayers to turn the layer visible:
   ?visiblelayers=<serviceid>/<layerid>
 
 
-You may pass multiple such layers, seperated by comma.
+You may also pass multiple layers separated by comma.
 
 The layerid and serviceid values are specific to an application. You can get
 the layerid and serviceid in the specific application, namely in the
@@ -144,7 +171,7 @@ You can set the scale from the list of available scales.
 
 
 Passing SRS
-------------
+-----------
 
 You can pass a favorite EPSG code you want to use on start of the application by URL query parameter:
 
@@ -153,8 +180,8 @@ You can pass a favorite EPSG code you want to use on start of the application by
    ?srs=EPSG:4326
 
 
-Passing CENTER
-----------------
+Passing Center
+--------------
 
 You can pass a coordinate. The application will open and display the coordinate in the center. In this case, you also have to set the SRS
 
@@ -163,15 +190,15 @@ You can pass a coordinate. The application will open and display the coordinate 
    ?center=364286,5622263
 
 
-more start parameter
---------------------------
+More Start Parameters
+---------------------
 
 The elments WMS Loader and WMC Loader provide also parameter you can user on start. Have a look at the element discription for further information.
 
 
 
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\Map
 * **Widget:** , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js

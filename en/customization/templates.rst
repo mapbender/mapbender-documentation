@@ -3,11 +3,12 @@
 How to create your own Template?
 ################################
 
-Mapbender comes with application templates out of the box. But usually you want to use your own template with your own corporate design. 
+Mapbender comes with application templates out of the box. But usually you want to use your own template with your own corporate design.
 This document will show you how to create a Workshop DemoBundle for demonstration purposes.
 The templates that come with Mapbender for demonstration purpose are located in the `Template`directory in the CoreBundle. To prevent overwriting your custom templates after an Mapbender upgrade you should create an extra bundle to safely store your custom files.
 
 Since version 3.0.4.0 you can change the style of your application with the built-in CSS-Editor. You find the documentation about the CSS-editor at :doc:`How to change the style of your application with the CSS-editor? <css>`.
+
 
 How to create your own template?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,7 +28,7 @@ The new Application-template can be used in different ways:
 * Choosing the template when you create a new application in the backend.
 * Change the template of existing applications by changing the ``template`` column in the table ``mb_core_application``.
 
-To use an own template we prepared a Workshop/DemoBundle, which can be used not only for application templates but also for customzing the administration interface. For the following steps, please download the files with the following links: 
+To use an own template we prepared a Workshop/DemoBundle, which can be used not only for application templates but also for customzing the administration interface. For the following steps, please download the files with the following links:
 
 * from version 3.0.6 and newer: https://github.com/mapbender/mapbender-workshop/tree/3.0.6
 * before version 3.0.6: https://github.com/mapbender/mapbender-workshop/tree/master
@@ -37,30 +38,34 @@ To use an own template we prepared a Workshop/DemoBundle, which can be used not 
 Create your own bundle
 ~~~~~~~~~~~~~~~~~~~~~~
 
-User bundles are stored in the src-directory. 
+User bundles are stored in the src-directory.
 
 This is how the structure can look like:
 
 .. code-block:: bash
 
  src/Workshop/DemoBundle/
-                    WorkshopDemoBundle.php 
+                    WorkshopDemoBundle.php
                     /Resources
                                   /public
-                                         demo_fullscreen.css  
+                                         demo_fullscreen.css
                                   /image
                                              workshop.ico
                                              workshop_logo.png
                                              print.png
                                              ...
                                   /views
-					/Template								
+					/Template
                                              fullscreen_demo.html.twig
                         /Template
 		                DemoFullscreen.php
 
+The following files have to be altered for design changes:
 
-Create a new namespace 
+* twig - changes the structure (e.g. - delete a component like the sidebar)
+* demo_fullscreen.css  - change colors, icons, fonts
+
+Create a new namespace
 **********************
 
 The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template and to your css-files.
@@ -69,31 +74,17 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
 .. code-block:: php
 
     <?php
-
     namespace Workshop\DemoBundle;
-
     use Mapbender\CoreBundle\Component\MapbenderBundle;
-    /**
-     * WorkshopDemo
-     *
-     * @author Astrid Emde
-     */
     class WorkshopDemoBundle extends MapbenderBundle
     {
-        /**
-         * @inheritdoc
-         */
         public function getTemplates()
         {
             return array('Workshop\DemoBundle\Template\DemoFullscreen');
         }
-        /**
-         * @inheritdoc
-         */
         public function getElements()
         {
             return array(
-                
             );
         }
     }
@@ -132,14 +123,7 @@ In the template file you define the name of your template, the regions that you 
             'css' => array('@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss','@WorkshopDemoBundle/Resources/public/demo_fullscreen.css'),
             'js'    => array(
                 '/components/underscore/underscore-min.js',
-                '@FOMCoreBundle/Resources/public/js/widgets/popup.js',
-                '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
-                '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js',
-                '@MapbenderCoreBundle/Resources/public/regional/vendor/notify.0.3.2.min.js',
-                "/components/datatables/media/js/jquery.dataTables.min.js",
-                '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
-                "/components/vis-ui.js/vis-ui.js-built.js"
-
+            ...
             ),
             'trans' => array()
         );
@@ -205,7 +189,7 @@ Use the existing template from mapbender/src/Mapbender/CoreBundle/Resources/view
 Create your own css-file
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create an empty css-file and fill it with content. Since Mapbender version 3.0.3.0 you only have to define the parts that have to look different from the default style of the element.
+Create an empty css-file and fill it with content. You only have to define the parts that have to look different from the default style of the element.
 
 Firebug can help you to find out the styles you want to change.
 
@@ -220,17 +204,17 @@ Your file could be named like this: src/Workshop/DemoBundle/Resources/public/dem
  .toolPane {
    background-color: rgba(0, 29, 122, 0.8) !important;
  }
- 
+
  .sidePane {
    overflow: visible;
    background-image: url("");
    background-color: #eff7e9;
  }
- 
+
  .sidePane.opened {
      width: 350px;
  }
- 
+
  .logoContainer {
    background-color: white !important;
    background-image: url("") !important;
@@ -238,33 +222,33 @@ Your file could be named like this: src/Workshop/DemoBundle/Resources/public/dem
    -moz-box-shadow: 0px 0px 3px #0028AD !important;
    box-shadow: 0px 0px 3px #0028AD !important;
  }
- 
+
  .sidePaneTabItem {
     background-color: #0028AD;
  }
- 
+
  .layer-opacity-handle {
      background-color: #0028AD;
  }
- 
+
  .mb-element-overview .toggleOverview {
      background-color: #0028AD;
  }
- 
+
  .button, .tabContainerAlt .tab {
      background-color: #0028AD;
- } 
- 
+ }
+
  .iconPrint:before {
    /*content: "\f02f"; }*/
    content:url("image/print.png");
  }
- 
+
  .popup {
    background-color: #eff7e9;
    background-image: url("");
  }
- 
+
  .pan{
    background-color: rgba(0, 93, 83, 0.9);
  }
@@ -284,13 +268,39 @@ If you do further edits at your css file you may have to delete the generated cs
 
  sudo rm -f web/assets/WorkshopDemoBundle__demo_fullscreen__css.css
 
+Style the administrational pages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please change the following css-files for the backend pages:
+
+ * login.css : Change the design of the login page
+ * manager.css : Change the design of the administration pages (e.g. application overview)
+ * password.css : Change the design of the password pages (e.g. Reset Password - page)
+
+You only have to define the parts that have to look different than the default page style.
+
+Firebug can help you to find out the styles you want to change.
+
+Referencing the CSS-files is possible with FOMManagerBundle and FOMUserBundle. They must be filed under app/Resources/. The already contained twig-files overwrite the default settings if configured correctly (Requirements from manager.html.twig file).
+Alternatively, it is possible to copy a twig-file and adjust it afterwards.
+
+ .. code-block:: bash
+
+  cp fom/src/FOM/ManagerBundle/Resources/views/manager.html.twig app/Resources/FOMManagerBundle/views/
+
+
+When the unchanged stylesheet remain, administration looks as follows:
+
+ .. image:: ../../figures/customization/workshop_administration.png
+      :scale: 80
+
 
 Register your template
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To register your template you have to create a file at 
+To register your template you have to create a file at
 
-* mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php 
+* mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php
 
 .. code-block:: bash
 
@@ -339,25 +349,10 @@ Add your new css-file to the listAssets function as last array-entry:
 
 
 
-Use your new template in mapbender.yml
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Now you can use the template in mapbender.yml where you can configure applications.
-
-You find the mapbender.yml at:
-
-* app/config
-
-.. code-block:: yaml
-  
-  "template:   Workshop\DemoBundle\Template\DemoFullscreen"
-
-
-
 Register your bundle in app/AppKernel.php
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you create a new application through the Mapbender administration you have to choose a template you want to use. 
+When you create a new application through the Mapbender administration you have to choose a template you want to use.
 
 Before your new template will show up you have to register your bundle in the file app/AppKernel.php
 
@@ -380,7 +375,7 @@ Before your new template will show up you have to register your bundle in the fi
             // FoM bundles
             new FOM\CoreBundle\FOMCoreBundle(),
             ...
-    
+
             // Mapbender bundles
             new Mapbender\CoreBundle\MapbenderCoreBundle(),
             ...
@@ -389,7 +384,7 @@ Before your new template will show up you have to register your bundle in the fi
 
         );
 
-Add write access to the web-directory for your webserver user. 
+Add write access to the web-directory for your webserver user.
 
 .. code-block:: bash
 
@@ -415,11 +410,38 @@ directories way easier.
 
 Now your template should show up in the template list when you create a new application.
 
+
+Usage in YAML-applications
+**************************
+
+You can adjust the YAML-applications in app/config/applications and change the templtate parameter.
+
+.. code-block:: yaml
+
+  "template:   Workshop\DemoBundle\Template\DemoFullscreen"
+
+
+Usage in new applications
+*************************
+
+If you create a new application in the administration interface of Mapbender, you can choose the new template. 
+
+
+Usage in existing applications
+******************************
+
+For existing applications you can change the parameter in the Mapbender database in the column ``template`` of the table ``mb_core_application``.
+
+For the *WorkshopDemoBundle* you change the entry from ``Mapbender\CoreBundle\Template\Fullscreen`` to ``Workshop\DemoBundle\WorkshopDemoBundle``.
+
+
+
+
 Usecases
 ~~~~~~~~
 
 How do I change my design?
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+**************************
 
 You have to edit the following files, if want to change the design
 
@@ -428,9 +450,9 @@ You have to edit the following files, if want to change the design
 
 
 How do I change the logo?
-~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************
 
-The logo (default is the Mapbender logo) can be changed in the parameters.yml. Which causes a global change. 
+The logo (default is the Mapbender logo) can be changed in the parameters.yml. Which causes a global change.
 
 .. code-block:: yaml
 
@@ -441,11 +463,11 @@ Or in the twig file:
 
 .. code-block:: html
 
- <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />	
+ <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />
 
 
 How do I change the title and favicon?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**************************************
 
 You can adjust the title and the favicon also in the twig-file:
 
@@ -459,7 +481,7 @@ You can adjust the title and the favicon also in the twig-file:
 
 
 How do I change the buttons?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+****************************
 
 Mapbender uses 'Font Awesome Icons' font icon collection:
 
@@ -470,7 +492,7 @@ Mapbender uses 'Font Awesome Icons' font icon collection:
    src: url("../../bundles/fomcore/images/icons/fontawesome-webfont.eot?v=3.0.1");
    src: url("../../bundles/fomcore/images/icons/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../../bundles/fomcore/images/icons/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../../bundles/fomcore/images/icons/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
    font-weight: normal;
-   font-style: normal; 
+   font-style: normal;
  }
 
 In your css-file you can refer to a font images like this:
@@ -493,7 +515,7 @@ If you want to use an image you could place the image in your bundle and refer t
 Try this out
 ~~~~~~~~~~~~
 
-* you can download the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop 
+* you can download the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop
 * change the color of your icons
 * change the size of your icons
 * change the color of the toolbar

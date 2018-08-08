@@ -1,7 +1,7 @@
 .. _scale_selector:
 
 Scale Selector
-***************
+**************
 
 Displays a selctbox with scales. The map scale changes when an value from the selectbox is choosen. 
 Notice: The Selectbox offers the scales that are defined for the map-Element.
@@ -45,7 +45,7 @@ You can overwrite the style of the element, for example the width with the follo
 
    
 Class, Widget & Style
-============================
+=====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\ScaleSelector
 * **Widget:** mapbender.element.scaleselector.js

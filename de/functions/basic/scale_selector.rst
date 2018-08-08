@@ -1,7 +1,7 @@
 .. _scale_selector_de:
 
 Scale Selector (Maßstabsauswahl)
-************************************************
+********************************
 
 Dieses Element zeigt eine Auswahlbox mit Maßstäben an. Der Kartenmaßstab ändert sich, wenn ein neuer Wert der Auswahlbox ausgewählt wurde.
 Beachten Sie: Die Auswahlbox zeigt nur Maßstäbe an, die vorher für das Map Element angegeben wurden.
