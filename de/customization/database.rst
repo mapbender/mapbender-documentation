@@ -1,7 +1,7 @@
 .. _database_de:
 
 Konfiguration der Datenbank
-############################
+###########################
 
 Allgemein
 *********
@@ -14,7 +14,7 @@ Beispiele zur Einrichtung finden sich in den `Installationsanleitungen <../insta
 .. _doctrine_de:
 
 Doctrine
-*************
+********
 
 Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht. 
 Auf der `Doctrine Projektseite <http://www.doctrine-project.org/>`_ finden sich weitere Informationen.
@@ -72,7 +72,7 @@ Der Parameter "default_connection" gibt die Datenbankverbindung an, die standard
 
 
 Verwendung mehrerer Datenbanken
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mit Mapbender können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender-Bundle gehört. EIne zweite Datenbank benötigen Sie ebenfalls für die Geodatensuche (über den SearchRouter) und die Datenerfassung (Digitizer). Die Geodaten sollten grundsätzlich in einer anderen DAtenbank vorgehalten werden und nicht in der Mapbender Datenbank.
 
