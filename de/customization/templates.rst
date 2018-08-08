@@ -8,6 +8,7 @@ Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im Mapbe
 
 Ab der Version 3.0.4.0 kann der Stil einer einzelnen Anwendung ebenfalls über den integrierten CSS-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter :doc:`Wie kann der Stil einer Anwendung mit dem CSS-Editor angepasst werden? <css>`.
 
+
 Wie werden eigene Vorlagen erzeugt?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -135,6 +136,40 @@ In der Template-Datei wir der Name des Templates, die Regionen die angelegt werd
  ->render('WorkshopDemoBundle:Template:demo_fullscreen.html.twig',...
 
 
+Hinzufügen von Eigenschaften für die Sidepane
+*********************************************
+
+Für die Sidepane können die Eigenschaften für "Tabs" oder "Accordion" definiert werden.
+
+- "Tabs" Reihenfolge von Mapbender Elementen in Tabs
+- "Accordion" zeigt die Elemente in einer Accordion Liste.
+
+Um diese Hinzuzufügen, definert man die Funktion "getRegionsProperties" in der Template Datei.
+
+Zur Konfiguration checkt man die Option in der Administration der Anwendung.
+
+
+.. code-block:: php
+
+    /**
+      @inheritdoc
+     */
+    public static function getRegionsProperties()
+    {
+        return array(
+            'sidepane' => array(
+                'tabs' => array(
+                    'name' => 'tabs',
+                    'label' => 'mb.manager.template.region.tabs.label'),
+                'accordion' => array(
+                    'name' => 'accordion',
+                    'label' => 'mb.manager.template.region.accordion.label')
+            )
+        );
+    }
+
+
+
 Eigene Twig-Datei erzeugen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -156,7 +191,7 @@ Eigene CSS-Datei erzeugen (Anwendungen)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Erzeugen Sie eine leere CSS-Datei und geben Sie in dieser nur die CSS-Definitionen für Ihre Anwendungs-Vorlage an.
-Ab der Mapbender Version 3.0.3.0 muss lediglich das CSS definiert werden, das vom Standard der Elemente abweicht.
+Es muss lediglich das CSS definiert werden, das vom Standard der Elemente abweicht.
 
 Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
@@ -246,7 +281,7 @@ Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche
 * manager.css : Anpassung des Designs der Verwaltungs/Administrations-Oberfläche (Anwendungsübersicht u.ä.)
 * password.css : Anpassung des Designs der Passwort-Oberfläche (Passwort vergessen u.ä.)
 
-Ab der Mapbender Version 3.0.3.0 muss lediglich das css definiert werden, das vom Standard der Administrationsoberfläche abweicht.
+Es muss lediglich das css definiert werden, das vom Standard der Administrationsoberfläche abweicht.
 
 Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
@@ -317,8 +352,8 @@ Fügen Sie die neue CSS-Datei in der Funktion listAssets als letzten Eintrag ein
 
 
 
-Verwenden der neuen Vorlage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Registrieren des Bundles in app/AppKernel.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
@@ -369,31 +404,41 @@ Aktualisieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - C
 Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste erscheinen.
 
 
-1. Einbindung in YAML-Anwendungen
-*********************************
+Einbindung in YAML-Anwendungen
+******************************
 
-Jetzt kann die Vorlage in der mapbender.yml, in der die Anwendung konfiguriert wird, verwendet werden. Sie finden die mapbender.yml unter app/config/applications.
+Sie können nun die YAML-Anwendungen unter app/config/applications anpassen und auf das neue Template verweisen.
 
 .. code-block:: yaml
 
   "template:   Workshop\DemoBundle\Template\DemoFullscreen"
 
 
-2. Einbindung in neue Anwendungen
-*********************************
+Einbindung in neue Anwendungen
+******************************
 
 Wenn Sie eine neue Anwendung mit der Mapbender-Administration erzeugen, können Sie eine Vorlage (Template) auswählen.
 
 
-3. Einbindung in bestehende Anwendungen
-***************************************
+Einbindung in bestehende Anwendungen
+************************************
 
-Für bereits existierende Anwendungen kann das Template über die Mapbender Datenbank in der Tabelle *mb_core_application* in der Spalte *template* angepasst werden.
-Für das *WorkshopDemoBundle* wird hier statt des Eintrags *Mapbender\CoreBundle\Template\Fullscreen* der Eintrag *Workshop\DemoBundle\WorkshopDemoBundle* angegeben.
+Für bereits existierende Anwendungen kann das Template über die Mapbender Datenbank in der Tabelle ``mb_core_application`` in der Spalte *template* angepasst werden.
+
+Für das *WorkshopDemoBundle* wird hier statt des Eintrags ``Mapbender\CoreBundle\Template\Fullscreen`` der Eintrag ``Workshop\DemoBundle\WorkshopDemoBundle`` angegeben.
 
 
 Anwendungsfälle
 ~~~~~~~~~~~~~~~
+
+Wie kann das Design verändert werden?
+*************************************
+
+Ändern Sie die folgenden Dateien:
+
+* twig: Änderungen in der Struktur (z.B. entfernen der Sidebar), Verweise auf ein Logo
+* demo_fullscreen.css: Änderungen der Farbe, Icons oder Schriftarten
+
 
 Wie kann das Logo verändert werden?
 ***********************************

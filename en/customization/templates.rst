@@ -9,6 +9,7 @@ The templates that come with Mapbender for demonstration purpose are located in 
 
 Since version 3.0.4.0 you can change the style of your application with the built-in CSS-Editor. You find the documentation about the CSS-editor at :doc:`How to change the style of your application with the CSS-editor? <css>`.
 
+
 How to create your own template?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -73,31 +74,17 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
 .. code-block:: php
 
     <?php
-
     namespace Workshop\DemoBundle;
-
     use Mapbender\CoreBundle\Component\MapbenderBundle;
-    /**
-     * WorkshopDemo
-     *
-     * @author Astrid Emde
-     */
     class WorkshopDemoBundle extends MapbenderBundle
     {
-        /**
-         * @inheritdoc
-         */
         public function getTemplates()
         {
             return array('Workshop\DemoBundle\Template\DemoFullscreen');
         }
-        /**
-         * @inheritdoc
-         */
         public function getElements()
         {
             return array(
-
             );
         }
     }
@@ -136,14 +123,7 @@ In the template file you define the name of your template, the regions that you 
             'css' => array('@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss','@WorkshopDemoBundle/Resources/public/demo_fullscreen.css'),
             'js'    => array(
                 '/components/underscore/underscore-min.js',
-                '@FOMCoreBundle/Resources/public/js/widgets/popup.js',
-                '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
-                '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js',
-                '@MapbenderCoreBundle/Resources/public/regional/vendor/notify.0.3.2.min.js',
-                "/components/datatables/media/js/jquery.dataTables.min.js",
-                '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
-                "/components/vis-ui.js/vis-ui.js-built.js"
-
+            ...
             ),
             'trans' => array()
         );
@@ -209,7 +189,7 @@ Use the existing template from mapbender/src/Mapbender/CoreBundle/Resources/view
 Create your own css-file
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create an empty css-file and fill it with content. Since Mapbender version 3.0.3.0 you only have to define the parts that have to look different from the default style of the element.
+Create an empty css-file and fill it with content. You only have to define the parts that have to look different from the default style of the element.
 
 Firebug can help you to find out the styles you want to change.
 
@@ -297,7 +277,7 @@ Please change the following css-files for the backend pages:
  * manager.css : Change the design of the administration pages (e.g. application overview)
  * password.css : Change the design of the password pages (e.g. Reset Password - page)
 
-Since Mapbender version 3.0.3.0 you only have to define the parts that have to look different than the default page style.
+You only have to define the parts that have to look different than the default page style.
 
 Firebug can help you to find out the styles you want to change.
 
@@ -313,6 +293,7 @@ When the unchanged stylesheet remain, administration looks as follows:
 
  .. image:: ../../figures/customization/workshop_administration.png
       :scale: 80
+
 
 Register your template
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -365,21 +346,6 @@ Add your new css-file to the listAssets function as last array-entry:
                             'js' => $js,
                             'application' => $this->application));
     }
-
-
-
-Use your new template in mapbender.yml
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Now you can use the template in mapbender.yml where you can configure applications.
-
-You find the mapbender.yml at:
-
-* app/config
-
-.. code-block:: yaml
-
-  "template:   Workshop\DemoBundle\Template\DemoFullscreen"
 
 
 
@@ -444,11 +410,38 @@ directories way easier.
 
 Now your template should show up in the template list when you create a new application.
 
+
+Usage in YAML-applications
+**************************
+
+You can adjust the YAML-applications in app/config/applications and change the templtate parameter.
+
+.. code-block:: yaml
+
+  "template:   Workshop\DemoBundle\Template\DemoFullscreen"
+
+
+Usage in new applications
+*************************
+
+If you create a new application in the administration interface of Mapbender, you can choose the new template. 
+
+
+Usage in existing applications
+******************************
+
+For existing applications you can change the parameter in the Mapbender database in the column ``template`` of the table ``mb_core_application``.
+
+For the *WorkshopDemoBundle* you change the entry from ``Mapbender\CoreBundle\Template\Fullscreen`` to ``Workshop\DemoBundle\WorkshopDemoBundle``.
+
+
+
+
 Usecases
 ~~~~~~~~
 
 How do I change my design?
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+**************************
 
 You have to edit the following files, if want to change the design
 
@@ -457,7 +450,7 @@ You have to edit the following files, if want to change the design
 
 
 How do I change the logo?
-~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************
 
 The logo (default is the Mapbender logo) can be changed in the parameters.yml. Which causes a global change.
 
@@ -474,7 +467,7 @@ Or in the twig file:
 
 
 How do I change the title and favicon?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**************************************
 
 You can adjust the title and the favicon also in the twig-file:
 
@@ -488,7 +481,7 @@ You can adjust the title and the favicon also in the twig-file:
 
 
 How do I change the buttons?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+****************************
 
 Mapbender uses 'Font Awesome Icons' font icon collection:
 
