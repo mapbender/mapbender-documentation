@@ -123,7 +123,7 @@ You need the PHP-PostgreSQL driver
    apt install php5-pgsql
 
 
-Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create and use. Further information is available in the chapter `Configuring the database <../database.html>`_.
+Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create and use. Further information is available in the chapter :ref:`database`.
 
 .. code-block:: yaml
 
@@ -135,7 +135,7 @@ Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml
     database_user:     postgres
     database_password: secret
  
-Run the app/console commands. You find detailed information for this commands in the chapter `Details of the configuration of Mapbender <configuration.html>`_.
+Run the app/console commands. You find detailed information for this commands in the chapter :ref:`installation_configuration`.
 
 .. code-block:: bash
 
@@ -164,7 +164,7 @@ You need the PHP-MySQL driver
    apt install php-mysql
 
 
-Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create and use. Further information is available in the chapter `Configuring the database <../customization/database.html>`_.
+Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml) and define the database you want to create and use. Further information is available in the chapter :ref:`database`.
 
 .. code-block:: yaml
 
@@ -176,7 +176,7 @@ Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml
                     database_user:     root
                     database_password: Tr0ub4dor&3
 
-Run the app/console commands. You find detailed information for this commands in the chapter `Details of the configuration of Mapbender <configuration.html>`_.
+Run the app/console commands. You find detailed information for this commands in the chapter :ref:`installation_configuration`.
 
 .. code-block:: bash
 

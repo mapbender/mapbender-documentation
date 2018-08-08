@@ -123,7 +123,7 @@ Sie benötigen den PHP-PostgreSQL Treiber.
    apt install php5-pgsql
  
 
-Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../customization/database.html>`_.
+Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel :ref:`database_de`.
 
 .. code-block:: yaml
 
@@ -135,7 +135,7 @@ Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/paramete
     database_user:     postgres
     database_password: geheim
  
-Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel `Details zur Konfiguration von Mapbender <configuration.html>`_.
+Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel :ref:`installation_configuration_de`.
 
 .. code-block:: bash
 
@@ -163,7 +163,7 @@ Sie benötigen den PHP-MySQL Treiber.
    apt install php-mysql
 
 
-Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../database.html>`_.
+Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen und nutzen möchten. Mehr Informationen dazu finden Sie im Kapitel :ref:`database_de`.
 
 .. code-block:: yaml
 
@@ -175,7 +175,7 @@ Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/paramete
                     database_user:     root
                     database_password: Tr0ub4dor&3
 
-Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel `Details zur Konfiguration von Mapbender <configuration.html>`_.
+Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel :ref:`installation_configuration_de`.
 
 .. code-block:: bash
 
