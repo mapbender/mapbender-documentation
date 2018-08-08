@@ -30,8 +30,10 @@ Configuration
 
 The Legend element is integrated via a button or in the sidepane. If you look for configurational details for the button, head over to this page: `Button <../misc/button.html>`_.
 
+
 Configuration: Examples:
 =======================
+
 Legend in the Sidepane:
 -----------------------
 If yout want to integrate a legend to the sidepane, click the ``+`` -button in the "Layouts"-tab (section "Sidepane").

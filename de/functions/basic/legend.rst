@@ -30,8 +30,10 @@ Konfiguration
 
 Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
+
 Konfigurationsbeispiele
 =======================
+
 Legende in der Sidepane
 -----------------------
 Die Legende in der Sidepane wird über das ``+`` -Zeichen in der Anwendung unter Layouts, Sidepane eingebunden.
