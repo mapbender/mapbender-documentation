@@ -5,7 +5,7 @@ How to create your own Template?
 
 Mapbender comes with application templates out of the box. But usually you want to use your own template with your own corporate design.
 This document will show you how to create a Workshop DemoBundle for demonstration purposes.
-The templates that come with Mapbender for demonstration purpose are located in the `Template`directory in the CoreBundle. To prevent overwriting your custom templates after an Mapbender upgrade you should create an extra bundle to safely store your custom files.
+The templates that come with Mapbender for demonstration purpose are located in the `Template` directory in the CoreBundle. To prevent overwriting your custom templates after an Mapbender upgrade you should create an extra bundle to safely store your custom files.
 
 Since version 3.0.4.0 you can change the style of your application with the built-in CSS-Editor. You find the documentation about the CSS-editor at :doc:`How to change the style of your application with the CSS-editor? <css>`.
 
