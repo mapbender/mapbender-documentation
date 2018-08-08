@@ -1224,13 +1224,10 @@ Darstellung (Styles)
 --------------------
 
 Über die Angabe eines Styles kann definiert werden, wie die Objekte angezeigt werden.
-*Default* definiert dabei die normale Darstellung der Objekte auf der Karte und *Select* die Darstellung der ausgewählten Objekte.
+
 * **default**: Definiert die normale Darstellung der Objekte auf der Karte
 * **select**: Darstellung der ausgewählten Objekte beim Mouseover
 * **selected**: Darstellung der ausgewählten Objekte nach dem Klick Event
-
-.. image:: ../../../../../figures/digitizer_style.png
-     :scale: 80
 
 .. code-block:: yaml
 

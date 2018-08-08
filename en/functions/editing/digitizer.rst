@@ -1094,7 +1094,7 @@ After saving an object, the refresh can be activated using the *refreshLayersAft
 
 If the YAML application is used in the /application folder, it can be specified by unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
 
-.. image:: ../../../../../figures/layerinstance_id.png
+.. image:: ../../../figures/digitizer/layerinstance_id.png
      :scale: 80
 
 
@@ -1226,10 +1226,11 @@ Further buttons can be defined for the popup forms. The events by clicking on th
 Design and Styles
 -----------------
 
-By specifying a style the way the objects are displayed on the map can be defined. 
+By specifying a style the way the objects are displayed on the map can be defined.
+
 * **default**: defines the normal display of the objects on the map 
 * **select**: defines the appearance of the objects while mouseover
-* **selected**: defines the appearance of the objects after klick event
+* **selected**: defines the appearance of the objects after click event
 
 
 .. code-block:: yaml
