@@ -4,7 +4,13 @@ HTML-Element
 ************
 
 Über das HTML-Element kann ein generisches HTML an einer beliebigen Stelle in der Anwendung definiert werden.
-Im generischen HTML stehen folgende Variablen zur Verfügung : "application" (Entity Application), "entity" (Entity HTMLElement) und "configuration". Damit kann beispielsweise ein Bild in die Anwendung eingefügt werden.
+Im HTML stehen folgende Variablen zur Verfügung:
+
+- "application" (Entity Application),
+- "entity" (Entity HTMLElement)
+- und "configuration".
+
+Damit kann beispielsweise ein Bild in die Anwendung eingefügt werden.
 
 .. image:: ../../../figures/html_result_application.png
      :scale: 80
@@ -50,10 +56,10 @@ Das HTML-Element, welches hier eingebunden wird, hat die Bezeichnung (Title) Map
 .. code-block:: yaml
 
      <a href='http://mapbender.org' target='_blank'>
-     <img src='https://mapbender.org/sites/default/files/mapbender-logo_webside.png'
+     <img src='https://mapbender.org/sites/default/files/mapbender_logo_website.png'
      height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
 
-Das Mapbender Logo wird als Bild eingebunden (img src='https://mapbender.org/sites/default/files/mapbender-logo_webside.png'). Zusätzlich wird für das Bild die Höhe (height=‘60px‘) und das Styling definiert. Das Styling (style=) beinhaltet die Hintergrundfarbe und Transparenz (background-color:rgb(255, 255, 255, 0.9)) sowie den Abstand des Bildes zu den Seitenrändern (padding:10px). Außerdem wurde ein Link zur Mapbender Webseite hinterlegt (href='http://mapbender.org'), welche sich beim klicken auf das Bild in einem neuen Tab öffnet (target='_blank').
+Das Mapbender Logo wird als Bild eingebunden (``img src='https://mapbender.org/sites/default/files/mapbender_logo_website.png'``). Zusätzlich wird für das Bild die Höhe (``height='60px'``) und das Styling definiert. Das Styling (``style=``) beinhaltet die Hintergrundfarbe und Transparenz (``background-color:rgb(255, 255, 255, 0.9)``) sowie den Abstand des Bildes zu den Seitenrändern (``padding:10px``). Außerdem wurde ein Link zur Mapbender Webseite hinterlegt (``href='http://mapbender.org'``), welche sich beim klicken auf das Bild in einem neuen Tab öffnet (``target='_blank'``).
 
 Das Element kann an unterschiedlichen Positionen eingebunden werden. Beispielsweise in der Toolbar:
 
@@ -96,7 +102,7 @@ In diesem Beispiel ist die Bezeichnung (Title) des HTML-Elements "Titel". Im Con
      <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{  application.title }} </span></b>
 
 
-Der Titel der Anwendung wurde mit dem Textzusatz "Anwendung" eingebunden. Dieser Zusatz ist unabhängig vom Titel der Anwendung und wird vor diesen gesetzt (d.h.: Anwendung + Titel der Anwendung). Durch den Style-Block (style=) wurden die Schriftgröße (font-size:25px), die Schriftfarbe (color:#b6dd18) und die Position (margin-right:50vw) des Titels angepasst. Außerdem wird der Titel fett (<b></b>) angezeigt. Die Variable für den Anwendungstitel wird durch diesen Ausdruck eingebunden: *{{ application.title }}*
+Der Titel der Anwendung wurde mit dem Textzusatz "Anwendung" eingebunden. Dieser Zusatz ist unabhängig vom Titel der Anwendung und wird vor diesen gesetzt (d.h.: Anwendung + Titel der Anwendung). Durch den Style-Block (``style=``) wurden die Schriftgröße (``font-size:25px``), die Schriftfarbe (``color:#b6dd18``) und die Position (``margin-right:50vw``) des Titels angepasst. Außerdem wird der Titel fett (``<b></b>``) angezeigt. Die Variable für den Anwendungstitel wird durch diesen Ausdruck eingebunden: ``{{ application.title }}``
 
 Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
@@ -105,9 +111,9 @@ Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
 **Variable "entity"**
 
-Die Variable "entity" bindet Parameter des HTML-Elements ein. Wurde beispielsweise die Variable *{{ entity }}* eingebunden, wird die ID des HTML-Elements angezeigt. Wurde die Variable *{{ entity.title }}* eingebunden, wird in der Anwendung die Bezeichnung (Title) des Elements ausgegeben.
+Die Variable "entity" bindet Parameter des HTML-Elements ein. Wurde beispielsweise die Variable ``{ entity }`` eingebunden, wird die ID des HTML-Elements angezeigt. Wurde die Variable ``{ entity.title }`` eingebunden, wird in der Anwendung die Bezeichnung (Title) des Elements ausgegeben.
 
-Die Konfiguration für das HTML-Element "Titel" und die Variable *{{ entity.title }}* mit dem Textzusatz "HTML-Element" sieht zum Beispiel wie folgt aus:
+Die Konfiguration für das HTML-Element "Titel" und die Variable ``{ entity.title }`` mit dem Textzusatz "HTML-Element" sieht zum Beispiel wie folgt aus:
 
 .. image:: ../../../figures/de/html_example_entity.title_dialog.png
      :scale: 80
@@ -142,7 +148,7 @@ HTTP Callbacks
 None.
 
 Beispiele
-==================
+=========
 
 Einfügen eines Bildes
 

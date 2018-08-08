@@ -4,7 +4,14 @@ HTML Element
 ************
 
 This element allows you to add generic HTML anywhere in your application.
-In the generic HTML the following variables are available: "application" (Entity Application), "entity" (Entity HTMLElement) and "configuration".
+In HTML the following variables are available:
+
+- "application" (Entity Application),
+- "entity" (Entity HTMLElement)
+- and "configuration".
+
+With these you can for example insert an image into the application.
+
 
 .. image:: ../../../figures/html_result_application.png
      :scale: 80
@@ -51,10 +58,10 @@ Let's include a simple logo. We start by naming the title of the HTML-element: M
 .. code-block:: yaml
 
      <a href='http://mapbender.org' target='_blank'>
-     <img src='https://mapbender.org/sites/default/files/mapbender-logo_webside.png'
+     <img src='https://mapbender.org/sites/default/files/mapbender_logo_website.png'
      height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
 
-As you can see, the mapbender logo is included as a picture in the code (img src='https://mapbender.org/sites/default/files/mapbender-logo_webside.png'). In addition, a height (height=‘60px‘) and a styling is defined. Our styling (style=) includes parameters that define background-color with transparency (background-color:rgb(255, 255, 255, 0.9)) and the distance to the margin of the page, called (padding:10px). Moreover, we include a link to the official Mapbender web page (href='http://mapbender.org'). If you click on the logo, the website will load in a new browser tab (target='_blank').
+As you can see, the mapbender logo is included as a picture in the code (``img src='https://mapbender.org/sites/default/files/mapbender_logo_website.png'``). In addition, a height (``height='60px'``) and a styling is defined. Our styling (``style=``) includes parameters that define background-color with transparency (``background-color:rgb(255, 255, 255, 0.9)``) and the distance to the margin of the page, called (``padding:10px``). Moreover, we include a link to the official Mapbender web page (``href='http://mapbender.org'``). If you click on the logo, the website will load in a new browser tab (``target='_blank'``).
 
 As mentioned, it is possible to include the HTML-element in several locations. Let's look at the toolbar first:
 
@@ -96,7 +103,7 @@ In this example, the title of the HTML-element is defined as "Title". The conten
      <b><span style="font-size:25px;color:#b6dd18;margin-right:50px"> Application {{  application.title }} </span></b>
 
 
-To add a bit of spicyness, our application title also has the additional text "Application". This additive is independent from the actual application title and is therefore set before the variable (i.e.: Application + application.title). The style block (style=) modifies the font size (font-size:25px), the font color (color:#b6dd18) and the title positioning (margin-right:50vw). Moreover, the letters are styled bold (<b></b>). As you might have guessed, the variable is mentioned in the following code: *{{ application.title }}* .
+To add a bit of spicyness, our application title also has the additional text "Application". This additive is independent from the actual application title and is therefore set before the variable (i.e.: Application + application.title). The style block (``style=``) modifies the font size (``font-size:25px``), the font color (``color:#b6dd18``) and the title positioning (``margin-right:50vw``). Moreover, the letters are styled bold (``<b></b>``). As you might have guessed, the variable is mentioned in the following code: ``{{ application.title }}`` .
 
 The outcome looks like this:
 
@@ -105,9 +112,9 @@ The outcome looks like this:
 
 **Variable "entity"**
 
-The variable "entity" includes parameters into the HTML-elements. For instance, if the variable *{{ entity }}* is integrated, the ID of the HTML-element is shown. If the variable *{{ entity.title }}* is integrated, the (HTML-)element title is shown in the application.
+The variable "entity" includes parameters into the HTML-elements. For instance, if the variable ``{{ entity }}`` is integrated, the ID of the HTML-element is shown. If the variable ``{{ entity.title }}`` is integrated, the (HTML-)element title is shown in the application.
 
-The configuration for the HTML-element "Title" and the variable *{{ entity.title }}* with the additional text "HTML-element" looks like this:
+The configuration for the HTML-element "Title" and the variable ``{{ entity.title }}`` with the additional text "HTML-element" looks like this:
 
 .. image:: ../../../figures/de/html_example_entity.title_dialog.png
      :scale: 80
