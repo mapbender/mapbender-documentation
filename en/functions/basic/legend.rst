@@ -32,7 +32,7 @@ The Legend element is integrated via a button or in the sidepane. If you look fo
 
 
 Configuration: Examples:
-=======================
+========================
 
 Legend in the Sidepane:
 -----------------------

@@ -1,7 +1,8 @@
 .. _printclient:
 
+
 ﻿PrintClient
-***********
+************
 
 Mapbender offers a PDF print, which print a defined area of the map. Before you print you can choose via the client these different possibilities:
 
