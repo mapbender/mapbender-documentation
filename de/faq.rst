@@ -147,7 +147,7 @@ Einstellungen für die Oracle Datenbank - Punkt und Komma
 
 F: Ich bekomme bei Oracle einen Fehler, wenn ich doctrine:schema:create ausführe. Warum? Hier ist meine Fehlermeldung:
 
-.. code-block:: sql
+.. code-block:: bash
 
                 [Doctrine\DBAL\Exception\DriverException]
                 An exception occurred while executing
