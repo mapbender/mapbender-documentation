@@ -12,15 +12,18 @@ Thumbs.db
 
 
 # Editor and IDE #
-######################
+##################
 .idea
 .project
 .sass-cache
 *.sublime-workspace
+.vscode
+
 
 
 # PROJECT #
-######################
+###########
+_build
 build
 _sources
 .doctrees
