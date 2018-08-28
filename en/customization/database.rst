@@ -31,18 +31,18 @@ The standard database definition in the config.yml looks like this:
             default_connection: default     
             connections:
                 default:        
-                driver:   %database_driver%
-                host:     %database_host%
-                port:     %database_port%
-                dbname:   %database_name%
-                path:     %database_path%
-                user:     %database_user%
-                password: %database_password%
-                charset:  UTF8
-                logging: %kernel.debug%
-                profiling: %kernel.debug%
+                driver:    "%database_driver%"
+                host:      "%database_host%"
+                port:      "%database_port%"
+                dbname:    "%database_name%"
+                path:      "%database_path%"
+                user:      "%database_user%"
+                password:  "%database_password%"
+                charset:    UTF8
+                logging:   "%kernel.debug%"
+                profiling: "%kernel.debug%"
         orm:
-            auto_generate_proxy_classes: %kernel_debug%
+            auto_generate_proxy_classes: "%kernel_debug%"
             auto_mapping:true
 
 All values encapsulated in % are parameters, loaded from the parameters.yml. The parameters.yml will load these parameters. Therefore, to change the database, modify the parameters values in the parameters.yml.
@@ -91,27 +91,27 @@ Here is an example for a database connection block in the **config.yml** with tw
             default_connection: default
             connections:
                 default:
-                    driver:   %database_driver%
-                    host:     %database_host%
-                    port:     %database_port%
-                    dbname:   %database_name%
-                    path:     %database_path%
-                    user:     %database_user%
-                    password: %database_password%
-                    charset:  UTF8
-                    logging: %kernel.debug%
-                    profiling: %kernel.debug%
+                    driver:    "%database_driver%"
+                    host:      "%database_host%"
+                    port:      "%database_port%"
+                    dbname:    "%database_name%"
+                    path:      "%database_path%"
+                    user:      "%database_user%"
+                    password:  "%database_password%"
+                    charset:    UTF8
+                    logging:   "%kernel.debug%"
+                    profiling: "%kernel.debug%"
                 search_db:
-                    driver:   %database2_driver%
-                    host:     %database2_host%
-                    port:     %database2_port%
-                    dbname:   %database2_name%
-                    path:     %database2_path%
-                    user:     %database2_user%
-                    password: %database2_password%
-                    charset:  UTF8
-                    logging: %kernel.debug%
-                    profiling: %kernel.debug%
+                    driver:    "%database2_driver%"
+                    host:      "%database2_host%"
+                    port:      "%database2_port%"
+                    dbname:    "%database2_name%"
+                    path:      "%database2_path%"
+                    user:      "%database2_user%"
+                    password:  "%database2_password%"
+                    charset:    UTF8
+                    logging:   "%kernel.debug%"
+                    profiling: "%kernel.debug%"
 
 
 The definition of the database variables is done in the file **parameters.yml**.

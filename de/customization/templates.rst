@@ -411,7 +411,7 @@ Sie können nun die YAML-Anwendungen unter app/config/applications anpassen und 
 
 .. code-block:: yaml
 
-  "template:   Workshop\DemoBundle\Template\DemoFullscreen"
+                template: Workshop\DemoBundle\Template\DemoFullscreen
 
 
 Einbindung in neue Anwendungen
@@ -462,7 +462,7 @@ Wie kann der Anwendungstitel und das Favicon angepasst werden?
 
 Der Anwendungstitel und das Favicon kann auch in der Twig-Datei angepasst werden:
 
-.. code-block:: yaml
+.. code-block:: php
 
 
  {% block title %}Workshop - {{ application.title }}{% endblock %}

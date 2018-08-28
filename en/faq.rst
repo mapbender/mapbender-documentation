@@ -148,7 +148,7 @@ Adjustments for Oracle database - point and comma
 
 Q: I get an error when I run doctrine:schema:create on Oracle. Why? The error message is:
 
-.. code-block:: sql
+.. code-block:: bash
 
                 [Doctrine\DBAL\Exception\DriverException]
                 An exception occurred while executing

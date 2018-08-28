@@ -158,7 +158,7 @@ Diese Methode wird gegen die FCGID Methode ausgetauscht. Sie benötigt etwas Vor
 
 In der httpd.conf:
 
-.. code-block:: apache
+.. code-block:: apacheconf
 
                 # FCGI
                 LoadModule fcgid_module "modules/mod_fcgid.so"
@@ -169,12 +169,12 @@ In der httpd.conf:
 
 Fügen Sie in der Mapbender-Apache-Site Datei (mapbender.conf), den "ExecCGI" Parameter hinzu, zum Beispiel:
 
-.. code-block:: apache
+.. code-block:: apacheconf
 
                 <Directory c:/srv/mapbender-starter-3.0.6.0/web/>
-                    [...]
+                    # [...]
                     Options MultiViews FollowSymLinks ExecCGI
-                    [...]
+                    # [...]
                 </Directory>
 
 
@@ -195,7 +195,8 @@ Informationen dazu unter:
 - Download: https://sourceforge.net/projects/wincache/
 - Der Download ist ein selbst extrahierendes Archiv (.exe)
 
-.. code-block:: txt
+
+  .. code-block:: none
                 
                 To install and enable the extension, use the following steps:
                 Unpack the package that is appropriate for the PHP version you are using.
@@ -210,7 +211,7 @@ Informationen dazu unter:
 
 **session.handler auf WinCache umstellen:**
 
-.. code-block:: txt
+.. code-block:: none
                 
                 To change the location of the session file use session.save_path directive.
                 sesion.save_handler = wincache
@@ -219,7 +220,7 @@ Informationen dazu unter:
 
 **wincache.reroute_enabled aktivieren**
 
-.. code-block:: txt
+.. code-block:: none
                 
                 The reroutes are not enabled by default. To enable them, set the reroute_enabled directive in either the php.ini or the .user.ini.
                 wincache.reroute_enabled = 1

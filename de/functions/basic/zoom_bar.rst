@@ -105,9 +105,9 @@ YAML-Definition:
    target: ~                     # ID des Kartenelements
    stepSize: 50                  # Schrittweite für das Verschieben
    stepByPixel: false            # Schritttyp: Pixel oder Prozent, false = Prozent, Standard ist false
-   anchor: 'inline'/'left-top'/  # Ausrichtung des Navigationswerkzeugs, Standard ist 'left-top' (oben-links) 
-     'left-bottom'/'right-top'/  # Benutzen Sie inline z.B. für die Sidebar
-     'right-bottom'
+   anchor: 'left-top'            # Ausrichtung des Navigationswerkzeugs, Standard ist 'left-top' (oben-links)
+                                 # Benutzen Sie inline z.B. für die Sidebar
+                                 # Optionen: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
    draggable: true               # das Navigationswerkzeug ist verschiebbar oder nicht, Standard ist true
 
 Class, Widget & Style

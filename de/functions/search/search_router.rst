@@ -29,17 +29,17 @@ Inhalte in der config.yml:
                  default:
                      [...]
                  gisdb:
-                     driver:   %gisdb_database_driver%
-                     host:     %gisdb_database_host%
-                     port:     %gisdb_database_port%
-                     dbname:   %gisdb_database_name%
-                     path:     %gisdb_database_path%
-                     user:     %gisdb_database_user%
-                     password: %gisdb_database_password%
+                     driver:   "%gisdb_database_driver%"
+                     host:     "%gisdb_database_host%"
+                     port:     "%gisdb_database_port%"
+                     dbname:   "%gisdb_database_name%"
+                     path:     "%gisdb_database_path%"
+                     user:     "%gisdb_database_user%"
+                     password: "%gisdb_database_password%"
                      persistent: true
                      charset:  UTF8
-                     logging: %kernel.debug%
-                     profiling: %kernel.debug%
+                     logging: "%kernel.debug%"
+                     profiling: "%kernel.debug%"
 
 
 Inhalte in der parameters.yml
