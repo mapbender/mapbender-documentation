@@ -8,6 +8,43 @@ Version history
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
 
+Version 3.0.7.4
+---------------
+
+Release date: 29.08.2018
+
+
+**Improvements and bugfixes:**
+
+* [Security] In some development environment a XSS error can occur with the assets. This error was only observed on some environments with specific debug PHP settings (error_reporting z.B. E_ALL). 
+* Revert the column type of the keyword-column to "varchar" to avoid incompatibilities with Oracle. Very long keywords are truncated back to 255 characters (#1000).
+* Some JavaScript fixes that leads to problems with defunct Internet Explorer 11 (#990).
+* Empty layer-names are not requested again in FeatureInfo (PR #1010).
+* Doctrine optimizations to store layer-order settings in PostgreSQL.
+* Reqgression fix in WMSLoader and image format / info format settings.
+* Fix on Delete Cascade SQL statements with PostgreSQL, when deleting a WMS source.
+* Fix in translations when only a placeholder was set. These fall back now to the fallback translation (per default: english).
+* Update OSGeo Logo (PR #861)
+
+
+**Notes for the update:**
+
+Please call again the **app/console doctrine:schema:update** command to set back the keyword-table and column to varchar.
+
+.. code-block:: bash
+
+                $ app/console doctrine:schema:update
+
+If this statement fails, for example with the PostgreSQL error ``SQLSTATE[22001]: String data, right truncated:`` and ``7 ERROR:  Value too long for type character varying(255)``, you probably have a keyword-entry in the table ``mb_core_keyword``, that exceeds the length of 255 characters. You can find out this entry with the following SQL-statement:
+
+.. code-block:: sql
+
+                SELECT x, id, length(x) FROM (
+                  select value, id from  mb_core_keyword
+                ) AS t(x) order by length desc;
+
+
+
 Version 3.0.7.3
 ---------------
 
@@ -148,7 +185,7 @@ Miscellaneous:
 
 Please call the command **app/console doctrine:schema:update** for the Update to this version. The QGIS layer ordering needs a change in the Mapbender database. Also the 255 characters for WMS services require a change of the database.
 
-.. code-block:: sql
+.. code-block:: bash
 
                 $ app/console doctrine:schema:update
 
@@ -420,7 +457,7 @@ Directory where YAML-based application definition are stored. As an example the 
 
 **app/console doctrine:schema:update**
 
-.. code-block:: sql
+.. code-block:: bash
 
                 $ app/console doctrine:schema:update --dump-sql
                 ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;

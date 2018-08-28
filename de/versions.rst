@@ -7,10 +7,48 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
+
+Version 3.0.7.4
+---------------
+
+Release Datum: 29.08.2018
+
+
+**Verbesserungen und Bugfixes:**
+
+* [Sicherheit] In Entwicklungsumgebungen kann es bei den Assets zu einem XSS Fehler kommen. Dieser Fehler tritt nur in einigen Umgebungen mit spezifischen PHP Einstellungen (error_reporting z.B. E_ALL) auf.
+* Zurücknahme der Keyword Spalte zum Datentyp "varchar", um Inkompatibilitäten mit Oracle zu vermeiden. Zu lange Keywords werden auf 255 Zeichen abgeschnitten. (#1000)
+* Einige JavaScript Fixes, die beim stillgelegten Internet Explorer 11 zu Problemen führten. (#990)
+* Leere Layernamen werden beim FeatureInfo nicht mehr angefragt (PR #1010).
+* Doctrine Optimierungen um die Layerreihenfolge Einstellungen in PostgreSQL zu setzen.
+* Regressions-Fix beim WmsLoader und image format / info format Einstellungen.
+* Fix beim Delete Cascade SQL Statement in PostgreSQL, wenn eine Wms Quelle gelöscht wird.
+* Fix bei Übersetzungen, wenn nur ein Platzhalter ausgegeben worden ist. Diese nehmen nun die Fallback Übersetzung (per default: Englisch)
+* OSGeo Logo aktualisiert (PR #861)
+
+
+**Anmerkungen zum Update:**
+
+Bitte führen sie wieder ein **app/console doctrine:schema:update** durch, um die Keyword-Tabelle wieder zu varchar zu ändern.
+
+.. code-block:: bash
+
+                $ app/console doctrine:schema:update
+
+Falls der Update Befehl fehlschlägt, z.B. mit der PostgreSQL Meldung ``SQLSTATE[22001]: String data, right truncated:`` und ``7 FEHLER:  Wert zu lang für Typ character varying(255)``, dann haben Sie einen Schlüsselwort-Eintrag in der Tabelle ``mb_core_keyword``, der 255 Zeichen überschreitet. Diesen können Sie mit folgendem SQL-Statement herausfinden:
+
+.. code-block:: sql
+
+                SELECT x, id, length(x) FROM (
+                  select value, id from  mb_core_keyword
+                ) AS t(x) order by length desc;
+
+
+
 Version 3.0.7.3
 ---------------
 
-Release Datum: 13.07.2017
+Release Datum: 13.07.2018
 
 **Allgemein:**
 
@@ -143,7 +181,7 @@ Verschiedenes:
 
 Bitte führen sie ein **app/console doctrine:schema:update** durch, wenn Sie auf diese Version aktualisieren. Die QGIS-Layerreihenfolge benötigt eine Änderung in der Mapbender-Datenbank. Auch die 255 Zeichen für WMS-Dienste erforderten eine Änderung der Datenbank.
 
-.. code-block:: sql
+.. code-block:: bash
 
                 $ app/console doctrine:schema:update
 
@@ -409,7 +447,7 @@ Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Bei
 
 **app/console doctrine:schema:update**
 
-.. code-block:: sql
+.. code-block:: bash
 
                 $ app/console doctrine:schema:update --dump-sql
                 ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
