@@ -31,20 +31,20 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgenderma�
         dbal:
             default_connection: default     
             connections:
-                default:        
-                driver:   %database_driver%
-                host:     %database_host%
-                port:     %database_port%
-                dbname:   %database_name%
-                path:     %database_path%
-                user:     %database_user%
-                password: %database_password%
-                charset:  UTF8
-                logging: %kernel.debug%
-                profiling: %kernel.debug%
+                default:
+                driver:    "%database_driver%"
+                host:      "%database_host%"
+                port:      "%database_port%"
+                dbname:    "%database_name%"
+                path:      "%database_path%"
+                user:      "%database_user%"
+                password:  "%database_password%"
+                charset:    UTF8
+                logging:   "%kernel.debug%"
+                profiling: "%kernel.debug%"
         orm:
-            auto_generate_proxy_classes: %kernel_debug%
-            auto_mapping:true
+            auto_generate_proxy_classes: "%kernel_debug%"
+            auto_mapping: true
 
 Bei Werten, die von dem %-Zeichen umschlossen werden, handelt es sich um Variablen. Diese Variablen werden aus der parameters.yml geladen. Um die Verbindung zur Datenbank zu ändern, müssen daher die Werte der Variablen in der parameters.yml verändert werden.
 
@@ -90,28 +90,28 @@ Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **config.yml**:
             connections:
                 # Datenbankverbindung default
                 default:
-                    driver:   %database_driver%
-                    host:     %database_host%
-                    port:     %database_port%
-                    dbname:   %database_name%
-                    path:     %database_path%
-                    user:     %database_user%
-                    password: %database_password%
-                    charset:  UTF8
-                    logging: %kernel.debug%
-                    profiling: %kernel.debug%
+                    driver:    "%database_driver%"
+                    host:      "%database_host%"
+                    port:      "%database_port%"
+                    dbname:    "%database_name%"
+                    path:      "%database_path%"
+                    user:      "%database_user%"
+                    password:  "%database_password%"
+                    charset:    UTF8
+                    logging:   "%kernel.debug%"
+                    profiling: "%kernel.debug%"
                 # Datenbankverbindung search_db
                 search_db:
-                    driver:   %database2_driver%
-                    host:     %database2_host%
-                    port:     %database2_port%
-                    dbname:   %database2_name%
-                    path:     %database2_path%
-                    user:     %database2_user%
-                    password: %database2_password%
-                    charset:  UTF8
-                    logging: %kernel.debug%
-                    profiling: %kernel.debug%
+                    driver:    "%database2_driver%"
+                    host:      "%database2_host%"
+                    port:      "%database2_port%"
+                    dbname:    "%database2_name%"
+                    path:      "%database2_path%"
+                    user:      "%database2_user%"
+                    password:  "%database2_password%"
+                    charset:    UTF8
+                    logging:   "%kernel.debug%"
+                    profiling: "%kernel.debug%"
 
 
 Die Definition der Datenbank Variablen (Angabe der Zugangsinformationen) wird in der **parameters.yml** Datei vorgenommen.
