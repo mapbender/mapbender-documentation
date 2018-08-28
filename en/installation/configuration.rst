@@ -1,4 +1,4 @@
-.. _configuration:
+.. _installation_configuration:
 
 Details of the configuration of Mapbender
 =========================================
