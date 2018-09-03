@@ -86,9 +86,9 @@ Set the write permission for user (u), group (g) and others (a) and rights. Assi
 
 .. code-block:: bash
 
- sudo chmod -R ugo+r /var/www/mapbender
- sudo chown -R www-data:www-data /var/www/mapbender
- sudo chmod -R ug+w /var/www/mapbender/web/uploads
+ sudo chown -R www-data:www-data /var/www/mapbender/app/logs
+ sudo chown -R www-data:www-data /var/www/mapbender/app/cache
+ sudo chown -R www-data:www-data /var/www/mapbender/web/uploads
 
  # if you want to use the preconfigured file-database
  sudo chmod -R ug+w app/db/demo.sqlite
