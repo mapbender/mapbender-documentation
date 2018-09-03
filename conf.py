@@ -276,5 +276,5 @@ html_context = {
     'display_github': True, # Add 'Edit on Github' link instead of 'View page source'
     'github_user': 'mapbender',
     'github_repo': 'mapbender-documentation',
-    'github_version': 'release/3.0.6/'
+    'github_version': 'master/'
 }
