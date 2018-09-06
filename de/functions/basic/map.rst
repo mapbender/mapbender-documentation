@@ -65,14 +65,14 @@ YAML-Definition:
                                 - "EPSG:CODE" oder
                                 - "EPSG:CODE|MEIN SRS TITEL"
    units: "degrees"           # Einheiten in Grad oder Meter, Standard ist "degrees" (Grad)
-   extents: array(
-       max: array(0, 40, 20, 60) 
-       start: array(5, 45, 15, 55)) # Kartenbereich (extent)
+   extents:
+       max: [0, 40, 20, 60]
+       start: [5, 45, 15, 55] # Kartenbereich (extent)
    scales: "25000000,10000000,5000000,1000000,500000" # eine CSV-Liste für den Maßstab
-   otherSrs: array(
-      "EPSG:31466",
-      "EPSG:31467",
-      "EPSG:25832")           # andere Koordinatenbezugssystem. Zwei Arten der SRS Definition werden unterstützt:
+   otherSrs:
+       - EPSG:31466
+       - EPSG:31467
+       - EPSG:25832          # andere Koordinatenbezugssystem. Zwei Arten der SRS Definition werden unterstützt:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MEIN SRS TITEL","EPSG:CODE|MEIN SRS TITEL"]
    tileSize: 256             # Kachelgröße

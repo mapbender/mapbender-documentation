@@ -67,14 +67,14 @@ YAML-Definition:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
    units: "degrees"           # units to use degrees/meters, default is degrees
-   extents: array(
-       max: array(0, 40, 20, 60)    # maximal map extents
-       start: array(5, 45, 15, 55)) # map extents for the start of the application
+   extents:
+       max: [0, 40, 20, 60]    # maximal map extents
+       start: [5, 45, 15, 55]  # map extents for the start of the application
    scales: "25000000,10000000,5000000,1000000,500000" # a csv scale list
-   otherSrs: array(
-      "EPSG:31466",
-      "EPSG:31467",
-      "EPSG:25832")           # other coordinate reference systems. Two srs definitions are supported:
+   otherSrs:
+       - EPSG:31466
+       - EPSG:31467
+       - EPSG:25832          # other coordinate reference systems. Two srs definitions are supported:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MY SRS TITLE","EPSG:CODE|MY SRS TITLE"]
    tileSize: 256             # size of tiles
