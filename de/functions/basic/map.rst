@@ -75,7 +75,6 @@ YAML-Definition:
       "EPSG:25832")           # andere Koordinatenbezugssystem. Zwei Arten der SRS Definition werden unterstützt:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MEIN SRS TITEL","EPSG:CODE|MEIN SRS TITEL"]
-   imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img"   # Pfad der Bilder (images)
    tileSize: 256             # Kachelgröße
    wmsTileDelay: 2500        # Delay bei WMS-T (findet z.Z. noch keine Anwendung)
 

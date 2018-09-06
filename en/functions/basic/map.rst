@@ -77,7 +77,6 @@ YAML-Definition:
       "EPSG:25832")           # other coordinate reference systems. Two srs definitions are supported:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MY SRS TITLE","EPSG:CODE|MY SRS TITLE"]
-   imgPath: "bundles/mapbendercore/mapquery/lib/openlayers/img"   # path of images
    tileSize: 256             # size of tiles
    wmsTileDelay: 2500        # delay on WMS-T (actually not applicable)
 
