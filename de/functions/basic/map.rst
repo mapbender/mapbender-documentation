@@ -69,7 +69,6 @@ YAML-Definition:
        max: array(0, 40, 20, 60) 
        start: array(5, 45, 15, 55)) # Kartenbereich (extent)
    scales: "25000000,10000000,5000000,1000000,500000" # eine CSV-Liste für den Maßstab
-   maxResolution: "auto"      # Auflösung, im Moment wird nur auto unterstützt, bitte ändern Sie es nicht.
    otherSrs: array(
       "EPSG:31466",
       "EPSG:31467",
