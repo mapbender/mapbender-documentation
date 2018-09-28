@@ -8,6 +8,25 @@ Version history
 You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
 
+Version 3.0.7.5
+---------------
+
+Release date: 29.08.2018
+
+
+**Improvements and bugfixes:**
+
+* Fix automation errors based on concrete branch naming (`PR#84 <https://github.com/mapbender/mapbender-starter/pull/84>`_)
+* Add Logo to Mapbender Starter and link it in Readme.md (`PR#82 <https://github.com/mapbender/mapbender-starter/pull/82>`_)
+* Update Mapbender to `v3.0.7.5 <https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5>`_
+* Update Owsproxy to `v3.0.6.4 <https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4>`_, includes Owsproxy dependencies
+* Update mapbender/vis-ui.js to `0.0.72 <https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72>`_
+* Update mapbender/data-source to `0.1.8 <https://github.com/mapbender/data-source/releases/tag/0.1.8>`_
+* Update mapbender/digitizer to `1.1.66 <https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.66>`_
+* Update bundled Composer to `1.6.5 <https://github.com/composer/composer/releases/tag/1.6.5>`_ 
+* Misc ComposerBootstrap cleanups
+
+
 Version 3.0.7.4
 ---------------
 
