@@ -18,8 +18,6 @@ Release date: 26.09.2018
 
 * Find the description of the fixes in the repository links
 * Update Mapbender-Starter `v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
-* Fix automation errors based on concrete branch naming (`PR#84 <https://github.com/mapbender/mapbender-starter/pull/84>`_)
-* Add Logo to Mapbender Starter and link it in Readme.md (`PR#82 <https://github.com/mapbender/mapbender-starter/pull/82>`_)
 * Update Mapbender to `v3.0.7.5 <https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5>`_
 * Update Owsproxy to `v3.0.6.4 <https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4>`_, includes Owsproxy dependencies
 * Update mapbender/vis-ui.js to `0.0.72 <https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72>`_
