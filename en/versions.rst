@@ -11,11 +11,13 @@ You find the milestones at: https://github.com/mapbender/mapbender/milestones
 Version 3.0.7.5
 ---------------
 
-Release date: 29.08.2018
+Release date: 26.09.2018
 
 
 **Improvements and bugfixes:**
 
+* Find the description of the fixes in the repository links
+* Update Mapbender-Starter `v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
 * Fix automation errors based on concrete branch naming (`PR#84 <https://github.com/mapbender/mapbender-starter/pull/84>`_)
 * Add Logo to Mapbender Starter and link it in Readme.md (`PR#82 <https://github.com/mapbender/mapbender-starter/pull/82>`_)
 * Update Mapbender to `v3.0.7.5 <https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5>`_
