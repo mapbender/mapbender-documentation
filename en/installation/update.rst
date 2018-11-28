@@ -51,7 +51,7 @@ Have a look at the steps as commands
  cd /var/www/mapbender/
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
- app/console assets:install web
+ app/console assets:install web --symlink --relative
  
  # change the access rights and owner of the files
  sudo chmod -R ugo+r /var/www/mapbender
