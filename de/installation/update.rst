@@ -55,7 +55,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
- app/console assets:install web
+ app/console assets:install web --symlink --relative
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
  sudo chmod -R ugo+r /var/www/mapbender
