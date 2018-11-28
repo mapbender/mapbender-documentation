@@ -142,7 +142,7 @@ Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im 
  cd /var/www/mapbender
  app/console doctrine:database:create
  app/console doctrine:schema:create
- app/console assets:install web
+ app/console assets:install web --symlink --relative
  app/console fom:user:resetroot
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
