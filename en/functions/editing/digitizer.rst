@@ -612,6 +612,7 @@ Form elements can be placed unto different Tabs. The formItem type "tabs" is use
 For each input field the CSS-behavior and styling informations can be assigned, regardless of the type. This can be used, for example, to highlight important fields or to fill an attribute field when editing another field.
 
 parameters: 
+
 * load, focus, blur
 * input, change, paste
 * click, dblclick, contextmenu
@@ -823,8 +824,7 @@ Mandatory fields
 
 The notes for a mandatory field appear above the used fields. In the case of a missing entry in a defined mandatory field, this will be marked in red and (if defined) a speech bubble will appear. The object can not be saved if mandatory data is missing.
 
-Note: When using multiple tabs in the form, the creator may set an entry incorrectly on a non-visible tab in a mandatory field, so the saving process does not work.
-No error message appears outside the form. The applicant has to check the information in the form (label: red border / speech bubble with reference) before it can be stored correctly.
+.. note:: Note: When using multiple tabs in the form, the creator may set an entry incorrectly on a non-visible tab in a mandatory field, so the saving process does not work. No error message appears outside the form. The applicant has to check the information in the form (label: red border / speech bubble with reference) before it can be stored correctly.
 
 .. code-block:: yaml
 
@@ -1090,6 +1090,7 @@ Definition of the cluster element:
 
 Map-Refresh after save
 ----------------------
+
 After saving an object, the refresh can be activated using the *refreshLayersAfterFeatureSave* option. This parameter is used to reload the defined layer instances in the map-element. This makes changes regarded to WMS services directly visible in the map. This event is thrown only if the "Save" button of the attribute dialog is pressed.
 
 If the YAML application is used in the /application folder, it can be specified by unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
