@@ -1215,13 +1215,13 @@ Further buttons can be defined for the popup forms. The events by clicking on th
             width: 500p
             # resizible: true
             buttons:
-              - text: Nachricht an Messung
+              - text: message to editor
                 click: |
                   var body = encodeURI("Sehr geehrter Herr/Frau xx,"+"\nLink:"+location.href);
-                  location.href = "mailto:vorname.nachname@mail.com?subject=Neue Bearbeitung im WebGIS&body=Mail an den Bearbeiter für die Geschwindigkeitsmessung und für die weitere Bearbeitung.";
-              - text: Nachricht an Auswertung
+                  location.href = "mailto:firstname.lastname@mail.com?subject=New edit in webgis&body=Mail to editor for further edits.";
+              - text: message to controller
                 click: |
-                 location.href = "mailto:andriy.oblivantsev@gmail.com&subject=test&body=really?";
+                 location.href = "mailto:firstname.lastname@mail.com&subject=webgis&body=really?";
 
 
 Design and Styles
