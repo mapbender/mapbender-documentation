@@ -1207,16 +1207,14 @@ Für die Erfassungsformulare können weitere Buttons definiert werden. Die Event
       ...
         popup:
             title: polygon test suite
-            width: 500p
-            # resizible: true
             buttons:
               - text: Nachricht an Messung
                 click: |
                   var body = encodeURI("Sehr geehrter Herr/Frau xx,"+"\nLink:"+location.href);
-                  location.href = "mailto:vorname.nachname@mail.com?subject=Neue Bearbeitung im WebGIS&body=Mail an den Bearbeiter für die Geschwindigkeitsmessung und für die weitere Bearbeitung.";
+                  location.href = "mailto:vorname.nachname@mail.com?subject=Neue Bearbeitung im WebGIS&body=Mail an den Bearbeiter für die die weitere Bearbeitung.";
               - text: Nachricht an Auswertung
                 click: |
-                 location.href = "mailto:andriy.oblivantsev@gmail.com&subject=test&body=really?";
+                 location.href = "mailto:vorname.nachname@mail.com&subject=WebGIS&body=really?";
 
 
 
