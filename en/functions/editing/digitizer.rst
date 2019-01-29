@@ -475,6 +475,7 @@ A basic definition, here for the poi-example, may look like the following snippe
             geomType: point
             geomField: geom
             srid: 4326
+            filter: interests = 'maps'
         openFormAfterEdit: true
         zoomScaleDenominator: 500
         allowEditData: true
@@ -497,6 +498,7 @@ The possible options are:
   * geomType: Geometry-type
   * geomField: Column-name in which the geometry is stored
   * srid: Coordinate-system in EPSG-code
+  * filter: Data filters for values ​​in a defined column, e.g. filter: interests = 'maps' 
 
 * **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data. [true/false] Standard is true.
 * **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
@@ -1164,7 +1166,31 @@ In difference to the Save-events, the update-events work only on an update of th
 
 **Note:** The events are still in development and should be used with caution. The correct matching of the events and their dependencies are not yet finished and may be changed in future versions.
 
-The following sections show some examples.
+The following sections show some examples. If you want to set several parameters in an event, these can be listed in sequence, separated by a simicolon, e.g.
+
+.. code-block:: yaml
+
+                events:
+                  onBeforeSave: $feature->setAttribute('interests', 'maps'); $feature->setAttribute('name', 'test');
+
+**Storage of predefined attibute data in an additional attribute-columns:**
+
+The following example shows how data can be written to an additional attribute column. This is done with the column "interests" and the fixed value "maps". When saving, the fixed value is stored in the table and you can use it via a filter for the selected display.
+
+.. code-block:: yaml
+
+                events:
+                  onBeforeSave: $feature->setAttribute('interests', 'maps');
+
+**Storage of group roles in an additional attribute-columns:**
+
+The following example shows how mapbender user data can be written to an additional attribute column. Here, this is done with the column "group" and the storage with the group roles of the user (userRoles). 
+
+.. code-block:: yaml
+
+                events:
+                  onBeforeSave: $feature->setAttribute('group', implode(',', $userRoles));
+
 
 **Storage of attibute data in an additional attribute-columns:**
 

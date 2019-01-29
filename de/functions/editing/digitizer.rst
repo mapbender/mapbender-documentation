@@ -467,6 +467,7 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
             geomType: point
             geomField: geom
             srid: 4326
+            filter: interests = 'maps'
         openFormAfterEdit: true
         zoomScaleDenominator: 500
         allowEditData: true
@@ -489,6 +490,7 @@ Die möglichen Optionen sind:
   * geomType: Geometrietyp
   * geomField: Attributspalte, in der die Geometrie liegt.
   * srid: Koordinatensystem im EPSG-Code
+  * filter: Datenfilter über Werte in einer definierten Spalte, z.B. filter: interests = 'maps'
 
 * **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular. [true/false] Standard ist true.
 * **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird.Standardwert ist 100
@@ -1159,7 +1161,31 @@ Im Unterschied zu den Save-Events arbeiten die Update-Events nur bei einer Aktua
 **Anmerkung:** Die Events sind noch in der Entwicklung und sollten mit Voraussicht eingebunden werden.
 Die korrekte Abstimmung der Events aufeinander und ihre Abhängigkeiten sind noch nicht vollständig fertiggestellt und können sich in zukünftigen Versionen ändern.
 
-Im folgenden einige Anwendungsbeispiele.
+Im folgenden einige Anwendungsbeispiele. Falls mehrere Parameter in einem Event gesetzt werden sollen können diese durch ein Simikolon getrennt hintereinander aufgelistet werden, z.B. 
+
+.. code-block:: yaml
+
+                events:
+                  onBeforeSave: $feature->setAttribute('interests', 'maps'); $feature->setAttribute('name', 'test');
+
+
+**Speichern von festen Sachdaten in zusätzlichen Attributspalte:**
+
+Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit der Spalte "interests" und dem festen Wert "maps". Beim Speichern wird der feste Wert in die Tabelle gespeichert und kann z.B. über einen Filter für die selektierte Anzeige genutzt werden. 
+
+.. code-block:: yaml
+
+                events:
+                  onBeforeSave: $feature->setAttribute('interests', 'maps');
+
+**Speichern von Gruppenrollen in zusätzlichen Attributspalte:**
+
+Das folgende Beispiel zeigt, wie Mapbender-Benutzerdaten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit der Spalte "group" und der Füllung mit den jeweiligen Gruppenrollen des Benutzers (userRoles)
+
+.. code-block:: yaml
+
+                events:
+                  onBeforeSave: $feature->setAttribute('group', implode(',', $userRoles));
 
 
 **Speichern von Sachdaten in zusätzlichen Attributspalten:**
