@@ -818,6 +818,7 @@ Checkboxes (type checkbox)
                                                    title: Is this true?   # Label (optional)
                                                    name:  public          # table column 
                                                    value: true            # parameter when activating the checkbox is stored in DB (here 'TRUE').
+                                                   checked: false         # behaviour of the checkbox (true or false). default is false. Defines whether checkbox is pre-selected (checked) on load
 
 
 
