@@ -812,7 +812,7 @@ Checkboxen (type checkbox)
                                                    title: Is this true?   # Beschriftung (optional)
                                                    name:  public          # Referenz zu Tabellenspalte
                                                    value: true            # angegebener Parameter beim Aktivieren der Checkbox wird in DB gespeichert (hier 'TRUE').
-
+                                                   checked: false         # Definiert, ob die Checkbox vordefiniert angehakt sein soll (true oder false). Standard ist false
 
 
 
