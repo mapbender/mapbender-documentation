@@ -88,7 +88,6 @@ Auflistung der Mapbender app/console Befehle:
   mapbender:assets:dump            Dump all Mapbender application assets.
   mapbender:generate:element       Generates a Mapbender element
   mapbender:generate:template      Generates a Mapbender application template
-  mapbender:generate:translation   Generates a Mapbender translation
 
 
 
