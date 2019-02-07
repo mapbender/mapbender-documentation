@@ -53,13 +53,10 @@ The link has to look like this:
 
 .. code-block:: html
 
-  <a mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1" 
+  <a href="#"
+  mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1"
   mb-wms-layers="Gewaesser,Fluesse" 
-  href="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
-
-  <a mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1" 
-  mb-wms-layers="Gewaesser,Fluesse" 
-  mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS" href="">load service</a>
+  mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
 
 
 .. code-block:: yaml
