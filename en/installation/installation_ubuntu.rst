@@ -174,7 +174,7 @@ Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml
                     database_name:     mapbender
                     database_path:     null
                     database_user:     root
-                    database_password: Tr0ub4dor&3
+                    database_password: secret
 
 Run the app/console commands. You find detailed information for this commands in the chapter `Details of the configuration of Mapbender <configuration.html>`_.
 
