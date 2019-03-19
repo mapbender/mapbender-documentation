@@ -86,8 +86,8 @@ Set the write permission for user (u), group (g) and others (a) and rights. Assi
 
 .. code-block:: bash
 
- sudo chown -R www-data:www-data /var/www/mapbender/app/cache
  sudo chown -R www-data:www-data /var/www/mapbender/app/logs
+ sudo chown -R www-data:www-data /var/www/mapbender/app/cache
  sudo chown -R www-data:www-data /var/www/mapbender/web/uploads
 
  # if you want to use the preconfigured file-database
@@ -174,7 +174,7 @@ Adapt the Mapbender configuration file parameters.yml (app/config/parameters.yml
                     database_name:     mapbender
                     database_path:     null
                     database_user:     root
-                    database_password: Tr0ub4dor&3
+                    database_password: secret
 
 Run the app/console commands. You find detailed information for this commands in the chapter :ref:`installation_configuration`.
 

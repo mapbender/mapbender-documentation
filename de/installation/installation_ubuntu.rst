@@ -50,7 +50,7 @@ Entpacken Sie das Mapbender Archiv (tar.gz oder zip) beispielsweise im Verzeichn
 
 Erstellen Sie den Apache Alias. Sie können Mapbender in ein beliebiges anderes Verzeichnis entpacken und müssen dann nur die folgende Datei anpassen und auf den richtigen Ordner verweisen lassen.
 
-Legen Sie die Datei **/etc/apache2/sites-available/mapbender3.conf** mit dem folgenden Inhalt an. 
+Legen Sie die Datei **/etc/apache2/sites-available/mapbender.conf** mit dem folgenden Inhalt an.
 
 .. code-block:: apache
                 
@@ -86,8 +86,8 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (o). Weise
 
 .. code-block:: bash
 
- sudo chown -R www-data:www-data /var/www/mapbender/app/cache
  sudo chown -R www-data:www-data /var/www/mapbender/app/logs
+ sudo chown -R www-data:www-data /var/www/mapbender/app/cache
  sudo chown -R www-data:www-data /var/www/mapbender/web/uploads
 
  # wenn Sie die vorkonfigurierte dateibasierte Datenbank nutzen möchten
@@ -173,7 +173,7 @@ Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/paramete
                     database_name:     mapbender
                     database_path:     null
                     database_user:     root
-                    database_password: Tr0ub4dor&3
+                    database_password: geheim
 
 Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im Kapitel :ref:`installation_configuration_de`.
 
