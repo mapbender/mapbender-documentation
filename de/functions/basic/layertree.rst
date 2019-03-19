@@ -161,8 +161,6 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
 
            Position des Layertrees als Element und Dialog in der Anwendung.
 
-Der **Displaytype** [7] bestimmt die Anzeige (*Tree*) des Layertrees. Durch die Angabe der maximalen Zeichenzahl über das Feld **Titlemaxlength** [8] kann die Anzeige des Titels der einzelnen Layer auf eine Zeichenzahl begrenzt werden. Das ist wichtig für die Begrenzung bei langen Layerbezeichnungen. Nach dem Erreichen der maximalen Zeichenzahl wird der Titel mit "..." als Zeichen abgeschnitten. 
-
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
            :alt: Einrichtung des einfachen Layertrees im Content-Bereich.
@@ -345,10 +343,8 @@ YAML-Definition:
   title: layertree             # Titel des Layerbaums
   target: ~                    # ID des Kartenelements
   type: ~                      # Typ des Layerbaums
-  displaytype: tree            # In 3.0 gibt es nur den Baum (Tree), in Zukunft wird auch eine Liste angeboten.
   useAccordion: false          # akkordeonartige Anzeige. Standard ist false
   autoOpen: false              # true, wenn der Layerbaum beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
-  titleMaxLength: 20           # Maximale Länge des Layertitels, Standard ist 20
   showBaseSource: true         # Anzeige des Basislayers, der Standardwert ist true
   showHeader: true             # zeigt eine Überschrift, die die Anzahl der Services zählt, der Standardwert ist true
   menu: [opacity,zoomtolayer,metadata,removelayer]  # zeigt ein Kontextmenü für den Layer an (wie Opazität, Zoom auf Layer, Anzeige des Metadatendialogs, Layer entfernen), der Standardwert ist menu: [] 
@@ -370,8 +366,6 @@ Der Layerbaum kann auch als Element definiert werden. Dann wird der Layerbaum in
     target: ~                    # ID des Kartenelements  
     type: ~                      # Typ des Layerbaums, element oder dialog
     autoOpen: false              # true, wenn der Layerbaum beim Start der Anwendung geöffnet werden soll, der Standardwert ist
-    displaytype: tree            # In 3.0 gibt es nur den Baum (Tree), in Zukunft wird auch eine Liste angeboten.
-    titlemaxlength: 20           # Maximale Länge des Layertitels, Standard ist 20  
     showBaseSource: true         # Anzeige des Basislayers, der Standardwert ist true
     showHeader: true             # zeigt eine Überschrift, die die Anzahl der Services zählt, der Standardwert ist true
     menu: [opacity,zoomtolayer,metadata,removelayer]  # zeigt ein Kontextmenü für den Layer an (wie Opazität, Zoom auf Layer, Anzeige des Metadatendialogs, Layer entfernen), der Standardwert ist menu: []

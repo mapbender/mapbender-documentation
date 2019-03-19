@@ -23,7 +23,6 @@ Konfiguration
 * **Display type:** akkordeonartige Anzeige oder Liste. Standard ist Liste.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht. 
 
-* **Legenden-URL generieren:** generiert eine GetLegendGraphic-Url, wenn die Operation GetLegendGraphic unterstützt wird, der Standardwert ist false.
 * **Titel der Datenquelle anzeigen:** zeigt den WMS Titel, der Standardwert ist true.
 * **Titel der Ebene anzeigen:** zeigt den Layertitel, der Standardwert ist true.
 * **Titel der gruppierten Ebenen anzeigen:** zeigt den Gruppenlayertitel für gruppierte Layer, der Standardwert ist true.
@@ -106,7 +105,6 @@ YAML-Definition:
    displayType: list                    # akkordeonartige Anzeige oder Liste. Standard ist Liste.
    target: ~                            # ID des Kartenelements
    hideEmptyLayer: true                 # true/false Layer wird versteckt, wenn keine Legende verfügbar ist, der Standardwert ist true
-   generateGetLegendGraphicUrl: false   # true/false generiert eine GetLegendGraphic-Url, wenn die Operation GetLegendGraphic unterstützt wird, der Standardwert ist false
    showWmsTitle: true                   # true/false zeigt den WMS Titel, der Standardwert ist true
    showLayerTitle: true                 # true/false zeigt den Layertitel, der Standardwert ist true
    showGroupedLayerTitle: true          # true/false zeigt den Gruppentitel für gruppierte Layer, der Standardwert ist true

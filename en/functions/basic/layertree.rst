@@ -162,8 +162,6 @@ By specifying a **Type** [6] the display of the Layertrees can be defined. There
            Type specification for the display of the Layertree.
 
 
-The **Displaytype** [7] defines the accordion-like display (*Tree*) of the Layertree. By adjusting the maximum number of characters in the field **Titlemaxlength** [8] the title of the individual layers can be limited to a number of characters. This is important for long layer names. After the maximung title length the title is shortened with "...".
-
 .. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
            :alt: Setup of a simple layertree in the content-area.
@@ -348,10 +346,8 @@ YAML-Definition:
   title: layertree             # title of layertree
   target: ~                    # Id of the Map element to query
   type: ~                      # type of layertree, element or dialog
-  displaytype: tree            # only tree in 3.0, future will offer list
   useAccordion: false          # accordion element, default is false
   autoOpen: false              # true/false open when application is started, default is false
-  titleMaxLength: 20           # max length of layer title, default is 20
   showBaseSource: true         # show base layer, default is true
   showHeader: true             # shows a headline which counts the number of services
   menu: [opacity,zoomtolayer,metadata,removelayer]  # show contextmenu for the layer (like opacity, zoom to layer, metadata, remove layer), default is menu: []

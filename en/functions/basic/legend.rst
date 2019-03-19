@@ -23,7 +23,6 @@ Configuration
 * **Display type:** Accordion-like display or list. Default is list.
 * **Target:** Id of Map element to query.
 
-* **Generate legend url:** generates a GetLegendGraphic-URL if operation GetLegendGraphic is supported, default is false.
 * **Show source title:** shows WMS/source title, default is true.
 * **Show layer title:** shows layer title, default is true.
 * **Show grouped layer title:** shows group title for grouped layers, default is true.
@@ -106,7 +105,6 @@ YAML-Definition:
    displayType: list                    # accordion/list type of display, default is list
    target: ~                            # Id of Map element to query
    hideEmptyLayer: true                 # true/false hide when no legend is available, default is true
-   generateGetLegendGraphicUrl: false   # true/false generate GetLegendGraphic-Url if the operation GetLegendGraphic is supported, default is false
    showWmsTitle: true                   # true/false show WMS title, default is true
    showLayerTitle: true                 # true/false show layer title, default is true
    showGroupedLayerTitle: true          # true/false show group title for grouped layers, default is true

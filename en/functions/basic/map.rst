@@ -78,7 +78,6 @@ YAML-Definition:
                                 - ["EPSG:CODE","EPSG:CODE"] or
                                 - ["EPSG:CODE|MY SRS TITLE","EPSG:CODE|MY SRS TITLE"]
    tileSize: 256             # size of tiles
-   wmsTileDelay: 2500        # delay on WMS-T (actually not applicable)
 
 
 
