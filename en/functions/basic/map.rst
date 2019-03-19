@@ -26,7 +26,6 @@ Configuration
 * **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
 * **Scales (csv):** a csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
 * **Max. resolution:** Only auto is supported. So please do not change. Defines the resulution of the map.
-* **OL image path:** OpenLayers image path, at which the images are saved (bundles/mapbendercore/mapquery/lib/openlayers/img).
 * **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
 
 
