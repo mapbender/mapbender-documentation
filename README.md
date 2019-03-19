@@ -4,7 +4,7 @@ This is the Mapbender documentation repository.
 
 You find the compiled pages of [the latest released version](https://github.com/mapbender/mapbender-documentation/releases) at [https://doc.mapbender.org/](https://doc.mapbender.org/). Other versions of the documentation are also available at [https://docs.mapbender.org/](https://docs.mapbender.org/current/#other-versions-of-this-documentation).
 
-The current working branch is [release/3.0.6](https://github.com/mapbender/mapbender-documentation/tree/release/3.0.6). The released versions are based on the [master branch](https://github.com/mapbender/mapbender-documentation/tree/master) and merged from release/3.0.6.
+The sources are [on Github](https://github.com/mapbender/mapbender-documentation).
 
 The website code is generated using [Sphinx](http://sphinx-doc.org/), therefore the documentation source is written in [Restructured Text](http://sphinx-doc.org/rest.html).
 
@@ -23,7 +23,7 @@ You can then build the documentation by running:
 $ make
 ```
 
-To participate in the documentation, create a fork, work on the [release/3.0.6](https://github.com/mapbender/mapbender-documentation/tree/release/3.0.6) branch and create a [Pull-Request](https://help.github.com/articles/about-pull-requests/) with the release/3.0.6 branch as base.
+To participate in the documentation, create a fork and submit a pull request with your changes.
 
 
 Have fun!
