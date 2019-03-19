@@ -36,7 +36,7 @@ Mapbender ist ein web-basiertes Geoportal Framework zum Veröffentlichen, Regist
 
 Administrationsoberflächen ermöglichen es Administratoren Karten- und Datendienste zu verwalten und zu kategorisieren. Über die Administration können einzelnen Benutzern und Gruppen Zugriffe gewährt werden.
 
-Mapbender ist die nächste Version in der Mapbender Serie. Es wurde unter Verwendung moderner Webtechnologien komplett neu geschrieben. Die Grundlage bildet Symfony2, das erfolgreiche PHP Web Application Framework. Auf der Clientseite finden Sie OpenLayers und jQuery (UI) verbunden über MapQuery.
+Mapbender wurde unter Verwendung moderner Webtechnologien komplett neu geschrieben. Die Grundlage bildet das Symfony Framework. Auf der Clientseite finden Sie OpenLayers.
 
 Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Frameworks fortgesetzt.
 
