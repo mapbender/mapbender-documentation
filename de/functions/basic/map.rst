@@ -3,7 +3,7 @@
 Map (Karte)
 ***********
 
-MapQuery/OpenLayers basierte Karte.
+OpenLayers-basierte Karte.
 Es müssen die Einheiten, der Start und der Max Bereich (extent), die Maßstäbe und die unterstützten Projektionen angegeben werden.
 
 .. image:: ../../../figures/de/map.png
@@ -197,8 +197,7 @@ Class, Widget & Style
 =====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\Map
-* **Widget:** , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
-* **Style:** mapbender.elements.css, mapquery//lib//openlayers//theme//default//style.css
+* **Widget:** mapbender.element.map.js
 
 HTTP Callbacks
 ==============

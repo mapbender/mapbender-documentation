@@ -198,8 +198,7 @@ Class, Widget & Style
 =====================
 
 * **Class:** Mapbender\\CoreBundle\\Element\\Map
-* **Widget:** , mapquery//lib//openlayers//OpenLayers.js, mapquery//lib//jquery//jquery.tmpl.js, mapquery//src//jquery.mapquery.core.js, proj4js//proj4js-compressed.js, mapbender.element.map.js
-* **Style:** mapbender.elements.css, mapquery//lib//openlayers//theme//default//style.css
+* **Widget:** mapbender.element.map.js
 
 HTTP Callbacks
 ==============

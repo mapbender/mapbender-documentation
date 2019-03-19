@@ -59,18 +59,6 @@ Read more about OpenLayers at http://openlayers.org/
 You find example applications with OpenLayers at http://dev.openlayers.org/examples/
 
 
-MapQuery
-********
-.. image:: http://mapquery.org/img/logo.png
-  :scale: 80 %
-  :alt: MapQuery Project page
-  :align: center
-  :target: http://mapquery.org/
-
-MapQuery implements a jQuery interface to OpenLayers. It provides a set of mapping related widgets. In Mapbender MapQuery is used to interact with OpenLayers.
-
-Read more about MapQuery at http://mapquery.org/
-
 jQuery and jQuery UI
 ********************
 .. TODO find a nice logo
