@@ -86,7 +86,12 @@ Update Example for Windows
  # Update your Mapbender database
  php.exe app/console doctrine:schema:update --dump-sql
  php.exe app/console doctrine:schema:update --force
-  
+ 
+ # Notes for MS4W users:
+ #     - be sure to first execute setenv.bat to properly set the required paths for PHP
+ #     - you may have to also pass the extension you need, at the commandline, for example:
+ #            php -dextension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll app/console doctrine:schema:update --dump-sql
+ 
  # Import the applications from mapbender.yml to your database to get to know about the latest developments
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
  php.exe app/console assets:install web
