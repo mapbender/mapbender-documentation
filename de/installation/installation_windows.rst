@@ -3,7 +3,7 @@
 Installation auf Windows
 ########################
 
-Wir zeigen Ihnen hier zwei Möglichkeiten, Mapbender auf Windows einzurichten. Die `Erste nutzt das MS4W Paket <#installation-uber-das-ms4w>`_ und die darin enthaltene Mapbender Version. Die `zweite Möglichkeit ist die manuelle Installation <#manuelle-installation>`_, bei denen Sie die Anpassungen an PHP und Apache selbst vornehmen und Mapbender per Hand entpacken.
+Wir zeigen Ihnen hier zwei Möglichkeiten, Mapbender auf Windows einzurichten. Die `Erste nutzt MS4W <#installation-uber-ms4w>`_ und die darin enthaltene Mapbender Version. Die `zweite Möglichkeit ist die manuelle Installation <#manuelle-installation>`_, bei denen Sie die Anpassungen an PHP und Apache selbst vornehmen und Mapbender per Hand entpacken.
 
 EXE-Installationsdateien für den offiziellen Mapbender bieten wir bislang nicht an, da diese den Mapbender zwar in ein Verzeichnis entpacken kann, die Anpassungen aber an den vorhandenen PHP und Webserver (Apache/Nginx) Installationen vorgenommen werden müssen.
 
@@ -24,8 +24,8 @@ Der Wert für das Web kann über eine ``phpinfo.php`` Seite überprüft werden (
 
 
 
-Installation über das MS4W
---------------------------
+Installation über MS4W
+----------------------
 
 Mapbender ist Teil von `MS4W (MapServer for Windows) <https://ms4w.com/>`_ und kann über dieses Paket installiert werden, inklusive Mapserver, Apache, GDAL, PHP und anderen. Dabei handelt es sich mehr oder weniger um eine Standard Release Version von Mapbender, die in die MS4W Umgebung von Apache/PHP eingebunden ist.
 
