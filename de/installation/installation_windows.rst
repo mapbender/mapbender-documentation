@@ -27,7 +27,7 @@ Der Wert für das Web kann über eine ``phpinfo.php`` Seite überprüft werden (
 Installation über MS4W
 ----------------------
 
-Mapbender ist Teil von `MS4W (MapServer for Windows) <https://ms4w.com/>`_ und kann über dieses Paket installiert werden, inklusive Mapserver, Apache, GDAL, PHP und anderen. Dabei handelt es sich mehr oder weniger um eine Standard Release Version von Mapbender, die in die MS4W Umgebung von Apache/PHP eingebunden ist.
+Mapbender ist Teil von `MS4W (MapServer for Windows) <https://ms4w.com/>`_ und kann über dieses Paket installiert werden, inklusive MapServer, Apache, GDAL, PHP, MapCache und anderen. Dabei handelt es sich mehr oder weniger um eine Standard Release Version von Mapbender, die in die MS4W Umgebung von Apache/PHP eingebunden ist.
 
 Wenn Sie das EXE-Installationsprogramm herunterladen, können Sie Mapbender aus einer Liste der Anwendungen auswählen:
 
