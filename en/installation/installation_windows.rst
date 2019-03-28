@@ -308,14 +308,6 @@ Run the app/console commands with php. First you have to open a terminal (cmd).
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
-Note for MS4W users, before you use the PHP command you must execute setenv.bat in that command window, to properly set the required PATHs:
-
-.. code-block:: text
-
- C:\ms4w>setenv.bat
-       
-       GDAL, mapserv, Python, PHP, and commandline MS4W tools path set 
-
 Installation of Mapbender is done. 
 
 Check the config.php again:
