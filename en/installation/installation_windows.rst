@@ -35,7 +35,7 @@ If you choose the EXE-Installer, you can select Mapbender from the list of apps:
 .. image:: ../../figures/installation/ms4w_installer.png
      :scale: 80
 
-If you choose the ZIP from MS4W, you have to download and unpack Mapbender by hand from `the MS4W download page <https://ms4w.com/download.html/>`_ and unpack it into the MS4W directory.
+If you choose the ZIP from MS4W, you have to download and unpack Mapbender by hand from `the MS4W download page <https://ms4w.com/download.html>`_ and unpack it into the MS4W directory.
 
 .. image:: ../../figures/installation/ms4w_packages.png
      :scale: 80

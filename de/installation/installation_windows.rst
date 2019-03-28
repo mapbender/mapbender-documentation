@@ -34,7 +34,7 @@ Wenn Sie das EXE-Installationsprogramm herunterladen, können Sie Mapbender aus 
 .. image:: ../../figures/installation/ms4w_installer.png
      :scale: 80
 
-Falls Sie sich für das ZIP von MS4W entschieden haben, müssen wie Mapbender per Hand von der `MS4W Download Seite <https://ms4w.com/download.html/>`_ herunterladen und in das MS4W Verzeichnis entpacken.
+Falls Sie sich für das ZIP von MS4W entschieden haben, müssen wie Mapbender per Hand von der `MS4W Download Seite <https://ms4w.com/download.html>`_ herunterladen und in das MS4W Verzeichnis entpacken.
 
 .. image:: ../../figures/installation/ms4w_packages.png
      :scale: 80
