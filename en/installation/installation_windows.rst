@@ -3,7 +3,7 @@
 Installation on Windows
 #######################
 
-We show you two different options to install Mapbender on Windows. The `first one uses the MS4W Package <#install-via-ms3w-package>`_ and the included Mapbender version. The `second one presents the manual installation <#manual-installation>`_, where you unpack Mapbender and adjust Apache and PHP by yourself.
+We show you two different options to install Mapbender on Windows. The `first one uses MS4W <#install-via-ms4w>`_ and the included Mapbender version. The `second one presents the manual installation <#manual-installation>`_, where you unpack Mapbender and adjust Apache and PHP by yourself.
 
 We don't offer EXE-installers, yet because it might unpack Mapbender to a specific directory but the adjustments have to be made on PHP and Webserver side (Apache/Nginx).
 
@@ -25,22 +25,22 @@ The value for the web can be checked with a ``phpinfo.php`` page (remember to se
 
 
 
-Install via MS4W package
-------------------------
+Install via MS4W
+----------------
 
-Mapbender is part of `MS4W (Mapserver for Windows) <http://www.ms4w.com/>`_ and can be installed via this package including Mapserver, Apache, GDAL, PHP among others. It's more or less a release version of Mapbender configuried for the MS4W Apache/PHP environment.
+Mapbender is included as a package of `MS4W (MapServer for Windows) <https://ms4w.com/>`_ which also includes MapServer, Apache, GDAL, PHP, MapCache among others. It's more or less a release version of Mapbender pre-configured for the MS4W Apache/PHP environment on Windows, that comes ready-to-use in MS4W, and does all the hard work of the manual install & settings of Apache, PHP etc. for you.
 
 If you choose the EXE-Installer, you can select Mapbender from the list of apps:
 
 .. image:: ../../figures/installation/ms4w_installer.png
      :scale: 80
 
-If you choose the ZIP from MS4W, you have to download and unpack Mapbender by hand from `the MS4W download page <http://www.ms4w.com/>`_ and unpack it into the MS4W directory.
+If you choose the ZIP from MS4W, you have to download and unpack Mapbender by hand from `the MS4W download page <https://ms4w.com/download.html>`_ and unpack it into the MS4W directory.
 
 .. image:: ../../figures/installation/ms4w_packages.png
      :scale: 80
 
-Please refer to `the MS4W homepage <http://ms4w.com>`_ for further details.
+Please refer to `the MS4W homepage <https://ms4w.com>`_ for further details.
 
 
 
@@ -307,7 +307,6 @@ Run the app/console commands with php. First you have to open a terminal (cmd).
  php.exe app/console fom:user:resetroot
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
  php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-
 
 Installation of Mapbender is done. 
 
