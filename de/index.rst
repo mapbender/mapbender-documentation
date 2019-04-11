@@ -3,8 +3,6 @@
 Willkommen bei der Mapbender Dokumentation
 ##########################################
 
-Inhalt:
-
 .. toctree::
    :maxdepth: 1
 

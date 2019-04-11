@@ -3,8 +3,6 @@
 Welcome to the Mapbender documentation
 ######################################
 
-Index:
-
 .. toctree::
    :maxdepth: 1
 

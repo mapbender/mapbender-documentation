@@ -8,15 +8,9 @@ Mapbender Documentation website
 
 You find the Mapbender Documentation at:
 
-http://doc.mapbender.org
+https://doc.mapbender.org
 
 The Documentation is build from the mapbender-docmentation repository at Github. This repository is used to build and deploy the http://doc.mapbender.org website on a nightly base. The website code is generated using Sphinx, therefore the documentation source is written in Restructured Text.
-
-Mapbender also provides an API Documentation at:
-
-http://api.mapbender.org
-
-This API Documentation is generated from the Mapbender code. You find information about how to write the Mapbender API documentation at :ref:`API documentation <apidocumentation>`.
 
 This HowTo concentrates on the build of the documentation at http://doc.mapbender.org.
 

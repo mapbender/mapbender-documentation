@@ -1,7 +1,7 @@
 Welcome to the Mapbender documentation
 ######################################
 
-Mapbender Project Page https://www.mapbender.org
+Mapbender Project Page https://mapbender.org
 
 Please choose your preferred language:
 
@@ -28,6 +28,7 @@ Online version of this documentation
 Other versions of this documentation
 ====================================
 
+* https://docs.mapbender.org/3077
 * https://docs.mapbender.org/3074
 * https://docs.mapbender.org/3073
 * https://docs.mapbender.org/3063
@@ -40,7 +41,6 @@ Other versions of this documentation
 * https://docs.mapbender.org/3050
 * https://docs.mapbender.org/304
 
-* Mapbender API Documentation: https://api.mapbender.org
 
 Download Mapbender
 ==================
@@ -70,5 +70,5 @@ Download Mapbender
   :width: 400 px
   :alt: Mapbender
   :align: center
-  :target: https://www.mapbender.org/
+  :target: https://mapbender.org/
 

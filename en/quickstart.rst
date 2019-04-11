@@ -549,26 +549,15 @@ What Next?
 
 This is only the first step on the road to using Mapbender. There is a lot more functionality you can try.
 
-Mapbender Project home
-
-  http://mapbender.org
 
 Mapbender Website
 
-  http://mapbender.org/
+  https://mapbender.org/
 
 You find tutorials at
 
-  http://doc.mapbender.org
-
-API-Documentation
-
-  http://api.mapbender.org
-
-Get to know Mapbender on
-
-	http://projects.mapbender.osgeo.org
+  https://doc.mapbender.org
 
 Get involved in the project
 
-	http://www.mapbender.org/Community
+	https://mapbender.org/Community

@@ -552,26 +552,14 @@ Was kommt als Nächstes?
 
 Dies waren nur die ersten Schritte mit Mapbender. Es gibt viele weitere Funktionen, die Sie ausprobieren können.
 
-Mapbender Projektseite
-
-  http://mapbender.org
-
 Mapbender Webseite
 
-  http://mapbender.org/
+  https://mapbender.org/
 
 Sie finden Tutorials unter
 
-  http://doc.mapbender.org
-
-Die API-Dokumentation finden Sie unter
-
-  http://api.mapbender.org
-
-Mapbender kennenlernen unter
-
-	http://projects.mapbender.osgeo.org
+  https://doc.mapbender.org
 
 Beteiligen Sie sich
 
-	http://www.mapbender.org/community/
+	https://mapbender.org/community/
