@@ -7,6 +7,42 @@ Versionshistorie
 
 Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
+.. _versions:
+
+
+Version 3.0.8
+---------------
+
+Release Datum: 12.04.2019
+
+
+**Verbesserungen und Bugfixes:**
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v.3.0.8
+
+**Hinweise zur Aktualisierung**
+https://github.com/mapbender/mapbender/blob/master/UPGRADING.md#308
+
+
+Version 3.0.7.7
+---------------
+
+Release Datum: 07.11.2018
+
+
+**Verbesserungen und Bugfixes:**
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3077
+
+
+Version 3.0.7.6
+---------------
+
+Release Datum: 18.10.2018
+
+
+**Verbesserungen und Bugfixes:**
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3076
+
+
 Version 3.0.7.5
 ---------------
 
