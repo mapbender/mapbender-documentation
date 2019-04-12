@@ -22,24 +22,16 @@ Online version of this documentation
 ====================================
 
 * https://doc.mapbender.org/
-* https://docs.mapbender.org/current/
+* Mapbender 3.0.8 https://docs.mapbender.org/current/
 
 
 Other versions of this documentation
 ====================================
 
-* https://docs.mapbender.org/3077
-* https://docs.mapbender.org/3074
-* https://docs.mapbender.org/3073
-* https://docs.mapbender.org/3063
-* https://docs.mapbender.org/3062
-* https://docs.mapbender.org/3061
-* https://docs.mapbender.org/3060
-* https://docs.mapbender.org/3053
-* https://docs.mapbender.org/3052
-* https://docs.mapbender.org/3051
-* https://docs.mapbender.org/3050
-* https://docs.mapbender.org/304
+* https://docs.mapbender.org/3.0.7
+* https://docs.mapbender.org/3.0.6
+* https://docs.mapbender.org/3.0.5
+* https://docs.mapbender.org/3.0.4
 
 
 Download Mapbender
