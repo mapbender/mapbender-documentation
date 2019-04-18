@@ -29,8 +29,7 @@ Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
 
 Für die Einbindung der eigenen Vorlage wurde ein Workshop/DemoBundle vorbereitet, dass als Template für Anwendungen und für das Anpassen der Administrationsoberflächen verwendet werden kann. Laden Sie sich für die folgenden Schritte diese Dateien bitte über dem folgenden Link herunter:
 
-* ab Version 3.0.6 unter https://github.com/mapbender/mapbender-workshop/tree/3.0.6
-* vor Version 3.0.6 unter https://github.com/mapbender/mapbender-workshop/tree/master
+* https://github.com/mapbender/mapbender-workshop/tree/master
 
 
 Erzeugen eines eigenen Bundles
