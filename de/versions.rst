@@ -17,9 +17,11 @@ Release Datum: 12.04.2019
 
 
 **Verbesserungen und Bugfixes:**
+
 * https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v.3.0.8
 
 **Hinweise zur Aktualisierung**
+
 https://github.com/mapbender/mapbender/blob/master/UPGRADING.md#308
 
 
@@ -30,6 +32,7 @@ Release Datum: 07.11.2018
 
 
 **Verbesserungen und Bugfixes:**
+
 * https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3077
 
 
@@ -40,6 +43,7 @@ Release Datum: 18.10.2018
 
 
 **Verbesserungen und Bugfixes:**
+
 * https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3076
 
 
