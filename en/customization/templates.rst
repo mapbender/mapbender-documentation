@@ -30,8 +30,7 @@ The new Application-template can be used in different ways:
 
 To use an own template we prepared a Workshop/DemoBundle, which can be used not only for application templates but also for customzing the administration interface. For the following steps, please download the files with the following links:
 
-* from version 3.0.6 and newer: https://github.com/mapbender/mapbender-workshop/tree/3.0.6
-* before version 3.0.6: https://github.com/mapbender/mapbender-workshop/tree/master
+* https://github.com/mapbender/mapbender-workshop/tree/master
 
 
 
