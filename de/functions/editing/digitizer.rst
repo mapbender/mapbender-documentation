@@ -893,8 +893,8 @@ Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Au
                              name: email
                              css: {width: 40%}
 
-Koordinaten
------------
+Koordinaten (type coordinates)
+------------------------------
 
 Um ein visuelles Feedback zu erhalten, Koordinaten manuell eingeben zu können, oder diese manuell nachzubessern kann für Punkt-Geometrien das *coordinates* Element eingebunden werden.
 

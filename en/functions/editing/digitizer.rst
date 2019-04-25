@@ -905,8 +905,8 @@ For each children you can define a width to controll the pace for each element.
                              css: {width: 40%}
 
 
-Coordinate Fields
------------------
+Coordinate Fields (type coordinates)
+------------------------------------
 
 For visual verification, manual entry or manual editing of point coordinates, the *coordinates* element can be used.
 
