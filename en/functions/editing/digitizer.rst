@@ -905,6 +905,32 @@ For each children you can define a width to controll the pace for each element.
                              css: {width: 40%}
 
 
+Coordinate Fields (type coordinates)
+------------------------------------
+
+For visual verification, manual entry or manual editing of point coordinates, the *coordinates* element can be used.
+
+.. image:: ../../../figures/digitizer_coordinates.png
+     :scale: 80
+
+.. code-block:: yaml
+                     
+                     - type: coordinates
+                       title_epsg: 'EPSG angeben'
+                       title_longitude: 'Longitude'
+                       title_latitude: 'Latitude'
+                       coordinatesFieldsOrder: ['epsg','x','y']
+                       title: ''
+                       css: {width: 100% }
+                       epsgCodes: [['EPSG:3857', 'EPSG:3857 (Pseudo Mercator)'], ['EPSG:4326', 'EPSG:4326 (WGS84)']]
+
+The possible special properties are:
+
+* **title_epsg**: the caption for the field to select the EPSG code of the coordinates
+* **title_longitude**: the title of the longitude field
+* **title_latitude**: the title of the latitude field
+* **coordinatesFieldsOrder**: a list of strings, describing the order in which the three input elements occur
+* **epsgCodes**: a list of tuples, each describing an EPSG code to select and its corresponding label in the form
 
 
 File upload (type file)

@@ -893,6 +893,32 @@ Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Au
                              name: email
                              css: {width: 40%}
 
+Koordinaten (type coordinates)
+------------------------------
+
+Um ein visuelles Feedback zu erhalten, Koordinaten manuell eingeben zu können, oder diese manuell nachzubessern kann für Punkt-Geometrien das *coordinates* Element eingebunden werden.
+
+.. image:: ../../../figures/digitizer_coordinates.png
+     :scale: 80
+
+.. code-block:: yaml
+
+                     - type: coordinates
+                       title_epsg: 'EPSG angeben'
+                       title_longitude: 'Longitude'
+                       title_latitude: 'Latitude'
+                       coordinatesFieldsOrder: ['epsg','x','y']
+                       title: ''
+                       css: {width: 100% }
+                       epsgCodes: [['EPSG:3857', 'EPSG:3857 (Pseudo Mercator)'], ['EPSG:4326', 'EPSG:4326 (WGS84)']]
+
+Die verfügbaren Parameter sind:
+
+* **title_epsg**: die Beschriftung für das Feld zur Auswahl des Koordinatensystems der Koordinaten
+* **title_longitude**: die Beschriftung für das logitude Feld
+* **title_latitude**: die Beschriftung für das latitude Feld
+* **coordinatesFieldsOrder**: eine Liste aus Strings, die die Reihenfolge der drei Eingabefelder (Koordinatensystemauswahl, Longitude, Latitude) definiert
+* **epsgCodes**: eine Liste aus Tupeln, die jeweils einen EPSG Code und dessen Beschriftung im Formular definieren
 
 
 Dateiupload (type file)
