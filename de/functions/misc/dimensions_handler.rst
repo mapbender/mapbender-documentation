@@ -44,7 +44,7 @@ Es bestehen zwei Möglichkeiten, die Zeitangabe in der Karte zu steuern. Zum ein
 Zeitslider im Kontextmenü
 -------------------------
 
-Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers integriert werden. Dazu muss die "Dimension" Option in dem Ebenenbaum aktiviert werden. 
+Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers im integriert werden. Dazu muss die "Dimension" Option in dem `Ebenenbaum <../basic/layertree.html>`_, aktiviert werden. 
 
 .. image:: ../../../figures/wmst_layertree.png
      :scale: 80

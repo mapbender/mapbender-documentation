@@ -45,7 +45,7 @@ There are two ways to control the time in the map. On the one hand, each service
 Timeslider in context menue
 ---------------------------
 
-The timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the layertree element.
+The timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the `Layertree <../basic/layertree.html>`_ element.
 
 .. image:: ../../../figures/wmst_layertree.png
      :scale: 80
