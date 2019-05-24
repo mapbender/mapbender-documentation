@@ -231,6 +231,100 @@ The print with a group named "Group 1" could look like this:
 To use this feature, it is required, that you’ve created groups before. How to create groups and users is described in the Mapbender documentation in the `Mapbender Quickstart <../../quickstart.html>`_.
 
 
+Printing feature information for a selected element
+===================================================
+
+You can print information from a selected feature to the print output. A feature can be selected via digitizer or featureInfo.
+
+The concept is to pass the feature_type-name and the selected object-id to the print. Mapbender will then get all the feature data for the selected object and will look for fields in the print template. In a field is defined, the data will be printed to this field.
+
+In the next steps it is described how this functionallity can be configured. The documentation relies on the poi table that is used in the digitizer example.
+
+You find the configuration and an example print-template in the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop 
+
+There are some steps you have to follow:
+
+1. Create a print template that refers to the feature columns
+2. Define a featureType and refer to your new print template in your config.yml
+3. Call feature print from featureInfo
+4. Or call feature print from digitizer
+
+
+1. create a print template that refers to the feature columns
+-------------------------------------------------------------
+
+Define textfields in your print template for every information you would like to print for the selected object. The textfield name has always the prefix *feature.* followed with the name of the attribute (column) to export.
+
+.. code-block:: yaml
+
+  feature.name for column name of table poi
+
+
+2. define a featureType and refer to your new print template in your config.yml
+-------------------------------------------------------------------------------
+
+.. code-block:: yaml
+
+ parameters:
+   featureTypes:
+     feature_demo:
+       connection: search_db   # Name of the database-connection from the config.yml
+       table: public.poi       # Table-name in which the FeatureTypes are stored
+       uniqueId: a_gid         # Column-name with the unique identifier
+       geomType: point         # Geometry-type
+       geomField: geom         # Column-name in which the geometry is stored
+       srid: 4326              # source EPSG-code of data
+       print:                  # print template to offer for feature data print
+         templates:
+          - template: a4_portrait_official_feature_data_demo
+            label: Demo with feature information print (portrait)
+          - template: a4_landscape_official_feature_data_demo
+            label: Demo with feature information print (landscape)
+
+
+3. Call feature print from featureInfo
+--------------------------------------
+
+Note: FeatureInfo is the information output from a OGC WMS service. It offers information for features at a click position.
+
+When you can configure a WMS you can generate a link with the following reference that will trigger the print with feature information.
+
+The following code is an example for a MapServer information template.
+
+.. code-block:: yaml
+
+ <table>
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <tr>
+ <td class="th_quer">Print</td>
+ <td><a href="" onclick="parent.$('.mb-element-map').data('mapQuery').olMap.setCenter([[x],[y]]);parent.$('.mb-element-printclient:parent').data('mapbenderMbPrintClient').printDigitizerFeature('feature_demo',[gid]);parent.$('.mb-element-featureinfo:parent').data('mapbenderMbFeatureInfo').deactivate();return false">print feature information</a>
+ </td>
+ </tr>
+ </table>
+
+The featureInfo will open a dialog with a link *print feature information*. When you click on the link the print dialog opens and offers the print templates that are defined for the feature type.
+
+You can choose the desired region and create a print pdf. The pdf will contain the information for the selected feature. 
+
+
+4. or call feature print from digitizer
+----------------------------------------
+
+You also can integrate the functionality to the digitizer. It will offer a new button *print* in every feature information dialog.
+
+To activate the functionality you have to add the following parameter to your digitizer configuration.
+
+.. code-block:: yaml
+    
+    printable: true
+
+When you click on the print button the print dialog is opens and offers the print templates that are defined for the feature type.
+
+Again you can choose the desired region and create a print pdf. The pdf will contain the information for the selected feature. 
+
+Note: The flexibility to move the print frame wont stop you from choosing a region that does not contain the feature that was selected. In this case the feature information does not match to the features that are displayed.
+
+
 Configuration of the element
 ============================
 
