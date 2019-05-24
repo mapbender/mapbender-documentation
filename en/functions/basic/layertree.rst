@@ -16,6 +16,7 @@ Functions
 * Changing the order of layers
 * Zoom to map extend of layers
 * Query the metadata of layers
+* control the time dimension of the layer 
 
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog.png
@@ -174,6 +175,7 @@ Via the **Menu** [9] a number of buttons can be activated, which are then availa
 * *Opacity* (change the opacity of a layer)
 * *Zoom to layer* (zoom to the BBOX of the layer)
 * *Metadata* (show the metadata of the layer)
+* *Dimension* (change the dimension, e.g. time or elevation of the Layer - read more about the `Dimensions handler <../functions/dimensions_handler.html>`_ )
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80

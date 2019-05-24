@@ -16,6 +16,7 @@ Funktionen
 * Verändern der Layerreihenfolge
 * Zoom zum Kartenausschnitt eines Layers
 * Abfrage der Metadaten eines Layers
+* Zeitliche Dimension des Layers kontrollieren 
 
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog.png
@@ -173,6 +174,7 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
 * *Opacity* (Deckkraft der einzelnen Layer verändern)
 * *Zoom to layer* (auf die BBOX des Layers zoomen)
 * *Metadata* (Metadaten des Layers anzeigen)
+* *Dimension* (Dimension des Layers kontrollieren , z.B. Höhe oder Zeit - mehr unter `Dimensions handler <../functions/dimensions_handler.html>`_ )
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
