@@ -10,8 +10,7 @@ You find the milestones at: https://github.com/mapbender/mapbender/milestones
 
 Version 3.0.7.0
 ---------------
-
-Release date: DD.MM.YYYY
+Release date: 23.04.2018
 
 **General**
 
@@ -56,7 +55,6 @@ Additional YAML-applications can be placed there.
 * Improvements in FOM at SSPI
 * Improvements in the translations. Thanks to the Code-Sprint of the FOSS4G!
 * Changes in translations from XLIF to YAML in the modules FOM and OWSProxy
-
 
 **Code-Improvements**
 
@@ -108,10 +106,7 @@ Please call the command **app/console doctrine:schema:update** for the Update to
 
 .. code-block:: sql
 
-                $ app/console doctrine:schema:update
-
-
-  
+                $ app/console doctrine:schema:update 
 
 Version 3.0.6.3
 ---------------

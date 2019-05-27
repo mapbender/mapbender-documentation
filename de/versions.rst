@@ -9,8 +9,7 @@ Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbe
 
 Version 3.0.7.0
 ---------------
-
-Release Datum: DD.MM.YYYY
+Release Datum: 23.04.2018
 
 **Allgemein**
 
@@ -100,7 +99,6 @@ Weitere YAML-Anwendungen können dort hinterlegt werden.
 
 * Dokumentation: Aufnahme des MS4W Pakets zur Installation unter :ref:`installation_windows_de`. Vielen Dank an Jeff McKenna.
 
-
 **Anmerkungen zum Update**
 
 Bitte führen sie ein **app/console doctrine:schema:update** durch, wenn Sie auf diese Version aktualisieren. Die QGIS-Layerreihenfolge benötigt eine Änderung in der Mapbender-Datenbank. Auch die 255 Zeichen für WMS-Dienste erforderten eine Änderung der Datenbank.
@@ -108,9 +106,6 @@ Bitte führen sie ein **app/console doctrine:schema:update** durch, wenn Sie auf
 .. code-block:: sql
 
                 $ app/console doctrine:schema:update
-
-
-
 
 Version 3.0.6.3
 ---------------
