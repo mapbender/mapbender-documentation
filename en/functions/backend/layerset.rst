@@ -82,6 +82,162 @@ The following table summarizes the behavior again:
 This allows Mapbender to respond in the different ways that a WMS Capabilities document can be built up by simply adjusting the order in the layer tree.
 
 
+<<<<<<< 1df435f06bc85e6b0187013d40995fd462ffc25f
+**Vendor Specific Parameter:**
+
+You can define Vendor Specific Parameters in a layerset instance to add them to a WMS request. This principle follows Multi-Dimensions in the WMS specification.
+
+You can use Vendor Specific Parameters in Mapbender for example to add the user- and group information of the logged-in user to a WMS request. You can also add hard coded values.
+
+The following example shows the definition of the parameter "group" which transfers the group-value of the logged-in user.
+
+The following example shows the currently available configurations for the Vstypes "user" und "groups":
+
+.. image:: ../../../figures/mapbender3_vendor_specific_parameter_full.jpg
+
+
+* Type: „single“, „multiple“, „interval“ (multiple values in dimensions)
+* Name: parameter name of the WMS request.
+* Default: the default value.
+* Extent: available values (multiple as a comma seperated list).
+* Vstype: Mapbender specific variables. Group (groups), User (users), Simple.
+* Hidden: If this value is set, requests are send via a server so that the parameters are not directly visible.
+
+Currently, the element can be used to transfer user- and groupinformation. For users $id$ and $username$ may be applied, for groups the value $groups$.
+=======
+Vendor Specific
+---------------
+
+You can define Vendor Specific Parameters in a layerset instance to add them to a WMS request. The indications of such additional parameters are necessary in order to obtain multi-dimensional data, e.g. to support the indication of a temporal dimension. More details on the supported formats can be found in the WMS specification in Annex C.
+
+It should be noted that the Mapbender only supports the passing of the parameters to the request, the query of this information with a module is not possible. 
+
+In Mapbender, the Vendor Specific information can be used to attach user and group information of the user to the WMS request. An extension of the temporal dimension via WMS-T is currently only possible via an experimental module, but is also defined in this module via the vendor specific information. The element supports the following time formats: single time, list of times, or time interval. In addition to the transfer of these dynamic values, fixed values ​​can also be conveyed.
+
+**Supported Parameters ?** 
+
+* angle (e.g. 45, for 45° rotation to the right) 
+* buffer (e.g. 5, for 5 addditional pixel at the border of the getmap and getfeature info request) 
+* sortBy (sort the features or elements)
+* filter und featureid (filter by an attribut or id)
+* format_options (e.g.  dpi for the definition of the resolution)
+
+** Example configuration**
+
+The following table shows three example configurations for the vendor specifics:
+
+* Passing user ID of the user via $id$. Use case: Username should be stored with each request and transferred to a database.
+* Passing the group ID of the logged in user via $groups$. Use case: Users in a specific group are only allowed to see the predefined map section assigned to the group, so the group ID is passed to the MapProxy and its authentication system.
+* Filter and transfer of the temporal dimension. Use case: In the WMS statistical data of every month in the year can be added for the comparison in the map, therefore, the requested month and the year must always be handed over.
+
++------------+----------------------+------------------------+------------------------+
+| Parameter  | 1) User transfer     | 2) Group transfer      | 3) Time Dimension      |
++============+======================+========================+========================+
+| URL-Request| &user_id=1234&       | &group_ids=1,4&        | &time=1,4&             |
++------------+----------------------+------------------------+------------------------+
+| type       | single               | multiple               | nearest                |
++------------+----------------------+------------------------+------------------------+
+| name       | user_id              | $groups$               | time                   |
++------------+----------------------+------------------------+------------------------+
+| default    | $id$                 | $groups$               | 2018-02                |
++------------+----------------------+------------------------+------------------------+
+| extent     | $id$                 | groups                 | 2017-01/2018-07/P1M    |
++------------+----------------------+------------------------+------------------------+
+| vstype     | user                 | groups                 |                        |
++------------+----------------------+------------------------+------------------------+
+| time       | k.A.                 | k.A.                   | activate Checkbox      |
++------------+----------------------+------------------------+------------------------+
+| units      | k.A.                 | k.A.                   | ISO8601                |
++------------+----------------------+------------------------+------------------------+
+|unit symbol | k.A.                 | k.A.                   |                        |
++------------+----------------------+------------------------+------------------------+
+
+
+.. image:: ../../../figures/vendor_specific_parameter.png
+           :scale: 80
+
+
+WMS-Time (Dimensions Handler)
+-----------------------------
+
+The dimension handler can be used to integrate WMS services with a time dimension. WMS-Time services are registered as a normal WMS data source. If a dimension is specified in the service, it is displayed in the layer metadata.
+
+.. code-block::
+
+    Dimension:
+ 		name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
+
+
+.. image:: ../../../figures/wmst_source.png
+     :scale: 80
+
+WMS-T are inserted almost exactly like traditional WMS in the layersets, but the time parameter still has to be activated. If this is not activated, the dimensions of the service are ignored and the standard value is used when calling the layer in the map content.
+
+If the service supports a time dimension, the instance displays the "Dimensions" button. By clicking on this button, the supported time parameters are displayed and the time can be activated by clicking the checkbox.
+After another click on the button, the detailed form opens, in which the usage can be further defined. Here you can further restrict the values ​​from the WMS service. To set up the service, the following definitions of time parameters are necessary:
+
+* **Query type**: multiple, nearest oder current
+* **Name**: value TIME (name=time)
+* **Units**: format for temporal dimensions (ISO 8601:2000)
+* **Unit symbol**:
+* **Default**: default time
+* **Extent (extent slider)**: Supported extent for the time dimension 
+
+
+.. image:: ../../../figures/wmst_layer.png
+     :scale: 80
+
+The element supports the following time variables:
+
+* single time parameter
+* list of times
+* time interval
+
+There are two ways to control the time in the map. On the one hand, each service with an active time parameter can be controlled via the context menu of the layer in the layertree. In addition, a central slider can be integrated, which can be displayed in any area of ​​the application. The slider can be used to combine several layers with the same extent to control them centrally.
+
+
+**Supported Parameters**
+
+* Checkbox time: active
+* Type: selection between "multiple", "nearest" or "current"
+* Name: parameter-name in WMS request
+* Units: ??
+* Unit symbol: ??
+* Default: default value.
+* Extent: available value range, the time axis  for the dimension slider
+
+
+** integration in context menue**
+
+The timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the layertree element.
+
+.. image:: ../../../figures/wmst_layertree.png
+     :scale: 80
+
+Nach der Aktivierung in dem Ebenenbaum erscheint ein Zeitslider in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element über die Checkbox aktviert werden. Danch kann über die Maus die Zeitachse verschoben werden. 
+
+After activation in the layertree, a time slider appears in the context menu. To use the time, the element must be activated via the checkbox. Then you can move the timeslider via the mouse.
+
+.. image:: ../../../figures/wmst_context_menu.png
+     :scale: 80
+
+
+** integration in slider element**
+
+
+The layers can be controlled by the dimensions handler element via a central slider. This element can be integrated into the sidepane, toolbar and footer.
+The configuration of the dimension handler is done in three steps:
+
+* **Creating the element**: First the element needs to be created and saved. Afterwards the element closes (see configuration).
+* **Creating a dimensionsset**: To define a dimensionsset, you need to create a new set in the element via the "+" button. After entering a title, the item must be saved. Then the element closes.
+* **Definition the slider**: Then you can select the layer instances for the "group" in the element, that you want to control via the slider. Multiselect is supported, but only instances that have the same extent can be combined with each other.
+When an instance is selected, all instances that do not conform to this default are no longer selectable. In addition, after the first selection of an instance, a slider appears. There you can restrict the extent for the time display.
+
+.. image:: ../../../figures/wmst_element.png
+     :scale: 80
+>>>>>>> documentaiton for wmst features and the vendor specific parameter for ticket 807
+
+
 .. _hints-layersets:
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen

@@ -82,6 +82,160 @@ Die folgende Tabelle fasst das Verhalten nochmal zusammen:
 Damit kann Mapbender auf die unterschiedlichen Art und Weisen reagieren, wie ein WMS Capabilities Dokument aufgebaut hat, indem einfach die Reihenfolge in dem Layerbaum angepasst wird.
 
 
+<<<<<<< 1df435f06bc85e6b0187013d40995fd462ffc25f
+**Vendor Specific Parameter:**
+
+In einer Layerset Instanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der multi-dimensionalen Daten in der WMS Spezifikation.
+
+In Mapbender können die Vendor Specific Parameter genutzt werden, z.B. um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
+
+Das folgende Beispiel zeigt die aktuell verfügbaren Konfigurationsmöglichkeiten für die Vstypes "user" und "groups":
+
+.. image:: ../../../figures/mapbender3_vendor_specific_parameter_full.jpg
+
+* Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
+* Name: Parameter Name im WMS Request.
+* Default: Standardwert.
+* Extent: Verfügbare Werte (bei Multiple als kommaseparierte Liste).
+* Vstype: Mapbender spezifische Variablen: Gruppe (groups), User (users), Simple.
+* Hidden: Wenn der Wert gesetzt ist, werden die Anfragen serverseitig versendet, so dass die Parameter nicht direkt sichtbar sind.
+
+Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzugeben. Für Benutzer kann $id$ und $username$ verwendet werden, für Gruppen nur $groups$.
+=======
+Vendor Specific
+---------------
+
+In einer Instanz können Vendor Specific Parameter definiert werden, die an den WMS Request angefügt werden. Die Angaben über solche zusätzlichen Parameter sind nötig, um multi-dimensionale Daten, wie z.B. die Angabe einer zeitlichen Dimension zu unterstüzten. Genaueres zu den unterstüzten Formaten findet sich in der WMS Spezifikation in Annex C. 
+
+Beachtet werden muss dabei, dass der Mapbender nur die Weitergabe der Parameter an der jeweiligen Anfrage unterstützt, die Abfrage dieser Angaben ist in keinem Modul möglich. 
+
+In Mapbender können die Vendor Specific Angaben genutzt werden, um Benutzer- und Gruppeninformation des angemeldeten Benutzers an den WMS Request zu hängen. Eine Erweiterung um die zeitliche Dimension über WMS-T ist derzeit nur über ein experimentelles Modul möglich, wird jedoch in diesem Modul auch über die Vendor Specific Angaben definiert. Das Element unterstützt die folgenden Zeitformate: einzelner Zeitpunkt, Liste von Zeitpunkten oder Zeitintervall. Neben der Übergabe von diesen dynamischen Werten können auch feste Werte vermittelt werden. 
+
+**Unterstützte Parameter ?** 
+
+* angle (z.B. 45, für 45° Rotation nach rechts) 
+* buffer (z.B. 5, für 5 zusätzliche Pixel am Rand der GetMap und GetFeatureInfo Anfragen ) 
+* sortBy (Sortieren der Features oder Rasterelemente)
+* filter und featureid (Filter über einen Filterwert oder die featureid)
+* format_options (z.B. dpi für die Vorgabe der Auflösung) mehr unter http://docs.geoserver.org/latest/en/user/services/wms/vendor.html#format-options
+
+**Wertangaben**
+
+* Type: Auswahl aus „single“, „multiple“ oder „interval“
+* Name: Parameter-Name im WMS Request
+* Default: Standardwert.
+* Extent: Verfügbare Werte (bei Multiple als kommaseparierte Liste).
+* Vstype: Mapbender spezifische Variablen. Hier besteht die Auswahl aus der Angabe der Gruppe (groups), dem Benutzer (user) oder der einfachen Angabe (simple).
+* Hidden: Wenn die Checkbox aktiviert ist, werden die Anfragen serverseitig versendet, so dass die Parameter nicht direkt im WMS Request sichtbar sind.
+* Unterstützte zeitlichen Parameter werden weiter unten beschrieben
+
+** Beispielkonfiguration**
+
+Die folgende Tabelle zeigt drei Beispiel-Konfigurationen für die Vendor Specifics:
+
+* Übergabe von Benutzer-ID des angemeldeten Benutzers über $id$. Anwendungsfall: Benutzername soll bei jeder Anfrage gespeichert werden und an eine Datenbank übergeben werden.
+* Übergabe der Gruppen-ID des angemeldeten Benutzers über $groups$. Anwendunsfall: Benutzer in einer bestimmten Gruppe dürfen nur dem der Gruppe zugewiesenen vordefinierten Kartenausschnitt sehen, daher wird die Gruppen-ID an den MapProxy und dessen Authentifizierungssystem weitergegeben.
+* Filter und Übergabe der zeitlichen Dimension. Anwendunsfall: In dem WMS sind statistische Daten des Jahres zu jedem Monat zu finden, die in der Karte verglichen werden sollen, daher muss der jeweilige angefragte Monat und das Jahr immer übergeben werden. 
+
+
++------------+----------------------+------------------------+------------------------+
+| Parameter  | 1) Benutzerübergabe  | 2) Gruppenübergabe     | 3) Zeitliche Dimension |
++============+======================+========================+========================+
+| URL-Aufruf | &user_id=1234&       | &group_ids=1,4&        | &time=1,4&             |
++------------+----------------------+------------------------+------------------------+
+| type       | single               | multiple               | nearest                |
++------------+----------------------+------------------------+------------------------+
+| name       | user_id              | $groups$               | time                   |
++------------+----------------------+------------------------+------------------------+
+| default    | $id$                 | $groups$               | 2018-02                |
++------------+----------------------+------------------------+------------------------+
+| extent     | $id$                 | groups                 | 2017-01/2018-07/P1M    |
++------------+----------------------+------------------------+------------------------+
+| vstype     | user                 | groups                 |                        |
++------------+----------------------+------------------------+------------------------+
+| time       | k.A.                 | k.A.                   | Checkbox aktivieren    |
++------------+----------------------+------------------------+------------------------+
+| units      | k.A.                 | k.A.                   | ISO8601                |
++------------+----------------------+------------------------+------------------------+
+|unit symbol | k.A.                 | k.A.                   |                        |
++------------+----------------------+------------------------+------------------------+
+
+
+.. image:: ../../../figures/vendor_specific_parameter.png
+           :scale: 80
+
+
+WMS-Time (Dimensions Handler)
+-----------------------------
+
+Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions Handler genutzt werden. WMS-Time Dienste werden wie ganz normale WMS als Datenquelle registriert. Wenn die Dienste über die Angabe einer zeitlichen Dimension verfügen, werden diese in den Layer-Metadaten angezeigt.
+
+.. code-block::
+
+    Dimension:
+    name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
+
+
+.. image:: ../../../figures/wmst_source.png
+     :scale: 80
+
+WMS-T werden fast genau wie herkömmliche WMS in die Layersets eingefügt, dabei muss jedoch der Time-Parameter noch aktiviert werden. Wird dieser nicht aktiviert, dann werden die Dimensionen des Dienstes außer Acht gelassen und bei dem Aufruf der Kartenebene der Standardwert genutzt.
+
+Bei Diensten mit einer zeitlichen Dimension erscheint bei der Instanz die Schaltfläche "Dimensionen". Durch einen Klick auf diese Schaltfläche, werden die unterstützten Zeit-Parameter angezeigt und die Zeit kann über das Anklicken der Checkbox aktiviert werden. 
+Nach einem weiteren Klick in die Schaltfläche öffnet sich dann das Detailformular, in dem die Nutzung weiter definiert werden kann. Die Werte aus dem WMS-Dienst werden hier übernommen und können weiter eingeschränkt werden. 
+
+.. image:: ../../../figures/wmst_layer.png
+     :scale: 80
+
+
+Das Element unterstützt die folgenden Zeitvariablen: 
+
+* einzelner Zeitpunkt
+* Liste von Zeitpunkten
+* Zeitintervall 
+
+Es bestehen zwei Möglichkeiten, die Zeitangabe in der Karte zu steuern. Zum einen kann jeder Dienst, für den der Time-Parameter aktiviert ist, über das Kontextmenü des Layers im Layertree gesteuert werden. Zudem kann ein zentraler Schieberegler eingebunden werden, der in einem beliebigen Bereich der Anwendung angezeigt werden kann. Über den Schieberegler könnne mehrere Kartenebenen mit dem selben Extent zusammengefasst und zentral gesteuert werden.
+
+**Wertangaben**
+
+* Checkbox time: active
+* Type: Auswahl aus "multiple", "nearest" oder "current"
+* Name: Parameter-Name im WMS Request
+* Units: ??
+* Unit symbol: ??
+* Default: Standardwert.
+* Extent: Verfügbarer Wertebereich, also Zeitachse (dimension slider)
+
+
+**Einbindung im Kontextmenü**
+
+Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers integriert werden. Dazu muss die "Dimension" Option in dem Ebenenbaum aktiviert werden. 
+
+.. image:: ../../../figures/wmst_layertree.png
+     :scale: 80
+
+Nach der Aktivierung in dem Ebenenbaum erscheint ein Zeitslider in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element über die Checkbox aktviert werden. Danch kann über die Maus die Zeitachse verschoben werden. 
+
+.. image:: ../../../figures/wmst_context_menu.png
+     :scale: 80
+
+
+**Einbindung über Slider-Element**
+
+Die Kartenebenen können durch das Dimensions Handler Element über einen zentralen Slider gesteuert werden. Dieses Element kann in die Sidepane, Toolbar und in den Footer integriert werden. 
+Die Konfiguration des „Dimensionhandler erfolgt in drei Schritten:
+
+* **Anlegen des Elements**: Zuerst wird das Element definiert und gespeichert. Danach schließt sich das Element (siehe Konfiguration).
+* **Anlegen eines Dimensionsets**: Für die Erstellung eines Dimensionsets kann in dem Element über den „+“-Button ein neues Set angelegt werden. Nach der Eingabe eines Titels muss das Element gespeichert werden. Danach schließt sich das Element.
+* **Definition des Schiebereglers**: Danach kann in dem Element in dem Feld „Group“ die Instanzen aus dem Layerset ausgesucht werden, die über den Slider gesteuert werden sollen. Eine Mehrfachauswahl ist möglich, aber es können nur Instanzen mit einander kombiniert werden, die den gleichen zeitlichen Extent besitzen. 
+Wenn eine Instanz ausgewählt wurde, sind alle Instanzen, die nicht dieser Vorgabe entsprechen, nicht mehr auswählbar. Zudem erscheint nach der ersten Auswahl einer Instanz ein Schieberegler, mit dem der Extent eingeschränkt werden kann.
+
+.. image:: ../../../figures/wmst_element.png
+     :scale: 80
+
+>>>>>>> documentaiton for wmst features and the vendor specific parameter for ticket 807
+
+
 .. _hinweise-layersets:
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen

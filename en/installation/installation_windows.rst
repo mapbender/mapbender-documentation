@@ -8,6 +8,22 @@ We show you two different options to install Mapbender on Windows. The `first on
 We don't offer EXE-installers, yet because it might unpack Mapbender to a specific directory but the adjustments have to be made on PHP and Webserver side (Apache/Nginx).
 
 
+Notes on the Windows installation
+---------------------------------
+
+Depending on the PHP-version the PHP variables for the Temp-directory are not set in Windows.
+
+Please check if the two variables
+
+* ``sys_temp_dir`` and
+* ``upload_tmp_dir`` are set.
+
+Please set them in the ``php.ini`` file. If you use seperate ``php.ini`` files for the command client (CLI) and the web, you can change both.
+
+The value for the web can be checked with a ``phpinfo.php`` page (remember to set that file not to the public).
+
+
+
 Install via MS3W package
 ------------------------
 

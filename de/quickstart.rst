@@ -291,33 +291,6 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
 * Gekachelt (Tiled): Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
 
 
-**Vendor Specific Parameter:**
-
-In einer Layerset Instanz können Vendor Specific Parameter angegeben werden,
-die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der
-multi-dimensionalen Daten in der WMS Spezifikation.
-
-In Mapbender können die Vendor Specific Parameter genutzt werden, z.B. um
-Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu
-hängen. Es können auch feste Werte übermittelt werden.
-
-Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
-Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
-
-.. image:: ../figures/mapbender3_vendor_specific_parameter.png
-
-* Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
-* Name: Parameter Name im WMS Request.
-* Default: Standardwert.
-* Extent: Verfügbare Werte (bei Multiple als kommaseparierte Liste).
-* Vstype: Mapbender spezifische Variablen: Gruppe (groups), User (users), Simple.
-* Hidden: Wenn der Wert gesetzt ist, werden die Anfragen serverseitig versendet, so dass die Parameter nicht direkt sichtbar sind.
-
-Momentan eignet sich das Element, um Benutzer und Gruppeninformationen
-weiterzugeben, z.B. für Benutzer die $id$ und für Gruppen den Parameter
-$groups$.
-
-
 **Layerkonfiguration:**
 
 * Titel - Layertitel der Service Information (der Titel ist anpassbar)
