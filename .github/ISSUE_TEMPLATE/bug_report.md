@@ -19,6 +19,6 @@ A clear and concise description of what you expected for the documentation. And 
 
 
 **Screenshots**
-If it makes sense.
+Please add a screenshot if it makes sense.
 
 
