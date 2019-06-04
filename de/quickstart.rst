@@ -175,7 +175,7 @@ Sie können eine Anwendung aus der Liste ``Anwendungen`` über den |mapbender3-b
 
 Exportieren und Importieren von Anwendungen und Daten
 ================================================================================
-Sie können eine Anwendung als  JSON oder YAML über ``Anwendungen --> Exportieren (Applications --> Export)`` exportieren. Für den Export können ein oder mehrere Anwendungen ausgewählt werden. Die Datenquellen können ebenfalls beim Export ausgegeben werden.
+Sie können eine Anwendung als  JSON oder YAML über ``Anwendungen --> Exportieren (Applications --> Export)`` exportieren.
 
   .. image:: ../figures/mapbender3_application_export.png
 
