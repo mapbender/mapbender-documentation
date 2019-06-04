@@ -151,10 +151,8 @@ Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
 
 .. image:: ../../../figures/mapbender_vendor_specific_parameter.png
 
-* Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
 * Name: Parameter Name im WMS Request.
-* Default: Standardwert.
-* Extent: Verfügbare Werte (wird unter Multiple als kommaseparierte Liste eingetragen).
+* Default: Standardwert.m
 * Vstype: Mapbender-spezifische Variablen: Gruppe (groups), User (users), Simple.
 * Hidden: Wenn dieser Wert gesetzt wird, werden die Anfragen serverseitig versendet, sodass die Parameter nicht direkt sichtbar sind.
 
