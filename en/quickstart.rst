@@ -173,7 +173,7 @@ You can delete an application from the menu item ``Applications`` with the |mapb
 
 Export / Import applications and sources
 ================================================================================
-You can export applications as JSON or YAML with ``Applications --> Export``. You can chose one applications to export and the format.
+You can export applications as JSON or YAML with ``Applications --> Export``. You can chose the application to be exported and the file-format.
 
   .. image:: ../figures/mapbender3_application_export.png
      :scale: 80
