@@ -23,7 +23,7 @@ Einfügen eines Bildes in Ihre Anwendung:
 
 .. code-block:: yaml
 
-    <img src='http://mapbender.org/sites/default/files/OSGeo_project.png' height='60px'>
+    <img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg' height='60px'>
 
 
 .. image:: ../../../figures/de/html.png
