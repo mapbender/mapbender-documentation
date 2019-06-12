@@ -23,7 +23,7 @@ You might want to add an image to your application:
 
 .. code-block:: html
 
-    <img src='http://mapbender.org/sites/default/files/OSGeo_project.png' height='60px'>
+    <img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg' height='60px'>
 
 
 .. image:: ../../../figures/html.png
