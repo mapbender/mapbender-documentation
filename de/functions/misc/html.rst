@@ -55,11 +55,11 @@ Das HTML-Element, welches hier eingebunden wird, hat die Bezeichnung (Title) Map
 
 .. code-block:: yaml
 
-     <a href='http://mapbender.org' target='_blank'>
-     <img src='https://mapbender.org/sites/default/files/mapbender_logo_website.png'
+     <a href='https://mapbender.org' target='_blank'>
+     <img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg'
      height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
 
-Das Mapbender Logo wird als Bild eingebunden (``img src='https://mapbender.org/sites/default/files/mapbender_logo_website.png'``). Zusätzlich wird für das Bild die Höhe (``height='60px'``) und das Styling definiert. Das Styling (``style=``) beinhaltet die Hintergrundfarbe und Transparenz (``background-color:rgb(255, 255, 255, 0.9)``) sowie den Abstand des Bildes zu den Seitenrändern (``padding:10px``). Außerdem wurde ein Link zur Mapbender Webseite hinterlegt (``href='http://mapbender.org'``), welche sich beim klicken auf das Bild in einem neuen Tab öffnet (``target='_blank'``).
+Das Mapbender Logo wird als Bild eingebunden (``img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg'``). Zusätzlich wird für das Bild die Höhe (``height='60px'``) und das Styling definiert. Das Styling (``style=``) beinhaltet die Hintergrundfarbe und Transparenz (``background-color:rgb(255, 255, 255, 0.9)``) sowie den Abstand des Bildes zu den Seitenrändern (``padding:10px``). Außerdem wurde ein Link zur Mapbender Webseite hinterlegt (``href='http://mapbender.org'``), welche sich beim klicken auf das Bild in einem neuen Tab öffnet (``target='_blank'``).
 
 Das Element kann an unterschiedlichen Positionen eingebunden werden. Beispielsweise in der Toolbar:
 
@@ -154,11 +154,11 @@ Einfügen eines Bildes
 
 .. code-block:: yaml
 
-   <img src='http://mapbender.org/sites/default/files/OSGeo_project.png'>
+   <img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg'>
 
 
 Einfügen eines Links
 
 .. code-block:: yaml
 
-  <a href='http://mapbender.org' target='_blank'>Go to the Mapbender Website</a>
+  <a href='https://mapbender.org' target='_blank'>Go to the Mapbender Website</a>
