@@ -146,14 +146,12 @@ In a layererset instance, vendor specific parameters are appended to the WMS req
 
 .. image:: ../../../figures/mapbender_vendor_specific_parameter.png
 
-* Type: "single", "multiple", "interval" (multiple values ​​in dimensions)
 * Name: parameter name in WMS request.
 * Default: default value.
-* Extent: available values ​​(configured under Multiple as a comma-separated list).
 * Vstype: Mapbender specific variables: group, user (users), simple.
 * Hidden: If this value is set, the requests are sent on the server so that the parameters are not directly visible.
 
-Currently, the item is useful for passing the service on only to specific users and groups. This happens e.g. for users via the ``$id$`` and for groups via the parameter ``$ groups $``.
+Currently, the item is useful for passing the service on only to specific users and groups. This happens e.g. for users via the ``$id$`` and for groups via the parameter ``$groups$``.
 
 
 Further information
