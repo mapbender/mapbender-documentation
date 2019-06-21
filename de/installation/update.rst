@@ -13,6 +13,8 @@ Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 * Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von /web/uploads/ in das /web/uploads Verzeichnis Ihrer neuen Mapbender Version
 * Wenn Sie eigenen Templates verwenden sollten, müssen Sie Ihre Templates mit denen der neuen Version vergleichen (kam es zu Änderungen?)
 * Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
+* Abhängig von Ihrer alten Mapbender Version, muss unter Umständen noch der Apache Alias für Mapbender in der Datei **/etc/apache2/sites-available/mapbender.conf** angepasst werden
+* Unter https://doc.mapbender.org/de/installation/installation_ubuntu.html im Bereich **Entpacken und im Webserver registrieren** ist beschrieben wie die Konfigurationsdatei für den Apache Alias aussehen sollte
 * Das war's auch schon! Schauen Sie sich Ihre neue Mapbender Version an.
 
 
@@ -27,7 +29,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  tar xfz /tmp/build_mapbender/mapbender3-3.0.4.0.tar.gz
  
  # Sichern Sie die alte Version
- mv -R /var/www/mapbender /var/www/mapbender_save
+ mv /var/www/mapbender /var/www/mapbender_save
  
  # Aktivieren Sie den Code der neuen Version
  cp -R /tmp/build_mapbender/mapbender3-3.0.4.0 /var/www/

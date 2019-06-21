@@ -10,9 +10,11 @@ To update Mapbender you have to do the following steps:
 * replace the new files 
 * merge your configuration files (check for new parameters and changes)
 * update your Mapbender database
-* copy the screenshots from you ald Mapbender version from /web/uploads/ to the folder /web/uploads Verzeichnis of your new installation
+* copy the screenshots from your old Mapbender version from /web/uploads/ to the folder /web/uploads Verzeichnis of your new installation
 * Templates: If you are using your own template you have to compare your scripts with the new scripts (are there any changes?)
 * print templates: if you use your own print templates: copy them back to app/Resources/MapbenderPrintBundle/templates/.
+* In some cases, depending on your old Mapbender version, you will need to adjust the Apache Alias within in the file **/etc/apache2/sites-available/mapbender.conf**
+* At https://doc.mapbender.org/en/installation/installation_ubuntu.html under the section **Unpack and register in your Web-Server** you can see how the config file for the Apache Alias should look like
 * That's all! Have a look at your new Mapbender version
 
 
@@ -27,7 +29,7 @@ Have a look at the steps as commands
  tar xfz /tmp/build_mapbender/mapbender3-3.0.4.0.tar.gz
  
  # save the old version
- mv -R /var/www/mapbender /var/www/mapbender_save
+ mv /var/www/mapbender /var/www/mapbender_save
  
  # get the code of the new version
  cp -R /tmp/build_mapbender/mapbender-3.0.4.0 /var/www/
