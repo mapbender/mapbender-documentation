@@ -71,9 +71,8 @@ For the installation of Mapbender have a look at `Installation <installation.htm
 Start Mapbender
 ================================================================================
 
-#. Choose  ``Mapbender`` from the start menu or visit http://localhost/mapbender3/app.php
-
-
+#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender/app.php (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at `Installation <installation.html>`_)
+ 
 #. The application will take a few moments to start up
 
 If you have any difficulties running Mapbender, please check whether your Apache web server and your PostgreSQL database are running.
@@ -86,7 +85,7 @@ Symfony offers a developer mode with lot of information about your application (
   .. image:: ../figures/mapbender3_app_dev.png
      :scale: 80
 
-#. Start the developer mode: http://localhost/mapbender3/app_dev.php
+#. Start the developer mode: http://localhost/mapbender/app_dev.php
 
 #. Have a look at the information that is offered in the developer mode.
 
