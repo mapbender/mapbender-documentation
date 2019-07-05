@@ -55,7 +55,7 @@ For the overview we choose the layerset overview. As *Target* we choose the elem
 If the overview isnt fixed (unchecked *Fix*), the overview will change, if the map is zoomed or dragged. The default view is the defined start extend.
 For the following parameter (no check of *Fix*, *Anchor*, left-bottom, *Width* 400 and *Height* 200):
 
-.. image:: ../../../figures/de/overview_example_dialog_left-bottom.png
+.. image:: ../../../figures/overview_example_dialog_left-bottom.png
      :scale: 80
 
 The overview will look like this:

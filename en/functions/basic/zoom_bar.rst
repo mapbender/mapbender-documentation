@@ -37,14 +37,14 @@ You can integrate various different *components* in the configuration dialog box
 
 In the application these components look like this:
 
-.. image:: ../../../figures/de/navigationtoolbar_features.png
+.. image:: ../../../figures/zoom_bar_features.png
      :scale: 80
  
 In the application you can also see if the option *Draggable* is checked. You can move the navigation toolbar by clicking, holding and moving the small cross.
 
 With the component **Pan** it is possible to move the map. By clicking on one of the four arrows you can move the map to the corresponding direction. It is possible to configure the step size in the configuration dialog box with the fields *Step size* and *Step by pixel*. If you set *Step by pixel* to true, the unit of the value in the field "Step size* is pixel. If it is set to false, the unit is percent. The value in *Step size* defines how far the map will be moved by clicking on the arrows. 
 
-.. image:: ../../../figures/de/navigationtoolbar_example_step.png
+.. image:: ../../../figures/zoom_bar_example_step.png
      :scale: 80
 
 If you configure the navigation toolbar like the example in the image, the map will be moved by 30% by clicking on one of the arrows. If you click on the north arrow the map will look like this:
