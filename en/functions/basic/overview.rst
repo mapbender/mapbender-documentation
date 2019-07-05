@@ -39,15 +39,15 @@ Configuration example
 
 There are different settings for the overview element:
 
-.. image:: ../../../figures/de/overview_example_dialog.png
+.. image:: ../../../figures/overview_example_dialog.png
      :scale: 80
 
 In the configuration example we implement the element (*Title*) "Overview". With *Layerset* we can select all previously implemented layersets. In this example we have two to choose from:
 
-.. image:: ../../../figures/de/map_example_layersets.png
+.. image:: ../../../figures/map_example_layersets.png
      :scale: 80
 
-For the overview we choose the layerset YAML-overview. As *Target* we choose the element referenced. *Anchor* defines where the overview will be implemented (left-top, left-bottom, right-top or right-bottom). In this instance we choese right-bottom. *Width* and *Height* define the size of the window displaying the overview. Default settings are 200 and 100. Additionally it is possible to check the boxes *Maximize* and *Fix*. For the configuration example both checkmarks are set. Because of this the aplication will be maximized when opened. Additionally the map view is fixed. The excerpt shown of the map in the overview window wont change when the map is dragged and shows the maximum extend defined in `Map Element <map.html>`.
+For the overview we choose the layerset overview. As *Target* we choose the element referenced. *Anchor* defines where the overview will be implemented (left-top, left-bottom, right-top or right-bottom). In this instance we choese right-bottom. *Width* and *Height* define the size of the window displaying the overview. Default settings are 200 and 100. Additionally it is possible to check the boxes *Maximize* and *Fix*. For the configuration example both checkmarks are set. Because of this the aplication will be maximized when opened. Additionally the map view is fixed. The excerpt shown of the map in the overview window wont change when the map is dragged and shows the maximum extend defined in `Map Element <map.html>`.
 
 .. image:: ../../../figures/de/overview_example_right-bottom_fixed.png
      :scale: 80
