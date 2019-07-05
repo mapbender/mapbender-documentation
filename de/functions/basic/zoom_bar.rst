@@ -3,7 +3,7 @@
 Navigation Toolbar (Zoombar) (Navigationswerkzeug)
 *********************************************************************
 
-Das Navigationswerkzeug bietet die Funktionen Zoomen und Verschieben an, ähnlich wie bei OpenLayers. Durch unterschiedliche Komponenten, können verschiedene Zoomstufen angesprochen werden. Gezoomt werden kann durch das Aufziehen einer Zoom Box, aber auch durch Klick auf die verschiedenen Maßstäbe in einer Leiste. Schnell lässt sich auch durch die Komponente Zoom to max extent auf die maximale Ausdehnung der Karte zoomen.
+Das Navigationswerkzeug bietet die Funktionen Zoomen und Verschieben an, ähnlich wie bei OpenLayers. Durch unterschiedliche Komponenten, können verschiedene Zoomstufen angesprochen werden. Gezoomt werden kann durch das Aufziehen einer Zoom Box, aber auch durch Klick auf die verschiedenen Maßstäbe in einer Leiste. Schnell lässt sich auch durch die Komponente **Zoom to max extent** auf die maximale Ausdehnung der Karte zoomen.
 
 .. image:: ../../../figures/de/zoom_bar.png
      :scale: 80
@@ -39,19 +39,19 @@ Die Komponenten sehen in der Anwendung wie folgt aus:
 .. image:: ../../../figures/de/navigationtoolbar_features.png
      :scale: 80
   
-Auch wenn ein Häkchen bei *Verschiebbar* gesetzt wurde, ist das in der Anwendung zu sehen, wie auf der Abbildung zu sehen ist. Bei klicken und halten des kleinen Kreuzes kann die Navigation Toolbar beliebig verschoben werden.
+Wenn das Häkchen bei *Verschiebbar* gesetzt wurde, wird in der Anwendung das Symbol zum Verschieben der Navigation Toolbar, wie in der Abbildung oben angezeigt. Durch Klicken und Gedrückthalten des kleinen Kreuzes kann die Navigation Toolbar beliebig verschoben werden.
 
-Mithilfe der Komponente **Pan** kann der Anwender durch klicken auf die unterschiedlichen Pfeile die Karte in die jeweilige Richtung verschieben. Wie weit die Karte durch den Klick verschoben wird, kann im Konfigurationsdialog durch die Felder *Step size* und *Step by pixel* eingestellt werden. Hierbei wird durch *Step by pixel* die Einheit festgelegt und durch *Step size* der Wert. Ist *Step by pixel* auf "true" gestellt, wird der Wert in *Step size* in der Einheit Pixel gelesen. Ist *Step by pixel* auf false gestellt, wird die Zahl bei *Step size* in Prozent angegeben. Der Wert im Feld *Step size* bestimmt dann die Verschiebung der Karte. Je größer die Zahl, desto mehr wird die Karte in die jeweilige Richtung verschoben. 
+Mithilfe der Komponente **Pan** kann der Anwender durch Klicken auf die unterschiedlichen Pfeile die Karte in die jeweilige Richtung verschieben. Wie weit die Karte durch den Klick verschoben wird, kann im Konfigurationsdialog durch die Felder *Step size* und *Step by pixel* eingestellt werden. Hierbei wird durch *Step by pixel* die Einheit festgelegt und durch *Step size* der Wert. Ist *Step by pixel* auf "true" gestellt, wird der Wert in *Step size* in der Einheit Pixel gelesen. Ist *Step by pixel* auf false gestellt, wird die Zahl bei *Step size* in Prozent angegeben. Der Wert im Feld *Step size* bestimmt dann die Verschiebung der Karte. Je größer die Zahl, desto mehr wird die Karte in die jeweilige Richtung verschoben.
 
 .. image:: ../../../figures/de/navigationtoolbar_example_step.png
      :scale: 80
 
-Ist das Navigationswerkzeug wie in der Abbildung eingestellt, wird die Karte bei Klick auf einen Richtungspfeil um 30% verschoben. In der Anwendung sieht ein Klick auf den Pfeil Richtung Norden mit einer Verschiebung von 30% wie folgt aus:
+Ist das Navigationswerkzeug wie in der Abbildung eingestellt, wird die Karte beim Klicken auf einen Richtungspfeil um 30% verschoben. In der Anwendung sieht ein Klick auf den Pfeil Richtung Norden mit einer Verschiebung von 30% wie folgt aus:
 
 .. image:: ../../../figures/de/navigationtoolbar_example_step_30percent.png
      :scale: 60
 
-Die Komponente **History** besteht aus zwei Pfeilen. Durch klicken auf dem linken Pfeil (zurück) springt die Kartenansicht auf denjenigen Ausschnitt oder diejenige Zoomstufe zurück, die vor Verschieben der Karte sichtbar waren. Der rechte Pfeil (vor) springt auf den aktuelleren Kartenausschnitt bzw. die aktuellere Zoomstufe. Um diese Funktion zu verdeutlichen ist hier ein Beispiel:
+Die Komponente **History** besteht aus zwei Pfeilen. Durch Anklicken des linken Pfeils (zurück) springt die Kartenansicht auf denjenigen Ausschnitt oder diejenige Zoomstufe zurück, die vor dem Verschieben der Karte sichtbar war. Durch Anklicken des rechten Pfeils (vor) springt die Kartenansicht auf den aktuelleren Kartenausschnitt bzw. die aktuellere Zoomstufe. Um diese Funktion zu verdeutlichen ist hier ein Beispiel:
 
 .. image:: ../../../figures/de/navigationtoolbar_example_history.png
      :scale: 60
@@ -87,7 +87,7 @@ Mit der Komponente **Zoom in/out** kann durch Klick auf das ``+`` -Zeichen (hine
 .. image:: ../../../figures/de/navigationtoolbar_example_zoominout.png
      :scale: 80
 
-Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/out*, indem auch hier das ``+`` und ``–`` -Zeichen zur Verfügung stehen. Zusätzlich besteht diese Komponente aus einer Leiste, die die möglichen Zoomstufen durch auswählbare Punkte anzeigt. Bei Bewegung der Maus über die einzelnen Punkte werden die zugehörigen Maßstäbe angezeigt (siehe Abbildung). Auch hier beziehen sich die Maßstäbe auf die vorher definierten im `Kartenelement <map.html>`_ . Der ausgefüllte Punkt zeigt an, in welchem Maßstab die Karte aktuell angezeigt wird. Durch klicken auf einen anderen Punkt, springt die Karte direkt zu dem zugehörigen Maßstab.
+Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/out*, indem auch hier das ``+`` und ``–`` -Zeichen zur Verfügung stehen. Zusätzlich besteht diese Komponente aus einer Leiste, die die möglichen Zoomstufen durch auswählbare Punkte anzeigt. Bei Bewegung der Maus über die einzelnen Punkte werden die zugehörigen Maßstäbe angezeigt (siehe Abbildung). Auch hier beziehen sich die Maßstäbe auf die vorher definierten im `Kartenelement <map.html>`_ . Der ausgefüllte Punkt zeigt an, in welchem Maßstab die Karte aktuell angezeigt wird. Durch Klicken auf einen anderen Punkt, springt die Karte direkt zu dem zugehörigen Maßstab.
 
 .. image:: ../../../figures/de/navigationtoolbar_example_zoomslider.png
      :scale: 80
