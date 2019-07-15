@@ -168,13 +168,13 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Über das **Menu** [9] kann eine Auswahl von Buttons aktiviert werden, die dann dem Benutzer der Anwendung im Ebenenbaum zur Verfügung gestellt werden. 
+Über das **Menu** [7] kann eine Auswahl von Buttons aktiviert werden, die dann dem Benutzer der Anwendung im Ebenenbaum zur Verfügung gestellt werden.
 
 * *Remove layer* (Layer aus der Anwendung entfernen)
 * *Opacity* (Deckkraft der einzelnen Layer verändern)
 * *Zoom to layer* (auf die BBOX des Layers zoomen)
 * *Metadata* (Metadaten des Layers anzeigen)
-* *Dimension* (Dimension des Layers kontrollieren , z.B. Höhe oder Zeit - mehr unter `Dimensions handler <../functions/dimensions_handler.html>`_ )
+* *Dimension* (Dimension des Layers kontrollieren , z.B. Höhe oder Zeit - mehr unter `Dimensions handler <../functions/misc/dimensions_handler.html>`_ )
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
@@ -202,7 +202,7 @@ Der Klick auf das "x" im Layertree Menü **[3]** ermöglicht das Entfernen eines
 
            Layertree Menü.
 
-Die Funktion **Visibility bei Ordnern ausblenden** [11] ermöglicht die Sicherung der Deckkraft. Bei aktiver Funktion wird die Deckkraft der Ebenen nicht angezeigt und kann nicht verändert werden.
+Die Funktion **Visibility bei Ordnern ausblenden** [9] ermöglicht die Sicherung der Deckkraft. Bei aktiver Funktion wird die Deckkraft der Ebenen nicht angezeigt und kann nicht verändert werden.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
@@ -210,7 +210,7 @@ Die Funktion **Visibility bei Ordnern ausblenden** [11] ermöglicht die Sicherun
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Durch einen Klick auf das Ordnersymbol des Layertrees **[1]** links neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste. Über die Funktion **Nicht aufklappbare Ordner ausblenden** [10] können Kartenebenen, die nicht mehrere Layer enthalten ausgeblendet werden.
+Durch einen Klick auf das Ordnersymbol des Layertrees **[1]** links neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste. Über die Funktion **Nicht aufklappbare Ordner ausblenden** [8] können Kartenebenen, die nicht mehrere Layer enthalten ausgeblendet werden.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
@@ -222,7 +222,7 @@ Die Checkbox neben dem jeweiligem Layernamen **[2]** ermöglicht das An- und Aus
 
 Das "i"-Symbol neben einem Layernamen **[3]** zeigt an, ob die Informationsabfrage aktiviert ist. Wenn das "i"-Symbol grau hinterlegt ist die Informationsabfrage nicht aktiv. Wird diese durch einen Klick aktiviert, so wird das Symbol dunkelgrau hinterlegt und bei einer Informationsabfrage erscheinen die Informationen zu dem Layer. 
 
-Die Funktion **Info ausblenden** [12] ermöglicht das Deaktivieren der Informationsabfrage. Die Infoabfrage ist unabhängig von den Einstellungen im Layerset oder Dienst nun nicht mehr möglich. 
+Die Funktion **Info ausblenden** [10] ermöglicht das Deaktivieren der Informationsabfrage. Die Infoabfrage ist unabhängig von den Einstellungen im Layerset oder Dienst nun nicht mehr möglich.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
@@ -286,7 +286,7 @@ Die in dem `Kartenelement <map.html>`_ angegebenen Instanzen können im Layertre
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Für den thematischen Layertree binden wir den Ebenenbaum in diesem Beispiel die Seitenleiste ein. Für die Einbindung in dem Sidepane-Bereich muss daher der Type *Element* **[6]** gewählt werden.
+Für den thematischen Layertree binden wir den Ebenenbaum in diesem Beispiel in die Seitenleiste ein. Für die Einbindung in dem Sidepane-Bereich muss daher der Type *Element* **[6]** gewählt werden.
 
 .. figure:: ../../../figures/layertree/layertree_type.png
            :scale: 80
