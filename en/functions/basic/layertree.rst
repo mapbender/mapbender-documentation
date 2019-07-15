@@ -54,7 +54,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 #. Configuration of the map ( Map element) to display the Layersets 
 #. Configuration of the Layertree itself
 
-Through the use of the **Layersets**, the desired layers are included in the application. The instances are the references to the individual WMS services. With the plus-button **[1]** new Layersets can be created. Then, new layers can be integrated in the application by adding the existing instances **[2]**. The Layerset "overview " **[3]** is -as usual- used for displaying the overview map. 
+Through the use of the **Layersets**, the desired layers are included in the application. The instances are the references to the individual WMS services. With the plus-button **[1]** new Layersets can be created. Then, new layers can be integrated in the application by adding the existing instances **[2]**. The Layerset "overview " **[3]** is -as usual- used for displaying the overview map.
 For a detailed documentation on how the services can be integrated correctly, please head for to the documentation of the `layersets <../backend/layerset.html>`_ and `sources <../backend/source.html>`_. 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_en.png
@@ -65,8 +65,8 @@ For a detailed documentation on how the services can be integrated correctly, pl
 
 
 In order to let the new integrated Layersets appear in the application, they must be specified in the `Mapelement <../basic/map.html>`_. 
-Here, you define which Layersets you want to use in the map by checking **[1]** the Layersets in the list. The Layerset "overview " for example is not displayed on the main map. 
-In this step, you define the order in which the Layersets appear in your Layertree and the map. You can move the created Layersets from the list [2] by drag & drop. Please notice that the first defined themes can cover underlying themes.
+Here, you define which Layersets you want to use in the map by checking the Layersets in the list. The Layerset "overview " for example is not displayed on the main map.
+In this step, you define the order in which the Layersets appear in your Layertree and the map. You can move the created Layersets from the list by drag & drop. Please notice that the first defined themes can cover underlying themes.
 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_en.png
@@ -114,7 +114,7 @@ It is important, that you put a tick in the field of the Layerset "World" **[1]*
 
 
 The last step is the configuration of the **Layertree**. 
-The instances specified in the map element can be defined in more detail with the Layertree. If a predefined application has been copied, the Layertree should work now. If the element is newly created, it can already be used with the default settings without necessary further adjustments. 
+The instances specified in the map element can be defined in more detail with the Layertree. If a predefined application has been copied, the Layertree should work now. If the element is newly created, it can already be used with the default settings without necessary further adjustments.
 For a better understanding of the functions and their usage we now edit the Layertree-element in the content.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
@@ -123,9 +123,9 @@ For a better understanding of the functions and their usage we now edit the Laye
 
            Configuration of the simple Layertree in the content.           
 
-When configuring the Layersets the function Basesource is activated as default. This is important for the `BaseSourceSwitcher <../basic/basesourceswitcher.html>`_, which allows you to switch between predefined themes. By enabling  **Display BaseSources** [1], instances that have been loaded as a base source in the application, are displayed in the Layertree. 
+When configuring the Layersets the function Basesource is activated as default. This is important for the `BaseSourceSwitcher <../basic/basesourceswitcher.html>`_, which allows you to switch between predefined themes. By enabling  **Show BaseSources** [1], instances that have been loaded as a base source in the application, are displayed in the Layertree.
 
-The function **Display Header** [2] allows the inclusion of a headline in the Layertree.
+The function **Show Header** [2] allows the inclusion of a headline in the Layertree.
 
 .. figure:: ../../../figures/layertree/layertree_header_en.png
            :scale: 80 
@@ -133,7 +133,7 @@ The function **Display Header** [2] allows the inclusion of a headline in the La
 
            Headline in the Layertree.           
 
-If you activate **Open automatically**, the Layertree is open on default when you start the application and must not be activated by clicking on a button or the unfolding of a sidebar. The **Title** [4] of the element is displayed in the "Layouts"-list and allows you to distinguish between different elements. The **Target** [5] is the ID of the map element. 
+If you activate **Autoopen** [3], the Layertree is open on default when you start the application and must not be activated by clicking on a button or the unfolding of a sidebar. The **Title** [4] of the element is displayed in the "Layouts"-list and allows you to distinguish between different elements. The **Target** [5] is the ID of the map element.
 
 .. figure:: ../../../figures/layertree/layertree_title_en.png
            :scale: 80
@@ -146,7 +146,7 @@ By specifying a **Type** [6] the display of the Layertrees can be defined. There
 * *Dialog*
 * *Element*
 
-.. figure:: ../../../figures/layertree/layertree_type.png
+.. figure:: ../../../figures/layertree/layertree_type_en.png
            :scale: 80
 
 
@@ -169,7 +169,7 @@ By specifying a **Type** [6] the display of the Layertrees can be defined. There
 
            Setup of a simple layertree in the content-area.
 
-Via the **Menu** [9] a number of buttons can be activated, which are then available in the layertree. 
+Via the **Menu** [7] a number of buttons can be activated, which are then available in the layertree.
 
 * *Remove layer* (remove layer from the application)
 * *Opacity* (change the opacity of a layer)
@@ -183,7 +183,7 @@ Via the **Menu** [9] a number of buttons can be activated, which are then availa
 
            Configuration for the context-menu.
 
-The individual functions can be activated by clicking on the button. All active functions are highlighted in green. In addition next to each layer in the Layertree a symbol of the context menu appears. By clicking on the menu a window pops up and the individual features can be used. The menu can be closed by clicking on the x-button. 
+The individual functions can be activated by clicking on the button. All active functions are highlighted in orange. In addition next to each layer in the Layertree a symbol of the context menu appears. By clicking on the menu a window pops up and the individual features can be used. The menu can be closed by clicking on the x-button.
 
 .. figure:: ../../../figures/layertree/layertree_menu_map.png
            :scale: 80
@@ -203,7 +203,7 @@ A click on the "x" in the Layertree context menu **[3]** allows you to remove a 
 
            Layertree context menu.
 
-The function **Hide visibility by folders** [11] allows to save the configuration of the opacity. When active, the opacity of the layers is not displayed and can not be changed.
+The function **Hide visibility by folders** [9] allows to save the configuration of the opacity. When active, the opacity of the layers is not displayed and can not be changed.
 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
@@ -212,7 +212,7 @@ The function **Hide visibility by folders** [11] allows to save the configuratio
 
            Configuration of a simple Layertree in the content.
 
-By clicking on the "folder"-icon of the Layertree **[1]** to the left of the instance the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list. The function **Hide not toggleable** [10] allows you to hide layers that don't contain multiple layers.  
+By clicking on the "folder"-icon of the Layertree **[1]** to the left of the instance the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list. The function **Hide not toggleable** [8] allows you to hide layers that don't contain multiple layers.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
@@ -224,7 +224,7 @@ The checkbox next to the respective layer name **[2]** allows to turn a layer on
 
 The "i"-icon next to a layer name **[3]** indicates if the FeatureInfo-function is enabled. The FeatureInfo-function is inactive if the "i"-icon is grayed out. If you activate the function with a click, the icon is dark gray and the requested information of the layer appears in a dialog box. 
 
-The function **Hide info** [12] allows you to disable the FeatureInfo-function. Independent of the settings in the Layerset or source the FeatureInfo-function is no longer possible.
+The function **Hide info** [10] allows you to disable the FeatureInfo-function. Independent of the settings in the Layerset or source the FeatureInfo-function is no longer possible.
 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1_en.png

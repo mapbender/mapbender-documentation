@@ -182,7 +182,7 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
 
            Konfiguration der Funktionen für das Kontextmenü.
 
-Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert werden. Alle aktiven Funktionen werden grün hinterlegt und in der Anwendung erscheint im Layertree rechts neben jedem Layer ein Symbol für das Kontextmenü. Durch den Klick auf den Menü-Button rechts neben dem Layernamen klappt ein Fenster auf und die einzelnen Funktionen können genutzt werden. Durch den Klick auf den x-Button rechts oben kann das Menü wieder geschlossen werden. 
+Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert werden. Alle aktiven Funktionen werden orange hinterlegt und in der Anwendung erscheint im Layertree rechts neben jedem Layer ein Symbol für das Kontextmenü. Durch den Klick auf den Menü-Button rechts neben dem Layernamen klappt ein Fenster auf und die einzelnen Funktionen können genutzt werden. Durch den Klick auf den x-Button rechts oben kann das Menü wieder geschlossen werden.
 
 .. figure:: ../../../figures/layertree/layertree_menu_map.png
            :scale: 80
@@ -255,7 +255,7 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Info s.o. oder in der Doku der `Layersets <../backend/layerset.html>`_ und `Dienste <../backend/source.html>`_).
 
 Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[2]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset noch die Instanz "GEBCO" hinzu. 
-Um die thematische Gruppierung gut nutzen zu können erstellen wir nun ein neues Layerset mit dem Namen "Project NRW" **[3]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein. 
+Um die thematische Gruppierung gut nutzen zu können erstellen wir nun ein neues Layerset mit dem Namen "Project NRW" **[3]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex.png
            :scale: 80
