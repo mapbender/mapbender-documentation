@@ -3,7 +3,7 @@
 Legende
 *******
 
-Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Dabei wird jeder einzelne Layer mit seinen Punkte, Flächen und Linien aufgelistet.
+Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Dabei wird jeder einzelne Layer mit seinen Punkten, Flächen und Linien aufgelistet.
 
 .. image:: ../../../figures/legend.png
      :scale: 80
@@ -16,13 +16,11 @@ Konfiguration
 
 
 * **Automatisches Öffnen:** true, wenn die Legende beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
-* **Ebenen ohne Objekte ausblenden:** Layer wird nicht aufgelistet, wenn keine Legende erzeugt werden kann, der Standardwert ist true.
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Element type:** Anzeige als Dialog- oder Blockelement, Standard ist Dialog.
 * **Display type:** akkordeonartige Anzeige oder Liste. Standard ist Liste.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht. 
-
+* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Titel der Datenquelle anzeigen:** zeigt den WMS Titel, der Standardwert ist true.
 * **Titel der Ebene anzeigen:** zeigt den Layertitel, der Standardwert ist true.
 * **Titel der gruppierten Ebenen anzeigen:** zeigt den Gruppenlayertitel für gruppierte Layer, der Standardwert ist true.
@@ -45,7 +43,7 @@ Im Dialogfeld wird das Element "Legende" ausgewählt. Anschließend öffnet sich
 .. image:: ../../../figures/de/legend_example_sidepane_dialog.png
      :scale: 80
 
-Das hier konfigurierte Element hat den Titel "Legende". Es entspricht dem *Element type* "blockelement", da es in der Sidepane fest eingebunden ist. Der *Display type* ist "list" und das *Target* die "Main Map". Die Legende öffnet sich automatisch (Häkchen bei *Automatisches Öffnen*) und blendet die Ebenen aus, in denen keine Objekte vorhanden sind (Häkchen bei *Ebenen ohne Objekte ausblenden*). Der Titel der Ebenen wird angezeigt sowie der Titel der gruppierten Ebenen (Häkchen bei *Titel der Ebene anzeigen* und *Titel der gruppierten Ebene anzeigen*). 
+Das hier konfigurierte Element hat den Titel "Legende". Es entspricht dem *Element type* "blockelement", da es in der Sidepane fest eingebunden ist. Der *Display type* ist "list" und das *Target* die "Hauptkarte". Die Legende öffnet sich automatisch (Häkchen bei *Automatisches Öffnen*). Der Titel der Ebenen wird angezeigt sowie der Titel der gruppierten Ebenen (Häkchen bei *Titel der Ebene anzeigen* und *Titel der gruppierten Ebene anzeigen*).
 
 Diese Konfiguration ergibt folgendes Ergebnis in der Anwendung:
 
@@ -60,7 +58,7 @@ Die Legende kann auch als Button in der Toolbar eingebunden werden. Hierfür mus
 
 .. image:: ../../../figures/de/add_content.png
      :scale: 80
-     
+
 Für das Konfigurationsbeispiel wurden folgende Einstellungen gewählt:
 
 .. image:: ../../../figures/de/legend_example_toolbar_dialog.png
@@ -78,20 +76,12 @@ Mit diesen Einstellungen sieht das Ergebnis in der Anwendung wie folgt aus:
 
 .. image:: ../../../figures/de/legend_example_toolbar.png
      :scale: 80
-     
+
 In der Toolbar ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird öffnet sich das Dialogfeld und zeigt die Legende an.
 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
-.. image:: ../../../figures/de/legend_example_toolbar_oOTDTETGE.png
-     :scale: 80
-
-
-.. image:: ../../../figures/de/legend_example_toolbar_TDTETGE.png
-     :scale: 80
-     
-     
-.. image:: ../../../figures/de/legend_example_toolbar_TETGE.png
+.. image:: ../../../figures/de/legend_example_toolbar_checkboxes.png
      :scale: 80
 
 YAML-Definition:
