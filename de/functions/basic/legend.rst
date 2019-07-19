@@ -47,7 +47,7 @@ Das hier konfigurierte Element hat den Titel "Legende". Es entspricht dem *Eleme
 
 Diese Konfiguration ergibt folgendes Ergebnis in der Anwendung:
 
-.. image:: ../../../figures/de/legend_example_sidepane.png
+.. image:: ../../../figures/legend_example_sidepane.png
      :scale: 80
 
 Es wird empfohlen, dass die Legende immer als "blockelement" eingebunden wird, wenn diese in der Sidepane angezeigt werden soll. Wird sie als *Element type* "dialog" eingebunden, öffnet sich ein Dialogfeld und die Legende wird nicht in der Sidepane angezeigt. Lediglich die Überschrift "Legende" ist zu sehen. Sofern dieser Dialog geschlossen wurde, ist dieser nicht mehr aufrufbar. Falls die Legende in der Toolbar eingebunden werden soll, empfiehlt es sich diese über einen Button zu konfigurieren und nicht über das Element Legende.
