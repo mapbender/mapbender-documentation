@@ -28,14 +28,14 @@ Die Konfiguration geschieht in zwei Schritten:
 
 .. image:: ../../../figures/de/basesourceswitcher_de.png
      :scale: 80
-     
+
 
 * **Title:** Text, der neben dem About Dialog Button angezeigt wird.
-* **Tooltip:** Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird. 
+* **Tooltip:** Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird.
 * **Target:** Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
-* **Instances:** Themengruppen, die untergeordnete Themenkarten enthalten und als übergeordneter Gruppenname in der Toolbar erscheinen
+* **Instancesets:** Themengruppen, die untergeordnete Themenkarten enthalten und als übergeordneter Gruppenname in der Toolbar erscheinen
 
-In dem Konfigurationsbeispiel sieht man, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden kann. Durch eine Group-Angabe können Gruppen gebildet werden, die dann über die Dropdown-Liste zusammengefasst werden. 
+In dem Konfigurationsbeispiel sieht man, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden kann. Durch eine Group-Angabe können Gruppen gebildet werden, die dann über die Dropdown-Liste zusammengefasst werden.
 
 * **Title**: Name der Themenkarte
 * **Group**: Optionale Zuweisung zu einer vorher definierten Themengruppe
@@ -43,7 +43,7 @@ In dem Konfigurationsbeispiel sieht man, dass entweder ein, kein oder mehrere Ei
 
 Einbinden in Sidepane
 -----------------------
-Der BaseSourceSwitcher kann in der Sidepane mit einer Kartenvorschau eingebunden werden. 
+Der BaseSourceSwitcher kann in der Sidepane mit einer Kartenvorschau eingebunden werden.
 
 .. image:: ../../../figures/de/basesourceswitcher_kartenvorschau.png
      :scale: 80
@@ -69,7 +69,7 @@ CSS-Vorlage:
           border-right-width: 1px;
           margin-bottom: 5px;
           margin-right: 5px; }
-          
+
      .mb-element-basesourceswitcher li[data-state=''] {
           background-color: #ffffff;
           color: #6fb536;
@@ -94,7 +94,7 @@ CSS-Vorlage:
           border-radius: 3px;
           border: 1px solid;
           border-color: #848484; }
-  
+
      .mb-element-basesourceswitcher li[data-sourceset='8'] {
           background: url("osm.png");
           width: 110px;
@@ -125,9 +125,9 @@ YAML-Definition:
                                                         # group: (optional) Gruppenname der Gruppen der Sourcesets über "group name"
                                                         # sources Liste der Sources
         - { title: sourcesetname, group: groupname,
-            sources: [sourceId]} 
-        
-        
+            sources: [sourceId]}
+
+
 
 Class, Widget & Style
 ============================
