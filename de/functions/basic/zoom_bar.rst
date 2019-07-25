@@ -17,7 +17,7 @@ Konfiguration
 * **Verschiebbar:** Navigationswerkzeug ist verschiebbar oder nicht, Standard ist true
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Components:** Komponenten des Navigationswerkzeugs, Standardmäßig wird alles selektiert; Auswahlmöglichkeiten: Pan, History, Zoom box, Zoom to max extent, Zoom in/out, Zoom slider 
+* **Components:** Komponenten des Navigationswerkzeugs, Standardmäßig wird alles selektiert; Auswahlmöglichkeiten: Pan, History, Zoom box, Zoom to max extent, Zoom in/out, Zoom slider
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Step size:** Schrittweite für das Verschieben
 * **Step by pixel:** Schritttyp: Pixel oder Prozent, false = Prozent, Standard ist false
@@ -38,7 +38,7 @@ Die Komponenten sehen in der Anwendung wie folgt aus:
 
 .. image:: ../../../figures/de/navigationtoolbar_features.png
      :scale: 80
-  
+
 Wenn das Häkchen bei *Verschiebbar* gesetzt wurde, wird in der Anwendung das Symbol zum Verschieben der Navigation Toolbar, wie in der Abbildung oben angezeigt. Durch Klicken und Gedrückthalten des kleinen Kreuzes kann die Navigation Toolbar beliebig verschoben werden.
 
 Mithilfe der Komponente **Pan** kann der Anwender durch Klicken auf die unterschiedlichen Pfeile die Karte in die jeweilige Richtung verschieben. Wie weit die Karte durch den Klick verschoben wird, kann im Konfigurationsdialog durch die Felder *Step size* und *Step by pixel* eingestellt werden. Hierbei wird durch *Step by pixel* die Einheit festgelegt und durch *Step size* der Wert. Ist *Step by pixel* auf "true" gestellt, wird der Wert in *Step size* in der Einheit Pixel gelesen. Ist *Step by pixel* auf false gestellt, wird die Zahl bei *Step size* in Prozent angegeben. Der Wert im Feld *Step size* bestimmt dann die Verschiebung der Karte. Je größer die Zahl, desto mehr wird die Karte in die jeweilige Richtung verschoben.
@@ -55,7 +55,7 @@ Die Komponente **History** besteht aus zwei Pfeilen. Durch Anklicken des linken 
 
 .. image:: ../../../figures/de/navigationtoolbar_example_history.png
      :scale: 60
-     
+
 Ausschnitt 1: die Startansicht von der Bonner Innenstadt im Maßstab 1:25.000
 
 Ausschnitt 2: Hineinzoomen auf einen Maßstab von 1:10.000
@@ -70,7 +70,7 @@ Die Komponente **Zoom box** ermöglicht das Aufziehen einer Box mit der Maus. De
 .. image:: ../../../figures/de/navigationtoolbar_example_zoombox.png
      :scale: 60
 
-Mit der Komponente **Zoom to max extent** kann schnell auf den im `Kartenelement <map.html>`_ definierten *Max. Extent* gezoomt werden. Zu beachten ist, dass der *Max. Extent* jedoch nur dann sichtbar ist, wenn auch der entsprechende benötigte Maßstab eingestellt ist. Ist es aufgrund der eingestellten Maßstäbe nicht möglich, den gesamten maximalen Ausschnitt zu sehen, wird auf den maximalen Maßstab herausgezoomt. 
+Mit der Komponente **Zoom to max extent** kann schnell auf den im `Kartenelement <map.html>`_ definierten *Max. Extent* gezoomt werden. Zu beachten ist, dass der *Max. Extent* jedoch nur dann sichtbar ist, wenn auch der entsprechende benötigte Maßstab eingestellt ist. Ist es aufgrund der eingestellten Maßstäbe nicht möglich, den gesamten maximalen Ausschnitt zu sehen, wird auf den maximalen Maßstab herausgezoomt.
 Bei Klick auf *Zoom to max extent* und einem maximalen Maßstab von 1:5.000.000 sieht der Kartenausschnitt wie folgt aus:
 
 .. image:: ../../../figures/de/navigationtoolbar_example_maxextent_5mio.png
@@ -98,17 +98,17 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: 'Navigation Toolbar' # Text des Tooltips
-   components: array("pan",      # Komponenten des Navigationswerkzeugs, Standardmäßig wird alles selektiert.
-     "history","zoom_box",
-     "zoom_max","zoom_slider")
-   target: ~                     # ID des Kartenelements
-   stepSize: 50                  # Schrittweite für das Verschieben
-   stepByPixel: false            # Schritttyp: Pixel oder Prozent, false = Prozent, Standard ist false
-   anchor: 'left-top'            # Ausrichtung des Navigationswerkzeugs, Standard ist 'left-top' (oben-links)
-                                 # Benutzen Sie inline z.B. für die Sidebar
-                                 # Optionen: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   draggable: true               # das Navigationswerkzeug ist verschiebbar oder nicht, Standard ist true
+   tooltip: 'Navigation Toolbar'    #Text des Tooltips
+   components: ["pan","history",    # Komponenten des Navigationswerkzeugs, standardmäßig wird alles selektiert
+   "zoom_box","zoom_max",
+   "zoom_slider"]
+   target: ~                        # ID des Kartenelements
+   stepsize: 50                     # Schrittweite für das Verschieben
+   stepbypixel: false               # Schritttyp: Pixel oder Prozent, false = Prozent, Standard ist false
+   anchor: left-top                 # Ausrichtung des Navigationswerkzeugs, Standard ist 'left-top' (oben-links)
+                                    # Benutzen Sie inline z.B. für die Sidebar
+                                    # Optionen: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+   draggable: true                  # das Navigationswerkzeug ist verschiebbar oder nicht, Standard ist true
 
 Class, Widget & Style
 ============================

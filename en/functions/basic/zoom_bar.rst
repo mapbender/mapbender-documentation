@@ -39,10 +39,10 @@ In the application these components look like this:
 
 .. image:: ../../../figures/zoom_bar_features.png
      :scale: 80
- 
+
 In the application you can also see if the option *Draggable* is checked. You can move the navigation toolbar by clicking, holding and moving the small cross.
 
-With the component **Pan** it is possible to move the map. By clicking on one of the four arrows you can move the map to the corresponding direction. It is possible to configure the step size in the configuration dialog box with the fields *Step size* and *Step by pixel*. If you set *Step by pixel* to true, the unit of the value in the field "Step size* is pixel. If it is set to false, the unit is percent. The value in *Step size* defines how far the map will be moved by clicking on the arrows. 
+With the component **Pan** it is possible to move the map. By clicking on one of the four arrows you can move the map to the corresponding direction. It is possible to configure the step size in the configuration dialog box with the fields *Step size* and *Step by pixel*. If you set *Step by pixel* to true, the unit of the value in the field "Step size* is pixel. If it is set to false, the unit is percent. The value in *Step size* defines how far the map will be moved by clicking on the arrows.
 
 .. image:: ../../../figures/zoom_bar_example_step.png
      :scale: 80
@@ -58,7 +58,7 @@ The component **History** contains two arrows. By clicking on the left arrow (ba
      :scale: 60
 
 Map view 1: the view of the city center of Bonn with a scale of 1:25.000
-     
+
 Map view 2: Zoom in to a scale of 1:10.000
 
 Map view 3: Move the map view to Beuel with a scale of 1:10.000
@@ -81,7 +81,7 @@ With a maximum scale of 1:1.000.000 the map view looks like this:
 .. image:: ../../../figures/de/navigationtoolbar_example_maxextent_1mio.png
      :scale: 60
 
-With the component **Zoom in/out** you can zoom in by clicking on the ``+`` - symbol or zoom out by clicking n the ``–`` - symbol. With this feature you can change the zoom level to the next larger or next smaller scale. The scales can be defined in the `map element <map.html>`_. Depending on the defined scales, you can create larger or smaller steps in the zoom levels.  
+With the component **Zoom in/out** you can zoom in by clicking on the ``+`` - symbol or zoom out by clicking n the ``–`` - symbol. With this feature you can change the zoom level to the next larger or next smaller scale. The scales can be defined in the `map element <map.html>`_. Depending on the defined scales, you can create larger or smaller steps in the zoom levels.
 
 .. image:: ../../../figures/de/navigationtoolbar_example_zoominout.png
      :scale: 80
@@ -97,18 +97,17 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: 'Navigation Toolbar' # text to use as tooltip
-   components: array("pan",      # components of the navigation toolbar, default all selected
-     "history","zoom_box",
-     "zoom_max","zoom_in_out",
-     "zoom_slider")
-   target: ~                     # Id of Map element to query
-   stepSize: 50                  # step value for pan 
-   stepByPixel: false            # step type "by pixel"/"percent", false = percent, default is false
-   anchor: 'left-top'            # navigation toolbar alignment, default is 'left-top' 
-                                 # use inline f.e. in sidebar
-                                 # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   draggable: true               # element is draggable or not, default true
+   tooltip: 'Navigation Toolbar'    # text to use as tooltip
+   components: ["pan","history",    # components of the navigation toolbar, default all selected
+   "zoom_box","zoom_max",
+   "zoom_slider"]
+   target: ~                        # Id of Map element to query
+   stepsize: 50                     # step value for pan
+   stepbypixel: false               # step type "by pixel"/"percent", false = percent, default is false
+   anchor: left-top                 # navigation toolbar alignment, default is 'left-top'
+                                    # use inline f.e. in sidebar
+                                    # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+   draggable: true                  # element is draggable or not, default true
 
 Class, Widget & Style
 ============================
