@@ -29,8 +29,8 @@ WGS 84 / Pseudo-Mercator (EPSG:3857):
 
 .. image:: ../../../figures/de/coordinates_display_wgs84_pseudo_mercator.png
      :scale: 80
- 
- 
+
+
 
 Konfiguration
 =============
@@ -41,8 +41,8 @@ Konfiguration
 * **Beschriftung anzeigen (Show title label):** Schaltet die Beschriftung an/aus. Die Beschriftung richtet sich nach dem Title.
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. Der Titel wird angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Anchor:** Verankerung des Elements (left-top, left-bottom, right-top, right-bottom). Bestimmt die Position des Elements im Layout. 
-* **Numdigits:** Anzahl der Nachkommastellen der Koordinaten.
+* **Anchor:** Verankerung des Elements (left-top, left-bottom, right-top, right-bottom). Bestimmt die Position des Elements im Layout.
+* **Num digits:** Anzahl der Nachkommastellen der Koordinaten.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Emtpy:** Angezeigter Text, wenn sich die Maus nicht in der Karte befindet (Standard: 'x= - y= -').
 * **Prefix:** Präfix vor der X-Koordinate (Standard 'x= ').
@@ -68,9 +68,9 @@ CSS-Styling
 Das Element kann über den folgenden CSS-Style angepasst werden, beispielsweise um die Breite zu vergrößern.
 
 .. code-block:: css
-                
-                .mb-element-coordsdisplay { 
-                    width: 500px; 
+
+                .mb-element-coordsdisplay {
+                    width: 500px;
                 }
 
 
