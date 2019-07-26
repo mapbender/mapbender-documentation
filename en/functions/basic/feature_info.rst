@@ -85,7 +85,7 @@ To have all images and background-colors in your print-out you should check the 
 Button-Configuration
 --------------------
 
-You need a button to show this element. See :ref:`button` for the general configuration options. The following screen shot shows an example for a FeatureInfo Button which is activated the whole time until the user deactivates it. Another possibility is to close the FeatureInfo dialog, if that is configured with the option "Deactivate on close".
+You need a button to show this element. See `Button <../misc/button.html>`_ for the general configuration options. The following screenshot shows an example for a FeatureInfo Button which is activated the whole time until the user deactivates it. Another possibility is to close the FeatureInfo dialog, if that is configured with the option "Deactivate on close".
 
 * **Group:** featureinfo
 * **Deactivate:** deactivate
