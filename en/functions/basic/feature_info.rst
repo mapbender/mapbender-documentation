@@ -14,14 +14,15 @@ Configuration
 .. image:: ../../../figures/feature_info_configuration.png
      :scale: 80
 
-* **Autoopen:** Enable or disable autoopening of the copyright window, when starting the application, default is disabled.
+* **Auto-open:** Enable or disable autoopening of the copyright window, when starting the application, default is disabled.
 * **Deactivate on close:** true/false to deactivate the functionality after closing the result dialog, default is true.
 * **Print Result:** offer a link to print the result of the featureInfo, default is false.
 * **Title:** Title of the element. It will be indicated next to the button.
 * **Tooltip:** Text used as a tooltip. It will be indacted when hovering with the mouse cursor over the button. It also used as a header in the copyright window.
 * **Target:** Id of Map element to query.
 * **Type:** Type of the information, Element or Dialog. Default and mandatory: Dialog.
-* **Display:** Display of the information, Tabs or Accordion. 
+* **Display type:** Display of the information, Tabs or Accordion.
+* **Max count:** Maximum number of results that should be displayed in the result dialog.
 * **Width/ Height:** width/ height of the dialog in px, default is 700/500.
 * **Show original:** show the css-style of the original feature info result, default is false.
 * **Only valid:** The parameter "Only valid" highly depends on the format of the GetFeatureInfo response. Example UMN: as long as the template defines a correct HTML head and body element (for example by referencing a header and footer file), Mapbender will interpret the result as valid. Are these head and body elements missing, Mapbender will interpret the result as not valid.
@@ -29,9 +30,13 @@ Configuration
   * Please make sure, that the GetFeatureInfo Response is a valid HTML.
   * If you have defined ``text/plan`` as output-format, the switch ``only valid`` must not be activated because ``text/plain`` doesn't return valid HTML.
 
-**Note:** It is possible to load WMS services dynmically into the application Via the information response of a FeatureInfo dialog. The WMS Loader is used for that feature. For further information take a look in the chapter `How to add a WMS by defining a link <../misc/wms_loader.html#how-to-add-a-wms-by-defining-a-link>`_.
+**Note:** It is possible to load WMS services dynmically into the application Via the information response of a FeatureInfo dialog. The WMS Loader is used for that feature. To achieve this you have to integrate the link of the desired WMS into the respective HTML template. For further information take a look in the chapter `How to add a WMS by defining a link <../misc/wms_loader.html#how-to-add-a-wms-by-defining-a-link>`_.
+An example for the use of that functionality can be found at the `application of the german city Gütersloh <http://www.geodaten.guetersloh.de/Bebauungsplaene>`_.
 
+.. image:: ../../../figures/feature_info_guetersloh.png
+     :scale: 80
 
+This example shows, how the respective WMS to a specific development plan is added to the application through the use of the FeatureInfo result dialog.
 
 Display as original and styled
 ------------------------------
@@ -46,7 +51,7 @@ Example original:
 Example styled:
 
 .. image:: ../../../figures/feature_info_not_original.png
-     :scale: 80             
+     :scale: 80
 
 
 
@@ -80,7 +85,7 @@ To have all images and background-colors in your print-out you should check the 
 Button-Configuration
 --------------------
 
-You need a button to show this element. See :ref:`button` for the general configuration options. The following screen shot shows an example for a FeatureInfo Button which is activated the whole time until the user deactivates it. Another possibility is to close the FeatureInfo dialog, if that is configured with the option "deactivate on close".
+You need a button to show this element. See :ref:`button` for the general configuration options. The following screen shot shows an example for a FeatureInfo Button which is activated the whole time until the user deactivates it. Another possibility is to close the FeatureInfo dialog, if that is configured with the option "Deactivate on close".
 
 * **Group:** featureinfo
 * **Deactivate:** deactivate
