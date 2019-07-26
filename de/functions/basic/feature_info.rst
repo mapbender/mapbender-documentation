@@ -5,7 +5,7 @@ Feature Info (Information)
 
 Dieses Element stellt die Infoabfrage bereit, die mit WMS Services funktioniert.
 
-.. image:: ../../../figures/feature_info.png
+.. image:: ../../../figures/de/feature_info.png
      :scale: 80
 
 Konfiguration
@@ -46,12 +46,12 @@ Mit der Option "Original zeigen" wird die Original-Darstellung des FeatureInfo R
 
 Beispiel Original:
 
-.. image:: ../../../figures/feature_info_original.png
+.. image:: ../../../figures/de/feature_info_original.png
      :scale: 80
 
 Beispiel gestyled:
 
-.. image:: ../../../figures/feature_info_not_original.png
+.. image:: ../../../figures/de/feature_info_not_original.png
      :scale: 80
 
 
@@ -63,12 +63,12 @@ Mit dem Schalter "Type" können die Responses mehrerer Dienste in unterschiedlic
 
 Beispiel Tabs:
 
-.. image:: ../../../figures/feature_info_tabs.png
+.. image:: ../../../figures/de/feature_info_tabs.png
      :scale: 80
 
 Beispiel Accordion:
 
-.. image:: ../../../figures/feature_info_accordion.png
+.. image:: ../../../figures/de/feature_info_accordion.png
      :scale: 80
 
 
