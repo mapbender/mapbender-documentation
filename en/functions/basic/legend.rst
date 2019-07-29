@@ -15,12 +15,12 @@ Configuration
      :scale: 80
 
 
-* **Autoopen:** If set true, the legend opens when the application is started. Default is true.
-* **Title:** Title of the element. The title will be listed in "Layouts". Is also shown next to the button, if "Show layer title" is true.
+* **Auto-open:** If activated, the legend opens when the application is started. Default is active.
+* **Title:** Title of the element. The title will be listed in "Layouts". Is also shown next to the button, if "Show layer title" is activated.
 * **Tooltip:** Text that will be indicated if the mouse hovers over the legend for a longer time.
 * **Elementtype:** Sets output as a dialog or blockelement, default is dialog.
 * **Display type:** Accordion-like display or list. Default is list.
-* **Target:** Id of Map element to query.
+* **Target:** ID of Map element to query.
 
 * **Show source title:** shows WMS/source title, default is true.
 * **Show layer title:** shows layer title, default is true.
@@ -29,12 +29,12 @@ Configuration
 The Legend element is integrated via a button or in the sidepane. If you look for configurational details for the button, head over to this page: `Button <../misc/button.html>`_.
 
 
-Configuration: Examples:
+Configuration Examples:
 ========================
 
 Legend in the Sidepane:
 -----------------------
-If yout want to integrate a legend to the sidepane, click the ``+`` -button in the "Layouts"-tab (section "Sidepane").
+If yout want to integrate a legend in the sidepane, click the ``+`` -button in the "Layouts"-tab (section "Sidepane").
 
 .. image:: ../../../figures/de/add_sidepane.png
      :scale: 80
@@ -65,7 +65,7 @@ In this example, the following settings are chosen:
 .. image:: ../../../figures/legend_example_toolbar_dialog.png
      :scale: 80
 
-As always, it is important to set the *Element type* to the appropriate setting - in this case, "dialog". In our example, the checkbox *Auto-open* is dismissed. Therefore, the legend opens with a click on the button.
+As always, it is important to set the *Element type* to the appropriate setting - in this case, "dialog". In our example, the checkbox *Auto-open* is dismissed. Therefore, the legend opens only with a click on the button.
 This button has to be implemented into the toolbar section. For detailed instructions on buttons, see the Mapbender-Documentation page `Button <../misc/button.html>`_.
 
 The configuration of a button can look like this:
