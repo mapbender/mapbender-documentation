@@ -3,12 +3,12 @@
 BaseSourceSwitcher
 ******************
 
-With this element you can switch between different predefined layers (BaseSources) like background maps. You can define the layer as a BaseSource in the tab "Layersets" in the applcation. You have to edit the layer and set a checkmark at "BaseSource":
+With this element you can switch between different predefined layers (BaseSources), e. g. background maps. You can define the layer as a BaseSource in the tab "Layersets" in the application. You have to edit the layer and set a checkmark at "BaseSource":
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80
 
-BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch over between the predefined source sets. For every sourceset a button will be displayed in the client. Only one BaseSource can be active at the same time.
+BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch between the predefined source sets. For every sourceset a button will be displayed in the client. Only one BaseSource can be active at the same time.
 
 You have the possibility to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
 
@@ -21,7 +21,7 @@ Configuration
 The configuration occurs in 2 steps:
 
 #. Create a BaseSourceSwitcher Element with Title, Tooltip and Target
-#. Add Sourceset/s with one or more sources and definition of a group (optional)
+#. Add Sourceset(s) with one or more sources and definition of a group (optional)
 
 .. image:: ../../../figures/basesourceswitcher_configuration.png
      :scale: 80
@@ -34,12 +34,12 @@ The configuration occurs in 2 steps:
 In the configuration example you can see that either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list.
 
 * **Title**: Title of the BaseSource
-* **Group**: Optionaly group name to group of sourcesets by "group name"
+* **Group**: Optional group name possibility to group sourcesets by "group name"
 * **Instances**: Sources for the BaseSource
 
 Integration into the sidepane
 ------------------------------
-The BaseSourceSwitcher can be integrated in the sidepane with a preview of the background-map.
+The BaseSourceSwitcher can be integrated in the sidepane with a preview of the background map.
 
 .. image:: ../../../figures/basesourceswitcher_map_preview.png
      :scale: 80
@@ -48,7 +48,7 @@ The styling of the application is adapted via CSS. As a preparation you have to 
 After that, you have to include the BaseSourceSwitcher in the sidepane, as explained in "Configuration". **The inclusion with the preview of the background map only works in the sidepane, not in the toolbar! Additionally you have to remove all groups, if you have previously used them.**
 
 Then you have to insert the CSS-defintion in your application under the "CSS" tab. To adapt the CSS-definition to your application you need to change the numbers of the data-sourcesets and the image paths for each service.
-The numbers for the data-sourcesets can be found in the "Layerset" tab under ID (you only need the InstanceID).
+The numbers for the data-sourcesets can be found in the "Layerset" tab under ID (you only have to define the InstanceID).
 
 CSS-Definition:
 ---------------
