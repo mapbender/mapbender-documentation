@@ -40,11 +40,11 @@ Configuration
 
 * **Show title label:** Enable or disable text (title).
 * **Title:** Title of the element. The title will be listed in "Layouts". It will be indicated if "Show label" is activated.
-* **Tooltip:** Text, that will be indicated if the mouse hovers over the button for a longer time.
+* **Tooltip:** Text that will be indicated if the mouse hovers over the button for a longer time.
 * **Anchor:** Anchoring of the element (left-top, left-bottom, right-top, right-bottom). Determines the position of the element in the layout.
 * **Num digits:** Number of decimal digits of the coordinates.
 * **Target:** ID of the map element to which the element refers.
-* **Emtpy:** Text displayed when the mouse is not in the map (default: 'x = - y = -').
+* **Empty:** Text displayed when the mouse is not in the map (default: 'x = - y = -').
 * **Prefix:** Prefix in front of the X-coordinate (Standard '= x').
 * **Separator:** Separator following the X-coordinate and before Y-coordinate (default: ' y= ').
 
