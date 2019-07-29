@@ -3,7 +3,7 @@
 BaseSourceSwitcher (Themenwechsel)
 *********************************************************************
 
-Mit diesem Element kann zwischen vordefinierten Themen (BaseSources) z.B. Hintergrundkarten gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets bei dem entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig hier ein Häkchen bei Basesource zu setzen:
+Mit diesem Element kann zwischen vordefinierten Themen (BaseSources), z. B. Hintergrundkarten, gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets für den entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss dazu geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig, ein Häkchen bei Basesource zu setzen:
 
 
 .. image:: ../../../figures/de/basesourceswitcher_basesource.png
@@ -31,11 +31,11 @@ Die Konfiguration geschieht in zwei Schritten:
 
 
 * **Title:** Text, der neben dem About Dialog Button angezeigt wird.
-* **Tooltip:** Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird.
+* **Tooltip:** Text, der erscheint, wenn der Mauszeiger längere Zeit über dem Button gehalten wird.
 * **Target:** Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
-* **Instancesets:** Themengruppen, die untergeordnete Themenkarten enthalten und als übergeordneter Gruppenname in der Toolbar erscheinen
+* **Instancesets:** Themengruppen, die untergeordnete Themenkarten enthalten und als übergeordneter Gruppenname in der Toolbar erscheinen.
 
-In dem Konfigurationsbeispiel sieht man, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden kann. Durch eine Group-Angabe können Gruppen gebildet werden, die dann über die Dropdown-Liste zusammengefasst werden.
+In dem Konfigurationsbeispiel sieht man, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden, die dann über die Dropdown-Liste zusammengefasst werden.
 
 * **Title**: Name der Themenkarte
 * **Group**: Optionale Zuweisung zu einer vorher definierten Themengruppe
@@ -48,7 +48,7 @@ Der BaseSourceSwitcher kann in der Sidepane mit einer Kartenvorschau eingebunden
 .. image:: ../../../figures/de/basesourceswitcher_kartenvorschau.png
      :scale: 80
 
-Das Styling wird über CSS angepasst. Als Vorbereitung werden Screenshots der Hintergrundkarten mit der Größe 110x110px erstellt und im web-Verzeichnis abgelegt (Screenshots müssen von Außen erreichbar sein).
+Das Styling wird über CSS angepasst. Als Vorbereitung werden Screenshots der Hintergrundkarten mit der Größe 110x110px erstellt und im web-Verzeichnis abgelegt (Screenshots müssen von außen erreichbar sein).
 Danach wird der BaseSourceSwitcher, wie in „Konfiguration“ beschrieben, in die Sidepane eingebunden. **Die Einbindung mit Kartenvorschau funktioniert nur in der Sidepane und nicht in der Toolbar! Zusätzlich müssen alle Gruppierungen entfernt werden, falls diese vorher genutzt wurden.**
 
 Anschließend wird die CSS-Vorlage (siehe unten) in der Anwendung unter dem Tab „CSS“ eingebunden. Um die Vorlage an die eigene Anwendung anzupassen, müssen die Nummern der data-sourcesets und die Bildpfade je Dienst verändert werden.
