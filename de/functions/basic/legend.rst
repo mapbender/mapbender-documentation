@@ -64,7 +64,7 @@ Für das Konfigurationsbeispiel wurden folgende Einstellungen gewählt:
 .. image:: ../../../figures/de/legend_example_toolbar_dialog.png
      :scale: 80
 
-Wichtig ist hier den *Element type* auf "dialog" einzustellen. Für das Konfigurationsbeispiel wurde das Häkchen bei *Automatisches Öffnen* entfernt, so dass sich die Legende nur bei aktivem Klicken auf den Button öffnet.
+Wichtig ist hier, den *Element type* auf "dialog" einzustellen. Für das Konfigurationsbeispiel wurde das Häkchen bei *Automatisches Öffnen* entfernt, sodass sich die Legende nur bei aktivem Klicken auf den Button öffnet.
 Sobald dieses Element im Content eingebunden wurde, muss ein Button in der Toolbar eingefügt werden. Die Konfiguration von Buttons wird in der Mapbender-Dokumentation unter `Button <../misc/button.html>`_ beschrieben.
 
 Die Konfiguration eines Buttons für die Legende kann wie folgt aussehen:
@@ -77,7 +77,7 @@ Mit diesen Einstellungen sieht das Ergebnis in der Anwendung wie folgt aus:
 .. image:: ../../../figures/de/legend_example_toolbar.png
      :scale: 80
 
-In der Toolbar ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird öffnet sich das Dialogfeld und zeigt die Legende an.
+In der Toolbar ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich das Dialogfeld und zeigt die Legende an.
 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
