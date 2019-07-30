@@ -5,13 +5,13 @@ Update Mapbender to a newer Version
 
 To update Mapbender you have to do the following steps:
 
-* get the new version from http://mapbender.org/builds/ or nightlies from http://mapbender.org/builds/nightly/
+* get the new version from http://mapbender.org/builds/
 * save your configuration files (parameters.yml and config.yml) and your old Mapbender (files and database)
 * replace the new files 
 * merge your configuration files (check for new parameters and changes)
 * update your Mapbender database
-* copy the screenshots from your old Mapbender version from /web/uploads/ to the folder /web/uploads Verzeichnis of your new installation
-* Templates: If you are using your own template you have to compare your scripts with the new scripts (are there any changes?)
+* copy the screenshots from your old Mapbender version from /web/uploads/ to the folder /web/uploads of your new installation
+* Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?)
 * print templates: if you use your own print templates: copy them back to app/Resources/MapbenderPrintBundle/templates/.
 * In some cases, depending on your old Mapbender version, you will need to adjust the Apache Alias within in the file **/etc/apache2/sites-available/mapbender.conf**
 * At https://doc.mapbender.org/en/installation/installation_ubuntu.html under the section **Unpack and register in your Web-Server** you can see how the config file for the Apache Alias should look like
