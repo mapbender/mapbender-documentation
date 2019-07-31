@@ -183,7 +183,7 @@ Via the **Menu** [7] a number of buttons can be activated, which are then availa
 
            Configuration for the context-menu.
 
-The individual functions can be activated by clicking on the button. All active functions are highlighted in orange. In addition, a symbol of the context menu appears next to each layer in the Layertree. By clicking on the menu, a window pops up and the individual features can be used. The menu can be closed by clicking on the x-button.
+The individual functions can be activated by clicking on the button. All active functions are highlighted. In addition, a symbol of the context menu appears next to each layer in the Layertree. By clicking on the menu, a window pops up and the individual features can be used. The menu can be closed by clicking on the x-button.
 
 .. figure:: ../../../figures/layertree/layertree_menu_map.png
            :scale: 80
