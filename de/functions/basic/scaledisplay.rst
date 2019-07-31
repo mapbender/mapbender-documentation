@@ -18,9 +18,9 @@ Konfiguration
      :scale: 80
 
 
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
+* **Target:** ID des Kartenelements, auf das sich das ScaleDisplay-Element bezieht.
 * **Scale prefix:** Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab".
 * **Unit prefix:** Wenn aktiviert, wird die Maßstabszahl nicht ausgeschrieben, sondern mit einem Präfix dargestellt, z.B. 1K für 1000. Der Standardwert ist false.
 * **Anchor:** Ausrichtung des ScaleDisplay-Elements, der Standardwert ist 'right-bottom' (rechts unten).
