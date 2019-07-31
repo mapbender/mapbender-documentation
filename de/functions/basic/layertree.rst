@@ -182,7 +182,7 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
 
            Konfiguration der Funktionen für das Kontextmenü.
 
-Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert werden. Alle aktiven Funktionen werden orange hinterlegt und in der Anwendung erscheint im Layertree rechts neben jedem Layer ein Symbol für das Kontextmenü. Durch den Klick auf den Menü-Button rechts neben dem Layernamen klappt ein Fenster auf und die einzelnen Funktionen können genutzt werden. Durch den Klick auf den x-Button rechts oben kann das Menü wieder geschlossen werden.
+Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert werden. Alle aktiven Funktionen werden bunt hinterlegt und in der Anwendung erscheint im Layertree rechts neben jedem Layer ein Symbol für das Kontextmenü. Durch den Klick auf den Menü-Button rechts neben dem Layernamen klappt ein Fenster auf und die einzelnen Funktionen können genutzt werden. Durch den Klick auf den x-Button rechts oben kann das Menü wieder geschlossen werden.
 
 .. figure:: ../../../figures/layertree/layertree_menu_map.png
            :scale: 80
