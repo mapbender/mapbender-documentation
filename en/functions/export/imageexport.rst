@@ -3,7 +3,7 @@
 ImageExport
 ***********
 
-Image Export allows you to export your current map-view. You can choose png or jpeg format.
+ImageExport allows you to export your current map-view. You can choose png or jpeg format.
 
 .. image:: ../../../figures/image_export.png
      :scale: 80
