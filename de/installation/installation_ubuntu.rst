@@ -27,6 +27,8 @@ Dort sind auch die notwendigen Komponenten für Mapbender aufgelistet, die Sie f
 
  apt install php5 php5-gd php5-curl php5-cli php5-sqlite sqlite php5-intl php5-mbstring curl openssl
 
+Beachten Sie, dass diese Pakete eine Nutzung von PHP5 erfordern, die meisten aktuellen Systeme (Ubuntu ab Version 16.04) jedoch PHP7 nutzen. Siehe unten im Bereich **PHP7** welche Pakete für eine Nutzung von Mapbender mit PHP7 installiert werden müssen.
+
 
 Zusätzlich für die Entwicklung:
  
@@ -91,7 +93,7 @@ Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (o). Weise
  sudo chown -R www-data:www-data /var/www/mapbender/web/uploads
 
  # wenn Sie die vorkonfigurierte dateibasierte Datenbank nutzen möchten
- sudo chmod -R ug+w app/db/demo.sqlite
+ sudo chmod -R ug+w /var/www/mapbender/app/db/demo.sqlite
 
 
 Der Apache Nutzer benötigt v.a. Schreibrechte auf app/cache, app/logs, web/uploads und app/db/demo.sqlite (wenn Sie die mitgelieferte dateibasierte Datenbank nutzen möchten) und Leserechte auf dem web Verzeichnis.
@@ -196,7 +198,14 @@ Für PHP 7 werden weitere Quellen benötigt. Die Paketliste bei Verwendung von P
 
 .. code-block:: bash
 
-  sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
+   sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
+
+
+Unter Ubuntu 16.04 muss zusätzlich das passende Modul für den Apache Webserver manuell nachinstalliert werden:
+
+.. code-block:: bash
+
+   sudo apt install libapache2-mod-php7.0
 
 
 Zur Nutzung von PostgreSQL zusätzlich:
@@ -217,7 +226,7 @@ Zusätzlich muss PHP 7 in Apache aktiviert werden:
 
 .. code-block:: bash
 
-  a2enmod php7.0
+   a2enmod php7.0
 
 
 

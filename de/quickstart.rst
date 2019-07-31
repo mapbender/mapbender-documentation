@@ -73,7 +73,7 @@ Hinweise zur Installation von Mapbender finden Sie unter `Installation <installa
 Starten Sie Mapbender
 ================================================================================
 
-#. Wählen Sie ``Mapbender`` aus dem Startmenü oder besuchen Sie http://localhost/mapbender3/app.php
+#. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender/app.php (Adresse kann etwas abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, nähere Informationen dazu unter `Installation <installation.html>`_)
 
 
 #. Die Anwendung braucht eine kurze Zeit, um zu starten.
@@ -89,7 +89,7 @@ Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über d
 
   .. image:: ../figures/mapbender3_app_dev.png
 
-#. Start des Entwicklungsmodus: http://localhost/mapbender3/app_dev.php
+#. Start des Entwicklungsmodus: http://localhost/mapbender/app_dev.php
 
 #. Schauen Sie sich an, welche Information im Entwicklungsmodus angezeigt werden.
 

@@ -29,7 +29,7 @@ The configuration dialog:
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Tooltip:** text to use as tooltip.
 * **Layerset:** refer to a layerset f.e. overview, define the layerset first and refer to it.
-* **Target:** Id of Map element to query. 
+* **Target:** Id of Map element to query.
 * **Anchor:** overview alignment, default is 'right-top'.
 * **Width/ Height:** overview width and height.
 
@@ -39,15 +39,15 @@ Configuration example
 
 There are different settings for the overview element:
 
-.. image:: ../../../figures/de/overview_example_dialog.png
+.. image:: ../../../figures/overview_example_dialog.png
      :scale: 80
 
 In the configuration example we implement the element (*Title*) "Overview". With *Layerset* we can select all previously implemented layersets. In this example we have two to choose from:
 
-.. image:: ../../../figures/de/map_example_layersets.png
+.. image:: ../../../figures/map_example_layersets.png
      :scale: 80
 
-For the overview we choose the layerset YAML-overview. As *Target* we choose the element referenced. *Anchor* defines where the overview will be implemented (left-top, left-bottom, right-top or right-bottom). In this instance we choese right-bottom. *Width* and *Height* define the size of the window displaying the overview. Default settings are 200 and 100. Additionally it is possible to check the boxes *Maximize* and *Fix*. For the configuration example both checkmarks are set. Because of this the aplication will be maximized when opened. Additionally the map view is fixed. The excerpt shown of the map in the overview window wont change when the map is dragged and shows the maximum extend defined in `Map Element <map.html>`.
+For the overview we choose the layerset overview. As *Target* we choose the element referenced. *Anchor* defines where the overview will be implemented (left-top, left-bottom, right-top or right-bottom). In this instance we choese right-bottom. *Width* and *Height* define the size of the window displaying the overview. Default settings are 200 and 100. Additionally it is possible to check the boxes *Maximize* and *Fix*. For the configuration example both checkmarks are set. Because of this the aplication will be maximized when opened. Additionally the map view is fixed. The excerpt shown of the map in the overview window wont change when the map is dragged and shows the maximum extend defined in `Map Element <map.html>`.
 
 .. image:: ../../../figures/de/overview_example_right-bottom_fixed.png
      :scale: 80
@@ -55,7 +55,7 @@ For the overview we choose the layerset YAML-overview. As *Target* we choose the
 If the overview isnt fixed (unchecked *Fix*), the overview will change, if the map is zoomed or dragged. The default view is the defined start extend.
 For the following parameter (no check of *Fix*, *Anchor*, left-bottom, *Width* 400 and *Height* 200):
 
-.. image:: ../../../figures/de/overview_example_dialog_left-bottom.png
+.. image:: ../../../figures/overview_example_dialog_left-bottom.png
      :scale: 80
 
 The overview will look like this:
@@ -69,17 +69,17 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: 'Overview'              # text to use as tooltip
-   target: ~                        # Id of Map element to query
-   layerset: ~                      # refer to a layerset f.e. overview, define the layerset first and refer to it
-   width: 200                       # overview width
-   height: 100                      # overview height
-   anchor: 'inline'/'left-top'/     # overview alignment, default is 'right-top'
-     'left-bottom'/'right-top'/     # use inline f.e. in sidebar
-     'right-bottom'   
-   position: array('0px','0px')     # overview position in relation to anchor, default: x=0px, y=0px
-   maximized: true                  # true/false to open/close on start, default is true
-   fixed: true                      # true/false to fix the overview extent, default is true
+   tooltip: 'Overview'          # text to use as tooltip
+   target: ~                    # Id of Map element to query
+   layerset: ~                  # refer to a layerset f.e. overview, define the layerset first and refer to it
+   width: 200                   # overview width
+   height: 100                  # overview height
+   anchor: 'right-top'          # overview alignment, default is 'right-top'
+                                # use inline f.e. in sidebar
+                                # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+   position: ['0px', '0px']     # overview position in relation to anchor, default: x=0px, y=0px
+   maximized: true              # true/false to open/close on start, default is true
+   fixed: true                  # true/false to fix the overview extent, default is true
 
 Class, Widget & Style
 ============================

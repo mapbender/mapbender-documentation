@@ -55,8 +55,8 @@ Um die unterschiedlichen Layersets im Layertree nutzen zu können, sind verschie
 #. Einrichtung des Layertrees selbst
 
 Über die **Layersets** werden die gewünschten Layer in die Anwendung eingebunden. 
-Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den Plus-Button **[1]** können neue Layersets erstellt. In die neuen Layersets können dann neue Layer über das Hinzufügen der bestehenden Instanzen **[2]** eingebunden werden. Das Layerset "overview" **[3]** wird – wie gehabt – für die Anzeige der Übersichtskarte verwendet. 
-Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können findet sich unter der Dokumentation des `Layersets <../backend/layerset.html>`_ und der `Datenquellen <../backend/source.html>`_. 
+Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den Plus-Button **[1]** können neue Layersets erstellt werden. In die neuen Layersets können dann neue Layer über das Hinzufügen der bestehenden Instanzen **[2]** eingebunden werden. Das Layerset "overview" **[3]** wird – wie gehabt – für die Anzeige der Übersichtskarte verwendet. 
+Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können, findet sich unter der Dokumentation des `Layersets <../backend/layerset.html>`_ und der `Datenquellen <../backend/source.html>`_. 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset.png
            :scale: 80
@@ -64,7 +64,7 @@ Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können fi
 
            Einrichtung verschiedener Layersets für die Einbindung in den Layertree.
 
-Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen müssen diese in dem `Kartenelement <map.html>`_ angegeben werden. 
+Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen, müssen diese in dem `Kartenelement <map.html>`_ angegeben werden. 
 Hier gibt man durch das Ankreuzen **[1]** der Layersets an, welche Layersets in der Kartenansicht verwendet werden sollen. Der Layerset "overview" wird beispielsweise nicht in der Hauptkarte angezeigt.  
 In diesem Schritt wird auch die Reihenfolge definiert, in der die Layersets im Layertree und in der Karte erscheinen sollen. Die erstellten Layersets können in der Auflistung per Drag & Drop verschoben werden. Bitte achten Sie darauf, dass die weiter oben definierten Themen die darunter liegenden Themen überdecken können.
 
@@ -91,7 +91,7 @@ In dem folgenden Beispiel ist ein **Layerset** mit einer Instanz definiert:
 * Layerset World: 
   * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
-Die Instanz des OSM-Demodienstes ist bei der Installation automatisch dabei. Diese muss nun nurnoch über den Reiter "Layersets" in ein bestehendes Layerset eingebunden werden. In dem folgenden Beispiel wurde das Layerset "YAML-main" in "World" umbenannt. 
+Die Instanz des OSM-Demodienstes ist bei der Installation automatisch dabei. Diese muss nur noch über den Reiter "Layersets" in ein bestehendes Layerset eingebunden werden. In dem folgenden Beispiel wurde das Layerset "YAML-main" in "World" umbenannt. 
 Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <../backend/layerset.html>`_ weiterhelfen. 
 
 
@@ -101,7 +101,7 @@ Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <..
 
            Einrichtung eines Layersets für die Einbindung in den einfachen Layertree.
 
-Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_  zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement in dem Content-Bereich.
+Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_  zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement über den Content-Bereich.
 Wichtig ist nun, dass bei dem Bereich Layersets ein Häckchen bei dem Layerset World **[1]** gesetzt ist, damit dieses Layerset später in der Anwendung angezeigt wird. 
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
 
@@ -168,13 +168,13 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Über das **Menu** [9] kann eine Auswahl von Buttons aktiviert werden, die dann dem Benutzer der Anwendung im Ebenenbaum zur Verfügung gestellt werden. 
+Über das **Menu** [7] kann eine Auswahl von Buttons aktiviert werden, die dann dem Benutzer der Anwendung im Ebenenbaum zur Verfügung gestellt werden.
 
 * *Remove layer* (Layer aus der Anwendung entfernen)
 * *Opacity* (Deckkraft der einzelnen Layer verändern)
 * *Zoom to layer* (auf die BBOX des Layers zoomen)
 * *Metadata* (Metadaten des Layers anzeigen)
-* *Dimension* (Dimension des Layers kontrollieren , z.B. Höhe oder Zeit - mehr unter `Dimensions handler <../functions/dimensions_handler.html>`_ )
+* *Dimension* (Dimension des Layers kontrollieren , z.B. Höhe oder Zeit - mehr unter `Dimensions handler <../functions/misc/dimensions_handler.html>`_ )
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
@@ -182,7 +182,7 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
 
            Konfiguration der Funktionen für das Kontextmenü.
 
-Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert werden. Alle aktiven Funktionen werden grün hinterlegt und in der Anwendung erscheint im Layertree rechts neben jedem Layer ein Symbol für das Kontextmenü. Durch den Klick auf den Menü-Button rechts neben dem Layernamen klappt ein Fenster auf und die einzelnen Funktionen können genutzt werden. Durch den Klick auf den x-Button rechts oben kann das Menü wieder geschlossen werden. 
+Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert werden. Alle aktiven Funktionen werden bunt hinterlegt und in der Anwendung erscheint im Layertree rechts neben jedem Layer ein Symbol für das Kontextmenü. Durch den Klick auf den Menü-Button rechts neben dem Layernamen klappt ein Fenster auf und die einzelnen Funktionen können genutzt werden. Durch den Klick auf den x-Button rechts oben kann das Menü wieder geschlossen werden.
 
 .. figure:: ../../../figures/layertree/layertree_menu_map.png
            :scale: 80
@@ -202,7 +202,7 @@ Der Klick auf das "x" im Layertree Menü **[3]** ermöglicht das Entfernen eines
 
            Layertree Menü.
 
-Die Funktion **Visibility bei Ordnern ausblenden** [11] ermöglicht die Sicherung der Deckkraft. Bei aktiver Funktion wird die Deckkraft der Ebenen nicht angezeigt und kann nicht verändert werden.
+Die Funktion **Visibility bei Ordnern ausblenden** [9] ermöglicht die Sicherung der Deckkraft. Bei aktiver Funktion wird die Deckkraft der Ebenen nicht angezeigt und kann nicht verändert werden.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
@@ -210,7 +210,7 @@ Die Funktion **Visibility bei Ordnern ausblenden** [11] ermöglicht die Sicherun
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Durch einen Klick auf das Ordnersymbol des Layertrees **[1]** links neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste. Über die Funktion **Nicht aufklappbare Ordner ausblenden** [10] können Kartenebenen, die nicht mehrere Layer enthalten ausgeblendet werden.
+Durch einen Klick auf das Ordnersymbol des Layertrees **[1]** links neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste. Über die Funktion **Nicht aufklappbare Ordner ausblenden** [8] können Kartenebenen, die nicht mehrere Layer enthalten, ausgeblendet werden.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
@@ -218,11 +218,11 @@ Durch einen Klick auf das Ordnersymbol des Layertrees **[1]** links neben der In
 
            Layertree Buttons.
 
-Die Checkbox neben dem jeweiligem Layernamen **[2]** ermöglicht das An- und Ausschalten eines Layers. Ist das Häkchen gesetzt erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet, wie z.B. maßstabsabhängige Anzeigen.
+Die Checkbox neben dem jeweiligem Layernamen **[2]** ermöglicht das An- und Ausschalten eines Layers. Ist das Häkchen gesetzt, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet, wie z.B. maßstabsabhängige Anzeigen.
 
-Das "i"-Symbol neben einem Layernamen **[3]** zeigt an, ob die Informationsabfrage aktiviert ist. Wenn das "i"-Symbol grau hinterlegt ist die Informationsabfrage nicht aktiv. Wird diese durch einen Klick aktiviert, so wird das Symbol dunkelgrau hinterlegt und bei einer Informationsabfrage erscheinen die Informationen zu dem Layer. 
+Das "i"-Symbol neben einem Layernamen **[3]** zeigt an, ob die Informationsabfrage aktiviert ist. Wenn das "i"-Symbol grau hinterlegt ist, ist die Informationsabfrage nicht aktiv. Wird diese durch einen Klick aktiviert, so wird das Symbol dunkelgrau hinterlegt und bei einer Informationsabfrage erscheinen die Informationen zu dem Layer. 
 
-Die Funktion **Info ausblenden** [12] ermöglicht das Deaktivieren der Informationsabfrage. Die Infoabfrage ist unabhängig von den Einstellungen im Layerset oder Dienst nun nicht mehr möglich. 
+Die Funktion **Info ausblenden** [10] ermöglicht das Deaktivieren der Informationsabfrage. Die Infoabfrage ist unabhängig von den Einstellungen im Layerset oder Dienst nun nicht mehr möglich.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
@@ -255,7 +255,7 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Info s.o. oder in der Doku der `Layersets <../backend/layerset.html>`_ und `Dienste <../backend/source.html>`_).
 
 Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[2]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset noch die Instanz "GEBCO" hinzu. 
-Um die thematische Gruppierung gut nutzen zu können erstellen wir nun ein neues Layerset mit dem Namen "Project NRW" **[3]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein. 
+Um die thematische Gruppierung gut nutzen zu können, erstellen wir nun ein neues Layerset mit dem Namen "Project NRW" **[3]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex.png
            :scale: 80
@@ -264,7 +264,7 @@ Um die thematische Gruppierung gut nutzen zu können erstellen wir nun ein neues
            Konfiguration der Layersets für den thematischen Layertree.
 
 
-Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die Übersichtskarte, das **World**-Layerset [2] mit den weltweiten/ Deutschlandweiten Daten und das **Project NRW** Layerset [3] mit den zwei regionalen Datensets aus NRW. 
+Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die Übersichtskarte, das **World**-Layerset [2] mit den weltweiten/deutschlandweiten Daten und das **Project NRW** Layerset [3] mit den zwei regionalen Datensets aus NRW. 
 
 
 Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_ zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement in dem Content-Bereich.
@@ -286,7 +286,7 @@ Die in dem `Kartenelement <map.html>`_ angegebenen Instanzen können im Layertre
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Für den thematischen Layertree binden wir den Ebenenbaum in diesem Beispiel die Seitenleiste ein. Für die Einbindung in dem Sidepane-Bereich muss daher der Type *Element* **[6]** gewählt werden.
+Für den thematischen Layertree binden wir den Ebenenbaum in diesem Beispiel in die Seitenleiste ein. Für die Einbindung in dem Sidepane-Bereich muss daher der Type *Element* **[6]** gewählt werden.
 
 .. figure:: ../../../figures/layertree/layertree_type.png
            :scale: 80
@@ -310,7 +310,7 @@ Damit die **Themen** in der Anwendung wie gewünscht angezeigt werden, gibt es v
            :scale: 80
 
 :[1] Thema anzeigen:
-  Ist diese Option gesetzt, wird der Layerset als zusätzliche Ebene angezeigt. Ist diese Option nicht gesetzt, werden die enthaltenen Layer-Instanzen in der Hauptebene angezeigt.
+  Ist diese Option gesetzt, wird das Layerset als zusätzliche Ebene angezeigt. Ist diese Option nicht gesetzt, werden die enthaltenen Layer-Instanzen in der Hauptebene angezeigt.
 :[2] Thema offen oder geschlossen:
   Ist diese Option gesetzt (Symbol des geöffneten Ordners), ist das Thema im Layertree automatisch ausgeklappt.
 :[3] Thema Dienste Sichtbarkeit:
@@ -334,7 +334,7 @@ Wir haben die Layersets somit als thematische Gruppen in den Ebenenbaum eingebun
 
            Aufbau des thematischen Layersets in der Seitenleiste.
 
-Das Layerset "World" wird als Thema angezeigt, ist jedoch nicht geöffnet und die beiden Schaltflächen sind nicht aktiviert. Bei dem Layerset "Project NRW" wird das Thema beim Öffnen der Anwendung aufgeklappt gezeigt. Die Schaltfläche für die Anzeige/ das Ausblenden der Dienste ist vorhanden und alle Layer können über einen Button aktiviert werden.
+Das Layerset "World" wird als Thema angezeigt, ist jedoch nicht geöffnet und die beiden Schaltflächen sind nicht aktiviert. Bei dem Layerset "Project NRW" wird das Thema beim Öffnen der Anwendung aufgeklappt gezeigt. Die Schaltfläche für die Anzeige bzw. das Ausblenden der Dienste ist vorhanden und alle Layer können über einen Button aktiviert werden.
 
 
 YAML-Definition:
