@@ -14,7 +14,7 @@ Konfiguration
 .. image:: ../../../figures/de/scalebar_configuration.png
      :scale: 80
 
-* **Title:** Titel des Elements. Dieser wird unter dem Reiter Layouts angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden.
+* **Title:** Titel des Elements. Dieser wird unter dem Reiter Layouts angezeigt.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich die Scalebar bezieht.
 * **MaxWidth:** Maximale Breite des Maßstabsbalkens, der Standardwert ist 200px.
