@@ -14,7 +14,7 @@ Configuration
 .. image:: ../../../figures/scalebar_configuration.png
      :scale: 80
 
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons.
+* **Title:** Title of the element. The title will be listed in "Layouts".
 * **Tooltip:** Text to use as tooltip.
 * **Target:** ID of the Map element to query.
 * **MaxWidth:** The maximum width of the scale bar, default 200px.
