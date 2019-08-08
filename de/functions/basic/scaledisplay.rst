@@ -3,11 +3,13 @@
 ScaleDisplay (Maßstabsanzeige)
 ********************************
 
-Die Maßstabsanzeige zeigt den aktuellen Maßstab an (1:1K or 1: 1000).
+Das ScaleDisplay-Element zeigt den aktuellen Maßstab an (1:1K or 1: 1000).
 
-.. image:: ../../../figures/de/scaledisplay.png
+.. image:: ../../../figures/scaledisplay.png
      :scale: 100
 
+.. image:: ../../../figures/scaledisplay_unit.png
+     :scale: 100
 
 Konfiguration
 =============
@@ -16,12 +18,12 @@ Konfiguration
      :scale: 80
 
 
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Scale prefix:** Bezeichnung, die vor dem Maßstab als Einheit steht.
-* **Unit prefix:** Bezeichnung, die vor dem Maßstab als Einheit steht.
-* **Anchor:** Ausrichtung des Maßstabs, der Standardwert ist 'right-bottom' (rechts unten)
+* **Target:** ID des Kartenelements, auf das sich das ScaleDisplay-Element bezieht.
+* **Scale prefix:** Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab".
+* **Unit prefix:** Wenn aktiviert, wird die Maßstabszahl nicht ausgeschrieben, sondern mit einem Präfix dargestellt, z.B. 1K für 1000. Der Standardwert ist false.
+* **Anchor:** Ausrichtung des ScaleDisplay-Elements, der Standardwert ist 'right-bottom' (rechts unten).
 
 
 YAML-Definition:
@@ -29,11 +31,13 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   tooltip: 'Scale Bar'             # Text des Tooltips
+   tooltip: 'ScaleDisplay'          # Text des Tooltips
    target: ~                        # ID des Kartenelements
-   anchor: 'inline'/'left-top'/     # Ausrichtung des Maßstabs, der Standardwert ist 'right-bottom' (rechts unten)
-     'left-bottom'/'right-top'/     # Benutzen Sie inline z.B. für die Sidebar
+   anchor: 'inline'/'left-top'/     # Ausrichtung des ScaleDisplay-Elements, der Standardwert ist 'right-bottom'
+     'left-bottom'/'right-top'/     # use inline f.e. in sidebar
      'right-bottom'
+   scalePrefix: Scale               # Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab"
+   unitPrefix: true                 # aktiviert Darstellung der Maßstabszahl mit Präfix, der Standardwert ist false
 
 Class, Widget & Style
 ============================
