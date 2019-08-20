@@ -13,7 +13,7 @@ Fullscreen Template
 .. image:: ../../figures/mapbender_fullscreen.png
      :scale: 50
 
-View a demo of the Mapbender Fullscreen Template https://demo.mapbender.org/application/mapbender_mobile_yml
+View a demo of the Mapbender Fullscreen Template https://demo.mapbender.org/application/mapbender_user_yml
 
 Regions of the Fullscreen Template:
 
