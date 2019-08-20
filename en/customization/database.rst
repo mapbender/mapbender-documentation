@@ -1,6 +1,6 @@
 .. _database:
 
-Configuring the database
+Database Configuration
 ########################
 
 General
