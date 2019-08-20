@@ -60,6 +60,5 @@ Topics
    :maxdepth: 1
 
    git
-   apidocumentation
    requestresponse
    elements
