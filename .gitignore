@@ -10,7 +10,6 @@
 ehthumbs.db
 Thumbs.db
 
-
 # Editor and IDE #
 ##################
 .idea
@@ -18,8 +17,6 @@ Thumbs.db
 .sass-cache
 *.sublime-workspace
 .vscode
-
-
 
 # PROJECT #
 ###########
