@@ -15,8 +15,7 @@ Read more about Templates in Mapbender at :ref:`templates`.
 
 Documentation
 *************
-Read more about Twig in Twig documentation the http://twig.sensiolabs.org/.
-
+If you want to know more about twig check out the documentation under http://twig.sensiolabs.org .
 You find a good introduction in the Symfony documentation **Creating and using Templates** http://symfony.com/doc/current/templating.html
 
  
@@ -78,14 +77,3 @@ You can check for syntax errors in Twig templates using the twig:lint console co
  app/console twig:lint mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig
 
 The example checks by filename, but you could also check by directory or bundle name.
-
-.. ToDO
- assets  
- ****** 
- app-Variable
- ************
- example
- ******
-
-
-
