@@ -90,4 +90,4 @@ activate
 ----------
 
 Öffnet einen Dialog, in dem ein WMS über einen getCapabilities-Request geladen werden kann.
-Es kann WMS 1.1.1 und  WMS 1.3.0 geladen werden.
+Es kann WMS 1.1.1 und WMS 1.3.0 geladen werden.
