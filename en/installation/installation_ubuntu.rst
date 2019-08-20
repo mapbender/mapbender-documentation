@@ -199,7 +199,7 @@ PHP 7 needs additional packages. The list of packages for PHP 7:
 
 .. code-block:: bash
 
-   sudo apt install apache2 php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
+   sudo apt install apache2 php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2 php-ldap
   
 
 Under Ubuntu 16.04 you need to install the appropriate module for the Apache web server manually:
