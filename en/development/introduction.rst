@@ -18,7 +18,6 @@ to Mapbender:
   <http://symfony.com/doc/current/index.html>`_ and learn about controllers,
   templating and the other cool things.
 * Docblock annotations: We use ApiGen to generate code documentation.
-  :doc:`More on this <apidocumentation>`.
 * JavaScript: We use jQuery a lot and especially the jQuery UI widget factory.
   These are essential to understand to write maintainable JavaScript code.
 
