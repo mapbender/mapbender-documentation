@@ -37,3 +37,4 @@ allclean:
 > rm -rf $(BUILDDIR)/.doctrees
 > rm $(BUILDDIR)/.buildinfo
 > rm -rf $(DISTDIR)/*
+::
