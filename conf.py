@@ -16,6 +16,7 @@ import os
 import shlex
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
+from pygments.lexers.templates import TwigHtmlLexer
 
 # Symfony Extension Start
 #sys.path.append(os.path.abspath('_exts'))
