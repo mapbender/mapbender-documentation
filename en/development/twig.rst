@@ -22,7 +22,7 @@ You find a good introduction in the Symfony documentation **Creating and using T
 Twig Syntax
 ***********
 
-.. code-block:: yaml
+.. code-block:: html+twig
 
    {# define a comment like this #}
    
@@ -72,7 +72,7 @@ Check the syntax of your Twig template
 **************************************
 You can check for syntax errors in Twig templates using the twig:lint console command:
 
-.. code-block:: yaml
+.. code-block:: bash
 
  app/console twig:lint mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig
 
