@@ -73,14 +73,18 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
 .. code-block:: php
 
     <?php
+
     namespace Workshop\DemoBundle;
+
     use Mapbender\CoreBundle\Component\MapbenderBundle;
+
     class WorkshopDemoBundle extends MapbenderBundle
     {
         public function getTemplates()
         {
             return array('Workshop\DemoBundle\Template\DemoFullscreen');
         }
+
         public function getElements()
         {
             return array(
