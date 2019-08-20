@@ -3,12 +3,15 @@
 Dimensions Handler
 ******************
 
-Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions Handler genutzt werden. WMS-Time Dienste werden wie ganz normale WMS als Datenquelle registriert. Wenn die Dienste über die Angabe einer zeitlichen Dimension verfügen, werden diese in den Layer-Metadaten angezeigt. 
+Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions Handler genutzt werden. 
+WMS-Time Dienste werden wie ganz normale WMS als Datenquelle registriert. 
+Wenn die Dienste über die Angabe einer zeitlichen Dimension verfügen, werden diese in den Layer-Metadaten angezeigt. 
 
-.. code-block::
+.. code-block:: latex
 
     Dimension:
     name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
+
 
 .. image:: ../../../figures/wmst_source.png
      :scale: 80
@@ -64,7 +67,8 @@ Die Konfiguration des „Dimensionhandler erfolgt in drei Schritten:
 
 * **Anlegen des Elements**: Zuerst wird das Element definiert und gespeichert. Danach schließt sich das Element (siehe Konfiguration).
 * **Anlegen eines Dimensionsets**: Für die Erstellung eines Dimensionsets kann in dem Element über den „+“-Button ein neues Set angelegt werden. Nach der Eingabe eines Titels muss das Element gespeichert werden. Danach schließt sich das Element.
-* **Definition des Schiebereglers**: Danach kann in dem Element in dem Feld „Group“ die Instanzen aus dem Layerset ausgesucht werden, die über den Slider gesteuert werden sollen. Eine Mehrfachauswahl ist möglich, aber es können nur Instanzen mit einander kombiniert werden, die den gleichen zeitlichen Extent besitzen. 
+* **Definition des Schiebereglers**: Danach kann in dem Element in dem Feld „Group“ die Instanzen aus dem Layerset ausgesucht werden, die über den Slider gesteuert werden sollen. Eine Mehrfachauswahl ist möglich, aber es können nur Instanzen mit einander kombiniert werden, die den gleichen zeitlichen Extent besitzen.
+
 Wenn eine Instanz ausgewählt wurde, sind alle Instanzen, die nicht dieser Vorgabe entsprechen, nicht mehr auswählbar. Zudem erscheint nach der ersten Auswahl einer Instanz ein Schieberegler, mit dem der Extent eingeschränkt werden kann.
 
 .. image:: ../../../figures/wmst_element.png
