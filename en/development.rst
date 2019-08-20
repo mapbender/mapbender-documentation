@@ -7,7 +7,6 @@ Development
    :maxdepth: 1
 
    development/introduction.rst
-   development/apidocumentation.rst
    development/elements.rst
    development/element_generate.rst
    development/requestresponse.rst
