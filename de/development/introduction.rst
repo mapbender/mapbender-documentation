@@ -41,7 +41,7 @@ Bibliotheken und Frameworks:
 
 
 Themen
-*******
+******
 
 
 .. toctree::
