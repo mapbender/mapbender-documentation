@@ -302,7 +302,7 @@ SQL für die Demo-Tabellen
 Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie legen drei Demo-Tabellen an, damit mit der oben gezeigte YAML-Definition die einzelnen Funktionen getestet werden können. Die PostGIS Extension muss aktiviert sein.
 
 
-.. code-block:: sql
+.. code-block:: postgres
 
     create table public.poi (
         gid serial,
@@ -327,7 +327,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: sql
+.. code-block:: postgres
 
     create table public.lines (
         gid serial,
@@ -354,7 +354,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: sql
+.. code-block:: postgres
 
     create table public.polygons (
         gid serial,
@@ -719,7 +719,7 @@ Ab Digitizer 1.2: Für die Mehrfachauswahl wird eine vereinfachte Auswahlmöglic
 
 Das SQL (wenn maps und reading abgespeichert wurden):
 
-.. code-block:: sql
+.. code-block:: postgres
 
                 gisdb=> select interests from poi where gid=3;
                 interests
@@ -1235,7 +1235,7 @@ Bei dem Event wird der Wert des Feldes "geom2" mit dem Wert des Feldes "geom" ü
 
 Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
 
-.. code-block:: sql
+.. code-block:: postgres
 
                 events:
                   onBeforeInsert: |

@@ -95,7 +95,7 @@ Bitte führen sie wieder ein **app/console doctrine:schema:update** durch, um di
 
 Falls der Update Befehl fehlschlägt, z.B. mit der PostgreSQL Meldung ``SQLSTATE[22001]: String data, right truncated:`` und ``7 FEHLER:  Wert zu lang für Typ character varying(255)``, dann haben Sie einen Schlüsselwort-Eintrag in der Tabelle ``mb_core_keyword``, der 255 Zeichen überschreitet. Diesen können Sie mit folgendem SQL-Statement herausfinden:
 
-.. code-block:: sql
+.. code-block:: postgres
 
                 SELECT x, id, length(x) FROM (
                   select value, id from  mb_core_keyword

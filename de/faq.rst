@@ -13,7 +13,7 @@ F: Ich würde gerne wissen, in welchen Anwendungen ein bestimmter WMS Dienst ein
 
 A: Bis wir die Information an der Oberfläche anbieten, hilft Ihnen folgendes SQL Statement:
 
-.. code-block:: sql
+.. code-block:: postgres
 
                 SELECT mb_core_application.* from mb_core_application, mb_core_layerset, mb_core_sourceinstance, mb_wms_wmsinstance, mb_wms_wmssource, mb_core_source
                 where

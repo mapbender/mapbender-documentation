@@ -13,7 +13,7 @@ F: I would like to know in which applications a specific WMS service is register
 
 A: Until we provide this information in the Administration Interface, this statement may help you:
 
-.. code-block:: sql
+.. code-block:: postgres
 
                 SELECT mb_core_application.* from mb_core_application, mb_core_layerset, mb_core_sourceinstance, mb_wms_wmsinstance, mb_wms_wmssource, mb_core_source
                 where

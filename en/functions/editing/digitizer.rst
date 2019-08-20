@@ -309,7 +309,7 @@ SQL for the demo tables
 
 The following SQL commands must be executed in your database. You create three demo tables so that the individual functions can be tested using the YAML definition shown above.
 
-.. code-block:: sql
+.. code-block:: postgres
 
     create table public.poi (
         gid serial,
@@ -334,7 +334,7 @@ The following SQL commands must be executed in your database. You create three d
         CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: sql
+.. code-block:: postgres
 
     create table public.lines (
         gid serial,
@@ -361,7 +361,7 @@ The following SQL commands must be executed in your database. You create three d
         CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
     );
 
-.. code-block:: sql
+.. code-block:: postgres
 
     create table public.polygons (
         gid serial,
@@ -726,7 +726,7 @@ From Digitizer version 1.2: The multiple selection provides an easier mechanism 
 
 The SQL (if maps and reading were chosen):
 
-.. code-block:: sql
+.. code-block:: postgres
 
                 gisdb=> select interests from poi where gid=3;
                 interests
@@ -1241,7 +1241,7 @@ In this event the value of "geom2" is overwritten with the value of "geom".
 
 The above scenario can be extended to a slightly constructed example in which simultaneously different geometry types shall be saved. With the help of PostGIS lines are interpolated to points. The Digitizer can use an event to fire the according SQL statement.
 
-.. code-block:: sql
+.. code-block:: postgres
                 
                 events:
                   onBeforeInsert: |
