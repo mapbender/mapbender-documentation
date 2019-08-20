@@ -16,7 +16,7 @@ Funktionen
 * Verändern der Layerreihenfolge
 * Zoom zum Kartenausschnitt eines Layers
 * Abfrage der Metadaten eines Layers
-* Zeitliche Dimension des Layers kontrollieren 
+* Zeitliche Dimension des Layers kontrollieren
 
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog.png

@@ -16,7 +16,7 @@ Functions
 * Changing the order of layers
 * Zoom to map extend of layers
 * Query the metadata of layers
-* control the time dimension of the layer 
+* Control the time dimension of the layer
 
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog.png
