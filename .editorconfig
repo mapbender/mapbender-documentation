@@ -3,6 +3,10 @@
 # top-most EditorConfig file
 root = true
 
+[Makefile]
+indent_style = tab
+tab_width = 4
+
 [*.rst]
 indent_style = space
 trim_trailing_whitespace = false
@@ -21,3 +25,4 @@ indent_style = space
 end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
+
