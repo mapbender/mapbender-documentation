@@ -17,12 +17,18 @@ import shlex
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 from pygments.lexers.templates import TwigHtmlLexer
+from pygments.lexers.templates import TwigLexer
+from pygments.lexers.data import YamlLexer
+from pygments.lexers.sql import PostgresLexer
 
 # Symfony Extension Start
 #sys.path.append(os.path.abspath('_exts'))
 
 # enable highlighting for PHP code not between ``<?php ... ?>`` by default
 lexers['php'] = PhpLexer(startinline=True, linenos=1)
+lexers['twig'] = TwigHtmlLexer()
+lexers['postgres'] = PostgresLexer()
+lexers['yaml'] = YamlLexer()
 
 # use PHP as the primary domain
 primary_domain = 'php'
@@ -47,9 +53,11 @@ api_url = 'http://api.symfony.com/master/%s'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc',
+extensions = [
+    'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'sphinx.ext.coverage'
+    'sphinx.ext.coverage',
+    'sphinxcontrib.phpdomain'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

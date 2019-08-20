@@ -92,7 +92,7 @@ Please call again the **app/console doctrine:schema:update** command to set back
 
 If this statement fails, for example with the PostgreSQL error ``SQLSTATE[22001]: String data, right truncated:`` and ``7 ERROR:  Value too long for type character varying(255)``, you probably have a keyword-entry in the table ``mb_core_keyword``, that exceeds the length of 255 characters. You can find out this entry with the following SQL-statement:
 
-.. code-block:: sql
+.. code-block:: postgres
 
                 SELECT x, id, length(x) FROM (
                   select value, id from  mb_core_keyword
