@@ -28,7 +28,7 @@ The new Application-template can be used in different ways:
 * Choosing the template when you create a new application in the backend.
 * Change the template of existing applications by changing the ``template`` column in the table ``mb_core_application``.
 
-To use an own template we prepared a Workshop/DemoBundle, which can be used not only for application templates but also for customzing the administration interface. For the following steps, please download the files with the following links:
+To use your own template we prepared a Workshop/DemoBundle, which can be used not only for application templates but also for customizing the administration interface. For the following steps, please download the files with the following links:
 
 * https://github.com/mapbender/mapbender-workshop/tree/master
 
