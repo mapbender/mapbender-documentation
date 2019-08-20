@@ -196,8 +196,3 @@ Class, Widget & Style
 
 * **Class:** Mapbender\\CoreBundle\\Element\\Map
 * **Widget:** mapbender.element.map.js
-
-HTTP Callbacks
-==============
-
-None.

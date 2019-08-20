@@ -115,8 +115,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\ZoomBar
 * **Widget:** mapbender.element.zoombar.js
 * **Style:** mapbender.element.zoombar.css
-
-HTTP Callbacks
-==============
-
-None.

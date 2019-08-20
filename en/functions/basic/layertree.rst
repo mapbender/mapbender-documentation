@@ -365,8 +365,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\Layertree
 * **Widget:** mapbender.element.layertree.js
 * **Style:** mapbender.elements.css
-
-HTTP Callbacks
-==============
-
-None.

@@ -62,7 +62,3 @@ Class, Widget & Style
 * **Widget:** mapbender.element.gpsPostion.js
 * **Style:** mapbender.element.gpsPosition.css
 
-HTTP Callbacks
-==============
-
-None.

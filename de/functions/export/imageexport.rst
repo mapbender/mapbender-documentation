@@ -33,7 +33,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\PrintBundle\\Element\\ImageExport
 * **Widget:** mapbender.element.imageExport.js
 
-HTTP Callbacks
-==============
-
-Keine.

@@ -75,13 +75,7 @@ Class, Widget & Style
 
 * **Class:** Mapbender\\WmsBundle\\Element\\WmsLoader
 * **Widget:** 
-* **Style:** 
-
-HTTP Callbacks
-==============
-
-Keine.
-
+* **Style:**
 
 JavaScript API
 ==============

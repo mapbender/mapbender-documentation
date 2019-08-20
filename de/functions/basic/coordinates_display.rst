@@ -81,7 +81,3 @@ Class, Widget & Style
 * **Widget:** mapbender.element.coordinatesdisplay.js
 * **Style:** mapbender.elements.css
 
-HTTP Callbacks
-==============
-
-Keine.

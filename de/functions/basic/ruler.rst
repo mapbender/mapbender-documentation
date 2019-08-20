@@ -41,7 +41,3 @@ Class, Widget & Style
 * **Widget:** mapbender.element.ruler.js, subclasses mapbender.element.button.js
 * **Style:** mapbender.elements.css
 
-HTTP Callbacks
-==============
-
-Keine.

@@ -35,8 +35,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\SrsSelector
 * **Widget:** mapbender.element.srsselector.js
 * **Style:** mapbender.elements.css
-
-HTTP Callbacks
-==============
-
-None.

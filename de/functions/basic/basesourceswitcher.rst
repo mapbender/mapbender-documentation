@@ -134,9 +134,3 @@ Class, Widget & Style
 
 * **Class:** Mapbender\\CoreBundle\\Element\\BaseSourceSwitcher
 * **Widget:** mapbender.element.basesourceswitcher.js
-
-
-HTTP Callbacks
-==============
-
-Keine.

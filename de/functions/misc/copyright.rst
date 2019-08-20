@@ -42,7 +42,3 @@ Class, Widget & Style
 * **Widget:** mapbender.element.copyright.js
 * **Style:** mapbender.elements.css
 
-HTTP Callbacks
-==============
-
-Keine.

@@ -76,7 +76,3 @@ Class, Widget & Style
 * **Widget:** 
 * **Style:** 
 
-HTTP Callbacks
-==============
-
-None.

@@ -121,8 +121,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\FeatureInfo
 * **Widget:** mapbender.element.featureInfo.js
 * **Style:** mapbender.elements.css
-
-HTTP Callbacks
-==============
-
-Keine.

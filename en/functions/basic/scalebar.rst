@@ -41,8 +41,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\ScaleBar
 * **Widget:** mapbender.element.scalebar.js
 * **Style:** mapbender.element.scalebar.css
-
-HTTP Callbacks
-==============
-
-None.

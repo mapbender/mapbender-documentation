@@ -140,7 +140,3 @@ Class, Widget & Style
 * **Widget:** mapbender.mbButton (mapbender.element.button.js)
 * **Style:** mapbender.elements.css
 
-HTTP Callbacks
-==============
-
-None.

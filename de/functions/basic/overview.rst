@@ -84,8 +84,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\Overview
 * **Widget:** mapbender.element.overview.js
 * **Style:** mapbender.element.overview.css
-
-HTTP Callbacks
-==============
-
-Keine.

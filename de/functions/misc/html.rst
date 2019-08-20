@@ -142,11 +142,6 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
 * **Widget:** mapbender.mbHTMLElement
 
-HTTP Callbacks
-==============
-
-None.
-
 Beispiele
 =========
 

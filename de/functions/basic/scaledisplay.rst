@@ -45,8 +45,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\ScaleDisplay
 * **Widget:** mapbender.element.scaledisplay.js
 * **Style:** mapbender.element.scaledisplay.css
-
-HTTP Callbacks
-==============
-
-Keine.

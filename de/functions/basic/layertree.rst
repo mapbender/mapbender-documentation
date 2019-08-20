@@ -383,7 +383,3 @@ Class, Widget & Style
 * **Widget:** mapbender.element.layertree.js
 * **Style:** mapbender.elements.css
 
-HTTP Callbacks
-==============
-
-Keine.

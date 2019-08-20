@@ -37,7 +37,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\Sketch
 * **Widget:** mapbender.element.sketch.js
 
-HTTP Callbacks
-=====================
-
-Keine.

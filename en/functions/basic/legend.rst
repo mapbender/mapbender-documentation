@@ -109,8 +109,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\Legend
 * **Widget:** mapbender.element.legend.js
 * **Style:** mapbender.element.legend.css
-
-HTTP Callbacks
-==============
-
-None.

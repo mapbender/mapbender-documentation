@@ -48,8 +48,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\ScaleSelector
 * **Widget:** mapbender.element.scaleselector.js
 * **Style:** mapbender.elements.css
-
-HTTP Callbacks
-==============
-
-None.

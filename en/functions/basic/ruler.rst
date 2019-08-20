@@ -40,8 +40,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\Ruler
 * **Widget:** mapbender.element.ruler.js, subclasses mapbender.element.button.js
 * **Style:** mapbender.elements.css
-
-HTTP Callbacks
-==============
-
-None.

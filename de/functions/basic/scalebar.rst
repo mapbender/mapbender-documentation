@@ -42,7 +42,3 @@ Class, Widget & Style
 * **Widget:** mapbender.element.scalebar.js
 * **Style:** mapbender.element.scalebar.css
 
-HTTP Callbacks
-==============
-
-Keine.

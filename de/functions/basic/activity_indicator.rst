@@ -36,8 +36,3 @@ Class, Widget & Style
 * **Class:** Mapbender\\CoreBundle\\Element\\ActivityIndicator
 * **Widget:** mapbender.element.activityindicator.js
 * **Style:** mapbender.elements.css
-
-HTTP Callbacks
---------------
-
-Keine.
