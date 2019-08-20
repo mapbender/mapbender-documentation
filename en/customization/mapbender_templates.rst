@@ -1,6 +1,6 @@
-.. _mapbender_templates:
+.. _mapbender_Templates:
 
-Mapbender templates
+Mapbender Templates
 ###################
 
 Get to know the Mapbender templates. Mapbender offers some templates ready to use. 
