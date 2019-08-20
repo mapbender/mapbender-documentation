@@ -115,10 +115,10 @@ Fügen Sie die Informationen zu den Koordinatensystemen über den folgenden Aufr
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
 
 
-Importieren von Anwendungen aus der mapbender.yml
+Importieren von Anwendungen aus application/app/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sie können die Anwendungen, die in der mapbender.yml definiert sind, in die Datenbank importieren:
+Sie können die Anwendungen, die in dem Ordner applications definiert sind, in die Datenbank importieren:
 
 .. code-block:: yaml
 
@@ -175,7 +175,7 @@ Sie können eine Sprache (locale) für Ihre Anwendung angeben. Folgende Sprachco
 - pt für Portugiesisch,
 - ru für Russisch.
 
-Unter http://doc.mapbender3.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue Sprachen hinzugefügt werden können.
+Unter http://doc.mapbender.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue Sprachen hinzugefügt werden können.
 
 **Logo:**
 
@@ -193,13 +193,13 @@ config.yml
 **Hinweis:** Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
 
 
-mapbender.yml
+Anwendungen unter application/app/config/applications
 ^^^^^^^^^^^^^
 
-Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die mapbender.yml Datei oder über die Mapbender Administration im Browser.
+Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die .yml-Datei oder über die Mapbender Administration im Browser.
 
-* Das Mapbender Team stellt mit jeder Version eine mapbender.yml mit Demoanwendungen mit den aktuellen Elementdefinitionen zur Verfügung (Sie können die Anwendungen deaktivieren indem Sie published: false setzen oder indem Sie die Datei leeren).
-* Anwendungen, die in der mapbender.yml definiert werden, können nicht über die Mapbender Administration im Browser bearbeitet werden.
+* Das Mapbender Team stellt mit jeder Version einen Ordner applications mit Demoanwendungen mit den aktuellen Elementdefinitionen zur Verfügung (Sie können die Anwendungen deaktivieren indem Sie published: false setzen oder indem Sie die Datei leeren).
+* Anwendungen, die in applications definiert werden, können nicht über die Mapbender Administration im Browser bearbeitet werden.
 * Sie können allerdings die Anwendungen über einen app/console Befehl in die Datenbank übertragen.
 
 .. code-block:: yaml
