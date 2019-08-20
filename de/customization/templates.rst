@@ -365,7 +365,7 @@ Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
     public function registerBundles()
     {
         $bundles = array(
-            // Standard Symfony2 bundles
+            // Standard Symfony bundles
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             ....
 

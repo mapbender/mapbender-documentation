@@ -76,7 +76,7 @@ Element Widgets können die Callback-URL zur Verwendung in ihrem Ajax-Aufruf kon
 Manager-Workflow
 ****************
 
-Manager-Module sind einfache Symfony2 Controller-Klassen. Um ihre Routen sicherzustellen sind Präfixe mit /manager – oder welche Präfixe auch immer für das Manager Bundle konfiguriert wurde, nötig. Sie sollten nicht die Sensio\FrameworkExtraBundle\Configuration\Route Annotation verwenden, sondern die spezielle FOM\ManagerBundle\Configuration\Route Annotation. Derzeit ist die Annotations-Klasse noch nicht sehr speziell, aber sie erlaubt dem ManagerBundle die Präfixe zu erzwingen.
+Manager-Module sind einfache Symfony Controller-Klassen. Um ihre Routen sicherzustellen sind Präfixe mit /manager – oder welche Präfixe auch immer für das Manager Bundle konfiguriert wurde, nötig. Sie sollten nicht die Sensio\FrameworkExtraBundle\Configuration\Route Annotation verwenden, sondern die spezielle FOM\ManagerBundle\Configuration\Route Annotation. Derzeit ist die Annotations-Klasse noch nicht sehr speziell, aber sie erlaubt dem ManagerBundle die Präfixe zu erzwingen.
 
 Am besten wird die Route-Annotation mit einem anderen Namen verwendet, um so das Debuggen zu erleichtern:
 

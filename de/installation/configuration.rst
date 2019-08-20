@@ -53,7 +53,7 @@ Mehr Informationen dazu finden Sie im Kapitel :ref:`database_de`.
 Erzeugen der Datenbank
 ^^^^^^^^^^^^^^^^^^^^^^^^ 
 
-Mit Symfony2 kann die Datenbank erzeugt werden. Beachten Sie, dass dazu die benötigten Datenbank-Benutzerrechte vorliegen. Rufen Sie folgenden Befehl mit dem console-Hilfsprogramm auf:
+Mit Symfony kann die Datenbank erzeugt werden. Beachten Sie, dass dazu die benötigten Datenbank-Benutzerrechte vorliegen. Rufen Sie folgenden Befehl mit dem console-Hilfsprogramm auf:
 
 .. code-block:: yaml
 
@@ -63,7 +63,7 @@ Mit Symfony2 kann die Datenbank erzeugt werden. Beachten Sie, dass dazu die ben�
 Erzeugen des Datenbankschemas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
 
-Erzeugen des Datenbankschemas über Symfony2:
+Erzeugen des Datenbankschemas über Symfony:
 
 .. code-block:: yaml
 

@@ -8,7 +8,7 @@ This pages gives an quick overview of the controllers used in an Mapbender appli
 The Front Controller - Using Routes
 ***********************************
 
-In Symfony2, each HTTP request goes trough the (one-and-only) front end controller (app.php in the web directory) which determines the controller funtion to pass it to.
+In Symfony, each HTTP request goes trough the (one-and-only) front end controller (app.php in the web directory) which determines the controller funtion to pass it to.
 
 The mapping from request path to controller function is basically done in the configuration, where the routing.yml defines these mappings - called routes - or imports their definitions from bundles (or other files).
 
@@ -66,7 +66,7 @@ To learn more about routing, read the `Symfony Book <http://symfony.com/doc/curr
 Defining routes using annotations
 *********************************
 In Mapbender we use a decentralized route definitions: Instead of writing each and every route in the routing.yml, we import their definition from the controller classes in the activated bundles. This has the advantage of having the definition with the controller function. This should usually be fine and can be - if need arises - easily overwritten by adapting the routing.yml.
-Using the Symfony2 with the SE bundles like Mapbender does, routes can therefore be written using annotation comments for each controller function. You can read about the annotation syntax over at the `Symfony2 documentation <http://symfony.com/doc/current/book/index.html>`_.
+Using the Symfony with the SE bundles like Mapbender does, routes can therefore be written using annotation comments for each controller function. You can read about the annotation syntax over at the `Symfony documentation <http://symfony.com/doc/current/book/index.html>`_.
 
 Mapbender Controllers
 *********************

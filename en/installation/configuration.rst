@@ -15,7 +15,7 @@ Following we describe the configuration steps of Mapbender a bit further. Config
 * Inserting srs parameters (EPSG code definition)
 * Loading the applications of the mapbender.yml to your database
 
-All can be done using the console utility provided by `Symfony2 <http://symfony.com/>`_, on which Mapbender framework is built upon. There's a mayor caveat though you should understand, before continuing:
+All can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which Mapbender framework is built upon. There's a mayor caveat though you should understand, before continuing:
 
 .. note:: The console utility will write files in the app/cache and app/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
@@ -50,7 +50,7 @@ Further information is available in the chapter :ref:`database`.
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^
 
-Symfony2 can attempt to create your database, this works of course only if the
+Symfony can attempt to create your database, this works of course only if the
 configured database user is allowed to. Call the console utility like this:
 
 .. code-block:: yaml
@@ -61,7 +61,7 @@ configured database user is allowed to. Call the console utility like this:
 Creating the database schema
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Symfony2 will create the database schema for you:
+Symfony will create the database schema for you:
 
 .. code-block:: yaml
 

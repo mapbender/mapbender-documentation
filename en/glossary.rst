@@ -153,7 +153,7 @@ This glossary is under construction.
             - :ref:`twig`
     
     Twig
-        Twig is a templating engine for PHP that is packaged in Symfony2 and offers an easy and powerful way to generate templates. With Twig we can separate the program functionality from design. A Twig file is a simple textfile from which you can generate every text-based format like html or xml.
+        Twig is a templating engine for PHP that is packaged in Symfony and offers an easy and powerful way to generate templates. With Twig we can separate the program functionality from design. A Twig file is a simple textfile from which you can generate every text-based format like html or xml.
 
         .. seealso::
             :ref:`twig`

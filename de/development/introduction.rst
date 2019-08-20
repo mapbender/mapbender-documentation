@@ -11,7 +11,7 @@ Dinge, die Sie wissen sollten
 Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu können:
 
 * Objektorientiertes PHP: Verwendet wird PHP > 5.6,  welches objektorientierte Programmierung ermöglicht.
-* Symfony2: Mapbender baut auf Symfony2 auf. Folgen Sie der Anleitung `Symphony
+* Symfony: Mapbender baut auf Symfony auf. Folgen Sie der Anleitung `Symfony
   <http://symfony.com/doc/current/index.html>`_ dort erfahren Sie mehr über Controller, Vorlagen usw.
 * Docblock-Anmerkungen: Es wird ApiGen zu Erstellung der Dokumentation verwendet.
   :doc:`Erfahren Sie mehr <apidocumentation>`.

@@ -3,7 +3,7 @@
 Components
 #####################
 
-Mapbender is made up of different components. On the server side we use Symfony2 as a framework which comes along with powerfull components like Doctrine, Twig, Monolog and more.
+Mapbender is made up of different components. On the server side we use Symfony as a framework which comes along with powerfull components like Doctrine, Twig, Monolog and more.
 
 On the client side we use OpenLayers, MapQuery and jQuery & jQuery UI.
 
@@ -17,7 +17,7 @@ We offer a Mapbender Starter package. With the Mapbender Starter package you can
 
 
 
-Symfony2
+Symfony
 ********
 
 .. image:: http://symfony.com/images/common/logo/logo_symfony_header.png
@@ -26,7 +26,7 @@ Symfony2
   :align: center
   :target: http://symfony.com/
 
-Symfony2 is a full object oriented PHP Web Development Framework. It builds blocks for all modern web application needs. It is a collection of software and a development methodology. It relies on the philosophy of building blocks. It is optimized for speed. It uses Byte Code Cache.
+Symfony is a full object oriented PHP Web Development Framework. It builds blocks for all modern web application needs. It is a collection of software and a development methodology. It relies on the philosophy of building blocks. It is optimized for speed. It uses Byte Code Cache.
 
 Here comes just a list of some components Symfony offers:
 
@@ -99,7 +99,7 @@ It provides jQuery, jQuery UI, OpenLayers and MapQuery for all other Mapbender b
 
 Mapbender Starter
 *****************
-Mapbender Starter is Symfony2 demo project which uses the Mapbender bundles to showcase a Mapbender application.
+Mapbender Starter is Symfony demo project which uses the Mapbender bundles to showcase a Mapbender application.
 
 It contains demo applications which are defined in the mapbender.yml with WMS, WMTS. It provides a web interface with authentication which provides the possibility to create applications, create users/groups and build up a service repository.
 

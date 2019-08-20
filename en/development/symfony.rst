@@ -1,6 +1,6 @@
 .. _symfony:
 
-Symfony2
+Symfony
 ########
 Symfony is a PHP framework for web projects. It comes along with powerfull components like Doctrine, Twig, Monolog and more.
 

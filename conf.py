@@ -17,7 +17,7 @@ import shlex
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 
-# Symfony2 Extension Start
+# Symfony Extension Start
 #sys.path.append(os.path.abspath('_exts'))
 
 # enable highlighting for PHP code not between ``<?php ... ?>`` by default
@@ -32,7 +32,7 @@ highlight_language = 'php'
 
 # set url for API links
 api_url = 'http://api.symfony.com/master/%s'
-# Symfony2 Extension End
+# Symfony Extension End
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the

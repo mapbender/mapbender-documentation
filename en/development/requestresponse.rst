@@ -111,7 +111,7 @@ by using their element id and the path provided in the Mapbender variable:
 Manager Workflow
 ****************
 
-Manager modules are plain Symfony2 controller classes. To ensure their routes
+Manager modules are plain Symfony controller classes. To ensure their routes
 are prefixed with /manager - or whatever prefix is configured for the manager
 bundle - you should not use the Sensio\\FrameworkExtraBundle\\Configuration\\Route
 annotation, but the special FOM\\ManagerBundle\\Configuration\\Route annotation.

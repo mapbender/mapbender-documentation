@@ -364,7 +364,7 @@ Before your new template will show up you have to register your bundle in the fi
     public function registerBundles()
     {
         $bundles = array(
-            // Standard Symfony2 bundles
+            // Standard Symfony bundles
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             ....
 

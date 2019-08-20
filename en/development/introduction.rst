@@ -14,7 +14,7 @@ to Mapbender:
 
 * Object-Orientated PHP: We're using PHP 5.3 which offers full object
   orientation. No simple scripts anymore.
-* Symfony2: This is what we build upon. So read `The Book
+* Symfony: This is what we build upon. So read `The Book
   <http://symfony.com/doc/current/index.html>`_ and learn about controllers,
   templating and the other cool things.
 * Docblock annotations: We use ApiGen to generate code documentation.
