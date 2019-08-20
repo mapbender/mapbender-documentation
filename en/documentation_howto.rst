@@ -172,8 +172,9 @@ Here are the steps you have to do:
   file:///data/mapbender-documentation/output/index.html
 
   # add, commit and push your new file to the mapbender-documentation repository
-  git add en/bundles/Mapbender/CoreBundle/elements/add_wms.rst
-  git commit -m 'new documentation for element AddWms' en/bundles/Mapbender/CoreBundle/elements/add_wms.rst
+  # replace <element_name> with the element name, dont forget to remove the <, >
+  git add en/bundles/Mapbender/CoreBundle/elements/<element_name>.rst
+  git commit -m 'new documentation for element <element_name>' en/bundles/Mapbender/CoreBundle/elements/<element_name>.rst
   git push
 
   # get the actual files from the mapbender-documentation repository
