@@ -51,7 +51,7 @@ Mehr Informationen dazu finden Sie im Kapitel :ref:`database_de`.
 
     
 Erzeugen der Datenbank
-^^^^^^^^^^^^^^^^^^^^^^^^ 
+^^^^^^^^^^^^^^^^^^^^^^ 
 
 Mit Symfony kann die Datenbank erzeugt werden. Beachten Sie, dass dazu die benötigten Datenbank-Benutzerrechte vorliegen. Rufen Sie folgenden Befehl mit dem console-Hilfsprogramm auf:
 
@@ -116,7 +116,8 @@ Fügen Sie die Informationen zu den Koordinatensystemen über den folgenden Aufr
 
 
 Importieren von Anwendungen aus application/app/config/applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Sie können die Anwendungen, die in dem Ordner applications definiert sind, in die Datenbank importieren:
 
@@ -194,7 +195,8 @@ config.yml
 
 
 Anwendungen unter application/app/config/applications
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die .yml-Datei oder über die Mapbender Administration im Browser.
 
