@@ -7,7 +7,7 @@ Mapbender can save and edit configurations with the WMC Editor. This configurati
 
 You can add configurations from the selectbox to your application. 
 
-**Notice:** All configurations are pubic at the moment. We want to add access control to this module later in development.
+**Notice:** All configurations are public at the moment. We want to add access control to this module later in development.
 
 **Notice:** You need the element WMC Loader to use this functionality.
 
