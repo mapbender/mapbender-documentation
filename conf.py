@@ -220,6 +220,9 @@ _PREAMBLE = r"""
     \usepackage[titles]{tocloft}
     \usepackage{textcomp}
     \inputencoding{utf8}
+    \setmainfont{Ubuntu}
+    \setsansfont{Ubuntu}
+    \setmonofont{Ubuntu Mono}
 """
 
 _PREAMPLE_PDFLATEX = """
