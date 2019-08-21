@@ -120,6 +120,7 @@ Das YAML Format einer Datei die über die Konsole exportiert wurde unterscheidet
 YAML-Dateien die zuvor über die Benutzeroberfläche exportiert wurden, können über die Konsole importiert werden.
 
 .. code-block:: bash
+
     $ app/console mapbender:application:import ~/Downloads/export.json 
 
 ~/Downloads/export.json ist der Dateipfad.
@@ -128,8 +129,10 @@ YAML-Dateien die zuvor über die Benutzeroberfläche exportiert wurden, können 
 **Hilfe zu den Befehlen**
 
 .. code-block:: bash
-    $ app/console mapbender:application:import --help
 
+    $ app/console mapbender:application:import --help
+    
 .. code-block:: bash
+
     $ app/console mapbender:application:export --help
 
