@@ -216,11 +216,9 @@ htmlhelp_basename = 'Mapbenderdoc'
 latex_engine = 'xelatex' # also possible lualatex, pdflatex, latex
 
 _PREAMBLE = r"""
-    \usepackage[LGR,X2,T1]{fontenc}
+    \usepackage[T1]{fontenc}
     \usepackage[titles]{tocloft}
     \usepackage{textcomp}
-
-    \usepackage{fontspec}
     \inputencoding{utf8}
 """
 
