@@ -7,7 +7,7 @@ Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dim
 WMS-Time Dienste werden wie ganz normale WMS als Datenquelle registriert. 
 Wenn die Dienste über die Angabe einer zeitlichen Dimension verfügen, werden diese in den Layer-Metadaten angezeigt. 
 
-.. code-block:: latex
+.. code-block:: resource
 
     Dimension:
     name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'

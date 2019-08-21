@@ -5,7 +5,7 @@ Dimensions handler
 
 The dimension handler can be used to integrate WMS services with a time dimension. WMS-Time services are registered as a normal WMS data source. If a dimension is specified in the service, it is displayed in the layer metadata.
 
-.. code-block::
+.. code-block:: resource
 
     Dimension:
  		name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
@@ -67,6 +67,7 @@ The configuration of the dimension handler is done in three steps:
 * **Creating the element**: First the element needs to be created and saved. Afterwards the element closes (see configuration).
 * **Creating a dimensionsset**: To define a dimensionsset, you need to create a new set in the element via the "+" button. After entering a title, the item must be saved. Then the element closes.
 * **Definition the slider**: Then you can select the layer instances for the "group" in the element, that you want to control via the slider. Multiselect is supported, but only instances that have the same extent can be combined with each other.
+
 When an instance is selected, all instances that do not conform to this default are no longer selectable. In addition, after the first selection of an instance, a slider appears. There you can restrict the extent for the time display.
 
 .. image:: ../../../figures/wmst_element.png
@@ -86,7 +87,7 @@ Configuration
 The following section lists the YAML definitions for the element and the inclusion in the service and leveltree.
 
 Element configuration
---------------------
+---------------------
 
 .. code-block:: yaml
 
