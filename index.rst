@@ -12,7 +12,7 @@ Please choose your preferred language:
    Deutsch <de/index>
 
 
-Sourcecode of this documentation
+Sourcecode
 ================================
 
 * https://github.com/mapbender/mapbender-documentation
@@ -23,14 +23,14 @@ Download
 * PDF: `Deutsch <https://doc.mapbender.org/download/Mapbender_de.pdf>`_ / `English <https://doc.mapbender.org/download/Mapbender_en.pdf>`_
 
 
-Online version of this documentation
+Online version
 ====================================
 
 * https://doc.mapbender.org/
 * Mapbender 3.0.8 https://docs.mapbender.org/current/
 
 
-Other versions of this documentation
+Other versions
 ====================================
 
 * https://docs.mapbender.org/3.0.7
