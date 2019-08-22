@@ -17,6 +17,11 @@ Sourcecode of this documentation
 
 * https://github.com/mapbender/mapbender-documentation
 
+Download
+================================
+
+* PDF: `Deutsch <https://doc.mapbender.org/download/Mapbender_de.pdf>`_ / `English <https://doc.mapbender.org/download/Mapbender_en.pdf>`_
+
 
 Online version of this documentation
 ====================================
