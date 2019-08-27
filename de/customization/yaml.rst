@@ -67,6 +67,13 @@ Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die D
     branding.logo:     neues_logo.jpg
 
   Die Datei des neuen Logos muss unter application/web eingefügt werden.
+  
+  * **Projektname**:
+  Der Projektname (Standard ist das Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+
+.. code-block:: yaml
+
+    branding.project_name:     Example    
 
 **Wichtiger Hinweis:** Achten Sie darauf keine Tabulatoren für Einrückungen zu verwenden. Verwenden Sie stattdessen Leerzeichen.
 
