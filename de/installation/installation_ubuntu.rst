@@ -198,8 +198,7 @@ Für PHP 7 werden weitere Quellen benötigt. Die Paketliste bei Verwendung von P
 
 .. code-block:: bash
 
-   sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2 php-ldap
-
+   sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
 
 Unter Ubuntu 16.04 muss zusätzlich das passende Modul für den Apache Webserver manuell nachinstalliert werden:
 
@@ -213,6 +212,13 @@ Zur Nutzung von PostgreSQL zusätzlich:
 .. code-block:: bash
 
    sudo apt install php-pgsql
+   
+  
+Zur Nutzung von LDAP zusätzlich:
+
+.. code-block:: bash
+
+   sudo apt install php-ldap
 
 
 Für MySQL:
