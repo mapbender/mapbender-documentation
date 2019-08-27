@@ -45,6 +45,45 @@ Load the Apache rewrite-module:
 
 
 
+PHP 7
+-----
+ 
+PHP 7 needs additional packages. The list of packages for PHP 7:
+
+.. code-block:: bash
+
+   sudo apt install apache2 php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
+  
+
+Under Ubuntu 16.04 you need to install the appropriate module for the Apache web server manually:
+
+.. code-block:: bash
+
+   sudo apt install libapache2-mod-php7.0
+
+
+To use PostgreSQL:
+
+.. code-block:: bash
+
+   sudo apt install php-pgsql
+
+
+For MySQL:
+
+.. code-block:: bash
+
+   sudo apt install php-mysql
+
+
+Enable PHP 7 in Apache
+
+.. code-block:: bash
+
+   a2enmod php7.0
+   
+
+
 Unpack and register in your Web-Server
 --------------------------------------
 
@@ -189,45 +228,6 @@ Run the app/console commands. You find detailed information for this commands in
  app/console fom:user:resetroot
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-
-
-
-PHP 7
------
- 
-PHP 7 needs additional packages. The list of packages for PHP 7:
-
-.. code-block:: bash
-
-   sudo apt install apache2 php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
-  
-
-Under Ubuntu 16.04 you need to install the appropriate module for the Apache web server manually:
-
-.. code-block:: bash
-
-   sudo apt install libapache2-mod-php7.0
-
-
-To use PostgreSQL:
-
-.. code-block:: bash
-
-   sudo apt install php-pgsql
-
-
-For MySQL:
-
-.. code-block:: bash
-
-   sudo apt install php-mysql
-
-
-Enable PHP 7 in Apache
-
-.. code-block:: bash
-
-   a2enmod php7.0
 
 
 
