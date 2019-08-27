@@ -5,10 +5,10 @@ Verschiedenes
 
 .. toctree::
    :maxdepth: 2
-
+   
+   misc/about_dialog.rst
    misc/button.rst
    misc/coordinate_utility.rst
-   misc/about_dialog.rst
    misc/copyright.rst
    misc/gpsposition.rst
    misc/html.rst
