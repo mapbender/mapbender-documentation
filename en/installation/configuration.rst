@@ -169,6 +169,7 @@ This is how the configiration could look like:
             - 192.168.1.123
 
 **Locales:**
+You can switch your whole mapbender installation to a different language (a single application can't be switched).
 
 You can choose a locale for your application:
 
