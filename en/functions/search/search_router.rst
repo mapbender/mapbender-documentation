@@ -153,12 +153,12 @@ You can overwride this by handing over a styleMap-Configuration, which could loo
         [...]
         styleMap:
             default:
-                strokeColor: '#00ff00'  # Umrandungsfarbe
-                strokeOpacity: 1        # 1 - opak (keine Transparenz)
-                strokeWidth: 3          # Umrandingsbreite
-                fillColor: '#f0f0f0'    # Füllfarbe                
-                fillOpacity: 0          # Opazität Füllung, voll transparent, daher keine Füllung
-                pointRadius: 6          # Größe des Punktsymbols
+                strokeColor: '#00ff00'  # border color
+                strokeOpacity: 1        # 1 - opak (zero transparency -> 1)
+                strokeWidth: 3          # border width
+                fillColor: '#f0f0f0'    # fill color               
+                fillOpacity: 0          # fill opacity, (full transparency -> 0)
+                pointRadius: 6          # size of the point symbol
             select:
                 strokeColor: '#0000ff'
                 strokeOpacity: 1
@@ -212,65 +212,65 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
 
   class: Mapbender\CoreBundle\Component\SQLSearchEngine
   class_options:
-    connection: demo        # die Datenbank, auf die das Element zugreift
-    relation: mapbender_user      # die Tabelle, auf die das Element zugreift
-    attributes:          # entspricht den Tabellenspalten in der Datenbank, die angesprochen werden sollen
+    connection: demo                 # database, on which the element has access
+    relation: mapbender_user         # table, on which the element has access
+    attributes:                      # table columns
       - gid
       - orga
       - town
       - usertype
-    geometry_attribute: the_geom      # Definition der Geometrie Spalte
-  form:            # ab hier beginnt die Konfiguration des Formulars
-    orga:            # Feld für die Suche nach dem Namen des Mapbender Users
+    geometry_attribute: the_geom     # definition geometry column
+  form:                              # configuration of the form
+    orga:                            # search field, search for 'Mapbender User'
       type: text
       options:
-        required: false        # kein Pflichtfeld
-        label: 'Mapbender User'      # Überschrift über dem Feld
-        attr:          # zusätzlich definierbare Attribute
-          data-autocomplete: 'on'      # automatische Vervollständigung des eingetippten Suchbegriffs
+        required: false              # no mandatory field
+        label: 'Mapbender User'      # caption of the search field
+        attr:                        # additional definable attributes
+          data-autocomplete: 'on'    # auto complete of search words
           data-autocomplete-distinct: 'on'
-      compare: ilike        # Vergleichsmodus
-    town:            # Feld für die Suche nach der Stadt
+      compare: ilike                 # comparison mode
+    town:                            # search field, search for 'City'
       type: text
       options:
-        required: false        # kein Pflichtfeld
-        label: Stadt        # Überschrift über dem Feld
+        required: false              # no mandatory field
+        label: City                  # caption of the search field
         attr:
           data-autocomplete: 'on'
           data-autocomplete-distinct: 'on'
       compare: ilike
-    usertype:          # Feld für die Suche nach dem Nutzertyp
-      type: choice        # Feld mit Auswahlmöglichkeiten als Dropdown
+    usertype:                        # search field, search for 'User type'
+      type: choice                   # possible choices via drop down list
       options:
-        empty_value: 'Bitte auswählen...'    # Text, der angezeigt wird, bevor etwas ausgewählt wurde
-        choices:          # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
+        empty_value: 'Please select...'    # displayed text, before entering a search
+        choices:                     # choices need to have the following format: "entry in the database column": "displayed name in the drop down list"
           1: Company
           2: Administration
           3: University
           4: User
-        required: false        # kein Pflichtfeld
-        label: Nutzertyp        # Überschrift über dem Feld
-      compare: exact        # Vergleichsmodus
-  results:          # Konfiguration der Ergebnisanzeige
-    view: table          # Tabelle ausgeben
-    count: true          # Anzahl der Ergebnisse anzeigen
-    headers:          # Titel der Spalte; werden wie folgt angegeben: Spaltenname in der Datenbank: Bezeichnung der Spalte in der Suchausgabe der Anwendung
+        required: false              # no mandatory field
+        label: User type             # caption of the search field
+      compare: exact                 # comparison mode
+  results:                           # configuration of the shown results list
+    view: table                      # display results as table
+    count: true                      # show number of results
+    headers:                         # column title; format: column title in the database: column title shown in the table 
       gid: ID
       orga: 'Mapbender User'
-      town: Stadt
+      town: City
     callback:
-      event: click        # bei Klicken wird das Element selektiert
+      event: click               
       options:
         buffer: 10
         minScale: null
         maxScale: 10000
-    styleMap:          # Styling der Punkte in der Karte
-      default:          # Styling aller angezeigten Punkte
+    styleMap:                        # Styling, points on the map
+      default:                       # Styling of all points on the map
         strokeColor: '#003366'
         strokeOpacity: 1
         fillColor: '#3366cc'
         fillOpacity: 0.5
-      select:          # Styling des selektierten Objekts
+      select:                        # Styling of the selected point on the map
         strokeColor: '#330000'
         strokeOpacity: 1
         fillColor: '#800000'
@@ -278,7 +278,7 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
 
 With this configuration the search in the application looks like this:
 
-.. image:: ../../../figures/de/search_router_example_search.png
+.. image:: ../../../figures/en/search_router_example_search.png
      :scale: 80
 
 This picture illustrates which consequences the configurations in the yaml-definition have for the search formula:
@@ -433,33 +433,33 @@ In the mapbender.yml file:
 
 .. code-block:: yaml
 
-   target: map # ID des Kartenelements
-   asDialog: true # true, Erebniswiedergabe in einem Dialogfeld
-   timeoutFactor:  3 # Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
-   height: 500 # Höhe des Dialogs
-   width: 700 # Breite des Dialogs
-   routes:    # Sammlung von Suchrouten
-       demo_polygon:  # für Maschinen lesbarer Name
-      class: Mapbender\CoreBundle\Component\SQLSearchEngine  #  Suchmaschine, die verwendet werden soll
-      class_options:  # Diese werden an die Suchmaschine weitergegeben
-          connection: digi_suche    # search_db  # DBAL Verbindungsname, der benutzt werden soll, benutzen sie ~ für default
-          relation: polygons # Verbindungsauswahl, Unterabfragen können verwendet werden
+   target: map                         # ID map element
+   asDialog: true                      # true, results in dialog box
+   timeoutFactor:  3                   # Timeout-Faktor (multiplied by autcomplete deceleration) to prevent auto correct, after search has been started
+   height: 500                         # height of dialog
+   width: 700                          # width of dialog
+   routes:                             # collection of search routes
+       demo_polygon:                   # for machines readable name
+      class: Mapbender\CoreBundle\Component\SQLSearchEngine     # search engine
+      class_options:                   # passed to the search engine
+          connection: digi_suche       # search_db  # DBAL connection name, ~ for default
+          relation: polygons          
           attributes: 
-              - gid  # Liste von Spalten auswählen, expressions are possible
+              - gid                    # list of columns, expressions are possible
               - name 
               - type
-          geometry_attribute: geom  # Name der Geometriesplate, die genutzt werden soll. Achtung: Projektion muss mit Projektion des map-Elements übereinstimmen
-      form:  # Einstellungen für das Suchformular
-          name:  # Feldname, Spaltenname der genutzt werden soll 
-              type: text  # Eingabefeld, normalerweise Text oder Zahlen
-              options:  # Einstellungen für das Eingabefeld
-                  required: false  # HTML5 benötigte Attribute
-                  label: Name  # benutzerdefinierte Beschriftung eingeben, sont wird die Beschriftung von dem Feldnamen abgeleitet
-                  attr:  # HTML5 benötigte Attribute
-                      data-autocomplete: on  # Attribut, um Autovervollständigung zu aktivieren
-                      data-autocomplete-distinct: on  # Attribut, dass Autovervollständigung aktiviert aber unterscheiden lässt
-                      data-autocomplete-using: type   # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden                
-              compare: ilike  # Siehe unten für weitere Vergleichsformen
+          geometry_attribute: geom     # name of the geometry column, Attention: projection needs to match with the projection of the map element
+      form:                            # declaration of the search form
+          name:                        # field name, column name
+              type: text               # input field, normally text or numbers
+              options:                 # declaration of the input field
+                  required: false      # HTML5, required attributes
+                  label: Name          # custom label, otherwise field name used
+                  attr:                # HTML5, required attributes
+                      data-autocomplete: on           # attribut, to activate auto complete
+                      data-autocomplete-distinct: on  # attribut, to activate distinct auto complete
+                      data-autocomplete-using: type   # auto complete, list of input fields (with comma seperated), WHERE input           
+              compare: ilike           # see 'comparison mode' on top of page
           type:
               type: choice
               options:
@@ -472,20 +472,20 @@ In the mapbender.yml file:
                       D: D
                       E: E
       results:
-          view: table  # Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
-          count: true # Anzahl der Treffer anzeigen
-          headers:  # hBezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
-              gid: ID  # Spaltenname -> Überschrift
+          view: table                  # display results as table 
+          count: true                  # show number of results
+          headers:                     # column title
+              gid: ID                  # colum name -> header
               name: Name
               type: Type
-          callback:  # Was beim Klick und Mauszeiger halten passiert
-              event: click  # Ergebnisliste (click oder mouseover)
+          callback:                    # click event
+              event: click             # click or mouseover
               options:
-                  buffer: 10    # Puffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
-                  minScale: ~   # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
-                        maxScale: ~
+                  buffer: 10           # buffer (before zoom)
+                  minScale: ~          # scaling boundaries for zoom, ~ for no boundaries
+                  maxScale: ~
           results:
-              styleMap:  # Siehe unten für weitere Styles
+              styleMap:                # see bottom page
                   default:
                       strokeColor: '#00ff00'
                       strokeOpacity: 1
@@ -494,6 +494,7 @@ In the mapbender.yml file:
                       strokeColor: '#ff0000'
                       fillColor: '#ff0000'
                       fillOpacity: 0.4
+
 
 
 Class, Widget & Style
