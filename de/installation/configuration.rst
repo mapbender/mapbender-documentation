@@ -166,7 +166,8 @@ Eine Konfiguration könnte wie folgt aussehen:
 
 **Spracheinstellung**
 
-Sie können eine Sprache (locale) für Ihre Anwendung angeben. Folgende Sprachcodes sind dabei verfügbar:
+Sie können eine Sprache (locale) für Ihre Mapbender Installation angeben (es kann nicht die Sprache von einer einzelnen Anwendung angepasst werden).
+Folgende Sprachcodes sind dabei verfügbar:
 
 - en für Englisch (Standard),
 - de für Deutsch,
