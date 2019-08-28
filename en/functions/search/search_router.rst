@@ -5,13 +5,13 @@ Search Router
 
 This element creates a configurable search formular with result output. At this time generic SQL search is supported, with more to come (WFS, Solr, ...).
 
-.. image:: ../../../figures/search_router.png
+.. image:: ../../../figures/search_router_en.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../figures/search_router_configuration.png
+.. image:: ../../../figures/search_router_configuration_en.png
      :scale: 80
 
 
@@ -198,12 +198,12 @@ Configuration Examples
 
 In this example a search was configured for the Mapbender user and added into the sidepane, usable under the ``+`` in Layouts.
 
-.. image:: ../../../figures/de/add_sidepane.png
+.. image:: ../../../figures/add_sidepane.png
      :scale: 80
 
 The confguration dialouge for this example looks like this:
 
-.. image:: ../../../figures/de/search_router_example_dialog.png
+.. image:: ../../../figures/search_router_example_dialog.png
      :scale: 80
 
 The element title (*Title*) is Search. It is againg diplayed as a title in the sidepane. The checkbox is unchecked, because the element is is implemented into the sidepane and not as a button. The *Timeout factor* is set to 2. The fields *Width* and *Height* are filled, but they wont be used in this application, because the element is configured in the sidepane. It is implemented via the ``+`` -Symbol and *Routes* into the search, called (*Title*) Mapbender User. The yaml-Configuration of the Element is written in *Configuration*. In Completion it reads:
@@ -278,12 +278,12 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
 
 With this configuration the search in the application looks like this:
 
-.. image:: ../../../figures/en/search_router_example_search.png
+.. image:: ../../../figures/search_router_example_search.png
      :scale: 80
 
 This picture illustrates which consequences the configurations in the yaml-definition have for the search formula:
 
-.. image:: ../../../figures/de/search_router_example_search_description.png
+.. image:: ../../../figures/search_router_example_search_description.png
      :scale: 80
 
 Displayed is the excerpt of the yaml-definition configureing the formula. Columns orga, town and usertype are used in the formula and implemented as the fields Mapebender User, Town and Usertype. Mapbender User and Town are type text, Usertype can be of various types. The text that should be displayed, if nothing is selected yet, is here "Please select…" (Nr. **1** – empty_value: ‚Please select...‘). The title above these fields is set with label (Nr. **2**). The attribute data-autocomplete: ‚on‘ results in a dropdown menu with recommendations from the database (Nr. **3**). Because compare: ilike is enabled it is not necessary to write the exact word. The search will find results that are only similar to the written term (Nr. **4** – Wheregr (the g is lowercase, nevertheless WhereGroup with uppercase G was found). The fieldtype choice is variable, possibilities are defined in choices (Nr. **5**). The table contains the possibilities as numbers (1, 2, 3, 4). In this example every number represents a text, which should be displayed in the dropdown menu.
