@@ -48,7 +48,7 @@ Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die D
 
 * **Mailer**: Die Mailerangaben starten mit mailer. Nutzen Sie z.B. smtp oder sendmail.
 
-* **Spracheinstellung**: Sie können eine Sprache (locale) für Ihre Anwendung angeben (Standardwert ist en). 
+* **Spracheinstellung**: Sie können eine Sprache (locale) für Ihre Mapbender Installation angeben (es kann nicht die Sprache von   einer einzelnen Anwendung angepasst werden). 
   Folgende Sprachcodes sind verfügbar:
     * en für Englisch (Standard),
     * de für Deutsch,
