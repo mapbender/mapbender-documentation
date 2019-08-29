@@ -202,8 +202,8 @@ Anwendungen unter application/app/config/applications
 Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die .yml-Datei oder über die Mapbender Administration im Browser.
 
 * Das Mapbender Team stellt mit jeder Version einen Ordner applications mit Demoanwendungen mit den aktuellen Elementdefinitionen zur Verfügung (Sie können die Anwendungen deaktivieren indem Sie published: false setzen oder indem Sie die Datei leeren).
-* Anwendungen, die in applications definiert werden, können nicht über die Mapbender Administration im Browser bearbeitet werden.
-* Sie können allerdings die Anwendungen über einen app/console Befehl in die Datenbank übertragen.
+* Anwendungen, die vom Mapbender Team im Ordner applications definiert wurden, können nicht über die Mapbender Administration im Browser bearbeitet werden.
+* Sie können allerdings diese Demo-Anwendungen über einen app/console Befehl in Ihre Datenbank übertragen und im Anschluss bearbeiten.
 
 .. code-block:: yaml
 
