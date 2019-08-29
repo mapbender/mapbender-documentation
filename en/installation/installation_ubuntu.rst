@@ -214,6 +214,13 @@ To use PostgreSQL:
 .. code-block:: bash
 
    sudo apt install php-pgsql
+   
+   
+To use LDAP:
+
+.. code-block:: bash
+
+   sudo apt install php-ldap
 
 
 For MySQL:
