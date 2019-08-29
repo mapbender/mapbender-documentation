@@ -154,7 +154,7 @@ You can overwride this by handing over a styleMap-Configuration, which could loo
         styleMap:
             default:
                 strokeColor: '#00ff00'  # border color
-                strokeOpacity: 1        # 1 - opak (zero transparency -> 1)
+                strokeOpacity: 1        # 1 - opak (no transparency -> 1)
                 strokeWidth: 3          # border width
                 fillColor: '#f0f0f0'    # fill color               
                 fillOpacity: 0          # fill opacity, (full transparency -> 0)
@@ -212,25 +212,25 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
 
   class: Mapbender\CoreBundle\Component\SQLSearchEngine
   class_options:
-    connection: demo                 # database, on which the element has access
-    relation: mapbender_user         # table, on which the element has access
-    attributes:                      # table columns
+    connection: demo                 # database (on which the element has access)
+    relation: mapbender_user         # table (on which the element has access)
+    attributes:                      # table columns (which the element addresses)
       - gid
       - orga
       - town
       - usertype
-    geometry_attribute: the_geom     # definition geometry column
+    geometry_attribute: the_geom     # definition of the geometry column
   form:                              # configuration of the form
-    orga:                            # search field, search for 'Mapbender User'
+    orga:                            # search field (e.g. search for specific Mapbender User)
       type: text
       options:
         required: false              # no mandatory field
         label: 'Mapbender User'      # caption of the search field
         attr:                        # additional definable attributes
-          data-autocomplete: 'on'    # auto complete of search words
+          data-autocomplete: 'on'    # auto-completion of search words
           data-autocomplete-distinct: 'on'
-      compare: ilike                 # comparison mode
-    town:                            # search field, search for 'City'
+      compare: ilike                 # see section 'comparison mode' on this page
+    town:                            # search field (e.g. search for specific city)
       type: text
       options:
         required: false              # no mandatory field
@@ -239,10 +239,10 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
           data-autocomplete: 'on'
           data-autocomplete-distinct: 'on'
       compare: ilike
-    usertype:                        # search field, search for 'User type'
+    usertype:                        # search field (search for specific User type)
       type: choice                   # possible choices via drop down list
       options:
-        empty_value: 'Please select...'    # displayed text, before entering a search
+        empty_value: 'Please select...'    # displayed text in field before entering a search
         choices:                     # choices need to have the following format: "entry in the database column": "displayed name in the drop down list"
           1: Company
           2: Administration
@@ -250,7 +250,7 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
           4: User
         required: false              # no mandatory field
         label: User type             # caption of the search field
-      compare: exact                 # comparison mode
+      compare: exact                 # see section 'comparison mode' on this page
   results:                           # configuration of the shown results list
     view: table                      # display results as table
     count: true                      # show number of results
@@ -264,7 +264,7 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
         buffer: 10
         minScale: null
         maxScale: 10000
-    styleMap:                        # Styling, points on the map
+    styleMap:                        # Styling points on the map
       default:                       # Styling of all points on the map
         strokeColor: '#003366'
         strokeOpacity: 1
@@ -276,7 +276,7 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
         fillColor: '#800000'
         fillOpacity: 0.5
 
-With this configuration the search in the application looks like this:
+With this configuration, the search in the application will look like this:
 
 .. image:: ../../../figures/search_router_example_search.png
      :scale: 80
@@ -434,21 +434,21 @@ In the mapbender.yml file:
 .. code-block:: yaml
 
    target: map                         # ID map element
-   asDialog: true                      # true, results in dialog box
-   timeoutFactor:  3                   # Timeout-Faktor (multiplied by autcomplete deceleration) to prevent auto correct, after search has been started
+   asDialog: true                      # true: results in dialog box
+   timeoutFactor:  3                   # timeout factor (multiplied by autocomplete deceleration) to prevent autocorrect after a search has been started
    height: 500                         # height of dialog
    width: 700                          # width of dialog
    routes:                             # collection of search routes
-       demo_polygon:                   # for machines readable name
-      class: Mapbender\CoreBundle\Component\SQLSearchEngine     # search engine
-      class_options:                   # passed to the search engine
+       demo_polygon:                   # machine-readable name
+      class: Mapbender\CoreBundle\Component\SQLSearchEngine     # path to used search engine
+      class_options:                   # options passed to the search engine
           connection: digi_suche       # search_db  # DBAL connection name, ~ for default
           relation: polygons          
           attributes: 
               - gid                    # list of columns, expressions are possible
               - name 
               - type
-          geometry_attribute: geom     # name of the geometry column, Attention: projection needs to match with the projection of the map element
+          geometry_attribute: geom     # name of the geometry column, attention: projection needs to match with the projection of the map element
       form:                            # declaration of the search form
           name:                        # field name, column name
               type: text               # input field, normally text or numbers
@@ -456,10 +456,10 @@ In the mapbender.yml file:
                   required: false      # HTML5, required attributes
                   label: Name          # custom label, otherwise field name used
                   attr:                # HTML5, required attributes
-                      data-autocomplete: on           # attribut, to activate auto complete
-                      data-autocomplete-distinct: on  # attribut, to activate distinct auto complete
-                      data-autocomplete-using: type   # auto complete, list of input fields (with comma seperated), WHERE input           
-              compare: ilike           # see 'comparison mode' on top of page
+                      data-autocomplete: on           # attribute to activate autocomplete
+                      data-autocomplete-distinct: on  # attribute to activate distinct autocomplete
+                      data-autocomplete-using: type   # autocomplete, list of input fields (with comma seperated), WHERE input           
+              compare: ilike           # see section 'comparison mode' on this page
           type:
               type: choice
               options:
@@ -475,17 +475,17 @@ In the mapbender.yml file:
           view: table                  # display results as table 
           count: true                  # show number of results
           headers:                     # column title
-              gid: ID                  # colum name -> header
+              gid: ID                  # column name -> header
               name: Name
               type: Type
           callback:                    # click event
-              event: click             # click or mouseover
+              event: click             # click or mouseover event
               options:
                   buffer: 10           # buffer (before zoom)
                   minScale: ~          # scaling boundaries for zoom, ~ for no boundaries
                   maxScale: ~
           results:
-              styleMap:                # see bottom page
+              styleMap:                # see below for further styles
                   default:
                       strokeColor: '#00ff00'
                       strokeOpacity: 1
