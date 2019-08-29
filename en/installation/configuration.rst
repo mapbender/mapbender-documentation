@@ -110,7 +110,7 @@ Alternatively, there is a silent mode you can use, if you want to use a script t
 Inserting SRS parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Inserting Proj4 SRS parameters into a database occurs using the command:
+Inserting Proj4 SRS parameters into a database can be done using the command:
 
 .. code-block:: yaml
 
@@ -119,16 +119,13 @@ Inserting Proj4 SRS parameters into a database occurs using the command:
 Importing applications from application/app/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-Importing applications from the folder applications into a database occurs using the command:
+The import of demo applications from this folder into your configured database can be done using the following command:
 
 .. code-block:: yaml
 
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
-
-
-
+After that, it is possible to edit the database-imported applications in the Mapbender backend.
 
 
 Configuration files
