@@ -29,3 +29,5 @@ _sources
 _exts
 vendor
 composer.phar
+downloads
+conf.pyc

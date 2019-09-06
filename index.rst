@@ -21,7 +21,9 @@ Download
 ================================
 
 * PDF: `Deutsch <https://doc.mapbender.org/download/Mapbender_de.pdf>`_ / `English <https://doc.mapbender.org/download/Mapbender_en.pdf>`_
-
+* Singlehtml: `Deutsch <https://doc.mapbender.org/download/singlehtml/de/index.html>`_ / `English <https://doc.mapbender.org/download/singlehtml/en/index.html>`_
+* EPUB: `Deutsch <https://doc.mapbender.org/download/Mapbender_de.epub>`_ / `English <https://doc.mapbender.org/download/Mapbender_en.epub>`_
+* Zip: `Deutsch <https://doc.mapbender.org/download/Mapbender_de.zip>`_ / `English <https://doc.mapbender.org/download/Mapbender_en.zip>`_
 
 Online version
 ====================================

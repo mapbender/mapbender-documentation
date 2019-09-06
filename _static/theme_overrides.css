@@ -68,5 +68,19 @@
  * Search box is squared not rounded
  */
 .wy-side-nav-search input[type="text"] {
-	border-radius: 0px;
+	border-radius: 0;
+}
+
+/*
+ * Cascaded list links should be also white cause of contrast
+ */
+.wy-menu-vertical li ul li a {
+    color: #fff;
+}
+
+/*
+ * Cascaded list links toctree color should be same color as level 1 toctree
+ */
+.wy-menu-vertical li.toctree-l2 span.toctree-expand {
+    color: #4d4d4d;
 }

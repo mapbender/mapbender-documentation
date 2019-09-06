@@ -18,12 +18,7 @@ needs_sphinx = '1.8'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinxcontrib.phpdomain'
-]
+#extensions = ['notfound.extension']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -39,7 +34,9 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Mapbender'
+author = u'The Mapbender Team'
 copyright = u'2019, The Mapbender Team'
+description = u'Mapbender Documentation'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -63,7 +60,7 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'downloads']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -85,10 +82,13 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
+# not found page 404
+notfound_template = '404.rst'
 
 # -- Internationalization configuration ----------------------------------------
 # -- Options for sphinx-intl ---------------------------------------------------
 
+languages = ['en', 'de']
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 
@@ -115,8 +115,7 @@ lexers['postgres'] = PostgresLexer()
 lexers['yaml']     = YamlLexer()
 lexers['resource'] = ResourceLexer()
 
-# use PHP as the primary domain
-primary_domain = 'php'
+primary_domain = 'py'
 highlight_language = 'php'
 
 # ...
@@ -140,10 +139,11 @@ html_theme = "sphinx_rtd_theme"
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
+# @see: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['_theme']
+html_theme_path = ['_templates']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -159,7 +159,7 @@ html_logo = '_static/mapbender_logo.png'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = '_static/mapbender3.ico'
+html_favicon = '_static/mapbender.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -294,7 +294,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'mapbender', u'Mapbender Documentation', [u'The Mapbender Team'], 1)
+    (master_doc, 'mapbender', u'Mapbender Documentation', [u'The Mapbender Team'], 1)
 ]
 
 # If true, show URL addresses after external links.
