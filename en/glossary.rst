@@ -163,9 +163,3 @@ This glossary is under construction.
 
         .. seealso::
             :ref:`translation`    
-   
-
-
-    
-
-c
