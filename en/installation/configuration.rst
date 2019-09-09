@@ -110,24 +110,22 @@ Alternatively, there is a silent mode you can use, if you want to use a script t
 Inserting SRS parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Inserting Proj4 SRS parameters into a database occurs using the command:
+Inserting Proj4 SRS parameters into a database can be done using the command:
 
 .. code-block:: yaml
 
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
 
-Importing applications from mapbender.yml
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Importing applications from application/app/config/applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Importing applications from mapbender.yml into a database occurs using the command:
+The import of demo applications from this folder into your configured database can be done using the following command:
 
 .. code-block:: yaml
 
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
-
-
-
+After that, it is possible to edit the database-imported applications in the Mapbender backend.
 
 
 Configuration files
@@ -168,6 +166,7 @@ This is how the configiration could look like:
             - 192.168.1.123
 
 **Locales:**
+You can switch your whole mapbender installation to a different language (a single application can't be switched).
 
 You can choose a locale for your application:
 
@@ -179,7 +178,7 @@ You can choose a locale for your application:
 - pt: Portuguese,
 - ru: Russian.
 
-Check http://doc.mapbender3.org/en/book/translation.html to find out how to modify translations or how to add a new language.
+Check http://doc.mapbender.org/en/book/translation.html to find out how to modify translations or how to add a new language.
 
 
 **Logo**
@@ -199,13 +198,14 @@ config.yml
 **Notice:** You need a mailer for self-registration and reset password functionality (see parameters.yml).
 
 
-mapbender.yml
-^^^^^^^^^^^^^
+Applications under application/app/config/applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can configure an applications on two ways. In the mapbender.yml file or with the browser in the Mapbender backend.
 
-* The Mapbender Team provides an up-to-date mapbender.yml with demo applications. New elements with their parameters are added to this configuration in every new version (You can disable the applications by setting published: false or you can empty the mapbender.yml file)
-* applications that are defined in the mapbender.yml are not editable in the backend
+You can configure an applications on two ways. In the .yml-file or with the browser in the Mapbender backend.
+
+* The Mapbender Team provides an up-to-date folder applications with demo applications. New elements with their parameters are added to this configuration in every new version (You can disable the applications by setting published: false or you can empty the mapbender.yml file)
+* applications that are defined in the folder are not editable in the backend
 * you can import the applications to the database with the following app/console command
 
 .. code-block:: yaml
