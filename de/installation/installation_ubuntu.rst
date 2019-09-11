@@ -45,8 +45,8 @@ Download der aktuellen Mapbender Version und entpacken nach /var/www/mapbender:
     mv $(ls -d /var/www/*/ | grep mapbender) /var/www/mapbender/
     
     
-Konfiguration Apache 
---------------------
+Konfiguration Apache 2.4
+------------------------
 
 Datei **/etc/apache2/sites-available/mapbender.conf** mit dem folgenden Inhalt anlegen:
 
