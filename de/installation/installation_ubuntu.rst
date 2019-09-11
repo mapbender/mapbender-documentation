@@ -3,9 +3,6 @@
 Installation auf Ubuntu und Debian
 ##################################
 
-Der schnelle Weg und die vorkonfigurierte Datenbank
----------------------------------------------------
-
 Die mitgelieferte SQlite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**). 
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
 
@@ -13,7 +10,7 @@ Für den Produktiveinsatz wird PostgreSQL empfohlen.
 Weite Installationshinweise finden Sie im Kapitel `Mapbender Einrichtung auf PostgreSQL <#mapbender-einrichtung-auf-postgresql>`_.
 
 
-Vorrausetzungen
+Vorausetzungen
 ---------------
 
 - PHP (ab Version 5.6, maximal 7.1)
