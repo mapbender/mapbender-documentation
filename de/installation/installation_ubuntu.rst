@@ -151,7 +151,7 @@ Initialisierung der Datenbank:
     app/console doctrine:schema:create
     app/console assets:install web --symlink --relative
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/       --append
+    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
  
 Weitere Informationen zur Konfiguration: :ref:`installation_configuration_de`
 
