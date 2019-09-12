@@ -10,8 +10,15 @@ Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
 Vorausetzungen
 ---------------
 
-- PHP NTS (ab Version 5.6, maximal 7.1, https://windows.php.net/download/)
-- APACHE Installation mit mod_rewrite als Dienst eingerichtet (https://www.apachelounge.com/download/)
+* PHP NTS (ab Version 5.6, maximal 7.1, https://windows.php.net/download/)
+* APACHE Installation als Dienst eingerichtet (https://www.apachelounge.com/download/)
+  mit folgenden aktivierten Modulen:
+** mod_rewrite
+** mod_fcgid
+* eingerichtete PostgreSQL Datenbank (Version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+** vorhandene Datenbank für Mapbender Konfiguration
+** ggf. eigenen Benutzer für Zugriff
+
 
 Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf nicht weiter eingegangen.
 
@@ -93,51 +100,48 @@ Der Apache Webserverdienst muss neu gestartet werden.
 mod_fcgid
 ---------
 
-Der Handler "mod_fcgid" ist für Windows Installationen mit Apache empfehlenswert, weil darüber Serveranfragen parallel ausgeführt werden können. Diese Anleitung ist ein Vorschlag des Deployments, es gibt dabei aber auch mehrere Variationen, auf die wir im Rahmen dieser Doku nicht eingehen können.
-
-Der gängige Weg ist, PHP einfach als Modul in den Apache einzuhängen:
-
-.. code-block:: apache
-
-                # LoadModule php5_module "c:/bin/php/5.6.30/php5apache2_4.dll"
-                # AddHandler application/x-httpd-php .php
-
-                # configure the path to php.ini
-                # PHPIniDir "c:/bin/php/5.6.30"
-
-
-Diese Methode wird gegen die FCGID Methode ausgetauscht. Sie benötigt etwas Vorbereitung, da das Modul nicht automatisch bei den Apache Installationen mitgegeben wird.
-
-* Webseite: https://httpd.apache.org/mod_fcgid/
-* Download für Windows (VC 11, bitte Abhängigkeit beachten): https://www.apachelounge.com/download/VC11/ und dort die **modules-...zip** Datei.
-* die mod_fcgid.so Datei aus dem Archiv muss in das module-Verzeichnis von Apache entpackt werden
-
-In der httpd.conf:
+Datei **<apache>\conf\conf.d\fcgi.conf** mit dem folgenden Inhalt anlegen:
 
 .. code-block:: apacheconf
 
-                # FCGI
-                LoadModule fcgid_module "modules/mod_fcgid.so"
-                FcgidInitialEnv PHPRC "c:/bin/php/5.6.30"
-                AddHandler fcgid-script .php
-                FcgidWrapper "c:/bin/php/5.6.30/php-cgi.exe" .php
+    LoadModule fcgid_module modules/mod_fcgid.so
+    
+    FcgidInitialEnv PHPRC "c:/php/"
+    FcgidInitialEnv PATH "c:/php;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem"
+    FcgidInitialEnv SystemRoot "C:/Windows"
+    FcgidInitialEnv TEMP "C:/WINDOWS/TEMP"
+    FcgidInitialEnv TMP "C:/WINDOWS/TEMP"
+    FcgidInitialEnv windir "C:/WINDOWS"
 
+    FcgidPassHeader Authorization
+    FcgidIOTimeout 1200
+    FcgidConnectTimeout 1200
+    FcgidBusyScanInterval 1200
+    FcgidBusyTimeout 1200
+    FcgidErrorScanInterval 1200
+    FcgidIdleScanInterval 1200
+    FcgidIdleTimeout 1200
+    FcgidZombieScanInterval 1200
+    FcgidMaxProcesses 1000
+    FcgidOutputBufferSize 64
+    FcgidProcessLifeTime 3600
+    FcgidMaxRequestsPerProcess 10000
+    FcgidMinProcessesPerClass 0
+    FcgidFixPathinfo 0
+    MaxRequestLen 200000
 
-In die Mapbender-Apache-Site Datei (mapbender.conf) muss der "ExecCGI" Parameter hinzugefügt werden, zum Beispiel:
-
-.. code-block:: apacheconf
-
-                <Directory c:/srv/mapbender-starter-3.0.6.0/web/>
-                    # [...]
-                    Options MultiViews FollowSymLinks ExecCGI
-                    # [...]
-                </Directory>
+    <Files ~ "\.php$">
+        Options Indexes FollowSymLinks ExecCGI
+        AddHandler fcgid-script .php
+        FcgidWrapper "c:/php/php-cgi.exe" .php
+    </Files>
 
 
 Konfiguration PostgreSQL
 ------------------------
 
-Die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) muss angepasst werden und die Datenbank definiert, welche erstellt werden soll. Weitere Informationen dazu befinden sich im Kapitel `Konfiguration der Datenbank <../customization/database.html>`_.
+Konfiguration der Datenbankverbindung (app/config/parameters.yml).
+Weitere Informationen im Kapitel :ref:`database_de`.
 
 .. code-block:: yaml
 
@@ -149,18 +153,16 @@ Die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) mus
     database_user:     postgres
     database_password: geheim
     
-Aufruf app/console Befehl über die php.exe. Hierzu muss ein Standardeingabefenster geöffnet werden.
+Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befehle eingeben: 
 
 .. code-block:: text
  
- c:
- cd mapbender
- php.exe app/console doctrine:database:create
- php.exe app/console doctrine:schema:create
- php.exe app/console assets:install web
- php.exe app/console fom:user:resetroot
- php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
- php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+    cd c:\mapbender
+    php.exe app/console doctrine:database:create
+    php.exe app/console doctrine:schema:create
+    php.exe app/console assets:install web
+    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixture/ORM/Application/ --append
 
 
 
