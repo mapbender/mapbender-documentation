@@ -22,7 +22,7 @@ Konfiguration PHP
 Entpacken des Zip-Archives z.B. nach c:\php
 Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-Verzeichnis nicht richtig gesetzt.
 
- * Es muss geprüft werden, ob die beiden Variablen (php.ini) gesetzt sind:
+* Es muss geprüft werden, ob die beiden Variablen (php.ini) gesetzt sind:
 
 .. code-block:: ini
 
