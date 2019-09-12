@@ -11,10 +11,12 @@ Vorausetzungen
 ---------------
 
 * PHP NTS (ab Version 5.6, maximal 7.1, https://windows.php.net/download/)
-* APACHE Installation als Dienst eingerichtet (https://www.apachelounge.com/download/) mit folgenden aktivierten Modulen:
+* APACHE Installation als Dienst eingerichtet (https://www.apachelounge.com/download/) 
+  mit folgenden aktivierten Modulen:
     * mod_rewrite
     * mod_fcgid
 * eingerichtete PostgreSQL Datenbank (Version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+    
     * vorhandene Datenbank für Mapbender Konfiguration
     * ggf. eigenen Benutzer für Zugriff
 
