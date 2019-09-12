@@ -3,17 +3,15 @@
 YAML Konfiguration (Konfigurations - und Anwendungsdateien)
 ###########################################################
 
-YAML Konfigurationsdateien
-==========================
-
 Die folgenden Konfigurationsdateien sind zu finden unter application/app/config.
 
 parameters.yml
---------------
-Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die Datenbank des MB-Repositories und Datenbanken, auf denen die einzelnen Elemente verweisen (z.B. für die Suche, die Digitalisierung, etc.). Hier wird die Standardsprache der Oberfläche festgelegt, sowie Cookie- und Proxy-Einstellungen definiert.
+==============
 
-* **Datenbank**: Parameter, die mit database beginnen, definieren die Datenbankverbindung.
-  Ihre Datenbankkonfiguration könnte in der parameters.yml könnte folgendermaßen aussehen, wenn Sie PostgreSQL verwenden:
+Hier werden grundlegende Parameter von Mapbender bestimmt, beispielsweise die Datenbank des MB-Repositories und Datenbanken, auf denen die einzelnen Elemente verweisen (z.B. für die Suche, die Digitalisierung, etc.). Hier wird die Standardsprache der Oberfläche festgelegt, sowie Cookie- und Proxy-Einstellungen definiert.
+
+* **Datenbank**: Parameter, die mit database beginnen, definieren eine Datenbankverbindung.
+  Eine Datenbankkonfiguration in der parameters.yml könnte folgendermaßen aussehen, wenn Sie PostgreSQL verwenden:
 
 .. code-block:: yaml
 
@@ -25,10 +23,10 @@ Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die D
     database_user:     postgres
     database_password: geheim
 
-  Mehr Informationen dazu finden Sie im Kapitel :ref:`database_de`.
+ Weitere Informationen im Kapitel :ref:`database_de`.
 
 * **Proxy-Einstellungen**:
-  Sofern Sie einen Proxy verwenden, müssen Sie diesen in der Datei parameters.yml im Bereich OWSProxy Configuration angeben.
+  Wenn ein Proxy verwendet wird, muss dieser in der Datei parameters.yml im Bereich OWSProxy Configuration angegeben werden.
 
   Eine Konfiguration könnte wie folgt aussehen:
 
@@ -48,7 +46,8 @@ Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die D
 
 * **Mailer**: Die Mailerangaben starten mit mailer. Nutzen Sie z.B. smtp oder sendmail.
 
-* **Spracheinstellung**: Sie können eine Sprache (locale) für Ihre Mapbender Installation angeben (es kann nicht die Sprache von   einer einzelnen Anwendung angepasst werden). 
+* **Spracheinstellung**: Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer  einzelnen Anwendung. 
+
   Folgende Sprachcodes sind verfügbar:
     * en für Englisch (Standard),
     * de für Deutsch,
@@ -57,10 +56,11 @@ Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die D
     * nl für Niederländisch,
     * pt für Portugiesisch,
     * ru für Russisch.
-  Unter http://doc.mapbender.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue  Sprachen hinzugefügt werden können.
-
+    
+  Weitere Informationen unter http://doc.mapbender.org/en/book/translation.html
+  
 * **Mapbender Logo**:
-  Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global   auf die gesamte Mapbender Installation aus.
+  Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich  global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
@@ -69,18 +69,20 @@ Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die D
   Die Datei des neuen Logos muss unter application/web eingefügt werden.
   
 * **Projektname**:
-  Der Projektname (Standard ist das Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+  Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
     branding.project_name:     Example    
 
-**Wichtiger Hinweis:** Achten Sie darauf keine Tabulatoren für Einrückungen zu verwenden. Verwenden Sie stattdessen Leerzeichen.
+
+**Wichtiger Hinweis:** In der parameters.yml dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
 
 
 config.yml
-----------
-Diese Datei enthält grundlegende Architektur-Vorgaben von MB. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen. Desweiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
+==========
+
+Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen. Desweiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
 
 * **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
