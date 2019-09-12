@@ -14,7 +14,10 @@ Vorausetzungen
 ---------------
 
 - PHP (ab Version 5.6, maximal 7.1)
-- APACHE Installation mit mod_rewrite und libapache2-mod-php
+- Apache Installation mit folgenden aktivierten Modulen:
+ 
+  * mod_rewrite
+  * libapache2-mod-php
 
 Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf nicht weiter eingegangen.
 
@@ -91,7 +94,7 @@ Es kann nun auf die Mapbender Installation unter **http://hostname/mapbender/** 
   
 Per Voreinstellung lauten die Anmeldedaten Benutzername: "root", Passwort: "root"
 
-Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
+Weitere Informationen unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
 
 
