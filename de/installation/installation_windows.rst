@@ -38,6 +38,7 @@ Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-V
 
     sys_temp_dir
     upload_tmp_dir
+    date.timezone
 
 * der Pfad vom PHP-bin Verzeichnis zur PATH-Variable (Windows-Umgebungsvariable) muss hinzugefügt werden
 * Aktivierung der benötigten PHP-Erweiterungen in der php.ini Konfigurationsdatei
@@ -190,7 +191,3 @@ Ob der Alias erreichbar ist:
 Das Symfony Welcome Script config.php öffnen. Das Skript prüft, ob alle notwendigen Komponenten installiert wurden und ob die Konfiguration erfolgte. Sofern noch Probleme vorliegen, sollten diese behoben werden.
  
 * http://localhost/mapbender/config.php
-
-
-.. image:: ../../figures/mapbender3_symfony_check_configphp.png
-     :scale: 80 
