@@ -7,7 +7,7 @@ Die mitgelieferte SQlite Datenbank ist für Testinstallationen geeignet. In dies
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
 
 Für den Produktiveinsatz wird PostgreSQL empfohlen. 
-Weite Installationshinweise finden Sie im Kapitel `Mapbender Einrichtung auf PostgreSQL <#mapbender-einrichtung-auf-postgresql>`_.
+Weite Installationshinweise im Kapitel `Mapbender Einrichtung auf PostgreSQL <#mapbender-einrichtung-auf-postgresql>`_.
 
 
 Vorausetzungen
@@ -87,8 +87,7 @@ Verzeichnisrechte
  
 Der erste Start
 ---------------
-
-Sie können nun auf Ihre Mapbender Installation mit **http://hostname/mapbender/** zugreifen.
+Es kann nun auf die Mapbender Installation unter **http://hostname/mapbender/** zugriffen werden.
   
 Per Voreinstellung lauten die Anmeldedaten Benutzername: "root", Passwort: "root"
 
@@ -102,7 +101,7 @@ Optional
 LDAP
 ----
 
-Zur Nutzung der optionalen LDAP-Anbindung nutzen Sie die PHP-LDAP-Extension:
+Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:
 
 .. code-block:: bash
 
@@ -127,7 +126,7 @@ Installation PHP-PostgreSQL Treiber:
  
 
 Konfiguration der Datenbankverbindung (app/config/parameters.yml).
-Mehr Informationen dazu finden Sie im Kapitel :ref:`database_de`.
+Weitere Informationen im Kapitel :ref:`database_de`.
 
 .. code-block:: yaml
 
