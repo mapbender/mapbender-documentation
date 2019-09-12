@@ -1,13 +1,10 @@
 .. _installation_de:
 
 
-Systemvoraussetzungen und Installation
-======================================
+Installation
+============
 
-Wir haben die Installationsanleitungen nach Betriebssystemen aufgeteilt. Die Installation im Symfony eigenen Webserver beschreibt, wie sie Symfony eigene Mechanismen nutzen können um schnell einen Blick auf Mapbender zu werfen.
-
-
-Installationsanleitung und Update für Benutzer
+Installationsanleitung und Update
 
 .. toctree::
    :maxdepth: 1
