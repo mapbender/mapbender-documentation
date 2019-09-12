@@ -22,14 +22,14 @@ Konfiguration PHP
 Entpacken des Zip-Archives z.B. nach C:\php
 Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-Verzeichnis nicht richtig gesetzt.
 
- * Bitte überprüfen Sie, ob die beiden Variablen (php.ini) gesetzt sind:
+ * Es muss geprüft werden, ob die beiden Variablen (php.ini) gesetzt sind:
 
 .. code-block:: ini
 
     sys_temp_dir
     upload_tmp_dir
 
-* fügen Sie den Pfad zum PHP-bin Verzeichnis zu Ihrer PATH-Variable (Windows-Umgebungsvariable) hinzu 
+* der Pfad vom PHP-bin Verzeichnis zur PATH-Variable (Windows-Umgebungsvariable) muss hinzugefügt werden
 * Aktivierung der benötigten PHP-Erweiterungen in der php.ini Konfigurationsdatei
 
 .. code-block:: ini
@@ -57,7 +57,7 @@ Download der aktuellen Mapbender Version (https://mapbender.org/builds/mapbender
 Konfiguration Apache 
 --------------------
 
-* Erstellen Sie einen Unterordner "conf.d" im Verzeichnis <apache>/conf. 
+* ein Unterordner "conf.d" muss im Verzeichnis <apache>/conf erstellt werden
 
 
 
@@ -110,7 +110,7 @@ Diese Methode wird gegen die FCGID Methode ausgetauscht. Sie benötigt etwas Vor
 
 * Webseite: https://httpd.apache.org/mod_fcgid/
 * Download für Windows (VC 11, bitte Abhängigkeit beachten): https://www.apachelounge.com/download/VC11/ und dort die **modules-...zip** Datei.
-* Entpacken Sie die mod_fcgid.so Datei aus dem Archiv in das module-Verzeichnis von Apache.
+* die mod_fcgid.so Datei aus dem Archiv muss in das module-Verzeichnis von Apache entpackt werden
 
 In der httpd.conf:
 
@@ -123,7 +123,7 @@ In der httpd.conf:
                 FcgidWrapper "c:/bin/php/5.6.30/php-cgi.exe" .php
 
 
-Fügen Sie in der Mapbender-Apache-Site Datei (mapbender.conf), den "ExecCGI" Parameter hinzu, zum Beispiel:
+In die Mapbender-Apache-Site Datei (mapbender.conf) muss der "ExecCGI" Parameter hinzugefügt werden, zum Beispiel:
 
 .. code-block:: apacheconf
 
@@ -137,7 +137,7 @@ Fügen Sie in der Mapbender-Apache-Site Datei (mapbender.conf), den "ExecCGI" Pa
 Konfiguration PostgreSQL
 ------------------------
 
-Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) an und definieren Sie die Datenbank, die Sie erzeugen möchten. Mehr Informationen dazu finden Sie im Kapitel `Konfiguration der Datenbank <../customization/database.html>`_.
+Die Mapbender Konfigurationsdatei parameters.yml (app/config/parameters.yml) muss angepasst werden und die Datenbank definiert, welche erstellt werden soll. Weitere Informationen dazu befinden sich im Kapitel `Konfiguration der Datenbank <../customization/database.html>`_.
 
 .. code-block:: yaml
 
@@ -148,8 +148,8 @@ Passen Sie die Mapbender Konfigurationsdatei parameters.yml (app/config/paramete
     database_path:     ~
     database_user:     postgres
     database_password: geheim
-
-Rufen Sie die app/console Befehle über die php.exe auf. Hierzu müssen Sie ein Standardeingabefenster öffnen.
+    
+Aufruf app/console Befehl über die php.exe. Hierzu muss ein Standardeingabefenster geöffnet werden.
 
 .. code-block:: text
  
@@ -167,7 +167,7 @@ Rufen Sie die app/console Befehle über die php.exe auf. Hierzu müssen Sie ein 
 Der erste Start
 ---------------
 
-Sie können nun auf Ihre Mapbender Installation mit **http://hostname/mapbender/** zugreifen.
+Die Mapbender Installation kann unter **http://hostname/mapbender/** aufgerufen werden.
   
 Per Voreinstellung lauten die Anmeldedaten Benutzername: "root", Passwort: "root"
 
@@ -178,11 +178,11 @@ Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 Überprüfung
 ===========
 
-und prüfen Sie, ob der Alias erreichbar ist:
+Ob der Alias erreichbar ist:
 
 * http://localhost/mapbender/
 
-Öffnen Sie das Symfony Welcome Script config.php. Das Skript prüft, ob alle notwendigen Komponenten installiert wurden und ob die Konfiguration erfolgte. Sofern noch Probleme vorliegen, sollten diese behoben werden.
+Das Symfony Welcome Script config.php öffnen. Das Skript prüft, ob alle notwendigen Komponenten installiert wurden und ob die Konfiguration erfolgte. Sofern noch Probleme vorliegen, sollten diese behoben werden.
  
 * http://localhost/mapbender/config.php
 
