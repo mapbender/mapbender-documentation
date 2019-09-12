@@ -87,7 +87,7 @@ In der mapbender.conf:
  </Directory>
 
 
-Starten Sie den Apache Webserverdienst neu.
+Der Apache Webserverdienst muss neu gestartet werden.
 
 
 mod_fcgid
