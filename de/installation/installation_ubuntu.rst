@@ -1,7 +1,7 @@
 .. _installation_ubuntu_de:
 
-Installation auf Ubuntu und Debian
-##################################
+Installation auf Ubuntu/Debian
+##############################
 
 Die mitgelieferte SQlite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**). 
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
