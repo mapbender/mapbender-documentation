@@ -101,8 +101,7 @@ Weitere Informationen unter:  `Mapbender Quickstart Dokument <../quickstart.html
 Optional
 --------
 
-LDAP
-----
+**LDAP**
 
 Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:
 
@@ -111,8 +110,7 @@ Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:
    sudo apt install php-ldap
    
    
-Mapbender Einrichtung auf PostgreSQL
-------------------------------------
+**Mapbender Einrichtung auf PostgreSQL**
 
 Für den Einsatz in einer Produktivumgebung wird nachfolgend die Konfiguration einer PostgreSQL Datenbank beschrieben.
 
@@ -155,8 +153,7 @@ Initialisierung der Datenbank:
 Weitere Informationen zur Konfiguration: :ref:`installation_configuration_de`
 
 
-Mapbender Einrichtung auf MySQL
--------------------------------
+**Mapbender Einrichtung auf MySQL**
 
 Analog zur Konfiguration mit PostgreSQL.
 
