@@ -181,8 +181,7 @@ Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
 
 
-Überprüfung
------------
+**Überprüfung**
 
 Ob der Alias erreichbar ist:
 
