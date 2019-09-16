@@ -1,17 +1,17 @@
 .. _yaml_de:
 
 YAML Konfiguration (Konfigurations - und Anwendungsdateien)
-###########################################################
+===========================================================
 
 Die folgenden Konfigurationsdateien sind zu finden unter application/app/config.
 
 parameters.yml
-==============
+--------------
 
-Hier werden grundlegende Parameter von Mapbender bestimmt, beispielsweise die Datenbank des MB-Repositories und Datenbanken, auf denen die einzelnen Elemente verweisen (z.B. für die Suche, die Digitalisierung, etc.). Hier wird die Standardsprache der Oberfläche festgelegt, sowie Cookie- und Proxy-Einstellungen definiert.
+Hier werden grundlegende Parameter von Mapbender bestimmt:
 
-* **Datenbank**: Parameter, die mit database beginnen, definieren eine Datenbankverbindung.
-  Eine Datenbankkonfiguration in der parameters.yml könnte folgendermaßen aussehen, wenn Sie PostgreSQL verwenden:
+* **Datenbank**: 
+  Die Datenbankkonfiguration in der parameters.yml sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
 
 .. code-block:: yaml
 
@@ -44,7 +44,7 @@ Hier werden grundlegende Parameter von Mapbender bestimmt, beispielsweise die Da
         ows_proxy3_noproxy:
             - 192.168.1.123
 
-* **Mailer**: Die Mailerangaben starten mit mailer. Nutzen Sie z.B. smtp oder sendmail.
+* **Mailer**: Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
 
 * **Spracheinstellung**: Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer  einzelnen Anwendung. 
 
@@ -80,7 +80,7 @@ Hier werden grundlegende Parameter von Mapbender bestimmt, beispielsweise die Da
 
 
 config.yml
-==========
+----------
 
 Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen. Desweiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
 
@@ -90,7 +90,7 @@ Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeit
 
 
 YAML Anwendungsdateien
-======================
+----------------------
 
 Als YAML definierte Anwendungen können in dem Verzeichnis **app/config/applications** abgelegt werden. Die bekannten Beispielanwendungen “**Mapbender mobile**”, “**Mapbender Demo Map**” und “**Mapbender Demo Map basic**” liegen dort als einzelne YAML Dateien. 
 Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
@@ -120,7 +120,7 @@ Export/Import von YAML Anwendungsdateien über die Konsole
 **Export über die Konsole**
 
 Anwendungen können als json oder yml über die Konsole exportiert werden.
-Jedoch kann die YAML-Datei die über die Konsole exportiert wurde nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
+Jedoch kann eine YAML-Datei die über die Konsole exportiert wurde nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
 Das YAML Format einer Datei die über die Konsole exportiert wurde unterscheidet sich von dem YAML Format der Dateien unter app/config/application. Ersteres wurde von einer Maschine erzeugt, letzteres von einem Programmierer. 
 
 
