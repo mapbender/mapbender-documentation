@@ -46,6 +46,18 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
 
 * **Mailer**: Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
 
+  Eine Konfiguration könnte wie folgt aussehen:
+
+.. code-block:: yaml
+   
+        mailer_transport:  smtp
+        mailer_host:       localhost
+        mailer_user:       ~
+        mailer_password:   ~
+        
+  Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
+  Weitere Informationen im Kapitel :ref:`users_de`.
+
 * **Spracheinstellung**: Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer  einzelnen Anwendung. 
 
   Folgende Sprachcodes sind verfügbar:
@@ -56,6 +68,15 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
     * nl für Niederländisch,
     * pt für Portugiesisch,
     * ru für Russisch.
+    
+  Eine Konfiguration könnte wie folgt aussehen:
+
+.. code-block:: yaml
+   
+   # locale en, de, it, es, ru, nl, pt are available
+    fallback_locale:   en
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
     
   Weitere Informationen unter http://doc.mapbender.org/en/book/translation.html
   
@@ -82,9 +103,9 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
 config.yml
 ----------
 
-Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen. Desweiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
+Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
 
-* **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
+* **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
 * **framework.session.cookie_httponly**: Stellen Sie für HTTP-only session cookies sicher, dass der Parameter framework.session.cookie_httponly auf true steht.
 
@@ -94,6 +115,69 @@ YAML Anwendungsdateien
 
 Als YAML definierte Anwendungen können in dem Verzeichnis **app/config/applications** abgelegt werden. Die bekannten Beispielanwendungen “**Mapbender mobile**”, “**Mapbender Demo Map**” und “**Mapbender Demo Map basic**” liegen dort als einzelne YAML Dateien. 
 Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
+
+**Mapbender mobile** 
+Kann als Mobile Template für die Erstellung von Anwendungen für Smatphones oder Tablets verwendet werden.
+
+**Mapbender Demo Map**
+Folgende Funktionen sind vorimplementiert:
+
+Toolbar
+- Layer tree
+- Featureinfo
+- Print client
+- Image Export
+- Legend
+- WMS loader
+- GPS Position
+- measure (line und area)
+- about 
+- POI
+
+Sidepane
+- Layer tree
+- Redlining
+- Coordinates utility
+- About Mapbender
+
+Content
+- Map
+- Navigation toolbar
+- Legend
+- Featureinfo
+- WMS loader
+- Image export
+- Print client
+- line 
+- area
+- Scale bar
+- Layer tree
+- Overview
+- Scale display
+- POI
+
+Footer
+- Activity Indicator
+- mb.core.coordinates.class.title
+- SRS selector
+- Scale selector
+- © OpenStreetMap contributors
+- HTML-powered by Mapbender
+
+Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/en/functions.html
+
+**Mapbender Demo Map basic**
+Unterschiede zu Mapbender Demo Map:
+
+Toolbar
+Statt 'POI' ist 'Coordinates utility' eingebunden.
+
+Sidepane
+Hier sind keine Funktionen vorimplementiert.
+
+Content
+Statt 'Scale display' und 'POI' befindet sich hier 'Coordinates utility'.
+
 
 
 Export/Import von YAML Anwendungsdateien über die Benutzeroberfläche
@@ -119,9 +203,9 @@ Export/Import von YAML Anwendungsdateien über die Konsole
 
 **Export über die Konsole**
 
-Anwendungen können als json oder yml über die Konsole exportiert werden.
+Anwendungen können als datei.json oder datei.yml über die Konsole exportiert werden.
 Jedoch kann eine YAML-Datei die über die Konsole exportiert wurde nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
-Das YAML Format einer Datei die über die Konsole exportiert wurde unterscheidet sich von dem YAML Format der Dateien unter app/config/application. Ersteres wurde von einer Maschine erzeugt, letzteres von einem Programmierer. 
+Das YAML Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML Format der Dateien unter app/config/application. Ersteres wurde von einer Maschine erzeugt, letzteres von einem Programmierer. 
 
 
 **Import über die Konsole**
