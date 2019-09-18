@@ -123,46 +123,50 @@ Kann als Mobile Template für die Erstellung von Anwendungen für Smatphones ode
 Folgende Funktionen sind vorimplementiert:
 
 Toolbar
-- Layer tree
-- Featureinfo
-- Print client
-- Image Export
-- Legend
-- WMS loader
-- GPS Position
-- measure (line und area)
-- about 
-- POI
+
+* Layer tree
+* Featureinfo
+* Print client
+* Image Export
+* Legend
+* WMS loader
+* GPS Position
+* measure (line und area)
+* about 
+* POI
 
 Sidepane
-- Layer tree
-- Redlining
-- Coordinates utility
-- About Mapbender
+
+* Layer tree
+* Redlining
+* Coordinates utility
+* About Mapbender
 
 Content
-- Map
-- Navigation toolbar
-- Legend
-- Featureinfo
-- WMS loader
-- Image export
-- Print client
-- line 
-- area
-- Scale bar
-- Layer tree
-- Overview
-- Scale display
-- POI
+
+* Map
+* Navigation toolbar
+* Legend
+* Featureinfo
+* WMS loader
+* Image export
+* Print client
+* line 
+* area
+* Scale bar
+* Layer tree
+* Overview
+* Scale display
+* POI
 
 Footer
-- Activity Indicator
-- mb.core.coordinates.class.title
-- SRS selector
-- Scale selector
-- © OpenStreetMap contributors
-- HTML-powered by Mapbender
+
+* Activity Indicator
+* mb.core.coordinates.class.title
+* SRS selector
+* Scale selector
+* © OpenStreetMap contributors
+* HTML-powered by Mapbender
 
 Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/en/functions.html
 
