@@ -117,107 +117,101 @@ Als YAML definierte Anwendungen können in dem Verzeichnis **app/config/applicat
 Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
 
 
-
-**Mapbender Demo Map**
+Mapbender Demo Map
+------------------
 
 Folgende Funktionen sind vorimplementiert:
 
 Toolbar
-
-* Layer tree (Button)
-* Featureinfo (Button)
-* Print client (Button)
-* Image Export (Button)
-* Legend (Button)
-* WMS loader (Button)
-* GPS Position
-* measure (line und area) (Buttons)
-* about (About dialog)
-* POI (Button)
+    * Layer tree (Button)
+    * Featureinfo (Button)
+    * Print client (Button)
+    * Image Export (Button)
+    * Legend (Button)
+    * WMS loader (Button)
+    * GPS Position
+    * measure (line und area) (Buttons)
+    * about (About dialog)
+    * POI (Button)
 
 Sidepane
-
-* Layer tree
-* Redlining
-* Coordinates utility
-* About Mapbender (HTML)
+    * Layer tree
+    * Redlining
+    * Coordinates utility
+    * About Mapbender (HTML)
 
 Content
-
-* Map
-* Navigation toolbar
-* Legend
-* Featureinfo
-* WMS loader
-* Image export
-* Print client
-* line 
-* area
-* Scale bar
-* Layer tree
-* Overview
-* Scale display
-* POI
+    * Map
+    * Navigation toolbar
+    * Legend
+    * Featureinfo
+    * WMS loader
+    * Image export
+    * Print client
+    * line 
+    * area
+    * Scale bar
+    * Layer tree
+    * Overview
+    * Scale display
+    * POI
 
 Footer
-
-* Activity Indicator
-* mb.core.coordinates.class.title
-* SRS selector
-* Scale selector
-* © OpenStreetMap contributors (Button)
-* HTML-powered by Mapbender (HTML)
+    * Activity Indicator
+    * mb.core.coordinates.class.title
+    * SRS selector
+    * Scale selector
+    * © OpenStreetMap contributors (Button)
+    * HTML-powered by Mapbender (HTML)
 
 Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
 
 
-**Mapbender Demo Map basic**
+
+Mapbender Demo Map basic
+------------------------
 
 Unterschiede zu Mapbender Demo Map:
 
-Toolbar
+Toolbar  
+    Die Toolbar unterscheidet sich kaum von der in der Mapbender Demo Map Anwendung. Statt 'POI' ist 'Coordinates utility'      eingebunden.
 
-Die Toolbar unterscheidet sich kaum von der in der Mapbender Demo Map Anwendung. Statt 'POI' ist 'Coordinates utility' eingebunden.
+Sidepane  
+    Hier sind keine Funktionen vorimplementiert.
 
-Sidepane
-
-Hier sind keine Funktionen vorimplementiert.
-
-Content
-
-Statt 'Scale display' und 'POI' ist 'Coordinates utility' eingebunden.
+Content  
+    Statt der Funktionen 'Scale display' und 'POI' ist die Funktion 'Coordinates utility' eingebunden.
 
 Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
 
 
-**Mapbender mobile** 
 
-Kann als Mobile Template für die Erstellung von Anwendungen für Smatphones oder Tablets verwendet werden.
+Mapbender mobile 
+----------------
+
+Die Beispielanwendung kann als Mobile Template für die Erstellung von Anwendungen für Smatphones oder Tablets verwendet werden.
 
 Folgende Funktionen sind vorimplementiert:
 
 Footer
-
-* Themes (Button)
-* Base source switcher (Button)
-* GPS Position
-* Imprint (Button)
-* help (Button)
-* about (Button)
+    * Themes (Button)
+    * Base source switcher (Button)
+    * GPS Position
+    * Imprint (Button)
+    * help (Button)
+    * about (Button)
 
 Content
-
-* Map
-* Navigation toolbar
+    * Map
+    * Navigation toolbar
 
 Mobilepane
-
-* Themes (Layer tree)
-* Featureinfo
-* Imprint (HTML)
-* help (HTML)
-* Base source switcher
-* about (HTML)
+    * Themes (Layer tree)
+    * Featureinfo
+    * Imprint (HTML)
+    * help (HTML)
+    * Base source switcher
+    * about (HTML)
 
 
 
