@@ -116,31 +116,31 @@ YAML Anwendungsdateien
 Als YAML definierte Anwendungen können in dem Verzeichnis **app/config/applications** abgelegt werden. Die bekannten Beispielanwendungen “**Mapbender mobile**”, “**Mapbender Demo Map**” und “**Mapbender Demo Map basic**” liegen dort als einzelne YAML Dateien. 
 Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
 
-**Mapbender mobile** 
-Kann als Mobile Template für die Erstellung von Anwendungen für Smatphones oder Tablets verwendet werden.
+
 
 **Mapbender Demo Map**
+
 Folgende Funktionen sind vorimplementiert:
 
 Toolbar
 
-* Layer tree
-* Featureinfo
-* Print client
-* Image Export
-* Legend
-* WMS loader
+* Layer tree (Button)
+* Featureinfo (Button)
+* Print client (Button)
+* Image Export (Button)
+* Legend (Button)
+* WMS loader (Button)
 * GPS Position
-* measure (line und area)
-* about 
-* POI
+* measure (line und area) (Buttons)
+* about (About dialog)
+* POI (Button)
 
 Sidepane
 
 * Layer tree
 * Redlining
 * Coordinates utility
-* About Mapbender
+* About Mapbender (HTML)
 
 Content
 
@@ -165,22 +165,59 @@ Footer
 * mb.core.coordinates.class.title
 * SRS selector
 * Scale selector
-* © OpenStreetMap contributors
-* HTML-powered by Mapbender
+* © OpenStreetMap contributors (Button)
+* HTML-powered by Mapbender (HTML)
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/en/functions.html
+Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
+
 
 **Mapbender Demo Map basic**
+
 Unterschiede zu Mapbender Demo Map:
 
 Toolbar
-Statt 'POI' ist 'Coordinates utility' eingebunden.
+
+Die Toolbar unterscheidet sich kaum von der in der Mapbender Demo Map Anwendung. Statt 'POI' ist 'Coordinates utility' eingebunden.
 
 Sidepane
+
 Hier sind keine Funktionen vorimplementiert.
 
 Content
-Statt 'Scale display' und 'POI' befindet sich hier 'Coordinates utility'.
+
+Statt 'Scale display' und 'POI' ist 'Coordinates utility' eingebunden.
+
+Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
+
+
+**Mapbender mobile** 
+
+Kann als Mobile Template für die Erstellung von Anwendungen für Smatphones oder Tablets verwendet werden.
+
+Folgende Funktionen sind vorimplementiert:
+
+Footer
+
+* Themes (Button)
+* Base source switcher (Button)
+* GPS Position
+* Imprint (Button)
+* help (Button)
+* about (Button)
+
+Content
+
+* Map
+* Navigation toolbar
+
+Mobilepane
+
+* Themes (Layer tree)
+* Featureinfo
+* Imprint (HTML)
+* help (HTML)
+* Base source switcher
+* about (HTML)
 
 
 
