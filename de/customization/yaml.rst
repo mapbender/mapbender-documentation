@@ -1,6 +1,6 @@
 .. _yaml_de:
 
-YAML Konfiguration (Konfigurations - und Anwendungsdateien)
+YAML Konfiguration (Konfigurations- und Anwendungsdateien)
 ===========================================================
 
 Die folgenden Konfigurationsdateien sind zu finden unter application/app/config.
@@ -34,9 +34,6 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgenderma�
                 charset:    UTF8                            # Die Kodierung, die die Datenbank verwendet.
                 logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standardwert: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
                 profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standardwert: %kernel.debug%)
-        orm:
-            auto_generate_proxy_classes: "%kernel_debug%"
-            auto_mapping: true
 
 
 * database_driver: Der Datenbanktreiber. Mögliche Werte sind:
@@ -58,7 +55,7 @@ Die Datenbankkonfiguration in der parameters.yml sieht folgendermaßen aus, wenn
     database_host:     localhost
     database_port:     5432
     database_name:     mapbender
-    database_path:
+    database_path:     ~
     database_user:     postgres
     database_password: geheim
 
@@ -67,7 +64,7 @@ Die Datenbankkonfiguration in der parameters.yml sieht folgendermaßen aus, wenn
 
 Mit Mapbender können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender-Bundle gehört. 
 
-Eine zweite Datenbank benötigen Sie ebenfalls für die *Geodatensuche* (über den SearchRouter) und die Datenerfassung (Digitizer). Die Geodaten sollten grundsätzlich in einer anderen Datenbank vorgehalten werden und nicht in der Mapbender Datenbank.
+Eine zweite Datenbank benötigen Sie ebenfalls für die *Geodatensuche* (über den SearchRouter) und die Datenerfassung (Digitizer). Die Geodaten sollten grundsätzlich in einer anderen Datenbank als der Mapbender Datenbank gesichert werden.
 
 Die Standard-Datenbankverbindung (``default_connection: default``) wird von Mapbender verwendet.
 
@@ -101,7 +98,7 @@ Weitere Informationen unter:
   
 Symfony Dokumentation <http://symfony.com/doc/current/best_practices/configuration.html>`_)
   
-Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <http://www.doctrine-project.org/>`_).
+Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <http://www.doctrine-project.org/>`_).
 
 **Proxy-Einstellungen**
 ***********************
@@ -144,7 +141,7 @@ Weitere Informationen im Kapitel :ref:`users_de`.
 **Spracheinstellung**
 *********************
 
-Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer  einzelnen Anwendung. 
+Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer einzelnen Anwendung. 
 
   Folgende Sprachcodes sind verfügbar:
     * en für Englisch (Standard),
@@ -205,22 +202,21 @@ Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als
 
 .. code-block:: yaml
 
-    doctrine:
+    doctrine:                                               # Bei Werten, die von dem %-Zeichen umschlossen werden,handelt es sich um Variablen
         dbal:
-            default_connection: default
+            default_connection: default                     # gibt die Datenbankverbindung an, die standardmäßig von Mapbender verwendet werden soll (``default_connection: default``).
             connections:
-                # Datenbankverbindung default
                 default:
-                    driver:    "%database_driver%"
-                    host:      "%database_host%"
-                    port:      "%database_port%"
-                    dbname:    "%database_name%"
-                    path:      "%database_path%"
-                    user:      "%database_user%"
-                    password:  "%database_password%"
-                    charset:    UTF8
-                    logging:   "%kernel.debug%"
-                    profiling: "%kernel.debug%"
+                driver:    "%database_driver%"              # Mehr Information unterhalb des Codes   
+                host:      "%database_host%"                # Der Host, auf dem die Datenbank läuft. Entweder der Name (z.B. localhost) oder die IP-Adresse (z.B. 127.0.0.1).
+                port:      "%database_port%"                # Der Port, auf dem die Datenbank lauscht (z.B. 5432 für PostgreSQL).
+                dbname:    "%database_name%"                # Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <../installation.html>`_ für Details.
+                path:      "%database_path%"                # Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
+                user:      "%database_user%"                # Benutzername für die Verbindung zur Datenbank.
+                password:  "%database_password%"            # Das Passwort des Datenbankbenutzers.
+                charset:    UTF8                            # Die Kodierung, die die Datenbank verwendet.
+                logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standardwert: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
+                profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standardwert: %kernel.debug%)
 
 **Verwendung mehrerer Datenbanken**
 
@@ -309,7 +305,7 @@ Content
 
 Footer
     * Activity Indicator
-    * mb.core.coordinates.class.title
+    * Coordinates Display (mb.core.coordinates.class.title)
     * SRS selector
     * Scale selector
     * © OpenStreetMap contributors (Button)
@@ -389,14 +385,14 @@ Export/Import von YAML Anwendungsdateien über die Konsole
 
 **Export über die Konsole**
 
-Anwendungen können als datei.json oder datei.yml über die Konsole exportiert werden.
-Jedoch kann eine YAML-Datei die über die Konsole exportiert wurde nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
-Das YAML Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML Format der Dateien unter app/config/application. Ersteres wurde von einer Maschine erzeugt, letzteres von einem Programmierer. 
+Anwendungen können als .json oder.yml - Datei über die Konsole exportiert werden.
+Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
+Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter app/config/application. Ersteres wurde von einer Maschine erzeugt, letzteres von einem Programmierer. 
 
 
 **Import über die Konsole**
 
-YAML-Dateien die zuvor über die Benutzeroberfläche exportiert wurden, können über die Konsole importiert werden.
+YAML-Dateien, die zuvor über die Benutzeroberfläche exportiert wurden, können über die Konsole importiert werden.
 
 .. code-block:: bash
 
@@ -406,6 +402,8 @@ YAML-Dateien die zuvor über die Benutzeroberfläche exportiert wurden, können 
 
 
 **Hilfe zu den Befehlen**
+
+Die Hilfekommandos, welche die Import- & Exportfunktion und erweiterte Optionen genauer erläutern, lauten:
 
 .. code-block:: bash
 
