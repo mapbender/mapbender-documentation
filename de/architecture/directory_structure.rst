@@ -21,16 +21,10 @@ app/config
 
 Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis app/config. Zwei Dateien sind dabei von besonderer Bedeutung:
 
+* parameters.yml
+* config.yml
 
-* parameters.yml: Hier werden grundlegenede Parameter von Mapbender bestimmt, beispielsweise die Datenbank des MB3-Repositories und Datenbanken, auf denen die einzelnen Elemente verweisen (z.B. für die Suche, die Digitalisierung, etc.).
-
-  Hier wird die Standardsprache der Oberfläche festgelegt, sowie Cookie- und Proxy-Einstellungen definiert.
-
-* config.yml: Diese Datei enthält grundlegende Architektur-Vorgaben von MB3. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert.
-
-  **Wichtig**: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen.
-
-  Desweiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
+Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 
 app/config/applications
