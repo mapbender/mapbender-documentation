@@ -33,21 +33,9 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony
 Anpassen der Konfigurationsdatei
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``app/config/parameters.yml`` gespeichert. In dieser Datei wird YAML Syntax verwendet. Achten Sie darauf **keine** Tabulatoren für Einrückungen zu verwenden. Verwenden Sie stattdessen Leerzeichen.
+Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``app/config/parameters.yml`` gespeichert.
 
-Ihre Datenbankkonfiguration könnte in der parameters.yml könnte folgendermaßen aussehen, wenn Sie PostgreSQL verwenden:
-
-.. code-block:: yaml
-
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:
-    database_user:     postgres
-    database_password: geheim
-
-Mehr Informationen dazu finden Sie im Kapitel :ref:`database_de`.
+Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
     
 Erzeugen der Datenbank
