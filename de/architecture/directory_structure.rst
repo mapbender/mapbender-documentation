@@ -30,7 +30,9 @@ Weitere Informationen im Kapitel :ref:`yaml_de`.
 app/config/applications
 -----------------------
 
-Als YAML definierte Anwendungen können in dem Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien. Diese ersetzen seit Version 3.0.6 die vormals als eine Datei vorliegende mapbender.yml. Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
+Als YAML definierte Anwendungen können in dem Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien.
+
+Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 
 
