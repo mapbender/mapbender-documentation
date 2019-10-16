@@ -86,6 +86,7 @@ Directory rights
  
 First steps
 -----------
+
 The Mapbender installation can now be accessed under **http://hostname/mapbender/**.
 User data by default: username: "root", passwort: "root"
 
@@ -129,9 +130,9 @@ Configuration of database connection (app/config/parameters.yml):
     database_name:     mapbender
     database_path:     ~
     database_user:     postgres
-    database_password: geheim
+    database_password: secret
     
-Following information: :ref:`database_en`.    
+Following information: :ref:`yaml_en`.    
     
 Initialisation of the database connection:
 
