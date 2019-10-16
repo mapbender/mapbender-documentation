@@ -10,8 +10,47 @@ parameters.yml
 
 Hier werden grundlegende Parameter von Mapbender bestimmt:
 
-* **Datenbank**: 
-  Die Datenbankkonfiguration in der parameters.yml sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
+**Datenbank**
+*************
+
+Zur Konfiguration der Datenbankverbindung werden die Dateien config.yml und parameters.yml verwendet. Während in der config.yml nur die Platzhalter angegeben werden, werden die Werte in der parameters.yml gefüllt.
+  
+Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgendermaßen aus:
+
+.. code-block:: yaml
+
+    doctrine:                                               # Bei Werten, die von dem %-Zeichen umschlossen werden,handelt es sich um Variablen
+        dbal:
+            default_connection: default                     # gibt die Datenbankverbindung an, die standardmäßig von Mapbender verwendet werden soll (``default_connection: default``).
+            connections:
+                default:
+                driver:    "%database_driver%"              # Mehr Information unterhalb des Codes   
+                host:      "%database_host%"                # Der Host, auf dem die Datenbank läuft. Entweder der Name (z.B. localhost) oder die IP-Adresse (z.B. 127.0.0.1).
+                port:      "%database_port%"                # Der Port, auf dem die Datenbank lauscht (z.B. 5432 für PostgreSQL).
+                dbname:    "%database_name%"                # Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <../installation.html>`_ für Details.
+                path:      "%database_path%"                # Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
+                user:      "%database_user%"                # Benutzername für die Verbindung zur Datenbank.
+                password:  "%database_password%"            # Das Passwort des Datenbankbenutzers.
+                charset:    UTF8                            # Die Kodierung, die die Datenbank verwendet.
+                logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standardwert: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
+                profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standardwert: %kernel.debug%)
+        orm:
+            auto_generate_proxy_classes: "%kernel_debug%"
+            auto_mapping: true
+
+
+* database_driver: Der Datenbanktreiber. Mögliche Werte sind:
+
+  * pdo_sqlite - SQLite PDO driver
+  * pdo_mysql - MySQL PDO driver
+  * pdo_pgsql - PostgreSQL PDO driver
+  * oci8 - Oracle OCI8 driver
+  * pdo_oci - Oracle PDO driver
+
+  Beachten Sie, dass Sie den entsprechenden PHP-Treiber installiert bzw. aktiviert haben.
+
+Beispiel: 
+Die Datenbankkonfiguration in der parameters.yml sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
 
 .. code-block:: yaml
 
@@ -23,12 +62,53 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
     database_user:     postgres
     database_password: geheim
 
- Weitere Informationen im Kapitel :ref:`database_de`.
+**Verwendung mehrerer Datenbanken**
+***********************************
 
-* **Proxy-Einstellungen**:
-  Wenn ein Proxy verwendet wird, muss dieser in der Datei parameters.yml im Bereich OWSProxy Configuration angegeben werden.
+Mit Mapbender können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender-Bundle gehört. 
 
-  Eine Konfiguration könnte wie folgt aussehen:
+Eine zweite Datenbank benötigen Sie ebenfalls für die *Geodatensuche* (über den SearchRouter) und die Datenerfassung (Digitizer). Die Geodaten sollten grundsätzlich in einer anderen Datenbank vorgehalten werden und nicht in der Mapbender Datenbank.
+
+Die Standard-Datenbankverbindung (``default_connection: default``) wird von Mapbender verwendet.
+
+Wenn Sie eine weitere Datenbank verwenden möchten, müssen Sie eine zweite Datenbankverbindung mit einem anderen Namen definieren.
+
+.. code-block:: yaml
+                
+    parameters:
+        # Datenbankverbindung "default"
+        database_driver:   pdo_pgsql
+        database_host:     localhost
+        database_port:     5432
+        database_name:     mapbender
+        database_path:     ~
+        database_user:     postgres
+        database_password: postgres
+
+        # Datenbankverbindung "search_db"
+        database2_driver:   pdo_pgsql
+        database2_host:     localhost
+        database2_port:     5432
+        database2_name:     search_db
+        database2_path:     ~
+        database2_user:     postgres
+        database2_password: postgres
+
+In den Elementen SearchRouter und Digitizer kann nun auf die Datenbankverbindung (connection) mit dem Namen **search_db** verwiesen werden.
+
+  
+Weitere Informationen unter:
+  
+Symfony Dokumentation <http://symfony.com/doc/current/best_practices/configuration.html>`_)
+  
+Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <http://www.doctrine-project.org/>`_).
+
+**Proxy-Einstellungen**
+***********************
+
+Wenn ein Proxy verwendet wird, muss dieser in der Datei parameters.yml im Bereich OWSProxy Configuration angegeben werden.
+
+Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
     
@@ -44,9 +124,11 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
         ows_proxy3_noproxy:
             - 192.168.1.123
 
-* **Mailer**: Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
+**Mailer**
+**********
 
-  Eine Konfiguration könnte wie folgt aussehen:
+Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
+Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
    
@@ -54,11 +136,15 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
         mailer_host:       localhost
         mailer_user:       ~
         mailer_password:   ~
-        
-  Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
-  Weitere Informationen im Kapitel :ref:`users_de`.
+    
+    
+Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
+Weitere Informationen im Kapitel :ref:`users_de`.
 
-* **Spracheinstellung**: Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer  einzelnen Anwendung. 
+**Spracheinstellung**
+*********************
+
+Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer  einzelnen Anwendung. 
 
   Folgende Sprachcodes sind verfügbar:
     * en für Englisch (Standard),
@@ -69,7 +155,7 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
     * pt für Portugiesisch,
     * ru für Russisch.
     
-  Eine Konfiguration könnte wie folgt aussehen:
+Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
    
@@ -78,10 +164,12 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
     
-  Weitere Informationen unter http://doc.mapbender.org/en/book/translation.html
+Weitere Informationen unter http://doc.mapbender.org/en/book/translation.html
   
-* **Mapbender Logo**:
-  Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich  global auf die gesamte Mapbender Installation aus.
+**Mapbender Logo**
+******************
+
+Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich  global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
@@ -89,8 +177,10 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
 
   Die Datei des neuen Logos muss unter application/web eingefügt werden.
   
-* **Projektname**:
-  Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+**Projektname**
+***************
+
+Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
@@ -103,11 +193,72 @@ Hier werden grundlegende Parameter von Mapbender bestimmt:
 config.yml
 ----------
 
-Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
+Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
 
 * **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
 * **framework.session.cookie_httponly**: Stellen Sie für HTTP-only session cookies sicher, dass der Parameter framework.session.cookie_httponly auf true steht.
+
+**Datenbank**
+*************
+Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen:
+
+.. code-block:: yaml
+
+    doctrine:
+        dbal:
+            default_connection: default
+            connections:
+                # Datenbankverbindung default
+                default:
+                    driver:    "%database_driver%"
+                    host:      "%database_host%"
+                    port:      "%database_port%"
+                    dbname:    "%database_name%"
+                    path:      "%database_path%"
+                    user:      "%database_user%"
+                    password:  "%database_password%"
+                    charset:    UTF8
+                    logging:   "%kernel.debug%"
+                    profiling: "%kernel.debug%"
+
+**Verwendung mehrerer Datenbanken**
+
+Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **config.yml**:
+
+.. code-block:: yaml
+
+    doctrine:
+        dbal:
+            default_connection: default
+            connections:
+                # Datenbankverbindung default
+                default:
+                    driver:    "%database_driver%"
+                    host:      "%database_host%"
+                    port:      "%database_port%"
+                    dbname:    "%database_name%"
+                    path:      "%database_path%"
+                    user:      "%database_user%"
+                    password:  "%database_password%"
+                    charset:    UTF8
+                    logging:   "%kernel.debug%"
+                    profiling: "%kernel.debug%"
+                # Datenbankverbindung search_db
+                search_db:
+                    driver:    "%database2_driver%"
+                    host:      "%database2_host%"
+                    port:      "%database2_port%"
+                    dbname:    "%database2_name%"
+                    path:      "%database2_path%"
+                    user:      "%database2_user%"
+                    password:  "%database2_password%"
+                    charset:    UTF8
+                    logging:   "%kernel.debug%"
+                    profiling: "%kernel.debug%"
+                    
+
+Weitere Informationen weiter oben unter parameters.yml.                    
 
 
 YAML Anwendungsdateien
