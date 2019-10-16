@@ -11,53 +11,10 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
-import os
-import shlex
-from sphinx.highlighting import lexers
-from pygments.lexers.web import PhpLexer
-from pygments.lexers.templates import TwigHtmlLexer
-from pygments.lexers.templates import TwigLexer
-from pygments.lexers.data import YamlLexer
-from pygments.lexers.sql import PostgresLexer
-from pygments.lexers.resource import ResourceLexer
-
-# Symfony Extension Start
-#sys.path.append(os.path.abspath('_exts'))
-
-# enable highlighting for PHP code not between ``<?php ... ?>`` by default
-lexers['php']      = PhpLexer(startinline=True, linenos=1)
-lexers['twig']     = TwigHtmlLexer()
-lexers['postgres'] = PostgresLexer()
-lexers['yaml']     = YamlLexer()
-lexers['resource'] = ResourceLexer()
-
-# use PHP as the primary domain
-primary_domain = 'php'
-highlight_language = 'php'
-
-# ...
-# add the extensions to the list of extensions
-
-# set url for API links
-api_url = 'http://api.symfony.com/master/%s'
-# Symfony Extension End
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
-
-# -- Internationalization configuration ----------------------------------------
-# -- Options for sphinx-intl example -------------------------------------------
-
-locale_dirs = ['locale/']   # path is example but recommended.
-gettext_compact = False     # optional.
-
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#needs_sphinx = '1.0'
+needs_sphinx = '1.8'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
@@ -75,7 +32,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 
 # The encoding of source files.
-#source_encoding = 'utf-8-sig'
+source_encoding = 'utf-8-sig'
 
 # The master toctree document.
 master_doc = 'index'
@@ -129,11 +86,55 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 
+# -- Internationalization configuration ----------------------------------------
+# -- Options for sphinx-intl ---------------------------------------------------
+
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.
+
+# -- Lexer configuration ---------------------------------------------------
+
+import sys
+import os
+import shlex
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
+from pygments.lexers.templates import TwigHtmlLexer
+from pygments.lexers.templates import TwigLexer
+from pygments.lexers.data import YamlLexer
+from pygments.lexers.sql import PostgresLexer
+from pygments.lexers.resource import ResourceLexer
+
+# Symfony Extension Start
+#sys.path.append(os.path.abspath('_exts'))
+
+# enable highlighting for PHP code not between ``<?php ... ?>`` by default
+lexers['php']      = PhpLexer(startinline=True, linenos=1)
+lexers['twig']     = TwigHtmlLexer()
+lexers['postgres'] = PostgresLexer()
+lexers['yaml']     = YamlLexer()
+lexers['resource'] = ResourceLexer()
+
+# use PHP as the primary domain
+primary_domain = 'php'
+highlight_language = 'php'
+
+# ...
+# add the extensions to the list of extensions
+
+# set url for API links
+api_url = 'http://api.symfony.com/master/%s'
+# Symfony Extension End
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#sys.path.insert(0, os.path.abspath('.'))
+
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#html_theme = 'mapbender'
 html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -216,12 +217,13 @@ htmlhelp_basename = 'Mapbenderdoc'
 latex_engine = 'xelatex' # also possible lualatex, pdflatex, latex
 
 _PREAMBLE = r"""
-    \usepackage[LGR,X2,T1]{fontenc}
+    \usepackage[T1]{fontenc}
     \usepackage[titles]{tocloft}
     \usepackage{textcomp}
-
-    \usepackage{fontspec}
     \inputencoding{utf8}
+    \setmainfont{Ubuntu}
+    \setsansfont{Ubuntu}
+    \setmonofont{Ubuntu Mono}
 """
 
 _PREAMPLE_PDFLATEX = """
@@ -345,3 +347,78 @@ html_context = {
     'github_repo': 'mapbender-documentation',
     'github_version': 'master/'
 }
+
+# -- Options for epub output ------------------------------------------------
+
+# The basename for the epub file. It defaults to the project name.
+#epub_basename
+
+# The HTML theme for the epub output. Since the default themes are not optimized for small screen space, using the same theme for HTML and epub output is usually not wise. This defaults to 'epub', a theme designed to save visual space.
+#epub_theme
+
+# A dictionary of options that influence the look and feel of the selected theme. These are theme-specific. For the options understood by the builtin themes, see this section.
+#epub_theme_options
+
+# The title of the document. It defaults to the html_title option but can be set independently for epub creation.
+#epub_title
+
+# The author of the document. This is put in the Dublin Core metadata. The default value is 'unknown'.
+#epub_author
+
+# The language of the document. This is put in the Dublin Core metadata. The default is the language option or 'en' if unset.
+#epub_language
+
+# The publisher of the document. This is put in the Dublin Core metadata. You may use any sensible string, e.g. the project homepage. The default value is 'unknown'.
+#epub_publisher
+
+# The copyright of the document. It defaults to the copyright option but can be set independently for epub creation.
+#epub_copyright
+
+# An identifier for the document. This is put in the Dublin Core metadata. For published documents this is the ISBN number, but you can also use an alternative scheme, e.g. the project homepage. The default value is 'unknown'.
+#epub_identifier
+
+# The publication scheme for the epub_identifier. This is put in the Dublin Core metadata. For published books the scheme is 'ISBN'. If you use the project homepage, 'URL' seems reasonable. The default value is 'unknown'.
+#epub_scheme
+
+# A unique identifier for the document. This is put in the Dublin Core metadata. You may use a random string. The default value is 'unknown'.
+#epub_uid
+
+# The cover page information. This is a tuple containing the filenames of the cover image and the html template. The rendered html cover page is inserted as the first item in the spine in content.opf. If the template filename is empty, no html cover page is created. No cover at all is created if the tuple is empty. Examples:
+#epub_cover = ('_static/cover.png', 'epub-cover.html')
+#epub_cover = ('_static/cover.png', '')
+#epub_cover = ()
+
+# Meta data for the guide element of content.opf. This is a sequence of tuples containing the type, the uri and the title of the optional guide information. See the OPF documentation at http://idpf.org/epub for details. If possible, default entries for the cover and toc types are automatically inserted. However, the types can be explicitely overwritten if the default entries are not appropriate. Example:
+# epub_guide = (('cover', 'cover.html', u'Cover Page'),)
+
+# Additional files that should be inserted before the text generated by Sphinx. It is a list of tuples containing the file name and the title. If the title is empty, no entry is added to toc.ncx. Example:
+epub_pre_files = [
+    ('index.html', 'Welcome'),
+]
+
+# Additional files that should be inserted after the text generated by Sphinx. It is a list of tuples containing the file name and the title. This option can be used to add an appendix. If the title is empty, no entry is added to toc.ncx. The default value is [].
+epub_post_files = []
+
+# A list of files that are generated/copied in the build directory but should not be included in the epub file. The default value is [].
+epub_exclude_files = []
+
+# The depth of the table of contents in the file toc.ncx. It should be an integer greater than zero. The default value is 3. Note: A deeply nested table of contents may be difficult to navigate.
+#epub_tocdepth
+
+# This flag determines if a toc entry is inserted again at the beginning of it’s nested toc listing. This allows easier navitation to the top of a chapter, but can be confusing because it mixes entries of differnet depth in one list. The default value is True.
+#epub_tocdup
+
+# This setting control the scope of the epub table of contents. The setting can have the following values:
+#epub_tocscope
+
+# This flag determines if sphinx should try to fix image formats that are not supported by some epub readers. At the moment palette images with a small color table are upgraded. You need the Python Image Library (PIL) installed to use this option. The default value is False because the automatic conversion may lose information.
+#epub_fix_images
+
+# This option specifies the maximum width of images. If it is set to a value greater than zero, images with a width larger than the given value are scaled accordingly. If it is zero, no scaling is performed. The default value is 0. You need the Python Image Library (PIL) installed to use this option.
+#epub_max_image_width
+
+# Control whether to display URL addresses. This is very useful for readers that have no other means to display the linked URL. The settings can have the following values:
+#epub_show_urls
+
+# If true, add an index to the epub document. It defaults to the html_use_index option but can be set independently for epub creation.
+#epub_use_index

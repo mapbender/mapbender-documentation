@@ -39,7 +39,7 @@ Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
     
 Erzeugen der Datenbank
-^^^^^^^^^^^^^^^^^^^^^^^^ 
+^^^^^^^^^^^^^^^^^^^^^^ 
 
 Mit Symfony kann die Datenbank erzeugt werden. Beachten Sie, dass dazu die benötigten Datenbank-Benutzerrechte vorliegen. Rufen Sie folgenden Befehl mit dem console-Hilfsprogramm auf:
 
@@ -103,25 +103,23 @@ Fügen Sie die Informationen zu den Koordinatensystemen über den folgenden Aufr
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
 
 
-Importieren von Anwendungen aus der mapbender.yml
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Importieren von Anwendungen aus application/app/config/applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sie können die Anwendungen, die in der mapbender.yml definiert sind, in die Datenbank importieren:
+
+Sie können die Anwendungen, die in dem Ordner applications definiert sind, in die Datenbank importieren:
 
 .. code-block:: yaml
 
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
 
-
-
 Konfigurationsdateien
 ---------------------
 
-Die Konfiguratuionsdateien liegen unter **app/config/parameters.yml**. 
+Die Konfiguratuionsdateien liegen unter **app/config**. 
 
 Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
-
 
 
 Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php

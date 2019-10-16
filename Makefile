@@ -5,11 +5,6 @@ SPHINXBUILD   = sphinx-build
 BUILDDIR      = _build
 SOURCEDIR     = .
 
-LATEXDIR      = build/latex
-SINGLEHTMLDIR = build/singlehtml
-LINKCHECKDIR  = build/linkcheck
-DISTDIR       = build
-
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 

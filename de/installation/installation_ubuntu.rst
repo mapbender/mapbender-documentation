@@ -45,6 +45,52 @@ Laden Sie das Apache Modul rewrite.
 
 
 
+PHP 7
+-----
+
+Für PHP 7 werden weitere Quellen benötigt. Die Paketliste bei Verwendung von PHP 7:
+
+.. code-block:: bash
+
+   sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
+   
+   
+Zur Nutzung der benötigten PHP-LDAP-Extension:
+
+.. code-block:: bash
+
+   sudo apt install php-ldap
+   
+
+Unter Ubuntu 16.04 muss zusätzlich das passende Modul für den Apache Webserver manuell nachinstalliert werden:
+
+.. code-block:: bash
+
+   sudo apt install libapache2-mod-php7.0
+
+
+Zur Nutzung von PostgreSQL zusätzlich:
+
+.. code-block:: bash
+
+   sudo apt install php-pgsql
+
+
+Für MySQL:
+
+.. code-block:: bash
+
+   sudo apt install php-mysql
+  
+
+Zusätzlich muss PHP 7 in Apache aktiviert werden:
+
+.. code-block:: bash
+
+   a2enmod php7.0
+
+
+
 Entpacken und im Webserver registrieren
 ---------------------------------------
 
@@ -188,46 +234,6 @@ Setzen Sie die app/console Befehle ab. Details zu diesen Befehlen finden Sie im 
  app/console fom:user:resetroot
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
  app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-
-
-
-PHP 7
------
-
-Für PHP 7 werden weitere Quellen benötigt. Die Paketliste bei Verwendung von PHP 7:
-
-.. code-block:: bash
-
-   sudo apt install php php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-intl openssl php-zip php-mbstring php-bz2
-
-
-Unter Ubuntu 16.04 muss zusätzlich das passende Modul für den Apache Webserver manuell nachinstalliert werden:
-
-.. code-block:: bash
-
-   sudo apt install libapache2-mod-php7.0
-
-
-Zur Nutzung von PostgreSQL zusätzlich:
-
-.. code-block:: bash
-
-   sudo apt install php-pgsql
-
-
-Für MySQL:
-
-.. code-block:: bash
-
-   sudo apt install php-mysql
-  
-
-Zusätzlich muss PHP 7 in Apache aktiviert werden:
-
-.. code-block:: bash
-
-   a2enmod php7.0
-
 
 
 Einrichtung für Apache 2.2
