@@ -8,4 +8,5 @@ Customization / Tipps and tricks
 
    customization/mapbender_templates.rst
    customization/templates.rst
+   customization/yaml.rst
    customization/css.rst
