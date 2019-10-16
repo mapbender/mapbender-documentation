@@ -118,81 +118,9 @@ Sie können die Anwendungen, die in der mapbender.yml definiert sind, in die Dat
 Konfigurationsdateien
 ---------------------
 
-Die Basiskonfiguration erfolgt in der Datei **app/config/parameters.yml**. Eine Vorlage app/config/parameters.yml.dist liegt vor. 
+Die Konfiguratuionsdateien liegen unter **app/config/parameters.yml**. 
 
-Die Konfigurationsdatei **app/config/config.yml** stellt weitere Parameter bereit, z.B. zur Konfiguration der Portalfunktion, Einrichtung des Owsproxy oder Einrichtung einer weiteren Datenbank.
-
-
-parameters.yml
-^^^^^^^^^^^^^^
-
-* Datenbank: Parameter, die mit **database** beginnen, definieren die Databankverbindung. 
-* Mailer: Die Mailerangaben starten mit **mailer**. Nutzen Sie z.B. smtp oder sendmail. 
-* Spracheinstellung: Sie können eine Sprache (locale) für Ihre Anwendung angeben (Standardwert ist en, de ist verfügbar). Unter http://doc.mapbender.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue Sprachen hinzugefügt werden können.
-
-.. note:: Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
-
-Sofern Sie einen Proxy verwenden, müssen Sie diesen in der Datei parameters.yml im Bereich *OWSProxy Configuration* angeben.
-
-Eine Konfiguration könnte wie folgt aussehen:
-
-.. code-block:: yaml
-
-    # OWSProxy Configuration
-        ows_proxy3_logging: false
-        ows_proxy3_obfuscate_client_ip: true
-        ows_proxy3_host: myproxy
-        ows_proxy3_port: 8080
-        ows_proxy3_connecttimeout: 60
-        ows_proxy3_timeout: 90
-        ows_proxy3_user: ~
-        ows_proxy3_password: ~
-        ows_proxy3_noproxy:
-            - 192.168.1.123
-
-
-**Spracheinstellung**
-
-Sie können eine Sprache (locale) für Ihre Anwendung angeben. Folgende Sprachcodes sind dabei verfügbar:
-
-- en für Englisch (Standard),
-- de für Deutsch,
-- es für Spanisch,
-- it für Italienisch,
-- nl für Niederländisch,
-- pt für Portugiesisch,
-- ru für Russisch.
-
-Unter http://doc.mapbender3.org/en/book/translation.html erfahren Sie mehr über die Anpassung von Übersetzungen und wie neue Sprachen hinzugefügt werden können.
-
-**Logo:**
-
-Um das Logo systemweit zu ändern, schauen Sie bitte in die Tipps & Tricks im Kapitel: :ref:`templates_de`
-
-
-
-config.yml
-^^^^^^^^^^
-
-* fom_user.selfregistration: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an. Sie müssen unter self_registration_groups eine/mehrere Gruppen angeeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
-* fom_user.reset_password: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
-* framework.session.cookie_httponly: Stellen Sie für HTTP-only session cookies sicher, dass der Parameter framework.session.cookie_httponly auf true steht.
-
-**Hinweis:** Sie benötigen einen Mailer, wenn Sie die Selbstregistrierung und das Paßwortsetzen nutzen möchten.
-
-
-mapbender.yml
-^^^^^^^^^^^^^
-
-Eine Anwendung kann auf zwei Arten konfiguriert werden. Entweder über die mapbender.yml Datei oder über die Mapbender Administration im Browser.
-
-* Das Mapbender Team stellt mit jeder Version eine mapbender.yml mit Demoanwendungen mit den aktuellen Elementdefinitionen zur Verfügung (Sie können die Anwendungen deaktivieren indem Sie published: false setzen oder indem Sie die Datei leeren).
-* Anwendungen, die in der mapbender.yml definiert werden, können nicht über die Mapbender Administration im Browser bearbeitet werden.
-* Sie können allerdings die Anwendungen über einen app/console Befehl in die Datenbank übertragen.
-
-.. code-block:: yaml
-
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
 
 
