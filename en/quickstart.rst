@@ -43,7 +43,7 @@ With this new code base we will continue the Mapbender idea of being a Geoportal
   * Services like WMS can be managed inside a service repository and linked to applications
   * Rights management are easy to maintain, for individual users and groups, whether you store them inside the database or in an LDAP.
   * Search modules (SQL oder Solr) can be configured
-  * Applications for digitaliszation can be setup.
+  * Applications for digitalization can be setup.
   * Mobile template can be used to provide applications for smartphones and tablets
 
 
@@ -80,7 +80,7 @@ If you have any difficulties running Mapbender, please check whether your Apache
 
 Start Mapbender in the developer mode app_dev.php
 =================================================
-Symfony offers a developer mode with lot of information about your application (logging, exceptions, database queries, memory usage, time and more). This mode is only available from localhost.
+Symfony offers a developer mode with lots of information about your application (logging, exceptions, database queries, memory usage, time and more). This mode is only available from localhost.
 
 #. Start the developer mode: http://localhost/mapbender/app_dev.php
 
@@ -100,9 +100,9 @@ Welcome page
 
 #. You can open an application by click on the title, the screenshot or the start button.
 
-#. Before you can administrate with Mapbender you have to log in to get access to the administration.
+#. Before you can administrate with Mapbender, you have to log in to get access to the administration.
 
-#. Click on Login at right-top to open the login page.
+#. Click on Login at the top-right to open the login page.
 
 #. You can log in with the user that was generated on installation. It can be ``root`` and password ``root`` (This is the default user and password that you get after installation of Mapbender on OSGeo-Live. Please change the root password if you want to run a productive environment. Please don't delete the user :guilabel:`root`.).
 
@@ -136,7 +136,7 @@ The Application overview provides the following functionality:
 Create an individual application
 ================================================================================
 
-Create a new application by providing basic information about your application. After that you use the edit mode to add elements, layers, styles (CSS-Editor) and security settings.
+Create a new application by providing basic information about your application. After that, you can use the edit mode to add elements, layers, styles (CSS-Editor) and security settings.
 
 #. choose ``Applications --> New Application``
 
@@ -168,7 +168,7 @@ You also can create a new application by copying an existing application. Every 
 
 Delete an application
 ================================================================================
-You can delete an application from the menu item ``Applications`` with the |mapbender3-button-delete|-button. With this step you only delet the application, the sources are still available.
+You can delete an application from the menu item ``Applications`` with the |mapbender3-button-delete|-button. With this step you only delete the application, the sources are still available.
 
 
 Export / Import applications and sources
@@ -189,18 +189,18 @@ Source Repository overview
 
 #. You get an overview on the Sources that are loaded in your Mapbender.
 
-#. Type (f.e WMS), Title, Description offer first information about the services.
+#. Type (e.g. WMS), Title, Description offer first information about the services.
 
-#. On click on the button |mapbender-button-show| ``View-Button`` you get further information about the source.
+#. On click on the button |mapbender-button-show| ``View-Button``, you get further information about the source.
 
-#. With the button |mapbender-button-delete| ``Delete-Button`` you can delete the source from your repository.
+#. With the button |mapbender-button-delete| ``Delete-Button``, you can delete the source from your repository.
 
 
 Loading Web Map Services
 ================================================================================
-You can load OGC Web Map Services (WMS) to your application. Mapbender supports Version 1.1.1 and 1.3.0.
+You can load OGC Web Map Services (WMS) to your application. Mapbender supports version 1.1.1 and 1.3.0.
 
-A WMS returns an XML-file when the getCapabilities document is requested. This information is parsed by Mapbender and Mapbender gets all the necessary information about the service from this XML
+A WMS returns an XML-file when the getCapabilities document is requested. This information is parsed by Mapbender and Mapbender gets all the necessary information about the service from this XML.
 
 .. tip:: You should first check the Capabilities document in your browser before you try to load it with Mapbender
 
@@ -339,7 +339,7 @@ Mapbender offers a set of elements. You can add the elements to your application
 
 #. You can change the position of the element via drag & drop
 
-#. Have a look at your application. Open your application choose ``Applications --> Applications Overview --> `` |mapbender-button-show| ``view-Button``
+#. Have a look at your application. To open your application, choose ``Applications --> Applications Overview --> `` |mapbender-button-show| ``view-Button``
 
 Now you should get an idea how easy it is to change a Mapbender application without changes in the code.
 
@@ -464,7 +464,7 @@ Assign an Application to a User/Group
 
 #. Publish your application by ``Security --> activated`` or ``Application --> visible``
 
-#. Set permission like view, edit, delete, operator, master, owner
+#. Set permissions like view, edit, delete, operator, master, owner
 
 #. Assign a user/group to the application
 
@@ -485,9 +485,9 @@ Assign single elements to a User/Group
 
 #. Every element has a |mapbender-button-key| ``-Button``
 
-#. Chose the |mapbender-button-key| ``-Button`` from the element, that should be only availale for special users / groups
+#. Choose the |mapbender-button-key| ``-Button`` from the element, that should be only availale for special users / groups
 
-#. Set permission like view, edit, delete, operator, master, owner
+#. Set permissions like view, edit, delete, operator, master, owner
 
 #. Assign a user/group to the element
 
