@@ -14,10 +14,10 @@ Fundamental parameters are specified here.
 **Database**
 ************
 
-To configurate the database the files config.yml and parameters,yml are needed.
-The config.yml contains placeholders for variables, which are specified in the parameters.yml.
+To configurate the database the files config.yml and parameters.yml are needed.
+The file config.yml contains placeholders for variables, which are specified in the file parameters.yml.
 
-The  database standard definiton set in the config.yml:
+The default database definiton set in config.yml is as follows:
 
 .. code-block:: yaml
 
@@ -46,7 +46,7 @@ The  database standard definiton set in the config.yml:
   * oci8 - Oracle OCI8 driver
   * pdo_oci - Oracle PDO driver
 
-  Please notice, necessary php driver need to been installed and activated.
+  Please notice: Necessary PHP drivers need to been installed and activated.
 
 
 Example: 
@@ -66,13 +66,13 @@ Database configuration in parameters.yml, when PostgreSQL is used:
 **Use of several databases**
 ****************************
 
-With Mapbender you can use several databases. This is recommended, when you want to keep your data seperated from Mapbender data. Or when you want to use code, that doesn't belong to a Mapbender bundle. 
+With Mapbender you can use several databases. This is recommended when you want to keep your data seperated from Mapbender data. Or when you want to use code that doesn't belong to a Mapbender bundle. 
 
 You already need a second database for *geo data search* (with SearchRouter)  and data collection (Digitizer). 
 
-The standard database connection (``default_connection: default``) is used by Mapbender.
+The default database connection (``default_connection: default``) is used by Mapbender.
 
-If you want to use another database, you need to define a database connection with a different name.
+If you want to use another database, you have to define a database connection with a different name.
 
 .. code-block:: yaml
                 
@@ -96,7 +96,7 @@ If you want to use another database, you need to define a database connection wi
         database2_password: postgres
         
         
-Now you can refer to database **search_db** in the elements SearchRouter and Digitizer.
+Now you can refer to the database **search_db** in the elements SearchRouter and Digitizer.
 
 More Information:
   
@@ -140,7 +140,7 @@ Configuration example:
         mailer_password:   ~
     
     
-The function 'Self-Registration' and 'reset password' need a mailer.
+The functions 'Self-Registration' and 'reset password' need a mailer.
 More Information :ref:`users_en`.
 
 
@@ -173,7 +173,7 @@ More information: http://doc.mapbender.org/en/book/translation.html
 **Mapbender logo**
 ******************
 
-The logo (standard is the Mapbender logo) can be changed in parameters.yml. The change has a global impact on the whole Mapbender installation.
+The logo (default is the Mapbender logo) can be changed in parameters.yml. This change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
@@ -185,7 +185,7 @@ The logo (standard is the Mapbender logo) can be changed in parameters.yml. The 
  **Project name**
 *****************
 
-The name of the project (standard: Mapbender) can be changed in parameters.yml. The change has a global impact on the whole Mapbender installation.
+The name of the project (default: Mapbender) can be changed in parameters.yml. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
@@ -206,7 +206,7 @@ The name of the project (standard: Mapbender) can be changed in parameters.yml. 
 
 **Database**
 *************
-Important: Every database defined in parameters.yml, needs to have a placeholder in config.yml as well:
+Important: Every database defined in parameters.yml needs to have a placeholder in config.yml as well:
 
 .. code-block:: yaml
 
@@ -268,8 +268,8 @@ More information under parameters.yml.
 YAML Application files
 -----------------------
 
-YAML application files are under **app/config/applications**. 
-“**Mapbender mobile**”, “**Mapbender Demo Map**” and “**Mapbender Demo Map basic**” are pre implemented example applications.
+YAML application files are stored under **app/config/applications**. 
+“**Mapbender mobile**”, “**Mapbender Demo Map**” and “**Mapbender Demo Map basic**” are pre-implemented as example applications.
 
 New YAML applications can be placed in the folder and will be automatically recognized by Mapbender.
 
@@ -331,13 +331,13 @@ Mapbender Demo Map basic
 Differences to Mapbender Demo Map:
 
 Toolbar  
-    Instead of 'POI' 'Coordinates utility' is integrated.
+    Instead of 'POI', 'Coordinates utility' is integrated.
 
 Sidepane  
     No functions pre-implemented.
 
 Content  
-    Instead of 'Scale display' and 'POI' the function 'Coordinates utility' is integrated.
+    Instead of 'Scale display' and 'POI', the function 'Coordinates utility' is integrated.
 
 Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
 
@@ -348,7 +348,7 @@ Mapbender mobile
 
 For a mobile template on smatphones and tablets.
 
-Following functions are pre implemented:
+Following functions are pre-implemented:
 
 Footer
     * Themes (Button)
@@ -397,7 +397,7 @@ Export/import YAML application files over the console
 
 Applications can be exported as .json or .yml -file over the console.
 
-A YAML file that has been exported over the console can't be placed under app/config/application to be imported in a Mapbender installation.
+A YAML file that has been exported over the console cannot be placed under app/config/application to be imported in a Mapbender installation.
 The YAML format that is produced by exporting over the console is different from the YAML format of the files under app/config/application.
 The former is produced by a machine and the latter is code written by a developer.
  
