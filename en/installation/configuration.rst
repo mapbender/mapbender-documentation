@@ -31,21 +31,9 @@ All can be done using the console utility provided by `Symfony <http://symfony.c
 
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Database connection parameters are stored together with some more configuration parameters in the file ``app/config/parameters.yml``. This file is using YAML syntax, so be aware that you can **not** use tabs for indenting. Be careful about this and use whitespaces instead. 
+Database connection parameters are stored together with some more configuration parameters in the file ``app/config/parameters.yml``. 
 
-Your database configuration in the parameters.yml file could look like this when you use PostgreSQL:
-
-.. code-block:: yaml
-
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:
-    database_user:     postgres
-    database_password: secret
-
-Further information is available in the chapter :ref:`database`.
+More Information: :ref:`yaml_en`.
 
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^
@@ -119,100 +107,15 @@ Inserting Proj4 SRS parameters into a database can be done using the command:
 Importing applications from application/app/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The import of demo applications from this folder into your configured database can be done using the following command:
-
-.. code-block:: yaml
-
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-
-After that, it is possible to edit the database-imported applications in the Mapbender backend.
+See chapter: :ref:`yaml_en`.
 
 
 Configuration files
 -------------------
 
-The basic configuration is done inside the **app/config/parameters.yml** file. A template is
-provided in the app/config/parameters.yml.dist file. 
+The basic configuration is done inside the **app/config/parameters.yml** file. 
 
-**app/config/config.yml** provides more parameters f.e. to configure portal functionality, owsproxy or provide an additional database. 
-
-
-parameters.yml
-^^^^^^^^^^^^^^
-
-* database: The parameters starting with **database** are the database connection details. 
-* mailer: The mailer settings start with **mailer**. Use f.e. smtp or sendmail. 
-* locale: You can choose a locale for your application (default is en, de is available). Check http://doc.mapbender.org/en/book/translation.html to find out how to modify translations or how to add a new language.
-
-.. note:: You need a mailer for self-registration and reset password functionality.
-
-If you use a proxy you have to add the proxy settings to parameters.yml at section *OWSProxy Configuration*.
-
-This is how the configiration could look like:
-
-
-.. code-block:: yaml
-
-    # OWSProxy Configuration
-        ows_proxy3_logging: false
-        ows_proxy3_obfuscate_client_ip: true
-        ows_proxy3_host: myproxy
-        ows_proxy3_port: 8080
-        ows_proxy3_connecttimeout: 60
-        ows_proxy3_timeout: 90
-        ows_proxy3_user: ~
-        ows_proxy3_password: ~
-        ows_proxy3_noproxy:
-            - 192.168.1.123
-
-**Locales:**
-You can switch your whole mapbender installation to a different language (a single application can't be switched).
-
-You can choose a locale for your application:
-
-- en: English (default),
-- de: German,
-- es: Spanish,
-- it: Italian,
-- nl: Dutch,
-- pt: Portuguese,
-- ru: Russian.
-
-Check http://doc.mapbender.org/en/book/translation.html to find out how to modify translations or how to add a new language.
-
-
-**Logo**
-
-To change the logo systemwide, take a look into the Tipps & Tricks section into the chapter :ref:`templates`
-
-
-
-
-config.yml
-^^^^^^^^^^
-
-* fom_user.selfregistration: To enable or disable self-registration of users, change the fom_user.selfregistration parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
-* fom_user.reset_password: In the same way the possibility to reset passwords can be enabled or disabled.
-* framework.session.cookie_httponly: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
-
-**Notice:** You need a mailer for self-registration and reset password functionality (see parameters.yml).
-
-
-Applications under application/app/config/applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-You can configure an applications on two ways. In the .yml-file or with the browser in the Mapbender backend.
-
-* The Mapbender Team provides an up-to-date folder applications with demo applications. New elements with their parameters are added to this configuration in every new version (You can disable the applications by setting published: false or you can empty the mapbender.yml file)
-* applications that are defined in the folder are not editable in the backend
-* you can import the applications to the database with the following app/console command
-
-.. code-block:: yaml
-
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-
-
+More Information: :ref:`yaml_en`.
 
 
 Production- and Development environment and Caching: app.php and app_dev.php
