@@ -196,7 +196,7 @@ The name of the project (default: Mapbender) can be changed in parameters.yml. T
  
  
  
- config.yml
+config.yml
 -----------
 
 * **fom_user.selfregistration**: To enable or disable self-registration of users, change the fom_user.selfregistration parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
