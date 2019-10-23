@@ -21,23 +21,19 @@ app/config
 
 Basic configuration files of Mapbender are placed in the app/config directory. Two files are of particular importance:
 
-* parameters.yml: The most basic parameters of Mapbender are defined here. For example the database of the MB3-repository and the databases on which some elements rely on (like Search or Digitizer).
+* parameters.yml
 
-  The default language of the interface has to be defined here as cookie- and proxy-settings. 
+* config.yml
 
-* config.yml: This file contains basic configuration of the arhcitecture. Also you'll find many parameters defined as wildcards for the parameters.yml
-
-  **Important**: Each database that is defined in the parameters.yml has to be defined as a wildcard in config.yml.
-
-  Furthermore the file defines which configuration has to be loaded for the productive and development mode.
-
+More Information: :ref:`yaml_en`.
 
   
 app/config/applications
 -----------------------
 
-The directory app/config/applications contains all applications that are defined in a YAML file. The known example-applications "Mapbender mobile", "Mapbender Demo Map" and "Mapbender Demo Map basic" are now placed there as single files. Since version 3.0.6 they replace the former single file mapbender.yml. Additional applications can be placed in this directory and are automatically recognized by Mapbender.
+The directory app/config/applications contains all applications that are defined in a YAML file. 
 
+More Information: :ref:`yaml_en`.
 
 
 bin
