@@ -415,7 +415,7 @@ YAML files that have been exported over the user interface or console, can be im
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:import ~/Downloads/demo.yaml
+	$ app/console mapbender:application:import ~/Downloads/demo.yaml 
 
 
 **Clone**
