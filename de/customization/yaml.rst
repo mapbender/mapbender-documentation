@@ -380,8 +380,8 @@ Unter **Anwendungen --> Importieren** kann die Exportdatei in eine Mapbender-Ins
 
 
 
-Export/Import von YAML Anwendungsdateien über die Konsole
----------------------------------------------------------
+Export/Import/Klonen von YAML Anwendungsdateien über die Konsole
+----------------------------------------------------------------
 
 **Export über die Konsole**
 
@@ -389,16 +389,32 @@ Anwendungen können als .json oder.yml - Datei über die Konsole exportiert werd
 Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
 Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter app/config/application. Ersteres wurde von einer Maschine erzeugt, letzteres von einem Programmierer. 
 
+.. code-block:: bash
+
+    $ app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
+    
+Durch *> ~/Downloads/demo.yaml* wird eine neue Datei unter dem angegebenen Pfad erstellt.
+*$ app/console mapbender:application:export mapbender_user_yml* gibt den Inhalt auf der Konsole aus.
+
 
 **Import über die Konsole**
 
-YAML-Dateien, die zuvor über die Benutzeroberfläche exportiert wurden, können über die Konsole importiert werden.
+YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole importiert werden.
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:import ~/Downloads/export.json 
+    $ app/console mapbender:application:import ~/Downloads/demo.yaml
+    
+    
+**Anwendung über die Konsole klonen**
 
-~/Downloads/export.json ist der Dateipfad.
+Klont eine existierende Anwendung. 
+
+.. code-block:: bash
+
+	$ app/console mapbender:application:clone mapbender_user_yml
+	
+Die neue Anwendung erhält die Endung _imp1 und heißt somit mapbender_user_yml_imp1.
 
 
 **Hilfe zu den Befehlen**

@@ -390,7 +390,7 @@ You can import the export file into a Mapbender installation under **Application
 
 
 
-Export/import YAML application files over the console 
+Export/import/clone YAML application files over the console 
 -----------------------------------------------------
 
 **Export**
@@ -400,17 +400,33 @@ Applications can be exported as .json or .yml -file over the console.
 A YAML file that has been exported over the console cannot be placed under app/config/application to be imported in a Mapbender installation.
 The YAML format that is produced by exporting over the console is different from the YAML format of the files under app/config/application.
 The former is produced by a machine and the latter is code written by a developer.
- 
-
-**Import**
-
-YAML files that have been exported over the user interface, can be imported over the console.
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:import ~/Downloads/export.json 
+	$ app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
+    
+*> ~/Downloads/demo.yaml* creates a new file under the specified path
+*$ app/console mapbender:application:export mapbender_user_yml* shows the data on the console.
 
-~/Downloads/export.json is the file path.
+
+**Import**
+
+YAML files that have been exported over the user interface or console, can be imported over the console.
+
+.. code-block:: bash
+
+	$ app/console mapbender:application:import ~/Downloads/demo.yaml
+
+
+**Clone**
+
+Clone an existing application.
+
+.. code-block:: bash
+
+	$ app/console mapbender:application:clone mapbender_user_yml
+	
+The name of the new application is mapbender_user_yml_imp1.
 
 
 **Help for the commands**
