@@ -411,7 +411,7 @@ The former is produced by a machine and the latter is code written by a develope
 
 **Import**
 
-YAML files that have been exported over the user interface or console, can be imported over the console.
+YAML files that have been exported over the user interface or console can be imported over the console.
 
 .. code-block:: bash
 
