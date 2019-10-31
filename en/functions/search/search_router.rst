@@ -320,55 +320,55 @@ Example with autocomplete and individualized display of results:
       connection: search_db
       relation: brd.qry_gn250_p_ortslage
       attributes:
-    - gid
-    - name
-    - gemeinde
-    - bundesland
-    - ewz_ger
-    - hoehe_ger
+        - gid
+        - name
+        - gemeinde
+        - bundesland
+        - ewz_ger
+        - hoehe_ger
       geometry_attribute: geom
   form:
       name:
-    type: text
-    options:
-        required: false
-        label: Name
-        attr:
-            data-autocomplete: on
-    compare: ilike
+        type: text
+        options:
+            required: false
+            label: Name
+            attr:
+                data-autocomplete: on
+        compare: ilike
       gemeinde:
-    type: text
-    options:
-        required: false
-    compare: ilike
+        type: text
+        options:
+            required: false
+        compare: ilike
   results:
       view: table
       count: true
       headers:
-    name: Name
-    gemeinde: Gemeinde
-    bundesland: Bundesland
-    ewz_ger: Einwohner
-    hoehe_ger: Höhe
+        name: Name
+        gemeinde: Gemeinde
+        bundesland: Bundesland
+        ewz_ger: Einwohner
+        hoehe_ger: Höhe
       callback:
-    event: click
-    options:
-        buffer: 1000
-        minScale: null
-        maxScale: null
+        event: click
+        options:
+            buffer: 1000
+            minScale: null
+            maxScale: null
       styleMap:
-    default:
-        strokeColor: '#00ff00'
-        strokeOpacity: 1
-        fillOpacity: 0
-    select:
-        strokeColor: '#ff0000'
-        fillColor: '#ff0000'
-        fillOpacity: 0.8
-    temporary:
-        strokeColor: '#0000ff'
-        fillColor: '#0000ff'
-        fillOpacity: 1
+        default:
+            strokeColor: '#00ff00'
+            strokeOpacity: 1
+            fillOpacity: 0
+        select:
+            strokeColor: '#ff0000'
+            fillColor: '#ff0000'
+            fillOpacity: 0.8
+        temporary:
+            strokeColor: '#0000ff'
+            fillColor: '#0000ff'
+            fillOpacity: 1
 
 Example with selection box:
 
@@ -384,46 +384,46 @@ Example with selection box:
       connection: search_db
       relation: brd.qry_gn250_p_ortslage
       attributes:
-    - gid
-    - name
-    - gemeinde
-    - bundesland
-    - oba
+        - gid
+        - name
+        - gemeinde
+        - bundesland
+        - oba
       geometry_attribute: geom
   form:
       oba:
-    type: choice
-    options:
-        empty_value: 'Bitte wählen...'
-        choices:
-            AX_Ortslage: Ort
-            AX_Wasserlauf: 'Gewässer'
+        type: choice
+        options:
+            empty_value: 'Bitte wählen...'
+            choices:
+                AX_Ortslage: Ort
+                AX_Wasserlauf: 'Gewässer'
       name:
-    type: text
-    options:
-        required: false
-        label: Name
-        attr:
-            data-autocomplete: on
-    compare: ilike
+        type: text
+        options:
+            required: false
+            label: Name
+            attr:
+                data-autocomplete: on
+        compare: ilike
       gemeinde:
-    type: text
-    options:
-        required: false
-    compare: ilike
+        type: text
+        options:
+            required: false
+        compare: ilike
   results:
       view: table
       count: true
       headers:
-    name: Name
-    gemeinde: Gemeinde
-    bundesland: Bundesland
+        name: Name
+        gemeinde: Gemeinde
+        bundesland: Bundesland
       callback:
-    event: click
-    options:
-        buffer: 1000
-        minScale: null
-        maxScale: null
+        event: click
+        options:
+            buffer: 1000
+            minScale: null
+            maxScale: null
 
 
 YAML-Definition 
@@ -485,15 +485,15 @@ In the mapbender.yml file:
                   minScale: ~          # scaling boundaries for zoom, ~ for no boundaries
                   maxScale: ~
           results:
-              styleMap:                # see below for further styles
-                  default:
-                      strokeColor: '#00ff00'
-                      strokeOpacity: 1
-                      fillOpacity: 0
-                  select:
-                      strokeColor: '#ff0000'
-                      fillColor: '#ff0000'
-                      fillOpacity: 0.4
+          styleMap:
+              default:
+                  strokeColor: '#00ff00'
+                  strokeOpacity: 1
+                  fillOpacity: 0
+              select:
+                  strokeColor: '#ff0000'
+                  fillColor: '#ff0000'
+                  fillOpacity: 0.4
 
 
 
