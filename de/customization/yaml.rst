@@ -100,6 +100,67 @@ Symfony Dokumentation <http://symfony.com/doc/current/best_practices/configurati
   
 Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <http://www.doctrine-project.org/>`_).
 
+
+**Disclaimer**
+**************
+
+.. image:: ../../../figures/disclaimer.png
+
+Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der parameters.yml ergänzt werden:
+
+.. code-block:: yaml
+    
+    mapbender.sitelinks:
+      - link: http://mapbender.org/en/about-contact				# Link URL
+        text: Imprint & Contact									# Link Text
+      - link: http://mapbender.org/en/privacy-policy
+        text: Privacy-Policy
+
+Die Sitelinks werden mittels "|" voneinander getrennt.
+  
+**Logo**
+********
+
+Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich  global auf die gesamte Mapbender Installation aus.
+
+.. code-block:: yaml
+
+    branding.logo:     neues_logo.jpg
+
+  Die Datei des neuen Logos muss unter application/web eingefügt werden.
+  
+
+**Mailer**
+**********
+
+Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
+Eine Konfiguration könnte wie folgt aussehen:
+
+.. code-block:: yaml
+   
+        mailer_transport:  smtp
+        mailer_host:       localhost
+        mailer_user:       ~
+        mailer_password:   ~
+    
+    
+Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
+Weitere Informationen im Kapitel :ref:`users_de`.
+
+
+**Projektname**
+***************
+
+Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+
+.. code-block:: yaml
+
+    branding.project_name:     Example    
+
+
+**Wichtiger Hinweis:** In der parameters.yml dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
+
+
 **Proxy-Einstellungen**
 ***********************
 
@@ -121,22 +182,6 @@ Eine Konfiguration könnte wie folgt aussehen:
         ows_proxy3_noproxy:
             - 192.168.1.123
 
-**Mailer**
-**********
-
-Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
-Eine Konfiguration könnte wie folgt aussehen:
-
-.. code-block:: yaml
-   
-        mailer_transport:  smtp
-        mailer_host:       localhost
-        mailer_user:       ~
-        mailer_password:   ~
-    
-    
-Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
-Weitere Informationen im Kapitel :ref:`users_de`.
 
 **Spracheinstellung**
 *********************
@@ -162,29 +207,6 @@ Eine Konfiguration könnte wie folgt aussehen:
     secret:            ThisTokenIsNotSoSecretChangeIt
     
 Weitere Informationen unter http://doc.mapbender.org/en/book/translation.html
-  
-**Mapbender Logo**
-******************
-
-Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich  global auf die gesamte Mapbender Installation aus.
-
-.. code-block:: yaml
-
-    branding.logo:     neues_logo.jpg
-
-  Die Datei des neuen Logos muss unter application/web eingefügt werden.
-  
-**Projektname**
-***************
-
-Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
-
-.. code-block:: yaml
-
-    branding.project_name:     Example    
-
-
-**Wichtiger Hinweis:** In der parameters.yml dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
 
 
 config.yml
