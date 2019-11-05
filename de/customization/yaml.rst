@@ -111,10 +111,10 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
 .. code-block:: yaml
     
     mapbender.sitelinks:
-      - link: http://mapbender.org/en/about-contact				# Link URL
-        text: Imprint & Contact									# Link Text
-      - link: http://mapbender.org/en/privacy-policy
-        text: Privacy-Policy
+      - link: https://mapbender.org/impressum-kontakt				# Link URL
+        text: Impressum & Kontakt									# Link Text
+      - link: https://mapbender.org/datenschutz
+        text: Datenschutz
 
 Die Sitelinks werden mittels "|" voneinander getrennt.
   
