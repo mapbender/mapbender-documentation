@@ -105,43 +105,23 @@ Symfony documentation <http://symfony.com/doc/current/best_practices/configurati
 Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine project <http://www.doctrine-project.org/>`_).
 
 
-**Proxy settings**
-***********************
-If you use a proxy, you need to change parameters.yml.
 
-Configuration example:
+**Disclaimer**
+**************
 
-.. code-block:: yaml
-    
-    # OWSProxy Configuration
-        ows_proxy3_logging: false
-        ows_proxy3_obfuscate_client_ip: true
-        ows_proxy3_host: myproxy
-        ows_proxy3_port: 8080
-        ows_proxy3_connecttimeout: 60
-        ows_proxy3_timeout: 90
-        ows_proxy3_user: ~
-        ows_proxy3_password: ~
-        ows_proxy3_noproxy:
-            - 192.168.1.123
- 
- 
- **Mailer**
-**********
+.. image:: ../../../figures/disclaimer.png
 
-Mailer information in parameters.yml (e.g. smtp or sendmail).
-Configuration example:
+A disclaimer can be added through the use of site links. 
 
 .. code-block:: yaml
-   
-        mailer_transport:  smtp
-        mailer_host:       localhost
-        mailer_user:       ~
-        mailer_password:   ~
     
-    
-The functions 'Self-Registration' and 'reset password' need a mailer.
-More Information :ref:`users_en`.
+    mapbender.sitelinks:
+      - link: http://mapbender.org/en/about-contact				# Link URL
+        text: Imprint & Contact									# Link text
+      - link: http://mapbender.org/en/privacy-policy
+        text: Privacy-Policy
+
+Site links will be seperated by "|".
 
 
 **Language setting**
@@ -170,8 +150,8 @@ Configuration example:
 More information: http://doc.mapbender.org/en/book/translation.html
 
 
-**Mapbender logo**
-******************
+**logo**
+*********
 
 The logo (default is the Mapbender logo) can be changed in parameters.yml. This change has a global impact on the whole Mapbender installation.
 
@@ -181,7 +161,24 @@ The logo (default is the Mapbender logo) can be changed in parameters.yml. This 
 
  The file of the logo needs to be added under application/web.
  
- 
+
+ **Mailer**
+**********
+
+Mailer information in parameters.yml (e.g. smtp or sendmail).
+Configuration example:
+
+.. code-block:: yaml
+   
+        mailer_transport:  smtp
+        mailer_host:       localhost
+        mailer_user:       ~
+        mailer_password:   ~
+       
+The functions 'Self-Registration' and 'reset password' need a mailer.
+More Information :ref:`users_en`.
+
+
  **Project name**
 *****************
 
@@ -193,6 +190,29 @@ The name of the project (default: Mapbender) can be changed in parameters.yml. T
 
 
 **Important note:** In parameters.yml **tabulators may not be used for indentation** instead you need to use space.
+
+
+**Proxy settings**
+***********************
+If you use a proxy, you need to change parameters.yml.
+
+Configuration example:
+
+.. code-block:: yaml
+    
+    # OWSProxy Configuration
+        ows_proxy3_logging: false
+        ows_proxy3_obfuscate_client_ip: true
+        ows_proxy3_host: myproxy
+        ows_proxy3_port: 8080
+        ows_proxy3_connecttimeout: 60
+        ows_proxy3_timeout: 90
+        ows_proxy3_user: ~
+        ows_proxy3_password: ~
+        ows_proxy3_noproxy:
+            - 192.168.1.123
+ 
+ 
  
  
  
