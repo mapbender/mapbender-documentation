@@ -3,25 +3,24 @@
 Installation on Windows
 #######################
 
-For fast installation (test system) MS4W-Installer (https://ms4w.com/download.html) can be used.
+For a quick installation (e.g. on a test system), use the MS4W-Installer (https://ms4w.com/download.html).
 
-Below the installation for a productive system is descriped. 
+Read on for a detailed description on a productive system. 
 
 
 Requirements
 ------------
 
 * PHP NTS (version 5.6 - 7.1, https://windows.php.net/download/)
-* Apache installation run as service (https://www.apachelounge.com/download/)   
-  with the following modules:
+* Apache installation (https://www.apachelounge.com/download/ , run as service with the following modules):
  
   * mod_rewrite
   * mod_fcgid
  
-* eingerichtete PostgreSQL Datenbank (Version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+* set up PostgreSQL database (version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
   
   * established database for Mapbender configuration 
-  * if necessary  own user for access
+  * if necessary: own user for access
 
 
 Nginx can also be used as web server, but it will not be discussed in this manual.   
@@ -34,7 +33,7 @@ Unzip the Zip archive, for example under c:\php .
 
 Based on the PHP-version, PHP-variables won't be set correctly in the temp-directory.
 
-* It needs to be checked, if both variables (php.ini) are set correctly:
+* It needs to be checked if the following variables (php.ini) are set correctly:
 
 .. code-block:: ini
 
@@ -43,7 +42,7 @@ Based on the PHP-version, PHP-variables won't be set correctly in the temp-direc
     date.timezone
 
 * the path from PHP-bin directory to the PATH-variable (Windows environment variable) needs to be set
-* activate the requiered PHP extensions in the php.ini configuration file
+* activate the required PHP extensions in the php.ini configuration file:
 
 .. code-block:: ini
 
@@ -64,7 +63,7 @@ Based on the PHP-version, PHP-variables won't be set correctly in the temp-direc
 Unpack and register to web server
 ---------------------------------
 
-Download the current Mapbender version (https://mapbender.org/builds/mapbender-starter-current.zip) and unzip into c:\mapbender\
+Download the current Mapbender version (https://mapbender.org/builds/mapbender-starter-current.zip) and unzip it into c:\mapbender\
 
 
 Configuration Apache
@@ -72,7 +71,7 @@ Configuration Apache
 
 A subfolder "conf.d" must be prepared in the directory <apache>/conf.
 
-Add following code at the end of file httpd.conf :
+Add the following code at the end of file httpd.conf :
 
 .. code-block:: apache
 
@@ -142,8 +141,8 @@ Create file **<apache>\conf\conf.d\fcgi.conf** with:
 Configuration PostgreSQL
 ------------------------
 
-Database configuration (app/config/parameters.yml).
-Following information :ref:`yaml_en`.
+To configure the database, use the following default configuration (which is part of app/config/parameters.yml).
+For more information on the database configuration, see :ref:`yaml_en`.
 
 
 .. code-block:: yaml
@@ -157,7 +156,7 @@ Following information :ref:`yaml_en`.
     database_password: secret
     
 
-Open the windows shell and initialisation the database connection with the following commands:
+Open the windows shell and initialize the database connection with the following commands:
 
 .. code-block:: text
  
@@ -174,13 +173,15 @@ First steps
 
 
 The Mapbender installation can now be accessed under **http://hostname/mapbender/**.
-User data by default: username: "root", passwort: "root"
+User data by default:
 
-Following information: `Mapbender Quickstart Document <../en/quickstart.html>`_. 
+username: "root", passwort: "root"
+
+More information at:  `Mapbender Quickstart Document <../en/quickstart.html>`_. 
 
 
 
-**Check it the alias is working**
+**Check if the alias is working**
 
 * http://localhost/mapbender/
 
