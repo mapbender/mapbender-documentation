@@ -7,11 +7,11 @@ Für eine schnelle Installation als Testsystem kann der MS4W-Installer (https://
 Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
 
 
-Vorausetzungen
+Voraussetzungen
 ---------------
 
 * PHP NTS (ab Version 5.6, maximal 7.1, https://windows.php.net/download/)
-* Apache Installation als Dienst eingerichtet (https://www.apachelounge.com/download/)   
+* Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/)   
   mit folgenden aktivierten Modulen:
  
   * mod_rewrite
@@ -19,7 +19,7 @@ Vorausetzungen
  
 * eingerichtete PostgreSQL Datenbank (Version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
   
-  * vorhandene Datenbank für Mapbender Konfiguration
+  * vorhandene Datenbank für die Mapbender Konfiguration
   * ggf. eigenen Benutzer für Zugriff
 
 
@@ -29,10 +29,10 @@ Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf 
 Konfiguration PHP
 -----------------
 
-Entpacken des Zip-Archives z.B. nach c:\php
-Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-Verzeichnis nicht richtig gesetzt.
+* Entpacken des Zip-Archives, z.B. nach c:\php
+* Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-Verzeichnis nicht richtig gesetzt.
 
-* Es muss geprüft werden, ob die beiden Variablen (php.ini) gesetzt sind:
+* Es muss deshalb geprüft werden, ob die folgenden Variablen (php.ini) gesetzt sind:
 
 .. code-block:: ini
 
@@ -41,7 +41,8 @@ Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-V
     date.timezone
 
 * der Pfad vom PHP-bin Verzeichnis zur PATH-Variable (Windows-Umgebungsvariable) muss hinzugefügt werden
-* Aktivierung der benötigten PHP-Erweiterungen in der php.ini Konfigurationsdatei
+
+* Aktivierung der benötigten PHP-Erweiterungen in der php.ini Konfigurationsdatei:
 
 .. code-block:: ini
 
@@ -80,8 +81,6 @@ In der httpd.conf am Ende einfügen:
                 Include "conf/conf.d/*.conf"
 
 Datei **<apache>\conf\conf.d\mapbender.conf** mit dem folgenden Inhalt anlegen:
-
-In der mapbender.conf:
   
 .. code-block:: apache
 
@@ -98,7 +97,7 @@ In der mapbender.conf:
  </Directory>
 
 
-Der Apache Webserverdienst muss neu gestartet werden.
+Der Apache Webserverdienst muss im Anschluss neu gestartet werden.
 
 
 mod_fcgid
@@ -175,7 +174,9 @@ Der erste Start
 
 Die Mapbender Installation kann unter **http://hostname/mapbender/** aufgerufen werden.
   
-Per Voreinstellung lauten die Anmeldedaten Benutzername: "root", Passwort: "root"
+Per Voreinstellung lauten die Anmeldedaten:
+
+Benutzername: "root", Passwort: "root"
 
 Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
@@ -183,7 +184,7 @@ Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
 **Überprüfung**
 
-Ob der Alias erreichbar ist:
+Überprüfen Sie, ob der Alias erreichbar ist:
 
 * http://localhost/mapbender/
 
