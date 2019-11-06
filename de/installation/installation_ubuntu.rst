@@ -3,14 +3,14 @@
 Installation auf Ubuntu/Debian
 ##############################
 
-Die mitgelieferte SQlite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**). 
+Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**). 
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
 
 Für den Produktiveinsatz wird PostgreSQL empfohlen. 
-Weite Installationshinweise im Kapitel `Mapbender Einrichtung auf PostgreSQL <#mapbender-einrichtung-auf-postgresql>`_.
+Weitere Installationshinweise finden Sie im Kapitel `Mapbender Einrichtung auf PostgreSQL <#mapbender-einrichtung-auf-postgresql>`_.
 
 
-Vorausetzungen
+Voraussetzungen
 ---------------
 
 - PHP (ab Version 5.6, maximal 7.1)
@@ -64,7 +64,7 @@ Datei **/etc/apache2/sites-available/mapbender.conf** mit dem folgenden Inhalt a
   RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
-Aktivieren der Seite und reload Apache:
+Aktivieren der Seite und Apache neu starten:
 
 .. code-block:: bash
 
@@ -88,11 +88,13 @@ Verzeichnisrechte
  sudo chmod -R ug+w /var/www/mapbender/app/db/demo.sqlite
 
  
-Der erste Start
----------------
+Nächste Schritte
+----------------
 Es kann nun auf die Mapbender Installation unter **http://hostname/mapbender/** zugriffen werden.
   
-Per Voreinstellung lauten die Anmeldedaten Benutzername: "root", Passwort: "root"
+Per Voreinstellung lauten die Anmeldedaten
+
+Benutzername: "root", Passwort: "root"
 
 Weitere Informationen unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
@@ -114,9 +116,9 @@ Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:
 
 Für den Einsatz in einer Produktivumgebung wird nachfolgend die Konfiguration einer PostgreSQL Datenbank beschrieben.
 
-Vorraussetzung:
+Voraussetzungen:
 - eingerichtete PostgreSQL Datenbank (Version < 10)
-- vorhandene Datenbank für Mapbender Konfiguration
+- vorhandene Datenbank zur Mapbender Konfiguration
 - ggf. eigenen Benutzer für Zugriff
 
 Installation PHP-PostgreSQL Treiber:
@@ -126,7 +128,7 @@ Installation PHP-PostgreSQL Treiber:
    sudo apt install php-pgsql
  
 
-Konfiguration der Datenbankverbindung (app/config/parameters.yml).
+Konfiguration der Datenbankverbindung in (app/config/parameters.yml).
 Weitere Informationen im Kapitel :ref:`database_de`.
 
 .. code-block:: yaml
