@@ -13,7 +13,8 @@ Achten Sie beim Ausführen der Befehle darauf, dass Sie sich im richtigen Verzei
 
     
 Übersicht der Befehle
----------------------  
+---------------------
+
   .. code-block:: yaml
 
     app/console  
@@ -127,13 +128,17 @@ Eventuell muss der Befehl mit root-Rechten (sudo) ausgeführt werden.
  
 Dev-Umgebung:
 
-.. code-block: yaml
+
+
+.. code-block:: yaml
 
 		app/console cache:clear --env=dev
+        
 		
 Prod-Umgebung:
 
-.. code-block: yaml		
+
+.. code-block:: yaml	
 
 		app/console cache:clear --env=prod --no-debug
 		
@@ -149,7 +154,8 @@ In diesem Modus kann lokal mit Mapbender gearbeitet werden.
 Mit Control -C kann der Server wieder gestoppt werden. 
 
 
-.. code-block: yaml
+
+.. code-block:: yaml
 
 	app/console server:run
 	
@@ -165,7 +171,8 @@ Der Befehl startet den von PHP eingebauten Webserver im Hintergrund.
 
 Im Terminal erscheint eine Meldung, dass der Server auf die angegebene Adresse hört (http://127.0.0.1:8000)
 
-.. code-block: yaml
+
+.. code-block:: yaml
 
 	app/console server:start
 
@@ -177,7 +184,8 @@ app/console server:stop
 
 Der Befehl stoppt den von PHP eingebauten Webserver im Hintergrund. Im Terminal erscheint eine Meldung, dass der Server mit angegebener Adresse gestoppt wurde (http://127.0.0.1:8000)
 
-.. code-block: yaml
+
+.. code-block:: yaml
 
 	app/console server:stop
 	
@@ -188,7 +196,8 @@ app/console server:status
 
 Dieser Befehl gibt den Status den lokalen Webservers aus.
 
-.. code-block: yaml
+
+.. code-block:: yaml
 
 	app/console server:status
 
@@ -199,7 +208,8 @@ app/console mapbender:database:upgrade
 
 Aktualisiert die Kartenelementkonfigurationen, falls neue vorhanden sind. 
 
-.. code-block: yaml 
+
+.. code-block:: yaml
 
 	app/console mapbender:database:upgrade 
 	
@@ -217,7 +227,7 @@ app/console doctrine:database:create
 Der Befehl wird einmalig bei der Installation verwendet und legt die Administrationsdatenbank für Mapbender an. Die Angabe zur Datenbankverbindung befindet sich in der parameters.yml-Datei.
 
 
-.. code-block: yaml 
+.. code-block:: yaml
 
 	app/console doctrine:database:create
 
@@ -228,7 +238,8 @@ app/console doctrine:schema:create
 
 Mit dem Befehl wird bei der Installation das Datenbankschema angelegt, d.h. es werden die von Mapbender benötigten Tabellen erstellt.
 
-.. code-block: yaml 
+
+.. code-block:: yaml
 
 	app/console doctrine:schema:create
 	
@@ -238,7 +249,8 @@ app/console doctrine:schema:validate
 
 Dieser Befehl überprüft, ob die Kartendateien korrekt und synchron mit der Datenbank sind.
 
-.. code-block: yaml		
+
+.. code-block:: yaml	
 
 	app/console doctrine:schema:validate
 [Mapping]  OK - The mapping files are correct.
@@ -251,7 +263,8 @@ Mit diesem Befehl lässt sich der root-Account erstellen oder aktualisieren. Fü
 
 Bei der Aktualisierung erfolgt die eindeutige Zuordnung über die bereits vorhandene ID, deshalb können alle drei o.g. Parameter verändert werden. 
 
-.. code-block: yaml 
+
+.. code-block:: yaml
 
 	app/console fom:user:resetroot
 
@@ -262,7 +275,8 @@ app/console mapbender:user:list
 
 Dieser Befehl zeigt im Terminal alle vorhandenen Benutzer mit ihrer ID und ihrem Benutzernamen an sowie Datum und Uhrzeit ihrer Erstellung.
 
-.. code-block: yaml 
+
+.. code-block:: yaml
 
 	app/console mapbender:user:list
 	User #3 name: al_bauer since 2019-10-14 12:10:44
@@ -273,7 +287,7 @@ app/console mapbender:version
 
 Der Befehl gibt die aktuelle Version des Mapbenders aus, z.B. Mapbender 3.0.8.4.
 
-.. code-block: yaml	
+.. code-block:: yaml
 
 	app/console mapbender:version 
 	Mapbender 3.0.8.4
@@ -283,8 +297,8 @@ app/console debug:config
 ------------------------
 
 Mit diesem Befehl werden alle registrierten Bundles (Pakete) aufgelistet und, falls vorhanden, der Alias dazu genannt.
- 
-.. code-block: yaml		
+
+.. code-block:: yaml	
 
 	app/console debug:config	
 
@@ -295,7 +309,7 @@ app/console debug:swiftmailer
 
 zeigt die/den konfigurierten Mailer an
 
-.. code-block: yaml		
+.. code-block:: yaml
 
 	app/console debug:swiftmailer 
 
@@ -305,32 +319,33 @@ app/console mapbender:print:queue:next
 
 Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine externe Integration erfordert. Druckaufträge können danach über die Kommandozeile gesteuert werden. Dafür muss in der parameters.yml-Datei folgender Parameter hinzugefügt und auf TRUE gesetzt werden:
 
-.. code-block: yaml	
+.. code-block:: yaml
 
 	mapbender.print.queueable
 
-nachzulesen auf:	
-https://github.com/mapbender/mapbender/pull/1070
+Weitere Informationen unter: https://github.com/mapbender/mapbender/pull/1070
 
 Anschließend wird im Backend des Mapbenders der Druckassistent aktualisiert und es erscheinen zwei neue Zeilen, Modus und Warteschleife.
-Modus wird auf "Warteschleife" gesetzt und Warteschleife auf "global", wenn davon auszugehen ist, dass die Druckaufträge für alle Kolleg*innen zugänglich sind. 
-Im Backend erscheint dadurch der neue Reiter/Tab "Druckaufträge". Diese können durch folgende Befehle über die Kommandozeile gesteuert werden. 
-Mit 
 
-.. code-block: yaml		
+Modus wird auf "Warteschleife" gesetzt und Warteschleife auf "global", wenn davon auszugehen ist, dass die Druckaufträge für alle Anwender zugänglich sind. 
+
+Im Backend erscheint dadurch der neue Reiter/Tab "Druckaufträge". Diese können durch folgende Befehle über die Kommandozeile gesteuert werden. 
+
+.. code-block:: yaml
 
 	app/console:queue:next
 	
-wird der nächste Druckauftrag ausgeführt, der in der Warteschleife steht. Für einen potenziell unendlich laufenden Prozess können folgende Optionen auf 0 gesetzt werden. 
+Es wird der nächste Druckauftrag ausgeführt, der in der Warteschleife steht. Für einen potenziell unendlich laufenden Prozess können folgende Optionen auf 0 gesetzt werden. 
 
-.. code-block: yaml	
+
+.. code-block:: yaml
 
 	app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
 
-Optionally, limit to processing jobs for time or number of print jobs can be set.  
+    Optionally, limit to processing jobs for time or number of print jobs can be set.  
 
-*--max-jobs=MAX-JOBS
-*--max-time=MAX-TIME  
+    *--max-jobs=MAX-JOBS
+    *--max-time=MAX-TIME  
 
 
 app/console mapbender:print:queue:rerun 
@@ -338,7 +353,7 @@ app/console mapbender:print:queue:rerun
 
  Dieser Befehl führt einen Druckwarteschlangenauftrag erneut aus. Die Angabe der ID ist dabei erforderlich.
  
-.. code-block: yaml		
+.. code-block:: yaml
 
 	app/console mapbender:print:queue:rerun 1
 	
@@ -352,7 +367,7 @@ app/console mapbender:print:queue:dumpjob
 
 Dieser Befehl gibt Druckaufträge in ein angegebenes Format (JSON oder yml) aus. Die ID des jeweiligen Druckauftrages ist für den Befehl erforderlich. Diese ID kann über die geöffnete Druckwarteschlange in der Mapbender-Anwendung ermittelt werden.
 
-.. code-block: yaml	
+.. code-block:: yaml
 
 	app/console mapbender:print:queue:dumpjob [options] [--] <id>
 	
@@ -457,7 +472,8 @@ app/console mapbender:print:runJob
 
 Mit diesem Befehl kann ein Druckauftrag aus einer Druck-Konfiguration heraus ausgeführt werden. Diese Konfiguration kann über app/console mapbender:print:dumpjob erstellt werden.
 
-.. code-block: yaml		
+
+.. code-block:: yaml	
 
 	app/console mapbender:print:runJob print_configuration.json /tmp/print.pdf
 	
@@ -469,8 +485,7 @@ Wenn ein Druckauftrag in der Warteschlange einen Fehler aufweist oder abgestürz
 
 Mit dem Befehl mapbender:print:repair wird der Status der Druckaufträge zurückgesetzt. Anschließend werden die Aufträge automatisch erneut ausgeführt.
 
-
-.. code-block: yaml		
+.. code-block:: yaml
 
 	app/console	app/console mapbender:print:repair 
 	
@@ -481,7 +496,7 @@ app/console mapbender:print:queue:clean
 
 Dieser Befehl löscht erfolgreich abgearbeitete Druckaufträge. Dazu zählen einerseits erstellte PDFs als auch dazugehörige Datenbankeinträge zu den Druckaufträgen. Beim Aufruf des Befehls kann die Angabe des Alters hinzugefügt werden, mit der Angabe 20 werden beispielsweise alle Aufträge gelöscht werden, die älter als 20 Tage sind.
 
-.. code-block: yaml		
+.. code-block:: yaml	
 	
 	mapbender:print:queue:clean 20
 	
@@ -496,8 +511,10 @@ app/console mapbender:print:queue:gcfiles
 gc steht für "garbage collection". gcfiles löscht entsprechend alle Druckaufträge, bei denen der Datenbankeintrag keine Referenz mehr zum Dateisystem hat. 
 Dies geschieht zum Beispiel, wenn ein Auftrag in der Datenbank gelöscht oder der Dateipfad zum PDF nicht mehr aktuell ist. 
 
-.. code-block: yaml		
+.. code-block:: yaml
 
 	app/console mapbender:print:queue:gcfiles
 	
 	No unreferenced local files found
+
+
