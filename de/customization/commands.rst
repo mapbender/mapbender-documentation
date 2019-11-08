@@ -175,7 +175,7 @@ Im Terminal erscheint eine Meldung, dass der Server auf die angegebene Adresse h
 .. code-block:: yaml
 
 	app/console server:start
-
+	
 	[OK] Web server listening on http://127.0.0.1:8000        
 
 
@@ -253,7 +253,7 @@ Dieser Befehl überprüft, ob die Kartendateien korrekt und synchron mit der Dat
 .. code-block:: yaml	
 
 	app/console doctrine:schema:validate
-[Mapping]  OK - The mapping files are correct.
+	[Mapping]  OK - The mapping files are correct.
 
 
 app/console fom:user:resetroot
