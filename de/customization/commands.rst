@@ -247,7 +247,7 @@ Mit dem Befehl wird bei der Installation das Datenbankschema angelegt, d.h. es w
 app/console doctrine:schema:validate
 ---------------------------------------
 
-Dieser Befehl überprüft, ob die Kartendateien korrekt und synchron mit der Datenbank sind.
+Der Befehl wird einmalig bei der Installation verwendet. Dieser Befehl überprüft, ob der Aufbau der Datenbank korrekt und aktuell ist.
 
 
 .. code-block:: yaml	
@@ -279,17 +279,19 @@ Dieser Befehl zeigt im Terminal alle vorhandenen Benutzer mit ihrer ID und ihrem
 .. code-block:: yaml
 
 	app/console mapbender:user:list
+        
 	User #3 name: al_bauer since 2019-10-14 12:10:44
 
 
 app/console mapbender:version
 -------------------------------
 
-Der Befehl gibt die aktuelle Version des Mapbenders aus, z.B. Mapbender 3.0.8.4.
+Der Befehl gibt die aktuelle Mapbender-Version aus.
 
 .. code-block:: yaml
 
 	app/console mapbender:version 
+        
 	Mapbender 3.0.8.4
  
 	
@@ -333,7 +335,7 @@ Im Backend erscheint dadurch der neue Reiter/Tab "Druckaufträge". Diese können
 
 .. code-block:: yaml
 
-	app/console:queue:next
+	app/console mapbender:print:queue:next
 	
 Es wird der nächste Druckauftrag ausgeführt, der in der Warteschleife steht. Für einen potenziell unendlich laufenden Prozess können folgende Optionen auf 0 gesetzt werden. 
 
@@ -342,10 +344,10 @@ Es wird der nächste Druckauftrag ausgeführt, der in der Warteschleife steht. F
 
 	app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
 
-    Optionally, limit to processing jobs for time or number of print jobs can be set.  
+Optional kann die Anzahl der Prozesse und die maximale Ausführungszeit limitiert werden.
 
-    *--max-jobs=MAX-JOBS
-    *--max-time=MAX-TIME  
+* --max-jobs=MAX-JOBS
+* --max-time=MAX-TIME  
 
 
 app/console mapbender:print:queue:rerun 
