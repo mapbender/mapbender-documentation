@@ -1125,6 +1125,7 @@ Wenn YAML-Anwendung unter /application genutzt werden, kann die Angabe per einde
 
   poi:
       [...]
+       allowEditData: true
        refreshLayersAfterFeatureSave:  # bei keiner Angabe in diesem Bereich erfolgt kein Karten-Refresh nach Speichern
          - 17
          - 18
