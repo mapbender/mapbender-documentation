@@ -271,6 +271,18 @@ YAML Application files
 YAML application files are stored under **app/config/applications**. 
 “**Mapbender mobile**”, “**Mapbender Demo Map**” and “**Mapbender Demo Map basic**” are pre-implemented as example applications.
 
+If you do not want the three example applications to be visible, you can change the variable 'published' to 'false'.
+
+.. code-block:: yaml
+
+	parameters:
+		applications:
+			mapbender_mobile:
+				[...]
+				published: false
+				
+Now the applications will not be visible for users (except for root user). 
+
 New YAML applications can be placed in the folder and will be automatically recognized by Mapbender.
 
 

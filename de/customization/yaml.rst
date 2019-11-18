@@ -261,6 +261,19 @@ YAML Anwendungsdateien
 ----------------------
 
 Als YAML definierte Anwendungen können in dem Verzeichnis **app/config/applications** abgelegt werden. Die bekannten Beispielanwendungen “**Mapbender mobile**”, “**Mapbender Demo Map**” und “**Mapbender Demo Map basic**” liegen dort als einzelne YAML Dateien. 
+
+Sollen die drei Beispielanwendungen nicht im Mapbender sichtbar sein, so kann man unter **app/config/applications** die einzelne Anwendung auswählen und deren Variable "published" auf "false" setzen.
+
+.. code-block:: yaml
+
+	parameters:
+		applications:
+			mapbender_mobile:
+				[...]
+				published: false
+				
+Nun sind die Anwendungen für Benutzer (außer dem root user) nicht sichtbar.
+
 Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
 
 
