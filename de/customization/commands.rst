@@ -38,7 +38,7 @@ Dabei sind die Angabe von Benutzername, Email und Passwort erforderlich. Der Ben
 .. code-block:: yaml
 
     app/console mapbender:user:create --help
-    app/console mapbender:user:create --password mypassword --email my@email name
+    app/console mapbender:user:create --password <password> --email <email> <name>
     app/console mapbender:user:create --password mypassword123 --email max.mustermann@mapbender.org 'Max Mustermann' 
    
    
@@ -55,7 +55,7 @@ Der Benutzername kann nicht verändert werden.
 
 .. code-block:: yaml
    
-    app/console mapbender:user:create --update --password mypassword --email my@email name
+    app/console mapbender:user:create --update --password <password> --email <email> <name>
 
     app/console mapbender:user:create --update --password mypassword8910 --email max.mustermann@mapbender.org 'Max Mustermann'
     
@@ -194,7 +194,7 @@ Der Befehl stoppt den von PHP eingebauten Webserver im Hintergrund. Im Terminal 
 app/console server:status
 -------------------------
 
-Dieser Befehl gibt den Status den lokalen Webservers aus.
+Dieser Befehl gibt den Status des lokalen Webservers aus.
 
 
 .. code-block:: yaml
