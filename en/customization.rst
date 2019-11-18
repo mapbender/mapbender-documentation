@@ -1,6 +1,6 @@
 .. _customization:
 
-Customization / Tipps and tricks
+Customization / Tips and tricks
 ================================
 
 .. toctree::
