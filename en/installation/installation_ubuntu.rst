@@ -167,7 +167,8 @@ Following parameters (parameters.yml) need to be adapted:
 
                     database_driver:   pdo_mysql
                     database_port:     3306
-                    
+                   
 To initialize your database connection, see PostgreSQL.                    
+
 
 

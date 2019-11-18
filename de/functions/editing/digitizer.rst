@@ -711,7 +711,8 @@ Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können 
                     beer: beer
                     flowers: flowers
 
-Ab Digitizer 1.2: Für die Mehrfachauswahl wird eine vereinfachte Auswahlmöglichkeit genutzt, die auch die Suche innerhalb der Drop-Down-Liste ermöglicht. Die Navigation durch die Liste ist mit der Tastatur möglich. Mögliche Einträge werden beim Eintippen hevorgehoben. Eine vorhandene Auswahl kann über das kleine "x" Symbol wieder deaktiviert werden.
+**Anmerkungen:** Ab Digitizer 1.2 wird für die Mehrfachauswahl eine vereinfachte Auswahlmöglichkeit genutzt, die auch die Suche innerhalb der Drop-Down-Liste ermöglicht. Die Navigation durch die Liste ist mit der Tastatur möglich. Mögliche Einträge werden beim Eintippen hevorgehoben. Eine vorhandene Auswahl kann über das kleine "x" Symbol wieder deaktiviert werden.
+Aktuell wird beim Mapbender der Digitizer 1.0.x mitgeliefert. Weitere Versionen findet man unter: https://github.com/mapbender/mapbender-digitizer
 
 .. image:: ../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
@@ -1125,11 +1126,15 @@ Wenn YAML-Anwendung unter /application genutzt werden, kann die Angabe per einde
 
   poi:
       [...]
+       allowEditData: true
        refreshLayersAfterFeatureSave:  # bei keiner Angabe in diesem Bereich erfolgt kein Karten-Refresh nach Speichern
          - 17
          - 18
-         - osm        # Namensangabe nur bei Anwendungen unter app/config/application möglich
+         - osm                         # Namensangabe nur bei Anwendungen unter app/config/application möglich
       [...]
+      
+**Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Aktuell wird beim Mapbender der Digitizer 1.0.x mitgeliefert. Weitere Versionen findet man unter: https://github.com/mapbender/mapbender-digitizer
+ 
 
 
 Duplizieren von Objekten
