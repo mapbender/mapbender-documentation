@@ -82,7 +82,12 @@ In the footer:
 Add variables into a HTMl-element:
 ----------------------------------
 
-In Mapbender, it is possible to work with variables in applications. The following example is a simple introduction to this topic, as we show how to include the application title and the element title via the HTML-element.
+In Mapbender, it is possible to work with variables in applications. 
+
+*Further information:* Reference documentation on standard variables in twig: https://symfony.com/doc/2.8/templating/app_variable.html
+
+
+**Examples:**
 
 **Variable "application.title"**
 
@@ -109,6 +114,27 @@ The outcome looks like this:
 
 .. image:: ../../../figures/de/html_example_application.title.png
      :scale: 80
+     
+     
+**Variable app.user.username**
+
+Gives back the username:
+
+.. code-block:: yaml
+
+	<p>Username: {{ app.user.username }}</p>
+    
+	
+**Variable group.title**
+
+The group of a user can not be issued with a single expression, because twig 1.40 does not support map.
+A loop is needed:
+
+.. code-block:: yaml
+	
+  {% for index, group in app.user.groups %}
+      <p>Gruppe #{{ index }}: {{ group.title }}</p>
+  {% endfor %}
 
 **Variable "entity"**
 
