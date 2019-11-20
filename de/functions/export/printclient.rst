@@ -219,13 +219,26 @@ Analog zu der Veränderung der Schriftfarbe, wird auch die Veränderung der Schr
 Dynamische Bilder und dynamische Texte
 ======================================
 
-Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder oder Beschreibungen (z.B. Logo und Bezeichnung der Gemeinde) ausgegeben werden. Hierzu gibt es die Platzhalter "dynamic_image" und "dynamic_text". Beide Elemente können in der ODG-Druckvorlage in die nicht druckbare Ebene eingefügt, benannt (**Menü: Ändern -> Name...**) und entsprechend platziert werden. Sobald diese Bereiche im Drucklayout vorliegen wird nach einem Bild mit dem Namen der Gruppe gesucht und dieses im Bereich "dynamic_image" ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Die verschiedenen Bilder je Gruppe werden im Ordner **app/Resources/MapbenderPrintBundle/images/** unter dem jeweiligen Namen der Gruppe abgelegt (z.B. Name der Gruppe ist "Gruppe 1", dann lautet der Name des Bildes Gruppe 1.png). Unter "dynamic_text" wird die Beschreibung der Gruppe ausgegeben.
-Ein Gruppen-abhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie folgt aussehen:
+Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder oder Beschreibungen (z.B. Logo und Bezeichnung der Gemeinde) ausgegeben werden. Hierzu gibt es die Platzhalter "dynamic_image" und "dynamic_text". Beide Elemente können in der ODG-Druckvorlage in die nicht druckbare Ebene eingefügt, umbenannt (**Menü: Format -> Name... bzw. Menü: Ändern -> Name... bzw. Kontextmenü des Elements -> Name...**) und entsprechend platziert werden. 
+
+**Hinweis:** Es kann immer nur ein Gruppenbild und eine Gruppenbeschreibung ausgegeben werden. Mapbender zeigt immer die zuerst aufgeführte Gruppe an. Ist der Benutzer in der Gruppe "intern" und "Gruppe 1", dann wird "intern.png" als Bild genommen und die Gruppenbeschreibung der Gruppe "intern" als dynamischer Text ausgegeben. 
+
+Ein gruppenabhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie folgt aussehen:
 
 .. image:: ../../../figures/de/print_client_example_groups.png
      :scale: 80
 
-Zur Nutzung dieser Funktion müssen Sie vorher Gruppen erstellen und den Anwendungen die jeweiligen Gruppen zuordnen. Die Funktionsweise der Gruppen- und Benutzerverwaltung finden Sie in der Mapbender Dokumentation im `Mapbender Quickstart <../../quickstart.html>`_.
+Zur Nutzung dieser Funktion müssen Sie vorher Gruppen mit Benutzern erstellen und den Anwendungen die jeweiligen Gruppen zuweisen. Die Funktionsweise der Gruppen- und Benutzerverwaltung finden Sie in der Mapbender Dokumentation im `Mapbender Quickstart <../../quickstart.html>`_.
+
+Dynamisches Bild
+----------------
+
+Sobald "dynamic_image" im Drucklayout vorliegt, wird nach einem Bild mit dem Namen der ersten zugewiesenen Gruppe gesucht und dieses im Bereich des Elements "dynamic_image" ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Die verschiedenen Bilder je Gruppe werden im Ordner **app/Resources/MapbenderPrintBundle/images/** unter dem jeweiligen Namen der Gruppe abgelegt (z.B. Gruppenname ist "Gruppe 1", dann lautet der Name des Bildes Gruppe 1.png).
+
+Dynamischer Text
+----------------
+
+Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe ausgegeben. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und bspw. für Copyright-Hinweise nutzen. 
 
 
 Druck von Information für ein ausgewähltes Objekt
