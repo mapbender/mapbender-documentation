@@ -82,7 +82,13 @@ Mit Variablen im HTMl-Element arbeiten:
 
 Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden. Als Beispiel wird gezeigt, wie der Titel der Anwendung und des Elements mithilfe eines HTML-Elements eingebunden werden kann.
 
-**Die Variable "application.title"**
+**Anmerkungen:** Referenzdoku zu Standard-Variablen in Twig: https://symfony.com/doc/2.8/templating/app_variable.html
+
+
+
+**Beispiele**
+
+**Variable "application.title"**
 
 Die Anwendung, für die dieses Element konfiguriert wird, sieht im Anwendungsmanager des
 Mapbender wie folgt aus:
@@ -109,6 +115,24 @@ Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 .. image:: ../../../figures/de/html_example_application.title.png
      :scale: 80
 
+**Variable app.user.username**
+Gibt den Usernamen aus:
+
+.. code-block:: yaml
+
+	<p>Username: {{ app.user.username }}</p>
+	
+**Variable group.title**
+Die Gruppe des Benutzers kann nicht in einer einzelnen Expression ausgegeben werden, da Twig 1.40 kein map unterstützt.
+Dies geschieht mit einer Schleife:
+
+.. code-block:: yaml
+	
+  {% for index, group in app.user.groups %}
+      <p>Gruppe #{{ index }}: {{ group.title }}</p>
+  {% endfor %}
+    
+    
 **Variable "entity"**
 
 Die Variable "entity" bindet Parameter des HTML-Elements ein. Wurde beispielsweise die Variable ``{ entity }`` eingebunden, wird die ID des HTML-Elements angezeigt. Wurde die Variable ``{ entity.title }`` eingebunden, wird in der Anwendung die Bezeichnung (Title) des Elements ausgegeben.
