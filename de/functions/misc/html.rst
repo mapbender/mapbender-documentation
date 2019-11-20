@@ -114,15 +114,19 @@ Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
 .. image:: ../../../figures/de/html_example_application.title.png
      :scale: 80
+     
 
 **Variable app.user.username**
+
 Gibt den Usernamen aus:
 
 .. code-block:: yaml
 
 	<p>Username: {{ app.user.username }}</p>
+    
 	
 **Variable group.title**
+
 Die Gruppe des Benutzers kann nicht in einer einzelnen Expression ausgegeben werden, da Twig 1.40 kein map unterstützt.
 Dies geschieht mit einer Schleife:
 
