@@ -81,6 +81,7 @@ Mit Variablen im HTMl-Element arbeiten:
 ---------------------------------------
 
 Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden.
+
 *Anmerkung:* Referenzdoku zu Standard-Variablen in Twig: https://symfony.com/doc/2.8/templating/app_variable.html
 
 
