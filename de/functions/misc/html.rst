@@ -80,13 +80,12 @@ Und im Footer:
 Mit Variablen im HTMl-Element arbeiten:
 ---------------------------------------
 
-Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden. Als Beispiel wird gezeigt, wie der Titel der Anwendung und des Elements mithilfe eines HTML-Elements eingebunden werden kann.
-
-**Anmerkungen:** Referenzdoku zu Standard-Variablen in Twig: https://symfony.com/doc/2.8/templating/app_variable.html
-
+Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden.
+*Anmerkung:* Referenzdoku zu Standard-Variablen in Twig: https://symfony.com/doc/2.8/templating/app_variable.html
 
 
-**Beispiele**
+
+**Beispiele:**
 
 **Variable "application.title"**
 
