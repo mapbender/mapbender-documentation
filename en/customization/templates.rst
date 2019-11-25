@@ -472,7 +472,7 @@ Or in the twig file:
 How do I change the title and favicon?
 **************************************
 
-1. You can adjust the title and the favicon also in the twig-file:
+1. You can adjust the title and the favicon in the twig-file:
 
 .. code-block:: yaml
 
@@ -485,7 +485,7 @@ How do I change the title and favicon?
 
 2. The favicon can also be changed under *application/web*:
 
-The current favicon.png-file can be replaced.
+   The current favicon.png-file can be replaced.
 
 
 
