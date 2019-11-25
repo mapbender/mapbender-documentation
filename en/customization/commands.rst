@@ -65,7 +65,7 @@ The user name cannot be changed.
 app/console mapbender:wms:validate:url 
 -------------------------------------   
 
-Command to check the accessibility of the WMS data source. the available layers are listed, if the service is accessible. 
+Command to check the accessibility of the WMS data source. The available layers are listed, if the service is accessible. 
 
 .. code-block:: yaml
 
@@ -99,7 +99,7 @@ Command to update the host name in the source URLs. Like this it is not necessar
 app/console mapbender:config:check 
 -----------------------------------
 
-Command to check the system configuration and mapbender requirements. Usefull command to to determine whether dependencies are compliant and database access works.
+Command to check the system configuration and mapbender requirements. Useful command to determine whether dependencies are compliant and database access works.
 
 .. code-block:: yaml
 
@@ -294,7 +294,7 @@ Command displays the configured mailer(s)
 app/console mapbender:print:queue:next
 --------------------------------------
 
-The queued print is disabled by default because it requires some external integration setup. To run a print jobs via the command line the follwoing parameter must be added to the parameters.yml file and set to TRUE to enable queued printing.
+The queued print is disabled by default because it requires some external integration setup. To run print jobs via the command line, the following parameter must be added to the parameters.yml file and set to TRUE to enable queued printing..
 
 .. code-block:: yaml
 
@@ -313,7 +313,7 @@ To run the jobs the following commands can be used.
 
 	app/console mapbender:print:queue:next
 	
-The command mapbender:print:queue:nextexcecutes the next print job in the queue. For a potentially infitie process, the following options can be set to 0.
+The command mapbender:print:queue:next excecutes the next print job in the queue. For a potentially infinite process, the following options can be set to 0.
 
 
 .. code-block:: yaml
@@ -467,7 +467,7 @@ The command resets the status of the print jobs so that they can be executed aga
 app/console mapbender:print:queue:clean
 ------------------------------------------
 
-This command purges old jobs from the print queue (database and files). This includes on the one hand created PDFs as well as corresponding database entries for the print jobs which are listed in the table called "mb_print_queue". With the command the expiring age can be set, for example, 20 can be used to delete all jobs older than 20 days.
+This command purges old jobs from the print queue (database and files). This includes created PDFs as well as corresponding database entries for the print jobs which are listed in the table called "mb_print_queue". With the command the expiring age can be set, for example, 20 can be used to delete all jobs older than 20 days.
 
 .. code-block:: yaml	
 	
