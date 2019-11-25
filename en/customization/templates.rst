@@ -472,7 +472,7 @@ Or in the twig file:
 How do I change the title and favicon?
 **************************************
 
-You can adjust the title and the favicon also in the twig-file:
+1. You can adjust the title and the favicon also in the twig-file:
 
 .. code-block:: yaml
 
@@ -480,6 +480,12 @@ You can adjust the title and the favicon also in the twig-file:
  {% block title %}Workshop - {{ application.title }}{% endblock %}
 
  {% block favicon %}{{ asset('bundles/workshopdemo/imgage/workshop.ico') }}{% endblock %}
+ 
+ 
+
+2. The favicon can also be changed under *application/web*:
+
+The current favicon.png-file can be replaced.
 
 
 
