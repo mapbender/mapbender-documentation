@@ -459,7 +459,7 @@ Das Logo kann auch in der Twig-Datei angepasst werden:
 Wie kann der Anwendungstitel und das Favicon angepasst werden?
 **************************************************************
 
-1. Der Anwendungstitel und das Favicon kann auch in der Twig-Datei angepasst werden:
+1. Der Anwendungstitel und das Favicon können in der Twig-Datei angepasst werden:
 
 .. code-block:: php
 
@@ -469,9 +469,9 @@ Wie kann der Anwendungstitel und das Favicon angepasst werden?
  {% block favicon %}{{ asset('bundles/workshopdemo/imgage/workshop.ico') }}{% endblock %}
  
  
-2. Das Favicon kann auch unter *application/web* verändert werden:
+2. Das Favicon kann zusätzlich unter *application/web* verändert werden:
 
-Die aktuelle favicon.png-Datei muss hierfür ausgetauscht werden.
+   Die aktuelle favicon.png-Datei muss hierfür ausgetauscht werden.
 
 
 
