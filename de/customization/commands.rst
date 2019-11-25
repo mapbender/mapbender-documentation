@@ -266,7 +266,7 @@ Bei der Aktualisierung erfolgt die eindeutige Zuordnung über die bereits vorhan
 
 .. code-block:: yaml
 
-	app/console fom:user:resetroot
+	app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
 
 
 
