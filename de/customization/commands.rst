@@ -472,7 +472,7 @@ Dieser Befehl gibt Druckaufträge in ein angegebenes Format (JSON oder yml) aus.
 app/console mapbender:print:runJob
 ----------------------------------
 
-Mit diesem Befehl kann ein Druckauftrag aus einer Druck-Konfiguration heraus ausgeführt werden. Diese Konfiguration kann über app/console mapbender:print:dumpjob erstellt werden.
+Mit diesem Befehl kann ein Druckauftrag aus einer Druck-Konfigurationsdatei heraus ausgeführt werden. Diese Konfiguration kann über app/console mapbender:print:dumpjob erstellt werden.
 
 
 .. code-block:: yaml	
