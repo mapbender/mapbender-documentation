@@ -294,7 +294,7 @@ Command displays the configured mailer(s)
 app/console mapbender:print:queue:next
 --------------------------------------
 
-The queued print is disabled by default because it requires some external integration setup. To run print jobs via the command line, the following parameter must be added to the parameters.yml file and set to TRUE to enable queued printing..
+The queued print is disabled by default because it requires some external integration setup. To run print jobs via the command line, the following parameter must be added to the parameters.yml file and set to TRUE to enable queued printing.
 
 .. code-block:: yaml
 
@@ -313,7 +313,7 @@ To run the jobs the following commands can be used.
 
 	app/console mapbender:print:queue:next
 	
-The command mapbender:print:queue:next excecutes the next print job in the queue. For a potentially infinite process, the following options can be set to 0.
+The command mapbender:print:queue:next executes the next print job in the queue. For a potentially infinite process, the following options can be set to 0.
 
 
 .. code-block:: yaml
