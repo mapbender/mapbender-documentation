@@ -304,7 +304,7 @@ Read more: https://github.com/mapbender/mapbender/pull/1070
 
 The print assistant is then updated in the backend of Mapbender and two new lines appear: mode and queue. 
 Mode is set to "queue" and queue is set to "global", if the print jobs are expected to be accessible to all colleagues. 
-The new tab "print jobs" appears in the print client pop-up window. 
+The new tab "Recent jobs" (which shows your scheduled print jobs) appears in the print client pop-up window. 
 
 To run the jobs the following commands can be used.
 
