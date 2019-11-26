@@ -472,7 +472,7 @@ Dieser Befehl gibt Druckaufträge in ein angegebenes Format (JSON oder yml) aus.
 app/console mapbender:print:runJob
 ----------------------------------
 
-Mit diesem Befehl kann ein Druckauftrag aus einer Druck-Konfigurationsdatei heraus ausgeführt werden. Diese Konfiguration kann über app/console mapbender:print:dumpjob erstellt werden.
+Mit diesem Befehl kann ein Druckauftrag aus einer Druck-Konfigurationsdatei heraus ausgeführt werden. Diese Konfiguration kann über den Befehl app/console mapbender:print:queue:dumpjob erstellt werden.
 
 
 .. code-block:: yaml	
@@ -483,7 +483,7 @@ Mit diesem Befehl kann ein Druckauftrag aus einer Druck-Konfigurationsdatei hera
 app/console mapbender:print:queue:repair 
 -------------------------------------------
 
-Wenn ein Druckauftrag in der Warteschlange einen Fehler aufweist oder abgestürzt ist, beispielsweise ein WMS-Dienst nicht erreichbar ist, kann der Druck nicht ausgeführt werden. 
+Wenn ein Druckauftrag in der Warteschlange einen Fehler aufweist oder abgestürzt ist, beispielsweise weil ein WMS-Dienst nicht erreichbar ist, kann der Druck nicht ausgeführt werden. 
 
 Mit dem Befehl mapbender:print:repair wird der Status der Druckaufträge zurückgesetzt. Anschließend werden die Aufträge automatisch erneut ausgeführt.
 
