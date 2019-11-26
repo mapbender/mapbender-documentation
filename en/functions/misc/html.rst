@@ -128,12 +128,12 @@ Gives back the username:
 **Variable group.title**
 
 The group of a user can not be issued with a single expression, because twig 1.40 does not support map.
-A loop is needed:
+Instead, a loop is needed:
 
 .. code-block:: yaml
 	
   {% for index, group in app.user.groups %}
-      <p>Gruppe #{{ index }}: {{ group.title }}</p>
+      <p>Group #{{ index }}: {{ group.title }}</p>
   {% endfor %}
 
 **Variable "entity"**
