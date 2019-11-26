@@ -80,9 +80,15 @@ Und im Footer:
 Mit Variablen im HTMl-Element arbeiten:
 ---------------------------------------
 
-Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden. Als Beispiel wird gezeigt, wie der Titel der Anwendung und des Elements mithilfe eines HTML-Elements eingebunden werden kann.
+Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden.
 
-**Die Variable "application.title"**
+*Anmerkung:* Die Referenzdoku zu Standard-Variablen in Twig finden Sie in der offiziellen Symfony-Dokumentation unter: https://symfony.com/doc/2.8/templating/app_variable.html
+
+
+
+**Beispiele:**
+
+**Variable "application.title"**
 
 Die Anwendung, für die dieses Element konfiguriert wird, sieht im Anwendungsmanager des
 Mapbender wie folgt aus:
@@ -108,7 +114,29 @@ Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
 .. image:: ../../../figures/de/html_example_application.title.png
      :scale: 80
+     
 
+**Variable app.user.username**
+
+Gibt den Usernamen des aktiven Users im HTML-Element aus:
+
+.. code-block:: yaml
+
+	<p>Username: {{ app.user.username }}</p>
+    
+	
+**Variable group.title**
+
+Die Gruppe des Benutzers kann nicht in einer einzelnen Expression ausgegeben werden, da Twig 1.40 den map-Filter erst in höheren Versionen unterstützt.
+Um Gruppentitel dennoch ausgeben zu können, bedienen wir uns einer Schleife, die im HTML-Element eingebunden wird:
+
+.. code-block:: yaml
+	
+  {% for index, group in app.user.groups %}
+      <p>Gruppe #{{ index }}: {{ group.title }}</p>
+  {% endfor %}
+    
+    
 **Variable "entity"**
 
 Die Variable "entity" bindet Parameter des HTML-Elements ein. Wurde beispielsweise die Variable ``{ entity }`` eingebunden, wird die ID des HTML-Elements angezeigt. Wurde die Variable ``{ entity.title }`` eingebunden, wird in der Anwendung die Bezeichnung (Title) des Elements ausgegeben.
