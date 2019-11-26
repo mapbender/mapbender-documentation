@@ -82,7 +82,7 @@ Mit Variablen im HTMl-Element arbeiten:
 
 Im Mapbender besteht die Möglichkeit Variablen in Anwendungen zu verwenden.
 
-*Anmerkung:* Referenzdoku zu Standard-Variablen in Twig: https://symfony.com/doc/2.8/templating/app_variable.html
+*Anmerkung:* Die Referenzdoku zu Standard-Variablen in Twig finden Sie in der offiziellen Symfony-Dokumentation unter: https://symfony.com/doc/2.8/templating/app_variable.html
 
 
 
@@ -118,7 +118,7 @@ Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
 **Variable app.user.username**
 
-Gibt den Usernamen aus:
+Gibt den Usernamen des aktiven Users im HTML-Element aus:
 
 .. code-block:: yaml
 
@@ -127,8 +127,8 @@ Gibt den Usernamen aus:
 	
 **Variable group.title**
 
-Die Gruppe des Benutzers kann nicht in einer einzelnen Expression ausgegeben werden, da Twig 1.40 kein map unterstützt.
-Dies geschieht mit einer Schleife:
+Die Gruppe des Benutzers kann nicht in einer einzelnen Expression ausgegeben werden, da Twig 1.40 den map-Filter erst in höheren Versionen unterstützt.
+Um Gruppentitel dennoch ausgeben zu können, bedienen wir uns einer Schleife, die im HTML-Element eingebunden wird:
 
 .. code-block:: yaml
 	
