@@ -15,7 +15,7 @@ Make sure you are in the correct directory (above the app directory)
 
     
 Help command
-************
+------------
 
   .. code-block:: yaml
 
@@ -65,7 +65,7 @@ The user name cannot be changed.
     
 
 app/console fom:user:resetroot
--------------------------------
+******************************
 
 Command to create or update the root account. User name, email and password must be assigned for creation.
 
@@ -79,7 +79,7 @@ During the update, the unique assignment is made via the already existing ID, th
 
 
 app/console mapbender:user:list
--------------------------------
+*******************************
 
 Command to list all existing users with their ID and user name and the time of creation.
 
