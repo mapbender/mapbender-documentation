@@ -8,7 +8,8 @@ Anpassungen / Tipps & Tricks
 
    customization/mapbender_templates.rst
    customization/templates.rst
-   customization/yaml.rst
    customization/css.rst
+   customization/yaml.rst
+   customization/commands.rst
 
 

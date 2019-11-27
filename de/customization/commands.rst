@@ -1,3 +1,5 @@
+.. _console_de:
+
 app/console Befehle
 ======================
 
