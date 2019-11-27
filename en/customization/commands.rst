@@ -323,7 +323,7 @@ The command resets the status of the print jobs so that they can be executed aga
 
 .. code-block:: yaml		
 
-	app/console	app/console mapbender:print:repair 
+	app/console mapbender:print:queue:repair 
 	
 	
 app/console mapbender:print:queue:clean
