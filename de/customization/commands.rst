@@ -319,11 +319,11 @@ app/console mapbender:print:queue:repair
 
 Wenn ein Druckauftrag in der Warteschlange einen Fehler aufweist oder abgestürzt ist, beispielsweise weil ein WMS-Dienst nicht erreichbar ist, kann der Druck nicht ausgeführt werden. 
 
-Mit dem Befehl mapbender:print:repair wird der Status der Druckaufträge zurückgesetzt. Anschließend werden die Aufträge automatisch erneut ausgeführt.
+Mit dem Befehl mapbender:print:queue:repair wird der Status der Druckaufträge zurückgesetzt. Anschließend werden die Aufträge automatisch erneut ausgeführt.
 
 .. code-block:: yaml
 
-	app/console	app/console mapbender:print:repair 
+	app/console mapbender:print:queue:repair 
 	
 	
 	
@@ -360,7 +360,7 @@ Mailer
 app/console debug:swiftmailer
 *****************************
 
-zeigt die/den konfigurierten Mailer an
+Zeigt die/den konfigurierten Mailer an.
 
 .. code-block:: yaml
 
