@@ -466,20 +466,26 @@ Or in the twig file:
 
 .. code-block:: html
 
- <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />
+ <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/image/workshop_logo.png')}}" />
 
 
 How do I change the title and favicon?
 **************************************
 
-You can adjust the title and the favicon also in the twig-file:
+1. You can adjust the title and the favicon in the twig-file:
 
 .. code-block:: yaml
 
 
  {% block title %}Workshop - {{ application.title }}{% endblock %}
 
- {% block favicon %}{{ asset('bundles/workshopdemo/imgage/workshop.ico') }}{% endblock %}
+ {% block favicon %}{{ asset('bundles/workshopdemo/image/workshop.ico') }}{% endblock %}
+ 
+ 
+
+2. The favicon can also be changed under *application/web*:
+
+   The current favicon.png-file can be replaced.
 
 
 
@@ -511,7 +517,7 @@ If you want to use an image you could place the image in your bundle and refer t
 .. code-block:: css
 
   .iconPrint:before {
-   content:url("imgage/print.png");
+   content:url("image/print.png");
   }
 
 

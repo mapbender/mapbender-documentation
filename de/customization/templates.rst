@@ -453,20 +453,25 @@ Das Logo kann auch in der Twig-Datei angepasst werden:
 
 .. code-block:: html
 
- <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/imgage/workshop_logo.png')}}" />
+ <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/image/workshop_logo.png')}}" />
 
 
 Wie kann der Anwendungstitel und das Favicon angepasst werden?
 **************************************************************
 
-Der Anwendungstitel und das Favicon kann auch in der Twig-Datei angepasst werden:
+1. Der Anwendungstitel und das Favicon können in der Twig-Datei angepasst werden:
 
 .. code-block:: php
 
 
  {% block title %}Workshop - {{ application.title }}{% endblock %}
 
- {% block favicon %}{{ asset('bundles/workshopdemo/imgage/workshop.ico') }}{% endblock %}
+ {% block favicon %}{{ asset('bundles/workshopdemo/image/workshop.ico') }}{% endblock %}
+ 
+ 
+2. Das Favicon kann zusätzlich unter *application/web* verändert werden:
+
+   Die aktuelle favicon.png-Datei muss hierfür ausgetauscht werden.
 
 
 
@@ -499,7 +504,7 @@ Wenn Sie ein Bild nutzen möchten, legen Sie dieses am Besten in Ihrem Bundle ab
 .. code-block:: css
 
   .iconPrint:before {
-    content:url("imgage/print.png");
+    content:url("image/print.png");
   }
 
 
