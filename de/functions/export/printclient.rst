@@ -3,15 +3,16 @@
 PrintClient (Druck)
 *******************
 
-Mapbender bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen dem Client verschiedene Auswahlmöglichkeiten zur Verfügung:
+Mapbender bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen im Client verschiedene Auswahlmöglichkeiten zur Verfügung:
 
- * Auswahl Maßstab,
+ * Auswahl Druckvorlage,
  * Auswahl Qualität,
+ * Auswahl Maßstab,
  * Drehung des Ausschnitts,
- * Ausdruck Legende.
- * Optional können freie Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden.
+ * Ausdruck Legende
+ * Optional können Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden.
 
-Der Druck greift auf Druckvorlagen zu, die individuell angepasst werden können. In den Druckvorlagen können Bereiche für Datum, Maßstab (Text und Maßstabsbalken), Übersichtskarte und Nordpfeil definiert werden.
+Der Druck greift auf Druckvorlagen zu, die individuell angepasst werden können. In den Druckvorlagen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
 
 Mapbender bringt bereits eine Kollektion von Druckvorlagen (LibreOffice Draw Dateien in den Formaten A4 bis A0) mit, die individuell angepasst werden können.
 
@@ -31,28 +32,32 @@ Konfiguration
 .. image:: ../../../figures/de/print_client_configuration.png
      :scale: 80
 
-Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden. Siehe unter :ref:`button_de` für die Konfiguration.
+Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden. Siehe unter :ref:`button` zur detaillierten Beschreibung der Button-Funktion.
 
 
 * **Titel**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Target**: Zielelement (ID des Kartenelements). 
 * **Type**: element oder dialog, default ist dialog
-* **Maßstabsstufen (Scales)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
+* **Maßstabsstufen (Scales)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, muss ein beliebiger Maßstab hinzugefügt werden.
 * **Drehbar**: definiert, ob der Ausdruck gedreht werden kann, der Standardwert ist true
-* **Legende drucken**: ob auch die Legende der Karte gedruckt werden soll, der Standardwert ist false
-* **Legenden Checkbox aktiv**: Soll die Legenden-Checkbox beim Start aktiv sein
-* **File prefix**: Definition des Dateinames für das PDF
+* **Legende drucken**: fügt eine Checkbox hinzu, die den Druck der Kartenlegende ermöglicht, der Standardwert ist false
+* **Legenden Checkbox aktiv**: definiert, ob die "Legende drucken" - Checkbox bei Anwendungsstart aktiv ist
+* **File prefix**: Anpassung des Dateinamens für das PDF. Dieser setzt sich aus dem definierbarem Prefix und der Datums- und Uhrzeitangabe des Drucks zusammen.
 * **Qualitätsstufen**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
-* **Template**: Verweis auf die Druckvorlage (z.B. a4portrait).
-* **Beschriftung (Label)**: Beschriftung des Feldes (z.B. Portrait A4).
+* **Template**: Verweis auf die Druckvorlage (z.B. a4portrait). Löschen und Hinzufügen von Vorlagen ist über die "+"- bzw. "x"-Symbole möglich.
+* **Beschriftung (Label)**: Bezeichnung der Druckvorlagen im Frontend (z.B. Portrait A4).
 
 * **Optionale Felder (optional fields)**:
   
+Über die Konfiguration folgender Werte können optionale Felder im Druckdialog ermöglicht werden. Eine Beispielkonfiguration mit vier Feldern (Titel, zwei Kommentarfelder, Bearbeiter) gibt die YAML-Definition.
+
   * **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
   * **label**: Beschriftung des optionalen Feldes.
   * **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
+  
+* **Zeige Pflichtfelder zuerst (Display required fields first)**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
     
-* **Replace pattern**: Kartenaufruf kann verändert werden. Angaben können angefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer).
+* **Replace pattern**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer) - ein Beispiel gibt der Abschnitt YAML-Definition.
 
 
   
