@@ -14,7 +14,7 @@ Achten Sie beim Ausführen der Befehle darauf, dass Sie sich im richtigen Verzei
 * mapbender (bei der Paketinstallation)
 
     
-Übersicht der Befehle
+Hilfe zu den Befehlen
 ---------------------
 
   .. code-block:: yaml
@@ -29,10 +29,11 @@ Die Hilfe für jeden Befehl kann mit [Befehl] --help aufgerufen werden, z.B.:
     app/console mapbender:user:create --help
     
 
-    
+Benutzerverwaltung
+------------------
 
 app/console mapbender:user:create 
--------------------------------------
+*********************************
 
 Befehl zum Anlegen eines Benutzers über die Kommandozeile. 
 Dabei sind die Angabe von Benutzername, Email und Passwort erforderlich. Der Benutzername und die Email müssen eindeutig sein.
@@ -60,153 +61,40 @@ Der Benutzername kann nicht verändert werden.
     app/console mapbender:user:create --update --password <password> --email <email> <name>
 
     app/console mapbender:user:create --update --password mypassword8910 --email max.mustermann@mapbender.org 'Max Mustermann'
-    
+   
+   
+app/console fom:user:resetroot
+******************************
 
-    
-app/console mapbender:wms:validate:url 
--------------------------------------   
+Mit diesem Befehl lässt sich der root-Account erstellen oder aktualisieren. Für die Erstellung müssen ein Benutzername, eine E-Mail und ein Passwort vergeben werden.
 
-Befehl zur Prüfung der Erreichbarkeit der WMS-Datenquelle. Ist der Dienst erreichbar, werden die verfügbaren Layer aufgelistet. 
-
-.. code-block:: yaml
-
-    app/console mapbender:wms:validate:url "https://osm-demo.wheregroup.com/service?VERSION=1.3.0"
-    
-	WMS source loaded and validated
-	Source describes 3 layers:
-	* OpenStreetMap (WhereGroup)
-	* OpenStreetMap
-	* OpenStreetMap (grey scale)
-
-
-
-app/console mapbender:source:rewrite:host 
------------------------------------------- 
-
-Aktualisiert den Hostnamen in den Quell-URLs, ohne die Funktionen/Capabilities neu laden zu müssen. 
-
-.. code-block:: yaml
-
-    app/console mapbender:source:rewrite:host "https://osm-demo.wheregroup.com" "http://osm-demo.wheregroup.com" 
-    
-	3 modified urls in WMS source #5 / OpenStreetMap (OSM) Demo WhereGroup
-	Summary:
-	1 sources changed
-	3 urls changed
-	4 sources unchanged
-	14 urls unchanged
-    
-
-app/console mapbender:config:check 
------------------------------------
-
-Der Befehl prüft die Konfiguration und gibt zur Information die Systemkonfiguration aus. Dadurch kann ermittelt werden, ob Abhängigkeiten nicht erfüllt werden.
-
-.. code-block:: yaml
-
-	app/console mapbender:config:check 
-
-
-Es werden folgende Anforderungen überprüft und angezeigt:
-
-* Datenbankverbindungen
-* PHP-Version 
-* Systemanforderungen 
-* Asset-Ordner
-* FastCGI
-* Apache Modus (rewrite)
-* PHP ini
-* geladene PHP-Erweiterungen
-* Zugriffserlaubnis auf Verzeichnisse
-
-
-app/console cache:clear
-------------------------
-
-Der Befehl löscht das Cache-Verzeichnis für eine bestimmte Umgebung. 
-Wird keine bestimmte Option angegeben, wird der Cache der dev-Umgebung geleert. 
-
-Eventuell muss der Befehl mit root-Rechten (sudo) ausgeführt werden.
- 
-Dev-Umgebung:
-
+Bei der Aktualisierung erfolgt die eindeutige Zuordnung über die bereits vorhandene ID, deshalb können alle drei o.g. Parameter verändert werden. 
 
 
 .. code-block:: yaml
 
-		app/console cache:clear --env=dev
+	app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
+
+
+
+app/console mapbender:user:list
+*******************************
+
+Dieser Befehl zeigt im Terminal alle vorhandenen Benutzer mit ihrer ID und ihrem Benutzernamen an sowie Datum und Uhrzeit ihrer Erstellung.
+
+
+.. code-block:: yaml
+
+	app/console mapbender:user:list
         
-		
-Prod-Umgebung:
+	User #3 name: al_bauer since 2019-10-14 12:10:44
 
 
-.. code-block:: yaml	
-
-		app/console cache:clear --env=prod --no-debug
-		
-
-
-
-app/console server:run
-------------------------
-
-Der Befehl führt den von PHP eingebauten Webserver aus. Im Terminal erscheint eine Meldung, dass der Server läuft und zeigt die lokale Adresse an (http://127.0.0.1:8000). 
-In diesem Modus kann lokal mit Mapbender gearbeitet werden.
-
-Mit Control -C kann der Server wieder gestoppt werden. 
-
-
-
-.. code-block:: yaml
-
-	app/console server:run
-	
-	[OK] Server running on http://127.0.0.1:8000                                                                           
-    // Quit the server with CONTROL-C. 
-    
-
-
-app/console server:start
-------------------------
-
-Der Befehl startet den von PHP eingebauten Webserver im Hintergrund. 
-
-Im Terminal erscheint eine Meldung, dass der Server auf die angegebene Adresse hört (http://127.0.0.1:8000)
-
-
-.. code-block:: yaml
-
-	app/console server:start
-	
-	[OK] Web server listening on http://127.0.0.1:8000        
-
-
-app/console server:stop
-------------------------
-
-Der Befehl stoppt den von PHP eingebauten Webserver im Hintergrund. Im Terminal erscheint eine Meldung, dass der Server mit angegebener Adresse gestoppt wurde (http://127.0.0.1:8000)
-
-
-.. code-block:: yaml
-
-	app/console server:stop
-	
-	
-
-app/console server:status
--------------------------
-
-Dieser Befehl gibt den Status des lokalen Webservers aus.
-
-
-.. code-block:: yaml
-
-	app/console server:status
-
-
+Datenbanken
+-----------
 
 app/console mapbender:database:upgrade 
---------------------------------------
+**************************************
 
 Aktualisiert die Kartenelementkonfigurationen, falls neue vorhanden sind. 
 
@@ -224,7 +112,7 @@ Aktualisiert die Kartenelementkonfigurationen, falls neue vorhanden sind.
 
 
 app/console doctrine:database:create 
--------------------------------------
+************************************
 
 Der Befehl wird einmalig bei der Installation verwendet und legt die Administrationsdatenbank für Mapbender an. Die Angabe zur Datenbankverbindung befindet sich in der parameters.yml-Datei.
 
@@ -236,7 +124,7 @@ Der Befehl wird einmalig bei der Installation verwendet und legt die Administrat
 
 
 app/console doctrine:schema:create 
------------------------------------
+**********************************
 
 Mit dem Befehl wird bei der Installation das Datenbankschema angelegt, d.h. es werden die von Mapbender benötigten Tabellen erstellt.
 
@@ -247,7 +135,7 @@ Mit dem Befehl wird bei der Installation das Datenbankschema angelegt, d.h. es w
 	
 	
 app/console doctrine:schema:validate
----------------------------------------
+************************************
 
 Der Befehl wird einmalig bei der Installation verwendet. Dieser Befehl überprüft, ob der Aufbau der Datenbank korrekt und aktuell ist.
 
@@ -256,70 +144,14 @@ Der Befehl wird einmalig bei der Installation verwendet. Dieser Befehl überprü
 
 	app/console doctrine:schema:validate
 	[Mapping]  OK - The mapping files are correct.
-
-
-app/console fom:user:resetroot
--------------------------------
-
-Mit diesem Befehl lässt sich der root-Account erstellen oder aktualisieren. Für die Erstellung müssen ein Benutzername, eine E-Mail und ein Passwort vergeben werden.
-
-Bei der Aktualisierung erfolgt die eindeutige Zuordnung über die bereits vorhandene ID, deshalb können alle drei o.g. Parameter verändert werden. 
-
-
-.. code-block:: yaml
-
-	app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
-
-
-
-app/console mapbender:user:list
--------------------------------
-
-Dieser Befehl zeigt im Terminal alle vorhandenen Benutzer mit ihrer ID und ihrem Benutzernamen an sowie Datum und Uhrzeit ihrer Erstellung.
-
-
-.. code-block:: yaml
-
-	app/console mapbender:user:list
         
-	User #3 name: al_bauer since 2019-10-14 12:10:44
-
-
-app/console mapbender:version
--------------------------------
-
-Der Befehl gibt die aktuelle Mapbender-Version aus.
-
-.. code-block:: yaml
-
-	app/console mapbender:version 
         
-	Mapbender 3.0.8.4
- 
-	
-app/console debug:config
-------------------------
 
-Mit diesem Befehl werden alle registrierten Bundles (Pakete) aufgelistet und, falls vorhanden, der Alias dazu genannt.
-
-.. code-block:: yaml	
-
-	app/console debug:config	
-
-
-
-app/console debug:swiftmailer
------------------------------
-
-zeigt die/den konfigurierten Mailer an
-
-.. code-block:: yaml
-
-	app/console debug:swiftmailer 
-
+Druck
+-----
 
 app/console mapbender:print:queue:next
---------------------------------------
+**************************************
 
 Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine externe Integration erfordert. Druckaufträge können danach über die Kommandozeile gesteuert werden. Dafür muss in der parameters.yml-Datei folgender Parameter hinzugefügt und auf TRUE gesetzt werden:
 
@@ -353,7 +185,7 @@ Optional kann die Anzahl der Prozesse und die maximale Ausführungszeit limitier
 
 
 app/console mapbender:print:queue:rerun 
----------------------------------------
+****************************************
 
  Dieser Befehl führt einen Druckwarteschlangenauftrag erneut aus. Die Angabe der ID ist dabei erforderlich.
  
@@ -367,7 +199,7 @@ app/console mapbender:print:queue:rerun
 	
 	
 app/console mapbender:print:queue:dumpjob 
-------------------------------------------
+*****************************************
 
 Dieser Befehl gibt Druckaufträge in ein angegebenes Format (JSON oder yml) aus. Die ID des jeweiligen Druckauftrages ist für den Befehl erforderlich. Diese ID kann über die geöffnete Druckwarteschlange in der Mapbender-Anwendung ermittelt werden.
 
@@ -472,7 +304,7 @@ Dieser Befehl gibt Druckaufträge in ein angegebenes Format (JSON oder yml) aus.
 	}
 
 app/console mapbender:print:runJob
-----------------------------------
+**********************************
 
 Mit diesem Befehl kann ein Druckauftrag aus einer Druck-Konfigurationsdatei heraus ausgeführt werden. Diese Konfiguration kann über den Befehl app/console mapbender:print:queue:dumpjob erstellt werden.
 
@@ -483,7 +315,7 @@ Mit diesem Befehl kann ein Druckauftrag aus einer Druck-Konfigurationsdatei hera
 	
 
 app/console mapbender:print:queue:repair 
--------------------------------------------
+****************************************
 
 Wenn ein Druckauftrag in der Warteschlange einen Fehler aufweist oder abgestürzt ist, beispielsweise weil ein WMS-Dienst nicht erreichbar ist, kann der Druck nicht ausgeführt werden. 
 
@@ -496,7 +328,7 @@ Mit dem Befehl mapbender:print:repair wird der Status der Druckaufträge zurück
 	
 	
 app/console mapbender:print:queue:clean
----------------------------------------
+***************************************
 
 Dieser Befehl löscht erfolgreich abgearbeitete Druckaufträge. Dazu zählen einerseits erstellte PDFs als auch dazugehörige Datenbankeinträge zu den Druckaufträgen. Beim Aufruf des Befehls kann die Angabe des Alters hinzugefügt werden, mit der Angabe 20 werden beispielsweise alle Aufträge gelöscht werden, die älter als 20 Tage sind.
 
@@ -510,7 +342,7 @@ Dieser Befehl löscht erfolgreich abgearbeitete Druckaufträge. Dazu zählen ein
 
 
 app/console mapbender:print:queue:gcfiles 
------------------------------------------
+*****************************************
 
 gc steht für "garbage collection". gcfiles löscht entsprechend alle Druckaufträge, bei denen der Datenbankeintrag keine Referenz mehr zum Dateisystem hat. 
 Dies geschieht zum Beispiel, wenn ein Auftrag in der Datenbank gelöscht oder der Dateipfad zum PDF nicht mehr aktuell ist. 
@@ -520,5 +352,195 @@ Dies geschieht zum Beispiel, wenn ein Auftrag in der Datenbank gelöscht oder de
 	app/console mapbender:print:queue:gcfiles
 	
 	No unreferenced local files found
+    
+
+Mailer
+------
+
+app/console debug:swiftmailer
+*****************************
+
+zeigt die/den konfigurierten Mailer an
+
+.. code-block:: yaml
+
+	app/console debug:swiftmailer 
+    
+    
+Server
+------
+
+app/console server:run
+**********************
+
+Der Befehl führt den von PHP eingebauten Webserver aus. Im Terminal erscheint eine Meldung, dass der Server läuft und zeigt die lokale Adresse an (http://127.0.0.1:8000). 
+In diesem Modus kann lokal mit Mapbender gearbeitet werden.
+
+Mit Control -C kann der Server wieder gestoppt werden. 
 
 
+
+.. code-block:: yaml
+
+	app/console server:run
+	
+	[OK] Server running on http://127.0.0.1:8000                                                                           
+    // Quit the server with CONTROL-C. 
+    
+
+
+app/console server:start
+************************
+
+Der Befehl startet den von PHP eingebauten Webserver im Hintergrund. 
+
+Im Terminal erscheint eine Meldung, dass der Server auf die angegebene Adresse hört (http://127.0.0.1:8000)
+
+
+.. code-block:: yaml
+
+	app/console server:start
+	
+	[OK] Web server listening on http://127.0.0.1:8000        
+
+
+app/console server:stop
+***********************
+
+Der Befehl stoppt den von PHP eingebauten Webserver im Hintergrund. Im Terminal erscheint eine Meldung, dass der Server mit angegebener Adresse gestoppt wurde (http://127.0.0.1:8000)
+
+
+.. code-block:: yaml
+
+	app/console server:stop
+	
+	
+
+app/console server:status
+*************************
+
+Dieser Befehl gibt den Status des lokalen Webservers aus.
+
+
+.. code-block:: yaml
+
+	app/console server:status
+
+
+
+Cache löschen
+-------------
+
+app/console cache:clear
+***********************
+
+Der Befehl löscht das Cache-Verzeichnis für eine bestimmte Umgebung. 
+Wird keine bestimmte Option angegeben, wird der Cache der dev-Umgebung geleert. 
+
+Eventuell muss der Befehl mit root-Rechten (sudo) ausgeführt werden.
+ 
+Dev-Umgebung:
+
+
+
+.. code-block:: yaml
+
+		app/console cache:clear --env=dev
+        
+		
+Prod-Umgebung:
+
+
+.. code-block:: yaml	
+
+		app/console cache:clear --env=prod --no-debug
+        
+        
+WMS-Dienste
+-----------
+    
+app/console mapbender:wms:validate:url 
+**************************************
+
+Befehl zur Prüfung der Erreichbarkeit der WMS-Datenquelle. Ist der Dienst erreichbar, werden die verfügbaren Layer aufgelistet. 
+
+.. code-block:: yaml
+
+    app/console mapbender:wms:validate:url "https://osm-demo.wheregroup.com/service?VERSION=1.3.0"
+    
+	WMS source loaded and validated
+	Source describes 3 layers:
+	* OpenStreetMap (WhereGroup)
+	* OpenStreetMap
+	* OpenStreetMap (grey scale)
+    
+            
+Sonstige
+--------
+
+app/console mapbender:source:rewrite:host 
+*****************************************
+
+Aktualisiert den Hostnamen in den Quell-URLs, ohne die Funktionen/Capabilities neu laden zu müssen. 
+
+.. code-block:: yaml
+
+    app/console mapbender:source:rewrite:host "https://osm-demo.wheregroup.com" "http://osm-demo.wheregroup.com" 
+    
+	3 modified urls in WMS source #5 / OpenStreetMap (OSM) Demo WhereGroup
+	Summary:
+	1 sources changed
+	3 urls changed
+	4 sources unchanged
+	14 urls unchanged
+   
+    
+
+app/console mapbender:config:check 
+**********************************
+
+Der Befehl prüft die Konfiguration und gibt zur Information die Systemkonfiguration aus. Dadurch kann ermittelt werden, ob Abhängigkeiten nicht erfüllt werden.
+
+.. code-block:: yaml
+
+	app/console mapbender:config:check 
+
+
+Es werden folgende Anforderungen überprüft und angezeigt:
+
+* Datenbankverbindungen
+* PHP-Version 
+* Systemanforderungen 
+* Asset-Ordner
+* FastCGI
+* Apache Modus (rewrite)
+* PHP ini
+* geladene PHP-Erweiterungen
+* Zugriffserlaubnis auf Verzeichnisse
+
+
+app/console mapbender:version
+*****************************
+
+Der Befehl gibt die aktuelle Mapbender-Version aus.
+
+.. code-block:: yaml
+
+	app/console mapbender:version 
+        
+	Mapbender 3.0.8.4
+
+
+app/console debug:config
+************************
+
+Mit diesem Befehl werden alle registrierten Bundles (Pakete) aufgelistet und, falls vorhanden, der Alias dazu genannt.
+
+.. code-block:: yaml	
+
+	app/console debug:config	
+    
+
+
+
+		
