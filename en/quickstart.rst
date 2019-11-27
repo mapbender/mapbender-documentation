@@ -82,12 +82,12 @@ Start Mapbender in the developer mode app_dev.php
 =================================================
 Symfony offers a developer mode with lots of information about your application (logging, exceptions, database queries, memory usage, time and more). This mode is only available from localhost.
 
-#. Start the developer mode: http://localhost/mapbender/app_dev.php
+1. Start the developer mode: http://localhost/mapbender/app_dev.php
 
   .. image:: ../figures/mapbender_app_dev.png
      :scale: 80
 
-#. Have a look at the information that is offered in the developer mode.
+2. Have a look at the information that is offered in the developer mode.
 
   .. image:: ../figures/mapbender_symfony_profiler.png
      :scale: 80
