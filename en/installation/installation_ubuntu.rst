@@ -5,7 +5,7 @@ Installation on Ubuntu/Debian
 
 Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under **<mapbender>/app/db/demo.sqlite**).
 
-For productive use PostgreSQL is recommended. You can find the neccessary configuration steps in chapter `Mapbender Deployment on PostgreSQL <#mapbender-deployment-on-postgresql>`_.
+For productive use PostgreSQL is recommended. You can find the neccessary configuration steps in chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
 
 Requirements
 ------------
