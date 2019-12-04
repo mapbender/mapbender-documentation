@@ -7,7 +7,7 @@ Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dies
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
 
 Für den Produktiveinsatz wird PostgreSQL empfohlen. 
-Weitere Installationshinweise finden Sie im Kapitel `Mapbender Einrichtung auf PostgreSQL <#mapbender-einrichtung-auf-postgresql>`_.
+Weitere Installationshinweise finden Sie im Kapitel `Optional > Mapbender Einrichtung auf PostgreSQL <#optional>`_.
 
 
 Voraussetzungen
