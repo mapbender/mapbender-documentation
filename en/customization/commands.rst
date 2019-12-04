@@ -217,7 +217,7 @@ This command dumps the queued print job from the database to JSON or YAML. The I
         "scale_select": "25000",
         "rotation": "-20",
         "extra": {
-            "title": "Egal!"
+            "title": "My Title"
         },
         "layers": {
             "0": {
