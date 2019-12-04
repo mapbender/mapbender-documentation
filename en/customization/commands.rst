@@ -90,7 +90,7 @@ Command to list all existing users with their ID and user name and the time of c
 	User #3 name: max_mustermann since 2019-10-14 12:10:44
     
     
-Databases
+Database
 ---------
     
 app/console mapbender:database:upgrade 
