@@ -243,7 +243,7 @@ Sobald "dynamic_image" im Drucklayout vorliegt, wird nach einem Bild mit dem Nam
 Dynamischer Text
 ----------------
 
-Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe ausgegeben. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und bspw. für Copyright-Hinweise nutzen. 
+Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe im Ausdruck eingetragen. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und bspw. für Copyright-Hinweise nutzen. 
 
 
 Druck von Information für ein ausgewähltes Objekt
@@ -261,8 +261,8 @@ Die folgenden Schritte sind müssen durchgeführt werden:
 
 1. Erzeugen Sie ein Drucktemplate, das auf die Objektspalten verweist
 2. Definieren Sie einen featureType und verweisen Sie auf das neue Drucktemplate in Ihrer config.yml
-3. Aufruf des Drucks über die Informationsabfrage
-4. alternativ Aufruf des Drucks über die Digitalisierung
+3. Rufen Sie den Druck über die Informationsabfrage auf
+4. alternativ: Aufruf des Drucks über die Digitalisierung
 
 
 1. Erzeugen Sie eine Druckvorlage, die auf die Objektspalten verweist
@@ -300,7 +300,7 @@ Definieren Sie im Drucktemplate ein Textfeld für die Informationen, die Sie fü
 3. Aufruf des Drucks über die Informationsabfrage
 -------------------------------------------------
 
-Bemerkung: Die Informationsabfrage (Feature Info) ist die Ausgabe von Informationen von einem OGC WMS Service. Es gibt Informationen zu Objekten an einer Kickposition aus.
+Bemerkung: Die Informationsabfrage (Feature Info) ist die Ausgabe von Informationen von einem OGC WMS Service. Sie gibt Informationen zu Objekten an einer Klickposition aus.
 
 Wenn Sie einen WMS konfigurieren, generieren Sie einen Link mit der folgenden Referenz, die den Druck mit Objektinformationen anstößt.
 
