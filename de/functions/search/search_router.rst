@@ -5,58 +5,14 @@ Search Router
 
 Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die Trefferausgabe sind dabei konfigurierbar. Zur Zeit wird eine SQL Suche unterstützt.
 
-.. image:: ../../../figures/search_router.png
+.. image:: ../../../figures/de/search_router_de.png
      :scale: 80
 
 Konfiguration
 =============
 
-.. image:: ../../../figures/de/search_router_configuration.png
+.. image:: ../../../figures/de/search_router_edit_de.png
      :scale: 80
-
-Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`database_de`.
-
-Beispiel für eine PostgreSQL Datenbank auf localhost, die gisdb heißt:
-
-Inhalte in der config.yml:
-
-.. code-block:: yaml
-   
-     doctrine:
-         dbal:
-             default_connection: default    
-             connections:
-                 default:
-                     [...]
-                 gisdb:
-                     driver:   "%gisdb_database_driver%"
-                     host:     "%gisdb_database_host%"
-                     port:     "%gisdb_database_port%"
-                     dbname:   "%gisdb_database_name%"
-                     path:     "%gisdb_database_path%"
-                     user:     "%gisdb_database_user%"
-                     password: "%gisdb_database_password%"
-                     persistent: true
-                     charset:  UTF8
-                     logging: "%kernel.debug%"
-                     profiling: "%kernel.debug%"
-
-
-Inhalte in der parameters.yml
-
-.. code-block:: yaml
-
-    parameters:
-        [...]
-        gisdb_database_driver:   pdo_pgsql
-        gisdb_database_host:     localhost
-        gisdb_database_port:     5432
-        gisdb_database_name:     gisdb
-        gisdb_database_path:     null
-        gisdb_database_user:     reader
-        gisdb_database_password: mypassword
-
-
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und wird neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Target:** Name/ID des Kartenelements, auf das sich das Element bezieht.
@@ -70,6 +26,10 @@ Inhalte in der parameters.yml
 
 Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im YAML-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
 Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
+
+**Tipp:**
+Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de:`.
+Es wird nur ein Koordinatenreferenzsystem unterstützt. Die Geometrie Spalte in der Datenbank muss mit dem Koordinatensystem der Karte übereinstimmen.
 
 
 Example
@@ -119,13 +79,56 @@ Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
           maxScale: 2500
 
 
+Type
+----
+
+Beispiele für die verschiedenen Typen:
+
+* text
+Beispiel mit Autocomplete:
+
+.. image:: ../../../figures/de/search_router_text_de.png
+     :scale: 80
+
+.. code-block:: yaml
+
+	form:
+		name:
+		type: text                                                      # Eingabefeld für Text
+		options:
+			required: true
+			attr:
+				data-autocomplete: 'on'                                 # Autocomplete
+				data-autocomplete-distinct: 'on'
+		compare: exact                                          
 
 
+* choice
+Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
+
+.. image:: ../../../figures/de/search_router_choice_de.png
+     :scale: 80
+
+.. code-block:: yaml
+
+    usertype:                                                         
+      type: choice                                                      # Feld mit Auswahlmöglichkeiten als Dropdown
+      options:
+        empty_value: 'Bitte auswählen...'                               # Text, der angezeigt wird, bevor etwas ausgewählt wurde
+        choices:                                                        # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
+          1: Company
+          2: Administration
+          3: University
+          4: User
+        required: false                                                 # kein Pflichtfeld
+        label: Wetter                                                   # Überschrift über dem Feld
+      compare: exact     
+      
 
 Vergleichsmodus
 ---------------
 
-Für jedes Feld kann ein Vergleichsmodus bestimmt werden, welcher von der Engine verwendet werden soll, wenn die Suchanfrage gestellt wird. Die SQL Suche Engine hat die folgenden Modi:
+Für jedes Feld kann ein Vergleichsmodus (compare) bestimmt werden, welcher von der Engine verwendet werden soll, wenn die Suchanfrage gestellt wird. Die SQL Suche Engine hat die folgenden Modi:
 
 * **exact:** genauer Vergleich, Schlüssel = Wert (key = val)
 * **iexact:** Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
@@ -135,7 +138,6 @@ Für jedes Feld kann ein Vergleichsmodus bestimmt werden, welcher von der Engine
 * **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring\*)
 * **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring)
 * **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring\*)
-
 
 
 
@@ -212,65 +214,65 @@ Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel
 
   class: Mapbender\CoreBundle\Component\SQLSearchEngine
   class_options:
-    connection: demo        # die Datenbank, auf die das Element zugreift
-    relation: mapbender_user      # die Tabelle, auf die das Element zugreift
-    attributes:          # entspricht den Tabellenspalten in der Datenbank, die angesprochen werden sollen
+    connection: demo                                                    # die Datenbank, auf die das Element zugreift
+    relation: mapbender_user                                            # die Tabelle, auf die das Element zugreift
+    attributes:                                                         # entspricht den Tabellenspalten in der Datenbank, die angesprochen werden sollen
       - gid
       - orga
       - town
       - usertype
-    geometry_attribute: the_geom      # Definition der Geometrie Spalte
-  form:            # ab hier beginnt die Konfiguration des Formulars
-    orga:            # Feld für die Suche nach dem Namen des Mapbender Users
+    geometry_attribute: the_geom                                        # Definition der Geometrie Spalte
+  form:                                                                 # ab hier beginnt die Konfiguration des Formulars
+    orga:                                                               # Feld für die Suche nach dem Namen des Mapbender Users
       type: text
       options:
-        required: false        # kein Pflichtfeld
-        label: 'Mapbender User'      # Überschrift über dem Feld
-        attr:          # zusätzlich definierbare Attribute
-          data-autocomplete: 'on'      # automatische Vervollständigung des eingetippten Suchbegriffs
+        required: false                                                 # kein Pflichtfeld
+        label: 'Mapbender User'                                         # Überschrift über dem Feld
+        attr:                                                           # zusätzlich definierbare Attribute
+          data-autocomplete: 'on'                                       # automatische Vervollständigung des eingetippten Suchbegriffs
           data-autocomplete-distinct: 'on'
-      compare: ilike        # Vergleichsmodus
-    town:            # Feld für die Suche nach der Stadt
+      compare: ilike                                                    # Vergleichsmodus
+    town:                                                               # Feld für die Suche nach der Stadt
       type: text
       options:
-        required: false        # kein Pflichtfeld
-        label: Stadt        # Überschrift über dem Feld
+        required: false                                                 # kein Pflichtfeld
+        label: Stadt                                                    # Überschrift über dem Feld
         attr:
           data-autocomplete: 'on'
           data-autocomplete-distinct: 'on'
       compare: ilike
-    usertype:          # Feld für die Suche nach dem Nutzertyp
-      type: choice        # Feld mit Auswahlmöglichkeiten als Dropdown
+    usertype:                                                           # Feld für die Suche nach dem Nutzertyp
+      type: choice                                                      # Feld mit Auswahlmöglichkeiten als Dropdown
       options:
-        empty_value: 'Bitte auswählen...'    # Text, der angezeigt wird, bevor etwas ausgewählt wurde
-        choices:          # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
+        empty_value: 'Bitte auswählen...'                               # Text, der angezeigt wird, bevor etwas ausgewählt wurde
+        choices:                                                        # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
           1: Company
           2: Administration
           3: University
           4: User
-        required: false        # kein Pflichtfeld
-        label: Nutzertyp        # Überschrift über dem Feld
-      compare: exact        # Vergleichsmodus
-  results:          # Konfiguration der Ergebnisanzeige
-    view: table          # Tabelle ausgeben
-    count: true          # Anzahl der Ergebnisse anzeigen
-    headers:          # Titel der Spalte; werden wie folgt angegeben: Spaltenname in der Datenbank: Bezeichnung der Spalte in der Suchausgabe der Anwendung
+        required: false                                                 # kein Pflichtfeld
+        label: Nutzertyp                                                # Überschrift über dem Feld
+      compare: exact                                                    # Vergleichsmodus
+  results:                                                              # Konfiguration der Ergebnisanzeige
+    view: table                                                         # Tabelle ausgeben
+    count: true                                                         # Anzahl der Ergebnisse anzeigen
+    headers:                                                            # Titel der Spalte; werden wie folgt angegeben: Spaltenname in der Datenbank: Bezeichnung der Spalte in der Suchausgabe der Anwendung
       gid: ID
       orga: 'Mapbender User'
       town: Stadt
     callback:
-      event: click        # bei Klicken wird das Element selektiert
+      event: click                                                      # bei Klicken wird das Element selektiert
       options:
         buffer: 10
         minScale: null
         maxScale: 10000
-    styleMap:          # Styling der Punkte in der Karte
-      default:          # Styling aller angezeigten Punkte
+    styleMap:                                                           # Styling der Punkte in der Karte
+      default:                                                          # Styling aller angezeigten Punkte
         strokeColor: '#003366'
         strokeOpacity: 1
         fillColor: '#3366cc'
         fillOpacity: 0.5
-      select:          # Styling des selektierten Objekts
+      select:                                                           # Styling des selektierten Objekts
         strokeColor: '#330000'
         strokeOpacity: 1
         fillColor: '#800000'

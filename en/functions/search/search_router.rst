@@ -11,56 +11,8 @@ This element creates a configurable search formular with result output. At this 
 Configuration
 =============
 
-.. image:: ../../../figures/search_router_configuration_en.png
+.. image:: ../../../figures/search_router_edit_en.png
      :scale: 80
-
-
-The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at `database <../../customization/database.html>`_.
-
-Example for a PostgreSQL database on localhost, called gisdb:
-
-
-Content in config.yml:
-
-.. code-block:: yaml
-   
-     doctrine:
-         dbal:
-             default_connection: default    
-             connections:
-                 default:
-                     [...]
-                 gisdb:
-                     driver:   "%gisdb_database_driver%"
-                     host:     "%gisdb_database_host%"
-                     port:     "%gisdb_database_port%"
-                     dbname:   "%gisdb_database_name%"
-                     path:     "%gisdb_database_path%"
-                     user:     "%gisdb_database_user%"
-                     password: "%gisdb_database_password%"
-                     persistent: true
-                     charset:  UTF8
-                     logging: "%kernel.debug%"
-                     profiling: "%kernel.debug%"
-   
-
-
-Content in parameters.yml
-
-.. code-block:: yaml
-
-    parameters:
-        [...]
-        gisdb_database_driver:   pdo_pgsql
-        gisdb_database_host:     localhost
-        gisdb_database_port:     5432
-        gisdb_database_name:     gisdb
-        gisdb_database_path:     null
-        gisdb_database_user:     reader
-        gisdb_database_password: mypassword
-
-
-
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Target:** Id of Map element to query.
@@ -74,6 +26,10 @@ Content in parameters.yml
 
 You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox where you can choose the search you want to use, and a ``configuration``. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 The element may be integrated into the sidepane or as a button into the toolbar. To configure a button visit the documentation at :ref:`button`
+
+**Tipp:**
+The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at `database :ref:`yaml_en:`.
+Only one coordinate reference system is allowed. The geometry column must match the coordinate system of the map.
 
 
 Example
@@ -121,6 +77,56 @@ Example of a route-configuration in the ``configuration`` area:
           buffer: 10
           minScale: null
           maxScale: null
+
+
+Type
+----
+
+Examples of the different types:
+
+* text
+Example with auto complete
+
+.. image:: ../../../figures/search_router_text_en.png
+     :scale: 80
+
+.. code-block:: yaml
+
+	form:
+		name:
+		type: text                                                      # input box for text
+		options:
+			required: true
+			attr:
+				data-autocomplete: 'on'                                 # auto complete
+				data-autocomplete-distinct: 'on'
+		compare: exact                                             
+
+
+* choice
+Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
+
+.. image:: ../../../figures/search_router_choice_en.png
+     :scale: 80
+
+.. code-block:: yaml
+
+    usertype:                                                         
+      type: choice                                                      # box with selection options as dropdown list
+      options:
+        empty_value: 'Please select...'                                 # text that is shown before an option is chossen
+        choices:                                                        # the options need to be specified: "name of the column of the database": "name shown in the dropdown list"
+          1: Company
+          2: Administration
+          3: University
+          4: User
+        required: false                                                 # no required field
+        label: user type                                                # heading above the box
+      compare: exact     
+      
+
+
+
 
 
 Comparison Mode
@@ -212,49 +218,49 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
 
   class: Mapbender\CoreBundle\Component\SQLSearchEngine
   class_options:
-    connection: demo                 # database (on which the element has access)
-    relation: mapbender_user         # table (on which the element has access)
-    attributes:                      # table columns (which the element addresses)
+    connection: demo                       # database (on which the element has access)
+    relation: mapbender_user               # table (on which the element has access)
+    attributes:                            # table columns (which the element addresses)
       - gid
       - orga
       - town
       - usertype
-    geometry_attribute: the_geom     # definition of the geometry column
-  form:                              # configuration of the form
-    orga:                            # search field (e.g. search for specific Mapbender User)
+    geometry_attribute: the_geom           # definition of the geometry column
+  form:                                    # configuration of the form
+    orga:                                  # search field (e.g. search for specific Mapbender User)
       type: text
       options:
-        required: false              # no mandatory field
-        label: 'Mapbender User'      # caption of the search field
-        attr:                        # additional definable attributes
-          data-autocomplete: 'on'    # auto-completion of search words
+        required: false                    # no mandatory field
+        label: 'Mapbender User'            # caption of the search field
+        attr:                              # additional definable attributes
+          data-autocomplete: 'on'          # auto-completion of search words
           data-autocomplete-distinct: 'on'
-      compare: ilike                 # see section 'comparison mode' on this page
-    town:                            # search field (e.g. search for specific city)
+      compare: ilike                       # see section 'comparison mode' on this page
+    town:                                  # search field (e.g. search for specific city)
       type: text
       options:
-        required: false              # no mandatory field
-        label: City                  # caption of the search field
+        required: false                    # no mandatory field
+        label: City                        # caption of the search field
         attr:
           data-autocomplete: 'on'
           data-autocomplete-distinct: 'on'
       compare: ilike
-    usertype:                        # search field (search for specific User type)
-      type: choice                   # possible choices via drop down list
+    usertype:                              # search field (search for specific User type)
+      type: choice                         # possible choices via drop down list
       options:
         empty_value: 'Please select...'    # displayed text in field before entering a search
-        choices:                     # choices need to have the following format: "entry in the database column": "displayed name in the drop down list"
+        choices:                           # choices need to have the following format: "entry in the database column": "displayed name in the drop down list"
           1: Company
           2: Administration
           3: University
           4: User
-        required: false              # no mandatory field
-        label: User type             # caption of the search field
-      compare: exact                 # see section 'comparison mode' on this page
-  results:                           # configuration of the shown results list
-    view: table                      # display results as table
-    count: true                      # show number of results
-    headers:                         # column title; format: column title in the database: column title shown in the table 
+        required: false                    # no mandatory field
+        label: User type                   # caption of the search field
+      compare: exact                       # see section 'comparison mode' on this page
+  results:                                 # configuration of the shown results list
+    view: table                            # display results as table
+    count: true                            # show number of results
+    headers:                               # column title; format: column title in the database: column title shown in the table 
       gid: ID
       orga: 'Mapbender User'
       town: City
@@ -264,13 +270,13 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
         buffer: 10
         minScale: null
         maxScale: 10000
-    styleMap:                        # Styling points on the map
-      default:                       # Styling of all points on the map
-        strokeColor: '#003366'
+    styleMap:                              # Styling points on the map
+      default:                             # Styling of all points on the map
+        strokeColor: '#003366'        
         strokeOpacity: 1
         fillColor: '#3366cc'
         fillOpacity: 0.5
-      select:                        # Styling of the selected point on the map
+      select:                              # Styling of the selected point on the map
         strokeColor: '#330000'
         strokeOpacity: 1
         fillColor: '#800000'
