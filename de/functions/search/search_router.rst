@@ -94,11 +94,11 @@ Beispiel mit Autocomplete:
 
 	form:
 		name:
-		type: text                                                      # Eingabefeld für Text
+		type: text                                          # Eingabefeld für Text
 		options:
 			required: true
 			attr:
-				data-autocomplete: 'on'                                 # Autocomplete
+				data-autocomplete: 'on'              # Autocomplete
 				data-autocomplete-distinct: 'on'
 		compare: exact                                          
 
@@ -112,16 +112,16 @@ Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
 .. code-block:: yaml
 
     usertype:                                                         
-      type: choice                                                      # Feld mit Auswahlmöglichkeiten als Dropdown
+      type: choice                            # Feld mit Auswahlmöglichkeiten als Dropdown
       options:
-        empty_value: 'Bitte auswählen...'                               # Text, der angezeigt wird, bevor etwas ausgewählt wurde
-        choices:                                                        # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
+        empty_value: 'Bitte auswählen...'     # Text, der angezeigt wird, bevor etwas ausgewählt wurde
+        choices:                              # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
           1: Company
           2: Administration
           3: University
           4: User
-        required: false                                                 # kein Pflichtfeld
-        label: Wetter                                                   # Überschrift über dem Feld
+        required: false                        # kein Pflichtfeld
+        label: Wetter                          # Überschrift über dem Feld
       compare: exact     
       
 
