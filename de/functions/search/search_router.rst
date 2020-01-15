@@ -14,7 +14,7 @@ Konfiguration
 .. image:: ../../../figures/de/search_router_edit_de.png
      :scale: 80
 
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und wird neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und wird neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Target:** Name/ID des Kartenelements, auf das sich das Element bezieht.
 * **Dialog:** Einbindung als Dialog über Button (Haken setzen) oder in der Sidepane (Haken nicht setzen)
 * **Timeout factor:** Timeout-Faktor (multipliziert mit autcomplete Verzögerung), um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde.
@@ -27,56 +27,13 @@ Konfiguration
 Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im YAML-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
 Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
 
+Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im YAML-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
+
+Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
+
 **Tipp:**
 Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de:`.
 Es wird nur ein Koordinatenreferenzsystem unterstützt. Die Geometrie Spalte in der Datenbank muss mit dem Koordinatensystem der Karte übereinstimmen.
-
-
-Example
--------
-
-Das folgende Beispiel baut auf den Deutschen Geographischen Namenskatalog im Maßstab 1:250.000 des `Bundesamtes für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_ auf. Die Daten wurden in die Tabelle ``gn250_p`` der Datenbank ``gisdb``  (siehe parameters.yml oben) kopiert und eignen sich gut für eine Ortssuche. Die Daten haben viele verschiedene Spalten, u.a.:
-
-- id: Die ID des Datensatzes
-- name: Der Name des Datensatzes
-- kreis: Der Landkreis (nicht für jeden Datensatz vorhanden)
-- oba_wert: Die Art des Features (z.B.. Bahnhof, Museum, etc.)
-
-
-Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
-
-.. code-block:: yaml
-
-    class: Mapbender\CoreBundle\Component\SQLSearchEngine
-    class_options:
-      connection: gisdb
-      relation: gn250_p
-      attributes:
-        - id
-        - name
-        - kreis
-        - oba_wert
-      geometry_attribute: geom
-    form:
-      name:
-        type: text
-        options:
-          required: true
-        compare: ilike
-    results:
-      view: table
-      count: true
-      headers:
-        id: ID
-        name: Name
-        kreis: Landkreis
-        oba_wert: Art
-      callback:
-        event: click
-        options:
-          buffer: 10
-          minScale: 500
-          maxScale: 2500
 
 
 Type
@@ -198,6 +155,9 @@ Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben w
 Konfigurationsbeispiele
 ========================
 
+1. Beispiel
+-----------
+
 In diesem Beispiel wurde eine Suche für die Mapbender User konfiguriert. Die Suche wurde in die Sidepane über das ``+`` -Zeichen in der Anwendung unter Layouts, Sidepane hinzugefügt.
 
 .. image:: ../../../figures/de/add_sidepane.png
@@ -283,11 +243,6 @@ Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel
         fillOpacity: 1
 
 
-Die Suche mit dieser Konfiguration sieht in der Anwendung so aus:
-
-.. image:: ../../../figures/de/search_router_example_search.png
-     :scale: 80
-
 Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigurationen in der yaml-Definition auf das Suchformular haben:
 
 .. image:: ../../../figures/de/search_router_example_search_description.png
@@ -309,131 +264,54 @@ Auf dieser Abbildung ist lediglich die Konfiguration der Ergebnisse angezeigt. D
 
 Da keines dieser Felder ein Pflichtfeld ist, kann die Suchabfrage auch nur mithilfe eines Feldes erfolgen.
 
-Weitere Konfigurationsbeispiele
---------------------------------
 
-Beispiel mit Autovervollständigung und individueller Ergebnisanzeige:
+2. Beispiel
+-----------
+
+Das folgende Beispiel baut auf den Deutschen Geographischen Namenskatalog im Maßstab 1:250.000 des `Bundesamtes für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_ auf. Die Daten wurden in die Tabelle ``gn250_p`` der Datenbank ``gisdb``  (siehe parameters.yml oben) kopiert und eignen sich gut für eine Ortssuche. Die Daten haben viele verschiedene Spalten, u.a.:
+
+- id: Die ID des Datensatzes
+- name: Der Name des Datensatzes
+- kreis: Der Landkreis (nicht für jeden Datensatz vorhanden)
+- oba_wert: Die Art des Features (z.B.. Bahnhof, Museum, etc.)
+
+
+Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
 
 .. code-block:: yaml
 
-   Create or Replace view brd.qry_gn250_p_ortslage as Select gid, name, gemeinde, bundesland, oba, ewz_ger,  hoehe_ger ,geom from brd.gn250_p where oba = 'AX_Ortslage' order by name;
-
-
-.. code-block:: yaml
-
-  class: Mapbender\CoreBundle\Component\SQLSearchEngine
-  class_options:
-      connection: search_db
-      relation: brd.qry_gn250_p_ortslage
+    class: Mapbender\CoreBundle\Component\SQLSearchEngine
+    class_options:
+      connection: gisdb
+      relation: gn250_p
       attributes:
-        - gid
+        - id
         - name
-        - gemeinde
-        - bundesland
-        - ewz_ger
-        - hoehe_ger
+        - kreis
+        - oba_wert
       geometry_attribute: geom
-  form:
+    form:
       name:
         type: text
         options:
-            required: false
-            label: Name
-            attr:
-                data-autocomplete: on
+          required: true
         compare: ilike
-      gemeinde:
-        type: text
-        options:
-            required: false
-        compare: ilike
-  results:
+    results:
       view: table
       count: true
       headers:
+        id: ID
         name: Name
-        gemeinde: Gemeinde
-        bundesland: Bundesland
-        ewz_ger: Einwohner
-        hoehe_ger: Höhe
+        kreis: Landkreis
+        oba_wert: Art
       callback:
         event: click
         options:
-            buffer: 1000
-            minScale: null
-            maxScale: null
-      styleMap:
-        default:
-            strokeColor: '#00ff00'
-            strokeOpacity: 1
-            fillOpacity: 0
-        select:
-            strokeColor: '#ff0000'
-            fillColor: '#ff0000'
-            fillOpacity: 0.8
-        temporary:
-            strokeColor: '#0000ff'
-            fillColor: '#0000ff'
-            fillOpacity: 1
-
-
-
-Beispiel mit Auswahlbox:
-
-.. code-block:: yaml
-
-   Create or Replace view brd.qry_gn250_p as Select gid, name, gemeinde, bundesland, oba, geom from brd.gn250_p where oba = 'AX_Ortslage' OR oba = 'AX_Wasserlauf' order by name;
-
-
-.. code-block:: yaml
-
-  class: Mapbender\CoreBundle\Component\SQLSearchEngine
-  class_options:
-      connection: search_db
-      relation: brd.qry_gn250_p_ortslage
-      attributes:
-        - gid
-        - name
-        - gemeinde
-        - bundesland
-        - oba
-      geometry_attribute: geom
-  form:
-      oba:
-        type: choice
-        options:
-            empty_value: 'Bitte wählen...'
-            choices:
-                AX_Ortslage: Ort
-                AX_Wasserlauf: 'Gewässer'
-      name:
-        type: text
-        options:
-            required: false
-            label: Name
-            attr:
-                data-autocomplete: on
-        compare: ilike
-      gemeinde:
-        type: text
-        options:
-            required: false
-        compare: ilike
-  results:
-      view: table
-      count: true
-      headers:
-        name: Name
-        gemeinde: Gemeinde
-        bundesland: Bundesland
-      callback:
-        event: click
-        options:
-            buffer: 1000
-            minScale: null
-            maxScale: null
-
-
+          buffer: 10
+          minScale: 500
+          maxScale: 2500
+          
+          
 YAML-Definition 
 ----------------
 
@@ -441,33 +319,33 @@ In der mapbender.yml Datei:
 
 .. code-block:: yaml
 
-   target: map # ID des Kartenelements
-   asDialog: true # true, Erebniswiedergabe in einem Dialogfeld
-   timeoutFactor:  3 # Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
-   height: 500 # Höhe des Dialogs
-   width: 700 # Breite des Dialogs
-   routes:    # Sammlung von Suchrouten
-       demo_polygon:  # für Maschinen lesbarer Name
+   target: map                                          # ID des Kartenelements
+   asDialog: true                                       # true, Erebniswiedergabe in einem Dialogfeld
+   timeoutFactor:  3                                    # Timeout-Faktor (multipliziert mit autcomplete Verzögerung) um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde
+   height: 500                                          # Höhe des Dialogs
+   width: 700                                           # Breite des Dialogs
+   routes:                                              # Sammlung von Suchrouten
+       demo_polygon:                                    # für Maschinen lesbarer Name
       class: Mapbender\CoreBundle\Component\SQLSearchEngine  #  Suchmaschine, die verwendet werden soll
-      class_options:  # Diese werden an die Suchmaschine weitergegeben
-          connection: digi_suche    # search_db  # DBAL Verbindungsname, der benutzt werden soll, benutzen sie ~ für default
-          relation: polygons # Verbindungsauswahl, Unterabfragen können verwendet werden
+      class_options:                                    # Diese werden an die Suchmaschine weitergegeben
+          connection: digi_suche                        # search_db, DBAL Verbindungsname, der benutzt werden soll, benutzen Sie ~ für default
+          relation: polygons                            # Verbindungsauswahl, Unterabfragen können verwendet werden
           attributes: 
-              - gid  # Liste von Spalten auswählen, expressions are possible
+              - gid                                     # Liste von Spalten auswählen, expressions are possible
               - name 
               - type
-          geometry_attribute: geom  # Name der Geometriesplate, die genutzt werden soll. Achtung: Projektion muss mit Projektion des map-Elements übereinstimmen
-      form:  # Einstellungen für das Suchformular
-          name:  # Feldname, Spaltenname der genutzt werden soll 
-              type: text  # Eingabefeld, normalerweise Text oder Zahlen
-              options:  # Einstellungen für das Eingabefeld
-                  required: false  # HTML5 benötigte Attribute
-                  label: Name  # benutzerdefinierte Beschriftung eingeben, sont wird die Beschriftung von dem Feldnamen abgeleitet
-                  attr:  # HTML5 benötigte Attribute
-                      data-autocomplete: on  # Attribut, um Autovervollständigung zu aktivieren
-                      data-autocomplete-distinct: on  # Attribut, dass Autovervollständigung aktiviert aber unterscheiden lässt
-                      data-autocomplete-using: type   # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden                
-              compare: ilike  # Siehe unten für weitere Vergleichsformen
+          geometry_attribute: geom                      # Name der Geometriesplate, die genutzt werden soll. Achtung: Projektion muss mit Projektion des map-Elements übereinstimmen
+      form:                                             # Einstellungen für das Suchformular
+          name:                                         # Feldname, Spaltenname der genutzt werden soll 
+              type: text                                # Eingabefeld, normalerweise Text oder Zahlen
+              options:                                  # Einstellungen für das Eingabefeld
+                  required: false                       # HTML5 benötigte Attribute
+                  label: Name                           # benutzerdefinierte Beschriftung eingeben, sonst wird die Beschriftung von dem Feldnamen abgeleitet
+                  attr:                                 # HTML5 benötigte Attribute
+                      data-autocomplete: on             # Attribut, um Autovervollständigung zu aktivieren
+                      data-autocomplete-distinct: on    # Attribut, dass Autovervollständigung aktiviert aber unterscheiden lässt
+                      data-autocomplete-using: type     # komma separierte Liste von anderen Eingabefeldern, in denen WHERE Angaben für die Autovervollständigung gemacht werden                
+              compare: ilike                            # Siehe unten für weitere Vergleichsformen
           type:
               type: choice
               options:
@@ -480,17 +358,17 @@ In der mapbender.yml Datei:
                       D: D
                       E: E
       results:
-          view: table  # Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
-          count: true # Anzahl der Treffer anzeigen
-          headers:  # hBezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
-              gid: ID  # Spaltenname -> Überschrift
+          view: table                                   # Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
+          count: true                                   # Anzahl der Treffer anzeigen
+          headers:                                      # Bezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
+              gid: ID                                   # Spaltenname -> Überschrift
               name: Name
               type: Type
-          callback:  # Was beim Klick und Mauszeiger halten passiert
-              event: click  # Ergebnisliste (click oder mouseover)
+          callback:                                     # Was beim Klick und Mauszeiger halten passiert
+              event: click                              # Ergebnisliste (click oder mouseover)
               options:
-                  buffer: 10    # Puffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
-                  minScale: ~   # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
+                  buffer: 10                            # Puffert die Geometrieergebnise (Karteneinheiten) vor dem Zoomen
+                  minScale: ~                           # Maßstabsbegrenzung beim Zoomen, ~ für keine Begrenzung
                   maxScale: ~
           styleMap:
               default:
