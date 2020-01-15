@@ -59,7 +59,7 @@ Example with auto complete
 
 
 * choice
-Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
+Example with different selection options via dropdown:
 
 .. image:: ../../../figures/search_router_choice_en.png
      :scale: 80
