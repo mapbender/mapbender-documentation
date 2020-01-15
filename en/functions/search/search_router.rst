@@ -261,8 +261,8 @@ Here only the configuration of the results is shown. The number of results is sh
 
 Because none of these fields are mandatory the search will work wih only on field.
 
-Example
--------
+2. Example
+-----------
 
 The following example uses the german geographical names data in 1:250.000 from the `Bundesamt für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_. The data was extracted to ``gn250_p`` table in the ``gisdb`` database (see parameters.yml above) and can be used for the search. The data has some specific columns:
 
@@ -271,9 +271,6 @@ The following example uses the german geographical names data in 1:250.000 from 
 - kreis: the administrative county (not for every dataset)
 - oba_wert: the type of data (e.g. station, museum, etc.)
 
-
-2. Example
-----------
 
 Example of a route-configuration in the ``configuration`` area:
 
