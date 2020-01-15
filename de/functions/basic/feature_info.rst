@@ -13,6 +13,12 @@ Als Beispiel diente der WMS "Krankenhäuser NRW" (http://www.wms.nrw.de/wms/kran
 Konfiguration
 =============
 
+Das Element FeatureInfo wird im Content eingebunden:
+
+
+.. image:: ../../../figures/de/feature_info_content.png
+     :scale: 80
+
 .. image:: ../../../figures/de/feature_info_configuration.png
      :scale: 80
 
@@ -30,6 +36,7 @@ Konfiguration
 * **nur valide zeigen:** Dieser Parameter hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender als nicht valide.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 
+Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
 Einstellungen im Layertree
 ---------------------------
