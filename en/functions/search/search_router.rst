@@ -25,58 +25,13 @@ Configuration
 * **Configuration**: Field to configure the search (ppears, when a search is added to Routes by using +)
 
 You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox where you can choose the search you want to use, and a ``configuration``. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
+
 The element may be integrated into the sidepane or as a button into the toolbar. To configure a button visit the documentation at :ref:`button`
 
-**Tipp:**
+**Tip:**
 The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at `database :ref:`yaml_en:`.
 Only one coordinate reference system is allowed. The geometry column must match the coordinate system of the map.
 
-
-Example
--------
-
-The following example uses the german geographical names data in 1:250.000 from the `Bundesamt für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_. The data was extracted to ``gn250_p`` table in the ``gisdb`` database (see parameters.yml above) and can be used for the search. The data has some specific columns:
-
-- id: the id of the dataset
-- name: the name of the dataset
-- kreis: the administrative county (not for every dataset)
-- oba_wert: the type of data (e.g. station, museum, etc.)
-
-
-Example of a route-configuration in the ``configuration`` area:
-
-.. code-block:: yaml
-
-    class: Mapbender\CoreBundle\Component\SQLSearchEngine
-    class_options:
-      connection: gisdb
-      relation: gn250_p
-      attributes:
-        - id
-        - name
-        - kreis
-        - oba_wert
-      geometry_attribute: geom
-    form:
-      name:
-        type: text
-        options:
-          required: true
-        compare: ilike
-    results:
-      view: table
-      count: true
-      headers:
-        id: ID
-        name: Name
-        kreis: Landkreis
-        oba_wert: Art
-      callback:
-        event: click
-        options:
-          buffer: 10
-          minScale: null
-          maxScale: null
 
 
 Type
@@ -126,9 +81,6 @@ Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
       
 
 
-
-
-
 Comparison Mode
 ---------------
 
@@ -142,6 +94,8 @@ For every field a comparison mode can be set, which should be used by the engine
 * **ilike**: both-side 'like', (case-insensitive - \*searchstring\*)
 * **ilike-left:** left-side 'like' (case-insensitive - \*searchstring)
 * **ilike-right:** right-side 'like' (case-insensitive - searchstring\*)
+
+
 
 Styling the Results
 -------------------
@@ -201,6 +155,9 @@ Note, that the hexadeximal color values have to be stated in quotation marks, be
                 
 Configuration Examples
 ======================
+
+1. Example
+----------
 
 In this example a search was configured for the Mapbender user and added into the sidepane, usable under the ``+`` in Layouts.
 
@@ -282,10 +239,6 @@ The element title (*Title*) is Search. It is againg diplayed as a title in the s
         fillColor: '#800000'
         fillOpacity: 0.5
 
-With this configuration, the search in the application will look like this:
-
-.. image:: ../../../figures/search_router_example_search.png
-     :scale: 80
 
 This picture illustrates which consequences the configurations in the yaml-definition have for the search formula:
 
@@ -308,128 +261,55 @@ Here only the configuration of the results is shown. The number of results is sh
 
 Because none of these fields are mandatory the search will work wih only on field.
 
+Example
+-------
 
-Additional configuration examples
----------------------------------
+The following example uses the german geographical names data in 1:250.000 from the `Bundesamt für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_. The data was extracted to ``gn250_p`` table in the ``gisdb`` database (see parameters.yml above) and can be used for the search. The data has some specific columns:
 
-Example with autocomplete and individualized display of results:
+- id: the id of the dataset
+- name: the name of the dataset
+- kreis: the administrative county (not for every dataset)
+- oba_wert: the type of data (e.g. station, museum, etc.)
+
+
+2. Example
+----------
+
+Example of a route-configuration in the ``configuration`` area:
 
 .. code-block:: yaml
 
-   Create or Replace view brd.qry_gn250_p_ortslage as Select gid, name, gemeinde, bundesland, oba, ewz_ger,  hoehe_ger ,geom from brd.gn250_p where oba = 'AX_Ortslage' order by name;
-
-
-.. code-block:: yaml
-
-  class: Mapbender\CoreBundle\Component\SQLSearchEngine
-  class_options:
-      connection: search_db
-      relation: brd.qry_gn250_p_ortslage
+    class: Mapbender\CoreBundle\Component\SQLSearchEngine
+    class_options:
+      connection: gisdb
+      relation: gn250_p
       attributes:
-        - gid
+        - id
         - name
-        - gemeinde
-        - bundesland
-        - ewz_ger
-        - hoehe_ger
+        - kreis
+        - oba_wert
       geometry_attribute: geom
-  form:
+    form:
       name:
         type: text
         options:
-            required: false
-            label: Name
-            attr:
-                data-autocomplete: on
+          required: true
         compare: ilike
-      gemeinde:
-        type: text
-        options:
-            required: false
-        compare: ilike
-  results:
+    results:
       view: table
       count: true
       headers:
+        id: ID
         name: Name
-        gemeinde: Gemeinde
-        bundesland: Bundesland
-        ewz_ger: Einwohner
-        hoehe_ger: Höhe
+        kreis: Landkreis
+        oba_wert: Art
       callback:
         event: click
         options:
-            buffer: 1000
-            minScale: null
-            maxScale: null
-      styleMap:
-        default:
-            strokeColor: '#00ff00'
-            strokeOpacity: 1
-            fillOpacity: 0
-        select:
-            strokeColor: '#ff0000'
-            fillColor: '#ff0000'
-            fillOpacity: 0.8
-        temporary:
-            strokeColor: '#0000ff'
-            fillColor: '#0000ff'
-            fillOpacity: 1
+          buffer: 10
+          minScale: null
+          maxScale: null
 
-Example with selection box:
-
-.. code-block:: yaml
-
-   Create or Replace view brd.qry_gn250_p as Select gid, name, gemeinde, bundesland, oba, geom from brd.gn250_p where oba = 'AX_Ortslage' OR oba = 'AX_Wasserlauf' order by name;
-
-
-.. code-block:: yaml
-
-  class: Mapbender\CoreBundle\Component\SQLSearchEngine
-  class_options:
-      connection: search_db
-      relation: brd.qry_gn250_p_ortslage
-      attributes:
-        - gid
-        - name
-        - gemeinde
-        - bundesland
-        - oba
-      geometry_attribute: geom
-  form:
-      oba:
-        type: choice
-        options:
-            empty_value: 'Bitte wählen...'
-            choices:
-                AX_Ortslage: Ort
-                AX_Wasserlauf: 'Gewässer'
-      name:
-        type: text
-        options:
-            required: false
-            label: Name
-            attr:
-                data-autocomplete: on
-        compare: ilike
-      gemeinde:
-        type: text
-        options:
-            required: false
-        compare: ilike
-  results:
-      view: table
-      count: true
-      headers:
-        name: Name
-        gemeinde: Gemeinde
-        bundesland: Bundesland
-      callback:
-        event: click
-        options:
-            buffer: 1000
-            minScale: null
-            maxScale: null
 
 
 YAML-Definition 
@@ -439,33 +319,33 @@ In the mapbender.yml file:
 
 .. code-block:: yaml
 
-   target: map                         # ID map element
-   asDialog: true                      # true: results in dialog box
-   timeoutFactor:  3                   # timeout factor (multiplied by autocomplete deceleration) to prevent autocorrect after a search has been started
-   height: 500                         # height of dialog
-   width: 700                          # width of dialog
-   routes:                             # collection of search routes
-       demo_polygon:                   # machine-readable name
-      class: Mapbender\CoreBundle\Component\SQLSearchEngine     # path to used search engine
-      class_options:                   # options passed to the search engine
-          connection: digi_suche       # search_db  # DBAL connection name, ~ for default
+   target: map                                               # ID map element
+   asDialog: true                                            # true: results in dialog box
+   timeoutFactor:  3                                         # timeout factor (multiplied by autocomplete deceleration) to prevent autocorrect after a search has been started
+   height: 500                                               # height of dialog
+   width: 700                                                # width of dialog
+   routes:                                                   # collection of search routes
+       demo_polygon:                                         # machine-readable name
+      class: Mapbender\CoreBundle\Component\SQLSearchEngine  # path to used search engine
+      class_options:                                         # options passed to the search engine
+          connection: digi_suche                             # search_db, DBAL connection name, ~ for default
           relation: polygons          
           attributes: 
-              - gid                    # list of columns, expressions are possible
+              - gid                                          # list of columns, expressions are possible
               - name 
               - type
-          geometry_attribute: geom     # name of the geometry column, attention: projection needs to match with the projection of the map element
-      form:                            # declaration of the search form
-          name:                        # field name, column name
-              type: text               # input field, normally text or numbers
-              options:                 # declaration of the input field
-                  required: false      # HTML5, required attributes
-                  label: Name          # custom label, otherwise field name used
-                  attr:                # HTML5, required attributes
-                      data-autocomplete: on           # attribute to activate autocomplete
-                      data-autocomplete-distinct: on  # attribute to activate distinct autocomplete
-                      data-autocomplete-using: type   # autocomplete, list of input fields (with comma seperated), WHERE input           
-              compare: ilike           # see section 'comparison mode' on this page
+          geometry_attribute: geom                           # name of the geometry column, attention: projection needs to match with the projection of the map element
+      form:                                                  # declaration of the search form
+          name:                                              # field name, column name
+              type: text                                     # input field, normally text or numbers
+              options:                                       # declaration of the input field
+                  required: false                            # HTML5, required attributes
+                  label: Name                                # custom label, otherwise field name used
+                  attr:                                      # HTML5, required attributes
+                      data-autocomplete: on                  # attribute to activate autocomplete
+                      data-autocomplete-distinct: on         # attribute to activate distinct autocomplete
+                      data-autocomplete-using: type          # autocomplete, list of input fields (with comma seperated), WHERE input           
+              compare: ilike                                 # see section 'comparison mode' on this page
           type:
               type: choice
               options:
@@ -478,17 +358,17 @@ In the mapbender.yml file:
                       D: D
                       E: E
       results:
-          view: table                  # display results as table 
-          count: true                  # show number of results
-          headers:                     # column title
-              gid: ID                  # column name -> header
+          view: table                                         # display results as table 
+          count: true                                         # show number of results
+          headers:                                            # column title
+              gid: ID                                         # column name -> header
               name: Name
               type: Type
-          callback:                    # click event
-              event: click             # click or mouseover event
+          callback:                                           # click event
+              event: click                                    # click or mouseover event
               options:
-                  buffer: 10           # buffer (before zoom)
-                  minScale: ~          # scaling boundaries for zoom, ~ for no boundaries
+                  buffer: 10                                  # buffer (before zoom)
+                  minScale: ~                                 # scaling boundaries for zoom, ~ for no boundaries
                   maxScale: ~
           results:
           styleMap:
