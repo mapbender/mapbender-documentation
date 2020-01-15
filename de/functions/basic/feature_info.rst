@@ -18,11 +18,11 @@ Konfiguration
 
 
 * **Automatisches Öffnen (Autoopen):** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Default: ausgeschaltet).
-* **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht, der Standardwert ist false.
-* **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können. Standardwert ist false.
+* **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht.
+* **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Default:false). 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Type:** Auswahl, ob die Info als Element oder Dialog angezeigt werden soll. Default und mandatory: Dialog.
+* **Type:** Auswahl, ob die Info als Element oder Dialog angezeigt werden soll (Default und mandatory: Dialog).
 * **Display type:** Anzeige der Information als Tabs oder in Accordionform (Default: tabs).
 * **Max count:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
 * **Width/Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
