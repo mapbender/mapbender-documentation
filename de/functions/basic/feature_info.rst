@@ -23,6 +23,7 @@ Das Element FeatureInfo wird im Content eingebunden:
      :scale: 80
 
 
+
 * **Automatisches Öffnen (Autoopen):** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Default: false).
 * **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht.
 * **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Default:false). 
@@ -58,7 +59,6 @@ Layer "Krankenhäuser NRW" ist nicht sichtbar und FeatureInfo-Abfrage für den L
      :scale: 80
      
 Obwohl der Layer nicht sichtbar ist, erfolgt in diesem Fall trotzdem die FeatureInfo-Abfrage.
-
 
 Anzeige als Original und gestyled
 ---------------------------------
@@ -100,7 +100,6 @@ Ausdruck der Resultate
 Mit dem Schalter "Print result" kann die Information des FeatureInfo ausgedruckt werden. Eine Druckschaltfläche ist dann in dem FeatureInfo-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
 
 Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox kann man die Option "Hintergrund drucken" im Druckoptionendialog anschalten, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
-
 
 YAML-Definition:
 ----------------
