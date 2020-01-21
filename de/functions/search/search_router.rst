@@ -33,7 +33,7 @@ Das Element kann entweder in der Sidepane oder als Button in der Toolbar integri
 
 **Tipp:**
 Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de:`.
-Es wird nur ein Koordinatenreferenzsystem unterstützt. Die Geometrie Spalte in der Datenbank muss mit dem Koordinatensystem der Karte übereinstimmen.
+Es wird nur ein Koordinatenreferenzsystem unterstützt. Die Geometriespalte in der Datenbank muss mit dem Koordinatensystem der Karte übereinstimmen.
 
 
 Type
@@ -158,7 +158,7 @@ Konfigurationsbeispiele
 1. Beispiel
 -----------
 
-In diesem Beispiel wurde eine Suche für die Mapbender User konfiguriert. Die Suche wurde in die Sidepane über das ``+`` -Zeichen in der Anwendung unter Layouts, Sidepane hinzugefügt.
+In diesem Beispiel wurde eine Suche für den "Mapbender User"-Layer konfiguriert. Die Suche wurde in die Sidepane über das ``+`` -Zeichen in der Anwendung unter dem Layouts-Tab hinzugefügt.
 
 .. image:: ../../../figures/de/add_sidepane.png
      :scale: 80
@@ -168,7 +168,7 @@ Der Konfigurationsdialog zu diesem Konfigurationsbeispiel sieht wie folgt aus:
 .. image:: ../../../figures/de/search_router_example_dialog.png
      :scale: 80
 
-Der Elementitel (*Title*) lautet Suchen. Dieser wieder in der Sidepane als Titel angezeigt. Da das Element in der Sidepane eingebunden wird und nicht als Button, wurde bei Dialog kein Hayken gesetzt. Der *Timeout factor* wurde auf 2 gestellt. In den Feldern *Width* und *Height* stehen zwar Werte, diese werden in der Anwendung jedoch nicht miteinbezogen, da das Element in der Sidepane konfiguriert wird. Es wurde über das ``+`` -Zeichen bei *Routes* eine Suche eingebunden, die die Bezeichnung (*Title*) Mapbender User trägt. In *Configuration* wurde die yaml-Konfiguration des Elements eingefügt. Vollständig lautet diese:
+Der Elementitel (*Title*) lautet Suchen. Dieser wird in der Sidepane als Titel angezeigt. Da das Element in der Sidepane eingebunden wird und nicht als Button, wurde bei Dialog kein Haken gesetzt. Der *Timeout factor* wurde auf 2 gestellt. In den Feldern *Width* und *Height* stehen zwar Werte, diese werden in der Anwendung jedoch nicht übergeben, da das Element in der Sidepane konfiguriert wird und diese die Werte nicht beachtet. Es wurde über das ``+`` -Zeichen bei *Routes* eine Suche eingebunden, die die Bezeichnung (*Title*) Mapbender User trägt. In *Configuration* wurde die yaml-Konfiguration des Elements eingefügt. Vollständig lautet diese:
 
 .. code-block:: yaml
 
@@ -268,7 +268,7 @@ Da keines dieser Felder ein Pflichtfeld ist, kann die Suchabfrage auch nur mithi
 2. Beispiel
 -----------
 
-Das folgende Beispiel baut auf den Deutschen Geographischen Namenskatalog im Maßstab 1:250.000 des `Bundesamtes für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_ auf. Die Daten wurden in die Tabelle ``gn250_p`` der Datenbank ``gisdb``  (siehe parameters.yml oben) kopiert und eignen sich gut für eine Ortssuche. Die Daten haben viele verschiedene Spalten, u.a.:
+Das folgende Beispiel baut auf den Deutschen Geographischen Namenskatalog im Maßstab 1:250.000 des `Bundesamtes für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_ auf. Die Daten wurden in die Tabelle ``gn250_p`` der Datenbank ``gisdb`` kopiert und eignen sich gut für eine Ortssuche. Die Daten haben viele verschiedene Spalten, u.a.:
 
 - id: Die ID des Datensatzes
 - name: Der Name des Datensatzes
