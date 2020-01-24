@@ -1,13 +1,12 @@
-{	
-    "name": "mapbender/documentation",	
-    "description": "Mapbender documentation",	
-    "keywords": ["mapbender", "documentation"],	
-    "type": "library",	
-    "license": "MIT",	
-    "authors": [	
-        {	
-            "name": "Astrid Emde"	
-        }	
-    ]	
-   
+{
+    "name": "mapbender/documentation",
+    "description": "Mapbender documentation",
+    "keywords": ["mapbender", "documentation"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Astrid Emde"
+        }
+    ]
 }
