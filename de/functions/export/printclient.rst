@@ -29,7 +29,7 @@ Der PrintClient kann sowohl als Dialog als auch als Element in der Sidebar verwe
 Konfiguration
 =============
 
-.. image:: ../../../figures/de/print_client_configuration.png
+.. image:: ../../../figures/print_client_configuration.png
      :scale: 80
 
 Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden. Siehe unter :ref:`button` zur detaillierten Beschreibung der Button-Funktion.
@@ -58,55 +58,6 @@ Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seit
 * **Zeige Pflichtfelder zuerst (Display required fields first)**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
     
 * **Replace pattern**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer) - ein Beispiel gibt der Abschnitt YAML-Definition.
-
-
-  
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    target: map                    # ID des Kartenelements
-    type: dialog                   # element oder dialog, default ist dialog
-    templates:
-        - { template: a4portrait, label: A4 Portrait}	# Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
-        - { template: a4landscape, label: A4 Landscape} 	# Vorlagebeschriftung im Druckdialog
-    scales: [5000, 10000, 25000]   # Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
-    quality_levels:				   # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
-        - { dpi: 72 , label: Draft (72dpi)}		# die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
-        - { dpi: 288,  label: Document (288dpi)}	# es können weitere dpi-Werte angegeben werden
-    rotatable: true                             	# true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
-    legend: true                   # true/false, der Standardwert ist false
-    legend_default_behaviour: false # true/false, Legenden Checkbox standardmäßig ausgewählt
-    file_prefix: mapbender        # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
-    optional_fields:               # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
-        title:                     # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
-            label: Titel           # Beschriftung des optionalen Feldes
-            type: text             # Typ des optionalen Feldes
-            options:                            
-                required: true     # erforderlich: true or false
-        comment1:
-            label: Kommentar 1
-            options: { required: false }
-        comment2:
-            label: Kommentar 2
-            options: { required: false }
-        bearbeiter:
-            label: Bearbeiter
-            options: { required: true }
-    replace_pattern:               # Für den Druck kann der Kartenaufruf verändert werden. 
-    -                      # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
-                default: { 288: '&map_resolution=288' }
-            -
-                pattern: 'stadtplan.xml'        # oder es können für den Druck optimierte Dienste angefordert werden.
-                replacement: { 288: 'stadtplan_4.xml' }
-
-Class, Widget & Style
-=====================
-
-* Class: Mapbender\\CoreBundle\\Element\\PrintClient
-* Widget: mapbender.element.printClient.js
-
 
 Verzeichnisse
 =============
@@ -346,3 +297,50 @@ Konfiguration des Elements
 ==========================
 
 Gehen Sie in der Administration von Mapbender zu Ihrer Anwendung und erzeugen Sie ein Element **Druck** (Beachten Sie: Das Element kann über einen Button aufgerufen werden oder in der Sidepane (Seitenleiste) verwendet werden).
+
+
+YAML-Definition:
+----------------
+
+.. code-block:: yaml
+
+    target: map                    # ID des Kartenelements
+    type: dialog                   # element oder dialog, default ist dialog
+    templates:
+        - { template: a4portrait, label: A4 Portrait}	# Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
+        - { template: a4landscape, label: A4 Landscape} 	# Vorlagebeschriftung im Druckdialog
+    scales: [5000, 10000, 25000]   # Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
+    quality_levels:				   # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
+        - { dpi: 72 , label: Draft (72dpi)}		# die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
+        - { dpi: 288,  label: Document (288dpi)}	# es können weitere dpi-Werte angegeben werden
+    rotatable: true                             	# true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
+    legend: true                   # true/false, der Standardwert ist false
+    legend_default_behaviour: false # true/false, Legenden Checkbox standardmäßig ausgewählt
+    file_prefix: mapbender        # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
+    optional_fields:               # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
+        title:                     # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
+            label: Titel           # Beschriftung des optionalen Feldes
+            type: text             # Typ des optionalen Feldes
+            options:                            
+                required: true     # erforderlich: true or false
+        comment1:
+            label: Kommentar 1
+            options: { required: false }
+        comment2:
+            label: Kommentar 2
+            options: { required: false }
+        bearbeiter:
+            label: Bearbeiter
+            options: { required: true }
+    replace_pattern:               # Für den Druck kann der Kartenaufruf verändert werden. 
+    -                      # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
+                default: { 288: '&map_resolution=288' }
+            -
+                pattern: 'stadtplan.xml'        # oder es können für den Druck optimierte Dienste angefordert werden.
+                replacement: { 288: 'stadtplan_4.xml' }
+
+Class, Widget & Style
+=====================
+
+* Class: Mapbender\\CoreBundle\\Element\\PrintClient
+* Widget: mapbender.element.printClient.js
