@@ -984,7 +984,7 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
 
                     - type: image               # Type image für das Anzeigen von Bildern
                       name: file_reference      # Referenz zur Datenbankspalte. Wenn definiert, wird der Pfad oder die URL in dem Feld ermittelt und "src" Option ersetzt
-                      src: "bundles/mapbendercore/image/logo_mb3.png"  # Angabe eines Pfades oder URL zu einem Bild. Falls der relative Pfad genutzt wird muss relative: true stehen.
+                      src: "../bundles/mapbendercore/image/logo_mb3.png"  # Angabe eines Pfades oder URL zu einem Bild. Falls der relative Pfad genutzt wird, muss relative: true stehen.
                       enlargeImage: true        # Bild wird beim Klick auf das Vorschaubild auf Originalgröße/maximale Auflösung vergrößert. Es wird nicht auf die Bildschirmgröße skaliert.
 
                       # Experimentelle Angaben zum Styling
@@ -995,7 +995,7 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
 
 Dynamische Pfade (z.B. "bundles/mapbendercore/image/[nr].png" oder 'bundles/mapbendercore/image/' + data.image_reference) können nicht angegeben werden.
 
-Eine Möglichkeit das zu Umgehen wäre ein Trigger, der in die Datenbankspalte beim Insert den Pfad und den Inhalt eines Tabellenfeldes als Name zusammenführt.
+Eine Möglichkeit, das zu umgehen, wäre ein Trigger, der in die Datenbankspalte beim Insert den Pfad und den Inhalt eines Tabellenfeldes als Name zusammenführt.
 
 
 Definition der zur Verfügung stehenden Werkzeuge (Toolset Type)
