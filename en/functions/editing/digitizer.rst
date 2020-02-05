@@ -991,7 +991,7 @@ The image can be specified by specifying the two parameters src and name.
                       
                     - type: image               # Feature type field name image.
                       name: file_reference      # Reference to the database column. If defined, the path or URL in the field can be used and replaces "src" option
-                      src: "bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to an image. If the path is relative use relative: true.
+                      src: "../bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to an image. If the path is relative use relative: true.
                       relative: true            # Optional. Default value is false. If true, the "src" path is determined from the "/web" directory.
                       enlargeImage: true        # Image is enlarged to original size/ maximum resolution by clicking on the preview image. It is not scaled to screen size.
 
