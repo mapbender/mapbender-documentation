@@ -48,11 +48,11 @@ Download Mapbender
 -----
 
 
-.. image:: https://www.ohloh.net/p/mapbender/widgets/project_partner_badge.gif
+.. image:: https://www.openhub.net/p/mapbender/widgets/project_partner_badge.gif
   :scale: 80 %
-  :alt: Mapbender Project on Ohloh
+  :alt: Mapbender Project on Open Hub
   :align: right
-  :target: https://www.ohloh.net/p/mapbender?ref=sample
+  :target: https://www.openhub.net/p/mapbender?ref=sample
    
 .. image:: ./figures/OSGeo_project.png
   :width: 200 px
