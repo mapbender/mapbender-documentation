@@ -48,7 +48,7 @@ The Layer "Krankenhäuser NRW" is visible and the FeatureInfo request for the la
 .. image:: ../../../figures/de/feature_info_off.png
      :scale: 80
 
-The Layer "Krankenhäuser NRW" is invisible and the FeatureInfo request for the same layer is activated.
+The Layer "Krankenhäuser NRW" is invisible and there will be no FeatureInfo request (even if the FeatureInfo request is activated).
 
 .. image:: ../../../figures/de/feature_info_on_layer_invisible.png
      :scale: 80
