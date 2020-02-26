@@ -65,12 +65,12 @@ YAML-Definition:
     type: dialog                                             # element oder dialog, default ist dialog
     templates:
         - { template: a4portrait, label: A4 Portrait}	     # Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
-        - { template: a4landscape, label: A4 Landscape} 	 # Vorlagebeschriftung im Druckdialog
+        - { template: a4landscape, label: A4 Landscape}      # Vorlagebeschriftung im Druckdialog
     scales: [5000, 10000, 25000]                             # Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
-    quality_levels:				                             # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
-        - { dpi: 72 , label: Draft (72dpi)}		             # die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
-        - { dpi: 288,  label: Document (288dpi)}	         # es können weitere dpi-Werte angegeben werden
-    rotatable: true                             	         # true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
+    quality_levels:                                          # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
+        - { dpi: 72 , label: Draft (72dpi)}                  # die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
+        - { dpi: 288,  label: Document (288dpi)}             # es können weitere dpi-Werte angegeben werden
+    rotatable: true                                          # true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
     legend: true                                             # true/false, der Standardwert ist false
     legend_default_behaviour: false                          # true/false, Legenden Checkbox standardmäßig ausgewählt
     file_prefix: mapbender                                   # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
