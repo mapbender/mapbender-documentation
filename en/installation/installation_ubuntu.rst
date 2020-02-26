@@ -143,6 +143,7 @@ Initialisation of the database connection:
     cd /var/www/mapbender
     app/console doctrine:database:create
     app/console doctrine:schema:create
+    app/console fom:user:resetroot
     app/console assets:install web --symlink --relative
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
