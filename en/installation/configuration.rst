@@ -152,10 +152,6 @@ There are differences in the behaviour of app.php and app_dev.php:
   things, that are important for developers but should not be visible for
   common users.
 
-  .. image:: ../../figures/symfony_profiler.png
-             :scale: 80
-  
-
 The directory app/cache contains the cache-files. It contains directories
 for each environment (prod and dev) but the mechanism of the dev-cache, as
 described, behaves different.
@@ -163,10 +159,3 @@ described, behaves different.
 If changes of the Mapbender interface or the code are made, the
 cache-directory (app/cache) has to be cleared to see the changes in the
 application.
-
-The following screenshots shows the location of the cache-directory in
-Mapbender:
-
-.. image:: ../../figures/mapbender_cache_directories.png 
-           :scale: 80
-
