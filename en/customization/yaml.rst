@@ -109,7 +109,7 @@ Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine pro
 **Disclaimer**
 **************
 
-.. image:: ../../../figures/disclaimer.png
+.. image:: ../../figures/disclaimer.png
 
 A disclaimer can be added through the use of site links. 
 
