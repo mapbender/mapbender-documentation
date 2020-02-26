@@ -129,7 +129,7 @@ Installation PHP-PostgreSQL Treiber:
  
 
 Konfiguration der Datenbankverbindung in (app/config/parameters.yml).
-Weitere Informationen im Kapitel :ref:`database_de`.
+Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 .. code-block:: yaml
 
