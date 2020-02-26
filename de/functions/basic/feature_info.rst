@@ -53,12 +53,11 @@ Layer "Krankenhäuser NRW" ist sichtbar und FeatureInfo-Abfrage für den Layer d
 .. image:: ../../../figures/de/feature_info_off.png
      :scale: 80
 
-Layer "Krankenhäuser NRW" ist nicht sichtbar und FeatureInfo-Abfrage für den Layer aktiviert:
+Layer "Krankenhäuser NRW" ist nicht sichtbar, es erfolgt zusätzlich keine FeatureInfo-Abfrage, auch wenn diese aktiviert ist:
 
 .. image:: ../../../figures/de/feature_info_on_layer_invisible.png
      :scale: 80
      
-Obwohl der Layer nicht sichtbar ist, erfolgt in diesem Fall trotzdem die FeatureInfo-Abfrage.
 
 Anzeige als Original und gestyled
 ---------------------------------
