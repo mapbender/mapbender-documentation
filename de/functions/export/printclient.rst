@@ -18,6 +18,10 @@ Mapbender bringt bereits eine Kollektion von Druckvorlagen (LibreOffice Draw Dat
 
 .. image:: ../../../figures/de/print_client.png
      :scale: 80
+     
+     
+Konfiguration des Elements
+==========================     
 
 .. image:: ../../../figures/print_client_configuration.png
      :scale: 80
@@ -45,6 +49,54 @@ Mapbender bringt bereits eine Kollektion von Druckvorlagen (LibreOffice Draw Dat
 * **Zeige Pflichtfelder zuerst (Display required fields first)**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
     
 * **Replace pattern**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer) - ein Beispiel gibt der Abschnitt YAML-Definition.
+
+
+Das Element kann über einen Button aufgerufen werden oder in der Sidepane als **Element** eingebunden werden. Hier muss der Druckrahmen aktiviert werden, um den Druck zu starten. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
+
+.. image:: ../../../figures/de/print_client_sidebar.png
+     :scale: 80
+
+YAML-Definition:
+----------------
+
+.. code-block:: yaml
+
+    target: map                                              # ID des Kartenelements
+    type: dialog                                             # element oder dialog, default ist dialog
+    templates:
+        - { template: a4portrait, label: A4 Portrait}	     # Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
+        - { template: a4landscape, label: A4 Landscape} 	 # Vorlagebeschriftung im Druckdialog
+    scales: [5000, 10000, 25000]                             # Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
+    quality_levels:				                             # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
+        - { dpi: 72 , label: Draft (72dpi)}		             # die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
+        - { dpi: 288,  label: Document (288dpi)}	         # es können weitere dpi-Werte angegeben werden
+    rotatable: true                             	         # true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
+    legend: true                                             # true/false, der Standardwert ist false
+    legend_default_behaviour: false                          # true/false, Legenden Checkbox standardmäßig ausgewählt
+    file_prefix: mapbender                                   # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
+    optional_fields:                                         # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
+        title:                                               # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
+            label: Titel                                     # Beschriftung des optionalen Feldes
+            type: text                                       # Typ des optionalen Feldes
+            options:                            
+                required: true                               # erforderlich: true or false
+        comment1:
+            label: Kommentar 1
+            options: { required: false }
+        comment2:
+            label: Kommentar 2
+            options: { required: false }
+        bearbeiter:
+            label: Bearbeiter
+            options: { required: true }
+    replace_pattern:                                         # Für den Druck kann der Kartenaufruf verändert werden. 
+    -                                                        # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
+                default: { 288: '&map_resolution=288' }
+            -
+                pattern: 'stadtplan.xml'                     # oder es können für den Druck optimierte Dienste angefordert werden.
+                replacement: { 288: 'stadtplan_4.xml' }
+
+
 
 Verzeichnisse
 =============
@@ -275,52 +327,3 @@ Mit Klick auf den Druckbutton, öffnet sich ein Druckdialog, der das definierte 
 Das gewünschte Gebiet kann auswählt werden und ein PDF erzeugt. Das PDF beinhaltet die Informationen für das selektierte Objekt.
 
 Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwender nicht daran, den Rahmen in einen Bereich zu verschieben, der nicht das ausgewählte Objekt enthält. Die ausgedruckte Objektinformation passt dann nicht zur Darstellung in der Karte.
-
-
-Konfiguration des Elements
-==========================
-
-Das Element kann über einen Button aufgerufen werden oder in der Sidepane als **Element** eingebunden werden. Hier muss der Druckrahmen aktiviert werden, um den Druck zu starten. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
-
-.. image:: ../../../figures/de/print_client_sidebar.png
-     :scale: 80
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    target: map                                              # ID des Kartenelements
-    type: dialog                                             # element oder dialog, default ist dialog
-    templates:
-        - { template: a4portrait, label: A4 Portrait}	     # Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
-        - { template: a4landscape, label: A4 Landscape} 	 # Vorlagebeschriftung im Druckdialog
-    scales: [5000, 10000, 25000]                             # Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
-    quality_levels:				                             # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
-        - { dpi: 72 , label: Draft (72dpi)}		             # die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
-        - { dpi: 288,  label: Document (288dpi)}	         # es können weitere dpi-Werte angegeben werden
-    rotatable: true                             	         # true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
-    legend: true                                             # true/false, der Standardwert ist false
-    legend_default_behaviour: false                          # true/false, Legenden Checkbox standardmäßig ausgewählt
-    file_prefix: mapbender                                   # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
-    optional_fields:                                         # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
-        title:                                               # Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert)
-            label: Titel                                     # Beschriftung des optionalen Feldes
-            type: text                                       # Typ des optionalen Feldes
-            options:                            
-                required: true                               # erforderlich: true or false
-        comment1:
-            label: Kommentar 1
-            options: { required: false }
-        comment2:
-            label: Kommentar 2
-            options: { required: false }
-        bearbeiter:
-            label: Bearbeiter
-            options: { required: true }
-    replace_pattern:                                         # Für den Druck kann der Kartenaufruf verändert werden. 
-    -                                                        # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
-                default: { 288: '&map_resolution=288' }
-            -
-                pattern: 'stadtplan.xml'                     # oder es können für den Druck optimierte Dienste angefordert werden.
-                replacement: { 288: 'stadtplan_4.xml' }
