@@ -104,7 +104,7 @@ Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken un
 **Disclaimer**
 **************
 
-.. image:: ../../../figures/disclaimer.png
+.. image:: ../../figures/disclaimer.png
 
 Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der parameters.yml ergänzt werden:
 
