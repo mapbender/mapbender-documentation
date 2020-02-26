@@ -169,10 +169,9 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
                      - type: date
                        title: favorite Date
                        name: date_favorite
-                       placeholder: Please add a date in the following style dd-mm-yy.
-                       dateFormat: dd-mm-yy
-                       value: 01-01-2016
-                       mandatory: true
+                       dateFormat: yyyy-mm-dd
+                       value: "2020-02-29"                             
+                       mandatory: true                                  
                        css: {width: 25%}
                      - type: breakLine
                      - type: breakLine
@@ -544,13 +543,13 @@ Definition Popup
 
 .. code-block:: yaml
 
-        popup:                  # Definition des Formularfensters als PopUp-Fenster. Weitere experimentelle Anpassungsmöglichkeiten unter http://api.jqueryui.com/dialog/
-            title: POI     # Definition des Titels vom Formularfensters
-            height: 400    # Höhe des Formularfensters
-            width: 500     # Breite des Formularfensters
+        popup:                                                          # Definition des Formularfensters als PopUp-Fenster. Weitere experimentelle Anpassungsmöglichkeiten unter http://api.jqueryui.com/dialog/
+            title: POI                                                  # Definition des Titels vom Formularfensters
+            height: 400                                                 # Höhe des Formularfensters
+            width: 500                                                  # Breite des Formularfensters
 
-            #modal: true   # Alles außer dem Formularfensters wird ausgegraut und die Position und Größe des Fensters ist für die Dauer der Datenaufnahme fixiert
-            #position: {at: "left+20px",  my: "left top-460px"}  #Positionierung des Formularfensters im Browserbereich
+            #modal: true                                                # Alles außer dem Formularfensters wird ausgegraut und die Position und Größe des Fensters ist für die Dauer der Datenaufnahme fixiert
+            #position: {at: "left+20px",  my: "left top-460px"}         # Positionierung des Formularfensters im Browserbereich
 
 
 
@@ -584,7 +583,7 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
                 paging: true
                 selectable: false
                 autoWidth: false
-                order: [[1, "asc"]] # Spalte 1 | 2 vorsortieren
+                order: [[1, "asc"]]          # Spalte 1 | 2 vorsortieren
 
 
 Dateireiter (type tabs)
@@ -661,14 +660,14 @@ Textfelder (type input)
 
 .. code-block:: yaml
 
-                                                 - type: input                    # Typ Textfeld
-                                                   title: Title for the field     # Beschriftung mit dem Titel des Feldes (optional)
-                                                   name: column_name              # Referenz zur Tabellenspalte
-                                                   mandatory: true                # Angabe ob Pflichtfeld (optional)
-                                                   mandatoryText: You have to provide information. # Text sofern Pflichtfeld nicht gefüllt ist
-                                                   infoText: 'Bitte geben Sie einen Wert an' # Definition eines Informationstextes
-                                                   value: 'default Text'          # Definition eines Standard-Wertes  (optional)
-                                                   placeholder: 'please edit this field' # Platzhalter, der vor der Eingabe erscheint (optional)
+                                                 - type: input                                        # Typ Textfeld
+                                                   title: Title for the field                         # Beschriftung mit dem Titel des Feldes (optional)
+                                                   name: column_name                                  # Referenz zur Tabellenspalte
+                                                   mandatory: true                                    # Angabe ob Pflichtfeld (optional)
+                                                   mandatoryText: You have to provide information.    # Text sofern Pflichtfeld nicht gefüllt ist
+                                                   infoText: 'Bitte geben Sie einen Wert an'          # Definition eines Informationstextes
+                                                   value: 'default Text'                              # Definition eines Standard-Wertes  (optional)
+                                                   placeholder: 'please edit this field'              # Platzhalter, der vor der Eingabe erscheint (optional)
 
 
 Auswahlboxen (selectbox oder multiselect [type select])
@@ -681,11 +680,11 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
 
 .. code-block:: yaml
 
-                                                 - type: select                     # Typ Auswahlbox
-                                                   title: select some types         # Beschriftung mit dem Titel des Feldes (optional)
-                                                   name: my_type                    # Referenz zur Tabellenspalte
-                                                   multiple: false                  # Definition einer Mehrfachauswahl (multiselect), Standard ist false
-                                                   options:                         # Definition der Optionen (key: value)
+                                                 - type: select                                       # Typ Auswahlbox
+                                                   title: select some types                           # Beschriftung mit dem Titel des Feldes (optional)
+                                                   name: my_type                                      # Referenz zur Tabellenspalte
+                                                   multiple: false                                    # Definition einer Mehrfachauswahl (multiselect), Standard ist false
+                                                   options:                                           # Definition der Optionen (key: value)
                                                        1: pub
                                                        2: bar
                                                        3: pool
@@ -750,10 +749,10 @@ Mit einer SQL Abfrage können die Werte direkt aus der Datenbank gezogen werden.
 
 .. code-block:: yaml
 
-                                                 - type: select                     # Typ Auswahlbox
-                                                   title: select some types         # Beschriftung (optional)
-                                                   name: my_type                    # Referenz zu Tabellenspalte
-                                                   connection: connectionName       # Definition einer Datenbankverbindung (connection)
+                                                 - type: select                       # Typ Auswahlbox
+                                                   title: select some types           # Beschriftung (optional)
+                                                   name: my_type                      # Referenz zu Tabellenspalte
+                                                   connection: connectionName         # Definition einer Datenbankverbindung (connection)
                                                    sql: 'SELECT DISTINCT key, value FROM tableName order by value' # Definition SQL, Abfrage der Werte key und value
 
 
@@ -763,7 +762,7 @@ Texte/Label (type label)
 
 .. code-block:: yaml
 
-                                                 - type: label      # Typ Label schreibt einen nicht bearbeitbaren Text in das Formularfenster.
+                                                 - type: label                                     # Typ Label schreibt einen nicht bearbeitbaren Text in das Formularfenster.
                                                    title: 'Please give information about the poi.' # Definition eines nicht bearbeitbaren Textes.
 
 
@@ -774,10 +773,10 @@ Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenque
 
 .. code-block:: yaml
 
-                                                - type: text              # Typ text zur Generierung von dynamischen Texten aus der Datenbank
-                                                  title:       Name       # Beschriftung (optional)
-                                                  name:        name       # Referenz zu Tabellenspalte, dessen Inhalt angezeigt werden soll
-                                                  css:         {width: 80%} # CSS Definition (optional)
+                                                - type: text                     # Typ text zur Generierung von dynamischen Texten aus der Datenbank
+                                                  title:       Name              # Beschriftung (optional)
+                                                  name:        name              # Referenz zu Tabellenspalte, dessen Inhalt angezeigt werden soll
+                                                  css:         {width: 80%}      # CSS Definition (optional)
                                                   text: data.gid + ': ' + data.name
                                                   # Text Definition in JavaScript
                                                   # data - Angabe, dass Datenbankfeld aus der Tabelle angesprochen wird.
@@ -790,9 +789,9 @@ Textbereiche (type textArea)
 
 .. code-block:: yaml
 
-                                                 - type: textArea      # Typ textArea erzeugt einen Textbereich
-                                                   rows: 4             # Anzahl der Zeilen für den Textbereich, die beim Öffnen des Formulars erscheinen. Feld kann per Maus im Formular größer gezogen werden.
-                                                   name: beschreibung  # Tabellenspalte
+                                                 - type: textArea                    # Typ textArea erzeugt einen Textbereich
+                                                   rows: 4                           # Anzahl der Zeilen für den Textbereich, die beim Öffnen des Formulars erscheinen. Feld kann per Maus im Formular größer gezogen werden.
+                                                   name: beschreibung                # Tabellenspalte
                                                    title: Bestandsaufnahme Bemerkung # Beschriftung (optional)
 
 
@@ -826,12 +825,12 @@ Die Hinweise für ein Pflichtfeld erscheinen über dem jeweiligen Feldern. Bei e
 
 .. code-block:: yaml
 
-                                                 - type:  [Angabe zum Feldtyp]           # jedes Feld kann zum Pflichtfeld gemacht werden
+                                                 - type:  [Angabe zum Feldtyp]              # jedes Feld kann zum Pflichtfeld gemacht werden
 
-                                                   mandatory: true                       # true - Das Feld muss gefüllt werden. Ansonsten kann der Datensatz nicht gespeichert werden. Bei der Definition sind auch reguläre Ausdrücke möglich.
-                                                   mandatorytitle: Pflichtfeld füllen!   # Text der im Feld angezeigt wird, wenn das Feld nicht gefüllt wird oder mit einem ungültigen Wert gefüllt wird.
+                                                   mandatory: true                          # true - Das Feld muss gefüllt werden. Ansonsten kann der Datensatz nicht gespeichert werden. Bei der Definition sind auch reguläre Ausdrücke möglich.
+                                                   mandatorytitle: Pflichtfeld füllen!      # Text der im Feld angezeigt wird, wenn das Feld nicht gefüllt wird oder mit einem ungültigen Wert gefüllt wird.
                                                    mandatoryText: Bitte eine Zahl eingeben! # Text der in einer Sprechblase über dem Feld angezeigt wird, wenn das Feld beim Speichern nicht gefüllt ist oder mit einem ungültigen Wert gefüllt ist.
-                                                   mandatory: /^\w+$/gi                  # Es können auch reguläre Ausdrücke angegeben werden, um die Eingabe zu überprüfen (z.B. Email oder numbers) Weitere Informationen unter: http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
+                                                   mandatory: /^\w+$/gi                     # Es können auch reguläre Ausdrücke angegeben werden, um die Eingabe zu überprüfen (z.B. Email oder numbers) Weitere Informationen unter: http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
 
                                                    # Prüfung, ob die Eingabe eine Zahl ist
                                                    mandatory: /^[0-9]+$/
@@ -846,16 +845,12 @@ Datumsauswahl (type date)
 
 .. code-block:: yaml
 
-                     - type: date              # Textfeld, das eine Datumsauswahl bereitstellt
-                       title: favorite Date    # Beschriftung (optional)
-                       name: date_favorite     # Referenz zu Tabellenspalte
-                       placeholder: Bitte geben Sie das Datum in der folgende Form an dd.mm.yy  # Platzhalter für die Datumsauswahl (optional)
-                       dateFormat: dd.mm.yy     # Format für die Datumsanzeige, Standardformat dd.mm.yy (16.01.2016). Weitere Beispiele yy/mm/dd (2017/01/16) oder yy-mm-dd (2017-01-16).
-                       value: 01.01.2017        # Startwert für die Datumsauswahl (optional)
-
-Bei der Nutzung einer Spalte mit dem Tabellenformat date wird das angegebene Datum unabhängig von der Angabe dateFormat in dem Format YYYY-MM-DD in die date-Datenbankspalte geschrieben.
-Fallls der Parameter dateFormat genutzt wird für eine andere Ansicht oder Abspeicherung muss ein Tabellenfeld im Textformat (z.B. date_text varchar) angelegt werden.
-
+                     - type: date                                       # Textfeld, das eine Datumsauswahl bereitstellt
+                       title: favorite Date                             # Beschriftung (optional)
+                       name: date_favorite                              # Referenz zu Tabellenspalte
+                       dateFormat: yyyy-mm-dd                           # Format für die Datumsanzeige (ISO8601)
+                       value: "2020-02-29"                              # Startwert für die Datumsauswahl (optional)
+                       mandatory: true                                  # Pflichtfeld
 
 
 Hilfetexten zu den Eingabefeldern (Attribut infoText)
@@ -866,7 +861,7 @@ Der Klick auf diesen Button öffnet den angegebenen Informationstext.
 
 .. code-block:: yaml
 
-                                                 - type:  [Angabe zum Feldtyp]           # jedes Feld kann einen Infotext nutzen
+                                                 - type:  [Angabe zum Feldtyp]                                   # jedes Feld kann einen Infotext nutzen
 
                                                    infoText: In dieses Feld dürfen nur Zahlen eingegeben werden  # Hinweistext, der angezeigt wird über i-Symbol.
 
@@ -947,15 +942,15 @@ Die in der Datenbank verlinkte URL ist:
 
 .. code-block:: yaml
 
-                    - type: file                # Typ file für das Hochladen von Dateien
-                      title: Dateiupload        # Beschriftung (optional)
-                      text: Laden Sie ein Bild hoch. # Informationstext zum Feld (optional)
-                      name: file_reference      # Angabe der Datenbankspalte, in die der Speicher-Pfad geschrieben wird
+                    - type: file                        # Typ file für das Hochladen von Dateien
+                      title: Dateiupload                # Beschriftung (optional)
+                      text: Laden Sie ein Bild hoch.    # Informationstext zum Feld (optional)
+                      name: file_reference              # Angabe der Datenbankspalte, in die der Speicher-Pfad geschrieben wird
 
 
                       # Experimentelle Parameter:
-                      #accept: image/*          # Vorauswahl von Elementen im Image-Format (Fenster für Dateiupload öffnet sich mit Einschränkungsfilter)
-                                                # Es können jedoch weiterhin auch andere Dateiformate hochgeladen werden.
+                      #accept: image/*                  # Vorauswahl von Elementen im Image-Format (Fenster für Dateiupload öffnet sich mit Einschränkungsfilter)
+                                                        # Es können jedoch weiterhin auch andere Dateiformate hochgeladen werden.
 
 **Anmerkungen:** Es wird momentan noch ein "thumbnail" Verzeichnis angelegt, dass eine kleinere Version der Bilder beinhaltet. Dieses wird in weiteren Entwicklungsphasen noch verändert.
 
@@ -982,14 +977,14 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
 
 .. code-block:: yaml
 
-                    - type: image               # Type image für das Anzeigen von Bildern
-                      name: file_reference      # Referenz zur Datenbankspalte. Wenn definiert, wird der Pfad oder die URL in dem Feld ermittelt und "src" Option ersetzt
+                    - type: image                                         # Type image für das Anzeigen von Bildern
+                      name: file_reference                                # Referenz zur Datenbankspalte. Wenn definiert, wird der Pfad oder die URL in dem Feld ermittelt und "src" Option ersetzt
                       src: "../bundles/mapbendercore/image/logo_mb3.png"  # Angabe eines Pfades oder URL zu einem Bild. Falls der relative Pfad genutzt wird, muss relative: true stehen.
-                      enlargeImage: true        # Bild wird beim Klick auf das Vorschaubild auf Originalgröße/maximale Auflösung vergrößert. Es wird nicht auf die Bildschirmgröße skaliert.
+                      enlargeImage: true                                  # Bild wird beim Klick auf das Vorschaubild auf Originalgröße/maximale Auflösung vergrößert. Es wird nicht auf die Bildschirmgröße skaliert.
 
                       # Experimentelle Angaben zum Styling
                       imageCss:
-                        width: 100%              # Image CSS Style: Skaliert das Vorschaubild in dem Formular, abweichend von der Originalgröße in Prozent.
+                        width: 100%                                       # Image CSS Style: Skaliert das Vorschaubild in dem Formular, abweichend von der Originalgröße in Prozent.
 
 **Achtung**: Wenn nur name und nicht name und src angegeben wird, erscheint bei leeren Spalteneinträgen ein Bild aus dem vorherigen Dateneintrag.
 

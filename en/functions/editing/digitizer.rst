@@ -177,10 +177,9 @@ The functionality of the built-in features and additional functions are explaine
                      - type: date
                        title: favorite Date
                        name: date_favorite
-                       placeholder: Please add a date in the following style dd-mm-yy.
-                       dateFormat: dd-mm-yy
-                       value: 01-01-2016
-                       mandatory: true
+                       dateFormat: yyyy-mm-dd
+                       value: "2020-02-29"                             
+                       mandatory: true    
                        css: {width: 25%}
                      - type: breakLine
                      - type: breakLine
@@ -550,13 +549,13 @@ Definition of the popup
 
 .. code-block:: yaml
 
-        popup:             # Define the form as a popup. Further experimental adaptations here: http://api.jqueryui.com/dialog/
-            title: POI     # Definition of the popup title
-            height: 400    # height of the popup
-            width: 500     # width of the popup
+        popup:                                                          # Define the form as a popup. Further experimental adaptations here: http://api.jqueryui.com/dialog/
+            title: POI                                                  # Definition of the popup title
+            height: 400                                                 # height of the popup
+            width: 500                                                  # width of the popup
 
-            #modal: true   # Everything except the form window is grayed out and the position and size of the window is fixed for the duration of the data collection.
-            #position: {at: "left+20px",  my: "left top-460px"}  # Position of the popup in the browser area
+            #modal: true                                                # Everything except the form window is grayed out and the position and size of the window is fixed for the duration of the data collection.
+            #position: {at: "left+20px",  my: "left top-460px"}         # Position of the popup in the browser area
 
 
 
@@ -601,12 +600,12 @@ Form elements can be placed unto different Tabs. The formItem type "tabs" is use
 .. code-block:: yaml
 
         formItems:
-           - type: tabs                      # Type tabs creates tabs in the popup
-             children:                       # The tabs are defined as sub-objects (children) of the form.
+           - type: tabs                                                 # Type tabs creates tabs in the popup
+             children:                                                  # The tabs are defined as sub-objects (children) of the form.
                - type: form
-                 title: Basic information    # title of the tabs
+                 title: Basic information                               # title of the tabs
                  css: {padding: 10px}
-                 children:                   # Multiple subobjects in groups can be used to arrange data in the form next to each other
+                 children:                                              # Multiple subobjects in groups can be used to arrange data in the form next to each other
                      - type: label
                        title: Welcome to the digitize demo. Try the new Mapbender feature!
                        ...
@@ -666,14 +665,14 @@ Textfields (type input)
 
 .. code-block:: yaml
 
-                                                 - type: input                    # element type definition
-                                                   title: Title for the field     # labeling (optional)
-                                                   name: column_name              # reference to table column (optional)
-                                                   mandatory: true                # specify mandatory field (optional)
+                                                 - type: input                                      # element type definition
+                                                   title: Title for the field                       # labeling (optional)
+                                                   name: column_name                                # reference to table column (optional)
+                                                   mandatory: true                                  # specify mandatory field (optional)
                                                    mandatoryText: You have to provide information.
-                                                   cssClass: 'input-css'          # additional css definition (optional)
-                                                   value: 'default Text'          # define a default value  (optional)
-                                                   placeholder: 'please edit this field' # placeholder appears in the field as information (optional)
+                                                   cssClass: 'input-css'                            # additional css definition (optional)
+                                                   value: 'default Text'                            # define a default value  (optional)
+                                                   placeholder: 'please edit this field'            # placeholder appears in the field as information (optional)
 
 
 Selectbox (selectbox or multiselect [type select])
@@ -756,10 +755,10 @@ Wir a SQL request, the values of the selectbox can be directly pulled from the d
 
 .. code-block:: yaml
 
-                                                 - type: select                     # element type definition
-                                                   title: select some types         # labeling (optional)
-                                                   name: my_type                    # reference to table column
-                                                   connection: connectionName       # Define a connection selectbox via SQL
+                                                 - type: select                                                    # element type definition
+                                                   title: select some types                                        # labeling (optional)
+                                                   name: my_type                                                   # reference to table column
+                                                   connection: connectionName                                      # Define a connection selectbox via SQL
                                                    sql: 'SELECT DISTINCT key, value FROM tableName order by value' # get the options of the
 
 
@@ -769,7 +768,7 @@ Text/Label (type label)
 
 .. code-block:: yaml
 
-                                                 - type: label                        # element type definition, label writes a non-editable text to the form window.
+                                                 - type: label                                    # element type definition, label writes a non-editable text to the form window.
                                                    text: 'Please give information about the poi.' # define a text 
 
 Text (type text)
@@ -779,10 +778,10 @@ Texts can be defined as a label in the form. In this case, fields of the data so
 
 .. code-block:: yaml
 
-                                                - type: text              # Type text for generating dynamic texts from the database
-                                                  title:       Name       # Label (optional)
-                                                  name:        name       # Name of the field (optional)
-                                                  css:         {width: 80%} # CSS definition (optional)
+                                                - type: text                          # Type text for generating dynamic texts from the database
+                                                  title:       Name                   # Label (optional)
+                                                  name:        name                   # Name of the field (optional)
+                                                  css:         {width: 80%}           # CSS definition (optional)
                                                   text: data.gid + ': ' + data.name
                                                   # Text definition in JavaScript
                                                   # data - data is the object, that gives access to all fields.
@@ -796,9 +795,9 @@ Similar to the text field via type input (see above), text areas can be created 
 
 .. code-block:: yaml
 
-                                                 - type: textArea      # Typ textArea creates a text area
-                                                   rows: 4             # Number of rows for the text area that appears when the form is opened. Field can be expanded by mouse in the form.
-                                                   name: beschreibung  # table column
+                                                 - type: textArea                    # Typ textArea creates a text area
+                                                   rows: 4                           # Number of rows for the text area that appears when the form is opened. Field can be expanded by mouse in the form.
+                                                   name: beschreibung                # table column
                                                    title: Bestandsaufnahme Bemerkung # Label (optional)
 
 
@@ -856,15 +855,12 @@ Datepicker (type date)
 
 .. code-block:: yaml
 
-                     - type: date              # click in the textfield opens a datepicker
-                       title: favorite Date    # Label (optional)
-                       name: date_favorite     # data table
-                       placeholder: Please add a date in the following style yy-dd-mm   # placeholder for the dateformat (optional)
-                       dateFormat: yy-dd-mm    # define the display of the dateformat (optional), default is dd.mm.yy which means 16.01.2016. Examples yy/mm/dd (2017/01/16) or yy-mm-dd (2017-01-16).
-                       value: 2016-01-01       # define a start value for the datepicker (optional)
+                     - type: date                                       # click in the textfield opens a datepicker
+                       title: favorite Date                             # Label (optional)
+                       name: date_favorite                              # data table
+                       dateFormat: yyyy-mm-dd                           # date format (ISO8601)
+                       value: "2020-02-29"                              # define a start value for the datepicker (optional)
 
-When using a column with the table format date, the date is written into the date database column, regardless of the dateFormat specification in the format YYYY-MM-DD.
-If the parameter dateFormat is used with a different dateFormat, a table field in the text format (for example, date_text varchar) must be created.
 
 
 
@@ -875,7 +871,7 @@ The infotext can appear over every field, regardless of whether this is a mandat
 
 .. code-block:: yaml
 
-                                                 - type:  [type name]           # every field, regardless of whether this is a mandatory field or not
+                                                 - type:  [type name]                                              # every field, regardless of whether this is a mandatory field or not
 
                                                    infoText:  Please note - only numbers are valid for this field. # Notice which will be displayed by i-symbol
 
@@ -955,15 +951,15 @@ The linked URL stored in the database column is:
 
 .. code-block:: yaml
 
-                    - type: file                # Typ file for the upload of files
-                      title: Dateiupload        # Label (optional)
+                    - type: file                     # Typ file for the upload of files
+                      title: Dateiupload             # Label (optional)
                       text: Laden Sie ein Bild hoch. # Informationtext (optional)
-                      name: file_reference      # table column for the storage path
+                      name: file_reference           # table column for the storage path
 
 
                       # Experimental parameters:
-                      #accept: image/*          # Pre-selection of elements in the image format (window for file upload opens with restriction filter) 
-                                                # Other file-formats can be still uploaded
+                      #accept: image/*               # Pre-selection of elements in the image format (window for file upload opens with restriction filter) 
+                                                     # Other file-formats can be still uploaded
 
 
 **Notes:** At this time, a "thumbnail" directory is created, which includes a smaller version of an image file. In future development this will be changed.
@@ -989,15 +985,15 @@ The image can be specified by specifying the two parameters src and name.
 
 .. code-block:: yaml
                       
-                    - type: image               # Feature type field name image.
-                      name: file_reference      # Reference to the database column. If defined, the path or URL in the field can be used and replaces "src" option
+                    - type: image                                         # Feature type field name image.
+                      name: file_reference                                # Reference to the database column. If defined, the path or URL in the field can be used and replaces "src" option
                       src: "../bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to an image. If the path is relative use relative: true.
-                      relative: true            # Optional. Default value is false. If true, the "src" path is determined from the "/web" directory.
-                      enlargeImage: true        # Image is enlarged to original size/ maximum resolution by clicking on the preview image. It is not scaled to screen size.
+                      relative: true                                      # Optional. Default value is false. If true, the "src" path is determined from the "/web" directory.
+                      enlargeImage: true                                  # Image is enlarged to original size/ maximum resolution by clicking on the preview image. It is not scaled to screen size.
 
                       # Experimental information about styling
                       imageCss:
-                        width: 100%              # Image CSS Style: Scales the preview image in the form, different from the original size in percent.
+                        width: 100%                                       # Image CSS Style: Scales the preview image in the form, different from the original size in percent.
 
 **Caution**: If only name and not name and src are specified, the wrong image appears from the previous data entry, if the column is empty.
 
