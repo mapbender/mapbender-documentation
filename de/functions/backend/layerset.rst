@@ -25,9 +25,9 @@ Der Screenshot zeigt die Instanz ``7/24`` basierend auf einem WMS-Dienst. Die zu
 
 - **Title:** Der Titel der Instanz, der in der Liste der Layersets und ihrer Instanzen angezeigt wird.
 
-- **Format:** Das Bildformat, mit dem die Kartenbilder über den GetMap Request in der Anwendung abgerufen werden sollen. Für Rasterkarten und Luftbilder empfiehlt sich das JPG Format, für z.B. Straßenkarten das PNG Format. Im Zweifel: PNG.
+- **Format:** Das Bildformat, mit dem die Kartenbilder über den GetMap-Request in der Anwendung abgerufen werden sollen. Für Rasterkarten und Luftbilder empfiehlt sich das JPG Format, für z.B. Straßenkarten das PNG Format. Im Zweifel: PNG.
 
-- **Infoformat:** Das Format, in denen die GetFeatureInfo Anfragen an den WMS abgeschickt werden soll. Im Zweifel: text/html oder ein analoges HTML-Format, was dann in den Dialog des `FeatureInfo <../basic/feature_info>`_ verwendet werden kann.
+- **Infoformat:** Das Format, in denen die GetFeatureInfo Anfragen an den WMS abgeschickt werden soll. Im Zweifel: text/html oder ein analoges HTML-Format, was dann in den Dialog des `FeatureInfo <../basic/feature_info>`_ verwendet werden kann. Alternativ ist die Verwendung von text/plain möglich.
 
 - **Exceptionformat:** wählen Sie das Format für Fehlermeldungen aus dem OGC Exception Formaten, die der WMS anbietet.
 

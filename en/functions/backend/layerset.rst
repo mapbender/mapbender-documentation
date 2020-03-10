@@ -25,9 +25,9 @@ The screenshot above shows the instance ``7/24`` based on a WMS service. The ass
 
 - **Title:** Title of the instance that is shown on the list of layersets and their instances.
 
-- **Format:** The image-format which is used to get the map-images for the application via the GetMap request. For raster-data and aerial imagery the JPG format is recommended, in case of street-maps the PNG format should be preferred. If you are in doubt: PNG.
+- **Format:** The image format which is used to get the map images for the application via the GetMap request. For raster data and aerial imagery the JPG format is recommended, in case of street maps the PNG format should be preferred. If you are in doubt: PNG.
 
-- **Infoformat:** The format which is used for the GetFeatureInfo requests to the WMS. In doubt: text/html or an analog HTML-format which can be used in the Dialog of the `FeatureInfo <../basic/feature_info>`_ element.
+- **Infoformat:** The format which is used for the GetFeatureInfo requests to the WMS. In doubt: text/html or an analog HTML format that can be used in the dialog of the `FeatureInfo <../basic/feature_info>`_ element. Another possibility is text/plain.
 
 - **Exceptionformat:** The format for error-messages that are returned by the WMS service.
 
