@@ -363,7 +363,7 @@ After the setup, the queued print can be controlled with several bash commands, 
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. You can find detailed information on all of the commands in our `app/console commands <../customization/commands.html>`_ documentation.
+Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. You can find detailed information on all of the commands in our `app/console commands <../../customization/commands.html>`_.
 
 
 3. Queued print: Usage
@@ -371,7 +371,7 @@ Note: To run the commands, open a terminal and head to the Mapbender application
 
 When using the queued print in the frontend, you will see two options: The tab "Job settings" offers the same print settings as the direct print. If the queued print has been set up right, a tab called 'Recent jobs' appears next to the 'Job settings' tab. If this tab is chosen, a chronological list of your print jobs will be shown. A new job will appear in the list after the "Print" button is clicked.
 
-.. image:: ../../../figures/print_queue_options.png
+.. image:: ../../../figures/print_queue_jobs.png
      :scale: 80
 
 To start the printing process, type in the bash command
