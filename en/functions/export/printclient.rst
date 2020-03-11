@@ -102,6 +102,7 @@ Directories
 
 * **print templates:** You find the print templates at **app/Resources/MapbenderPrintBundle/templates/**. Create your own print template to provide an individual output for your application.
 
+* **default directories**: Mapbender saves its generated print files in your browsers default download folder. If you choose to use the queued print, please note that your files will be saved under the Mapbender directory **web/prints/**.
 
 Create your individual templates
 ================================
@@ -323,3 +324,81 @@ When you click on the print button the print dialog opens and offers the print t
 Again, you can choose the desired region and create a print PDF. The PDF will contain the information for the selected feature.
 
 Note: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
+
+
+Queued Print
+============
+
+The queued print is an experimental print feature for Mapbender which comes with an advanced background print system. Right now, it's still in experimental state due to several potential cache memory regenaration problems on more complex server structes. The queued print is implemented since Mapbender 3.0.8, but deactivated by default. If you choose to activate it, you can use the feature via command line (either manually or as a cronjob). Queued print helps improving resource-intense print jobs, because the queue can manage the print jobs more easily in the background (compared to direct print). In the meantime, you're free to work with Mapbender in other ways.
+
+
+1. Queued print: Configuration
+------------------------------
+
+To activate the queued print, open the parameters.yml file of your Mapbender installation and insert the following parameter:
+
+.. code-block:: yaml
+
+    mapbender.print.queueable: true
+
+To deactivate the queued print, either set the parameter to 'false' or delete the whole parameter.
+As soon as the queued print section is set to true, you can configure a queued print in the Mapbender backend.
+Open your PrintClient element and adjust the new options "Mode" and "Job queue". To activate the queue, set "Mode" to 'queued'. 'Direct' will implement the default print surface to your Mapbender application. Moreover, the privacy preferences of your print queue are changeable via the "Job queue" field ('global' or 'private'). After adjusting, save the element and open the application.
+
+.. image:: ../../../figures/print_queue_options.png
+     :scale: 80
+
+2. Queued print: Bash commands
+------------------------------
+
+After the setup, the queued print can be controlled with several bash commands, which are as follows:
+
+.. code-block:: yaml
+
+    mapbender:print:queue:clean
+    mapbender:print:queue:dumpjob
+    mapbender:print:queue:gcfiles
+    mapbender:print:queue:next
+    mapbender:print:queue:repair
+    mapbender:print:queue:rerun
+    mapbender:print:runJob
+
+Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. You can find detailed information on all of the commands in our `app/console commands <../customization/commands.html>`_ documentation.
+
+
+3. Queued print: Usage
+----------------------
+
+When using the queued print in the frontend, you will see two options: The tab "Job settings" offers the same print settings as the direct print. If the queued print has been set up right, a tab called 'Recent jobs' appears next to the 'Job settings' tab. If this tab is chosen, a chronological list of your print jobs will be shown. A new job will appear in the list after the "Print" button is clicked.
+
+.. image:: ../../../figures/print_queue_options.png
+     :scale: 80
+
+To start the printing process, type in the bash command
+
+.. code-block:: yaml
+
+    app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
+
+to execute a print process in the command line. This process starts all the jobs that are added into the print queue list automatically. Alternatively, you can choose to adjust the parameters and create a fitting cronjob. Terminate the process with 'CTRL + C'. If a print job is finished, it will be listet as "finished" in the status column of the list. Afterwards, the PDF button will open your printable PDF file.
+
+
+Memory Limits
+=============
+
+1. Queued Print
+---------------
+
+Print jobs can be resource intensive and may exceed you initially set php.ini memory limit. Therefore it is possible to increase the required memory limit manually. This is an advantage for users who are working with large print templates.
+Note: Never reduce the memory limit.
+
+To increase the memory limits for the queued print, adjust `mapbender.print.queue.memory_limit` (string; default is 1G). Caution: This parameter does not allow 'null' as value.
+
+
+2. Direct Print
+---------------
+
+To increase the memory limit of the direct print, adjust `mapbender.print.memory_limit` (string or null; default is null) to your possible memory contigent.
+If the parameter is set to 'null', Mapbender print will look for your php.ini value.
+If you set the parameter to a value which is accepted by your php.ini-configuration file, Mapbender print uses this limit instead of the php.ini limit (possible values are e.g. 512M, 2G, 2048M, etc.)
+Use '-1' for unrestricted memory usage.

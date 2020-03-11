@@ -105,6 +105,7 @@ Verzeichnisse
 
 * **print templates:** Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
 
+* **Standardverzeichnisse Druck**: Die Druckdateien werden in dem Standard-Downloadordner ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
 
 Erstellen einer individuellen Vorlage
 =====================================
@@ -327,3 +328,81 @@ Mit Klick auf den Druckbutton, öffnet sich ein Druckdialog, der das definierte 
 Das gewünschte Gebiet kann auswählt werden und ein PDF erzeugt. Das PDF beinhaltet die Informationen für das selektierte Objekt.
 
 Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwender nicht daran, den Rahmen in einen Bereich zu verschieben, der nicht das ausgewählte Objekt enthält. Die ausgedruckte Objektinformation passt dann nicht zur Darstellung in der Karte.
+
+
+Warteschleifendruck
+===================
+
+Der Warteschleifendruck ist ein neues Druckfeature in Mapbender, welches einen erweiterten Hintergrunddruck erlaubt. Dieses experimentelle Feature ist seit Mapbender 3.0.8 implementiert, jedoch standardmäßig nicht aktiviert. Das liegt daran, dass auf komplexeren Systemen Probleme mit der Cache-Speicher-Regeneration vorkommen können. Sobald aktiviert, kann das Feature entweder händisch über die Kommandozeile angestoßen oder über einen Cronjob automatisiert werden. Der Warteschleifendruck hilft dabei, ressourcenintensive Druckjobs mit langen Ausführungszeiten zu verbessern, indem diese in eine Warteschleife, die im Hintergrund abgearbeitet wird, ausgelagert werden. Währenddessen können Sie mit Mapbender anderweitig weiterarbeiten.
+
+
+1. Warteschleifendruck: Konfiguration
+-------------------------------------
+
+Um den Warteschleifendruck zu aktivieren, öffnen Sie die parameters.yml-Datei Ihrer Mapbender-Installation und fügen Sie an geeigneter Stelle die folgende Passage ein:
+
+.. code-block:: yaml
+
+    mapbender.print.queueable: true
+
+
+Um den Warteschleifendruck zu deaktivieren, setzen Sie den Parameter zurück auf false oder löschen Sie den hinzugefügten Eintrag.
+Sobald der Eintrag auf true gesetzt ist, haben Sie im Backend die Möglichkeit, im Element PrintClient die neu hinzugekommenen Parameter "Modus" und "Warteschleife" anzupassen. Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da ansonsten nach wie vor der standardmäßige Direktdruck ("Direkt") greift. Darüber hinaus können Sie die Sichtbarkeitseinstellungen Ihrer Warteschleife festlegen ("global" bzw. "privat"). Speichern Sie das angepasste Element.
+
+.. image:: ../../../figures/de/print_queue_options.png
+     :scale: 80
+
+2. Warteschleifendruck: Kommandozeilenbefehle
+---------------------------------------------
+
+Nach Initialisierung des Warteschleifendrucks stehen Ihnen die folgenden Funktionen über die Kommandozeile zur Ausführung des Drucks zur Verfügung.
+
+.. code-block:: yaml
+
+    mapbender:print:queue:clean
+    mapbender:print:queue:dumpjob
+    mapbender:print:queue:gcfiles
+    mapbender:print:queue:next
+    mapbender:print:queue:repair
+    mapbender:print:queue:rerun
+    mapbender:print:runJob
+
+Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen, also bspw.: app/console mapbender:print:queue:clean. Zur genauen Vorgehensweise siehe die Informationen auf der Seite app/console Befehle (https://doc.mapbender.org/de/customization/commands.html)
+
+
+3. Warteschleifendruck: Durchführung
+------------------------------------
+
+Der Tab „Einstellungen“ bietet die vom Direktdruck gewohnten Druckoptionen. Nachdem der Warteschleifendruck eingerichtet wurde, kann neben dem Tab „Einstellungen“ über einen Button die neu erscheinende Funktion „Druckaufträge“ angewählt werden. Hier finden sich chronologisch alle Druckaufträge aufgelistet, die der User über das Mapbender-Interface wie gewohnt erstellt.
+
+.. image:: ../../../figures/de/print_queue_options.png
+     :scale: 80
+
+Neu ist, dass die Druckaufträge im Hintergrund erst nach Start des Prozesses
+
+.. code-block:: yaml
+
+    app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
+
+in der Kommandozeile ausgeführt werden. Er bewirkt, dass nach dem Klick auf den Drucken-Button der Druck entsprechend seiner Position in der Warteliste über die Kommandozeile durchführt wird. Der Prozess wird über die Tastenkombination "Strg+C" beendet. Nach abgeschlossener Generierung der Dateien (erkennbar über den Status "fertig" in der Liste der Druckaufträge) können diese über den PDF-Button geöffnet werden können.
+
+
+Speicherbegrenzungen
+====================
+
+1. Warteschleifendruck
+----------------------
+
+Da der Druck möglicherweise speicherintensiver sein kann als anfangs in Ihren PHP-Einstellungen festgelegt, kann der benötigte Speicher durch manuelle Konfiguration erhöht werden. Dies ist für Anwender, die mit größeren Ausdrucken arbeiten möchten, besonders von Vorteil.
+Bemerkung: Erhöhen Sie die Speicherbegrenzung, aber reduzieren Sie sie nicht.
+
+Beeinflussen Sie den Parameter `mapbender.print.queue.memory_limit` (string; Standard ist 1G), um die Speicherbegrenzung speziell für den Warteschleifendruck zu erhöhen. Vorsicht: Dieser Parameter erlaubt keine "null"-Werte.
+
+
+2. Direktdruck
+--------------
+
+Beeinflussen Sie den Parameter `mapbender.print.memory_limit` (string or null; Standard ist null) und passen Sie ihn an Ihr mögliches Speicherlimit an.
+Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an.
+Tragen Sie hingegen einen Wert ein, der in der php.ini-Konfigurationsdatei als valide akzeptiert wird, nutzt der Druck stattdessen dieses Speicherlimit (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.)
+Benutzen Sie "-1" für eine unbegrenzte Speichernutzung.
