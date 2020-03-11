@@ -347,7 +347,7 @@ Um den Warteschleifendruck zu aktivieren, öffnen Sie die parameters.yml-Datei I
 
 
 Um den Warteschleifendruck zu deaktivieren, setzen Sie den Parameter zurück auf false oder löschen Sie den hinzugefügten Eintrag.
-Sobald der Eintrag auf true gesetzt ist, haben Sie im Backend die Möglichkeit, im Element PrintClient die neu hinzugekommenen Parameter "Modus" und "Warteschleife" anzupassen. Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da ansonsten nach wie vor der standardmäßige Direktdruck ("Direkt") greift. Darüber hinaus können Sie die Sichtbarkeitseinstellungen Ihrer Warteschleife festlegen ("global" bzw. "privat"). Speichern Sie das angepasste Element.
+Sobald der Eintrag auf true gesetzt ist, haben Sie im Backend die Möglichkeit, im Element PrintClient die neu hinzugekommenen Parameter "Modus" und "Warteschleife" anzupassen. Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da ansonsten nach wie vor der standardmäßige Direktdruck ("direkt") greift. Darüber hinaus können Sie die Sichtbarkeitseinstellungen Ihrer Warteschleife festlegen ("global" bzw. "privat"). Speichern Sie das angepasste Element.
 
 .. image:: ../../../figures/de/print_queue_options.png
      :scale: 80
@@ -367,7 +367,7 @@ Nach Initialisierung des Warteschleifendrucks stehen Ihnen die folgenden Funktio
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen, also bspw.: app/console mapbender:print:queue:clean. Zur genauen Vorgehensweise siehe die Informationen auf der Seite app/console Befehle (https://doc.mapbender.org/de/customization/commands.html)
+Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen, also bspw.: app/console mapbender:print:queue:clean. Zur genauen Vorgehensweise siehe die Informationen auf der Seite `app/console commands <../../customization/commands.html>`_.
 
 
 3. Warteschleifendruck: Durchführung
@@ -375,7 +375,7 @@ Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Ver
 
 Der Tab „Einstellungen“ bietet die vom Direktdruck gewohnten Druckoptionen. Nachdem der Warteschleifendruck eingerichtet wurde, kann neben dem Tab „Einstellungen“ über einen Button die neu erscheinende Funktion „Druckaufträge“ angewählt werden. Hier finden sich chronologisch alle Druckaufträge aufgelistet, die der User über das Mapbender-Interface wie gewohnt erstellt.
 
-.. image:: ../../../figures/de/print_queue_options.png
+.. image:: ../../../figures/de/print_queue_jobs.png
      :scale: 80
 
 Neu ist, dass die Druckaufträge im Hintergrund erst nach Start des Prozesses
