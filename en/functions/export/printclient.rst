@@ -178,12 +178,10 @@ The legend can be integrated next to the map on the first page. This field is no
 Logo on the legendpage
 ======================
 
-If the legend should still be created on an additional page, you can put a logo on this second page. This can be achieved with the dynamic element "legendpage_image". You have to create a new field on the non-printable layer and change its name to "legendpage_image" (**Menu: Modify -> Name...**). Save the desired logo or image in the directory **app/Resources/MapbenderPrintBundle/images/** and change its name to "legendpage_image.png". The print could contain two pages and look like this:
+If the legend shall be created on an additional page, the logo can be placed on this page too. This can be achieved with the dynamic element "legendpage_image". A new field on the non-printable layer has to be created and the name changed to "legendpage_image" (**Menu: Modify -> Name...**). The desired logo or image has to be saved in the directory **app/Resources/MapbenderPrintBundle/images/** and its name needs to be changed to "legendpage_image.png". 
 
 .. image:: ../../../figures/print_client_example_legendpage_image.png
     :scale: 80
-
-You can see the legendpage image in the right corner of the second page.
 
 
 Coloured texts
@@ -209,9 +207,9 @@ The change of the font size works in an analogous manner.
 Dynamic images and dynamic texts
 ================================
 
-Dependent of the group you can generate prints with different Logo and Text (e.g. the name of the commune and the individual logo). There are two objects which handle this - dynamic_image and dynamic_text. If these objects exists in your print layout Mapbender and you are member of a group Mapbender will look for an Image with the name of the group (groupname.png) and will be displayed in the print in the object dynamic_image. The height of the object will be used to scale the image and the width will be calculated relative to the height. In the object dynamic_text the group description will be printed.
+Dependent of the group prints can be created with different logos and text (e.g. the name of the commune and the individual logo). There are two objects which handle this - dynamic_image and dynamic_text. If these objects exists in the print layout Mapbender and the user is a member of a group, Mapbender will search for an image with the name of the group (groupname.png) and it will be displayed in the print in the object dynamic_image. The height of the object will be used to scale the image and the width will be calculated relative to the height. In the object dynamic_text the group description will be printed.
 
-Depending on the group, the print can contain different images or descriptions (e.g. logo and name of the commune). This can be achieved through the dynamic elements "dynamic_image" and "dynamic_text". You can insert both elements in the ODG-print template on the non-printable layer and change their names (**Menu: Modify -> Name...**).
+Depending on the group, the print can contain different images or descriptions (e.g. logo and name of the commune). This can be achieved through the dynamic elements "dynamic_image" and "dynamic_text". One can insert both elements in the ODG-print template on the non-printable layer and change their names (**Menu: Modify -> Name...**).
 
 **Note:** There will be printed only one dynamic image and dynamic text of a group description. In other words: Mapbender always takes the first group into account. If a user is member of both groups „intern“ and „Group 1“, then „intern.png“ is taken as dynamic image and the group description of „intern“ will be adopted into the dynamic text field.
 
@@ -220,15 +218,7 @@ The print with a group named "Group 1" could look like this:
 .. image:: ../../../figures/print_client_example_groups.png
      :scale: 80
 
-To use this feature, it is required that you’ve created groups before. How to create groups and users is described in the Mapbender documentation in the `Mapbender Quickstart <../../quickstart.html>`_.
-
-Dynamic Image
--------------
-
-As soon as you’ve put the fields in the print template, Mapbender will look for an image with the name of the group and will display it in the field of the "dynamic_image". The height of the object will be used to scale the image and the width will be calculated relative to the height. You have to save the different images in the directory **app/Resources/MapbenderPrintBundle/images/** with the name of the group (e.g. the name of the group is "Group 1", then the name of the image has to be Group 1.png).
-
-Dynamic Text
-------------
+To use this feature, it is required that groups exist. How to create groups and users is described in the Mapbender documentation in the `Mapbender Quickstart <../../quickstart.html>`_.
 
 The description of the group will be displayed in the field "dynamic_text".
 The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. A good use case is e.g. a copyright message.
@@ -237,7 +227,7 @@ The element "dynamic_text" looks for a group description that is given in the fi
 Printing feature information for a selected element
 ===================================================
 
-You can print information from a selected feature to the print output. A feature can be selected via digitizer or Feature Info.
+A feature can be selected via digitizer or Feature Info.
 
 The concept is to pass the feature_type-name and the selected object ID to the print. Mapbender will then get all the feature data for the selected object and will look for fields in the print template. If a print template field is defined, the data will be printed to this field.
 
@@ -255,7 +245,7 @@ There are some steps you have to follow:
 1. Create a print template that refers to the feature columns
 -------------------------------------------------------------
 
-Define text fields in your print template for every information you would like to print for the selected object. The text field name has always the prefix *feature.*, followed with the name of the attribute (column) to export.
+Define text fields in the print template for every information you would like to print for the selected object. The text field name has always the prefix *feature.*, followed with the name of the attribute (column) to export.
 .. code-block:: yaml
 
   feature.name for column name of table poi
