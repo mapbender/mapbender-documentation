@@ -301,17 +301,15 @@ You can choose the desired region and create a print PDF. The PDF will contain t
 4. Or call feature print from digitizer
 ----------------------------------------
 
-You also can integrate the functionality to the digitizer. It will offer a new button *print* in every feature information dialog.
+The functionality can also be integrated in the digitizer. It will offer a new button *print* in every feature information dialog.
 
-To activate the functionality, you have to add the following parameter to your digitizer configuration.
+To activate the functionality, add the following parameter to the digitizer configuration.
 
 .. code-block:: yaml
 
     printable: true
 
-When you click on the print button the print dialog opens and offers the print templates that are defined for the feature type.
-
-Again, you can choose the desired region and create a print PDF. The PDF will contain the information for the selected feature.
+With click on the print button the print dialog opens and offers the print templates that are defined for the feature type.
 
 Note: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
 
@@ -353,13 +351,13 @@ After the setup, the queued print can be controlled with several bash commands, 
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. You can find detailed information on all of the commands in our `app/console commands <../../customization/commands.html>`_.
+Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. Detailed information on the commands:  `app/console commands <../../customization/commands.html>`_.
 
 
 3. Queued print: Usage
 ----------------------
 
-When using the queued print in the frontend, you will see two options: The tab "Job settings" offers the same print settings as the direct print. If the queued print has been set up right, a tab called 'Recent jobs' appears next to the 'Job settings' tab. If this tab is chosen, a chronological list of your print jobs will be shown. A new job will appear in the list after the "Print" button is clicked.
+When using the queued print in the frontend, there are two options: The tab "Job settings" offers the same print settings as the direct print. If the queued print has been set up right, a tab called 'Recent jobs' appears next to the 'Job settings' tab. If this tab is chosen, a chronological list of your print jobs will be shown. A new job will appear in the list after the "Print" button is clicked.
 
 .. image:: ../../../figures/print_queue_jobs.png
      :scale: 80
@@ -370,7 +368,7 @@ To start the printing process, type in the bash command
 
     app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
 
-to execute a print process in the command line. This process starts all the jobs that are added into the print queue list automatically. Alternatively, you can choose to adjust the parameters and create a fitting cronjob. Terminate the process with 'CTRL + C'. If a print job is finished, it will be listet as "finished" in the status column of the list. Afterwards, the PDF button will open your printable PDF file.
+to execute a print process in the command line. This process starts all the jobs that are added into the print queue list automatically. Alternatively, you can choose to adjust the parameters and create a fitting cronjob. Terminate the process with 'CTRL + C'. If a print job is finished, it will be listet as "finished" in the status column of the list. Afterwards, the PDF button will open the printable PDF file.
 
 
 Memory Limits
