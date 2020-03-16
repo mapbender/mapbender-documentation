@@ -333,21 +333,19 @@ Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwend
 Warteschleifendruck
 ===================
 
-Der Warteschleifendruck ist ein neues Druckfeature in Mapbender, welches einen erweiterten Hintergrunddruck erlaubt. Dieses experimentelle Feature ist seit Mapbender 3.0.8 implementiert, jedoch standardmäßig nicht aktiviert. Das liegt daran, dass auf komplexeren Systemen Probleme mit der Cache-Speicher-Regeneration vorkommen können. Sobald aktiviert, kann das Feature entweder händisch über die Kommandozeile angestoßen oder über einen Cronjob automatisiert werden. Der Warteschleifendruck hilft dabei, ressourcenintensive Druckjobs mit langen Ausführungszeiten zu verbessern, indem diese in eine Warteschleife, die im Hintergrund abgearbeitet wird, ausgelagert werden. Währenddessen können Sie mit Mapbender anderweitig weiterarbeiten.
+Der Warteschleifendruck ist ein neues Druckfeature in Mapbender, welches einen erweiterten Hintergrunddruck erlaubt. Dieses experimentelle Feature ist seit Mapbender 3.0.8 implementiert. Es ist standardmäßig nicht aktiviert, da bei komplexeren Systemen Probleme mit der Cache-Speicher-Regeneration auftreten können. Sobald aktiviert, kann das Feature entweder händisch über die Kommandozeile angestoßen oder über einen Cronjob automatisiert werden. Der Warteschleifendruck hilft dabei, ressourcenintensive Druckjobs mit langen Ausführungszeiten zu verbessern, indem diese in eine Warteschleife, die im Hintergrund abgearbeitet wird, ausgelagert werden. Währenddessen können Sie mit Mapbender anderweitig weiterarbeiten.
 
 
 1. Warteschleifendruck: Konfiguration
 -------------------------------------
 
-Um den Warteschleifendruck zu aktivieren, öffnen Sie die parameters.yml-Datei Ihrer Mapbender-Installation und fügen Sie an geeigneter Stelle die folgende Passage ein:
+Um den Warteschleifendruck zu aktivieren, muss die parameters.yml-Datei wie folgt ergänzt werden:
 
 .. code-block:: yaml
 
     mapbender.print.queueable: true
 
-
-Um den Warteschleifendruck zu deaktivieren, setzen Sie den Parameter zurück auf false oder löschen Sie den hinzugefügten Eintrag.
-Sobald der Eintrag auf true gesetzt ist, haben Sie im Backend die Möglichkeit, im Element PrintClient die neu hinzugekommenen Parameter "Modus" und "Warteschleife" anzupassen. Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da ansonsten nach wie vor der standardmäßige Direktdruck ("direkt") greift. Darüber hinaus können Sie die Sichtbarkeitseinstellungen Ihrer Warteschleife festlegen ("global" bzw. "privat"). Speichern Sie das angepasste Element.
+Im Backend existiert nun die Möglichkeit, im Element PrintClient die neu hinzugekommenen Parameter "Modus" und "Warteschleife" anzupassen. Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da sonst standardmäßig Direktdruck ("direkt") eingestellt ist. Darüber hinaus können die Sichtbarkeitseinstellungen der Warteschleife festlegt werden ("global" bzw. "privat").
 
 .. image:: ../../../figures/de/print_queue_options.png
      :scale: 80
@@ -355,7 +353,7 @@ Sobald der Eintrag auf true gesetzt ist, haben Sie im Backend die Möglichkeit, 
 2. Warteschleifendruck: Kommandozeilenbefehle
 ---------------------------------------------
 
-Nach Initialisierung des Warteschleifendrucks stehen Ihnen die folgenden Funktionen über die Kommandozeile zur Ausführung des Drucks zur Verfügung.
+Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen über die Kommandozeile zur Ausführung des Drucks zur Verfügung.
 
 .. code-block:: yaml
 
@@ -394,15 +392,13 @@ Speicherbegrenzungen
 ----------------------
 
 Da der Druck möglicherweise speicherintensiver sein kann als anfangs in Ihren PHP-Einstellungen festgelegt, kann der benötigte Speicher durch manuelle Konfiguration erhöht werden. Dies ist für Anwender, die mit größeren Ausdrucken arbeiten möchten, besonders von Vorteil.
-Bemerkung: Erhöhen Sie die Speicherbegrenzung, aber reduzieren Sie sie nicht.
+Bemerkung: Die Speicherbegrenzung sollte nicht reduziert werden.
 
-Beeinflussen Sie den Parameter `mapbender.print.queue.memory_limit` (string; Standard ist 1G), um die Speicherbegrenzung speziell für den Warteschleifendruck zu erhöhen. Vorsicht: Dieser Parameter erlaubt keine "null"-Werte.
+Der Parameter `mapbender.print.queue.memory_limit` (string; Standard ist 1G) muss angepasst werden, um die Speicherbegrenzung speziell für den Warteschleifendruck zu erhöhen. Vorsicht: Dieser Parameter erlaubt keine "null"-Werte.
 
 
 2. Direktdruck
 --------------
 
-Beeinflussen Sie den Parameter `mapbender.print.memory_limit` (string or null; Standard ist null) und passen Sie ihn an Ihr mögliches Speicherlimit an.
-Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an.
-Tragen Sie hingegen einen Wert ein, der in der php.ini-Konfigurationsdatei als valide akzeptiert wird, nutzt der Druck stattdessen dieses Speicherlimit (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.)
-Benutzen Sie "-1" für eine unbegrenzte Speichernutzung.
+Über den Parameter `mapbender.print.memory_limit` (string or null; Standard ist null) kann das Speicherlimit angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
+Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an, der Wert "-1" steht für unbegrenzte Speichernutzung.
