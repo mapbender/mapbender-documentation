@@ -98,16 +98,16 @@ YAML-Definition:
 Directories
 =============
 
-* **northarrow:** The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. You can replace the "north arrow" image to use a different image as north arrow.
+* **northarrow:** The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. The "north arrow" image can be replaced to use a different image instead.
 
-* **print templates:** You find the print templates at **app/Resources/MapbenderPrintBundle/templates/**. Create your own print template to provide an individual output for your application.
+* **print templates:** The print templates can be found under **app/Resources/MapbenderPrintBundle/templates/**. 
 
-* **default directories**: Mapbender saves its generated print files in your browsers default download folder. If you choose to use the queued print, please note that your files will be saved under the Mapbender directory **web/prints/**.
+* **default directories**: Mapbender saves its generated print files in the browsers default download folder. If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
 
 Create your individual templates
 ================================
 
-To create an individual print template, either use an already existing print template .odg-file, or create a new LibreOffice Draw file. Your template can include fixed objects like a logo, copyright or print information. In addition, you have to create a layer for the dynamic elements like map, overview, north arrow, scale, date and optional fields. The dynamic layer is an additional non-printable layer in your LibreOffice Draw file. Add this layer with **Menu: -> Add -> Layer -> define a name for the layer and choose the checkbox option "not printable"**.
+To create an individual print template, already existing print templates (.odg-file) can be copied, or a new LibreOffice Draw file can be used. The template can include fixed objects like a logo, copyright or print information. In addition, a layer for dynamic elements like map, overview, north arrow, scale, date and optional fields can be created. The dynamic layer is an additional non-printable layer in the LibreOffice Draw file. The layer can be added with **Menu: -> Add -> Layer -> define name for the layer and choose checkbox option "not printable"**.
 
 .. image:: ../../../figures/print_template_odg.png
      :scale: 80
@@ -124,15 +124,15 @@ The following objects are available by default in Mapbender:
 * dynamic_image (connected to group role)
 * dynamic_text (connected to group role)
 
-You can define optional fields in the element definition (e.g. title, comment, editor) and add them to the Open Office Draw file. You have to insert these fields into the non-printable area of the file, or else they will appear in the generated template PDF.
+Optional fields in the element definition (e.g. title, comment, editor) can be defined and added to the Open Office Draw file. They need to be inserted into the non-printable area of the file, or else they will appear in the generated template PDF.
 
-When creating dynamic texts, each property must have the appropriate name, for example the field **comment1** must have the name **comment1** in the Open Office Draw file. For naming fields, it is not enough to apply the name to the content of the text field. Instead, you need to select the field and edit its object name. Select the text field and go to **Menu Edit --> name...** to change the name accordingly.
+When creating dynamic texts, each property must have the appropriate name, for example the field **comment1** must have the name **comment1** in the Open Office Draw file. For naming fields, it is not enough to apply the name to the content of the text field. Instead, the field needs to be selected and its object name edited. Select text field **--> Menu Edit --> name...** to change the name accordingly.
 
 .. image:: ../../../figures/print_template_name.png
     :scale: 80
 
 
-Export the template to .pdf under the same name as the .odg file. Use the name without its extension in your print yml-definition.
+Export the template to .pdf under the same name as the .odg file. Use the name without its extension in the print yml-definition.
 
 The print script will read the information (position, size, font size, alignment) from the .odg-file and combines those with the fixed objects in the PDF template and the map image in Mapbender to generate your PDF.
 
@@ -169,7 +169,7 @@ Adapt templates:
 Legend on the first page
 ========================
 
-You can integrate the legend next to the map on the first page. This field is not included in the print template by default. To insert the legend you have to modify the ODG print template file. Insert a new dynamic field with the name "legend" on the non printable layer and put it to the desired spot. Go to **Menu: Modify -> Name...** to change the name of the field to "legend". As final step, you have to export the ODG-file as PDF-file as described above and save it in the same directory. The result could look like this:
+The legend can be integrated next to the map on the first page. This field is not included in the print template by default. To insert the legend the ODG print template file needs to be modified. A new dynamic field with the name "legend" on the non printable layer needs to be inserted. **Menu: Modify -> Name...** to change the name of the field to "legend". As final step,  the ODG-file has to be exported as PDF-file as described above and saved in the same directory. The result could look like this:
 
 .. image:: ../../../figures/print_client_example_legend.png
     :scale: 80
@@ -189,12 +189,12 @@ You can see the legendpage image in the right corner of the second page.
 Coloured texts
 ==============
 
-The text in the print template can be changed in many ways. Besides the size of the font, you can also change the colour of the text. To do so, insert a text field via **Menu: Insert -> Text Box**. If you want to insert it as a dynamic element, you have to insert it on the non-printable layer and change its name, for example to "title". To change the colour of the text, select the text in the text field (here: "title"). You can either change the colour in the tab **Properties -> Character**:
+The text in the print template can be changed in many ways. Besides the size of the font, one can also change the colour of the text. To do so, a text field via **Menu: Insert -> Text Box** needs to be inserted. To change the colour of the text, select the text in the text field (here: "title"). The colour can be changed in the tab **Properties -> Character**:
 
 .. image:: ../../../figures/print_client_example_colour_nav.png
      :scale: 80
 
-Or you **right-click the selected text** and open the dialogue window **Character**. There you can change the colour in the tab **Font Effects -> Font color**.
+Or **right-click the selected text** --> dialogue window **Character** --> **Font Effects** --> **Font color**.
 
 .. image:: ../../../figures/print_client_example_colour_dialog.png
      :scale: 80
