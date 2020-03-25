@@ -345,7 +345,7 @@ Um den Warteschleifendruck zu aktivieren, muss die parameters.yml-Datei wie folg
 
     mapbender.print.queueable: true
 
-Im Backend existiert nun die Möglichkeit, im Element PrintClient die neu hinzugekommenen Parameter "Modus" und "Warteschleife" anzupassen. Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da sonst standardmäßig Direktdruck ("direkt") eingestellt ist. Darüber hinaus können die Sichtbarkeitseinstellungen der Warteschleife festlegt werden ("global" bzw. "privat").
+Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da sonst standardmäßig [der] Direktdruck (["Modus"] "direkt") eingestellt ist.
 
 .. image:: ../../../figures/de/print_queue_options.png
      :scale: 80
