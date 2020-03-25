@@ -207,7 +207,7 @@ The change of the font size works in an analogous manner.
 Dynamic images and dynamic texts
 ================================
 
-Dependent of the group prints can be created with different logos and text (e.g. the name of the commune and the individual logo). There are two objects which handle this - dynamic_image and dynamic_text. If these objects exists in the print layout Mapbender and the user is a member of a group, Mapbender will search for an image with the name of the group (groupname.png) and it will be displayed in the print in the object dynamic_image. The height of the object will be used to scale the image and the width will be calculated relative to the height. In the object dynamic_text the group description will be printed.
+Dependent of a group, prints can be created with different logos and text (e.g. the name of the commune and the individual logo). There are two objects which handle this - ["dynamic_image" and "dynamic_text"]. If these objects exist in the print layout, [Mapbender and the user are members of a group. Mapbender will then] search for an image with the name of the group (groupname.png) and it will be displayed in the print in the object ["dynamic_image"]. The height of the object will be used to scale the image[,] the width will be calculated relative to the height. In the object ["dynamic_text"], the group description will be printed.
 
 Depending on the group, the print can contain different images or descriptions (e.g. logo and name of the commune). This can be achieved through the dynamic elements "dynamic_image" and "dynamic_text". One can insert both elements in the ODG-print template on the non-printable layer and change their names (**Menu: Modify -> Name...**).
 
