@@ -353,7 +353,7 @@ Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da sonst stand
 2. Warteschleifendruck: Kommandozeilenbefehle
 ---------------------------------------------
 
-Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen über die Kommandozeile zur Ausführung des Drucks zur Verfügung.
+Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen über die Kommandozeile zur Ausführung des Drucks zur Verfügung[:]
 
 .. code-block:: yaml
 
