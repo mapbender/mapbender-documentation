@@ -102,7 +102,7 @@ Directories
 
 * **print templates:** The print templates can be found under **app/Resources/MapbenderPrintBundle/templates/**. 
 
-* **default directories**: Mapbender saves its generated print files in the browsers default download folder. If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
+* **default directories**: Mapbender saves its generated print files in the browser's default download folder. If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
 
 Create your individual templates
 ================================
