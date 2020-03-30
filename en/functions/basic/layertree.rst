@@ -337,31 +337,3 @@ Now we have the Layersets integrated as thematic groups. By configuring the them
            Configuration of the thematic Layertree in the sidepane.
 
 The Layerset "World" is displayed as a theme, but it is not open and the two buttons are not available. In the Layerset "Project NRW" the theme is shown unfolded upon opening the application. The button for displaying/hiding the source is available and all layers can be activated via a button.
-
-
-YAML-Definition:
-=================
-
-
-.. code-block:: yaml
-                
-  title: layertree             # title of layertree
-  target: ~                    # Id of the Map element to query
-  type: ~                      # type of layertree, element or dialog
-  useAccordion: false          # accordion element, default is false
-  autoOpen: false              # true/false open when application is started, default is false
-  showBaseSource: true         # show base layer, default is true
-  showHeader: true             # shows a headline which counts the number of services
-  menu: [opacity,zoomtolayer,metadata,removelayer]  # show contextmenu for the layer (like opacity, zoom to layer, metadata, remove layer), default is menu: []
-..
-   .. image:: ../../../figures/layertree/layertree_configuration_pre305.png
-        :scale: 80
-
-You can optionally use a button to show this element. See :ref:`button` for inherited configuration options. You also can define the layertree with a type element. Then, you can display the layertree in a frame like the sidebar.
-
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Layertree
-* **Widget:** mapbender.element.layertree.js
-* **Style:** mapbender.elements.css

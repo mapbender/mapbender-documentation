@@ -337,49 +337,5 @@ Wir haben die Layersets somit als thematische Gruppen in den Ebenenbaum eingebun
 Das Layerset "World" wird als Thema angezeigt, ist jedoch nicht geöffnet und die beiden Schaltflächen sind nicht aktiviert. Bei dem Layerset "Project NRW" wird das Thema beim Öffnen der Anwendung aufgeklappt gezeigt. Die Schaltfläche für die Anzeige bzw. das Ausblenden der Dienste ist vorhanden und alle Layer können über einen Button aktiviert werden.
 
 
-YAML-Definition:
-================
-
-.. code-block:: yaml
-                
-  title: layertree             # Titel des Layerbaums
-  target: ~                    # ID des Kartenelements
-  type: ~                      # Typ des Layerbaums
-  useAccordion: false          # akkordeonartige Anzeige. Standard ist false
-  autoOpen: false              # true, wenn der Layerbaum beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
-  showBaseSource: true         # Anzeige des Basislayers, der Standardwert ist true
-  showHeader: true             # zeigt eine Überschrift, die die Anzahl der Services zählt, der Standardwert ist true
-  menu: [opacity,zoomtolayer,metadata,removelayer]  # zeigt ein Kontextmenü für den Layer an (wie Opazität, Zoom auf Layer, Anzeige des Metadatendialogs, Layer entfernen), der Standardwert ist menu: [] 
-
-
-..
-   .. figure:: ../../../figures/layertree/layertree_configuration_pre305.png
-        :scale: 80
-
 Optional kann ein Button für dieses Element verwendet werden, um es als Dialogfeld einzubinden. Siehe unter :ref:`button_de` für die Konfiguration. 
-Der Layerbaum kann auch als Element definiert werden. Dann wird der Layerbaum in einem frame wie der Sidebar angezeigt.
-
-..
-   YAML-Definition:
-
-   .. code-block:: yaml    
-
-    title: layertree             # Titel des Layerbaums
-    target: ~                    # ID des Kartenelements  
-    type: ~                      # Typ des Layerbaums, element oder dialog
-    autoOpen: false              # true, wenn der Layerbaum beim Start der Anwendung geöffnet werden soll, der Standardwert ist
-    showBaseSource: true         # Anzeige des Basislayers, der Standardwert ist true
-    showHeader: true             # zeigt eine Überschrift, die die Anzahl der Services zählt, der Standardwert ist true
-    menu: [opacity,zoomtolayer,metadata,removelayer]  # zeigt ein Kontextmenü für den Layer an (wie Opazität, Zoom auf Layer, Anzeige des Metadatendialogs, Layer entfernen), der Standardwert ist menu: []
-    hideInfo: null               #
-    hideNotToggleable: null      #
-    hideSelect: null             #
-    themes: {  }                 #   
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Layertree
-* **Widget:** mapbender.element.layertree.js
-* **Style:** mapbender.elements.css
-
+Der Layerbaum kann auch als Element definiert werden. Dann wird der Layerbaum in einem frame wie der Sidebar angezeigt.             

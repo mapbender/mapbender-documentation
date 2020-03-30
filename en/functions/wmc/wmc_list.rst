@@ -27,31 +27,3 @@ Configuration
 * **Tooltip:** text to use as tooltip.
 * **Target:** Id of Map element to query.
 * **Label:** add title as label in front of selectbox, default is false.
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title: WMC List         
-    tooltip: WMC List           # text to use as tooltip
-    target: wmcloader           # target to interact with, should be wmcloader
-    label: true                 # add title as label in front of selectbox (default is false)
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmcBundle\\Element\\WmcEditor
-* **Widget:** <Put Widget name here>
-* **Style:** <Put name of css file here>
-
-
-HTTP Callbacks
-==============
-
-
-<action>
---------
-
-Opens a dialog with an editor in which configurations can be saved and edited.

@@ -34,11 +34,6 @@ Willkommen bei der Mapbender Dokumentation
    architecture
 
 .. toctree::
-   :maxdepth: 2
-
-   development
-
-.. toctree::
    :maxdepth: 1
 
    versions

@@ -19,24 +19,3 @@ Configuration
 * **Target:** ID of Map element to query.
 * **Type:** Choose type of element: line or area.
 * **Immediate:** Select whether the calculated lengths are displayed immediately or only after the click on the map.
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: "ruler"   # text to use as tooltip
-   target: ~          # ID of Map element to query
-   type: 'line'       # choose type line or area
-   immediate: 'false' # True: Display the calculated lengths immediately. False: The calculated lengths are displayed only after clicking. Default: False.
-
-
-You need a button to show this element. See :ref:`button` for inherited configuration options.
-To use both functions (measuring areas and lines) in an application, you need two buttons that are in a group.
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Ruler
-* **Widget:** mapbender.element.ruler.js, subclasses mapbender.element.button.js
-* **Style:** mapbender.elements.css

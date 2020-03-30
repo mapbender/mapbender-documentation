@@ -93,31 +93,3 @@ Printing the results
 The switch "Print result" allows you to print the output of the FeatureInfo. A "Print" button will appear on the FeatureInfo dialogue. The printing is done with the printing dialogue of the web browser.
 
 To make sure that all images and background colors are available in your printout, you should check the printing settings of your web browser: In Firefox, you can check the option "Print background". In Chrome-based browsers the option is called "Background graphics". The used fonts can vary on a printout as PDF and depend on the specific viewer. Furthermore, most web browsers modify the pages a bit before printing to save ink/toner.
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   title: FeaureInfo       # Titel des Elements
-   tooltip: Feature Info   # text to use as tooltip
-   type: dialog            # Default: dialog.
-   target: map             # Id of Map element to query
-   autoActivate: false     # true/false open when application is started, default: false
-   deactivateOnClose: true # true/false to deactivate the functionality after closing the result dialog, default is true
-   onlyValid: null         # require correct HTML format of response, default: false
-   printResult: false      # offer a link to print the result of the featureInfo, default: false
-   showOriginal: false     # show the css-style of the original feature info result, default: false
-   displayType: tabs       # tabs/accordion Default: tabs
-   width: 700              # width of the dialog in pixels, default is 700
-   height: 500             # height of the dialog in pixels, default is 500
-
-
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\FeatureInfo
-* **Widget:** mapbender.element.featureInfo.js
-* **Style:** mapbender.elements.css

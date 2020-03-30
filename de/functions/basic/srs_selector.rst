@@ -19,19 +19,3 @@ Konfiguration
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem SRS Selector angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich der SRS Selector bezieht.
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: 'SRS Selector'  # Text des Tooltips
-   label: false             # false/true, um den SRS Selector zu beschriften. Der Standardwert ist false.
-   target: ~                # ID des Kartenelements
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\SrsSelector
-* **Widget:** mapbender.element.srsselector.js
-* **Style:** mapbender.elements.css

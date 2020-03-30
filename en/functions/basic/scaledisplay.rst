@@ -23,24 +23,3 @@ Configuration
 * **Scale prefix:** Prefix, shown with scale.
 * **Unit prefix:** Prefix, shown with unit, e.g. 1K as 1000.
 * **Anchor:** ScaleDisplay alignment, default is 'right-bottom' (use inline e.g. in sidebar).
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: 'ScaleDisplay'          # text to use as tooltip
-   target: ~                        # ID of Map element to query
-   anchor: 'inline'/'left-top'/     # ScaleDisplay alignment, default is 'right-bottom'
-     'left-bottom'/'right-top'/     # use inline, e.g. in sidebar
-     'right-bottom'
-   scalePrefix: Scale               # prefix, shown with scale
-   unitPrefix: false                # prefix, shown with unit, e.g. 1K as 1000
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleDisplay
-* **Widget:** mapbender.element.scaledisplay.js
-* **Style:** mapbender.element.scaledisplay.css

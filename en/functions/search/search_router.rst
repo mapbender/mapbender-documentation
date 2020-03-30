@@ -377,26 +377,3 @@ In the mapbender.yml file:
                   strokeColor: '#ff0000'
                   fillColor: '#ff0000'
                   fillOpacity: 0.4
-
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\SearchRouter
-* **Widget:** mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
-* **Style:** mapbender.element.searchRouter.css
-
-
-HTTP Callbacks
-==============
-
-<route_id>/autocomplete
------------------------
-
-Auto-completed Ajax endpoint for the predefined search route. The auto-complete uses Backbone.js. The auto-complete is implemented in mapbender.element.searchRouter.Search.js.
-
-<route_id>/search
------------------
-
-Auto-completed Ajax endpoint for the predefined search route. The search module uses Backbone.js. The auto-complete is implemented in mapbender.element.searchRouter.Search.js.

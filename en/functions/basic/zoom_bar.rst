@@ -90,28 +90,3 @@ The component **Zoom slider** contains the component *Zoom in/out*. Additionally
 
 .. image:: ../../../figures/de/navigationtoolbar_example_zoomslider.png
      :scale: 80
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: 'Navigation Toolbar'    # text to use as tooltip
-   components: ["pan","history",    # components of the navigation toolbar, default all selected
-   "zoom_box","zoom_max",
-   "zoom_slider"]
-   target: ~                        # Id of Map element to query
-   stepsize: 50                     # step value for pan
-   stepbypixel: false               # step type "by pixel"/"percent", false = percent, default is false
-   anchor: left-top                 # navigation toolbar alignment, default is 'left-top'
-                                    # use inline f.e. in sidebar
-                                    # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   draggable: true                  # element is draggable or not, default true
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ZoomBar
-* **Widget:** mapbender.element.zoombar.js
-* **Style:** mapbender.element.zoombar.css

@@ -83,26 +83,3 @@ Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legend
 
 .. image:: ../../../figures/de/legend_example_toolbar_checkboxes.png
      :scale: 80
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: 'Legend'                    # Text des Tooltips
-   elementType: dialog                  # Anzeige als Dialog- oder Blockelement, Standard ist Dialog.
-   autoOpen: true                       # true, wenn die Legende beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
-   displayType: list                    # akkordeonartige Anzeige oder Liste. Standard ist Liste.
-   target: ~                            # ID des Kartenelements
-   hideEmptyLayer: true                 # true/false Layer wird versteckt, wenn keine Legende verfügbar ist, der Standardwert ist true
-   showWmsTitle: true                   # true/false zeigt den WMS Titel, der Standardwert ist true
-   showLayerTitle: true                 # true/false zeigt den Layertitel, der Standardwert ist true
-   showGroupedLayerTitle: true          # true/false zeigt den Gruppentitel für gruppierte Layer, der Standardwert ist true
-
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Legend
-* **Widget:** mapbender.element.legend.js
-* **Style:** mapbender.element.legend.css

@@ -48,21 +48,6 @@ Configuration
 * **Prefix:** Prefix in front of the X-coordinate (Standard '= x').
 * **Separator:** Separator following the X-coordinate and before Y-coordinate (default: ' y= ').
 
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: 'coordinates display' # text to use as tooltip
-   numDigits: 2                   # the number of digits each coordinate shall have when being rendered, default 2
-   target: ~                      # id of Map element to query
-   label: true                    # true/false to label coordinates display, default is false
-   empty: 'x= - y= -'             # show the following text, if the mouse is not on the map
-   prefix: 'x= '                  # show prefix before x-coordinate
-   separator: ' y= '              # show separator before y-coordinate
-
-
 CSS-Styling
 ===========
 
@@ -73,11 +58,3 @@ The element can be customized with the following CSS-style, for example to incre
                 .mb-element-coordsdisplay {
                     width: 500px;
                 }
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\CoordinatesDisplay
-* **Widget:** mapbender.element.coordinatesdisplay.js
-* **Style:** mapbender.elements.css

@@ -116,26 +116,3 @@ Ist der Button Linienmessung aktiv, sieht er wie folgt aus:
      :scale: 80
 
 Sobald nun auf den Button Flächenmessung geklickt wird, wird die Funktion Linienmessung beendet und die Funktion Flächenmessung aktiviert.
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title:        # Titel
-    tooltip:      # Text des Tooltips
-    icon: ~       # Symbol verwendete CSS Klasse
-    label: true   # false/true, um den Button zu beschriften. Der Standardwert ist true.
-    target: ~     # Titel (Id) des Zielelements
-    click:        # bezieht sich auf eine Webseite oder ein Skript, z.B.: http://mapbender.org
-    group: ~      # Gruppe, in die der Button eingefügt werden soll. Nur ein Button pro Gruppe kann aktiviert sein.
-    action: ~     # Methode, die aufgerufen wird, wenn der Button aktiviert wird. 
-    deactivate: ~ # Methode, die aufgerufen wird, wenn der Button deaktiviert wird
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Button
-* **Widget:** mapbender.mbButton (mapbender.element.button.js)
-* **Style:** mapbender.elements.css

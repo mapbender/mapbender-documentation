@@ -28,32 +28,3 @@ Konfiguration
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Label:** Titel als Beschriftung der Selektbox. Standard ist false.
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title: WMC List         
-    tooltip: WMC List           # Text des Tooltips
-    target: wmcloader           # Target mit dem interagiert wird, sollte wmcloader sein
-    label: true                 # Titel als Beschriftung der Selektbox. Standard ist false
-    
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmcBundle\\Element\\WmcEditor
-* **Widget:** <Put Widget name here>
-* **Style:** <Put name of css file here>
-
-
-HTTP Callbacks
-==============
-
-
-<action>
---------------------------------
-
-Öffnet einen Dialog mit einem Editor, in dem Konfigurationen gespeichert und bearbeitet werden können.

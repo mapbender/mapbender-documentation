@@ -104,27 +104,3 @@ CSS-Definition:
           background: url("webatlas_color.png");
           width: 110px;
           height: 110px; }
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title: 'BaseSourceSwitcher'                         # title
-    tooltip: 'BaseSourceSwitcher'                       # text to use as tooltip
-    target: map                                         # Id of Map element
-    sourcesets:                                         # List of sourcesets
-        - { title: sourcesetname, group: groupname,
-            sources: [sourceId]}                        # sourceset: title,
-                                                        # group: (optional) group name to group of sourcesets by "group name"
-                                                        # sources list of sources
-      sourcesets:
-        - { title: sourcesetname, group: groupname,
-            sources: [sourceId]}
-
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\BaseSourceSwitcher
-* **Widget:** mapbender.element.basesourceswitcher.js

@@ -116,27 +116,3 @@ If the button line ruler is active, it looks like this:
      :scale: 80
 
 As soon as you click on the button area ruler, the feature line ruler is deactivated and the feature area ruler activated.
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title:        # title
-    tooltip:      # text to use as tooltip
-    icon: ~       # icon CSS class to use
-    label: true   # false/true to label the button, default is true
-    target: ~     # title (Id) of target element
-    click:        # refer to a website or script like http://mapbender.org
-    group: ~      # group to put the button into. Only one button per group can be active
-    action: ~     # method of target to call when button is activated
-    deactivate: ~ # method of target to call when button is deactivated
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Button
-* **Widget:** mapbender.mbButton (mapbender.element.button.js)
-* **Style:** mapbender.elements.css
-

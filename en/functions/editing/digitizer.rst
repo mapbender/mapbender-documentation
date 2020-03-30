@@ -1341,15 +1341,3 @@ This code-snippet shows how to include the Digitizer into a YAML-file based appl
                         target: map
                         schemes:
                             ...
-
-
-
-
-
-Class, Widget & Style
-=====================
-
-* Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
-* Widget: mapbender.element.digitizer.js
-* Style: sass\\element\\digitizer.scss
-

@@ -153,22 +153,6 @@ Dieses Element sieht in der Anwendung wie folgt aus:
 .. image:: ../../../figures/de/html_example_entity.title.png
      :scale: 80
 
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title: 'HTML-Element'
-    class: Mapbender\CoreBundle\Element\HTMLElement
-    content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # content kann Variablen: "application", "entity" und "configuration" beinhalten.
-    classes: my-special-css-class
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
-* **Widget:** mapbender.mbHTMLElement
 
 Beispiele
 =========

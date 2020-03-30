@@ -23,20 +23,3 @@ Configuration
 * **Body:** define a text to display. 
 * **Target:** only map-element is possible.
 * **Use Mailto:** send POI by e-mail.
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    target: map                             # only map-element is possible
-    body: 'Please take a look at this POI'  # define a text to display
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\CoreBundle\Element\POI
-* **Widget:** mapbender.mbPOI
-

@@ -70,29 +70,3 @@ Using the tool
 
 * The text-field can be used to edit your own coordinates. They must be given in the coordinate-system that is chosen in the upper drop-down list.
 * With a click on the **Center map** button, the map zooms to the given coordinate and shows the position with an orange symbol.
-
-
-YAML-Definition
-===============
-
-.. code-block:: yaml
-
-    coordinatesutility:
-        title: 'Koordinaten Utility'
-        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
-        type: element
-        target: map
-        srsList:
-            -
-                name: 'EPSG:31466'
-                title: '31466'
-            -
-                name: 'EPSG:31468'
-                title: '31468'
-            -
-                name: 'EPSG:25833'
-                title: '25832'
-            -
-                name: 'EPSG:4326'
-                title: '4326'
-                addMapSrsList: true

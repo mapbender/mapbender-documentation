@@ -17,31 +17,3 @@ Konfiguration
 * **Beschriftung anzeigen (Show label):** Schaltet Text neben dem About Dialog Button ein/aus.
 * **Title:** Text, der neben dem About Dialog Button angezeigt wird.
 * **Tooltip:** Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird. 
-
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   title: 'Über Mapbender'     # Text, der neben dem About Dialog Button angezeigt wird
-   tooltip: 'Über Mapbender'   # Text des Tooltips
-   label: true                  # false/true, um den Button zu beschriften. Der Standardwert ist true.
-   icon: 'abouticon'            # Symbol für den Button
-
-   
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\AboutDialog
-* **Widget:** mapbender.mbAboutDialog
-* **Style:** mapbender.elements.css
-
-HTTP Callbacks
-==============
-
-about
------
-
-Ruft Inhalte des Dialogs auf.

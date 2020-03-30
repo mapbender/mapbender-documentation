@@ -16,18 +16,3 @@ Configuration
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. The title will be displayed besides the button if "Show label" is activated.
 * **Target:** Target element (Title(ID)) of the button.
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   target: ~                        # Id of Map element to query (e.g. map)
-
-You need a button to show this element. See :ref:`button` for inherited configuration options.
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\PrintBundle\\Element\\ImageExport
-* **Widget:** mapbender.element.imageExport.js

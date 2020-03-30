@@ -29,32 +29,3 @@ Configuration
 * **Tooltip:** text to use as tooltip.
 * **Target:** Id of Map element to query.
 * **Accessgroups:** define groups that can use the WMC Editor.
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title: WMC Editor
-    tooltip: WMC Editor   # text to use as tooltip
-    target: map           # name of map element
-    accessGroups: [0,1]   # define groups that can use the WMC Editor
-
-You need a button to show this element. See `Button <../misc/button.html>`_ for inherited configuration options.
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmcBundle\\Element\\WmcEditor
-* **Widget:** <Put Widget name here>
-* **Style:** <Put name of css file here>
-
-
-HTTP Callbacks
-==============
-
-
-<action>
---------------------------------
-
-Opens a dialog with an editor in which configurations can be saved and edited.

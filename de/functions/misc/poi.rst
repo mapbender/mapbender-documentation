@@ -22,18 +22,3 @@ Konfiguration
 * **Body:** Dialogtext der nach dem Setzen eines POI angezeigt wird. 
 * **Target:** definiert das Kartenelement, auf dem der POI gesetzt wird.
 * **Use Mailto:** nach dem Klick auf die Karte kann der POI Standort per Mail verschickt werden. 
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    target: map                             # only mapp-element is possible
-    body: 'Setzen Sie per Klick einen Treffpunkt'  # definieren Sie einen Text für den Dialog
-
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\CoreBundle\Element\POI
-* **Widget:** mapbender.mbPOI

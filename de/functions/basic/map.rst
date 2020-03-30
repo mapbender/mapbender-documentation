@@ -181,16 +181,3 @@ Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentr
 .. code-block:: php
 
    ?center=364286,5622263
-
-
-Weitere Startparameter
-----------------------
-
-Die Elemente WMS Loader und WMC Loader stellen ebenfalls Parameter zur Verfügung, die beim Start einer Anwendung übergeben werden können. Schauen Sie sich für nähere Informationen die Dokumentation dieser Elemente an.
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Map
-* **Widget:** mapbender.element.map.js

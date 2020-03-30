@@ -91,28 +91,3 @@ Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/ou
 
 .. image:: ../../../figures/de/navigationtoolbar_example_zoomslider.png
      :scale: 80
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: 'Navigation Toolbar'    #Text des Tooltips
-   components: ["pan","history",    # Komponenten des Navigationswerkzeugs, standardmäßig wird alles selektiert
-   "zoom_box","zoom_max",
-   "zoom_slider"]
-   target: ~                        # ID des Kartenelements
-   stepsize: 50                     # Schrittweite für das Verschieben
-   stepbypixel: false               # Schritttyp: Pixel oder Prozent, false = Prozent, Standard ist false
-   anchor: left-top                 # Ausrichtung des Navigationswerkzeugs, Standard ist 'left-top' (oben-links)
-                                    # Benutzen Sie inline z.B. für die Sidebar
-                                    # Optionen: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   draggable: true                  # das Navigationswerkzeug ist verschiebbar oder nicht, Standard ist true
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ZoomBar
-* **Widget:** mapbender.element.zoombar.js
-* **Style:** mapbender.element.zoombar.css

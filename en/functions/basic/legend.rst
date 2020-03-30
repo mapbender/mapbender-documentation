@@ -84,28 +84,3 @@ The activation and deactivation of checkboxes in the configurational settings le
 
 .. image:: ../../../figures/legend_example_toolbar_checkboxes.png
      :scale: 80
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: 'Legend'                    # text to use as tooltip
-   elementType: dialog                  # dialog/blockelement, default is dialog
-   autoOpen: true                       # true/false open when application is started, default is true
-   displayType: list                    # accordion/list type of display, default is list
-   target: ~                            # Id of Map element to query
-   hideEmptyLayer: true                 # true/false hide when no legend is available, default is true
-   showWmsTitle: true                   # true/false show WMS title, default is true
-   showLayerTitle: true                 # true/false show layer title, default is true
-   showGroupedLayerTitle: true          # true/false show group title for grouped layers, default is true
-
-You can optionally use a button to show this element. See :ref:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
-
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Legend
-* **Widget:** mapbender.element.legend.js
-* **Style:** mapbender.element.legend.css

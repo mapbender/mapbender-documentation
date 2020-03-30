@@ -32,33 +32,3 @@ Configuration
 * **Center on first position:** center map only on first received GPS position.
 * **Zoom to accuracy:** zoom map according to received GPS position accuracy.
 * **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy.
-
-
-YAML-Definition:
-----------------
-
-The element is placed as a button into the toolbar.
-
-.. code-block:: yaml
-                
-                class: Mapbender\CoreBundle\Element\GpsPosition
-                label: true                         # true/false to label button, default is true
-                autoStart: false	                # true/false, default is false
-                title: GPS-Position                 # title of the button
-                tooltip: GPS-Position               # text to use as tool tip
-                icon: gpsposition                   # icon to display on button
-                target: map                         # Id of Map element to query
-                average: 1                          # calculates the average of the last at parameter average defined amount of received GPS coordinates, default 1
-                refreshinterval: 5000               # refresh interval in ms, default is 5000 ms
-                follow: true                        # default false, true refreshes the map for every received GPS position received, only use with WMS in tiled mode
-                centerOnFirstPosition: true         # center map only on first received gps position
-                zoomToAccuracy: false               # zoom map according to received gps position accuracy
-                zoomToAccuracyOnFirstPosition: true # zoom map according to first received gps position accuracy
-
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\GpsPosition
-* **Widget:** mapbender.element.gpsPostion.js
-* **Style:** mapbender.element.gpsPosition.css
-

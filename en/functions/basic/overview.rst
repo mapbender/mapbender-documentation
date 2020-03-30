@@ -62,28 +62,3 @@ The overview will look like this:
 
 .. image:: ../../../figures/de/overview_example_left-bottom.png
      :scale: 80
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: 'Overview'          # text to use as tooltip
-   target: ~                    # Id of Map element to query
-   layerset: ~                  # refer to a layerset f.e. overview, define the layerset first and refer to it
-   width: 200                   # overview width
-   height: 100                  # overview height
-   anchor: 'right-top'          # overview alignment, default is 'right-top'
-                                # use inline f.e. in sidebar
-                                # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   position: ['0px', '0px']     # overview position in relation to anchor, default: x=0px, y=0px
-   maximized: true              # true/false to open/close on start, default is true
-   fixed: true                  # true/false to fix the overview extent, default is true
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Overview
-* **Widget:** mapbender.element.overview.js
-* **Style:** mapbender.element.overview.css

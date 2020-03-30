@@ -20,16 +20,6 @@ Configuration
 * **Tooltip:** Text to use as tooltip.
 * **Target:** ID of the Map element to query.
 
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   tooltip: "Scale selector"  # text to use as tooltip
-   target: ~         # Id of Map element to query
-   label: false      # false/true to label the scale selector, default is false
-
-
 CSS-Styling
 ===========
 
@@ -40,11 +30,3 @@ You can overwrite the style of the element, for example you can adjust the width
                 .mb-element-scaleselector.dropdown {
                     width: 200px;
                  }
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleSelector
-* **Widget:** mapbender.element.scaleselector.js
-* **Style:** mapbender.elements.css

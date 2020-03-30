@@ -10,6 +10,7 @@ Dieses Element stellt eine Informationsabfrage bereit, die per WMS funktioniert.
      
 Als Beispiel diente der WMS "Krankenhäuser NRW" (http://www.wms.nrw.de/wms/krankenhaus?) vom Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW. 
 
+
 Konfiguration
 =============
 
@@ -38,6 +39,7 @@ Das Element FeatureInfo wird im Content eingebunden:
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 
 Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
+
 
 Einstellungen im Layertree
 ---------------------------
@@ -99,30 +101,3 @@ Ausdruck der Resultate
 Mit dem Schalter "Print result" kann die Information des FeatureInfo ausgedruckt werden. Eine Druckschaltfläche ist dann in dem FeatureInfo-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
 
 Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox kann man die Option "Hintergrund drucken" im Druckoptionendialog anschalten, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-   title: FeatureInfo      # Titel des Elements
-   tooltip: Feature Info   # Text des Tooltips
-   type: dialog            # Default und mandatory: dialog.
-   target: map             # ID des Kartenelements
-   autoActivate: false     # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird, der Standardwert ist false.
-   deactivateOnClose: true # true/false um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren, der Standardwert ist true
-   onlyValid: false        # Korrekte HTML Ausgabe erfordern. Standardwert ist false.
-   printResult: false      # Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann. Standardwert ist false.
-   showOriginal: false     # Der Original css-Stil des Ergebnisses wird angezeigt. Standardwert ist false.
-   displayType: tabs       # tabs/accordion Default: tabs
-   width: 700              # Breite des Dialogs in Pixel, Standardwert: 700
-   height: 500             # Höhe des Dialog in Pixel, Standardwert: 500
-
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\FeatureInfo
-* **Widget:** mapbender.element.featureInfo.js
-* **Style:** mapbender.elements.css

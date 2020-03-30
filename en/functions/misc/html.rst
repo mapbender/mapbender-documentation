@@ -152,22 +152,6 @@ Finally, the element looks like this:
 .. image:: ../../../figures/de/html_example_entity.title.png
      :scale: 80
 
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title: 'HTML-Element'
-    class: Mapbender\CoreBundle\Element\HTMLElement
-    content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # the variables: "application", "entity" und "configuration" are available in the content.
-    classes: my-special-css-class
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
-* **Widget:** mapbender.mbHTMLElement
 
 Examples
 ========

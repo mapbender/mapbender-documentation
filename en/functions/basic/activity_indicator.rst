@@ -21,20 +21,3 @@ Configuration
 * **Activity class:** CSS class to indicate activity (Ajax or tile).
 * **Ajax activity class:** CSS class to indicate Ajax activity.
 * **Tile activiy class:** CSS class to indicate tile loading activity.
-
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    activityClass: mb-activity          # CSS class to indicate activity (Ajax or tile)
-    ajaxActivityClass: mb-activity-ajax # CSS class to indicate Ajax activity
-    tileActivityClass: mb-activity-tile # CSS class to indicate tile loading activity
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ActivityIndicator
-* **Widget:** mapbender.element.activityindicator.js
-* **Style:** mapbender.elements.css

@@ -1335,12 +1335,3 @@ YAML-Datei basierende Anwendung eingebaut werden kann.
                         target: map
                         schemes:
                             ...
-
-
-
-Class, Widget & Style
-=====================
-
-* Class: Mapbender\\DigitizerBundle\\Element\\Digitizer
-* Widget: mapbender.element.digitizer.js
-* Style: sass\\element\\digitizer.scss

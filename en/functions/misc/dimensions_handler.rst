@@ -135,12 +135,3 @@ Layertree configuration
             menu:
                 - [...]
                 - dimension
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmsBundle\\Element\\DimensionsHandler
-* **Widget:** 
-* **Style:** 
-

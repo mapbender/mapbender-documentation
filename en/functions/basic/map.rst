@@ -182,17 +182,3 @@ You can pass a coordinate. The application will open and display the coordinate 
 .. code-block:: php
 
    ?center=364286,5622263
-
-
-More Start Parameters
----------------------
-
-The elments WMS Loader and WMC Loader provide also parameter you can user on start. Have a look at the element discription for further information.
-
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Map
-* **Widget:** mapbender.element.map.js

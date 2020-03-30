@@ -69,29 +69,3 @@ Benutzung
 
 * In dem Textfeld können eigene Koordinaten angegeben werden. Diese müssen in dem Koordinatensystem eingegeben werden, welches in der Drop-Down-Liste darüber festgelegt wurde.
 * Über einen Klick auf die Schaltfläche **Karte zentrieren** wird zu dem Punkt gezoomt und dieser mit einem orangenen Symbol angezeigt.
-
-
-YAML-Definition
-===============
-
-.. code-block:: yaml
-
-    coordinatesutility:
-        title: 'Koordinaten Utility'
-        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
-        type: element
-        target: map
-        srsList:
-            -
-                name: 'EPSG:31466'
-                title: '31466'
-            -
-                name: 'EPSG:31468'
-                title: '31468'
-            -
-                name: 'EPSG:25833'
-                title: '25832'
-            -
-                name: 'EPSG:4326'
-                title: '4326'
-                addMapSrsList: true

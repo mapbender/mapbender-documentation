@@ -29,32 +29,3 @@ Konfiguration
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Accessgroups:** definiert Gruppen, die den WMC Editor verwenden können.
-
-YAML-Definition:
-----------------
-
-.. code-block:: yaml
-
-    title: WMC Editor
-    tooltip: WMC Editor   # Text des Tooltips
-    target: map           # Name des Kartenelements 
-    accessGroups: [0,1]   # definiert Gruppen, die den WMC Editor verwenden können
-
-Für das Element wird ein Button benötigt. Siehe unter `Button <../misc/button.html>`_ für die Konfiguration.
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmcBundle\\Element\\WmcEditor
-* **Widget:** <Put Widget name here>
-* **Style:** <Put name of css file here>
-
-
-HTTP Callbacks
-==============
-
-
-<action>
---------------------------------
-
-Öffnet einen Dialog mit einem Editor, in dem Konfigurationen gespeichert und bearbeitet werden können.
