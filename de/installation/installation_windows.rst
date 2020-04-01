@@ -143,8 +143,8 @@ Datei **<apache>\conf\conf.d\fcgi.conf** mit dem folgenden Inhalt anlegen:
 Konfiguration PostgreSQL
 ------------------------
 
-Konfiguration der Datenbankverbindung (app/config/parameters.yml).
-Weitere Informationen im Kapitel :ref:`database_de`.
+Konfiguration der Datenbankverbindung in (app/config/parameters.yml).
+Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 .. code-block:: yaml
 
@@ -167,6 +167,7 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
     php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
     php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
+Weitere Informationen zur Konfiguration: :ref:`installation_configuration_de`
 
 
 Der erste Start
