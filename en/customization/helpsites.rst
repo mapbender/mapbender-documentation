@@ -3,27 +3,27 @@
 How to create custom Help Sites?
 ################################
 
-Adding new Helpsites
+Adding new Help Sites
 ********************
 
-The customisation of the existing Helpsites is possible. It is important however, changes reference back to the version control. With every edit the Web-directory should be refreshed and the cache cleared, because they save the sites.
+The customisation of the existing help sites is possible. It is important however, changes reference back to the version control. With every edit the Web-directory should be refreshed and the cache cleared, because they save the sites.
 
 .. code-block:: php
 
     #installing Assets for the Web-directory
-    app/console assets:install web --symlink –relative
+    app/console assets:install web --symlink --relative
 
     #empty Cache (prod and dev directory)
-    rm -Rf app/cache/*
+    rm -rf app/cache/*
 
-The following syntax shows the helpsites:
+The following syntax shows the help sites:
 
 .. code-block:: php
 
     [Mapbender-URL] + /help/
-    z.B. https://bev-dev.wheregroup.com/mapbender/help/
+    z.B. https://my-mapbender.com/mapbender/help/
 
-New Helpsitescan be implemented with HelpController.php. For this implementation of a new site at the right place the indent has to mirror the structure below. New helpsites additionally have to be created in the view-directory and saved as [filename].html.twig.
+New help sites can be implemented with HelpController.php. For this implementation of a new site at the right place the indent has to mirror the structure below. New help sites additionally have to be created in the view-directory and saved as [filename].html.twig.
 
 .. code-block:: php
 
@@ -39,7 +39,7 @@ New Helpsitescan be implemented with HelpController.php. For this implementation
                     'linklist'                 => array(),
                     'benchmark choice'           => array(),
 
-    # create new sites
+    # create new site
     cd application/src/Mapbender/HelpBundle/Resources/views/Pages/
     touch linkliste.html.twig
 
@@ -48,15 +48,15 @@ New Helpsitescan be implemented with HelpController.php. For this implementation
     {% set title = "linklist" %}
 
     #installing assets for the Web directory
-    app/console assets:install web --symlink –relative
+    app/console assets:install web --symlink --relative
 
     #clearing cache (prod and dev directory)
-    rm -Rf app/cache/*
+    rm -rf app/cache/*
 
 
-Editing existing helpsites
+Editing existing Help Sites
 **************************
-To edit existing helpsites the respective file in the view directorycan be changed
+To edit existing help sites the respective file in the view directorycan be changed
 
 .. code-block:: php
 
@@ -65,15 +65,15 @@ To edit existing helpsites the respective file in the view directorycan be chang
     #editing exist5ing data z.B. userinterface.html.twig
 
     #installing assets for the Web directory
-    app/console assets:install web --symlink –relative
+    app/console assets:install web --symlink --relative
 
     #clearing cache (prod and dev directory)
-    rm -Rf app/cache/*
+    rm -rf app/cache/*
 
 
-Changeing the design of the helpsites
+Changing the design of the Help Sites
 *************************************
-The design templates can be changed according to ones wishes. These can be stated for the helpsites via css-files.
+The design templates can be changed according to ones wishes. These can be stated for the help sites via css-files.
 
 .. code-block:: php
 
@@ -81,13 +81,13 @@ The design templates can be changed according to ones wishes. These can be state
     # most important parameters are in help.css
 
     #installing assets for the Web directory
-    app/console assets:install web --symlink –relative
+    app/console assets:install web --symlink --relative
 
     #clearing cache (prod and dev directory)
-    rm -Rf app/cache/*
+    rm -rf app/cache/*
 
 
-Referecing a picture of the helpsites
+Referecing a picture of the Help Sites
 *************************************
 Esitsing images are stored in the images-directory and are referenced in the files. To exchange existing pictures or implement new ones you can edit here:
 
@@ -95,5 +95,5 @@ Esitsing images are stored in the images-directory and are referenced in the fil
 
     cd application/src/Mapbender/HelpBundle/Resources/public/images
 
-    #Reference in the helpsites, for exammple the footer
-        <img src="{{ asset('bundles/mapbenderhelp/images/fussleiste.png') }}" alt="footer" title="footer "/>
+    #Reference in the help sites, e.g. via the footer
+        <img src="{{ asset('bundles/mapbenderhelp/images/fussleiste.png') }}" alt="footer" title="footer"/>
