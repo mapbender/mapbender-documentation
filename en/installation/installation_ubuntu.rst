@@ -93,6 +93,7 @@ User data by default:
 username: "root", password: "root"
 
 Troubleshooting is available via the following command (must be executed in the application directory):
+
 .. code-block:: yaml
 
 	app/console mapbender:config:check
