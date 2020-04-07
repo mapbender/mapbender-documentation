@@ -14,6 +14,7 @@ and will always be given full access. If all is lost, you can use this user
 to manage everything. And in the event that the credentials for this user are
 also lost, a console command (fom:user:resetroot) is available for resetting.
 
+.. note:: **Notice:** To use the features below, Symfony Switfmailer needs to be set up correctly. Please check your local Symfony verion and adjust the Symfony documentation accordingly before setting up Swiftmailer. An in-depth configuration can be found in the official Symfony docs: https://symfony.com/doc/current/mailer.html
 
 Forgot Password
 ---------------
@@ -65,7 +66,7 @@ The text of the confirmation mail can be customized in the
 Activation of users
 -------------------
 
-Since Mapbender 3.0.5.3. Users can be set activated or deactivated by
+Users can be set activated or deactivated by
 Administrators with the User-ACL-right of at least "edit". For this purpose,
 a checkbox exists in the Edit User dialog.
 
