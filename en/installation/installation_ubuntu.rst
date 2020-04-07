@@ -10,15 +10,15 @@ For productive use PostgreSQL is recommended. You can find the neccessary config
 Requirements
 ------------
 
-- PHP (from version 5.6 to 7.1)
+- PHP (from version 5.6 to 7.2)
 - Apache installation with the following modules activated:
- 
+
   * mod_rewrite
   * libapache2-mod-php
-  
-Nginx can also be used as web server (this will not be discussed in detail here).   
-  
-  
+
+Nginx can also be used as web server (this will not be discussed in detail here).
+
+
 Preparation
 -----------
 
@@ -27,8 +27,8 @@ Installation of mandatory PHP extensions:
 .. code-block:: bash
 
     sudo apt install php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
-    
-    
+
+
 Unpack and register to web server
 ---------------------------------
 
@@ -36,10 +36,10 @@ Download the current Mapbender version and unzip it into /var/www/mapbender:
 
 .. code-block:: bash
 
-    wget https://mapbender.org/builds/mapbender-starter-current.tar.gz -O /var/www/mapbender-starter-current.tar.gz  
+    wget https://mapbender.org/builds/mapbender-starter-current.tar.gz -O /var/www/mapbender-starter-current.tar.gz
     tar -zxf /var/www/mapbender-starter-current.tar.gz -C /var/www
     mv $(ls -d /var/www/*/ | grep mapbender) /var/www/mapbender/
-    
+
 
 Configuration Apache 2.4
 ------------------------
@@ -47,13 +47,13 @@ Configuration Apache 2.4
 Create the file **/etc/apache2/sites-available/mapbender.conf** with the following content:
 
 .. code-block:: apache
-                
+
  Alias /mapbender /var/www/mapbender/web/
  <Directory /var/www/mapbender/web/>
   Options MultiViews FollowSymLinks
   DirectoryIndex app.php
   Require all granted
-   
+
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -82,17 +82,24 @@ Directory rights
  sudo chmod -R ug+w /var/www/mapbender/web/uploads
 
  sudo chmod -R ug+w /var/www/mapbender/app/db/demo.sqlite
- 
- 
+
+
 First steps
 -----------
 
 The Mapbender installation can now be accessed under **http://hostname/mapbender/**.
-User data by default: 
+User data by default:
 
 username: "root", password: "root"
 
-Following information: `Mapbender Quickstart Document <../en/quickstart.html>`_. 
+Troubleshooting is available via the following command (must be executed in the application directory):
+.. code-block:: yaml
+
+	app/console mapbender:config:check
+
+
+Congratulations! Mapbender is now set up correctly and ready for further configuration.
+More information on proper configuration of Mapbender: `Mapbender Quickstart Document <../en/quickstart.html>`_.
 
 
 Optional
@@ -105,8 +112,8 @@ To use the optional LDAP-connection, following PHP-LDAP-extension is required:
 .. code-block:: bash
 
    sudo apt install php-ldap
-   
-   
+
+
 **Mapbender installation with PostgreSQL**
 
 Configuration of PostgreSQL database for productive use:
@@ -121,7 +128,7 @@ Installation PHP-PostgreSQL driver
 .. code-block:: bash
 
    sudo apt install php-pgsql
-   
+
 Configuration of database connection (app/config/parameters.yml):
 
 .. code-block:: yaml
@@ -133,9 +140,9 @@ Configuration of database connection (app/config/parameters.yml):
     database_path:     ~
     database_user:     postgres
     database_password: secret
-    
-For further information: :ref:`yaml_en`.    
-    
+
+For further information: :ref:`yaml_en`.
+
 Initialisation of the database connection:
 
  .. code-block:: bash
@@ -146,10 +153,10 @@ Initialisation of the database connection:
     app/console assets:install web --symlink --relative
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-    
-Following information: :ref:`installation_configuration_en`    
-    
-   
+
+Following information: :ref:`installation_configuration_en`
+
+
 
 **Mapbender installation with MySQL:**
 
@@ -167,8 +174,5 @@ Following parameters (parameters.yml) need to be adapted:
 
                     database_driver:   pdo_mysql
                     database_port:     3306
-                   
-To initialize your database connection, see PostgreSQL.                    
 
-
-
+To initialize your database connection, see PostgreSQL.

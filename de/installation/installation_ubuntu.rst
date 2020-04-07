@@ -3,19 +3,19 @@
 Installation auf Ubuntu/Debian
 ##############################
 
-Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**). 
+Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**).
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
 
-Für den Produktiveinsatz wird PostgreSQL empfohlen. 
+Für den Produktiveinsatz wird PostgreSQL empfohlen.
 Weitere Installationshinweise finden Sie im Kapitel `Optional > Mapbender Einrichtung auf PostgreSQL <#optional>`_.
 
 
 Voraussetzungen
 ---------------
 
-- PHP (ab Version 5.6, maximal 7.1)
+- PHP (ab Version 5.6, maximal 7.2)
 - Apache Installation mit folgenden aktivierten Modulen:
- 
+
   * mod_rewrite
   * libapache2-mod-php
 
@@ -30,8 +30,8 @@ Installation der benötigten PHP-Extensions:
 .. code-block:: bash
 
     sudo apt install php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
-   
-  
+
+
 
 Entpacken und im Webserver registrieren
 ---------------------------------------
@@ -40,24 +40,24 @@ Download der aktuellen Mapbender Version und entpacken nach /var/www/mapbender:
 
 .. code-block:: bash
 
-    wget https://mapbender.org/builds/mapbender-starter-current.tar.gz -O /var/www/mapbender-starter-current.tar.gz  
+    wget https://mapbender.org/builds/mapbender-starter-current.tar.gz -O /var/www/mapbender-starter-current.tar.gz
     tar -zxf /var/www/mapbender-starter-current.tar.gz -C /var/www
     mv $(ls -d /var/www/*/ | grep mapbender) /var/www/mapbender/
-    
-    
+
+
 Konfiguration Apache 2.4
 ------------------------
 
 Datei **/etc/apache2/sites-available/mapbender.conf** mit dem folgenden Inhalt anlegen:
 
 .. code-block:: apache
-                
+
  Alias /mapbender /var/www/mapbender/web/
  <Directory /var/www/mapbender/web/>
   Options MultiViews FollowSymLinks
   DirectoryIndex app.php
   Require all granted
-   
+
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -87,16 +87,25 @@ Verzeichnisrechte
 
  sudo chmod -R ug+w /var/www/mapbender/app/db/demo.sqlite
 
- 
+
 Nächste Schritte
 ----------------
 Es kann nun auf die Mapbender Installation unter **http://hostname/mapbender/** zugriffen werden.
-  
+
 Per Voreinstellung lauten die Anmeldedaten
 
 Benutzername: "root", Passwort: "root"
 
-Weitere Informationen unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
+
+Bei Aufrufproblemen ist es möglich, im application-Unterverzeichnis über die Kommandozeile die Systemkonfiguration mit folgendem Befehl zu prüfen und fehlende Abhängigkeiten aufzudecken:
+
+.. code-block:: yaml
+
+	app/console mapbender:config:check
+
+
+Glückwunsch! Mapbender wurde erfolgreich installiert.
+Informationen zur Ersteinrichtung von Mapbender finden sich unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
 
 
@@ -110,8 +119,8 @@ Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:
 .. code-block:: bash
 
    sudo apt install php-ldap
-   
-   
+
+
 **Mapbender Einrichtung auf PostgreSQL**
 
 Für den Einsatz in einer Produktivumgebung wird nachfolgend die Konfiguration einer PostgreSQL Datenbank beschrieben.
@@ -126,7 +135,7 @@ Installation PHP-PostgreSQL Treiber:
 .. code-block:: bash
 
    sudo apt install php-pgsql
- 
+
 
 Konfiguration der Datenbankverbindung in (app/config/parameters.yml).
 Weitere Informationen im Kapitel :ref:`yaml_de`.
@@ -140,7 +149,7 @@ Weitere Informationen im Kapitel :ref:`yaml_de`.
     database_path:     ~
     database_user:     postgres
     database_password: geheim
- 
+
 Initialisierung der Datenbank:
 
 .. code-block:: bash
@@ -151,7 +160,7 @@ Initialisierung der Datenbank:
     app/console assets:install web --symlink --relative
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
- 
+
 Weitere Informationen zur Konfiguration: :ref:`installation_configuration_de`
 
 
@@ -172,5 +181,5 @@ Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Paramete
 
                     database_driver:   pdo_mysql
                     database_port:     3306
-                    
+
 Nachfolgend muss die Datenbank initialisiert werden, siehe PostgreSQL.
