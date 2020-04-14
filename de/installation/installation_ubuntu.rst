@@ -90,14 +90,14 @@ Verzeichnisrechte
 
 Nächste Schritte
 ----------------
-Es kann nun auf die Mapbender Installation unter **http://hostname/mapbender/** zugriffen werden.
+Es kann nun auf die Mapbender Installation unter **http://hostname/mapbender/** zugegriffen werden.
 
 Per Voreinstellung lauten die Anmeldedaten
 
 Benutzername: "root", Passwort: "root"
 
 
-Bei Aufrufproblemen ist es möglich, im application-Unterverzeichnis über die Kommandozeile die Systemkonfiguration mit folgendem Befehl zu prüfen und fehlende Abhängigkeiten aufzudecken:
+Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 .. code-block:: yaml
 
