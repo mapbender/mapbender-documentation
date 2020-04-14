@@ -138,19 +138,19 @@ In der Template-Datei wir der Name des Templates, die Regionen die angelegt werd
 Hinzufügen von Eigenschaften für die Sidepane
 *********************************************
 
-Innerhalb der Sidepane können Elemente in den Ansichten "Accordion, "Buttons" oder "None" angezeigt werden werden.
+Innerhalb der Sidepane können Elemente in unterschiedlichen Ansichten angezeigt werden.
 
-- "Accordion" zeigt alle hinzugefügten Elemente in einer Accordion-Liste:
+- "Accordion" zeigt alle hinzugefügten Elemente in Reitern:
 
 .. image:: ../../../figures/sidepane_accordion.png
      :scale: 80
 
-- "Buttons" zeigt alle hinzugefügten Elemente in einer Buttonleiste:
+- "Buttons" zeigt alle hinzugefügten Elemente über Buttons:
 
 .. image:: ../../../figures/sidepane_buttons.png
      :scale: 80
 
-- "None" verzichtet auf Styling-Optionen und zeigt die Elemente sofort an:
+- "None" verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an:
 
 .. image:: ../../../figures/de/sidepane_nostyle.png
      :scale: 80
@@ -159,30 +159,6 @@ Die Ansichtsoption für die Sidepane kann im Sidepane-Bereich im Mapbender-Backe
 
 .. image:: ../../../figures/sidepane_backend.png
      :scale: 80
-
-
-Das manuelle Hinzufügen der Sidepane ist alternativ über die Funktion "getRegionsProperties" in der Template-Datei möglich.
-
-
-.. code-block:: php
-
-    /**
-      @inheritdoc
-     */
-    public static function getRegionsProperties()
-    {
-        return array(
-            'sidepane' => array(
-                'tabs' => array(
-                    'name' => 'tabs',
-                    'label' => 'mb.manager.template.region.tabs.label'),
-                'accordion' => array(
-                    'name' => 'accordion',
-                    'label' => 'mb.manager.template.region.accordion.label')
-            )
-        );
-    }
-
 
 
 Eigene Twig-Datei erzeugen

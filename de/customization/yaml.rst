@@ -145,7 +145,7 @@ Eine Konfiguration könnte wie folgt aussehen:
 
 
 Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
-Weitere Informationen (auch mit Link zur Erstkonfiguration des Swiftmailers) im Kapitel :ref:`users_de`.
+Weitere Informationen (auch mit Link zur Erstkonfiguration des Swiftmailers) im Kapitel `Users <../functions/backend/FOM/users.html>`_ .
 
 
 **Projektname**
@@ -330,8 +330,8 @@ Content
     * WMS loader
     * Image export
     * Print client
-    * line
-    * area
+    * measure line
+    * measure area
     * Scale bar
     * Layer tree
     * Overview
