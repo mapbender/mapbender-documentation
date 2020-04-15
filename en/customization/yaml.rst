@@ -176,7 +176,7 @@ Configuration example:
         mailer_password:   ~
 
 The functions 'Self-Registration' and 'reset password' need a mailer.
-More information on Symfony Swiftmailer :ref:`users_en`.
+More information in chapter :ref:`users_en`.
 
 
  **Project name**
