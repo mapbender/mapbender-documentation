@@ -145,7 +145,7 @@ Eine Konfiguration könnte wie folgt aussehen:
 
 
 Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
-Weitere Informationen (auch mit Link zur Erstkonfiguration des Swiftmailers) im Kapitel :ref:`users_de`.
+Weitere Informationen im Kapitel :ref:`users_de`.
 
 
 **Projektname**
