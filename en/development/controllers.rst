@@ -3,7 +3,7 @@
 Controllers
 #############
 
-This pages gives an quick overview of the controllers used in an Mapbender application.
+This pages gives a quick overview of the controllers used in a Mapbender application.
 
 The Front Controller - Using Routes
 ***********************************
@@ -70,7 +70,7 @@ Using the Symfony with the SE bundles like Mapbender does, routes can therefore 
 
 Mapbender Controllers
 *********************
-A Mapbender installation with use a particular set of controller classes and functions. This chapter will give an short list of these, so you can inspect them more easily.
+A Mapbender installation uses a particular set of controller classes and functions. This chapter will give a short list of these, so you can inspect them more easily.
 
 Frontend
 ~~~~~~~~
@@ -90,9 +90,9 @@ Elements of an application can provide Ajax endpoints for their client side widg
 
 Backend
 ~~~~~~~
-The backend is handled by the ManagerBundle, which provides (will provide) an consistent backend for managing all aspects of an Mapbender application: applications, layers, elements, users, settings.
+The backend is handled by the ManagerBundle, which provides (will provide) a consistent backend for managing all aspects of a Mapbender application: applications, layers, elements, users, settings.
 
-For each section a own controller class exists within this bundle:
+For each section an own controller class exists within this bundle:
 
 * ApplicationController - Manage applications
 * GroupController - Manage user groups
