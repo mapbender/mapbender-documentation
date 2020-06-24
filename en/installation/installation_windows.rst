@@ -11,7 +11,7 @@ Read on for a detailed description on a productive system.
 Requirements
 ------------
 
-* PHP NTS (version 5.6 - 7.1, https://windows.php.net/download/)
+* PHP NTS (version 5.6 - 7.2, https://windows.php.net/download/)
 * Apache installation (https://www.apachelounge.com/download/ , run as service with the following modules):
  
   * mod_rewrite

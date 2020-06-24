@@ -10,7 +10,7 @@ Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
 Voraussetzungen
 ---------------
 
-* PHP NTS (ab Version 5.6, maximal 7.1, https://windows.php.net/download/)
+* PHP NTS (ab Version 5.6, maximal 7.2, https://windows.php.net/download/)
 * Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/)   
   mit folgenden aktivierten Modulen:
  
