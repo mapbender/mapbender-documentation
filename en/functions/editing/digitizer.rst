@@ -858,7 +858,7 @@ Datepicker (type date)
                      - type: date                                       # click in the textfield opens a datepicker
                        title: favorite Date                             # Label (optional)
                        name: date_favorite                              # data table
-                       dateFormat: yyyy-mm-dd                           # date format (ISO8601)
+                       dateFormat: yy-mm-dd                           # date format (ISO8601)
                        value: "2020-02-29"                              # define a start value for the datepicker (optional)
 
 
