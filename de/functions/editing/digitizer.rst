@@ -848,7 +848,7 @@ Datumsauswahl (type date)
                      - type: date                                       # Textfeld, das eine Datumsauswahl bereitstellt
                        title: favorite Date                             # Beschriftung (optional)
                        name: date_favorite                              # Referenz zu Tabellenspalte
-                       dateFormat: yyyy-mm-dd                           # Format für die Datumsanzeige (ISO8601)
+                       dateFormat: yy-mm-dd                           # Format für die Datumsanzeige (ISO8601)
                        value: "2020-02-29"                              # Startwert für die Datumsauswahl (optional)
                        mandatory: true                                  # Pflichtfeld
 
