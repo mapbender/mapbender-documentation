@@ -361,8 +361,8 @@ Anwendungsfälle
 ~~~~~~~~~~~~~~~
 
 Wie kann das Logo verändert werden?
-Wie kann der Anwendungstitel?
-Wie verändere ich die Sprache?
+Wie kann der Anwendungstitel angepasst werden?
+Wie stelle ich die Sprache ein?
 
 Auf diese und weitere Fragen finden Sie Antworten im Kapitel :ref:`yaml_de`.
 
