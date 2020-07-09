@@ -276,13 +276,6 @@ Alternatively, it is possible to copy a twig-file and adjust it afterwards.
   cp fom/src/FOM/ManagerBundle/Resources/views/manager.html.twig app/Resources/FOMManagerBundle/views/
 
 
-When the unchanged stylesheet remain, administration looks as follows:
-
- .. image:: ../../figures/customization/workshop_administration.png
-      :scale: 80
-
-
-
 Register your bundle in app/AppKernel.php
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
