@@ -23,7 +23,7 @@ How to create your own template?
 * Register your bundle in app/AppKernel.php
 * Use your template
 
-To help you we prepared a Workshop/DemoBundle, which can be used not only for application templates but also for customizing the administration interface. For the following steps, you ca download the files with the following links:
+To help you we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files with the following links:
 
 * https://github.com/mapbender/mapbender-workshop/tree/master
 
@@ -347,14 +347,14 @@ You can adjust the YAML-applications in app/config/applications and change the t
   "template:   Workshop\DemoBundle\Template\DemoFullscreen"
 
 
-Usage in new applications from the Backend
+Usage in new applications from the backend
 ******************************************
 
 If you create a new application in the administration interface of Mapbender, you can choose the new template. 
 
 
-Usage in an existing applications
-**********************************
+Usage in an existing application
+********************************
 
 For existing applications you can change the parameter in the Mapbender database in the column ``template`` of the table ``mb_core_application``.
 
