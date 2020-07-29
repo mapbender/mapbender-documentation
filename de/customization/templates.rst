@@ -327,7 +327,7 @@ Aktualisieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - C
 Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste erscheinen.
 
 
-Verwendung der eignen Vorlage
+Verwendung der eigenen Vorlage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
@@ -343,14 +343,14 @@ Sie können nun die YAML-Anwendungen unter app/config/applications anpassen und 
                 template: Workshop\DemoBundle\Template\DemoFullscreen
 
 
-Einbindung in eine neue Anwendungen übers Backend
-**************************************************
+Einbindung in eine neue Anwendungen über das Backend
+****************************************************
 
 Wenn Sie eine neue Anwendung mit der Mapbender-Administration erzeugen, können Sie eine Vorlage (Template) auswählen.
 
 
-Einbindung in eine bestehende Anwendungen
-******************************************
+Einbindung in eine bestehende Anwendung
+***************************************
 
 Für bereits existierende Anwendungen kann das Template über die Mapbender Datenbank in der Tabelle ``mb_core_application`` in der Spalte *template* angepasst werden.
 
