@@ -29,7 +29,7 @@ Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf 
 Konfiguration PHP
 -----------------
 
-* Entpacken des Zip-Archives, z.B. nach c:\php
+* Entpacken des Zip-Archives, z.B. nach c:\\php
 * Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-Verzeichnis nicht richtig gesetzt.
 
 * Es muss deshalb geprüft werden, ob die folgenden Variablen (php.ini) gesetzt sind:
@@ -63,7 +63,7 @@ Konfiguration PHP
 Entpacken und im Webserver registrieren
 ---------------------------------------
 
-Download der aktuellen Mapbender Version (https://mapbender.org/builds/mapbender-starter-current.zip) und entpacken nach c:\mapbender\
+Download der aktuellen Mapbender Version (https://mapbender.org/builds/mapbender-starter-current.zip) und entpacken nach c:\\mapbender\\
     
 
 Konfiguration Apache 
@@ -80,7 +80,7 @@ In der httpd.conf am Ende einfügen:
                 # Include directory conf.d
                 Include "conf/conf.d/*.conf"
 
-Datei **<apache>\conf\conf.d\mapbender.conf** mit dem folgenden Inhalt anlegen:
+Datei **<apache>\\conf\\conf.d\\mapbender.conf** mit dem folgenden Inhalt anlegen:
   
 .. code-block:: apache
 
@@ -103,7 +103,7 @@ Der Apache Webserverdienst muss im Anschluss neu gestartet werden.
 mod_fcgid
 ---------
 
-Datei **<apache>\conf\conf.d\fcgi.conf** mit dem folgenden Inhalt anlegen:
+Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
 
 .. code-block:: apacheconf
 
