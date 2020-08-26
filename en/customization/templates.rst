@@ -141,19 +141,19 @@ In the template file you define the name of your template, the regions that you 
 Adding properties for your sidepane region
 ********************************************
 
-It is possible to adjust some properties for the sidepane while working with templates that support it. Elements in the sidepane can be displayed in three styles, "Accordion, "Tabs" or "None".
+It is possible to adjust some properties for the sidepane while working with templates that support it. Elements in the sidepane can be displayed in three different styles:
 
-- "Accordion" shows elements in a accordion-styled list:
+- "Accordion" shows elements via tabs:
 
 .. image:: ../../../figures/sidepane_accordion.png
      :scale: 80
 
-- "Buttons" shows elements as a continuous button line:
+- "Buttons" shows elements as a continuous via buttons:
 
 .. image:: ../../../figures/sidepane_buttons.png
      :scale: 80
 
-- "None" does not contain any styling options at all and displays the elements directly instead:
+- "None" does not contain any styling options at all and displays the elements in the configured backend order:
 
 .. image:: ../../../figures/sidepane_nostyle.png
      :scale: 80
@@ -162,31 +162,6 @@ Sidepane properties are adjustable in the Sidepane area of the Mapbender backend
 
 .. image:: ../../../figures/sidepane_backend.png
      :scale: 80
-
-
-If you are adding the sidepane in a new template, you define the function "getRegionsProperties" in the template file.
-
-
-.. code-block:: php
-
-    /**
-      @inheritdoc
-     */
-    public static function getRegionsProperties()
-    {
-        return array(
-            'sidepane' => array(
-                'tabs' => array(
-                    'name' => 'tabs',
-                    'label' => 'mb.manager.template.region.tabs.label'),
-                'accordion' => array(
-                    'name' => 'accordion',
-                    'label' => 'mb.manager.template.region.accordion.label')
-            )
-        );
-    }
-
-
 
 
 Create your own twig-file
