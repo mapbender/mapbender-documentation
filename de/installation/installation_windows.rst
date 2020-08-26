@@ -189,6 +189,17 @@ Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
 * http://localhost/mapbender/
 
-Das Symfony Welcome Script config.php öffnen. Das Skript prüft, ob alle notwendigen Komponenten installiert wurden und ob die Konfiguration erfolgte. Sofern noch Probleme vorliegen, sollten diese behoben werden.
- 
-* http://localhost/mapbender/config.php
+Überprüfen Sie in der Konfiguration, ob bestimmte Abhängigkeiten nicht erfüllt werden mit:
+
+
+.. code-block:: text
+
+    app/console mapbender:config:check
+    
+     
+Weitere Informationen dazu finden Sie unter: https://doc.mapbender.org/de/customization/commands.html#app-console-mapbender-config-check
+    
+
+
+
+

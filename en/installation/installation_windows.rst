@@ -187,6 +187,14 @@ More information at:  `Mapbender Quickstart Document <../en/quickstart.html>`_.
 
 * http://localhost/mapbender/
 
-Open the Symfony Welcome Script config.php. The script will check if all required components are installed.
 
-* http://localhost/mapbender/config.php
+Check the system configuration and Mapbender requirements with:
+
+.. code-block:: text
+
+    app/console mapbender:config:check
+
+
+Further information can be found at: https://doc.mapbender.org/en/customization/commands.html#app-console-mapbender-config-check
+
+
