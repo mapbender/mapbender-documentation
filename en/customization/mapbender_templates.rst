@@ -3,7 +3,7 @@
 Mapbender Templates
 ###################
 
-Get to know the Mapbender templates. Mapbender offers some templates ready to use.
+Get to know the basic Mapbender templates which are ready to use out of the box.
 
 
 
@@ -27,23 +27,6 @@ Specials:
   * dark background style of the template
   * fullscreen display with sidepane
 
-Fullscreen Alternative Template
-*******************************
-
-View a demo of the Mapbender Fullscreen Alternative Template https://demo.mapbender.org/application/mapbender_user_basic_yml
-
-Regions of the Fullscreen Template:
-
-  * Toolbar (button region)
-  * Sidepane (layertree, legend, search,...)
-  * Content (map, navigation toolbar, scalebar,...)
-  * Footer (impressum, scaledisplay, ...)
-
-Specials:
-
-  * blue background style of the template
-  * default slim toolbar layout
-  * fullscreen display with sidepane
 
 Mobile Template
 ***************
