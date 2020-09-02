@@ -27,16 +27,16 @@ Online version
 ====================================
 
 * https://doc.mapbender.org/
-* Mapbender 3.0.8 https://docs.mapbender.org/current/
+* Newest documentation tree: https://docs.mapbender.org/current/
 
 
-Other versions
+Older versions
 ====================================
 
+* https://docs.mapbender.org/3.0.8
 * https://docs.mapbender.org/3.0.7
 * https://docs.mapbender.org/3.0.6
 * https://docs.mapbender.org/3.0.5
-* https://docs.mapbender.org/3.0.4
 
 
 Download Mapbender

@@ -304,7 +304,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
 .. code-block:: postgres
 
     create table public.poi (
-        gid serial,
+        gid serial PRIMARY KEY,
         name varchar,
         type varchar,
         abstract varchar,
@@ -322,14 +322,13 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         file_reference varchar,
         x float,
         y float,
-        geom geometry(point,4326),
-        CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
+        geom geometry(point,4326)
     );
 
 .. code-block:: postgres
 
     create table public.lines (
-        gid serial,
+        gid serial PRIMARY KEY,
         name varchar,
         type varchar,
         abstract varchar,
@@ -349,14 +348,13 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         file_reference varchar,
         x float,
         y float,
-        geom geometry(linestring,4326),
-        CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
+        geom geometry(linestring,4326)
     );
 
 .. code-block:: postgres
 
     create table public.polygons (
-        gid serial,
+        gid serial PRIMARY KEY,
         name varchar,
         type varchar,
         abstract varchar,
@@ -376,8 +374,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         file_reference varchar,
         x float,
         y float,
-        geom geometry(polygon,4326),
-        CONSTRAINT pk_polygons_gid PRIMARY KEY (gid)
+        geom geometry(polygon,4326)
     );
 
 

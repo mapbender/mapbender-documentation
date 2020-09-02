@@ -311,7 +311,7 @@ The following SQL commands must be executed in your database. You create three d
 .. code-block:: postgres
 
     create table public.poi (
-        gid serial,
+        gid serial PRIMARY KEY,
         name varchar,
         type varchar,
         abstract varchar,
@@ -329,14 +329,13 @@ The following SQL commands must be executed in your database. You create three d
         file_reference varchar,
         x float,
         y float,
-        geom geometry(point,4326),
-        CONSTRAINT pk_poi_gid PRIMARY KEY (gid)
+        geom geometry(point,4326)
     );
 
 .. code-block:: postgres
 
     create table public.lines (
-        gid serial,
+        gid serial PRIMARY KEY,
         name varchar,
         type varchar,
         abstract varchar,
@@ -356,14 +355,13 @@ The following SQL commands must be executed in your database. You create three d
         file_reference varchar,
         x float,
         y float,
-        geom geometry(linestring,4326),
-        CONSTRAINT pk_lines_gid PRIMARY KEY (gid)
+        geom geometry(linestring,4326)
     );
 
 .. code-block:: postgres
 
     create table public.polygons (
-        gid serial,
+        gid serial PRIMARY KEY,
         name varchar,
         type varchar,
         abstract varchar,
@@ -383,8 +381,7 @@ The following SQL commands must be executed in your database. You create three d
         file_reference varchar,
         x float,
         y float,
-        geom geometry(polygon,4326),
-        CONSTRAINT pk_polygons_gid PRIMARY KEY (gid)
+        geom geometry(polygon,4326)
     );
 
 
