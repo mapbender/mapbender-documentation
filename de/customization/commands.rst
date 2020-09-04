@@ -157,7 +157,7 @@ Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine exter
 
 .. code-block:: yaml
 
-	mapbender.print.queueable
+	mapbender.print.queueable: true
 
 Weitere Informationen unter: https://github.com/mapbender/mapbender/pull/1070
 
