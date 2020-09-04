@@ -157,7 +157,7 @@ The queued print is disabled by default because it requires some external integr
 
 .. code-block:: yaml
 
-	mapbender.print.queueable
+	mapbender.print.queueable: true
 
 Read more: https://github.com/mapbender/mapbender/pull/1070
 
