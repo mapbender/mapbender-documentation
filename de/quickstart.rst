@@ -204,7 +204,7 @@ Ein WMS liefert ein XML, wenn das getCapabilities-Dokument angefordert wird. Die
 
 .. tip:: Sie sollten das Capabilities-Dokument zuerst in Ihrem Browser überprüfen, bevor Sie versuchen, den Dienst in Mapbender zu laden.
 
-#. Wählen Sie ``Datenquelle --> Neue Datenquelle (Sources --> Add Source)`` oder nutzen sie den |mapbender3-button-add| ``Button`` um eine neue Datenquelle hinzuzufügen. Geben Sie den Link zur WMS getCapabilities URL in das Textfeld ``Dienste-URL`` (``Service URL``) ein.
+#. Wählen Sie ``Datenquelle --> Neue Datenquelle (Sources --> Add Source)`` oder nutzen sie den |mapbender-button-add| ``Button`` um eine neue Datenquelle hinzuzufügen. Geben Sie den Link zur WMS getCapabilities URL in das Textfeld ``Dienste-URL`` (``Service URL``) ein.
 
 #. Geben Sie Benutzername und Kennwort ein, sofern der Dienst eine Authentifizierung benötigt.
 
@@ -332,7 +332,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
 
   .. image:: ../figures/mapbender_application_add_element.png
 
-#. Wählen Sie ``Anwendungen -->`` |mapbender-button-edit| ``Editier-Button --> Layouts --> Button`` |mapbender3-button-add|, um eine Übersicht über die Mapbender-Elemente zu erhalten.
+#. Wählen Sie ``Anwendungen -->`` |mapbender-button-edit| ``Editier-Button --> Layouts --> Button`` |mapbender-button-add|, um eine Übersicht über die Mapbender-Elemente zu erhalten.
 
 #. Wählen Sie ein Element aus der Liste aus.
 
@@ -342,7 +342,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
 
 #. Sie können die Position der Elemente über drag & drop ändern.
 
-#. Schauen Sie sich Ihre Anwendung an. Öffnen Sie Ihre Anwendung über den Button |mapbender3-button-show|.
+#. Schauen Sie sich Ihre Anwendung an. Öffnen Sie Ihre Anwendung über den Button |mapbender-button-show|.
 
 Jetzt sollten sie eine Idee davon haben, wie einfach es ist eine Mapbender-Anwendung ohne Codes zu verändern.
 
@@ -467,7 +467,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 #. Wählen Sie ``Sicherheit (Security)``
 
-#. Veröffentlichen Sie Ihre Anwendung über die Auswahl **aktiviert** unter ``Sicherheit`` oder den Button zur Veröffentlichung |mapbender3-button-publish| bei der Anwendungsübersicht
+#. Veröffentlichen Sie Ihre Anwendung über die Auswahl **aktiviert** unter ``Sicherheit`` oder den Button zur Veröffentlichung |mapbender-button-publish| bei der Anwendungsübersicht
 
 #. Setzen Sie Berechtigungen wie view, edit, delete, operator, master, owner
 
