@@ -157,7 +157,6 @@ Initialisierung der Datenbank:
     cd /var/www/mapbender
     app/console doctrine:database:create
     app/console doctrine:schema:create
-    app/console fom:user:resetroot
     app/console mapbender:database:init -v
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
