@@ -167,7 +167,7 @@ Open the windows shell and initialize the database connection with the following
     php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
     
-Following information: :ref:`installation_configuration_en`    
+Following information: :ref:`installation_configuration`    
 
 
 First steps
