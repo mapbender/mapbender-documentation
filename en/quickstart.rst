@@ -168,7 +168,7 @@ You also can create a new application by copying an existing application. Every 
 
 Delete an application
 ================================================================================
-You can delete an application from the menu item ``Applications`` with the |mapbender3-button-delete|-button. With this step you only delete the application, the sources are still available.
+You can delete an application from the menu item ``Applications`` with the |mapbender-button-delete|-button. With this step you only delete the application, the sources are still available.
 
 
 Export / Import applications and sources
@@ -204,7 +204,7 @@ A WMS returns an XML-file when the getCapabilities document is requested. This i
 
 .. tip:: You should first check the Capabilities document in your browser before you try to load it with Mapbender
 
-#. Choose menu item ``Source --> Add Source`` or use the |mapbender3-button-add|-button in the source repository. Link to the WMS getCapabilities URL in the text field ``Serviceurl``.
+#. Choose menu item ``Source --> Add Source`` or use the |mapbender-button-add|-button in the source repository. Link to the WMS getCapabilities URL in the text field ``Serviceurl``.
 
 #. Enter username and password if your service needs authentication.
 
