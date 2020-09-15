@@ -176,6 +176,7 @@ Configuration example:
         mailer_password:   ~
 
 The functions 'Self-Registration' and 'reset password' need a mailer.
+
 More information in chapter :ref:`users_en`.
 
 
@@ -337,8 +338,8 @@ Content
     * WMS loader
     * Image export
     * Print client
-    * line
-    * area
+    * measure line
+    * measure area
     * Scale bar
     * Layer tree
     * Overview

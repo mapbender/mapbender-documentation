@@ -138,39 +138,30 @@ In the template file you define the name of your template, the regions that you 
 
 
 
-Adding properties for your "sidepane" region
+Adding properties for your sidepane region
 ********************************************
 
-For a "sidepane" region are "tabs" and "accordion" properties supported.
+It is possible to adjust some properties for the sidepane while working with templates that support it. Elements in the sidepane can be displayed in three different styles:
 
-* "tabs" orders Mapbender elements in tabs
-* "accordion" displays Mapbender elements as an accordion list
+- "Accordion" shows elements via tabs:
 
-For adding you define the function "getRegionsProperties" in the template file.
+.. image:: ../../../figures/sidepane_accordion.png
+     :scale: 80
 
-For configuration you check an option in your application's configuration.
+- "Buttons" shows elements as a continuous via buttons:
 
+.. image:: ../../../figures/sidepane_buttons.png
+     :scale: 80
 
-.. code-block:: php
+- "None" does not contain any styling options at all and displays the elements in the configured backend order:
 
-    /**
-      @inheritdoc
-     */
-    public static function getRegionsProperties()
-    {
-        return array(
-            'sidepane' => array(
-                'tabs' => array(
-                    'name' => 'tabs',
-                    'label' => 'mb.manager.template.region.tabs.label'),
-                'accordion' => array(
-                    'name' => 'accordion',
-                    'label' => 'mb.manager.template.region.accordion.label')
-            )
-        );
-    }
+.. image:: ../../../figures/sidepane_nostyle.png
+     :scale: 80
 
+Sidepane properties are adjustable in the Sidepane area of the Mapbender backend:
 
+.. image:: ../../../figures/sidepane_backend.png
+     :scale: 80
 
 
 Create your own twig-file
@@ -427,7 +418,7 @@ You can adjust the YAML-applications in app/config/applications and change the t
 Usage in new applications
 *************************
 
-If you create a new application in the administration interface of Mapbender, you can choose the new template. 
+If you create a new application in the administration interface of Mapbender, you can choose the new template.
 
 
 Usage in existing applications
@@ -480,8 +471,8 @@ How do I change the title and favicon?
  {% block title %}Workshop - {{ application.title }}{% endblock %}
 
  {% block favicon %}{{ asset('bundles/workshopdemo/image/workshop.ico') }}{% endblock %}
- 
- 
+
+
 
 2. The favicon can also be changed under *application/web*:
 

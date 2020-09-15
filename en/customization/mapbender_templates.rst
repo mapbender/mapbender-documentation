@@ -3,7 +3,7 @@
 Mapbender Templates
 ###################
 
-Get to know the Mapbender templates. Mapbender offers some templates ready to use. 
+Get to know the basic Mapbender templates which are ready to use out of the box.
 
 
 
@@ -22,11 +22,10 @@ Regions of the Fullscreen Template:
   * Content (map, navigation toolbar, scalebar,...)
   * Footer (impressum, scaledisplay, ...)
 
-Specials: 
+Specials:
 
   * dark background style of the template
   * fullscreen display with sidepane
-
 
 
 Mobile Template
@@ -55,4 +54,3 @@ Please note that not all elements can be used with the Mobile template at the mo
   * HTML
   * Button
   * SimpleSearch
-
