@@ -176,9 +176,7 @@ The functionality of the built-in features and additional functions are explaine
                        options: {maps: maps, reading: reading, swimming: swimming, dancing: dancing, beer: beer, flowers: flowers}
                      - type: date
                        title: favorite Date
-                       name: date_favorite
-                       dateFormat: yyyy-mm-dd
-                       value: "2020-02-29"                             
+                       name: date_favorite                         
                        mandatory: true    
                        css: {width: 25%}
                      - type: breakLine
@@ -858,11 +856,6 @@ Datepicker (type date)
                      - type: date                                       # click in the textfield opens a datepicker
                        title: favorite Date                             # Label (optional)
                        name: date_favorite                              # data table
-                       dateFormat: yy-mm-dd                           # date format (ISO8601)
-                       value: "2020-02-29"                              # define a start value for the datepicker (optional)
-
-
-
 
 Helptexts to the form-elements (attribute infotext)
 ---------------------------------------------------
