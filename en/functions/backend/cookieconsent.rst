@@ -27,5 +27,5 @@ Example:
 
 .. code-block:: yaml
 
-#Mapbender Cookie Consent Message
+    #Mapbender Cookie Consent Message
     mapbender.cookieconsent: true
