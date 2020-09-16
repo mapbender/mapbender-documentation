@@ -168,9 +168,7 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
                        options: {maps: maps, reading: reading, swimming: swimming, dancing: dancing, beer: beer, flowers: flowers}
                      - type: date
                        title: favorite Date
-                       name: date_favorite
-                       dateFormat: yyyy-mm-dd
-                       value: "2020-02-29"                             
+                       name: date_favorite                     
                        mandatory: true                                  
                        css: {width: 25%}
                      - type: breakLine
@@ -844,9 +842,7 @@ Datumsauswahl (type date)
 
                      - type: date                                       # Textfeld, das eine Datumsauswahl bereitstellt
                        title: favorite Date                             # Beschriftung (optional)
-                       name: date_favorite                              # Referenz zu Tabellenspalte
-                       dateFormat: yyyy-mm-dd                           # Format für die Datumsanzeige (ISO8601)
-                       value: "2020-02-29"                              # Startwert für die Datumsauswahl (optional)
+                       name: date_favorite                              # Referenz zu Tabellenspalt
                        mandatory: true                                  # Pflichtfeld
 
 
