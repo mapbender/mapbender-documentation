@@ -160,7 +160,7 @@ It is possible to adjust some properties for the sidepane while working with tem
 
 Sidepane properties are adjustable in the Sidepane area of the Mapbender backend:
 
-.. image:: ../../figures/sidepane-backend.png
+.. image:: ../../figures/sidepane_backend.png
      :scale: 80
 
 
