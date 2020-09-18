@@ -134,33 +134,6 @@ In der Template-Datei wir der Name des Templates, die Regionen die angelegt werd
  ...
  ->render('WorkshopDemoBundle:Template:demo_fullscreen.html.twig',...
 
-
-Hinzufügen von Eigenschaften für die Sidepane
-*********************************************
-
-Innerhalb der Sidepane können Elemente in unterschiedlichen Ansichten angezeigt werden.
-
-- "Accordion" zeigt alle hinzugefügten Elemente in Reitern:
-
-.. image:: ../../figures/de/sidepane_accordion.png
-     :scale: 80
-
-- "Buttons" zeigt alle hinzugefügten Elemente über Buttons:
-
-.. image:: ../../figures/de/sidepane_buttons.png
-     :scale: 80
-
-- "None" verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an:
-
-.. image:: ../../figures/de/sidepane_nostyle.png
-     :scale: 80
-
-Die Ansichtsoption für die Sidepane kann im Sidepane-Bereich im Mapbender-Backend ausgewählt werden. Dazu genügt ein Klick auf den gewünschten Button:
-
-.. image:: ../../figures/sidepane_backend.png
-     :scale: 80
-
-
 Eigene Twig-Datei erzeugen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
