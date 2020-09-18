@@ -145,22 +145,22 @@ It is possible to adjust some properties for the sidepane while working with tem
 
 - "Accordion" shows elements via tabs:
 
-.. image:: ../../../figures/sidepane_accordion.png
+.. image:: ../../figures/sidepane_accordion.png
      :scale: 80
 
 - "Buttons" shows elements as a continuous via buttons:
 
-.. image:: ../../../figures/sidepane_buttons.png
+.. image:: ../../figures/sidepane_buttons.png
      :scale: 80
 
 - "None" does not contain any styling options at all and displays the elements in the configured backend order:
 
-.. image:: ../../../figures/sidepane_nostyle.png
+.. image:: ../../figures/sidepane_nostyle.png
      :scale: 80
 
 Sidepane properties are adjustable in the Sidepane area of the Mapbender backend:
 
-.. image:: ../../../figures/sidepane_backend.png
+.. image:: ../../figures/sidepane-backend.png
      :scale: 80
 
 
