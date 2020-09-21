@@ -24,7 +24,32 @@ Regionen des Fullscreen Templates:
 Specials:
 
   * Template mit dunklem Hintergrund
-  * Großansicht mit Seitenleiste
+  * Großansicht mit konfigurierbarer Sidepane:
+  
+Sidepane-Konfigurationsmöglichkeiten
+************************************
+
+Das Fullscreen Template bietet eine Sidepane an, innerhalb derer Elemente in unterschiedlichen Ansichten angezeigt werden können.
+
+- "Accordion" zeigt alle hinzugefügten Elemente in Reitern:
+
+.. image:: ../../../figures/sidepane_accordion.png
+     :scale: 80
+
+- "Buttons" zeigt alle hinzugefügten Elemente über Buttons:
+
+.. image:: ../../../figures/sidepane_buttons.png
+     :scale: 80
+
+- "None" verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an:
+
+.. image:: ../../../figures/de/sidepane_nostyle.png
+     :scale: 80
+
+Die Ansichtsoption für die Sidepane kann im Sidepane-Bereich im Mapbender-Backend ausgewählt werden. Dazu genügt ein Klick auf einen der rechts angeordneten Buttons:
+
+.. image:: ../../../figures/sidepane_backend.png
+     :scale: 80
 
 
 Mobile template

@@ -25,8 +25,32 @@ Regions of the Fullscreen Template:
 Specials:
 
   * dark background style of the template
-  * fullscreen display with sidepane
+  * fullscreen display with adjustable sidepane:
 
+Configuration of the sidepane
+*****************************
+
+It is possible to adjust some properties for the sidepane while working with templates that support it. Elements in the sidepane can be displayed in three different styles:
+
+- "Accordion" shows elements via tabs:
+
+.. image:: ../../figures/sidepane_accordion.png
+     :scale: 80
+
+- "Buttons" shows elements via buttons:
+
+.. image:: ../../figures/sidepane_buttons.png
+     :scale: 80
+
+- "None" does not contain any styling options at all and displays the elements in the configured backend order:
+
+.. image:: ../../figures/sidepane_nostyle.png
+     :scale: 80
+
+Sidepane properties are adjustable in the Sidepane area of the Mapbender backend:
+
+.. image:: ../../figures/sidepane_backend.png
+     :scale: 80
 
 Mobile Template
 ***************
