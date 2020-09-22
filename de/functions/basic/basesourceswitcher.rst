@@ -20,7 +20,7 @@ Zu jeder Datenquelle kann eine Gruppe definiert werden. Alle Definitionen einer 
 Konfiguration
 =============
 
-Die Konfiguration geschieht in zwei Schritten:
+Die Konfiguration geschieht in zwei Schritten im Content-Bereich:
 
 #. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel, Tooltip und Target)
 #. Hinzufügen von Themen mit einer oder mehrerer Quellen und optionaler Definition einer Gruppe

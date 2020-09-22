@@ -18,7 +18,7 @@ You have the possibility to define groups. All sourcesets of the same group will
 Configuration
 =============
 
-The configuration occurs in 2 steps:
+The configuration occurs in 2 steps in the context section:
 
 #. Create a BaseSourceSwitcher Element with Title, Tooltip and Target
 #. Add Sourceset(s) with one or more sources and definition of a group (optional)

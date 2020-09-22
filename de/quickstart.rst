@@ -34,7 +34,7 @@ Mapbender Quickstart: Erste Schritte mit Mapbender
 
 Mapbender ist ein web-basiertes Geoportal Framework zum Veröffentlichen, Registrieren, Anzeigen, Navigieren und Überwachen von Diensten, mit der Möglichkeit Dienste gesichert anzubieten.
 
-Administrationsoberflächen ermöglichen es Administratoren Karten- und Datendienste zu verwalten und zu kategorisieren. Über die Administration können einzelnen Benutzern und Gruppen Zugriffe gewährt werden.
+Administrationsoberflächen ermöglichen es Administratoren, Karten- und Datendienste zu verwalten und zu kategorisieren. Über die Administration können einzelnen Benutzern und Gruppen Zugriffe gewährt werden.
 
 Mapbender wurde unter Verwendung moderner Webtechnologien komplett neu geschrieben. Die Grundlage bildet das Symfony Framework. Auf der Clientseite finden Sie OpenLayers.
 
@@ -46,7 +46,7 @@ Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Framewor
   * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
   * Suchen (SQL oder Solr) können konfiguriert werden.
   * Anwendungen zur Digitalisierung können aufgebaut werden
-  * Ein Mobiles Template kann für das Erstellen von Anwendung für Smartphones und Tablets verwendet werden
+  * Ein Mobiles Template kann für das Erstellen von Anwendungen für Smartphones und Tablets verwendet werden
 
 Sie brauchen nichts weiter als einen Standard Webbrowser für diesen Schnellstart (Quickstart).
 
@@ -78,7 +78,7 @@ Starten Sie Mapbender
 
 #. Die Anwendung braucht eine kurze Zeit, um zu starten.
 
-Falls Sie Schwierigkeiten haben, Mapbender zu starten, überprüfen Sie ob der Apache Web Server und die PostgreSQL Datenbank laufen.
+Falls Sie Schwierigkeiten haben, Mapbender zu starten, überprüfen Sie, ob der Apache Web Server und die PostgreSQL Datenbank laufen.
 
 
 
@@ -156,7 +156,7 @@ Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. Kartenelement, 
   .. image:: ../figures/mapbender_create_application.png
 
 
-.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen im online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter `Wie werden eigene Vorlagen (templates) erzeugt? <customization/templates.html>`_.
+.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter `Wie werden eigene Vorlagen (templates) erzeugt? <customization/templates.html>`_.
 
 
 Kopieren und Umbenennen einer Anwendung
@@ -269,13 +269,12 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
 **Dienstekonfiguration:**
 
 * Titel: Name der bei der Anwendung angezeigt wird
+* Opacity: wählen Sie die Opazität (Deckkraft) in Prozent
 * Format: wählen Sie das Format für den getMap-Requests
 * Infoformat: wählen Sie das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
 * Exceptionformat: wählen Sie das Format für Fehlermeldungen
-* Opacity: wählen Sie die Opazität (Deckkraft) in Prozent
 * Kachel-Puffer (Tile buffer): Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen. Default: 0.
 * BBOX-Faktor: Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier kann man angeben, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Default: 1.25 und kann auf 1 gesetzt werden.
-* Sichtbarkeit (Visible): soll der Dienst sichtbar sein
 * BaseSource: soll der Dienst als BaseSource behandelt werden (BaseSources können beim Ebenenbaum ein-/ausgeblendet werden)
 * Proxy: bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
 * Transparenz: Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
@@ -295,19 +294,13 @@ hängen. Es können auch feste Werte übermittelt werden.
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
 Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
-.. image:: ../figures/mapbender3_vendor_specific_parameter.png
+.. image:: ../figures/mapbender_vendor_specific_parameter.png
 
-* Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
+* Vstype: Mapbender spezifische Variablen: Gruppe (groups), User (users), Simple.
 * Name: Parameter Name im WMS Request.
 * Default: Standardwert.
-* Extent: Verfügbare Werte (bei Multiple als kommaseparierte Liste).
-* Vstype: Mapbender spezifische Variablen: Gruppe (groups), User (users), Simple.
+
 * Hidden: Wenn der Wert gesetzt ist, werden die Anfragen serverseitig versendet, so dass die Parameter nicht direkt sichtbar sind.
-
-Momentan eignet sich das Element, um Benutzer und Gruppeninformationen
-weiterzugeben, z.B. für Benutzer die $id$ und für Gruppen den Parameter
-$groups$.
-
 
 **Layerkonfiguration:**
 
@@ -321,7 +314,6 @@ $groups$.
 * Aufklappen (toggle) - aufklappen beim Start der Anwendung
 * Sortieren (reorder) - Ebenen können über drag&drop in der Anwendung verschoben werden
 * ... -> öffnet einen Dialog mit weiteren Informationen
-* name - Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
 * Style - wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den standard (default) Stil wählen.
 
 
@@ -336,7 +328,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
 
 #. Wählen Sie ein Element aus der Liste aus.
 
-#. Beachten Sie die verschiedenen Bereiche Ihrer Anwendung. Stellen Sie sicher, dass sie das Element zum richtigen Bereich hinzufügen.
+#. Beachten Sie die verschiedenen Bereiche Ihrer Anwendung. Stellen Sie sicher, dass Sie das Element zum richtigen Bereich hinzufügen.
 
 #. Konfigurieren Sie das Element. Hinweis: Wenn Sie ein Element z.B. **Karte (map)** auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
 
@@ -344,7 +336,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
 
 #. Schauen Sie sich Ihre Anwendung an. Öffnen Sie Ihre Anwendung über den Button |mapbender-button-show|.
 
-Jetzt sollten sie eine Idee davon haben, wie einfach es ist eine Mapbender-Anwendung ohne Codes zu verändern.
+Jetzt sollten sie eine Idee davon haben, wie einfach es ist, eine Mapbender-Anwendung ohne Codes zu verändern.
 
 
   .. image:: ../figures/mapbender_application_elements.png

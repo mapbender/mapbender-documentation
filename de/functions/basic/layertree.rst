@@ -29,7 +29,7 @@ Funktionen
            :scale: 80
            :alt: Komplexer Layertree mit mehreren Layersets in der Seitenleiste, unterteilt in thematischen Gruppen. 
 
-           Komplexer Layertree mit mehreren Layersets in der Seitenleiste, unterteilt in thematischen Gruppen. 
+           Komplexer Layertree mit mehreren Layersets in der Seitenleiste, unterteilt in thematische Gruppen. 
 
 
 Zur Konfiguration des Layerbaums gibt es verschiedene Verknüpfungspunkte zu anderen Elementen, die beachtet werden müssen: 
@@ -65,7 +65,7 @@ Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können, f
            Einrichtung verschiedener Layersets für die Einbindung in den Layertree.
 
 Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen, müssen diese in dem `Kartenelement <map.html>`_ angegeben werden. 
-Hier gibt man durch das Ankreuzen **[1]** der Layersets an, welche Layersets in der Kartenansicht verwendet werden sollen. Der Layerset "overview" wird beispielsweise nicht in der Hauptkarte angezeigt.  
+Hier gibt man durch das Ankreuzen **[1]** der Layersets an, welche Layersets in der Kartenansicht verwendet werden sollen. Das Layerset "overview" wird beispielsweise nicht in der Hauptkarte angezeigt.  
 In diesem Schritt wird auch die Reihenfolge definiert, in der die Layersets im Layertree und in der Karte erscheinen sollen. Die erstellten Layersets können in der Auflistung per Drag & Drop verschoben werden. Bitte achten Sie darauf, dass die weiter oben definierten Themen die darunter liegenden Themen überdecken können.
 
 
