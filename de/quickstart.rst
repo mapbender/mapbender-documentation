@@ -263,19 +263,18 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
 #. Sie können die Reihenfolge der Layer über drag & drop ändern.
 
 
-.. image:: ../figures/mapbender_wms_application_settings.png
+.. image:: ../figures/mapbender_wms_application_settings3.png
 
 
 **Dienstekonfiguration:**
 
 * Titel: Name der bei der Anwendung angezeigt wird
+* Opacity: wählen Sie die Opazität (Deckkraft) in Prozent
 * Format: wählen Sie das Format für den getMap-Requests
 * Infoformat: wählen Sie das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
 * Exceptionformat: wählen Sie das Format für Fehlermeldungen
-* Opacity: wählen Sie die Opazität (Deckkraft) in Prozent
 * Kachel-Puffer (Tile buffer): Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen. Default: 0.
 * BBOX-Faktor: Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier kann man angeben, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Default: 1.25 und kann auf 1 gesetzt werden.
-* Sichtbarkeit (Visible): soll der Dienst sichtbar sein
 * BaseSource: soll der Dienst als BaseSource behandelt werden (BaseSources können beim Ebenenbaum ein-/ausgeblendet werden)
 * Proxy: bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
 * Transparenz: Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
@@ -295,13 +294,12 @@ hängen. Es können auch feste Werte übermittelt werden.
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
 Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
-.. image:: ../figures/mapbender3_vendor_specific_parameter.png
+.. image:: ../figures/mapbender_vendor_specific_parameter3.png
 
-* Type: „single“, „multiple“, „interval“ (multiple Values in Dimensions)
+* Vstype: Mapbender spezifische Variablen: Gruppe (groups), User (users), Simple.
 * Name: Parameter Name im WMS Request.
 * Default: Standardwert.
-* Extent: Verfügbare Werte (bei Multiple als kommaseparierte Liste).
-* Vstype: Mapbender spezifische Variablen: Gruppe (groups), User (users), Simple.
+
 * Hidden: Wenn der Wert gesetzt ist, werden die Anfragen serverseitig versendet, so dass die Parameter nicht direkt sichtbar sind.
 
 Momentan eignet sich das Element, um Benutzer und Gruppeninformationen
