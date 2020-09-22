@@ -6,7 +6,7 @@ BaseSourceSwitcher (Themenwechsel)
 Mit diesem Element kann zwischen vordefinierten Themen (BaseSources), z. B. Hintergrundkarten, gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets für den entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss dazu geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig, ein Häkchen bei Basesource zu setzen:
 
 
-.. image:: ../../../figures/de/basesourceswitcher_basesource.png
+.. image:: ../../../figures/basesourceswitcher_basesource3.png
      :scale: 80
 
 
@@ -20,7 +20,7 @@ Zu jeder Datenquelle kann eine Gruppe definiert werden. Alle Definitionen einer 
 Konfiguration
 =============
 
-Die Konfiguration geschieht in zwei Schritten:
+Die Konfiguration geschieht in zwei Schritten im Content-Bereich:
 
 #. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel, Tooltip und Target)
 #. Hinzufügen von Themen mit einer oder mehrerer Quellen und optionaler Definition einer Gruppe
