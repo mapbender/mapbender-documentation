@@ -34,7 +34,7 @@ Mapbender Quickstart: Erste Schritte mit Mapbender
 
 Mapbender ist ein web-basiertes Geoportal Framework zum Veröffentlichen, Registrieren, Anzeigen, Navigieren und Überwachen von Diensten, mit der Möglichkeit Dienste gesichert anzubieten.
 
-Administrationsoberflächen ermöglichen es Administratoren Karten- und Datendienste zu verwalten und zu kategorisieren. Über die Administration können einzelnen Benutzern und Gruppen Zugriffe gewährt werden.
+Administrationsoberflächen ermöglichen es Administratoren, Karten- und Datendienste zu verwalten und zu kategorisieren. Über die Administration können einzelnen Benutzern und Gruppen Zugriffe gewährt werden.
 
 Mapbender wurde unter Verwendung moderner Webtechnologien komplett neu geschrieben. Die Grundlage bildet das Symfony Framework. Auf der Clientseite finden Sie OpenLayers.
 
@@ -46,7 +46,7 @@ Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Framewor
   * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
   * Suchen (SQL oder Solr) können konfiguriert werden.
   * Anwendungen zur Digitalisierung können aufgebaut werden
-  * Ein Mobiles Template kann für das Erstellen von Anwendung für Smartphones und Tablets verwendet werden
+  * Ein Mobiles Template kann für das Erstellen von Anwendungen für Smartphones und Tablets verwendet werden
 
 Sie brauchen nichts weiter als einen Standard Webbrowser für diesen Schnellstart (Quickstart).
 
@@ -78,7 +78,7 @@ Starten Sie Mapbender
 
 #. Die Anwendung braucht eine kurze Zeit, um zu starten.
 
-Falls Sie Schwierigkeiten haben, Mapbender zu starten, überprüfen Sie ob der Apache Web Server und die PostgreSQL Datenbank laufen.
+Falls Sie Schwierigkeiten haben, Mapbender zu starten, überprüfen Sie, ob der Apache Web Server und die PostgreSQL Datenbank laufen.
 
 
 
@@ -156,7 +156,7 @@ Ihre Anwendung wurde erstellt. Jetzt brauchen Sie Elemente (z.B. Kartenelement, 
   .. image:: ../figures/mapbender_create_application.png
 
 
-.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen im online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter `Wie werden eigene Vorlagen (templates) erzeugt? <customization/templates.html>`_.
+.. tip:: Beachten Sie, dass derzeit die Layout-, Icon- und Farbanpassungen online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter `Wie werden eigene Vorlagen (templates) erzeugt? <customization/templates.html>`_.
 
 
 Kopieren und Umbenennen einer Anwendung
@@ -336,7 +336,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
 
 #. Wählen Sie ein Element aus der Liste aus.
 
-#. Beachten Sie die verschiedenen Bereiche Ihrer Anwendung. Stellen Sie sicher, dass sie das Element zum richtigen Bereich hinzufügen.
+#. Beachten Sie die verschiedenen Bereiche Ihrer Anwendung. Stellen Sie sicher, dass Sie das Element zum richtigen Bereich hinzufügen.
 
 #. Konfigurieren Sie das Element. Hinweis: Wenn Sie ein Element z.B. **Karte (map)** auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
 
@@ -344,7 +344,7 @@ Mapbender bietet eine Reihe von Elementen (Modulen) an, aus denen Sie Ihre Anwen
 
 #. Schauen Sie sich Ihre Anwendung an. Öffnen Sie Ihre Anwendung über den Button |mapbender-button-show|.
 
-Jetzt sollten sie eine Idee davon haben, wie einfach es ist eine Mapbender-Anwendung ohne Codes zu verändern.
+Jetzt sollten sie eine Idee davon haben, wie einfach es ist, eine Mapbender-Anwendung ohne Codes zu verändern.
 
 
   .. image:: ../figures/mapbender_application_elements.png

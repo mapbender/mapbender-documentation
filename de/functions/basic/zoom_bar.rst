@@ -51,7 +51,7 @@ Ist das Navigationswerkzeug wie in der Abbildung eingestellt, wird die Karte bei
 .. image:: ../../../figures/de/navigationtoolbar_example_step_30percent.png
      :scale: 60
 
-Die Komponente **History** besteht aus zwei Pfeilen. Durch Anklicken des linken Pfeils (zurück) springt die Kartenansicht auf denjenigen Ausschnitt oder diejenige Zoomstufe zurück, die vor dem Verschieben der Karte sichtbar war. Durch Anklicken des rechten Pfeils (vor) springt die Kartenansicht auf den aktuelleren Kartenausschnitt bzw. die aktuellere Zoomstufe. Um diese Funktion zu verdeutlichen ist hier ein Beispiel:
+Die Komponente **History** besteht aus zwei Pfeilen. Durch Anklicken des linken Pfeils (zurück) springt die Kartenansicht auf denjenigen Ausschnitt oder diejenige Zoomstufe zurück, die vor dem Verschieben der Karte sichtbar war. Durch Anklicken des rechten Pfeils (vor) springt die Kartenansicht auf den aktuelleren Kartenausschnitt bzw. die aktuellere Zoomstufe. Um diese Funktion zu verdeutlichen, ist hier ein Beispiel:
 
 .. image:: ../../../figures/de/navigationtoolbar_example_history.png
      :scale: 60
