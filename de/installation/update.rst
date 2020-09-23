@@ -41,7 +41,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  
  # Händisch müssen Sie nun die Konfigurationsdateien auf neue Parameter überprüfen.
  # Vergleichen Sie die Dateien parameters.yml, config.yml und sofern verwendet die mapbender.yml.
- # Sofern Sie eigene Templates angelegt haben, vergeleichen Sie diese mit der neuen Mapbender Version.
+ # Sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version.
  # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/web/uploads.
  # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach mapbender/app/Resources/MapbenderPrintBundle/templates/.
 

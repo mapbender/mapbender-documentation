@@ -100,7 +100,7 @@ auf die drei Punkte des Layers und ein Popupfenster erscheint.
 .. image:: ../../../figures/wms_instance_layer_id.png
      :scale: 80
 
-Der erste Wert nenn die interne SourceID und SourceLayerId (31-591). Der
+Der erste Wert nennt die interne SourceID und SourceLayerId (31-591). Der
 zweite Wert listet die InstanceID und InstanceLayerId, die wir im weiteren
 nutzen wollen (73-836).
 
