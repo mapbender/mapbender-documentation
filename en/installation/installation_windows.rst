@@ -163,11 +163,11 @@ Open the windows shell and initialize the database connection with the following
     cd c:\mapbender
     php.exe app/console doctrine:database:create
     php.exe app/console doctrine:schema:create
-    php.exe app/console assets:install web
-    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+    php.exe app/console mapbender:database:init -v
     php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+
     
-Following information: :ref:`installation_configuration_en`    
+Following information: :ref:`installation_configuration`    
 
 
 First steps
@@ -187,6 +187,14 @@ More information at:  `Mapbender Quickstart Document <../en/quickstart.html>`_.
 
 * http://localhost/mapbender/
 
-Open the Symfony Welcome Script config.php. The script will check if all required components are installed.
 
-* http://localhost/mapbender/config.php
+Check the system configuration and Mapbender requirements with:
+
+.. code-block:: text
+
+    app/console mapbender:config:check
+
+
+Further information can be found at: https://doc.mapbender.org/en/customization/commands.html#app-console-mapbender-config-check
+
+

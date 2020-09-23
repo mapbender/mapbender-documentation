@@ -145,6 +145,7 @@ Eine Konfiguration könnte wie folgt aussehen:
 
 
 Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
+
 Weitere Informationen im Kapitel :ref:`users_de`.
 
 
@@ -330,8 +331,8 @@ Content
     * WMS loader
     * Image export
     * Print client
-    * line
-    * area
+    * measure line
+    * measure area
     * Scale bar
     * Layer tree
     * Overview

@@ -140,23 +140,6 @@ In der Template-Datei wird der Name des Templates, die Regionen die angelegt wer
         public $twigTemplate = 'WorkshopDemoBundle:Template:demo_fullscreen.html.twig';
     }
 
-
-
-
-Hinzufügen von Eigenschaften für die Sidepane
-*********************************************
-
-Für die Sidepane können die Eigenschaften für "Tabs" oder "Accordion" definiert werden.
-
-- "Tabs" Reihenfolge von Mapbender Elementen in Tabs
-- "Accordion" zeigt die Elemente in einer Accordion Liste.
-
-Siehe im Code oben drüber unter $regionsProperties.
-
-Zur Konfiguration checkt man die Option in der Administration der Anwendung.
-
-
-
 Eigene Twig-Datei erzeugen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -365,7 +348,6 @@ Wie kann der Anwendungstitel angepasst werden?
 Wie stelle ich die Sprache ein?
 
 Auf diese und weitere Fragen finden Sie Antworten im Kapitel :ref:`yaml_de`.
-
 
 Wie können eigene Buttons eingebunden werden?
 *********************************************

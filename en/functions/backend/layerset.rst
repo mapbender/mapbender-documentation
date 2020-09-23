@@ -112,7 +112,7 @@ The layer table offers several checkboxes and two scale visibility fields that a
 
 .. _hints-layersets:
 
-Notes on the effects of each confiuguration
+Notes on the effects of each configuration
 ===========================================
 
 Basesources

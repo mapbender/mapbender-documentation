@@ -3,7 +3,7 @@
 Mapbender Templates
 ###################
 
-Get to know the Mapbender templates. Mapbender offers some templates ready to use. 
+Get to know the basic Mapbender templates which are ready to use out of the box.
 
 
 
@@ -22,12 +22,35 @@ Regions of the Fullscreen Template:
   * Content (map, navigation toolbar, scalebar,...)
   * Footer (impressum, scaledisplay, ...)
 
-Specials: 
+Specials:
 
   * dark background style of the template
-  * fullscreen display with sidepane
+  * fullscreen display with adjustable sidepane:
 
+Configuration of the sidepane
+*****************************
 
+It is possible to adjust some properties for the sidepane while working with templates that support it. Elements in the sidepane can be displayed in three different styles:
+
+- "Accordion" shows elements via tabs:
+
+.. image:: ../../figures/sidepane_accordion.png
+     :scale: 80
+
+- "Buttons" shows elements via buttons:
+
+.. image:: ../../figures/sidepane_buttons.png
+     :scale: 80
+
+- "None" does not contain any styling options at all and displays the elements in the configured backend order:
+
+.. image:: ../../figures/sidepane_nostyle.png
+     :scale: 80
+
+Sidepane properties are adjustable in the Sidepane area of the Mapbender backend:
+
+.. image:: ../../figures/sidepane_backend.png
+     :scale: 80
 
 Mobile Template
 ***************
@@ -55,4 +78,3 @@ Please note that not all elements can be used with the Mobile template at the mo
   * HTML
   * Button
   * SimpleSearch
-

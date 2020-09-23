@@ -141,25 +141,9 @@ In the template file you define the name of your template, the regions that you 
             '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
             "/components/vis-ui.js/vis-ui.js-built.js"
         );
-
         public $twigTemplate = 'WorkshopDemoBundle:Template:demo_fullscreen.html.twig';
     }
     
-
-Adding properties for your "sidepane" region
-********************************************
-
-For a "sidepane" region are "tabs" and "accordion" properties supported.
-
-* "tabs" orders Mapbender elements in tabs
-* "accordion" displays Mapbender elements as an accordion list
-
-For adding you define the function "getRegionsProperties" in the template file.
-
-For configuration you check an option in your application's configuration.
-
-
-
 Create your own twig-file
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -350,7 +334,7 @@ You can adjust the YAML-applications in app/config/applications and change the t
 Usage in new applications from the backend
 ******************************************
 
-If you create a new application in the administration interface of Mapbender, you can choose the new template. 
+If you create a new application in the administration interface of Mapbender, you can choose the new template.
 
 
 Usage in an existing application
@@ -368,7 +352,6 @@ Usecases
 
 How do I change the logo, the title and the language?
 This and more tips can be found here: :ref:`yaml_en`.
-
 
 How do I change the buttons?
 ****************************

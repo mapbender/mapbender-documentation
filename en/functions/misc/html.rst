@@ -23,7 +23,7 @@ You might want to add an image to your application:
 
 .. code-block:: html
 
-    <img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg' height='60px'>
+    <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg' height='60px'>
 
 
 .. image:: ../../../figures/html.png
@@ -58,10 +58,10 @@ Let's include a simple logo. We start by naming the title of the HTML-element: M
 .. code-block:: yaml
 
      <a href='https://mapbender.org' target='_blank'>
-     <img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg'
+     <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
      height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
 
-As you can see, the mapbender logo is included as a picture in the code (``img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg'``). In addition, a height (``height='60px'``) and a styling is defined. Our styling (``style=``) includes parameters that define background-color with transparency (``background-color:rgb(255, 255, 255, 0.9)``) and the distance to the margin of the page, called (``padding:10px``). Moreover, we include a link to the official Mapbender web page (``href='https://mapbender.org'``). If you click on the logo, the website will load in a new browser tab (``target='_blank'``).
+As you can see, the mapbender logo is included as a picture in the code (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). In addition, a height (``height='60px'``) and a styling is defined. Our styling (``style=``) includes parameters that define background-color with transparency (``background-color:rgb(255, 255, 255, 0.9)``) and the distance to the margin of the page, called (``padding:10px``). Moreover, we include a link to the official Mapbender web page (``href='https://mapbender.org'``). If you click on the logo, the website will load in a new browser tab (``target='_blank'``).
 
 As mentioned, it is possible to include the HTML-element in several locations. Let's look at the toolbar first:
 
@@ -176,7 +176,7 @@ Add an image
 
 .. code-block:: html
 
-   <img src='https://mapbender.org/sites/default/files/Mapbender-Logo.svg'>
+   <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'>
 
 
 Add an Link

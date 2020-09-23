@@ -151,12 +151,10 @@ Initialisation of the database connection:
     cd /var/www/mapbender
     app/console doctrine:database:create
     app/console doctrine:schema:create
-    app/console assets:install web --symlink --relative
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+    app/console mapbender:database:init -v
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-
-Following information: :ref:`installation_configuration_en`
-
+    
+Following information: :ref:`installation_configuration`
 
 
 **Mapbender installation with MySQL:**
