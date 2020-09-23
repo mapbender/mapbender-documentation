@@ -3,10 +3,11 @@
 Wie werden eigene Style-Vorlagen (templates) erzeugt?
 #####################################################
 
-Mapbender beinhaltet bereits erzeugte Anwendungs-Vorlagen. Häufig sollen eigene Anwendungs-Vorlagen und Administrationsoberflächen mit Ihrem eigenen Corporate Design verwendet werden.
-Die bereits vorhandenen Vorlagen befinden sich zu Demonstrationszwecken im Mapbender CoreBundle `Template` Verzeichnis. Um Probleme bei einem Upgrade zu vermeiden, sollten Sie für personalisierte Oberflächen ein eigenes Bundle verwenden.
+Mapbender beinhaltet bereits Anwendungs-Vorlagen, sie befinden sich im Mapbender CoreBundle `Template`-Verzeichnis (/application/mapbender/src/Mapbender/CoreBundle/Template). 
+Häufig sollen jedoch eigene Anwendungs-Vorlagen und Administrationsoberflächen mit eigenem Corporate Design verwendet werden.
+Um Probleme bei einem Upgrade zu vermeiden, sollte für personalisierte Oberflächen ein eigenes Bundle verwendet werden.
 
-Ab der Version 3.0.4.0 kann der Stil einer einzelnen Anwendung ebenfalls über den integrierten CSS-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter :doc:`Wie kann der Stil einer Anwendung mit dem CSS-Editor angepasst werden? <css>`.
+Der Stil einer einzelnen Anwendung kann ebenfalls über den integrierten CSS-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter :doc:`Wie kann der Stil einer Anwendung mit dem CSS-Editor angepasst werden? <css>`.
 
 
 Wie werden eigene Vorlagen erzeugt?
@@ -15,19 +16,16 @@ Wie werden eigene Vorlagen erzeugt?
 **Schritte für die Einbindung:**
 
 * Erzeugen eines eigenen Bundles
+* Erzeugen eines neuen Namespaces
 * Template PHP-Datei zur Registrierung der eigenen Vorlage erzeugen
 * Erzeugen einer eigenen Twig-Datei
 * Erzeugen eigener CSS-Datei(en)
 * Registrierung des Bundles in der Datei app/AppKernel.php
 * Verwenden der neuen Vorlage
 
-Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
 
-* Eintrag in der YAML-Datei von der Anwendung (applications/app/config/applications/\*.yml)
-* Auswahl über die Administration bei einer neuen Anwendung
-* Anpassung bestehender Anwendungen über die Änderung des Spalteneintrags ``template`` in der Datenbank in der Tabelle ``mb_core_application``.
-
-Für die Einbindung der eigenen Vorlage wurde ein Workshop/DemoBundle vorbereitet, dass als Template für Anwendungen und für das Anpassen der Administrationsoberflächen verwendet werden kann. Laden Sie sich für die folgenden Schritte diese Dateien bitte über dem folgenden Link herunter:
+Als Beispiel für die Einbindung einer eigenen Vorlage wurde ein Workshop/DemoBundle vorbereitet. Dieses kann verwendet und individuell verändert werden. 
+Sie können sich die Dateien unter folgendem Link herunterladen:
 
 * https://github.com/mapbender/mapbender-workshop/tree/master
 
@@ -35,129 +33,132 @@ Für die Einbindung der eigenen Vorlage wurde ein Workshop/DemoBundle vorbereite
 Erzeugen eines eigenen Bundles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Anwender-Bundles werden im src-Verzeichnis abgelegt.
+Anwender-Bundles werden im src-Verzeichnis (/application/src) abgelegt.
 
-Die Struktur kann wie folgt aussehen:
+Die Struktur eines Bundles kann wie folgt aussehen:
 
 .. code-block:: bash
 
  src/Workshop/DemoBundle/
-                    WorkshopDemoBundle.php
-                    /Resources
-                                  /public
-                                         demo_fullscreen.css
-                                         /image
-                                             workshop.ico
-                                             workshop_logo.png
-                                             print.png
-                                             ...
-                                  /views
-					/Template
-                                             fullscreen_demo.html.twig
-                        /Template
-		                DemoFullscreen.php
+ 
+                         WorkshopDemoBundle.php
+                    
+                         /Resources
+                                    /public
+                                           demo_fullscreen.css
+                                    
+                                    /image
+                                           workshop.ico
+                                           workshop_logo.png
+                                           print.png
+   
+                                    /views
+					                      /Template
+                                                   fullscreen_demo.html.twig
+                         /Template
+		                          DemoFullscreen.php
 
 
-Die folgenden Dateien müssen für das Design bearbeitet werden:
+Die folgenden Dateien können bearbeitet werden:
 
-* twig - verändert die Struktur (z.B. - Löschen einer Komponente wie die Sidebar)
-* demo_fullscreen.css  - verändert die Farben, Icons, Schriften
+* twig-Datei: verändert die Struktur (z.B. - Löschen einer Komponente wie die Sidebar)
+* css-Datei:  verändert die Farben, Icons, Schriften
 
 
 Erzeugen eines neuen Namespaces
-*******************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Die Datei WorkshopDemoBundle.php erzeugt den Namespace für das Bundle und referenziert auf das Template und zu den eigenen CSS-Dateien.
+In unserem Beispiel erzeugt die Datei *WorkshopDemoBundle.php* einen Namespace für das Bundle und referenziert auf das Template.
 
 
 .. code-block:: php
 
     <?php
+
     namespace Workshop\DemoBundle;
+
     use Mapbender\CoreBundle\Component\MapbenderBundle;
+
     class WorkshopDemoBundle extends MapbenderBundle
     {
+        public function getElements()
+        {
+            return array(
+            //    'Workshop\DemoBundle\Element\MapKlick',
+            );
+        }
         public function getTemplates()
         {
             return array('Workshop\DemoBundle\Template\DemoFullscreen');
         }
-        public function getElements()
-        {
-            return array(
-            );
-        }
     }
-    ?>
+
 
 
 Anlegen der eigenen Template-Datei
-**********************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In unserem Beispiel heißt die Template-Datei FullscreenDemo.php. Sie befindet sich unter src/Workshop/DemoBundle/Template/FullscreenDemo.php.
+In unserem Beispiel heißt die Template-Datei *FullscreenDemo.php*. Sie befindet sich unter src/Workshop/DemoBundle/Template/DemoFullscreen.php.
 
-In der Template-Datei wir der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete Twig-Datei definiert.
+In der Template-Datei wird der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete Twig-Datei definiert.
 
 
 .. code-block:: php
 
- <?php
+    <?php
 
- namespace Workshop\DemoBundle;
+    namespace Workshop\DemoBundle\Template;
 
- use Mapbender\CoreBundle\Component\MapbenderBundle;
+    use Mapbender\CoreBundle\Template\Fullscreen;
 
- class DemoFullscreen extends MapbenderBundle
- {
-    ...
- }
-
- public static function getTitle()
- {
-   return 'DemoFullscreen';
- }
- ....
-
- public static function listAssets()
- {
-        $assets = array(
-            'css' => array('@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss','@WorkshopDemoBundle/Resources/public/demo_fullscreen.css'),
-            'js'    => array(
-                '/components/underscore/underscore-min.js',
-            ...
-            ),
-            'trans' => array()
+    class DemoFullscreen extends Fullscreen
+    {
+        protected static $title             = "Fullscreen Template Workshop";
+        protected static $regions           = array('toolbar', 'sidepane', 'content', 'footer');
+        protected static $regionsProperties = array(
+            'sidepane' => array(
+                'tabs'      => array(
+                    'name'  => 'tabs',
+                    'label' => 'mb.manager.template.region.tabs.label'),
+                'accordion' => array(
+                    'name'  => 'accordion',
+                    'label' => 'mb.manager.template.region.accordion.label')
+            )
+        );
+        protected static $css               = array(
+            '@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss',
+            '@WorkshopDemoBundle/Resources/public/demo_fullscreen.scss',
+        );
+        protected static $js                = array(
+            '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
+            '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js',
+            '@MapbenderCoreBundle/Resources/public/mapbender.container.info.js',
+            '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
+            "/components/vis-ui.js/vis-ui.js-built.js"
         );
 
-    return $assets;
- }
-
- ...
- ->render('WorkshopDemoBundle:Template:demo_fullscreen.html.twig',...
+        public $twigTemplate = 'WorkshopDemoBundle:Template:demo_fullscreen.html.twig';
+    }
 
 Eigene Twig-Datei erzeugen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Twig-Dateien sind im folgenden Verzeichnis gespeichert:
 
-* mapbender\src\Mapbender\CoreBundle\Resources\views\Template
+application/mapbender/src/Mapbender/CoreBundle/Resources/views/Template
 
 Kopieren Sie eine existierende Twig-Datei, speichern Sie diese unter einem neuen Namen und verändern Sie den Inhalt, z.B. die Farbe.
 
-.. code-block:: bash
-
- cd mapbender/src/Workshop/DemoBundle/Resources/views/Template
+Verwenden Sie z.B. mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig und kopieren Sie diese nach /Workshop/DemoBundle/Resources/views/Template/fullscreen_demo.html.twig
 
 
-Verwenden Sie mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig und kopieren Sie diese nach fullscreen_demo.html.twig
-
-
-Eigene CSS-Datei erzeugen (Anwendungen)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Eigene CSS-Datei erzeugen
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Erzeugen Sie eine leere CSS-Datei und geben Sie in dieser nur die CSS-Definitionen für Ihre Anwendungs-Vorlage an.
 Es muss lediglich das CSS definiert werden, das vom Standard der Elemente abweicht.
 
-Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
+Mit Hilfe der Entwicklerwerkzeuge Ihres Browsers können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
 Ihre CSS-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css und die folgende Definition enthalten:
 
@@ -237,7 +238,7 @@ Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter web/assets generi
 
 
 Styling der Administrationsseiten
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**********************************
 
 Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche bitte an:
 
@@ -246,8 +247,6 @@ Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche
 * password.css : Anpassung des Designs der Passwort-Oberfläche (Passwort vergessen u.ä.)
 
 Es muss lediglich das css definiert werden, das vom Standard der Administrationsoberfläche abweicht.
-
-Mit Hilfe von Firebug können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
 Auf die CSS-Dateien wird über das FOMManagerBundle und FOMUserBundle referenziert. Diese müssen unter app/Resources/ abgelegt werden. Die bereits enthaltenen Twig-Dateien überschreiben nach der erfolgreichen Einrichtung die Standard-Einstellungen (Vorgaben aus der manager.html.twig Datei).
 Alternativ kann auch die bisherige Twig-Datei kopiert und angepasst werden.
@@ -261,58 +260,6 @@ Bei unveränderter Übernahme der Stylevorgaben sieht die Administration dann so
 
 .. image:: ../../figures/customization/workshop_administration.png
      :scale: 80
-
-
-Registrieren Sie Ihre Vorlage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Um Ihre Vorlage zu registrieren, müssen Sie eine Datei erzeugen unter:
-
-* mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php
-
-.. code-block:: bash
-
- cd mapbender/src/Mapbender/CoreBundle/Template
- cp Fullscreen.php mapbender/src/Workshop/DemoBundle/Template/DemoFullscreen.php
-
-Fügen Sie die neue CSS-Datei in der Funktion listAssets als letzten Eintrag ein:
-
-.. code-block:: php
-
-
-    public static function listAssets()
-    {
-        $assets = array(
-            'css' => array('@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss','@WorkshopDemoBundle/Resources/public/demo_fullscreen.css'),
-            'js'    => array(
-                '/components/underscore/underscore-min.js',
-                '@FOMCoreBundle/Resources/public/js/widgets/popup.js',
-                '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
-                '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js',
-                '@MapbenderCoreBundle/Resources/public/regional/vendor/notify.0.3.2.min.js',
-                "/components/datatables/media/js/jquery.dataTables.min.js",
-                '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
-                "/components/vis-ui.js/vis-ui.js-built.js"
-            ),
-            'trans' => array()
-        );
-        return $assets;
-    }
-
-
-.. code-block:: php
-
-    public function render($format = 'html', $html = true, $css = true, $js = true)
-    {
-        $templating = $this->container->get('templating');
-        return $templating
-                        ->render('WorkshopDemoBundle:Template:demo_fullscreen.html.twig',
-                                 array(
-                            'html' => $html,
-                            'css' => $css,
-                            'js' => $js,
-                            'application' => $this->application));
-    }
 
 
 
@@ -330,24 +277,19 @@ Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
     public function registerBundles()
     {
         $bundles = array(
-            // Standard Symfony bundles
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+
             ....
-
-            // Extra bundles required by Mapbender/OWSProxy3
-            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-
-            // FoM bundles
-            new FOM\CoreBundle\FOMCoreBundle(),
-            ...
 
             // Mapbender bundles
             new Mapbender\CoreBundle\MapbenderCoreBundle(),
             ...
 
-	    new Workshop\DemoBundle\WorkshopDemoBundle(),
+	        new Workshop\DemoBundle\WorkshopDemoBundle(),
 
         );
+    }
+ }
+ 
 
 Setzen Sie Schreibrechte für das web-Verzeichnis für Ihren Webserver-Benutzer.
 
@@ -368,6 +310,12 @@ Aktualisieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - C
 Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste erscheinen.
 
 
+Verwendung der eigenen Vorlage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
+
+
 Einbindung in YAML-Anwendungen
 ******************************
 
@@ -378,14 +326,14 @@ Sie können nun die YAML-Anwendungen unter app/config/applications anpassen und 
                 template: Workshop\DemoBundle\Template\DemoFullscreen
 
 
-Einbindung in neue Anwendungen
-******************************
+Einbindung in eine neue Anwendungen über das Backend
+****************************************************
 
 Wenn Sie eine neue Anwendung mit der Mapbender-Administration erzeugen, können Sie eine Vorlage (Template) auswählen.
 
 
-Einbindung in bestehende Anwendungen
-************************************
+Einbindung in eine bestehende Anwendung
+***************************************
 
 Für bereits existierende Anwendungen kann das Template über die Mapbender Datenbank in der Tabelle ``mb_core_application`` in der Spalte *template* angepasst werden.
 
@@ -395,50 +343,11 @@ Für das *WorkshopDemoBundle* wird hier statt des Eintrags ``Mapbender\CoreBundl
 Anwendungsfälle
 ~~~~~~~~~~~~~~~
 
-Wie kann das Design verändert werden?
-*************************************
-
-Ändern Sie die folgenden Dateien:
-
-* twig: Änderungen in der Struktur (z.B. entfernen der Sidebar), Verweise auf ein Logo
-* demo_fullscreen.css: Änderungen der Farbe, Icons oder Schriftarten
-
-
 Wie kann das Logo verändert werden?
-***********************************
+Wie kann der Anwendungstitel angepasst werden?
+Wie stelle ich die Sprache ein?
 
-Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
-
-.. code-block:: yaml
-
- server_logo:   bundles/workshopdemo/image/workshop_logo.png
-
-
-Das Logo kann auch in der Twig-Datei angepasst werden:
-
-.. code-block:: html
-
- <img class="logo" height="40" alt="Workshop Logo" src="{{ asset('bundles/workshopdemo/image/workshop_logo.png')}}" />
-
-
-Wie kann der Anwendungstitel und das Favicon angepasst werden?
-**************************************************************
-
-1. Der Anwendungstitel und das Favicon können in der Twig-Datei angepasst werden:
-
-.. code-block:: php
-
-
- {% block title %}Workshop - {{ application.title }}{% endblock %}
-
- {% block favicon %}{{ asset('bundles/workshopdemo/image/workshop.ico') }}{% endblock %}
-
-
-2. Das Favicon kann zusätzlich unter *application/web* verändert werden:
-
-   Die aktuelle favicon.png-Datei muss hierfür ausgetauscht werden.
-
-
+Auf diese und weitere Fragen finden Sie Antworten im Kapitel :ref:`yaml_de`.
 
 Wie können eigene Buttons eingebunden werden?
 *********************************************
