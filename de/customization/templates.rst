@@ -3,7 +3,7 @@
 Wie werden eigene Style-Vorlagen (templates) erzeugt?
 #####################################################
 
-Mapbender beinhaltet bereits Anwendungs-Vorlagen, sie befinden sich im Mapbender CoreBundle `Template`-Verzeichnis (/application/mapbender/src/Mapbender/CoreBundle/Template). 
+Mapbender beinhaltet bereits Anwendungs-Vorlagen, sie befinden sich im Mapbender CoreBundle `Template`-Verzeichnis (``/application/mapbender/src/Mapbender/CoreBundle/Template``). 
 Häufig sollen jedoch eigene Anwendungs-Vorlagen und Administrationsoberflächen mit eigenem Corporate Design verwendet werden.
 Um Probleme bei einem Upgrade zu vermeiden, sollte für personalisierte Oberflächen ein eigenes Bundle verwendet werden.
 
@@ -98,7 +98,7 @@ In unserem Beispiel erzeugt die Datei *WorkshopDemoBundle.php* einen Namespace f
 Anlegen der eigenen Template-Datei
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In unserem Beispiel heißt die Template-Datei *FullscreenDemo.php*. Sie befindet sich unter src/Workshop/DemoBundle/Template/DemoFullscreen.php.
+In unserem Beispiel heißt die Template-Datei *FullscreenDemo.php*. Sie befindet sich unter ``src/Workshop/DemoBundle/Template/DemoFullscreen.php``.
 
 In der Template-Datei wird der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete Twig-Datei definiert.
 
@@ -145,11 +145,11 @@ Eigene Twig-Datei erzeugen
 
 Die Twig-Dateien sind im folgenden Verzeichnis gespeichert:
 
-application/mapbender/src/Mapbender/CoreBundle/Resources/views/Template
+``application/mapbender/src/Mapbender/CoreBundle/Resources/views/Template``
 
 Kopieren Sie eine existierende Twig-Datei, speichern Sie diese unter einem neuen Namen und verändern Sie den Inhalt, z.B. die Farbe.
 
-Verwenden Sie z.B. mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig und kopieren Sie diese nach /Workshop/DemoBundle/Resources/views/Template/fullscreen_demo.html.twig
+Verwenden Sie z.B. ``mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig`` und kopieren Sie diese nach ``/Workshop/DemoBundle/Resources/views/Template/fullscreen_demo.html.twig``
 
 
 Eigene CSS-Datei erzeugen
@@ -160,7 +160,7 @@ Es muss lediglich das CSS definiert werden, das vom Standard der Elemente abweic
 
 Mit Hilfe der Entwicklerwerkzeuge Ihres Browsers können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
-Ihre CSS-Datei könnte wie folgt heißen: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css und die folgende Definition enthalten:
+Ihre CSS-Datei könnte wie folgt heißen: ``src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css`` und die folgende Definition enthalten:
 
 .. code-block:: css
 
@@ -227,7 +227,7 @@ Das Ergebnis der wenigen Zeilen CSS sieht dann so aus:
 
 Beim Laden der neuen Anwendung wird eine CSS-Datei im web/assets-Verzeichnis angelegt:
 
-* web/assets/WorkshopDemoBundle__demo_fullscreen__css.css
+* ``web/assets/WorkshopDemoBundle__demo_fullscreen__css.css``
 
 Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter web/assets generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
 
@@ -268,7 +268,7 @@ Registrieren des Bundles in app/AppKernel.php
 
 Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
-* mapbender/app/AppKernel.php
+* ``mapbender/app/AppKernel.php``
 
 .. code-block:: php
 
@@ -319,7 +319,7 @@ Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
 Einbindung in YAML-Anwendungen
 ******************************
 
-Sie können nun die YAML-Anwendungen unter app/config/applications anpassen und auf das neue Template verweisen.
+Sie können nun die YAML-Anwendungen unter ``app/config/applications`` anpassen und auf das neue Template verweisen.
 
 .. code-block:: yaml
 
@@ -373,7 +373,7 @@ In der CSS-Datei können Sie zu den Icons der Schriftart folgendermaßen verweis
     content: "\f02f";
   }
 
-Wenn Sie ein Bild nutzen möchten, legen Sie dieses am Besten in Ihrem Bundle ab und referenzieren es auf die folgende Art und Weise:
+Wenn Sie ein Bild nutzen möchten, legen Sie dieses am besten in Ihrem Bundle ab und referenzieren es auf die folgende Art und Weise:
 
 .. code-block:: css
 
