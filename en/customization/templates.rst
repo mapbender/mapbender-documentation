@@ -3,7 +3,7 @@
 How to create your own Template?
 ################################
 
-Mapbender comes with application templates out of the box, you can find them in the Mapbender CoreBundle (/application/mapbender/src/Mapbender/CoreBundle/Template). But usually you want to use your own templates with your own corporate design.
+Mapbender comes with application templates out of the box, you can find them in the Mapbender CoreBundle (``/application/mapbender/src/Mapbender/CoreBundle/Template``). But usually you want to use your own templates with your own corporate design.
 
 To prevent overwriting your custom templates after an Mapbender upgrade you should create an extra bundle to safely store your custom files.
 
@@ -36,7 +36,6 @@ User bundles are stored in the src-directory (/application/src).
 
 This is how the structure can look like:
 
-.. code-block:: bash
 
 .. code-block:: bash
 
@@ -72,8 +71,6 @@ Create a new namespace
 The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template and to your css-files.
 
 
-
-
 .. code-block:: php
 
     <?php
@@ -97,12 +94,11 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
     }
     
    
-    
 
 Create your own template file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In our example the template file is called FullscreenDemo.php. You find it at src/Workshop/DemoBundle/Template/FullscreenDemo.php.
+In our example the template file is called FullscreenDemo.php. You find it at ``src/Workshop/DemoBundle/Template/FullscreenDemo.php``.
 
 In the template file you define the name of your template, the regions that you want to provide and refer to a twig file.
 
@@ -149,11 +145,11 @@ Create your own twig-file
 
 You find the twig-files at the following path:
 
-application/mapbender/src/Mapbender/CoreBundle/Resources/views/Template
+* ``application/mapbender/src/Mapbender/CoreBundle/Resources/views/Template``
 
 The easiest way to create your own twig file is to copy an existing twig, save it under a new name and change the content like colors.
 
-Use the existing template from mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig and copy it to fullscreen_demo.html.twig
+Use the existing template from ``mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig`` and copy it to ``fullscreen_demo.html.twig``.
 
 
 Create your own css-file
@@ -163,7 +159,7 @@ Create an empty css-file and fill it with content. You only have to define the p
 
 Firebug can help you to find out the styles you want to change.
 
-Your file could be named like this: src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css and have the following definition:
+Your file could be named like this: ``src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css`` and have the following definition:
 
 .. code-block:: css
 
@@ -230,7 +226,7 @@ The result of these few lines of css will look like this:
 
 When you open your new application a css-file will be created at:
 
-* web/assets/WorkshopDemoBundle__demo_fullscreen__css.css
+* ``web/assets/WorkshopDemoBundle__demo_fullscreen__css.css``
 
 If you do further edits at your css file you may have to delete the generated css file in the assets directory to see the changes. You should also clear the browser cache.
 
@@ -318,17 +314,16 @@ Now your template should show up in the template list when you create a new appl
 
 How to use a new template
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-There are different ways of how to use the new template
-:
+There are different ways of how to use the new template:
 
 Usage in YAML-applications
 **************************
 
-You can adjust the YAML-applications in app/config/applications and change the templtate parameter.
+You can adjust the YAML-applications in app/config/applications and change the template parameter.
 
 .. code-block:: yaml
 
-  "template:   Workshop\DemoBundle\Template\DemoFullscreen"
+  template:   Workshop\DemoBundle\Template\DemoFullscreen
 
 
 Usage in new applications from the backend
@@ -343,8 +338,6 @@ Usage in an existing application
 For existing applications you can change the parameter in the Mapbender database in the column ``template`` of the table ``mb_core_application``.
 
 For the *WorkshopDemoBundle* you change the entry from ``Mapbender\CoreBundle\Template\Fullscreen`` to ``Workshop\DemoBundle\WorkshopDemoBundle``.
-
-
 
 
 Usecases
