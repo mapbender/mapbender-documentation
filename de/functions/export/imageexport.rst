@@ -3,7 +3,7 @@
 ImageExport (Bildexport)
 ************************
 
-Mit dem ImageExport kann die aktuelle Kartenansicht exportiert werden. Das Bild kann als png oder jpeg abgespeichert werden.
+Mit dem ImageExport kann die aktuelle Kartenansicht exportiert werden. Das Bild kann als .png oder .jpeg abgespeichert werden.
 
 .. image:: ../../../figures/de/image_export.png
      :scale: 80
@@ -24,7 +24,7 @@ YAML-Definition:
 
    target: ~                        # ID des Kartenelements (z.B. map)
 
-Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :ref:`button_de`.
+Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
 
 
 Class, Widget & Style

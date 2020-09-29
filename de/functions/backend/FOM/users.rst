@@ -18,7 +18,7 @@ reißen, können Sie mit diesem Benutzer alles verwalten. Und falls Sie gar
 die Anmeldedaten vergessen haben sollten, können Sie über ein app/console
 Kommando den Benutzer zurücksetzen: fom:user:resetroot.
 
-.. note:: **Hinweis:** Um die Funktionen unterhalb nutzen zu können muss der Symfony Swiftmailer korrekt eingerichtet sein. Bitte überprüfen Sie Ihre lokale Symfony-Version und nutzen Sie die offizielle Symfony-Dokumentation zur Einrichtung des Tools: https://symfony.com/doc/current/mailer.html
+.. note:: **Hinweis:** Um die Funktionen unterhalb nutzen zu können, muss der Symfony Swiftmailer korrekt eingerichtet sein. Bitte überprüfen Sie Ihre lokale Symfony-Version und nutzen Sie die offizielle Symfony-Dokumentation zur Einrichtung des Tools: https://symfony.com/doc/current/mailer.html
 
 Passwort vergessen
 ------------------
@@ -61,7 +61,7 @@ Adresse angeben kann.
 .. image:: ../../../../en/functions/backend/FOM/user_self_register.png
 
 Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung
-abschließen kann. Bis zu diesen Zeitpunkt ist er als inaktiver Nutzer in
+abschließen kann. Bis zu diesem Zeitpunkt ist er als inaktiver Nutzer in
 Mapbender hinterlegt.
 
 Die Texte der Bestätigungsmail können unter

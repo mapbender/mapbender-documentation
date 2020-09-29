@@ -3,7 +3,7 @@
 Layersets und Layerset-Instanzen
 ********************************
 
-Ein Layerset ist ein logischer Container, die einen oder mehrere Layerset-Instanzen (WMS Dienste) beinhalten kann. Ein typisches Beispiel sind die Unterscheidung in den Layerset "main" für die Hauptkarte und "overview" für die Übersichtskarte. Sie können weitere Layersets definieren, die optional in der Karte dargestellt werden oder auch im Layertree als eigener Ordner erscheinen (thematische Layer).
+Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS Dienste) beinhalten kann. Ein typisches Beispiel sind die Unterscheidung in den Layerset "main" für die Hauptkarte und "overview" für die Übersichtskarte. Sie können weitere Layersets definieren, die optional in der Karte dargestellt werden oder auch im Layertree als eigener Ordner erscheinen (thematische Layer).
 
 .. image:: ../../../figures/mapbender3_service_edit.png
            :scale: 80
@@ -63,9 +63,9 @@ Diese Unterscheidung hat ihre Ursprünge in der Art und Weise wie WMS-Dienste un
 
 Die `OGC Referenzimplementierung eines WMS <http://www.opengeospatial.org/standards/wms/quickstart>`_ beschreibt den Aufbau eines Beispiel WMS unter: `http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3 <http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3>`_
 
-Dieser WMS zeigt einige Punkt, Linien und Flächenobjekte und Rasterbilder an. Das Capabilities Dokument listet dabei die Bilddaten (z.B. DTM) weiter oben als die Punkte (z.B. osm_points als vorletzter Layer). Dieses Prinzip übernimmt der Mapbender sowohl in den DataSources, wo der Dienst in Mapbender eingeladen und registriert wird als auch in den Layerset-Instanzen.
+Dieser WMS zeigt einige Punkt-, Linien- und Flächenobjekte und Rasterbilder an. Das Capabilities Dokument listet dabei die Bilddaten (z.B. DTM) weiter oben als die Punkte (z.B. osm_points als vorletzter Layer). Dieses Prinzip übernimmt der Mapbender sowohl in den DataSources, wo der Dienst in Mapbender eingeladen und registriert wird als auch in den Layerset-Instanzen.
 
-Im Layerbaum dreht sich dann aber die Reihenfolge um, da aus unserer Erfahrung der Benutzer es gewohnt ist, dass der Layer, der im Layerbaum weiter oben steht auch als oberster Layer gezeichnet wird. Diese Erfahrung hat ein Benutzer auch, wenn er ein Desktop-GIS nutzt. Punkte sind dann im Layerbaum weiter oben und Rasterdaten weiter unten.
+Im Layerbaum dreht sich dann aber die Reihenfolge um, da aus unserer Erfahrung der Benutzer es gewohnt ist, dass der Layer, der im Layerbaum weiter oben steht, auch als oberster Layer gezeichnet wird. Diese Erfahrung hat ein Benutzer auch, wenn er ein Desktop-GIS nutzt. Punkte sind dann im Layerbaum weiter oben und Rasterdaten weiter unten.
 
 Der `QGIS Server <https://www.qgis.org/>`_ verhält sich hier aber anders. Einen WMS kann man mithilfe der QGIS-Projektdatei sehr einfach auf einen QGIS Server deployen und die Reihenfolge der Layer in den WMS Capabilities ist dann gleich der Reihenfolge, die man im eigenen QGIS-Projekt genutzt hat. Also generell: Punkte oben, weiter darunter die Linien, dann zum Schluß die Polygondaten oder Rasterbilder. QGIS und QGIS Server sind dabei nicht die einzigen Programme, die das so machen, aber die besten. Für den GetMap Aufruf ist das dann wieder irrelevant, da dort die Art und Weise der Aufrufe und wie diese dann an den Klienten zurückgesendet werden in der WMS-Spezifikation geklärt ist.
 
@@ -120,9 +120,9 @@ Hinweise zu den Auswirkungen der einzelnen Konfigurationen
 Basesources
 -----------
 
-Es gibt viele Möglichkeiten den Layertree zu füllen und mit Basisdiensten zu arbeiten:
+Es gibt viele Möglichkeiten, den Layertree zu füllen und mit Basisdiensten zu arbeiten:
 - Z.B. durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
-- Oder auch mit den Möglichkeiten des `thematischen Layerbaums <../basic/layertree>`_ zu arbeiten, verschiedene Layersets anlegen und die Basisdienste und thematische Diensten dort verteilen und im Layerbaum unterscheiden.
+- Oder auch mit den Möglichkeiten des `thematischen Layerbaums <../basic/layertree>`_ zu arbeiten, verschiedene Layersets anzulegen und die Basisdienste und thematischen Dienste dort zu verteilen und im Layerbaum zu unterscheiden.
 
 Für welche Möglichkeit Sie sich entscheiden, hängt ganz von Ihren Vorlieben ab.
 

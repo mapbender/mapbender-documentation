@@ -599,7 +599,7 @@ Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu d
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
 
-Bei jedem Eingabefeldkönnen unabhänig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit kann man beispielsweise wichtige Felder hervorheben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld füllen.
+Bei jedem Eingabefeld können unabhängig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit kann man beispielsweise wichtige Felder hervorheben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld füllen.
 
 Verhaltensparameter:
 
@@ -885,7 +885,7 @@ Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Au
 Koordinaten (type coordinates)
 ------------------------------
 
-Um ein visuelles Feedback zu erhalten, Koordinaten manuell eingeben zu können, oder diese manuell nachzubessern kann für Punkt-Geometrien das *coordinates* Element eingebunden werden.
+Um ein visuelles Feedback zu erhalten, Koordinaten manuell eingeben zu können oder diese manuell nachzubessern, kann für Punkt-Geometrien das *coordinates* Element eingebunden werden.
 
 .. image:: ../../../figures/digitizer_coordinates.png
      :scale: 80
@@ -965,7 +965,7 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
 
 * **src**: Url-Pfad oder Dateipfad (kann relativer Pfad sein)
 * **name**: Url-Pfad oder Dateipfad wird aus der Tabellenspalte übernommen (kann kein relativer Pfad sein)
-* Anagbe von **name** und **src** zusammen: Der Inhalt der Datenbankspalte aus name wird genommen. Falls die Spalte leer ist wird die src-Angabe genutzt.
+* Angabe von **name** und **src** zusammen: Der Inhalt der Datenbankspalte aus name wird genommen. Falls die Spalte leer ist wird die src-Angabe genutzt.
 
 
 .. code-block:: yaml
@@ -1004,7 +1004,7 @@ Werkzeugliste:
 * **removeSelected** - die selektierten Geometrien löschen (experimentell). Löscht alle in der Karte selektierten Objekte.
 * **removeAll** - Vorsicht: alle Geometrien aus der Tabelle löschen
 
-Definition der für die Erfassung verwendeten Toolset Typen
+Definition der für die Erfassung verwendeten Toolset Typen:
 
 .. code-block:: yaml
 
@@ -1103,7 +1103,7 @@ Karten-Refresh nach Speichern
 
 Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option ``refreshLayersAfterFeatureSave`` aktiviert werden. Über diesen Parameter werden die definierten Layer-Instanzen aus dem Map-Element neu geladen. Damit werden Änderungen in WMS-Diensten direkt in der Karte sichtbar. Dieses Event wird nur gestartet, wenn der Speichern Knopf aus dem Attributdialog verwendet wird.
 
-Wenn YAML-Anwendung unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
+Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
 
 
 .. image:: ../../../figures/digitizer/layerinstance_id.png
