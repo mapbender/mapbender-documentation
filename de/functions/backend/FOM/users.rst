@@ -71,7 +71,7 @@ Die Texte der Bestätigungsmail können unter
 Aktivieren von Nutzern
 ----------------------
 
-Seit Mapbender 3.0.5.3. Benutzer können von Administratoren mit mindestens
+Seit Mapbender 3.0.5.3. können Benutzer von Administratoren mit mindestens
 der Benutzer ACL-Rolle "edit" aktiviert oder deaktiviert werden. Dazu dient
 der Schalter im Edit User Dialog.
 
@@ -80,7 +80,7 @@ oder deaktivieren.
 
 .. image:: ../../../../en/functions/backend/FOM/edit_user_activated.png
 
-Ein Benutzer, der deaktiviert ist, kann sich nicht mehr am Mapbender
+Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender
 anmelden, bis er wieder aktiviert wird.
 
 .. image:: ../../../../en/functions/backend/FOM/user_account_is_disabled.png
