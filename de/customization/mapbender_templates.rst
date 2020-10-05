@@ -33,12 +33,12 @@ Das Fullscreen Template bietet eine Sidepane an, innerhalb derer Elemente in unt
 
 - "Accordion" zeigt alle hinzugefügten Elemente in Reitern:
 
-.. image:: ../../../figures/de/sidepane_accordion.png
+.. image:: ../../../figures/sidepane_accordion.png
      :scale: 80
 
 - "Buttons" zeigt alle hinzugefügten Elemente über Buttons:
 
-.. image:: ../../../figures/de/sidepane_buttons.png
+.. image:: ../../../figures/sidepane_buttons.png
      :scale: 80
 
 - "None" verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an:
