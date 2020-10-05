@@ -8,7 +8,7 @@ Datenbank Repository gespeichert. Die Entität hält nur die notwendigen
 Informationen über einen Nutzer vor, komplexere Benutzerdaten sollten in
 Benutzerprofilen hinterlegt werden (TBD).
 
-Das Bundle enthält alle Mittel um Benutzer durch einen Administrator zu
+Das Bundle enthält alle Mittel, um Benutzer durch einen Administrator zu
 verwalten als auch das eigene Registrieren eines Nutzers sowie das
 Zurücksetzen des eigenen Passwortes.
 
