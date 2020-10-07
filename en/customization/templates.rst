@@ -3,7 +3,7 @@
 How to create your own Template?
 ################################
 
-Mapbender comes with application templates out of the box, you can find them in the Mapbender CoreBundle (``/application/mapbender/src/Mapbender/CoreBundle/Template``). But usually you want to use your own templates with your own corporate design.
+Mapbender comes with application templates out of the box, you can find them in the Mapbender CoreBundle ``/application/mapbender/src/Mapbender/CoreBundle/Template``. But usually you want to use your own templates with your own corporate design.
 
 To prevent overwriting your custom templates after an Mapbender upgrade you should create an extra bundle to safely store your custom files.
 
@@ -32,7 +32,7 @@ To help you we prepared a Workshop/DemoBundle, which can be used not only for ap
 Create your own bundle
 ~~~~~~~~~~~~~~~~~~~~~~
 
-User bundles are stored in the src-directory (/application/src).
+User bundles are stored in the src-directory ``/application/src``.
 
 This is how the structure can look like:
 
@@ -248,7 +248,7 @@ You only have to define the parts that have to look different than the default p
 
 Firebug can help you to find out the styles you want to change.
 
-Referencing the CSS-files is possible with FOMManagerBundle and FOMUserBundle. They must be filed under app/Resources/. The already contained twig-files overwrite the default settings if configured correctly (Requirements from manager.html.twig file).
+Referencing the CSS-files is possible with FOMManagerBundle and FOMUserBundle. They must be filed under ``app/Resources/``. The already contained twig-files overwrite the default settings if configured correctly (Requirements from manager.html.twig file).
 Alternatively, it is possible to copy a twig-file and adjust it afterwards.
 
  .. code-block:: bash
