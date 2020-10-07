@@ -3,7 +3,7 @@
 Wie werden eigene Style-Vorlagen (templates) erzeugt?
 #####################################################
 
-Mapbender beinhaltet bereits Anwendungs-Vorlagen, sie befinden sich im Mapbender CoreBundle `Template`-Verzeichnis (``/application/mapbender/src/Mapbender/CoreBundle/Template``). 
+Mapbender beinhaltet bereits Anwendungs-Vorlagen, sie befinden sich im Mapbender CoreBundle `Template`-Verzeichnis ``/application/mapbender/src/Mapbender/CoreBundle/Template``. 
 Häufig sollen jedoch eigene Anwendungs-Vorlagen und Administrationsoberflächen mit eigenem Corporate Design verwendet werden.
 Um Probleme bei einem Upgrade zu vermeiden, sollte für personalisierte Oberflächen ein eigenes Bundle verwendet werden.
 
@@ -33,7 +33,7 @@ Sie können sich die Dateien unter folgendem Link herunterladen:
 Erzeugen eines eigenen Bundles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Anwender-Bundles werden im src-Verzeichnis (/application/src) abgelegt.
+Anwender-Bundles werden im src-Verzeichnis ``/application/src`` abgelegt.
 
 Die Struktur eines Bundles kann wie folgt aussehen:
 
@@ -229,7 +229,7 @@ Beim Laden der neuen Anwendung wird eine CSS-Datei im web/assets-Verzeichnis ang
 
 * ``web/assets/WorkshopDemoBundle__demo_fullscreen__css.css``
 
-Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter web/assets generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
+Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter ``web/assets`` generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
 
 .. code-block:: bash
 
@@ -248,7 +248,7 @@ Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche
 
 Es muss lediglich das css definiert werden, das vom Standard der Administrationsoberfläche abweicht.
 
-Auf die CSS-Dateien wird über das FOMManagerBundle und FOMUserBundle referenziert. Diese müssen unter app/Resources/ abgelegt werden. Die bereits enthaltenen Twig-Dateien überschreiben nach der erfolgreichen Einrichtung die Standard-Einstellungen (Vorgaben aus der manager.html.twig Datei).
+Auf die CSS-Dateien wird über das FOMManagerBundle und FOMUserBundle referenziert. Diese müssen unter ``app/Resources/`` abgelegt werden. Die bereits enthaltenen Twig-Dateien überschreiben nach der erfolgreichen Einrichtung die Standard-Einstellungen (Vorgaben aus der manager.html.twig Datei).
 Alternativ kann auch die bisherige Twig-Datei kopiert und angepasst werden.
 
 .. code-block:: bash
