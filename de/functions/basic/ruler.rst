@@ -31,7 +31,7 @@ YAML-Definition:
    type: 'line'       # Wählen Sie Typ 'line' oder 'area'
    immediate: 'false' # true: Zeige die errechneten Längen sofort an. false: Die errechneten Längen werden erst nach Klick angezeigt. Default: False.
 
-Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :ref:`button_de`.
+Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
 Für die Nutzung von beiden Funktionen (Flächen- und Linien messen) in einer Anwendung brauchen Sie zwei Buttons, die in einer Gruppe sind.
 
 Class, Widget & Style

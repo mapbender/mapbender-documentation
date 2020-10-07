@@ -8,7 +8,7 @@ Datenbank Repository gespeichert. Die Entität hält nur die notwendigen
 Informationen über einen Nutzer vor, komplexere Benutzerdaten sollten in
 Benutzerprofilen hinterlegt werden (TBD).
 
-Das Bundle enthält alle Mittel um Benutzer durch einen Administrator zu
+Das Bundle enthält alle Mittel, um Benutzer durch einen Administrator zu
 verwalten als auch das eigene Registrieren eines Nutzers sowie das
 Zurücksetzen des eigenen Passwortes.
 
@@ -18,7 +18,7 @@ reißen, können Sie mit diesem Benutzer alles verwalten. Und falls Sie gar
 die Anmeldedaten vergessen haben sollten, können Sie über ein app/console
 Kommando den Benutzer zurücksetzen: fom:user:resetroot.
 
-.. note:: **Hinweis:** Um die Funktionen unterhalb nutzen zu können muss der Symfony Swiftmailer korrekt eingerichtet sein. Bitte überprüfen Sie Ihre lokale Symfony-Version und nutzen Sie die offizielle Symfony-Dokumentation zur Einrichtung des Tools: https://symfony.com/doc/current/mailer.html
+.. note:: **Hinweis:** Um die Funktionen unterhalb nutzen zu können, muss der Symfony Swiftmailer korrekt eingerichtet sein. Bitte überprüfen Sie Ihre lokale Symfony-Version und nutzen Sie die offizielle Symfony-Dokumentation zur Einrichtung des Tools: https://symfony.com/doc/current/mailer.html
 
 Passwort vergessen
 ------------------
@@ -61,7 +61,7 @@ Adresse angeben kann.
 .. image:: ../../../../en/functions/backend/FOM/user_self_register.png
 
 Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung
-abschließen kann. Bis zu diesen Zeitpunkt ist er als inaktiver Nutzer in
+abschließen kann. Bis zu diesem Zeitpunkt ist er als inaktiver Nutzer in
 Mapbender hinterlegt.
 
 Die Texte der Bestätigungsmail können unter
@@ -71,7 +71,7 @@ Die Texte der Bestätigungsmail können unter
 Aktivieren von Nutzern
 ----------------------
 
-Seit Mapbender 3.0.5.3. Benutzer können von Administratoren mit mindestens
+Seit Mapbender 3.0.5.3. können Benutzer von Administratoren mit mindestens
 der Benutzer ACL-Rolle "edit" aktiviert oder deaktiviert werden. Dazu dient
 der Schalter im Edit User Dialog.
 
@@ -80,7 +80,7 @@ oder deaktivieren.
 
 .. image:: ../../../../en/functions/backend/FOM/edit_user_activated.png
 
-Ein Benutzer, der deaktiviert ist, kann sich nicht mehr am Mapbender
+Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender
 anmelden, bis er wieder aktiviert wird.
 
 .. image:: ../../../../en/functions/backend/FOM/user_account_is_disabled.png
