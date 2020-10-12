@@ -105,7 +105,7 @@ Verzeichnisse
 
 * **print templates:** Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
 
-* **Standardverzeichnisse Druck**: Die Druckdateien werden in dem Standard-Downloadordner ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
+* **Standardverzeichnisse Druck**: Die Druckdateien werden in dem Standard-Downloadordner Ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
 
 Erstellen einer individuellen Vorlage
 =====================================
@@ -126,7 +126,7 @@ Die folgenden Bereiche liegen standardmäßig in Mapbender vor:
 * dynamic_image (dynamisches Bild - gekoppelt an die Gruppe)
 * dynamic_text (dynamischer Text - gekoppelt an die Gruppe)
 
-Optionale Felder (z.B. Titel, Kommentar, Bearbeiter) können über die Element-Konfiguration definiert werden. Diese müssen im nicht druckbaren Bereich einfügt werden, sodass Sie nicht in der Vorlage-PDF ausgegeben werden.
+Optionale Felder (z.B. Titel, Kommentar, Bearbeiter) können über die Element-Konfiguration definiert werden. Diese müssen im nicht druckbaren Bereich einfügt werden, sodass sie nicht in der Vorlage-PDF ausgegeben werden.
 
 Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen haben, z.B. das Kommentarfeld **comment1** muss auch in der Vorlage **comment1** heißen. Zum Benennen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Felder müssen selektiert und über **Menü: Format --> Name...** angepasst werden.
 
@@ -191,7 +191,7 @@ Auf der zweiten Seite erscheint das eingefügte Logo.
 Farbige Texte
 =============
 
-Der Text der Druckvorlage kann vielfältig angepasst werden. Neben der Schriftgröße besteht die Möglichkeit die Farbe des Textes zu verändern. Hierfür wird ein Textfeld erzeugt **Menü: Einfügen -> Textfeld**. Soll der Text als dynamisches Element eingebunden werden, wird dieser auf der vorher festgelegten nicht druckbaren Ebene eingefügt und benannt. Hier wurde als Beispiel das dynamische Element "title" gewählt. Um den Text oder den Platzhalter zu färben, Text innerhalb des Textfeldes (hier: "title") markieren. Die Änderung der Farbe kann rechts neben der Vorlage unterhalb des Reiters **Eigenschaften -> Zeichen** vorgenommen werden.
+Der Text der Druckvorlage kann vielfältig angepasst werden. Neben der Schriftgröße besteht die Möglichkeit, die Farbe des Textes zu verändern. Hierfür wird ein Textfeld erzeugt **Menü: Einfügen -> Textfeld**. Soll der Text als dynamisches Element eingebunden werden, wird dieser auf der vorher festgelegten nicht druckbaren Ebene eingefügt und benannt. Hier wurde als Beispiel das dynamische Element "title" gewählt. Um den Text oder den Platzhalter zu färben, Text innerhalb des Textfeldes (hier: "title") markieren. Die Änderung der Farbe kann rechts neben der Vorlage unterhalb des Reiters **Eigenschaften -> Zeichen** vorgenommen werden.
 
 .. image:: ../../../figures/print_client_example_colour_nav.png
      :scale: 80
@@ -239,13 +239,13 @@ Druck von Information für ein ausgewähltes Objekt
 
 Es können Informationen zu einem ausgewählten Objekt ausgedruckt werden. Ein Objekt kann über die Digitalisierung (Digitizer) oder die Informationsabfrage (FeatureInfo) selektiert werden.
 
-Der feature_type-name und die selektierte object-id wird an den Druck weitergeleitet. Dadurch erhält Mapbender alle Informationen, um zu selektierten Objekten die Sachdaten zu ermitteln und in Feldern im Drucktemplate auszugeben. Im Drucktemplate wurde festgelegt, welche Daten ausgegeben werden sollen.
+Der feature_type-name und die selektierte object-id wird an den Druck weitergeleitet. Dadurch erhält Mapbender alle Informationen, um zu den selektierten Objekten die Sachdaten zu ermitteln und in Feldern im Drucktemplate auszugeben. Im Drucktemplate wurde festgelegt, welche Daten ausgegeben werden sollen.
 
 Im Folgenden wird beschrieben, wie dieses Verhalten konfiguriert werden kann. Die Dokumentation bezieht sich auf die poi-Tabelle, die im digitizer-Beispiel verwendet wird.
 
 Sie finden die Konfiguration und ein Beispiel-Drucktemplate im  Workshop/DemoBundle unter https://github.com/mapbender/mapbender-workshop
 
-Die folgenden Schritte sind müssen durchgeführt werden:
+Die folgenden Schritte müssen durchgeführt werden:
 
 1. Erzeugen eines Drucktemplates, das auf die Objektspalten verweist
 2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der config.yml
@@ -307,7 +307,7 @@ Der folgende Code ist ein Beispiel für ein MapServer FeatureInfo-Template.
 
 Die Informationsabfrage (FeatureInfo) öffnet einen Dialog mit dem Link *print feature information*. Mit Klick auf den Link, öffnet sich ein Druckdialog, der das Drucktemplate für das selektierte Objekt anbietet.
 
-Das gewünschte Gebiet kann auswählt werden und ein PDF erzeugt. Das PDF beinhaltet die Informationen für das selektierte Objekt.
+Das gewünschte Gebiet kann auswählt und ein PDF erzeugt werden. Das PDF beinhaltet die Informationen für das selektierte Objekt.
 
 
 4. Oder Aufruf des Drucks über die Digitalisierung

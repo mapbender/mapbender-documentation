@@ -128,7 +128,7 @@ Tragen Sie den folgenden XML-Block in die Datei ein:
     <solr></solr>
 
 
-Die solr.xml identifiziert das Verzeichniss als Solr-Ordner mit den Cores. Hier können auch die eigenen Solr-Cores abgelegt werden. Da wir jedoch unabhängig von der Solr-Version arbeiten wollen legen wir uns im folgenden ein separates Verzeichniss mit den Kernen an. Falls Sie diesen Schritt nicht durchführen wollen, dann führen Sie die folgende Anleitung in dem Verzeichnis solr-5.4.1/server/solr/ durch. 
+Die solr.xml identifiziert das Verzeichniss als Solr-Ordner mit den Cores. Hier können auch die eigenen Solr-Cores abgelegt werden. Da wir jedoch unabhängig von der Solr-Version arbeiten wollen, legen wir uns im folgenden ein separates Verzeichniss mit den Kernen an. Falls Sie diesen Schritt nicht durchführen wollen, dann führen Sie die folgende Anleitung in dem Verzeichnis solr-5.4.1/server/solr/ durch. 
 
 
 Eigener Solr-Core
@@ -217,7 +217,7 @@ Nun können Sie Solr mit den eigenen Kernen neustarten. Nutzen Sie dazu den obig
 Solr example
 ------------
 
-Das Verzeichnis /solr-5.4.1/example enthält Beispiele für Solr. Jedes Beispiel ist in einem seperaten Verzeichnis abgelegt. Um ein bestimmtes Beispiel auszuführen, geben Sie den folgenden Befehl im Terminal ein:
+Das Verzeichnis /solr-5.4.1/example enthält Beispiele für Solr. Jedes Beispiel ist in einem separaten Verzeichnis abgelegt. Um ein bestimmtes Beispiel auszuführen, geben Sie den folgenden Befehl im Terminal ein:
 
 .. code-block:: yaml
 
@@ -240,7 +240,7 @@ Das Standardverzeichnis für die Cores ist /data/solr-5.4.1/server/solr; dieses 
 
 /data/solr-5.4.1/server/solr/configsets: 
 
-* Diese Verzeichnis enthält verschiedene Konfigurationsoptionen, um Solr auszuführen.
+* Dieses Verzeichnis enthält verschiedene Konfigurationsoptionen, um Solr auszuführen.
 * basic_configs: Basiskonfiguration für eine minimale Solr-Ausführung.
 * Beispiel liegt unter /data/solr-5.4.1/server/solr/configsets/basic_configs
 

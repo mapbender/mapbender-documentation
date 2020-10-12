@@ -3,7 +3,7 @@
 POI (Treffpunkt)
 **************************
 
-Generiert POI-URLs (Treffpunkt-URLS), verwendbar für das Verschicken eines Koordinatenpunkts per eMail. Dabei wird der übermittelte Punkte in das Koordinatensystem der Karte projeziert und angezeigt.
+Generiert POI-URLs (Treffpunkt-URLS), verwendbar für das Verschicken eines Koordinatenpunkts per E-Mail. Dabei wird der übermittelte Punkte in das Koordinatensystem der Karte projeziert und angezeigt.
 
 .. image:: ../../../figures/de/poi.png
      :scale: 80
