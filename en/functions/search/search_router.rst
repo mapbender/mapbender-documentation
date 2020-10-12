@@ -3,7 +3,7 @@
 Search Router
 *************
 
-This element creates a configurable search formular with result output. At this time generic SQL search is supported, with more to come (WFS, Solr, ...).
+This element creates a configurable search formular with result output. At this point of time generic SQL search is supported, with more to come (WFS, Solr, ...).
 
 .. image:: ../../../figures/search_router_en.png
      :scale: 80
@@ -24,9 +24,9 @@ Configuration
 * **Title**: Search Title (appears, when a search is added to Routes by using +)
 * **Configuration**: Field to configure the search (ppears, when a search is added to Routes by using +)
 
-You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox where you can choose the search you want to use, and a ``configuration``. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
+You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox. From there you can choose the search you want to use and a ``configuration``. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
-The element may be integrated into the sidepane or as a button into the toolbar. To configure a button visit the documentation at :ref:`button`
+The element may be integrated into the sidepane or as a button into the toolbar. To configure a button visit the documentation at :ref:`button`.
 
 **Tip:**
 The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at `database :ref:`yaml_en:`.
@@ -84,7 +84,7 @@ Example with different selection options via dropdown:
 Comparison Mode
 ---------------
 
-For every field a comparison mode can be set, which should be used by the engine when the query is send. The SQL search engine has the following modes:
+For every field a comparison mode can be set, which should be used by the engine when the query is sent. The SQL search engine has the following modes:
 
 * **exact:** exact comparison (key = val)
 * **iexact:** comparison ignoring cases (case-insensitive)
@@ -100,12 +100,12 @@ For every field a comparison mode can be set, which should be used by the engine
 Styling the Results
 -------------------
 
-By default the results are shown in the default-OpenLayers Style, orange for hits and blue fo selected objects. The OpenLayer default Styling looks like this:
+By default the results are shown in the default-OpenLayers Style, orange for hits and blue for selected objects. The OpenLayer default Styling looks like this:
 
 .. image:: ../../../figures/de/search_router_example_colour_orangeblue.png
      :scale: 80
 
-You can overwride this by handing over a styleMap-Configuration, which could look like this:
+You can overwrite this by handing over a styleMap-Configuration, which could look like this:
 
 .. code-block:: yaml
 
@@ -137,16 +137,16 @@ Three different styles are configured:
 
 - **default**: The standard-style for all results
 - **select**: The style used if a result is clicked.
-- **temporary**: The styles used if you hover with the mouse-pointer over a result.der Tabelle bewegt.
+- **temporary**: The styles used if you hover with the mouse-pointer over a result.
                
-This will not draw the point-symbol interiors, since the transparency is set to Zero (fillOpacity: 0). Only their outlines will be drawn in green. The selected features will be drawn here in with a purple fill and an opacity of 0.8. The stroke-Color is a blue line. The temporary symbols on mouse-hover are opaque blue points. The following screenshot shows this design:
+This will not draw the point-symbol interiors, since the transparency is set to zero (fillOpacity: 0). Only their outlines will be drawn in green. The selected features will be drawn in here with a purple fill and an opacity of 0.8. The stroke-Color is a blue line. The temporary symbols on mouse-hover are opaque blue points. The following screenshot shows this design:
 
 .. image:: ../../../figures/de/search_router_example_colour_purplegreen.png
      :scale: 80
 
-The default settings override the OpenLayers-Default Settings, so you only have to state the things you want to overwride. If you state nothing, the default OpenLayer style will be used.
+The default settings override the OpenLayers-Default Settings, so you only have to state the things you want to overwrite. If you state nothing, the default OpenLayer style will be used.
 
-The select-style works the same way. Any statement you make woll overwrite the settings of the *final* default style.
+The select-style works the same way: Any statement you make will overwrite the settings of the *final* default style.
 
 Note, that the hexadeximal color values have to be stated in quotation marks, because the #-Symbol would be interpreted as a comment instead.
 
@@ -169,7 +169,7 @@ The confguration dialouge for this example looks like this:
 .. image:: ../../../figures/search_router_example_dialog.png
      :scale: 80
 
-The element title (*Title*) is Search. It is againg diplayed as a title in the sidepane. The checkbox is unchecked, because the element is is implemented into the sidepane and not as a button. The *Timeout factor* is set to 2. The fields *Width* and *Height* are filled, but they wont be used in this application, because the element is configured in the sidepane. It is implemented via the ``+`` -Symbol and *Routes* into the search, called (*Title*) Mapbender User. The yaml-Configuration of the Element is written in *Configuration*. In Completion it reads:
+The element title (*Title*) is Search. It is again displayed as a title in the sidepane. The checkbox is unchecked, because the element is implemented into the sidepane and not as a button. The *Timeout factor* is set to 2. The fields *Width* and *Height* are filled, but they won't be used in this application, because the element is configured in the sidepane. It is implemented via the ``+`` -Symbol and *Routes* into the search, called (*Title*) Mapbender User. The yaml-Configuration of the Element is written in *Configuration*. In Completion it reads:
 
 .. code-block:: yaml
 
@@ -245,7 +245,7 @@ This picture illustrates which consequences the configurations in the yaml-defin
 .. image:: ../../../figures/search_router_example_search_description.png
      :scale: 80
 
-Displayed is the excerpt of the yaml-definition configureing the formula. Columns orga, town and usertype are used in the formula and implemented as the fields Mapebender User, Town and Usertype. Mapbender User and Town are type text, Usertype can be of various types. The text that should be displayed, if nothing is selected yet, is here "Please select…" (Nr. **1** – empty_value: ‚Please select...‘). The title above these fields is set with label (Nr. **2**). The attribute data-autocomplete: ‚on‘ results in a dropdown menu with recommendations from the database (Nr. **3**). Because compare: ilike is enabled it is not necessary to write the exact word. The search will find results that are only similar to the written term (Nr. **4** – Wheregr (the g is lowercase, nevertheless WhereGroup with uppercase G was found). The fieldtype choice is variable, possibilities are defined in choices (Nr. **5**). The table contains the possibilities as numbers (1, 2, 3, 4). In this example every number represents a text, which should be displayed in the dropdown menu.
+Displayed is the excerpt of the yaml-definition configuring the formula. Columns orga, town and usertype are used in the formula and implemented as the fields Mapebender User, Town and Usertype. Mapbender User and Town are type text, Usertype can be of various types. The text that should be displayed here, if nothing is selected yet, is "Please select…" (Nr. **1** – empty_value: ‚Please select...‘). The title above these fields is set with a label (Nr. **2**). The attribute data-autocomplete: ‚on‘ results in a dropdown menu with recommendations from the database (Nr. **3**). Because compare: ilike is enabled it is not necessary to write the exact word. The search will find results that are only similar to the written term (Nr. **4** – Wheregr (the g is lowercase, nevertheless WhereGroup with uppercase G was found). The fieldtype choice is variable, possibilities are defined in choices (Nr. **5**). The table contains the possibilities as numbers (1, 2, 3, 4). In this example every number represents a text, which should be displayed in the dropdown menu.
 
 A complete search for the Mapbender User WhereGroup, in the Town Bonn, of the Usertype Company and the found results will look like this:
 

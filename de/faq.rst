@@ -70,7 +70,7 @@ A: Mittels des PHP-Parameters `max-input_vars <http://php.net/manual/de/info.con
 Meine Anwendung kann nicht kopiert werden
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Ich habe eine komplexe Anwendung und möchte Sie kopieren. Das schlägt fehl.
+F: Ich habe eine komplexe Anwendung und möchte sie kopieren. Das schlägt fehl.
 
 
 A: Eine mögliche Ursache ist, dass PHP nicht das Arbeiten mit großen Dateien (YAML-Export/Import, etc.) erlaubt. Das tritt v.a. bei Fast-CGI auf. Dafür dient der PHP Parameter MaxRequestLen, den Sie in der Konfiguration von FCGI anpassen können.

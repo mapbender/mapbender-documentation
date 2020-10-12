@@ -39,4 +39,4 @@ Mit Hife von Firebug können Sie die bestehende Definition ermitteln, in den css
 .. image:: ../../figures/css_editor_result_application.png
      :scale: 80
 
-Bis zur Mapbender Version 3.0.3.2 müssten eigene Templates mit css-Dateien erzeugt werden, um den Standardstil anzupassen. Der neue css-Editor ermöglicht es, einfach Stil-Anpassungen der Anwendung vorzunehmen. Die Dokumentation zur Erstellung eigener Templates finden Sie unter :doc:`Wie werden eigene Vorlagen (templates) erzeugt? <templates>`.
+Bis zur Mapbender Version 3.0.3.2 mussten eigene Templates mit css-Dateien erzeugt werden, um den Standardstil anzupassen. Der neue css-Editor ermöglicht es, einfach Stil-Anpassungen der Anwendung vorzunehmen. Die Dokumentation zur Erstellung eigener Templates finden Sie unter :doc:`Wie werden eigene Vorlagen (templates) erzeugt? <templates>`.

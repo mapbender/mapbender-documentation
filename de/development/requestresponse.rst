@@ -16,7 +16,7 @@ Anwendungs Workflow
 ********************
 Die Standardanwendung controller /application/{slug} steuert die Mapbender\CoreBundle\Controller\Application::applicationAction($slug)-Funktion. Dieses funktioniert folgendermaßen:
 
-Grundsätzlich fragt der Controller den Mapbender-Service nach einer Anwendung mit dem gegebenen Namen Slug zu suchen. Zunächst sucht der Mapbender-Service die Anwendung in der Datenbank und nur, wenn er sie dort nicht findet, wird in den Anwendungen, die in der Konfigurations-YAML definiert sind, gesucht.
+Grundsätzlich fragt der Controller den Mapbender-Service, nach einer Anwendung mit dem gegebenen Namen Slug zu suchen. Zunächst sucht der Mapbender-Service die Anwendung in der Datenbank und nur, wenn er sie dort nicht findet, wird in den Anwendungen, die in der Konfigurations-YAML definiert sind, gesucht.
 
 Die dadurch geladene Entität der Klasse Mapbender\CoreBundle\Entity\Application wird mit ihrem Ursprung in dem Source-Attribut, das entweder Mapbender\CoreBundle\Entity\Application::SOURCE_YAML oder Mapbender\CoreBundle\Entity\Application::SOURCE_DB ist, getaggt. 
 
@@ -28,11 +28,11 @@ Zugriffsprüfungen werden nicht im Mapbender-Service, in der Entität oder in de
 
 Element-Rendering-Workflow
 **************************
-Bei dem Anwendungsrendering ist jedes Element aufgefordert, sich selbst zu rendern. Der Arbeitsablauf ist ein wenig kompliziert, aber grundsätzlich fragt die Anwendung ihre Vorlage, sich selbst zu rendern, welches die Vorlagen-Iteration für jedes Element und das Aufrufen der Elementrendering-Funktion beinhaltet.
+Bei dem Anwendungsrendering ist jedes Element aufgefordert, sich selbst zu rendern. Der Arbeitsablauf ist ein wenig kompliziert, aber grundsätzlich fragt die Anwendung Ihre Vorlage, sich selbst zu rendern, welches die Vorlagen-Iteration für jedes Element und das Aufrufen der Elementrendering-Funktion beinhaltet.
 
 Die Render-Funktion verwendet normalerweise Twig zum Rendern eines HTML-Fragments. Dieses Fragment muss ein ID-Attribut enthalten, das der ID des Elements dynamisch von der Mapbender-Anwendung gegeben wird. Da diese IDs dynamisch generiert werden, dürfen Sie diese nicht für das Styling in ihrer Element-CSS verwenden.
 
-Die Anwendung iteriert über jedes Element und ruft die getConfiguration-Methode auf, um alle Elementkonfiguration-Arrays zu sammeln, die clientsetig in der Mapbender.configuration.elements-Variable verfügbar sind .- sowie zu jeder Element Widget Konstruktionsmethode.
+Die Anwendung iteriert über jedes Element und ruft die getConfiguration-Methode auf, um alle Elementkonfiguration-Arrays zu sammeln, die clientseitig in der Mapbender.configuration.elements-Variable verfügbar sind .- sowie zu jeder Element Widget Konstruktionsmethode.
 
 Die Konfiguration der Elemente ist verfügbar:
 
@@ -44,7 +44,7 @@ Element Callback Workflow
 *************************
 Der übliche Element-Callback /application/{slug}/element/{id}/{action} wird an die Funktion  Mapbender\CoreBundle\Controller\ApplicationController::elementAction($slug, $id, $action) geleitet.
 
-Diese Funktion erledigt das gleiche wie applicationAction, um das Anwendungsobjekt zu erhalten. Dadurch wird der Zugriff auf die Anwendung geprüft. Es ist kein Zugriff auf das Element-Callback möglich, wenn der Benutzer nicht die Erlaubnis hat, die Anwendung zu verwenden.
+Diese Funktion erledigt das Gleiche wie applicationAction, um das Anwendungsobjekt zu erhalten. Dadurch wird der Zugriff auf die Anwendung geprüft. Es ist kein Zugriff auf das Element-Callback möglich, wenn der Benutzer nicht die Erlaubnis hat, die Anwendung zu verwenden.
 
 Das Element wird erneuert und der Zugriff auf das Element wird, basierend auf der Rolle des aktuellen Benutzers, geprüft.
 
@@ -76,7 +76,7 @@ Element Widgets können die Callback-URL zur Verwendung in ihrem Ajax-Aufruf kon
 Manager-Workflow
 ****************
 
-Manager-Module sind einfache Symfony Controller-Klassen. Um ihre Routen sicherzustellen sind Präfixe mit /manager – oder welche Präfixe auch immer für das Manager Bundle konfiguriert wurde, nötig. Sie sollten nicht die Sensio\FrameworkExtraBundle\Configuration\Route Annotation verwenden, sondern die spezielle FOM\ManagerBundle\Configuration\Route Annotation. Derzeit ist die Annotations-Klasse noch nicht sehr speziell, aber sie erlaubt dem ManagerBundle die Präfixe zu erzwingen.
+Manager-Module sind einfache Symfony Controller-Klassen. Um ihre Routen sicherzustellen, sind Präfixe mit /manager – oder welche Präfixe auch immer für das Manager Bundle konfiguriert wurden – nötig. Sie sollten nicht die Sensio\FrameworkExtraBundle\Configuration\Route Annotation verwenden, sondern die spezielle FOM\ManagerBundle\Configuration\Route Annotation. Derzeit ist die Annotations-Klasse noch nicht sehr speziell, aber sie erlaubt dem ManagerBundle, die Präfixe zu erzwingen.
 
 Am besten wird die Route-Annotation mit einem anderen Namen verwendet, um so das Debuggen zu erleichtern:
 

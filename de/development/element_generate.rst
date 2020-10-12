@@ -143,7 +143,7 @@ In der PHP-Datei finden Sie zahlreiche Funktionen. Ändern Sie den return-Wert d
 Registrierung des neuen Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ein Element kann registriert werden, indem es in der Funktion *getElements()* in der Datei src/Workshop/DemoBundle/WorkshopDemoBundle.php aufgeführt wird. Nach der Erstellung liegt diese Funktion vorerst nicht vor. Fügen Sie diese ein. Außerdem muss die Referenz zum MapbernderCoreBundle eingetragen werden (use Mapbender\\CoreBundle...). Sie müssen weiterhin angeben, dass die Klasse, das MapbenderBundle erweitert.
+Ein Element kann registriert werden, indem es in der Funktion *getElements()* in der Datei src/Workshop/DemoBundle/WorkshopDemoBundle.php aufgeführt wird. Nach der Erstellung liegt diese Funktion vorerst nicht vor. Fügen Sie diese ein. Außerdem muss die Referenz zum MapbernderCoreBundle eingetragen werden (use Mapbender\\CoreBundle...). Sie müssen weiterhin angeben, dass die Klasse das MapbenderBundle erweitert.
 
 Durch diesen Eintrag kann das Element im Backend bei der Anwendungskonfiguration ausgewählt werden.
 
@@ -176,7 +176,7 @@ Erstellen Sie eine Anwendung und fügen Sie das neue Element zu der Anwendung hi
 Ändern der Aktion des Klick-Ereignisses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wenn Sie ein map-click-Element erzeugen reagiert dieses auf das Klick-Ereignis mit einer Aktion. Diese Aktion kann modifiziert werden. Schauen Sie sich dazu die JQuery widget Datei an (mapbender/src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js). 
+Wenn Sie ein map-click-Element erzeugen, reagiert dieses auf das Klick-Ereignis mit einer Aktion. Diese Aktion kann modifiziert werden. Schauen Sie sich dazu die JQuery widget Datei an (mapbender/src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js). 
 
 Hier finden Sie die Funktion *_mapClickHandler()*, die die Koordinaten des Klick-Ereignisses ermittelt und an die Funktion *_mapClickWorker()* weitergibt. Standarmäßig gibt das neu generierte Element die Pixelposition und Koordinate des Klicks in einem Dialog aus.
 

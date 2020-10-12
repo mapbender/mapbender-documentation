@@ -3,7 +3,7 @@
 Konzept
 #######
 
-Dieses Kapitel gibt eine Einführung in das Konzept von Mapbender. Nach dem Lesen sollten Sie den Aufbau von Mapbender und ihre Interaktion verstehen.
+Dieses Kapitel gibt eine Einführung in das Konzept von Mapbender. Nach dem Lesen sollten Sie den Aufbau von Mapbender und Ihre Interaktion verstehen.
 
 Anwendung
 ===========
@@ -25,7 +25,7 @@ Jedes Element besteht aus vier Bereichen:
 
 * PHP Klasse - sie beschreibt das Element mit seinen Möglichkeiten. Die Klasse kann auch ein Ajax callback point bereit stellen, so dass das clientseitige Widget (siehe unten) Datenbankabfragen ausführen kann und die Ergebnisse beispielsweise anzeigen kann.
 * JavaScript Widget– dies ist der clientseitige Teil des Elements. Dieser Teil beinhaltet alles, was Sie am Bildschirm ausführen und mit dem Sie interagieren. Über Ajax kann dieser Teil den serverseitigen Gegenpart aufrufen und beispielsweise Datenbankabfragen ausführen.
-* Template – HTML, das das Element verwendet. In der einfachsten Version würde dies nur ein DIV-Tag sein. Aber es kann auch komplexer sein.
+* Template – HTML, dass das Element verwendet. In der einfachsten Version würde dies nur ein DIV-Tag sein. Aber es kann auch komplexer sein.
 * CSS - dient dem Styling der Elemente.
 
 Anwendungsvorlage

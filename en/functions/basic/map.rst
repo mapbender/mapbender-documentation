@@ -30,12 +30,12 @@ Configuration
 Configuration example
 =====================
 
-The Main Map element is included in the content section of the application menu. A map element can be added with the ``+`` -button.
+The main map element is included in the content section of the application menu. A map element can be added with the ``+`` -button.
 
 .. image:: ../../../figures/add_content.png
      :scale: 80
 
-All layersets can be included in the Main Map element if they are set in the layersets tab in the application backend before. In this example, these are the following:
+All layersets can be included in the main map element if they are set in the layersets tab in the application backend beforehand. For this example, those are the following:
 
 .. image:: ../../../figures/map_example_layersets.png
      :scale: 80
@@ -104,7 +104,7 @@ on the right side. Click on the icon and a popup window will appear.
      :scale: 80
 
 The first value lists the internal SourceID and SourceLayerId (31-591). The
-seconds value lists the InstanceID and InstanceLayerId, that we want to use
+seconds value lists the InstanceID and InstanceLayerId that we want to use
 now (73-836).
 
 Use this values for the "visibleLayers" parameter in your URL, and seperate them by a slash.
@@ -177,7 +177,7 @@ You can pass a favorite EPSG code you want to use on start of the application by
 Passing Center
 --------------
 
-You can pass a coordinate. The application will open and display the coordinate in the center. In this case, you also have to set the SRS
+You can pass a coordinate. The application will open and display the coordinate in the center. In this case, you also have to set the SRS.
 
 .. code-block:: php
 
@@ -187,7 +187,7 @@ You can pass a coordinate. The application will open and display the coordinate 
 More Start Parameters
 ---------------------
 
-The elments WMS Loader and WMC Loader provide also parameter you can user on start. Have a look at the element discription for further information.
+The elements WMS Loader and WMC Loader provide also parameter you can use on start. Have a look at the element description for further information.
 
 
 
