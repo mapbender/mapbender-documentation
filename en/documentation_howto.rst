@@ -70,7 +70,7 @@ Every language (en - english, de - german) has the same file structure.
 
 How to build the documentation via Sphinx?
 ******************************************
-We generate the webside code from the rst-files using Sphinx.
+We generate the website code from the rst-files using Sphinx.
 
 To build the website locally, you need to install Sphinx. In Debian-based distributions this is done via:
 
@@ -137,7 +137,7 @@ Quickstart
 The Mapbender Quickstart is a tutorial to get to know Mapbender. It is used on OSGeo-Live too http://live.osgeo.org.
 
 If you want to add a new lesson to the Quickstart:
- * add the subject of you lesson at the beginning of the document (This Quick Start describes how to: ...)
+ * add the subject of your lesson at the beginning of the document (This Quick Start describes how to: ...)
  * add the new lesson to the document and provide a screenshot if this makes sense
  * images are stored in the ../../../figures-directory
 

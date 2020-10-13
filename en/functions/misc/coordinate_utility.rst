@@ -13,7 +13,7 @@ Both functions can be accessed with one user-interface:
 .. image:: ../../../figures/coordinate_utility.png
      :scale: 80
 
-Both cases allow a dynamic coordinate-transofrmation so that also points in a different coordinate-system can be used.
+Both cases allow a dynamic coordinate-transformation so that also points in a different coordinate-system can be used.
 
 Additional you have the possibility to copy the coordinates into the clipboard.
 

@@ -379,7 +379,7 @@ Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.h
 Mapbender mobile
 ----------------
 
-For a mobile template on smatphones and tablets.
+For a mobile template on smartphones and tablets.
 
 Following functions are pre-implemented:
 
@@ -410,7 +410,7 @@ Export/import YAML application files over the user interface
 
 **Export**
 
-You can expport applications as JSON or YAML under **Applications --> Export**.
+You can export applications as JSON or YAML under **Applications --> Export**.
 
 .. image:: ../../figures/export.png
 

@@ -224,7 +224,7 @@ Now you can restart Solr with your own core. Use the command we mentioned above 
 Solr example
 ------------
 
-The directiory /solr-5.4.1/example contains Solr examples. Each example is contained in a 
+The directory /solr-5.4.1/example contains Solr examples. Each example is located in a 
 separate directory. To run a specific example, do:
 
 .. code-block:: bash
@@ -275,7 +275,7 @@ DataImportHandler
 
 Import records from a PostgreSQL-database using the Data Import Handler.
 
-Adaptation of the Data Connection in the configutation files under data/solr_data/places/config:
+Adaptation of the Data Connection in the configuration files under data/solr_data/places/config:
 
 * **solrconfig.xml**
 * **data-config.xml**

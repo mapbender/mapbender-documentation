@@ -207,11 +207,11 @@ The change of the font size works in an analogous manner.
 Dynamic images and dynamic texts
 ================================
 
-Dependent of a group, prints can be created with different logos and text (e.g. the name of the commune and the individual logo). There are two objects which handle this - ["dynamic_image" and "dynamic_text"]. If these objects exist in the print layout, [Mapbender and the user are members of a group. Mapbender will then] search for an image with the name of the group (groupname.png) and it will be displayed in the print in the object ["dynamic_image"]. The height of the object will be used to scale the image[,] the width will be calculated relative to the height. In the object ["dynamic_text"], the group description will be printed.
+Dependent on a group, prints can be created with different logos and texts (e.g. the name of the commune and the individual logo). There are two objects which can handle this: "dynamic_image" and "dynamic_text". If these objects exist in the print layout [Mapbender and the user are members of a group], Mapbender will then search for an image with the name of the group (groupname.png). The picture will be displayed in the print in the object ["dynamic_image"]. The height of the object will be used to scale the image[,] the width will be calculated relative to the height. In the object ["dynamic_text"] the group description will be printed.
 
 Depending on the group, the print can contain different images or descriptions (e.g. logo and name of the commune). This can be achieved through the dynamic elements "dynamic_image" and "dynamic_text". One can insert both elements in the ODG-print template on the non-printable layer and change their names (**Menu: Modify -> Name...**).
 
-**Note:** There will be printed only one dynamic image and dynamic text of a group description. In other words: Mapbender always takes the first group into account. If a user is member of both groups „intern“ and „Group 1“, then „intern.png“ is taken as dynamic image and the group description of „intern“ will be adopted into the dynamic text field.
+**Note:** Only one dynamic image and dynamic text of a group description will be printed. In other words: Mapbender always takes the first group into account. If a user is member of both groups „intern“ and „Group 1“, then „intern.png“ is taken as dynamic image and the group description of „intern“ will be adopted into the dynamic text field.
 
 The print with a group named "Group 1" could look like this:
 
@@ -220,8 +220,8 @@ The print with a group named "Group 1" could look like this:
 
 To use this feature, it is required that groups exist. How to create groups and users is described in the Mapbender documentation in the `Mapbender Quickstart <../../quickstart.html>`_.
 
-The description of the group will be displayed in the field "dynamic_text".
-The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. A good use case is e.g. a copyright message.
+The description of the group will be displayed in the field "dynamic_text" (e.g. copyright message).
+The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. 
 
 
 Printing feature information for a selected element
@@ -231,7 +231,7 @@ A feature can be selected via digitizer or Feature Info.
 
 The concept is to pass the feature_type-name and the selected object ID to the print. Mapbender will then get all the feature data for the selected object and will look for fields in the print template. If a print template field is defined, the data will be printed to this field.
 
-In the next steps it is described how this functionality can be configured. The documentation relies on the poi table that is used in the digitizer example.
+In the next steps it is described how this functionality can be configured. The documentation relies on the POI table that is used in the digitizer example.
 
 You find the configuration and an example print-template in the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop
 
@@ -246,9 +246,10 @@ There are some steps you have to follow:
 -------------------------------------------------------------
 
 Define text fields in the print template for every information you would like to print for the selected object. The text field name has always the prefix *feature.*, followed with the name of the attribute (column) to export.
+
 .. code-block:: yaml
 
-  feature.name for column name of table poi
+ feature.name for column name of table POI
 
 
 2. Define a featureType and refer to your new print template in your config.yml
@@ -317,7 +318,7 @@ Note: The flexibility to move the print frame won‘t stop you from choosing a r
 Queued Print
 ============
 
-The queued print is an experimental print feature for Mapbender which comes with an advanced background print system. Right now, it's still in experimental state due to several potential cache memory regenaration problems on more complex server structes. The queued print is implemented since Mapbender 3.0.8, but deactivated by default. If you choose to activate it, you can use the feature via command line (either manually or as a cronjob). Queued print helps improving resource-intense print jobs, because the queue can manage the print jobs more easily in the background (compared to direct print). In the meantime, you're free to work with Mapbender in other ways.
+The queued print is an experimental print feature for Mapbender which comes with an advanced background print system. Right now, it's still in experimental state due to several potential cache memory regeneration problems on more complex server structures. The queued print is implemented since Mapbender 3.0.8, but deactivated by default. If you choose to activate it, you can use the feature via command line (either manually or as a cronjob). Queued print helps improving resource-intense print jobs, because the queue can manage the print jobs more easily in the background (compared to direct print). In the meantime, you're free to work with Mapbender in other ways.
 
 
 1. Queued print: Configuration
@@ -368,7 +369,7 @@ To start the printing process, type in the bash command
 
     app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
 
-to execute a print process in the command line. This process starts all the jobs that are added into the print queue list automatically. Alternatively, you can choose to adjust the parameters and create a fitting cronjob. Terminate the process with 'CTRL + C'. If a print job is finished, it will be listet as "finished" in the status column of the list. Afterwards, the PDF button will open the printable PDF file.
+to execute a print process in the command line. This process starts all the jobs that are added into the print queue list automatically. Alternatively, you can choose to adjust the parameters and create a fitting cronjob. Terminate the process with 'CTRL + C'. If a print job is finished, it will be listed as "finished" in the status column of the list. Afterwards, the PDF button will open the printable PDF file.
 
 
 Memory Limits
@@ -377,7 +378,7 @@ Memory Limits
 1. Queued Print
 ---------------
 
-Print jobs can be resource intensive and may exceed you initially set php.ini memory limit. Therefore it is possible to increase the required memory limit manually. This is an advantage for users who are working with large print templates.
+Print jobs can be resource intensive and may exceed your initially set php.ini memory limit. Therefore it is possible to increase the required memory limit manually. This is an advantage for users who are working with large print templates.
 Note: Never reduce the memory limit.
 
 To increase the memory limits for the queued print, adjust `mapbender.print.queue.memory_limit` (string; default is 1G). Caution: This parameter does not allow 'null' as value.

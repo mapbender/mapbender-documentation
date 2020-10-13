@@ -33,7 +33,7 @@ The screenshot above shows the instance ``7/24`` based on a WMS service. The ass
 
 **The properties for the application**
 
-- **Opacity:** Choose the Opacity in percent. This value can be changed by the user in the  `Layertree <../basic/layertree>`_ , if it's made available in the corresponding menu.
+- **Opacity:** Choose the Opacity in percent. This value can be changed by the user in the  `Layertree <../basic/layertree>`_, if it's made available in the corresponding menu.
 
 - **Tile buffer:** This parameter applies to services that are tiled and specifies whether to retrieve more surrounding tiles. With that they are already downloaded and visible during a pan movement. The higher the value, the more surrounding tiles are retrieved. Default: 0.
 
@@ -142,7 +142,7 @@ There exist also some WMS services that support only a maximum image size that c
 Vendor Specific Parameter
 -------------------------
 
-In a layererset instance, vendor specific parameters are appended to the WMS request. The implementation follows the specifications of the multi-dimensional data in the WMS specification. In Mapbender3, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values ​​can also be transmitted. The following example shows the definition of a parameter "group", which as content passes on the group of the user currently logged in to Mapbender.
+In a layererset instance, vendor specific parameters are appended to the WMS request. The implementation follows the specifications of the multi-dimensional data in the WMS specification. In Mapbender3, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values ​​can also be transmitted. The following example shows the definition of a parameter "group", which as content passes on the group of the user currently logged into Mapbender.
 
 .. image:: ../../../figures/mapbender_vendor_specific_parameter.png
 
