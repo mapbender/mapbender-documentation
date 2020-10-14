@@ -28,7 +28,7 @@ Zugriffsprüfungen werden nicht im Mapbender-Service, in der Entität oder in de
 
 Element-Rendering-Workflow
 **************************
-Bei dem Anwendungsrendering ist jedes Element aufgefordert, sich selbst zu rendern. Der Arbeitsablauf ist ein wenig kompliziert, aber grundsätzlich fragt die Anwendung Ihre Vorlage, sich selbst zu rendern, welches die Vorlagen-Iteration für jedes Element und das Aufrufen der Elementrendering-Funktion beinhaltet.
+Bei dem Anwendungsrendering ist jedes Element aufgefordert, sich selbst zu rendern. Der Arbeitsablauf ist ein wenig kompliziert, aber grundsätzlich fragt die Anwendung ihre Vorlage, sich selbst zu rendern, welches die Vorlagen-Iteration für jedes Element und das Aufrufen der Elementrendering-Funktion beinhaltet.
 
 Die Render-Funktion verwendet normalerweise Twig zum Rendern eines HTML-Fragments. Dieses Fragment muss ein ID-Attribut enthalten, das der ID des Elements dynamisch von der Mapbender-Anwendung gegeben wird. Da diese IDs dynamisch generiert werden, dürfen Sie diese nicht für das Styling in ihrer Element-CSS verwenden.
 
