@@ -187,7 +187,7 @@ You can pass a coordinate. The application will open and display the coordinate 
 More Start Parameters
 ---------------------
 
-The elements WMS Loader and WMC Loader provide also parameter you can use on start. Have a look at the element description for further information.
+The elements WMS Loader and WMC Loader also provide parameters you can use on start. Have a look at the element descriptions for further information.
 
 
 
