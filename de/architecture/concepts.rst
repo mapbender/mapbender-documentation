@@ -23,10 +23,10 @@ Elemente sind die Bausteine der Anwendung. Jedes Element liefert Funktionalität
 
 Jedes Element besteht aus vier Bereichen: 
 
-* PHP Klasse - sie beschreibt das Element mit seinen Möglichkeiten. Die Klasse kann auch ein Ajax callback point bereit stellen, so dass das clientseitige Widget (siehe unten) Datenbankabfragen ausführen kann und die Ergebnisse beispielsweise anzeigen kann.
-* JavaScript Widget– dies ist der clientseitige Teil des Elements. Dieser Teil beinhaltet alles, was Sie am Bildschirm ausführen und mit dem Sie interagieren. Über Ajax kann dieser Teil den serverseitigen Gegenpart aufrufen und beispielsweise Datenbankabfragen ausführen.
-* Template – HTML, dass das Element verwendet. In der einfachsten Version würde dies nur ein DIV-Tag sein. Aber es kann auch komplexer sein.
-* CSS - dient dem Styling der Elemente.
+* PHP-Klasse: Sie beschreibt das Element mit seinen Möglichkeiten. Die Klasse kann auch ein Ajax callback point bereitstellen, so dass das clientseitige Widget (siehe unten) Datenbankabfragen ausführen kann und die Ergebnisse beispielsweise anzeigen kann.
+* JavaScript-Widget: Dies ist der clientseitige Teil des Elements. Dieser Teil beinhaltet alles, was Sie am Bildschirm ausführen und mit dem Sie interagieren. Über Ajax kann dieser Teil den serverseitigen Gegenpart aufrufen und beispielsweise Datenbankabfragen ausführen.
+* Template: HTML, welche das Element verwendet. In der einfachsten Version würde dies nur ein DIV-Tag sein. Aber es kann auch komplexer sein.
+* CSS: Dient dem Styling der Elemente.
 
 Anwendungsvorlage
 ==================
