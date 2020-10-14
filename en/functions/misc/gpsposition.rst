@@ -9,7 +9,7 @@ The function is built upon the `Geolocation-API <https://www.w3.org/TR/geolocati
 
 The midpoint shows the probable position of the device, the outer circle the accuracy of the positioning, that means the region where the position is probably to find.
 
-Compatibility: Internet Explorer and MS Edge devliver without a GPS-reciever at the machine imprecise informationen. This behaviour is also observable with other applications.
+Compatibility: Internet Explorer and MS Edge deliver without a GPS-reciever at the machine imprecise information. This behaviour is also observable with other applications.
 
 .. image:: ../../../figures/gps_position.png
      :scale: 80

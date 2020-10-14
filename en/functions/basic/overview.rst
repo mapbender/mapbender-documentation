@@ -3,9 +3,9 @@
 Overview
 ********
 
-The Overview element provides a control of an overview map, similar to the OpenLayers Overview control. This element though is easier to use when custom styling is needed.
+The Overview element provides control over an overview map, similar to the OpenLayers Overview control. This element though is easier to use when custom styling is needed.
 
-You can define the size of your overview window and a position. Refer to a layerset that you defined before for the services to display in the overview map. The overview map can be fixed or can zoom when you zoom in/out in the main map. You also can define whether the overview map is minimized or maximized on start of the application.
+You can define the size of your overview window and a position. Refer to a layerset that you defined before for the services to display in the overview map. The overview map can be fixed or zoom in/ out in the main map. You also can define whether the overview map is minimized or maximized on start of the application.
 
 
 .. image:: ../../../figures/overview.png
@@ -47,12 +47,12 @@ In the configuration example we implement the element (*Title*) "Overview". With
 .. image:: ../../../figures/map_example_layersets.png
      :scale: 80
 
-For the overview we choose the layerset overview. As *Target* we choose the element referenced. *Anchor* defines where the overview will be implemented (left-top, left-bottom, right-top or right-bottom). In this instance we choese right-bottom. *Width* and *Height* define the size of the window displaying the overview. Default settings are 200 and 100. Additionally it is possible to check the boxes *Maximize* and *Fix*. For the configuration example both checkmarks are set. Because of this the aplication will be maximized when opened. Additionally the map view is fixed. The excerpt shown of the map in the overview window wont change when the map is dragged and shows the maximum extend defined in `Map Element <map.html>`.
+For the overview we choose the layerset overview. As *Target* we choose the element referenced. *Anchor* defines where the overview will be implemented (left-top, left-bottom, right-top or right-bottom). In this instance we choose right-bottom. *Width* and *Height* define the size of the window displaying the overview. Default settings are 200 and 100. Additionally it is possible to check the boxes *Maximize* and *Fix*. For the configuration example both checkmarks are set. Because of this the application will be maximized when opened. Additionally the map view is fixed. The excerpt shown in the overview window won't change if the map is dragged and shows the maximum extend defined in `Map Element <map.html>`.
 
 .. image:: ../../../figures/de/overview_example_right-bottom_fixed.png
      :scale: 80
 
-If the overview isnt fixed (unchecked *Fix*), the overview will change, if the map is zoomed or dragged. The default view is the defined start extend.
+If the overview isn't fixed (unchecked *Fix*), the overview will change if the map is zoomed or dragged. The default view is the defined start extend.
 For the following parameter (no check of *Fix*, *Anchor*, left-bottom, *Width* 400 and *Height* 200):
 
 .. image:: ../../../figures/overview_example_dialog_left-bottom.png

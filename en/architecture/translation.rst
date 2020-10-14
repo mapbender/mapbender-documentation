@@ -236,7 +236,7 @@ At this point you can let others know that you have some changes that you want t
 
 In order to merge your work with the main repository, you have to make a pull request.
 
-You can do it by logging on your github account and go to the branch you changed. Click on the New pull request green button. The changes you made previously while appear.
+You can do it by logging in your github account and go to the branch you changed. Click on the New pull request green button. The changes you made previously while appear.
 
 You can review and comment your request before submitting. To submit, click on the Create pull request green button. Then, you're done ! Good job !
 

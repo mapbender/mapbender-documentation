@@ -3,7 +3,7 @@
 About Dialog
 ************
 
-This element renders a `button <button.html>`_ which shows a simple about dialog, listing Mapbender's version. For the default-template the button can be placed, as usual, into the toolbar but can be also positioned into the footer region.
+This element renders a `button <button.html>`_ which shows a simple about dialog, listing Mapbender's version. For the default-template the button can be placed, as usual, into the toolbar but can also be positioned into the footer region.
 
 .. image:: ../../../figures/about_dialog.png
      :scale: 80

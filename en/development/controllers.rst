@@ -8,11 +8,11 @@ This pages gives a quick overview of the controllers used in a Mapbender applica
 The Front Controller - Using Routes
 ***********************************
 
-In Symfony, each HTTP request goes trough the (one-and-only) front end controller (app.php in the web directory) which determines the controller funtion to pass it to.
+In Symfony, each HTTP request goes trough the (one-and-only) front end controller (app.php in the web directory) which determines the controller function to pass it to.
 
 The mapping from request path to controller function is basically done in the configuration, where the routing.yml defines these mappings - called routes - or imports their definitions from bundles (or other files).
 
-To get an overview off all defined routes by using the console command
+To get an overview off all defined routes by using the console command.
 
 .. code-block:: yaml
 

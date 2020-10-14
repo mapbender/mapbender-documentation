@@ -61,13 +61,13 @@ Rectangle: Select the button "Rectangle" and simply open up a rectangle with you
 
 Text: Select the button "Text". The dialog will show a textfield where you can set your text. After this, simply click into the map. Your specified text will appear at the click-point.
 
-Once you have clicked the button of one geometry-type, this button is active and you can drob objects on the map. If you want to quit the draw-mode, click again on that button.
+Once you have clicked the button of one geometry-type, this button is active and you can drop objects on the map. If you want to quit the draw-mode, click again on that button.
 
 
 Delete objects
 --------------
 
-With the X-Symbol you can delete the respective object from the map.
+With the X-symbol you can delete the respective object from the map.
 
 
 Change objects
@@ -75,12 +75,12 @@ Change objects
 
 With the pen-symbol you can move or alter the respective object. The chosen object will be highlighted. You can finish this operation with a click into the map.
 
-Points and Annotations can be moved to a different position. Lines and Polygon can not be moved.
+Points and annotations can be moved to a different position. Lines and polygons can not be moved.
 
 .. image:: ../../../figures/de/redlining/redlining_modify_point.png
      :scale: 80
 
-You can add new vertices to existing lines or polygons if you move the vertex in the middle of an edge (the lightly transparent rendered vertex). You can remove vertices by clicking on a vertex and hitting the Delete-key.
+You can add new vertices to existing lines or polygons if you move the vertex in the middle of an edge (the lightly transparent rendered vertex). You can remove vertices by clicking on a vertex and hitting the delete-key.
 
 .. image:: ../../../figures/de/redlining/redlining_modify_polygon.png
      :scale: 80

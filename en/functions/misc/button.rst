@@ -84,7 +84,7 @@ If you choose the *Icon* "Legend (Font Awesome)" instead of "Legend" and check t
 .. image:: ../../../figures/de/button_legend_font_awesome_text.png
      :scale: 80
      
-Now, by clicking the button, the legend will open in a dialg box. This only works, if the *element type* of the legend element is set to "dialog". The *element type* "blockelement" should only be used when you want to integrate the legend in the sidepane.
+Now, by clicking the button, the legend will open in a dialog box. This only works, if the *element type* of the legend element is set to "dialog". The *element type* "blockelement" should only be used when you want to integrate the legend in the sidepane.
 
 
 Button for Line and Area Ruler

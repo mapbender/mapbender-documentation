@@ -123,7 +123,7 @@ Es gibt eine aktive und passive Kommunikation zwischen den Widgets. Die aktive K
 
     var otherElement = $('#element-13').mbMyClass('methodA', parameterA, parameterB);
 
-Dies ist eine Standard-jQuery UI Syntax und selbsterklärend. Es ist die Frage, wie Sie die anderen HTML-Elemente erkennen? Um ein Element zu selektieren wird bevorzugt die ID verwendet. Diese ID's werden jedoch zur Laufzeit von Mapbender generiert, wenn die Anwendung startet, so dass sie nicht davon ausgehen können, dass die ID immer gleich ist. Glücklicherweise können Sie in der Konfiguration eine Element-ID als eine Target-Option für ein anderes Element übergeben. Diese wird mit der Laufzeit-ID des Target-Elements des HTML-Element überschrieben, so dass Sie in Ihrem Widget-Code auf die richtige ID "this.options.target" zugreifen können. 
+Dies ist eine Standard-jQuery UI Syntax und selbsterklärend. Es ist die Frage, wie Sie die anderen HTML-Elemente erkennen? Um ein Element zu selektieren, wird bevorzugt die ID verwendet. Diese ID's werden jedoch zur Laufzeit von Mapbender generiert, wenn die Anwendung startet, so dass Sie nicht davon ausgehen können, dass die ID immer gleich ist. Glücklicherweise können Sie in der Konfiguration eine Element-ID als eine Target-Option für ein anderes Element übergeben. Diese wird mit der Laufzeit-ID des Target-Elements des HTML-Element überschrieben, so dass Sie in Ihrem Widget-Code auf die richtige ID "this.options.target" zugreifen können. 
 
 .. code-block:: js
 

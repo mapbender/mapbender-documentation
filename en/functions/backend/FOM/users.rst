@@ -6,8 +6,7 @@ User are implemented as FOM\\UserBundle\\Entity\\User and stored in the database
 The entity has only some basic information about the user itself, more complex
 user data will have to be implemented by user profiles (yet to be done).
 
-The bundles provides all means to administrate users by admin as well as self-
-registration and password recovery.
+The bundles provides all means to administrate users by admin as well as self-registration and password recovery.
 
 The user with the id 1 is special, as this user is created during installation
 and will always be given full access. If all is lost, you can use this user
@@ -19,7 +18,7 @@ also lost, a console command (fom:user:resetroot) is available for resetting.
 Forgot Password
 ---------------
 
-If a user has forgot his/her password, he can use the "Forgot password?"
+If a user has forgotten his/her password, he can use the "Forgot password?"
 link in the Login-screen to request a new one. For that he types in his
 username or e-mail-adress.
 
@@ -42,7 +41,7 @@ The functionality can be switched off in the config.yml.
 Registering
 -----------
 
-Users can selfregister themselves in Mapbender. For this you have to adjust
+Users can self-register themselves in Mapbender. For this you have to adjust
 the setting fom_user:selfregister in the config.yml to true.
 
 .. code-block:: yaml
@@ -50,14 +49,14 @@ the setting fom_user:selfregister in the config.yml to true.
                 fom_user:
                     selfregister: false # true/false
 
-The Login-dialog contains a "Register" link. This openes a page where the
+The Login-dialog contains a "Register" link. This opens a page where the
 user can type in his/her name, password and e-mail adresss.
 
 .. image:: ../../../../en/functions/backend/FOM/user_self_register.png
 
 
 After that he gets a confirmation mail to complete the registration. Until
-that time he is only managed as inactive user in Mapbender.
+that time he is only managed as an inactive user in Mapbender.
 
 The text of the confirmation mail can be customized in the
 /FOM/UserBundle/Resources/translations/messages.en.xlf file.
@@ -99,9 +98,9 @@ Login Failures
 --------------
 
 Login failures are responded with the Message "Bad credentials". For
-security reasons it is not shown if the error is is based on a wrong
+security reasons it is not shown if the error is based on a wrong
 username or a wrong password. Login failures will not lock the account
-indefinately after four attempts.  Rather the account will be locked for a
+indefinitely after four attempts.  Rather the account will be locked for a
 given period of time.
 
 The config.yml allows to adjust the behaviour:

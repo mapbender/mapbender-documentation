@@ -41,7 +41,7 @@ Configuration: Examples
 Add a logo with a link:
 -----------------------
 
-It is possible to include several additional elements via the HTML-element. E.g., you might want to integrate a picture or logo. Moreover, you might want to add a plain text or picture element that refers to an external page via an included link. For this, it is important to know that you can include the HTML-element in several ways in your application.
+It is possible to include several additional elements via the HTML-element. For example, you might want to integrate a picture or logo. Moreover, you might want to add a plain text or picture element that refers to an external page via an included link. For this, it is important to know that you can include the HTML-element in several ways in your application.
 
 In the backend of your application, head over to the Layouts-tab. Then, simply add the HTML-element to the toolbar, the sidepane or the footer with a single click on the ``+`` -button.
 

@@ -7,7 +7,7 @@ Mapbender can save and edit configurations with the WMC Editor. This configurati
 
 You can add WMC Editor to your application. Notice that the editor needs a button to open.
 
-The Editor offers the possibility to create and update configurations. You can save configurations with a title, desciption and upload a screenshot.
+The Editor offers the possibility to create and update configurations. You can save configurations with a title, description and upload a screenshot.
 
 **Notice:** All configurations are public at the moment. We want to add access control to this module later in development.
 

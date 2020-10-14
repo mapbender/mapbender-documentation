@@ -24,7 +24,7 @@ Each ACL is composed by an object identity and several Access Control Entries
 
 Object identites
 ----------------
-ACLs are not assigned to objects directly, but to so called object identities.
+ACLs are not assigned to objects directly, but to so-called object identities.
 They represent individual objects or classes (the create permission is a
 class-based permission for example).
 

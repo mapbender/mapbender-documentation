@@ -412,7 +412,7 @@ Save, Delete, Cancel
 
 Three buttons are available in the attribute-dialog: Save, Delete and Cancel.
 
-*Saving* changes only happens, if the "Save" button in the attribute-dialog is pressed. A move of the geometry alone doesn't save the feature directly (to avoid unnecessary stores into the database). It is mandatory to open the attribute-dialog and to click Save, yet.
+*Saving* changes only happens, if the "Save" button in the attribute-dialog is pressed. A move of the geometry alone doesn't save the feature directly (to avoid unnecessary stores into the database). It is mandatory to open the attribute-dialog and to click Save.
 
 .. image:: ../../../figures/digitizer_save_delete_cancel.png
      :scale: 80
@@ -557,7 +557,7 @@ Definition of the popup
 Definition of the feature table
 -------------------------------
 
-The Digitizer provides an object table. This can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
+The Digitizer provides an object table. It can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
 The width of the individual columns can optionally be specified in percent or pixels.
 
 * **tableFields:** define the columns for the feature table. 
@@ -605,7 +605,7 @@ Form elements can be placed unto different Tabs. The formItem type "tabs" is use
                        title: Welcome to the digitize demo. Try the new Mapbender feature!
                        ...
 
-For each input field the CSS-behavior and styling informations can be assigned, regardless of the type. This can be used, for example, to highlight important fields or to fill an attribute field when editing another field.
+For each input field the CSS-behavior and styling information can be assigned, regardless of the type. This can be used, for example, to highlight important fields or to fill an attribute field when editing another field.
 
 parameters: 
 
@@ -729,7 +729,7 @@ The SQL (if maps and reading were chosen):
                 maps,reading
                 (1 row)
 
-On saving the keywords are saved in the database (for example: "dancing: Tanzen" and "flowers: Blumen" stores "dancing,flowers").
+The keywords are saved in the database (for example: "dancing: Tanzen" and "flowers: Blumen" stores "dancing,flowers").
 
 
 .. code-block:: yaml
@@ -746,7 +746,7 @@ On saving the keywords are saved in the database (for example: "dancing: Tanzen"
 
 **Get the options for the selectbox via SQL**
 
-Wir a SQL request, the values of the selectbox can be directly pulled from the database. In this case, the key value mapping is not possible and only the indices of the entries can be stored.
+With a SQL request, the values of the selectbox can be directly pulled from the database. In this case, the key value mapping is not possible and only the indices of the entries can be stored.
 
 .. code-block:: yaml
 
@@ -842,7 +842,7 @@ The notes for a mandatory field appear above the used fields. In the case of a m
 
 
 
-Datepicker (type date)
+Date-picker (type date)
 ----------------------
 
 .. image:: ../../../figures/digitizer_datepicker.png
@@ -872,7 +872,7 @@ Element groups (type: fieldSet)
 
 Elements can be grouped together in one row to provide logical connections or save space. To define a group you have to set type fieldSet and afterwards define the children which shall be grouped.
 
-For each children you can define a width to controll the pace for each element.
+For each children you can define a width to control the pace for each element.
 
 .. code-block:: yaml
 
@@ -963,9 +963,9 @@ Images (type image)
 .. image:: ../../../figures/digitizer_image.png
      :scale: 80
 
-The image-element can be used to view an picture in the form. You can display images by specifying a URL in a database field or URL using the src parameter.
+The image-element can be used to view a picture in the form. You can display images by specifying a URL in a database field or URL using the src parameter.
 
-Images, which are marked by the element file in a table column can thus also directly integrated and displayed.
+Images, which are marked by the element file in a table column, can thus also directly be integrated and displayed.
 
 The image can be specified by specifying the two parameters src and name.
 
@@ -1027,7 +1027,7 @@ YAML-Definition of toolset types
 Search in the tables (inline Search)
 ------------------------------------
 
-You can use the inline search to search for a element in the table. 
+You can use the inline search to search for an element in the table. 
 The activated element displays a search bar above the table. It shows all the search results for records of the table.
 
 .. code-block:: yaml
@@ -1109,7 +1109,7 @@ Map-Refresh after save
 
 After saving an object, the refresh can be activated using the *refreshLayersAfterFeatureSave* option. This parameter is used to reload the defined layer instances in the map-element. This makes changes regarded to WMS services directly visible in the map. This event is thrown only if the "Save" button of the attribute dialog is pressed.
 
-If the YAML application is used in the /application folder, it can be specified by unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
+If the YAML application is used in the /application folder, it can be specified by a unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
 
 .. image:: ../../../figures/digitizer/layerinstance_id.png
      :scale: 80
@@ -1126,19 +1126,19 @@ If the YAML application is used in the /application folder, it can be specified 
          - osm        # specify by unique name only with applications in app/config/application
       [...]
 
-**Notes:** Map-Refresh after save is avaiable from Digitizer version 1.2. Currently Mapbender comes with Digitizer 1.0.x. More versions: https://github.com/mapbender/mapbender-digitizer
+**Notes:** Map-Refresh after save is available from Digitizer version 1.2. Currently Mapbender comes with Digitizer 1.0.x. More versions: https://github.com/mapbender/mapbender-digitizer
 
 Duplicate features
 ------------------
 
-Already captured object can be duplicated. This is done via a duplicate-button within the popup of the current selected already existing feature, via the context menu and the hit table.
+Already captured objects can be duplicated. This is done via a duplicate-button within the popup of the current selected already existing feature, via the context menu and the hit table.
 In order for the new object to be recognized better in the map, a color highlighting can be defined here.
 
 The Duplicate button can be activated depending on a specific attribute value. This means that only when the corresponding attribute has a specific value (date> 0) the duplicate function works.
 
 * **data**: Define default values for attributes.
-* **rules**: Rule based duplicating ( only if the filter/rule is active the object can be duplicated).
-* **style**: Styling of the duplicated feature ( more at Design and Styles)
+* **rules**: Rule based duplicating (only if the filter/rule is active the object can be duplicated).
+* **style**: Styling of the duplicated feature (more at Design and Styles)
 * **on**: Events while duplicating process
 
 .. code-block:: yaml
@@ -1178,11 +1178,11 @@ Different events exist that can be associated to a feature to manipulate attribu
 * **onBeforeRemove**: Event before deleting data
 * **onAfterRemove**: Event after deleting data
 
-In difference to the Save-events, the update-events work only on an update of the data, not on creation.
+In difference to the save-events, the update-events work only on an update of the data, not on creation.
 
 **Note:** The events are still in development and should be used with caution. The correct matching of the events and their dependencies are not yet finished and may be changed in future versions.
 
-The following sections show some examples. If you want to set several parameters in an event, these can be listed in sequence, separated by a simicolon, e.g.
+The following sections show some examples. If you want to set several parameters in an event, these can be listed in sequence, separated by a semicolon, e.g.
 
 .. code-block:: yaml
 
@@ -1212,9 +1212,9 @@ The following example shows how mapbender user data can be written to an additio
 
 This example shows how data can be stored in an additional attribute-column after saving. In this case it is done with two geometry-columns "geom" and "geom2". When saving, the data of "geom" should be saved in the field "geom2".
 
-Depending on the use-case the onBeforeInsert or the onBeforeUpdate event can be used.
+Depending on the use case, the onBeforeInsert or the onBeforeUpdate event can be used.
 
-At the time of the saving-process the new geometry doesn't yet persist in the database. Therefore it cannot be accessed as a feature but only via the corresponding "item", an internal Digitizer structure. This "item" are based on the formular and the defined attribute fields.
+At the time of the saving-process the new geometry doesn't yet persist in the database. Therefore it cannot be accessed as a feature but only via the corresponding "item", an internal Digitizer structure. This "item" is based on the formular and the defined attribute fields.
 
 .. code-block:: yaml
 
@@ -1228,7 +1228,7 @@ In this event the value of "geom2" is overwritten with the value of "geom".
 
 **Storage of different geometry-types:**
 
-The above scenario can be extended to a slightly constructed example in which simultaneously different geometry types shall be saved. With the help of PostGIS lines are interpolated to points. The Digitizer can use an event to fire the according SQL statement.
+The above scenario can be extended to a slightly constructed example in which simultaneously different geometry types shall be saved. With the help of PostGIS, lines are interpolated to points. The Digitizer can use an event to fire the according SQL statement.
 
 .. code-block:: postgres
                 
@@ -1241,12 +1241,12 @@ The above scenario can be extended to a slightly constructed example in which si
                     $result  = $stmnt->fetchAll();
                     $item['geompoi'] = $result[0]['geom'];
 
-The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL Statement and deliver it to the SQL-Connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
+The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL-statement and delivers it to the SQL-connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
 
 Buttons
 -------
 
-Further buttons can be defined for the popup forms. The events by clicking on the button can be freely defined by JavaScript. Thus, for example, mailto data can be generated for the integration of a mail.
+Further buttons can be defined for the popup forms. The events (by clicking on the buttons) can be freely defined with JavaScript. Thus, for example, mailto data can be generated for the integration of a mail.
 
 .. code-block:: yaml
 

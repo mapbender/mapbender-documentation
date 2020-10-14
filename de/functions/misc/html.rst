@@ -59,7 +59,7 @@ Das HTML-Element, welches hier eingebunden wird, hat die Bezeichnung (Title) Map
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
      height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
 
-Das Mapbender Logo wird als Bild eingebunden (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). Zusätzlich wird für das Bild die Höhe (``height='60px'``) und das Styling definiert. Das Styling (``style=``) beinhaltet die Hintergrundfarbe und Transparenz (``background-color:rgb(255, 255, 255, 0.9)``) sowie den Abstand des Bildes zu den Seitenrändern (``padding:10px``). Außerdem wurde ein Link zur Mapbender Webseite hinterlegt (``href='https://mapbender.org'``), welche sich beim klicken auf das Bild in einem neuen Tab öffnet (``target='_blank'``).
+Das Mapbender Logo wird als Bild eingebunden (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). Zusätzlich wird für das Bild die Höhe (``height='60px'``) und das Styling definiert. Das Styling (``style=``) beinhaltet die Hintergrundfarbe und Transparenz (``background-color:rgb(255, 255, 255, 0.9)``) sowie den Abstand des Bildes zu den Seitenrändern (``padding:10px``). Außerdem wurde ein Link zur Mapbender Webseite hinterlegt (``href='https://mapbender.org'``), welche sich beim Klicken auf das Bild in einem neuen Tab öffnet (``target='_blank'``).
 
 Das Element kann an unterschiedlichen Positionen eingebunden werden. Beispielsweise in der Toolbar:
 

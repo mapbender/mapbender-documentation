@@ -3,7 +3,7 @@
 Sketch
 ******
 
-The Sketch element adds a vector layer in the map and enables geometry objects to draw.
+The Sketch element adds a vector layer in the map and enables geometry objects to be drawn.
 
 .. image:: ../../../figures/sketch.png
      :scale: 80
