@@ -7,7 +7,7 @@ We have documented the installation from the Git-sources directly in the README.
 
 `https://github.com/mapbender/mapbender-starter/blob/master/README.md <https://github.com/mapbender/mapbender-starter/blob/master/README.md>`_.
 
-We have created a  Contributing Guide for our Developers, which describes the steps to develop with Mapbender and also describes the Installation via Git. This documentation is directly available in the Git-Repository: 
+We have created a Contributing Guide for our developers which describes the necessary steps to develop with Mapbender and also explains how to install the software via Git. This documentation is directly available in the Git-Repository: 
 
 
 `https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_.
