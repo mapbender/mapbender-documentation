@@ -33,7 +33,7 @@ Mapbender Quickstart: First steps with Mapbender
 
 Mapbender is a web based geoportal framework to publish, register, view, navigate, monitor and grant secure access to spatial data infrastructure services.
 
-Management interfaces empower administrators, who need to maintain and categorize map and feature services and grant access to individuals, groups and other services.
+Management interfaces empower administrators who need to maintain and categorize map and feature services and grant access to individuals, groups and other services.
 
 Mapbender is written from the ground up, using modern web technologies. The foundation is laid by Symfony. On the client-side expect to find OpenLayers and jQuery.
 
@@ -341,7 +341,7 @@ Mapbender offers a set of elements. You can add the elements to your application
 
 #. Have a look at your application. To open your application, choose ``Applications --> Applications Overview --> `` |mapbender-button-show| ``view-Button``
 
-Now you should have gotten an idea, how easy it is to change a Mapbender application without changes in the code.
+Now you should have gotten an idea how easy it is to change a Mapbender application without any changes in the code.
 
   .. image:: ../figures/mapbender_application_elements.png
      :scale: 80
