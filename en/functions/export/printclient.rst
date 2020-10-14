@@ -249,7 +249,7 @@ Define text fields in the print template for every information you would like to
 
 .. code-block:: yaml
 
- feature.name for column name of table POI
+ feature.name for column name of table poi
 
 
 2. Define a featureType and refer to your new print template in your config.yml
