@@ -1212,7 +1212,7 @@ The following example shows how mapbender user data can be written to an additio
 
 This example shows how data can be stored in an additional attribute-column after saving. In this case it is done with two geometry-columns "geom" and "geom2". When saving, the data of "geom" should be saved in the field "geom2".
 
-Depending on the used-case, the onBeforeInsert or the onBeforeUpdate event can be used.
+Depending on the use case, the onBeforeInsert or the onBeforeUpdate event can be used.
 
 At the time of the saving-process the new geometry doesn't yet persist in the database. Therefore it cannot be accessed as a feature but only via the corresponding "item", an internal Digitizer structure. This "item" is based on the formular and the defined attribute fields.
 
