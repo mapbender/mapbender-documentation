@@ -3,7 +3,7 @@
 Konzept
 #######
 
-Dieses Kapitel gibt eine Einführung in das Konzept von Mapbender. Nach dem Lesen sollten Sie den Aufbau von Mapbender und Ihre Interaktion verstehen.
+Dieses Kapitel gibt eine Einführung in das Konzept von Mapbender. Nach dem Lesen sollten Sie den Aufbau von Mapbender und die Interaktion zwischen den verschiedenen Komponenten der Software verstehen.
 
 Anwendung
 ===========
