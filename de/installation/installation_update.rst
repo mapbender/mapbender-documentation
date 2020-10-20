@@ -1,4 +1,4 @@
-.. _update_de:
+.. _installation_update_de:
 
 Aktualisierung von Mapbender auf eine neuere Version
 ====================================================

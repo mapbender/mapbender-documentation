@@ -12,5 +12,4 @@ Customization / Tips and tricks
    customization/yaml.rst
    customization/commands.rst
    
-   .. _customization_de:
 

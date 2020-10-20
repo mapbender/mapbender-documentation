@@ -1,4 +1,4 @@
-.. _console_en:
+.. _commands:
 
 app/console commands
 ======================
