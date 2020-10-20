@@ -256,7 +256,7 @@ You can configure the WMS for your specific application. Maybe you don't want to
 
 #. You can change the order of the layers via drag & drop
 
-.. image:: ../figures/mapbender_wms_application_settings_en.png
+.. image:: ../figures/mapbender_wms_application_settings_en.png 
   :scale: 80
 
 **Service configuration:**
