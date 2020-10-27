@@ -19,7 +19,6 @@ Configuration
 * **Layersets:** Refers to a layerset. Define the layerset first and refer to it.
 * **DPI:** Resolution, default is 72.
 * **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
-* **Map units:** Units in which the map is calculated. Choose between meters, degrees, feet, miles or inches. Default is "degrees".
 * **Tile size:** Size of the tiles of tiled WMS services.
 * **Max. Extent:** Maximal map extent, defined by BBOX parameters.
 * **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
