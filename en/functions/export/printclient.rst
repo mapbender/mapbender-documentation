@@ -1,7 +1,7 @@
 .. _printclient:
 
 
-﻿PrintClient
+PrintClient
 ************
 
 Mapbender offers a PDF print which prints a defined area of the map. Before you print, you can choose from these different possibilities with the client:
@@ -48,7 +48,12 @@ With the configuration of the following values it is possible to enable optional
 
 * **Display required fields first**: If this checkbox is active, your defined required fields appear utmost.
 
-* **replace_pattern** - You can modify the map request for printing. You can add additional parameters like map_resolution (for MapServer) – an example is given in the YAML definition.
+* **replace_pattern** - You can modify the map request for printing. You can add additional parameters like map_resolution (for MapServer).
+
+Here's an example for the backend configuration (or look below in the YAML definition for an enhanced and commented example).
+
+.. image:: ../../../figures/print_client_configuration_enhanced.png
+     :scale: 80
 
 The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
 

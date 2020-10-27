@@ -48,9 +48,13 @@ Konfiguration des Elements
 
 * **Zeige Pflichtfelder zuerst (Display required fields first)**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
 
-* **Replace pattern**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer) - ein Beispiel gibt der Abschnitt YAML-Definition.
+* **Replace pattern**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer).
 
+Im Backend finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein ausführliches und kommentiertes Beispiel steht weiter unten im Abschnitt YAML-Definition).
 
+.. image:: ../../../figures/de/print_client_configuration_enhanced.png
+     :scale: 80
+     
 Das Element kann über einen Button aufgerufen werden oder in der Sidepane als **Element** eingebunden werden. Hier muss der Druckrahmen aktiviert werden, um den Druck zu starten. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
 
 .. image:: ../../../figures/print_client_sidebar.png
