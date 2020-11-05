@@ -159,13 +159,14 @@ Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine exter
 
 	mapbender.print.queueable: true
 
-Weitere Informationen unter: https://github.com/mapbender/mapbender/pull/1070
+Weitere Informationen zum Warteschleifendruck können Sie hier nachlesen https://doc.mapbender.org/de/functions/export/printclient.html?highlight=warteschleife#warteschleifendruck
+sowie https://github.com/mapbender/mapbender/pull/1070
 
 Anschließend wird im Backend des Mapbenders der Druckassistent aktualisiert und es erscheinen zwei neue Zeilen, Modus und Warteschleife.
 
 Modus wird auf "Warteschleife" gesetzt und Warteschleife auf "global", wenn davon auszugehen ist, dass die Druckaufträge für alle Anwender zugänglich sind. 
 
-Im Backend erscheint dadurch der neue Reiter/Tab "Druckaufträge". Diese können durch folgende Befehle über die Kommandozeile gesteuert werden. 
+Im Pop-up Fenster des Print Clients erscheint jetzt ein neuer Reiter: "Druckaufträge". Dieser kann durch folgende Befehle über die Kommandozeile gesteuert werden. 
 
 .. code-block:: yaml
 
