@@ -42,7 +42,7 @@ Older versions
 Download Mapbender
 ==================
 
-* https://mapbender.org/mapbender-herunterladen/
+* https://mapbender.org/en/download/
 
 
 -----
