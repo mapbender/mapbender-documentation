@@ -1037,8 +1037,6 @@ The activated element displays a search bar above the table. It shows all the se
       inlineSearch: true      # true: allows the search in the table, default is true
       ...
 
-The advanced search (parameter search) is possible instead of the simple search (parameter inlineSearch). More about this search function can be found at `Search via Digitizer <search_digitizer.html>`_ .
-
 
 Context Menu
 ------------
