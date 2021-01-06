@@ -1030,7 +1030,6 @@ Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eine
       inlineSearch: true      # Suche in den Tabellenspalten, Standard ist true
       ...
 
-Die erweiterte Suche (Parameter search) ist statt der simplen Suche (Parameter inlineSearch) möglich. Mehr zu dieser Suchfunktion findet sich unter `Suche per Digitizer <search_digitizer.html>`_ .
 
 Kontextmenü
 -----------
