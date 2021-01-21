@@ -68,7 +68,7 @@ Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
     usertype:                                                         
       type: choice                            # Feld mit Auswahlmöglichkeiten als Dropdown
       options:
-        empty_value: 'Bitte auswählen...'     # Text, der angezeigt wird, bevor etwas ausgewählt wurde
+        placeholder: 'Bitte auswählen...'     # Text, der angezeigt wird, bevor etwas ausgewählt wurde
         choices:                              # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
           1: Company
           2: Administration
