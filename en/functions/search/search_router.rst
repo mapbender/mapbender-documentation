@@ -69,7 +69,7 @@ Example with different selection options via dropdown:
     usertype:                                                         
       type: choice                                                      # box with selection options as dropdown list
       options:
-        placeholder: 'Please select...'                                 # text that is shown before an option is chossen
+        placeholder: 'Please select...'                                 # text that is shown before an option is selected
         choices:                                                        # the options need to be specified: "name of the column of the database": "name shown in the dropdown list"
           1: Company
           2: Administration
