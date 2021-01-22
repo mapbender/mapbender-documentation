@@ -37,7 +37,7 @@ The project has a very good documentation:
 
 OpenLayers
 **********
-OpenLayers is a powerful software for web maps. It supports lot of data sources and functionality.
+OpenLayers is a powerful software for web maps. It supports a lot of data sources and functionality.
 
 Read more about OpenLayers at http://openlayers.org/
 
