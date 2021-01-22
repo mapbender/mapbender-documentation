@@ -419,7 +419,7 @@ You can export applications as JSON or YAML under **Applications --> Export**.
 
 You can import the export file into a Mapbender installation under **Applications --> Import**.
 
-.. image:: ../../figures/export.png
+.. image:: ../../figures/import.png
 
 
 
