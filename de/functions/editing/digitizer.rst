@@ -75,7 +75,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
     poi:
         label: point digitizing
         inlineSearch: true
-        maxResults: 500
         featureType:
             connection: search_db
             table: poi
@@ -180,7 +179,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
     line:
         label: line digitizing
         inlineSearch: true
-        maxResults: 1500
         featureType:
             connection: search_db
             table: lines
@@ -235,7 +233,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
     polygon:
         label: polygon digitizing
         inlineSearch: true
-        maxResults: 1500
         featureType:
             connection: search_db
             table: polygons
@@ -452,7 +449,6 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
 
     poi:
         label: point digitizing
-        maxResults: 500
         minScale: 5000
         featureType:
             connection: search_db
@@ -474,7 +470,6 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
 Die möglichen Optionen sind:
 
 * **label:** Beschriftung mit dem Namen der Erfassungsoberfläche
-* **maxResults:** maximale Trefferanzahl, default Wert ist 1000
 * **minScale:** Minimaler Maßstab, ab dem die Features in der Karte angezeigt werden (z.B. minscale: 5000 = Anzeige ab einem Maßstab über 1:5000, beim rauszoomen)
 * **featureType:** Verbindung zur Datenbank
 
