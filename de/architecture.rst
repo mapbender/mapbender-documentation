@@ -7,4 +7,5 @@ Architektur
    :maxdepth: 2
 
    architecture/directory_structure
+   architecture/components
    architecture/concepts
