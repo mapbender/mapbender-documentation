@@ -1,7 +1,7 @@
 .. _components_de:
 
-Mapbender-Komponenten
-#####################
+Komponenten
+###########
 
 Mapbender besteht aus unterschiedlichen Software-Komponenten. Serverseitig wird Symfony als Framework mit seinen integrierten Bestandteilen (Doctrine, Twig, Monolog) genutzt.
 
