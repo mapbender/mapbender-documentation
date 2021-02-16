@@ -8,6 +8,16 @@ Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die
 .. image:: ../../../figures/de/search_router_de.png
      :scale: 80
 
+
+Element hinzufügen
+=============
+
+Für die Einbindung des Search Routers müssen zwei Bedingungen erfüllt sein:
+
+1. Die Datenbank muss in den Konfigurationsdateien definiert sein.
+2. Das Element "Suche" muss im Layout integriert sein.
+
+
 Konfiguration
 =============
 

@@ -8,6 +8,16 @@ This element creates a configurable search formular with result output. At this 
 .. image:: ../../../figures/search_router_en.png
      :scale: 80
 
+
+Add SearchRouter
+=============
+
+In order to use the Searchrouter, two requirements have to be met:
+
+1. The database has to be defined in the configuration files.
+2. The SearchRouter element has to be integrated in the Mapbender layout.
+
+
 Configuration
 =============
 
