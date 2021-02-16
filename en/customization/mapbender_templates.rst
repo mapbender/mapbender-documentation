@@ -1,10 +1,13 @@
 .. _mapbender_Templates:
 
-Mapbender Templates
-###################
+Application Templates
+#####################
 
-Get to know the basic Mapbender templates which are ready to use out of the box.
+There are three application templates in Mapbender that come with the installation:
 
+* Fullscreen Template
+* Basic Template (Fullscreen without Sidepane)
+* Mobile Template
 
 
 Fullscreen Template

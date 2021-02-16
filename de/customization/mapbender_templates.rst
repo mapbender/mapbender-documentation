@@ -1,18 +1,21 @@
 .. _mapbender_templates_de:
 
-Mapbender Templates
-##########################
+Anwendungsvorlagen
+#####################
 
-Lernen Sie die wichtigsten Mapbender-Anwendungs-Templates kennen, die bei der Installation mitgeliefert werden.
+Es werden insgesamt drei Anwendungsvorlagen im Mapbender bei der Installation mitgeliefert:
 
+* Fullscreen Template
+* Basis Template (Fullscreen ohne Sidepane)
+* Mobiles Template
 
 Fullscreen Template
-*********************
+*******************
 
 .. image:: ../../figures/mapbender_fullscreen.png
      :scale: 50
 
-Schauen Sie sich die Demo zum Mapbender Fullscreen Template an: https://demo.mapbender.org/application/mapbender_user_yml
+Schauen Sie sich die Demo zum Mapbender Fullscreen an: https://demo.mapbender.org/application/mapbender_user_yml
 
 Regionen des Fullscreen Templates:
 
@@ -21,7 +24,7 @@ Regionen des Fullscreen Templates:
   * Content (Karte, Maßstabsleiste,...)
   * Footer (Fußleiste mit Impressum, Aktivitätsanzeige...)
 
-Specials:
+Besonderheiten:
 
   * Template mit dunklem Hintergrund
   * Großansicht mit konfigurierbarer Sidepane:
@@ -52,8 +55,8 @@ Die Ansichtsoption für die Sidepane kann im Sidepane-Bereich im Mapbender-Backe
      :scale: 80
 
 
-Mobile template
-*********************
+Mobiles Template
+****************
 
 .. image:: ../../figures/mapbender_mobile.png
      :scale: 80
