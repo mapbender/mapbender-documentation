@@ -12,7 +12,7 @@ This element creates a configurable search formular with result output. At this 
 Add SearchRouter
 =============
 
-In order to use the Searchrouter, two requirements have to be met:
+In order to use the SearchRouter, two requirements have to be met:
 
 1. The database has to be defined in the configuration files.
 2. The SearchRouter element has to be integrated in the Mapbender layout.
