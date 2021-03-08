@@ -1,7 +1,9 @@
 .. _mapbender_Templates:
 
-Application Templates
-#####################
+Mapbender Templates
+###################
+
+A Mapbender Template determines the basic representation (colour, font etc.) of an application. Furthermore, it defines the sections (e.g. toolbar or sidepane) in which new elements can be added.
 
 There are three application templates in Mapbender that come with the installation:
 
