@@ -16,7 +16,7 @@ Mit dem PrintClient können folgende Druckeinstellungen beeinflusst werden:
  * Maßstab,
  * Drehung des Ausschnitts,
  * Titel,
- * Aktivierung/ Deaktivierung einer Legende,
+ * Aktivierung/Deaktivierung einer Legende,
  * Optional können Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden.
 
 .. image:: ../../../figures/de/print_client.png
