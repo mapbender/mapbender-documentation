@@ -1,9 +1,11 @@
 .. _mapbender_templates_de:
 
-Anwendungsvorlagen
+Mapbender Templates
 #####################
 
-Es werden insgesamt drei Anwendungsvorlagen im Mapbender bei der Installation mitgeliefert:
+Ein Mapbender Template bestimmt die grundlegende Darstellung (Farbe, Schrift etc.) einer Anwendung. Es definiert außerdem die Bereiche (z.B. Toolbar oder Sidepane), in welche neue Elemente eingefügt werden können.
+
+Es werden insgesamt drei Mapbender Templates bei der Installation mitgeliefert:
 
 * Fullscreen Template
 * Basis Template (Fullscreen ohne Sidepane)
