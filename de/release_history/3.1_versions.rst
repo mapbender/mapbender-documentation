@@ -1,0 +1,68 @@
+.. _3.1_versions_de:
+
+
+Versionshistorie für 3.1
+========================
+
+`English Version of this document. <../../en/release_history/3.1_versions.html>`_
+
+Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
+
+
+
+Version 3.1.0.10
+----------------
+
+Release Datum: 30.06.2020
+
+
+Version 3.1.0.9
+---------------
+
+Release Datum: 23.06.2020
+
+
+Version 3.1.0.8
+---------------
+
+Release Datum: 23.06.2020
+
+
+Version 3.1.0.7
+---------------
+
+Release Datum: 03.06.2020
+
+
+Version 3.1.0.6
+---------------
+
+Release Datum: 26.05.2020
+
+
+Version 3.1.0.5
+---------------
+
+Release Datum: 18.05.2020
+
+
+Version 3.1.0.4
+---------------
+
+Release Datum: 11.05.2020
+
+
+Version 3.1.0.3
+---------------
+
+Release Datum: 23.04.2020
+
+
+Version 3.1.0.2
+---------------
+
+Release Datum: 17.04.2020
+
+
+
+

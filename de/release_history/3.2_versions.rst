@@ -1,0 +1,62 @@
+.. _3.2_versions_de:
+
+
+Versionshistorie für 3.2
+========================
+
+`English Version of this document. <../../en/release_history/3.2_versions.html>`_
+
+Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
+
+
+
+Version 3.2.4
+-------------
+
+Release Datum: 04.03.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v324
+
+
+Version 3.2.3
+-------------
+
+Release Datum: 21.12.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v323
+
+
+Version 3.2.2
+-------------
+
+Release Datum: 02.11.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v322
+
+
+Version 3.2.1
+-------------
+
+Release Datum: 06.08.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v321
+
+
+Version 3.2.0
+-------------
+
+Release Datum: 29.07.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v320
+
+
