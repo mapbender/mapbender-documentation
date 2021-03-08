@@ -15,7 +15,7 @@ It is possible to define different properties of the PDF you would like to print
  * Quality,
  * Scale,
  * Frame rotation,
- * Activate/ deactivate legend
+ * Activate/deactivate legend
  * Optionally, it is possible to define individual input fields (e.g. title, comment, remark), which will then also be printed in the PDF.
 
 .. image:: ../../../figures/print_client.png
@@ -30,7 +30,7 @@ The PrintClient element can be implemented both as a dialog (via a button) and a
 Configuration
 -------------
 
-The Printclient can be configurated in the backend. It relies on print templates (format A4 to A0). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/ texts in the PDF.
+The Printclient can be configurated in the backend. It relies on print templates (format A4 to A0). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
 
 .. image:: ../../../figures/print_client_configuration.png
      :scale: 80
