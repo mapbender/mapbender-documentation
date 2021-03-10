@@ -37,7 +37,7 @@ Configuration
 You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox. From there you can choose the search you want to use and a ``configuration``. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
 **Tip:**
-The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at `database :ref:`yaml_en:`.
+The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at :ref:`yaml`.
 Only one coordinate reference system is allowed. The geometry column must match the coordinate system of the map.
 
 

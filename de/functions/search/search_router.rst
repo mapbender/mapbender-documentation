@@ -37,9 +37,8 @@ Konfiguration
 Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im YAML-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
 
 **Tipp:**
-Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de:`.
+Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de`.
 Es wird nur ein Koordinatenreferenzsystem unterstützt. Die Geometriespalte in der Datenbank muss mit dem Koordinatensystem der Karte übereinstimmen.
-
 
 Type
 ----
