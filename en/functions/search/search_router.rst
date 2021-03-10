@@ -15,7 +15,7 @@ Add SearchRouter
 In order to use the Searchrouter, two requirements have to be met:
 
 1. The database has to be defined in the configuration files.
-2. The SearchRouter element has to be integrated in the Mapbender layout.
+2. The SearchRouter element has to be integrated in the Mapbender layout. The element may be integrated into the sidepane or as a button into the toolbar. To configure a button visit the documentation at :ref:`button`.
 
 
 Configuration
@@ -36,10 +36,8 @@ Configuration
 
 You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox. From there you can choose the search you want to use and a ``configuration``. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
-The element may be integrated into the sidepane or as a button into the toolbar. To configure a button visit the documentation at :ref:`button`.
-
 **Tip:**
-The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at `database :ref:`yaml_en:`.
+The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at :ref:`yaml`.
 Only one coordinate reference system is allowed. The geometry column must match the coordinate system of the map.
 
 
