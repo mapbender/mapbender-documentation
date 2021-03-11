@@ -4,7 +4,7 @@
 PrintClient
 ************
 
-The PrintClient allows for the print of a predefined map area. The following documentation will first give an overview about the general set-up and configuration of the PrintClient. The second part will answer the question, how individual print templates can be generated. Lastly, the print process and all its configuration options will be presented.
+The PrintClient allows for the print of a predefined map area. The following documentation will first give an overview about the general set-up and configuration of the PrintClient. The second part will answer the question how individual print templates can be generated. Lastly, the print process and all its configuration options will be presented.
 
 General
 =======
@@ -21,7 +21,7 @@ It is possible to define different properties of the PDF you would like to print
 .. image:: ../../../figures/print_client.png
      :scale: 80
 
-The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
+The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. The print frame can be moved around freely in the map canvas, it defines the area of the PDF output. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
 
 .. image:: ../../../figures/print_client_sidebar.png
      :scale: 80     :scale: 80
@@ -30,7 +30,7 @@ The PrintClient element can be implemented both as a dialog (via a button) and a
 Configuration
 -------------
 
-The Printclient can be configurated in the backend. It relies on print templates (format A4 to A0). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
+The Printclient can be configurated in the backend. It relies on print templates (format A0 to A4). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
 
 .. image:: ../../../figures/print_client_configuration.png
      :scale: 80
@@ -65,8 +65,8 @@ Here's an example for the backend configuration (or look below in the YAML defin
      :scale: 80
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 .. code-block:: yaml
 
@@ -337,8 +337,8 @@ Queued Print
 The queued print is an experimental print feature for Mapbender which comes with an advanced background print system. Right now, it's still in experimental state due to several potential cache memory regeneration problems on more complex server structures. The queued print is implemented since Mapbender 3.0.8, but deactivated by default. If you choose to activate it, you can use the feature via command line (either manually or as a cronjob). Queued print helps improving resource-intense print jobs, because the queue can manage the print jobs more easily in the background (compared to direct print). In the meantime, you're free to work with Mapbender in other ways.
 
 
-*1. Queued print: Configuration*
---------------------------------
+*Queued print: Configuration*
+-----------------------------
 
 To activate the queued print, open the parameters.yml file of your Mapbender installation and insert the following parameter:
 
@@ -353,8 +353,8 @@ Open your PrintClient element and adjust the new options "Mode" and "Job queue".
 .. image:: ../../../figures/print_queue_options.png
      :scale: 80
 
-*2. Queued print: Bash commands*
---------------------------------
+*Queued print: Bash commands*
+-----------------------------
 
 After the setup, the queued print can be controlled with several bash commands, which are as follows:
 
@@ -371,8 +371,8 @@ After the setup, the queued print can be controlled with several bash commands, 
 Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. Detailed information on the commands:  `app/console commands <../../customization/commands.html>`_.
 
 
-*3. Queued print: Usage*
-------------------------
+*Queued print: Usage*
+---------------------
 
 When using the queued print in the frontend, there are two options: The tab "Job settings" offers the same print settings as the direct print. If the queued print has been set up right, a tab called 'Recent jobs' appears next to the 'Job settings' tab. If this tab is chosen, a chronological list of your print jobs will be shown. A new job will appear in the list after the "Print" button is clicked.
 
@@ -391,8 +391,8 @@ to execute a print process in the command line. This process starts all the jobs
 Memory Limits
 -------------
 
-*1. Queued Print*
------------------
+*Queued Print*
+--------------
 
 Print jobs can be resource intensive and may exceed your initially set php.ini memory limit. Therefore it is possible to increase the required memory limit manually. This is an advantage for users who are working with large print templates.
 Note: Never reduce the memory limit.
@@ -400,8 +400,8 @@ Note: Never reduce the memory limit.
 To increase the memory limits for the queued print, adjust `mapbender.print.queue.memory_limit` (string; default is 1G). Caution: This parameter does not allow 'null' as value.
 
 
-*2. Direct Print*
------------------
+*Direct Print*
+--------------
 
 To increase the memory limit of the direct print, adjust `mapbender.print.memory_limit` (string or null; default is null) to your possible memory contigent.
 If the parameter is set to 'null', Mapbender print will look for your php.ini value.
