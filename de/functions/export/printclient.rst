@@ -3,7 +3,7 @@
 PrintClient (Druck)
 *******************
 
-Der PrintClient ermöglicht den Druck eines vordefinierten Kartenbereichs. Im folgenden wird zunächst der allgemeine Aufbau und die Konfiguration des PrintClients erklärt. Danach folgt eine Einführung in die Erstellung individueller Druckvorlagen. Im letzten Teil wird auf den Druckvorgang selbst eingegangen und wie man diesen konfigurieren kann. 
+Der PrintClient ermöglicht den Druck eines vordefinierten Kartenbereichs. Im Folgenden wird zunächst der allgemeine Aufbau und die Konfiguration des PrintClients erklärt. Danach folgt eine Einführung in die Erstellung individueller Druckvorlagen. Im letzten Teil wird auf den Druckvorgang selbst eingegangen und wie dieser konfiguriert werden kann. 
 
 
 Allgemeines
@@ -22,7 +22,7 @@ Mit dem PrintClient können folgende Druckeinstellungen beeinflusst werden:
 .. image:: ../../../figures/de/print_client.png
      :scale: 80
      
-Das Element kann über einen Button aufgerufen werden oder in der Sidepane als **Element** eingebunden werden. Hier muss der Druckrahmen aktiviert werden, um den Druck zu starten. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
+Das Element kann über einen Button aufgerufen oder in der Sidepane als Element eingebunden werden. Sobald der PrintClient angesteuert wird, erscheint auf der Karte ein Druckrahmen. Dieser bestimmt den zu druckenden Bereich der Karte und kann vom Anwender beliebig ausgerichtet werden. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
 
 .. image:: ../../../figures/print_client_sidebar.png
      :scale: 80     
@@ -66,8 +66,8 @@ Im Backend finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein a
      :scale: 80
      
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 .. code-block:: yaml
 
@@ -265,7 +265,7 @@ Die folgenden Schritte müssen durchgeführt werden:
 1. Erzeugen eines Drucktemplates, das auf die Objektspalten verweist
 2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der config.yml
 3. Druck über die Informationsabfrage aufrufen
-4. alternativ: Aufruf des Drucks über die Digitalisierung
+4. Alternativ: Aufruf des Drucks über die Digitalisierung
 
 
 *1. Erzeugen einer Druckvorlage, die auf die Objektspalten verweist*
@@ -325,8 +325,8 @@ Die Informationsabfrage (FeatureInfo) öffnet einen Dialog mit dem Link *print f
 Das gewünschte Gebiet kann auswählt und ein PDF erzeugt werden. Das PDF beinhaltet die Informationen für das selektierte Objekt.
 
 
-*4. Oder Aufruf des Drucks über die Digitalisierung*
-----------------------------------------------------
+*4. Alternativ: Aufruf des Drucks über die Digitalisierung*
+-----------------------------------------------------------
 
 Die Funktion kann auch in die Digitalisierung eingebunden werden. Im Digitalisierungsdialog wird dann ein neuer Button *Drucken* angeboten.
 
@@ -351,8 +351,8 @@ Warteschleifendruck
 Der Warteschleifendruck ist ein neues Druckfeature in Mapbender, welches einen erweiterten Hintergrunddruck erlaubt. Dieses experimentelle Feature ist seit Mapbender 3.0.8 implementiert. Es ist standardmäßig nicht aktiviert, da bei komplexeren Systemen Probleme mit der Cache-Speicher-Regeneration auftreten können. Sobald aktiviert, kann das Feature entweder händisch über die Kommandozeile angestoßen oder über einen Cronjob automatisiert werden. Der Warteschleifendruck hilft dabei, ressourcenintensive Druckjobs mit langen Ausführungszeiten zu verbessern, indem diese in eine Warteschleife, die im Hintergrund abgearbeitet wird, ausgelagert werden. Währenddessen können Sie mit Mapbender anderweitig weiterarbeiten.
 
 
-*1. Warteschleifendruck: Konfiguration*
----------------------------------------
+*Warteschleifendruck: Konfiguration*
+------------------------------------
 
 Um den Warteschleifendruck zu aktivieren, muss die parameters.yml-Datei wie folgt ergänzt werden:
 
@@ -365,8 +365,8 @@ Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da sonst stand
 .. image:: ../../../figures/de/print_queue_options.png
      :scale: 80
 
-*2. Warteschleifendruck: Kommandozeilenbefehle*
------------------------------------------------
+*Warteschleifendruck: Kommandozeilenbefehle*
+--------------------------------------------
 
 Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen über die Kommandozeile zur Ausführung des Drucks zur Verfügung[:]
 
@@ -383,8 +383,8 @@ Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen ü
 Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen, also bspw.: app/console mapbender:print:queue:clean. Zur genauen Vorgehensweise siehe die Informationen auf der Seite `app/console commands <../../customization/commands.html>`_.
 
 
-*3. Warteschleifendruck: Durchführung*
---------------------------------------
+*Warteschleifendruck: Durchführung*
+-----------------------------------
 
 Der Tab „Einstellungen“ bietet die vom Direktdruck gewohnten Druckoptionen. Nachdem der Warteschleifendruck eingerichtet wurde, kann neben dem Tab „Einstellungen“ über einen Button die neu erscheinende Funktion „Druckaufträge“ angewählt werden. Hier finden sich chronologisch alle Druckaufträge aufgelistet, die der User über das Mapbender-Interface wie gewohnt erstellt.
 
@@ -403,8 +403,8 @@ in der Kommandozeile ausgeführt werden. Er bewirkt, dass nach dem Klick auf den
 Speicherbegrenzungen
 --------------------
 
-*1. Warteschleifendruck*
-------------------------
+*Warteschleifendruck*
+---------------------
 
 Da der Druck möglicherweise speicherintensiver sein kann als anfangs in Ihren PHP-Einstellungen festgelegt, kann der benötigte Speicher durch manuelle Konfiguration erhöht werden. Dies ist für Anwender, die mit größeren Ausdrucken arbeiten möchten, besonders von Vorteil.
 Bemerkung: Die Speicherbegrenzung sollte nicht reduziert werden.
@@ -412,8 +412,8 @@ Bemerkung: Die Speicherbegrenzung sollte nicht reduziert werden.
 Der Parameter `mapbender.print.queue.memory_limit` (string; Standard ist 1G) muss angepasst werden, um die Speicherbegrenzung speziell für den Warteschleifendruck zu erhöhen. Vorsicht: Dieser Parameter erlaubt keine "null"-Werte.
 
 
-*2. Direktdruck*
-----------------
+*Direktdruck*
+-------------
 
 Über den Parameter `mapbender.print.memory_limit` (string or null; Standard ist null) kann das Speicherlimit angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
 Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an, der Wert "-1" steht für unbegrenzte Speichernutzung.
