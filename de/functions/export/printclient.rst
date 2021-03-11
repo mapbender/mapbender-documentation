@@ -3,25 +3,35 @@
 PrintClient (Druck)
 *******************
 
-Mapbender bietet einen PDF Druck, der einen definierten Bereich der Karte ausdruckt. Hierbei stehen im Client verschiedene Auswahlmöglichkeiten zur Verfügung:
+Der PrintClient ermöglicht den Druck eines vordefinierten Kartenbereichs. Im Folgenden wird zunächst der allgemeine Aufbau und die Konfiguration des PrintClients erklärt. Danach folgt eine Einführung in die Erstellung individueller Druckvorlagen. Im letzten Teil wird auf den Druckvorgang selbst eingegangen und wie dieser konfiguriert werden kann. 
 
- * Auswahl Druckvorlage,
- * Auswahl Qualität,
- * Auswahl Maßstab,
+
+Allgemeines
+===========
+
+Mit dem PrintClient können folgende Druckeinstellungen beeinflusst werden:
+
+ * Druckvorlage,
+ * Qualität,
+ * Maßstab,
  * Drehung des Ausschnitts,
- * Ausdruck Legende
+ * Titel,
+ * Aktivierung/Deaktivierung einer Legende,
  * Optional können Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden.
-
-Der Druck greift auf Druckvorlagen zu, die individuell angepasst werden können. In den Druckvorlagen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
-
-Mapbender bringt bereits eine Kollektion von Druckvorlagen (LibreOffice Draw Dateien in den Formaten A4 bis A0) mit, die individuell angepasst werden können.
 
 .. image:: ../../../figures/de/print_client.png
      :scale: 80
+     
+Das Element kann über einen Button aufgerufen oder in der Sidepane als Element eingebunden werden. Sobald der PrintClient angesteuert wird, erscheint auf der Karte ein Druckrahmen. Dieser bestimmt den zu druckenden Bereich der Karte und kann vom Anwender beliebig ausgerichtet werden. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
 
+.. image:: ../../../figures/print_client_sidebar.png
+     :scale: 80     
+     
+Konfiguration des PrintClients
+------------------------------
 
-Konfiguration des Elements
-==========================
+Der PrintClient kann im Backend konfiguriert werden. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A4 bis A0 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
+
 
 .. image:: ../../../figures/print_client_configuration.png
      :scale: 80
@@ -55,13 +65,9 @@ Im Backend finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein a
 .. image:: ../../../figures/de/print_client_configuration_enhanced.png
      :scale: 80
      
-Das Element kann über einen Button aufgerufen werden oder in der Sidepane als **Element** eingebunden werden. Hier muss der Druckrahmen aktiviert werden, um den Druck zu starten. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
 
-.. image:: ../../../figures/print_client_sidebar.png
-     :scale: 80
-
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 .. code-block:: yaml
 
@@ -100,19 +106,22 @@ YAML-Definition:
                 pattern: 'stadtplan.xml'                     # oder es können für den Druck optimierte Dienste angefordert werden.
                 replacement: { 288: 'stadtplan_4.xml' }
 
-
-
 Verzeichnisse
-=============
+-------------
 
-* **northarrow:** Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Er kann durch ein anderes Bild ersetzt werden.
+**Der Nordpfeil:**
+* Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Er kann durch ein anderes Bild ersetzt werden.
 
-* **print templates:** Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
+**Die Print Templates:**
+* Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
 
-* **Standardverzeichnisse Druck**: Die Druckdateien werden in dem Standard-Downloadordner Ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
+**Die Druckdateien:**
+* Die Druckdateien werden in dem Standard-Downloadordner Ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
+
 
 Erstellen einer individuellen Vorlage
 =====================================
+
 Um eine individuelle Druckvorlage zu erstellen, kann eine vorhandene Druckvorlage (ODG-Datei, LibreOffice Draw) kopiert und anschließend bearbeitet werden. Die Vorlage kann feste Objekte wie ein Logo, Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine dynamische Ebene für die dynamisch erzeugten Elemente (wie die Karte, die Übersichtskarte, den Nordpfeil, den Maßstab, das Datum und optionale Felder) erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene. Eine Ebene in LibreOffice Draw kann folgendermaßen hinzugefügt werden: **Menü: Einfügen -> Ebene... -> Namen für die Ebene definieren und Checkbox "druckbar" deaktivieren**.
 
 .. image:: ../../../figures/print_template_odg.png
@@ -143,7 +152,7 @@ Das Druck-Skript liest die Informationen (Position, Größe, Schriftgröße, Aus
 
 
 Druck von Elementen vor dem Kartenbild
-======================================
+--------------------------------------
 
 Damit beim Druck der Kartenbereich möglichst groß ist und wenig Platz durch weiße oder leere Bereiche verloren geht, können Elemente vor das Kartenbild gelegt werden. Besonders hilfreich ist dies vor allem bei großen Druckformaten wie DIN A1, die einen verhältnismäßig breiten weißen Rand aufweisen.
 
@@ -173,7 +182,7 @@ Templates anpassen:
 
 
 Legende auf der ersten Seite
-============================
+----------------------------
 
 Neben dem Kartenbereich kann die Legende auf der ersten Seite der Druckvorlage integriert werden. Standardmäßig ist dieser Bereich nicht in den Druckvorlagen vorhanden. Für die Integration der Legende wird die LibreOffice Draw-Druckvorlage angepasst. Hierfür wird ein neues dynamisches Feld mit dem Namen "legend" auf der nicht druckbaren Ebene eingefügt. Die Bezeichnung des Feldes zu "legend" wird über **Menü: Format -> Name…** verändert. Sobald das Element platziert und benannt wurde, wird im Druck die Legende angezeigt. Abschließend muss die ODG-Datei als PDF exportiert und im gleichen Ordner abspeichert werden. Die Legende auf der ersten Seite kann wie folgt aussehen:
 
@@ -182,7 +191,7 @@ Neben dem Kartenbereich kann die Legende auf der ersten Seite der Druckvorlage i
 
 
 Logo auf der Legendenseite
-==========================
+--------------------------
 
 Sofern die Legende weiterhin auf einer zusätzlichen Seite erzeugt werden soll, kann auf der zweiten Seite ebenfalls ein Logo eingebunden werden. Dies erfolgt über das dynamische Element "legendpage_image". Hierfür wird ein neues Feld in der nicht druckbaren Ebene eingefügt, über **Menü: Format -> Name...** in "legendpage_image" umbenannt und an gewünschter Stelle platziert. Das Logo oder Bild wird im Ordner **app/Resources/MapbenderPrintBundle/images/** unter dem Namen "legendpage_image.png" abgespeichert.
 Das erzeugte PDF kann beispielsweise aus folgenden beiden Seiten bestehen:
@@ -193,7 +202,7 @@ Das erzeugte PDF kann beispielsweise aus folgenden beiden Seiten bestehen:
 Auf der zweiten Seite erscheint das eingefügte Logo.
 
 Farbige Texte
-=============
+-------------
 
 Der Text der Druckvorlage kann vielfältig angepasst werden. Neben der Schriftgröße besteht die Möglichkeit, die Farbe des Textes zu verändern. Hierfür wird ein Textfeld erzeugt **Menü: Einfügen -> Textfeld**. Soll der Text als dynamisches Element eingebunden werden, wird dieser auf der vorher festgelegten nicht druckbaren Ebene eingefügt und benannt. Hier wurde als Beispiel das dynamische Element "title" gewählt. Um den Text oder den Platzhalter zu färben, Text innerhalb des Textfeldes (hier: "title") markieren. Die Änderung der Farbe kann rechts neben der Vorlage unterhalb des Reiters **Eigenschaften -> Zeichen** vorgenommen werden.
 
@@ -212,9 +221,8 @@ Die Veränderung der Farbe des dynamischen Feldes "title" in blau kann im Druck 
 
 Analog zu der Veränderung der Schriftfarbe wird auch die Veränderung der Schriftgröße durchgeführt.
 
-
 Dynamische Bilder und dynamische Texte
-======================================
+--------------------------------------
 
 Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder oder Beschreibungen (z.B. Logo und Bezeichnung der Gemeinde) ausgegeben werden. Hierzu gibt es die Platzhalter "dynamic_image" und "dynamic_text". Beide Elemente können in der ODG-Druckvorlage in die nicht druckbare Ebene eingefügt, umbenannt (**Menü: Format -> Name... bzw. Kontextmenü des Elements -> Name...**) und entsprechend platziert werden.
 
@@ -227,19 +235,22 @@ Ein gruppenabhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie folg
 
 Zur Nutzung dieser Funktion müssen Gruppen mit Benutzern erstellt und den Anwendungen die jeweiligen Gruppen zugewiesen werden. Weitere Informationen zur Funktionsweise der Gruppen- und Benutzerverwaltung unter `Mapbender Quickstart <../../quickstart.html>`_.
 
-Dynamisches Bild
-----------------
+*Dynamisches Bild*
+------------------
 
 Sobald "dynamic_image" im Drucklayout vorliegt, wird nach einem Bild mit dem Namen der ersten zugewiesenen Gruppe gesucht und dieses im Bereich des Elements "dynamic_image" ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Die verschiedenen Bilder je Gruppe werden im Ordner **app/Resources/MapbenderPrintBundle/images/** unter dem jeweiligen Namen der Gruppe abgelegt (z.B. Gruppenname ist "Gruppe 1", dann lautet der Name des Bildes Gruppe 1.png).
 
-Dynamischer Text
-----------------
+*Dynamischer Text*
+------------------
 
 Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe im Ausdruck eingetragen. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und bspw. für Copyright-Hinweise nutzen.
 
 
+Der Druckvorgang
+================
+
 Druck von Information für ein ausgewähltes Objekt
-=================================================
+-------------------------------------------------
 
 Es können Informationen zu einem ausgewählten Objekt ausgedruckt werden. Ein Objekt kann über die Digitalisierung (Digitizer) oder die Informationsabfrage (FeatureInfo) selektiert werden.
 
@@ -254,11 +265,11 @@ Die folgenden Schritte müssen durchgeführt werden:
 1. Erzeugen eines Drucktemplates, das auf die Objektspalten verweist
 2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der config.yml
 3. Druck über die Informationsabfrage aufrufen
-4. alternativ: Aufruf des Drucks über die Digitalisierung
+4. Alternativ: Aufruf des Drucks über die Digitalisierung
 
 
-1. Erzeugen einer Druckvorlage, die auf die Objektspalten verweist
-----------------------------------------------------------------------
+*1. Erzeugen einer Druckvorlage, die auf die Objektspalten verweist*
+--------------------------------------------------------------------
 
 Im Drucktemplate ein Textfeld für die Informationen definieren, die für das selektierte Objekt ausdruckt werden sollen. Der Textfeldname hat immer den Prefix *feature.* gefolgt vom Namen der Spalte.
 
@@ -267,8 +278,8 @@ Im Drucktemplate ein Textfeld für die Informationen definieren, die für das se
   feature.name for column name of table poi
 
 
-2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der config.yml
---------------------------------------------------------------------------------------------------
+*2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der config.yml*
+-------------------------------------------------------------------------------------------
 
 .. code-block:: yaml
 
@@ -289,8 +300,8 @@ Im Drucktemplate ein Textfeld für die Informationen definieren, die für das se
             label: Demo with feature information print (landscape)
 
 
-3. Aufruf des Drucks über die Informationsabfrage
--------------------------------------------------
+*3. Aufruf des Drucks über die Informationsabfrage*
+---------------------------------------------------
 
 Bemerkung: Die Informationsabfrage (FeatureInfo) ist die Ausgabe von Informationen von einem OGC WMS Service. Sie gibt Informationen zu Objekten an einer Klickposition aus.
 
@@ -314,8 +325,8 @@ Die Informationsabfrage (FeatureInfo) öffnet einen Dialog mit dem Link *print f
 Das gewünschte Gebiet kann auswählt und ein PDF erzeugt werden. Das PDF beinhaltet die Informationen für das selektierte Objekt.
 
 
-4. Oder Aufruf des Drucks über die Digitalisierung
---------------------------------------------------
+*4. Alternativ: Aufruf des Drucks über die Digitalisierung*
+-----------------------------------------------------------
 
 Die Funktion kann auch in die Digitalisierung eingebunden werden. Im Digitalisierungsdialog wird dann ein neuer Button *Drucken* angeboten.
 
@@ -335,13 +346,13 @@ Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwend
 
 
 Warteschleifendruck
-===================
+-------------------
 
 Der Warteschleifendruck ist ein neues Druckfeature in Mapbender, welches einen erweiterten Hintergrunddruck erlaubt. Dieses experimentelle Feature ist seit Mapbender 3.0.8 implementiert. Es ist standardmäßig nicht aktiviert, da bei komplexeren Systemen Probleme mit der Cache-Speicher-Regeneration auftreten können. Sobald aktiviert, kann das Feature entweder händisch über die Kommandozeile angestoßen oder über einen Cronjob automatisiert werden. Der Warteschleifendruck hilft dabei, ressourcenintensive Druckjobs mit langen Ausführungszeiten zu verbessern, indem diese in eine Warteschleife, die im Hintergrund abgearbeitet wird, ausgelagert werden. Währenddessen können Sie mit Mapbender anderweitig weiterarbeiten.
 
 
-1. Warteschleifendruck: Konfiguration
--------------------------------------
+*Warteschleifendruck: Konfiguration*
+------------------------------------
 
 Um den Warteschleifendruck zu aktivieren, muss die parameters.yml-Datei wie folgt ergänzt werden:
 
@@ -354,8 +365,8 @@ Dabei muss "Modus" auf die Option "Warteschleife" gesetzt werden, da sonst stand
 .. image:: ../../../figures/de/print_queue_options.png
      :scale: 80
 
-2. Warteschleifendruck: Kommandozeilenbefehle
----------------------------------------------
+*Warteschleifendruck: Kommandozeilenbefehle*
+--------------------------------------------
 
 Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen über die Kommandozeile zur Ausführung des Drucks zur Verfügung[:]
 
@@ -372,8 +383,8 @@ Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen ü
 Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen, also bspw.: app/console mapbender:print:queue:clean. Zur genauen Vorgehensweise siehe die Informationen auf der Seite `app/console commands <../../customization/commands.html>`_.
 
 
-3. Warteschleifendruck: Durchführung
-------------------------------------
+*Warteschleifendruck: Durchführung*
+-----------------------------------
 
 Der Tab „Einstellungen“ bietet die vom Direktdruck gewohnten Druckoptionen. Nachdem der Warteschleifendruck eingerichtet wurde, kann neben dem Tab „Einstellungen“ über einen Button die neu erscheinende Funktion „Druckaufträge“ angewählt werden. Hier finden sich chronologisch alle Druckaufträge aufgelistet, die der User über das Mapbender-Interface wie gewohnt erstellt.
 
@@ -390,10 +401,10 @@ in der Kommandozeile ausgeführt werden. Er bewirkt, dass nach dem Klick auf den
 
 
 Speicherbegrenzungen
-====================
+--------------------
 
-1. Warteschleifendruck
-----------------------
+*Warteschleifendruck*
+---------------------
 
 Da der Druck möglicherweise speicherintensiver sein kann als anfangs in Ihren PHP-Einstellungen festgelegt, kann der benötigte Speicher durch manuelle Konfiguration erhöht werden. Dies ist für Anwender, die mit größeren Ausdrucken arbeiten möchten, besonders von Vorteil.
 Bemerkung: Die Speicherbegrenzung sollte nicht reduziert werden.
@@ -401,8 +412,9 @@ Bemerkung: Die Speicherbegrenzung sollte nicht reduziert werden.
 Der Parameter `mapbender.print.queue.memory_limit` (string; Standard ist 1G) muss angepasst werden, um die Speicherbegrenzung speziell für den Warteschleifendruck zu erhöhen. Vorsicht: Dieser Parameter erlaubt keine "null"-Werte.
 
 
-2. Direktdruck
---------------
+*Direktdruck*
+-------------
 
 Über den Parameter `mapbender.print.memory_limit` (string or null; Standard ist null) kann das Speicherlimit angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
 Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an, der Wert "-1" steht für unbegrenzte Speichernutzung.
+

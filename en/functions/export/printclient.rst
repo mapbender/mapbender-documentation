@@ -4,24 +4,33 @@
 PrintClient
 ************
 
-Mapbender offers a PDF print which prints a defined area of the map. Before you print, you can choose from these different possibilities with the client:
+The PrintClient allows for the print of a predefined map area. The following documentation will first give an overview about the general set-up and configuration of the PrintClient. The second part will answer the question how individual print templates can be generated. Lastly, the print process and all its configuration options will be presented.
 
- * select scale,
- * select quality,
- * rotate the print frame,
- * print legend
- * optionally, it is possible to define individual input fields (e.g. title, comment, remark), which will also be printed in the PDF.
+General
+=======
 
-The print element uses print templates, which can be modified individually. In the print templates, you can define regions for date, scale (text or scalebar), north arrow, overview map and dynamic images / dynamic texts.
+It is possible to define different properties of the PDF you would like to print with the client:
 
-Mapbender already contains a collection of print templates (LibreOffice Draw files in formats A4 to A0) which can be modified individually.
+ * Print template,
+ * Quality,
+ * Scale,
+ * Frame rotation,
+ * Activate/deactivate legend
+ * Optionally, it is possible to define individual input fields (e.g. title, comment, remark), which will then also be printed in the PDF.
 
 .. image:: ../../../figures/print_client.png
      :scale: 80
 
+The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. The print frame can be moved around freely in the map canvas, it defines the area of the PDF output. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
+
+.. image:: ../../../figures/print_client_sidebar.png
+     :scale: 80     :scale: 80
+
 
 Configuration
-=============
+-------------
+
+The Printclient can be configurated in the backend. It relies on print templates (format A0 to A4). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
 
 .. image:: ../../../figures/print_client_configuration.png
      :scale: 80
@@ -55,13 +64,9 @@ Here's an example for the backend configuration (or look below in the YAML defin
 .. image:: ../../../figures/print_client_configuration_enhanced.png
      :scale: 80
 
-The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
 
-.. image:: ../../../figures/print_client_sidebar.png
-     :scale: 80     :scale: 80
-
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 .. code-block:: yaml
 
@@ -99,15 +104,18 @@ YAML-Definition:
                 pattern: 'stadtplan.xml'        # or you can request a different service which is optimized for printing
                 replacement: { 288: 'stadtplan_4.xml' }
 
-
 Directories
-=============
+-----------
 
-* **northarrow:** The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. The "north arrow" image can be replaced to use a different image instead.
+**The northarrow**
+* The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. The "north arrow" image can be replaced to use a different image instead.
 
-* **print templates:** The print templates can be found under **app/Resources/MapbenderPrintBundle/templates/**. 
+**The print templates**
+* The print templates can be found under **app/Resources/MapbenderPrintBundle/templates/**. 
 
-* **default directories**: Mapbender saves its generated print files in the browser's default download folder. If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
+**The print files**
+Mapbender saves its generated print files in the browser's default download folder. If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
+
 
 Create your individual templates
 ================================
@@ -142,7 +150,7 @@ Export the template to .pdf under the same name as the .odg file. Use the name w
 The print script will read the information (position, size, font size, alignment) from the .odg-file and combines those with the fixed objects in the PDF template and the map image in Mapbender to generate your PDF.
 
 Printing elements in front of the map element
-=============================================
+---------------------------------------------
 
 In order for the map element to be as large as possible and to avoid white or empty areas, elements can be placed in front of the map image to prevent that space is lost through white areas. This is particularly useful in the case of large printing formats which have a comparatively wide border.
 
@@ -172,7 +180,7 @@ Adapt templates:
 
 
 Legend on the first page
-========================
+------------------------
 
 The legend can be integrated next to the map on the first page. This field is not included in the print template by default. To insert the legend the ODG print template file needs to be modified. A new dynamic field with the name "legend" on the non printable layer needs to be inserted. **Menu: Modify -> Name...** to change the name of the field to "legend". As final step,  the ODG-file has to be exported as PDF-file as described above and saved in the same directory. The result could look like this:
 
@@ -180,8 +188,8 @@ The legend can be integrated next to the map on the first page. This field is no
     :scale: 80
 
 
-Logo on the legendpage
-======================
+Logo on the legend page
+-----------------------
 
 If the legend shall be created on an additional page, the logo can be placed on this page too. This can be achieved with the dynamic element "legendpage_image". A new field on the non-printable layer has to be created and the name changed to "legendpage_image" (**Menu: Modify -> Name...**). The desired logo or image has to be saved in the directory **app/Resources/MapbenderPrintBundle/images/** and its name needs to be changed to "legendpage_image.png". 
 
@@ -190,7 +198,7 @@ If the legend shall be created on an additional page, the logo can be placed on 
 
 
 Coloured texts
-==============
+--------------
 
 The text in the print template can be changed in many ways. Besides the size of the font, one can also change the colour of the text. To do so, a text field via **Menu: Insert -> Text Box** needs to be inserted. To change the colour of the text, select the text in the text field (here: "title"). The colour can be changed in the tab **Properties -> Character**:
 
@@ -210,7 +218,7 @@ The change of the colour of the dynamic field "title" to blue can look like this
 The change of the font size works in an analogous manner.
 
 Dynamic images and dynamic texts
-================================
+--------------------------------
 
 Dependent on a group, prints can be created with different logos and texts (e.g. the name of the commune and the individual logo). There are two objects which can handle this: "dynamic_image" and "dynamic_text". If these objects exist in the print layout [Mapbender and the user are members of a group], Mapbender will then search for an image with the name of the group (groupname.png). The picture will be displayed in the print in the object ["dynamic_image"]. The height of the object will be used to scale the image[,] the width will be calculated relative to the height. In the object ["dynamic_text"] the group description will be printed.
 
@@ -229,8 +237,11 @@ The description of the group will be displayed in the field "dynamic_text" (e.g.
 The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. 
 
 
+The printing process
+====================
+
 Printing feature information for a selected element
-===================================================
+---------------------------------------------------
 
 A feature can be selected via digitizer or Feature Info.
 
@@ -247,8 +258,8 @@ There are some steps you have to follow:
 3. Call feature print from FeatureInfo
 4. Or call feature print from digitizer
 
-1. Create a print template that refers to the feature columns
--------------------------------------------------------------
+*1. Create a print template that refers to the feature columns*
+---------------------------------------------------------------
 
 Define text fields in the print template for every information you would like to print for the selected object. The text field name has always the prefix *feature.*, followed with the name of the attribute (column) to export.
 
@@ -257,8 +268,8 @@ Define text fields in the print template for every information you would like to
  feature.name for column name of table poi
 
 
-2. Define a featureType and refer to your new print template in your config.yml
--------------------------------------------------------------------------------
+*2. Define a featureType and refer to your new print template in your config.yml*
+---------------------------------------------------------------------------------
 
 .. code-block:: yaml
 
@@ -279,8 +290,8 @@ Define text fields in the print template for every information you would like to
             label: Demo with feature information print (landscape)
 
 
-3. Call feature print from FeatureInfo
---------------------------------------
+*3. Call feature print from FeatureInfo*
+----------------------------------------
 
 Note: FeatureInfo is the information output from a OGC WMS service. It offers information for features at a click position.
 
@@ -304,8 +315,8 @@ The FeatureInfo will open a dialog with a link *print feature information*. When
 You can choose the desired region and create a print PDF. The PDF will contain the information for the selected feature.
 
 
-4. Or call feature print from digitizer
-----------------------------------------
+*4. Or call feature print from digitizer*
+-----------------------------------------
 
 The functionality can also be integrated in the digitizer. It will offer a new button *print* in every feature information dialog.
 
@@ -321,13 +332,13 @@ Note: The flexibility to move the print frame won‘t stop you from choosing a r
 
 
 Queued Print
-============
+------------
 
 The queued print is an experimental print feature for Mapbender which comes with an advanced background print system. Right now, it's still in experimental state due to several potential cache memory regeneration problems on more complex server structures. The queued print is implemented since Mapbender 3.0.8, but deactivated by default. If you choose to activate it, you can use the feature via command line (either manually or as a cronjob). Queued print helps improving resource-intense print jobs, because the queue can manage the print jobs more easily in the background (compared to direct print). In the meantime, you're free to work with Mapbender in other ways.
 
 
-1. Queued print: Configuration
-------------------------------
+*Queued print: Configuration*
+-----------------------------
 
 To activate the queued print, open the parameters.yml file of your Mapbender installation and insert the following parameter:
 
@@ -342,8 +353,8 @@ Open your PrintClient element and adjust the new options "Mode" and "Job queue".
 .. image:: ../../../figures/print_queue_options.png
      :scale: 80
 
-2. Queued print: Bash commands
-------------------------------
+*Queued print: Bash commands*
+-----------------------------
 
 After the setup, the queued print can be controlled with several bash commands, which are as follows:
 
@@ -360,8 +371,8 @@ After the setup, the queued print can be controlled with several bash commands, 
 Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. Detailed information on the commands:  `app/console commands <../../customization/commands.html>`_.
 
 
-3. Queued print: Usage
-----------------------
+*Queued print: Usage*
+---------------------
 
 When using the queued print in the frontend, there are two options: The tab "Job settings" offers the same print settings as the direct print. If the queued print has been set up right, a tab called 'Recent jobs' appears next to the 'Job settings' tab. If this tab is chosen, a chronological list of your print jobs will be shown. A new job will appear in the list after the "Print" button is clicked.
 
@@ -378,10 +389,10 @@ to execute a print process in the command line. This process starts all the jobs
 
 
 Memory Limits
-=============
+-------------
 
-1. Queued Print
----------------
+*Queued Print*
+--------------
 
 Print jobs can be resource intensive and may exceed your initially set php.ini memory limit. Therefore it is possible to increase the required memory limit manually. This is an advantage for users who are working with large print templates.
 Note: Never reduce the memory limit.
@@ -389,10 +400,11 @@ Note: Never reduce the memory limit.
 To increase the memory limits for the queued print, adjust `mapbender.print.queue.memory_limit` (string; default is 1G). Caution: This parameter does not allow 'null' as value.
 
 
-2. Direct Print
----------------
+*Direct Print*
+--------------
 
 To increase the memory limit of the direct print, adjust `mapbender.print.memory_limit` (string or null; default is null) to your possible memory contigent.
 If the parameter is set to 'null', Mapbender print will look for your php.ini value.
 If you set the parameter to a value which is accepted by your php.ini-configuration file, Mapbender print uses this limit instead of the php.ini limit (possible values are e.g. 512M, 2G, 2048M, etc.)
 Use '-1' for unrestricted memory usage.
+
