@@ -5,7 +5,6 @@ Activity Indicator (Aktivitätsindikator)
 
 Der Aktivitätsindikator (Sanduhr) ist ein einfaches Modul, das Aktivitäten anzeigt (Ajax-Aufrufe und Kartenaufrufe). 
 In der voreingestellten Konfiguration wird ein Schrift-Symbol verwendet. 
-Dieses kann ganz einfach in der CSS-Datei geändert werden: ``fom//src//FOM//CoreBundle//Resources//public//css/frontend//mapbender3_theme.css`` 
 
 Der Aktivitätsindikator kann in Sidepane, Footer oder Toolbar implementiert werden. Standardmäßig sieht er folgendermaßen aus: 
 
