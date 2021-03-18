@@ -4,11 +4,13 @@ Activity Indicator
 ******************
 
 The activity indicator element provides a simple widget showing background activity (Ajax calls and pending map tile requests).
-In the default configuration it uses a Font symbol. This can be easily modified by changing the CSS for the 
-widget in the css-file ``fom//src//FOM//CoreBundle//Resources//public//css/frontend//mapbender3_theme.css``.
+In the default configuration it uses a Font symbol. 
+
+The activity indicator can be implemented in footer, sidepane and toolbar. Per default it looks like this:
 
 .. image:: ../../../figures/activity_indicator.png
      :scale: 100
+
 
 Configuration
 =============
