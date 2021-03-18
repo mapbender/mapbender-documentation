@@ -10,7 +10,128 @@ Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbe
 .. _versions:
 
 
-Version 3.0.8
+
+Version 3.2.4
+-------------
+
+Release Datum: 04.03.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v324
+
+
+Version 3.2.3
+-------------
+
+Release Datum: 21.12.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v323
+
+
+Version 3.2.2
+-------------
+
+Release Datum: 02.11.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v322
+
+
+Version 3.2.1
+-------------
+
+Release Datum: 06.08.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v321
+
+
+Version 3.2.0
+-------------
+
+Release Datum: 29.07.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v320
+
+
+Version 3.0.8.6
+---------------
+
+Release Datum: 15.09.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3086
+
+
+Version 3.0.8.5
+---------------
+
+Release Datum: 05.02.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3085
+
+
+Version 3.0.8.4
+---------------
+
+Release Datum: 04.09.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3084
+
+
+Version 3.0.8.3
+---------------
+
+Release Datum: 05.07.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3083
+
+
+Version 3.0.8.2.1
+-----------------
+
+Release Datum: 05.07.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v30821
+
+
+Version 3.0.8.2
+---------------
+
+Release Datum: 03.07.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3082
+
+
+Version 3.0.8.1
+---------------
+
+Release Datum: 14.05.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3081
+
+
+Version 3.0.8.0
 ---------------
 
 Release Datum: 12.04.2019
@@ -18,7 +139,7 @@ Release Datum: 12.04.2019
 
 **Verbesserungen und Bugfixes:**
 
-* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v.3.0.8
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v308
 
 **Hinweise zur Aktualisierung**
 
@@ -514,7 +635,7 @@ Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Bei
 
 
 
-Milestone 3.0.5.3
+Version 3.0.5.3
 -----------------
 
 Release Datum: 04.02.2016
@@ -592,7 +713,7 @@ Allgemeine Änderungen:
 
     
     
-Milestone 3.0.5.2
+Version 3.0.5.2
 -----------------
 
 Release Datum: 27.10.2015
@@ -647,7 +768,7 @@ Release Datum: 27.10.2015
 
 
 
-Milestone 3.0.5.1
+Version 3.0.5.1
 -----------------
 
 Release Datum: 26.08.2015
@@ -696,7 +817,7 @@ Release Datum: 26.08.2015
 
 
  
-Milestone 3.0.5.0
+Version 3.0.5.0
 -----------------
 
 Release Datum: 01.07.2015
@@ -751,7 +872,7 @@ Release Datum: 01.07.2015
 * Beim Kopieren einer Anwendung von Mapbender 3.0.4.x muss in der Map/Overview der jeweilige Layerset neu gesetzt werden.
                     
 
-Milestone 3.0.4.1
+Version 3.0.4.1
 -----------------
 
 Release Datum: 23-01-2015
@@ -778,7 +899,7 @@ Release Datum: 23-01-2015
 * https://github.com/mapbender/mapbender/milestones/3.0.4.1
  
 
-Milestone 3.0.4.0
+Version 3.0.4.0
 -----------------
 
 Release Datum: 12-09-2014
@@ -796,7 +917,7 @@ Release Datum: 12-09-2014
 * spanische Übersetzung
  
 
-Milestone 3.0.3
+Version 3.0.3
 ----------------
 
 Release Datum: 17-03-2014
@@ -818,7 +939,7 @@ Release Datum: 17-03-2014
 * Funktion zur Validierung von WMS GetCapabilities Dokumenten
  
 
-Milestone 3.0.2
+Version 3.0.2
 ---------------
 
 Release Datum: 27-11-2013
@@ -829,7 +950,7 @@ Release Datum: 27-11-2013
 * WMSLoader Erweiterung WMS über Link hinzufügen
  
 
-Milestone 3.0.1
+Version 3.0.1
 ---------------
 
 Release Datum: 06-09-2013
@@ -843,7 +964,7 @@ Release Datum: 06-09-2013
 * Bug fixes
  
 
-Milestone 3.0.0.2
+Version 3.0.0.2
 -----------------
 
 Bugfix-Release Datum: 19-07-2013
@@ -852,7 +973,7 @@ Bugfix-Release Datum: 19-07-2013
 
  
 
-Milestone 3.0.0.1
+Version 3.0.0.1
 -----------------
 
 Bugfix-Release Datum: 07-06-2013
@@ -861,7 +982,7 @@ Bugfix-Release Datum: 07-06-2013
 
  
 
-Milestone 3.0.0.0
+Version 3.0.0.0
 -----------------
 
 Release Datum: 29-05-2013
