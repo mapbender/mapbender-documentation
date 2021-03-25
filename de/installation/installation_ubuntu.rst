@@ -112,6 +112,17 @@ Informationen zur Ersteinrichtung von Mapbender finden sich unter:  `Mapbender Q
 Optional
 --------
 
+**Root-Benutzer anlegen**
+
+Der Root-Benutzerzugang ist der erste Mapbender-Benutzerzugang, er verfügt über alle Privilegien. Er muss mithilfe des Befehls:
+
+.. code-block:: bash
+   app/console fom:user:resetroot
+
+zunächst initial angelegt werden. Im Anschluss werden benötigte Informationen abgefragt, die in der Datenbank hinterlegt werden. Überspringen des Dialogs mittels Enter führt zu den Standard-Werten bei der Benutzer-/Passworteingabe (root/root).
+
+Weitere Informationen im Kapitel :ref:`installation_configuration_de`.
+
 **LDAP**
 
 Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:

@@ -169,6 +169,21 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
 Weitere Informationen zur Konfiguration: :ref:`installation_configuration_de`
 
 
+Standardbenutzer anlegen
+------------------------
+
+Der Root-Benutzerzugang ist der standardmäßige Mapbender-Benutzerzugang, er verfügt über alle Privilegien. Er muss mithilfe des Befehls:
+
+.. code-block:: text
+
+    cd c:\mapbender
+    php.exe app/console fom:user:resetroot
+
+zunächst initial angelegt werden. Im Anschluss werden benötigte Informationen abgefragt, die in der Datenbank hinterlegt werden. Überspringen des Dialogs mittels Enter führt zu den Standardwerten bei der Benutzer-/Passworteingabe (root/root).
+
+Weitere Informationen im Kapitel :ref:`installation_configuration_de`.
+
+
 Der erste Start
 ---------------
 
