@@ -127,7 +127,7 @@ Weitere Informationen im Kapitel :ref:`installation_configuration_de`.
 
 Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:
 
-.. code-block:: bash
+.. code-block:: text
 
    sudo apt install php-ldap
 
