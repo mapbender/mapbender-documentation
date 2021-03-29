@@ -173,7 +173,7 @@ Following information: :ref:`installation_configuration`
 Create root user
 -----------------------
 
-You must create a default user before it is possible to log into the Mapbender backend. If there is no root user yet, the neccessary command to create it is:
+You must create a default user before it is possible to log into the Mapbender backend. If there is no root user yet, the neccessary command to create one is:
 
 .. code-block:: text
 
