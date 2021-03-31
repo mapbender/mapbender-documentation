@@ -171,7 +171,6 @@ To gain database access, you have to create a default user via
 
 .. code-block:: text
 
-    cd c:\mapbender
     php.exe app/console fom:user:resetroot
 
 
