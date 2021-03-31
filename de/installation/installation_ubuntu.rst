@@ -166,7 +166,7 @@ Root-Benutzer für Zugriff anlegen:
 
    app/console fom:user:resetroot
 
-Weitere Informationen zur Konfiguration finden sich hier :ref:`installation_configuration_de`
+Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`
 
 
 **Mapbender Einrichtung auf MySQL**

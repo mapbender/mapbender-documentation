@@ -160,7 +160,7 @@ Create root user for access:
 
    app/console fom:user:resetroot
 
-Find further information here :ref:`installation_configuration`
+Find further information in :ref:`installation_configuration`
 
 
 **Mapbender installation with MySQL:**

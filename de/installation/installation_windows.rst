@@ -174,7 +174,7 @@ Für den Zugriff auf die Datenbank kann der Standardbenutzer mit folgendem Befeh
     cd c:\mapbender
     php.exe app/console fom:user:resetroot
 
-Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`.
+Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`
 
 
 Der erste Start
