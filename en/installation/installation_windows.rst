@@ -166,23 +166,16 @@ Open the windows shell and initialize the database connection with the following
     php.exe app/console mapbender:database:init -v
     php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 
-    
-Following information: :ref:`installation_configuration`    
 
-
-Create root user
------------------------
-
-You must create a default user before it is possible to log into the Mapbender backend. If there is no root user yet, the neccessary command to create one is:
+To gain database access, you have to create a default user via
 
 .. code-block:: text
 
     cd c:\mapbender
     php.exe app/console fom:user:resetroot
 
-A dialogue form will then ask information about the user (name, password & optional e-mail) and will save it in the database. If nothing is inserted, the default values for username and password (root/root) apply.
 
-Find further information in :ref:`installation_configuration`.
+Find further information in :ref:`installation_configuration`
 
 
 First steps
