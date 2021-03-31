@@ -167,7 +167,7 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
     php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
     
 
-Für den Zugriff auf die Datenbank kann der Standardbenutzer mit folgendem Befehl angelegt werden:
+Für den Zugriff auf die Datenbank muss der Standardbenutzer mit folgendem Befehl angelegt werden:
 
 .. code-block:: text
 
