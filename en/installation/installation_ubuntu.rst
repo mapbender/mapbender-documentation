@@ -106,18 +106,6 @@ More information on proper configuration of Mapbender: `Mapbender Quickstart Doc
 Optional
 --------
 
-**Create root user**
-
-You must create a default user before it is possible to log into the Mapbender backend. If there is no root user yet, the neccessary command to create one is:
-
-.. code-block:: bash
-   
-   app/console fom:user:resetroot
-
-A dialogue form will then ask information about the user (name, password & optional e-mail) and will save it in the database. If nothing is inserted, the default values for username and password (root/root) apply.
-
-Find further information in :ref:`installation_configuration`.
-
 **LDAP**
 
 To use the optional LDAP-connection, following PHP-LDAP-extension is required:
@@ -166,7 +154,13 @@ Initialisation of the database connection:
     app/console mapbender:database:init -v
     app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
     
-Following information: :ref:`installation_configuration`
+Create root user for access:
+
+.. code-block:: bash
+
+   app/console fom:user:resetroot
+
+Find further information here :ref:`installation_configuration`
 
 
 **Mapbender installation with MySQL:**
