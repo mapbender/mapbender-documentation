@@ -712,7 +712,7 @@ The Multiselect-Box is activated by the attribute "multiple: true". You can choo
                     flowers: flowers
 
 **Notes:** From Digitizer version 1.2 and up, the multiple selection provides an easier mechanism to choose an entry, which also allows a search in the drop-down-list. The navigation through the list is possible via keyboard. Possible entries are highlighted during typing. An already chosen entry can be removed by clicking the small "x" symbol.
-Currently Mapbender is shipped with Digitizer 1.1.x. More versions: https://github.com/mapbender/mapbender-digitizer
+Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer
 
 .. image:: ../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
@@ -1124,7 +1124,7 @@ If the YAML application is used in the /application folder, it can be specified 
          - osm        # specify by unique name only with applications in app/config/application
       [...]
 
-**Notes:** Map-Refresh after save is available from Digitizer version 1.2. Currently Mapbender is shipped with Digitizer 1.1.x. More versions: https://github.com/mapbender/mapbender-digitizer
+**Notes:** Map-Refresh after save is available from Digitizer version 1.2. Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer
 
 Duplicate features
 ------------------
