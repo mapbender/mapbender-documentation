@@ -35,6 +35,7 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 * Definition von Hilfetexten
 * Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe bestimmter Feldinhalte
 * Möglichkeit, in Formulare eingegebene Inhalte per Buttonklick in die Zwischenablage zu kopieren
+* Karten-Refresh nach Speichern
 
 
 .. image:: ../../../figures/digitizer_with_tabs.png
