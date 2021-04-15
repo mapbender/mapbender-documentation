@@ -10,7 +10,7 @@ In order to use the digitizer, one has to define a specific yaml-definition:
 .. toctree::
    :maxdepth: 1
 
-   digitizer/digitizer_configuration.rst
+   digitizer/digitizer_configuration.rst  
    
    
 More information about the functionality of the digitizer can be found here:   
