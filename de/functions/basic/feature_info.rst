@@ -3,13 +3,11 @@
 FeatureInfo (Information)
 *************************
 
-Dieses Element stellt eine Informationsabfrage bereit, die per WMS funktioniert.
+Mit diesem Element können Sie Informationen eines WMS abfragen. In der folgenden Abbildung sehen Sie ein Beispiel für eine solche Informationsabfrage. Es wurde hierfür der WMS "Krankenhäuser NRW" (http://www.wms.nrw.de/wms/krankenhaus?) vom Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW verwendet.
 
 .. image:: ../../../figures/de/feature_info.png
      :scale: 80
      
-Als Beispiel diente der WMS "Krankenhäuser NRW" (http://www.wms.nrw.de/wms/krankenhaus?) vom Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW. 
-
 Konfiguration
 =============
 
@@ -27,15 +25,15 @@ Das Element FeatureInfo wird im Content eingebunden:
 * **Automatisches Öffnen (Autoopen):** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Default: false).
 * **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht.
 * **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Default:false). 
+* **Nur valide zeigen** Anzeige von validen WMS
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Type:** Auswahl, ob die Info als Element oder Dialog angezeigt werden soll (Default und mandatory: Dialog).
 * **Display type:** Anzeige der Information als Tabs oder in Accordionform (Default: tabs).
 * **Max count:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
 * **Width/Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
-* **Original Zeigen:** Original css-Stil des Ergebnisses wird angezeigt (Default: true).
-* **nur valide zeigen:** Dieser Parameter hängt sehr vom Format des GetFeatureInfo Responses ab. Beispiel UMN: Solange ein Template korrekte HTML Head und Body Elemente definiert (z.B. über die Angabe einer Headers und Footers Datei), interpretiert Mapbender das Resultat als valide. Fehlen diese Head und Body Angaben, so gilt dies für Mapbender als nicht valide.
-* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
+* **Highlighting aktiv** Aktivierung des FeatureInfo Highlightings 
+* **Grundfarbe** Farbe mit der ausgewählte Geometrien hervogehoben werden
+* **Hover-Farbe** Farbe mit der ausgewählte Geometrien hervogehoben werden, wenn man darüber hovert
 
 Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
@@ -47,7 +45,6 @@ Layer "Krankenhäuser NRW" ist sichtbar und FeatureInfo-Abfrage für den Layer a
 .. image:: ../../../figures/de/feature_info_on.png
      :scale: 80
 
-
 Layer "Krankenhäuser NRW" ist sichtbar und FeatureInfo-Abfrage für den Layer deaktiviert:
 
 .. image:: ../../../figures/de/feature_info_off.png
@@ -58,23 +55,6 @@ Layer "Krankenhäuser NRW" ist nicht sichtbar, es erfolgt zusätzlich keine Feat
 .. image:: ../../../figures/de/feature_info_on_layer_invisible.png
      :scale: 80
      
-
-Anzeige als Original und gestyled
----------------------------------
-
-Mit der Option "Original zeigen" wird die Originaldarstellung des FeatureInfo Responses genutzt. Ist die Option deaktiviert, wird versucht eine einheitliche Darstellung in Mapbender zu erreichen.
-
-Beispiel Original:
-
-.. image:: ../../../figures/de/feature_info_original.png
-     :scale: 80
-
-Beispiel gestyled:
-
-.. image:: ../../../figures/de/feature_info_not_original.png
-     :scale: 80
-
-
 
 Anzeige als Tabs und Accordion
 ------------------------------
@@ -99,6 +79,38 @@ Ausdruck der Resultate
 Mit dem Schalter "Print result" kann die Information des FeatureInfo ausgedruckt werden. Eine Druckschaltfläche ist dann in dem FeatureInfo-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
 
 Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox kann man die Option "Hintergrund drucken" im Druckoptionendialog anschalten, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
+
+
+FeatureInfo Highlighting
+------------------------
+
+Ab Mapbender 3.2.3 können einzelne Geometrien eines WMS über die Infoabfrage farblich in der Karte hervorgehoben werden. Dies ist besonders bei der Arbeit mit umfangreichen WMS hilfreich, da somit einzelne Geometrien leichter zugeordnet werden können.
+
+Eine Infoabfrage mit aktiviertem FeatureInfo Highlighting könnte beispielsweise folgendermaßen aussehen:
+
+.. image:: ../../../figures/de/feature_info_highlighting.png
+     :scale: 80
+
+In der vorherigen Abbildung wurden mehrere Geometrien in der Karte ausgewählt (PLZ: 53111, 53113 und 53115). Der FeatureInfo Dialog zeigt nur die Informationen dieser Geometrien an. Die Fläche mit der PLZ 53115 wird durch Hovering rot in der Karte markiert.  
+
+Zur Aktivierung von FeatureInfo Highlighting, navigieren Sie zu Ihrem FeatureInfo-Element im Content-Bereich. Hier können Sie das Highlighting aktivieren, sowie Grund- und Hoverfarbe setzen.
+
+Weiterhin muss die HTML-Ausgabe der Infoabfrage angepasst werden. Hierfür ist es notwendig, dass die Geometrieabfrage versteckt als WKT in ein HTML-div erfolgt. Diese wird nicht angezeigt. Zusätzlich muss der EPSG-Code übergeben und eine eindeutige ID in dem HTML-div vorliegen.
+Mapbender wertet diese Informationen aus und stellt die Geometrien in der Karte dar. Beim Mouse-Over auf den Treffern des Infofensters wird die dazugehörige Geometrie entsprechend hervorgehoben. Je nachdem welche WMS-Server-Software Sie nutzen, sieht die Anpassung unterschiedlich aus. Anpassungen können für MapServer, QGIS Server, GeoServer problemlos erfolgen.
+
+Die notwendige Anpassung wird hier am Beispiel von MapServer gezeigt. In der DATA-Angabe wird zusätzlich die Geometrie als WKT ausgegeben. Außerdem wird das FeatureInfo-Template angepasst.Wird nun ein WMS über GetFeatureInfo abgefragt, werden die entsprechenden Flächen in der Karte hervorgehoben. 
+
+.. code-block:: console
+
+DATA "geom from (Select *, ST_AsText(geom) as geom_wkt from plz) as foo USING UNIQUE gid USING SRID 4326"
+
+<div class="geometryElement" id="[gid]" data-geometry="[geom_wkt]" data-srid="EPSG:4326">
+  <table>
+	...
+  <table>
+</div>
+
+
 
 YAML-Definition:
 ----------------
