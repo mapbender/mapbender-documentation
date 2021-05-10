@@ -3,8 +3,13 @@
 Mapbender Templates
 ###################
 
-Get to know the basic Mapbender templates which are ready to use out of the box.
+A Mapbender Template determines the basic representation (colour, font etc.) of an application. Furthermore, it defines the sections (e.g. toolbar or sidepane) in which new elements can be added.
 
+There are three application templates in Mapbender that come with the installation:
+
+* Fullscreen Template
+* Basic Template (Fullscreen without Sidepane)
+* Mobile Template
 
 
 Fullscreen Template

@@ -83,7 +83,6 @@ The functionality of the built-in features and additional functions are explaine
     poi:
         label: point digitizing
         inlineSearch: true
-        maxResults: 500
         featureType:
             connection: search_db
             table: poi
@@ -188,7 +187,6 @@ The functionality of the built-in features and additional functions are explaine
     line:
         label: line digitizing
         inlineSearch: true
-        maxResults: 1500
         featureType:
             connection: search_db
             table: lines
@@ -243,7 +241,6 @@ The functionality of the built-in features and additional functions are explaine
     polygon:
         label: polygon digitizing
         inlineSearch: true
-        maxResults: 1500
         featureType:
             connection: search_db
             table: polygons
@@ -460,7 +457,6 @@ A basic definition, here for the poi-example, may look like the following snippe
 
     poi:
         label: point digitizing
-        maxResults: 500
         minScale: 5000
         featureType:
             connection: search_db
@@ -483,7 +479,6 @@ The possible options are:
 
 * **label:** Label of the Digitizer popup
 * **minScale:** Minimum scale, where the features should be displayed in the map (e.g. minscale: 5000 = show from a scale 'over' 1:5000, when zooming out).
-* **maxResults:** Maximum number of results
 * **featureType:** Connection to the database
 
   * connection: Name of the database-connection from the parameters/config.yml
@@ -1036,8 +1031,6 @@ The activated element displays a search bar above the table. It shows all the se
       ...
       inlineSearch: true      # true: allows the search in the table, default is true
       ...
-
-The advanced search (parameter search) is possible instead of the simple search (parameter inlineSearch). More about this search function can be found at `Search via Digitizer <search_digitizer.html>`_ .
 
 
 Context Menu

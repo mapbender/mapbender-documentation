@@ -8,6 +8,16 @@ Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die
 .. image:: ../../../figures/de/search_router_de.png
      :scale: 80
 
+
+Element hinzufügen
+=============
+
+Für die Einbindung des Search Routers müssen zwei Bedingungen erfüllt sein:
+
+1. Die Datenbank muss in den Konfigurationsdateien definiert sein.
+2. Das Element "Suchen" muss im Layout integriert sein. Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
+
+
 Konfiguration
 =============
 
@@ -26,12 +36,9 @@ Konfiguration
 
 Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im YAML-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
 
-Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
-
 **Tipp:**
-Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de:`.
+Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de`.
 Es wird nur ein Koordinatenreferenzsystem unterstützt. Die Geometriespalte in der Datenbank muss mit dem Koordinatensystem der Karte übereinstimmen.
-
 
 Type
 ----
@@ -68,7 +75,7 @@ Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
     usertype:                                                         
       type: choice                            # Feld mit Auswahlmöglichkeiten als Dropdown
       options:
-        empty_value: 'Bitte auswählen...'     # Text, der angezeigt wird, bevor etwas ausgewählt wurde
+        placeholder: 'Bitte auswählen...'     # Text, der angezeigt wird, bevor etwas ausgewählt wurde
         choices:                              # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
           1: Company
           2: Administration
