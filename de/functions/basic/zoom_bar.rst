@@ -40,7 +40,7 @@ Wenn das Häkchen bei **Verschiebbar** gesetzt wurde, dann erscheint in der Anwe
 
 Mit **Rotation** kann die Orientierung der Karte verändert werden. Die Abbildung zeigt den Kartenausschnitt nach einer (links) sowie zwei (rechts) Rotationen nach rechts. Durch Klick auf den Nordpfeil ist es möglich, die Standardrotation schnell wiederherzustellen.
 
-.. image:: ../../../figures/de/navigationtoolbar_rotation.png
+.. image:: ../../../figures/de/navigationtoolbar_rotation.jpg
      :scale: 80
 
 Es besteht die Möglichkeit, mit **Zoom to max extent** auf den kleinsten Maßstab zu zoomen. Dieser *Max Extent* wird vom Nutzer selbst innerhalb des `Kartenelements <map.html>`_ im Content-Bereich definiert.
