@@ -30,7 +30,7 @@ The following option for the construction of the forms are available:
 * Datepicker
 * File upload and Image Display
 * Definition of tabs
-* Definition breaklines
+* Definition breakLines
 * Definition of Text 
 * Mandatory fields, regular expressions to valid the content are possible
 * Help texts
@@ -791,12 +791,12 @@ Similar to the text field via type input (see above), text areas can be created 
                                                    title: Bestandsaufnahme Bemerkung # Label (optional)
 
 
-Breaklines (type breakline)
+Breaklines (type breakLine)
 ---------------------------
 
 .. code-block:: yaml
 
-                                                 - type: breakline                     # element type definition, will draw a line 
+                                                 - type: breakLine                     # element type definition, will draw a line 
 
 
 Checkboxes (type checkbox)
