@@ -22,13 +22,13 @@ Das Element FeatureInfo wird im Content eingebunden:
 
 
 
-* **Automatisches Öffnen (Autoopen):** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Default: false).
-* **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht (Default: false).
-* **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Default: true).
+* **Automatisches Öffnen:** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: false).
+* **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht (Standard: false).
+* **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Standard: true).
 * **Nur valide zeigen** Anzeige von validen WMS
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Display type:** Anzeige der Information als Tabs oder in Accordionform (Default: tabs).
+* **Display type:** Anzeige der Information als Tabs oder in Accordionform (Standard: tabs).
 * **Max count:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
 * **Width/Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
 * **Highlighting aktiv** Aktivierung des FeatureInfo Highlightings.
@@ -40,17 +40,17 @@ Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Butto
 Einstellungen im Layertree
 ---------------------------
 
-Layer "Krankenhäuser NRW" ist sichtbar und FeatureInfo-Abfrage für den Layer aktiviert:
+Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist aktiviert:
 
 .. image:: ../../../figures/de/feature_info_on.png
      :scale: 80
 
-Layer "Krankenhäuser NRW" ist sichtbar und FeatureInfo-Abfrage für den Layer deaktiviert:
+Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist deaktiviert:
 
 .. image:: ../../../figures/de/feature_info_off.png
      :scale: 80
 
-Layer "Krankenhäuser NRW" ist nicht sichtbar, es erfolgt zusätzlich keine FeatureInfo-Abfrage, auch wenn diese aktiviert ist:
+Layer ist nicht sichtbar; es erfolgt keine FeatureInfo-Abfrage, auch wenn diese aktiviert ist:
 
 .. image:: ../../../figures/de/feature_info_on_layer_invisible.png
      :scale: 80
@@ -84,7 +84,7 @@ Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Dr
 FeatureInfo Highlighting
 ------------------------
 
-Ab Mapbender 3.2.3 können einzelne Geometrien eines WMS über die Infoabfrage farblich in der Karte hervorgehoben werden. Dies ist besonders bei der Arbeit mit umfangreichen WMS hilfreich, da somit einzelne Geometrien leichter zugeordnet werden können.
+Einzelne Geometrien eines WMS können über die Infoabfrage in der Karte farblich hervorgehoben werden. Dies ist besonders bei der Arbeit mit umfangreichen WMS hilfreich, da so einzelne Geometrien leichter zugeordnet werden können.
 
 .. image:: ../../../figures/de/feature_info_configuration_highlighting.png
      :scale: 80
@@ -94,12 +94,12 @@ Eine Infoabfrage mit aktiviertem FeatureInfo Highlighting könnte beispielsweise
 .. image:: ../../../figures/de/feature_info_highlighting.png
      :scale: 80
 
-In der vorherigen Abbildung wurden mehrere Geometrien in der Karte ausgewählt (PLZ: 53111, 53113 und 53115). Der FeatureInfo Dialog zeigt nur die Informationen dieser Geometrien an. Die Fläche mit der PLZ 53115 wird durch Hovering rot in der Karte markiert.
+In der Abbildung wurden mehrere Geometrien in der Karte ausgewählt (PLZ: 53111, 53113 und 53115). Der FeatureInfo Dialog zeigt nur die Informationen dieser Geometrien an. Die Fläche mit der PLZ 53115 wird durch Hovering rot in der Karte markiert.
 
-Zur Aktivierung von FeatureInfo Highlighting, navigieren Sie zu Ihrem FeatureInfo-Element im Content-Bereich. Hier können Sie das Highlighting aktivieren, sowie Grund- und Hoverfarbe setzen.
+Das FeatureInfo Highlighting kann im FeatureInfo-Element im Content-Bereich aktiviert werden. Dort sind auch Grund- und Hoverfarbe auswählbar.
 
-Weiterhin muss die HTML-Ausgabe der Infoabfrage angepasst werden. Hierfür ist es notwendig, dass die Geometrieabfrage versteckt als WKT in ein HTML-div erfolgt. Diese wird nicht angezeigt. Zusätzlich muss der EPSG-Code übergeben und eine eindeutige ID in dem HTML-div vorliegen.
-Mapbender wertet diese Informationen aus und stellt die Geometrien in der Karte dar. Beim Mouse-Over auf den Treffern des Infofensters wird die dazugehörige Geometrie entsprechend hervorgehoben. Je nachdem welche WMS-Server-Software Sie nutzen, sieht die Anpassung unterschiedlich aus. Anpassungen können für MapServer, QGIS Server, GeoServer problemlos erfolgen.
+Darüber hinaus muss die HTML-Ausgabe der Infoabfrage angepasst werden. Hierfür ist es notwendig, dass die Geometrieabfrage versteckt als WKT über ein HTML-div erfolgt. Zusätzlich muss der EPSG-Code übergeben werden und eine eindeutige ID in dem HTML-div vorliegen (siehe Konfigurationsbeispiel unten).
+Mapbender wertet nach korrekter Konfiguration diese Informationen aus und stellt die Geometrien in der Karte dar. Beim Mouse-Over auf den Treffern des Infofensters wird die dazugehörige Geometrie farblich entsprechend hervorgehoben. Anpassungen können für MapServer, QGIS Server, GeoServer erfolgen.
 
 Die notwendige Anpassung wird hier am Beispiel von MapServer gezeigt. In der DATA-Angabe wird zusätzlich die Geometrie als WKT ausgegeben. Außerdem wird das FeatureInfo-Template angepasst. Wird nun ein WMS über GetFeatureInfo abgefragt, werden die entsprechenden Flächen in der Karte hervorgehoben.
 
@@ -121,25 +121,19 @@ YAML-Definition:
 
    title: FeatureInfo             # Titel des Elements
    tooltip: Feature Info          # Text des Tooltips
-   type: dialog                   # Default und mandatory: dialog.
+   type: dialog                   # Standard, Pflichtfeld: dialog
    target: map                    # ID des Kartenelements
-   autoActivate: false            # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird, der Standardwert ist false.
-   deactivateOnClose: true        # true/false um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren, der Standardwert ist true
+   autoActivate: false            # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird (Standard: false)
+   deactivateOnClose: true        # true/false, um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren (Standard: true)
    onlyValid: false               # Korrekte HTML Ausgabe erfordern. Standardwert ist false.
-   printResult: false             # Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann. Standardwert ist false.
-   displayType: tabs              # tabs/accordion Default: tabs
+   printResult: false             # Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann (Standard: false)
+   displayType: tabs              # tabs/accordion (Standard: tabs)
    width: 700                     # Breite des Dialogs in Pixel, Standardwert: 700
    height: 500                    # Höhe des Dialog in Pixel, Standardwert: 500
-   maxCount: 100	           # Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
-   highlighting: false            # Deaktiviert/aktiviert FeatureInfo Highlighting
+   maxCount: 100	              # Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll
+   highlighting: false            # FeatureInfo Highlighting (Standard: false)
    featureColorDefault: #ffa500   # Farbe zur Hervorhebung ausgewählter Geometrien
    featureColorHover: #ff0000     # Farbe zur Hervorhebung beim Hovern über ausgewählte Geometrien
 
 
 
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\FeatureInfo
-* **Widget:** mapbender.element.featureInfo.js
-* **Style:** mapbender.elements.css
