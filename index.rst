@@ -49,7 +49,6 @@ Download Mapbender
 
 
 .. image:: https://www.openhub.net/p/mapbender/widgets/project_partner_badge.gif
-  :scale: 80 %
   :alt: Mapbender Project on Open Hub
   :align: right
   :target: https://www.openhub.net/p/mapbender?ref=sample
