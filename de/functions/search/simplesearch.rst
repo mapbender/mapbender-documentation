@@ -72,9 +72,9 @@ YAML-Definition
 So richten Sie Solr ein:
 ========================
 
-* **Download**: http://lucene.apache.org/solr/
-* **Dokumentation**: http://lucene.apache.org/solr/resources.html#documentation 
-* **Tutorial**: http://lucene.apache.org/solr/quickstart.html
+* **Download**: https://solr.apache.org/downloads.html
+* **Dokumentation**: https://solr.apache.org/guide
+* **Tutorial**: https://solr.apache.org/guide/solr-tutorial.html
 
 Class, Widget & Style
 =========================
