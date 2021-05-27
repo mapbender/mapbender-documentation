@@ -73,9 +73,9 @@ YAML-Definition
 How to setup Solr
 ==================
 
-* **Download**: http://lucene.apache.org/solr/
-* **Documentation**: http://lucene.apache.org/solr/resources.html#documentation 
-* **Quickstart**: http://lucene.apache.org/solr/quickstart.html
+* **Download**: https://solr.apache.org/downloads.html
+* **Documentation**: https://solr.apache.org/guide
+* **Quickstart**: https://solr.apache.org/guide/solr-tutorial.html
 
 Class, Widget & Style
 =========================
