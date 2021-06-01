@@ -4,7 +4,7 @@ Linien-/Flächenmessung
 **********************
 
 Mit dem Lineal wird eine Linie oder eine Fläche gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Für das Element wird ein Button verwendet. Die Konfiguration findet sich unter :ref:`button_de`.
-Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst. Jedes eingebundene Element kann nur entweder Linien oder Flächen messen. Für die Nutzung von beiden Funktionen (Flächen- und Linien messen) in einer Anwendung werden zwei Buttons benötigt, die in einer gemeinsamen Gruppe sind.
+Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst. Jedes eingebundene Element kann nur entweder Linien oder Flächen messen. Für die Nutzung von beiden Funktionen (Flächen- und Linienmessung) in einer Anwendung werden zwei Buttons benötigt, die in einer gemeinsamen Gruppe sind.
 
 .. image:: ../../../figures/de/ruler.png
      :scale: 80
