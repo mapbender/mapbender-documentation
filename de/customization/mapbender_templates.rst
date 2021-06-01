@@ -42,7 +42,7 @@ Im Anschluss können folgende Optionen konfiguriert werden:
  * Bildschirmtyp
  * Breite (in Pixeln)
  * Position
- * Checkbox "Geschlossen halten"
+ * Checkbox "Geschlossen starten"
 
 
 .. image:: ../../figures/de/sidepane_backend.png
@@ -72,7 +72,7 @@ Die Option "Bildschirmtyp" legt fest, für welche Geräteart (Alle, Mobil oder D
 
 Die Position gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
 
-Die Checkbox "Geschlossen halten" hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über den einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
+Die Checkbox "Geschlossen starten" hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über den einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
 
 Mobiles Template
 ****************
