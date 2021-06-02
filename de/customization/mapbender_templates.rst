@@ -34,9 +34,24 @@ Besonderheiten:
 Sidepane-Konfigurationsmöglichkeiten
 ************************************
 
-Das Fullscreen Template bietet eine Sidepane an, innerhalb derer Elemente in unterschiedlichen Ansichten angezeigt werden können.
+Das Fullscreen Template bietet eine vielseitig konfigurierbare Sidepane an.
+Die Ansichtsoptionen für die Sidepane können im Sidepane-Bereich im Mapbender-Backend ausgewählt werden. Dazu genügt ein Klick auf das Einstellungszahnrad.
+Im Anschluss können folgende Optionen konfiguriert werden:
 
-- "Accordion" zeigt alle hinzugefügten Elemente in Reitern:
+ * Typ
+ * Bildschirmtyp
+ * Breite (in Pixeln)
+ * Position
+ * Checkbox "Geschlossen starten"
+
+
+.. image:: ../../figures/de/sidepane_backend.png
+     :scale: 80
+
+
+Die Option "Typ" zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an:
+
+- "Akkordeon" zeigt alle hinzugefügten Elemente in Reitern:
 
 .. image:: ../../figures/de/sidepane_accordion.png
      :scale: 80
@@ -46,16 +61,18 @@ Das Fullscreen Template bietet eine Sidepane an, innerhalb derer Elemente in unt
 .. image:: ../../figures/de/sidepane_buttons.png
      :scale: 80
 
-- "None" verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an:
+- "Unformatiert" verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an:
 
 .. image:: ../../figures/de/sidepane_nostyle.png
      :scale: 80
 
-Die Ansichtsoption für die Sidepane kann im Sidepane-Bereich im Mapbender-Backend ausgewählt werden. Dazu genügt ein Klick auf einen der rechts angeordneten Buttons:
+Die Option "Bildschirmtyp" legt fest, für welche Geräteart (Alle, Mobil oder Desktop) die Sidepane angezeigt werden soll.
 
-.. image:: ../../figures/sidepane_backend.png
-     :scale: 80
+Über die Option "Breite" kann ein Pixelwert definiert werden, der die Breite der Sidepane in der Anwendung verändert.
 
+Die Position gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
+
+Die Checkbox "Geschlossen starten" hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über den einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
 
 Mobiles Template
 ****************
