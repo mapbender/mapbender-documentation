@@ -174,7 +174,7 @@ Durch die Angabe eines **Type** [6] kann die Anzeige des Layertrees in der Anwen
 * *Opacity* (Deckkraft der einzelnen Layer verändern)
 * *Zoom to layer* (auf die BBOX des Layers zoomen)
 * *Metadata* (Metadaten des Layers anzeigen)
-* *Dimension* (Dimension des Layers kontrollieren , z.B. Höhe oder Zeit - mehr unter `Dimensions handler <../functions/misc/dimensions_handler.html>`_ )
+* *Dimension* (Dimension des Layers kontrollieren , z.B. Höhe oder Zeit - mehr unter `Dimensions handler <../misc/dimensions_handler.html>`_ )
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80

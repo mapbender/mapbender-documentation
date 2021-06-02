@@ -175,7 +175,7 @@ Via the **Menu** [7] a number of buttons can be activated, which are then availa
 * *Opacity* (change the opacity of a layer)
 * *Zoom to layer* (zoom to the BBOX of the layer)
 * *Metadata* (show the metadata of the layer)
-* *Dimension* (change the dimension, e.g. time or elevation of the Layer - read more about the `Dimensions handler <../functions/dimensions_handler.html>`_ )
+* *Dimension* (change the dimension, e.g. time or elevation of the Layer - read more about the `Dimensions handler <../misc/dimensions_handler.html>`_ )
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
