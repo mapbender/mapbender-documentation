@@ -11,7 +11,7 @@ Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instan
 Layerset-Instanzen
 ==================
 
-Layerset-Instanzen enthalten die Optionen, wie ein WMS angesprochen werden kann: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr. Über den Zahnrad Button können Instanzen konfiguriert werden.
+Layerset-Instanzen enthalten die Optionen, wie ein WMS angesprochen werden kann: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr. Aus der Layerset-Übersicht können mit dem Zahnrad-Button einzelne Instanzen konfiguriert werden.
 
 .. image:: ../../../figures/de/layerset/mapbender_wms_application_settings_DE.png
 
