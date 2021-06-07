@@ -3,7 +3,7 @@
 Search Router
 *************
 
-This element creates a configurable search formular with result output. At this point of time generic SQL search is supported, with more to come (WFS, Solr, ...).
+This element creates a configurable search formular with result output in which generic SQL search is supported.
 
 .. image:: ../../../figures/search_router_en.png
      :scale: 80

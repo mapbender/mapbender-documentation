@@ -44,7 +44,7 @@ Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Framewor
   * Dienste wie WMS können in einem Service Repository verwaltet und mit Anwendungen verbunden werden.
   * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
   * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
-  * Suchen (SQL oder Solr) können konfiguriert werden.
+  * Suchen können konfiguriert werden.
   * Anwendungen zur Digitalisierung können aufgebaut werden
   * Ein Mobiles Template kann für das Erstellen von Anwendungen für Smartphones und Tablets verwendet werden
 
@@ -367,7 +367,7 @@ Beispiele für Elemente, die Mapbender anbietet:
 * Linien- und Flächenmessung (Ruler Line/Area) - Linien- und Flächenzeichnung, Dialog der Messung
 * Maßstabsauswahl (Scale Selector) - Auswahl des Maßstabs über eine Auswahlbox
 * Maßstabsleiste (ScaleBar) - Anzeige des aktuellen Maßstabs
-* Einfache Suche (SimpleSearch) - Einfache Suche über SOLR
+* Einfache Suche (SimpleSearch) - Einfache Suche
 * Suche (Search Router) - konfigurierbare Suche über SQL
 * SRS Auswahl (Spatial Reference System Selector) - Auswahl der Projektion (SRS) über eine Auswahlbox
 * Navigation Toolbar (Zoombar)
