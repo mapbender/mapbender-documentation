@@ -3,7 +3,7 @@
 Layersets und Layerset-Instanzen
 ********************************
 
-Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS Dienste) beinhalten kann. Ein typisches Beispiel sind die Unterscheidung in den Layerset "main" für die Hauptkarte und "overview" für die Übersichtskarte. Sie können weitere Layersets definieren, die optional in der Karte dargestellt werden oder auch im Layertree als eigener Ordner erscheinen (thematische Layer).
+Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS-Dienste) beinhalten kann. Ein typisches Beispiel sind die Unterscheidung in den Layerset "main" für die Hauptkarte und "overview" für die Übersichtskarte. Sie können weitere Layersets definieren, die optional in der Karte dargestellt werden oder auch im Layertree als eigener Ordner erscheinen (thematische Layer).
 
 .. image:: ../../../figures/de/layerset/mapbender_service_edit_DE.png
 
@@ -15,7 +15,7 @@ Layerset-Instanzen enthalten die Optionen, wie ein WMS angesprochen werden kann:
 
 .. image:: ../../../figures/de/layerset/mapbender_wms_application_settings_DE.png
 
-Sobald ein WMS Dienst in einen Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
+Sobald ein WMS-Dienst in einen Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
 Der Screenshot zeigt die `private Instanz <freie_private_instanzen_>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2, die Layerset-Instanz selbst hat die Laufnummer 28.
 
 **Die Eigenschaften aus den WMS-Capabilities:**
@@ -81,22 +81,20 @@ Die folgende Tabelle fasst das Verhalten nochmal zusammen:
 Damit kann Mapbender auf die unterschiedlichen Art und Weisen reagieren, wie ein WMS Capabilities Dokument aufgebaut hat, indem einfach die Reihenfolge in dem Layerbaum angepasst wird.
 
 
-.. _freie_private_instanzen:
-
 Freie und private Instanzen
 ---------------------------
 
-Alle Layerset-Instanzen werden standardmäßig als private Instanzen erstellt. Private Instanzen müssen für jede Anwendung individuell konfiguriert werden. Freie Instanzen ermöglichen die Einbindung einer konfigurierten Layerset-Instanz in mehreren Anwendungen.So können freie Instanzen verwendet werden, um für mehrere Anwendungen, die gleich konfigurierte Layerset-Instanzen teilen, nicht mehrmals die gleiche Konfiguration durchführen zu müssen.Änderungen einer freien Instanz sind in allen Anwendungen, in denen die Instanz eingebunden ist, wirksam.
+Alle Layerset-Instanzen werden standardmäßig als private Instanzen erstellt. Private Instanzen müssen für jede Anwendung individuell konfiguriert werden. Freie Instanzen ermöglichen die Einbindung einer vorkonfigurierten Layerset-Instanz in mehreren Anwendungen. So können freie Instanzen bspw. verwendet werden, um für mehrere Anwendungen, die gleich konfigurierte Layerset-Instanzen teilen, nicht mehrmals die gleiche Konfiguration durchführen zu müssen. Änderungen einer freien Instanz sind in allen Anwendungen, in denen die Instanz eingebunden ist, wirksam.
 
 Eine Layerset-Instanz kann in der Bearbeitungsansicht über den blauen Button "In freie Instanz umwandeln" in eine freie Instanz umgewandelt werden. Über den gleichen Button lässt sich eine freie Instanz wieder in eine private Instanz umwandeln.
 
 .. image:: ../../../figures/de/layerset/convert_to_shared_instance_DE.png
 
-|
+In der Layersets-Übersicht sind freie Instanzen in der Spalte "Typ" mit einem Funk-Symbol gekennzeichnet.
 
 .. image:: ../../../figures/de/layerset/convert_to_bound_instance_DE.png
 
-In der Layersets-Übersicht sind freie Instanzen in der "Typ" Spalte mit einem Wi-Fi Symbol gekennzeichnet. Private Instanzen sind mit dem Anker Symbol gekennzeichnet.
+ Private Instanzen sind wiederum mit einem Anker-Symbol gekennzeichnet.
 
 .. image:: ../../../figures/de/layerset/instances_labels_DE.png
 
@@ -104,7 +102,7 @@ Um eine freie Instanz in eine Anwendung einzubinden, kann diese als Datenquelle 
 
 .. image:: ../../../figures/de/layerset/incorporate_shared_instance_DE.png
 
-Zu einer Übersicht aller freien Instanzen kann über das Menü **Datenquellen -> Freie Instanzen** navigiert werden.
+Zu einer Übersicht aller freien Instanzen kann über das Menü zu **Datenquellen -> Freie Instanzen** navigiert werden.
 
 .. image:: ../../../figures/de/layerset/shared_instances_overview_DE.png
 
@@ -136,8 +134,6 @@ Layerkonfiguration
 
 
 
-.. _hinweise-layersets:
-
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen
 ==========================================================
 
@@ -145,7 +141,7 @@ Basesources
 -----------
 
 Es gibt viele Möglichkeiten, den Layertree zu füllen und mit Basisdiensten zu arbeiten:
-- Z.B. durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
+- Bspw. durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
 - Oder auch mit den Möglichkeiten des `thematischen Layerbaums <../basic/layertree>`_ zu arbeiten, verschiedene Layersets anzulegen und die Basisdienste und thematischen Dienste dort zu verteilen und im Layerbaum zu unterscheiden.
 
 Für welche Möglichkeit Sie sich entscheiden, hängt ganz von Ihren Vorlieben ab.
