@@ -1,4 +1,4 @@
-.. _yaml_en:
+.. _yaml:
 
 YAML Configuration (Configuration and Application files)
 ========================================================
