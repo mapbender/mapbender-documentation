@@ -177,7 +177,7 @@ Configuration example:
 
 The functions 'Self-Registration' and 'reset password' need a mailer.
 
-More information in chapter :ref:`users_en`.
+More information in chapter :ref:`users`.
 
 
  **Project name**

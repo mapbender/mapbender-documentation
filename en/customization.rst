@@ -11,6 +11,4 @@ Customization / Tips and tricks
    customization/css.rst
    customization/yaml.rst
    customization/commands.rst
-   
-   .. _customization_de:
 

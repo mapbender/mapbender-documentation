@@ -43,7 +43,7 @@ If you set a tick at **Draggable**, then a small cross will appear next to the n
 
 **Rotation** enables changes of the map orientation. The following figure displays the map after one (left) and two (right) rotations. A click on the north arrow allows for a restoration of the original rotation.
 
-.. image:: ../../../figures/navigationtoolbar_rotation.jpg
+.. image:: ../../../figures/navigationtoolbar_rotation.png
      :scale: 80
 
 Users can zoom to their smallest scale by **Zoom to max extent**. This *Max Extent* can be set individually in the `map element <map.html>`_ of the content.
