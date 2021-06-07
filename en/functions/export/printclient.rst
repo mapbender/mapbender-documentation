@@ -237,7 +237,7 @@ The description of the group will be displayed in the field "dynamic_text" (e.g.
 The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. 
 
 
-Since Mapbender 3.2. there is a new feature which allows users to print their name. In order to do this, one has to insert **user_name** into their print template. The logged-in user's name is then printed at the defined location. If no user is logged in, nothing is printed. 
+It is possible to print a user name. In order to do this, one has to insert **user_name** into their print template. The logged-in user's name is then printed at the defined location. If no user is logged in, nothing is printed. 
 
 .. image:: ../../../figures/print_client_user_name.png
      :scale: 80
