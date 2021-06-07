@@ -14,6 +14,9 @@ Mit Skizzen Element können folgende Geometrietypen erstellt werden:
 * Kreis
 * Text 
 
+.. image:: ../../../figures/de/sketch.png
+     :scale: 80
+
 Konfiguration
 ================
 
