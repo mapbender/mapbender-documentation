@@ -32,8 +32,10 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 * Definition von Reitern
 * Definition von Trennlinien
 * Definition von beschreibenden Texten zur Information
+* Definition von Hilfetexten
 * Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe bestimmter Feldinhalte
-* Hilfetexte
+* Möglichkeit, in Formulare eingegebene Inhalte per Buttonklick in die Zwischenablage zu kopieren
+* Karten-Refresh nach Speichern
 
 
 .. image:: ../../../figures/digitizer_with_tabs.png
@@ -75,7 +77,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
     poi:
         label: point digitizing
         inlineSearch: true
-        maxResults: 500
         featureType:
             connection: search_db
             table: poi
@@ -180,7 +181,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
     line:
         label: line digitizing
         inlineSearch: true
-        maxResults: 1500
         featureType:
             connection: search_db
             table: lines
@@ -235,7 +235,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
     polygon:
         label: polygon digitizing
         inlineSearch: true
-        maxResults: 1500
         featureType:
             connection: search_db
             table: polygons
@@ -423,17 +422,17 @@ Es gibt mehrere Optionen in den `Basisdefinitionen <#basisdefinition>`_, die das
 Das *Löschen* eines Features kann sowohl über den Dialog, als auch die Tabelle geschehen.
 
 
-Vertices
+Stützpunkte
 --------
 
-Das Bearbeiten von Polygonen und Linien erlaubt das Erstellen, Verschieben und Löschen von Vertices. Die Schaltfläche zum Editieren von Vertices erwartet, dass man ein Polygon selektiert. Dieses wird dann mit den Stützpunkten angezeigt.
+Das Bearbeiten von Polygonen und Linien erlaubt das Erstellen, Verschieben und Löschen von Stützpunkten. Die Schaltfläche zum Editieren von Stützpunkten erwartet, dass man ein Polygon selektiert. Dieses wird dann mit den Stützpunkten angezeigt.
 
 .. image:: ../../../figures/digitizer_edit_vertices.png
            :scale: 80
 
 Die vorhandenen Stützpunkte werden deckend dargestellt, mögliche neue Stützpunkte befinden sich immer in der Mitte einer Kante, sind leicht transparent dargestellt und können per Klick auf diesen Punkt hinzugefügt werden.
 
-Vorhandene Vertices werden mit der Entfernentaste auf dem Keyboard gelöscht. Dafür bewegt man sich mit dem Mauszeiger über einen Stützpunkt und drückt die Entf-Taste. *Anmerkung*: Falls das Löschen einen Stützpunktes nicht reagiert, hilft ein Klick mit der rechten Maustaste auf die Karte. Speziell mit dem aktivierten Kontextmenü können sich z.Z. noch Events verhaken.
+Vorhandene Stützpunkte werden mit der Entfernen-Taste auf der Tastatur gelöscht. Dafür bewegt man sich mit dem Mauszeiger über einen Stützpunkt und drückt die Entf-Taste. *Anmerkung*: Falls das Löschen einen Stützpunktes nicht reagiert, hilft ein Klick mit der rechten Maustaste auf die Karte. Speziell mit dem aktivierten Kontextmenü können sich z.Z. noch Events verhaken.
 
 
 
@@ -452,7 +451,6 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
 
     poi:
         label: point digitizing
-        maxResults: 500
         minScale: 5000
         featureType:
             connection: search_db
@@ -474,7 +472,6 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
 Die möglichen Optionen sind:
 
 * **label:** Beschriftung mit dem Namen der Erfassungsoberfläche
-* **maxResults:** maximale Trefferanzahl, default Wert ist 1000
 * **minScale:** Minimaler Maßstab, ab dem die Features in der Karte angezeigt werden (z.B. minscale: 5000 = Anzeige ab einem Maßstab über 1:5000, beim rauszoomen)
 * **featureType:** Verbindung zur Datenbank
 
@@ -551,7 +548,7 @@ Definition Popup
 Definition der Objekttabelle
 ----------------------------
 
-Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte gezoomt werden und das Bearbeitsformular kann geöffnet werden. Die Objekttabelle ist sortierbar. Die Breite der einzelnen Spalten kann optional in Prozent oder Pixeln angegeben werden.
+Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte gezoomt werden und das Bearbeitungsformular kann geöffnet werden. Die Objekttabelle ist sortierbar. Die Breite der einzelnen Spalten kann optional in Prozent oder Pixeln angegeben werden.
 
 * **tableFields:** Definition der Spalten für die Objekttabelle.
    * Definition einer Spalte: [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe z.B. Angabe der Breite]}  # Definition einer Spalte
@@ -658,9 +655,10 @@ Textfelder (type input)
                                                  - type: input                                        # Typ Textfeld
                                                    title: Title for the field                         # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: column_name                                  # Referenz zur Tabellenspalte
-                                                   mandatory: true                                    # Angabe ob Pflichtfeld (optional)
-                                                   mandatoryText: You have to provide information.    # Text sofern Pflichtfeld nicht gefüllt ist
-                                                   infoText: 'Bitte geben Sie einen Wert an'          # Definition eines Informationstextes
+                                                   copyClipboard: false                               # Button, der eingetragene Inhalte in die Zwischenablage kopiert (optional). [true/false] Standard ist false.
+                                                   mandatory: true                                    # Angabe ob Pflichtfeld (optional). [true/false]
+                                                   mandatoryText: You have to provide information.    # Text, sofern Pflichtfeld nicht gefüllt wurde
+                                                   infoText: 'Bitte geben Sie einen Wert an'          # Definition eines Informationstextes (optional)
                                                    value: 'default Text'                              # Definition eines Standard-Wertes  (optional)
                                                    placeholder: 'please edit this field'              # Platzhalter, der vor der Eingabe erscheint (optional)
 
@@ -678,7 +676,8 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
                                                  - type: select                                       # Typ Auswahlbox
                                                    title: select some types                           # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: my_type                                      # Referenz zur Tabellenspalte
-                                                   multiple: false                                    # Definition einer Mehrfachauswahl (multiselect), Standard ist false
+                                                   copyClipboard: false                               # Button, der den ausgewählten Wert in die Zwischenablage kopiert (optional).
+                                                   multiple: false                                    # Definition einer Mehrfachauswahl (multiselect). [true/false] Standard ist false.
                                                    options:                                           # Definition der Optionen (key: value)
                                                        1: pub
                                                        2: bar
@@ -688,7 +687,7 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
 
 **(2) multiselect - mehrere Einträge können ausgewählt werden**
 
-Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können mehrere Einträge ausgewählt werden. Die Nutzung und die Voraussetzungen der Datenbank können da variieren. Bei dem oben beschriebenen Beispiel können die Interessen in den POI als Multiobjekte abgespeichert werden. Das Datenbankfeld ist weiterhin  ein character varying.
+Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können mehrere Einträge ausgewählt werden. Die Nutzung und die Voraussetzungen der Datenbank können variieren. Bei dem oben beschriebenen Beispiel können die Interessen in den POI als Multiobjekte abgespeichert werden. Das Datenbankfeld ist weiterhin ein character varying.
 
 .. code-block:: yaml
 
@@ -697,6 +696,7 @@ Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können 
                   multiple: true
                   title: Interests
                   name: interests
+                  copyClipboard: false
                   options:
                     maps: maps
                     reading: reading
@@ -706,7 +706,7 @@ Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können 
                     flowers: flowers
 
 **Anmerkungen:** Ab Digitizer 1.2 wird für die Mehrfachauswahl eine vereinfachte Auswahlmöglichkeit genutzt, die auch die Suche innerhalb der Drop-Down-Liste ermöglicht. Die Navigation durch die Liste ist mit der Tastatur möglich. Mögliche Einträge werden beim Eintippen hevorgehoben. Eine vorhandene Auswahl kann über das kleine "x" Symbol wieder deaktiviert werden.
-Aktuell wird beim Mapbender der Digitizer 1.0.x mitgeliefert. Weitere Versionen findet man unter: https://github.com/mapbender/mapbender-digitizer
+Aktuelle Informationen zur Digitizer-Version findet man unter: https://github.com/mapbender/mapbender-digitizer
 
 .. image:: ../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
@@ -723,7 +723,7 @@ Das SQL (wenn maps und reading abgespeichert wurden):
                 (1 row)
 
 
-Beim Abspeichern von Einträgen werden die Schlüsselwörter in der Datenbank abgelegt (Bsp.: "dancing: Tanzen" und "flowers: Blumen" speichert "dancing,flowers").
+Beim Abspeichern von Einträgen werden die Schlüsselwörter in der Datenbank abgelegt (Bsp.: "dancing: Tanzen" und "flowers: Blumen" speichert "dancing,flowers"). Das Kopieren mehrerer Werte in die Zwischenablage ist ebenfalls möglich (siehe konfiguriertes Beispiel).
 
 .. code-block:: yaml
 
@@ -731,16 +731,17 @@ Beim Abspeichern von Einträgen werden die Schlüsselwörter in der Datenbank ab
                                                  - type: select                       # Typ Auswahlbox
                                                    title: Wählen Sie einen Typ aus    # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: my_type                      # Referenz zur Tabellenspalte
+                                                   copyClipboard: true                # Button, der den ausgewählten Wert in die Zwischenablage kopiert (optional).                                                   
                                                    multiple: true                     # Definition einer Mehrfachauswahl (multiselect), Standard ist false
-                                                   options:
-                                                     a: a                             # Definition der Optionen (key: value)
+                                                   options:                           # Definition der Optionen (key: value)
+                                                     a: a                             
                                                      b: b
                                                      c: c
 
 
 **Füllen der Auswahlboxen über eine SQL Abfrage**
 
-Mit einer SQL Abfrage können die Werte direkt aus der Datenbank gezogen werden. Dabei ist zu beachten, dass die key-value zuordnungen wegfallen und nur noch die Indizes abgespeichert werden.
+Mit einer SQL-Abfrage können die Werte direkt aus der Datenbank gezogen werden. Dabei ist zu beachten, dass die key-value-Zuordnungen wegfallen und nur noch die Stützpunkte abgespeichert werden.
 
 .. code-block:: yaml
 
@@ -816,7 +817,7 @@ Pflichtfelder
 
 Die Hinweise für ein Pflichtfeld erscheinen über dem jeweiligen Feldern. Bei einer fehlenden Angabe in einem definierten Pflichtfeld wird dieses rot umrandet und (wenn vorher definiert) erscheinen Hinweise. Das Objekt kann nicht gespeichert werden, wenn Pflichtangaben fehlen.
 
-.. note:: Hinweis: Bei der Nutzung von mehreren Reitern in dem Formular kann es sein, dass der Erfasser bei einem Pflichtfeld auf einem nicht sichtbaren Reiter eine Angabe falsch setzt und das Abspeichern daher nicht funktioniert. Hier erscheint keine Fehlermeldung außerhalb des Formulars. Der Erfasser muss die Angaben in dem Formular überprüfen (Kennzeichen: rote Umrandung/ Sprechblase mit Hinweis), bevor diese korrekt abgespeichert werden können.
+.. note:: Hinweis: Bei der Nutzung von mehreren Reitern in dem Formular kann es sein, dass der Erfasser bei einem Pflichtfeld auf einem nicht sichtbaren Reiter eine Angabe falsch setzt und das Abspeichern daher nicht funktioniert. Hier erscheint keine Fehlermeldung außerhalb des Formulars. Der Erfasser muss die Angaben in dem Formular überprüfen (Kennzeichen: rote Umrandung/Sprechblase mit Hinweis), bevor diese korrekt abgespeichert werden können.
 
 .. code-block:: yaml
 
@@ -1030,7 +1031,6 @@ Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eine
       inlineSearch: true      # Suche in den Tabellenspalten, Standard ist true
       ...
 
-Die erweiterte Suche (Parameter search) ist statt der simplen Suche (Parameter inlineSearch) möglich. Mehr zu dieser Suchfunktion findet sich unter `Suche per Digitizer <search_digitizer.html>`_ .
 
 Kontextmenü
 -----------
@@ -1121,7 +1121,7 @@ Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per ein
          - osm                         # Namensangabe nur bei Anwendungen unter app/config/application möglich
       [...]
       
-**Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Aktuell wird beim Mapbender der Digitizer 1.0.x mitgeliefert. Weitere Versionen findet man unter: https://github.com/mapbender/mapbender-digitizer
+**Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Aktuelle Informationen findet man unter: https://github.com/mapbender/mapbender-digitizer
  
 
 

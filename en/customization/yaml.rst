@@ -177,7 +177,7 @@ Configuration example:
 
 The functions 'Self-Registration' and 'reset password' need a mailer.
 
-More information in chapter :ref:`users_en`.
+More information in chapter :ref:`users`.
 
 
  **Project name**
@@ -419,7 +419,7 @@ You can export applications as JSON or YAML under **Applications --> Export**.
 
 You can import the export file into a Mapbender installation under **Applications --> Import**.
 
-.. image:: ../../figures/export.png
+.. image:: ../../figures/import.png
 
 
 

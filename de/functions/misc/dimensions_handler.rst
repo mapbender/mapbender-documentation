@@ -1,4 +1,4 @@
-.. _dimensions_handler:
+.. _dimensions_handler_de:
 
 Dimensions Handler
 ******************

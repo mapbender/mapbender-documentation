@@ -21,8 +21,8 @@ In connection with the digitization, very complex forms can be generated for the
 
 The following option for the construction of the forms are available:
 
-* define more then one feature types for digitization. You can switch from one feature type to the other with a select box
-* use a table as source. You can also define a filter to get a subset of the table
+* Define more then one feature types for digitization. You can switch from one feature type to the other with a select box
+* Use a table as source. You can also define a filter to get a subset of the table
 * Textfields
 * Selectboxes, Multiselectboxes
 * Radiobuttons, Checkboxes
@@ -33,9 +33,10 @@ The following option for the construction of the forms are available:
 * Definition breaklines
 * Definition of Text 
 * Mandatory fields, regular expressions to valid the content are possible
-* Help texts
+* Definition of help texts
 * Duplicate features
 * Refresh after save
+* Possibility to copy entered information from a form into the clipboard
 
 
 .. image:: ../../../figures/digitizer_with_tabs.png
@@ -83,7 +84,6 @@ The functionality of the built-in features and additional functions are explaine
     poi:
         label: point digitizing
         inlineSearch: true
-        maxResults: 500
         featureType:
             connection: search_db
             table: poi
@@ -188,7 +188,6 @@ The functionality of the built-in features and additional functions are explaine
     line:
         label: line digitizing
         inlineSearch: true
-        maxResults: 1500
         featureType:
             connection: search_db
             table: lines
@@ -243,7 +242,6 @@ The functionality of the built-in features and additional functions are explaine
     polygon:
         label: polygon digitizing
         inlineSearch: true
-        maxResults: 1500
         featureType:
             connection: search_db
             table: polygons
@@ -460,7 +458,6 @@ A basic definition, here for the poi-example, may look like the following snippe
 
     poi:
         label: point digitizing
-        maxResults: 500
         minScale: 5000
         featureType:
             connection: search_db
@@ -483,7 +480,6 @@ The possible options are:
 
 * **label:** Label of the Digitizer popup
 * **minScale:** Minimum scale, where the features should be displayed in the map (e.g. minscale: 5000 = show from a scale 'over' 1:5000, when zooming out).
-* **maxResults:** Maximum number of results
 * **featureType:** Connection to the database
 
   * connection: Name of the database-connection from the parameters/config.yml
@@ -655,7 +651,7 @@ parameters:
                             yearField.css("background-color","#ffc0c0");
 
 
-Textfields (type input)
+Text fields (type input)
 -----------------------
 
 .. code-block:: yaml
@@ -663,6 +659,7 @@ Textfields (type input)
                                                  - type: input                                      # element type definition
                                                    title: Title for the field                       # labeling (optional)
                                                    name: column_name                                # reference to table column (optional)
+                                                   copyClipboard: false                             # specify button that copies entered information to the clipboard (optional). [true/false]. Default is false.
                                                    mandatory: true                                  # specify mandatory field (optional)
                                                    mandatoryText: You have to provide information.
                                                    cssClass: 'input-css'                            # additional css definition (optional)
@@ -683,7 +680,8 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
 
                                                  - type: select                     # element type definition
                                                    title: select a type             # labeling (optional)
-                                                   name: my_type                    # reference to table column (optional)                    
+                                                   name: my_type                    # reference to table column (optional)
+                                                   copyClipboard: false             # specify button that copies chosen values to the clipboard (optional). [true/false]. Default is false.                    
                                                    multiple: false                  # define a multiselect, default is false
                                                    options:                         # definition of the options (key, value)
                                                        1: pub
@@ -704,6 +702,7 @@ The Multiselect-Box is activated by the attribute "multiple: true". You can choo
                   multiple: true
                   title: Interests
                   name: interests
+                  copyClipboard: false
                   options:
                     maps: maps
                     reading: reading
@@ -712,8 +711,8 @@ The Multiselect-Box is activated by the attribute "multiple: true". You can choo
                     beer: beer
                     flowers: flowers
 
-**Notes:** From Digitizer version 1.2 the multiple selection provides an easier mechanism to choose an entry, which also allows a search in the drop-down-list. The navigation through the list is possible via keyboard. Possible entries are highlighted during typing. An already chosen entry can be removed by clicking the small "x" symbol.
-Currently Mapbender comes with Digitizer 1.0.x. More versions: https://github.com/mapbender/mapbender-digitizer
+**Notes:** From Digitizer version 1.2 and up, the multiple selection provides an easier mechanism to choose an entry, which also allows a search in the drop-down-list. The navigation through the list is possible via keyboard. Possible entries are highlighted during typing. An already chosen entry can be removed by clicking the small "x" symbol.
+Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer
 
 .. image:: ../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
@@ -729,7 +728,7 @@ The SQL (if maps and reading were chosen):
                 maps,reading
                 (1 row)
 
-The keywords are saved in the database (for example: "dancing: Tanzen" and "flowers: Blumen" stores "dancing,flowers").
+The keywords are saved in the database (for example: "dancing: Tanzen" and "flowers: Blumen" stores "dancing,flowers"). It is possible to copy several values to the clipboard with CopyClipboard: true.
 
 
 .. code-block:: yaml
@@ -737,6 +736,7 @@ The keywords are saved in the database (for example: "dancing: Tanzen" and "flow
                                                  - type: select                       # element type definition
                                                    title: select some types           # labeling (optional)
                                                    name: my_type                      # reference to table column (optional)
+                                                   copyClipboard: true                # Button which copies chosen values to the clipboard (optional)
                                                    multiple: true                     # define a multiselect, default is false
                                                    options:
                                                      a: a                             # definition of the options (key, value)
@@ -822,7 +822,7 @@ Mandatory fields
 
 The notes for a mandatory field appear above the used fields. In the case of a missing entry in a defined mandatory field, this will be marked in red and (if defined) a speech bubble will appear. The object can not be saved if mandatory data is missing.
 
-.. note:: Note: When using multiple tabs in the form, the creator may set an entry incorrectly on a non-visible tab in a mandatory field, so the saving process does not work. No error message appears outside the form. The applicant has to check the information in the form (label: red border / speech bubble with reference) before it can be stored correctly.
+.. note:: Note: When using multiple tabs in the form, the creator may set an entry incorrectly on a non-visible tab in a mandatory field, so the saving process does not work. No error message appears outside the form. The applicant has to check the information in the form (label: red border/speech bubble with reference) before it can be stored correctly.
 
 .. code-block:: yaml
 
@@ -1037,8 +1037,6 @@ The activated element displays a search bar above the table. It shows all the se
       inlineSearch: true      # true: allows the search in the table, default is true
       ...
 
-The advanced search (parameter search) is possible instead of the simple search (parameter inlineSearch). More about this search function can be found at `Search via Digitizer <search_digitizer.html>`_ .
-
 
 Context Menu
 ------------
@@ -1126,7 +1124,7 @@ If the YAML application is used in the /application folder, it can be specified 
          - osm        # specify by unique name only with applications in app/config/application
       [...]
 
-**Notes:** Map-Refresh after save is available from Digitizer version 1.2. Currently Mapbender comes with Digitizer 1.0.x. More versions: https://github.com/mapbender/mapbender-digitizer
+**Notes:** Map-Refresh after save is available from Digitizer version 1.2. Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer
 
 Duplicate features
 ------------------

@@ -13,7 +13,7 @@ Functions
    functions/search.rst
    functions/export.rst
    functions/editing.rst
-   functions/wmc.rst
+   functions/share.rst
    functions/backend.rst
    functions/backend/FOM/index.rst
    functions/misc.rst

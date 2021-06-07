@@ -256,19 +256,18 @@ You can configure the WMS for your specific application. Maybe you don't want to
 
 #. You can change the order of the layers via drag & drop
 
-.. image:: ../figures/mapbender_wms_application_settings.png
+.. image:: ../figures/mapbender_wms_application_settings_en.png 
   :scale: 80
 
 **Service configuration:**
 
 * Title: name shown in the application
+* Opacity: choose opacity in percent
 * Format: choose the format for getMap-Requests
 * Infoformat: choose the format for getFeatureInfo-Requests
 * Exceptionformat: choose the format for exceptions
-* Opacity: choose opacity in percent
 * Tile buffer: This parameter is valid for tiles services and specifies if additional tiles should be requested. If the user pans the map, these tiles are already downloaded and visible. The higher the value the more tiles are requested. Default: 0
 * BBOX-Faktor: This parameter is valid for non-tiled WMS services. You can specify the size of the returned map-image. A value greater than 1 will request a bigger map-image. Default: 1.25, can be set to 1.
-* Visible: set the visibility of the request
 * BaseSource: should the service be handled as BaseSource (BaseSources can be shown/hided in the layertree)
 * Proxy: if active the service will be requested by Mapbender and not directly
 * Transparency: default is active, the source is without a transparent background if it is deactivated (getMap-Request with TRANSPARENT=FALSE)
@@ -288,16 +287,14 @@ also add hard coded values.
 The following example shows the definition of the parameter "group", which
 transfers the group-value of the logged-in user.
 
-.. image:: ../figures/mapbender3_vendor_specific_parameter.png
+.. image:: ../figures/mapbender_vendor_specific_parameter.png
            :scale: 80
 
 
 
-* Type: „single“, „multiple“, „interval“ (multiple values in dimensions)
+* Vstype: Mapbender specific variables. Group (groups), User (users), Simple.
 * Name: parameter name of the WMS request.
 * Default: the default value.
-* Extent: available values (multiple as a comma seperated list).
-* Vstype: Mapbender specific variables. Group (groups), User (users), Simple.
 * Hidden: If this value is set, requests are send via a server so that the parameters are not directly visible.
 
 Currently, the element can be used to transfer user- and group-information,
