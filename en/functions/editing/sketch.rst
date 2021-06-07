@@ -85,7 +85,7 @@ Stop drawing
 
 To stop drawing click the pause button.
 
-.. image:: ../../../figures/de/sketch_stop_drawing.png
+.. image:: ../../../figures/sketch_stop_drawing.png
      :scale: 80
 
 
