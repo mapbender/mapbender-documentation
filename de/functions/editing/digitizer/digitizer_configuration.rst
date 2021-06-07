@@ -15,7 +15,7 @@ Das Element kann nur in der Sidepane eingebettet werden.
 * **Schemes:** YAML-Definition für das Element "digitizer"
 
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
-Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../customization/database.html>`_.
+Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../../customization/yaml.html>`_.
 
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
