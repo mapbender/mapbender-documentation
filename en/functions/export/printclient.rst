@@ -120,7 +120,7 @@ Mapbender saves its generated print files in the browser's default download fold
 Create your individual templates
 ================================
 
-To create an individual print template, already existing print templates (.odg-file) can be copied, or a new LibreOffice Draw file can be used. The template can include fixed objects like a logo, copyright or print information. In addition, a layer for dynamic elements like map, overview, north arrow, scale, date and optional fields can be created. The dynamic layer is an additional non-printable layer in the LibreOffice Draw file. The layer can be added with **Menu: -> Add -> Layer -> define name for the layer and choose checkbox option "not printable"**.
+To create an individual print template, already existing print templates (.odg-file) can be copied, or a new LibreOffice Draw file can be used. The template can include fixed objects like a logo, copyright or print information. In addition, a layer for dynamic elements like map, overview, north arrow, scale, date and optional fields can be created. The dynamic layer is an additional non-printable layer in the LibreOffice Draw file. The layer can be added with **Menu: -> Add -> Layer -> define name for the layer and choose checkbox option "not printable"**. An element is assigned to a layer via drag and drop.
 
 .. image:: ../../../figures/print_template_odg.png
      :scale: 80
@@ -237,8 +237,15 @@ The description of the group will be displayed in the field "dynamic_text" (e.g.
 The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. 
 
 
+It is possible to print a user name. In order to do this, one has to insert **user_name** into their print template. The logged-in user's name is then printed at the defined location. If no user is logged in, nothing is printed. 
+
+.. image:: ../../../figures/print_client_user_name.png
+     :scale: 80
+
+
 The printing process
 ====================
+
 
 Printing feature information for a selected element
 ---------------------------------------------------

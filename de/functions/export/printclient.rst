@@ -122,7 +122,7 @@ Verzeichnisse
 Erstellen einer individuellen Vorlage
 =====================================
 
-Um eine individuelle Druckvorlage zu erstellen, kann eine vorhandene Druckvorlage (ODG-Datei, LibreOffice Draw) kopiert und anschließend bearbeitet werden. Die Vorlage kann feste Objekte wie ein Logo, Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine dynamische Ebene für die dynamisch erzeugten Elemente (wie die Karte, die Übersichtskarte, den Nordpfeil, den Maßstab, das Datum und optionale Felder) erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene. Eine Ebene in LibreOffice Draw kann folgendermaßen hinzugefügt werden: **Menü: Einfügen -> Ebene... -> Namen für die Ebene definieren und Checkbox "druckbar" deaktivieren**.
+Um eine individuelle Druckvorlage zu erstellen, kann eine vorhandene Druckvorlage (ODG-Datei, LibreOffice Draw) kopiert und anschließend bearbeitet werden. Die Vorlage kann feste Objekte wie ein Logo, Copyright oder Druckinformationen beinhalten. Zusätzlich muss eine dynamische Ebene für die dynamisch erzeugten Elemente (wie die Karte, die Übersichtskarte, den Nordpfeil, den Maßstab, das Datum und optionale Felder) erstellt werden. Die dynamische Ebene ist eine zusätzliche nicht druckbare Ebene. Eine Ebene in LibreOffice Draw kann folgendermaßen hinzugefügt werden: **Menü: Einfügen -> Ebene... -> Namen für die Ebene definieren und Checkbox "druckbar" deaktivieren**. Die Zuordnung von Elementen zu einer Ebene erfolgt über Drag & Drop.
 
 .. image:: ../../../figures/print_template_odg.png
      :scale: 80
@@ -246,8 +246,16 @@ Sobald "dynamic_image" im Drucklayout vorliegt, wird nach einem Bild mit dem Nam
 Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe im Ausdruck eingetragen. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und bspw. für Copyright-Hinweise nutzen.
 
 
+
+Außerdem kann der Name des eingeloggten Nutzers ausgedruckt werden. Dafür muss der Platzhalter **user_name** an der gewünschten Stelle im Template eingefügt werden. Wenn kein Nutzer eingeloggt ist, dann bleibt beim Druck dieser Bereich frei.
+
+.. image:: ../../../figures/de/print_client_user_name.png
+     :scale: 80
+ 
+
 Der Druckvorgang
 ================
+
 
 Druck von Information für ein ausgewähltes Objekt
 -------------------------------------------------
