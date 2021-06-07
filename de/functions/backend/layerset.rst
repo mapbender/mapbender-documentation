@@ -5,21 +5,18 @@ Layersets und Layerset-Instanzen
 
 Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS Dienste) beinhalten kann. Ein typisches Beispiel sind die Unterscheidung in den Layerset "main" für die Hauptkarte und "overview" für die Übersichtskarte. Sie können weitere Layersets definieren, die optional in der Karte dargestellt werden oder auch im Layertree als eigener Ordner erscheinen (thematische Layer).
 
-.. image:: ../../../figures/mapbender3_service_edit.png
-           :scale: 80
+.. image:: ../../../figures/de/layerset/mapbender_service_edit_DE.png
 
 
 Layerset-Instanzen
 ==================
 
-Layerset-Instanzen enthalten die Optionen, wie ein WMS angesprochen werden kann: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr.
+Layerset-Instanzen enthalten die Optionen, wie ein WMS angesprochen werden kann: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr. Über den Zahnrad Button können Instanzen konfiguriert werden.
 
-.. image:: ../../../figures/de/mapbender3_wms_application_settings.png
-           :scale: 80
+.. image:: ../../../figures/de/layerset/mapbender_wms_application_settings_DE.png
 
 Sobald ein WMS Dienst in einen Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
-
-Der Screenshot zeigt die Instanz ``7/24`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 7, die Layerset-Instanz selbst hat die Laufnummer 24. Sie basiert auf dem OSM-Dienst der WhereGroup und kann in diesem Dialog für die Anwendung konfiguriert werden.
+Der Screenshot zeigt die `private Instanz <freie_private_instanzen_>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2, die Layerset-Instanz selbst hat die Laufnummer 28.
 
 **Die Eigenschaften aus den WMS-Capabilities:**
 
@@ -84,6 +81,34 @@ Die folgende Tabelle fasst das Verhalten nochmal zusammen:
 Damit kann Mapbender auf die unterschiedlichen Art und Weisen reagieren, wie ein WMS Capabilities Dokument aufgebaut hat, indem einfach die Reihenfolge in dem Layerbaum angepasst wird.
 
 
+.. _freie_private_instanzen:
+
+Freie und private Instanzen
+---------------------------
+
+Alle Layerset-Instanzen werden standardmäßig als private Instanzen erstellt. Private Instanzen müssen für jede Anwendung individuell konfiguriert werden. Freie Instanzen ermöglichen die Einbindung einer konfigurierten Layerset-Instanz in mehreren Anwendungen.So können freie Instanzen verwendet werden, um für mehrere Anwendungen, die gleich konfigurierte Layerset-Instanzen teilen, nicht mehrmals die gleiche Konfiguration durchführen zu müssen.Änderungen einer freien Instanz sind in allen Anwendungen, in denen die Instanz eingebunden ist, wirksam.
+
+Eine Layerset-Instanz kann in der Bearbeitungsansicht über den blauen Button "In freie Instanz umwandeln" in eine freie Instanz umgewandelt werden. Über den gleichen Button lässt sich eine freie Instanz wieder in eine private Instanz umwandeln.
+
+.. image:: ../../../figures/de/layerset/convert_to_shared_instance_DE.png
+
+|
+
+.. image:: ../../../figures/de/layerset/convert_to_bound_instance_DE.png
+
+In der Layersets-Übersicht sind freie Instanzen in der "Typ" Spalte mit einem Wi-Fi Symbol gekennzeichnet. Private Instanzen sind mit dem Anker Symbol gekennzeichnet.
+
+.. image:: ../../../figures/de/layerset/instances_labels_DE.png
+
+Um eine freie Instanz in eine Anwendung einzubinden, kann diese als Datenquelle bei dem Hinzufügen einer Instanz ausgewählt werden.
+
+.. image:: ../../../figures/de/layerset/incorporate_shared_instance_DE.png
+
+Zu einer Übersicht aller freien Instanzen kann über das Menü **Datenquellen -> Freie Instanzen** navigiert werden.
+
+.. image:: ../../../figures/de/layerset/shared_instances_overview_DE.png
+
+
 .. _layer_konfiguration:
 
 Layerkonfiguration
@@ -91,8 +116,7 @@ Layerkonfiguration
 
 Über die verschiedenen Checkboxen können Sie verschiedene Einstellungen treffen. Beachten Sie dabei, dass die oberste Checkbox der Liste jeweils für alle Instanzen denselben Status auswählt.
 
-.. image:: ../../../figures/de/layerset_instance.png
-           :scale: 80
+.. image:: ../../../figures/de/layerset/layerset_instance_DE.png
 
 
 
@@ -149,7 +173,7 @@ In einer Layerset Instanz können Vendor Specific Parameter angegeben werden, di
 In Mapbender können die Vendor Specific Parameter genutzt werden, um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
-.. image:: ../../../figures/mapbender_vendor_specific_parameter.png
+.. image:: ../../../figures/de/layerset/mapbender_vendor_specific_parameter_DE.png
 
 * Name: Parameter Name im WMS Request.
 * Default: Standardwert
