@@ -25,15 +25,15 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 .. code-block:: bash
 
  # Laden Sie die neue Version herunter
- wget -O http://mapbender.org/builds/mapbender3-3.0.4.0.tar.gz /tmp/build_mapbender/
- tar xfz /tmp/build_mapbender/mapbender3-3.0.4.0.tar.gz
+ wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz  /tmp/build_mapbender/
+ tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz 
  
  # Sichern Sie die alte Version
  mv /var/www/mapbender /var/www/mapbender_save
  
  # Aktivieren Sie den Code der neuen Version
- cp -R /tmp/build_mapbender/mapbender3-3.0.4.0 /var/www/
- mv /var/www/mapbender3-3.0.4.0 /var/www/mapbender
+ cp -R /tmp/build_mapbender/mapbender-starter-v3.2.5 /var/www/
+ mv /var/www/mapbender-starter-v3.2.5 /var/www/mapbender
  
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
  cp /var/www/mapbender_save/app/config/parameters.yml /var/www/mapbender/app/config/parameters.yml
