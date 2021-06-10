@@ -32,8 +32,8 @@ Have a look at the steps as commands
  mv /var/www/mapbender /var/www/mapbender_save
  
  # get the code of the new version
- cp -R /tmp/build_mapbender/mapbender-3.0.4.0 /var/www/
- mv /var/www/mapbender-3.0.4.0 /var/www/mapbender
+ cp -R /tmp/build_mapbender/mapbender-starter-v3.2.5 /var/www/
+ mv /var/www/mapbender-starter-v3.2.5 /var/www/mapbender
  
  # copy your old configuration files to the new version
  cp /var/www/mapbender_save/app/config/parameters.yml /var/www/mapbender/app/config/parameters.yml
@@ -53,6 +53,8 @@ Have a look at the steps as commands
  cd /var/www/mapbender/
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
+ 
+ # Update the symbolic links
  app/console assets:install web --symlink --relative
  
  # change the access rights and owner of the files
