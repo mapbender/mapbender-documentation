@@ -18,7 +18,7 @@ Configuration
 * **Tooltip:** Text to use as tooltip.
 * **Target:** ID of the Map element to query.
 * **MaxWidth:** The maximum width of the scale bar, default 200px.
-* **Anchor:** Scale bar alignment, default is 'right-bottom' (use inline f.e. in sidebar).
+* **Anchor:** Scale bar alignment, default is 'right-bottom' (use inline e.g. in sidebar).
 * **Units:** Scale bar units 'kilometer' and/or 'miles' (ml), default ['km'].
 
 YAML-Definition:
@@ -29,7 +29,7 @@ YAML-Definition:
    tooltip: 'Scale Bar'             # text to use as tooltip
    target: ~                        # ID of the Map element to query
    anchor: 'inline'/'left-top'/     # scale bar alignment, default is 'right-bottom'
-     'left-bottom'/'right-top'/     # use inline f.e. in sidebar
+     'left-bottom'/'right-top'/     # use inline, e.g. in sidebar
      'right-bottom'
    position: ['10px', '10px']       # scale bar position, default: x=20px, y=20px
    maxWidth: 200                    # the maximum width of the scale bar, default 200px

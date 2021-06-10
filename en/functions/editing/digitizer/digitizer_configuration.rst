@@ -727,7 +727,7 @@ The notes for a mandatory field appear above the used fields. In the case of a m
                                                    mandatory: true                       # true - field has to be set. Else you can't save the object. Regular expressions are possible too - see below.
                                                    mandatorytitle: Mandatory info!       # Text that appears in the field when the field is not filled or filled with an invalid value.
                                                    mandatoryText: Please choose a type!  # Text that is displayed in a speech bubble above the field when the field is not filled when it is saved or invalid.
-                                                   mandatory: /^\w+$/gi                  # You can define a regular expression to check the input for a field. You can check f.e. for email or numbers. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
+                                                   mandatory: /^\w+$/gi                  # You can define a regular expression to check the input for a field. You can check e.g. for email or numbers. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
 
                                                    # Check if input is a number
                                                    mandatory: /^[0-9]+$/
@@ -875,7 +875,7 @@ The image can be specified by specifying the two parameters src and name.
                       name: file_reference                                # Reference to the database column. If defined, the path or URL in the field can be used and replaces "src" option
                       src: "../bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to an image. If the path is relative use relative: true.
                       relative: true                                      # Optional. Default value is false. If true, the "src" path is determined from the "/web" directory.
-                      enlargeImage: true                                  # Image is enlarged to original size/ maximum resolution by clicking on the preview image. It is not scaled to screen size.
+                      enlargeImage: true                                  # Image is enlarged to original size/maximum resolution by clicking on the preview image. It is not scaled to screen size.
 
                       # Experimental information about styling
                       imageCss:
@@ -1060,8 +1060,8 @@ Events
 
 Different events exist that can be associated to a feature to manipulate attributes before or after an action.
 
-* **onBeforeSave**: Event before the storage of a new/ modified information
-* **onAfterSave**: Event after the storage of a new/ modified information
+* **onBeforeSave**: Event before the storage of a new/modified information
+* **onAfterSave**: Event after the storage of a new/modified information
 
 * **onBeforeUpdate**: Event before the update of a modified information
 * **onAfterUpdate**: Event after the update of a modified information

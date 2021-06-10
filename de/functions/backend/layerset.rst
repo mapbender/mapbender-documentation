@@ -97,12 +97,12 @@ Layerkonfiguration
 
 
 * Titel: Layertitel der Service Information (anpassbar).
-* Aktiv an/aus (active on/off): Aktiviert / deaktiviert ein Thema in dieser Anwendung. Sobald dieser Haken nicht gesetzt ist, werden alle anderen Haken derselben Instanz ignoriert.
+* Aktiv an/aus (active on/off): Aktiviert/deaktiviert ein Thema in dieser Anwendung. Sobald dieser Haken nicht gesetzt ist, werden alle anderen Haken derselben Instanz ignoriert.
 * Auswählen erlauben (select allow): Der Layer ist im Ebenenbaum auswählbar.
 * Auswählen an (select on): Der Layer ist bei Anwendungsstart im Ebenenbaum aktiv.
 * Info erlauben (info allow): Die Infoabfrage wird für diesen Layer zugelassen.
 * Info an (info on): Die Infoabfrage wird beim Start aktiviert.
-* Minimaler/ Maximaler Maßstab (minsc / maxsc): Der Maßstabsbereich, in dem der Layer angezeigt wird.
+* Minimaler/Maximaler Maßstab (minsc/maxsc): Der Maßstabsbereich, in dem der Layer angezeigt wird.
 * Aufklappen (toggle): Aufklappen des Layers beim Start der Anwendung.
 * Sortieren (reorder): Die Ebenen können über Drag & Drop in der Anwendung verschoben werden.
 

@@ -28,10 +28,10 @@ The configuration dialog:
 * **Fix:** true/false to fix the overview extent, default is true.
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Tooltip:** text to use as tooltip.
-* **Layerset:** refer to a layerset f.e. overview, define the layerset first and refer to it.
+* **Layerset:** refer to a layerset, e.g. overview, define the layerset first and refer to it.
 * **Target:** Id of Map element to query.
 * **Anchor:** overview alignment, default is 'right-top'.
-* **Width/ Height:** overview width and height.
+* **Width/Height:** overview width and height.
 
 
 Configuration example
@@ -71,11 +71,11 @@ YAML-Definition:
 
    tooltip: 'Overview'          # text to use as tooltip
    target: ~                    # Id of Map element to query
-   layerset: ~                  # refer to a layerset f.e. overview, define the layerset first and refer to it
+   layerset: ~                  # refer to a layerset, e.g. overview, define the layerset first and refer to it
    width: 200                   # overview width
    height: 100                  # overview height
    anchor: 'right-top'          # overview alignment, default is 'right-top'
-                                # use inline f.e. in sidebar
+                                # use inline e.g. in sidebar
                                 # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
    position: ['0px', '0px']     # overview position in relation to anchor, default: x=0px, y=0px
    maximized: true              # true/false to open/close on start, default is true

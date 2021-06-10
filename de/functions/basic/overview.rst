@@ -30,7 +30,7 @@ Der Konfigurationsdialog:
 * **Layerset:** vorher definiertes Layerset, das angezeigt werden soll.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Anchor:** Ausrichtung der Übersicht, Standard ist 'right-top' (rechts oben); Auswahlmöglichkeit: left-top (links-oben), left-bottom (links-unten), right-top (rechts-oben), right-bottom (rechts-unten).
-* **Width/ Height:** Breite und Höhe der Übersichtskarte.
+* **Width/Height:** Breite und Höhe der Übersichtskarte.
 
 
 Konfigurationsbeispiel
