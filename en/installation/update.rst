@@ -25,8 +25,8 @@ Have a look at the steps as commands
 .. code-block:: bash
 
  # Download the new version
- wget -O http://mapbender.org/builds/mapbender3-3.0.4.0.tar.gz /tmp/build_mapbender/
- tar xfz /tmp/build_mapbender/mapbender3-3.0.4.0.tar.gz
+ wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
+ tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz
  
  # save the old version
  mv /var/www/mapbender /var/www/mapbender_save
