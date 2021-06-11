@@ -16,7 +16,7 @@ Layerset-Instanzen enthalten die Optionen, wie ein WMS angesprochen werden kann:
 .. image:: ../../../figures/de/layerset/mapbender_wms_application_settings_DE.png
 
 Sobald ein WMS-Dienst in einen Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
-Der Screenshot zeigt die `private Instanz <freie_private_instanzen_>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2, die Layerset-Instanz selbst hat die Laufnummer 28.
+Der Screenshot zeigt die `private Instanz <layerset.rst#freie-und-private-instanzen>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2, die Layerset-Instanz selbst hat die Laufnummer 28.
 
 **Die Eigenschaften aus den WMS-Capabilities:**
 
@@ -40,13 +40,13 @@ Der Screenshot zeigt die `private Instanz <freie_private_instanzen_>`_ ``2/28`` 
 
 - **Sichtbarkeit:** Der Dienst kann mit dieser Schaltfläche sichtbar geschaltet werden.
 
-- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den `BaseSourceSwitcher <../basic/basesourceswitcher>`_, der nur BaseSources anzeigen soll und auf den `Layertree <../basic/layertree>`_, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch die `Hinweise <hinweise-layersets_>`_ weiter unten.
+- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den `BaseSourceSwitcher <../basic/basesourceswitcher>`_, der nur BaseSources anzeigen soll und auf den `Layertree <../basic/layertree>`_, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch die `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_ weiter unten.
 
-- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe die `Hinweise <hinweise-layersets_>`_ weiter unten.
+- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe die `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_ weiter unten.
 
 - **Transparenz:** Ist dieser Schalter aktiviert (und das ist er standardmäßig) wird der Dienst mit transparenten Hintergrund angefordert. Also im WMS GetMap-Request mit dem Parameter ``TRANSPARENT=TRUE``.
 
-- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert. Der Standard ist nicht gekachelt. Siehe die folgenden `Hinweise <hinweise-layersets_>`_.
+- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert. Der Standard ist nicht gekachelt. Siehe die folgenden `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_.
 
 
 **Layer-Reihenfolge:**
@@ -94,7 +94,7 @@ In der Layersets-Übersicht sind freie Instanzen in der Spalte "Typ" mit einem F
 
 .. image:: ../../../figures/de/layerset/convert_to_bound_instance_DE.png
 
- Private Instanzen sind wiederum mit einem Anker-Symbol gekennzeichnet.
+Private Instanzen sind wiederum mit einem Anker-Symbol gekennzeichnet.
 
 .. image:: ../../../figures/de/layerset/instances_labels_DE.png
 
