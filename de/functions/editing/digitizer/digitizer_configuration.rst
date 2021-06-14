@@ -686,12 +686,12 @@ Textbereiche (type textArea)
                                                    title: Bestandsaufnahme Bemerkung # Beschriftung (optional)
 
 
-Trennlinien (type breakline)
+Trennlinien (type breakLine)
 ----------------------------
 
 .. code-block:: yaml
 
-                                                 - type: breakline      # fügt eine einfache Trennlinie ein
+                                                 - type: breakLine      # fügt eine einfache Trennlinie ein
 
 
 Checkboxen (type checkbox)

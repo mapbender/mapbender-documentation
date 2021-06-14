@@ -26,7 +26,7 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 * Datumsauswahl
 * Dateiupload und Bildanzeige
 * Definition von Reitern
-* Definition von Trennlinien
+* Definition von Trennlinien (breakLine)
 * Definition von beschreibenden Texten zur Information
 * Definition von Hilfetexten
 * Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe bestimmter Feldinhalte
