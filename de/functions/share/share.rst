@@ -71,7 +71,7 @@ Share
 Persistente Kartenzustände
 ==========================
 
-Die Funktion macht bestimmte Kartenparameter und Einstellungen "persistent". Das heißt eine Applikation kann in einem neuen Browser-Tab geöffnet werden, ohne das dabei bestimmte Informationen verloren gehen.
+Die Funktion macht bestimmte Kartenparameter und Einstellungen "persistent". Das heißt eine Applikation kann in einem neuen Browser-Tab geöffnet werden, ohne dass dabei bestimmte Informationen verloren gehen.
 
 Persistente und damit wiederherstellbare Informationen umfassen:
 
@@ -128,7 +128,7 @@ Die URL beeinhaltet dabei folgende Kartenparameter:
 
 Diese Funktion muss nicht extra konfiguriert werden. Sie ist immer aktiviert.
 
-Wenn eine Url in einem neuen Browserfenster geöffnet wird, dann erfolgt auch die Übernahme der zuvor genannten Kartenparameter. Änderungen können über die Browsernavigation vor- bzw. zurückgenommen werden.
+Wenn eine URL in einem neuen Browserfenster geöffnet wird, dann erfolgt auch die Übernahme der zuvor genannten Kartenparameter. Änderungen können über die Browsernavigation vor- bzw. zurückgenommen werden.
 
 Bei Neuladung (F5) werden Nutzer auch zum jeweiligen Kartenausschnitt zurückgeschickt. Soll zur ursprünglichen Konfiguration zurück navigiert werden, dann muss die Anwendung entweder komplett neu geöffnet werden oder eine manuelle Bearbeitung der URL erfolgen.
 
@@ -138,7 +138,7 @@ Hinweis: Folgende Informationen werden nicht hinterlegt: Layer-Auswahl, Layer-So
 Element "URL teilen"
 --------------------
 
-Das Teilen von URLs kann zudem durch den Einbau eines entsprechenden Elements vereinfacht werden. Dieses wird als Button in Toolbar oder Footer eingebunden.
+Das Teilen von URLs kann zudem durch den Einbau eines entsprechenden Elements vereinfacht werden. Dieses wird als Button in der Toolbar oder dem Footer eingebunden.
 
 .. image:: ../../../figures/de/share_url.png
      :scale: 60
