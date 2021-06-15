@@ -97,7 +97,7 @@ Shared instances are marked with a Wi-Fi symbol in the "type" column of the laye
 
 .. image:: ../../../figures/layerset/convert_to_bound_instance.png
 
-Shared instances are marked with an anchor symbol in the "type" column of the layerset overview.
+Bound instances are marked with an anchor symbol in the "type" column of the layerset overview.
 
 .. image:: ../../../figures/layerset/instances_labels.png
 
