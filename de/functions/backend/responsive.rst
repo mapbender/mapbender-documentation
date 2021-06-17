@@ -3,7 +3,7 @@
 Responsives Design
 ******************
 
-Mapbender bietet ein responsives Webdesign zur besseren Übersichtlichkeit an. Jedes Element in Toolbar und Sidepane kann dabei für unterschiedliche Ansichten individuell konfiguriert werden (Desktop, Mobiltelefon oder beides).
+Mapbender bietet ein responsives Webdesign zur besseren Übersichtlichkeit an. Jedes Element in der Toolbar und Sidepane kann dabei für unterschiedliche Ansichten individuell konfiguriert werden (Desktop, Mobiltelefon oder beides).
 
 Hinweis: Diese Funktion ist nur in Open Layers 6 verfügbar.
 
