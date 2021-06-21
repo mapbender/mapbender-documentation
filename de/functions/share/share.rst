@@ -80,7 +80,7 @@ Persistente und damit wiederherstellbare Informationen umfassen:
 * Aktivierte/deaktivierte Layersets
 * Transparenz
 
-.. note:: **Hinweis:** Die Persistenz beruht nur auf dem eigenen Browserspeicher und ist damit rein lokal. Dies trifft auch auf Systeme mit mehreren Anwendenden zu. Die Funktion hat außerdem keinerlei Auswirkung auf den Mapbender Login.
+.. note:: **Hinweis:** Die Persistenz beruht nur auf dem eigenen Browserspeicher und ist damit rein lokal. Dies trifft auch auf Systeme mit mehreren Anwendern zu. Die Funktion hat außerdem keinerlei Auswirkung auf den Mapbender Login.
 
 Persistente Kartenzustände werden über eine Checkbox für jede Anwendung unter dem Tab "Basisdaten" einzeln aktiviert.
 
@@ -130,7 +130,7 @@ Diese Funktion muss nicht extra konfiguriert werden. Sie ist immer aktiviert.
 
 Wenn eine URL in einem neuen Browserfenster geöffnet wird, dann erfolgt auch die Übernahme der genannten Kartenparameter. Änderungen können über die Browsernavigation vor- bzw. zurückgenommen ("Weiter" oder "Zurück") werden.
 
-Nach dem Neuladen des Browserfensters werden Anwendende zum jeweiligen Kartenausschnitt zurückgeschickt. Soll zur Start-Konfiguration zurück navigiert werden, dann muss die Anwendung entweder komplett neu geöffnet werden oder eine manuelle Anpassung der URL erfolgen.
+Nach dem Neuladen des Browserfensters werden Anwender zum jeweiligen Kartenausschnitt zurückgeschickt. Soll zur Start-Konfiguration zurück navigiert werden, dann muss die Anwendung entweder komplett neu geöffnet werden oder eine manuelle Anpassung der URL erfolgen.
 
 .. note:: **Hinweis:** Folgende Informationen werden nicht hinterlegt: Layer-Auswahl, Layer-Sortierung, temporäre Geometrien, Laufzeitergänzungen, Transparenz sowie interaktiv hinzugefügte Instanzen.
 
