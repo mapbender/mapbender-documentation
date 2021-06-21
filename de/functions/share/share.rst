@@ -71,7 +71,7 @@ Share
 Persistente Kartenzustände
 ==========================
 
-Die Funktion macht bestimmte Kartenparameter und Einstellungen "persistent". Das heißt eine Applikation kann in einem neuen Browser-Tab geöffnet werden, ohne dass dabei bestimmte Informationen verloren gehen.
+Diese Funktion macht bestimmte Kartenparameter und -einstellungen persistent: Eine Kartenanwendung kann dann in einem neuen Browser-Tab geöffnet werden, ohne dass dabei die Kartenparameter auf die Standardeinstellung zurückgesetzt werden.
 
 Persistente und damit wiederherstellbare Informationen umfassen:
 
@@ -80,9 +80,9 @@ Persistente und damit wiederherstellbare Informationen umfassen:
 * Aktivierte/deaktivierte Layersets
 * Transparenz
 
-Die Persistenz beruht nur auf dem eigenen Browserspeicher und ist damit rein lokal. Dies trifft auch auf Systeme mit mehreren Benutzern zu. Die Funktion hat außerdem keinerlei Auswirkung auf den Mapbender Login.
+.. note:: **Hinweis:** Die Persistenz beruht nur auf dem eigenen Browserspeicher und ist damit rein lokal. Dies trifft auch auf Systeme mit mehreren Anwendenden zu. Die Funktion hat außerdem keinerlei Auswirkung auf den Mapbender Login.
 
-Persistente Kartenzustände werden über eine Checkbox für jede Anwendung einzeln aktiviert unter dem Tab "Basisdaten".
+Persistente Kartenzustände werden über eine Checkbox für jede Anwendung unter dem Tab "Basisdaten" einzeln aktiviert.
 
 .. image:: ../../../figures/de/persistent_map_view.png
      :scale: 80
@@ -103,9 +103,9 @@ parameters:
             persistentView: true      # <== neu
             template:  Mapbender\CoreBundle\Template\Fullscreen
 
-Die Einbettung erzeugt eine neue Spalte in der Tabelle *mb_core_application*. Es muss deshalb eine Datenbankaktualisierung durchgeführt werden mit *app/console doctrine:schema:update --force*.
+Die Einbettung erzeugt eine neue Spalte in der Tabelle *mb_core_application*. Es muss deshalb eine Datenbankaktualisierung mit *app/console doctrine:schema:update --force* durchgeführt werden.
 
-Folgende Kartenparameter und Einstellungen werden momentan nicht unterstützt:
+Folgende Kartenparameter und Einstellungen sind nicht Teil persister Kartenzustände:
 
 * WMS-Dimensionen
 * interaktiv hinzugefügte Instanzen (WMS laden)
@@ -117,9 +117,9 @@ Folgende Kartenparameter und Einstellungen werden momentan nicht unterstützt:
 URL teilen
 ==========
 
-Mapbender hinterlegt bestimmte Kartenparameter automatisch in jeder Anwendungs-URL. Dadurch können Kartenausschnitte einfach über Email, Chat etc. durch Weiterleiten der URL geteilt werden.
+Mapbender hinterlegt bestimmte Kartenparameter automatisch in jeder Anwendungs-URL. Dadurch ist es möglich, aktuell gewählte Kartenparameter durch Teilen der URL an andere weiterzuleiten.
 
-Die URL beeinhaltet dabei folgende Kartenparameter:
+Die URL beinhaltet folgende Kartenparameter:
 
 * Kartenposition
 * Maßstab
@@ -128,11 +128,11 @@ Die URL beeinhaltet dabei folgende Kartenparameter:
 
 Diese Funktion muss nicht extra konfiguriert werden. Sie ist immer aktiviert.
 
-Wenn eine URL in einem neuen Browserfenster geöffnet wird, dann erfolgt auch die Übernahme der zuvor genannten Kartenparameter. Änderungen können über die Browsernavigation vor- bzw. zurückgenommen werden.
+Wenn eine URL in einem neuen Browserfenster geöffnet wird, dann erfolgt auch die Übernahme der genannten Kartenparameter. Änderungen können über die Browsernavigation vor- bzw. zurückgenommen ("Weiter" oder "Zurück") werden.
 
-Bei Neuladung (F5) werden Nutzer auch zum jeweiligen Kartenausschnitt zurückgeschickt. Soll zur ursprünglichen Konfiguration zurück navigiert werden, dann muss die Anwendung entweder komplett neu geöffnet werden oder eine manuelle Bearbeitung der URL erfolgen.
+Nach dem Neuladen des Browserfensters werden Anwendende zum jeweiligen Kartenausschnitt zurückgeschickt. Soll zur Start-Konfiguration zurück navigiert werden, dann muss die Anwendung entweder komplett neu geöffnet werden oder eine manuelle Anpassung der URL erfolgen.
 
-Hinweis: Folgende Informationen werden nicht hinterlegt: Layer-Auswahl, Layer-Sortierung, temporäre Geometrien, Laufzeitergänzungen, Transparenz sowie interaktiv hinzugefügte Instanzen.
+.. note:: **Hinweis:** Folgende Informationen werden nicht hinterlegt: Layer-Auswahl, Layer-Sortierung, temporäre Geometrien, Laufzeitergänzungen, Transparenz sowie interaktiv hinzugefügte Instanzen.
 
 
 Element "URL teilen"
@@ -150,14 +150,14 @@ Das Element speichert folgende Informationen:
 * Grundlegende Kartenparameter (Kartenposition, Maßstab, Drehung, Referenzsystem)
 * Layer- und Layerset-Einstellungen (Auswahl sowie Transparenz)
 
-Folgende Informationen werden *nicht* übergeben: interaktiv hinzugefügte Instanzen (WMS laden), interaktiv entfernte Instanzen (Ebenenbaum Kontextmenü) sowie Änderungen der Layerreihenfolge (Drag & Drop).
+.. note:: **Hinweis:** Folgende Informationen werden nicht übergeben: interaktiv hinzugefügte Instanzen (WMS laden), interaktiv entfernte Instanzen (Ebenenbaum Kontextmenü) sowie Änderungen der Layerreihenfolge (Drag & Drop).
+
 
 YAML-Definition:
 ----------------
 
 .. code-block:: yaml
 
-    title: Teile diese Kartenansicht   #Optionaler Titel, standardmäßig wird "URL teilen" verwendet (string oder leer).
-    tooltip: Ich werde beim Hovern angezeigt   #Optionaler Titel, entpricht bei Weglassung dem Titel (string oder leer).
-    label: true   #Aktiviert Darstellung des Titels, zeigt bei FALSE das Element Icon an (Standard: true).
-    
+    title: Teile diese Kartenansicht            # Optionaler Titel, standardmäßig wird "URL teilen" verwendet (string oder leer).
+    tooltip: Ich werde beim Hovern angezeigt    # Optionaler Tooltip-Titel, entpricht bei Weglassung dem Titel (string oder leer).
+label: true                                     # Aktiviert Darstellung des Titels, zeigt bei false das Element-Icon an (Standard: true).
