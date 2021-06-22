@@ -25,7 +25,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 .. code-block:: bash
 
  # Laden Sie die neue Version herunter
- wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz  /tmp/build_mapbender/
+ wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
  tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz 
  
  # Sichern Sie die alte Version
@@ -54,7 +54,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
 
-# Aufbau der symbolischen Links
+ # Aufbau der symbolischen Links
  app/console assets:install web --symlink --relative
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
@@ -93,7 +93,7 @@ Aktualisierungsbeispiel für Windows
  #     - ggf. müssen Sie die benötigte Erweiterung auf der Kommandozeile im Aufruf übergeben z.B. 
  #            php -d extension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll app/console doctrine:schema:update --dump-sql
   
-# Ausspielen in den web-Bereich
+ # Ausspielen in den web-Bereich
  php.exe app/console assets:install web
 
  # Löschen Sie den Cache und die Logdateien unter mapbender/app/cache und mapbender/app/logs
