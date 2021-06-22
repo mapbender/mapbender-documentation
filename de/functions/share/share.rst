@@ -84,7 +84,7 @@ Die Persistenz beruht nur auf dem eigenen Browserspeicher und ist damit rein lok
 
 Persistente Kartenzustände werden über eine Checkbox für jede Anwendung einzeln aktiviert unter dem Tab "Basisdaten".
 
-.. image:: ../../../figures/de/persistent_map_view.png
+.. image:: ../../../figures/de/persistent_map_state.png
      :scale: 80
 
 Die Funktion kann auch über eine YAML-Anwendung definiert werden. Zu beachten ist hierbei der neue Parameter *persistentView*. Wird dieser weggelassen, dann entspricht dies *false*.
