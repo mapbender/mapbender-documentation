@@ -25,7 +25,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 .. code-block:: bash
 
  # Laden Sie die neue Version herunter
- wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz  /tmp/build_mapbender/
+ wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
  tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz 
  
  # Sichern Sie die alte Version
@@ -54,9 +54,13 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
 
+<<<<<<< HEAD:de/installation/installation_update.rst
  # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
  bin/composer run reimport-example-apps
 
+=======
+ # Aufbau der symbolischen Links
+>>>>>>> 3f5d6a7 (fixed suggestions robin):de/installation/update.rst
  app/console assets:install web --symlink --relative
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
