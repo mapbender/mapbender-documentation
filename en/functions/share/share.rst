@@ -134,7 +134,7 @@ Persisted and restored settings encompass:
 
 Persistent map view is enabled on a per-application basis with a new checkbox under the "Base data" tab.
 
-.. image:: ../../../figures/persistent_map_view.png
+.. image:: ../../../figures/persistent_map_state.png
      :scale: 80
 
 This feature can also be set in a Yaml-application definition, with a new *persistentView* entry on the top level. Omitting the entry is the same as setting it to false.
