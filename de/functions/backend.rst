@@ -8,6 +8,7 @@ Backend
    
    backend/cookieconsent.rst
    backend/layerset.rst
+   backend/responsive.rst
    backend/source.rst
    
 .. toctree::
