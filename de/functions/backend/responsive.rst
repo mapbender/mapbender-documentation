@@ -5,8 +5,6 @@ Responsives Design
 
 Mapbender bietet ein responsives Webdesign zur besseren Übersichtlichkeit an. Jedes Element in der Toolbar und Sidepane kann dabei für unterschiedliche Ansichten individuell konfiguriert werden (Desktop, Mobiltelefon oder beides).
 
-Hinweis: Diese Funktion ist nur in Open Layers 6 verfügbar.
-
 .. image:: ../../../figures/de/responsive_design_overview.png
      :scale: 80
 
@@ -15,8 +13,8 @@ Alternativ kann das Design auch für ganze Layout-Bereiche definiert werden. Dad
 .. image:: ../../../figures/de/responsive_design_template.png
      :scale: 80
 
-Anwendungsbeispiel:
-===================
+Anwendungsbeispiel
+==================
 
 Im folgenden Beispiel wird das Element "Information" aus der mobilen Ansicht entfernt.
 
