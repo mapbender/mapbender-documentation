@@ -25,15 +25,15 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 .. code-block:: bash
 
  # Laden Sie die neue Version herunter
- wget -O http://mapbender.org/builds/mapbender3-3.0.4.0.tar.gz /tmp/build_mapbender/
- tar xfz /tmp/build_mapbender/mapbender3-3.0.4.0.tar.gz
+ wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
+ tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz 
  
  # Sichern Sie die alte Version
  mv /var/www/mapbender /var/www/mapbender_save
  
  # Aktivieren Sie den Code der neuen Version
- cp -R /tmp/build_mapbender/mapbender3-3.0.4.0 /var/www/
- mv /var/www/mapbender3-3.0.4.0 /var/www/mapbender
+ cp -R /tmp/build_mapbender/mapbender-starter-v3.2.5 /var/www/
+ mv /var/www/mapbender-starter-v3.2.5 /var/www/mapbender
  
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
  cp /var/www/mapbender_save/app/config/parameters.yml /var/www/mapbender/app/config/parameters.yml
@@ -54,9 +54,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
 
- # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
- app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-
+ # Aufbau der symbolischen Links
  app/console assets:install web --symlink --relative
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
@@ -95,8 +93,7 @@ Aktualisierungsbeispiel für Windows
  #     - ggf. müssen Sie die benötigte Erweiterung auf der Kommandozeile im Aufruf übergeben z.B. 
  #            php -d extension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll app/console doctrine:schema:update --dump-sql
   
- # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
- php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+ # Ausspielen in den web-Bereich
  php.exe app/console assets:install web
 
  # Löschen Sie den Cache und die Logdateien unter mapbender/app/cache und mapbender/app/logs
