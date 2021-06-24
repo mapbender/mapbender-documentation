@@ -132,7 +132,7 @@ Persistente und damit wiederherstellbare Informationen umfassen:
 
 Persistente Kartenzustände werden über eine Checkbox für jede Anwendung unter dem Tab "Basisdaten" einzeln aktiviert.
 
-.. image:: ../../../figures/de/persistent_map_view.png
+.. image:: ../../../figures/de/persistent_map_state.png
      :scale: 80
 
 Die Funktion kann auch über eine YAML-Anwendung definiert werden. Zu beachten ist hierbei der neue Parameter *persistentView*. Wird dieser weggelassen, dann entspricht dies *false*.
