@@ -26,7 +26,7 @@ The following option for the construction of the forms are available:
 * Datepicker
 * File upload and Image Display
 * Definition of tabs
-* Definition breaklines
+* Definition breakLines
 * Definition of Text 
 * Mandatory fields, regular expressions to valid the content are possible
 * Definition of help texts
