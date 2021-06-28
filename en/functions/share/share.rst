@@ -3,7 +3,7 @@
 Share
 *****
 Share offers a variety of possibilities that simplify the joint work with Mapbender applications:
-Share URL enables quick sharing of self-configured map states via URL, View Manager stores custom map states, Application Switcher enables cross-application switches and Persistent Map View helps with browser work ease in general.
+*Share URL* enables quick sharing of self-configured map states via URL, *View Manager* stores custom map states, *Application Switcher* enables cross-application switches and *Persistent Map View* simplifies the application compatibility with the web browser.
 
 
 Share URL
@@ -69,7 +69,7 @@ Each state must be given a title for reidentification. For saving the current ma
 .. image:: ../../../figures/view_manager_create_map_state.png
      :scale: 80
 
-The most basic interaction (always available) is re-applying the map state stored in the entry. This option is always-on: The saved map state will be reapplied as soon as "Apply" is hit on the selected map state in list view. Moreover, entries may offer a "Replace" interaction. This will overwrite the map state stored in the entry, and will also update the title, using the global title input field. Also, entries may offer a "Delete" interaction (with an extra confirmation step).
+The most basic interaction (always available) is re-applying the map state stored in the entry. This option is always on: The saved map state will be reapplied as soon as "Apply" is hit on the selected map state in list view. Moreover, entries may offer a "Replace" interaction. This will overwrite the map state stored in the entry, and will also update the title, using the global title input field. Also, entries may offer a "Delete" interaction (with an extra confirmation step).
 
 .. note:: Note: The View Manager does *not* store or reapply the following configurations:
 * any interactively added sources (via WmsLoader)
@@ -137,7 +137,7 @@ Persistent map view is enabled on a per-application basis with a new checkbox un
 .. image:: ../../../figures/persistent_map_state.png
      :scale: 80
 
-This feature can also be set in a Yaml-application definition, with a new *persistentView* entry on the top level. Omitting the entry is the same as setting it to false.
+This feature can also be set in a Yaml-application definition, with a new *persistentView* entry on the top level. Omitting this entry is the same as setting it to false.
 
 YAML-Definition:
 ----------------
