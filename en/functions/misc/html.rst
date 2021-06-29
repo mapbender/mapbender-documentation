@@ -3,57 +3,50 @@
 HTML Element
 ************
 
-This element allows you to add generic HTML anywhere in your application.
-In HTML the following variables are available:
+This element allows the integration of HTML anywhere in an application. Figures, links or e.g. texts can be inserted. The following illustration shows the integration of a Mapbender logo in footer, toolbar and sidepane:
 
-- "application" (Entity Application),
-- "entity" (Entity HTMLElement)
-- and "configuration".
-
-With these you can for example insert an image into the application.
-
-
-.. image:: ../../../figures/html_result_application.png
+.. image:: ../../../figures/html_preview_example.png
      :scale: 80
+ 
+ The following variables can be integrated in HTML:
+
+- "application" (Entity Application)
+- "entity" (Entity HTML-Element)
+
 
 Configuration
 =============
 
-You might want to add an image to your application:
+This element has to be integrated in the backend.
 
-.. code-block:: html
-
-    <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg' height='60px'>
-
-
-.. image:: ../../../figures/html.png
+.. image:: ../../../figures/html_element.png
      :scale: 80
-
 
 * **Title:** Title of the element. The title will be listed in "Layouts". It will be indicated if "Show label" is activated.
-* **Content:** Content of the HTML-element. The variables: "application", "entity" und "configuration" are available in the content.
-* **Classes:** html-element-inline, my-special-css-class
-
-Configuration: Examples
-=======================
+* **Content:** Content of the HTML-element. The variables: "application" and "entity" are available in the content.
+* **Classes:** CSS-class
 
 
-Add a logo with a link:
------------------------
+Configuration examples
+======================
 
-It is possible to include several additional elements via the HTML-element. For example, you might want to integrate a picture or logo. Moreover, you might want to add a plain text or picture element that refers to an external page via an included link. For this, it is important to know that you can include the HTML-element in several ways in your application.
+Insert picture:
+---------------
 
-In the backend of your application, head over to the Layouts-tab. Then, simply add the HTML-element to the toolbar, the sidepane or the footer with a single click on the ``+`` -button.
+In this example, the Mapbender Logo was integrated in the sidepane (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). It consists of a defined height (``height='60px'``), background color and transparency (``background-color:rgb(255, 255, 255, 0.9)``) as well as a certain padding (``padding:10px``). These configurations were defined as styling through ``style=``.
 
-.. image:: ../../../figures/de/html_add_element.png
+.. code-block:: yaml
+
+     <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
+     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
+
+.. image:: ../../../figures/html_example_logo.png
      :scale: 80
 
-The dialog "Add element - HTML" will pop up. In our example it looks like this:
+Insert picture with link:
+-------------------------
 
-.. image:: ../../../figures/de/html_example_dialog.png
-     :scale: 80
-
-Let's include a simple logo. We start by naming the title of the HTML-element: Mapbender Logo. In the content section, it is possible to write plain HTML-code. We refer to our element with the appropriate code. In the classes section, we stick to the default setting (html-element-inline). The HTML-code looks like this:
+A linkage was added to the previously inserted logo. It references to the Mapbender website (``href='https://mapbender.org'``). The link is opened in a new tab because of ``target='_blank'``.
 
 .. code-block:: yaml
 
@@ -61,95 +54,70 @@ Let's include a simple logo. We start by naming the title of the HTML-element: M
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
      height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
 
-As you can see, the mapbender logo is included as a picture in the code (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). In addition, a height (``height='60px'``) and a styling is defined. Our styling (``style=``) includes parameters that define background-color with transparency (``background-color:rgb(255, 255, 255, 0.9)``) and the distance to the margin of the page, called (``padding:10px``). Moreover, we include a link to the official Mapbender web page (``href='https://mapbender.org'``). If you click on the logo, the website will load in a new browser tab (``target='_blank'``).
+Variables & HTMl-Element
+------------------------
 
-As mentioned, it is possible to include the HTML-element in several locations. Let's look at the toolbar first:
+Several variables can be integrated in the HTML-Element.
 
-.. image:: ../../../figures/de/html_example_toolbar.png
-     :scale: 80
+* Variable: **"application.title"**
 
-In the sidepane:
+This variable allows the integration of the application title. In the example, this corresponds to "Konfigurationsbeispiele".
 
-.. image:: ../../../figures/de/html_example_sidepane.png
-     :scale: 80
-
-In the footer:
-
-.. image:: ../../../figures/de/html_example_footer.png
-     :scale: 80
-
-
-Add variables into a HTMl-element:
-----------------------------------
-
-In Mapbender, it is possible to work with variables in applications. 
-
-*Further information:* Reference documentation on standard variables in twig: https://symfony.com/doc/2.8/templating/app_variable.html
-
-
-**Examples:**
-
-**Variable "application.title"**
-
-The application manager shows our application like this:
-
-.. image:: ../../../figures/de/html_example_application.title_application.png
-     :scale: 80
-
-First, we add the HTML-element - as mentioned before, this happens by clicking the ``+`` -button. To integrate the title of your application into the element, the variable "application.title" is required.
-
-.. image:: ../../../figures/de/html_example_application.title_dialog.png
-     :scale: 80
-
-In this example, the title of the HTML-element is defined as "Title". The content section uses the following code:
+The HTML-Code could look as follows:
 
 .. code-block:: yaml
 
-     <b><span style="font-size:25px;color:#b6dd18;margin-right:50px"> Application {{  application.title }} </span></b>
+     <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{  application.title }} </span></b>
 
+The application title is defined through ``{{ application.title }}``. The term "Anwendung" is an addition and will display independently from the actual title. The style-block defines (``style=``) font size (``font-size:25px``), font width (``<b></b>``), font color (``color:#b6dd18``) as well as position (``margin-right:50vw``) of the title.
 
-To add a bit of spicyness, our application title also has the additional text "Application". This additive is independent from the actual application title and is therefore set before the variable (i.e.: Application + application.title). The style block (``style=``) modifies the font size (``font-size:25px``), the font color (``color:#b6dd18``) and the title positioning (``margin-right:50vw``). Moreover, the letters are styled bold (``<b></b>``). As you might have guessed, the variable is mentioned in the following code: ``{{ application.title }}`` .
+The result for the configuration example looks like this:
 
-The outcome looks like this:
-
-.. image:: ../../../figures/de/html_example_application.title.png
+.. image:: ../../../figures/html_example_application_title.png
      :scale: 80
-     
-     
-**Variable app.user.username**
 
-Gives back the username:
+* Variable: **app.user.username**
+
+This variable displays the name of the active user:
 
 .. code-block:: yaml
 
 	<p>Username: {{ app.user.username }}</p>
-    
-	
-**Variable group.title**
 
-The group of a user can not be issued with a single expression, because twig 1.40 does not support map.
-Instead, a loop is needed:
+In this example, the username is displayed in the toolbar:
+	
+.. image:: ../../../figures/html_example_user_name.png
+     :scale: 80
+    
+* Variable: **group.title**
+
+The group of a user can not be defined in a single expression, because Twig 1.40 only supports the map-filter in higher versions. In order to integrate this variable, a loop will be used:
 
 .. code-block:: yaml
-	
+
   {% for index, group in app.user.groups %}
       <p>Group #{{ index }}: {{ group.title }}</p>
   {% endfor %}
 
-**Variable "entity"**
+In this example, index and group name are displayed in the toolbar:
 
-The variable "entity" includes parameters into the HTML-elements. For instance, if the variable ``{{ entity }}`` is integrated, the ID of the HTML-element is shown. If the variable ``{{ entity.title }}`` is integrated, the (HTML-)element title is shown in the application.
-
-The configuration for the HTML-element "Title" and the variable ``{{ entity.title }}`` with the additional text "HTML-element" looks like this:
-
-.. image:: ../../../figures/de/html_example_entity.title_dialog.png
+.. image:: ../../../figures/html_example_group_name.png
      :scale: 80
 
-The styling is transferred from the first example (application.title). Only the additional text, variable and position (margin-right) were changed for entity.title.
+* Variable: **"entity"**
 
-Finally, the element looks like this:
+The variable ``{ entity }`` displays the ID and ``{ entity.title }`` the name of the HTML-element. 
 
-.. image:: ../../../figures/de/html_example_entity.title.png
+In the following, the variable ``{ entity.title }`` was integrated with the text addition "HTML-Element". The Styling parameters correspond to those of the example with *application.title*. Text additions, variables and position were simply adjusted for *entity.title*.
+
+.. code-block:: yaml
+
+	<b><span style=“font-size:25px;color:#b6dd18;margin-right:60vw“> HTML-Element
+	{{ entity.title }} </span></b>
+
+These variables could look as follows:
+
+.. image:: ../../../figures/html_example_entity_title.png
      :scale: 80
 
 YAML-Definition:
@@ -159,7 +127,7 @@ YAML-Definition:
 
     title: 'HTML-Element'
     class: Mapbender\CoreBundle\Element\HTMLElement
-    content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # the variables: "application", "entity" und "configuration" are available in the content.
+    content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> #The variables "application" and "entity" are available in the content.
     classes: my-special-css-class
 
 
@@ -168,19 +136,3 @@ Class, Widget & Style
 
 * **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
 * **Widget:** mapbender.mbHTMLElement
-
-Examples
-========
-
-Add an image
-
-.. code-block:: html
-
-   <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'>
-
-
-Add an Link
-
-.. code-block:: html
-
-  <a href='https://mapbender.org' target='_blank'>Go to the Mapbender Website</a>
