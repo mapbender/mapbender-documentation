@@ -5,7 +5,7 @@ SimpleSearch
 
 SimpleSearch offers a single field search or keyword search. The search query is transmitted to a search service. The search server from Apache (Solr) or from OpenStreetMap (Nominatim) can be used.
 
-An input field is offered which can be integrated directly into the toolbar or in the sidebar. SimpleSearch sends the entered search term to a configurable URL and receives JSON-formatted data, which contain a label and geometry attributes for each entry.
+An input field is offered which can be integrated directly into the toolbar or the sidebar. SimpleSearch sends the entered search term to a configurable URL and receives JSON-formatted data, which contain a label and geometry attributes for each entry.
 
 The geometry data can be encoded in WKT or GeoJSON format.
 
@@ -75,7 +75,7 @@ Set-up of Solr
 * **Documentation**: https://solr.apache.org/guide
 * **Quickstart**: https://solr.apache.org/guide/solr-tutorial.html
 
-Set-up of Nominatim
+Set up of Nominatim
 ===================
 
 * **Download**: http://nominatim.org/release-docs/latest/admin/Installation/
