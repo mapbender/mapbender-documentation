@@ -3,10 +3,11 @@
 SimpleSearch
 ************
 
-SimpleSearch offers a one-step solution for geo-data querying. Giving only one input field which can be directly embedded into the toolbar,
-it will send the entered search term to a configurable URL where it expects to receive a JSON-formatted data back which includes a label and a geometry attribute for each entry.
+SimpleSearch offers a single field search or keyword search. The search query is transmitted to a search service. The search server from Apache (Solr) or from OpenStreetMap (Nominatim) can be used.
 
-Geometry data can be encoded as WKT or in GeoJSON format.
+An input field is offered which can be integrated directly into the toolbar or the sidebar. SimpleSearch sends the entered search term to a configurable URL and receives JSON-formatted data, which contain a label and geometry attributes for each entry.
+
+The geometry data can be encoded in WKT or GeoJSON format.
 
 .. image:: ../../../figures/simplesearch.png
      :scale: 80
@@ -21,9 +22,8 @@ Configuration
 .. image:: ../../../figures/simplesearch_configuration_b.png
      :scale: 80
 
-
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Query URL:** Solr URL for the search (e.g. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
+* **Query URL:** Solr URL for the search (e.g. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``) or Nominatim URL.
 * **Query URL key:** The query parameter key to append  (e.g. ``q``).
 * **Query Whitespace replacement pattern:** Pattern for replacing white spaces.
 * **Query key format:** Simple search format  (e.g. ``%s``).
@@ -44,38 +44,42 @@ Configuration
 * **Result icon url:** Icon to display as result marker (e.g. ``http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png``).
 * **Result icon offset:**  Offset x and y for the icon (e.g. ``0,0``).
 
-
-  
 YAML-Definition
---------------------
+---------------
 
 .. code-block:: yaml
 
-   query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8   # Example Solr URL (e.g. ``http://localhost:8080/solr/core/0/select?wt=json&indent=true``).
-   query_key: q                                                                  # The query parameter key to append
-   query_ws_replace:                                                             # Pattern for replacing white spaces.
-   query_format: '%s'                                                            # Simple search format.
-   token_regex: [^a-zA-Z0-9äöüÄÖÜß]                                              # Tokenizer split regexp.
-   token_regex_in: ([a-zA-ZäöüÄÖÜß]{3,})                                         # Tokenizer search regexp.
-   token_regex_out: '$1*'                                                        # Tokenizer replace regexp.
-   collection_path: response.docs                                                # Can be a dotted attribute path to extract from the query result.                                             
-   label_attribute: label                                                        # Name of the attribute to use for entry labeling
-   geom_attribute: geom                                                          # Name of the geometry data attribute
-   geom_format: WKT                                                              # geometry data format, can be WKT or GeoJSON
-   delay: 300                                                                    # Autocomplete delay. Use 0 to disable autocomplete.
-   result_buffer: 50                                                             # buffer result geometry with this (map units) before zooming
-   result_minscale: 1000                                                         # scale restrictions for zooming, ~ for none
-   result_maxscale: 5000                                                         # scale restrictions for zooming, ~ for none
+   query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8        # Example Solr URL (e.g. ``http://localhost:8080/solr/core/0/select?wt=json&indent=true``) or Nominatim URL.
+   query_key: q                                                                       # The query parameter key to append
+   query_ws_replace:                                                                  # Pattern for replacing white spaces.
+   query_format: '%s'                                                                 # Simple search format.
+   token_regex: [^a-zA-Z0-9äöüÄÖÜß]                                                   # Tokenizer split regexp.
+   token_regex_in: ([a-zA-ZäöüÄÖÜß]{3,})                                              # Tokenizer search regexp.
+   token_regex_out: '$1*'                                                             # Tokenizer replace regexp.
+   collection_path: response.docs                                                     # Can be a dotted attribute path to extract from the query result.                                             
+   label_attribute: label                                                             # Name of the attribute to use for entry labeling
+   geom_attribute: geom                                                               # Name of the geometry data attribute
+   geom_format: WKT                                                                   # geometry data format, can be WKT or GeoJSON
+   delay: 300                                                                         # Autocomplete delay. Use 0 to disable autocomplete.
+   result_buffer: 50                                                                  # buffer result geometry with this (map units) before zooming
+   result_minscale: 1000                                                              # scale restrictions for zooming, ~ for none
+   result_maxscale: 5000                                                              # scale restrictions for zooming, ~ for none
    result_icon_url: http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png # icon to display as result marker
-   result_icon_offset: -6,-38                                                    # Offset x and y for the icon
+   result_icon_offset: -6,-38                                                         # Offset x and y for the icon
    
 
-How to setup Solr
-==================
+Set-up of Solr
+==============
 
 * **Download**: https://solr.apache.org/downloads.html
 * **Documentation**: https://solr.apache.org/guide
 * **Quickstart**: https://solr.apache.org/guide/solr-tutorial.html
+
+Set up of Nominatim
+===================
+
+* **Download**: http://nominatim.org/release-docs/latest/admin/Installation/
+* **Documentation**: http://nominatim.org/release-docs/latest/
 
 Class, Widget & Style
 =========================
