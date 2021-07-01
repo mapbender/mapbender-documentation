@@ -19,13 +19,13 @@ Functions
 * Control the time dimension of the layer
 
 
-.. figure:: ../../../figures/layertree/layertree_example_dialog.png
+.. figure:: ../../../figures/layertree/layertree_example_dialog_en.png
            :scale: 80
            :alt: simple Layertree integrated as dialogue with a Layerset and Layer
 
            Simple Layertree integrated as dialogue with one Layerset and Layer.
 
-.. figure:: ../../../figures/layertree/layertree_example_sidepane.png
+.. figure:: ../../../figures/layertree/layertree_example_sidepane_en.png
            :scale: 80
            :alt: complex Layertree integrated in the sidebar with multiple Layersets divided into thematic groups
 
@@ -69,11 +69,11 @@ Here, you define which Layersets you want to use in the map by checking the Laye
 In this step, you define the order in which the Layersets appear in your Layertree and the map. You can move the created Layersets from the list by drag & drop. Please notice that the first defined themes can cover underlying themes.
 
 
-.. figure:: ../../../figures/layertree/layertree_configuration_map_en.png
+.. figure:: ../../../figures/layertree/layertree_configuration_map_simple_en.png
            :scale: 80
-           :alt:  Configuration in the map ( Map-Element ) to display the Layersets.
+           :alt:  Configuration in the map (Map-Element) to display the Layersets.
 
-           Configuration in the map ( Map-Element ) to display the Layersets.
+           Configuration in the map (Map-Element) to display the Layersets.
 
 
 Workflow Layertree with basic functions 
@@ -92,7 +92,7 @@ In the example, we defined one **Layerset** with one instance:
 * Layerset World: 
     * Instance `OSM Demosource <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
-The instance of the OSM demosource is automatically included in the installation. Now this needs to be integrated into an existing Layerset. Switch to the tab "Layersets". In the following example, the Layerset " YAML main" was renamed to " World ". 
+The instance of the OSM demosource is automatically included in the installation. Now this needs to be integrated into an existing Layerset. Switch to the tab Layersets. In the following example, the Layerset "YAML main" was renamed to "World". 
 In case of difficulties with the integration, the documentation of the `Layersets <../backend/layerset.html>`_ provides useful information.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple_en.png
@@ -104,7 +104,7 @@ In case of difficulties with the integration, the documentation of the `Layerset
 **Configuration of the map to display the Layerset**
 
 In the next step, we configure the `Map element <../basic/map.html>`_ to display the Layersets in the **map**. To do this you need to switch to the tab "Layouts" and edit the map element in the content. 
-It is important that you put a tick in the field of the Layerset "World" **[1]**, so it appears in the application afterwards. If you have questions for further configuration of the `Map element <../basic/map.html>`_  the documentation can help.
+It is important that you put a tick in the field of the Layerset "World", so it appears in the application afterwards. If you have questions for further configuration of the `Map element <../basic/map.html>`_  the documentation can help.
 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple_en.png
@@ -174,13 +174,19 @@ A click on the "x" in the Layertree context menu allows you to remove a layer fr
 
 The function **Hide visibility by folders** allows to save the configuration of the opacity. When active, the opacity of the individual layers is not displayed and cannot be changed.
 
+The function **Hide info** allows you to disable the FeatureInfo-function. Independently of the settings in the Layerset or source the FeatureInfo-function is no longer possible.
+
+The checkbox **Thematic layer** activates the thematic division of levels. The next section contains further explanation on how to configure the thematic layertree.
+
+The checkbox **Allow Reorder at TOC** controls whether layers may be freely rearranged using drag & drop in the layertree.
+
 .. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
            :alt: Configuration of a simple Layertree in the content. 
 
            Configuration of a simple Layertree in the content.
 
-By clicking on the folder icon of the Layertree **[1]** to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
+By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
@@ -188,15 +194,9 @@ By clicking on the folder icon of the Layertree **[1]** to the left of the insta
 
            Layertree Buttons.
 
-The checkbox next to the respective layer name **[2]** allows to turn a layer on and off. If the checkbox is set, the Layer will appear in the map. However, it will continue to respect the defined rules of the Layerset, such as scale-dependent display.
+The checkbox next to the respective layer name allows to turn a layer on and off. If the checkbox is set, the Layer will appear in the map. However, it will continue to respect the defined rules of the Layerset, such as scale-dependent display.
 
-The "i"-icon next to a layer name **[3]** indicates if the FeatureInfo-function is enabled. The FeatureInfo-function is inactive if the "i"-icon is grayed out. If you activate the function with a click, the icon is dark gray and has a frame. If activated, the requested information of the layer appears in a dialog box. 
-
-The function **Hide info** allows you to disable the FeatureInfo-function. Independently of the settings in the Layerset or source the FeatureInfo-function is no longer possible.
-
-The checkbox **Allow Reorder at TOC** controls whether layers may be freely rearranged using drag & drop in the layertree.
-
-The checkbox **Thematic layer** activates the thematic division of levels. See below for configuration.
+The "i"-icon next to a layer name indicates if the FeatureInfo-function is enabled. The FeatureInfo-function is inactive if the "i"-icon is grayed out. If you activate the function with a click, the icon is dark gray and has a frame. If activated, the requested information of the layer appears in a dialog box. 
 
 
 Workflow thematic Layertree
@@ -231,7 +231,7 @@ To use the thematic grouping, we create a new Layerset named "Project NRW" **[3]
 
            Configuration of Layersets for thematic Layertree.
 
-The Layerset should now contain three Layersets. The **Overview** [1] for the overview map, the **World**-Layerset [2] with the world-/Germany-wide data and the **Project NRW** Layerset [3] with the two regional data sets from NRW. 
+The Layerset should now contain three Layersets. The **Overview** [1] for the overview map, the **Project NRW** Layerset [2] with two regional data sets from Western Germany and the **World**-Layerset [3] with the supraregional data. 
 
 **Configuration of the map to display the Layerset**
 
@@ -293,7 +293,7 @@ If we keep the default settings in the Theme Set "World" and activate the other 
 
 Now we have the Layersets integrated as thematic groups. By configuring the thematic layer, the Layertree appears now like this:
 
-.. figure:: ../../../figures/layertree/layertree_example_sidepane.png
+.. figure:: ../../../figures/layertree/layertree_example_sidepane_en.png
            :scale: 80
            :alt: Configuration of the thematic Layertree in the sidepane.
 

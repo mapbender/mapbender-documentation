@@ -1,12 +1,12 @@
 .. _layertree_de:
 
-Layertree - Table of Content (Layerbaum) 
+Layertree - Table of Content (Ebenenbaum) 
 ****************************************
 
 Funktionen
 ==========
 
-**Was kann der Layerbaum?**
+**Was kann der Layertree?**
 
 * Anzeige von Layern
 * Anzeige von Layergruppen
@@ -92,7 +92,7 @@ In dem folgenden Beispiel ist ein **Layerset** mit einer Instanz definiert:
 * Layerset World: 
   * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
-Die Instanz des OSM-Demodienstes ist bei der Installation automatisch dabei. Diese muss nur noch über den Reiter "Layersets" in ein bestehendes Layerset eingebunden werden. In dem folgenden Beispiel wurde das Layerset "YAML-main" in "World" umbenannt. 
+Die Instanz des OSM-Demodienstes ist bei der Installation automatisch dabei. Diese muss nur noch über den Reiter Layersets in ein bestehendes Layerset eingebunden werden. In dem folgenden Beispiel wurde das Layerset "YAML-main" in "World" umbenannt. 
 Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <../backend/layerset.html>`_ weiterhelfen. 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple.png
@@ -104,7 +104,7 @@ Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <..
 **Einrichtung in der Karte zur Anzeige des Layersets**
 
 Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_  zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement über den Content-Bereich.
-Wichtig ist nun, dass bei dem Bereich Layersets ein Häckchen bei dem Layerset World **[1]** gesetzt ist, damit dieses Layerset später in der Anwendung angezeigt wird. 
+Wichtig ist nun, dass bei dem Bereich Layersets ein Häckchen bei dem Layerset World gesetzt ist, damit dieses Layerset später in der Anwendung angezeigt wird. 
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple.png
@@ -174,13 +174,19 @@ Der Klick auf das nebengeordnete "x" im Layertree Menü ermöglicht das Entferne
 
 Die Funktion **Visibility bei Ordnern ausblenden** ermöglicht die Sicherung der Deckkraft. Bei aktiver Funktion wird die Deckkraft der einzelnen Ebenen nicht angezeigt und kann nicht verändert werden.
 
+Die Checkbox **Info ausblenden** ermöglicht das Deaktivieren der Informationsabfrage. Die Einstellungen zur Informationsabfrage sind unabhängig von den Einstellungen im Layerset oder Dienst dann nicht mehr möglich.
+
+Die Checkbox **Thematischer Layer** aktiviert die thematische Einteilung von Ebenen. Im nächsten Abschnitt erfolgt ein Anwendungsbeispiel zur Verdeutlichung.
+
+Die Checkbox **Erlaubt sortieren im Layerbaum** steuert, ob ein freies Umsortieren von Ebenen per Drag & Drop im Ebenenbaum erfolgen darf.
+
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
            :alt: Einrichtung des einfachen Layertrees im Content-Bereich.
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Durch einen Klick auf das Ordnersymbol des Layertrees **[1]** links neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste.
+Durch einen Klick auf das Ordnersymbol des Layertrees links neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
@@ -188,15 +194,9 @@ Durch einen Klick auf das Ordnersymbol des Layertrees **[1]** links neben der In
 
            Layertree Buttons.
 
-Die Checkbox neben dem jeweiligem Layernamen **[2]** ermöglicht das An- und Ausschalten eines Layers. Ist das Häkchen gesetzt, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet, wie z.B. maßstabsabhängige Anzeigen.
+Die Checkbox neben dem jeweiligem Layernamen ermöglicht das An- und Ausschalten eines Layers. Ist das Häkchen gesetzt, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet, wie z.B. maßstabsabhängige Anzeigen.
 
-Das "i"-Symbol neben einem Layernamen **[3]** zeigt an, ob die Informationsabfrage aktiviert ist. Wenn das "i"-Symbol keine Umrandung hat, ist die Informationsabfrage nicht aktiv. Wird diese durch einen Klick aktiviert, so wird das Symbol durch eine kreisliche Umrandung hinterlegt und bei einer Informationsabfrage erscheinen die Informationen zu dem Layer. 
-
-Die Checkbox **Info ausblenden** ermöglicht das Deaktivieren der Informationsabfrage. Die Einstellungen zur Informationsabfrage sind unabhängig von den Einstellungen im Layerset oder Dienst dann nicht mehr möglich.
-
-Die Checkbox **Erlaubt sortieren im Layerbaum** steuert, ob ein freies Umsortieren von Ebenen per Drag & Drop im Ebenenbaum erfolgen darf.
-
-Die Checkbox **Thematischer Layer** aktiviert die thematische Einteilung von Ebenen. Es folgt ein Anwendungsbeispiel zur Verdeutlichung.
+Das "i"-Symbol neben einem Layernamen zeigt an, ob die Informationsabfrage aktiviert ist. Wenn das "i"-Symbol keine Umrandung hat, ist die Informationsabfrage nicht aktiv. Wird diese durch einen Klick aktiviert, so wird das Symbol durch eine kreisliche Umrandung hinterlegt und bei einer Informationsabfrage erscheinen die Informationen zu dem Layer. 
 
 
 Workflow thematischer Layertree
@@ -222,8 +222,8 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
 
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Info s.o. oder in der Doku der `Layersets <../backend/layerset.html>`_ und `Dienste <../backend/source.html>`_).
 
-Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[2]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset noch die Instanz "GEBCO" hinzu. 
-Um die thematische Gruppierung gut nutzen zu können, erstellen wir nun ein neues Layerset mit dem Namen "Project NRW" **[3]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein.
+Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[3]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset noch die Instanz "GEBCO" hinzu. 
+Um die thematische Gruppierung gut nutzen zu können, erstellen wir nun ein neues Layerset mit dem Namen "Project NRW" **[2]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex.png
            :scale: 80
@@ -231,7 +231,7 @@ Um die thematische Gruppierung gut nutzen zu können, erstellen wir nun ein neue
 
            Konfiguration der Layersets für den thematischen Layertree.
 
-Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die Übersichtskarte, das **World**-Layerset [2] mit den weltweiten/deutschlandweiten Daten und das **Project NRW** Layerset [3] mit den zwei regionalen Datensets aus NRW. 
+Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die Übersichtskarte, das **Project NRW** Layerset [2] mit den zwei regionalen Datensets aus NRW und das **World**-Layerset [3] mit den überregionalen Layern. 
 
 **Einrichtung in der Karte zur Anzeige der Layersets**
 
