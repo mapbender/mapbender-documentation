@@ -3,12 +3,12 @@
 HTML-Element
 ************
 
-Dieses Element ermöglicht die Definition von HTML an beliebigen Stellen in der Anwendung. Dadurch können zum Beispiel Bilder, Links oder Texte eingebunden werden. Die folgende Abbildung zeigt beispielsweise die Integrierung des Mapbender-Logos in Footer, Toolbar und Seitenleiste.
+Dieses Element ermöglicht die Definition von HTML an beliebigen Stellen in der Anwendung. Dadurch können zum Beispiel Bilder, Links oder Texte eingebunden werden. Die folgende Abbildung zeigt die Integrierung des Mapbender-Logos in Footer, Toolbar und Seitenleiste.
 
 .. image:: ../../../figures/html_preview_example.png
      :scale: 80
 
-Es stehen grundsätzlich die folgenden Variablen im HTML zur Verfügung:
+Es stehen grundsätzlich die folgenden Variablen im HTML-Element zur Verfügung:
 
 - "application" (Entity Application)
 - "entity" (Entity HTML-Element)
@@ -33,7 +33,7 @@ Konfigurationsbeispiele
 Bild einbinden:
 ---------------
 
-Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). Es besitzt eine definierte Höhe (``height='60px'``), Hintergrundfarbe und Transparenz (``background-color:rgb(255, 255, 255, 0.9)``) sowie einen bestimmten Seitenrandabstand (``padding:10px``). Diese Eigenschaften wurden im Styling (``style=``) definiert.
+Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). Es besitzt eine definierte Höhe (``height='60px'``), Hintergrundfarbe und Transparenz (``background-color:rgb(255, 255, 255, 0.9)``) sowie einen bestimmten Seitenrandabstand (``padding:10px``). Diese Eigenschaften werden im Styling-Bereich (``style=``) definiert.
 
 .. code-block:: yaml
 
@@ -46,7 +46,7 @@ Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``img src='ht
 Bild mit hinterlegtem Link einbinden:
 -------------------------------------
 
-Das zuvor eingebundene Logo wurde um eine Linkverknüpfung erweitert. Der Link verweist auf die Mapbender Webseite (``href='https://mapbender.org'``). Die Information ``target='_blank'`` sorgt dafür, dass sich der Link beim Klicken in einem neuen Tab öffnet.
+Das zuvor eingebundene Logo kann um eine Linkverknüpfung erweitert werden. Der Link verweist auf die Mapbender-Webseite (``href='https://mapbender.org'``). Die Information ``target='_blank'`` sorgt dafür, dass sich der Link beim Klicken in einem neuen Tab öffnet.
 
 .. code-block:: yaml
 
@@ -54,20 +54,20 @@ Das zuvor eingebundene Logo wurde um eine Linkverknüpfung erweitert. Der Link v
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
      height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
 
-Variablen & HTMl-Element
+Variablen & HTML-Element
 ------------------------
 
 Es besteht die Möglichkeit, Variablen in Anwendungen zu verwenden.
 
 * Variable: **"application.title"**
 
-Mit dieser Variable kann der Titel einer Anwendung einbgebunden werden. Im folgenden Beispiel lautet dieser: "Konfigurationsbeispiele".
+Mit dieser Variable kann der Titel einer Anwendung eingebunden werden. Im folgenden Beispiel lautet dieser: "Konfigurationsbeispiele".
 
 Der HTML-Code kann wie folgt aussehen:
 
 .. code-block:: yaml
 
-     <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{  application.title }} </span></b>
+     <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{ application.title }} </span></b>
 
 Die Variable für den Anwendungstitel wird durch ``{{ application.title }}`` eingebunden. Der Begriff "Anwendung" ist ein Textzusatz und erscheint unabhängig vom Titel. Durch den Style-Block (``style=``) wurden Schriftgröße (``font-size:25px``), Schriftbreite (``<b></b>``), Schriftfarbe (``color:#b6dd18``) sowie Position (``margin-right:50vw``) des Titels angepasst.
 
@@ -91,7 +91,7 @@ Im Anwendungsbeispiel wird der Nutzername in der Toolbar angezeigt:
     
 * Variable: **group.title**
 
-Die Gruppe des Benutzers kann nicht in einem einzelnen Ausdruck wiedergegeben werden, da Twig 1.40 den Map-Filter erst in höheren Versionen unterstützt.
+Die Gruppe des Benutzers kann nicht in einem einzelnen Ausdruck wiedergegeben werden, da Twig den Map-Filter erst in höheren Versionen unterstützt.
 Um Gruppentitel dennoch ausgeben zu können, wird eine Schleife im HTML-Element eingebunden:
 
 .. code-block:: yaml
@@ -109,7 +109,7 @@ Im Anwendungsbeispiel werden Index und Name der Gruppe in der Toolbar ausgegeben
 
 Die Variable ``{ entity }`` gibt die ID und ``{ entity.title }`` den Namen des HTML-Elements wieder. 
 
-Im folgenden wurde die Variable ``{ entity.title }`` mit dem Textzusatz "HTML-Element" eingebunden. Die Styling-Parameter entsprechen der Konfiguration aus dem Beispiel *application.title*. Für *entity.title* wurden lediglich Textzusatz, Variable und Position (margin-right) angepasst.
+Im Folgenden wurde die Variable ``{ entity.title }`` mit dem Textzusatz "HTML-Element" eingebunden. Die Styling-Parameter entsprechen der Konfiguration aus dem Beispiel *application.title*. Für *entity.title* wurden lediglich Textzusatz, Variable und Position (margin-right) angepasst.
 
 .. code-block:: yaml
 
