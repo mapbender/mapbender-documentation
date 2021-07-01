@@ -23,7 +23,7 @@ Konfiguration
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Query URL:** Solr URL (bzw. Nominatim URL), an die der eingegebene Suchbegriff gesendet wird (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
+* **Query URL:** Solr bzw. Nominatim URL, an die der eingegebene Suchbegriff gesendet wird (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
 * **Query URL key:** Der Suchparameterschlüssel, der angehängt wird (z.B. ``q``).
 * **Query Whitespace replacement pattern:** Muster zum Austausch von Leerzeichen.
 * **Query key format:** Einfaches Suchformat (z.B. ``%s``).
@@ -49,7 +49,7 @@ YAML-Definition
 
 .. code-block:: yaml
 
-   query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8        # Solr URL (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``) oder Nomaintan URL.
+   query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8        # Solr URL (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``) oder Nominatim URL.
    query_key: q                                                                       # Der Suchparameterschlüssel, der angehängt wird
    query_ws_replace:                                                                  # Pattern zum Austausch von Leerzeichen.
    query_format: '%s'                                                                 # Einfaches Suchformat.
