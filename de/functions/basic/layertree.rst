@@ -307,14 +307,14 @@ YAML-Definition:
 
    .. code-block:: yaml    
 
-    title: layertree             # Titel des Layerbaums
-    target: ~                    # ID des Kartenelements  
-    type: ~                      # Typ des Layerbaums, element oder dialog
-    autoOpen: false              # true, wenn der Layerbaum beim Start der Anwendung geöffnet werden soll, der Standardwert ist
-    showBaseSource: true         # Anzeige des Basislayers, der Standardwert ist true
-    showHeader: true             # zeigt eine Überschrift, die die Anzahl der Services zählt, der Standardwert ist true
-    menu: [opacity,zoomtolayer,metadata,removelayer]  # zeigt ein Kontextmenü für den Layer an (wie Opazität, Zoom auf Layer, Anzeige des Metadatendialogs, Layer entfernen), der Standardwert ist menu: []
-    hideInfo: null               #
-    hideSelect: null             #
-    allowReorder                 #
-    themes: {  }                 #   
+    title: layertree                                    # Titel des Layerbaums
+    target: ~                                           # ID des Kartenelements  
+    type: ~                                             # Typ des Layerbaums (Element oder Dialog)
+    autoOpen: false                                     # Öffnet Layerbaum beim Start der Anwendung (Standard = false)
+    showBaseSource: true                                # Zeigt den Basislayer an (Standard = true)
+    showHeader: true                                    # Zeigt eine Überschrift, die die Anzahl der Services zählt (Standard = true)
+    menu: [opacity,zoomtolayer,metadata,removelayer]    # Zeigt ein Kontextmenü für den Layer an (wie Transparenz, Zoom auf Layer, Anzeige des Metadatendialogs,                                                             Layer entfernen)
+    hideInfo: null               
+    hideSelect: null             
+    allowReorder                 
+    themes: {  }                    
