@@ -18,7 +18,6 @@ Funktionen
 * Abfrage der Metadaten eines Layers
 * Zeitliche Dimension des Layers kontrollieren
 
-
 .. figure:: ../../../figures/layertree/layertree_example_dialog.png
            :scale: 80
            :alt: Einfacher Layertree mit einem Layerset und Layer als Dialog
@@ -30,7 +29,6 @@ Funktionen
            :alt: Komplexer Layertree mit mehreren Layersets in der Seitenleiste, unterteilt in thematische Gruppen. 
 
            Komplexer Layertree mit mehreren Layersets in der Seitenleiste, unterteilt in thematische Gruppen. 
-
 
 Zur Konfiguration des Layerbaums gibt es verschiedene Verknüpfungspunkte zu anderen Elementen, die beachtet werden müssen: 
 
@@ -67,7 +65,6 @@ Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können, f
 Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen, müssen diese in dem `Kartenelement <map.html>`_ angegeben werden. 
 Hier gibt man durch das Ankreuzen der Layersets an, welche Layersets in der Kartenansicht verwendet werden sollen. Das Layerset "overview" wird beispielsweise nicht in der Hauptkarte angezeigt.  
 In diesem Schritt wird auch die Reihenfolge definiert, in der die Layersets im Layertree und in der Karte erscheinen sollen. Die erstellten Layersets können in der Auflistung per Drag & Drop verschoben werden. Bitte achten Sie darauf, dass die weiter oben definierten Themen die darunter liegenden Themen überdecken können.
-
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple.png
            :scale: 80
@@ -207,7 +204,6 @@ Im Folgenden gehen wir eine komplexe beispielhafte Konfiguration eines Layertree
 #. Einrichtung mehrerer Layersets
 #. Einrichtung in der Karte zur Anzeige der Layersets
 #. Einrichtung des thematischen Layertrees
-
 
 **Einrichtung mehrerer Layersets**
 
