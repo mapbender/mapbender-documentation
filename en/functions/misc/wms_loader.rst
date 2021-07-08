@@ -45,7 +45,7 @@ You need a button to show this element. See `button <button.html>`_ for inherite
 How to add a WMS by defining a link
 ====================================
 
-You can add a WMS to Mapbender by defining a link f.e. in your :ref:`WMS featureinfo<feature_info>` or your search results.
+You can add a WMS to Mapbender by defining a link, e.g. in your :ref:`WMS featureinfo<feature_info>` or your search results.
 
 Activate the option **use Declarative** in the WMS Loader element (in a YAML application set the option ``useDeclarative`` to true).
 

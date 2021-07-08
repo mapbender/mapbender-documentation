@@ -128,7 +128,7 @@ Images (figures)
 Images for the documentation are **all** located at
 
 * mapbender-documentation/figures
-* create images with size 800 x 600px (you can resize your browser window f.e. with web developer to this size)
+* create images with size 800 x 600px (you can resize your browser window e.g. with web developer to this size)
 * have a look at quickstart.rst about how to refer to an image
 
 

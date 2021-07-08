@@ -34,7 +34,7 @@ YAML-Definition:
    tooltip: 'ScaleDisplay'          # Text des Tooltips
    target: ~                        # ID des Kartenelements
    anchor: 'inline'/'left-top'/     # Ausrichtung des ScaleDisplay-Elements, der Standardwert ist 'right-bottom'
-     'left-bottom'/'right-top'/     # use inline f.e. in sidebar
+     'left-bottom'/'right-top'/     
      'right-bottom'
    scalePrefix: Scale               # Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab"
    unitPrefix: true                 # aktiviert Darstellung der Maßstabszahl mit Präfix, der Standardwert ist false

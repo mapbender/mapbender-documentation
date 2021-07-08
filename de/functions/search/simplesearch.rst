@@ -40,7 +40,7 @@ Konfiguration
 * **Quell-SRS:** EPSG-Code des primären Koordinatenbezugsystems 
 * **Delay:** Automatische Vervollständigungs-Verzögerung (z.B. ``300``).
 * **Result buffer:** Puffert das Objekt (in Karteneinheiten) vor dem Zoomen (z.B. ``10``).
-* **Result minscale/ maxscale:** Maßstabsbegrenzung beim Zoomen (z.B. ``1000`` und ``5000``). ~ wenn keine Begrenzung gewünscht wird.
+* **Result minscale/maxscale:** Maßstabsbegrenzung beim Zoomen (z.B. ``1000`` und ``5000``). ~ wenn keine Begrenzung gewünscht wird.
 * **Result icon url:** Symbol, das zur Trefferanzeige verwendet werden soll (z.B. ``http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png``).
 * **Result icon offset:** Versatz x und y des Symbols (z.B. ``-6,-38`` für das Stecknadel-Icon).
 
