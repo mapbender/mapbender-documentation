@@ -155,7 +155,7 @@ Add the new element to an application
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a new application and add your element to the new application.
-Note that the configuration for your generated element is done in YAML syntax. If you want to use the map-element as target you have to find out the id of the map-element (f.e. via firebug inspect).
+Note that the configuration for your generated element is done in YAML syntax. If you want to use the map-element as target you have to find out the id of the map-element (e.g. via inspector tool).
 
 
 Change the action on Click event

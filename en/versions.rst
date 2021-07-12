@@ -934,7 +934,7 @@ For details have a look at: https://github.com/mapbender/mapbender/issues?milest
 * Print with overview
 * Sidepane with different elements (chnage via button)
 * Layertree context menue to change opacity and to zoom to layer
-* Open application with parameters (f.e. position)
+* Open application with parameters (e.g. position)
 * ACL for elements
 * Added function for validate WMS GetCapabilities documents
 

@@ -113,7 +113,7 @@ Nach erfolgreicher Anmeldung werden Sie zur ``Mapbender Administration`` weiter 
 
 Anwendungsübersicht
 ================================================================================
-Nach der Anmeldung werden Sie zur Anwendungsübersicht (``Anwendungen/ Applications``) mit einer Liste der für Sie freigegebenen Anwendungen weiter geleitet.
+Nach der Anmeldung werden Sie zur Anwendungsübersicht (``Anwendungen/Applications``) mit einer Liste der für Sie freigegebenen Anwendungen weiter geleitet.
 
 Die Anwendungsübersicht bietet folgende Funktionen:
 
@@ -309,12 +309,12 @@ $groups$.
 **Layerkonfiguration:**
 
 * Titel - Layertitel der Service Information (der Titel ist anpassbar)
-* Aktiv an/aus (active on/off) - aktiviert/ deaktiviert ein Thema in dieser Anwendung
+* Aktiv an/aus (active on/off) - aktiviert/deaktiviert ein Thema in dieser Anwendung
 * Auswählen erlauben (select allow) - Layer wird angezeigt und ist auswählbar im Ebenenbaum
 * Auswählen an (select on) - Layer ist bei Anwendungsstart aktiv
 * Info erlauben (info allow) - Infoabfrage wird für diesen Layer zugelassen
 * Info an (info on) - Layer Infoabfrage wird beim Start aktiviert
-* Minimaler/ Maximaler Maßstab (minsc / maxsc) - Maßstabsbereich, in dem der Layer angezeigt wird.
+* Minimaler/Maximaler Maßstab (minsc/maxsc) - Maßstabsbereich, in dem der Layer angezeigt wird.
 * Aufklappen (toggle) - aufklappen beim Start der Anwendung
 * Sortieren (reorder) - Ebenen können über drag&drop in der Anwendung verschoben werden
 * ... -> öffnet einen Dialog mit weiteren Informationen

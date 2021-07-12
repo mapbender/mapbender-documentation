@@ -1058,8 +1058,8 @@ Events
 
 Es gibt mehrere Events, die zu einem Feature zugeordnet werden können, um Attribute vor oder nach der Aktion zu manipulieren.
 
-* **onBeforeSave**: Event vor dem Speichern von neuen/ veränderten Informationen
-* **onAfterSave**: Event nach dem Speichern von neuen/ veränderten Informationen
+* **onBeforeSave**: Event vor dem Speichern von neuen/veränderten Informationen
+* **onAfterSave**: Event nach dem Speichern von neuen/veränderten Informationen
 
 * **onBeforeUpdate**: Event vor der Aktualisierung von veränderten Informationen
 * **onAfterUpdate**: Event nach der Aktualisierung von veränderten Informationen
