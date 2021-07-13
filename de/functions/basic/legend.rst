@@ -47,7 +47,7 @@ Diese Konfiguration ergibt folgendes Ergebnis in der Anwendung:
 .. image:: ../../../figures/legend_example_sidepane.png
      :scale: 80
 
-Die Legende wird in diesem Fall als Blockelement in der Sidepane angeordnet. Falls die Legende in der Toolbar eingebunden werden soll, empfiehlt es sich diese über einen Button zu konfigurieren und nicht über das Element Legende (siehe folgenden Abschnitt).
+Die Legende wird in diesem Fall als Blockelement in der Sidepane angeordnet. Falls die Legende in der Toolbar eingebunden werden soll, empfiehlt es sich, diese über einen Button zu konfigurieren und nicht über das Element Legende (siehe folgenden Abschnitt).
 
 Legende in der Toolbar
 -----------------------
