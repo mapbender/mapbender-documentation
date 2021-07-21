@@ -135,7 +135,7 @@ Erstellen einer Anwendung
 
 Es gibt drei verschiedene Möglichkeiten, durch die neue Anwendungen erstellt werden können:
 
-Einerseits besteht die Option **1**, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit **2** ist der Import einer Anwendung. Weitere Informationen hierzu finden sich auf der Seite :ref:`yaml_de:yaml-anwendungsdateien`. Es können außerdem **3** komplett neue Anwendungen über das Backend definiert werden. Die einzelnen Arbeitsschritte werden hierfür im folgenen näher erläutert:
+Einerseits besteht die Option **1**, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit **2** ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich auf der Seite :ref:`yaml_de:yaml-anwendungsdateien`. Es können außerdem **3** komplett neue Anwendungen über das Backend definiert werden. Die einzelnen Arbeitsschritte werden hierfür im folgenen näher erläutert:
 
 #. Wählen Sie zunächst *"Anwendung anlegen"* auf der Anwendungsübersichtsseite.
 
