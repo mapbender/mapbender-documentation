@@ -151,7 +151,7 @@ Einerseits besteht die Option **1**, diese aus bereits vorhandenen Anwendungen z
 
 #. Klicken Sie *"speichern"*, um die Anwendung zu erzeugen.
 
-Anwendungen können jederzeit bearbeitet werden. Von der Anwendungsüberssichtsseite aus ist eine Navigation zu jeder Applikation (mit gegebenen Nutzungsrechten) über den |mapbender-button-edit| ``Button`` möglich. Weiterhin findet sich hier ein |mapbender-button-show| Button für jede Anwendung, mit dem diese im Frontend aufgerufen werden kann. Es besteht außerdem die Option, Anwendungen zu |mapbender-button-export| exportieren, |mapbender-button-delete| löschen sowie diese für nicht angemeldete Nutzer |mapbender-button-publish| zu aktivieren bzw. deaktivieren.
+Anwendungen können jederzeit bearbeitet werden. Von der Anwendungsübersichtsseite aus ist eine Navigation zu jeder Applikation (mit gegebenen Nutzungsrechten) über den |mapbender-button-edit| ``Button`` möglich. Weiterhin findet sich hier ein |mapbender-button-show| Button für jede Anwendung, mit dem diese im Frontend aufgerufen werden kann. Es besteht außerdem die Option, Anwendungen zu |mapbender-button-export| exportieren, zu |mapbender-button-delete| löschen sowie diese für nicht angemeldete Nutzer |mapbender-button-publish| zu aktivieren bzw. deaktivieren.
 
   .. image:: ../figures/de/mapbender_create_application.png
      :scale: 80  
@@ -166,7 +166,7 @@ Mapbender besteht aus den Bereichen Toolbar, Sidepane, Content und Footer. In di
 
 #. Klicken Sie auf den |mapbender-button-add| ``Button`` neben einem Bereich, um einen Überblick über die Mapbender-Elemente zu erhalten.
 
-#. Wählen Sie ein Element aus der Liste aus. Beachten Sie dabei den jeweiligen Bereich Ihrer Anwendung. Es können dabei nicht alle Elemente zu jedem Bereich hinzugefügt werden. Beispielsweise ist die Übersichtskarte (overview) nur in den Content-Bereich integrierbar.
+#. Wählen Sie ein Element aus der Liste aus. Beachten Sie dabei den jeweiligen Bereich Ihrer Anwendung. Es können nicht alle Elemente zu jedem Bereich hinzugefügt werden. Beispielsweise ist die Übersichtskarte (overview) nur in den Content-Bereich integrierbar.
 
 #. Konfigurieren Sie das Element. Hinweis: Wenn Sie ein Element z.B. **Karte (map)** auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
 
@@ -189,7 +189,7 @@ Im folgenden finden Sie eine vollständige Liste aller Elemente inlusive ihrer F
 * Button:			zum Einbinden von Elementen als Button
 * Copyright:			zeigt Nutzungsbedingungen an
 * Data manager:		erzeugt und speichert Sachinformationen in einer Datenbank 
-* Digitizer			erzeugt und speichert von Geometrieinformationen in einer Datenbank
+* Digitizer			erzeugt und speichert Geometrieinformationen in einer Datenbank
 * Dimensions-Handler:		für die Einbindung von Diensten mit einer zeitlichen Dimension
 * Druck:			Druckdialog
 * Ebenenbaum:			Übersicht mit allen eingebundenen Layersets und Layern
@@ -223,7 +223,7 @@ Versuchen Sie es selber
 
 * Fügen Sie ein Kartenelement zum Content-Bereich Ihrer Anwendung hinzu.
 * Fügen Sie ein Ebenenbaum zum Content-Bereich Ihrer Anwendung hinzu.
-* Fügen Sie einen Button in die Toolbar, der den Layertree öffnet.
+* Fügen Sie einen Button in die Toolbar ein, der den Layertree öffnet.
 * Fügen Sie das Navigationswerkzeug in den Content-Bereich hinzu.
 * Fügen Sie ein Copyright-Element hinzu und ändern Sie den Copyright-Text.
 * Fügen Sie eine SRS Auswahl in den Footer-Bereich ein.
@@ -274,7 +274,7 @@ Hinzufügen von Diensten zu Anwendungen
 
 Nachdem ein Dienst in Mapbender geladen wurde, kann dieser zu einer oder mehreren Anwendungen hinzugefügt werden.
 
-#. Navigieren Sie zunächst zur Übersichtsseite mit allen Anwendungen. Klicken Sie dann auf den |mapbender-button-edit| ``Button`` der jeweiligen Anwendung und navigieren zum Tab *Layersets*.
+#. Navigieren Sie zunächst zur Übersichtsseite mit allen Anwendungen. Klicken Sie dann auf den |mapbender-button-edit| ``Button`` der jeweiligen Anwendung und navigieren Sie zum Tab *Layersets*.
 
 #. Im Bereich *Layersets* besteht die Möglichkeit, einzelne hochgeladene Dienste zu einer Anwendung hinzuzufügen. Klicken Sie hierfür zunächst auf den |mapbender-button-add| ``Button`` neben der Filterfunktion, um ein Layerset anzulegen. Alle Dienste in einer Anwendung müssen einem bestimmten Layerset zugeordnet sein. Vergeben Sie für dieses einen Titel (z.B. "main" für die Hauptkarte und "overview" für die Übersichtskarte).
 
@@ -288,7 +288,7 @@ Nachdem ein Dienst in Mapbender geladen wurde, kann dieser zu einer oder mehrere
 Konfiguration von Diensten
 --------------------------
 
-Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie nicht alle Ebenen anzeigen oder Sie möchten die Reihenfolge oder den Titel der Ebenen ändern, die Info-Abfrage für einzelne Ebenen verhindern oder den Minimal-/Maximalmaßstab ändern.
+Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie nicht alle Ebenen anzeigen lassen oder Sie möchten die Reihenfolge oder den Titel der Ebenen ändern, die Info-Abfrage für einzelne Ebenen verhindern oder den Minimal-/Maximalmaßstab ändern.
 
 #. Wählen Sie  ``Anwendung -->`` |mapbender-button-edit| ``Button --> Layerset -->`` |mapbender-button-edit| ``Editier-Button``, um eine Instanz zu konfigurieren.
 
@@ -303,13 +303,13 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie n
 
 * Titel: 			Name der bei der Anwendung angezeigt wird
 * Opacity: 			Durchlässigkeit (Deckkraft) des Dienstes in Prozent
-* Format: 			das Format für den getMap-Requests
-* Infoformat: 			das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird 					empfohlen)
-* Exceptionformat: 		das Format für Fehlermeldungen
+* Format: 			Das Format für den getMap-Requests
+* Infoformat: 			Das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird 					empfohlen)
+* Exceptionformat: 		Das Format für Fehlermeldungen
 * Kachel-Puffer:		Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt 				an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei 					einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto 					mehr umgebende Kacheln werden abgerufen (Standard: 0).
-* BBOX-Faktor: 		Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier 					kann man angeben, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 					wird ein größeres Kartenbild anfordern. Default: 1.25 und kann auf 1 gesetzt 				werden.
-* BaseSource: 			soll der Dienst als BaseSource behandelt werden (BaseSources können beim 					Ebenenbaum ein-/ausgeblendet werden)
-* Proxy: 			bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
+* BBOX-Faktor: 		Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier 					kann angegeben werden, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 					wird ein größeres Kartenbild anfordern. Default: 1.25 und kann auf 1 gesetzt 				werden.
+* BaseSource: 			Der Dienst soll als BaseSource behandelt werden (BaseSources können beim 					Ebenenbaum ein-/ausgeblendet werden)
+* Proxy: 			Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
 * Transparenz: 		Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten 					Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
 * Tiled: 			Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei 					großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht 					unterstützt)
 
@@ -352,10 +352,10 @@ $groups$.
 * Ausgewählt an:	Layer ist bei Anwendungsstart aktiv
 * Info erlauben:	Infoabfrage wird für diesen Layer zugelassen
 * Info an:		Layer Infoabfrage wird beim Start aktiviert
-* Aufklappen erlauben: erlaubt aufklappen des Layers beim Start der Anwendung
-* Aufklappen an: 	klappt Layer auf beim Start der Anwendung
+* Aufklappen erlauben: Erlaubt aufklappen des Layers beim Start der Anwendung
+* Aufklappen an: 	Klappt Layer beim Start der Anwendung auf
 * Layer-Reihenfolge:	Layer können in der Standard- oder QGIS-Reihenfolge dargestellt werden.
-* ... 			öffnet einen Dialog mit weiteren Informationen
+* ... 			Öffnet einen Dialog mit weiteren Informationen
 * ID:			ID des Layers
 * Name: 		Layername der Service Information (wird beim getMap-Request verwendet und ist nicht 			veränderbar)
 * Style: 		Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den 				Standard-Stil (default) wählen.
@@ -390,7 +390,7 @@ Der Zugriff auf eine Mapbender Anwendung benötigt Authentifizierung. Nur öffen
 Benutzer oder Gruppen können Berechtigungen bekommen, um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
 
 .. NOCH NICHT IMPLEMENTIERT
-  Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie ``guest``, ``operator`` oder ``administrator``. Die ``role`` eines Benutzers beruht auf den Funktionen und des Diensten, aud die der Benutzer durch diese Anwendung Zugriff hat.
+  Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie ``guest``, ``operator`` oder ``administrator``. Die ``role`` eines Benutzers beruht auf den Funktionen und den Diensten, auf die der Benutzer durch diese Anwendung Zugriff hat.
 
 
 Benutzer anlegen
@@ -434,11 +434,11 @@ Rechte
 
 Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Diese beruhen auf dem Symfony ACL System. 
 
-* view:	kann anzeigen
-* edit:	kann editieren
-* delete:	kann löschen
-* operator:	kann anzeigen, editieren und löschen
-* master:	kann anzeigen, editieren und löschen und diese Rechte außerdem weitergeben
+* view:	Kann anzeigen
+* edit:	Kann editieren
+* delete:	Kann löschen
+* operator:	Kann anzeigen, editieren und löschen
+* master:	Kann anzeigen, editieren und löschen und diese Rechte außerdem weitergeben
 * owner:	Besitzer darf alles (darf auch master- und owner-Recht vergeben)
 
 Weisen Sie einem Benutzer über ``Sicherheit --> Benutzer --> Benutzer bearbeiten --> Sicherheit`` Rechte zu.
@@ -453,7 +453,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 #. Wählen Sie ``Sicherheit``.
 
-#. Veröffentlichen Sie Ihre Anwendung über die Auswahl *"öffentlicher Zugriff"* unter ``Sicherheit`` oder den Button zur Veröffentlichung |mapbender-button-publish| bei der Anwendungsübersicht. Ist diese Einstellung aktiviert, dann haben auch nicht angemeldete Nutzer einen Zugriff auf die Anwendung.
+#. Veröffentlichen Sie Ihre Anwendung über die Auswahl *"öffentlicher Zugriff"* unter ``Sicherheit`` oder den Button zur Veröffentlichung |mapbender-button-publish| bei der Anwendungsübersicht. Ist diese Einstellung aktiviert, haben auch nicht angemeldete Nutzer einen Zugriff auf die Anwendung.
 
 #. Setzen Sie die Zugriffsrechte für einen Benutzer oder eine Gruppe.
 
