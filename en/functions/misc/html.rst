@@ -8,7 +8,7 @@ This element allows the integration of HTML anywhere in an application. Figures,
 .. image:: ../../../figures/html_preview_example.png
      :scale: 80
  
- The following variables can be integrated in HTML:
+The following variables can be integrated in HTML:
 
 - "application" (Entity Application)
 - "entity" (Entity HTML-Element)
@@ -24,7 +24,7 @@ This element has to be integrated in the backend.
 
 * **Title:** Title of the element. The title will be listed in "Layouts". It will be indicated if "Show label" is activated.
 * **Content:** Content of the HTML-element. The variables: "application" and "entity" are available in the content.
-* **Classes:** CSS-class
+* **Classes:** CSS-classes.
 
 
 Configuration examples
@@ -33,12 +33,12 @@ Configuration examples
 Insert picture:
 ---------------
 
-In this example, the Mapbender Logo was integrated in the sidepane (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). It consists of a defined height (``height='60px'``), background color and transparency (``background-color:rgb(255, 255, 255, 0.9)``) as well as a certain padding (``padding:10px``). These configurations were defined as styling through ``style=``.
+In this example, the Mapbender Logo was integrated in the sidepane (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). It can be adjusted with a predefined height (``height='60px'``), background color and transparency (``background-color:rgb(255, 255, 255, 0.9)``) as well as a certain padding (``padding:10px``). These configurations were defined as styling through ``style=``.
 
 .. code-block:: yaml
 
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
-     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
+     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'></a>
 
 .. image:: ../../../figures/html_example_logo.png
      :scale: 80
@@ -46,15 +46,15 @@ In this example, the Mapbender Logo was integrated in the sidepane (``img src='h
 Insert picture with link:
 -------------------------
 
-A linkage was added to the previously inserted logo. It references to the Mapbender website (``href='https://mapbender.org'``). The link is opened in a new tab because of ``target='_blank'``.
+A linkage was added to the previously inserted logo. It references to the Mapbender website (``href='https://mapbender.org'``) if the logo is clicked on. The link is opened in a new tab because of ``target='_blank'``.
 
 .. code-block:: yaml
 
      <a href='https://mapbender.org' target='_blank'>
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
-     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
+     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'></a>
 
-Variables & HTMl-Element
+Variables & HTML-Element
 ------------------------
 
 Several variables can be integrated in the HTML-Element.
@@ -63,13 +63,13 @@ Several variables can be integrated in the HTML-Element.
 
 This variable allows the integration of the application title. In the example, this corresponds to "Konfigurationsbeispiele".
 
-The HTML-Code could look as follows:
+The HTML-Code could look like this:
 
 .. code-block:: yaml
 
      <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{  application.title }} </span></b>
 
-The application title is defined through ``{{ application.title }}``. The term "Anwendung" is an addition and will display independently from the actual title. The style-block defines (``style=``) font size (``font-size:25px``), font width (``<b></b>``), font color (``color:#b6dd18``) as well as position (``margin-right:50vw``) of the title.
+The application title is defined through ``{{ application.title }}``. The term "Anwendung" is an addition and will display independently from the actual title. The style-block (``style=``) defines font size (``font-size:25px``), font width (``<b></b>``), font color (``color:#b6dd18``) as well as position (``margin-right:50vw``) of the title.
 
 The result for the configuration example looks like this:
 
@@ -91,7 +91,7 @@ In this example, the username is displayed in the toolbar:
     
 * Variable: **group.title**
 
-The group of a user can not be defined in a single expression, because Twig 1.40 only supports the map-filter in higher versions. In order to integrate this variable, a loop will be used:
+The group of a user cannot be defined in a single expression, because Twig 1.40 only supports the map-filter in higher versions. In order to integrate this variable, a loop will be used:
 
 .. code-block:: yaml
 
@@ -106,7 +106,7 @@ In this example, index and group name are displayed in the toolbar:
 
 * Variable: **"entity"**
 
-The variable ``{ entity }`` displays the ID and ``{ entity.title }`` the name of the HTML-element. 
+The variable ``{ entity }`` displays the ID and ``{ entity.title }``, which gives out the title of the HTML-element. 
 
 In the following, the variable ``{ entity.title }`` was integrated with the text addition "HTML-Element". The Styling parameters correspond to those of the example with *application.title*. Text additions, variables and position were simply adjusted for *entity.title*.
 
@@ -131,8 +131,3 @@ YAML-Definition:
     classes: my-special-css-class
 
 
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
-* **Widget:** mapbender.mbHTMLElement
