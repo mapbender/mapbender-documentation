@@ -11,7 +11,7 @@
 
   .. |mapbender-button-copy| image:: ../figures/mapbender_button_copy.png
   
-  .. |mapbender-button-copy| image:: ../figures/mapbender_button_export.png
+  .. |mapbender-button-export| image:: ../figures/mapbender_button_export.png
 
   .. |mapbender-button-publish| image:: ../figures/mapbender_button_publish.png
 
