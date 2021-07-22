@@ -3,27 +3,27 @@
 Data Manager
 ************
 
-The functionality of the Data Manager is similar to that of the 'Digitizer<digitizer.html>`_. However, the Data Manager only saves technical data, i.e. it does not store any geometry information.
+The functionality of Data Manager is similar to that of `Digitizer <digitizer.html>`_. However, Data Manager only works with nonspatial data, i. e. it doesn't provide or store any geometrical information.
 
 Configuration example
 ---------------------
 
-The Data Manager can for instance be used to store contact information.
+Data Manager is a good solution to store simple contact information in Mapbender:
 
 .. image:: ../../../figures/data_manager.png
      :scale: 80
 
-In the presented example, an input template is opened after click on the ``+`` -button. 
+In the example, an input template is opened after clicking the ``+`` -button. 
     
 .. image:: ../../../figures/data_manager_template.png
      :scale: 80
      
 Setup
------------
+-----
 
-In order to use the Data Manager, a database connection has to be set up. Further information can be found in the chapter about the `configuration of a database <../../customization/yaml.html>`_.
+In order to use Data Manager, a database connection has to be set up. Further information can be found in the chapter about the `Configuration of a database <../../customization/yaml.html>`_.
 
-The element can afterwards be integrated in the sidepane.
+Afterwards, the element can be integrated in the sidepane.
      
 .. image:: ../../../figures/data_manager_add.png
      :scale: 80
@@ -31,109 +31,108 @@ The element can afterwards be integrated in the sidepane.
 YAML-Definition
 ---------------
 
-In the following, the YAML-Code of the formerly presented configuration example is displayed:
+Here's the necessary YAML-Code of the formerly presented configuration example:
 
 .. code-block:: yaml
 
-contacts:
-  dataStore:
-    connection: geodata_db
-    table: contacts
-    uniqueId: gid
-  allowEdit: true
-  allowCreate: true
-  allowDelete: true
-  allowRefresh: false
-  popup:
-    title: contacts
-    width: 550px
-  formItems:
-    -
-      type: form
-      children:
+    contacts:
+      dataStore:
+        connection: geodata_db
+        table: contacts
+        uniqueId: gid
+      allowEdit: true
+      allowCreate: true
+      allowDelete: true
+      allowRefresh: false
+      popup:
+        title: contacts
+        width: 550px
+      formItems:
         -
-          type: fieldSet
+          type: form
           children:
             -
-              type: input
-              title: surname
-              placeholder: 'Please enter your surname.'
-              name: surname
-              css:
-                width: 60%
+              type: fieldSet
+              children:
+                -
+                  type: input
+                  title: surname
+                  placeholder: 'Please enter your surname.'
+                  name: surname
+                  css:
+                    width: 60%
+                -
+                  type: input
+                  title: 'first name'
+                  name: first name
+                  css:
+                    width: 40%
+            -
+              type: breakLine
+            -
+              type: fieldSet
+              children:
+                -
+                  type: input
+                  title: street
+                  name: street
+                  css:
+                    width: 80%
+                -
+                  type: input
+                  title: 'house number and addition'
+                  name: housnr
+                  css:
+                    width: 20%
+            -
+              type: fieldSet
+              children:
+                -
+                  type: input
+                  title: 'post code'
+                  name: post code
+                  css:
+                    width: 20%
+                -
+                  type: input
+                  title: location
+                  name: location
+                  css:
+                    width: 80%
+            -
+              type: breakLine
+            -
+              type: fieldSet
+              children:
+                -
+                  type: input
+                  title: 'phone number'
+                  name: phone
             -
               type: input
-              title: 'first name'
-              name: first name
-              css:
-                width: 40%
-        -
-          type: breakLine
-        -
-          type: fieldSet
-          children:
+              title: e-Mail
+              placeholder: 'Please enter your e-Mail.'
+              name: email
             -
-              type: input
-              title: street
-              name: street
-              css:
-                width: 80%
+              type: breakLine
             -
-              type: input
-              title: 'house number and addition'
-              name: housnr
-              css:
-                width: 20%
-        -
-          type: fieldSet
-          children:
-            -
-              type: input
-              title: 'post code'
-              name: post code
-              css:
-                width: 20%
-            -
-              type: input
-              title: location
-              name: location
-              css:
-                width: 80%
-        -
-          type: breakLine
-        -
-          type: fieldSet
-          children:
-            -
-              type: input
-              title: 'phone number'
-              name: phone
-        -
-          type: input
-          title: e-Mail
-          placeholder: 'Please enter your e-Mail.'
-          name: email
-        -
-          type: breakLine
-        -
-          type: textArea
-          title: note
-          placeholder: 'You can leave notes here.'
-          name: note
-  table:
-    autoWidth: false
-    columns:
-      -
-        data: surname
-        title: surname
-      -
-        data: first name
-        title: 'first name'
-    info: true
-    lenghtChange: false
-    ordering: true
-    pageLength: 10
-    paging: true
-    processing: true
-    searching: true
-
+              type: textArea
+              title: note
+              placeholder: 'You can leave notes here.'
+              name: note
+      table:
+        autoWidth: false
+        columns:
+          -
+            data: surname
+            title: surname
+          -
+            data: first name
+            title: 'first name'
+        info: true
+        lenghtChange: false
+        ordering: true
+        pageLength: 10
+        paging: true
+        processing: true
+        searching: true
