@@ -74,10 +74,3 @@ The element can be customized with the following CSS-style, for example to incre
                     width: 500px;
                 }
 
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\CoordinatesDisplay
-* **Widget:** mapbender.element.coordinatesdisplay.js
-* **Style:** mapbender.elements.css
