@@ -34,4 +34,9 @@ YAML-Definition:
     ajaxActivityClass: mb-activity-ajax # CSS Klasse, die Ajax-Aktivitäten anzeigt
     tileActivityClass: mb-activity-tile # CSS Klasse, die Kartenaufrufe anzeigt
 
+Class, Widget & Style
+---------------------
 
+* **Class:** Mapbender\\CoreBundle\\Element\\ActivityIndicator
+* **Widget:** mapbender.element.activityindicator.js
+* **Style:** mapbender.elements.css

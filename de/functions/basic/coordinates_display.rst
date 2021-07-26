@@ -74,5 +74,10 @@ Das Element kann über den folgenden CSS-Style angepasst werden, beispielsweise 
                 }
 
 
+Class, Widget & Style
+=====================
 
+* **Class:** Mapbender\\CoreBundle\\Element\\CoordinatesDisplay
+* **Widget:** mapbender.element.coordinatesdisplay.js
+* **Style:** mapbender.elements.css
 
