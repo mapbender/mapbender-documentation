@@ -102,12 +102,17 @@ Inserting Proj4 SRS parameters into a database can be done using the command:
 
 .. code-block:: yaml
 
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+    app/console mapbender:database:init
 
 Importing applications from application/app/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See chapter: :ref:`yaml_en`.
+
+It is possible to (re-)import applications from the applications folder into the database with the following command:
+
+.. code-block:: yaml
+
+    bin/composer run reimport-example-apps
 
 
 Configuration files

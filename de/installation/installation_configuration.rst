@@ -99,7 +99,7 @@ Fügen Sie die Informationen zu den Koordinatensystemen über den folgenden Aufr
 
 .. code-block:: yaml
 
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+    app/console mapbender:database:init
 
 
 Importieren von Anwendungen aus application/app/config/applications
@@ -110,7 +110,7 @@ Sie können die Anwendungen, die in dem Ordner applications definiert sind, in d
 
 .. code-block:: yaml
 
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+    bin/composer run reimport-example-apps
 
 
 Konfigurationsdateien

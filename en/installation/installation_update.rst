@@ -95,7 +95,7 @@ Update Example for Windows
  #            php -d extension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll app/console doctrine:schema:update --dump-sql
  
  # Import the applications from mapbender.yml to your database to get to know about the latest developments
- php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+ php.exe bin/composer run reimport-example-apps
  php.exe app/console assets:install web
 
  # Delete your cache and the logdateien at mapbender/app/cache und mapbender/app/logs
