@@ -55,7 +55,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  app/console doctrine:schema:update --force
 
  # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
- app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+ bin/composer run reimport-example-apps
 
  app/console assets:install web --symlink --relative
  
@@ -96,7 +96,7 @@ Aktualisierungsbeispiel für Windows
  #            php -d extension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll app/console doctrine:schema:update --dump-sql
   
  # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
- php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+ php.exe bin/composer run reimport-example-apps
  php.exe app/console assets:install web
 
  # Löschen Sie den Cache und die Logdateien unter mapbender/app/cache und mapbender/app/logs

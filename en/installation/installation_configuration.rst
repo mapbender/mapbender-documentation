@@ -12,7 +12,7 @@ Following we describe the configuration steps of Mapbender a bit further. Config
 * Creating the database schema
 * Copying the bundles' assets to the public web directory
 * Creating the "root" user
-* Inserting srs parameters (EPSG code definition)
+* Initializing the database
 * Loading the applications of the mapbender.yml to your database
 
 All can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which Mapbender framework is built upon. There's a mayor caveat though you should understand before continuing:
@@ -95,19 +95,24 @@ Alternatively, there is a silent mode you can use, if you want to use a script t
 
     app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
 
-Inserting SRS parameters
-^^^^^^^^^^^^^^^^^^^^^^^^
+Initialize the database
+^^^^^^^^^^^^^^^^^^^^^^^
 
-Inserting Proj4 SRS parameters into a database can be done using the command:
+Initializing the database can be done using the command:
 
 .. code-block:: yaml
 
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+    app/console mapbender:database:init
 
 Importing applications from application/app/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See chapter: :ref:`yaml_en`.
+
+It is possible to (re-)import applications from the applications folder into the database with the command:
+
+.. code-block:: yaml
+
+    bin/composer run reimport-example-apps
 
 
 Configuration files

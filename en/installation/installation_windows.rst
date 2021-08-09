@@ -164,7 +164,7 @@ Open the windows shell and initialize the database connection with the following
     php.exe app/console doctrine:database:create
     php.exe app/console doctrine:schema:create
     php.exe app/console mapbender:database:init -v
-    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+    php.exe bin/composer run reimport-example-apps
 
 
 To gain database access, you have to create a default user via
