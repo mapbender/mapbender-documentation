@@ -106,7 +106,7 @@ In this example, index and group name are displayed in the toolbar:
 
 * Variable: **"entity"**
 
-The variable ``{ entity }`` displays the ID and ``{ entity.title }``, which gives out the title of the HTML-element. 
+The variable ``{ entity }`` displays the ID and ``{ entity.title }``, which displays the title of the HTML-element. 
 
 In the following, the variable ``{ entity.title }`` was integrated with the text addition "HTML-Element". The Styling parameters correspond to those of the example with *application.title*. Text additions, variables and position were simply adjusted for *entity.title*.
 
