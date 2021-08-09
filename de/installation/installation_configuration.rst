@@ -12,7 +12,7 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 * Erzeugen der Datenbankschemas
 * Kopieren des bundle Assets in das öffentliche web-Verzeichnis
 * Erzeugen des "root" Benutzers
-* Laden der SRS Parameters (EPSG-Code Definition)
+* Initialisieren der Datenbank
 * Laden der Anwendungen der mapbender.yml Definition in die Datenbank
 
 Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
@@ -92,10 +92,10 @@ Sie können auch den Modus "silent" verwenden, wenn Sie ein Skript nutzen möcht
     app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
 
 
-Einfügen der SRS Parameter
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Initialisieren der Datenbank
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Fügen Sie die Informationen zu den Koordinatensystemen über den folgenden Aufruf in die Datenbank:
+Führen Sie das nachfolgende Kommando aus, um die Datenbank zu initialisieren und startbereit zu machen:
 
 .. code-block:: yaml
 
