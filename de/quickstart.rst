@@ -310,7 +310,7 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 * BBOX-Faktor: Dieser Parameter gilt für Dienste, die nicht gekachelt angefordert werden. Hier kann angegeben werden, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Standard: 1.25
 * BaseSource: Der Dienst soll als BaseSource behandelt werden (BaseSources können im Ebenenbaum ein-/ausgeblendet werden)
 * Proxy: Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
-* Transparenz: Standard ist aktiviert, deaktiviert wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit TRANSPARENT=FALSE)
+* Transparenz: standardmäßig aktiviert, bei Deaktivierung wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit Transparent=FALSE)
 * gekachelt: Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
 * Layer-Reihenfolge: gibt eine Lesrichtung für die im Dienst enthaltenen Layer vor. Standard (umgekehrt) und QGIS-Style (gleiche Reihenfolge) sind auswählbar.
 
@@ -342,7 +342,7 @@ Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzug
 
 * Titel: Layertitel, wird im Dienst-Repository angezeigt
 * Min./Max. Maßstab: Maßstabsbereich, in dem der Layer angezeigt wird
-* aktiv: aktiviert/deaktiviert ein Layer, sodass bei Deaktivierung die anderen Checkboxen dieses Layers ignoriert werden
+* aktiv: aktiviert/deaktiviert einen Layer, sodass bei Deaktivierung die anderen Checkboxen dieses Layers ignoriert werden
 * Ausgewählt erlauben: Layer wird angezeigt und ist auswählbar im Ebenenbaum
 * Ausgewählt an: Layer ist bei Anwendungsstart aktiv
 * Info erlauben: Infoabfrage wird für diesen Layer zugelassen
