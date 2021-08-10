@@ -36,8 +36,6 @@ The Printclient can be configurated in the backend. It relies on print templates
      :scale: 80
 
 * **title**: Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. The title will be displayed next to the button if "Show label" is activated.
-* **target**: ID of map element to query.
-* **type**: element or dialog, default is dialog
 * **scales**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
 * **rotatable**: defines if the print extent is rotatable, default is true
 * **print legend**: adds a checkbox which allows your print to have a legend
