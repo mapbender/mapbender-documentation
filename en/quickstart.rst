@@ -236,11 +236,11 @@ Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click 
 
 The sources pages provides a user with the following functions:
 
- * add data source
- * filter via text to search for sources
+ * |mapbender-button-add| add data source
  * |mapbender-button-show| show data source 
  * |mapbender-button-update| update data source
  * |mapbender-button-delete| delete data source
+ * filter via text to search for sources
  
   .. image:: ../figures/mapbender_sources.png
      :scale: 80
@@ -264,7 +264,7 @@ Mapbender allows the integration of OGC Web Map Services (WMS) and Web Map Tile 
 
 #. After a successful upload, Mapbender will provide an overview of the WMS information.
 
-  .. image:: ../figures/mapbender_add_sources.png
+  .. image:: ../figures/mapbender_add_source.png
      :scale: 80
 
 
@@ -442,10 +442,10 @@ Assign an Application to a User/Group
 
 #. Set permissions for specific users/groups.
 
-#. Test your configuration. Logout from Mapbender by ``Logout``. Login again as the new user.
-
   .. image:: ../figures/mapbender_security.png
      :scale: 80
+
+Test your configuration. Logout from Mapbender by ``Logout``. Login again as the new user.
 
 
 Assign elements to a User/Group
