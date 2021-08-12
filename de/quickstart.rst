@@ -236,11 +236,11 @@ In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werde
 
 Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
 
- * Datenquelle hinzufügen
- * Datenquellen filtern
+ * |mapbender-button-add| Datenquelle hinzufügen
  * |mapbender-button-show| Datenquelle anzeigen
  * |mapbender-button-update| Datenquelle aktualisieren
  * |mapbender-button-delete| Datenquelle löschen
+ * Datenquellen filtern
 
   .. image:: ../figures/de/mapbender_sources.png
      :scale: 80
@@ -441,10 +441,11 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 #. Setzen Sie die Zugriffsrechte für einen Benutzer oder eine Gruppe.
 
-#. Testen Sie die Konfiguration. Melden Sie sich dafür über ``Logout`` aus und melden sich unter einer neuen Benutzerbezeichnung an.
-
   .. image:: ../figures/de/mapbender_security.png
      :scale: 80
+
+Testen Sie die Konfiguration. Melden Sie sich dafür über ``Logout`` aus und melden sich unter einer neuen Benutzerbezeichnung an.
+
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
 ------------------------------------------------
