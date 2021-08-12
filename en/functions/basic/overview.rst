@@ -81,9 +81,3 @@ YAML-Definition:
    maximized: true              # true/false to open/close on start, default is true
    fixed: true                  # true/false to fix the overview extent, default is true
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Overview
-* **Widget:** mapbender.element.overview.js
-* **Style:** mapbender.element.overview.css

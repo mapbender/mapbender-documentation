@@ -26,10 +26,3 @@ YAML-Definition:
 
 Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
 
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\PrintBundle\\Element\\ImageExport
-* **Widget:** mapbender.element.imageExport.js
-

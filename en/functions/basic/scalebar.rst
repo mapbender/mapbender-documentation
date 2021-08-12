@@ -35,9 +35,3 @@ YAML-Definition:
    maxWidth: 200                    # the maximum width of the scale bar, default 200px
    units: ['km']                    # scale bar units 'kilometer' and/or 'miles' (ml), default ['km']
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleBar
-* **Widget:** mapbender.element.scalebar.js
-* **Style:** mapbender.element.scalebar.css

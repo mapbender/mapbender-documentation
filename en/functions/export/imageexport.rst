@@ -26,8 +26,3 @@ YAML-Definition:
 
 You need a button to show this element. See :ref:`button` for inherited configuration options.
 
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\PrintBundle\\Element\\ImageExport
-* **Widget:** mapbender.element.imageExport.js

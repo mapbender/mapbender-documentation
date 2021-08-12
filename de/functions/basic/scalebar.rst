@@ -35,10 +35,3 @@ YAML-Definition:
    maxWidth: 200                    # Maximale Breite des Maßstabsbalkens, der Standardwert ist 200
    units: ['km']                    # Einheiten des Maßstabsbalkens, 'kilometer' und/oder 'miles' (ml), Standard ist ['km']
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleBar
-* **Widget:** mapbender.element.scalebar.js
-* **Style:** mapbender.element.scalebar.css
-

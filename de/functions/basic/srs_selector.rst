@@ -29,9 +29,3 @@ YAML-Definition:
    label: false             # false/true, um den SRS Selector zu beschriften. Der Standardwert ist false.
    target: ~                # ID des Kartenelements
 
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\SrsSelector
-* **Widget:** mapbender.element.srsselector.js
-* **Style:** mapbender.elements.css

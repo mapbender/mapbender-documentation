@@ -39,9 +39,3 @@ YAML-Definition:
    scalePrefix: Scale               # Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab"
    unitPrefix: true                 # aktiviert Darstellung der Maßstabszahl mit Präfix, der Standardwert ist false
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleDisplay
-* **Widget:** mapbender.element.scaledisplay.js
-* **Style:** mapbender.element.scaledisplay.css
