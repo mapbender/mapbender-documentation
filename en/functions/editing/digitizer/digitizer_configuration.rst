@@ -442,22 +442,21 @@ In connection with the digitization, very complex forms can be generated for the
 
 The following option for the construction of the forms are available:
 
-* Define more then one feature types for digitization. You can switch from one feature type to the other with a select box
-* Use a table as source. You can also define a filter to get a subset of the table
+* Define more than one feature type for digitization. You can switch from one feature type to another with a select box.
+* It is possible to define a filter to only query a subset of your database table.
 * Textfields
 * Selectboxes, Multiselectboxes
-* Radiobuttons, Checkboxes
+* Checkboxes and Radiobuttons 
 * Textareas
 * Datepicker
 * File upload and Image Display
 * Definition of tabs
 * Definition breakLines
 * Definition of Text 
-* Mandatory fields, regular expressions to valid the content are possible
+* Mandatory fields, regular expressions to validate the field input
 * Definition of help texts
-* Duplicate features
 * Refresh after save
-* Possibility to copy entered information from a form into the clipboard
+* Possibility to copy entered information from a form into the clipboard via a button
 
 
 .. image:: ../../../figures/digitizer_with_tabs.png
