@@ -395,9 +395,12 @@ Create a user
 
 #. Save your new user. It is still possible to alter user information later on.
 
+.. image:: ../figures/mapbender_create_user.png
+     :scale: 80
+
 #. You can provide more information about the user in the tab ``Profile``. In the ``Groups`` and ``Security`` tabs it is possible to assign the user additional parameters, e.g. the membership to a group.
 
-.. image:: ../figures/mapbender_create_user.png
+.. image:: ../figures/mapbender_assign_user_to_group.png
      :scale: 80
 
 
