@@ -3,8 +3,7 @@
 Scale Selector
 **************
 
-Displays a selectbox with scales. The map scale changes when a different value from the selectbox is chosen.
-Notice: The selectbox offers the scales that are defined for the Map Element.
+This element displays a selectbox with scales. The map scale changes when a different value from the selectbox is chosen. The selectbox only offers scales that have been defined in the map element.
 
 .. image:: ../../../figures/scale_selector.png
      :scale: 100
@@ -15,10 +14,9 @@ Configuration
 .. image:: ../../../figures/scale_selector_configuration.png
      :scale: 80
 
-* **Show label:** True to label the Scale Selector. The default-value is false.
+* **Show label:** Displays label of the Scale Selector (Default: false).
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Tooltip:** Text to use as tooltip.
-* **Target:** ID of the Map element to query.
 
 YAML-Definition:
 ----------------
