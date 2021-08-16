@@ -398,7 +398,7 @@ Benutzer anlegen
   .. image:: ../figures/de/mapbender_create_user.png
    :scale: 80
 
-#. Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reitern ``Gruppen`` und ``Sicherheit`` können dem Benutzer zusätzliche Parameter, bspw. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
+Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reitern ``Gruppen`` und ``Sicherheit`` können dem Benutzer zusätzliche Parameter, bspw. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
 
   .. image:: ../figures/de/mapbender_assign_user_to_group.png
    :scale: 80
