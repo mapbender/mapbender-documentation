@@ -391,7 +391,7 @@ User and group management
 ================================================================================
 An access to Mapbender requires authentication. Only public applications can be used by everyone.
 
-A user has permissions to access one or a set of applications and services.
+A user can get permissions to access one or a set of applications and services.
 
 .. NOT IMPLEMENTED YET
   There is no inherent difference between roles like :``guest``, ``operator`` or ``administrator``. The ``role`` of a user depends on the functionality and services the user has access through his applications.

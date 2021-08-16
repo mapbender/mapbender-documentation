@@ -395,7 +395,7 @@ Benutzer- und Gruppenverwaltung
 =================================
 Der Zugriff auf eine Mapbender Anwendung benötigt Authentifizierung. Nur öffentliche Anwendungen können von allen Anwendern genutzt werden.
 
-Ein Benutzer kann die Berechtigungen bekommen, um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
+Ein Benutzer kann die Berechtigungen zugewiesen bekommen, um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
 
 .. NOCH NICHT IMPLEMENTIERT
   Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie ``guest``, ``operator`` oder ``administrator``. Die ``role`` eines Benutzers beruht auf den Funktionen und des Diensten, aud die der Benutzer durch diese Anwendung Zugriff hat.
@@ -416,7 +416,6 @@ Benutzer anlegen
 
 
   .. image:: ../figures/mapbender_create_user.png
-
 
 
 Gruppen anlegen

@@ -10,7 +10,7 @@ The command ``app/console fom:user:resetroot`` resets the user with ID 1. This u
 
 .. code-block:: bash
           $ app/console fom:user:resetroot
-                Welcome to the Mapbender3 root account management command  
+                Welcome to the Mapbender root account management command  
                 Enter the username to use for the root account.
                 Username [root]: root
                 Enter the e-mail adress to use for the root account.
@@ -29,20 +29,24 @@ The root user (ID 1) can create new users. A user itself can create a new user i
 Create new applications
 -----------------------
 
-A user who would like to create new applications has to have the Create right in the ACL "Applications". Once he has this right, the user can also import and export applications.
+A user who would like to create new applications has to have the Create right in the ACL "Applications". Once that right is permitted, the user can also import and export applications.
 
-To create Layerset Instances, he has to have the right Edit in ACL "Service Source". 
+
+Configure sources
+-----------------
+
+To get permission to the ``Sources`` tab and work with sources in the Mapbender backend, a specified user (or group member) needs the ``Edit`` right in the Global Access Control Lists. 
 
 
 Copy applications
 -----------------
 
-A user can copy applications if he has the right Edit in ACL "Applications" or within the application itself. The right of the application overwrites the global ACL right.
+A user can copy applications if he has the ``Edit`` right in ACL "Applications" or within the application itself. The right of the application overwrites the global ACL right.
 
-Thereby the user is automatically owner of his copied application.
+Thereby, the user automatically becomes the owner of the copied application.
 
 
 Delete applications
 -------------------
 
-A user can delete applications if he has the right Delete in the ACL "Applications" or within the application itself. The right of the applications overwriters the global ACL right.
+A user can delete applications if he has the ``Delete`` right  in the ACL "Applications" or within the application itself. The right of the applications overwriters the global ACL right.

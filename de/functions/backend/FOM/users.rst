@@ -3,36 +3,22 @@
 Benutzer
 ========
 
-Benutzer werden als FOM\\UserBundle\\Entity\\User implementiert und im
-Datenbank Repository gespeichert. Die Entität hält nur die notwendigen
-Informationen über einen Nutzer vor, komplexere Benutzerdaten sollten in
-Benutzerprofilen hinterlegt werden (TBD).
+Benutzer werden als FOM\\UserBundle\\Entity\\User implementiert und im Datenbank Repository gespeichert. Die Entität hält nur die notwendigen Informationen über einen Nutzer vor.
 
-Das Bundle enthält alle Mittel, um Benutzer durch einen Administrator zu
-verwalten als auch das eigene Registrieren eines Nutzers sowie das
-Zurücksetzen des eigenen Passwortes.
+Das Bundle enthält alle Mittel, um Benutzer durch einen Administrator zu verwalten als auch das eigene Registrieren eines Nutzers sowie das Zurücksetzen des eigenen Passwortes.
 
-Der Benutzer mit der ID 1 ist besonders, da dieser Benutzer bei der
-Installation erstellt wird und immer alle Rechte hat. Falls alle Stricke
-reißen, können Sie mit diesem Benutzer alles verwalten. Und falls Sie gar
-die Anmeldedaten vergessen haben sollten, können Sie über ein app/console
-Kommando den Benutzer zurücksetzen: fom:user:resetroot.
+Der Benutzer mit der ID 1 ist besonders, da dieser Benutzer bei der Installation erstellt wird und immer alle Rechte hat. Falls alle Stricke reißen, können Sie mit diesem Benutzer alles verwalten. Und falls Sie gar die Anmeldedaten vergessen haben sollten, können Sie über ein app/console Kommando den Benutzer zurücksetzen: fom:user:resetroot.
 
-.. note:: **Hinweis:** Um die Funktionen unterhalb nutzen zu können, muss der Symfony Swiftmailer korrekt eingerichtet sein. Bitte überprüfen Sie Ihre lokale Symfony-Version und nutzen Sie die offizielle Symfony-Dokumentation zur Einrichtung des Tools: https://symfony.com/doc/current/mailer.html
+.. note:: **Hinweis:** Um die untenstehenden Funktionen nutzen zu können, muss der Symfony Swiftmailer korrekt eingerichtet sein. Bitte überprüfen Sie Ihre lokale Symfony-Version und nutzen Sie die offizielle Symfony-Dokumentation zur Einrichtung des Tools: https://symfony.com/doc/current/mailer.html
 
 Passwort vergessen
 ------------------
 
-Falls ein Benutzer sein Passwort vergessen hat, kann er in der Login-Maske
-über den Link "Passwort vergessen" ein neues Passwort anfordern. Dazu gibt
-er dann seinen Benutzernamen oder seine E-Mail Adresse an.
+Falls ein Benutzer sein Passwort vergessen hat, kann er in der Login-Maske über den Link "Passwort vergessen" ein neues Passwort anfordern. Dazu gibt er dann seinen Benutzernamen oder seine E-Mail Adresse an.
 
 .. image:: ../../../../en/functions/backend/FOM/user_forgot_password.png
 
-Danach bekommt der Benutzer eine E-Mail mit einem Link, die zu der Seite
-führt, um das Passwort zurückzusetzen. Der Link ist danach nicht mehr
-gültig. Der Text der Mail kann in der Datei
-/FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
+Danach bekommt der Benutzer eine E-Mail mit einem Link, die zu der Seite führt, um das Passwort zurückzusetzen. Der Link ist danach nicht mehr gültig. Der Text der Mail kann in der Datei /FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
 
 Die Funktionalität kann in der config.yml ausgeschaltet werden.
 
@@ -42,52 +28,37 @@ Die Funktionalität kann in der config.yml ausgeschaltet werden.
                     reset_password: true # true/false
 
 
-
 Registrierung
 -------------
 
-Benutzer können sich an Mapbender selbst registrieren. Dafür stellt man in
-der config.yml die Einstellung fom_user:selfregister auf true.
+Benutzer können sich an Mapbender selbst registrieren. Dafür stellt man in der config.yml die Einstellung fom_user:selfregister auf true.
 
 .. code-block:: yaml
 
                 fom_user:
                     selfregister: false # true/false
 
-Im Login-Dialog erscheint der "Register" Link. Der Benutzer wird zu einer
-Maske geführt, in der er seinen Namen, sein Passwort und seine E-Mail
-Adresse angeben kann.
+Im Login-Dialog erscheint der "Register" Link. Der Benutzer wird zu einer Maske geführt, in der er seinen Namen, sein Passwort und seine E-Mail Adresse angeben kann.
 
 .. image:: ../../../../en/functions/backend/FOM/user_self_register.png
 
-Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung
-abschließen kann. Bis zu diesem Zeitpunkt ist er als inaktiver Nutzer in
-Mapbender hinterlegt.
+Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung abschließen kann. Bis zu diesem Zeitpunkt ist er als inaktiver Nutzer in Mapbender hinterlegt.
 
-Die Texte der Bestätigungsmail können unter
-/FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
+Die Texte der Bestätigungsmail können unter /FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
 
 
 Aktivieren von Nutzern
 ----------------------
 
-Seit Mapbender 3.0.5.3. können Benutzer von Administratoren mit mindestens
-der Benutzer ACL-Rolle "edit" aktiviert oder deaktiviert werden. Dazu dient
-der Schalter im Edit User Dialog.
-
-Ein Benutzer mit Administrationsrechten kann sich selbst nicht aktivieren
-oder deaktivieren.
+Benutzer können von Administratoren mit der ACL-Rolle "edit" aktiviert oder deaktiviert werden. Ein Benutzer mit Administrationsrechten kann sich selbst nicht aktivieren oder deaktivieren.
 
 .. image:: ../../../../en/functions/backend/FOM/edit_user_activated.png
 
-Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender
-anmelden, bis er wieder aktiviert wird.
+Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender anmelden, bis er wieder aktiviert wird.
 
 .. image:: ../../../../en/functions/backend/FOM/user_account_is_disabled.png
 
-Benutzer, die sich selbst registriert haben, aber die Freischaltungsmail
-noch nicht bestätigt haben, können so von einem Administrator per Hand
-freigeschaltet werden.
+Benutzer, die sich selbst registriert haben, aber die Freischaltungsmail noch nicht bestätigt haben, können so von einem Administrator per Hand freigeschaltet werden.
 
 
 Usermanagement über Sicherheitsschlüsselabfrage
@@ -95,7 +66,7 @@ Usermanagement über Sicherheitsschlüsselabfrage
 
 Innerhalb jeder Mapbender-Applikation besteht zusätzlich die Möglichkeit der Rechtevergabeanpassung. Im Tab "Layouts" findet sich diese Einstellung in Form eines Schlüssels neben jedem Element.
 
-Um anzupassen, ob jemand Zugriff auf das Element hat, muss zunächst auf den Schlüssel geklickt werden. Im Anschluss kann ein Nutzer hinzugefügt werden. Dies geschieht über das "+"-Symbol.
+Um anzupassen, ob jemand Zugriff auf ein individuelles Element innerhalb einer Anwendung hat, muss zunächst auf den Schlüssel geklickt werden. Im Anschluss kann ein Nutzer hinzugefügt werden. Dies geschieht über das "+"-Symbol.
 
 Ein gesetzter Haken neben dem entsprechenden Nutzeraccount erlaubt dem jeweiligen Nutzer den Zugriff. Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
 
@@ -105,13 +76,9 @@ Ein gesetzter Haken neben dem entsprechenden Nutzeraccount erlaubt dem jeweilige
 Login Fehler
 ------------
 
-Fehlerhafte Logins werden mit der Meldung "Login fehlerhaft"
-kommentiert. Aus Sicherheitsgründen wird nicht genannt, ob es am falschen
-Loginnamen oder falschen Passwort liegt. Login Fehler schließen den Account
-nicht dauerhaft aus. Vielmehr wird der Account für eine bestimmte Zeit
-ausgeschlossen (gelockt).
+Fehlerhafte Logins werden mit der Meldung "Login fehlerhaft" kommentiert. Loginfehler schließen den Account nicht dauerhaft aus. Vielmehr wird der Account für eine bestimmte Zeit ausgeschlossen (gelockt).
 
-Die config.yml ermöglicht die Anpassung des Verhaltens:
+Die config.yml ermöglicht die Anpassung dieses Verhaltens:
 
 .. code-block:: yaml
 

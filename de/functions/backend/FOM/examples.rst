@@ -10,7 +10,7 @@ Der Befehl ``app/console fom:user:resetroot`` setzt den User mit der ID 1 zurüc
 
 .. code-block:: bash
           $ app/console fom:user:resetroot
-                Welcome to the Mapbender3 root account management command  
+                Welcome to the Mapbender root account management command  
                 Enter the username to use for the root account.
                 Username [root]: root
                 Enter the e-mail adress to use for the root account.
@@ -30,15 +30,19 @@ Der root Benutzer (ID 1) kann neue Benutzer anlegen. Dies ist auch für andere B
 Neue Anwendungen anlegen
 ------------------------
 
-Ein Benutzer, der neue Anwendungen erzeugen soll, muss im ACL "Applications" das Create Recht besitzen. Sobald er dieses Recht hat, kann er auch Anwendungen exportieren und importieren.
+Ein Benutzer, der neue Anwendungen erzeugen soll, muss im ACL "Anwendungen" das Create Recht besitzen. Sobald er dieses Recht hat, kann er auch Anwendungen exportieren und importieren.
 
-Um Layerset Instanzen einzubauen, muss er im ACL "Service Source" das Edit Recht besitzen.
+
+Datenquellen konfigurieren
+--------------------------
+
+Um den Aufruf auf den Tab ``Datenquellen`` zu erhalten und anschließend Dienste einbinden, konfigurieren oder aktualisieren zu können, muss ein Benutzer/eine Gruppe im ACL "Datenquellen" mindestens das Edit-Recht zugewiesen bekommen.
 
 
 Anwendungen kopieren
 --------------------
 
-Ein Benutzer kann Anwendungen kopieren, wenn er im ACL "Applications" oder in der Anwendung mindestens das Edit Recht hat. Dabei überschreibt das Recht der Anwendung das globale ACL Recht.
+Ein Benutzer kann Anwendungen kopieren, wenn er im ACL ``Applications`` oder in der Anwendung mindestens das Edit Recht hat. Dabei überschreibt das individuelle Recht der Anwendung das globale ACL Recht.
 
 Dabei wird der Benutzer automatisch Owner seiner kopierten Anwendung.
 
@@ -46,4 +50,4 @@ Dabei wird der Benutzer automatisch Owner seiner kopierten Anwendung.
 Anwendungen löschen
 -------------------
 
-Ein Benutzer kann Anwendungen löschen, wenn er im ACL "Applications" oder er in der Anwendung mindestens das Delete Recht hat. Dabei überschreibt das Recht der Anwendung das globale ACL Recht.
+Ein Benutzer kann Anwendungen löschen, wenn er im ACL ``Anwendungen`` oder er in der Anwendung mindestens das Delete Recht hat. Dabei überschreibt das individuelle Recht der Anwendung das globale ACL Recht.
