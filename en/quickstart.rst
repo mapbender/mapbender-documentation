@@ -398,7 +398,7 @@ Create a user
 .. image:: ../figures/mapbender_create_user.png
      :scale: 80
 
-#. You can provide more information about the user in the tab ``Profile``. In the ``Groups`` and ``Security`` tabs it is possible to assign the user additional parameters, e.g. the membership to a group.
+You can provide more information about the user in the tab ``Profile``. In the ``Groups`` and ``Security`` tabs it is possible to assign the user additional parameters, e.g. the membership to a group.
 
 .. image:: ../figures/mapbender_assign_user_to_group.png
      :scale: 80
