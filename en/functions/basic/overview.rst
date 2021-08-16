@@ -3,10 +3,7 @@
 Overview
 ********
 
-The Overview element provides control over an overview map, similar to the OpenLayers Overview control. This element though is easier to use when custom styling is needed.
-
-You can define the size of your overview window and a position. Refer to a layerset that you defined before for the services to display in the overview map. The overview map can be fixed or zoom in/ out in the main map. You also can define whether the overview map is minimized or maximized on start of the application.
-
+Mapbender provides an overview map in addition to its main map. This element can be individually adjusted in terms of size, position and zoom behaviour. The overview map refers to a specific layerset and the instance(s) it contains.
 
 .. image:: ../../../figures/overview.png
      :scale: 80
@@ -14,51 +11,35 @@ You can define the size of your overview window and a position. Refer to a layer
 Configuration
 =============
 
-The Overview element must be placed in the Configuration underneath the Map element.
-
-.. image:: ../../../figures/overview_configuration_dependency_map.png
-   :scale: 80
-
 The configuration dialog:
 
 .. image:: ../../../figures/overview_configuration.png
      :scale: 80
 
-* **Maximize:** true/false to open/close on start, default is true.
-* **Fix:** true/false to fix the overview extent, default is true.
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Tooltip:** text to use as tooltip.
-* **Layerset:** refer to a layerset, e.g. overview, define the layerset first and refer to it.
-* **Target:** Id of Map element to query.
-* **Anchor:** overview alignment, default is 'right-top'.
-* **Width/Height:** overview width and height.
-
+* **Maximize:** Opens the element on start (Default: true).
+* **Fix:** Fixes the overview extent (Default: false).
+* **Title:** Title of the element. The title will be listed in "Layouts".
+* **Layerset:** Refers to a previously defined layerset e.g. overview.
+* **Width/Height:** Width and height of the element
+* **Position:** Position of the element itself; options are: top left, bottom left, top right and bottom right.
 
 Configuration example
 =====================
 
-There are different settings for the overview element:
-
-.. image:: ../../../figures/overview_example_dialog.png
+.. image:: ../../../figures/overview_configuration_example.png
      :scale: 80
 
-In the configuration example we implement the element (*Title*) "Overview". With *Layerset* we can select all previously implemented layersets. In this example we have two to choose from:
+The element provides various configuration options. In the example, the settings *Maximize* and *Fix* are activated. As a result, the element is displayed (i.e. maximized) when the application is opened and the view of the map is fixed. If the latter function is deactivated, then the overview adapts as soon as the map is moved or the scale is changed. The start extent is displayed when the application is opened. In the example, the element has the title "Overview". It is necessary that the overview map is linked to a layerset. The following layersets are available:
 
 .. image:: ../../../figures/map_example_layersets.png
      :scale: 80
 
-For the overview we choose the layerset overview. As *Target* we choose the element referenced. *Anchor* defines where the overview will be implemented (left-top, left-bottom, right-top or right-bottom). In this instance we choose right-bottom. *Width* and *Height* define the size of the window displaying the overview. Default settings are 200 and 100. Additionally it is possible to check the boxes *Maximize* and *Fix*. For the configuration example both checkmarks are set. Because of this the application will be maximized when opened. Additionally the map view is fixed. The excerpt shown in the overview window won't change if the map is dragged and shows the maximum extend defined in `Map Element <map.html>`.
+The layerset "overview" was chosen for the overview. Width and height of the element correspond to the standard setting. The position is defined as "lower right". The element looks like this in the applikation:
 
 .. image:: ../../../figures/de/overview_example_right-bottom_fixed.png
      :scale: 80
 
-If the overview isn't fixed (unchecked *Fix*), the overview will change if the map is zoomed or dragged. The default view is the defined start extend.
-For the following parameter (no check of *Fix*, *Anchor*, left-bottom, *Width* 400 and *Height* 200):
-
-.. image:: ../../../figures/overview_example_dialog_left-bottom.png
-     :scale: 80
-
-The overview will look like this:
+For the following parameters (no check of *Fix*, *Position*: left-bottom, *Width* 400 and *Height* 200) the overview will look like this:
 
 .. image:: ../../../figures/de/overview_example_left-bottom.png
      :scale: 80
@@ -81,9 +62,3 @@ YAML-Definition:
    maximized: true              # true/false to open/close on start, default is true
    fixed: true                  # true/false to fix the overview extent, default is true
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Overview
-* **Widget:** mapbender.element.overview.js
-* **Style:** mapbender.element.overview.css
