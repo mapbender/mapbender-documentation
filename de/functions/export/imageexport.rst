@@ -15,7 +15,6 @@ Konfiguration
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der "Layout" Liste angezeigt und ermöglicht mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 
 YAML-Definition:
 ----------------
