@@ -5,9 +5,9 @@ Users
 
 User are implemented as FOM\\UserBundle\\Entity\\User and stored in the database. The entity has only some basic information about the user itself, more complex user data will have to be implemented by user profiles (yet to be done).
 
-The bundles provides all means to administrate users by admin as well as self-registration and password recovery.
+The bundle provides all means to administrate users by admin as well as self-registration and password recovery.
 
-The user with the id 1 is special, as this user is created during installation and will always be given full access. If all is lost, you can use this user to manage everything. And in the event that the credentials for this user are also lost, a console command (fom:user:resetroot) is available for resetting.
+The user with the id 1 (root) is special, as this user is created during installation and will always be given full access. If all is lost, you can use this user to manage everything. And in the event that the credentials for this user are also lost, a console command (fom:user:resetroot) is available for resetting.
 
 .. note:: **Notice:** To use the features below, Symfony Switfmailer needs to be set up correctly. Please check your local Symfony verion and adjust the Symfony documentation accordingly before setting up Swiftmailer. An in-depth configuration can be found in the official Symfony docs: https://symfony.com/doc/current/mailer.html
 
@@ -18,7 +18,7 @@ If a user has forgotten his/her password, he can use the "Forgot password?" link
 
 .. image:: ../../../../en/functions/backend/FOM/user_forgot_password.png
 
-After that, the user should receive an e-mail with a link which leads to a page where a password reset is possible. The link isn't valid anymore after this operation. The text of the mail can be customized in the /FOM/UserBundle/Resources/translations/messages.en.xlf file.
+After that, the user should receive an e-mail with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the /FOM/UserBundle/Resources/translations/messages.en.xlf file.
 
 The functionality can be switched off in the config.yml.
 
@@ -28,8 +28,8 @@ The functionality can be switched off in the config.yml.
                     reset_password: true # true/false
 
 
-Registering
------------
+Registration
+------------
 
 Users can self-register themselves in Mapbender. For this you have to adjust the setting fom_user:selfregister in the config.yml to true.
 
@@ -50,7 +50,7 @@ The text of the confirmation mail can be customized in the /FOM/UserBundle/Resou
 Activation of users
 -------------------
 
-Users can be set activated or deactivated by Administrators with the User-ACL-right of at least "edit". For this purpose, a checkbox exists in the Edit User dialog. A user with administration rights cannot activate or deactivate himself.
+Users can be set activated or deactivated by Administrators with the User-ACL-Right of at least *edit*. For this purpose, a checkbox exists in the Edit User dialog. A user with administration rights cannot activate or deactivate himself.
 
 .. image:: ../../../../en/functions/backend/FOM/edit_user_activated.png
 
@@ -78,7 +78,7 @@ Login Failures
 
 Login failures are responded with the Message "Bad credentials". For security reasons it is not shown if the error is based on a wrong username or a wrong password. Login failures will not lock the account indefinitely after four attempts.  Rather the account will be locked for a given period of time.
 
-The config.yml allows to adjust the behaviour:
+The config.yml allows to adjust this behaviour:
 
 .. code-block:: yaml
 
