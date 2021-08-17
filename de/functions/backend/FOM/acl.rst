@@ -4,7 +4,7 @@
 Access Control Lists (ACL)
 ==========================
 
-Die Absicherung von Domain-Objekten wird in Mapbender über Access Control Lists implementiert. ACLs ermöglichen in Mapbender eine flexible Rechtezuweisung auf Applikationen, Dienste und die Benutzer- und Gruppenverwaltung selbst.
+Die Absicherung von Domain-Objekten wird in Mapbender über Access Control Lists (ACLs) implementiert. ACLs ermöglichen in Mapbender eine flexible Rechtezuweisung auf Applikationen, Dienste und die Benutzer- und Gruppenverwaltung selbst.
 
 Mapbender bietet zur Absicherung dieser Bereiche die folgenden Rechte- und Rollenzuweisungen an:
 
