@@ -3,7 +3,7 @@
 Sicherheitskonzepte
 ===================
 
-Sicherheit wird im FOMUserBundle bereitgestellt und basiert auf diesen Konzepten:
+Sicherheit wird im FOM User Bundle bereitgestellt und basiert auf diesen Konzepten:
 
 - :doc:`Benutzer <users>`
 - :doc:`Rollen und Gruppen <roles_groups>`
@@ -12,14 +12,15 @@ Sicherheit wird im FOMUserBundle bereitgestellt und basiert auf diesen Konzepten
 
 Rechte
 ========
+
 Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Sie basieren auf :doc:`Access Control Lists (ACL) <acl>`.
 
 * view - anzeigen
 * edit - editieren
 * delete - löschen
 * operator - kann anzeigen, editieren und löschen
-* master - kann anzeigen, editieren und löschen und diese Rechte außerdem weitergeben.
-* owner - Besitzer, darf alles. Darf master und owner Recht vergeben.
+* master - kann anzeigen, editieren, löschen und diese Rechte außerdem weitergeben
+* owner - Besitzer, darf alles (inkl. Vergabe von master und owner Recht)
 
 Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherheit`` die gewünschten Rechte zu.
 
@@ -29,6 +30,7 @@ Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherhei
 
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 =======================================================
+
 #. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Bearbeiten``.
 
 #. Wählen Sie ``Sicherheit``.
@@ -37,13 +39,14 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 #. Fügen Sie für individuelle Einstellungen alternativ Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie eine Anwendung einem oder mehreren Benutzer(n)/Gruppe(n) zu.
 
-#. Melden Sie sich über ``Logout`` ab und unter der ausgewählten Benutzerbezeichnung an, um die Rechtevergabe zu testen.
+#. Melden Sie sich erneut unter der ausgewählten Benutzerbezeichnung an, um die Rechtevergabe zu testen.
 
 #. Alternativ können Sie auch unter ``Sicherheit --> Globale Zugriffssteuerungsliste (ACL) --> Anwendungen`` schnell Berechtigungen von Benutzern/Gruppen für alle Anwendungen festlegen.
 
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
 ================================================
+
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Für einzelne Elemente kann der Zugriff noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
 #. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Bearbeiten``.
@@ -59,10 +62,11 @@ Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Z
 
 Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
 =====================================================
+
 #. Bearbeiten Sie Ihre Benutzer über ``Sicherheit --> Benutzer``.
 
 #. Wählen Sie ``Sicherheit``.
 
 #. Weisen Sie Benutzern/Gruppen individuelle Berechtigungen auf den individuellen Benutzer zu. Fügen Sie Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie Benutzer(n)/Gruppe(n) einen Benutzer zu.
 
-#. Melden Sie sich über ``Logout`` ab und unter dem Benutzer/Gruppe mit neuen Rechten an, um die Rechtevergabe zu testen. Je nach Konfiguration ist es so z.B. möglich, dass alle Teilnehmer einer Gruppe Berechtigungen über einen bestimmten Benutzer haben und dessen Account bearbeiten oder löschen können.
+#. Melden Sie sich unter dem Benutzer bzw. der Gruppe mit neuen Rechten an, um die Rechtevergabe zu testen. Je nach Konfiguration ist es so z.B. möglich, dass alle Teilnehmer einer Gruppe Berechtigungen über einen bestimmten Benutzer haben und dessen Account bearbeiten oder löschen können.
