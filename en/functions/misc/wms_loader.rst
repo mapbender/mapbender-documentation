@@ -17,14 +17,11 @@ Configuration
 .. image:: ../../../figures/wms_loader_configuration.png
      :scale: 80
 
-* **Auto open:** true/false open when application is started, default false.
-* **Split layers:** split layer on load of the service, default false.
-* **Use declarative:** allow to load service from a link (for example from featureInfo or search) and define the layers to activated, default false. 
+* **Auto open:** Opens element when application is started (Default: false).
+* **Split layers:** Splits layer on load of the service (Default: false).
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Tooltip:** text to use as tooltip.
-* **Target:** Id of Map element to query.
-* **Defaultformat:** default format is image/png, further possibilities: image/gif, image/jpeg.
-* **Default infoformat:** default infoformat is text/html, further possibilities: text/xml, text/plain.
+* **Default format:** Default format is image/png, other possibilities: image/gif, image/jpeg.
+* **Default info format:** Default info format is text/html, other possibilities: text/xml, text/plain.
 
 YAML-Definition:
 ----------------

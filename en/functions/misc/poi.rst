@@ -17,13 +17,10 @@ Configuration
 .. image:: ../../../figures/poi_configuration.png
      :scale: 80
      
-
+* **Use Mailto:** Sends POI by e-mail.
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Tooltip:** text to use as tooltip.
-* **Body:** define a text to display. 
-* **Target:** only map-element is possible.
-* **Use Mailto:** send POI by e-mail.
-
+* **Body:** Defines text to display. 
+* **GPS Position:** Defines GPS Position in the map.
 
 YAML-Definition:
 ----------------

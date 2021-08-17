@@ -14,10 +14,9 @@ Konfiguration
 .. image:: ../../../figures/de/about_dialog_configuration.png
      :scale: 80
 
-* **Beschriftung anzeigen (Show label):** Schaltet Text neben dem About Dialog Button ein/aus.
+* **Beschriftung anzeigen:** Schaltet Text neben dem About Dialog Button ein/aus (Standard: true).
 * **Title:** Text, der neben dem About Dialog Button angezeigt wird.
 * **Tooltip:** Text, der erscheint wenn der Mauszeiger längere Zeit über dem Button gehalten wird. 
-
 
 
 YAML-Definition:

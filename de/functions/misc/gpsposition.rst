@@ -20,17 +20,15 @@ Konfiguration
 .. image:: ../../../figures/de/gps_position_configuration.png
      :scale: 80
 
-* **Beschriftung anzeigen (Show label):** Schaltet die Beschriftung des Buttons an/aus.
+* **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: true).
+* **Autostart** Startet Element beim Öffnen der Anwendung (Standard: false)
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Icon:** Symbol des Buttons, basierend auf einer CSS Klasse.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Average:** berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1.
-* **Refreshinterval:**  Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
-* **Follow:** Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu.
-* **Center on first position:** true zentriert die Karte auf die erstermittelte Position.
-* **Zoom to accuracy:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit.
-* **Zoom to accuracy on first position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position.
+* **Average:** Berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1.
+* **Follow:**  Positioniert die Karte bei jeder empfangenen GPS Koordinate neu (Standard: false).
+* **Center on first position:** Zentriert die Karte auf die erstermittelte Position (Standard: true).
+* **Zoom to accuracy on first position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position (Standard: true).
 
 
 YAML-Definition:

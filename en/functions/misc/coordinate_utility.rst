@@ -20,36 +20,19 @@ Additional you have the possibility to copy the coordinates into the clipboard.
 The element can be configured in the Mapbender-Backend as a dialog with a button or directly in the Sidebar as an element.
 
 
-Initialization and Configuration
-================================
-
-Add the element `Coordinate Utility` into the content of your application.
-
-.. image:: ../../../figures/coordinate_utility_add.png
-     :scale: 80
-
-The customization allows - besides the standard-configuration - some additional options:
+Configuration
+=============
 
 .. image:: ../../../figures/coordinate_utility_configuration.png
      :scale: 80
 
 * **Title:** Title of the element.
 * **Target:** Map on which this tool works (Main Map)
-* **Type:** Dialog or Element.
-
-  * **Dialog:** The tool is placed in the Content of the application and is called with a button. The tool is presented as a dialog.
-  * **Element:** The tool is placed in the Sidebar of the application. You have to declare it as element.
-
 * **Srs List:** You can define additional SRS to which the tool has to transform the coordinates. This list can be left empty.
+* **Zoom-Level:** Zoom level of the map (Default: 6)
+* **Add map's srs list:** The supported coordinate-systems defined in the `Map element  <../basic/map>`_ are automatically used by the Coordinate-Tool. These coordinate systems, defined in the map, are also used by the `SRS Selector  <../basic/srs_selector>`_ (Default: true).
 
-* **Add map's srs list:** The supported coordinate-systems defined in the `Map element  <../basic/map>`_ are automatically used by the Coordinate-Tool. These coordinate systems, defined in the map, are also used by the `SRS Selector  <../basic/srs_selector>`_.
-
-If you define the Tool as a dialog, you need a `Button  <../misc/button>`_ that you place in the Toolbar. The following screenshot shows an example configuration of the button:
-
-.. image:: ../../../figures/coordinate_utility_button.png
-     :scale: 80
-
-* **Target:** Name of the tool that is placed in the content of the application (Koordinaten Utility)
+If you define the Tool as a dialog, you need a `Button  <../misc/button>`_ that you place in the Toolbar. 
 
 
 Using the tool

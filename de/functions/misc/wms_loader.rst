@@ -17,14 +17,11 @@ Konfiguration
 .. image:: ../../../figures/wms_loader_configuration.png
      :scale: 80
 
-* **Auto open:** true, wenn das Element beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
-* **Split layers:** geteilte Ebenen beim Laden des Dienstes, Standard ist false.
-* **Use declarative:** erlaubt einen Dienst über einen Link zu laden (zum Beispiel über die Informationsabfrage oder Suche) und definiert die Layer zu aktivieren, Standard ist false.
+* **Automatisches Öffnen:** Öffnet Element beim Start der Anwendung (Standard: false).
+* **Layer aufteilen:** Teilt Ebenen beim Laden des Dienstes auf (Standard: false).
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Defaultformat:** Standard Format ist image/png, weitere Möglichkeiten: image/gif, image/jpeg.
-* **Defaultinfoformat:** Standard Infoformat ist text/html, weitere Möglichkeiten: text/xml, text/plain.
+* **Default format:** Standardformat ist image/png, weitere Möglichkeiten: image/gif, image/jpeg.
+* **Default info format:** Standardinfoformat ist text/html, weitere Möglichkeiten: text/xml, text/plain.
 
 YAML-Definition:
 ----------------

@@ -20,15 +20,10 @@ Zusätzlich besteht bei dem Element die Möglichkeit, die Koordinaten in die Zwi
 Das Element bindet man im Mapbender-Backend entweder als Dialog zum Aufruf über einen Button ein, oder als Element in der Seitenleiste.
 
 
-Einrichtung und Konfiguration
-=============================
+Konfiguration
+=============
 
 Fügen Sie das Element `Koordinaten Utility` in den Content Ihrer Anwendung ein.
-
-.. image:: ../../../figures/de/coordinate_utility_add.png
-     :scale: 80
-
-Bei der Einrichtung des Elements haben Sie, neben den Standard Konfigurationsmöglichkeiten, noch weitere Optionen:
 
 .. image:: ../../../figures/de/coordinate_utility_configuration.png
      :scale: 80
@@ -36,21 +31,9 @@ Bei der Einrichtung des Elements haben Sie, neben den Standard Konfigurationsmö
 * **Title:** Titel des Elements
 * **Target:** Karte, auf der dieses Element funktioniert (Main Map)
 * **Type:** Dialog oder Element.
-
-  * **Dialog:** Das Tool befindet sich in dem Content der Anwendung und wird über eine Schaltfläche geöffnet. Es erscheint als Dialog.
-  * **Element:** Das Tool befindet sich in der Sidebar der Anwendung. Dazu muss es als Element deklariert werden.
-
 * **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren soll. Das Feld kann leer gelassen werden.
-
+* **Zoom-Level** Zoom-Level der Karte (Standard: 6)
 * **Koordinatensysteme von der Karte hinzufügen:** Die von dem `Kartenelement  <../basic/map>`_ angegebenen Koordinatensysteme werden automatisch von dem Tool unterstützt. Diese werden in der Karte angegeben und auch im  `SRS Selector  <../basic/srs_selector>`_ unterstützt.
-
-Wenn Sie das Tool als Dialog einbauen, benötigen Sie eine `Schaltfläche  <../misc/button>`_, die in den Toolbar eingefügt wird. Im folgenden eine Beispielkonfiguration der Schaltfläche:
-
-.. image:: ../../../figures/de/coordinate_utility_button.png
-     :scale: 80
-
-* **Target:** Der Name des Tools, so wie er in dem Content hinterlegt ist (Koordinaten Utility)
-
 
 Benutzung
 =========
