@@ -331,11 +331,12 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         y float,
         geom geometry(polygon,4326)
     );
+    
+    
 Konfiguration
 =============
 
 Im Folgenden werden die einzelnen Bestandteile des Digitizers erklärt, die die Grundstruktur ausmachen und die in dem Formular eingebettet werden können.
-
 
 Basisdefinition
 ---------------
@@ -427,6 +428,26 @@ Experimentell:
 
 Definition Popup
 ----------------
+
+In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten komplexe Formulare generiert werden.
+
+Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
+
+* Definition von mehreren Datenquellen und Geometrieformaten für die Erfassung. Die verschiedenen Quellen werden über eine Auswahlbox angeboten.
+* Als Datenquelle wird eine Datenbank-Tabelle angesprochen. Es ist möglich, eine Auswahl der Daten über einen Filter heranzuziehen. 
+* Textfelder
+* Textblöcke (mehrzeilige Textfelder)
+* Selectboxen, Multiselectboxen (Füllen der Auswahlbox über eine feste Definition von Werten in der YAML-Definition oder über ein Select auf eine Tabelle)
+* Checkboxen und Radiobuttons
+* Datumsauswahl
+* Dateiupload und Bildanzeige
+* Definition von Reitern
+* Definition von Trennlinien (breakLine)
+* Definition von beschreibenden Texten zur Information
+* Definition von Hilfetexten
+* Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe bestimmter Feldinhalte
+* Möglichkeit, in Formulare eingegebene Inhalte per Buttonklick in die Zwischenablage zu kopieren
+* Karten-Refresh nach Speichern
 
 .. code-block:: yaml
 
@@ -884,6 +905,9 @@ Eine Möglichkeit, das zu umgehen, wäre ein Trigger, der in die Datenbankspalte
 
 Definition der zur Verfügung stehenden Werkzeuge (Toolset Type)
 ---------------------------------------------------------------
+
+Jeder FeatureType kann unterschiedliche Toolsets freischalten, die dann in der Schaltflächenleiste des Digitizers sichtbar sind.
+In dem FeatureType "poi" wird mit dem "drawPoint" Toolset z.B. die Schaltfläche zum Erstellen eines neuen Punktes freigeschaltet, mit dem Toolset "modifyFeature" die Verschieben-Schaltfläche eingeblendet.
 
 Werkzeugliste:
 

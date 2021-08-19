@@ -434,6 +434,35 @@ Experimental:
 Definition of the popup
 -----------------------
 
+In connection with the digitization, very complex forms can be generated for the acquisition of data.
+    
+
+.. image:: ../../../figures/digitizer.png
+     :scale: 80
+
+The following option for the construction of the forms are available:
+
+* Define more than one feature type for digitization. You can switch from one feature type to another with a select box.
+* It is possible to define a filter to only query a subset of your database table.
+* Textfields
+* Selectboxes, Multiselectboxes
+* Checkboxes and Radiobuttons 
+* Textareas
+* Datepicker
+* File upload and Image Display
+* Definition of tabs
+* Definition breakLines
+* Definition of Text 
+* Mandatory fields, regular expressions to validate the field input
+* Definition of help texts
+* Refresh after save
+* Possibility to copy entered information from a form into the clipboard via a button
+
+
+.. image:: ../../../figures/digitizer_with_tabs.png
+     :scale: 80
+
+
 .. code-block:: yaml
 
         popup:                                                          # Define the form as a popup. Further experimental adaptations here: http://api.jqueryui.com/dialog/
