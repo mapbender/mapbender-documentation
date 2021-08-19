@@ -55,10 +55,3 @@ The element is placed as a button into the toolbar.
                 zoomToAccuracy: false               # zoom map according to received gps position accuracy
                 zoomToAccuracyOnFirstPosition: true # zoom map according to first received gps position accuracy
 
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\GpsPosition
-* **Widget:** mapbender.element.gpsPostion.js
-* **Style:** mapbender.element.gpsPosition.css
-

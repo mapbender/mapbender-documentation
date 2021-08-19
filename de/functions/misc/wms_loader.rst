@@ -68,20 +68,3 @@ Der Link sollte folgendermaßen aussehen:
     mb-wms-layers="Gewaesser,Fluesse" # Definiert die Ebenen, die aktiviert werden sollen, _all activates aktiviert alle Ebenen. Standard ist alle Ebenen sind deaktiviert.
     href oder mb-url              # verweist auf die WMS getcapabilities URL
 
-   
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmsBundle\\Element\\WmsLoader
-* **Widget:** 
-* **Style:**
-
-JavaScript API
-==============
-
-activate
-----------
-
-Öffnet einen Dialog, in dem ein WMS über einen getCapabilities-Request geladen werden kann.
-Es kann WMS 1.1.1 und WMS 1.3.0 geladen werden.
