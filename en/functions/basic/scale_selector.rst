@@ -41,10 +41,3 @@ You can overwrite the style of the element, for example you can adjust the width
                     width: 200px;
                  }
 
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleSelector
-* **Widget:** mapbender.element.scaleselector.js
-* **Style:** mapbender.elements.css

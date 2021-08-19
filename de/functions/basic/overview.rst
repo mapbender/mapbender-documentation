@@ -78,9 +78,3 @@ YAML-Definition:
    maximized: true              # true/false ob die Applikation beim Start maximiert ist, der Standardwert ist true
    fixed: true                  # true/false um den Übersichtsbereich zu fixieren, der Standardwert ist true
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Overview
-* **Widget:** mapbender.element.overview.js
-* **Style:** mapbender.element.overview.css

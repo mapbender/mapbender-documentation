@@ -30,18 +30,3 @@ YAML-Definition:
    label: true                  # false/true, um den Button zu beschriften. Der Standardwert ist true.
    icon: 'abouticon'            # Symbol für den Button
 
-   
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\AboutDialog
-* **Widget:** mapbender.mbAboutDialog
-* **Style:** mapbender.elements.css
-
-HTTP Callbacks
-==============
-
-about
------
-
-Ruft Inhalte des Dialogs auf.

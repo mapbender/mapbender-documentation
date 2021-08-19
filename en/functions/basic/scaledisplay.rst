@@ -38,9 +38,3 @@ YAML-Definition:
    scalePrefix: Scale               # prefix, shown with scale
    unitPrefix: false                # prefix, shown with unit, e.g. 1K as 1000
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleDisplay
-* **Widget:** mapbender.element.scaledisplay.js
-* **Style:** mapbender.element.scaledisplay.css
