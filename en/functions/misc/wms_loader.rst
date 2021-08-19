@@ -68,11 +68,3 @@ The link has to look like this:
     href oder mb-url              # refer to the WMS getcapabilities URL
 
    
-
-Class, Widget & Style
-=======================
-
-* **Class:** Mapbender\\WmsBundle\\Element\\WmsLoader
-* **Widget:** 
-* **Style:** 
-

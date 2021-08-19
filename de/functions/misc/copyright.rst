@@ -34,11 +34,3 @@ YAML-Definition:
    content: "Lorem ipsum"          # Erstellen Sie ihren Text für das Copyright
    autoOpen: true                  # Automatisches Öffnen beim Start der Anwendung
                 
-
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Copyright
-* **Widget:** mapbender.element.copyright.js
-* **Style:** mapbender.elements.css
-

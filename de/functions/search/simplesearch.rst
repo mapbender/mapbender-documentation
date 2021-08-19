@@ -81,12 +81,6 @@ Einrichtung von Nominatim:
 * **Download**: http://nominatim.org/release-docs/latest/admin/Installation/
 * **Dokumentation**: http://nominatim.org/release-docs/latest/
 
-Class, Widget & Style
-=========================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\SimpleSearch
-* **Widget:** mapbender.element.simplesearch.js
-
 HTTP Callbacks
 ==============
 

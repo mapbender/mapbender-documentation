@@ -31,9 +31,3 @@ YAML-Definition:
     target: map                             # only mapp-element is possible
     body: 'Setzen Sie per Klick einen Treffpunkt'  # definieren Sie einen Text für den Dialog
 
-
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\CoreBundle\Element\POI
-* **Widget:** mapbender.mbPOI

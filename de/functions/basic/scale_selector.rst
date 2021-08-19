@@ -41,10 +41,3 @@ Der Style des Elements (z.B. die Breite) kann mit folgendem CSS-Code überschrie
                     width: 200px;
                  }
 
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleSelector
-* **Widget:** mapbender.element.scaleselector.js
-* **Style:** mapbender.elements.css

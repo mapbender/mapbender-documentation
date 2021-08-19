@@ -60,3 +60,4 @@ YAML-Definition:
    position: ['0px', '0px']     # Position der Übersicht in Relation zum Anker, Standard: x=0px, y=0px
    maximized: true              # true/false ob die Applikation beim Start maximiert ist, der Standardwert ist true
    fixed: true                  # true/false um den Übersichtsbereich zu fixieren, der Standardwert ist true
+
