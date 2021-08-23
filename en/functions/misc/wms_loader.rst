@@ -3,8 +3,7 @@
 WMS Loader
 ***********************
 
-Opens a dialog in  which a WMS can be loaded via the getCapabilities-Request.
-You can load WMS 1.1.1 and  WMS 1.3.0.
+Opens a dialog in  which a WMS can be loaded via the getCapabilities-Request. It is possible to load WMS 1.1.1 and WMS 1.3.0.
 
 
 .. image:: ../../../figures/wms_loader.png
@@ -17,7 +16,7 @@ Configuration
 .. image:: ../../../figures/wms_loader_configuration.png
      :scale: 80
 
-* **Auto open:** Opens element when application is started (Default: false).
+* **Auto open:** Opens the element when application is started (Default: false).
 * **Split layers:** Splits layer on load of the service (Default: false).
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Default format:** Default format is image/png, other possibilities: image/gif, image/jpeg.
@@ -65,11 +64,3 @@ The link has to look like this:
     href oder mb-url              # refer to the WMS getcapabilities URL
 
    
-
-Class, Widget & Style
-=======================
-
-* **Class:** Mapbender\\WmsBundle\\Element\\WmsLoader
-* **Widget:** 
-* **Style:** 
-
