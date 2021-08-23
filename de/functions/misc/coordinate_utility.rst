@@ -1,6 +1,6 @@
 .. _coordinate_utility_de:
 
-Koordinatenwerkzeug
+Koordinaten Utility
 *******************
 
 Über das Element *Koordinaten Utility* lassen sich zwei Dinge realisieren:
@@ -14,16 +14,14 @@ Beide Funktionen werden über eine Oberfläche realisiert.
      :scale: 80
 
 In beiden Fällen ist eine dynamische Koordinatentransformation möglich, so dass auch Punkte anderer Koordinatensysteme eingegeben werden können.
-
-Zusätzlich besteht bei dem Element die Möglichkeit, die Koordinaten in die Zwischenablage zu kopieren.
-
-Das Element bindet man im Mapbender-Backend entweder als Dialog zum Aufruf über einen Button ein, oder als Element in der Seitenleiste.
+Zusätzlich besteht bei dem Element die Möglichkeit, die Koordinaten über einen Button in die Zwischenablage zu kopieren.
+Das Element bindet man im Mapbender-Backend entweder als Dialog zum Aufruf über einen Button oder als Element in der Seitenleiste ein.
 
 
 Konfiguration
 =============
 
-Fügen Sie das Element `Koordinaten Utility` in den Content Ihrer Anwendung ein.
+Fügen Sie das Element `Koordinaten Utility` bspw. in den Content-Bereich Ihrer Anwendung ein.
 
 .. image:: ../../../figures/de/coordinate_utility_configuration.png
      :scale: 80
@@ -31,9 +29,10 @@ Fügen Sie das Element `Koordinaten Utility` in den Content Ihrer Anwendung ein.
 * **Title:** Titel des Elements
 * **Target:** Karte, auf der dieses Element funktioniert (Main Map)
 * **Type:** Dialog oder Element.
-* **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren soll. Das Feld kann leer gelassen werden.
+* **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren können soll. Das Feld kann leer gelassen werden.
 * **Zoom-Level** Zoom-Level der Karte (Standard: 6)
-* **Koordinatensysteme von der Karte hinzufügen:** Die von dem `Kartenelement  <../basic/map>`_ angegebenen Koordinatensysteme werden automatisch von dem Tool unterstützt. Diese werden in der Karte angegeben und auch im  `SRS Selector  <../basic/srs_selector>`_ unterstützt.
+* **Koordinatensysteme von der Karte hinzufügen:** Die von dem `Kartenelement  <../basic/map>`_ angegebenen Koordinatensysteme werden automatisch vom Tool unterstützt. Diese werden in der Karte angegeben und auch im  `SRS Selector  <../basic/srs_selector>`_ unterstützt.
+
 
 Benutzung
 =========
@@ -43,8 +42,8 @@ Benutzung
 
 **Koordinate abgreifen:**
 
-* Ist das Koordinatenwerkzeug als Dialog geöffnet, reagiert die Karte auf einen Klick. Klicken Sie in die Karte und die Klickkoordinate wird in dem Dialog angezeigt.
-* Ändern Sie das Koordinatensystem im Dialog mit der Drop-Down-Liste. Die Klick-Koordinate wird in diesem angegebenen Koordinatensystem angezeigt.
+* Ist das Koordinaten Utility als Dialog geöffnet, reagiert die Karte auf einen Klick. Klicken Sie in die Karte und die Klickkoordinate wird in dem Dialog angezeigt.
+* Ändern Sie das Koordinatensystem im Dialog mithilfe der Drop-Down-Liste. Die Klick-Koordinate wird in diesem angegebenen Koordinatensystem angezeigt.
 * Die untere Zeile zeigt daher die Klickkoordinate noch in dem Original-Koordinatensystem der Karte.
 * Die Schaltfläche hinter jeder Eingabezeile erlauben es, den Koordinatenwert direkt in die Zwischenablage zu kopieren.
 
