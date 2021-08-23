@@ -20,15 +20,15 @@ Configuration
 .. image:: ../../../figures/gps_position_configuration.png
      :scale: 80
 
-* **Show label:** Switches the button label on/off (Default: true).
-* **Autostart:** Starts element when opening the application (Default: false).
+* **Show label:** Switches the button label on/off (Default: on).
+* **Autostart:** Starts element when opening the application (Default: off).
 * **Title:** Title of the element.
 * **Tooltip:** This text will be displayed during hovering over the element with the cursor.
 * **Icon:** Icon to display on button.
 * **Average:** Calculates the average of the last at parameter average defined amount of received GPS coordinates (Default: 1).
-* **Follow:** Refreshes the map for every received GPS position received, only use with WMS in tiled mode (Default: false).
-* **Center on first position:** Centers map only on first received GPS position (Default: true).
-* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy (Default: true).
+* **Follow:** Refreshes the map for every received GPS position received, only use with WMS in tiled mode (Default: off).
+* **Center on first position:** Centers map only on first received GPS position (Default: on).
+* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy (Default: on).
 
 
 YAML-Definition:
@@ -51,11 +51,4 @@ The element is placed as a button into the toolbar.
                 centerOnFirstPosition: true         # center map only on first received gps position
                 zoomToAccuracy: false               # zoom map according to received gps position accuracy
                 zoomToAccuracyOnFirstPosition: true # zoom map according to first received gps position accuracy
-
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\GpsPosition
-* **Widget:** mapbender.element.gpsPostion.js
-* **Style:** mapbender.element.gpsPosition.css
 
