@@ -32,3 +32,4 @@ YAML-Definition:
    position: ['10px', '10px']       # Position des Maßstabsbalkens, der Standardwert ist: x=20px, y=20px
    maxWidth: 200                    # Maximale Breite des Maßstabsbalkens, der Standardwert ist 200
    units: ['km']                    # Einheiten des Maßstabsbalkens, 'kilometer' und/oder 'miles' (ml), Standard ist ['km']
+

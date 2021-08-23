@@ -35,3 +35,4 @@ YAML-Definition:
      'right-bottom'
    scalePrefix: Scale               # Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab"
    unitPrefix: true                 # aktiviert Darstellung der Maßstabszahl mit Präfix, der Standardwert ist false
+

@@ -54,11 +54,3 @@ Das Element wird als Button in die Toolbar eingefügt.
                 zoomToAccuracy: false               # Zoomt auf die ermittelte Koordinate nach Messgenauigkeit
                 zoomToAccuracyOnFirstPosition: true # Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position
 
-
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\GpsPosition
-* **Widget:** mapbender.element.gpsPostion.js
-* **Style:** mapbender.element.gpsPosition.css
-

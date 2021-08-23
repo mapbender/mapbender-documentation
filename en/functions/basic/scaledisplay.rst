@@ -35,3 +35,4 @@ YAML-Definition:
      'right-bottom'
    scalePrefix: Scale               # prefix, shown with scale
    unitPrefix: false                # prefix, shown with unit, e.g. 1K as 1000
+

@@ -32,3 +32,4 @@ YAML-Definition:
    position: ['10px', '10px']       # scale bar position, default: x=20px, y=20px
    maxWidth: 200                    # the maximum width of the scale bar, default 200px
    units: ['km']                    # scale bar units 'kilometer' and/or 'miles' (ml), default ['km']
+

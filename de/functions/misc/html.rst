@@ -130,9 +130,3 @@ YAML-Definition:
     content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> #content kann die Variablen "application" und "entity" beinhalten.
     classes: my-special-css-class
 
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\HTMLElement
-* **Widget:** mapbender.mbHTMLElement
-

@@ -1,98 +1,63 @@
 .. _digitizer_functionality_de:
 
-Funktionalitäten des Digitizers
-*******************************
+Funktionen des Digitizers
+*************************
 
-Das Digitizer-Element bietet komplexe Editierfunktionalitäten an:
+Der Digitizer ermöglicht das Editieren von FeatureTypes. Diese basieren auf Punkt-, Linien- oder Polygongeometrien und ihren Sachdaten. Letztere werden in dem Formular des Digitizers angezeigt. Das Editieren der Geometrien geschieht über die Karte. Der Digitizer ermöglicht eine Vielzahl von Funktionen zur Erstellung und Bearbeitung von Geometrien:
 
-* Verschieben von Objekten
-* Einfügen von Stützpunkten (Linien, Flächen)
-* Erfassung von Flächen mit Enklaven und/oder Exklaven sowie Kreisen und Ellipsen
+* Erstellen von Punkten, Linien und Polygonen (Quadrate, Rechtecke, Kreise und Ellipsen)
+* Verschieben von Geometrieobjekten
+* Einfügen von Stützpunkten (bei Linien und Polygonen)
+* Erfassung von Polygonen mit Enklaven
 
-In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten sehr komplexe Formulare generiert werden.
-
-
-.. image:: ../../../figures/digitizer.png
+.. image:: ../../../figures/de/Digitizer_geometries.png
      :scale: 80
 
-Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
-
-* Definition von mehreren Datenquellen und Geometrieformaten für die Erfassung. Die verschiedenen Quellen werden über eine Auswahlbox angeboten.
-* Als Datenquelle wird eine Tabelle angesprochen, wobei auch nur eine Auswahl der Daten über einen Filter herangezogen werden kann
-* Textfelder
-* Textblöcke (mehrzeilige Textfelder)
-* Selectboxen, Multiselectboxen (Füllen der Auswahlbox über eine feste Definition von Werten in der YAML-Definition oder über ein Select auf eine Tabelle)
-* Radiobuttons und Checkboxen
-* Datumsauswahl
-* Dateiupload und Bildanzeige
-* Definition von Reitern
-* Definition von Trennlinien (breakLine)
-* Definition von beschreibenden Texten zur Information
-* Definition von Hilfetexten
-* Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe bestimmter Feldinhalte
-* Möglichkeit, in Formulare eingegebene Inhalte per Buttonklick in die Zwischenablage zu kopieren
-* Karten-Refresh nach Speichern
-
-
-.. image:: ../../../figures/digitizer_with_tabs.png
-     :scale: 80
-
-
-Nutzung
-=======
-
-Allgemein
----------
-
-Der Digitizer ermöglicht das Editieren von FeatureTypes. Diese basieren auf Punkt, Linien oder Polygongeometrien und ihren Sachdaten. Die Sachdaten werden in dem Formular des Digitizers angezeigt. Das Editieren der Geometrien geschieht über die Karte.
-
+Die folgenden Abschnitte stellen die Arbeit mit Digitizer gemäß der Standardkonfiguration genauer vor.
 
 Geometrien erstellen
 --------------------
 
-Jeder FeatureType kann unterschiedliche `Toolsets <#definition-der-zur-verfugung-stehenden-werkzeuge-toolset-type>`_ freischalten, die dann in der Schaltflächenleiste des Digitizers sichtbar sind.
+In der Standardkonfiguration kann der Nutzer über ein Dropdown-Menü zwischen drei verschiedenen Geometrietypen wählen: Punkt, Linie und Polygon.
 
-In dem FeatureType "poi" wird mit dem "drawPoint" Toolset beispielsweise die Schaltfläche zum Erstellen eines neuen Punktes freigeschaltet, mit dem Toolset "modifyFeature" die Verschieben-Schaltfläche eingeblendet.
+**Punkte**
 
+Durch einen Klick auf den Button *"Punkt erstellen"* wird die Funktion aktiviert/deaktiviert.
 
-.. image:: ../../../figures/digitizer_buttons_poi.png
+.. image:: ../../../figures/de/Digitizer_create_points.png
      :scale: 80
 
+**Linien**
 
+Durch einen Klick auf den Button *"Linie erstellen"* wird die Funktion aktiviert/deaktiviert.
 
-Speichern, Löschen, Abbrechen
------------------------------
-
-Es stehen drei Schaltflächen im Dialog zur Verfügung: Speichern, Löschen, Abbrechen.
-
-Das *Speichern* der Änderungen geschieht erst, wenn die Schaltfläche "Speichern" im Attributdialog gedrückt worden ist. Ein Verschieben einer Geometrie alleine speichert das Feature also nicht sofort (um unnötige Änderungen in der Datenbank zu verhindern). Es ist bislang noch notwendig, den Attributdialog zu öffnen und Speichern zu klicken.
-
-.. image:: ../../../figures/digitizer_save_delete_cancel.png
+.. image:: ../../../figures/de/Digitizer_create_lines.png
      :scale: 80
 
-* **Speichern:** Speichert die Geometrie und die Attributdaten in die Datenbank.
-* **Löschen:** Löscht die Daten.
-* **Abbrechen:** Speichert und löscht die Daten nicht, behält die Geometrie aber für eine weitere Bearbeitung im internen Speicher. Sie ist weiterhin in der Karte zu sehen und kann angepasst werden (z.B. bei Polygonen). Attributdaten werden nicht vorgehalten.
+**Polygone**
 
-Es gibt mehrere Optionen in den `Basisdefinitionen <#basisdefinition>`_, die das Verhalten bestimmen:
+Es können unterschiedliche Arten von Polygonen erstellt werden. Dies ist über eine Aktivierung des jeweiligen Buttons für Flächen, Rechtecke, Enklaven, Ellipsen oder Kreise möglich.
 
-* allowEditData: Speichern Schaltfläche anzeigen.
-* allowDelete: Löschen Schaltfläche anzeigen.
-* allowCancelButton: Abbrechen Schaltfläche anzeigen.
-* allowDeleteByCancelNewGeometry: Verhalten des Abbrechen Knopfes.
+.. image:: ../../../figures/de/Digitizer_create_polygons.png
+     :scale: 80
 
-Das *Löschen* eines Features kann sowohl über den Dialog, als auch die Tabelle geschehen.
+Mithilfe der Maus kann nun die zuvor ausgewählte Geometrieart in der Karte erstellt werden. Anschließend öffnet sich ein Pop-up Fenster, welches das vordefinierte Sachdatenformular gemäß der Yaml-Konfiguration ausgibt und die Erfassung dieser zulässt.
 
 
-Stützpunkte
------------
+Geometrien bearbeiten, speichern oder löschen
+---------------------------------------------
 
-Das Bearbeiten von Polygonen und Linien erlaubt das Erstellen, Verschieben und Löschen von Stützpunkten. Die Schaltfläche zum Editieren von Stützpunkten erwartet, dass man ein Polygon selektiert. Dieses wird dann mit den Stützpunkten angezeigt.
+Die Speicherung der Geometrien erfolgt in der jeweils definierten Datenbanktabelle. Zusätzlich werden Geometrien im Digitizer-Element in Form einer Tabelle aufgelistet. Dies erleichtert die Verwaltung der Geometrien. In der Tabelle werden Nummer (ID wird automatisch erzeugt) sowie Name jedes Objekts angezeigt. Es besteht die Möglichkeit, ihre Reihenfolge zu verändern sowie nach bestimmten Geometrien zu suchen.
 
-.. image:: ../../../figures/digitizer_edit_vertices.png
-           :scale: 80
+In der Auflistung können nur Objekte des aktuellen Kartenausschnitts angezeigt werden  **1**. Weiterhin besteht die Option, alle Objekte auszublenden **2** oder einzublenden **3**. Änderungen können für alle Objekte gespeichert werden **4**. Eine Bearbeitung wäre z.B. die Verschiebung von Objekten **5**. Nach Aktivierung dieses Buttons können Geometrien mithilfe des Cursors über die Karte bewegt werden. 
 
-Die vorhandenen Stützpunkte werden deckend dargestellt, mögliche neue Stützpunkte befinden sich immer in der Mitte einer Kante, sind leicht transparent dargestellt und können per Klick auf diesen Punkt hinzugefügt werden.
+Es besteht weiterhin die Möglichkeit, nur einzelne Objekte auszublenden **6** sowie deren Modifikationen individuell abzuspeichern **8**. Veränderungen der Sachdaten sind ebenfalls möglich **7**. Zuletzt kann jedes Objekt innerhalb des Digitizer-Elements wieder aus der Datenbank gelöscht werden **9**.
 
-Vorhandene Stützpunkte werden mit der Entfernen-Taste auf der Tastatur gelöscht. Dafür bewegt man sich mit dem Mauszeiger über einen Stützpunkt und drückt die Entf-Taste. *Anmerkung*: Falls das Löschen einen Stützpunktes nicht reagiert, hilft ein Klick mit der rechten Maustaste auf die Karte. Speziell mit dem aktivierten Kontextmenü können sich z.Z. noch Events verhaken.
+.. image:: ../../../figures/de/Digitizer_edit.png
+     :scale: 80
+
+Die zuvor beschriebenen Funktionen sind identisch bei allen Geometrien. Es gibt außerdem noch die Option, Linien und Polygone zu modifizieren. Mit dieser Funktion können Stützpunkte eingefügt oder Eckpunkte verschoben werden. Durch Klick auf den Button *"Bearbeiten"* wird die Funktion aktiviert. Um ein Objekt nun zu modifizieren, muss dieses nun individuell durch einen Klick ausgewählt werden. 
+
+.. image:: ../../../figures/de/Digitizer_edit_lines_polygons.png
+     :scale: 80
 

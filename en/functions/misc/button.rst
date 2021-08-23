@@ -133,10 +133,3 @@ YAML-Definition:
     action: ~     # method of target to call when button is activated
     deactivate: ~ # method of target to call when button is deactivated
 
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Button
-* **Widget:** mapbender.mbButton (mapbender.element.button.js)
-* **Style:** mapbender.elements.css
-

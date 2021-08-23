@@ -28,3 +28,4 @@ YAML-Definition:
    tooltip: 'SRS Selector'  # Text des Tooltips
    label: false             # false/true, um den SRS Selector zu beschriften. Der Standardwert ist false.
    target: ~                # ID des Kartenelements
+

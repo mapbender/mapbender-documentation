@@ -184,10 +184,3 @@ More Start Parameters
 
 The elements WMS Loader and WMC Loader also provide parameters you can use on start. Have a look at the element descriptions for further information.
 
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Map
-* **Widget:** mapbender.element.map.js
