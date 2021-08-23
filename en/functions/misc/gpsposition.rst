@@ -20,18 +20,15 @@ Configuration
 .. image:: ../../../figures/gps_position_configuration.png
      :scale: 80
 
-* **Show label:** Switches the button label on/off.
-* **Autostart:** true/false, default is false.
+* **Show label:** Switches the button label on/off (Default: on).
+* **Autostart:** Starts element when opening the application (Default: off).
 * **Title:** Title of the element.
-* **Tooltip:** The text entered as a tool tip will be indicated by hovering over the element with the mouse cursor a longer time.
-* **Icon:** icon to display on button.
-* **Target:** Id of Map element, activated after the click.
-* **Average:** calculates the average of the last at parameter average defined amount of received GPS coordinates, default 1.
-* **Refreshinterval:**  refresh interval in ms, default is 5000 ms.
-* **Follow:** default false, true refreshes the map for every received GPS position received, only use with WMS in tiled mode.
-* **Center on first position:** center map only on first received GPS position.
-* **Zoom to accuracy:** zoom map according to received GPS position accuracy.
-* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy.
+* **Tooltip:** This text will be displayed during hovering over the element with the cursor.
+* **Icon:** Icon to display on button.
+* **Average:** Calculates the average of the last at parameter average defined amount of received GPS coordinates (Default: 1).
+* **Follow:** Refreshes the map for every received GPS position received, only use with WMS in tiled mode (Default: off).
+* **Center on first position:** Centers map only on first received GPS position (Default: on).
+* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy (Default: on).
 
 
 YAML-Definition:
