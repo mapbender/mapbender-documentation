@@ -21,7 +21,6 @@ Configuration
 * **Tooltip:** Text, that will be indicated if the mouse hovers over the button for a longer time.
 * **Icon:** Symbol of the button. Based on a CSS class.
 
-
 Icons
 -----
 
@@ -32,25 +31,25 @@ For some symbols you can choose between two different types of icons:
 
 The latter are based on a `IconSet <https://github.com/mapbender/icons>`_, which is delivered with Mapbender as a module. We recommend to use the symbols from this library.
 
-
 More information on that topic:
 
 * https://github.com/mapbender/icons
 * http://rawgit.com/mapbender/icons/master/demo.html
 
+
 Configuration examples:
 ========================
 Depending on the purpose of the application, different buttons are required which provide different features. These can be integrated as needed.
-You can add buttons for features which are integrated in the content. For example the legend, the feature info or the line and/or area ruler can be activated or opened by buttons. 
+You can add buttons for features which are integrated in the content. For example, the legend or the line and/or area ruler can be activated or opened with buttons: 
 
 
 Button for the legend element
 ------------------------------
 
-The legend is very helpful, because it provides information about the map content. In this user example the legend is integrated in the content as element type "dialog". You can find a descripton of how to configure the legend element in this documentation at `Legend <../basic/legend.html>`_.
+The legend is very helpful because it provides information about the map content. In this user example, the legend is integrated in the content as element type "dialog". You can find a descripton of how to configure the legend element in this documentation at `Legend <../basic/legend.html>`_.
 You can add a button for the legend by following these steps:
 
-First you have to select the button element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
+First, you have to select the button element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80
@@ -62,7 +61,7 @@ You can set the name of the legend button in the field *Title*. Here the title i
 .. image:: ../../../figures/de/button_legend_dialog_icon.png
      :scale: 80
 
-In the *Target* field you can choose the predefined feature which should be activated or opened by clicking on the button. The dropdown list contains all features, which have been added to the content, the sidepane or the footer before. In this example the option "Legend" was chosen.
+In the *Target* field you can choose the predefined feature which should be activated or opened by clicking on the button. The dropdown list contains all features, which have been added to the content, the sidepane or the footer before. In this example, the option "Legend" was chosen.
 
 .. image:: ../../../figures/de/button_legend_dialog_target.png
      :scale: 80
@@ -82,24 +81,24 @@ If you choose the *Icon* "Legend (Font Awesome)" instead of "Legend" and check t
 .. image:: ../../../figures/de/button_legend_font_awesome_text.png
      :scale: 80
      
-Now, by clicking on the button, the legend will open in a dialog box. This only works, if the *element type* of the legend element is set to "dialog". The *element type* "blockelement" should only be used when you want to integrate the legend in the sidepane.
+Now, by clicking on the button, the legend will open in a dialog box. This only works if the *element type* of the legend element is set to "dialog". The *element type* "blockelement" should only be used when you want to integrate the legend in the sidepane.
 
 
 Button for Line and Area Ruler
 --------------------------------
 
-The line and area ruler can also be integrated in the application via buttons. These elements already have to have been added to the content, sidepane or footer in order to do so.
+The line and area ruler also can be integrated in the application via buttons. These elements must have been added to the content, sidepane or footer in order to do so.
 
-This example demonstrates how to create groups. Both buttons should be in one group, so that only one line or area ruler, can be active and not both at the same time.
+This example demonstrates how to create groups: Both buttons should be in one group, so that only one line or area ruler can be active and not both at the same time.
 
 You can add this button, like the legend button, by clicking on the ``+`` -symbol in the application in the Layouts tab. The dialog box "Add element - Button" appears. For the line ruler feature it can look like this:
 
 .. image:: ../../../figures/de/button_distance_dialog.png
      :scale: 80
      
-In this example, the title (*Title*) of the button is "Line ruler". The element references to a *Target* called "line". This element was created beforehand with the feature Line/Area Ruler. You can find a description of how to create this feature in this documentation under `Line/Area Ruler <../basic/ruler.html>`_.
+In this example, the title (*Title*) of the button is "Line ruler". The element references to a *Target* called "line". This element was created beforehand with the feature Line/Area Ruler. You can find a description on how to create this feature under `Line/Area Ruler <../basic/ruler.html>`_.
 
-To group this button and the button for the area ruler, you have to put a group name in the field *Group*. In this example the name of the group is "measure". You also have to add this group name to the button for the area ruler. 
+To group this button and the button for the area ruler, you have to put a group name in the field *Group*. In this example, the name of the group is "measure". You also have to add this group name to the button for the area ruler. 
 
 When you hover your mouse over the button, the text "measure line" will appear (*Tooltip*). The option "Line ruler" was chosen for *Icon*.
 
@@ -135,11 +134,4 @@ YAML-Definition:
     group: ~      # group to put the button into. Only one button per group can be active
     action: ~     # method of target to call when button is activated
     deactivate: ~ # method of target to call when button is deactivated
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Button
-* **Widget:** mapbender.mbButton (mapbender.element.button.js)
-* **Style:** mapbender.elements.css
 
