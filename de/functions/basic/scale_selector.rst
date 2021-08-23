@@ -27,14 +27,3 @@ YAML-Definition:
    target: ~         # ID des Kartenelements
    label: false      # false/true, um die Maßstabsauswahl zu beschriften. Der Standardwert ist false.
 
-
-CSS-Styling
-===========
-
-Der Style des Elements (z.B. die Breite) kann mit folgendem CSS-Code überschrieben werden:
-
-.. code-block:: css
-
-                .mb-element-scaleselector.dropdown {
-                    width: 200px;
-                 }

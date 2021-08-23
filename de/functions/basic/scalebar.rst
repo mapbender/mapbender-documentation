@@ -3,7 +3,7 @@
 Maßstabsleiste (ScaleBar)
 *************************
 
-Die Maßstabsleiste zeigt den aktuellen Maßstab graphisch als Linie dar..
+Die Maßstabsleiste stellt den aktuellen Maßstab graphisch als Linie dar:
 
 .. image:: ../../../figures/scalebar.png
      :scale: 100
@@ -15,9 +15,9 @@ Konfiguration
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird unter dem Reiter Layouts angezeigt.
-* **MaxWidth:** Maximale Breite der Maßstabsleiste (Standardwert: 200px).
-* **Units:** Einheiten der Maßstabsleiste, 'kilometer' und/oder 'miles' (Standardwert: 'kilometer')
-* **Position:** Ausrichtung der Ma?stabsleiste (Standardwert: 'unten rechts').
+* **Max width:** Maximale Breite der Maßstabsleiste (Standardwert: 200px).
+* **Units:** Die wählbaren Einheiten der Maßstabsleiste:'kilometer' oder 'miles' (Standardwert: kilometer)
+* **Position:** Ausrichtung der Maßstabsleiste (Standardwert: Unten rechts).
 
 YAML-Definition:
 ----------------

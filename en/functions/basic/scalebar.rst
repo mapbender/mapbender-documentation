@@ -3,7 +3,7 @@
 ScaleBar
 ***********************
 
-The ScaleBar displays the current map scale graphically.
+The ScaleBar is a small line which represents the current map scale graphically.
 
 .. image:: ../../../figures/scalebar.png
      :scale: 100
@@ -15,9 +15,9 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts".
-* **MaxWidth:** The maximum width of the scale bar (Default: 200px).
-* **Units:** Scale bar units 'kilometer' and/or 'miles' (Default: 'kilometer').
-* **Position:** Scale bar alignment (Default: 'bottom right').
+* **Max width:** The maximum width of the scale bar (Default: 200px).
+* **Units:** Scale bar units 'kilometer' or 'miles' (Default: kilometer).
+* **Position:** Scale bar alignment (Default: Bottom right).
 
 YAML-Definition:
 ----------------

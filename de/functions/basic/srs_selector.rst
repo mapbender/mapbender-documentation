@@ -3,8 +3,8 @@
 SRS Auswahl (Spatial Reference System Selector)
 ***********************************************
 
-Mit dem Element 'SRS Selector' kann das räumliche Referenzsystems (SRS) der Karte geändert werden.
-In der Karte stehen die Koordinatensysteme in der Selectbox zur Auswahl, die vorher im `Kartenelement <map.html>`_ definiert wurden.
+Mit dem Element 'SRS Selector' kann das räumliche Referenzsystem (SRS) der Karte geändert werden.
+Nach der Konfiguration stehen die Koordinatensysteme der Karte in einer Selectbox zur Auswahl, die vorher im `Kartenelement <map.html>`_ definiert wurden.
 
 .. image:: ../../../figures/srs_selector.png
      :scale: 100
@@ -16,7 +16,7 @@ Konfiguration
      :scale: 80
 
 * **Beschriftung anzeigen:** Beschriftet die SRS Auswahl (Standard: false).
-* **Title:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem SRS Selector angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Title:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht die Unterscheidung mehrerer Button-Elemente voneinander. Der Titel wird außerdem neben dem SRS Selector angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 
 

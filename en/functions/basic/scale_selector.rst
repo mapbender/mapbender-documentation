@@ -27,22 +27,3 @@ YAML-Definition:
    target: ~         # Id of Map element to query
    label: false      # false/true to label the scale selector, default is false
 
-
-CSS-Styling
-===========
-
-You can overwrite the style of the element, for example you can adjust the width with the following statement:
-
-.. code-block:: css
-
-                .mb-element-scaleselector.dropdown {
-                    width: 200px;
-                 }
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleSelector
-* **Widget:** mapbender.element.scaleselector.js
-* **Style:** mapbender.elements.css
