@@ -3,8 +3,7 @@
 WMS Loader
 **********
 
-Mit diesem Element können WMS per getCapabilities-Request geladen werden.
-Es kann WMS 1.1.1 und  WMS 1.3.0 geladen werden.
+Mit diesem Element können WMS per getCapabilities-Request geladen werden. Es kann WMS 1.1.1 und WMS 1.3.0 geladen werden.
 
 
 .. image:: ../../../figures/wms_loader.png
@@ -66,19 +65,3 @@ Der Link sollte folgendermaßen aussehen:
     href oder mb-url              # verweist auf die WMS getcapabilities URL
 
    
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmsBundle\\Element\\WmsLoader
-* **Widget:** 
-* **Style:**
-
-JavaScript API
-==============
-
-activate
-----------
-
-Öffnet einen Dialog, in dem ein WMS über einen getCapabilities-Request geladen werden kann.
-Es kann WMS 1.1.1 und WMS 1.3.0 geladen werden.
