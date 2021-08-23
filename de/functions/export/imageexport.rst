@@ -24,3 +24,4 @@ YAML-Definition:
    target: ~                        # ID des Kartenelements (z.B. map)
 
 Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
+

@@ -63,5 +63,3 @@ Der Link sollte folgendermaßen aussehen:
     mb-layer-merge="1"            # Standard ist 1: aktiviert die Ebene in mb-wms-layers. Deaktiviert die Ebenen nicht, die schon aktiviert sind.
     mb-wms-layers="Gewaesser,Fluesse" # Definiert die Ebenen, die aktiviert werden sollen, _all activates aktiviert alle Ebenen. Standard ist alle Ebenen sind deaktiviert.
     href oder mb-url              # verweist auf die WMS getcapabilities URL
-
-   

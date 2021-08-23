@@ -1,9 +1,9 @@
 .. _scaledisplay_de:
 
-ScaleDisplay (Maßstabsanzeige)
-********************************
+Maßstabsanzeige (ScaleDisplay)
+******************************
 
-Das ScaleDisplay-Element zeigt den aktuellen Maßstab an (1:1K or 1: 1000).
+Die Maßstabsanzeige zeigt den aktuellen Maßstab numerisch an (1:1K or 1:1000).
 
 .. image:: ../../../figures/scaledisplay.png
      :scale: 100
@@ -19,11 +19,8 @@ Konfiguration
 
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden.
-* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Target:** ID des Kartenelements, auf das sich das ScaleDisplay-Element bezieht.
 * **Scale prefix:** Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab".
-* **Unit prefix:** Wenn aktiviert, wird die Maßstabszahl nicht ausgeschrieben, sondern mit einem Präfix dargestellt, z.B. 1K für 1000. Der Standardwert ist false.
-* **Anchor:** Ausrichtung des ScaleDisplay-Elements, der Standardwert ist 'right-bottom' (rechts unten).
+* **Unit prefix:** Falls aktiviert, wird die Maßstabszahl nicht ausgeschrieben, sondern mit einem Präfix dargestellt, z.B. 1K für 1000 (Standard: false).
 
 
 YAML-Definition:
@@ -39,9 +36,3 @@ YAML-Definition:
    scalePrefix: Scale               # Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab"
    unitPrefix: true                 # aktiviert Darstellung der Maßstabszahl mit Präfix, der Standardwert ist false
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleDisplay
-* **Widget:** mapbender.element.scaledisplay.js
-* **Style:** mapbender.element.scaledisplay.css

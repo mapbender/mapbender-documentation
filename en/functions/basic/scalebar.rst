@@ -3,7 +3,7 @@
 ScaleBar
 ***********************
 
-The ScaleBar displays a small line indicator representing the current map scale.
+The ScaleBar is a small line which represents the current map scale graphically.
 
 .. image:: ../../../figures/scalebar.png
      :scale: 100
@@ -15,11 +15,9 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts".
-* **Tooltip:** Text to use as tooltip.
-* **Target:** ID of the Map element to query.
-* **MaxWidth:** The maximum width of the scale bar, default 200px.
-* **Anchor:** Scale bar alignment, default is 'right-bottom' (use inline e.g. in sidebar).
-* **Units:** Scale bar units 'kilometer' and/or 'miles' (ml), default ['km'].
+* **Max width:** The maximum width of the scale bar (Default: 200px).
+* **Units:** Scale bar units 'kilometer' or 'miles' (Default: kilometer).
+* **Position:** Scale bar alignment (Default: Bottom right).
 
 YAML-Definition:
 ----------------
@@ -35,9 +33,3 @@ YAML-Definition:
    maxWidth: 200                    # the maximum width of the scale bar, default 200px
    units: ['km']                    # scale bar units 'kilometer' and/or 'miles' (ml), default ['km']
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\ScaleBar
-* **Widget:** mapbender.element.scalebar.js
-* **Style:** mapbender.element.scalebar.css

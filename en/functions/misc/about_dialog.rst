@@ -28,5 +28,3 @@ YAML-Definition:
    tooltip: 'About Mapbender'  # text to use as tooltip
    label: true                  # false/true to label the button, default is true
    icon: 'icon-about'           # icon to display on button
-
-   

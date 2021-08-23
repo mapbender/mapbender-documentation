@@ -62,5 +62,3 @@ The link has to look like this:
     mb-layer-merge="1"            # default is 1 which means: activate the layers passed mb-wms-layers and do not disable the layers which are already active.
     mb-wms-layers="Gewaesser,Fluesse" # defines the layers to be activated, _all activates all layers, default all layers are deactivated
     href oder mb-url              # refer to the WMS getcapabilities URL
-
-   
