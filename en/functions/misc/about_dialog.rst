@@ -3,7 +3,7 @@
 About Dialog
 ************
 
-This element renders a `button <button.html>`_ which shows a simple about dialog, listing Mapbender's version. For the default-template the button can be placed, as usual, into the toolbar but can also be positioned into the footer region.
+This element creates a `button <button.html>`_ which shows a simple about dialog, listing Mapbender's version. The button can be placed into the toolbar and the footer region.
 
 .. image:: ../../../figures/about_dialog.png
      :scale: 80
@@ -14,7 +14,7 @@ Configuration
 .. image:: ../../../figures/about_dialog_configuration.png
      :scale: 80
 
-* **Show Label:** Enable/Disable about dialog text next to the icon (Default: true).
+* **Show Label:** Enable/Disable About dialog text next to its icon (Default: true).
 * **Title:** Text indicated next to the about dialog icon. 
 * **Tooltip:** Text to use as a tooltip. Appears when hovering over the icon. 
 
@@ -30,17 +30,3 @@ YAML-Definition:
    icon: 'icon-about'           # icon to display on button
 
    
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\AboutDialog
-* **Widget:** mapbender.mbAboutDialog
-* **Style:** mapbender.elements.css
-
-HTTP Callbacks
-==============
-
-about
------
-
-Retrieves dialog contents.
