@@ -3,9 +3,9 @@
 GPS-Position
 ************
 
-Dieses Elememt stellt einen Button bereit, der zu Ihrer aktuellen Position navigiert und zeigt ein Symbol an dieser Position an. Der Maßstab wird dabei nicht verändert, außer durch Aktivierung der Einstellung ``zoom to accuracy (zoom to accuracy on first position)``.
+Dieses Elememt stellt einen Button bereit, der zur aktuellen Position auf der Karte navigiert und ein markierendes Symbol anzeigt. Der Maßstab wird dabei nicht verändert, außer durch Aktivierung der Einstellung ``zoom to accuracy (zoom to accuracy on first position)``.
 
-Die Funktion baut auf der `Geolocation-API <https://www.w3.org/TR/geolocation-API/>`_  des W3C auf. Ob Ihr Browser diese Funktionalität unterstützt, erfahren Sie auf der `Can I Use <http://caniuse.com/#feat=geolocation>`_ Seite. Die Funktion nutzt den ``High Accurcacy Parameter``, der die Standortbestimmung über GPS forciert. Falls das Gerät einen GPS-Empfänger hat und dieser aktiviert ist, ist die Positionsbestimmung also genauer. Ansonsten werden die WLAN Access-Points zur Positionsbestimmung herangezogen.
+Die Funktion baut auf der `Geolocation-API <https://www.w3.org/TR/geolocation-API/>`_  des W3C auf. Ob Ihr Browser diese Funktionalität unterstützt, erfahren Sie auf der `Can I Use <http://caniuse.com/#feat=geolocation>`_ Seite. Die Funktion nutzt den ``High Accuracy Parameter``, der die Standortbestimmung über GPS forciert. Falls das Gerät einen GPS-Empfänger hat und dieser aktiviert ist, ist die Positionsbestimmung also genauer. Ansonsten werden die WLAN Access-Points zur Positionsbestimmung herangezogen.
 
 Der Mittelpunkt zeigt die wahrscheinliche Position des Gerätes an, der äußere Kreis die Genauigkeit der Positionsbestimmung, d.h. in welchem Bereich sich die ermittelte Position wahrscheinlich befindet.
 
@@ -20,13 +20,13 @@ Konfiguration
 .. image:: ../../../figures/de/gps_position_configuration.png
      :scale: 80
 
-* **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: true).
-* **Autostart** Startet Element beim Öffnen der Anwendung (Standard: false)
+* **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
+* **Autostart** Startet Element beim Öffnen der Anwendung (Standard: aus).
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 * **Icon:** Symbol des Buttons, basierend auf einer CSS Klasse.
-* **Average:** Berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1.
-* **Follow:**  Positioniert die Karte bei jeder empfangenen GPS Koordinate neu (Standard: false).
+* **Average:** Berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten (Standard: 1).
+* **Follow:** Positioniert die Karte bei jeder empfangenen GPS Koordinate neu (Standard: false).
 * **Center on first position:** Zentriert die Karte auf die erstermittelte Position (Standard: true).
 * **Zoom to accuracy on first position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position (Standard: true).
 
@@ -51,12 +51,4 @@ Das Element wird als Button in die Toolbar eingefügt.
                 centerOnFirstPosition: true         # Zentriert die Karte auf die erstermittelte Position
                 zoomToAccuracy: false               # Zoomt auf die ermittelte Koordinate nach Messgenauigkeit
                 zoomToAccuracyOnFirstPosition: true # Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position
-
-
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\GpsPosition
-* **Widget:** mapbender.element.gpsPostion.js
-* **Style:** mapbender.element.gpsPosition.css
 
