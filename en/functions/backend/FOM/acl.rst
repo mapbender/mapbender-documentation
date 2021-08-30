@@ -4,7 +4,7 @@
 Access Control Lists
 ====================
 
-Security for domain objects is implemented in Mapbender using Access Control Lists. ACLs provide flexible permissions for individual objects, like applications, services, or user- and group management.
+The security for domain objects is implemented in Mapbender using Access Control Lists. ACLs provide flexible permissions for individual objects like applications, services or user- and group management.
 
 Mapbender offers these rights to create individual permissions and secure the domain objects:
 
