@@ -9,7 +9,6 @@ The bundle provides all means to administrate users by admin as well as self-reg
 
 The user with the id 1 (root) is special, as this user is created during installation and will always be given full access. If all is lost, you can use this user to manage everything. And in the event that the credentials for this user are also lost, a console command (fom:user:resetroot) is available for resetting.
 
-.. note:: **Notice:** To use the features below, Symfony Switfmailer needs to be set up correctly. Please check your local Symfony verion and adjust the Symfony documentation accordingly before setting up Swiftmailer. An in-depth configuration can be found in the official Symfony docs: https://symfony.com/doc/current/mailer.html
 
 Forgot Password
 ---------------
