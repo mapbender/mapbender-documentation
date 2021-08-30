@@ -9,6 +9,7 @@ Security for domain objects is implemented in Mapbender using Access Control Lis
 Mapbender offers these rights to create individual permissions and secure the domain objects:
 
 - View       : View an existing object
+- Create     : Create a new object
 - Edit       : Edit an existing object
 - Delete     : Delete an existing object
 - Operator   : View, Edit, and Delete permission.

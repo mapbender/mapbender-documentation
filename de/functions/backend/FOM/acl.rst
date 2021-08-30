@@ -9,6 +9,7 @@ Die Absicherung von Domain-Objekten wird in Mapbender über Access Control Lists
 Mapbender bietet zur Absicherung dieser Bereiche die folgenden Rechte- und Rollenzuweisungen an:
 
 - View       : Ein existierendes Objekt lesen
+- Create     : Ein neues Objekt erstellen
 - Edit       : Ein existierendes Objekt bearbeiten
 - Delete     : Ein existierendes Objekt löschen
 - Operator   : Rollenbezeichnung für die Rolle "Operator", dieser hat die Rechte View, Edit und Delete.
