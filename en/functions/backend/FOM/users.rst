@@ -56,8 +56,6 @@ Users can be set activated or deactivated by Administrators with the User-ACL-ri
 
 A user who is deactivated cannot login into Mapbender anymore until he gets activated again.
 
-.. image:: ../../../../en/functions/backend/FOM/user_account_is_disabled.png
-
 Users which have self-registered themselves but have not approved the activation mail can now be activated by an administrator.
 
 

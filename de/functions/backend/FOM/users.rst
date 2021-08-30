@@ -56,8 +56,6 @@ Benutzer können von Administratoren mit der ACL-Rolle "edit" aktiviert oder dea
 
 Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender anmelden, bis er wieder aktiviert wird.
 
-.. image:: ../../../../en/functions/backend/FOM/user_account_is_disabled.png
-
 Benutzer, die sich selbst registriert haben, aber die Freischaltungsmail noch nicht bestätigt haben, können so von einem Administrator per Hand freigeschaltet werden.
 
 
