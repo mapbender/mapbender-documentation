@@ -20,7 +20,7 @@ Configuration
 * **Tooltip:** Text to use as tooltip.
 * **Components:** Components of the navigation toolbal (all selected by default). Options: Rotation, zoom to max extent, Back to start, Zoom in/out, Zoom slider
 * **Back to start:** Resets layer settings (default: false).
-* **Anchor:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar). Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom
+* **Position:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar). Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom
 
 
 Components of the Navigation Toolbar element:
