@@ -19,6 +19,7 @@ The command ``app/console fom:user:resetroot`` resets the user with ID 1. This u
                 Password: secret
                 Do you confirm reset [yes]? yes
                 The root is now usable. Have fun!
+
 Create new user
 ---------------
 
@@ -28,7 +29,7 @@ The root user (ID 1) can create new users. A user itself can create a new user i
 Create new applications
 -----------------------
 
-A user who should create new applications has to have the Create right in the ACL "Applications". Once he has this right he can also import and export applications.
+A user who would like to create new applications has to have the Create right in the ACL "Applications". Once he has this right, the user can also import and export applications.
 
 To create Layerset Instances, he has to have the right Edit in ACL "Service Source". 
 
@@ -36,10 +37,7 @@ To create Layerset Instances, he has to have the right Edit in ACL "Service Sour
 Copy applications
 -----------------
 
-A user can copy applications if:
-
-* he has the right Edit in ACL "Applications"
-* or he has the right Edit in the application itself. The right of the application overwrites the global ACL right.
+A user can copy applications if he has the right Edit in ACL "Applications" or within the application itself. The right of the application overwrites the global ACL right.
 
 Thereby the user is automatically owner of his copied application.
 
@@ -47,7 +45,4 @@ Thereby the user is automatically owner of his copied application.
 Delete applications
 -------------------
 
-A user can delete applications if:
-
-* he has the right Delete in the ACL "Applications"
-* or he has the right Delete in the application itself. The right of the applications overwriters the global ACL right.
+A user can delete applications if he has the right Delete in the ACL "Applications" or within the application itself. The right of the applications overwriters the global ACL right.

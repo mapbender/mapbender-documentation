@@ -3,37 +3,34 @@
 Layersets und Layerset-Instanzen
 ********************************
 
-Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS Dienste) beinhalten kann. Ein typisches Beispiel sind die Unterscheidung in den Layerset "main" für die Hauptkarte und "overview" für die Übersichtskarte. Sie können weitere Layersets definieren, die optional in der Karte dargestellt werden oder auch im Layertree als eigener Ordner erscheinen (thematische Layer).
+Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS-Dienste) beinhalten kann. Ein typisches Beispiel ist die Unterscheidung zwischen dem Layerset "main" (Hauptkarte) und "overview" (Übersichtskarte). Es besteht die Möglichkeit, weitere Layersets zu definieren. Diese werden entweder in der Karte direkt oder auch im Layertree als eigener Ordner dargestellt (thematische Layer).
 
-.. image:: ../../../figures/mapbender3_service_edit.png
-           :scale: 80
+.. image:: ../../../figures/de/layerset/mapbender_service_edit_DE.png
 
 
 Layerset-Instanzen
 ==================
 
-Layerset-Instanzen enthalten die Optionen, wie ein WMS angesprochen werden kann: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr.
+Layerset-Instanzen enthalten unterschiedliche Optionen, mit denen WMS-Dienste angesprochen werden können: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr. Aus der Layerset-Übersicht können mit dem Zahnrad-Button einzelne Instanzen konfiguriert werden.
 
-.. image:: ../../../figures/de/mapbender3_wms_application_settings.png
-           :scale: 80
+.. image:: ../../../figures/de/layerset/mapbender_wms_application_settings_DE.png
 
-Sobald ein WMS Dienst in einen Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
-
-Der Screenshot zeigt die Instanz ``7/24`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 7, die Layerset-Instanz selbst hat die Laufnummer 24. Sie basiert auf dem OSM-Dienst der WhereGroup und kann in diesem Dialog für die Anwendung konfiguriert werden.
+Sobald ein WMS-Dienst in ein Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
+Der Screenshot zeigt die `private Instanz <layerset.rst#freie-und-private-instanzen>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2. Die Layerset-Instanz selbst hat die Laufnummer 28.
 
 **Die Eigenschaften aus den WMS-Capabilities:**
 
 - **Title:** Der Titel der Instanz, der in der Liste der Layersets und ihrer Instanzen angezeigt wird.
 
-- **Format:** Das Bildformat, mit dem die Kartenbilder über den GetMap-Request in der Anwendung abgerufen werden sollen. Für Rasterkarten und Luftbilder empfiehlt sich das JPG Format, für z.B. Straßenkarten das PNG Format. Im Zweifel: PNG.
+- **Format:** Das Bildformat, mit dem die Kartenbilder über den GetMap-Request in der Anwendung abgerufen werden sollen. Für Rasterkarten und Luftbilder empfiehlt sich das JPG Format, für z.B. Straßenkarten das PNG Format. Im Zweifelsfall sollte PNG verwendet werden.
 
 - **Infoformat:** Das Format, in denen die GetFeatureInfo Anfragen an den WMS abgeschickt werden soll. Im Zweifel: text/html oder ein analoges HTML-Format, was dann in den Dialog des `FeatureInfo <../basic/feature_info>`_ verwendet werden kann. Alternativ ist die Verwendung von text/plain möglich.
 
-- **Exceptionformat:** wählen Sie das Format für Fehlermeldungen aus dem OGC Exception Formaten, die der WMS anbietet.
+- **Exceptionformat:** Das Format für Fehlermeldungen aus den OGC Exception Formaten, welche der WMS anbietet.
 
 **Die Eigenschaften für die Anwendung**
 
-- **Opacity:** wählen Sie die Deckkraft des Dienstes in Prozent. Dieser Wert wird dann auch für den Benutzer im `Layertree <../basic/layertree>`_ gesetzt, wenn dort im Menü auch die "Opacity" aktiviert ist.
+- **Opacity:** Die Deckkraft des Dienstes in Prozent. Dieser Wert ist nur dann für den Benutzer im `Layertree <../basic/layertree>`_ konfigurierbar, wenn im Menü auch die "Opacity" aktiviert ist.
 
 - **Kachel-Puffer (Tile buffer):** Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen. Default: 0.
 
@@ -43,13 +40,13 @@ Der Screenshot zeigt die Instanz ``7/24`` basierend auf einem WMS-Dienst. Die zu
 
 - **Sichtbarkeit:** Der Dienst kann mit dieser Schaltfläche sichtbar geschaltet werden.
 
-- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den `BaseSourceSwitcher <../basic/basesourceswitcher>`_, der nur BaseSources anzeigen soll und auf den `Layertree <../basic/layertree>`_, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch die `Hinweise <hinweise-layersets_>`_ weiter unten.
+- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den `BaseSourceSwitcher <../basic/basesourceswitcher>`_, der nur BaseSources anzeigen soll und auf den `Layertree <../basic/layertree>`_, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch die `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_ weiter unten.
 
-- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe die `Hinweise <hinweise-layersets_>`_ weiter unten.
+- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe die `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_ weiter unten.
 
-- **Transparenz:** Ist dieser Schalter aktiviert (und das ist er standardmäßig) wird der Dienst mit transparenten Hintergrund angefordert. Also im WMS GetMap-Request mit dem Parameter ``TRANSPARENT=TRUE``.
+- **Transparenz:** Ist dieser Schalter aktiviert (und das ist er standardmäßig) wird der Dienst mit transparentem Hintergrund angefordert. Also im WMS GetMap-Request mit dem Parameter ``TRANSPARENT=TRUE``.
 
-- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert. Der Standard ist nicht gekachelt. Siehe die folgenden `Hinweise <hinweise-layersets_>`_.
+- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert. Der Standard ist nicht gekachelt. Siehe die folgenden `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_.
 
 
 **Layer-Reihenfolge:**
@@ -63,11 +60,11 @@ Diese Unterscheidung hat ihre Ursprünge in der Art und Weise wie WMS-Dienste un
 
 Die `OGC Referenzimplementierung eines WMS <http://www.opengeospatial.org/standards/wms/quickstart>`_ beschreibt den Aufbau eines Beispiel WMS unter: `http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3 <http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3>`_
 
-Dieser WMS zeigt einige Punkt-, Linien- und Flächenobjekte und Rasterbilder an. Das Capabilities Dokument listet dabei die Bilddaten (z.B. DTM) weiter oben als die Punkte (z.B. osm_points als vorletzter Layer). Dieses Prinzip übernimmt der Mapbender sowohl in den DataSources, wo der Dienst in Mapbender eingeladen und registriert wird als auch in den Layerset-Instanzen.
+Dieser WMS zeigt einige Punkt-, Linien- und Flächenobjekte und Rasterbilder an. Das Capabilities Dokument listet dabei die Bilddaten (z.B. DTM) weiter oben als die Punkte (z.B. osm_points als vorletzter Layer). Dieses Prinzip übernimmt Mapbender sowohl in den DataSources, wo der Dienst in Mapbender eingeladen und registriert wird, als auch in den Layerset-Instanzen.
 
-Im Layerbaum dreht sich dann aber die Reihenfolge um, da aus unserer Erfahrung der Benutzer es gewohnt ist, dass der Layer, der im Layerbaum weiter oben steht, auch als oberster Layer gezeichnet wird. Diese Erfahrung hat ein Benutzer auch, wenn er ein Desktop-GIS nutzt. Punkte sind dann im Layerbaum weiter oben und Rasterdaten weiter unten.
+Im Layerbaum dreht sich diese Reihenfolge dann aber um. Unserer Erfahrung nach vereinfacht dies die Nutzerfreundlichkeit. Denn somit werden Layer, welche weiter oben im Ebenenbaum positioniert sind, auch als oberste Layer angezeigt. Dieses Verhalten ist überlicherweise auch in einem Desktop-GIS zu finden. Punkte werden dann im Layerbaum weiter oben und Rasterdaten weiter unten dargestellt.
 
-Der `QGIS Server <https://www.qgis.org/>`_ verhält sich hier aber anders. Einen WMS kann man mithilfe der QGIS-Projektdatei sehr einfach auf einen QGIS Server deployen und die Reihenfolge der Layer in den WMS Capabilities ist dann gleich der Reihenfolge, die man im eigenen QGIS-Projekt genutzt hat. Also generell: Punkte oben, weiter darunter die Linien, dann zum Schluß die Polygondaten oder Rasterbilder. QGIS und QGIS Server sind dabei nicht die einzigen Programme, die das so machen, aber die besten. Für den GetMap Aufruf ist das dann wieder irrelevant, da dort die Art und Weise der Aufrufe und wie diese dann an den Klienten zurückgesendet werden in der WMS-Spezifikation geklärt ist.
+Der `QGIS Server <https://www.qgis.org/>`_ verhält sich hier aber anders. Einen WMS kann man mithilfe der QGIS-Projektdatei sehr einfach auf einen QGIS Server konfigurieren. Die Reihenfolge der Layer in den WMS Capabilities ist dann gleich der Reihenfolge, die man im eigenen QGIS-Projekt genutzt hat. Es gilt generell: Punkte oben, darunter die Linien, dann zum Schluß die Polygondaten oder Rasterbilder. QGIS und QGIS Server stellen dabei nicht die einzigen Programme dar, welche dies so machen. Sie sind aber die besten. Für den GetMap Aufruf sind diese Einstellungen dann wieder irrelevant. Denn die WMS-Spezifikation klärt bereits die Art und Weise der Aufrufe und wie diese an den Klienten zurückgesendet werden.
 
 Die folgende Tabelle fasst das Verhalten nochmal zusammen:
 
@@ -81,7 +78,33 @@ Die folgende Tabelle fasst das Verhalten nochmal zusammen:
 | Layertree  (from top to bottom)        | point, line, polygon | point, line, polygon   |
 +----------------------------------------+----------------------+------------------------+
 
-Damit kann Mapbender auf die unterschiedlichen Art und Weisen reagieren, wie ein WMS Capabilities Dokument aufgebaut hat, indem einfach die Reihenfolge in dem Layerbaum angepasst wird.
+Damit kann Mapbender auf die unterschiedlichen Art und Weisen reagieren, die ein WMS Capabilities Dokument aufgebaut hat, indem einfach die Reihenfolge in dem Layerbaum angepasst wird.
+
+
+Freie und private Instanzen
+---------------------------
+
+Alle Layerset-Instanzen werden standardmäßig als private Instanzen erstellt. Private Instanzen müssen für jede Anwendung individuell konfiguriert werden. Freie Instanzen ermöglichen die Einbindung einer vorkonfigurierten Layerset-Instanz in mehreren Anwendungen. Freie Instanzen können bspw. verwendet werden, um für mehrere Anwendungen, welche gleich konfigurierte Layerset-Instanzen teilen, nicht mehrmals die gleiche Konfiguration durchführen zu müssen. Änderungen einer freien Instanz sind in allen Anwendungen, in denen die Instanz eingebunden ist, wirksam.
+
+Eine Layerset-Instanz kann in der Bearbeitungsansicht über den blauen Button "In freie Instanz umwandeln" umgeändert werden. Über den gleichen Button lässt sich eine freie Instanz wieder in eine private Instanz umwandeln.
+
+.. image:: ../../../figures/de/layerset/convert_to_shared_instance_DE.png
+
+In der Layersets-Übersicht sind freie Instanzen in der Spalte "Typ" mit einem Funk-Symbol gekennzeichnet.
+
+.. image:: ../../../figures/de/layerset/convert_to_bound_instance_DE.png
+
+Private Instanzen sind wiederum mit einem Anker-Symbol gekennzeichnet.
+
+.. image:: ../../../figures/de/layerset/instances_labels_DE.png
+
+Um eine freie Instanz in eine Anwendung einzubinden, kann diese als Datenquelle beim Hinzufügen einer Instanz ausgewählt werden.
+
+.. image:: ../../../figures/de/layerset/incorporate_shared_instance_DE.png
+
+Zu einer Übersicht aller freien Instanzen kann über das Menü zu **Datenquellen -> Freie Instanzen** navigiert werden.
+
+.. image:: ../../../figures/de/layerset/shared_instances_overview_DE.png
 
 
 .. _layer_konfiguration:
@@ -91,18 +114,15 @@ Layerkonfiguration
 
 Über die verschiedenen Checkboxen können Sie verschiedene Einstellungen treffen. Beachten Sie dabei, dass die oberste Checkbox der Liste jeweils für alle Instanzen denselben Status auswählt.
 
-.. image:: ../../../figures/de/layerset_instance.png
-           :scale: 80
-
-
+.. image:: ../../../figures/de/layerset/layerset_instance_DE.png
 
 * Titel: Layertitel der Service Information (anpassbar).
-* Aktiv an/aus (active on/off): Aktiviert / deaktiviert ein Thema in dieser Anwendung. Sobald dieser Haken nicht gesetzt ist, werden alle anderen Haken derselben Instanz ignoriert.
+* Aktiv an/aus (active on/off): Aktiviert/deaktiviert ein Thema in dieser Anwendung. Sobald dieser Haken nicht gesetzt ist, werden alle anderen Haken derselben Instanz ignoriert.
 * Auswählen erlauben (select allow): Der Layer ist im Ebenenbaum auswählbar.
 * Auswählen an (select on): Der Layer ist bei Anwendungsstart im Ebenenbaum aktiv.
 * Info erlauben (info allow): Die Infoabfrage wird für diesen Layer zugelassen.
 * Info an (info on): Die Infoabfrage wird beim Start aktiviert.
-* Minimaler/ Maximaler Maßstab (minsc / maxsc): Der Maßstabsbereich, in dem der Layer angezeigt wird.
+* Minimaler/Maximaler Maßstab (minsc/maxsc): Der Maßstabsbereich, in dem der Layer angezeigt wird.
 * Aufklappen (toggle): Aufklappen des Layers beim Start der Anwendung.
 * Sortieren (reorder): Die Ebenen können über Drag & Drop in der Anwendung verschoben werden.
 
@@ -111,9 +131,6 @@ Layerkonfiguration
 * Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard - (default) - Stil wählen.
 
 
-
-.. _hinweise-layersets:
-
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen
 ==========================================================
 
@@ -121,7 +138,7 @@ Basesources
 -----------
 
 Es gibt viele Möglichkeiten, den Layertree zu füllen und mit Basisdiensten zu arbeiten:
-- Z.B. durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
+- Bspw. durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
 - Oder auch mit den Möglichkeiten des `thematischen Layerbaums <../basic/layertree>`_ zu arbeiten, verschiedene Layersets anzulegen und die Basisdienste und thematischen Dienste dort zu verteilen und im Layerbaum zu unterscheiden.
 
 Für welche Möglichkeit Sie sich entscheiden, hängt ganz von Ihren Vorlieben ab.
@@ -139,17 +156,17 @@ Der Parameter "Gekachelt" wird benutzt, um das Kartenbild in einzelnen Kacheln a
 
 Man muss dabei aber beachten: Die Anzahl der Anfragen an einen WMS vergrößert sich rapide: Je nach Bildschirm-Auflösung und eingestellter Kachelgröße im `Kartenelement <../basic/map>`_ werden statt einer viele Anfragen abgeschickt. Die zurückgelieferten Bilder sind zwar nicht besonders groß (normalerweise nimmt man Kachelgrößen von 256x256 oder 512x512 Pixel), aber zahlreich. Auch in Hinblick auf die Verwendung des **Kachel-Puffers**. Es ist also eine Abwägung und eine Fall- zu Fall-Unterscheidung, wie man den Dienst ansprechen möchte. Die Performance kann auch über eigene Maßstabsangaben der Layer gesteigert werden, wenn der Dienst diese etwas zu locker vorgegeben hat.
 
-Es gibt des Weiteren noch hier und da WMS-Dienste, die nur eine maximale Kartenbildgröße unterstützen und mit den hohen Auflösungen die Mapbender anfragen kann nicht zurechtkommen. Das Fullscreen-Template kann auf die maximale Bildschirmbreite gezogen werden und das angeforderte Kartenbild ist dann in etwa der Breite und Höhe des sichtbaren Browserfensters.
+Es gibt des Weiteren noch hier und da WMS-Dienste, die nur eine maximale Kartenbildgröße unterstützen und mit den hohen Auflösungen, die Mapbender anfragen kann, nicht zurechtkommen. Das Fullscreen-Template kann auf die maximale Bildschirmbreite gezogen werden und das angeforderte Kartenbild ist dann in etwa der Breite und Höhe des sichtbaren Browserfensters.
 
 
 Vendor Specific Parameter
 -------------------------
 
 In einer Layerset Instanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der multi-dimensionalen Daten in der WMS Spezifikation.
-In Mapbender können die Vendor Specific Parameter genutzt werden, um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
+In Mapbender können die Vendor Specific Parameter genutzt werden, um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS-Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
-.. image:: ../../../figures/mapbender_vendor_specific_parameter.png
+.. image:: ../../../figures/de/layerset/mapbender_vendor_specific_parameter_DE.png
 
 * Name: Parameter Name im WMS Request.
 * Default: Standardwert
@@ -159,13 +176,10 @@ Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
 Momentan eignet sich das Element, um den Dienst nur an bestimmte Benutzer und Gruppen weiterzugeben. Dies geschieht z.B. für Benutzer über die ``$id$`` und für Gruppen über den Parameter ``$groups$``.
 
 
-
-
-
 Weitere Informationen
 ---------------------
 
-* Information zur Benutzung von Layersets finden Sie in auch im `Quickstart <../../quickstart#konfiguration-von-diensten>`_
+* Information zur Benutzung von Layersets finden Sie auch im `Quickstart <../../quickstart#konfiguration-von-diensten>`_
 
 * Die Bedeutung der Layersets für die Anzeige im Layertree ist im Abschnitt zu den Thematischen Layern in der `Layertree-Dokumentation <../basic/layertree>`_ beschrieben.
 

@@ -1,4 +1,4 @@
-.. _console_de:
+.. _commands_de:
 
 app/console Befehle
 ======================

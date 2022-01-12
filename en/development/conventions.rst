@@ -66,7 +66,7 @@ What to keep in mind, when you create a layout
 Translation where
 ************************
 
-* conventions to put the files? Groß-Kleinschreibung/ welche Übersetzungen werden generell gepflegt? en/de weitere?
+* conventions to put the files? Groß-Kleinschreibung/welche Übersetzungen werden generell gepflegt? en/de weitere?
 * also have a look at `Translation in Mapbender <../translation.rst>`
 
 

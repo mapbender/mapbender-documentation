@@ -1,4 +1,4 @@
-.. _mapbender_Templates:
+.. _mapbender_templates:
 
 Mapbender Templates
 ###################
@@ -35,7 +35,21 @@ Specials:
 Configuration of the sidepane
 *****************************
 
-It is possible to adjust some properties for the sidepane while working with templates that support it. Elements in the sidepane can be displayed in three different styles:
+The fullscreen template offers an adjustable sidepane. The sidepane style can be changed via Mapbender backend (in the sidepane section of the Layouts tab).
+The gear symbol in the sidepane section shows the following options:
+
+* Type
+* Screen type (mandatory field)
+* Width
+* Position
+* Checkbox "Initially closed"
+
+
+.. image:: ../../figures/sidepane_backend.png
+     :scale: 80
+
+
+The option "Type" adjusts the inserted elements:
 
 - "Accordion" shows elements via tabs:
 
@@ -47,15 +61,19 @@ It is possible to adjust some properties for the sidepane while working with tem
 .. image:: ../../figures/sidepane_buttons.png
      :scale: 80
 
-- "None" does not contain any styling options at all and displays the elements in the configured backend order:
+- "Unstyled" does not contain any styling options at all and displays the elements in the configured backend order:
 
 .. image:: ../../figures/sidepane_nostyle.png
      :scale: 80
 
-Sidepane properties are adjustable in the Sidepane area of the Mapbender backend:
+The option "Screen type" is a mandatory field and defines the device on which the sidepane is visible (any, mobile or desktop).
 
-.. image:: ../../figures/sidepane_backend.png
-     :scale: 80
+The option "Width" takes a pixel value and adjusts the sidepane width accordingly.
+
+"Position" defines the placement of the sidepane: "Left" or "Right" can be selected.
+
+The checkbox "Initially closed" hides the sidepane after the application is opened for the first time. It is possible to show or re-hide the sidepane while using the application.
+
 
 Mobile Template
 ***************

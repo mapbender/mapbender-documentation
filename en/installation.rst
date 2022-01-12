@@ -12,7 +12,7 @@ Installation and update guide for the common user
 
    installation/installation_ubuntu.rst
    installation/installation_windows.rst
-   installation/update.rst
+   installation/installation_update.rst
 
 Installation guide and details for developers
 
@@ -21,4 +21,4 @@ Installation guide and details for developers
 
    installation/installation_symfony.rst
    installation/installation_git.rst
-   installation/configuration.rst
+   installation/installation_configuration.rst

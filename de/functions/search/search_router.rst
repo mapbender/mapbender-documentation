@@ -389,15 +389,6 @@ In der mapbender.yml Datei:
                   fillOpacity: 1
 
 
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\SearchRouter
-* **Widget:** mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
-* **Style:** mapbender.element.searchRouter.css
-
-
 HTTP Callbacks
 ==============
 

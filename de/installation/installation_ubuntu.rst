@@ -158,9 +158,15 @@ Initialisierung der Datenbank:
     app/console doctrine:database:create
     app/console doctrine:schema:create
     app/console mapbender:database:init -v
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+    bin/composer run reimport-example-apps
 
-Weitere Informationen zur Konfiguration: :ref:`installation_configuration_de`
+Root-Benutzer für Zugriff anlegen:
+
+.. code-block:: bash
+
+   app/console fom:user:resetroot
+
+Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`
 
 
 **Mapbender Einrichtung auf MySQL**

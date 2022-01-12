@@ -166,7 +166,7 @@ Github - editing on GitHub
 ==========================
 
 * you can edit files directly on GitHub.
-* navigate to the file f.e https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/CoreBundle/Resources/translations/messages.de.yml
+* navigate to the file, e.g. https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/CoreBundle/Resources/translations/messages.de.yml
 * edit the file
 * save changes and create a new branch for this commit and start a pull request
 

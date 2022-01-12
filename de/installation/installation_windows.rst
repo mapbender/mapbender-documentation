@@ -164,9 +164,16 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
     php.exe app/console doctrine:database:create
     php.exe app/console doctrine:schema:create
     php.exe app/console mapbender:database:init -v
-    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+    php.exe bin/composer run reimport-example-apps
     
-Weitere Informationen zur Konfiguration: :ref:`installation_configuration_de`
+
+Für den Zugriff auf die Datenbank muss der Standardbenutzer mit folgendem Befehl angelegt werden:
+
+.. code-block:: text
+
+    php.exe app/console fom:user:resetroot
+
+Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`
 
 
 Der erste Start

@@ -3,8 +3,7 @@
 Map (Karte)
 ***********
 
-OpenLayers-basierte Karte.
-Es müssen die Einheiten, der Start und der Max Bereich (extent), die Maßstäbe und die unterstützten Projektionen angegeben werden.
+Die Karte basiert auf OpenLayers und wird als Element im Content-Bereich integriert.
 
 .. image:: ../../../figures/de/map.png
      :scale: 80
@@ -15,40 +14,39 @@ Konfiguration
 .. image:: ../../../figures/de/map_dialog.png
      :scale: 80
 
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Title:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Layersets:** Vorher konfiguriertes Layersets zur Anzeige der Hauptkarte (Thematische Karte, Hintergrundkarte).
-* **DPI:** Maßeinheit für die Auflösung, Standard ist 72.
-* **SRS:** Spatial Reference System, Koordinatenbezugssystem beim Start der Anwendung. Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
 * **Tile size:** Größe der Tiles bei gekachelten Diensten.
+* **SRS:** Koordinatenbezugssystem beim Start der Anwendung ("Spatial Reference System"). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
 * **Max. Extent:** Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert).
 * **Start Extent:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert).
-* **Scales (csv):** festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma separiert).
-* **Other SRS:** weitere auswählbare Projektionen unter denen die Karte noch angezeigt werden kann (werden durch Komma separiert). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
+* **Feste Maßstabsstufen:** Das Zoom-Verhalten wird hierdurch konfiguriert. Feste Maßstabsstufen verbessern die visuelle Qualität von Diensten, welche nur auf bestimmten Maßstäben zwischengespeichert werden. Ist die Einstellung aktiviert, dann können nur Maßstäbe ausgewählt werden, die auch unter *scales* im Folgenden definiert sind (Standard: false).
+* **Scales (csv):** Festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma getrennt).
+* **Other SRS:** Weitere auswählbare Projektionen unter denen die Karte angezeigt werden kann (werden durch Komma getrennt). Zwei Arten der SRS Definition werden unterstützt: EPSG:CODE oder EPSG:CODE|MEIN SRS TITEL.
 
 
 Konfigurationsbeispiel
 ======================
 
-Die Hauptkarte (Main Map) wird in der Anwendung unter Layouts im Content integriert. Über das ``+`` -Zeichen kann das Element hinzugefügt werden.
+Das Kartenelement (Map) muss unter Layouts im Content-Bereich integriert werden:
 
 .. image:: ../../../figures/de/add_content.png
      :scale: 80
 
-Als Hauptkarte (Main Map) können alle Layersets definiert werden, die vorher in der Anwendung unter Layersets festgelegt wurden. Für dieses Konfigurationsbeispiel sind das folgende Layersets:
+In der Karte können alle Instanzen angezeigt werden, welche im Layerset enthalten sind. Im vorliegenden Beispiel wird zwischen der *Hauptkarte/main* (1) und *Übersichtskarte/overview* (2) unterschieden.
 
-.. image:: ../../../figures/de/map_example_layersets.png
+.. image:: ../../../figures/de/map_example_layerset.png
      :scale: 80
 
-Die Layersets sind im Konfigurationsdialog des Kartenelements unter *Layersets* (1) sichtbar. Hier können auch mehrere gleichzeitig ausgewählt werden. Diejenigen Layersets, die nicht ausgewählt wurden, können als Overview fungieren.
+Damit *Layersets* **(1)** auch in der Karte angezeigt werden, müssen diese im Kartenelement aktiviert werden. Eine Mehrfachauswahl ist hierbei auch möglich. Layersets, welche nicht ausgewählt wurden, können als Overview fungieren. Im Beispiel dient *main* als Haupt- und *overview* als Übersichtskarte.
+
+Das Feld *SRS* **(2)** definiert das Koordinatenreferenzsystem. Im Beispiel ist dies EPSG 25832 bzw. ETRS89/UTM Zone 32N. Wenn andere Referenzsysteme zur Auswahl stehen sollen, werden diese unter *Other SRS* **(7)** angegeben. Im Beispiel umfasst dies: 25833 (ETRS89/UTM Zone 33N), 31466 (DHDN/3-degree Gauss-Krüger Zone 2), 31467 (DHDN/3-degree Gauss-Krüger Zone 3), 3857 (WGS 84/Pseudo-Mercator) und 4326 (WGS 84).
+
+Weiterhin kann das Feld *Max. Extent* **(3)** definiert werden. Dieses gibt den maximalen sichtbaren Kartenbereich an. Alles was außerhalb dieser Angabe liegt, wird vom Anwender nicht gesehen. Das Feld *Start Extent* **(4)** wiederum definiert den Startbereich, welcher beim Öffnen der Anwendung zu sehen ist. Im Beispiel wird das Stadtgebiet von Bonn angezeigt. Zudem definiert *Scales* **(6)** die unterschiedlichen Zoomstufen in der Anwendung. Zwischen diesen kann mithilfe von dem :ref:`scale_selector_de`oder der :ref:`zoom_bar_de` navigiert werden. Feste Maßstabsstufen **(5)** wurden dabei im Beispiel deaktiviert. Das heißt, es ist auch eine Auswahl anderer Maßstäbe über das Mausrad möglich.
 
 .. image:: ../../../figures/de/map_example_dialog.png
      :scale: 80
 
-Im Feld *SRS* (2) wird das Koordinatensystem definiert, welches beim Öffnen der Karte verwendet wird. In diesem Beispiel wurde das Koordinatensystem ETRS89/UTM Zone 32N gewählt. Der EPSG Code lautet 25832. Wenn andere Koordinatensysteme in der Anwendung zur Auswahl stehen sollen, werden diese bei *Other SRS* (6) angegeben. Auch hier wird der EPSG Code verwendet. Es können mehrere EPSG Codes, durch ein Komma getrennt, angegeben werden. In diesem Beispiel wurden zusätzlich folgende EPSG Codes verwendet: 25833 (ETRS89/UTM Zone 33N), 31466 (DHDN/3-degree Gauss-Krüger Zone 2), 31467 (DHDN/3-degree Gauss-Krüger Zone 3), 3857 (WGS 84/Pseudo-Mercator), 4326 (WGS 84). In der Anwendung kann mithilfe des Elements SRS Auswahl zwischen den hier definierten Koordinatensystemen gewechselt werden. Wie dieses Element eingebunden wird, wird in der Dokumentation unter :ref:`scale_selector_de` beschrieben.
-
-Das Feld *Max. Extent* (3) gibt den maximalen Kartenbereich an, der vom Nutzer der Anwendung gesehen werden kann. Alles was außerhalb dieser Angabe liegt, kann durch den Anwender nicht gesehen werden. Das Feld *Start Extent* (4) gibt den Startbereich an, der beim Öffnen der Anwendung zu sehen ist. Im Konfigurationsbeispiel wird das Stadtgebiet von Bonn angezeigt.
-
-Im Feld *Scales (csv)* (5) werden die Maßstäbe angegeben, die in der Anwendung genutzt werden können. Soll der Anwender beispielsweise zwar eine Übersichtskarte sehen können, jedoch keine näheren Details (definieren Sie einfach keine Möglichkeit, näher als 1:10000 zu zoomen). Zwischen den Maßstäben, die in diesem Feld definiert werden, kann mithilfe des Elements Maßstabsauswahl gewechselt werden. Wie dieses Element eingebunden werden kann, wird in der Dokumentation unter :ref:`scale_selector_de` beschrieben. Auch mit dem Element Navigationswerkzeug kann zwischen den Maßstäben gewechselt werden, die in der Main Map definiert wurden. Wie dieses Element integriert werden kann, wird in der Dokumentation unter :ref:`zoom_bar_de` beschrieben.
 
 YAML-Definition:
 ----------------
@@ -187,9 +185,3 @@ Weitere Startparameter
 
 Die Elemente WMS Loader und WMC Loader stellen ebenfalls Parameter zur Verfügung, die beim Start einer Anwendung übergeben werden können. Schauen Sie sich für nähere Informationen die Dokumentation dieser Elemente an.
 
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Map
-* **Widget:** mapbender.element.map.js
