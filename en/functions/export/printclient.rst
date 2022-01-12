@@ -24,7 +24,7 @@ It is possible to define different properties of the PDF you would like to print
 The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. The print frame can be moved around freely in the map canvas, it defines the area of the PDF output. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
 
 .. image:: ../../../figures/print_client_sidebar.png
-     :scale: 80     :scale: 80
+     :scale: 80
 
 
 Configuration

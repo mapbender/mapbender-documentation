@@ -177,7 +177,7 @@ Release Datum: 26.09.2018
 **Verbesserungen und Bugfixes:**
 
 * Die Beschreibung zu den Fixes ist in den Repository-Links zu finden
-* Aktualisierung Mapbender-Starter Repository auf `v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
+* Aktualisierung `Mapbender-Starter v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
 * Aktualisierung Mapbender Repository auf `v3.0.7.5 <https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5>`_
 * Aktualisierung Owsproxy Repository auf `v3.0.6.4 <https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4>`_, includes Owsproxy dependencies
 * Aktualisierung mapbender/vis-ui.js Repository auf `0.0.72 <https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72>`_

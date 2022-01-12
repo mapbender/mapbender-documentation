@@ -10,7 +10,7 @@ This element creates a configurable search formular with result output. At this 
 
 
 Add SearchRouter
-=============
+================
 
 In order to use the SearchRouter, two requirements have to be met:
 
@@ -47,8 +47,7 @@ Type
 
 Examples of the different types:
 
-* text
-Example with auto complete
+* Type text; example with autocomplete:
 
 .. image:: ../../../figures/search_router_text_en.png
      :scale: 80
@@ -66,8 +65,7 @@ Example with auto complete
 		compare: exact                                             
 
 
-* choice
-Example with different selection options via dropdown:
+* Type choice; example with different selection options via dropdown:
 
 .. image:: ../../../figures/search_router_choice_en.png
      :scale: 80

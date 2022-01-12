@@ -838,7 +838,7 @@ The notes for a mandatory field appear above the used fields. In the case of a m
 
 
 Date-picker (type date)
-----------------------
+-----------------------
 
 .. image:: ../../../figures/digitizer_datepicker.png
      :scale: 80
