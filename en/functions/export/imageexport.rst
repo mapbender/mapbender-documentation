@@ -21,7 +21,8 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   target: ~                        # Id of Map element to query (e.g. map)
+   class: Mapbender\PrintBundle\Element\ImageExport
+   target: map                       # Id of Map element to query (e.g. map)
 
 You need a button to show this element. See :ref:`button` for inherited configuration options.
 
