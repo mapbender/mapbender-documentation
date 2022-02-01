@@ -10,14 +10,14 @@ Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
 Voraussetzungen
 ---------------
 
-* PHP NTS (ab Version 5.6, maximal 7.2, https://windows.php.net/download/)
+* PHP NTS  >= 7.1 https://windows.php.net/download/)
 * Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/)   
   mit folgenden aktivierten Modulen:
  
   * mod_rewrite
   * mod_fcgid
  
-* eingerichtete PostgreSQL Datenbank (Version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+* eingerichtete PostgreSQL Datenbank (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
   
   * vorhandene Datenbank für die Mapbender Konfiguration
   * ggf. eigenen Benutzer für Zugriff
@@ -179,7 +179,7 @@ Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configurat
 Der erste Start
 ---------------
 
-Die Mapbender Installation kann unter **http://hostname/mapbender/** aufgerufen werden.
+Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufen werden.
   
 Per Voreinstellung lauten die Anmeldedaten:
 
