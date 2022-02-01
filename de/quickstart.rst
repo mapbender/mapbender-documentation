@@ -5,7 +5,6 @@
 :Version: osgeo-live8.5
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
-:Date: |date|
 
   .. |mapbender-button-show| image:: ../figures/mapbender_button_show.png
 

@@ -31,7 +31,7 @@ Sie können sich die Dateien unter folgendem Link herunterladen:
 
 
 Erzeugen eines eigenen Bundles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Anwender-Bundles werden im src-Verzeichnis ``/application/src`` abgelegt.
 
@@ -153,7 +153,7 @@ Verwenden Sie z.B. ``mapbender/src/Mapbender/CoreBundle/Resources/views/Template
 
 
 Eigene CSS-Datei erzeugen
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Erzeugen Sie eine leere CSS-Datei und geben Sie in dieser nur die CSS-Definitionen für Ihre Anwendungs-Vorlage an.
 Es muss lediglich das CSS definiert werden, das vom Standard der Elemente abweicht.
@@ -238,7 +238,7 @@ Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter ``web/assets`` ge
 
 
 Styling der Administrationsseiten
-**********************************
+*********************************
 
 Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche bitte an:
 
@@ -311,7 +311,7 @@ Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste er
 
 
 Verwendung der eigenen Vorlage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
 
@@ -383,7 +383,7 @@ Wenn Sie ein Bild nutzen möchten, legen Sie dieses am besten in Ihrem Bundle ab
 
 
 Probieren Sie es aus
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 * Laden Sie das Workshop/DemoBundle herunter: https://github.com/mapbender/mapbender-workshop
 * Ändern Sie die Farbe Ihrer Icons.

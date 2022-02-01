@@ -150,9 +150,8 @@ Configuration example:
 More information: http://doc.mapbender.org/en/book/translation.html
 
 
-**logo**
-*********
-
+**Logo**
+********
 The logo (default is the Mapbender logo) can be changed in parameters.yml. This change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
@@ -163,8 +162,7 @@ The logo (default is the Mapbender logo) can be changed in parameters.yml. This 
 
 
  **Mailer**
-**********
-
+***********
 Mailer information in parameters.yml (e.g. smtp or sendmail).
 Configuration example:
 
@@ -182,7 +180,6 @@ More information in chapter :ref:`users`.
 
  **Project name**
 *****************
-
 The name of the project (default: Mapbender) can be changed in parameters.yml. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
@@ -194,7 +191,7 @@ The name of the project (default: Mapbender) can be changed in parameters.yml. T
 
 
 **Proxy settings**
-***********************
+******************
 If you use a proxy, you need to change parameters.yml.
 
 Configuration example:
@@ -424,7 +421,7 @@ You can import the export file into a Mapbender installation under **Application
 
 
 Export/import/clone YAML application files over the console
------------------------------------------------------
+-----------------------------------------------------------
 
 **Export**
 

@@ -10,7 +10,7 @@ Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die
 
 
 Element hinzufügen
-=============
+==================
 
 Für die Einbindung des Search Routers müssen zwei Bedingungen erfüllt sein:
 
@@ -45,8 +45,7 @@ Type
 
 Beispiele für die verschiedenen Typen:
 
-* text
-Beispiel mit Autocomplete:
+* Typ text; Beispiel mit Autocomplete:
 
 .. image:: ../../../figures/de/search_router_text_de.png
      :scale: 80
@@ -64,8 +63,7 @@ Beispiel mit Autocomplete:
 		compare: exact                                          
 
 
-* choice
-Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
+* Typ choice; Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
 
 .. image:: ../../../figures/de/search_router_choice_de.png
      :scale: 80
