@@ -30,11 +30,10 @@ Example
 ```bash
 
 cd /data
-git clone https://github.com/mapbender/mapbender-documentation.git
-cd mapbender-documentation
+git clone git clone git@github.com:mapbender/mapbender-documentation
 git checkout release/3.2.0
 
-ln -s /data/mapbender-documentation/_build/ mb-doc
+ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
 
 rm -Rf _build
 sphinx-build . _build -A version=3.2.0
