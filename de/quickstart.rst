@@ -373,7 +373,7 @@ http://osm-demo.wheregroup.com/service
 5. Benutzer- und Gruppenverwaltung
 ==================================
 
-Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. Nur öffentliche Anwendungen können von allen Anwendern genutzt werden. Benutzer oder Gruppen können Berechtigungen bekommen, um auf eine oder mehrere Anwendungen und Dienste zuzugreifen.
+Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. Nur öffentliche Anwendungen können von allen Anwendern genutzt werden. Benutzer oder Gruppen können Berechtigungen bekommen, um auf eine oder mehrere Anwendungen oder Dienste zuzugreifen.
 
 .. NOCH NICHT IMPLEMENTIERT
   Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie ``guest``, ``operator`` oder ``administrator``. Die ``role`` eines Benutzers beruht auf den Funktionen und den Diensten, auf die der Benutzer durch diese Anwendung Zugriff hat.
