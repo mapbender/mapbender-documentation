@@ -21,15 +21,15 @@ Functions
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog_en.png
            :scale: 80
-           :alt: Simple Layertree integrated as a dialogue with a Layerset and Layer.
+           :alt: Layertree as a dialogue popup showing services with layers
 
-           Simple Layertree integrated as dialogue with one Layerset and Layer.
+           Layertree as a dialogue popup showing services with layers.
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_en.png
            :scale: 80
-           :alt: Complex Layertree integrated in the sidebar with multiple Layersets divided into thematic groups.
+           :alt: Thematic Layertree integrated in the sidebar displaying the layerset titles.
 
-           Thematic Layertree integrated in the sidebar with multiple Layersets. 
+           Thematic Layertree integrated in the sidebar displaying the layerset titles.
 
 
 To configure the Layertree there are a few connections to other elements that must be considered:

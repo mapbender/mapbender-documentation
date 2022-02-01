@@ -20,15 +20,15 @@ Funktionen
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog.png
            :scale: 80
-           :alt: Einfacher Layertree mit einem Layerset und Layer als Dialog
+           :alt: Ebenenbaum im Dialogfenster zeigt Dienste mit Ebenen
 
-           Einfacher Layertree mit einem Layerset und Layer als Dialog, über einen Button eingebunden.
+           Einfacher Ebenenbaum im Dialogfenster zeigt Dienste mit Ebenen. Der Ebenenbaum wurde über einen Button eingebunden.
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane.png
            :scale: 80
-           :alt: Komplexer Layertree mit mehreren Layersets in der Seitenleiste, unterteilt in thematische Gruppen. 
+           :alt: Die Nutzung in der Seitenleiste ist möglich. Thematischer Ebenenbaum zeigt die Titel der Layersets in der Seitenleiste.
 
-           Komplexer Layertree mit mehreren Layersets in der Seitenleiste, unterteilt in thematische Gruppen. 
+           Die Nutzung in der Seitenleiste ist möglich. Thematischer Ebenenbaum zeigt die Titel der Layersets in der Seitenleiste.
 
 Zur Konfiguration des Layerbaums gibt es verschiedene Verknüpfungspunkte zu anderen Elementen, die beachtet werden müssen: 
 
@@ -39,7 +39,6 @@ Zur Konfiguration des Layerbaums gibt es verschiedene Verknüpfungspunkte zu and
 
 Konfiguration
 =============
-
 
 Allgemeine Konfiguration
 ------------------------
