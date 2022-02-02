@@ -8,7 +8,7 @@ With this element you can switch between different predefined layers (BaseSource
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80
 
-BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch between the predefined source sets. For every sourceset a button will be displayed in the client. Only one BaseSource can be active at the same time.
+BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch between the predefined source sets. For every sourceset a button will be displayed in the client. Only one source set can be active at the same time.
 
 You have the possibility to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
 
@@ -17,6 +17,20 @@ You have the possibility to define groups. All sourcesets of the same group will
 
 Configuration
 =============
+
+Preparation: In order to be able to configura the BaseSourceSwitcher you have to define Service
+ instances as Basesource (checkbox Basesource checked).
+Please not that on start of an application all sourcesets with an activated root layer are active.
+
+Configuration with selected root-layer - sourceset is active on start:
+
+.. image:: ../../../figures/basesourceswitcher_instance_active.png
+     :scale: 80
+
+Configuration with selected root-Layer - sourceset is not active on start:
+
+.. image:: ../../../figures/basesourceswitcher_instance_not_active.png
+     :scale: 80
 
 The configuration occurs in 2 steps:
 
@@ -65,6 +79,7 @@ CSS-Definition:
           border-right-width: 1px;
           margin-bottom: 5px;
           margin-right: 5px; }
+
      .mb-element-basesourceswitcher li[data-state=''] {
           background-color: #ffffff;
           color: #6fb536;
@@ -105,6 +120,7 @@ CSS-Definition:
           width: 110px;
           height: 110px; }
 
+
 YAML-Definition:
 ----------------
 
@@ -121,4 +137,7 @@ YAML-Definition:
       sourcesets:
         - { title: sourcesetname, group: groupname,
             sources: [sourceId]}
+
+
+
 
