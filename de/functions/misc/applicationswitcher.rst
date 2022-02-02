@@ -21,17 +21,16 @@ Konfiguration
 Anwendung wechseln Konfiguraton
 -------------------------------
 
-Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Toolbar Bereich das Element Button ausgewählt werden.
+Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Toolbar Bereich das Element Anwendung wechseln ausgewählt werden.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80
      
-Nach Auswahl des Elements Link öffnet sich der Dialog "Element hinzufügen – Anwendung wechseln". Hier werden die Einstellungen zur Konfiguration des Elements vorgenommen.
+Nach Auswahl des Elements öffnet sich der Dialog "Element hinzufügen – Anwendung wechseln". Hier werden die Einstellungen zur Konfiguration des Elements vorgenommen.
 
-Im Feld *Title* definieren Sie einen Text, der erscheinen soll, 
-wenn die Maus über den Button fährt.
+Im Feld *Title* definieren Sie einen Text, der erscheinen soll, wenn die Maus über den Button fährt.
 Unter *Anwendungen* wählen Sie per Klick die Anwendungen aus, die zur Auswahl erscheinen sollen.
-Über die Checkbox *In neuem Tab öffnen* definiert Sie, ob die Anwendung beim Wechsel in einem neuen Browser-Tab geöffnet werden soll.
+Über die Checkbox *In neuem Tab öffnen* definieren Sie, ob die Anwendung beim Wechsel in einem neuen Browser-Tab geöffnet werden soll.
 
 YAML-Definition:
 ----------------
