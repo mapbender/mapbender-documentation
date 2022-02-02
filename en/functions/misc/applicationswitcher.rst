@@ -29,10 +29,9 @@ First, you have to select the link element by clicking on the ``+`` - symbol in 
 
 After the selection of the ApplicationSwitcher element, the "Add element - ApplicationSwitcher" dialog box opens, where you can configure the element.
 
-You can define a the field *Title*. This title will be displayed as 
-tooltip on mouseover on the selectbox.
+You can define a the field *Title*. This title will be displayed as tooltip on mouseover on the selectbox.
 
-With the checkbox *Open in new tab:* you can define whether the new application should be opened in the same window (default) or in a new tab.
+With the checkbox *Open in new tab:*, you can define whether the new application should be opened in the same window (default) or in a new tab.
 
 
 YAML-Definition:
