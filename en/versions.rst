@@ -9,6 +9,16 @@ You can find the milestones at `Github <https://github.com/mapbender/mapbender/m
 
 
 
+Version 3.2.9
+-------------
+
+Release date: 28.01.2022
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v329
+
+
 Version 3.2.8
 -------------
 
