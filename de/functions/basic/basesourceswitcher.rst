@@ -20,6 +20,22 @@ Zu jeder Datenquelle kann eine Gruppe definiert werden. Alle Definitionen einer 
 Konfiguration
 =============
 
+Vorbereitung: Um den BaseSourceSwitcher konfigurieren zu können, 
+müssen WMS-Instanzen als BaseSource definiert sein (CheckBox BaseSource aktiv). 
+Beachten Sie, dass in der Anwendung beim Start die Themen aktiviert werden, 
+bei denen der root-Layer aktiv ist (neu ab Version 3.2).
+
+Konfiguration aktiver ausgewählter root-Layer - Thema ist aktiv beim Start:
+
+.. image:: ../../../figures/de/basesourceswitcher_instance_active.png
+     :scale: 80
+
+Konfiguration nicht aktivierter ausgewählter root-Layer - Thema ist beim Start nicht aktiv:
+
+.. image:: ../../../figures/de/basesourceswitcher_instance_not_active.png
+     :scale: 80
+
+
 Die Konfiguration geschieht in zwei Schritten im Content-Bereich:
 
 #. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel, Tooltip und Target)

@@ -211,7 +211,7 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
     usertype:                              # search field (search for specific User type)
       type: choice                         # possible choices via drop down list
       options:
-        empty_value: 'Please select...'    # displayed text in field before entering a search
+        placeholder: 'Please select...'    # displayed text in field before entering a search
         choices:                           # choices need to have the following format: "entry in the database column": "displayed name in the drop down list"
           1: Company
           2: Administration
@@ -244,6 +244,10 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
         strokeOpacity: 1
         fillColor: '#800000'
         fillOpacity: 0.5
+      temporary:
+        strokeColor: '#0000ff'
+        fillColor: '#0000ff'
+        fillOpacity: 1
 
 
 This picture illustrates which consequences the configurations in the yaml-definition have for the search formula:
@@ -251,7 +255,7 @@ This picture illustrates which consequences the configurations in the yaml-defin
 .. image:: ../../../figures/search_router_example_search_description.png
      :scale: 80
 
-Displayed is the excerpt of the yaml-definition configuring the formula. Columns orga, town and usertype are used in the formula and implemented as the fields Mapebender User, Town and Usertype. Mapbender User and Town are type text, Usertype can be of various types. The text that should be displayed here, if nothing is selected yet, is "Please select…" (Nr. **1** – empty_value: ‚Please select...‘). The title above these fields is set with a label (Nr. **2**). The attribute data-autocomplete: ‚on‘ results in a dropdown menu with recommendations from the database (Nr. **3**). Because compare: ilike is enabled it is not necessary to write the exact word. The search will find results that are only similar to the written term (Nr. **4** – Wheregr (the g is lowercase, nevertheless WhereGroup with uppercase G was found). The fieldtype choice is variable, possibilities are defined in choices (Nr. **5**). The table contains the possibilities as numbers (1, 2, 3, 4). In this example every number represents a text, which should be displayed in the dropdown menu.
+Displayed is the excerpt of the yaml-definition configuring the formula. Columns orga, town and usertype are used in the formula and implemented as the fields Mapebender User, Town and Usertype. Mapbender User and Town are type text, Usertype can be of various types. The text that should be displayed here, if nothing is selected yet, is "Please select…" (Nr. **1** – placeholder: ‚Please select...‘). The title above these fields is set with a label (Nr. **2**). The attribute data-autocomplete: ‚on‘ results in a dropdown menu with recommendations from the database (Nr. **3**). Because compare: ilike is enabled it is not necessary to write the exact word. The search will find results that are only similar to the written term (Nr. **4** – Wheregr (the g is lowercase, nevertheless WhereGroup with uppercase G was found). The fieldtype choice is variable, possibilities are defined in choices (Nr. **5**). The table contains the possibilities as numbers (1, 2, 3, 4). In this example every number represents a text, which should be displayed in the dropdown menu.
 
 A complete search for the Mapbender User WhereGroup, in the Town Bonn, of the Usertype Company and the found results will look like this:
 
@@ -352,7 +356,7 @@ In the mapbender.yml file:
           type:
               type: choice
               options:
-                  empty_value: Please select a type.
+                  placeholder: Please select a type.
                   required: false
                   choices:
                       A: A
@@ -373,7 +377,6 @@ In the mapbender.yml file:
                   buffer: 10                                  # buffer (before zoom)
                   minScale: ~                                 # scaling boundaries for zoom, ~ for no boundaries
                   maxScale: ~
-          results:
           styleMap:
               default:
                   strokeColor: '#00ff00'
@@ -383,6 +386,10 @@ In the mapbender.yml file:
                   strokeColor: '#ff0000'
                   fillColor: '#ff0000'
                   fillOpacity: 0.4
+              temporary:
+                  strokeColor: '#0000ff'
+                  fillColor: '#0000ff'
+                  fillOpacity: 1
 
 
 HTTP Callbacks

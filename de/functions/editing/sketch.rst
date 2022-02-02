@@ -99,6 +99,6 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Applikation einz
    target: ~                        # ID des Kartenelements
    auto_activate: false             # (Standard: false).
    deactivate_on_close: true        # Gezeichnete Geometrien werden durch Schließen des Elements deaktiviert (Standard: true).
-   geometrytypes: 'point', 'line'   # Liste der unterstützten Geometrietypen 
-   'polygon', 'rectangle', "circle"
+   geometrytypes: point,line,polygon,text,rectangle,circle   # Liste der unterstützten Geometrietypen 
+
 
