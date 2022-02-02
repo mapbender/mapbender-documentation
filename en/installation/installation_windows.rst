@@ -11,13 +11,13 @@ Read on for a detailed description on a productive system.
 Requirements
 ------------
 
-* PHP NTS (version 5.6 - 7.2, https://windows.php.net/download/)
+* PHP NTS >= 7.1 https://windows.php.net/download/)
 * Apache installation (https://www.apachelounge.com/download/ , run as service with the following modules):
  
   * mod_rewrite
   * mod_fcgid
  
-* set up PostgreSQL database (version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+* set up PostgreSQL database (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
   
   * established database for Mapbender configuration 
   * if necessary: own user for access
@@ -181,7 +181,7 @@ First steps
 -----------
 
 
-The Mapbender installation can now be accessed under **http://hostname/mapbender/**.
+The Mapbender installation can now be accessed under **http://[hostname]/mapbender/**.
 User data by default:
 
 username: "root", passwort: "root"

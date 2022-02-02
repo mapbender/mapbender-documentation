@@ -13,7 +13,7 @@ To update Mapbender you have to do the following steps:
 * copy the screenshots from your old Mapbender version from /web/uploads/ to the folder /web/uploads of your new installation
 * Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?)
 * print templates: if you use your own print templates: copy them back to app/Resources/MapbenderPrintBundle/templates/.
-* In some cases, depending on your old Mapbender version, you will need to adjust the Apache Alias within in the file **/etc/apache2/sites-available/mapbender.conf**
+* Import the demo applications either via bin/composer run reimport-example-apps or via the web administration
 * At https://doc.mapbender.org/en/installation/installation_ubuntu.html under the section **Unpack and register in your Web-Server** you can see how the config file for the Apache Alias should look like
 * That's all! Have a look at your new Mapbender version
 
@@ -53,6 +53,11 @@ Have a look at the steps as commands
  cd /var/www/mapbender/
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
+
+ # Import the mapbender demo applications
+ bin/composer run reimport-example-apps
+
+ # export the web directory
  app/console assets:install web --symlink --relative
  
  # change the access rights and owner of the files
@@ -63,10 +68,6 @@ Have a look at the steps as commands
  sudo chmod -R ug+w /var/www/mapbender/app/cache
  sudo chmod -R ug+w /var/www/mapbender/app/logs
  sudo chmod -R ug+w /var/www/mapbender/web/uploads
- 
- # export the web directory
- app/console assets:install web
-
 
 Update Example for Windows
 ------------------------------------

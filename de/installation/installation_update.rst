@@ -7,13 +7,12 @@ Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
 * Laden Sie die neuste Version von http://mapbender.org/builds/ herunter
 * Sichern Sie Ihre Konfigurationsdateien (parameters.yml und config.yml) und Ihre alte Mapbender Version (Dateien und Datenbank)
-* Ersetzen Sie die Dateien durch die neuen Mapbender Dateien
+* Ersetzen Sie die Dateien durch die neuen Mapbender-Dateien
 * Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen
-* Aktualisieren Sie Ihre Mapbender Datenbank
-* Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von /web/uploads/ in das /web/uploads Verzeichnis Ihrer neuen Mapbender Version
+* Aktualisieren Sie Ihre Mapbender-Datenbank
+* Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von mapbender/web/uploads/ in das mapbender/web/uploads Verzeichnis Ihrer neuen Mapbender Version
 * Wenn Sie Ihre eigenen Templates verwenden sollten, müssen Sie diese mit denen der neuen Version vergleichen (kam es zu Änderungen?)
-* Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
-* Abhängig von Ihrer alten Mapbender Version, muss unter Umständen noch der Apache Alias für Mapbender in der Datei **/etc/apache2/sites-available/mapbender.conf** angepasst werden
+* Importieren Sie die Demo-Anwendungen (über den Befehl bin/composer run reimport-example-apps oder über die Web-Administration), um sich den neusten Stand der Entwicklungen anzuschauen
 * Unter https://doc.mapbender.org/de/installation/installation_ubuntu.html im Bereich **Entpacken und im Webserver registrieren** ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte
 * Das war's auch schon! Schauen Sie sich Ihre neue Mapbender Version an.
 
@@ -54,9 +53,10 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
 
- # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
+ # Importieren Sie die Demo-Anwendungen, um sich den neusten Stand der Entwicklungen anzuschauen
  bin/composer run reimport-example-apps
 
+ # export the web directory
  app/console assets:install web --symlink --relative
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
