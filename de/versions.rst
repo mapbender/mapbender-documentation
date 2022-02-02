@@ -9,6 +9,16 @@ Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbe
 
 
 
+Version 3.2.9
+-------------
+
+Release Datum: 28.01.2022
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v329
+
+
 Version 3.2.8
 -------------
 
