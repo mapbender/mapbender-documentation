@@ -26,7 +26,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 
  # Laden Sie die neue Version herunter
  wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
- tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz 
+ tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz
  
  # Sichern Sie die alte Version
  mv /var/www/mapbender /var/www/mapbender_save
