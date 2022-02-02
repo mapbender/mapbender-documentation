@@ -7,6 +7,8 @@ Mit diesem Element können Sie Informationen eines WMS abfragen. In der folgende
 
 .. image:: ../../../figures/de/feature_info.png
      :scale: 80
+
+Der Dienst Krankenhäuser NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) dienst zur Veranschaulichung.
      
 Konfiguration
 =============
@@ -37,7 +39,7 @@ Das Element FeatureInfo wird im Content eingebunden:
 
 Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
-Einstellungen im Layertree
+Einstellungen im Ebenenbaum
 ---------------------------
 
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist aktiviert:
@@ -59,14 +61,14 @@ Layer ist nicht sichtbar; es erfolgt keine FeatureInfo-Abfrage, auch wenn diese 
 Anzeige als Tabs und Accordion
 ------------------------------
 
-Mit dem Schalter "Type" können die Responses mehrerer Dienste in unterschiedlichen Tabs oder als Accordion angezeigt werden.
+Mit dem Schalter "Type" können die Antworten der einzelnen Dienste in unterschiedlichen Reitern oder als Akkordeon angezeigt werden.
 
-Beispiel Tabs:
+Beispiel Reiter:
 
 .. image:: ../../../figures/de/feature_info_tabs.png
      :scale: 80
 
-Beispiel Accordion:
+Beispiel Akkordeon:
 
 .. image:: ../../../figures/de/feature_info_accordion.png
      :scale: 80
@@ -76,7 +78,7 @@ Beispiel Accordion:
 Ausdruck der Resultate
 ----------------------
 
-Mit dem Schalter "Print result" kann die Information des FeatureInfo ausgedruckt werden. Eine Druckschaltfläche ist dann in dem FeatureInfo-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
+Mit dem Schalter "Drucken" kann die Information des FeatureInfo ausgedruckt werden. Eine Druckschaltfläche ist dann in dem FeatureInfo-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
 
 Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox kann man die Option "Hintergrund drucken" im Druckoptionendialog anschalten, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
 
@@ -94,7 +96,7 @@ Eine Infoabfrage mit aktiviertem FeatureInfo Highlighting könnte beispielsweise
 .. image:: ../../../figures/de/feature_info_highlighting.png
      :scale: 80
 
-In der Abbildung wurden mehrere Geometrien in der Karte ausgewählt (PLZ: 53111, 53113 und 53115). Der FeatureInfo Dialog zeigt nur die Informationen dieser Geometrien an. Die Fläche mit der PLZ 53115 wird durch Hovering rot in der Karte markiert.
+In der Abbildung wurden mehrere Geometrien in der Karte ausgewählt (PLZ: 53111, 53113 und 53115). Der FeatureInfo Dialog zeigt die Informationen zu diesen Objekten an. Die Fläche mit der PLZ 53115 wird durch Hovering rot in der Karte markiert.
 
 Das FeatureInfo Highlighting kann im FeatureInfo-Element im Content-Bereich aktiviert werden. Dort sind auch Grund- und Hoverfarbe auswählbar.
 
@@ -105,13 +107,13 @@ Die notwendige Anpassung wird hier am Beispiel von MapServer gezeigt. In der DAT
 
 .. code-block:: bash
 
-  $ DATA "geom from (Select *, ST_AsText(geom) as geom_wkt from plz) as foo USING UNIQUE gid USING SRID 4326"
+  DATA "geom from (Select *, ST_AsText(geom) as geom_wkt from plz) as foo USING UNIQUE gid USING SRID 4326"
 
-  $ <div class="geometryElement" id="[gid]" data-geometry="[geom_wkt]" data-srid="EPSG:4326">
-  $ <table>
-  $	...
-  $ <table>
-  $ </div>
+  <div class="geometryElement" id="[gid]" data-geometry="[geom_wkt]" data-srid="EPSG:4326">
+  <table>
+  	...
+  <table>
+  </div>
 
 
 YAML-Definition:
