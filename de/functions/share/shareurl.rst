@@ -3,24 +3,6 @@
 URL teilen
 **********
 
-Mapbender hinterlegt bestimmte Kartenparameter automatisch in jeder Anwendungs-URL. 
-Dadurch ist es möglich, aktuell gewählte Kartenparameter durch Teilen der URL an andere weiterzuleiten. 
-
-Die URL beinhaltet folgende Kartenparameter:
-
-* Kartenposition
-* Maßstab
-* Drehung
-* Räumliches Referenzsystem
-
-Diese Funktion muss nicht extra konfiguriert werden. Sie ist immer aktiviert.
-
-Wenn eine URL in einem neuen Browserfenster geöffnet wird, dann erfolgt auch die Übernahme der genannten Kartenparameter. Änderungen können über die Browsernavigation vor- bzw. zurückgenommen ("Weiter" oder "Zurück") werden.
-
-Nach dem Neuladen des Browserfensters werden Anwender zum jeweiligen Kartenausschnitt zurückgeschickt. Soll zur Start-Konfiguration zurück navigiert werden, dann muss die Anwendung entweder komplett neu geöffnet werden oder eine manuelle Anpassung der URL erfolgen.
-
-.. note:: **Hinweis:** Folgende Informationen werden nicht hinterlegt: Layer-Auswahl, Layer-Sortierung, temporäre Geometrien, Laufzeitergänzungen, Transparenz sowie interaktiv hinzugefügte Instanzen.
-
 Das Teilen von URLs kann durch den Einbau eines entsprechenden Elements vereinfacht werden. Dieses wird als Button in der Toolbar oder dem Footer eingebunden.
 
 .. image:: ../../../figures/de/share_url.png
