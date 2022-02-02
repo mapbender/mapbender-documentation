@@ -3,7 +3,8 @@
 Link
 ****
 
-The link element provides a push button widget that refers a defined link like a website or script.
+The link element provides a button widget that refers a defined link like a website or script.
+
 
 Configuration
 =============
@@ -35,9 +36,11 @@ More information on that topic:
 
 Example
 =======
+It is possible to create and adjust different buttons with different functions.
+Buttons can refer to features which are included in the Content area. For example, it is possible to create a Legend button or Line- and/or Area Ruler buttons:
 
-Link
-----
+Link to a Webpage
+-----------------
 
 First, you have to select the link element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
 
@@ -48,7 +51,7 @@ After the selection of the link element, the "Add element - Link" dialog box ope
 
 You can set the name of the link button in the field *Title*. This title will be displayed as label next to the icon if *Show label* is active. 
 
-In the field *Tooltip* you can define a text that will be displaced as tooltip during hovering over the button. You can choose from a variety of icons to set the icon for your link button.
+In the field *Tooltip*, you can define a text that will be displaced as tooltip during hovering over the button. You can choose from a variety of icons to set the icon for your link button.
 
 .. image:: ../../../figures/link_configuration.png
      :scale: 80
@@ -59,10 +62,10 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-    title: Link                               # title
+    title: Link                                 # title
     class: Mapbender\CoreBundle\Element\Button
-    tooltip: Visit the Mapbender Website      # text to use as tooltip
-    icon: iconInfoActive                      # icon CSS class to use
-    label: true   # false/true to label the button, default is true
-    click: https://mapbender.org              # refer to a website or script
+    tooltip: Visit the Mapbender Website        # text to use as tooltip
+    icon: iconInfoActive                        # icon CSS class to use
+    label: true                                 # false/true to label the button, default is true
+    click: https://mapbender.org                # refer to a website or script
 
