@@ -45,8 +45,8 @@ Mit dieser neuen Code-Grundlage wird die Mapbender Idee eines Geoportal Framewor
   * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
   * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
   * Suchen (SQL oder Solr) können konfiguriert werden.
-  * Anwendungen zur Digitalisierung können aufgebaut werden
-  * Ein Mobiles Template kann für das Erstellen von Anwendungen für Smartphones und Tablets verwendet werden
+  * Anwendungen zur Digitalisierung können aufgebaut werden.
+  * Ein Mobiles Template kann für das Erstellen von Anwendungen für Smartphones und Tablets verwendet werden.
 
 Sie brauchen nichts weiter als einen Standard Webbrowser für diesen Schnellstart (Quickstart).
 
