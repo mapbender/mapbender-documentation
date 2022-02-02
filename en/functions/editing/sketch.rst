@@ -100,7 +100,6 @@ This code can be used to implement the element in a yaml-application.
    target: ~                        # ID of the element
    auto_activate: false             # (default: false).
    deactivate_on_close: true        # Drawn sketches will be deactivated if the element is closed (default: true).
-   geometrytypes: 'point', 'line'   # list of available geometry types
-   'polygon', 'rectangle', "circle"
+   geometrytypes: point,line,polygon,text,rectangle,circle   # list of available geometry types
 
 
