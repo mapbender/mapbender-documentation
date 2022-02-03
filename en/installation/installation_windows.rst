@@ -142,7 +142,7 @@ Configuration PostgreSQL
 ------------------------
 
 To configure the database, use the following default configuration (which is part of app/config/parameters.yml).
-For more information on the database configuration, see :ref:`yaml_en`.
+For more information on the database configuration, see :ref:`yaml`.
 
 
 .. code-block:: yaml

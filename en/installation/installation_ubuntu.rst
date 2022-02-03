@@ -142,7 +142,7 @@ Configuration of database connection (app/config/parameters.yml):
     database_user:     postgres
     database_password: secret
 
-For further information: :ref:`yaml_en`.
+For further information: :ref:`yaml`.
 
 Initialisation of the database connection:
 
