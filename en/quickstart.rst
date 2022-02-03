@@ -232,7 +232,7 @@ Try it yourself
 4. Configure Sources
 ====================
 
-Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`layerset:.
+Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`layerset:`.
 
 The sources pages provides a user with the following functions:
 
@@ -256,7 +256,7 @@ Mapbender allows the integration of OGC Web Map Services (WMS) and Web Map Tile 
 
 #. Define the *"Type"* of the source: OGC WMS oder OGC WMTS / TMS.
 
-#. Provide the link to the getCapabilities URL in the field *"Service-URL"*``.
+#. Provide the link to the getCapabilities URL in the field *"Service-URL"*.
 
 #. Define username and password in case your source requires it.
 
@@ -367,8 +367,7 @@ Try it yourself
 
 *Here is an example source:*
 
-* WhereGroup OSM WMS:
-https://osm-demo.wheregroup.com/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=getCapabilities
+* WhereGroup OSM WMS: https://osm-demo.wheregroup.com/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=getCapabilities
 
 5. User and group management
 ============================

@@ -367,8 +367,7 @@ Versuchen Sie es selber
 
 *Hier ist ein Beispieldienst:*
 
-* WhereGroup OSM WMS:
-https://osm-demo.wheregroup.com/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=getCapabilities
+* WhereGroup OSM WMS: https://osm-demo.wheregroup.com/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=getCapabilities
 
 5. Benutzer- und Gruppenverwaltung
 ==================================
