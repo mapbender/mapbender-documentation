@@ -5,8 +5,7 @@ Einrichtung des Digitizers
 
 Das Element kann nur in der Sidepane eingebettet werden.
 
-
-.. image:: ../../../figures/digitizer_configuration.png
+.. image:: ../../../../figures/digitizer_configuration.png
      :scale: 80
 
 
@@ -391,19 +390,19 @@ Die möglichen Optionen sind:
 * **displayOnInactive:** Der aktuellen FeatureType wird weiterhin auf der Karte angezeigt, auch wenn der Digitizer in der Sidepane (Accordion, Tabs) nicht mehr aktiviert ist. [true/false]. Die Option ist, wenn angeschaltet, ein wenig tricky, da auch die einzelnen Digitizer Events noch aktiviert sind, für erfahrene Anwendern aber durchaus hilfreich.
 * **allowLocate:** Navigation zu einem Feature hin über die Bedienung mit der Tabs-Taste, sinvoll für die Bedienung ohne Maus. [true/false]. Es erscheint eine extra "ZoomTo" Schaltfläche zu jeden Feature.
 
-   .. image:: ../../../figures/digitizer/allowlocate.png
+   .. image:: ../../../../figures/digitizer/allowlocate.png
               :scale: 80
 
 
 * **allowChangeVisibility:** Ändern der Sichtbarkeit von einem Treffer in der Karte (sichtbar/nicht sichtbar). [true/false]. Es wird ein Auge-Symbol zu jedem Feature eingeblendet, mit dem dieses explizit aus- und wieder eingeblendet werden kann.
 
-   .. image:: ../../../figures/digitizer/allowchangevisibility.png
+   .. image:: ../../../../figures/digitizer/allowchangevisibility.png
               :scale: 80
 
 
 * **showVisibilityNavigation:** Ändern der Sichtbarkeit von allen Treffern in der Karte (sichtbar/nicht sichtbar). [true/false]
 
-   .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
+   .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
 
@@ -417,12 +416,12 @@ Experimentell:
 
 * **allowCustomerStyle:** Erlauben benutzerspezifischer Styles für Elemente in der Karte. [true/false]. Dieses Feature ist noch experimentell: Zu jedem Feature können über ein Symbol die einzelnen Styles verändert werden.
 
- .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
+ .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
  Es erscheint ein Style-Manager, mit dem man die einzelnen Features anpassen kann.
 
- .. image:: ../../../figures/digitizer/stylemanager.png
+ .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
 
 
@@ -448,6 +447,10 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 * Pflichtfelder, Definition von regulären Ausdrücken für die Formatvorgabe bestimmter Feldinhalte
 * Möglichkeit, in Formulare eingegebene Inhalte per Buttonklick in die Zwischenablage zu kopieren
 * Karten-Refresh nach Speichern
+
+.. image:: ../../../../figures/digitizer_with_tabs.png
+     :scale: 80
+
 
 .. code-block:: yaml
 
@@ -562,7 +565,6 @@ Verhaltensparameter:
                             yearField.css("background-color","#ffc0c0");
 
 
-
 Textfelder (type input)
 -----------------------
 
@@ -575,8 +577,9 @@ Textfelder (type input)
                                                    mandatory: true                                    # Angabe ob Pflichtfeld (optional). [true/false]
                                                    mandatoryText: You have to provide information.    # Text, sofern Pflichtfeld nicht gefüllt wurde
                                                    infoText: 'Bitte geben Sie einen Wert an'          # Definition eines Informationstextes (optional)
+                                                   cssClass: 'input-css'                              # css-Klasse, die für das Textfeld verwendet werden soll
                                                    value: 'default Text'                              # Definition eines Standard-Wertes  (optional)
-                                                   placeholder: 'please edit this field'              # Platzhalter, der vor der Eingabe erscheint (optional)
+                                                   placeholder: 'Bitte geben Sie ... ein'             # Platzhalter, der vor der Eingabe erscheint (optional)
 
 
 Auswahlboxen (selectbox oder multiselect [type select])
@@ -624,7 +627,7 @@ Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können 
 **Anmerkungen:** Ab Digitizer 1.2 wird für die Mehrfachauswahl eine vereinfachte Auswahlmöglichkeit genutzt, die auch die Suche innerhalb der Drop-Down-Liste ermöglicht. Die Navigation durch die Liste ist mit der Tastatur möglich. Mögliche Einträge werden beim Eintippen hevorgehoben. Eine vorhandene Auswahl kann über das kleine "x" Symbol wieder deaktiviert werden.
 Aktuelle Informationen zur Digitizer-Version findet man unter: https://github.com/mapbender/mapbender-digitizer
 
-.. image:: ../../../figures/digitizer/digi_multiselecttool.png
+.. image:: ../../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
 
 
@@ -752,7 +755,7 @@ Die Hinweise für ein Pflichtfeld erscheinen über dem jeweiligen Feldern. Bei e
 Datumsauswahl (type date)
 -------------------------
 
-.. image:: ../../../figures/digitizer_datepicker.png
+.. image:: ../../../../figures/digitizer_datepicker.png
      :scale: 80
 
 .. code-block:: yaml
@@ -804,7 +807,7 @@ Koordinaten (type coordinates)
 
 Um ein visuelles Feedback zu erhalten, Koordinaten manuell eingeben zu können oder diese manuell nachzubessern, kann für Punkt-Geometrien das *coordinates* Element eingebunden werden.
 
-.. image:: ../../../figures/digitizer_coordinates.png
+.. image:: ../../../../figures/digitizer_coordinates.png
      :scale: 80
 
 .. code-block:: yaml
@@ -871,7 +874,7 @@ Für die Ansicht von hochgeladenen Bildern kann die Bildanzeige dazugenommen wer
 Bildanzeige (type image)
 ------------------------
 
-.. image:: ../../../figures/digitizer_image.png
+.. image:: ../../../../figures/digitizer_image.png
      :scale: 80
 
 Für die Ansicht eines Bildes im Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
@@ -957,7 +960,7 @@ Kontextmenü
 Über das Kontextmenü kann ein Objekt auf der Karte näher betrachtet werden.
 Nach der Aktivierung kann man über den rechten Mausklick auf einem Objekt ein Kontextmenü öffnen.
 
-.. image:: ../../../figures/digitizer_contextmenu.png
+.. image:: ../../../../figures/digitizer_contextmenu.png
      :scale: 80
 
 Elemente des Kontextmenüs:
@@ -986,7 +989,7 @@ Abhängig von der definerten Distanz und Zoomstufe werden unterschiedlich viele 
 Durch die Komplexität des Clusterings können sich in zukünftigen Versionen noch Änderungen an der Funktion und der Syntax ergeben, so dass wir dieses Feature bislang als experimentell kennzeichnen. Abhängigkeiten existieren zu der Anzeige der Features für den aktuellen Ausschnitt/den gesamten Bereich und den unterschiedlichen Geometrietypen.
 
 
-.. image:: ../../../figures/digitizer_clustering.png
+.. image:: ../../../../figures/digitizer_clustering.png
      :scale: 80
 
 Definition der Clusterelemente:
@@ -1025,7 +1028,7 @@ Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option ``r
 Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
 
 
-.. image:: ../../../figures/digitizer/layerinstance_id.png
+.. image:: ../../../../figures/digitizer/layerinstance_id.png
      :scale: 80
 
 
