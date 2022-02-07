@@ -25,9 +25,6 @@ Konfiguration
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und wird neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Target:** Name/ID des Kartenelements, auf das sich das Element bezieht.
-* **Dialog:** Einbindung als Dialog über Button (Haken setzen) oder in der Sidepane (Haken nicht setzen)
-* **Timeout factor:** Timeout-Faktor (multipliziert mit autcomplete Verzögerung), um die Autovervollständigung zu verhindern, nachdem eine Suche gestartet wurde.
 * **Width:** Breite des Dialogs (nur wenn das Element als Dialog eingebunden wurde)
 * **Height:** Höhe des Dialogs (nur wenn das Element als Dialog eingebunden wurde)
 * **Routes:** Erstellung einer neuen Suche.
@@ -36,53 +33,95 @@ Konfiguration
 
 Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. Die Definition der Suche erfolgt im YAML-Syntax im Textfeld *Configuration*. Hier werden die Suchtabelle bzw. Abfrage, die Datenbankverbindung, der Formularaufbau, die Trefferausgabe sowie das Styling der Treffer definiert.
 
-**Tipp:**
-Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de`.
-Es wird nur ein Koordinatenreferenzsystem unterstützt. Die Geometriespalte in der Datenbank muss mit dem Koordinatensystem der Karte übereinstimmen.
+.. note:: Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de`.
+
 
 Type
 ----
 
-Beispiele für die verschiedenen Typen:
+Das Formular unterstützt zwei Typen - Typ text für Textfelder und Typ choice für Auswahlfelder. 
 
-* Typ text; Beispiel mit Autocomplete:
+Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguration erstellt werden. Die Konfiguration beginnt mit dem Spaltennamen (in den Beispielen sind es die Spalten name und usertype).
+
+* label - Sie können den Parameter label für die Spaltenbeschriftung angeben. Fehlt der Parameter wird der Tabellenspalten-Name mit führendem Großbuchstaben verwendet.
+
+* required - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard ist false). Mit required: true wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
+
+Sie können außerdem den Vergleichsoperator definieren. Siehe 'comparison mode'.
+
+
+Typ text
+~~~~~~~~
+
+Type text
+~~~~~~~~~
+
+Über den Typ text können Textfelder in das Suchformular eingefügt werden.
+
+Der Typ text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten müssen Sie zusätzliche additional attr-Parameter hinzufügen.
+
+Unterstützte autocomplete-Paramter:
+
+* data-autocomplete: on - Parameter zum Aktivieren der Autovervollständigung
+* data-autocomplete-distinct: on - Gibt doppelte Ergebnisse der Autovervollständigung nur einmal aus
+* data-autocomplete-using: column1, column2 - Definiert weitere Spalte/n des Suchformulars, die bei der Autovervollständigung berücksichtigt werden sollen.
+
+
+* Typ text; Beispiel mit Autocomplete und Pflichtfeld:
 
 .. image:: ../../../figures/de/search_router_text_de.png
      :scale: 80
 
+
 .. code-block:: yaml
 
-	form:
-		name:
-		type: text                                          # Eingabefeld für Text
-		options:
-			required: true
-			attr:
-				data-autocomplete: 'on'              # Autocomplete
-				data-autocomplete-distinct: 'on'
-		compare: exact                                          
+    form:
+        name:
+	    type: Symfony\Component\Form\Extension\Core\Type\TextType                                                      # input box for text
+            options:
+                label: Name 
+                required: true
+            attr:
+                data-autocomplete: 'on'          # aktiviere autocomplete
+                data-autocomplete-distinct: 'on'
+            compare: exact                                          
 
 
-* Typ choice; Beispiel für ein Feld mit Auswahlmöglichkeiten als Dropdown:
+Type choice
+~~~~~~~~~~~
+
+Der Typ choice ermöglicht die Definition von Auswahlboxen in dem Suchformular.
+
+* placeholder - Es kann ein Platzhaltertext definiert werden. Dieser erscheint wenn noch keine Auswahl erfolgte.
+
+Die Auswahlmöglichkeiten werden im Bereich choices definiert. Dabei werden ein Wert (value) und ein Schlüssel (key) angegeben.
+
+* key - wird bei der Suchanfrage verwendet 
+* value - wird in der Auswahlbox angezeigt 
+
+..note: Ab Mapbender 3.2 sollte die Angabe in der Reihenfolge value: key erfolgen und die Typdefinition lautet type: Symfony\Component\Form\Extension\Core\Type\ChoiceType.
+
+* Typ choice; Beispiel für ein Feld mit Auswahlmöglichkeiten:
 
 .. image:: ../../../figures/de/search_router_choice_de.png
      :scale: 80
 
+
 .. code-block:: yaml
 
     usertype:                                                         
-      type: choice                            # Feld mit Auswahlmöglichkeiten als Dropdown
-      options:
-        placeholder: 'Bitte auswählen...'     # Text, der angezeigt wird, bevor etwas ausgewählt wurde
-        choices:                              # die Auswahlmöglichkeiten; werden wie folgt angegeben: "Eintrag in der Spalte der Datenbank": "Angezeiger Name in der Dropdown-Liste"
-          1: Company
-          2: Administration
-          3: University
-          4: User
-        required: false                        # kein Pflichtfeld
-        label: Wetter                          # Überschrift über dem Feld
-      compare: exact     
-      
+        type: Symfony\Component\Form\Extension\Core\Type\ChoiceType                                                      # box with selection options as dropdown list
+        options:
+            label: Nutzertyp
+            required: false
+            placeholder: 'Bitte auswählen...'
+            choices:                        
+                Company: 1
+                Administration: 2
+                University: 3
+                User: 4
+        compare: exact     
+
 
 Vergleichsmodus
 ---------------
