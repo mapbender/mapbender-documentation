@@ -11,18 +11,26 @@ Services and their usage in applications
 
 F: I would like to know in which applications a specific WMS service is registered. Is there a way to achive that?
 
-A: Until we provide this information in the Administration Interface, this statement may help you:
+A: The information is provided in the Administration Backend as Source information.
+
+* Go to Sources and select a Source
+* Select a source via click on the Button Show Metadata and go to the tab Applications
+* You can see in which application the source is loaded
+* You can see whether the source is integrated as shared Instance or private Instance and wether it is activated or inactive
+* Via click on the application title or the source instance you can switch to the application or instance
+
+If you prefer SQL you can take the WMS ID from the Source, replace the ``<id_of_the_wms>`` in the following SQL and run it:
 
 .. code-block:: postgres
 
-                SELECT mb_core_application.* from mb_core_application, mb_core_layerset, mb_core_sourceinstance, mb_wms_wmsinstance, mb_wms_wmssource, mb_core_source
-                where
+                SELECT mb_core_application.* from mb_core_application, mb_core_layerset, mb_core_sourceinstance, mb_wms_wmsinstance, mb_wms_wmssource, mb_c           where
                 -- applications and their layersets
                 mb_core_application.id = mb_core_layerset.application_id and
                 -- layersets and their instances
                 mb_core_layerset.id = mb_core_sourceinstance.layerset and
                 -- layerset-instances and wms-instance
-                mb_core_sourceinstance.id = mb_wms_wmsinstance.id and
+        ore_source
+             mb_core_sourceinstance.id = mb_wms_wmsinstance.id and
                 -- wms-instance and wms-source
                 mb_wms_wmsinstance.wmssource = mb_wms_wmssource.id and
                 -- wms-source and mb3-core source
@@ -30,15 +38,13 @@ A: Until we provide this information in the Administration Interface, this state
                 mb_core_source.id = <id_of_the_wms>;
 
 
-For the ID ``id_of_the_wms`` go to the Data Source page and take the number which is assigned to the specific WMS.
-
-
 app.php und app_dev.php: What purpose do they have?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please take a look at the `Details of the configuration of Mapbender <installation/configuration.html>`_, in chapter `Production- and Development environment and Caching: app.php and app_dev.php <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_.
 
-In general you'll use the app.php file. Only if you develop something (TWIG-files, CSS or JS-files) or for debugging, you'll open Mapbender with the app_dev.php.
+For productive use you'll use the app.php file. Only if you develop something (TWIG-files, CSS or JS-files) or for debugging, you'll open Mapbender with the app_dev.php in developer mode.
+The developer mode provides more information and error messages. 
 
 
 What is this cache and when do I have to clear it?
@@ -46,23 +52,27 @@ What is this cache and when do I have to clear it?
 
 Also for this question, please take a look at the `Details of the configuration of Mapbender <installation/configuration.html>`_, in chapter `Production- and Development environment and Caching: app.php and app_dev.php <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_.
 
-You'll delete the contents of the ``mapbender/app/cache/`` directory, not the folder itself. In detail the ``prod`` and - if present - the ``dev`` directory.
-
+You'll delete the contents of the ``mapbender/app/cache/`` directory, not the folder itself. 
+In detail the ``prod`` and - if present - the ``dev`` directory.
+It is no problem to delete these directories. When you run Mapbender again, new files will be stored again in the cache-directory.
 
 
 Performance
 -----------
 
-Working with large wms clients
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Working with large WMS Services with many layers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: During the upload of large wms into an application (e.g. wms with more than 100 layers), the configuration of the `Layerset-Instance <functions/backend/layerset.html>`_ only takes and presents an incorrect amount of layers. In addition, the wms instance cannot be saved. Why?
+Q: When I try to use a WMS Service with many layers (> 100) into an application, the configuration of the `Layerset-Instance <functions/backend/layerset.html>`_ only takes 
+and presents an incorrect amount of layers. In addition, the wms instance cannot be saved. Why?
 
-A: To solve the problem, navigate to the php parameter `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_. It defines the number of possible input variables. The default value is 1000 (depending on the php version). In a wms with many layers, the number of input values is higher than the default value. You have to change the parameter to a higher value (e.g. 2000). Notice that the number is directly dependent to the amount of layers in a wms.
+A: To solve the problem, navigate to the php parameter `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_. It defines the number of possible input variables. The default value is 1000 (depending on the php version). 
+For a WMS with many layers, the number of input values is higher than the default value. You have to change the parameter to a higher value (e.g. 2000). 
+
 
 .. code-block:: ini
 
-   ;; 1000 (default) or more
+   ;; 1000 (default)
    max_input_vars = 1000
 
 
@@ -72,7 +82,7 @@ My application cannot be duplicated
 
 Q: I made a highly complex application and want to duplicate it, but it does not work.
 
-A: A possible reason for this is that php does not allow a workflow with big files (YAML-export/import/etc.). The problem occurs especially in FastCGI. Just adjust the php parameter MaxRequestLen (you can do that in the configuration of FCGI).
+A: A possible reason for this is that PHP does not allow a workflow with big files (YAML-export/import/etc.). The problem occurs especially in FastCGI. Just adjust the php parameter MaxRequestLen (you can do that in the configuration of FCGI).
 
 .. code-block:: ini
 
@@ -119,7 +129,7 @@ F: I get an error when printing. I have looked into the logfiles (app/logs/prod.
                 from namespace "Mapbender\PrintBundle\Component"."
                 at /srv/mapbender-starter/application/mapbender/src/Mapbender/PrintBundle/Component/PrintService.php line 310
 
-A: Please make sure you have installed the php5-gd library.
+A: Please make sure you have installed the php-gd library.
 
 
 
@@ -202,3 +212,4 @@ Furthermore, change the respective persistent database connection parameter in c
 .. code-block:: ini
 
    persistent=true
+

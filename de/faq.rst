@@ -11,26 +11,31 @@ Dienste und in welchen Anwendungen sie genutzt werden
 
 F: Ich würde gerne wissen, in welchen Anwendungen ein bestimmter WMS Dienst eingebaut ist. Gibt es einen Weg das herauszufinden?
 
-A: Bis wir die Information an der Oberfläche anbieten, hilft Ihnen folgendes SQL Statement:
+A: Die Information ist über die Web-Administration im Bereich der Datenquellen verfügbar.
+
+* Gehen Sie im oberen Menü zu Datenquellen
+* Wählen Sie per Klick auf den Button Show Metadata eine Datenquelle aus und Klicken anschließend den Link Anwendungen
+* Unter Anwendungen sehen Sie, in welchen Anwendungen sich der Dienst befindet
+* Sie sehen, ob der Dienst als freie Instance oder private Instanz eingebunden wurde und ob der Dienst aktiviert oder deaktiviert ist
+* Per Klick auf die den Anwendungs- oder den Datenquellentitel gelangen Sie bequem zur Konfiguratoin der Anwendung bzw. der Instanz
+
+Wenn Sie SQL bevorzugen, können Sie die WMS-ID der Datenquelle im folgenden SQL unter ``<id_of_the_wms>`` eintragen und das SQL ausführen:
 
 .. code-block:: postgres
 
-                SELECT mb_core_application.* from mb_core_application, mb_core_layerset, mb_core_sourceinstance, mb_wms_wmsinstance, mb_wms_wmssource, mb_core_source
-                where
-                -- Anwendungen und ihre Layersets
+                SELECT mb_core_application.* from mb_core_application, mb_core_layerset, mb_core_sourceinstance, mb_wms_wmsinstance, mb_wms_wmssource, mb_c           where
+                -- applications and their layersets
                 mb_core_application.id = mb_core_layerset.application_id and
-                -- Layersets und ihre Instanzen
+                -- layersets and their instances
                 mb_core_layerset.id = mb_core_sourceinstance.layerset and
-                -- Layerset-Instanzen und die WMS-Instanz
-                mb_core_sourceinstance.id = mb_wms_wmsinstance.id and
-                -- WMS-Instanz und WMS-Source
+                -- layerset-instances and wms-instance
+        ore_source
+             mb_core_sourceinstance.id = mb_wms_wmsinstance.id and
+                -- wms-instance and wms-source
                 mb_wms_wmsinstance.wmssource = mb_wms_wmssource.id and
-                -- WMS-Source und MB3-Core Source
+                -- wms-source and mb3-core source
                 mb_wms_wmssource.id = mb_core_source.id and
                 mb_core_source.id = <id_of_the_wms>;
-
-
-Als ID ``<id_of_the_wms>`` geben Sie die Nummer ein, die auf der Seite der Datenquellen dem jeweiligen WMS zugeordnet ist.
 
 
 app.php und app_dev.php: Wozu sind diese da?
@@ -38,7 +43,10 @@ app.php und app_dev.php: Wozu sind diese da?
 
 Siehe die `Details zur Konfiguration von Mapbender <installation/configuration.html>`_, im Kapitel `Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
 
-Sie nutzen normalerweise die app.php Datei. Erst wenn Sie noch selbst etwas entwickeln (an den Twig-Dateien, CSS oder JS-Dateien) oder zu Debugzwecken, nutzen Sie die app_dev.php.
+Im produktiven Einsatz rufen Sie Mapbender über die app.php-Datei auf. 
+Erst wenn Sie selbst etwas entwickeln (an den Twig-Dateien, CSS oder JS-Dateien) oder 
+zu Debugzwecken, nutzen Sie den Aufruf über die app_dev.php-Datei.
+Der Entwicklermodus gibt mehr informationen aus und zeigt ausführliche Fehlermeldungen. 
 
 
 Was ist der Cache und wann muss ich ihn löschen?
@@ -46,24 +54,27 @@ Was ist der Cache und wann muss ich ihn löschen?
 
 Auch für diese Frage, siehe die `Details zur Konfiguration von Mapbender <installation/configuration.html>`_, im Kapitel `Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
 
-Sie löschen die Inhalte vom ``mapbender/app/cache/`` Ordner, nicht den cache-Ordner selbst. Also das ``prod`` und - falls vorhanden - das ``dev`` Verzeichnis.
-
+Sie löschen die Inhalte vom ``mapbender/app/cache/`` Ordner, nicht den cache-Ordner selbst. Also das ``prod``- und - falls vorhanden - das ``dev``-Verzeichnis. Die zwei Verzeichnisse können ohne Bedenken gelöscht werden. 
+Beim nächsten Aufruf von Mapbedner werden im Cache erneut Dateien abgelegt.
 
 
 Performance
 -----------
 
-Arbeiten mit größeren WMS Diensten
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Arbeiten mit WMS-Diensten mit zahlreichen Layern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Beim Laden von größeren WMS (z.B. mehr als 100 Layer) in eine Anwendung werden in der Konfiguration der `Layerset-Instance <functions/backend/layerset.html>`_  nur Teile der Layer übernommen und angezeigt. Die WMS Instance kann auch nicht abgespeichert werden. Warum?
+F: Beim Laden von WMS mit vielen Layern (mehr als 100 Layer) in eine Anwendung werden in der Konfiguration der `Layerset-Instance <functions/backend/layerset.html>`_  nur Teile der Layer übernommen und angezeigt. Die WMS-Instance kann auch nicht abgespeichert werden. Warum?
 
-A: Mittels des PHP-Parameters `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_ kann die Zahl der Eingabe Variablen erhöht werden. Der Standardwert liegt (je nach PHP Version) bei 1000. Die Zahl der Eingabe Variablen ist bei einem WMS mit vielen Layern sehr hoch, vergleichbar mit der Anzahl der Auswahlmöglichkeiten innerhalb des WMS-Instance Dialogs. Setzen Sie in dem Fall den Parameter hoch, beispielsweise auf 2000. Die Zahl hängt direkt mit der Anzahl der Layer im WMS zusammen.
+A: Mittels des PHP-Parameters `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_ kann die Zahl der Eingabe-Variablen erhöht werden. 
+Der Standardwert liegt bei 1000. 
+Die Zahl der Eingabe Variablen ist bei einem WMS mit vielen Layern sehr hoch, vergleichbar mit der Anzahl der Auswahlmöglichkeiten innerhalb des WMS-Instance Dialogs. 
+Setzen Sie in dem Fall den Parameter hoch, beispielsweise auf 2000. Die Zahl hängt direkt mit der Anzahl der Layer im WMS zusammen.
 
 .. code-block:: ini
 
-   ;; 1000 (default) oder höher
-   max_input_vars = 1000 
+   ;; 1000 (default)
+   max_input_vars = 1000
 
 
 
@@ -120,7 +131,7 @@ F: Ich bekomme einen Fehler beim Drucken. Ich habe in das Log geschaut (app/logs
                 from namespace "Mapbender\PrintBundle\Component"."
                 at /srv/mapbender-starter/application/mapbender/src/Mapbender/PrintBundle/Component/PrintService.php line 310
 
-A: Bitte stellen Sie sicher, dass Sie die php5-gd Bibliothek installiert haben.
+A: Bitte stellen Sie sicher, dass Sie die php-gd Bibliothek installiert haben.
 
 
 Deprecation Notices bei composer oder bootstrap Script
