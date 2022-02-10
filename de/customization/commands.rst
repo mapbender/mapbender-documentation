@@ -27,7 +27,34 @@ Die Hilfe für jeden Befehl kann mit [Befehl] --help aufgerufen werden, z.B.:
 .. code-block:: yaml
 
     app/console mapbender:user:create --help
+   
+
+Anwendungs-Export und Import
+----------------------------
+
+app/console mapbender:application:export 
+****************************************
+
+Eine Anwendung kann als JSON- oder YAML-Datei exportiert werden. Dabei muss der Anwendungs-Url-Titel (slug) angebeben werden und eine Exportdatei definiert werden.
+
+.. code-block:: yaml
+
+   app/console mapbender:application:export mapbender_user_db --format=json > export.json
+
+
+app/console mapbender:application:import
+****************************************
+
+Eine Anwendung kann aus einer JSON- oder YAML-Datei importiert werden. Mapbender wählt automatisch einen neuen Namen, wenn der Name bereits vorliegt. 
+You can import an application from a JSON-file. Mapbender will automatically choose a new name if the name already excists.  
+
+.. code-block:: yaml
+   
+   app/console mapbender:application:import export.json
     
+    Imported 1 applications
+    * mapbender_user_db_imp2
+
 
 Benutzerverwaltung
 ------------------
@@ -73,6 +100,11 @@ Bei der Aktualisierung erfolgt die eindeutige Zuordnung über die bereits vorhan
 
 .. code-block:: yaml
 
+	app/console fom:user:resetroot
+
+
+.. code-block:: yaml
+
 	app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
 
 
@@ -87,7 +119,7 @@ Dieser Befehl zeigt im Terminal alle vorhandenen Benutzer mit ihrer ID und ihrem
 
 	app/console mapbender:user:list
         
-	User #3 name: al_bauer since 2019-10-14 12:10:44
+	User #3 name: max_mustermann since 2019-10-14 12:10:44
 
 
 Datenbanken
@@ -144,8 +176,7 @@ Der Befehl wird einmalig bei der Installation verwendet. Dieser Befehl überprü
 
 	app/console doctrine:schema:validate
 	[Mapping]  OK - The mapping files are correct.
-        
-        
+                
 
 Druck
 -----
@@ -456,10 +487,71 @@ Prod-Umgebung:
 
 		app/console cache:clear --env=prod --no-debug
         
-        
-WMS-Dienste
------------
     
+WMS Dienste
+-----------
+
+app/console mapbender:wms:add
+***********************************
+
+Fügt einen neuen WMS in das Mapbender Dienste-Repository hinzu.
+
+.. code-block:: yaml
+
+    app/console mapbender:wms:add https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+    
+    * <empty name> OpenStreetMap (WhereGroup)
+    * * osm OpenStreetMap
+    * * osm-grey OpenStreetMap (grey scale)
+    Saved new source #76
+
+
+app/console mapbender:wms:parse:url
+***********************************
+
+Befehl zum Parsen des GetCapabilities-Dokuments via URL. Der Befehl kann zum Validieren einer WMS-Adresse verwendet werden.
+
+.. code-block:: yaml
+
+    app/console mapbender:wms:parse:url --validate https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+
+
+app/console mapbender:wms:reload:file
+*************************************
+
+Befehl um einen WMS in Mapbender zu aktualisieren. Dabei wird die WMS-ID und eine Datei mit dem getCapabilities-XML angegeben.
+
+.. code-block:: yaml
+
+   app/console mapbender:wms:reload:url 76 /var/www/html/service.xml
+
+
+app/console mapbender:wms:reload:url
+************************************
+
+Befehl um einen WMS in Mapbender zu aktualisieren. Dabei wird die WMS-ID und eine Datei mit der getCapabilities-Adresse (URL) angegeben.
+
+.. code-block:: yaml
+
+   app/console mapbender:wms:reload:url 76 https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+
+
+app/console mapbender:wms:show
+******************************
+
+Befehl zum Anzeigen von Informationen zu einem WMS. Hierbei wird die ID der WMS Datenquelle im Befehl angegeben.
+
+.. code-block:: yaml
+
+   app/console mapbender:wms:show 76
+   
+     Source describes 3 layers:
+     * <empty name> OpenStreetMap (WhereGroup)
+     * * osm OpenStreetMap
+     * * osm-grey OpenStreetMap (grey scale)
+
+
+
 app/console mapbender:wms:validate:url 
 **************************************
 
@@ -478,7 +570,7 @@ Befehl zur Prüfung der Erreichbarkeit der WMS-Datenquelle. Ist der Dienst errei
             
 Sonstige
 --------
-
+    
 app/console mapbender:source:rewrite:host 
 *****************************************
 
