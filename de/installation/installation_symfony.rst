@@ -1,7 +1,7 @@
 .. _installation_symfony_de:
 
 Installation von Mapbender unter Verwendung des Symfony-eigenen Webservers
-#################################
+##########################################################################
 
 Mapbender baut auf das `Symfony <http://symfony.com/>`_ Framework auf und kann 
 daher den `Symfony-eigenen Webserver <http://symfony.com/doc/current/cookbook/web_server/built_in.html>`_ nutzen. 

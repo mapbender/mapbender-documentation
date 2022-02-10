@@ -33,7 +33,7 @@ Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Database connection parameters are stored together with some more configuration parameters in the file ``app/config/parameters.yml``. 
 
-More Information: :ref:`yaml_en`.
+More Information: :ref:`yaml`.
 
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^
@@ -120,7 +120,7 @@ Configuration files
 
 The basic configuration is done inside the **app/config/parameters.yml** file. 
 
-More Information: :ref:`yaml_en`.
+More Information: :ref:`yaml`.
 
 
 Production- and Development environment and Caching: app.php and app_dev.php
