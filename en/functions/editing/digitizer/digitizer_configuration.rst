@@ -5,7 +5,7 @@ Setting up of Digitizer
 
 You can only use the element in the sidepane.
 
-.. image:: ../../../figures/digitizer_configuration.png
+.. image:: ../../../../figures/digitizer_configuration.png
      :scale: 80
 
 
@@ -398,19 +398,19 @@ The possible options are:
 * **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
 * **allowLocate:** Navigation to a feature via the tabs-keyboard-button, simple for operation without mouse. [True / false]. An extra "zoomTo" Button is displayed for each feature.
 
-   .. image:: ../../../figures/digitizer/allowlocate.png
+   .. image:: ../../../../figures/digitizer/allowlocate.png
               :scale: 80
 
   
 * **allowChangeVisibility:** Allow to change the visibility of one feature in the map (visible / invisible). [true/false]. An Eye Symbol is displayed, which allows to hide or display each feature indiviudally.
 
-   .. image:: ../../../figures/digitizer/allowchangevisibility.png
+   .. image:: ../../../../figures/digitizer/allowchangevisibility.png
               :scale: 80
 
   
 * **showVisibilityNavigation:** Allow to change the visibility of all features in the map (visible / invisible). [true/false]
   
-   .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
+   .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
 .. * **displayPermanent:** FeatureTypes are displayed permanently (with explicit, active or select) [true/false]
@@ -420,12 +420,12 @@ Experimental:
 
 * **allowCustomerStyle:** Allow user-specific styles for features in the map [true/false]. This feature is experimental: For each feature you can set unique styles.
 
- .. image:: ../../../figures/digitizer/showvisibilitynavigation.png
+ .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
  A style-manager is used to let you set the unique styles.
 
- .. image:: ../../../figures/digitizer/stylemanager.png
+ .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
 
 
@@ -437,7 +437,7 @@ Definition of the popup
 In connection with the digitization, very complex forms can be generated for the acquisition of data.
     
 
-.. image:: ../../../figures/digitizer.png
+.. image:: ../../../../figures/digitizer.png
      :scale: 80
 
 The following option for the construction of the forms are available:
@@ -459,7 +459,7 @@ The following option for the construction of the forms are available:
 * Possibility to copy entered information from a form into the clipboard via a button
 
 
-.. image:: ../../../figures/digitizer_with_tabs.png
+.. image:: ../../../../figures/digitizer_with_tabs.png
      :scale: 80
 
 
@@ -493,6 +493,7 @@ The width of the individual columns can optionally be specified in percent or pi
 .. code-block:: yaml
 
         searchType: currentExtent
+        showExtendSearchSwitch: true
         tableFields:
             gid: {label: Nr. , width: 20%}
             name: {label: Name , width: 80%}
@@ -577,7 +578,7 @@ parameters:
 
 
 Text fields (type input)
------------------------
+------------------------
 
 .. code-block:: yaml
 
@@ -586,8 +587,8 @@ Text fields (type input)
                                                    name: column_name                                # reference to table column (optional)
                                                    copyClipboard: false                             # specify button that copies entered information to the clipboard (optional). [true/false]. Default is false.
                                                    mandatory: true                                  # specify mandatory field (optional)
-                                                   mandatoryText: You have to provide information.
-                                                   cssClass: 'input-css'                            # additional css definition (optional)
+                                                   mandatoryText: You have to provide information.  # text occurs if the column is empty on save 
+                                                   cssClass: 'input-css'                            # css class to use as style for the input field (optional)
                                                    value: 'default Text'                            # define a default value  (optional)
                                                    placeholder: 'please edit this field'            # placeholder appears in the field as information (optional)
 
@@ -639,7 +640,7 @@ The Multiselect-Box is activated by the attribute "multiple: true". You can choo
 **Notes:** From Digitizer version 1.2 and up, the multiple selection provides an easier mechanism to choose an entry, which also allows a search in the drop-down-list. The navigation through the list is possible via keyboard. Possible entries are highlighted during typing. An already chosen entry can be removed by clicking the small "x" symbol.
 Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer
 
-.. image:: ../../../figures/digitizer/digi_multiselecttool.png
+.. image:: ../../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
                     
 
@@ -768,9 +769,9 @@ The notes for a mandatory field appear above the used fields. In the case of a m
 
 
 Date-picker (type date)
-----------------------
+-----------------------
 
-.. image:: ../../../figures/digitizer_datepicker.png
+.. image:: ../../../../figures/digitizer_datepicker.png
      :scale: 80
 
 .. code-block:: yaml
@@ -822,7 +823,7 @@ Coordinate Fields (type coordinates)
 
 For visual verification, manual entry or manual editing of point coordinates, the *coordinates* element can be used.
 
-.. image:: ../../../figures/digitizer_coordinates.png
+.. image:: ../../../../figures/digitizer_coordinates.png
      :scale: 80
 
 .. code-block:: yaml
@@ -885,7 +886,7 @@ A possibility to show the uploaded images is the image-element.
 Images (type image)
 -------------------
 
-.. image:: ../../../figures/digitizer_image.png
+.. image:: ../../../../figures/digitizer_image.png
      :scale: 80
 
 The image-element can be used to view a picture in the form. You can display images by specifying a URL in a database field or URL using the src parameter.
@@ -969,7 +970,7 @@ Context Menu
 Using the context menu, an object on the map can be considered in more detail.
 After the activation you can open a context menu via the right mouse click on an object or cluster.
 
-.. image:: ../../../figures/digitizer_contextmenu.png
+.. image:: ../../../../figures/digitizer_contextmenu.png
      :scale: 80
 
 Items of the Context Menu: 
@@ -997,7 +998,7 @@ Depending on the defined distance and zoom level different numbers of objects ca
 
 Due to the complexity of the Clustering, future versions may have changes in functionality and syntax, so we define that still as experimental. Dependencies are to the display of features in the current extent/all areas and the different geometry types.
 
-.. image:: ../../../figures/digitizer_clustering.png
+.. image:: ../../../../figures/digitizer_clustering.png
      :scale: 80
 
 Definition of the cluster element: 
@@ -1034,7 +1035,7 @@ After saving an object, the refresh can be activated using the *refreshLayersAft
 
 If the YAML application is used in the /application folder, it can be specified by a unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
 
-.. image:: ../../../figures/digitizer/layerinstance_id.png
+.. image:: ../../../../figures/digitizer/layerinstance_id.png
      :scale: 80
 
 
