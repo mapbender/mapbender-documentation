@@ -47,13 +47,17 @@ Mithilfe der Maus kann nun die zuvor ausgewählte Geometrieart in der Karte erst
 Geometrien bearbeiten, speichern oder löschen
 ---------------------------------------------
 
-Die Speicherung der Geometrien erfolgt in der jeweils definierten Datenbanktabelle. Zusätzlich werden Geometrien im Digitizer-Element in Form einer Tabelle aufgelistet. Dies erleichtert die Verwaltung der Geometrien. In der Tabelle werden Nummer (ID wird automatisch erzeugt) sowie Name jedes Objekts angezeigt. Es besteht die Möglichkeit, ihre Reihenfolge zu verändern sowie nach bestimmten Geometrien zu suchen.
+Die Speicherung der Geometrien erfolgt in der jeweils definierten Datenbanktabelle. 
+Die Objekte werden in der Karte angezeigt und darüber 
+hinaus im Digitizer-Element in Form einer Tabelle aufgelistet. 
+Dies erleichtert die Verwaltung der Geometrien. 
+In der Tabelle können beliebige Spalten ausgegeben werden. Im Beispiel werden die Nummer (ID wird automatisch erzeugt) sowie Name jedes Objekts angezeigt. Es besteht die Möglichkeit, die Sortierung der Spalten zu ändern sowie die Tabelle zu durchsuchen.
 
-In der Auflistung können nur Objekte des aktuellen Kartenausschnitts angezeigt werden  **1**. Weiterhin besteht die Option, alle Objekte auszublenden **2** oder einzublenden **3**. Änderungen können für alle Objekte gespeichert werden **4**. Eine Bearbeitung wäre z.B. die Verschiebung von Objekten **5**. Nach Aktivierung dieses Buttons können Geometrien mithilfe des Cursors über die Karte bewegt werden. 
+In der Auflistung können nur Objekte des aktuellen Kartenausschnitts angezeigt werden  **1**. Weiterhin besteht die Option, alle Objekte auszublenden **2** oder einzublenden **3**. Änderungen können für alle Objekte gespeichert werden **4**. Eine Bearbeitung wäre z.B. die Verschiebung von Objekten **5**. Nach Aktivierung dieses Buttons können Geometrien mithilfe der Maus verändert werden. 
 
-Es besteht weiterhin die Möglichkeit, nur einzelne Objekte auszublenden **6** sowie deren Modifikationen individuell abzuspeichern **8**. Veränderungen der Sachdaten sind ebenfalls möglich **7**. Zuletzt kann jedes Objekt innerhalb des Digitizer-Elements wieder aus der Datenbank gelöscht werden **9**.
+Es besteht weiterhin die Möglichkeit, nur einzelne Objekte auszublenden **6** sowie deren Modifikationen individuell abzuspeichern **8**. Veränderungen der Sachdaten sind ebenfalls möglich **7**. Zuletzt kann jedes Objekt gelöscht werden **9**.
 
-.. image:: ../../../../../figures/de/Digitizer_edit.png
+.. image:: ../../../../figures/de/Digitizer_edit.png
      :scale: 80
 
 Die zuvor beschriebenen Funktionen sind identisch bei allen Geometrien. Es gibt außerdem noch die Option, Linien und Polygone zu modifizieren. Mit dieser Funktion können Stützpunkte eingefügt oder Eckpunkte verschoben werden. Durch Klick auf den Button *"Bearbeiten"* wird die Funktion aktiviert. Um ein Objekt nun zu modifizieren, muss dieses nun individuell durch einen Klick ausgewählt werden. 

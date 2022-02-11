@@ -47,11 +47,11 @@ After activation, an object can be created through one or more clicks on the map
 Edit, save or delete geometries
 -------------------------------
 
-Objects are saved in the defined database table. Additionally, geometries are displayed in the form of a spreadsheet in the sidepane. This simplifies the administration of data. The spreadsheet displays the number (ID is automatically created after saving) and name of each object. It is possible to change the order of geometries or search for specific objects.
+Objects are saved in the defined database table. The objects are displayed on the map and additionally as a table in the sidepane. This simplifies the administration of data. You can define which columns to list via the configuration. In this configuration the number (ID is automatically created after saving) and name of each object are displayed. It is possible to sort the columns or to search in the columns.
 
-The list can also only display geometries of the current extent **1**. It is possible to hide **2** or show **3** all objects via click on the corresponding buttons. Modifications can be saved for all objects **4**. A change would, for instance, be the movement **5** of an object. After the button has been activated, geometries can be moved on the map via the cursor.
+The list can also only display geometries of the current extent **1**. It is possible to hide **2** or show **3** all objects via click on the corresponding buttons. Modifications can be saved for all objects **4**. A change would, for instance, be the movement **5** of an object. After the button has been activated, geometries can be moved on the map with the mouse.
 
-Furthermore, individual objects can be hidden **6** and changes saved **8**. Attribute data are modifiable as well **7**. Every object can be deleted **9** individually from the database via the Digitizer element.
+Furthermore, individual objects can be hidden **6** and changes saved **8**. You can change the attribute data **7**. Every object can be deleted **9**.
 
 .. image:: ../../../../figures/Digitizer_edit.png
      :scale: 80
