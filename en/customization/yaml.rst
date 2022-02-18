@@ -116,10 +116,10 @@ A disclaimer can be added through the use of site links.
 .. code-block:: yaml
 
     mapbender.sitelinks:
-      - link: http://mapbender.org/en/about-contact				# Link URL
-        text: Imprint & Contact									# Link text
-      - link: http://mapbender.org/en/privacy-policy
-        text: Privacy-Policy
+      - link: https://mapbender.org/en/legal-notice/				# Link URL
+        text: Imprint & Contact									    # Link text
+      - link: https://mapbender.org/en/privacy-policy/
+        text: Privacy Policy
 
 Site links will be seperated by "|".
 
