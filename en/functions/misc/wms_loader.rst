@@ -33,8 +33,6 @@ YAML-Definition:
    defaultFormat: 'image/png'           # default format is image/png, further possibilities: image/gif, image/jpeg
    defaultInfoFormat: 'text/html'       # default infoformat is text/html, further possibilities: text/xml, text/plain
    splitLayers: false                   # split layer on load of the service, default false
-   useDeclarative: false                # allow to load service from a link (for example from featureInfo or search) 
-                                        # and define the layers to activated, default false 
 
 You need a button to show this element. See `button <button.html>`_ for inherited configuration options.
 
@@ -51,7 +49,8 @@ The link has to look like this:
 
   <a href="#"
   mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1"
-  mb-wms-layers="Gewaesser,Fluesse" 
+  mb-wms-layers="Gewaesser,Fluesse"
+  mb-add-vendor-specific="bplan=123" 
   mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
 
 
@@ -62,3 +61,5 @@ The link has to look like this:
     mb-layer-merge="1"            # default is 1 which means: activate the layers passed mb-wms-layers and do not disable the layers which are already active.
     mb-wms-layers="Gewaesser,Fluesse" # defines the layers to be activated, _all activates all layers, default all layers are deactivated
     href oder mb-url              # refer to the WMS getcapabilities URL
+    mb-add-vendor-specific="bplan=123" # define a vendor specific that will be added to the requests (new from version 3.2.9)
+
