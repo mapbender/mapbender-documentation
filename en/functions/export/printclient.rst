@@ -24,7 +24,7 @@ It is possible to define different properties of the PDF you would like to print
 The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. The print frame can be moved around freely in the map canvas, it defines the area of the PDF output. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
 
 .. image:: ../../../figures/print_client_sidebar.png
-     :scale: 80     :scale: 80
+     :scale: 80
 
 
 Configuration
@@ -36,8 +36,6 @@ The Printclient can be configurated in the backend. It relies on print templates
      :scale: 80
 
 * **title**: Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. The title will be displayed next to the button if "Show label" is activated.
-* **target**: ID of map element to query.
-* **type**: element or dialog, default is dialog
 * **scales**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
 * **rotatable**: defines if the print extent is rotatable, default is true
 * **print legend**: adds a checkbox which allows your print to have a legend
@@ -120,7 +118,7 @@ Mapbender saves its generated print files in the browser's default download fold
 Create your individual templates
 ================================
 
-To create an individual print template, already existing print templates (.odg-file) can be copied, or a new LibreOffice Draw file can be used. The template can include fixed objects like a logo, copyright or print information. In addition, a layer for dynamic elements like map, overview, north arrow, scale, date and optional fields can be created. The dynamic layer is an additional non-printable layer in the LibreOffice Draw file. The layer can be added with **Menu: -> Add -> Layer -> define name for the layer and choose checkbox option "not printable"**.
+To create an individual print template, already existing print templates (.odg-file) can be copied, or a new LibreOffice Draw file can be used. The template can include fixed objects like a logo, copyright or print information. In addition, a layer for dynamic elements like map, overview, north arrow, scale, date and optional fields can be created. The dynamic layer is an additional non-printable layer in the LibreOffice Draw file. The layer can be added with **Menu: -> Add -> Layer -> define name for the layer and choose checkbox option "not printable"**. An element is assigned to a layer via drag and drop.
 
 .. image:: ../../../figures/print_template_odg.png
      :scale: 80
@@ -237,8 +235,15 @@ The description of the group will be displayed in the field "dynamic_text" (e.g.
 The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. 
 
 
+It is possible to print a user name. In order to do this, one has to insert **user_name** into their print template. The logged-in user's name is then printed at the defined location. If no user is logged in, nothing is printed. 
+
+.. image:: ../../../figures/print_client_user_name.png
+     :scale: 80
+
+
 The printing process
 ====================
+
 
 Printing feature information for a selected element
 ---------------------------------------------------

@@ -1,4 +1,4 @@
-.. _console_en:
+.. _commands:
 
 app/console commands
 ======================
@@ -27,7 +27,33 @@ The parameter --help displays the help message for every command for example:
 .. code-block:: yaml
 
     app/console mapbender:user:create --help
+   
+
+Application Export & Import
+----------------------------
+
+app/console mapbender:application:export 
+****************************************
+
+You can export an application as JSON- or YAML-file. In the command you have to add the Url title (slug) of the application and define the export file.
+
+.. code-block:: yaml
+
+   app/console mapbender:application:export mapbender_user_db --format=json > export.json
+
+
+app/console mapbender:application:import
+****************************************
+
+You can import an application from a JSON or YAML-file. Mapbender will automatically choose a new name if the name already excists.  
+
+.. code-block:: yaml
+   
+   app/console mapbender:application:import export.json
     
+    Imported 1 applications
+    * mapbender_user_db_imp2
+
 
 User administration
 --------------------
@@ -42,7 +68,7 @@ User name, email and password are mandatory. User name and email have to be uniq
 .. code-block:: yaml
 
     app/console mapbender:user:create --help
-    app/console mapbender:user:create --password mypassword --email my@email name
+    app/console mapbender:user:create --password <password> --email <email> <name>
     app/console mapbender:user:create --password mypassword123 --email max.mustermann@mapbender.org 'Max Mustermann' 
    
    
@@ -59,7 +85,7 @@ The user name cannot be changed.
 
 .. code-block:: yaml
    
-    app/console mapbender:user:create --update --password mypassword --email my@email name
+    app/console mapbender:user:create --update --password <password> --email <email> <name>
 
     app/console mapbender:user:create --update --password mypassword8910 --email max.mustermann@mapbender.org 'Max Mustermann'
     
@@ -77,6 +103,11 @@ During the update, the unique assignment is made via the already existing ID, th
 	app/console fom:user:resetroot
 
 
+.. code-block:: yaml
+
+	app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
+
+
 
 app/console mapbender:user:list
 *******************************
@@ -87,6 +118,7 @@ Command to list all existing users with their ID and user name and the time of c
 .. code-block:: yaml
 
 	app/console mapbender:user:list
+        
 	User #3 name: max_mustermann since 2019-10-14 12:10:44
     
     
@@ -120,7 +152,6 @@ The command is used only once during installation and creates the administration
 .. code-block:: yaml
 
 	app/console doctrine:database:create
-
 
 
 
@@ -449,8 +480,69 @@ Prod:
 		app/console cache:clear --env=prod --no-debug
         
     
-WMS 
----
+WMS Services
+------------
+
+app/console mapbender:wms:add
+***********************************
+
+Adds a new WMS Source to your Mapbender Service repository.
+
+.. code-block:: yaml
+
+    app/console mapbender:wms:add https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+    
+    * <empty name> OpenStreetMap (WhereGroup)
+    * * osm OpenStreetMap
+    * * osm-grey OpenStreetMap (grey scale)
+    Saved new source #76
+
+
+app/console mapbender:wms:parse:url
+***********************************
+
+Command to parse a GetCapabilities document by url. The command can be used to validate a WMS Url.
+
+.. code-block:: yaml
+
+    app/console mapbender:wms:parse:url --validate https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+
+
+app/console mapbender:wms:reload:file
+*************************************
+
+Command to reload (update) a WMS source from given file.
+
+.. code-block:: yaml
+
+   app/console mapbender:wms:reload:url 76 /var/www/html/service.xml
+
+
+app/console mapbender:wms:reload:url
+************************************
+
+Command to reload (update) a WMS source from given url.
+
+.. code-block:: yaml
+
+   app/console mapbender:wms:reload:url 76 https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+
+
+app/console mapbender:wms:show
+******************************
+
+Command to displays layer information of a persisted WMS source. You have to parse the ID of the WMS Source to get the information.
+
+.. code-block:: yaml
+
+   app/console mapbender:wms:show 76
+   
+     Source describes 3 layers:
+     * <empty name> OpenStreetMap (WhereGroup)
+     * * osm OpenStreetMap
+     * * osm-grey OpenStreetMap (grey scale)
+
+
 
 app/console mapbender:wms:validate:url 
 **************************************
@@ -470,7 +562,7 @@ Command to check the accessibility of the WMS data source. The available layers 
     
 Other
 -----
-    
+
 app/console mapbender:source:rewrite:host 
 *****************************************
 

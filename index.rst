@@ -49,13 +49,12 @@ Download Mapbender
 
 
 .. image:: https://www.openhub.net/p/mapbender/widgets/project_partner_badge.gif
-  :scale: 80 %
   :alt: Mapbender Project on Open Hub
   :align: right
   :target: https://www.openhub.net/p/mapbender?ref=sample
    
 .. image:: ./figures/OSGeo_project.png
-  :width: 200 px
+  :width: 200px
   :alt: Mapbender is a Project of the OSGeo Foundation
   :align: center
   :target: https://www.osgeo.org/
@@ -64,7 +63,7 @@ Download Mapbender
 
 
 .. image:: ./figures/mapbender_logo_font.png
-  :width: 400 px
+  :width: 400px
   :alt: Mapbender
   :align: center
   :target: https://mapbender.org/

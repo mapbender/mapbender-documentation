@@ -5,12 +5,12 @@ Installation on Ubuntu/Debian
 
 Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under **<mapbender>/app/db/demo.sqlite**).
 
-For productive use PostgreSQL is recommended. You can find the neccessary configuration steps in chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
+.. hint:: For productive use PostgreSQL is recommended. You can find the neccessary configuration steps in chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
 
 Requirements
 ------------
 
-- PHP (from version 5.6 to 7.2)
+- PHP >= 7.1
 - Apache installation with the following modules activated:
 
   * mod_rewrite
@@ -32,7 +32,7 @@ Installation of mandatory PHP extensions:
 Unpack and register to web server
 ---------------------------------
 
-Download the current Mapbender version and unzip it into /var/www/mapbender:
+Download the current Mapbender version and unzip it into /var/www/mapbender or a different location:
 
 .. code-block:: bash
 
@@ -87,7 +87,7 @@ Directory rights
 First steps
 -----------
 
-The Mapbender installation can now be accessed under **http://hostname/mapbender/**.
+The Mapbender installation can now be accessed under **http://[hostname]/mapbender/**.
 User data by default:
 
 username: "root", password: "root"
@@ -120,9 +120,9 @@ To use the optional LDAP-connection, following PHP-LDAP-extension is required:
 Configuration of PostgreSQL database for productive use:
 
 Requirements:
-- configured PostgreSQL database (version < 10)
+- configured PostgreSQL database
 - database for Mapbender configuration
-- possibly user for access
+- PostgreSQl database user to access the database with create database right
 
 Installation PHP-PostgreSQL driver
 
@@ -142,7 +142,7 @@ Configuration of database connection (app/config/parameters.yml):
     database_user:     postgres
     database_password: secret
 
-For further information: :ref:`yaml_en`.
+For further information: :ref:`yaml`.
 
 Initialisation of the database connection:
 
@@ -152,9 +152,15 @@ Initialisation of the database connection:
     app/console doctrine:database:create
     app/console doctrine:schema:create
     app/console mapbender:database:init -v
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+    bin/composer run reimport-example-apps
     
-Following information: :ref:`installation_configuration`
+Create root user for access:
+
+.. code-block:: bash
+
+   app/console fom:user:resetroot
+
+Find further information in :ref:`installation_configuration`
 
 
 **Mapbender installation with MySQL:**

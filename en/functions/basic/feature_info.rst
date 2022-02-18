@@ -8,69 +8,54 @@ This element provides feature info capabilities to Mapbender. It works with WMS.
 .. image:: ../../../figures/feature_info.png
      :scale: 80
 
-As an example serves the WMS 'Krankenhäuser NRW' (http://www.wms.nrw.de/wms/krankenhaus?) from 'Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW'. 
+The WMS 
+Krankenhäuser NRW' (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) from 'Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW' serves as example service.
 
 
 Configuration
 =============
 
-The element FeatureInfo will be integrated in the 'content':
+In the example configuration, the element FeatureInfo is integrated in the 'Content' area:
 
-.. image:: ../../../figures/feature_info_content_en.png
+.. image:: ../../../figures/feature_info_content.png
      :scale: 80
 
 .. image:: ../../../figures/feature_info_configuration.png
      :scale: 80
 
+
 * **Auto-open:** Enable or disable autoopening of the copyright window when starting the application (default: false).
-* **Deactivate on close:** True/false to deactivate the functionality after closing the result dialog.
+* **Deactivate on close:** True/false to deactivate the functionality after closing the result dialog (default: true).
 * **Print Result:** Offer a link to print the result of FeatureInfo (default: false).
+* **Only valid:** Display valid WMS (default: false).
 * **Title:** Title of the element. It will be indicated next to the button.
 * **Target:** ID of Map element to query.
-* **Type:** Type of the information, Element or Dialog (default and mandatory: Dialog).
 * **Display type:** Display of the information, tabs or accordion.
 * **Max count:** Maximum number of results that should be displayed in the result dialog.
 * **Width/Height:** Width/height of the dialog in px.
-* **Show original:** Show the CSS-style of the original feature info result (default: true).
-* **Tooltip:** Text used as a tooltip. It will be indicated when hovering with the mouse cursor over the button. It also used as a header in the copyright window.
+* **Highlighting enabled:** Deactivates/activates FeatureInfo Highlighting (default: false).
+* **Default color** Sets color for selected objects.
+* **Hover color** Sets hover color for selected objects.
 
-A button is also needed. Further information on how to configurate a button: `Button <../misc/button.html>`_.
+A button is also needed for complete frontend integration. Further information on how to configurate a button: `Button <../misc/button.html>`_.
 
-Layer tree settings
----------------------------
-The Layer "Krankenhäuser NRW" is visible and the FeatureInfo request for the layer is activated.
+Layertree settings
+------------------
+The layer is visible and FeatureInfo request for the layer is activated.
 
 .. image:: ../../../figures/de/feature_info_on.png
      :scale: 80
 
-The Layer "Krankenhäuser NRW" is visible and the FeatureInfo request for the layer is deactivated.
+The layer is visible and the FeatureInfo request for the layer is deactivated.
  
 .. image:: ../../../figures/de/feature_info_off.png
      :scale: 80
 
-The Layer "Krankenhäuser NRW" is invisible and there will be no FeatureInfo request (even if the FeatureInfo request is activated).
+The layer is invisible and there will be no FeatureInfo request (even if FeatureInfo request is activated).
 
 .. image:: ../../../figures/de/feature_info_on_layer_invisible.png
      :scale: 80
-
-The FeatureInfo can be requested even though the layer is invisible.
-
-
-Display as original and styled
-------------------------------
-
-With the option "Show original", the original design of the FeatureInfo response is used. If the option is deactivated, Mapbender tries to achieve a uniform representation.
-
-Beispiel Original:
-
-.. image:: ../../../figures/feature_info_original_en.png
-     :scale: 80
-
-Beispiel gestyled:
-
-.. image:: ../../../figures/feature_info_not_original_en.png
-     :scale: 80
-
+     
 
 Display as tabs and accordion
 -----------------------------
@@ -86,13 +71,46 @@ Example Accordion:
 
 .. image:: ../../../figures/feature_info_accordion.png
      :scale: 80
+
      
 Printing the results
 --------------------
 
-The switch "Print result" allows you to print the output of the FeatureInfo. A "Print" button will appear on the FeatureInfo dialogue. The printing is done with the printing dialogue of the web browser.
+The switch "Print result" allows you to print the output of the FeatureInfo. A "Print" button will appear on the FeatureInfo dialogue. The printing itself is achieved with the printing dialogue of your web browser.
 
-To make sure that all images and background colors are available in your printout, you should check the printing settings of your web browser: In Firefox, you can check the option "Print background". In Chrome-based browsers the option is called "Background graphics". The used fonts can vary on a printout as PDF and depend on the specific viewer. Furthermore, most web browsers modify the pages a bit before printing to save ink/toner.
+To make sure that all images and background colors are available in your printout, you should check the print settings of your web browser: In Firefox, you can check the option "Print background". In Chrome-based browsers the option is called "Background graphics". The used fonts can vary on a printout as PDF and depend on the specific viewer. Furthermore, most web browsers modify the pages a bit before printing to save ink/toner.
+
+
+FeatureInfo Highlighting
+------------------------
+
+Individual geometries of a WMS can be highlighted with FeatureInfo. This is particularly helpful for the work with comprehensive WMS, because it allows an easier identification of geometries.
+
+A FeatureInfo request with activated highlighting could look like this:
+
+.. image:: ../../../figures/feature_info_highlighting.png
+     :scale: 80
+
+The figure above highlights several geometries in the map (Postcodes ('PLZ'): 53111, 53113 und 53115). The FeatureInfo dialog only displays information belonging to these geometries. The area 53115 is highlighted red due to hovering.
+
+FeatureInfo Highlighting is activated within the Feature Info element. Here, users get the option to choose a default and hover color.
+
+.. image:: ../../../figures/feature_info_configuration_highlighting.png
+     :scale: 80
+
+Furthermore, the HTML output of the FeatureInfo request has to be adjusted. In order to do so, the geometry query has to be hidded as a WKT in an HTML div (will not be displayed). In addition, the EPSG code must be transferred and there must be a unique ID in the HTML div (see configuration below). Mapbender evaluates this information and displays the geometries on the map. When you hover over the entries in the info window, the associated geometry is highlighted accordingly. The adaptation looks different depending on which WMS server software you are using. Adjustments can easily be made for MapServer, QGIS Server, GeoServer.
+
+The necessary adjustment is shown here using a configuration for MapServer. In the DATA specification, the geometry is put out as a WKT. In addition, the FeatureInfo template is adapted. If a WMS is now queried via GetFeatureInfo, the corresponding areas are highlighted on the map.
+
+.. code-block:: bash
+
+  DATA "geom from (Select *, ST_AsText(geom) as geom_wkt from plz) as foo USING UNIQUE gid USING SRID 4326"
+
+  <div class="geometryElement" id="[gid]" data-geometry="[geom_wkt]" data-srid="EPSG:4326">
+  <table>
+  	...
+  <table>
+  </div>
 
 
 YAML-Definition:
@@ -100,24 +118,21 @@ YAML-Definition:
 
 .. code-block:: yaml
 
-   title: FeaureInfo       # Titel des Elements
-   tooltip: Feature Info   # text to use as tooltip
-   type: dialog            # Default: dialog.
-   target: map             # Id of Map element to query
-   autoActivate: false     # true/false open when application is started, default: false
-   deactivateOnClose: true # true/false to deactivate the functionality after closing the result dialog, default is true
-   onlyValid: null         # require correct HTML format of response, default: false
-   printResult: false      # offer a link to print the result of the featureInfo, default: false
-   showOriginal: false     # show the css-style of the original feature info result, default: false
-   displayType: tabs       # tabs/accordion Default: tabs
-   width: 700              # width of the dialog in pixels, default is 700
-   height: 500             # height of the dialog in pixels, default is 500
+   title: FeaureInfo              # title of the element
+   tooltip: Feature Info          # text to use as tooltip
+   type: dialog                   # Default: dialog.
+   target: map                    # Id of Map element to query
+   autoActivate: false            # true/false open when application is started (default: false)
+   deactivateOnClose: true        # true/false to deactivate the functionality after closing the result dialog (default: true)
+   onlyValid: false               # require correct HTML format of response (default: false)
+   printResult: false             # offer a link to print the result of the featureInfo (default: false)
+   displayType: tabs              # tabs/accordion (default: tabs)
+   width: 700                     # width of the dialog in pixels (default: 700)
+   height: 500                    # height of the dialog in pixels (default: 500)
+   maxCount: 100	              # maximum count of hits to be displayed
+   highlighting: false            # deactivates/activates FeatureInfo Highlighting (default: false)
+   featureColorDefault: #ffa500   # color to highlight selected objects
+   featureColorHover: #ff0000     # color to highlight selected objects during hovering
 
 
 
-Class, Widget & Style
-============================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\FeatureInfo
-* **Widget:** mapbender.element.featureInfo.js
-* **Style:** mapbender.elements.css

@@ -3,12 +3,60 @@
 Versionshistorie
 ================
 
-`English Version of this document. <../en/versions.html>`_
+`English version of this document. <../en/versions.html>`_
 
 Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
-.. _versions:
 
+
+Version 3.2.9
+-------------
+
+Release Datum: 28.01.2022
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v329
+
+
+Version 3.2.8
+-------------
+
+Release Datum: 02.11.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v328
+
+
+Version 3.2.7
+-------------
+
+Release Datum: 07.09.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v327
+
+
+Version 3.2.6
+-------------
+
+Release Datum: 09.08.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v326
+
+
+Version 3.2.5
+-------------
+
+Release Datum: 08.06.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v325
 
 
 Version 3.2.4
@@ -177,7 +225,7 @@ Release Datum: 26.09.2018
 **Verbesserungen und Bugfixes:**
 
 * Die Beschreibung zu den Fixes ist in den Repository-Links zu finden
-* Aktualisierung Mapbender-Starter Repository auf `v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
+* Aktualisierung `Mapbender-Starter v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
 * Aktualisierung Mapbender Repository auf `v3.0.7.5 <https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5>`_
 * Aktualisierung Owsproxy Repository auf `v3.0.6.4 <https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4>`_, includes Owsproxy dependencies
 * Aktualisierung mapbender/vis-ui.js Repository auf `0.0.72 <https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72>`_

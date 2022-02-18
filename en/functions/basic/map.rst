@@ -3,8 +3,7 @@
 Map
 ***
 
-MapQuery/OpenLayers based map.
-You have to define units, start and max. extent, scales and supported projections.
+Map is based on OpenLayers. The element can be integrated via the content section.
 
 .. image:: ../../../figures/map.png
      :scale: 80
@@ -16,41 +15,38 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Layersets:** Refers to a layerset. Define the layerset first and refer to it.
-* **DPI:** Resolution, default is 72.
-* **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+* **Layersets:** Refers to a layerset. Note: Layersets have to be defined first and can then be referred to.
 * **Tile size:** Size of the tiles of tiled WMS services.
+* **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
 * **Max. Extent:** Maximal map extent, defined by BBOX parameters.
 * **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
-* **Scales (csv):** a csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
-* **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG: CODE or EPSG:CODE|MY SRS TITLE.
+* **Fixed zoom steps:** This option activates a zoom behaviour with fixed scales. This is useful to increase visual quality of services that are cached on very particular resolution steps only. When set true, scale denominator snaps to one of the values given in the *scales* option as defined below (Default: false).
+* **Scales (csv):** A csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
+* **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
 
 
 Configuration example
 =====================
 
-The main map element is included in the content section of the application menu. A map element can be added with the ``+`` -button.
+The map element has to be included into the content section:
 
 .. image:: ../../../figures/add_content.png
      :scale: 80
 
-All layersets can be included in the main map element if they are set in the layersets tab in the application backend beforehand. For this example, those are the following:
+The map can entail all instances that are defined in the layerset. The following example distinguishes between a *main* (1) and *overview* (2) layerset.
 
 .. image:: ../../../figures/map_example_layersets.png
      :scale: 80
 
-The layersets are visible in the configuration dialog in the *Layersets* (1) section. It is possible to multi-select the desired layers. Unchecked layersets can be used in the overview element (as a overview map) later on.
+In order to display all *Layersets* **(1)** on the map, they have to be activated. Multiple selections are possible as well. De-selected layersets can function as an overview. In the example, *main* is displayed on the main map and *overview* as an overview map.
+
+The field *SRS* **(2)** defines the coordinate reference system that is used at application start. In this example, the coordinate reference system EPSG 25832 or ETRS89/UTM Zone 32N was chosen. If the application should support other coordinate systems, simply add those in the *Other SRS* **(7)** field. In this example, the following codes are used: 25833 (ETRS89/UTM Zone 33N), 31466 (DHDN/3-degree Gauss-Kruger Zone 2), 31467 (DHDN/3-degree Gauss-Kruger Zone 3), 3857 (WGS 84/Pseudo-Mercator) and 4326 (WGS 84).
+
+The field *max. Extent* **(3)** states the maximum zoomable extent of the map application. If there is data outside of the extent, it cannot be seen by the frontend user. The field *start Extent* **(4)** refers to the extent of the map that is visible when the application is started in the browser (in the example the city of Bonn). Furthermore, the field *scales (csv)* **(6)** defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`zoom_bar`. *Fixed zoom steps* **(5)** were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
 
 .. image:: ../../../figures/map_example_dialog.png
      :scale: 80
-
-The field *SRS* (2) defines the coordinate reference system that is used at application launch. In this example, the coordinate reference system ETRS89/ UTM Zone 32N was chosen. The affiliated ESPG-code is 25832. If the application should support other coordinate systems, simply add those in the *Other SRS* (6) field (enter the EPSG code). It is possible to enter several comma-separated codes. In this example, the following codes are used: 25833 (ETRS89/ UTM Zone 33N), 31466 (DHDN / 3-degree Gauss-Krüger Zone 2), 31467 (DHDN / 3-degree Gauss-Krüger Zone 3), 3857 (WGS 84 / Pseudo-Mercator) and 4326 (WGS 84). Switching between the registered coordinate systems works with the element "SRS Selector". To get more details on the SRS selector, visit :ref:`scale_selector`.
-
-The field *max. Extent* (3) states the max. zoomable extent of the map application. If there is data outside of the extent, it cannot be seen by the frontend user. The field *start Extent* (4) refers to the extent of the map that is visible when the application is launched in the browser (in the example the city of Bonn).
-
-The field *scales (csv)* (5) defines the scales that are usable in the application. This element can come handy if the user should e.g. see the map, but not too many details of it (just define no possibility to zoom closer than 1:10000). Moreover, it is possible to switch between the defined SRS's with the element scale selector. For further details, view :ref:`scale_selector`. Alternatively, this can be realized with the navigation toolbar element.
-For further integrational details see :ref:`zoom_bar`.
-
+     
 
 YAML-Definition:
 ----------------
@@ -188,10 +184,3 @@ More Start Parameters
 
 The elements WMS Loader and WMC Loader also provide parameters you can use on start. Have a look at the element descriptions for further information.
 
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\Map
-* **Widget:** mapbender.element.map.js

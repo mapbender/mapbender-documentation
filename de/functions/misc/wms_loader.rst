@@ -3,28 +3,24 @@
 WMS Loader
 **********
 
-Mit diesem Element können WMS per getCapabilities-Request geladen werden.
-Es kann WMS 1.1.1 und  WMS 1.3.0 geladen werden.
+Mit diesem Element können WMS per getCapabilities-Request geladen werden. Es kann WMS 1.1.1 und WMS 1.3.0 geladen werden.
 
 
-.. image:: ../../../figures/wms_loader.png
+.. image:: ../../../figures/de/wms_loader.png
      :scale: 80
 
 
 Konfiguration
 =============
 
-.. image:: ../../../figures/wms_loader_configuration.png
+.. image:: ../../../figures/de/wms_loader_configuration.png
      :scale: 80
 
-* **Auto open:** true, wenn das Element beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
-* **Split layers:** geteilte Ebenen beim Laden des Dienstes, Standard ist false.
-* **Use declarative:** erlaubt einen Dienst über einen Link zu laden (zum Beispiel über die Informationsabfrage oder Suche) und definiert die Layer zu aktivieren, Standard ist false.
+* **Automatisches Öffnen:** Öffnet Element beim Start der Anwendung (Standard: false).
+* **Layer aufteilen:** Teilt Ebenen beim Laden des Dienstes auf (Standard: false).
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
-* **Defaultformat:** Standard Format ist image/png, weitere Möglichkeiten: image/gif, image/jpeg.
-* **Defaultinfoformat:** Standard Infoformat ist text/html, weitere Möglichkeiten: text/xml, text/plain.
+* **Default format:** Standardformat ist image/png, weitere Möglichkeiten: image/gif, image/jpeg.
+* **Default info format:** Standardinfoformat ist text/html, weitere Möglichkeiten: text/xml, text/plain.
 
 YAML-Definition:
 ----------------
@@ -37,8 +33,6 @@ YAML-Definition:
    defaultFormat: 'image/png'           # Standard Format ist image/png, weitere Möglichkeiten: image/gif, image/jpeg
    defaultInfoFormat: 'text/html'       # Standard Infoformat ist text/html, weitere Möglichkeiten: text/xml, text/plain
    splitLayers: false                   # geteilte Ebenen beim Laden des Dienstes, Standard ist false
-   useDeclarative: false                # erlaubt einen Dienst über einen Link zu laden (zum Beispiel über die Informationsabfrage oder Suche) 
-                                        # und definiert die Layer zu aktivieren, Standard ist false
 
 Für das Element wird ein Button verwendet. Siehe unter :ref:`button_de` für die Konfiguration.
 
@@ -57,6 +51,7 @@ Der Link sollte folgendermaßen aussehen:
   <a href="#"
   mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1"
   mb-wms-layers="Gewaesser,Fluesse" 
+  mb-add-vendor-specific="bplan=123"
   mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
 
 
@@ -67,21 +62,5 @@ Der Link sollte folgendermaßen aussehen:
     mb-layer-merge="1"            # Standard ist 1: aktiviert die Ebene in mb-wms-layers. Deaktiviert die Ebenen nicht, die schon aktiviert sind.
     mb-wms-layers="Gewaesser,Fluesse" # Definiert die Ebenen, die aktiviert werden sollen, _all activates aktiviert alle Ebenen. Standard ist alle Ebenen sind deaktiviert.
     href oder mb-url              # verweist auf die WMS getcapabilities URL
+    mb-add-vendor-specific="bplan=123" # Definition von Vendor Specific Parametern, die an den reuqest angefügt werden (neu ab Version 3.2.9).
 
-   
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmsBundle\\Element\\WmsLoader
-* **Widget:** 
-* **Style:**
-
-JavaScript API
-==============
-
-activate
-----------
-
-Öffnet einen Dialog, in dem ein WMS über einen getCapabilities-Request geladen werden kann.
-Es kann WMS 1.1.1 und WMS 1.3.0 geladen werden.

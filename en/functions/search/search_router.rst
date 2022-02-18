@@ -3,14 +3,14 @@
 Search Router
 *************
 
-This element creates a configurable search formular with result output. At this point of time generic SQL search is supported, with more to come (WFS, Solr, ...).
+This element creates a configurable search formular with result output in which generic SQL search is supported.
 
 .. image:: ../../../figures/search_router_en.png
      :scale: 80
 
 
 Add SearchRouter
-=============
+================
 
 In order to use the SearchRouter, two requirements have to be met:
 
@@ -25,9 +25,6 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Target:** Id of Map element to query.
-* **Dialog:** Render inside a dialog or not.
-* **Timeout factor:** Timeout factor (multiplied with autcomplete delay) to prevent autocomplete right after a search has been started.
 * **Width:**  Width of the dialog (only for dialog, not sidepane)
 * **Height:**  Height of the dialog (only for dialog, not sidepane)
 * **Routes:** Collection of search routes.
@@ -36,57 +33,93 @@ Configuration
 
 You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox. From there you can choose the search you want to use and a ``configuration``. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
-**Tip:**
-The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at :ref:`yaml`.
-Only one coordinate reference system is allowed. The geometry column must match the coordinate system of the map.
-
+.. note:: The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at :ref:`yaml`.
 
 
 Type
 ----
 
-Examples of the different types:
+The form supports two types - text and choice.
 
-* text
-Example with auto complete
+You have to define a configuration for each table column you would like to provide in the 
+search form. The configuraton starts with the column name (in the example it is the column called name).
+
+* label - you can define a label parameter (if not defined the capitalized column name will be used).
+
+* required: You can define whether a type should be required (default is false). With required: true a mandatory field is defined. 
+That means that the user has to define a search term here before the search can run. Headings of required fields are marked with a red *.
+
+You also can define a compare mode. See section 'comparison mode'.
+
+
+Type text
+~~~~~~~~~
+
+Type text allows you to provide text fields for your search formular.
+
+Type text supports autocomplete. If you want to add autocomplete to the field you have to add the additional attr-parameters.
+
+Supported autocomplete paramters are:
+
+* data-autocomplete: on - parameter to activate autocomplete
+* data-autocomplete-distinct: on - paramter to activate distinct autocomplete
+* data-autocomplete-using: column1, column2 - define other column/s that should be also considered on autocomplete
+
+
+Type text; example with autocomplete:
 
 .. image:: ../../../figures/search_router_text_en.png
      :scale: 80
 
+
 .. code-block:: yaml
 
-	form:
-		name:
-		type: text                                                      # input box for text
-		options:
-			required: true
-			attr:
-				data-autocomplete: 'on'                                 # auto complete
-				data-autocomplete-distinct: 'on'
-		compare: exact                                             
+    form:
+        name:
+	    type: Symfony\Component\Form\Extension\Core\Type\TextType                                                      # input box for text
+            options:
+                label: Name 
+                required: true
+            attr:
+                data-autocomplete: 'on'          # activate autocomplete
+                data-autocomplete-distinct: 'on'
+            compare: exact                                          
 
 
-* choice
-Example with different selection options via dropdown:
+Type choice
+~~~~~~~~~~~
+
+Type choice allows you to provide a selectbox in your search formular.
+
+For type choice you can define a placeholder. This is a text that is shown before an option is selected.
+
+You have to define the choices for the selectbox. You define a value and a key. 
+
+* key - will be send in the search query
+* value - is show as text in selectbox
+
+..note: Please note that from Mapbender 3.2 you should use the value: key definition and type: Symfony\Component\Form\Extension\Core\Type\ChoiceType
+
+* Type choice; example with different selection options via dropdown:
 
 .. image:: ../../../figures/search_router_choice_en.png
      :scale: 80
 
+
 .. code-block:: yaml
 
     usertype:                                                         
-      type: choice                                                      # box with selection options as dropdown list
-      options:
-        placeholder: 'Please select...'                                 # text that is shown before an option is selected
-        choices:                                                        # the options need to be specified: "name of the column of the database": "name shown in the dropdown list"
-          1: Company
-          2: Administration
-          3: University
-          4: User
-        required: false                                                 # no required field
-        label: user type                                                # heading above the box
-      compare: exact     
-      
+        type: Symfony\Component\Form\Extension\Core\Type\ChoiceType                                                      # box with selection options as dropdown list
+        options:
+            label: User type
+            required: false
+            placeholder: 'Please select...' 
+            choices:                        
+                Company: 1
+                Administration: 2
+                University: 3
+                User: 4
+        compare: exact     
 
 
 Comparison Mode
@@ -122,10 +155,10 @@ You can overwrite this by handing over a styleMap-Configuration, which could loo
         styleMap:
             default:
                 strokeColor: '#00ff00'  # border color
-                strokeOpacity: 1        # 1 - opak (no transparency -> 1)
+                strokeOpacity: 1        # border opacity (1 - opaque / no transparency)
                 strokeWidth: 3          # border width
                 fillColor: '#f0f0f0'    # fill color               
-                fillOpacity: 0          # fill opacity, (full transparency -> 0)
+                fillOpacity: 0          # fill opacity, (0 full transparency)
                 pointRadius: 6          # size of the point symbol
             select:
                 strokeColor: '#0000ff'
@@ -160,7 +193,6 @@ Note, that the hexadeximal color values have to be stated in quotation marks, be
 
 
 
-                
 Configuration Examples
 ======================
 
@@ -213,7 +245,7 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
     usertype:                              # search field (search for specific User type)
       type: choice                         # possible choices via drop down list
       options:
-        empty_value: 'Please select...'    # displayed text in field before entering a search
+        placeholder: 'Please select...'    # displayed text in field before entering a search
         choices:                           # choices need to have the following format: "entry in the database column": "displayed name in the drop down list"
           1: Company
           2: Administration
@@ -246,6 +278,10 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
         strokeOpacity: 1
         fillColor: '#800000'
         fillOpacity: 0.5
+      temporary:
+        strokeColor: '#0000ff'
+        fillColor: '#0000ff'
+        fillOpacity: 1
 
 
 This picture illustrates which consequences the configurations in the yaml-definition have for the search formula:
@@ -253,7 +289,7 @@ This picture illustrates which consequences the configurations in the yaml-defin
 .. image:: ../../../figures/search_router_example_search_description.png
      :scale: 80
 
-Displayed is the excerpt of the yaml-definition configuring the formula. Columns orga, town and usertype are used in the formula and implemented as the fields Mapebender User, Town and Usertype. Mapbender User and Town are type text, Usertype can be of various types. The text that should be displayed here, if nothing is selected yet, is "Please select…" (Nr. **1** – empty_value: ‚Please select...‘). The title above these fields is set with a label (Nr. **2**). The attribute data-autocomplete: ‚on‘ results in a dropdown menu with recommendations from the database (Nr. **3**). Because compare: ilike is enabled it is not necessary to write the exact word. The search will find results that are only similar to the written term (Nr. **4** – Wheregr (the g is lowercase, nevertheless WhereGroup with uppercase G was found). The fieldtype choice is variable, possibilities are defined in choices (Nr. **5**). The table contains the possibilities as numbers (1, 2, 3, 4). In this example every number represents a text, which should be displayed in the dropdown menu.
+Displayed is the excerpt of the yaml-definition configuring the formula. Columns orga, town and usertype are used in the formula and implemented as the fields Mapebender User, Town and Usertype. Mapbender User and Town are type text, Usertype can be of various types. The text that should be displayed here, if nothing is selected yet, is "Please select…" (Nr. **1** – placeholder: ‚Please select...‘). The title above these fields is set with a label (Nr. **2**). The attribute data-autocomplete: ‚on‘ results in a dropdown menu with recommendations from the database (Nr. **3**). Because compare: ilike is enabled it is not necessary to write the exact word. The search will find results that are only similar to the written term (Nr. **4** – Wheregr (the g is lowercase, nevertheless WhereGroup with uppercase G was found). The fieldtype choice is variable, possibilities are defined in choices (Nr. **5**). The table contains the possibilities as numbers (1, 2, 3, 4). In this example every number represents a text, which should be displayed in the dropdown menu.
 
 A complete search for the Mapbender User WhereGroup, in the Town Bonn, of the Usertype Company and the found results will look like this:
 
@@ -354,7 +390,7 @@ In the mapbender.yml file:
           type:
               type: choice
               options:
-                  empty_value: Please select a type.
+                  placeholder: Please select a type.
                   required: false
                   choices:
                       A: A
@@ -375,7 +411,6 @@ In the mapbender.yml file:
                   buffer: 10                                  # buffer (before zoom)
                   minScale: ~                                 # scaling boundaries for zoom, ~ for no boundaries
                   maxScale: ~
-          results:
           styleMap:
               default:
                   strokeColor: '#00ff00'
@@ -385,15 +420,10 @@ In the mapbender.yml file:
                   strokeColor: '#ff0000'
                   fillColor: '#ff0000'
                   fillOpacity: 0.4
-
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\SearchRouter
-* **Widget:** mapbender.element.searchRouter.js, mapbender.element.searchRouter.Feature.js, mapbender.element.searchRouter.Search.js
-* **Style:** mapbender.element.searchRouter.css
+              temporary:
+                  strokeColor: '#0000ff'
+                  fillColor: '#0000ff'
+                  fillOpacity: 1
 
 
 HTTP Callbacks

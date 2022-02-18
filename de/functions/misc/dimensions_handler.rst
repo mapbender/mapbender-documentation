@@ -1,4 +1,4 @@
-.. _dimensions_handler:
+.. _dimensions_handler_de:
 
 Dimensions Handler
 ******************
@@ -136,12 +136,4 @@ Ebenenbaum
             menu:
                 - [...]
                 - dimension
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmsBundle\\Element\\DimensionsHandler
-* **Widget:** 
-* **Style:** 
 

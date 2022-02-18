@@ -6,14 +6,14 @@ Installation auf Ubuntu/Debian
 Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**).
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
 
-Für den Produktiveinsatz wird PostgreSQL empfohlen.
+.. hint:: Für den Produktiveinsatz wird PostgreSQL empfohlen.
 Weitere Installationshinweise finden Sie im Kapitel `Optional > Mapbender Einrichtung auf PostgreSQL <#optional>`_.
 
 
 Voraussetzungen
 ---------------
 
-- PHP (ab Version 5.6, maximal 7.2)
+- PHP >= 7.1
 - Apache Installation mit folgenden aktivierten Modulen:
 
   * mod_rewrite
@@ -36,7 +36,7 @@ Installation der benötigten PHP-Extensions:
 Entpacken und im Webserver registrieren
 ---------------------------------------
 
-Download der aktuellen Mapbender Version und entpacken nach /var/www/mapbender:
+Download der aktuellen Mapbender Version und entpacken nach /var/www/mapbender oder ein anderes Verzeichnis:
 
 .. code-block:: bash
 
@@ -90,7 +90,7 @@ Verzeichnisrechte
 
 Nächste Schritte
 ----------------
-Es kann nun auf die Mapbender Installation unter **http://hostname/mapbender/** zugegriffen werden.
+Es kann nun auf die Mapbender Installation unter **http://[hostname]/mapbender/** zugegriffen werden.
 
 Per Voreinstellung lauten die Anmeldedaten
 
@@ -158,9 +158,15 @@ Initialisierung der Datenbank:
     app/console doctrine:database:create
     app/console doctrine:schema:create
     app/console mapbender:database:init -v
-    app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+    bin/composer run reimport-example-apps
 
-Weitere Informationen zur Konfiguration: :ref:`installation_configuration_de`
+Root-Benutzer für Zugriff anlegen:
+
+.. code-block:: bash
+
+   app/console fom:user:resetroot
+
+Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`
 
 
 **Mapbender Einrichtung auf MySQL**

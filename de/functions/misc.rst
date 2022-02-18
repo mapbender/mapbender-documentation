@@ -10,6 +10,7 @@ Verschiedenes
    misc/button.rst
    misc/coordinate_utility.rst
    misc/copyright.rst
+   misc/dimensions_handler.rst
    misc/gpsposition.rst
    misc/html.rst
    misc/poi.rst

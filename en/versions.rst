@@ -3,9 +3,60 @@
 Version history
 ===============
 
-`German Version of this document. <../de/versions.html>`_
+`German version of this document. <../de/versions.html>`_
 
-You find the milestones at: https://github.com/mapbender/mapbender/milestones
+You can find the milestones at `Github <https://github.com/mapbender/mapbender/milestones>`_.
+
+
+
+Version 3.2.9
+-------------
+
+Release date: 28.01.2022
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v329
+
+
+Version 3.2.8
+-------------
+
+Release date: 02.11.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v328
+
+
+Version 3.2.7
+-------------
+
+Release date: 07.09.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v327
+
+
+Version 3.2.6
+-------------
+
+Release date: 09.08.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v326
+
+
+Version 3.2.5
+-------------
+
+Release date: 08.06.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v325
 
 
 Version 3.2.4
@@ -173,7 +224,7 @@ Release date: 26.09.2018
 **Improvements and bugfixes:**
 
 * Find the description of the fixes in the repository links
-* Update Mapbender-Starter `v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
+* Update `Mapbender-Starter v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
 * Update Mapbender to `v3.0.7.5 <https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5>`_
 * Update Owsproxy to `v3.0.6.4 <https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4>`_, includes Owsproxy dependencies
 * Update mapbender/vis-ui.js to `0.0.72 <https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72>`_
@@ -934,7 +985,7 @@ For details have a look at: https://github.com/mapbender/mapbender/issues?milest
 * Print with overview
 * Sidepane with different elements (chnage via button)
 * Layertree context menue to change opacity and to zoom to layer
-* Open application with parameters (f.e. position)
+* Open application with parameters (e.g. position)
 * ACL for elements
 * Added function for validate WMS GetCapabilities documents
 

@@ -15,21 +15,14 @@ Konfiguration
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der "Layout" Liste angezeigt und ermöglicht mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 
 YAML-Definition:
 ----------------
 
 .. code-block:: yaml
 
-   target: ~                        # ID des Kartenelements (z.B. map)
+   class: Mapbender\PrintBundle\Element\ImageExport
+   target: map                       # ID des Kartenelements (z.B. map)
 
 Für das Element wird ein Button verwendet. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\PrintBundle\\Element\\ImageExport
-* **Widget:** mapbender.element.imageExport.js
 
