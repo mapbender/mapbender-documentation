@@ -3,10 +3,23 @@
 Data Manager
 ************
 
-Der Data Manager ähnelt in seiner Funktionalität dem `Digitizer <digitizer.html>`_. Der Data Manager speichert allerdings nur Sachdaten, er hinterlegt also keine Geometrieinformationen.
+Der Data Manager ähnelt in seiner Funktionalität dem `Digitizer <digitizer.html>`_. Der Data Manager speichert allerdings nur Sachdaten und keine Geodaten.
+
+Der Data Manager kann zur Pflege von Referenztabllen verwendet werden, beispielsweise einer Tabelle mit Kontaktinformationen.
+
 
 Konfigurationsbeispiel
 ----------------------
+
+Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
+Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../../customization/yaml.html>`_.
+
+Die Definition des Data Managers erfolgt im YAML-Syntax. 
+Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, den Formularaufbau.
+
+
+.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
+Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
 
 Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu speichern.
 
@@ -15,17 +28,40 @@ Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu 
 
 In dem dargestellten Konfigurationsbeispiel öffnet sich eine Eingabevorlage nach Klick auf das ``+``-Zeichen.
    
-.. image:: ../../../figures/de/data_manager_template.png
+.. image:: ../../../figures/data_manager_form.png
      :scale: 80
-     
-Einrichtung
------------
 
-Um den Data Manager zu nutzen, muss eine Datenbankverbindung konfiguriert werden. Genauere Informationen hierzu finden sich im Kapitel zur `Konfiguration einer Datenbank <../../customization/yaml.html>`_.
+SQL for the contact table
+--------------------------
+
+The following SQL commands must be executed in your database to create the contact table for the example.
+
+.. code-block:: postgres
+
+   CREATE TABLE public.contacts (
+        gid serial PRIMARY KEY,
+        firstname varchar,
+        lastname varchar,
+        street varchar,
+        housenumber varchar,
+        postcode integer,
+        location varchar,
+        phone varchar,
+        email varchar,
+        notes varchar,
+        public boolean,
+        date_of_creation date DEFAULT date(now()),
+        user_of_last_edit varchar,
+        date_favorite date,
+	color_favorite varchar
+    );
+     
+Element-Konfiguration
+---------------------
 
 Das Element kann danach in die Seitenleiste eingebettet werden.
      
-.. image:: ../../../figures/de/data_manager_add.png
+.. image:: ../../../figures/de/data_manager_configuration.png
      :scale: 80
 
 YAML-Definition
@@ -35,38 +71,44 @@ Im Folgenden ist der YAML-Code des oben dargestellten Konfigurationsbeispiels hi
 
 .. code-block:: yaml
 
-    Kontakte:
+    contacts:
       dataStore:
         connection: geodata_db
-        table: kontakte
+        table: contacts
         uniqueId: gid
+        events:
+          onBeforeSave: '$feature->setAttribute(''user_of_last_edit'', $user ); '    
       allowEdit: true
       allowCreate: true
       allowDelete: true
       allowRefresh: false
       popup:
-        title: Kontakte
+        title: contacts
         width: 550px
       formItems:
         -
           type: form
           children:
             -
+              type: label
+              title: 'Example for element Data Manager'        
+            -
               type: fieldSet
               children:
                 -
                   type: input
-                  title: Name
-                  placeholder: 'Bitte geben Sie einen Namen an.'
-                  name: nachname
+                  title: last name
+                  attr:
+                      placeholder: 'Please enter your last name.'
+                  name: lastname
                   css:
-                    width: 60%
+                    width: 50%
                 -
                   type: input
-                  title: Vorname
-                  name: vorname
+                  title: 'first name'
+                  name: firstname
                   css:
-                    width: 40%
+                    width: 50%
             -
               type: breakLine
             -
@@ -74,65 +116,131 @@ Im Folgenden ist der YAML-Code des oben dargestellten Konfigurationsbeispiels hi
               children:
                 -
                   type: input
-                  title: Straße
-                  name: strasse
+                  title: street
+                  name: street
                   css:
-                    width: 80%
+                    width: 30%
                 -
                   type: input
-                  title: 'Hausnummer und Zusatz'
-                  name: hausnr
+                  title: 'house number'
+                  name: housenumber
                   css:
                     width: 20%
+                -
+                  type: input
+                  title: postcode
+                  name: postcode
+                  css:
+                    width: 20%
+                -
+                  type: input
+                  title: location
+                  name: location
+                  css:
+                    width: 30%
+
+            -
+              type: fieldSet
+              children:
+                -
+                  type: date
+                  title: date_favorite
+                  name: date_favorite
+                  css:
+                    width: 50%
+                -
+                  type: colorPicker
+                  title: color favorite
+                  name: color_favorite
+                  attr:
+                    placeholder: '#ff0000'
+                  css:
+                    width: 50%
+            #-
+            #  type: breakLine
             -
               type: fieldSet
               children:
                 -
                   type: input
-                  title: PLZ
-                  name: plz
+                  title: phone number
+                  name: phone
+                  mandatory: true
+                  mandatoryText: 'Please add your phone number.'
+                  infoText: 'Help: Please add your phone number.'
+                  copyClipboard: true              
                   css:
-                    width: 20%
+                    width: 50%              
                 -
                   type: input
-                  title: Ort
-                  name: ort
+                  title: email
+                  infoText: 'Help: Please add your e-mail.'
+                  copyClipboard: true              
+                  placeholder: 'Please enter your e-mail.'
+                  name: email
                   css:
-                    width: 80%
-            -
-              type: breakLine
-            -
-              type: fieldSet
-              children:
-                -
-                  type: input
-                  title: Telefon
-                  name: telefon
-            -
-              type: input
-              title: E-Mail
-              placeholder: 'Bitte geben Sie eine E-Mail Adresse an.'
-              name: email
+                    width: 50%
             -
               type: breakLine
             -
               type: textArea
-              title: Bemerkung
-              placeholder: 'Hier können Sie Bemerkungen verfassen.'
-              name: bemerkung
+              title: notes
+              placeholder: 'You can leave notes here.'
+              name: notes
+              value: 'Guter Tester'
+            -
+              type: checkbox
+              name: public
+              value: true
+              title: 'publish contact'          
+            -
+              type: text
+              title: 'Information'
+              text: "'user: ' + data.user_of_last_edit + ' Datum:' + data.date_of_creation\n"           
+            - type: radioGroup
+              title: Choose one
+              name: choice_column_1
+              options:
+                - label: Option 1
+                  value: v1
+                - label: Option 2
+                  value: v2
+                - label: Option 3
+                  value: v3                          
+              value: v2   # Pre-select second option by default for new items
+            - type: select
+              title: Select at least one (multiple choice)
+              attr:
+                required: required
+                multiple: multiple
+              name: choice_column_2
+              options:
+                - label: Option 1
+                  value: v1
+                - label: Option 2 (disabled)
+                  value: v2
+                  attr:
+                    disabled: disabled
+                - label: Option 3
+                  value: v3
+                - label: Option 4
+                  value: v4                            
+              value: v1,v3   # use comma-separated values for default multi-select value          
       table:
         autoWidth: false
         columns:
           -
-            data: nachname
-            title: Name
+            data: lastname
+            title: last name
           -
-            data: vorname
-            title: Vorname
+            data: firstname
+            title: first name
         info: true
         lenghtChange: false
         ordering: true
         pageLength: 10
         paging: true
         processing: true
-        searching: true    
+        searching: true
+
+
