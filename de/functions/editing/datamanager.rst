@@ -19,7 +19,7 @@ Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, den Formul
 
 
 .. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
-Falls Sie den genauen Fehler reproduzieren möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
+Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
 
 Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu speichern.
 
