@@ -3,11 +3,16 @@
 SimpleSearch
 ************
 
-SimpleSearch offers a single field search or keyword search. The search query is transmitted to a search service. The search server from Apache (Solr) or from OpenStreetMap (Nominatim) can be used.
+SimpleSearch offers a single field search or keyword search. The search query is transmitted 
+to a search service. 
+The search servers Apache Solr, Nominatim, photon or an OGC API Features service can be used.
 
-An input field is offered which can be integrated directly into the toolbar or the sidebar. SimpleSearch sends the entered search term to a configurable URL and receives JSON-formatted data, which contain a label and geometry attributes for each entry.
+An input field is offered which can be integrated directly into the toolbar or the sidebar. 
+SimpleSearch sends the entered search term to a configurable URL and receives JSON-formatted data, which contain a label and geometry attributes for each entry.
 
 The geometry data can be encoded in WKT or GeoJSON format.
+
+It is configurable which information from the result json should be shown as result
 
 .. image:: ../../../figures/simplesearch.png
      :scale: 80
@@ -34,15 +39,38 @@ Configuration
   * Token replace, e.g.: ``$1*``
   
 * **Collection path:** Can be a dotted attribute path to extract from the query result (e.g. ``response.docs``).
-* **Label attribute:** Name of the attribute to use for entry labeling (e.g. ``label``).
+* **Label attribute:** Name of the attribute/s to show as result.
 * **Geom attribute:** Name of the geometry data attribute (e.g. ``geom``).
 * **Geom format:** Geometry data format, can be WKT or GeoJSON (e.g. ``WKT``).
-* **Source SRS:** EPSG code of the spatial reference system
+* **Source SRS:** EPSG code of the spatial reference system (e.g. ``EPSG:25832``)
 * **Delay:** Autocomplete delay. Use 0 to disable autocomplete (e.g. ``300``).
 * **Result buffer:** Buffer result geometry with this (map units) before zooming (e.g. ``10``).
 * **Result minscale/maxscale:** Scale restrictions for zooming, ~ for none  (e.g. ``1000`` und ``5000``).
 * **Result icon url:** Icon to display as result marker (e.g. ``http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png``).
 * **Result icon offset:**  Offset x and y for the icon (e.g. ``0,0``).
+
+
+Flexible configuration via label_attribute
+------------------------------------------
+
+The result JSON provides different information. From version 3.2 you can 
+define one or several attributes for the result text.
+
+.. code-block:: yaml
+
+   label_attribute: label
+
+The definition is relative to the Collection path. You can use additional text to separate the attributes.
+
+.. code-block:: yaml
+
+   label_attribute:  '${properties.address.city} ${properties.address.road} ${properties.address.house_number}'
+
+
+.. code-block:: yaml
+
+   label_attribute:  'Town: ${properties.address.city}: ${properties.address.road} - ${properties.address.house_number}'
+
 
 YAML-Definition
 ---------------
@@ -60,13 +88,15 @@ YAML-Definition
    label_attribute: label                                                             # Name of the attribute to use for entry labeling
    geom_attribute: geom                                                               # Name of the geometry data attribute
    geom_format: WKT                                                                   # geometry data format, can be WKT or GeoJSON
-   delay: 300                                                                         # Autocomplete delay. Use 0 to disable autocomplete.
-   result_buffer: 50                                                                  # buffer result geometry with this (map units) before zooming
-   result_minscale: 1000                                                              # scale restrictions for zooming, ~ for none
-   result_maxscale: 5000                                                              # scale restrictions for zooming, ~ for none
-   result_icon_url: http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png # icon to display as result marker
-   result_icon_offset: -6,-38                                                         # Offset x and y for the icon
-   
+   sourceSrs: 'EPSG:25832'                                                            # Projection of the result data
+   delay: 300
+   result:                                                                            # Autocomplete delay. Use 0 to disable autocomplete.
+     buffer: 50                                                                       # buffer result geometry with this (map units) before zooming
+     minscale: 1000                                                                   # scale restrictions for zooming, ~ for none
+     maxscale: 5000                                                                   # scale restrictions for zooming, ~ for none
+     icon_url: /bundles/mapbendercore/image/pin_red.png                               # icon to display as result marker
+     icon_offset: -6,-38                                                              # Offset x and y for the icon
+ 
 
 Set-up of Solr
 ==============
@@ -80,6 +110,16 @@ Set up of Nominatim
 
 * **Download**: http://nominatim.org/release-docs/latest/admin/Installation/
 * **Documentation**: http://nominatim.org/release-docs/latest/
+
+Set up of photon
+================
+photon is an open source geocoder built for OpenStreetMap data.
+
+* **Download & Documentation**: https://github.com/komoot/photon
+
+Set up of OGC API Features
+==========================
+Several projects support OGC API Features like QGIS, GeoServer, pygeoapi.
 
 HTTP Callbacks
 ==============
