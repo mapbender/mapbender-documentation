@@ -46,8 +46,7 @@ search form. The configuraton starts with the column name (in the example it is 
 
 * label - you can define a label parameter (if not defined the capitalized column name will be used).
 
-* required: You can define whether a type should be required (default is false). With required: true a mandatory field is defined. 
-That means that the user has to define a search term here before the search can run. Headings of required fields are marked with a red *.
+* required: You can define whether a type should be required (default is false). With required: true a mandatory field is defined. That means that the user has to define a search term here before the search can run. Headings of required fields are marked with a red '*'.
 
 You also can define a compare mode. See section 'comparison mode'.
 

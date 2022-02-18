@@ -22,7 +22,7 @@
 
   .. |mapbender-button-key| image:: ../figures/mapbender_button_key.png
 
-  .. |mapbender-button-update| image:: ../figures/mapbender_button_update.png 
+  .. |mapbender-button-update| image:: ../figures/mapbender_button_update.png
 
 .. image:: ../_static/mapbender_logo.png
   :scale: 100 %
@@ -232,7 +232,7 @@ Versuchen Sie es selbst
 Datenquellen (Sources) verwenden
 ================================
 
-In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist noch einmal in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`layerset_de:`.
+In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist noch einmal in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`layerset_de` .
 
 Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
 

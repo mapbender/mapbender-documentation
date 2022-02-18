@@ -11,8 +11,8 @@ parameters.yml
 Fundamental parameters are specified here.
 
 
-**Database**
-************
+Database
+********
 
 To configurate the database the files config.yml and parameters.yml are needed.
 The file config.yml contains placeholders for variables, which are specified in the file parameters.yml.
@@ -63,8 +63,8 @@ Database configuration in parameters.yml, when PostgreSQL is used:
     database_password: secret
 
 
-**Use of several databases**
-****************************
+Use of several databases
+************************
 
 With Mapbender you can use several databases. This is recommended when you want to keep your data seperated from Mapbender data. Or when you want to use code that doesn't belong to a Mapbender bundle.
 
@@ -106,8 +106,8 @@ Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine pro
 
 
 
-**Disclaimer**
-**************
+Disclaimer
+**********
 
 .. image:: ../../figures/disclaimer.png
 
@@ -124,8 +124,8 @@ A disclaimer can be added through the use of site links.
 Site links will be seperated by "|".
 
 
-**Language setting**
-*********************
+Language setting
+****************
 
 The language (locale) of the whole Mapbender installation can be changed, but not the language of a single application.
 
@@ -150,8 +150,8 @@ Configuration example:
 More information: http://doc.mapbender.org/en/book/translation.html
 
 
-**Logo**
-********
+Logo
+****
 The logo (default is the Mapbender logo) can be changed in parameters.yml. This change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
@@ -161,9 +161,11 @@ The logo (default is the Mapbender logo) can be changed in parameters.yml. This 
  The file of the logo needs to be added under application/web.
 
 
- **Mailer**
-***********
+Mailer
+*******
+
 Mailer information in parameters.yml (e.g. smtp or sendmail).
+
 Configuration example:
 
 .. code-block:: yaml
@@ -178,8 +180,8 @@ The functions 'Self-Registration' and 'reset password' need a mailer.
 More information in chapter :ref:`users`.
 
 
- **Project name**
-*****************
+Project name
+************
 The name of the project (default: Mapbender) can be changed in parameters.yml. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
@@ -190,8 +192,8 @@ The name of the project (default: Mapbender) can be changed in parameters.yml. T
 **Important note:** In parameters.yml **tabulators may not be used for indentation** instead you need to use space.
 
 
-**Proxy settings**
-******************
+Proxy settings
+**************
 If you use a proxy, you need to change parameters.yml.
 
 Configuration example:
@@ -222,8 +224,8 @@ config.yml
 * **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
 
 
-**Database**
-*************
+Database
+********
 Important: Every database defined in parameters.yml needs to have a placeholder in config.yml as well:
 
 .. code-block:: yaml
@@ -245,8 +247,8 @@ Important: Every database defined in parameters.yml needs to have a placeholder 
                 profiling: "%kernel.debug%"                 # Profiling SQL requests. This option can be turned of in production. (standard: %kernel.debug%)
 
 
-**Use of several databases**
-****************************
+Use of several databases
+************************
 Example with two database connections in **config.yml**:
 
 .. code-block:: yaml

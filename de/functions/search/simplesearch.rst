@@ -111,8 +111,8 @@ Einrichtung von Nominatim:
 * **Download**: http://nominatim.org/release-docs/latest/admin/Installation/
 * **Dokumentation**: http://nominatim.org/release-docs/latest/
 
-Einrichtung von photon
-================
+Einrichtung von photon:
+=======================
 photon ist ein Open Source Geocoder für OpenStreetMap-Daten.
 
 * **Download & Dokumentation**: https://github.com/komoot/photon

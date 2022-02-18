@@ -8,17 +8,19 @@ Reset User with ID 1
 
 The command ``app/console fom:user:resetroot`` resets the user with ID 1 (root). This user generally owns all rights.
 
-.. code-block:: bash
-          $ app/console fom:user:resetroot
-                Welcome to the Mapbender root account management command  
-                Enter the username to use for the root account.
-                Username [root]: root
-                Enter the e-mail adress to use for the root account.
-                E-Mail [root@root.de]: admin@mycompany.foo
-                Enter the password to use for the root account.
-                Password: secret
-                Do you confirm reset [yes]? yes
-                The root is now usable. Have fun!
+.. code-block:: yaml
+           
+          app/console fom:user:resetroot
+          
+          Welcome to the Mapbender root account management command  
+          Enter the username to use for the root account.
+          Username [root]: root
+          Enter the e-mail adress to use for the root account.
+          E-Mail [root@root.de]: admin@mycompany.foo
+          Enter the password to use for the root account.
+          Password: secret
+          Do you confirm reset [yes]? yes
+          The root is now usable. Have fun!
 
 Create new user
 ---------------

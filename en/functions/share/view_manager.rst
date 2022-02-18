@@ -21,6 +21,7 @@ Each state must be given a title for reidentification. For saving the current ma
 The most basic interaction (always available) is re-applying the map state stored in the entry. This option is always on: The saved map state will be reapplied as soon as "Apply" is hit on the selected map state in list view. Moreover, entries may offer a "Replace" interaction. This will overwrite the map state stored in the entry, and will also update the title, using the global title input field. Also, entries may offer a "Delete" interaction (with an extra confirmation step).
 
 .. note:: Note: The View Manager does *not* store or reapply the following configurations:
+
 * any interactively added sources (via WmsLoader)
 * any interactively removed layers (via Layertree context menu)
 * any values for WMS dimensions

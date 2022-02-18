@@ -29,6 +29,5 @@ Users will be sent back to the same part of the map if they refresh the page. Th
 
    share/shareurl.rst
    share/view_manager.rst
-   share/applicationswitcher.rst
    share/persistant_map_view.rst
 

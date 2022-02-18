@@ -28,6 +28,5 @@ Nach dem Neuladen des Browserfensters werden Anwender zum jeweiligen Kartenaussc
 
    share/shareurl.rst
    share/view_manager.rst
-   share/applicationswitcher.rst
    share/persistant_map_view.rst
 
