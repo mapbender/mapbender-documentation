@@ -63,7 +63,6 @@ This is how a Mapbender application can look like:
   .. image:: ../figures/mapbender_basic_application.png
      :scale: 80
 
-
 Installation
 ============
 
@@ -133,7 +132,9 @@ The application overview site displays a list of all available applications. The
 
 There are three different options to create an application: 
 
-An application can be created out of an already existing one. This can be done via a click on the |mapbender-button-copy| button in the application overview. The application will receive the same title and URL title with the appendix *"imp"*. All previously defined elements and configurations will be transferred as well. Another possibility is the import of an application. Further information can be found on the following page: :ref:`yaml_de:yaml-application-files`. Furthermore, new applications can be created from scratch. The required work steps are explained in the following:
+An application can be created out of an already existing one. This can be done via a click on the |mapbender-button-copy| button in the application overview. The application will receive the same title and URL title with the appendix *"imp"*. All previously defined elements and configurations will be transferred as well. Another possibility is the import of an application. Further information can be found on the following page: :ref:`yaml_de:yaml-application-files`. 
+
+Furthermore, new applications can be created from scratch. The required steps are explained in the following:
 
 #. Select the option *"New Application"* in the application overview.
 
@@ -231,7 +232,7 @@ Try it yourself
 4. Configure Sources
 ====================
 
-Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`layerset:.
+Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`layerset:`.
 
 The sources pages provides a user with the following functions:
 
@@ -255,7 +256,7 @@ Mapbender allows the integration of OGC Web Map Services (WMS) and Web Map Tile 
 
 #. Define the *"Type"* of the source: OGC WMS oder OGC WMTS / TMS.
 
-#. Provide the link to the getCapabilities URL in the field *"Service-URL"*``.
+#. Provide the link to the getCapabilities URL in the field *"Service-URL"*.
 
 #. Define username and password in case your source requires it.
 
@@ -366,9 +367,7 @@ Try it yourself
 
 *Here is an example source:*
 
-* WhereGroup OSM WMS:
-http://osm-demo.wheregroup.com/service
-
+* WhereGroup OSM WMS: https://osm-demo.wheregroup.com/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=getCapabilities
 
 5. User and group management
 ============================
@@ -485,10 +484,6 @@ To pass a single POI, use the following URL format:
 
 * ?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
 
-To pass multiple POIs, use the following format:
-
-* ?poi[0][point]=363374,5621936&poi[0][label]=Hello%201&poi[1][point]=366761,5623022&poi[1][label]=World
-
 
 What's next?
 ============
@@ -500,4 +495,4 @@ Mapbender Website: https://mapbender.org/
 
 You find tutorials at: https://doc.mapbender.org
 
-Get involved in the project: https://mapbender.org/Community
+Get involved in the project: https://mapbender.org/en/community/

@@ -22,9 +22,8 @@
 
   .. |mapbender-button-key| image:: ../figures/mapbender_button_key.png
 
-  .. |mapbender-button-update| image:: ../figures/mapbender_button_update.png
-  
-  
+  .. |mapbender-button-update| image:: ../figures/mapbender_button_update.png 
+
 .. image:: ../_static/mapbender_logo.png
   :scale: 100 %
   :alt: project logo
@@ -61,7 +60,7 @@ Diese Schnellstart-Anleitung beschreibt, wie Sie:
 
 Eine Mapbender Anwendung kann wie folgt aussehen:
 
-  .. image:: ../figures/mapbender3_basic_application.png
+  .. image:: ../figures/de/mapbender_basic_application.png
      :scale: 80
 
 Installation
@@ -133,7 +132,9 @@ In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendu
 
 Es gibt drei verschiedene Möglichkeiten, durch die neue Anwendungen erstellt werden können:
 
-Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich auf der Seite :ref:`yaml_de:yaml-anwendungsdateien`. Es können außerdem komplett neue Anwendungen über das Backend definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
+Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich auf der Seite :ref:`yaml_de:yaml-anwendungsdateien`. 
+
+Es können außerdem komplett neue Anwendungen über das Backend definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
 
 #. Wählen Sie zunächst den Button *"Anwendung anlegen"* auf der Anwendungsübersichtsseite.
 
@@ -366,9 +367,7 @@ Versuchen Sie es selber
 
 *Hier ist ein Beispieldienst:*
 
-* WhereGroup OSM WMS:
-http://osm-demo.wheregroup.com/service
-
+* WhereGroup OSM WMS: https://osm-demo.wheregroup.com/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=getCapabilities
 
 5. Benutzer- und Gruppenverwaltung
 ==================================
@@ -483,10 +482,6 @@ Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der
 Format für die Übergabe eines einzelnen Punktes:
 
 * ?poi[point]=363374,5621936&poi[label]=Hello World&poi[scale]=5000
-
-Für die Übergabe vieler Punkte wird das folgende Format verwendet:
-
-* ?poi[0][point]=363374,5621936&poi[0][label]=Hello&poi[1][point]=366761,5623022&poi[1][label]=World
 
 
 Was kommt als Nächstes?
