@@ -1,7 +1,7 @@
 .. _installation_symfony:
 
 Installation of Mapbender using Symfony built-in webserver
-##############################################
+##########################################################
 
 Mapbender is built on the `Symfony <http://symfony.com/>`_ Framework and therefore 
 can make use of the `Symfony built-in webserver <http://symfony.com/doc/current/cookbook/web_server/built_in.html>`_. 

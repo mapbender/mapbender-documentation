@@ -12,7 +12,7 @@ Please choose your preferred language:
    Deutsch <de/index>
 
 
-Sourcecode
+Source Code
 ================================
 
 * https://github.com/mapbender/mapbender-documentation

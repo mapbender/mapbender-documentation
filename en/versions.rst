@@ -384,7 +384,7 @@ Miscellaneous:
   * :ref:`search`
   * :ref:`export`
   * :ref:`editing`
-  * :ref:`wmc`
+  * WMC
   * :ref:`backend`
   * :ref:`fom`
   * :ref:`misc`

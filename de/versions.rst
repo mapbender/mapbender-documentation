@@ -381,7 +381,7 @@ Verschiedenes:
   * :ref:`search_de`
   * :ref:`export_de`
   * :ref:`editing_de`
-  * :ref:`wmc_de`
+  * WMC
   * :ref:`backend_de`
   * :ref:`fom_de`
   * :ref:`misc_de`

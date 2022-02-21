@@ -25,7 +25,7 @@ Basic configuration files of Mapbender are placed in the app/config directory. T
 
 * config.yml
 
-More Information: :ref:`yaml_en`.
+More Information: :ref:`yaml`.
 
   
 app/config/applications
@@ -33,7 +33,7 @@ app/config/applications
 
 The directory app/config/applications contains all applications that are defined in a YAML file. 
 
-More Information: :ref:`yaml_en`.
+More Information: :ref:`yaml` .
 
 
 bin

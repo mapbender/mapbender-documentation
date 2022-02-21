@@ -18,9 +18,7 @@ You have the possibility to define groups. All sourcesets of the same group will
 Configuration
 =============
 
-Preparation: In order to be able to configura the BaseSourceSwitcher you have to define Service
- instances as Basesource (checkbox Basesource checked).
-Please not that on start of an application all sourcesets with an activated root layer are active.
+Preparation: In order to be able to configura the BaseSourceSwitcher you have to define Service instances as Basesource (checkbox Basesource checked). Please note that on start of an application all sourcesets with an activated root layer are active.
 
 Configuration with selected root-layer - sourceset is active on start:
 

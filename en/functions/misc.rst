@@ -7,7 +7,9 @@ Other
    :maxdepth: 2
    
    misc/about_dialog.rst
+   misc/applicationswitcher.rst
    misc/button.rst
+   misc/link.rst
    misc/coordinate_utility.rst
    misc/copyright.rst
    misc/dimensions_handler.rst
