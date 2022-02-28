@@ -12,6 +12,12 @@ You have the possibility to define groups. All sourcesets of the same group will
 .. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
 
+The BaseSourceSwitcher can also be used in the sidepane. The definition of groups is not possible in the sidepane. 
+
+.. image:: ../../../figures/basesourceswitcher_sidepane.png
+     :scale: 80
+
+
 Configuration
 =============
 
@@ -48,13 +54,6 @@ In the configuration example you can see that either one, none or several entrie
 * **Title**: Title of the BaseSource
 * **Group**: Optional group name
 * **Instances**: Sources for the BaseSource
-
-Integration into the sidepane
-------------------------------
-The BaseSourceSwitcher can be integrated in the sidepane. The definition of groups is not possible in the sidepane. 
-
-.. image:: ../../../figures/basesourceswitcher_sidepane.png
-     :scale: 80
 
 
 YAML-Definition:

@@ -16,10 +16,16 @@ Zu jeder Datenquelle kann eine Gruppe definiert werden. Alle Definitionen einer 
 .. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
 
+Der BaseSourceSwitcher kann auch in der Seitenleiste eingebunden werden. Dabei ist keine Definition von Gruppen möglich.
+
+.. image:: ../../../figures/de/basesourceswitcher_sidepane.png
+     :scale: 80
+
+
 Konfiguration
 =============
 
-*Vorbereitung*: Um den BaseSourceSwitcher konfigurieren zu können, 
+**Vorbereitung**: Um den BaseSourceSwitcher konfigurieren zu können, 
 müssen WMS-Instanzen als BaseSource definiert sein (CheckBox BaseSource aktiv). 
 Beachten Sie, dass in der Anwendung beim Start die Themen aktiviert werden, 
 bei denen der root-Layer aktiv ist (neu ab Version 3.2).
@@ -58,13 +64,6 @@ Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge
 * **Title**: Name der Themenkarte
 * **Group**: Optionale Zuweisung zu einer Themengruppe
 * **Instances**: Auswahl der Instanzen für die Themenkarte
-
-Einbindung in Sidepane
------------------------
-Der BaseSourceSwitcher kann in der Seitenleiste eingebunden werden. Dabei ist keine Definition von Gruppen möglich.
-
-.. image:: ../../../figures/de/basesourceswitcher_sidepane.png
-     :scale: 80
 
 
 YAML-Definition:
