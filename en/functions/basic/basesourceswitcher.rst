@@ -21,7 +21,7 @@ The BaseSourceSwitcher can also be used in the sidepane. The definition of group
 Configuration
 =============
 
-*Preparation*: In order to be able to configure the BaseSourceSwitcher you have to define Service instances as Basesource (checkbox Basesource checked). Please note that on start of an application all sourcesets with an activated root layer are active.
+**Preparation**: In order to be able to configure the BaseSourceSwitcher you have to define Service instances as Basesource (checkbox Basesource checked). Please note that on start of an application all sourcesets with an activated root layer are active.
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80
