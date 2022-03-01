@@ -3,37 +3,95 @@
 Search Router
 *************
 
-This element creates a configurable search formular with result output in which generic SQL search is supported.
+This element creates a configurable search formular with a configurable result output in which generic SQL search is supported.
 
 .. image:: ../../../figures/search_router_en.png
      :scale: 80
 
 
-Add SearchRouter
-================
-
-In order to use the SearchRouter, two requirements have to be met:
-
-1. The database has to be defined in the configuration files.
-2. The SearchRouter element has to be integrated in the Mapbender layout. The element may be integrated into the sidepane or as a button into the toolbar. To configure a button visit the documentation at :ref:`button`.
-
-
 Configuration
 =============
+
+.. note:: The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at :ref:`yaml`.
+
+The element may be integrated into the sidepane or via a button into from the toolbar. To configure a button visit the documentation at :ref:`button`.
+
 
 .. image:: ../../../figures/search_router_edit_en.png
      :scale: 80
 
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Title:** Title of the element. The title will be listed in the Layouts section in the backend. It is shown as sidepane tab/button title (usage in sidepane) or dialog title (usage via button).
 * **Width:**  Width of the dialog (only for dialog, not sidepane)
 * **Height:**  Height of the dialog (only for dialog, not sidepane)
+
+You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox. The definition of the search is done in YAML syntax in the textarea configuration. 
+
 * **Routes:** Collection of search routes.
 * **Title**: Search Title (appears, when a search is added to Routes by using +)
-* **Configuration**: Field to configure the search (ppears, when a search is added to Routes by using +)
+* **Configuration**: Field to configure the search
+ (appears, when a search is added to Routes by using +)
 
-You can define Searches (Routes) with the ``+`` Button. Each Search has a ``title`` which will show up in the search form in a selectbox. From there you can choose the search you want to use and a ``configuration``. The definition of the search is done in YAML syntax in the textarea configuration. Here you define the database connection, the Search tables/views, the design of the form and of the result table.
 
-.. note:: The SearchRouter needs access to the database where the search tables are. You have to define a new database configuration to be able to connect with the geo database. Read more about this at :ref:`yaml`.
+Route Configuration
+-------------------
+In the textarea configuration you define all important information for each search. 
+
+* the database connection
+* the search tables/views and columns
+* the design of the form 
+* and the design of the result table
+* the design of the results on the map
+
+
+.. code-block:: yaml
+
+    class: Mapbender\CoreBundle\Component\SQLSearchEngine
+    class_options:
+        connection: geodata_db   # database alias from config.yml
+        relation: polygons       # search table
+        attributes:              # columns that are used in the form and in the result table
+          - gid
+          - name
+          - type
+          - city
+        geometry_attribute: geom # reference to the geometry column
+    form:
+        name:
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            options:
+                required: true
+            compare: exact
+        city:
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            options:
+                required: false
+                label: City/Town
+            compare: ilike
+    results:
+        view: table
+        count: true
+        headers:
+            gid: ID
+            name: Name
+            city: City/Town
+        callback:
+            event: click
+            options:
+                buffer: 10
+                minScale: null
+                maxScale: null
+
+
+Class and Class options
+-----------------------
+The configuration starts with the definition of the class (always class: Mapbender\CoreBundle\Component\SQLSearchEngine) followed by the information about the database connection, definition of the search table, the columns that are used and the geometry column.
+
+
+Form
+----
+In the form section you can define the setup of the form and define textfields and selectboxes. 
+
+You refer to the table columns and define the type, options and compare.
 
 
 Type
@@ -54,7 +112,7 @@ You also can define a compare mode. See section 'comparison mode'.
 Type text
 ~~~~~~~~~
 
-Type text allows you to provide text fields for your search formular.
+Type **text** allows you to provide text fields for your search formular.
 
 Type text supports autocomplete. If you want to add autocomplete to the field you have to add the additional attr-parameters.
 
@@ -81,7 +139,8 @@ Type text; example with autocomplete:
                 required: true
             attr:
                 data-autocomplete: 'on'          # activate autocomplete
-                data-autocomplete-distinct: 'on'
+                data-autocomplete-distinct: 'on' # only show equal results once
+                data-autocomplete-using: type, city     # autocomplete, list of input fields (with comma seperated), WHERE input           
             compare: exact                                          
 
 
@@ -107,24 +166,27 @@ You have to define the choices for the selectbox. You define a value and a key.
 
 .. code-block:: yaml
 
-    usertype:                                                         
+    type:                                                         
         type: Symfony\Component\Form\Extension\Core\Type\ChoiceType                                                      # box with selection options as dropdown list
         options:
             label: User type
             required: false
-            placeholder: 'Please select...' 
+            placeholder: 'Please select...'
             choices:                        
-                Company: 1
-                Administration: 2
-                University: 3
-                User: 4
+                Company: A
+                Administration: B
+                University: C
+                User: D
+                Something else: E
         compare: exact     
 
 
 Comparison Mode
 ---------------
 
-For every field a comparison mode can be set, which should be used by the engine when the query is sent. The SQL search engine has the following modes:
+For every field a comparison mode can be set. This is used by the engine when the query is sent. 
+
+The following comparison modes are supported:
 
 * **exact:** exact comparison (key = val)
 * **iexact:** comparison ignoring cases (case-insensitive)
@@ -136,16 +198,51 @@ For every field a comparison mode can be set, which should be used by the engine
 * **ilike-right:** right-side 'like' (case-insensitive - searchstring\*)
 
 
+Result
+------
+
+In the section **results** the definition for the result table and styling is none.
+
+.. code-block:: yaml
+
+    results:
+        view: table
+        count: true
+        headers:
+            gid: ID
+            name: Name
+            city: City/Town
+        callback:
+            event: click
+            options:
+                buffer: 10
+                minScale: null
+                maxScale: null
+
+* **view**: is always set to table. No more options are possible
+* **count**: true or false to show the number of results
+* **headers**: definition of the columns to display and the alternative labeling
+* **callback**: define the action for the click event on a result item
+* **event**: only click is supported
+* ** buffer**: zoom to the result item with a defined buffer
+* **minScale and maxScale**: zoom to the result item in a scale between minScale and maxScale
+
 
 Styling the Results
 -------------------
 
-By default the results are shown in the default-OpenLayers Style, orange for hits and blue for selected objects. The OpenLayer default Styling looks like this:
+By default the results are shown in the default-OpenLayers Style.
 
 .. image:: ../../../figures/de/search_router_example_colour_orangeblue.png
      :scale: 80
 
-You can overwrite this by handing over a styleMap-Configuration, which could look like this:
+You can overwrite this by handing over a styleMap-Configuration.
+
+Three different styles are configured:
+
+* **default** - default style
+* **select** - style on select
+* **temporary** - style on mouse-over
 
 .. code-block:: yaml
 
@@ -170,25 +267,19 @@ You can overwrite this by handing over a styleMap-Configuration, which could loo
                strokeColor: '#0000ff'
                fillColor: '#0000ff'
                fillOpacity: 1
+          
+In the default style the point-symbol interior is transparent (fillOpacity: 0). Only their outlines will be drawn in green. 
 
+The selected features will be drawn with a purple fill and an opacity of 0.8. The outline of the symbol is blue. 
 
-Three different styles are configured:
-
-
-- **default**: The standard-style for all results
-- **select**: The style used if a result is clicked.
-- **temporary**: The styles used if you hover with the mouse-pointer over a result.
-               
-This will not draw the point-symbol interiors, since the transparency is set to zero (fillOpacity: 0). Only their outlines will be drawn in green. The selected features will be drawn in here with a purple fill and an opacity of 0.8. The stroke-Color is a blue line. The temporary symbols on mouse-hover are opaque blue points. The following screenshot shows this design:
+The temporary symbols on mouse-hover are blue points. 
 
 .. image:: ../../../figures/de/search_router_example_colour_purplegreen.png
      :scale: 80
 
-The default settings override the OpenLayers-Default Settings, so you only have to state the things you want to overwrite. If you state nothing, the default OpenLayer style will be used.
+The styleMap settings override the default settings, so you only have to define the sections you want to overwrite. No extra styleMap is set the default style will be used.
 
-The select-style works the same way: Any statement you make will overwrite the settings of the *final* default style.
-
-Note, that the hexadeximal color values have to be stated in quotation marks, because the #-Symbol would be interpreted as a comment instead.
+Note, that the hexadeximal color values have to be stated in quotation marks, because # would be interpreted as a comment instead.
 
 
 
@@ -214,7 +305,7 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
 
   class: Mapbender\CoreBundle\Component\SQLSearchEngine
   class_options:
-    connection: demo                       # database (on which the element has access)
+    connection: geodata_db                 # database (on which the element has access)
     relation: mapbender_user               # table (on which the element has access)
     attributes:                            # table columns (which the element addresses)
       - gid
@@ -224,7 +315,7 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
     geometry_attribute: the_geom           # definition of the geometry column
   form:                                    # configuration of the form
     orga:                                  # search field (e.g. search for specific Mapbender User)
-      type: text
+      type: Symfony\Component\Form\Extension\Core\Type\TextType
       options:
         required: false                    # no mandatory field
         label: 'Mapbender User'            # caption of the search field
@@ -233,7 +324,7 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
           data-autocomplete-distinct: 'on'
       compare: ilike                       # see section 'comparison mode' on this page
     town:                                  # search field (e.g. search for specific city)
-      type: text
+      type: Symfony\Component\Form\Extension\Core\Type\TextType
       options:
         required: false                    # no mandatory field
         label: City                        # caption of the search field
@@ -242,7 +333,7 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
           data-autocomplete-distinct: 'on'
       compare: ilike
     usertype:                              # search field (search for specific User type)
-      type: choice                         # possible choices via drop down list
+      type: Symfony\Component\Form\Extension\Core\Type\ChoiceType
       options:
         placeholder: 'Please select...'    # displayed text in field before entering a search
         choices:                           # choices need to have the following format: "entry in the database column": "displayed name in the drop down list"
@@ -321,7 +412,7 @@ Example of a route-configuration in the ``configuration`` area:
 
     class: Mapbender\CoreBundle\Component\SQLSearchEngine
     class_options:
-      connection: gisdb
+      connection: geodata_db
       relation: gn250_p
       attributes:
         - id
@@ -331,7 +422,7 @@ Example of a route-configuration in the ``configuration`` area:
       geometry_attribute: geom
     form:
       name:
-        type: text
+        type: Symfony\Component\Form\Extension\Core\Type\TextType
         options:
           required: true
         compare: ilike
@@ -368,16 +459,17 @@ In the mapbender.yml file:
        demo_polygon:                                         # machine-readable name
       class: Mapbender\CoreBundle\Component\SQLSearchEngine  # path to used search engine
       class_options:                                         # options passed to the search engine
-          connection: digi_suche                             # search_db, DBAL connection name, ~ for default
+          connection: geodata_db                             # search_db, DBAL connection name, ~ for default
           relation: polygons          
           attributes: 
               - gid                                          # list of columns, expressions are possible
               - name 
               - type
+              - city
           geometry_attribute: geom                           # name of the geometry column, attention: projection needs to match with the projection of the map element
       form:                                                  # declaration of the search form
           name:                                              # field name, column name
-              type: text                                     # input field, normally text or numbers
+              type: Symfony\Component\Form\Extension\Core\Type\TextType        # input field, normally text or numbers
               options:                                       # declaration of the input field
                   required: false                            # HTML5, required attributes
                   label: Name                                # custom label, otherwise field name used
@@ -386,17 +478,23 @@ In the mapbender.yml file:
                       data-autocomplete-distinct: on         # attribute to activate distinct autocomplete
                       data-autocomplete-using: type          # autocomplete, list of input fields (with comma seperated), WHERE input           
               compare: ilike                                 # see section 'comparison mode' on this page
+          city:
+              type: Symfony\Component\Form\Extension\Core\Type\TextType
+              options:
+                  required: false
+                  label: City/Town
+              compare: ilike
           type:
-              type: choice
+              type: Symfony\Component\Form\Extension\Core\Type\ChoiceType 
               options:
                   placeholder: Please select a type.
                   required: false
                   choices:
-                      A: A
-                      B: B
-                      C: C
-                      D: D
-                      E: E
+                      A Company: A
+                      B Administration: B
+                      C University: C
+                      D User: D
+                      E Something else: E
       results:
           view: table                                         # display results as table 
           count: true                                         # show number of results
@@ -404,6 +502,7 @@ In the mapbender.yml file:
               gid: ID                                         # column name -> header
               name: Name
               type: Type
+              city: City/Town
           callback:                                           # click event
               event: click                                    # click or mouseover event
               options:
@@ -425,15 +524,4 @@ In the mapbender.yml file:
                   fillOpacity: 1
 
 
-HTTP Callbacks
-==============
 
-<route_id>/autocomplete
------------------------
-
-Auto-completed Ajax endpoint for the predefined search route. The auto-complete uses Backbone.js. The auto-complete is implemented in mapbender.element.searchRouter.Search.js.
-
-<route_id>/search
------------------
-
-Auto-completed Ajax endpoint for the predefined search route. The search module uses Backbone.js. The auto-complete is implemented in mapbender.element.searchRouter.Search.js.
