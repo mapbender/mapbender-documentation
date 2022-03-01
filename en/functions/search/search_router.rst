@@ -224,7 +224,7 @@ In the section **results** the definition for the result table and styling is no
 * **headers**: definition of the columns to display and the alternative labeling
 * **callback**: define the action for the click event on a result item
 * **event**: only click is supported
-* ** buffer**: zoom to the result item with a defined buffer
+* **buffer**: zoom to the result item with a defined buffer
 * **minScale and maxScale**: zoom to the result item in a scale between minScale and maxScale
 
 
@@ -240,9 +240,9 @@ You can overwrite this by handing over a styleMap-Configuration.
 
 Three different styles are configured:
 
-* **default** - default style
-* **select** - style on select
-* **temporary** - style on mouse-over
+* **default**: default style
+* **select**: style on select
+* **temporary**: style on mouse-over
 
 .. code-block:: yaml
 
