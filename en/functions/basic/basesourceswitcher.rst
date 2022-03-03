@@ -3,9 +3,9 @@
 BaseSourceSwitcher
 ******************
 
-With this element you can switch between different predefined layers (BaseSources), e. g. background maps. You can define the layer as a BaseSource in the tab "Layersets" in the application. You have to edit the layer and set a checkmark at "BaseSource":
+With this element you can switch between different predefined layers (BaseSources), e. g. background maps. You can define the layer as a BaseSource in the tab "Layersets" in the application. You have to edit the layer and set a checkmark at "BaseSource".
 
-BaseSourceSwitcher is a button group to change the map's background sources. The BaseSourceSwitcher allows you to switch between the predefined source sets. For every sourceset a button will be displayed in the client. Only one source set can be active at the same time.
+The BaseSourceSwitcher is a button group to change the map's background sources. It allows you to switch between predefined sourcesets. For every sourceset a button will be displayed in the client. Only one source set can be active at the same time.
 
 You have the possibility to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
 
@@ -21,17 +21,17 @@ The BaseSourceSwitcher can also be used in the sidepane. The definition of group
 Configuration
 =============
 
-**Preparation**: In order to be able to configure the BaseSourceSwitcher you have to define Service instances as Basesource (checkbox Basesource checked). Please note that on start of an application all sourcesets with an activated root layer are active.
+**Preparation**: In order to be able to configure the BaseSourceSwitcher you have to define Service instances as Basesource (checkbox "Basesource" on). Please note that on start of an application all sourcesets with an activated root layer are active.
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80
 
-Configuration with selected root-layer - sourceset is active on start:
+Configuration with selected root layer - sourceset is active on start:
 
 .. image:: ../../../figures/basesourceswitcher_instance_active.png
      :scale: 80
 
-Configuration with selected root-Layer - sourceset is not active on start:
+Configuration with selected root layer - sourceset is not active on start:
 
 .. image:: ../../../figures/basesourceswitcher_instance_not_active.png
      :scale: 80
@@ -39,7 +39,7 @@ Configuration with selected root-Layer - sourceset is not active on start:
 The configuration occurs in 2 steps:
 
 #. Create a BaseSourceSwitcher Element with Title, Tooltip and Target
-#. Add Sourceset(s) with one or more sources and definition of a group (optional)
+#. Add sourceset(s) with one or more sources and definition of a group (optional)
 
 .. image:: ../../../figures/basesourceswitcher_configuration.png
      :scale: 80
@@ -51,9 +51,9 @@ The configuration occurs in 2 steps:
 
 In the configuration example you can see that either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list.
 
-* **Title**: Title of the BaseSource
-* **Group**: Optional group name
-* **Instances**: Sources for the BaseSource
+* **Title**: Title of the BaseSource.
+* **Group**: Optional group name.
+* **Instances**: Sources for the BaseSource.
 
 
 YAML-Definition:
