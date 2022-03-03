@@ -3,11 +3,7 @@
 BaseSourceSwitcher (Themenwechsel)
 *********************************************************************
 
-Mit diesem Element kann zwischen vordefinierten Themen (BaseSources), z. B. Hintergrundkarten, gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets für den entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss dazu geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig, ein Häkchen bei Basesource zu setzen:
-
-
-
-
+Mit diesem Element kann zwischen vordefinierten Themen (BaseSources), z. B. Hintergrundkarten, gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets für den entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss dazu geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig, ein Häkchen bei Basesource zu setzen.
 
 Über Buttons kann zwischen den verschiedenen Themen gewechselt werden. Es kann dabei immer nur ein Thema aktiv sein.
 
@@ -26,9 +22,9 @@ Konfiguration
 =============
 
 **Vorbereitung**: Um den BaseSourceSwitcher konfigurieren zu können, 
-müssen WMS-Instanzen als BaseSource definiert sein (CheckBox BaseSource aktiv). 
+müssen WMS-Instanzen als BaseSource definiert sein (Checkbox BaseSource: aktiv). 
 Beachten Sie, dass in der Anwendung beim Start die Themen aktiviert werden, 
-bei denen der root-Layer aktiv ist (neu ab Version 3.2).
+bei denen der root-Layer aktiv ist.
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80
@@ -54,16 +50,16 @@ Die Konfiguration geschieht in zwei Schritten im Content-Bereich:
      :scale: 80
 
 
-* **Title:** Titel des Elements
+* **Title:** Titel des Elements.
 * **Tooltip:** Text, der erscheint, wenn der Mauszeiger längere Zeit über dem Hintergrundwechsler gehalten wird.
-* **Target:** Zielelement (Titel(ID)) des Buttons, das bei Anklicken des Buttons ausgelöst wird.
-* **Instancesets:** Es können ein bis viele Themengruppen definiert werden. Diese verweisen auf eine Auswahl an Instanzen und sind mit einem Titel und einem Gruppennamen (optional) versehen.
+* **Target:** Zielelement des Buttons, das bei Anklicken des Buttons ausgelöst wird.
+* **Instancesets:** Es können eine oder mehrere Themengruppen definiert werden. Diese verweisen auf eine Auswahl an Instanzen und sind mit einem Titel und einem Gruppennamen (optional) versehen.
 
 Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden, die dann über eine Dropdown-Liste zusammengefasst werden.
 
-* **Title**: Name der Themenkarte
-* **Group**: Optionale Zuweisung zu einer Themengruppe
-* **Instances**: Auswahl der Instanzen für die Themenkarte
+* **Title**: Name der Themenkarte.
+* **Group**: Optionale Zuweisung zu einer Themengruppe.
+* **Instances**: Auswahl der Instanzen für die Themenkarte.
 
 
 YAML-Definition:
