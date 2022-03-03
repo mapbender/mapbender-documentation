@@ -4,7 +4,7 @@ Suchen
 ======
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :numbered:
 
    search/search_router.rst

@@ -4,7 +4,7 @@ Verschiedenes
 =============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    misc/about_dialog.rst
    misc/applicationswitcher.rst
