@@ -8,11 +8,14 @@ Der Data Manager ähnelt in seiner Funktionalität dem `Digitizer <digitizer.htm
 Der Data Manager kann zur Pflege von Referenztabllen verwendet werden, beispielsweise einer Tabelle mit Kontaktinformationen.
 
 
+Setup
+-----
+
+Der Data Manager benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
+Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../../customization/yaml.html>`_.
+
 Konfigurationsbeispiel
 ----------------------
-
-Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
-Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../../customization/yaml.html>`_.
 
 Die Definition des Data Managers erfolgt im YAML-Syntax. 
 Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, den Formularaufbau.

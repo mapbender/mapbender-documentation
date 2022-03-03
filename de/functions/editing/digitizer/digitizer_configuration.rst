@@ -276,6 +276,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         file_reference varchar,
         x float,
         y float,
+        city varchar,
         geom geometry(point,4326)
     );
 
@@ -302,6 +303,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         file_reference varchar,
         x float,
         y float,
+        city varchar,
         geom geometry(linestring,4326)
     );
 
@@ -328,6 +330,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         file_reference varchar,
         x float,
         y float,
+        city varchar,
         geom geometry(polygon,4326)
     );
     

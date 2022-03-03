@@ -283,6 +283,7 @@ The following SQL commands must be executed in your database. You create three d
         file_reference varchar,
         x float,
         y float,
+        city varchar,
         geom geometry(point,4326)
     );
 
@@ -309,6 +310,7 @@ The following SQL commands must be executed in your database. You create three d
         file_reference varchar,
         x float,
         y float,
+        city varchar,
         geom geometry(linestring,4326)
     );
 
@@ -335,6 +337,7 @@ The following SQL commands must be executed in your database. You create three d
         file_reference varchar,
         x float,
         y float,
+        city varchar,
         geom geometry(polygon,4326)
     );
     
