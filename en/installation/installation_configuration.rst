@@ -6,7 +6,7 @@ Details of the configuration of Mapbender
 Configuration steps
 -------------------
 
-Following we describe the configuration steps of Mapbender a bit further. Configuring your Mapbender installation is made up of the following six steps:
+In the following, we will describe the configurational steps of Mapbender a bit further. Configuring your Mapbender installation consists of the following six steps:
 
 * Creating the database
 * Creating the database schema
@@ -15,11 +15,11 @@ Following we describe the configuration steps of Mapbender a bit further. Config
 * Initializing the database
 * Loading the applications of the mapbender.yml to your database
 
-All can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which Mapbender framework is built upon. There's a mayor caveat though you should understand before continuing:
+All that can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which the Mapbender framework is built upon. There's a mayor caveat though you should understand before continuing:
 
 .. note:: The console utility will write files in the app/cache and app/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
-.. note:: **Notice:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/ else mapbender/).
+.. note:: **Notice:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/, else mapbender/).
 
 .. code-block:: yaml
 
@@ -60,7 +60,7 @@ Symfony will create the database schema for you:
 Copying the assets bundles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each bundle has it's own assets - CSS files, JavaScript files, images and more -
+Each bundle has its own assets - CSS files, JavaScript files, images and more -
 but these need to be copied into the public web folder:
 
 .. code-block:: yaml
@@ -107,7 +107,6 @@ Initializing the database can be done using the command:
 Importing applications from application/app/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 It is possible to (re-)import applications from the applications folder into the database with the command:
 
 .. code-block:: yaml
@@ -123,44 +122,44 @@ The basic configuration is done inside the **app/config/parameters.yml** file.
 More Information: :ref:`yaml`.
 
 
-Production- and Development environment and Caching: app.php and app_dev.php
------------------------------------------------------------------------------
+Production and Development environment and Caching: app.php and app_dev.php
+---------------------------------------------------------------------------
 
-Mapbender provides two environments: a production-environment for the
-general operation and a development-environment in which the application can
+Mapbender provides two environments: a production environment for the
+general operation and a development environment in which the application can
 be tested. This concept follows the `"environments" in the Symfony framework
 <http://symfony.com/doc/current/book/configuration.html>`_.
 
-The production-environment is called with the URL
-http://localhost/mapbender/app.php, the development-environment with the
+The production environment is called with the URL
+http://localhost/mapbender/app.php, the development environment with the
 URL http://localhost/mapbender/app_dev.php. The call with app_dev.php is
 and should only be available from localhost.
 
 There are differences in the behaviour of app.php and app_dev.php:
 
-* The cache-mechanism of the development-environment behaves differently: Not
+* The cache mechanism of the development environment behaves differently: Not
   all files are cached, thus code changes are directly
-  visible. Therefore the usage of the app_dev.php is always slower than the
-  production-environment.
+  visible. Therefore, the usage of app_dev.php is always slower than the
+  production environment.
 
-  In detail, the development-environment of Mapbender does not cache the
+  In detail, the development environment of Mapbender does not cache the
   CSS, JavaScript and Translation files, among others.
 
-  The production-environment caches all these files and puts them into the
+  The production environment caches all these files and puts them into the
   app/cache folder.
 
-* The development-environment gives out error-messages and stack-traces
-  to the user-interface. The production-environment logs them into the file
+* The development environment gives out error messages and stack traces
+  to the user interface. The production environment logs them into the file
   app/log/prod.log.
 
-* The development-environment shows the Symfony Profiler. This tool logs
+* The development environment shows the Symfony Profiler. This tool logs
   things that are important for developers but are not supposed to be visible for
   common users.
 
-The directory app/cache contains the cache-files. It contains directories
+The directory app/cache contains the cache files. It contains directories
 for each environment (prod and dev). But the mechanism of the dev-cache, as
 described before, behaves differently.
 
 If changes of the Mapbender interface or the code are made, the
-cache-directory (app/cache) has to be cleared to see the changes in the
+cache directory (app/cache) has to be cleared to see the changes in the
 application.
