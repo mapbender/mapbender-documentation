@@ -124,13 +124,13 @@ A disclaimer can be added through the use of site links.
 Site links will be seperated by "|".
 
 
-Language setting
-****************
+Language settings
+*****************
 
-The language (locale) of the whole Mapbender installation can be changed, but not the language of a single application.
+Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language code in the configuration file **app/config/parameters.yml** to support a translation into your preferred language.
 
   Following language codes are available:
-    * en for English (standard),
+    * en for English (default),
     * de for German,
     * es for Spanish,
     * it for Italian,
@@ -143,8 +143,7 @@ Configuration example:
 .. code-block:: yaml
 
    # locale en, de, it, es, ru, nl, pt are available
-    fallback_locale:   en
-    locale:            en
+    fallbacks:         en
     secret:            ThisTokenIsNotSoSecretChangeIt
 
 More information: http://doc.mapbender.org/en/book/translation.html
