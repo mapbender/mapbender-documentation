@@ -127,11 +127,13 @@ Site links will be seperated by "|".
 Language settings
 *****************
 
-Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language code in the configuration file **app/config/parameters.yml** to support a translation into your preferred language.
+Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **app/config/parameters.yml**.
+If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language. We recommend en (English) or de (German) as fallback options.
 
   Following language codes are available:
     * en for English (default),
     * de for German,
+    * tr for Turkish,
     * es for Spanish,
     * it for Italian,
     * nl for Dutch,
@@ -142,11 +144,11 @@ Configuration example:
 
 .. code-block:: yaml
 
-   # locale en, de, it, es, ru, nl, pt are available
-    fallbacks:         en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+   # locale en, de, it, tr, es, ru, nl, pt are available
+    fallbacks: ['en']
+    secret: ThisTokenIsNotSoSecretChangeIt
 
-More information: http://doc.mapbender.org/en/book/translation.html
+More information: https://doc.mapbender.org/en/architecture/translation.html
 
 
 Logo

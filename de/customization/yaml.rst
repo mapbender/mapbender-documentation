@@ -187,13 +187,14 @@ Eine Konfiguration könnte wie folgt aussehen:
 Spracheinstellung
 *****************
 
-Mapbender wird automatisch an die eingestellte Browsersprache angepasst.
-Es ist jedoch möglich, eine bevorzugte Sprache (fallbacks) zu definieren, die bei unvollständigen Übersetzungen anstelle der Browsersprache genutzt wird.
+Mapbender verwendet automatisch die ausgewählte Sprache der Browsereinstellungen.
+Es ist jedoch möglich, eine bevorzugte Sprache (fallbacks) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt. Es werden Englisch und/oder Deutsch aufgrund ihres hohen Übersetzungsanteils empfohlen.
 Dies kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
 
   Folgende Sprachcodes sind verfügbar:
     * en für Englisch (Standard),
     * de für Deutsch,
+    * tr für Türkisch,
     * es für Spanisch,
     * it für Italienisch,
     * nl für Niederländisch,
@@ -204,11 +205,11 @@ Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
 
-   # en, de, it, es, ru, nl, pt are available
-    fallbacks:         en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+   # en, de, tr, it, es, ru, nl, pt are available
+    fallbacks: ['en']
+    secret: ThisTokenIsNotSoSecretChangeIt
 
-Weitere Informationen unter http://doc.mapbender.org/en/book/translation.html
+Weitere Informationen unter https://doc.mapbender.org/en/architecture/translation.html
 
 
 config.yml

@@ -130,10 +130,10 @@ getestet werden können. Dieses Konzept orientiert sich an den
 `"Environments" im Symfony Framework
 <http://symfony.com/doc/current/book/configuration.html>`_.
 
-Die Produktionsumgebung wird mit der URL http://localhost/mapbender/app.php
+Die Produktionsumgebung wird mit der URL https://localhost/app.php
 aufgerufen, die Entwicklungsumgebung mit der URL
-http://localhost/mapbender/app_dev.php. Der Aufruf über app_dev.php kann
-und sollte nur nur vom localhost erfolgen.
+https://localhost/app_dev.php. Der Aufruf über app_dev.php kann
+und sollte nur vom localhost erfolgen.
 
 Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
 

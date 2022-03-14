@@ -76,11 +76,11 @@ How can you activate translation?
 *********************************
 
 Mapbender is automatically adjusted to your browser's language.
-Moreover, you can set the following parameter to your preferred language in the configuration file **app/config/parameters.yml**. If a translation should be missed, the set language instead will be used.
+Moreover, you can set fallback language options in the configuration file **app/config/parameters.yml**. If a translation from your browser's default language is not translated in Mapbender yet, it will fall back to the predefined language instead. We recommend to set English and/or German as fallback options.
 
 .. code-block:: yaml
     
-    fallbacks:   en
+    fallbacks: ['en']
 
 
 Check whether translations (yml-files) for your language exist 
