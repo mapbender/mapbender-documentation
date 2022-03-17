@@ -33,11 +33,9 @@ Configuration
 * **Query Whitespace replacement pattern:** Pattern for replacing white spaces.
 * **Query key format:** Simple search format  (e.g. ``%s``).
 * **Token search/ replace (JavaScript regex):** Tokenizer split/ search/ replace regexp.
-
   * Token, e.g.: ``[^a-zA-Z0-9äöüÄÖÜß]``
   * Token search, e.g.: ``([a-zA-ZäöüÄÖÜß]{3,})``
-  * Token replace, e.g.: ``$1*``
-  
+  * Token replace, e.g.: ``$1*``  
 * **Collection path:** Can be a dotted attribute path to extract from the query result (e.g. ``response.docs``).
 * **Label attribute:** Name of the attribute/s to show as result.
 * **Geom attribute:** Name of the geometry data attribute (e.g. ``geom``).
@@ -53,14 +51,13 @@ Configuration
 Flexible configuration via label_attribute
 ------------------------------------------
 
-The result JSON provides different information. From version 3.2 you can 
-define one or several attributes for the result text.
+The result JSON provides different information. It is possible to define one or several attributes for the result text.
 
 .. code-block:: yaml
 
    label_attribute: label
 
-The definition is relative to the Collection path. You can use additional text to separate the attributes.
+The definition is relative to the Collection path. It is possible to use additional text to separate the attributes.
 
 .. code-block:: yaml
 

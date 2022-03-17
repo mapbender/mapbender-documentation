@@ -1,9 +1,9 @@
 .. _simplesearch_de:
 
-SimpleSearch
-************
+Einfache Suche (SimpleSearch)
+*****************************
 
-SimpleSearch bietet eine Einfeldsuche oder Schlagwortsuche. 
+Die Einfache Suche bietet eine Einfeldsuche oder Schlagwortsuche. 
 Die Suchanfrage wird dabei an einen Suchdienst übermittelt. 
 Als Such-Server können Apache Solr, Nominatim, photon oder ein OGC API Features Dienst verwendet werden.
 
@@ -11,8 +11,7 @@ Es wird ein Eingabefeld angeboten, welches direkt in die Toolbar oder in der Sei
 
 Die Geometriedaten können in WKT oder in GeoJSON-Format codiert werden.
 
-Es kann frei konfiguriert werden, welche Informationen in der 
-Trefferauswahl angezeigt werden sollen.
+Es kann frei konfiguriert werden, welche Informationen in der Trefferauswahl angezeigt werden sollen.
 
 .. image:: ../../../figures/simplesearch.png
      :scale: 80
@@ -33,11 +32,9 @@ Konfiguration
 * **Query Whitespace replacement pattern:** Muster zum Austausch von Leerzeichen.
 * **Query key format:** Einfaches Suchformat (z.B. ``%s``).
 * **Token search/ replace (JavaScript regex):** Tokenizer spaltet/ sucht/ ersetzt regexp.
-
   * Token, z.B.: ``[^a-zA-Z0-9äöüÄÖÜß]``
   * Token search, z.B.: ``([a-zA-ZäöüÄÖÜß]{3,})``
-  * Token replace, z.B.: ``$1*``
-    
+  * Token replace, z.B.: ``$1*``    
 * **Collection path:** Dies kann ein Attributspfad sein, der vom Abfrageergebnis extrahiert wird (z.B. ``response.docs``).
 * **Label attribut:** Attribut oder mehrere Attribute , die als Ergebnis angezeigt werden sollen.
 * **Geom attribut:** Attributname der Geodaten (z.B. ``geom``).
@@ -53,7 +50,7 @@ Konfiguration
 Flexible Konfigurationsmöglichkeiten für label_attribute
 ---------------------------------------------------------
 
-Das JSON enthält unterschiedliche Informationen. Ab Version 3.2 können auch mehrere der Attribute als Ergebnis ausgegeben werden.
+Das JSON enthält unterschiedliche Informationen. Es können auch mehrere der Attribute als Ergebnis ausgegeben werden.
 
 .. code-block:: yaml
 
@@ -119,7 +116,7 @@ photon ist ein Open Source Geocoder für OpenStreetMap-Daten.
 
 Konfiguration OGC API Features
 ==============================
-Diverse projekte unterstützen OGC API Features wie QGIS, GeoServer, pygeoapi.
+Diverse Projekte unterstützen OGC API Features wie QGIS, GeoServer, pygeoapi.
 
 HTTP Callbacks
 ==============
