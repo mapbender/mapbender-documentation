@@ -1,9 +1,9 @@
 .. _wms_loader:
 
 WMS Loader
-***********************
+**********
 
-Opens a dialog in  which a WMS can be loaded via the getCapabilities-Request. It is possible to load WMS 1.1.1 and WMS 1.3.0.
+Opens a dialog in which a WMS can be loaded via the getCapabilities-Request. It is possible to load WMS 1.1.1 and WMS 1.3.0.
 
 
 .. image:: ../../../figures/wms_loader.png
@@ -19,29 +19,31 @@ Configuration
 * **Auto open:** Opens the element when application is started (Default: false).
 * **Split layers:** Splits layer on load of the service (Default: false).
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Default format:** Default format is image/png, other possibilities: image/gif, image/jpeg.
-* **Default info format:** Default info format is text/html, other possibilities: text/xml, text/plain.
+* **Default format:** image/png, image/gif, image/jpeg (Default: image/png).
+* **Default info format:** text/html, text/xml, text/plain (Default: text/html).
+
+You need a button to show this element. See `button <button.html>`_ for inherited configuration options.
 
 YAML-Definition:
 ----------------
+
+This template can be used to include the element into a YAML application.
 
 .. code-block:: yaml
 
    target: ~                            # Id of Map element to query
    tooltip: 'WMS Loader'                # text to use as tooltip
-   autoOpen: false                      # true/false open when application is started, default false 
-   defaultFormat: 'image/png'           # default format is image/png, further possibilities: image/gif, image/jpeg
-   defaultInfoFormat: 'text/html'       # default infoformat is text/html, further possibilities: text/xml, text/plain
-   splitLayers: false                   # split layer on load of the service, default false
-
-You need a button to show this element. See `button <button.html>`_ for inherited configuration options.
+   autoOpen: false                      # true/false open when application is started (Default: false)
+   defaultFormat: 'image/png'           # image/png, image/gif, image/jpeg (Default: image/png)
+   defaultInfoFormat: 'text/html'       # text/html, text/xml, text/plain (Default: text/html)
+   splitLayers: false                   # split layer on load of the service (Default: false)
 
 How to add a WMS by defining a link
 ====================================
 
 You can add a WMS to Mapbender by defining a link, e.g. in your :ref:`WMS featureinfo<feature_info>` or your search results.
 
-Activate the option **use Declarative** in the WMS Loader element (in a YAML application set the option ``useDeclarative`` to true).
+Activate the option **use Declarative** in the WMS Loader element (in a YAML application, set the option ``useDeclarative`` to true).
 
 The link has to look like this:
 
