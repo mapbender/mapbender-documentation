@@ -58,10 +58,10 @@ Der Link sollte folgendermaßen aussehen:
 
 .. code-block:: yaml
 
-    mb-action="source.add.wms"    # definiert die Aktion, um einen WMS hinzuzufügen
-    mb-wms-merge="1"              # fügt den WMS nur einmal hinzu, wenn der WMS in der Applikation bereits Bestandteil ist, wird dieser verwendet (Standard ist 1)
-    mb-layer-merge="1"            # Standard ist 1: aktiviert die Ebene in mb-wms-layers. Deaktiviert die Ebenen nicht, die schon aktiviert sind.
-    mb-wms-layers="Gewaesser,Fluesse" # Definiert die Ebenen, die aktiviert werden sollen, _all activates aktiviert alle Ebenen. Standard ist alle Ebenen sind deaktiviert.
-    href oder mb-url              # verweist auf die WMS getcapabilities URL
+    mb-action="source.add.wms"         # Definiert die Aktion, um einen WMS hinzuzufügen
+    mb-wms-merge="1"                   # Fügt den WMS nur einmal hinzu, wenn der WMS in der Applikation bereits Bestandteil ist, wird dieser verwendet (Standard: 1)
+    mb-layer-merge="1"                 # Aktiviert die Ebene in mb-wms-layers. Deaktiviert die Ebenen nicht, die schon aktiviert sind (Standard: 1).
+    mb-wms-layers="Gewaesser,Fluesse"  # Definiert die Ebenen, die aktiviert werden sollen, _all activates aktiviert alle Ebenen.
+    href oder mb-url                   # Verweist auf die WMS getcapabilities URL.
     mb-add-vendor-specific="bplan=123" # Definition von Vendor Specific Parametern, die an den Request angefügt werden (ab Version 3.2.9).
 

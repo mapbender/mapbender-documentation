@@ -3,7 +3,7 @@
 WMS Loader
 **********
 
-Opens a dialog in which a WMS can be loaded via the getCapabilities-Request. It is possible to load WMS 1.1.1 and WMS 1.3.0.
+Opens a dialog in which a WMS can be loaded via the getCapabilities request. It is possible to load WMS 1.1.1 and WMS 1.3.0.
 
 
 .. image:: ../../../figures/wms_loader.png
@@ -41,7 +41,7 @@ This template can be used to include the element into a YAML application.
 How to add a WMS by defining a link
 ====================================
 
-You can add a WMS to Mapbender by defining a link, e.g. in your :ref:`WMS featureinfo<feature_info>` or your search results.
+You can add a WMS to Mapbender by defining a link, e. g. in your :ref:`WMS featureinfo<feature_info>` or your search results.
 
 Activate the option **use Declarative** in the WMS Loader element (in a YAML application, set the option ``useDeclarative`` to true).
 
@@ -58,10 +58,10 @@ The link has to look like this:
 
 .. code-block:: yaml
 
-    mb-action="source.add.wms"    # defines action to add a  WMS
-    mb-wms-merge="1"              # adds the WMS only once, if WMS is already part of the application it will use the WMS which is there (default is 1)
-    mb-layer-merge="1"            # default is 1 which means: activate the layers passed mb-wms-layers and do not disable the layers which are already active.
-    mb-wms-layers="Gewaesser,Fluesse" # defines the layers to be activated, _all activates all layers, default all layers are deactivated
-    href oder mb-url              # refer to the WMS getcapabilities URL
-    mb-add-vendor-specific="bplan=123" # define a vendor specific that will be added to the requests (new from version 3.2.9)
+    mb-action="source.add.wms"         # defines action to add a  WMS
+    mb-wms-merge="1"                   # adds the WMS only once, if WMS is already part of the application it will use the WMS which is there (default: 1)
+    mb-layer-merge="1"                 # activate the layers passed mb-wms-layers and do not disable the layers which are already active (default: 1)
+    mb-wms-layers="Gewaesser,Fluesse"  # defines the layers to be activated, _all activates all layers, default all layers are deactivated
+    href oder mb-url                   # refer to the WMS getcapabilities URL
+    mb-add-vendor-specific="bplan=123" # define a vendor specific that will be added to the requests (version 3.2.9 and up)
 
