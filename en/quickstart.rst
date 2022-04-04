@@ -312,7 +312,7 @@ Sources can be individually configured. This can be useful if you, for instance,
 * Proxy: If active, the service will be requested by Mapbender and not directly
 * Transparency: default is active, the source is without a transparent background if it is deactivated (getMap-Request with Transparent=FALSE)
 * Tiled: you can request a WMS in tiles, default is not tiled (may be a good choice if your map is very big and the WMS service does not support the width/height)
-* Layer ordering: Handles the order of the layers in the service. Can be set to Standard (reversed) and QGIS (same order).
+* Layer ordering: Handles the order of the layers in the service. Can be set toStandard  (reversed) and QGIS (same order).
 
 
 **Dimensions:**
@@ -350,7 +350,7 @@ Currently, the element can be used to transfer user- and group information, e.g.
 * info on: layer provides feature info requests, info default activates the feature info functionality
 * toggle allowed: allows opening of folder at application start
 * toggle on: open folder on start of the application
-* layer ordering: allows to order layer according to the standard or QGIS configuration.
+* layer ordering: allows to order layer according to the Standard or QGIS configuration.
 * more information (...): opens a dialog with detailed layer information:
 * ID: ID of the layer
 * Name: layer name of the service information (for getMap-Requests)

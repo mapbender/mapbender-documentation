@@ -105,7 +105,7 @@ Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguratio
 
 * label - Sie können den Parameter label für die Spaltenbeschriftung angeben. Fehlt der Parameter wird der Tabellenspalten-Name mit führendem Großbuchstaben verwendet.
 
-* required - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard ist false). Mit required: true wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
+* required - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard: false). Mit required: true wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
 
 Sie können außerdem den Vergleichsoperator definieren. Siehe 'comparison mode'.
 

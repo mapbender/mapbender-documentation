@@ -306,9 +306,9 @@ YAML-Definition:
     title: layertree                                    # Titel des Layerbaums
     target: ~                                           # ID des Kartenelements  
     type: ~                                             # Typ des Layerbaums (Element oder Dialog)
-    autoOpen: false                                     # Öffnet Layerbaum beim Start der Anwendung (Standard = false)
-    showBaseSource: true                                # Zeigt den Basislayer an (Standard = true)
-    showHeader: true                                    # Zeigt eine Überschrift, die die Anzahl der Services zählt (Standard = true)
+    autoOpen: false                                     # Öffnet Layerbaum beim Start der Anwendung (Standard: false)
+    showBaseSource: true                                # Zeigt den Basislayer an (Standard: true)
+    showHeader: true                                    # Zeigt eine Überschrift, die die Anzahl der Services zählt (Standard: true)
     menu: [opacity,zoomtolayer,metadata,removelayer]    # Zeigt ein Kontextmenü für den Layer an (wie Transparenz, Zoom auf Layer, Anzeige des Metadatendialogs,                                                             Layer entfernen)
     hideInfo: null               
     hideSelect: null             

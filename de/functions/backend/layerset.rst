@@ -46,7 +46,7 @@ Der Screenshot zeigt die `private Instanz <layerset.rst#freie-und-private-instan
 
 - **Transparenz:** Ist dieser Schalter aktiviert (und das ist er standardmäßig) wird der Dienst mit transparentem Hintergrund angefordert. Also im WMS GetMap-Request mit dem Parameter ``TRANSPARENT=TRUE``.
 
-- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert. Der Standard ist nicht gekachelt. Siehe die folgenden `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_.
+- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert (Standard: nicht gekachelt). Siehe die folgenden `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_.
 
 
 **Layer-Reihenfolge:**
@@ -128,7 +128,7 @@ Layerkonfiguration
 
 * ... -> öffnet einen Dialog mit weiteren Informationen:
 * Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar).
-* Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard - (default) - Stil wählen.
+* Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard -Stil wählen.
 
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen

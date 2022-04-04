@@ -381,8 +381,8 @@ Die möglichen Optionen sind:
   * srid: Koordinatensystem im EPSG-Code
   * filter: Datenfilter über Werte in einer definierten Spalte, z.B. filter: interests = 'maps'
 
-* **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular. [true/false] Standard ist true.
-* **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird.Standardwert ist 100
+* **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular (Standard: true).
+* **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird (Standard: 100).
 * **allowEditData:** Daten dürfen editiert und gespeichert werden [true/false]. Es erscheint immer eine Speichern Schaltfläche.
 * **allowDigitize:** Daten dürfen gespeichert werden. [true/false]
 * **allowDelete:** Daten dürfen gelöscht werden. [true/false]. Es erscheint eine Löschen Schaltfläche.
@@ -412,7 +412,7 @@ Die möglichen Optionen sind:
 
 
 
-.. * **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. [true/false] Standardwert ist false.
+.. * **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. (Standard: false)
 
 
 Experimentell:
@@ -576,7 +576,7 @@ Textfelder (type input)
                                                  - type: input                                        # Typ Textfeld
                                                    title: Title for the field                         # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: column_name                                  # Referenz zur Tabellenspalte
-                                                   copyClipboard: false                               # Button, der eingetragene Inhalte in die Zwischenablage kopiert (optional). [true/false] Standard ist false.
+                                                   copyClipboard: false                               # Button, der eingetragene Inhalte in die Zwischenablage kopiert (optional). (Standard: false)
                                                    mandatory: true                                    # Angabe ob Pflichtfeld (optional). [true/false]
                                                    mandatoryText: You have to provide information.    # Text, sofern Pflichtfeld nicht gefüllt wurde
                                                    infoText: 'Bitte geben Sie einen Wert an'          # Definition eines Informationstextes (optional)
@@ -599,7 +599,7 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
                                                    title: select some types                           # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: my_type                                      # Referenz zur Tabellenspalte
                                                    copyClipboard: false                               # Button, der den ausgewählten Wert in die Zwischenablage kopiert (optional).
-                                                   multiple: false                                    # Definition einer Mehrfachauswahl (multiselect). [true/false] Standard ist false.
+                                                   multiple: false                                    # Definition einer Mehrfachauswahl (multiselect). (Standard: false)
                                                    options:                                           # Definition der Optionen (key: value)
                                                        1: pub
                                                        2: bar
@@ -654,7 +654,7 @@ Beim Abspeichern von Einträgen werden die Schlüsselwörter in der Datenbank ab
                                                    title: Wählen Sie einen Typ aus    # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: my_type                      # Referenz zur Tabellenspalte
                                                    copyClipboard: true                # Button, der den ausgewählten Wert in die Zwischenablage kopiert (optional).                                                   
-                                                   multiple: true                     # Definition einer Mehrfachauswahl (multiselect), Standard ist false
+                                                   multiple: true                     # Definition einer Mehrfachauswahl (multiselect). (Standard: false)
                                                    options:                           # Definition der Optionen (key: value)
                                                      a: a                             
                                                      b: b
@@ -730,7 +730,7 @@ Checkboxen (type checkbox)
                                                    title: Is this true?   # Beschriftung (optional)
                                                    name:  public          # Referenz zu Tabellenspalte
                                                    value: true            # angegebener Parameter beim Aktivieren der Checkbox wird in DB gespeichert (hier 'TRUE').
-                                                   checked: false         # Definiert, ob die Checkbox vordefiniert angehakt sein soll (true oder false). Standard ist false
+                                                   checked: false         # Definiert, ob die Checkbox vordefiniert angehakt sein soll. (Standard: false)
 
 
 
@@ -953,7 +953,7 @@ Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eine
 
   poi:
       ...
-      inlineSearch: true      # Suche in den Tabellenspalten, Standard ist true
+      inlineSearch: true      # Suche in den Tabellenspalten (Standard: true)
       ...
 
 

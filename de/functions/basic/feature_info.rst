@@ -127,11 +127,11 @@ YAML-Definition:
    target: map                    # ID des Kartenelements
    autoActivate: false            # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird (Standard: false)
    deactivateOnClose: true        # true/false, um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren (Standard: true)
-   onlyValid: false               # Korrekte HTML Ausgabe erfordern. Standardwert ist false.
+   onlyValid: false               # Korrekte HTML Ausgabe erfordern (Standard: false).
    printResult: false             # Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann (Standard: false)
    displayType: tabs              # tabs/accordion (Standard: tabs)
-   width: 700                     # Breite des Dialogs in Pixel, Standardwert: 700
-   height: 500                    # Höhe des Dialog in Pixel, Standardwert: 500
+   width: 700                     # Breite des Dialogs in Pixel (Standard: 700)
+   height: 500                    # Höhe des Dialog in Pixel (Standard: 500)
    maxCount: 100	              # Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll
    highlighting: false            # FeatureInfo Highlighting (Standard: false)
    featureColorDefault: #ffa500   # Farbe zur Hervorhebung ausgewählter Geometrien

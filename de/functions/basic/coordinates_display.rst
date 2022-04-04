@@ -43,8 +43,8 @@ Konfiguration
 * **Num digits:** Anzahl der Nachkommastellen der Koordinaten.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Empty:** Angezeigter Text, wenn sich die Maus nicht in der Karte befindet (Standard: 'x= - y= -').
-* **Prefix:** Präfix vor der X-Koordinate (Standard 'x= ').
-* **Separator:** Separator nach X- und vor Y-Koordinate (Standard ' y= ').
+* **Prefix:** Präfix vor der X-Koordinate (Standard: 'x= ').
+* **Separator:** Separator nach X- und vor Y-Koordinate (Standard: ' y= ').
 
 YAML-Definition:
 ----------------

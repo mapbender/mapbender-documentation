@@ -25,5 +25,5 @@ YAML-Definition:
 
    tooltip: "Maßstabsauswahl"  # Text des Tooltips
    target: ~         # ID des Kartenelements
-   label: false      # false/true, um die Maßstabsauswahl zu beschriften. Der Standardwert ist false.
+   label: false      # false/true, um die Maßstabsauswahl zu beschriften (Standard: false).
 

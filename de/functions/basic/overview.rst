@@ -54,10 +54,10 @@ YAML-Definition:
    layerset: ~                  # vorher definiertes Layerset, das angezeigt werden soll.
    width: 200                   # Breite der Übersicht
    height: 100                  # Höhe der Übersicht
-   anchor: 'right-top'          # Ausrichtung der Übersicht, Standard ist 'right-top' (rechts oben)
+   anchor: 'right-top'          # Ausrichtung der Übersicht (Standard: right-top)
                                 # Benutzen Sie inline z.B. für die Sidebar
                                 # Optionen: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   position: ['0px', '0px']     # Position der Übersicht in Relation zum Anker, Standard: x=0px, y=0px
-   maximized: true              # true/false ob die Applikation beim Start maximiert ist, der Standardwert ist true
-   fixed: true                  # true/false um den Übersichtsbereich zu fixieren, der Standardwert ist true
+   position: ['0px', '0px']     # Position der Übersicht in Relation zum Anker (Standard: x=0px, y=0px)
+   maximized: true              # true/false ob die Applikation beim Start maximiert ist (Standard: true)
+   fixed: true                  # true/false um den Übersichtsbereich zu fixieren (Standard: true)
 

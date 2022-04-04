@@ -26,6 +26,6 @@ YAML-Definition:
 
    title: 'Über Mapbender'     # Text, der neben dem About Dialog Button angezeigt wird
    tooltip: 'Über Mapbender'   # Text des Tooltips
-   label: true                  # false/true, um den Button zu beschriften. Der Standardwert ist true.
+   label: true                  # false/true, um den Button zu beschriften (Standard: true)
    icon: 'abouticon'            # Symbol für den Button
 

@@ -311,7 +311,7 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 * BaseSource: Der Dienst soll als BaseSource behandelt werden (BaseSources können im Ebenenbaum ein-/ausgeblendet werden)
 * Proxy: Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
 * Transparenz: standardmäßig aktiviert, bei Deaktivierung wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit Transparent=FALSE)
-* gekachelt: Dienst wird in Kacheln angefordert, Standard ist nicht gekachelt (kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt)
+* gekachelt: Dienst wird in Kacheln angefordert. Kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt. (Standard: nicht gekachelt)
 * Layer-Reihenfolge: gibt eine Lesrichtung für die im Dienst enthaltenen Layer vor. Standard (umgekehrt) und QGIS-Style (gleiche Reihenfolge) sind auswählbar.
 
 

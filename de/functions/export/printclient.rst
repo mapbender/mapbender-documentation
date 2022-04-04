@@ -38,8 +38,8 @@ Der PrintClient kann im Backend konfiguriert werden. Er greift dabei auf Druckvo
 
 * **Titel**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Maßstabsstufen (Scales)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, muss ein beliebiger Maßstab hinzugefügt werden.
-* **Drehbar**: definiert, ob der Ausdruck gedreht werden kann, der Standardwert ist true
-* **Legende drucken**: fügt eine Checkbox hinzu, die den Druck der Kartenlegende ermöglicht, der Standardwert ist false
+* **Drehbar**: definiert, ob der Ausdruck gedreht werden kann (Standard: true).
+* **Legende drucken**: fügt eine Checkbox hinzu, die den Druck der Kartenlegende ermöglicht (Standard: false).
 * **Legenden Checkbox aktiv**: definiert, ob die "Legende drucken" - Checkbox bei Anwendungsstart aktiv ist
 * **File prefix**: Anpassung des Dateinamens für das PDF. Dieser setzt sich aus dem definierbarem Prefix und der Datums- und Uhrzeitangabe des Drucks zusammen.
 * **Qualitätsstufen**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
@@ -78,8 +78,8 @@ YAML-Definition
     quality_levels:                                          # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
         - { dpi: 72 , label: Draft (72dpi)}                  # die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
         - { dpi: 288,  label: Document (288dpi)}             # es können weitere dpi-Werte angegeben werden
-    rotatable: true                                          # true/false ob der Ausdruck gedreht werden kann, der Standardwert ist true
-    legend: true                                             # true/false, der Standardwert ist false
+    rotatable: true                                          # true/false ob der Ausdruck gedreht werden kann (Standard: true).
+    legend: true                                             # true/false  (Standard: false).
     legend_default_behaviour: false                          # true/false, Legenden Checkbox standardmäßig ausgewählt
     file_prefix: mapbender                                   # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
     optional_fields:                                         # es können optional weitere Felder definiert werden (z.B. Titel-Feld)
@@ -415,12 +415,12 @@ Speicherbegrenzungen
 Da der Druck möglicherweise speicherintensiver sein kann als anfangs in Ihren PHP-Einstellungen festgelegt, kann der benötigte Speicher durch manuelle Konfiguration erhöht werden. Dies ist für Anwender, die mit größeren Ausdrucken arbeiten möchten, besonders von Vorteil.
 Bemerkung: Die Speicherbegrenzung sollte nicht reduziert werden.
 
-Der Parameter `mapbender.print.queue.memory_limit` (string; Standard ist 1G) muss angepasst werden, um die Speicherbegrenzung speziell für den Warteschleifendruck zu erhöhen. Vorsicht: Dieser Parameter erlaubt keine "null"-Werte.
+Der Parameter `mapbender.print.queue.memory_limit` (string; Standard: 1G) muss angepasst werden, um die Speicherbegrenzung speziell für den Warteschleifendruck zu erhöhen. Vorsicht: Dieser Parameter erlaubt keine "null"-Werte.
 
 
 *Direktdruck*
 -------------
 
-Über den Parameter `mapbender.print.memory_limit` (string or null; Standard ist null) kann das Speicherlimit angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
+Über den Parameter `mapbender.print.memory_limit` (string or null; Standard: null) kann das Speicherlimit angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
 Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an, der Wert "-1" steht für unbegrenzte Speichernutzung.
 

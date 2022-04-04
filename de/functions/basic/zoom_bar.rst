@@ -18,8 +18,8 @@ Konfiguration
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Components:** Komponenten des Navigationswerkzeugs, standardmäßig wird alles selektiert; Auswahlmöglichkeiten: Rotation, zoom to max extent, Zurück zum Anfang, Zoom in/out und Zoom slider.
-* **Zurück zum Anfang** Zurücksetzen von Dienstzuständen. Der Standard ist false.
-* **Position:** Ausrichtung des Navigationswerkzeugs, Standard ist 'left-top' (oben links); Auswahlmöglichkeiten: inline (zum Einbinden in der Sidepane), left-top (oben links), left-bottom (unten links), right-top (oben rechts), right-bottom (unten rechts)
+* **Zurück zum Anfang** Zurücksetzen von Dienstzuständen (Standard: false).
+* **Position:** Ausrichtung des Navigationswerkzeugs (Standard: 'left-top'); Auswahlmöglichkeiten: inline (zum Einbinden in der Sidepane), left-top (oben links), left-bottom (unten links), right-top (oben rechts), right-bottom (unten rechts)
 
 Komponenten des Navigationswerkzeugs:
 --------------------------------------

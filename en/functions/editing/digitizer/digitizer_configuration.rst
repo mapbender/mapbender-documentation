@@ -389,7 +389,7 @@ The possible options are:
   * srid: Coordinate-system in EPSG-code
   * filter: Data filters for values ​​in a defined column, e.g. filter: interests = 'maps' 
 
-* **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data. [true/false] Standard is true.
+* **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data (Default: true)
 * **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
 * **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. The Save button is always visible.
 * **allowDigitize:** Allow to save data [true/false].

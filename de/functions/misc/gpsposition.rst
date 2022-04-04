@@ -39,15 +39,15 @@ Das Element wird als Button in die Toolbar eingefügt.
 .. code-block:: yaml
 
                 class: Mapbender\CoreBundle\Element\GpsPosition
-                label: true                         # false/true, um den Button zu beschriften. Der Standardwert ist true.
-                autoStart: false                    # true, wenn diese Funktion beim Start der Anwendung geöffnet werden soll, der Standardwert ist false.
+                label: true                         # false/true, um den Button zu beschriften (Standard: true)
+                autoStart: false                    # true, wenn diese Funktion beim Start der Anwendung geöffnet werden soll (Standard: false).
                 title: GPS-Position                 # Titel des Buttons
                 tooltip: GPS-Position               # Text des Tooltips
                 icon: iconGpsTarget                 # Symbol für den Button
                 target: map                         # ID des Kartenelements
-                average: 1                          # berechnet den Mittelwert der unter average angegebenen letzten empfangenen GPS Koordinaten, Standard ist 1            
-                refreshinterval: 5000               # Aktualisierungsintervall in ms. Der Standardwert ist 5000 ms.
-                follow: true                        # Standard ist false, true positioniert die Karte bei jeder empfangenen GPS Koordinate neu. Sollte nur mit WMS Diensten im gekachelten Modus verwendet werden, da sonst bei jeder Neupositionierung ein neuer Kartenrequest geschickt wird
+                average: 1                          # berechnet den Mittelwert der unter average angegebenen letzten empfangenen GPS Koordinaten (Standard: 1).           
+                refreshinterval: 5000               # Aktualisierungsintervall in ms (Standard: 5000 ms).
+                follow: true                        # True positioniert die Karte bei jeder empfangenen GPS Koordinate neu (Standard: false). Sollte nur mit WMS Diensten im gekachelten Modus verwendet werden, da sonst bei jeder Neupositionierung ein neuer Kartenrequest geschickt wird
                 centerOnFirstPosition: true         # Zentriert die Karte auf die erstermittelte Position
                 zoomToAccuracy: false               # Zoomt auf die ermittelte Koordinate nach Messgenauigkeit
                 zoomToAccuracyOnFirstPosition: true # Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position
