@@ -78,8 +78,8 @@ YAML-Definition
     quality_levels:                                          # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
         - { dpi: 72 , label: Draft (72dpi)}                  # die erste Angabe ist der dpi Wert, die zweite Angabe ist die Beschriftung
         - { dpi: 288,  label: Document (288dpi)}             # es können weitere dpi-Werte angegeben werden
-    rotatable: true                                          # true/false ob der Ausdruck gedreht werden kann (Standard: true).
-    legend: true                                             # true/false  (Standard: false).
+    rotatable: true                                          # true/false, ob der Ausdruck gedreht werden kann (Standard: true).
+    legend: true                                             # true/false, ob die Legende mitgedruckt werden soll (Standard: false).
     legend_default_behaviour: false                          # true/false, Legenden Checkbox standardmäßig ausgewählt
     file_prefix: mapbender                                   # Definition des Dateinames für das PDF (wird zusammengesetzt zu file_prefix_date.pdf)
     optional_fields:                                         # es können optional weitere Felder definiert werden (z.B. Titel-Feld)

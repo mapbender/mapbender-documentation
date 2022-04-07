@@ -20,7 +20,7 @@ Configuration
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons.
 * **Scale prefix:** Prefix shown with scale.
 * **Unit prefix:** Prefix shown with unit, e.g. 1K as 1000.
-* **Position:** ScaleDisplay alignment (Default: 'bottom right').
+* **Position:** ScaleDisplay alignment (default: 'bottom right').
 
 
 YAML-Definition:

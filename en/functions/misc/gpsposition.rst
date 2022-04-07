@@ -20,15 +20,15 @@ Configuration
 .. image:: ../../../figures/gps_position_configuration.png
      :scale: 80
 
-* **Show label:** Switches the button label on/off (Default: on).
-* **Autostart:** Starts element when opening the application (Default: off).
+* **Show label:** Switches the button label on/off (default: on).
+* **Autostart:** Starts element when opening the application (default: off).
 * **Title:** Title of the element.
 * **Tooltip:** This text will be displayed during hovering over the element with the cursor.
 * **Icon:** Icon to display on button.
-* **Average:** Calculates the average of the last at parameter average defined amount of received GPS coordinates (Default: 1).
-* **Follow:** Refreshes the map for every received GPS position received, only use with WMS in tiled mode (Default: off).
-* **Center on first position:** Centers map only on first received GPS position (Default: on).
-* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy (Default: on).
+* **Average:** Calculates the average of the last at parameter average defined amount of received GPS coordinates (default: 1).
+* **Follow:** Refreshes the map for every received GPS position received, only use with WMS in tiled mode (default: off).
+* **Center on first position:** Centers map only on first received GPS position (default: on).
+* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy (default: on).
 
 
 YAML-Definition:
@@ -39,8 +39,8 @@ The element is placed as a button into the toolbar.
 .. code-block:: yaml
                 
                 class: Mapbender\CoreBundle\Element\GpsPosition
-                label: true                         # true/false to label button, default is true
-                autoStart: false	                # true/false, default is false
+                label: true                         # true/false to label button (default: true)
+                autoStart: false	                # true/false (default: false)
                 title: GPS-Position                 # title of the button
                 tooltip: GPS-Position               # text to use as tool tip
                 icon: gpsposition                   # icon to display on button

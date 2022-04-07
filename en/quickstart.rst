@@ -306,8 +306,8 @@ Sources can be individually configured. This can be useful if you, for instance,
 * Format: Format of the getMap-Requests
 * Infoformat: Format of the getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
 * Exceptionformat: Format for error messages
-* Tile buffer: This parameter is valid for tiles services and specifies if additional tiles should be requested. If the user pans the map, these tiles are already downloaded and visible. The higher the value the more tiles are requested (Default: 0).
-* BBOX Factor: This parameter is valid for non-tiled WMS services. You can specify the size of the returned map-image. A value greater than 1 will request a bigger map-image. Default: 1.25
+* Tile buffer: This parameter is valid for tiles services and specifies if additional tiles should be requested. If the user pans the map, these tiles are already downloaded and visible. The higher the value the more tiles are requested (default: 0).
+* BBOX Factor: This parameter is valid for non-tiled WMS services. You can specify the size of the returned map-image. A value greater than 1 will request a bigger map-image (default: 1.25).
 * BaseSource: Should the service be handled as BaseSource (BaseSources can be shown/hidden in the layertree)
 * Proxy: If active, the service will be requested by Mapbender and not directly
 * Transparency: default is active, the source is without a transparent background if it is deactivated (getMap-Request with Transparent=FALSE)

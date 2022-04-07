@@ -389,7 +389,7 @@ The possible options are:
   * srid: Coordinate-system in EPSG-code
   * filter: Data filters for values ​​in a defined column, e.g. filter: interests = 'maps' 
 
-* **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data (Default: true)
+* **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data (default: true)
 * **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
 * **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. The Save button is always visible.
 * **allowDigitize:** Allow to save data [true/false].
@@ -486,7 +486,7 @@ The width of the individual columns can optionally be specified in percent or pi
 
 * **tableFields:** define the columns for the feature table. 
    * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
-* **searchType:** search extent in the map, display of all features in the result table or only features displayed in the current extent [all / currentExtent], default is currentExtent
+* **searchType:** search extent in the map, display of all features in the result table or only features displayed in the current extent [all / currentExtent] (default: currentExtent).
 * **showExtendSearchSwitch:** Activate or deactivate the display of the searchType selectbox for searching in the curret extent [true/false]
 * **view:** Settings for the object result table
    * Detailed information on possible configurations under https://datatables.net/reference/option/
@@ -588,7 +588,7 @@ Text fields (type input)
                                                  - type: input                                      # element type definition
                                                    title: Title for the field                       # labeling (optional)
                                                    name: column_name                                # reference to table column (optional)
-                                                   copyClipboard: false                             # specify button that copies entered information to the clipboard (optional). [true/false]. Default is false.
+                                                   copyClipboard: false                             # true/false. if true, specify a button that copies entered information to the clipboard (default: false) (optional)
                                                    mandatory: true                                  # specify mandatory field (optional)
                                                    mandatoryText: You have to provide information.  # text occurs if the column is empty on save 
                                                    cssClass: 'input-css'                            # css class to use as style for the input field (optional)
@@ -610,8 +610,8 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
                                                  - type: select                     # element type definition
                                                    title: select a type             # labeling (optional)
                                                    name: my_type                    # reference to table column (optional)
-                                                   copyClipboard: false             # specify button that copies chosen values to the clipboard (optional). [true/false]. Default is false.                    
-                                                   multiple: false                  # define a multiselect, default is false
+                                                   copyClipboard: false             # specify button that copies chosen values to the clipboard (optional). [true/false] (default: false).           
+                                                   multiple: false                  # define a multiselect (default: false)
                                                    options:                         # definition of the options (key, value)
                                                        1: pub
                                                        2: bar
@@ -666,7 +666,7 @@ The keywords are saved in the database (for example: "dancing: Tanzen" and "flow
                                                    title: select some types           # labeling (optional)
                                                    name: my_type                      # reference to table column (optional)
                                                    copyClipboard: true                # Button which copies chosen values to the clipboard (optional)
-                                                   multiple: true                     # define a multiselect, default is false
+                                                   multiple: true                     # define a multiselect (default: false)
                                                    options:
                                                      a: a                             # definition of the options (key, value)
                                                      b: b
@@ -742,7 +742,7 @@ Checkboxes (type checkbox)
                                                    title: Is this true?   # Label (optional)
                                                    name:  public          # table column 
                                                    value: true            # parameter when activating the checkbox is stored in DB (here 'TRUE').
-                                                   checked: false         # behaviour of the checkbox (true or false). default is false. Defines whether checkbox is pre-selected (checked) on load
+                                                   checked: false         # [true/false] behaviour of the checkbox (default: false). Defines whether checkbox is pre-selected (checked) on load
 
 
 
@@ -907,7 +907,7 @@ The image can be specified by specifying the two parameters src and name.
                     - type: image                                         # Feature type field name image.
                       name: file_reference                                # Reference to the database column. If defined, the path or URL in the field can be used and replaces "src" option
                       src: "../bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to an image. If the path is relative use relative: true.
-                      relative: true                                      # Optional. Default value is false. If true, the "src" path is determined from the "/web" directory.
+                      relative: true                                      # Optional. If true, the "src" path is determined from the "/web" directory (default: false).
                       enlargeImage: true                                  # Image is enlarged to original size/maximum resolution by clicking on the preview image. It is not scaled to screen size.
 
                       # Experimental information about styling
@@ -963,7 +963,7 @@ The activated element displays a search bar above the table. It shows all the se
 
   poi:
       ...
-      inlineSearch: true      # true: allows the search in the table, default is true
+      inlineSearch: true      # true: allows the search in the table (default: true).
       ...
 
 

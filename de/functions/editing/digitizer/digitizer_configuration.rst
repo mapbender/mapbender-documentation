@@ -375,7 +375,7 @@ Die möglichen Optionen sind:
 
   * connection: Name der Datenbank-Verbindung aus der parameters/config.yml
   * table: Name der Tabelle, in der das FeatureType gespeichert wird
-  * uniqueId: Name der Spalte mit dem eindeutigen Identifier, default bei keiner Angabe ist [id]
+  * uniqueId: Name der Spalte mit dem eindeutigen Identifier (Standard bei Leerwert: [id])
   * geomType: Geometrietyp
   * geomField: Attributspalte, in der die Geometrie liegt.
   * srid: Koordinatensystem im EPSG-Code
@@ -474,7 +474,7 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 
 * **tableFields:** Definition der Spalten für die Objekttabelle.
    * Definition einer Spalte: [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe z.B. Angabe der Breite]}  # Definition einer Spalte
-* **searchType:** Suchbereich in der Karte, Anzeige aller Objekttreffer in der Tabelle oder nur aller Objekttreffer in dem derzeitigen Kartenausschnitt [all / currentExtent], default currentExtent
+* **searchType:** Suchbereich in der Karte, Anzeige aller Objekttreffer in der Tabelle oder nur aller Objekttreffer in dem derzeitigen Kartenausschnitt [all / currentExtent] (Standard: currentExtent).
 * **showExtendSearchSwitch:** Anzeige der searchType Selectbox zur Suche im Kartenausschnitt aktivieren oder deaktivieren [true/false]
 * **view:** Einstellungen zu der Objekttabelle
    * Detaillierte Informationen zu möglichen Angaben unter https://datatables.net/reference/option/
@@ -576,7 +576,7 @@ Textfelder (type input)
                                                  - type: input                                        # Typ Textfeld
                                                    title: Title for the field                         # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: column_name                                  # Referenz zur Tabellenspalte
-                                                   copyClipboard: false                               # Button, der eingetragene Inhalte in die Zwischenablage kopiert (optional). (Standard: false)
+                                                   copyClipboard: false                               # Button, der eingetragene Inhalte in die Zwischenablage kopiert (optional) (Standard: false).
                                                    mandatory: true                                    # Angabe ob Pflichtfeld (optional). [true/false]
                                                    mandatoryText: You have to provide information.    # Text, sofern Pflichtfeld nicht gefüllt wurde
                                                    infoText: 'Bitte geben Sie einen Wert an'          # Definition eines Informationstextes (optional)

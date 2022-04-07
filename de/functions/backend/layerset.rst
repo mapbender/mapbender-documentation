@@ -32,9 +32,9 @@ Der Screenshot zeigt die `private Instanz <layerset.rst#freie-und-private-instan
 
 - **Opacity:** Die Deckkraft des Dienstes in Prozent. Dieser Wert ist nur dann für den Benutzer im `Layertree <../basic/layertree>`_ konfigurierbar, wenn im Menü auch die "Opacity" aktiviert ist.
 
-- **Kachel-Puffer (Tile buffer):** Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen. Default: 0.
+- **Kachel-Puffer (Tile buffer):** Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen (Standard: 0).
 
-- **BBOX-Faktor:** Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier kann man angeben, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Default: 1.25 und kann gerne auf 1 gesetzt werden.
+- **BBOX-Faktor:** Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier kann man angeben, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern (Standard: 1.25, kann auf 1 gesetzt werden).
 
 - **Vendor Specific Parameters:** Siehe unten.
 
@@ -169,7 +169,7 @@ Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
 .. image:: ../../../figures/de/layerset/mapbender_vendor_specific_parameter.png
 
 * Name: Parameter Name im WMS Request.
-* Default: Standardwert
+* default: Standardwert
 * Vstype: Mapbender-spezifische Variablen: Gruppe (groups), User (users), Simple.
 * Hidden: Wenn dieser Wert gesetzt wird, werden die Anfragen serverseitig versendet, sodass die Parameter nicht direkt sichtbar sind.
 

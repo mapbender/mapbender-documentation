@@ -25,7 +25,7 @@ In the example configuration, the element FeatureInfo is integrated in the 'Cont
 
 
 * **Auto-open:** Enable or disable autoopening of the copyright window when starting the application (default: false).
-* **Deactivate on close:** True/false to deactivate the functionality after closing the result dialog (default: true).
+* **Deactivate on close:** true/false to deactivate the functionality after closing the result dialog (default: true).
 * **Print Result:** Offer a link to print the result of FeatureInfo (default: false).
 * **Only valid:** Display valid WMS (default: false).
 * **Title:** Title of the element. It will be indicated next to the button.
@@ -120,7 +120,7 @@ YAML-Definition:
 
    title: FeaureInfo              # title of the element
    tooltip: Feature Info          # text to use as tooltip
-   type: dialog                   # Default: dialog.
+   type: dialog                   # defines the element type (default: dialog)
    target: map                    # Id of Map element to query
    autoActivate: false            # true/false open when application is started (default: false)
    deactivateOnClose: true        # true/false to deactivate the functionality after closing the result dialog (default: true)

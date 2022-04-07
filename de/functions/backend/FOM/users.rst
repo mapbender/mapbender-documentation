@@ -99,7 +99,7 @@ Die config.yml ermöglicht die Anpassung dieses Verhaltens:
        login_delay_after_fail: 2 # Seconds
 
 
-* **auto_create_log_table:** Angabe zur Rückwärtskompatibilität (Default: true).
-* **login_check_log_time:** Angabe zur Bereinigung der Login-Failure Tabelle (Default: -5 minutes)
-* **login_attempts_before_delay:** Anzahl der Login Versuche, bevor das Login-Delay greift (Default: 3)
-* **login_delay_after_fail:** Länge des Login-Delays in Sekunden (Default: 2).
+* **auto_create_log_table:** Angabe zur Rückwärtskompatibilität (default: true).
+* **login_check_log_time:** Angabe zur Bereinigung der Login-Failure Tabelle (default: -5 minutes)
+* **login_attempts_before_delay:** Anzahl der Login Versuche, bevor das Login-Delay greift (default: 3)
+* **login_delay_after_fail:** Länge des Login-Delays in Sekunden (default: 2).

@@ -16,11 +16,11 @@ Configuration
 .. image:: ../../../figures/wms_loader_configuration.png
      :scale: 80
 
-* **Auto open:** Opens the element when application is started (Default: false).
-* **Split layers:** Splits layer on load of the service (Default: false).
+* **Auto open:** Opens the element when application is started (default: false).
+* **Split layers:** Splits layer on load of the service (default: false).
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Default format:** image/png, image/gif, image/jpeg (Default: image/png).
-* **Default info format:** text/html, text/xml, text/plain (Default: text/html).
+* **Default format:** image/png, image/gif, image/jpeg (default: image/png).
+* **Default info format:** text/html, text/xml, text/plain (default: text/html).
 
 You need a button to show this element. See `button <button.html>`_ for inherited configuration options.
 
@@ -33,10 +33,10 @@ This template can be used to include the element into a YAML application.
 
    target: ~                            # Id of Map element to query
    tooltip: 'WMS Loader'                # text to use as tooltip
-   autoOpen: false                      # true/false open when application is started (Default: false)
-   defaultFormat: 'image/png'           # image/png, image/gif, image/jpeg (Default: image/png)
-   defaultInfoFormat: 'text/html'       # text/html, text/xml, text/plain (Default: text/html)
-   splitLayers: false                   # split layer on load of the service (Default: false)
+   autoOpen: false                      # true/false open when application is started (default: false)
+   defaultFormat: 'image/png'           # image/png, image/gif, image/jpeg (default: image/png)
+   defaultInfoFormat: 'text/html'       # text/html, text/xml, text/plain (default: text/html)
+   splitLayers: false                   # split layer on load of the service (default: false)
 
 How to add a WMS by defining a link
 ====================================
