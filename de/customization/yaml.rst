@@ -427,10 +427,10 @@ Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheid
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
+    app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
 
 Durch *> ~/Downloads/demo.yaml* wird eine neue Datei unter dem angegebenen Pfad erstellt.
-*$ app/console mapbender:application:export mapbender_user_yml* gibt den Inhalt auf der Konsole aus.
+*app/console mapbender:application:export mapbender_user_yml* gibt den Inhalt auf der Konsole aus.
 
 
 **Import über die Konsole**
@@ -439,7 +439,7 @@ YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportier
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:import ~/Downloads/demo.yaml
+    app/console mapbender:application:import ~/Downloads/demo.yaml
 
 
 **Anwendung über die Konsole klonen**
@@ -448,7 +448,7 @@ Klont eine existierende Anwendung.
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:clone mapbender_user_yml
+	app/console mapbender:application:clone mapbender_user_yml
 
 Die neue Anwendung erhält die Endung _imp1 und heißt somit mapbender_user_yml_imp1.
 
@@ -459,8 +459,8 @@ Die Hilfekommandos, welche die Import- & Exportfunktion und erweiterte Optionen 
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:import --help
+    app/console mapbender:application:import --help
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:export --help
+    app/console mapbender:application:export --help

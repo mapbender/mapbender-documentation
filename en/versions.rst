@@ -259,7 +259,7 @@ Please call again the **app/console doctrine:schema:update** command to set back
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update
+                app/console doctrine:schema:update
 
 If this statement fails, for example with the PostgreSQL error ``SQLSTATE[22001]: String data, right truncated:`` and ``7 ERROR:  Value too long for type character varying(255)``, you probably have a keyword-entry in the table ``mb_core_keyword``, that exceeds the length of 255 characters. You can find out this entry with the following SQL-statement:
 
@@ -413,7 +413,7 @@ Please call the command **app/console doctrine:schema:update** for the Update to
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update
+                app/console doctrine:schema:update
 
 
 Version 3.0.7.2, 3.0.7.1 und 3.0.7.0
@@ -685,7 +685,7 @@ Directory where YAML-based application definition are stored. As an example the 
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update --dump-sql
+                app/console doctrine:schema:update --dump-sql
                 ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
                 ALTER TABLE mb_core_keyword ALTER value DROP DEFAULT;
 

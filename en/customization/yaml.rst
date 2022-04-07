@@ -435,10 +435,10 @@ The former is produced by a machine and the latter is code written by a develope
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
+	app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
 
 *> ~/Downloads/demo.yaml* creates a new file under the specified path
-*$ app/console mapbender:application:export mapbender_user_yml* shows the data on the console.
+*app/console mapbender:application:export mapbender_user_yml* shows the data on the console.
 
 
 **Import**
@@ -447,7 +447,7 @@ YAML files that have been exported over the user interface or console can be imp
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:import ~/Downloads/demo.yaml
+	app/console mapbender:application:import ~/Downloads/demo.yaml
 
 
 **Clone**
@@ -456,7 +456,7 @@ Clone an existing application.
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:clone mapbender_user_yml
+	app/console mapbender:application:clone mapbender_user_yml
 
 The name of the new application is mapbender_user_yml_imp1.
 
@@ -465,8 +465,8 @@ The name of the new application is mapbender_user_yml_imp1.
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:import --help
+    app/console mapbender:application:import --help
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:export --help
+    app/console mapbender:application:export --help
