@@ -48,6 +48,8 @@ For the following parameters (unchecking *Fix*, *Position*: left-bottom, *Width*
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
    tooltip: 'Overview'          # text to use as tooltip

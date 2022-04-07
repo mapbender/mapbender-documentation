@@ -446,7 +446,7 @@ Example of a route-configuration in the ``configuration`` area:
 YAML-Definition 
 ---------------
 
-In the mapbender.yml file:
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

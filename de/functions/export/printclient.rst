@@ -67,6 +67,8 @@ Im Backend finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein a
 YAML-Definition
 ---------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
     target: map                                              # ID des Kartenelements

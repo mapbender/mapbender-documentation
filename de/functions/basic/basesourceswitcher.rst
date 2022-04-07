@@ -65,6 +65,8 @@ Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
     title:                                              # Titel

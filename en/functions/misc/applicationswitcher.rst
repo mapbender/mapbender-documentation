@@ -37,6 +37,8 @@ With the checkbox *Open in new tab:*, you can define whether the new application
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
     title: Choose an Application              # Text will be displayed as tooltip

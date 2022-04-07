@@ -123,6 +123,8 @@ As soon as you click on the button area ruler, the feature line ruler is deactiv
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
     title:        # title

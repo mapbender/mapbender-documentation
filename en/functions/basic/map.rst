@@ -51,6 +51,8 @@ The field *max. Extent* **(3)** states the maximum zoomable extent of the map ap
 YAML-Definition:
 ----------------
 
+This template can be used to include the map into a YAML application.
+
 .. code-block:: yaml
 
    layerset: null             # refer to a layerset, define the layerset first and refer to it

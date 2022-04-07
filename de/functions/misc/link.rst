@@ -60,6 +60,8 @@ Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole a
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
     title: Link                                # Titel

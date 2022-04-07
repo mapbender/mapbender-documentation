@@ -63,6 +63,8 @@ Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/ou
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    tooltip: 'Navigation Toolbar'    # Text des Tooltips

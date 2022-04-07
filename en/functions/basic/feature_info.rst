@@ -116,6 +116,8 @@ The necessary adjustment is shown here using a configuration for MapServer. In t
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
    title: FeaureInfo              # title of the element

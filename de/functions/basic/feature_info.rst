@@ -119,6 +119,8 @@ Die notwendige Anpassung wird hier am Beispiel von MapServer gezeigt. In der DAT
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    title: FeatureInfo             # Titel des Elements

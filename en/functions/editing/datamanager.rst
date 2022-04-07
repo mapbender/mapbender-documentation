@@ -68,7 +68,7 @@ The element can be integrated in the sidepane.
 YAML-Definition
 ---------------
 
-Here's the necessary YAML-Code of the configuration example above:
+You can find the necessary YAML-Code of the configuration example below:
 
 .. code-block:: yaml
 

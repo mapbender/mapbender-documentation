@@ -59,6 +59,8 @@ In the configuration example you can see that either one, none or several entrie
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
     title: 'BaseSourceSwitcher'                         # title

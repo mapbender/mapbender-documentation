@@ -92,7 +92,7 @@ To stop drawing click the pause button.
 YAML-Definition:
 ----------------
 
-This code can be used to implement the element in a yaml-application.
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

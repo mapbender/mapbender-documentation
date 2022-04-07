@@ -451,7 +451,7 @@ Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
 YAML-Definition 
 ----------------
 
-In der mapbender.yml Datei:
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

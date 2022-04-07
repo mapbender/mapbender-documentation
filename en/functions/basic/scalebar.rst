@@ -22,6 +22,8 @@ Configuration
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
    tooltip: 'Scale Bar'             # text to use as tooltip

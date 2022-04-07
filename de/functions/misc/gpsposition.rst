@@ -34,7 +34,7 @@ Konfiguration
 YAML-Definition:
 ----------------
 
-Das Element wird als Button in die Toolbar eingefügt.
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

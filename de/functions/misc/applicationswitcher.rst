@@ -35,6 +35,8 @@ Unter *Anwendungen* wählen Sie per Klick die Anwendungen aus, die zur Auswahl e
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
     title: Choose an Application              # Text wird als Tooltip angezeigt

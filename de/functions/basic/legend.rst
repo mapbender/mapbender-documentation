@@ -84,6 +84,8 @@ Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legend
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    tooltip: 'Legend'                    # Text des Tooltips

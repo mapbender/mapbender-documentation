@@ -60,6 +60,8 @@ In the field *Tooltip*, you can define a text that will be displaced as tooltip 
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
     title: Link                                 # title

@@ -34,7 +34,7 @@ Configuration
 YAML-Definition:
 ----------------
 
-The element is placed as a button into the toolbar.
+This template can be used to insert the element into a YAML application. The element is placed as a button into the toolbar.
 
 .. code-block:: yaml
                 

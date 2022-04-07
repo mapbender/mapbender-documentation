@@ -1247,7 +1247,7 @@ By specifying a style the way the objects are displayed on the map can be define
 YAML-Definition for the element Digitizer in mapbender.yml
 ==========================================================
 
-This code-snippet shows how to include the Digitizer into a YAML-file based application.
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

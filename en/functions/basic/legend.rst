@@ -86,6 +86,8 @@ The activation and deactivation of checkboxes in the configurational settings le
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
    tooltip: 'Legend'                    # text to use as tooltip

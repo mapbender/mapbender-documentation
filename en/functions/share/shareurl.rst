@@ -27,6 +27,8 @@ Configuration
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
     title: Share this map view          # Optional custom title, uses default title "Share URL" if omitted (string or empty).

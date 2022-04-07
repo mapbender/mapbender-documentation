@@ -1241,8 +1241,7 @@ Darstellung (Styles)
 YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml
 ================================================================================
 
-Dieser Codeabschnitt zeigt, wie das Digitizer Element in eine auf einer
-YAML-Datei basierende Anwendung eingebaut werden kann.
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

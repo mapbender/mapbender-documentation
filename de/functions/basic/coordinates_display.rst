@@ -49,6 +49,8 @@ Konfiguration
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    numDigits: 2                   # die Anzahl der Nachkommastellen, die jede Koordinate haben soll

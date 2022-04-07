@@ -51,6 +51,8 @@ Weiterhin kann das Feld *Max. Extent* **(3)** definiert werden. Dieses gibt den 
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um die Karte in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    layerset: null             # verweist auf ein Layerset, definiert zuerst das layerset und verweist darauf

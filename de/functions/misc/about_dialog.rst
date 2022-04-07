@@ -22,6 +22,8 @@ Konfiguration
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    title: 'Über Mapbender'     # Text, der neben dem About Dialog Button angezeigt wird

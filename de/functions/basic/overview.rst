@@ -47,6 +47,8 @@ Bei Anpassung der folgenden Parameter (kein Haken bei *Fixieren*, *Position*: un
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    tooltip: 'Overview'          # Text des Tooltips

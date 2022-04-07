@@ -123,6 +123,8 @@ Diese Variablen sehen in der Anwendung wie folgt aus:
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
     title: 'HTML-Element'

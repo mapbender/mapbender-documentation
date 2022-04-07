@@ -301,6 +301,8 @@ Das Layerset "World" wird als Thema angezeigt, ist jedoch nicht geöffnet. Bei d
 YAML-Definition:
 =================
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
    .. code-block:: yaml    
 
     title: layertree                                    # Titel des Layerbaums

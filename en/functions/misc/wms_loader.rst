@@ -27,7 +27,7 @@ You need a button to show this element. See `button <button.html>`_ for inherite
 YAML-Definition:
 ----------------
 
-This template can be used to include the element into a YAML application.
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 
