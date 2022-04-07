@@ -1,9 +1,9 @@
 ﻿.. _printclient_de:
 
-PrintClient (Druck)
+Druck (PrintClient)
 *******************
 
-Der PrintClient ermöglicht den Druck eines vordefinierten Kartenbereichs. Im Folgenden wird zunächst der allgemeine Aufbau und die Konfiguration des PrintClients erklärt. Danach folgt eine Einführung in die Erstellung individueller Druckvorlagen. Im letzten Teil wird auf den Druckvorgang selbst eingegangen und wie dieser konfiguriert werden kann. 
+Das Druckelement ermöglicht den Druck eines auswählbaren Kartenbereichs. Im Folgenden wird zunächst der allgemeine Aufbau und die Konfiguration des PrintClients erklärt. Danach folgt eine Einführung in die Erstellung individueller Druckvorlagen. Im letzten Teil wird auf den Druckvorgang selbst eingegangen und wie dieser konfiguriert werden kann. 
 
 
 Allgemeines

@@ -1,11 +1,11 @@
 .. _sketch_de:
 
-Sketch
-******
+Skizzen (Sketch)
+****************
 
-Mit dem Skizzen (Sketch) Element können temporär verfügbare Geometrien in der Karte erstellt werden. Temporär bedeutet, dass die Objekte nicht in einer Datenbank gespeichert werden und beim Neustart der Anwendung verloren gehen. Skizzen werden auch in das Druckbild übernommen.
+Mit dem Skizzen Element können temporär verfügbare Geometrien in der Karte erstellt werden. Temporär bedeutet, dass die Objekte nicht in einer Datenbank gespeichert werden und beim Neustart der Anwendung verloren gehen. Skizzen werden auch in das Druckbild übernommen.
 
-Mit Skizzen Element können folgende Geometrietypen erstellt werden:
+Mit Skizzen können folgende Geometrietypen erstellt werden:
 
 * Punkt
 * Linie

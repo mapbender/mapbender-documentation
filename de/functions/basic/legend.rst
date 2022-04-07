@@ -1,7 +1,7 @@
 .. _legend_de:
 
-Legende
-*******
+Legende (Legend)
+****************
 
 Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Dabei wird jeder einzelne Layer mit seinen Punkten, Flächen und Linien aufgelistet.
 

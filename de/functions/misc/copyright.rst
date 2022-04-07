@@ -1,7 +1,7 @@
 .. _copyright_de:
 
 Copyright
-************
+*********
 
 Dieses Element zeigt die Nutzungsbedingungen ("Terms of use") in einem Dialog an.
 

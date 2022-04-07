@@ -1,7 +1,8 @@
 .. _twig:
 
 Twig
-#####
+####
+
 Symfony follows the template approach and we use this in Mapbender. Symfony uses a templating engine to generate HTML, CSS or other content. 
 
 Twig is a templating engine that is packaged in Symfony and offers an easy and powerfull way to generate templates. 

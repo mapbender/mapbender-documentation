@@ -1,7 +1,7 @@
 .. _view_manager_de:
 
-Ansichtsverwaltung
-******************
+Ansichtsverwaltung (View Manager)
+*********************************
 
 
 Das Element Ansichtsverwaltung erlaubt die Speicherung und Wiederverwendung von Kartenansichten. Folgende Kartenparameter sind hierin inbegriffen: Kartenposition, Maßstab, Koordinatenreferenzsystem, Drehung, Layer, Layerauswahl sowie Transparenz. Gesetzte Kartenansichten bleiben dabei auch nach Neuladen der Anwendung erhalten.

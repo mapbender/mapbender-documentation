@@ -1,7 +1,7 @@
 .. _scaledisplay_de:
 
-Maßstabsanzeige (ScaleDisplay)
-******************************
+Maßstabsanzeige (Scale display)
+*******************************
 
 Die Maßstabsanzeige zeigt den aktuellen Maßstab numerisch an (1:1K or 1:1000).
 

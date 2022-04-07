@@ -1,6 +1,6 @@
 .. _feature_info_de:
 
-FeatureInfo (Information)
+Information (FeatureInfo)
 *************************
 
 Mit diesem Element können Sie Informationen eines WMS abfragen. In der folgenden Abbildung sehen Sie ein Beispiel für eine solche Informationsabfrage. Es wurde hierfür der WMS "Krankenhäuser NRW" (http://www.wms.nrw.de/wms/krankenhaus?) vom Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW verwendet.

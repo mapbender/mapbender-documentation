@@ -1,9 +1,9 @@
 .. _dimensions_handler_de:
 
-Dimensions Handler
+Dimensions-Handler
 ******************
 
-Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions Handler genutzt werden. 
+Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions-Handler genutzt werden. 
 WMS-Time Dienste werden wie ganz normale WMS als Datenquelle registriert. 
 Wenn die Dienste über die Angabe einer zeitlichen Dimension verfügen, werden diese in den Layer-Metadaten angezeigt. 
 
@@ -62,7 +62,7 @@ Nach der Aktivierung in dem Ebenenbaum erscheint ein Zeitslider in dem Kontextme
 Zeitslider als Element
 ----------------------
 
-Die Kartenebenen können durch das Dimensions Handler Element über einen zentralen Slider gesteuert werden. Dieses Element kann in die Sidepane, Toolbar und in den Footer integriert werden. 
+Die Kartenebenen können mithilfe von Dimensions-Handler über einen zentralen Slider gesteuert werden. Dieses Element kann in die Sidepane, Toolbar und in den Footer integriert werden. 
 Die Konfiguration des „Dimensionhandler erfolgt in drei Schritten:
 
 * **Anlegen des Elements**: Zuerst wird das Element definiert und gespeichert. Danach schließt sich das Element (siehe Konfiguration).

@@ -1,7 +1,7 @@
 .. _zoom_bar:
 
 Navigation Toolbar (Zoombar)
-******************************
+****************************
 
 This element simplifies navigation within the map via rotation and zoom. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The zoombar itself is draggable.
 

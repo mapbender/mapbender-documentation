@@ -1,7 +1,7 @@
 .. _poi:
 
-POI (MeetingPoint)
-***********************
+POI
+***
 
 Generate POI-URLs (aka meeting points) suitable for e-mail. The generated point is projected and displayed in the coordinate system of the map.
 

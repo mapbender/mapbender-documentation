@@ -1,7 +1,7 @@
 .. _overview_de:
 
-Overview (Übersicht)
-********************
+Übersichtskarte (Overview)
+**************************
 
 Mapbender bietet neben der Hauptkarte auch eine Übersichtskarte an. Dieses Element kann in Größe, Position und Zoom-Verhalten individuell angepasst werden. Es bezieht sich auf ein bestimmtes Layerset und die darin definierten Instanz(en). 
 

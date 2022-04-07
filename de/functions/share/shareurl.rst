@@ -1,7 +1,7 @@
 .. _shareurl_de:
 
-URL teilen
-**********
+URL teilen (Share URL)
+**********************
 
 Das Teilen von URLs kann durch den Einbau eines entsprechenden Elements vereinfacht werden. Dieses wird als Button in der Toolbar oder dem Footer eingebunden.
 

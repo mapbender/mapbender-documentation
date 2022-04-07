@@ -2,7 +2,7 @@
 
 
 PrintClient
-************
+***********
 
 The PrintClient allows for the print of a predefined map area. The following documentation will first give an overview about the general set-up and configuration of the PrintClient. The second part will answer the question how individual print templates can be generated. Lastly, the print process and all its configuration options will be presented.
 

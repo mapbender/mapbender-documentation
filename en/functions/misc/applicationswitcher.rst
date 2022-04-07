@@ -1,9 +1,9 @@
 .. _applicationswitcher:
 
-ApplicationSwitcher
-*******************
+Application Switcher
+********************
 
-The ApplicationSwitcher element provides a selectbox that refers to other Mapbender applications. You can switch from one application to another. The map extent will be preserved.
+The Application Switcher provides a selectbox that refers to other Mapbender applications. You can switch from one application to another. The map extent will be preserved.
 
 .. image:: ../../../figures/applicationswitcher.png
      :scale: 80
@@ -19,8 +19,8 @@ Configuration
 * **Open in new tab:** Define whether the new application should be opened in the same window (default) or in a new tab.
 
 
-ApplicationSwitcher Configuration
----------------------------------
+Application Switcher Configuration
+----------------------------------
 
 First, you have to select the link element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
 

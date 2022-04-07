@@ -1,7 +1,7 @@
 .. _feature_info:
 
 FeatureInfo
-************
+***********
 
 This element provides feature info capabilities to Mapbender. It works with WMS.
 

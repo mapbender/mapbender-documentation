@@ -1,7 +1,7 @@
 .. _zoom_bar_de:
 
-Navigation Toolbar (Zoombar) (Navigationswerkzeug)
-*********************************************************************
+Navigationswerkzeug (Navigation Toolbar)
+****************************************
 
 Das Element erleichtert die Navigation in der Karte durch Rotation und Zoom. Der Kartenmaßstab kann individuell über eine Leiste angesprungen oder über die Zoom in/out-Buttons abgeändert werden. Es besteht zudem die Möglichkeit, auf die maximale Kartenausdehnung zu zoomen oder zum Anfangszustand zurück zu navigieren. Das Navigationselement selbst ist verschiebbar.
 

@@ -1,6 +1,6 @@
 .. _gpspostion:
 
-GPS-Position
+GPS Position
 ************
 
 This element provides a button to navigate to your current position and display a symbol at that position. The scale will not be changed until you activate ``zoom to accuracy (zoom to accuracy on first position)``.

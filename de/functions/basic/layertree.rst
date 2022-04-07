@@ -1,7 +1,7 @@
 .. _layertree_de:
 
-Layertree - Table of Content (Ebenenbaum)
-*****************************************
+Ebenenbaum (Layertree)
+**********************
 
 
 Funktionen

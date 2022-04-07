@@ -1,7 +1,7 @@
 .. _scalebar_de:
 
-Maßstabsleiste (ScaleBar)
-*************************
+Maßstabsleiste (Scale bar)
+**************************
 
 Die Maßstabsleiste stellt den aktuellen Maßstab graphisch als Linie dar:
 

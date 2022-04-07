@@ -1,7 +1,7 @@
 .. _components:
 
 Components
-#####################
+##########
 
 Mapbender is made up of different components. On the server side we use Symfony as a framework which comes along with powerful components like Doctrine, Twig, Monolog and more.
 

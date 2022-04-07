@@ -1,7 +1,7 @@
 .. _coordinate_utility_de:
 
-Koordinaten Utility
-*******************
+Koordinaten Utility (Coordinate Utility)
+****************************************
 
 Über das Element *Koordinaten Utility* lassen sich zwei Dinge realisieren:
 

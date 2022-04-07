@@ -1,6 +1,6 @@
 .. _coordinates_display_de:
 
-Coordinates Display (Koordinatenanzeige)
+Koordinatenanzeige (Coordinates Display)
 ****************************************
 
 Das Koordinatenanzeige-Element zeigt die Kartenkoordinaten der aktuellen Mausposition an. Die Koordinaten sind abhängig vom eingestellten räumlichen Referenzsystem, welches im `Spatial Reference System Selector <srs_selector.html>`_ geändert werden kann.

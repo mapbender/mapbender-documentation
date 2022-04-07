@@ -1,6 +1,6 @@
 .. _map_de:
 
-Map (Karte)
+Karte (Map)
 ***********
 
 Die Karte basiert auf OpenLayers und wird als Element im Content-Bereich integriert.

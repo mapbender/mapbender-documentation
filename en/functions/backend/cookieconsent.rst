@@ -1,9 +1,7 @@
 .. _cookieconsent:
 
-Cookie-Banner
+Cookie Banner
 =============
-
-(since 3.0.7.0)
 
 Applications support displaying a cookie banner which is customized via the Mapbender configuration file ``parameters.yml``. We use the code from `Cookie Consent <https://cookieconsent.insites.com/>`_ without making an additional call to the internet.
 

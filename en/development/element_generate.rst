@@ -1,7 +1,7 @@
 .. _element_generate:
 
 How to create your own Element?
-################################
+###############################
 
 *Note*: This guide is under complete restructuring. We will provide a new documentation in the Contributing Guite in our Git-Repository:
 

@@ -1,7 +1,7 @@
 .. _search_router_de:
 
-Search Router
-*************
+Suchen (Search Router)
+**********************
 
 Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die Trefferausgabe sind dabei konfigurierbar. Zur Zeit wird eine SQL Suche unterstützt.
 

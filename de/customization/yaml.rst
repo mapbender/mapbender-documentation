@@ -1,7 +1,7 @@
 .. _yaml_de:
 
 YAML Konfiguration (Konfigurations- und Anwendungsdateien)
-===========================================================
+==========================================================
 
 Die folgenden Konfigurationsdateien sind zu finden unter application/app/config.
 

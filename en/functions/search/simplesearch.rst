@@ -1,14 +1,14 @@
 .. _simplesearch:
 
-SimpleSearch
-************
+Simple Search
+*************
 
-SimpleSearch offers a single field search or keyword search. The search query is transmitted 
+Simple Search offers a single field search or keyword search. The search query is transmitted 
 to a search service. 
 The search servers Apache Solr, Nominatim, photon or an OGC API Features service can be used.
 
 An input field is offered which can be integrated directly into the toolbar or the sidebar. 
-SimpleSearch sends the entered search term to a configurable URL and receives JSON-formatted data, which contain a label and geometry attributes for each entry.
+Simple Search sends the entered search term to a configurable URL and receives JSON-formatted data, which contain a label and geometry attributes for each entry.
 
 The geometry data can be encoded in WKT or GeoJSON format.
 

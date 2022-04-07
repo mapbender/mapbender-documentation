@@ -1,7 +1,7 @@
 .. _applicationswitcher_de:
 
-Anwendung wechseln
-******************
+Anwendung wechseln (Application Switcher)
+*****************************************
 
 Dieses Element stellt ein Auswahlbox bereit, über die zwischen Anwendungen gewechselt werden kann. Dabei bleibt der aktuelle Kartenausschnitt erhalten.
 

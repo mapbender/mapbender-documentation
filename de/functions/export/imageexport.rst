@@ -1,9 +1,9 @@
 .. _imageexport_de:
 
-ImageExport (Bildexport)
+Bildexport (ImageExport)
 ************************
 
-Mit dem ImageExport kann die aktuelle Kartenansicht exportiert werden. Das Bild kann als .png oder .jpeg abgespeichert werden.
+Mit dem Bildexport kann die aktuelle Kartenansicht exportiert werden. Das Bild kann als .png oder .jpeg abgespeichert werden.
 
 .. image:: ../../../figures/de/image_export.png
      :scale: 80

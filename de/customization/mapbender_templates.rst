@@ -1,7 +1,7 @@
 .. _mapbender_templates_de:
 
 Mapbender Templates
-#####################
+###################
 
 Ein Mapbender Template bestimmt die grundlegende Darstellung (Farbe, Schrift etc.) einer Anwendung. Es definiert außerdem die Bereiche (z.B. Toolbar oder Sidepane), in welche neue Elemente eingefügt werden können.
 

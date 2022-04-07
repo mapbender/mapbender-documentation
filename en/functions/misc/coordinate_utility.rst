@@ -1,9 +1,9 @@
 .. _coordinate_utility:
 
-Coordinate Utility
-******************
+Coordinates Utility
+*******************
 
-The element *Coordinate Utility* allows two different things:
+The element *Coordinates Utility* allows two different things:
 
 1. Zoom to a given point coordinate
 2. Show the clicked point of the map

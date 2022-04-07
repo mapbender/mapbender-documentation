@@ -1,9 +1,9 @@
 .. _scalebar:
 
-ScaleBar
-***********************
+Scale Bar
+*********
 
-The ScaleBar is a small line which represents the current map scale graphically.
+The Scale bar is a small line which represents the current map scale graphically.
 
 .. image:: ../../../figures/scalebar.png
      :scale: 100
