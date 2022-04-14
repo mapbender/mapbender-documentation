@@ -41,11 +41,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
 Hinzufügen eines WMS über einen definierten Link
 ================================================
 
-Mapbender kann einen WMS über einen definierten Link hinzufügen, z. B. über :ref:`die Informationsabfrage<feature_info_de>` oder über Suchergebnisse.
-
-Dazu muss in "WMS laden" die Option **use Declarative** aktiviert werden. In einer YAML-Anwendung wird die Option ``useDeclarative`` auf true gesetzt.
-
-Der Link sollte folgendermaßen aussehen:
+Mapbender kann einen WMS über einen definierten Link hinzufügen, z. B. über :ref:`die Informationsabfrage<feature_info_de>` oder über Suchergebnisse. Der Link sollte folgendermaßen aussehen:
 
 .. code-block:: html
 
