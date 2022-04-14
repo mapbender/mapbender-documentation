@@ -306,44 +306,44 @@ Mapbender Demo Map
 Folgende Funktionen sind vorimplementiert:
 
 Toolbar
-    * Layer tree (Button)
-    * Featureinfo (Button)
-    * Print client (Button)
-    * Image Export (Button)
-    * Legend (Button)
-    * WMS loader (Button)
-    * GPS Position
-    * measure (line und area) (Buttons)
-    * about (About dialog)
-    * POI (Button)
+    * Ebenenbaum (Button)
+    * Information (Button)
+    * Druck (Button)
+    * Bildexport (Button)
+    * Legende (Button)
+    * WMS laden (Button)
+    * GPS-Position
+    * Messen (Linie und Fläche) (Buttons)
+    * Über-Mapbender-Dialog
+    * MeetingPoint (POI) (Button)
 
 Sidepane
-    * Layer tree
-    * Redlining
-    * Coordinates utility
-    * About Mapbender (HTML)
+    * Ebenenbaum
+    * Skizzen
+    * Koordinaten Utility
+    * Über-Mapbender-Dialog (HTML)
 
 Content
-    * Map
-    * Navigation toolbar
-    * Legend
-    * Featureinfo
-    * WMS loader
-    * Image export
-    * Print client
-    * measure line
-    * measure area
-    * Scale bar
-    * Layer tree
-    * Overview
-    * Scale display
-    * POI
+    * Karte
+    * Navigationswerkzeug
+    * Legende
+    * Information
+    * WMS laden
+    * Bildexport
+    * Druck
+    * Linie messen
+    * Fläche messen
+    * Maßstabsleiste
+    * Ebenenbaum
+    * Übersicht
+    * Maßstabsanzeige
+    * MeetingPoint (POI)
 
 Footer
-    * Activity Indicator
-    * Coordinates Display (mb.core.coordinates.class.title)
-    * SRS selector
-    * Scale selector
+    * Aktivitätsanzeige
+    * Koordinatenanzeige
+    * SRS Auswahl
+    * Maßstabsanzeige
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
@@ -377,24 +377,24 @@ Die Beispielanwendung kann als Mobile Template für die Erstellung von Anwendung
 Folgende Funktionen sind vorimplementiert:
 
 Footer
-    * Themes (Button)
-    * Base source switcher (Button)
-    * GPS Position
+    * Themen (Button)
+    * Themenwechsel (Button)
+    * GPS-Position
     * Imprint (Button)
-    * help (Button)
-    * about (Button)
+    * Hilfe (Button)
+    * Über-Mapbender-Dialog (Button)
 
 Content
-    * Map
-    * Navigation toolbar
+    * Karte
+    * Navigationswerkzeug
 
 Mobilepane
-    * Themes (Layer tree)
-    * Featureinfo
+    * Themen (Ebenenbaum)
+    * Information
     * Imprint (HTML)
-    * help (HTML)
-    * Base source switcher
-    * about (HTML)
+    * Hilfe (HTML)
+    * Themenwechsel
+    * Über-Mapbender-Dialog (HTML)
 
 
 

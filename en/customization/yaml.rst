@@ -325,7 +325,7 @@ Toolbar
 
 Sidepane
     * Layer tree
-    * Redlining
+    * Sketch
     * Coordinates utility
     * About Mapbender (HTML)
 
