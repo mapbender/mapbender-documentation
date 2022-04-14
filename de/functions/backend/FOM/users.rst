@@ -34,7 +34,7 @@ Die Funktionalität kann in der config.yml ausgeschaltet werden.
 Registrierung
 -------------
 
-Benutzer können sich in Mapbender selbst registrieren. Dafür stellt man in der config.yml die Einstellung *fom_user:selfregister* auf true.
+Benutzer können sich in Mapbender selbst registrieren. Vorher muss in der config.yml die Einstellung *fom_user:selfregister* auf true gestellt werden.
 
 .. code-block:: yaml
 

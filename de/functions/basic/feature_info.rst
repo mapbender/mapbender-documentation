@@ -34,8 +34,8 @@ Das Element FeatureInfo wird im Content eingebunden:
 * **Max count:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
 * **Width/Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
 * **Highlighting aktiv** Aktivierung des FeatureInfo Highlightings.
-* **Grundfarbe** Farbe mit der ausgewählte Geometrien hervogehoben werden.
-* **Hover-Farbe** Farbe mit der ausgewählte Geometrien hervogehoben werden, wenn man darüber hovert.
+* **Grundfarbe** Farbe, mit der ausgewählte Geometrien hervogehoben werden.
+* **Hover-Farbe** Farbe, mit der ausgewählte Geometrien nach kurzem Verweilen des Mauszeigers hervorgehoben werden.
 
 Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
@@ -80,7 +80,7 @@ Ausdruck der Resultate
 
 Mit dem Schalter "Drucken" kann die Information des FeatureInfo ausgedruckt werden. Eine Druckschaltfläche ist dann in dem FeatureInfo-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
 
-Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox kann man die Option "Hintergrund drucken" im Druckoptionendialog anschalten, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
+Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox heißt die Option "Hintergrund drucken" und wird im Druckoptionendialog angeschaltet, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
 
 
 FeatureInfo Highlighting

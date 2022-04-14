@@ -34,7 +34,7 @@ Der Screenshot zeigt die `private Instanz <layerset.rst#freie-und-private-instan
 
 - **Kachel-Puffer (Tile buffer):** Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen (Standard: 0).
 
-- **BBOX-Faktor:** Dieser Parameter gilt für Dienste, die nicht-gekachelt angefordert werden. Hier kann man angeben, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern (Standard: 1.25, kann auf 1 gesetzt werden).
+- **BBOX-Faktor:** Dieser Parameter gilt für Dienste, die nicht gekachelt angefordert werden. Hier kann angegeben werden, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern (Standard: 1.25, kann auf 1 gesetzt werden).
 
 - **Vendor Specific Parameters:** Siehe unten.
 
@@ -64,7 +64,7 @@ Dieser WMS zeigt einige Punkt-, Linien- und Flächenobjekte und Rasterbilder an.
 
 Im Layerbaum dreht sich diese Reihenfolge dann aber um. Unserer Erfahrung nach vereinfacht dies die Nutzerfreundlichkeit. Denn somit werden Layer, welche weiter oben im Ebenenbaum positioniert sind, auch als oberste Layer angezeigt. Dieses Verhalten ist überlicherweise auch in einem Desktop-GIS zu finden. Punkte werden dann im Layerbaum weiter oben und Rasterdaten weiter unten dargestellt.
 
-Der `QGIS Server <https://www.qgis.org/>`_ verhält sich hier aber anders. Einen WMS kann man mithilfe der QGIS-Projektdatei sehr einfach auf einen QGIS Server konfigurieren. Die Reihenfolge der Layer in den WMS Capabilities ist dann gleich der Reihenfolge, die man im eigenen QGIS-Projekt genutzt hat. Es gilt generell: Punkte oben, darunter die Linien, dann zum Schluß die Polygondaten oder Rasterbilder. QGIS und QGIS Server stellen dabei nicht die einzigen Programme dar, welche dies so machen. Sie sind aber die besten. Für den GetMap Aufruf sind diese Einstellungen dann wieder irrelevant. Denn die WMS-Spezifikation klärt bereits die Art und Weise der Aufrufe und wie diese an den Klienten zurückgesendet werden.
+Der `QGIS Server <https://www.qgis.org/>`_ verhält sich hier aber anders. Ein WMS kann mithilfe der QGIS-Projektdatei sehr einfach auf einen QGIS Server konfiguriert werden. Die Reihenfolge der Layer in den WMS Capabilities ist dann gleich der Reihenfolge, die im eigenen QGIS-Projekt genutzt wird. Es gilt generell: Punkte oben, darunter die Linien, dann zum Schluß die Polygondaten oder Rasterbilder. QGIS und QGIS Server stellen dabei nicht die einzigen Programme dar, welche dies so machen. Sie sind aber die besten. Für den GetMap Aufruf sind diese Einstellungen dann wieder irrelevant. Denn die WMS-Spezifikation klärt bereits die Art und Weise der Aufrufe und wie diese an den Klienten zurückgesendet werden.
 
 Die folgende Tabelle fasst das Verhalten nochmal zusammen:
 
@@ -146,15 +146,15 @@ Für welche Möglichkeit Sie sich entscheiden, hängt ganz von Ihren Vorlieben a
 Proxy
 -----
 
-Wozu dient dieser Schalter? Die Proxynutzung macht dann Sinn, wenn man vermeiden möchte, dass der Webbrowser als Klient direkt auf den Dienst zugreift, wie dies durch OpenLayers ja standardmäßig passiert. Ist dieser Schalter aktiviert, greift der Mapbender mit seiner URL auf den Dienst zu, verarbeitet die Bilder und stellt sie in der Karte dar. D.h. man kann über Firewalls sehr leicht einen über das Netzwerk-geschützten Dienst anbieten, der nur von dem Webserver angesprochen werden darf, auf dem der Mapbender läuft.
+Wozu dient dieser Schalter? Die Proxynutzung macht Sinn, wenn vermieden werden soll, dass der Webbrowser als Client direkt auf den Dienst zugreift (dies ist die OpenLayers Standardeinstellung). Ist der Schalter jedoch aktiviert, greift Mapbender mit seiner URL auf den Dienst zu, verarbeitet die Bilder und stellt sie in der Karte dar. D.h. es kann über Firewalls sehr leicht ein über das Netzwerk geschützter Dienst angeboten werden, der nur von dem Webserver angesprochen werden darf, auf dem Mapbender läuft.
 
 
 Kachelung, Kartengröße und Performance
 --------------------------------------
 
-Der Parameter "Gekachelt" wird benutzt, um das Kartenbild in einzelnen Kacheln anzufordern und nicht als ganzes Bild. Das sollte man generell einschalten, wenn man einen `Mapproxy <https://mapproxy.de/>`_ eingebunden hat, der den Dienst gekachelt bereitstellt. Es macht aber auch für normale, ungekachelte Dienste Sinn, da die gefühlte Wartezeit beim Nutzer geringer ist: Das Kartenbild erscheint, obwohl noch nicht alle Kacheln abgerufen worden sind.
+Der Parameter "Gekachelt" wird benutzt, um das Kartenbild in einzelnen Kacheln anzufordern und nicht als ganzes Bild. Bei Nutzung eines `Mapproxy <https://mapproxy.de/>`_ , der den Dienst gekachelt bereitstellt, sollte der Parameter eingeschaltet werden. Es macht aber auch für normale, ungekachelte Dienste Sinn, da die gefühlte Wartezeit beim Nutzer geringer ist: Das Kartenbild erscheint, obwohl noch nicht alle Kacheln abgerufen worden sind.
 
-Man muss dabei aber beachten: Die Anzahl der Anfragen an einen WMS vergrößert sich rapide: Je nach Bildschirm-Auflösung und eingestellter Kachelgröße im `Kartenelement <../basic/map>`_ werden statt einer viele Anfragen abgeschickt. Die zurückgelieferten Bilder sind zwar nicht besonders groß (normalerweise nimmt man Kachelgrößen von 256x256 oder 512x512 Pixel), aber zahlreich. Auch in Hinblick auf die Verwendung des **Kachel-Puffers**. Es ist also eine Abwägung und eine Fall- zu Fall-Unterscheidung, wie man den Dienst ansprechen möchte. Die Performance kann auch über eigene Maßstabsangaben der Layer gesteigert werden, wenn der Dienst diese etwas zu locker vorgegeben hat.
+Man muss dabei aber beachten: Die Anzahl der Anfragen an einen WMS vergrößert sich rapide: Je nach Bildschirm-Auflösung und eingestellter Kachelgröße im `Kartenelement <../basic/map>`_ werden statt einer viele Anfragen abgeschickt. Die zurückgelieferten Bilder sind zwar nicht besonders groß, aber zahlreich. Auch in Hinblick auf die Verwendung des **Kachel-Puffers**. Es ist somit eine Abwägungs- und Fall-zu-Fall-Unterscheidung, wie der Dienst angesprochen werden soll. Die Performance kann auch über eigene Maßstabsangaben der Layer gesteigert werden, wenn der Dienst diese etwas zu locker vorgegeben hat.
 
 Es gibt des Weiteren noch hier und da WMS-Dienste, die nur eine maximale Kartenbildgröße unterstützen und mit den hohen Auflösungen, die Mapbender anfragen kann, nicht zurechtkommen. Das Fullscreen-Template kann auf die maximale Bildschirmbreite gezogen werden und das angeforderte Kartenbild ist dann in etwa der Breite und Höhe des sichtbaren Browserfensters.
 

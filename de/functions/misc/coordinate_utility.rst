@@ -5,8 +5,8 @@ Koordinaten Utility (Coordinate Utility)
 
 Über das Element *Koordinaten Utility* lassen sich zwei Dinge realisieren:
 
-1. Man kann zu einem Punkt mithilfe des zugehörigen eingegebenen Koordinatenpunkts springen.
-2. Man kann sich den Klickpunkt aus der Karte anzeigen lassen.
+1. Es kann zu einem Punkt mithilfe des zugehörigen eingegebenen Koordinatenpunkts gesprungen werden.
+2. Es kann der Klickpunkt aus der Karte anzeigt werden.
 
 Beide Funktionen werden über eine Oberfläche realisiert.
 
@@ -15,7 +15,7 @@ Beide Funktionen werden über eine Oberfläche realisiert.
 
 In beiden Fällen ist eine dynamische Koordinatentransformation möglich, so dass auch Punkte anderer Koordinatensysteme eingegeben werden können.
 Zusätzlich besteht bei dem Element die Möglichkeit, die Koordinaten über einen Button in die Zwischenablage zu kopieren.
-Das Element bindet man im Mapbender-Backend entweder als Dialog zum Aufruf über einen Button oder als Element in der Seitenleiste ein.
+Das Element wird im Backend entweder als Dialog zum Aufruf über einen Button oder als Element in der Seitenleiste eingebunden.
 
 
 Konfiguration

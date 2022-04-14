@@ -422,7 +422,7 @@ Experimentell:
  .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
- Es erscheint ein Style-Manager, mit dem man die einzelnen Features anpassen kann.
+ Es erscheint ein Style-Manager zur Anpassung einzelner Features.
 
  .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
@@ -518,7 +518,7 @@ Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu d
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
 
-Bei jedem Eingabefeld können unabhängig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit kann man beispielsweise wichtige Felder hervorheben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld füllen.
+Bei jedem Eingabefeld können unabhängig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit können beispielsweise wichtige Felder hervorgehoben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld gefüllt werden.
 
 Verhaltensparameter:
 
@@ -628,7 +628,7 @@ Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können 
                     flowers: flowers
 
 **Anmerkungen:** Ab Digitizer 1.2 wird für die Mehrfachauswahl eine vereinfachte Auswahlmöglichkeit genutzt, die auch die Suche innerhalb der Drop-Down-Liste ermöglicht. Die Navigation durch die Liste ist mit der Tastatur möglich. Mögliche Einträge werden beim Eintippen hevorgehoben. Eine vorhandene Auswahl kann über das kleine "x" Symbol wieder deaktiviert werden.
-Aktuelle Informationen zur Digitizer-Version findet man unter: https://github.com/mapbender/mapbender-digitizer
+Aktuelle Informationen zur Digitizer-Version finden sich unter: https://github.com/mapbender/mapbender-digitizer
 
 .. image:: ../../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
@@ -961,7 +961,7 @@ Kontextmenü
 -----------
 
 Über das Kontextmenü kann ein Objekt auf der Karte näher betrachtet werden.
-Nach der Aktivierung kann man über den rechten Mausklick auf einem Objekt ein Kontextmenü öffnen.
+Nach der Aktivierung lässt sich über den rechten Mausklick auf ein Objekt ein Kontextmenü öffnen.
 
 .. image:: ../../../../figures/digitizer_contextmenu.png
      :scale: 80
@@ -1046,7 +1046,7 @@ Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per ein
          - osm                         # Namensangabe nur bei Anwendungen unter app/config/application möglich
       [...]
       
-**Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Aktuelle Informationen findet man unter: https://github.com/mapbender/mapbender-digitizer
+**Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Mehr Informationen unter: https://github.com/mapbender/mapbender-digitizer
  
 
 
@@ -1138,7 +1138,7 @@ Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attri
 
 Man kann das Event je nach Anwendungsfall bei onBeforeInsert oder onBeforeUpdate eintragen.
 
-Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Datenbank ist, kann man auf sie nicht als Feature zugreifen, sondern nur über das jeweilige "item", eine interne Digitizer Speicherstruktur. Diese "item" orientieren sich am Formular und den dort angegebenen Attributen.
+Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Datenbank ist, kann auf sie nicht als Feature zugegriffen werden, sondern nur über das jeweilige "Item", eine interne Digitizer Speicherstruktur. Diese "Items" orientieren sich am Formular und den dort angegebenen Attributen.
 
 .. code-block:: yaml
 
@@ -1151,7 +1151,7 @@ Bei dem Event wird der Wert des Feldes "geom2" mit dem Wert des Feldes "geom" ü
 
 **Speichern unterschiedlicher Geometrietypen:**
 
-Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
+Dieses Szenario ist zu einem konsturierten Beispiel erweiterbar, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
 
 .. code-block:: postgres
 
@@ -1164,7 +1164,7 @@ Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleic
                     $result  = $stmnt->fetchAll();
                     $item['geompoi'] = $result[0]['geom'];
 
-Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, greift man über das "item" auf die Geometrie (geomline). Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
+Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, muss über das "Item" auf die Geometrie (geomline) zugegriffen werden. Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
 
 Buttons
 -------
