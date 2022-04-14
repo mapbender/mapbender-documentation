@@ -56,11 +56,9 @@ This template can be used to include the map into a YAML application.
 .. code-block:: yaml
 
    layerset: null             # refer to a layerset, define the layerset first and refer to it
-   dpi: 72                    # resolution, default is 72
    srs: "EPSG:4326"           # coordinate reference system. Two ways of srs definitions are supported:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
-   units: "degrees"           # units to use degrees/meters, default is degrees
    extents:
        max: [0, 40, 20, 60]    # maximal map extents
        start: [5, 45, 15, 55]  # map extents for the start of the application
