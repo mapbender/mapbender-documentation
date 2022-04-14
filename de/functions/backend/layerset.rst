@@ -128,7 +128,7 @@ Layerkonfiguration
 
 * ... -> öffnet einen Dialog mit weiteren Informationen:
 * Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar).
-* Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard -Stil wählen.
+* Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil wählen.
 
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen
