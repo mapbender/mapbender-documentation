@@ -207,8 +207,8 @@ Eine Konfiguration könnte wie folgt aussehen:
 
    # en, de, tr, it, es, ru, nl, pt are available
     fallback_locale:   en
-    locale:            de
-    secret: ThisTokenIsNotSoSecretChangeIt
+    locale:            de    
+    secret:            ThisTokenIsNotSoSecretChangeIt
 
 Weitere Informationen unter https://doc.mapbender.org/en/architecture/translation.html
 

@@ -146,8 +146,8 @@ Configuration example:
 
    # locale en, de, it, tr, es, ru, nl, pt are available
     fallback_locale:   en
-    locale:            en
-    secret: ThisTokenIsNotSoSecretChangeIt
+    locale:            en    
+    secret:            ThisTokenIsNotSoSecretChangeIt
 
 More information: https://doc.mapbender.org/en/architecture/translation.html
 
