@@ -121,11 +121,11 @@ Die Konfiguratuionsdateien liegen unter **app/config**.
 Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
 
-Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php
+Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php
 -----------------------------------------------------------------------
 
 Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den
-normalen Betrieb- und eine Entwicklerumgebung, in dem die Anwendungen
+normalen Betrieb- und eine Entwicklungsumgebung, in dem die Anwendungen
 getestet werden können. Dieses Konzept orientiert sich an den
 `"Environments" im Symfony Framework
 <http://symfony.com/doc/current/book/configuration.html>`_.
@@ -142,12 +142,12 @@ Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
   sichtbar sind. Dadurch ist der Aufruf einer Anwendung über app_dev.php
   immer langsamer als im Produktivbetrieb.
 
-  Im Detail werden in der Entwicklerumgebung von Mapbender u.a. die CSS,
+  Im Detail werden in der Entwicklungsumgebung von Mapbender u.a. die CSS,
   JavaScript und Übersetzungsdateien nicht gecacht.
 
   In der Produktionsumgebung werden diese aber in app/cache abgelegt.
 
-* In der Entwicklerumgebung werden Fehlermeldungen und ihr Stacktrace direkt
+* In der Entwicklungsumgebung werden Fehlermeldungen und ihr Stacktrace direkt
   an der Oberfläche angezeigt. In der Produktionsumgebung werden die
   Fehlermeldungen in die Datei app/log/prod.log geschrieben.
 

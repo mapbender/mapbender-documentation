@@ -41,7 +41,7 @@ Wenn Sie SQL bevorzugen, können Sie die WMS-ID der Datenquelle im folgenden SQL
 app.php und app_dev.php: Wozu sind diese da?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Siehe die `Details zur Konfiguration von Mapbender <installation/configuration.html>`_, im Kapitel `Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
+Siehe die `Details zur Konfiguration von Mapbender <installation/configuration.html>`_, im Kapitel `Produktions- und Enwicklungsumgebung und Caches: app.php und app_dev.php <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
 
 Im produktiven Einsatz rufen Sie Mapbender über die app.php-Datei auf. 
 Erst wenn Sie selbst etwas entwickeln (an den Twig-Dateien, CSS oder JS-Dateien) oder 
@@ -52,7 +52,7 @@ Der Entwicklermodus gibt mehr informationen aus und zeigt ausführliche Fehlerme
 Was ist der Cache und wann muss ich ihn löschen?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Auch für diese Frage, siehe die `Details zur Konfiguration von Mapbender <installation/configuration.html>`_, im Kapitel `Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
+Auch für diese Frage, siehe die `Details zur Konfiguration von Mapbender <installation/configuration.html>`_, im Kapitel `Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
 
 Sie löschen die Inhalte vom ``mapbender/app/cache/`` Ordner, nicht den cache-Ordner selbst. Also das ``prod``- und - falls vorhanden - das ``dev``-Verzeichnis. Die zwei Verzeichnisse können ohne Bedenken gelöscht werden. 
 Beim nächsten Aufruf von Mapbedner werden im Cache erneut Dateien abgelegt.
