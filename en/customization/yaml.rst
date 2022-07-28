@@ -145,7 +145,8 @@ Configuration example:
 .. code-block:: yaml
 
    # locale en, de, it, tr, es, ru, nl, pt are available
-    fallbacks: ['en']
+    fallback_locale:   en
+    locale:            en
     secret: ThisTokenIsNotSoSecretChangeIt
 
 More information: https://doc.mapbender.org/en/architecture/translation.html

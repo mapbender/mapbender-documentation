@@ -131,8 +131,8 @@ be tested. This concept follows the `"environments" in the Symfony framework
 <http://symfony.com/doc/current/book/configuration.html>`_.
 
 The production environment is called with the URL
-https://localhost/app.php, the development environment with the
-URL https://localhost/app_dev.php. The call with app_dev.php is
+http://localhost/app.php, the development environment with the
+URL http://localhost/app_dev.php. The call with app_dev.php is
 and should only be available from localhost.
 
 There are differences in the behaviour of app.php and app_dev.php:

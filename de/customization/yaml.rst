@@ -188,7 +188,7 @@ Spracheinstellung
 *****************
 
 Mapbender verwendet automatisch die ausgewählte Sprache der Browsereinstellungen.
-Es ist jedoch möglich, eine bevorzugte Sprache (fallbacks) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt. Es werden Englisch und/oder Deutsch aufgrund ihres hohen Übersetzungsanteils empfohlen.
+Es ist jedoch möglich, eine bevorzugte Sprache (fallback) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt. Es werden Englisch und/oder Deutsch aufgrund ihres hohen Übersetzungsanteils empfohlen.
 Dies kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
 
   Folgende Sprachcodes sind verfügbar:
@@ -206,7 +206,8 @@ Eine Konfiguration könnte wie folgt aussehen:
 .. code-block:: yaml
 
    # en, de, tr, it, es, ru, nl, pt are available
-    fallbacks: ['en']
+    fallback_locale:   en
+    locale:            de
     secret: ThisTokenIsNotSoSecretChangeIt
 
 Weitere Informationen unter https://doc.mapbender.org/en/architecture/translation.html

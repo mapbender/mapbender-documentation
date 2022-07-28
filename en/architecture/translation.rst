@@ -80,8 +80,8 @@ Moreover, you can set fallback language options in the configuration file **app/
 
 .. code-block:: yaml
     
-    fallbacks: ['en']
-
+    fallback_locale:   en
+    locale:            en
 
 Check whether translations (yml-files) for your language exist 
 
@@ -105,7 +105,7 @@ If your language is not translated yet, it is easy to add a new language.
 * translate
 * set locale in your parameters.yml to the new language
 * clear your cache
-* adjust your browser language to the translated language - Mapbender is automatically translated into the language your browser is set to.
+* adjust your browser language to the translated language - Mapbender will be translated automatically.
 * if everything is fine with your new language, give the files to the Mapbender community - best would be a pull request on GitHub in the Mapbender repository.
 
 
