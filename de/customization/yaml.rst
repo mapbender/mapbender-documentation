@@ -118,16 +118,19 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
 
 Die Sitelinks werden mittels "|" voneinander getrennt.
 
-Logo
-****
 
-Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich  global auf die gesamte Mapbender Installation aus.
+Logo und Login-Bild
+*******************
+
+In der parameters.yml kann auf das eigene Logo und auf ein alternatives Bild für das Login verwiesen werden.. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
-    branding.logo:     neues_logo.jpg
+    branding.logo: ./bundles/mapbendercore/image/logo_mb.png
+    branding.login_backdrop: ./bundles/mapbendercore/image/body.png
 
-  Die Datei des neuen Logos muss unter application/web eingefügt werden.
+
+Die Dateien müssen unter application/web verfügbar sein.
 
 
 Mailer
@@ -156,7 +159,7 @@ Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst
 
 .. code-block:: yaml
 
-    branding.project_name:     Example
+    branding.project_name: Geoportal
 
 
 **Wichtiger Hinweis:** In der parameters.yml dürfen **keine Tabulatoren für Einrückungen** verwendet werden.

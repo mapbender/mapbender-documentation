@@ -152,13 +152,15 @@ More information: http://doc.mapbender.org/en/book/translation.html
 
 Logo
 ****
-The logo (default is the Mapbender logo) can be changed in parameters.yml. This change has a global impact on the whole Mapbender installation.
+In parameters.yml you can refer to your own logo and to an alternative Image for the login page. This change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
-    branding.logo:     new_logo.jpg
+    branding.logo: ./bundles/mapbendercore/image/logo_mb.png
+    branding.login_backdrop: ./bundles/mapbendercore/image/body.png
 
- The file of the logo needs to be added under application/web.
+
+ The files must be accessable under application/web.
 
 
 Mailer
@@ -186,7 +188,7 @@ The name of the project (default: Mapbender) can be changed in parameters.yml. T
 
 .. code-block:: yaml
 
-    branding.project_name:     Example
+    branding.project_name: Geoportal
 
 
 **Important note:** In parameters.yml **tabulators may not be used for indentation** instead you need to use space.
