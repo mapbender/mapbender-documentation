@@ -599,6 +599,8 @@ Der Befehl prüft die Konfiguration und gibt zur Information die Systemkonfigura
 	app/console mapbender:config:check 
 
 
+.. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
+
 Es werden folgende Anforderungen überprüft und angezeigt:
 
 * Datenbankverbindungen
