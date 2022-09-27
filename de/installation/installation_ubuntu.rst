@@ -12,7 +12,7 @@ Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finde
 Voraussetzungen
 ---------------
 
-- PHP >= 7.1
+- PHP >= 7.4
 - Apache Installation mit folgenden aktivierten Modulen:
 
   * mod_rewrite
@@ -76,9 +76,7 @@ Verzeichnisrechte
 
 .. code-block:: bash
 
- sudo chown -R www-data:www-data /var/www/mapbender/app/logs
- sudo chown -R www-data:www-data /var/www/mapbender/app/cache
- sudo chown -R www-data:www-data /var/www/mapbender/web/uploads
+ sudo chown -R :www-data /var/www/mapbender
 
  sudo chmod -R ug+w /var/www/mapbender/app/logs
  sudo chmod -R ug+w /var/www/mapbender/app/cache
@@ -103,6 +101,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 	app/console mapbender:config:check
 
+.. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
 Informationen zur Ersteinrichtung von Mapbender finden sich unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.

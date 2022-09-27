@@ -32,8 +32,8 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  mv /var/www/mapbender /var/www/mapbender_save
  
  # Aktivieren Sie den Code der neuen Version
- cp -R /tmp/build_mapbender/mapbender-starter-v3.2.5 /var/www/
- mv /var/www/mapbender-starter-v3.2.5 /var/www/mapbender
+ cp -R /tmp/build_mapbender/mapbender-starter-v3.3.2 /var/www/
+ mv /var/www/mapbender-starter-v3.3.2 /var/www/mapbender
  
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
  cp /var/www/mapbender_save/app/config/parameters.yml /var/www/mapbender/app/config/parameters.yml
@@ -45,9 +45,9 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/web/uploads.
  # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach mapbender/app/Resources/MapbenderPrintBundle/templates/.
 
- # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
+ # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte der Apache Gruppe (www-data) zu.
  sudo chmod -R ugo+r /var/www/mapbender
- sudo chown -R www-data:www-data /var/www/mapbender
+ sudo chown -R :www-data /var/www/mapbender
 
  # Aktualisieren Sie Ihre Mapbender Datenbank
  cd /var/www/mapbender/
@@ -60,9 +60,9 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # Aufbau der symbolischen Links
  app/console assets:install web --symlink --relative
  
- # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
- sudo chmod -R ugo+r /var/www/mapbender
- sudo chown -R www-data:www-data /var/www/mapbender
+ # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte der Apache Gruppe (www-data) zu.
+ sudo chmod -R ug+r /var/www/mapbender
+ sudo chown -R :www-data /var/www/mapbender
 
  # Sie benötigen Schreibrechte für die Verzeichnisse app/cache und app/logs.
  sudo chmod -R ug+w /var/www/mapbender/app/cache

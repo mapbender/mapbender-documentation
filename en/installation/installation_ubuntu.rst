@@ -10,7 +10,7 @@ Mapbender is shipped with a preconfigured SQLite database which includes preconf
 Requirements
 ------------
 
-- PHP >= 7.1
+- PHP >= 7.4
 - Apache installation with the following modules activated:
 
   * mod_rewrite
@@ -73,9 +73,7 @@ Directory rights
 
 .. code-block:: bash
 
- sudo chown -R www-data:www-data /var/www/mapbender/app/logs
- sudo chown -R www-data:www-data /var/www/mapbender/app/cache
- sudo chown -R www-data:www-data /var/www/mapbender/web/uploads
+ sudo chown -R :www-data /var/www/mapbender
 
  sudo chmod -R ug+w /var/www/mapbender/app/logs
  sudo chmod -R ug+w /var/www/mapbender/app/cache
@@ -98,6 +96,7 @@ Troubleshooting is available via the following command (must be executed in the 
 
 	app/console mapbender:config:check
 
+.. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
 
 Congratulations! Mapbender is now set up correctly and ready for further configuration.
 More information on proper configuration of Mapbender: `Mapbender Quickstart Document <../en/quickstart.html>`_.
