@@ -152,7 +152,7 @@ More information: http://doc.mapbender.org/en/book/translation.html
 
 Logo
 ****
-In parameters.yml you can refer to your own logo and to an alternative Image for the login page. This change has a global impact on the whole Mapbender installation.
+In parameters.yml, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
@@ -160,7 +160,7 @@ In parameters.yml you can refer to your own logo and to an alternative Image for
     branding.login_backdrop: ./bundles/mapbendercore/image/body.png
 
 
- The files must be accessable under application/web.
+ The files must be accessible under application/web.
 
 
 Mailer
