@@ -122,7 +122,7 @@ Die Sitelinks werden mittels "|" voneinander getrennt.
 Logo und Login-Bild
 *******************
 
-In der parameters.yml kann auf das eigene Logo und auf ein alternatives Bild für das Login verwiesen werden.. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+In der parameters.yml kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
 
 .. code-block:: yaml
 
