@@ -344,7 +344,7 @@ Usecases
 ~~~~~~~~
 
 How do I change the logo, the title and the language?
-This and more tips can be found here: :ref:`yaml_en`.
+This and more tips can be found here: :ref:`yaml`.
 
 How do I change the buttons?
 ****************************

@@ -4,7 +4,7 @@ Editing
 =======
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    editing/digitizer.rst
    editing/datamanager.rst

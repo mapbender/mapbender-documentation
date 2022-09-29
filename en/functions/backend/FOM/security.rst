@@ -24,7 +24,7 @@ Mapbender provides different rights. They refer to the :doc:`Access Control List
 
 Assign roles to a user by ``Users --> Edit your User --> Security``.
 
-  .. image:: ../figures/mapbender_roles.png
+  .. image:: ../../../../figures/mapbender_roles.png
      :scale: 80
 
 

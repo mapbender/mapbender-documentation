@@ -22,6 +22,7 @@ Um eine neue Kartenansicht zu speichern, muss zunächst ein Titel für deren Re-
 In seiner einfachsten Form kann das Element zur Wiederverwendung von Kartenansichten verwendet werden. Diese Option ist immer vorhanden: Die zuvor gespeicherte Kartenansicht wird nach Klick auf den Abrufen-Button wiederhergestellt. Gespeicherte Ansichten können außerdem überschrieben oder gelöscht werden. Die Einträge in der Sidepane werden dabei entsprechend aktualisiert.
 
 .. note:: Hinweis: Aktuell unterstützt die Ansichtsverwaltung *nicht* folgende Konfigurationen:
+
 * interaktiv hinzugefügte Instanzen (WMS laden)
 * interaktiv entfernte Instanzen (Ebenenbaum Kontextmenü)
 * alle Werte für WMS-Dimensionen

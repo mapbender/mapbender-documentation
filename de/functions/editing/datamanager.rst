@@ -8,18 +8,21 @@ Der Data Manager ähnelt in seiner Funktionalität dem `Digitizer <digitizer.htm
 Der Data Manager kann zur Pflege von Referenztabllen verwendet werden, beispielsweise einer Tabelle mit Kontaktinformationen.
 
 
+Setup
+-----
+
+Der Data Manager benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
+Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../../customization/yaml.html>`_.
+
 Konfigurationsbeispiel
 ----------------------
-
-Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
-Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../../customization/yaml.html>`_.
 
 Die Definition des Data Managers erfolgt im YAML-Syntax. 
 Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, den Formularaufbau.
 
 
-.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
-Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
+.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
+
 
 Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu speichern.
 
@@ -27,7 +30,7 @@ Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu 
      :scale: 80
 
 In dem dargestellten Konfigurationsbeispiel öffnet sich eine Eingabevorlage nach Klick auf das ``+``-Zeichen.
-   
+
 .. image:: ../../../figures/data_manager_form.png
      :scale: 80
 
@@ -55,12 +58,13 @@ The following SQL commands must be executed in your database to create the conta
         date_favorite date,
 	color_favorite varchar
     );
-     
+
+
 Element-Konfiguration
 ---------------------
 
 Das Element kann danach in die Seitenleiste eingebettet werden.
-     
+
 .. image:: ../../../figures/de/data_manager_configuration.png
      :scale: 80
 

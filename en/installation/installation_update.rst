@@ -53,10 +53,11 @@ Have a look at the steps as commands
  cd /var/www/mapbender/
  app/console doctrine:schema:update --dump-sql
  app/console doctrine:schema:update --force
-
+  
  # Import the mapbender demo applications
  bin/composer run reimport-example-apps
 
+ # Update the symbolic links
  app/console assets:install web --symlink --relative
  
  # change the access rights and owner of the files
@@ -96,6 +97,8 @@ Update Example for Windows
  
  # Import the applications from mapbender.yml to your database to get to know about the latest developments
  php.exe bin/composer run reimport-example-apps
+
+ # Export files to the web-directory
  php.exe app/console assets:install web
 
  # Delete your cache and the logdateien at mapbender/app/cache und mapbender/app/logs

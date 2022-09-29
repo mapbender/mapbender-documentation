@@ -25,6 +25,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 
  # Laden Sie die neue Version herunter
  wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
+ 
  tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz
  
  # Sichern Sie die alte Version
@@ -56,7 +57,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # Importieren Sie die Demo-Anwendungen, um sich den neusten Stand der Entwicklungen anzuschauen
  bin/composer run reimport-example-apps
 
- # export the web directory
+ # Aufbau der symbolischen Links
  app/console assets:install web --symlink --relative
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte dem Apache User (www-data) zu.
@@ -97,6 +98,8 @@ Aktualisierungsbeispiel für Windows
   
  # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
  php.exe bin/composer run reimport-example-apps
+
+ # Ausspielen in den web-Bereich
  php.exe app/console assets:install web
 
  # Löschen Sie den Cache und die Logdateien unter mapbender/app/cache und mapbender/app/logs

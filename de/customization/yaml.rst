@@ -10,8 +10,8 @@ parameters.yml
 
 Hier werden grundlegende Parameter von Mapbender bestimmt:
 
-**Datenbank**
-*************
+Datenbank
+*********
 
 Zur Konfiguration der Datenbankverbindung werden die Dateien config.yml und parameters.yml verwendet. Während in der config.yml nur die Platzhalter angegeben werden, werden die Werte in der parameters.yml gefüllt.
 
@@ -59,8 +59,8 @@ Die Datenbankkonfiguration in der parameters.yml sieht folgendermaßen aus, wenn
     database_user:     postgres
     database_password: geheim
 
-**Verwendung mehrerer Datenbanken**
-***********************************
+Verwendung mehrerer Datenbanken
+*******************************
 
 Mit Mapbender können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender-Bundle gehört.
 
@@ -101,8 +101,8 @@ Symfony Dokumentation <http://symfony.com/doc/current/best_practices/configurati
 Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <http://www.doctrine-project.org/>`_).
 
 
-**Disclaimer**
-**************
+Disclaimer
+**********
 
 .. image:: ../../figures/disclaimer.png
 
@@ -118,8 +118,8 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
 
 Die Sitelinks werden mittels "|" voneinander getrennt.
 
-**Logo**
-********
+Logo
+****
 
 Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich  global auf die gesamte Mapbender Installation aus.
 
@@ -130,8 +130,8 @@ Das Logo (Standard ist das Mapbender Logo) kann in der Datei parameters.yml ange
   Die Datei des neuen Logos muss unter application/web eingefügt werden.
 
 
-**Mailer**
-**********
+Mailer
+******
 
 Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
 Eine Konfiguration könnte wie folgt aussehen:
@@ -149,8 +149,8 @@ Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurückset
 Weitere Informationen im Kapitel :ref:`users_de`.
 
 
-**Projektname**
-***************
+Projektname
+***********
 
 Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
@@ -162,8 +162,8 @@ Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst
 **Wichtiger Hinweis:** In der parameters.yml dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
 
 
-**Proxy-Einstellungen**
-***********************
+Proxy-Einstellungen
+*******************
 
 Wenn ein Proxy verwendet wird, muss dieser in der Datei parameters.yml im Bereich OWSProxy Configuration angegeben werden.
 
@@ -184,8 +184,8 @@ Eine Konfiguration könnte wie folgt aussehen:
             - 192.168.1.123
 
 
-**Spracheinstellung**
-*********************
+Spracheinstellung
+*****************
 
 Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer einzelnen Anwendung.
 
@@ -219,8 +219,8 @@ Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeit
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
 * **framework.session.cookie_httponly**: Stellen Sie für HTTP-only session cookies sicher, dass der Parameter framework.session.cookie_httponly auf true steht.
 
-**Datenbank**
-*************
+Datenbank
+*********
 Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen:
 
 .. code-block:: yaml
