@@ -693,7 +693,7 @@ Release Datum: 04.02.2016
 
 Besondere Änderungen:
 
-- Performance: Die CSS, JavaScript und Translation Dateien werden nun im `Produktionsmodus <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_ im Symfony Cache gehalten. Dies kann insbesondere bei langsamen Servern zu Performancesteigerungen führen. Die Änderung gilt nicht für den `Entwicklermodus (app_dev.php) <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
+- Performance: Die CSS, JavaScript und Translation Dateien werden nun im `Produktionsmodus <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_ im Symfony Cache gehalten. Dies kann insbesondere bei langsamen Servern zu Performancesteigerungen führen. Die Änderung gilt nicht für den `Entwicklungsmodus (app_dev.php) <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
 - Das Paket `eslider/sassc-binaries <https://github.com/eSlider/sassc-binaries>`_ bietet nun auch einen sassc Compiler für 32-bit Linux Systeme an. Dies führte zu Anzeigeproblemen unter 32-bit Linux Systemen (http://lists.osgeo.org/pipermail/mapbender_users/2015-December/004768.html)
 - Redlining: Die Inhalte des Redlining Elements sind nun sichtbar und das Element kann sowohl als Dialog als auch Element in der Sidepane verwendet werden. Siehe auch die `Dokumentation zum Redlining Element <functions/editing/redlining.html>`_. Die Scrollbar bei den Geometrie-Types im Konfigurationsdialog wird korrekt angezeigt.
 

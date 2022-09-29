@@ -75,13 +75,13 @@ This is how a translation file messages.de.yml for German translation could look
 How can you activate translation?
 *********************************
 
-Activate your default locale in the configuration file **app/config/parameters.yml**
+Mapbender is automatically adjusted to your browser's language.
+Moreover, you can set fallback language options in the configuration file **app/config/parameters.yml**. If a translation from your browser's default language is not translated in Mapbender yet, it will fall back to the predefined language instead. We recommend to set English and/or German as fallback options.
 
 .. code-block:: yaml
     
     fallback_locale:   en
-    locale:            de
-
+    locale:            en
 
 Check whether translations (yml-files) for your language exist 
 
@@ -105,7 +105,8 @@ If your language is not translated yet, it is easy to add a new language.
 * translate
 * set locale in your parameters.yml to the new language
 * clear your cache
-* if everything is fine with your new language give the files to the Mapbender community - best would be a pull request or send the files to mapbender@osgeo.org
+* adjust your browser language to the translated language - Mapbender will be translated automatically.
+* if everything is fine with your new language, give the files to the Mapbender community - best would be a pull request on GitHub in the Mapbender repository.
 
 
 Naming conventions and locations
@@ -125,13 +126,13 @@ The naming convention is **domain.locale.loader**.
 
 * domain    - we use the default domain messages
 * locale    - locale that the translations is made for (e.g. de, de_DE);
-* loader    - defines the loader to load and parse the file. We use YAML
+* loader    - defines the loader to load and parse the file. We use YAML.
 
 
 Share your translations with the Mapbender community!
 *****************************************************
 
-Supporting more and more language would be great for Mapbender. The Mapbender project would be happy if you could share your translations with the community.
+Supporting more and more languages would be great for Mapbender. The Mapbender project would be happy if you could share your translations with the community.
 
 This is what you have to do:
 

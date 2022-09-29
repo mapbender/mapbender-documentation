@@ -190,11 +190,14 @@ Eine Konfiguration könnte wie folgt aussehen:
 Spracheinstellung
 *****************
 
-Die Sprache (locale) der Mapbender Installation kann angepasst werden, jedoch nicht die einer einzelnen Anwendung.
+Mapbender verwendet automatisch die ausgewählte Sprache der Browsereinstellungen.
+Es ist jedoch möglich, eine bevorzugte Sprache (fallback) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt. Es werden Englisch und/oder Deutsch aufgrund ihres hohen Übersetzungsanteils empfohlen.
+Dies kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
 
   Folgende Sprachcodes sind verfügbar:
     * en für Englisch (Standard),
     * de für Deutsch,
+    * tr für Türkisch,
     * es für Spanisch,
     * it für Italienisch,
     * nl für Niederländisch,
@@ -205,18 +208,18 @@ Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
 
-   # locale en, de, it, es, ru, nl, pt are available
+   # en, de, tr, it, es, ru, nl, pt are available
     fallback_locale:   en
-    locale:            en
+    locale:            de    
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-Weitere Informationen unter http://doc.mapbender.org/en/book/translation.html
+Weitere Informationen unter https://doc.mapbender.org/en/architecture/translation.html
 
 
 config.yml
 ----------
 
-Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklermodus verwendet werden sollen.
+Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
 
 * **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.

@@ -19,7 +19,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony
 
 .. note:: Das console-Hilfsprogramm wird Dateien in die Verzeichnisse app/cache und app/logs schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis app/db und die SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP- Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
-.. note:: **Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ andernfalls mapbender/).
+.. note:: **Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus, dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ , andernfalls mapbender/).
 
 .. code-block:: yaml
 
@@ -121,19 +121,19 @@ Die Konfiguratuionsdateien liegen unter **app/config**.
 Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
 
-Produktions- und Entwicklerumgebung und Caches: app.php und app_dev.php
+Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php
 -----------------------------------------------------------------------
 
 Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den
-normalen Betrieb- und eine Entwicklerumgebung, in dem die Anwendungen
+normalen Betrieb- und eine Entwicklungsumgebung, in dem die Anwendungen
 getestet werden können. Dieses Konzept orientiert sich an den
 `"Environments" im Symfony Framework
 <http://symfony.com/doc/current/book/configuration.html>`_.
 
-Die Produktionsumgebung wird mit der URL http://localhost/mapbender/app.php
+Die Produktionsumgebung wird mit der URL http://localhost/app.php
 aufgerufen, die Entwicklungsumgebung mit der URL
-http://localhost/mapbender/app_dev.php. Der Aufruf über app_dev.php kann
-und sollte nur nur vom localhost erfolgen.
+http://localhost/app_dev.php. Der Aufruf über app_dev.php kann
+und sollte nur vom localhost erfolgen.
 
 Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
 
@@ -142,12 +142,12 @@ Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
   sichtbar sind. Dadurch ist der Aufruf einer Anwendung über app_dev.php
   immer langsamer als im Produktivbetrieb.
 
-  Im Detail werden in der Entwicklerumgebung von Mapbender u.a. die CSS,
+  Im Detail werden in der Entwicklungsumgebung von Mapbender u.a. die CSS,
   JavaScript und Übersetzungsdateien nicht gecacht.
 
   In der Produktionsumgebung werden diese aber in app/cache abgelegt.
 
-* In der Entwicklerumgebung werden Fehlermeldungen und ihr Stacktrace direkt
+* In der Entwicklungsumgebung werden Fehlermeldungen und ihr Stacktrace direkt
   an der Oberfläche angezeigt. In der Produktionsumgebung werden die
   Fehlermeldungen in die Datei app/log/prod.log geschrieben.
 
