@@ -25,15 +25,15 @@ Have a look at the steps as commands
 .. code-block:: bash
 
  # Download the new version
- wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
+ wget http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
  tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz
  
  # save the old version
  mv /var/www/mapbender /var/www/mapbender_save
  
  # get the code of the new version
- cp -R /tmp/build_mapbender/mapbender-starter-v3.2.5 /var/www/
- mv /var/www/mapbender-starter-v3.2.5 /var/www/mapbender
+ cp -R /tmp/build_mapbender/mapbender-starter-v3.3.2 /var/www/
+ mv /var/www/mapbender-starter-v3.3.2 /var/www/mapbender
  
  # copy your old configuration files to the new version
  cp /var/www/mapbender_save/app/config/parameters.yml /var/www/mapbender/app/config/parameters.yml
@@ -47,7 +47,7 @@ Have a look at the steps as commands
  
  # change the accessrights and owner of the files
  sudo chmod -R ugo+r /var/www/mapbender
- sudo chown -R www-data:www-data /var/www/mapbender
+ sudo chown -R :www-data /var/www/mapbender
  
  # Update your Mapbender database
  cd /var/www/mapbender/
@@ -60,9 +60,9 @@ Have a look at the steps as commands
  # Update the symbolic links
  app/console assets:install web --symlink --relative
  
- # change the access rights and owner of the files
- sudo chmod -R ugo+r /var/www/mapbender
- sudo chown -R www-data:www-data /var/www/mapbender
+ # change the access rights and group of the files
+ sudo chmod -R ug+r /var/www/mapbender
+ sudo chown -R :www-data /var/www/mapbender
 
  # You have to set write permission to app/cache and app/logs.
  sudo chmod -R ug+w /var/www/mapbender/app/cache

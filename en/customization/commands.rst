@@ -590,6 +590,9 @@ Command to check the system configuration and mapbender requirements. Useful com
 	app/console mapbender:config:check 
 
 
+.. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
+
+
 The following requirements are checked and displayed:
 
 * Databse connections
