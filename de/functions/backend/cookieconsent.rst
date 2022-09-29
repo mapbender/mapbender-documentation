@@ -3,8 +3,6 @@
 Cookie-Banner
 =============
 
-(seit 3.0.7.0)
-
 Anwendungen unterstützen die Anzeige eines Cookie-Banners, welches in der Mapbender-Konfigurationsdatei ``parameters.yml`` eingerichtet werden kann. Wir nutzen dazu den Code von `Cookie Consent <https://cookieconsent.insites.com/>`_, ohne dass dabei ein Aufruf ins Internet gestartet wird.
 
 Das Banner erscheint in einer beliebigen Anwendung beim ersten Aufruf.

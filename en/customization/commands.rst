@@ -1,7 +1,7 @@
 .. _commands:
 
 app/console commands
-======================
+====================
 
 Mapbender provides commands that can be executed via the command line. Some of the commands are provided by the Symfony components, others belong to Mapbender. 
 

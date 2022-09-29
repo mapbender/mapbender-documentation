@@ -50,6 +50,8 @@ Configuration
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
    numDigits: 2                   # the number of digits each coordinate shall have when being rendered (default: 2)

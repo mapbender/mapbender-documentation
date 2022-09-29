@@ -167,7 +167,7 @@ F: Ich bekomme bei Oracle einen Fehler, wenn ich doctrine:schema:create ausführ
                                                   PRIMARY KEY(id))':
                 ORA-01722: Ungültige Zahl
 
-A: Wahrscheinlich kommt Oracle nicht mit den Dezimaltrennern zurecht und erwartet ein Komma, statt einem Punkt (also 1,25 statt 1.25). Das kann man mit folgendem Statement am Ende der config.yml einrichten (Cache danach leeren).
+A: Wahrscheinlich kommt Oracle nicht mit den Dezimaltrennern zurecht und erwartet ein Komma statt einem Punkt (also 1,25 statt 1.25). Das Einsetzen des nachfolgenden Statements am Ende der config.yml verhindert dies (Cache danach leeren):
 
 .. code-block:: yaml
 

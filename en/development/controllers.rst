@@ -1,7 +1,7 @@
 .. _controllers:
 
 Controllers
-#############
+###########
 
 This pages gives a quick overview of the controllers used in a Mapbender application.
 

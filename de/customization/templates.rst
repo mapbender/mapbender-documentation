@@ -240,13 +240,13 @@ Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter ``web/assets`` ge
 Styling der Administrationsseiten
 *********************************
 
-Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche bitte an:
+Passen Sie die vorhandenen CSS-Dateivorlagen für die unterschiedlichen Bereiche an:
 
 * login.css : Anpassung des Designs der Login-Oberfläche (Anmelde-Seite)
 * manager.css : Anpassung des Designs der Verwaltungs/Administrations-Oberfläche (Anwendungsübersicht u.ä.)
 * password.css : Anpassung des Designs der Passwort-Oberfläche (Passwort vergessen u.ä.)
 
-Es muss lediglich das css definiert werden, das vom Standard der Administrationsoberfläche abweicht.
+Es muss lediglich das CSS definiert werden, das vom Standard der Administrationsoberfläche abweicht.
 
 Auf die CSS-Dateien wird über das FOMManagerBundle und FOMUserBundle referenziert. Diese müssen unter ``app/Resources/`` abgelegt werden. Die bereits enthaltenen Twig-Dateien überschreiben nach der erfolgreichen Einrichtung die Standard-Einstellungen (Vorgaben aus der manager.html.twig Datei).
 Alternativ kann auch die bisherige Twig-Datei kopiert und angepasst werden.

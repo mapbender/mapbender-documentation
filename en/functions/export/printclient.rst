@@ -2,7 +2,7 @@
 
 
 PrintClient
-************
+***********
 
 The PrintClient allows for the print of a predefined map area. The following documentation will first give an overview about the general set-up and configuration of the PrintClient. The second part will answer the question how individual print templates can be generated. Lastly, the print process and all its configuration options will be presented.
 
@@ -66,6 +66,8 @@ Here's an example for the backend configuration (or look below in the YAML defin
 YAML-Definition
 ---------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
     target: map                    # Id of Map element to query
@@ -77,15 +79,15 @@ YAML-Definition
     quality_levels:					# define quality levels in dpi
         - { dpi: 72 , label: Draft (72dpi)}		# 72 - dpi value, Draft - label
         - { dpi: 288,  label: Document (288dpi)}	# 288 - dpi value, Document - label
-    rotatable: true                 # true/false use true for rotation, default is true
-    legend: true                    # true/false, default is false
-    legend_default_behaviour: false # true/false, if true the legend check-box is checked by default
+    rotatable: true                 # true/false use true for rotation (default: true)
+    legend: true                    # true/false to print a legend (default: false)
+    legend_default_behaviour: false # true/false, if true the legend checkbox is checked by default
     file_prefix: mapbender         # define the file prefix for the PDF that is generated (file_prefix_date.pdf will be created)
     optional_fields:                # define optional fields (example title-field)
         title:                      # name of the optional fields, default is null (no optional fields are defined)
             label: Title            # label of the optional field
             options:                #
-                required: false     # true or false
+                required: false     # true/false
         comment1:
             label: Comment 1
             options: { required: false }

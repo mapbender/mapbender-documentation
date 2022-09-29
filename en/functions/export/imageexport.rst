@@ -1,9 +1,9 @@
 .. _imageexport:
 
-ImageExport
-***********
+Image Export
+************
 
-ImageExport allows you to export your current map view. You can choose png or jpeg format.
+Image Export allows you to export your current map view. You can choose .png or .jpeg format.
 
 .. image:: ../../../figures/image_export.png
      :scale: 80
@@ -18,6 +18,8 @@ Configuration
 
 YAML-Definition:
 ----------------
+
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

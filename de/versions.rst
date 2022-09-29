@@ -260,7 +260,7 @@ Bitte führen sie wieder ein **app/console doctrine:schema:update** durch, um di
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update
+                app/console doctrine:schema:update
 
 Falls der Update Befehl fehlschlägt, z.B. mit der PostgreSQL Meldung ``SQLSTATE[22001]: String data, right truncated:`` und ``7 FEHLER:  Wert zu lang für Typ character varying(255)``, dann haben Sie einen Schlüsselwort-Eintrag in der Tabelle ``mb_core_keyword``, der 255 Zeichen überschreitet. Diesen können Sie mit folgendem SQL-Statement herausfinden:
 
@@ -410,7 +410,7 @@ Bitte führen sie ein **app/console doctrine:schema:update** durch, wenn Sie auf
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update
+                app/console doctrine:schema:update
 
 
 Version 3.0.7.2, 3.0.7.1 und 3.0.7.0
@@ -676,7 +676,7 @@ Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Bei
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update --dump-sql
+                app/console doctrine:schema:update --dump-sql
                 ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
                 ALTER TABLE mb_core_keyword ALTER value DROP DEFAULT;
 

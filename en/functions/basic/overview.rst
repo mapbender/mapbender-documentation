@@ -16,8 +16,8 @@ The configuration dialog offers the following settings:
 .. image:: ../../../figures/overview_configuration.png
      :scale: 80
 
-* **Maximize:** Opens the element on start (Default: true).
-* **Fix:** Fixes the overview extent (Default: false).
+* **Maximize:** Opens the element on start (default: true).
+* **Fix:** Fixes the overview extent (default: false).
 * **Title:** Title of the element, will be listed in "Layouts".
 * **Layerset:** Refers to a previously defined layerset, e.g. overview.
 * **Width/Height:** Width and height of the element.
@@ -48,6 +48,8 @@ For the following parameters (unchecking *Fix*, *Position*: left-bottom, *Width*
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
    tooltip: 'Overview'          # text to use as tooltip
@@ -55,10 +57,10 @@ YAML-Definition:
    layerset: ~                  # refer to a layerset, e.g. overview, define the layerset first and refer to it
    width: 200                   # overview width
    height: 100                  # overview height
-   anchor: 'right-top'          # overview alignment, default is 'right-top'
+   anchor: 'right-top'          # overview alignment (default: 'right-top')
                                 # use inline e.g. in sidebar
                                 # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
    position: ['0px', '0px']     # overview position in relation to anchor, default: x=0px, y=0px
-   maximized: true              # true/false to open/close on start, default is true
-   fixed: true                  # true/false to fix the overview extent, default is true
+   maximized: true              # true/false to open/close on start (default: true)
+   fixed: true                  # true/false to fix the overview extent (default: true)
 

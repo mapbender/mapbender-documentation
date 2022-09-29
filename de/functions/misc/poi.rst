@@ -1,7 +1,7 @@
 .. _poi_de:
 
-POI (Treffpunkt)
-**************************
+MeetingPoint (POI)
+******************
 
 Generiert POI-URLs (Treffpunkt-URLS), verwendbar für das Verschicken eines Koordinatenpunkts per E-Mail. Dabei wird der übermittelte Punkt in das Koordinatensystem der Karte projeziert und angezeigt.
 
@@ -24,6 +24,8 @@ Konfiguration
 
 YAML-Definition:
 ----------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

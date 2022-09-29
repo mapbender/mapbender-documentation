@@ -306,13 +306,13 @@ Sources can be individually configured. This can be useful if you, for instance,
 * Format: Format of the getMap-Requests
 * Infoformat: Format of the getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
 * Exceptionformat: Format for error messages
-* Tile buffer: This parameter is valid for tiles services and specifies if additional tiles should be requested. If the user pans the map, these tiles are already downloaded and visible. The higher the value the more tiles are requested (Default: 0).
-* BBOX Factor: This parameter is valid for non-tiled WMS services. You can specify the size of the returned map-image. A value greater than 1 will request a bigger map-image. Default: 1.25
+* Tile buffer: This parameter is valid for tiles services and specifies if additional tiles should be requested. If the user pans the map, these tiles are already downloaded and visible. The higher the value the more tiles are requested (default: 0).
+* BBOX Factor: This parameter is valid for non-tiled WMS services. You can specify the size of the returned map-image. A value greater than 1 will request a bigger map-image (default: 1.25).
 * BaseSource: Should the service be handled as BaseSource (BaseSources can be shown/hidden in the layertree)
 * Proxy: If active, the service will be requested by Mapbender and not directly
 * Transparency: default is active, the source is without a transparent background if it is deactivated (getMap-Request with Transparent=FALSE)
 * Tiled: you can request a WMS in tiles, default is not tiled (may be a good choice if your map is very big and the WMS service does not support the width/height)
-* Layer ordering: Handles the order of the layers in the service. Can be set to Standard (reversed) and QGIS (same order).
+* Layer ordering: Handles the order of the layers in the service. Can be set toStandard  (reversed) and QGIS (same order).
 
 
 **Dimensions:**
@@ -350,7 +350,7 @@ Currently, the element can be used to transfer user- and group information, e.g.
 * info on: layer provides feature info requests, info default activates the feature info functionality
 * toggle allowed: allows opening of folder at application start
 * toggle on: open folder on start of the application
-* layer ordering: allows to order layer according to the standard or QGIS configuration.
+* layer ordering: allows to order layer according to the Standard or QGIS configuration.
 * more information (...): opens a dialog with detailed layer information:
 * ID: ID of the layer
 * Name: layer name of the service information (for getMap-Requests)

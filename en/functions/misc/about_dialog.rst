@@ -14,13 +14,15 @@ Configuration
 .. image:: ../../../figures/about_dialog_configuration.png
      :scale: 80
 
-* **Show Label:** Enable/Disable About dialog text next to its icon (Default: true).
+* **Show Label:** Enable/Disable About dialog text next to its icon (default: true).
 * **Title:** Text indicated next to the about dialog icon. 
 * **Tooltip:** Text to use as a tooltip. Appears when hovering over the icon. 
 
 
 YAML-Definition:
 ----------------
+
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

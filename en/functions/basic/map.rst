@@ -20,7 +20,7 @@ Configuration
 * **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
 * **Max. Extent:** Maximal map extent, defined by BBOX parameters.
 * **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
-* **Fixed zoom steps:** This option activates a zoom behaviour with fixed scales. This is useful to increase visual quality of services that are cached on very particular resolution steps only. When set true, scale denominator snaps to one of the values given in the *scales* option as defined below (Default: false).
+* **Fixed zoom steps:** This option activates a zoom behaviour with fixed scales. This is useful to increase visual quality of services that are cached on very particular resolution steps only. When set true, scale denominator snaps to one of the values given in the *scales* option as defined below (default: false).
 * **Scales (csv):** A csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
 * **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
 
@@ -51,14 +51,14 @@ The field *max. Extent* **(3)** states the maximum zoomable extent of the map ap
 YAML-Definition:
 ----------------
 
+This template can be used to include the map into a YAML application.
+
 .. code-block:: yaml
 
    layerset: null             # refer to a layerset, define the layerset first and refer to it
-   dpi: 72                    # resolution, default is 72
    srs: "EPSG:4326"           # coordinate reference system. Two ways of srs definitions are supported:
                                 - "EPSG:CODE" or
                                 - "EPSG:CODE|MY SRS TITLE"
-   units: "degrees"           # units to use degrees/meters, default is degrees
    extents:
        max: [0, 40, 20, 60]    # maximal map extents
        start: [5, 45, 15, 55]  # map extents for the start of the application

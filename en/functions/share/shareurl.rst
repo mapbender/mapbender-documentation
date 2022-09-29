@@ -27,11 +27,13 @@ Configuration
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
     title: Share this map view          # Optional custom title, uses default title "Share URL" if omitted (string or empty).
     class: Mapbender\CoreBundle\Element\ShareUrl
     tooltip: I am displayed on hover    # Optional custom tooltip, same as title if omitted (string or empty).
-    label: true                         # Enables display of title, set as false will only display icon (Default: true).
+    label: true                         # Enables display of title, set as false will only display icon (default: true).
 
 

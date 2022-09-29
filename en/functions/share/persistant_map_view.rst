@@ -35,7 +35,7 @@ This change introduces a new column in the *mb_core_application* table and there
 YAML-Definition:
 ----------------
 
-This feature can also be set in a YAML-application definition, with a new *persistentView* entry on the top level. Omitting this entry is the same as setting it to false.
+This template can be used to insert the element into a YAML application with a new *persistentView* entry on the top level. Omitting this entry is the same as setting it to false.
 
 .. code-block:: yaml
 

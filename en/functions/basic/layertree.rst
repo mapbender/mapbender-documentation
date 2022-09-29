@@ -300,6 +300,8 @@ The Layerset "World" is displayed as a theme, but it is not open and the two but
 YAML-Definition:
 =================
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
                 
   title: layertree                                  # Title of layertree

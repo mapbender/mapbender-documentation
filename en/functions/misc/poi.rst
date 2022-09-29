@@ -1,7 +1,7 @@
 .. _poi:
 
-POI (MeetingPoint)
-***********************
+POI
+***
 
 Generate POI-URLs (aka meeting points) suitable for e-mail. The generated point is projected and displayed in the coordinate system of the map.
 
@@ -23,6 +23,8 @@ Configuration
 
 YAML-Definition:
 ----------------
+
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

@@ -118,6 +118,8 @@ Sobald nun auf den Button Flächenmessung geklickt wird, wird die Funktion Linie
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
     title:        # Titel

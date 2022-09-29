@@ -1,6 +1,6 @@
 .. _activity_indicator_de:
 
-Activity Indicator (Aktivitätsindikator)
+Aktivitätsindikator (Activity Indicator)
 ========================================
 
 Der Aktivitätsindikator (Sanduhr) ist ein einfaches Modul, das Aktivitäten anzeigt (Ajax-Aufrufe und Kartenaufrufe). 
@@ -27,6 +27,8 @@ Konfiguration
 
 YAML-Definition:
 ----------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

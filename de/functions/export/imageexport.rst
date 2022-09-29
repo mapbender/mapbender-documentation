@@ -1,9 +1,9 @@
 .. _imageexport_de:
 
-ImageExport (Bildexport)
+Bildexport (ImageExport)
 ************************
 
-Mit dem ImageExport kann die aktuelle Kartenansicht exportiert werden. Das Bild kann als .png oder .jpeg abgespeichert werden.
+Mit dem Bildexport kann die aktuelle Kartenansicht exportiert werden. Das Bild kann als .png oder .jpeg abgespeichert werden.
 
 .. image:: ../../../figures/de/image_export.png
      :scale: 80
@@ -18,6 +18,8 @@ Konfiguration
 
 YAML-Definition:
 ----------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

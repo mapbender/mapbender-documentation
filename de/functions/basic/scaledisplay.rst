@@ -1,7 +1,7 @@
 .. _scaledisplay_de:
 
-Maßstabsanzeige (ScaleDisplay)
-******************************
+Maßstabsanzeige (Scale display)
+*******************************
 
 Die Maßstabsanzeige zeigt den aktuellen Maßstab numerisch an (1:1K or 1:1000).
 
@@ -26,13 +26,15 @@ Konfiguration
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    tooltip: 'ScaleDisplay'          # Text des Tooltips
    target: ~                        # ID des Kartenelements
-   anchor: 'inline'/'left-top'/     # Ausrichtung des ScaleDisplay-Elements, der Standardwert ist 'right-bottom'
+   anchor: 'inline'/'left-top'/     # Ausrichtung des ScaleDisplay-Elements (Standard: 'right-bottom')
      'left-bottom'/'right-top'/     
      'right-bottom'
    scalePrefix: Scale               # Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab"
-   unitPrefix: true                 # aktiviert Darstellung der Maßstabszahl mit Präfix, der Standardwert ist false
+   unitPrefix: true                 # aktiviert Darstellung der Maßstabszahl mit Präfix (Standard: false).
 

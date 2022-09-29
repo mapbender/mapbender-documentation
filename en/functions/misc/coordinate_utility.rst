@@ -1,9 +1,9 @@
 .. _coordinate_utility:
 
-Coordinate Utility
-******************
+Coordinates Utility
+*******************
 
-The element *Coordinate Utility* allows two different things:
+The element *Coordinates Utility* allows two different things:
 
 1. Zoom to a given point coordinate
 2. Show the clicked point of the map
@@ -26,8 +26,8 @@ Configuration
 * **Title:** Title of the element.
 * **Target:** Map on which this tool works (Main Map)
 * **Srs List:** You can define additional SRS to which the tool has to transform the coordinates. This list can be left empty.
-* **Zoom-Level:** Zoom level of the map (Default: 6)
-* **Add map's srs list:** The supported coordinate systems defined in the `Map element  <../basic/map>`_ are automatically used. These coordinate systems, defined in the map, are also used by the `SRS Selector  <../basic/srs_selector>`_ (Default: true).
+* **Zoom-Level:** Zoom level of the map (default: 6)
+* **Add map's srs list:** The supported coordinate systems defined in the `Map element  <../basic/map>`_ are automatically used. These coordinate systems, defined in the map, are also used by the `SRS Selector  <../basic/srs_selector>`_ (default: true).
 
 If you define Coordinate Utility as a dialog, you need a `Button  <../misc/button>`_ that you place in the Toolbar. 
 
@@ -54,6 +54,8 @@ Using the tool
 
 YAML-Definition
 ===============
+
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

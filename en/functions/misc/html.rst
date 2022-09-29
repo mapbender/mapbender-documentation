@@ -1,7 +1,7 @@
 .. _html:
 
-HTML Element
-************
+HTML
+****
 
 This element allows the integration of HTML anywhere in an application. Figures, links or e.g. texts can be inserted. The following illustration shows the integration of a Mapbender logo in footer, toolbar and sidepane:
 
@@ -122,6 +122,8 @@ These variables could look as follows:
 
 YAML-Definition:
 ----------------
+
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

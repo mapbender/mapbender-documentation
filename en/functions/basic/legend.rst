@@ -15,13 +15,13 @@ Configuration
      :scale: 80
 
 
-* **Auto-open:** If activated, the legend opens when the application is started. Default is active.
+* **Auto-open:** If activated, the legend opens when the application is started (default: active)
 * **Title:** Title of the element. The title will be listed in "Layouts". Is also shown next to the button, if "Show layer title" is activated.
 * **Target:** ID of Map element to query.
 
-* **Show source title:** shows WMS/source title, default is true.
-* **Show layer title:** shows layer title, default is true.
-* **Show grouped layer title:** shows group title for grouped layers, default is true.
+* **Show source title:** shows WMS/source title (default: true)
+* **Show layer title:** shows layer title (default: true)
+* **Show grouped layer title:** shows group title for grouped layers (default: true)
 
 The Legend element is integrated via a button or in the sidepane. If you look for configurational details for the button, head over to this page: `Button <../misc/button.html>`_.
 
@@ -86,17 +86,19 @@ The activation and deactivation of checkboxes in the configurational settings le
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
    tooltip: 'Legend'                    # text to use as tooltip
-   elementType: dialog                  # dialog/blockelement, default is dialog
-   autoOpen: true                       # true/false open when application is started, default is true
-   displayType: list                    # accordion/list type of display, default is list
+   elementType: dialog                  # dialog/blockelement (default: dialog)
+   autoOpen: true                       # true/false open when application is started (default: true)
+   displayType: list                    # accordion/list type of display (default: list)
    target: ~                            # Id of Map element to query
-   hideEmptyLayer: true                 # true/false hide when no legend is available, default is true
-   showWmsTitle: true                   # true/false show WMS title, default is true
-   showLayerTitle: true                 # true/false show layer title, default is true
-   showGroupedLayerTitle: true          # true/false show group title for grouped layers, default is true
+   hideEmptyLayer: true                 # true/false hide when no legend is available (default: true)
+   showWmsTitle: true                   # true/false show WMS title (default: true)
+   showLayerTitle: true                 # true/false show layer title (default: true)
+   showGroupedLayerTitle: true          # true/false show group title for grouped layers (default: true)
 
 You can optionally use a button to show this element. See :ref:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
 

@@ -1,7 +1,7 @@
 .. _layertree_de:
 
-Layertree - Table of Content (Ebenenbaum)
-*****************************************
+Ebenenbaum (Layertree)
+**********************
 
 
 Funktionen
@@ -63,7 +63,7 @@ Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können, f
            Einrichtung verschiedener Layersets für die Einbindung in den Layertree.
 
 Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen, müssen diese in dem `Kartenelement <map.html>`_ angegeben werden. 
-Hier gibt man durch das Ankreuzen der Layersets an, welche Layersets in der Kartenansicht verwendet werden sollen. Das Layerset "overview" wird beispielsweise nicht in der Hauptkarte angezeigt.  
+Durch das Ankreuzen der gewünschten Layersets wird angegeben, welche Layersets in der Kartenansicht verwendet werden sollen. Das Layerset "overview" wird beispielsweise nicht in der Hauptkarte angezeigt.  
 In diesem Schritt wird auch die Reihenfolge definiert, in der die Layersets im Layertree und in der Karte erscheinen sollen. Die erstellten Layersets können in der Auflistung per Drag & Drop verschoben werden. Bitte achten Sie darauf, dass die weiter oben definierten Themen die darunter liegenden Themen überdecken können.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple.png
@@ -113,7 +113,7 @@ Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kart
 **Einrichtung des Layertrees**
 
 Als letzter Schritt erfolgt die Einrichtung des **Layertrees** selbst. 
-Die in dem Kartenelement angegebenen Instanzen können im Layertree noch genauer definiert werden. Wenn eine vordefinierte Anwendung kopiert wurde, sollte der Layertree jetzt schon funktionieren. Bindet man das Element neu in die Anwendung ein, so kann dieses mit den Standardeinstellungen bereits genutzt werden, ohne dass weitere Anpassungen zwingend nötig sind.
+Die in dem Kartenelement angegebenen Instanzen können im Layertree noch genauer definiert werden. Wenn eine vordefinierte Anwendung kopiert wurde, sollte der Layertree jetzt schon funktionieren. Beim erneuten Einbinden des Elements in die Anwendung kann dieses mit den Standardeinstellungen bereits genutzt werden, ohne dass weitere Anpassungen zwingend nötig sind.
 Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bearbeiten wir nun das Ebenenbaum-Element in dem Content-Bereich.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
@@ -122,7 +122,7 @@ Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bear
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Bei der Konfiguration der Layersets ist standardisiert das Häckchen Basesource aktiviert. Dieses ist wichtig für den `Themenwechsler <basesourceswitcher.html>`_, mit dem man zwischen vordefinierten Themen wechseln kann. Über das Häckchen bei **BaseSources anzeigen** werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch in dem Layertree angezeigt. 
+Bei der Konfiguration der Layersets ist standardisiert das Häckchen Basesource aktiviert. Dieses ist wichtig für den `Themenwechsler <basesourceswitcher.html>`_, mit dem zwischen vordefinierten Themen gewechselt werden kann. Über das Häckchen bei **BaseSources anzeigen** werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch in dem Layertree angezeigt. 
 
 Wenn **Automatisches Öffnen** aktiv ist, ist der Layertree direkt beim Öffnen der Anwendung offen und muss nicht erst durch das Klicken auf einen Button oder das Aufklappen einer Seitenleiste aktiviert werden. Der **Titel** des Elements wird in der "Layouts"-Liste angezeigt und ermöglicht, mehrere Elemente voneinander zu unterscheiden. **Target** ist die ID des Kartenelements, auf das sich das Element bezieht.
 
@@ -301,14 +301,16 @@ Das Layerset "World" wird als Thema angezeigt, ist jedoch nicht geöffnet. Bei d
 YAML-Definition:
 =================
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
    .. code-block:: yaml    
 
     title: layertree                                    # Titel des Layerbaums
     target: ~                                           # ID des Kartenelements  
     type: ~                                             # Typ des Layerbaums (Element oder Dialog)
-    autoOpen: false                                     # Öffnet Layerbaum beim Start der Anwendung (Standard = false)
-    showBaseSource: true                                # Zeigt den Basislayer an (Standard = true)
-    showHeader: true                                    # Zeigt eine Überschrift, die die Anzahl der Services zählt (Standard = true)
+    autoOpen: false                                     # Öffnet Layerbaum beim Start der Anwendung (Standard: false)
+    showBaseSource: true                                # Zeigt den Basislayer an (Standard: true)
+    showHeader: true                                    # Zeigt eine Überschrift, die die Anzahl der Services zählt (Standard: true)
     menu: [opacity,zoomtolayer,metadata,removelayer]    # Zeigt ein Kontextmenü für den Layer an (wie Transparenz, Zoom auf Layer, Anzeige des Metadatendialogs,                                                             Layer entfernen)
     hideInfo: null               
     hideSelect: null             

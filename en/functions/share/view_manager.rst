@@ -47,11 +47,13 @@ Configuration
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
-   publicEntries        # String or empty (falsy value disables public entries entirely); other allowed values are ro (read only), rw (allow read and write), rwd (allow read and write and deletion) (Default: ro)
-   privateEntries       # Turns user-private states on, with full usage (save, reapply, delete) (Default: true)
-   allowAnonymousSave   # Extend right to save public entries also to anonymous users (Default: false)
-   showDate:            # Show date of creation or last update in entry listing (Default: true)
+   publicEntries        # String or empty (falsy value disables public entries entirely); other allowed values are ro (read only), rw (allow read and write), rwd (allow read and write and deletion) (default: ro)
+   privateEntries       # Turns user-private states on, with full usage (save, reapply, delete) (default: true)
+   allowAnonymousSave   # Extend right to save public entries also to anonymous users (default: false)
+   showDate:            # Show date of creation or last update in entry listing (default: true)
 
 

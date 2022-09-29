@@ -1,6 +1,6 @@
 .. _scale_selector_de:
 
-Maßstabsauswahl (Scale Selector)
+Maßstabsauswahl (Scale selector)
 ********************************
 
 Dieses Element zeigt eine Auswahlbox mit Maßstäben an. Der Kartenmaßstab ändert sich, wenn ein neuer Wert der Auswahlbox ausgewählt wird. Zudem ändert sich der Wert der Anzeige, wenn in die Karte hinein- oder herausgezoomt wird. Die Auswahlbox zeigt nur Maßstäbe an, die vorher auch für das Map Element definiert wurden.
@@ -21,9 +21,11 @@ Konfiguration
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    tooltip: "Maßstabsauswahl"  # Text des Tooltips
    target: ~         # ID des Kartenelements
-   label: false      # false/true, um die Maßstabsauswahl zu beschriften. Der Standardwert ist false.
+   label: false      # false/true, um die Maßstabsauswahl zu beschriften (Standard: false).
 

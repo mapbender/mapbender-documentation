@@ -1,7 +1,7 @@
 .. _copyright_de:
 
 Copyright
-************
+*********
 
 Dieses Element zeigt die Nutzungsbedingungen ("Terms of use") in einem Dialog an.
 
@@ -23,6 +23,8 @@ Konfiguration
 
 YAML-Definition:
 ----------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

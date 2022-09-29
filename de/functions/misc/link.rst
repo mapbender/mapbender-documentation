@@ -60,11 +60,13 @@ Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole a
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
     title: Link                                # Titel
     class: Mapbender\CoreBundle\Element\Button
     tooltip: Besuchen Sie diese Webseite       # Text des Tooltips
     icon: iconInfoActive                       # Symbol verwendete CSS Klasse
-    label: true                                # false/true, um den Button zu beschriften. Der Standardwert ist true.
-    click: https://mapbender.org               # bezieht sich auf eine Webseite oder ein Skript
+    label: true                                # false/true, um den Button zu beschriften (Standard: true).
+    click: https://mapbender.org               # bezieht sich auf eine Webseite oder ein Skript.

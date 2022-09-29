@@ -1,7 +1,7 @@
 .. _zoom_bar_de:
 
-Navigation Toolbar (Zoombar) (Navigationswerkzeug)
-*********************************************************************
+Navigationswerkzeug (Navigation Toolbar)
+****************************************
 
 Das Element erleichtert die Navigation in der Karte durch Rotation und Zoom. Der Kartenmaßstab kann individuell über eine Leiste angesprungen oder über die Zoom in/out-Buttons abgeändert werden. Es besteht zudem die Möglichkeit, auf die maximale Kartenausdehnung zu zoomen oder zum Anfangszustand zurück zu navigieren. Das Navigationselement selbst ist verschiebbar.
 
@@ -18,8 +18,8 @@ Konfiguration
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt.
 * **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Components:** Komponenten des Navigationswerkzeugs, standardmäßig wird alles selektiert; Auswahlmöglichkeiten: Rotation, zoom to max extent, Zurück zum Anfang, Zoom in/out und Zoom slider.
-* **Zurück zum Anfang** Zurücksetzen von Dienstzuständen. Der Standard ist false.
-* **Position:** Ausrichtung des Navigationswerkzeugs, Standard ist 'left-top' (oben links); Auswahlmöglichkeiten: inline (zum Einbinden in der Sidepane), left-top (oben links), left-bottom (unten links), right-top (oben rechts), right-bottom (unten rechts)
+* **Zurück zum Anfang** Zurücksetzen von Dienstzuständen (Standard: false).
+* **Position:** Ausrichtung des Navigationswerkzeugs (Standard: 'left-top'); Auswahlmöglichkeiten: inline (zum Einbinden in der Sidepane), left-top (oben links), left-bottom (unten links), right-top (oben rechts), right-bottom (unten rechts)
 
 Komponenten des Navigationswerkzeugs:
 --------------------------------------
@@ -62,6 +62,8 @@ Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/ou
 
 YAML-Definition:
 ----------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

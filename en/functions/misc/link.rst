@@ -12,7 +12,7 @@ Configuration
 .. image:: ../../../figures/link_configuration.png
      :scale: 80
 
-* **Show label:** Enables or disables text (title) next to the button (Default: true).
+* **Show label:** Enables or disables text (title) next to the button (default: true).
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Tooltip:** Text, that will be indicated if the mouse hovers over the button for a longer time.
 * **Icon:** Symbol of the button. Based on a CSS class.
@@ -59,6 +59,8 @@ In the field *Tooltip*, you can define a text that will be displaced as tooltip 
 
 YAML-Definition:
 ----------------
+
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

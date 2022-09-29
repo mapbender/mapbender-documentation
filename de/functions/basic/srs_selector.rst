@@ -1,9 +1,9 @@
 .. _srs_selector_de:
 
-SRS Auswahl (Spatial Reference System Selector)
-***********************************************
+SRS Auswahl (SRS Selector)
+**************************
 
-Mit dem Element 'SRS Selector' kann das räumliche Referenzsystem (SRS) der Karte geändert werden.
+Mit der SRS Auswahl kann das räumliche Referenzsystem (SRS) der Karte geändert werden.
 Nach der Konfiguration stehen die Koordinatensysteme der Karte in einer Selectbox zur Auswahl, die vorher im `Kartenelement <map.html>`_ definiert wurden.
 
 .. image:: ../../../figures/srs_selector.png
@@ -23,9 +23,11 @@ Konfiguration
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    tooltip: 'SRS Selector'  # Text des Tooltips
-   label: false             # false/true, um den SRS Selector zu beschriften. Der Standardwert ist false.
+   label: false             # false/true, um den SRS Selector zu beschriften (Standard: false).
    target: ~                # ID des Kartenelements
 

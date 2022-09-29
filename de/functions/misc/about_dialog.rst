@@ -1,7 +1,7 @@
 .. _about_dialog_de:
 
-About Dialog (Über-Dialog)
-**************************
+Über-Mapbender-Dialog (About Dialog)
+************************************
 
 Dieses Element erstellt einen `Button <button.html>`_, der einen Dialog mit der aktuellen Mapbender Version anzeigt. Der Button kann in die Toolbar und in den Footer eingefügt werden.
 
@@ -22,10 +22,12 @@ Konfiguration
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    title: 'Über Mapbender'     # Text, der neben dem About Dialog Button angezeigt wird
    tooltip: 'Über Mapbender'   # Text des Tooltips
-   label: true                  # false/true, um den Button zu beschriften. Der Standardwert ist true.
+   label: true                  # false/true, um den Button zu beschriften (Standard: true)
    icon: 'abouticon'            # Symbol für den Button
 

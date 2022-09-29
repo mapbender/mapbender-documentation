@@ -1,7 +1,7 @@
 .. _basesourceswitcher_de:
 
-BaseSourceSwitcher (Themenwechsel)
-*********************************************************************
+Themenwechsel (BaseSourceSwitcher)
+**********************************
 
 Mit diesem Element kann zwischen vordefinierten Themen (BaseSources), z. B. Hintergrundkarten, gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets für den entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss dazu geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig, ein Häkchen bei Basesource zu setzen.
 
@@ -64,6 +64,8 @@ Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge
 
 YAML-Definition:
 ----------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

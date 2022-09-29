@@ -1,6 +1,6 @@
 .. _feature_info_de:
 
-FeatureInfo (Information)
+Information (FeatureInfo)
 *************************
 
 Mit diesem Element können Sie Informationen eines WMS abfragen. In der folgenden Abbildung sehen Sie ein Beispiel für eine solche Informationsabfrage. Es wurde hierfür der WMS "Krankenhäuser NRW" (http://www.wms.nrw.de/wms/krankenhaus?) vom Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW verwendet.
@@ -34,8 +34,8 @@ Das Element FeatureInfo wird im Content eingebunden:
 * **Max count:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
 * **Width/Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
 * **Highlighting aktiv** Aktivierung des FeatureInfo Highlightings.
-* **Grundfarbe** Farbe mit der ausgewählte Geometrien hervogehoben werden.
-* **Hover-Farbe** Farbe mit der ausgewählte Geometrien hervogehoben werden, wenn man darüber hovert.
+* **Grundfarbe** Farbe, mit der ausgewählte Geometrien hervogehoben werden.
+* **Hover-Farbe** Farbe, mit der ausgewählte Geometrien nach kurzem Verweilen des Mauszeigers hervorgehoben werden.
 
 Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
@@ -80,7 +80,7 @@ Ausdruck der Resultate
 
 Mit dem Schalter "Drucken" kann die Information des FeatureInfo ausgedruckt werden. Eine Druckschaltfläche ist dann in dem FeatureInfo-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
 
-Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox kann man die Option "Hintergrund drucken" im Druckoptionendialog anschalten, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
+Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox heißt die Option "Hintergrund drucken" und wird im Druckoptionendialog angeschaltet, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
 
 
 FeatureInfo Highlighting
@@ -119,6 +119,8 @@ Die notwendige Anpassung wird hier am Beispiel von MapServer gezeigt. In der DAT
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
    title: FeatureInfo             # Titel des Elements
@@ -127,11 +129,11 @@ YAML-Definition:
    target: map                    # ID des Kartenelements
    autoActivate: false            # true, wenn die Infoabfrage beim Start der Anwendung geöffnet wird (Standard: false)
    deactivateOnClose: true        # true/false, um die Funktion nach dem Schließen des Ergebnisfensters zu deaktivieren (Standard: true)
-   onlyValid: false               # Korrekte HTML Ausgabe erfordern. Standardwert ist false.
+   onlyValid: false               # Korrekte HTML Ausgabe erfordern (Standard: false).
    printResult: false             # Anzeige eines Links, über den die Infoabfrage ausgedruckt werden kann (Standard: false)
    displayType: tabs              # tabs/accordion (Standard: tabs)
-   width: 700                     # Breite des Dialogs in Pixel, Standardwert: 700
-   height: 500                    # Höhe des Dialog in Pixel, Standardwert: 500
+   width: 700                     # Breite des Dialogs in Pixel (Standard: 700)
+   height: 500                    # Höhe des Dialog in Pixel (Standard: 500)
    maxCount: 100	              # Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll
    highlighting: false            # FeatureInfo Highlighting (Standard: false)
    featureColorDefault: #ffa500   # Farbe zur Hervorhebung ausgewählter Geometrien

@@ -1,7 +1,7 @@
 .. _applicationswitcher_de:
 
-Anwendung wechseln
-******************
+Anwendung wechseln (Application Switcher)
+*****************************************
 
 Dieses Element stellt ein Auswahlbox bereit, über die zwischen Anwendungen gewechselt werden kann. Dabei bleibt der aktuelle Kartenausschnitt erhalten.
 
@@ -34,6 +34,8 @@ Unter *Anwendungen* wählen Sie per Klick die Anwendungen aus, die zur Auswahl e
 
 YAML-Definition:
 ----------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

@@ -27,9 +27,9 @@ Configuration
 
 * **Auto activate** The element is activated automatically.
 * **Deactivate on close** Sketches are deactivated after closure of the element.
-* **Title:** Title of the elements. This is referenced by the button which opens the element.
-* **Target:** ID of the map-element, to which the Redlining refers.
-* **Geometrytypes** Lists all geometrytypes
+* **Title:** Title of the element. This is referenced by the button which opens the element.
+* **Target:** ID of the map element, to which the sketch element refers.
+* **Geometrytypes** Lists all geometrytypes.
 
 Draw geometries
 ---------------
@@ -92,7 +92,7 @@ To stop drawing click the pause button.
 YAML-Definition:
 ----------------
 
-This code can be used to implement the element in a yaml-application.
+This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 

@@ -1,7 +1,7 @@
 .. _html_de:
 
-HTML-Element
-************
+HTML (Element)
+**************
 
 Dieses Element ermöglicht die Definition von HTML an beliebigen Stellen in der Anwendung. Dadurch können zum Beispiel Bilder, Links oder Texte eingebunden werden. Die folgende Abbildung zeigt die Integrierung des Mapbender-Logos in Footer, Toolbar und Seitenleiste.
 
@@ -122,6 +122,8 @@ Diese Variablen sehen in der Anwendung wie folgt aus:
 
 YAML-Definition:
 ----------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

@@ -1,6 +1,6 @@
 .. _map_de:
 
-Map (Karte)
+Karte (Map)
 ***********
 
 Die Karte basiert auf OpenLayers und wird als Element im Content-Bereich integriert.
@@ -51,14 +51,14 @@ Weiterhin kann das Feld *Max. Extent* **(3)** definiert werden. Dieses gibt den 
 YAML-Definition:
 ----------------
 
+Diese Vorlage kann genutzt werden, um die Karte in einer YAML-Anwendung einzubinden.
+
 .. code-block:: yaml
 
-   layerset: null             # verweist auf ein Layerset, definiert zuerst das layerset und verweist darauf
-   dpi: 72                    # Auflösung, Standard ist 72
+   layerset: null             # Definiert und verweist auf ein Layerset
    srs: "EPSG:4326"           # Koordinatenbezugssystem. Zwei Arten der SRS Definition werden unterstützt:
                                 - "EPSG:CODE" oder
                                 - "EPSG:CODE|MEIN SRS TITEL"
-   units: "degrees"           # Einheiten in Grad oder Meter, Standard ist "degrees" (Grad)
    extents:
        max: [0, 40, 20, 60]
        start: [5, 45, 15, 55] # Kartenbereich (extent)

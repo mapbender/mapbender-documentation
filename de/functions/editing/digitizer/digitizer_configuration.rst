@@ -375,14 +375,14 @@ Die möglichen Optionen sind:
 
   * connection: Name der Datenbank-Verbindung aus der parameters/config.yml
   * table: Name der Tabelle, in der das FeatureType gespeichert wird
-  * uniqueId: Name der Spalte mit dem eindeutigen Identifier, default bei keiner Angabe ist [id]
+  * uniqueId: Name der Spalte mit dem eindeutigen Identifier (Standard bei Leerwert: [id])
   * geomType: Geometrietyp
   * geomField: Attributspalte, in der die Geometrie liegt.
   * srid: Koordinatensystem im EPSG-Code
   * filter: Datenfilter über Werte in einer definierten Spalte, z.B. filter: interests = 'maps'
 
-* **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular. [true/false] Standard ist true.
-* **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird.Standardwert ist 100
+* **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular (Standard: true).
+* **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird (Standard: 100).
 * **allowEditData:** Daten dürfen editiert und gespeichert werden [true/false]. Es erscheint immer eine Speichern Schaltfläche.
 * **allowDigitize:** Daten dürfen gespeichert werden. [true/false]
 * **allowDelete:** Daten dürfen gelöscht werden. [true/false]. Es erscheint eine Löschen Schaltfläche.
@@ -412,7 +412,7 @@ Die möglichen Optionen sind:
 
 
 
-.. * **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. [true/false] Standardwert ist false.
+.. * **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. (Standard: false)
 
 
 Experimentell:
@@ -422,7 +422,7 @@ Experimentell:
  .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
- Es erscheint ein Style-Manager, mit dem man die einzelnen Features anpassen kann.
+ Es erscheint ein Style-Manager zur Anpassung einzelner Features.
 
  .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
@@ -474,7 +474,7 @@ Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte
 
 * **tableFields:** Definition der Spalten für die Objekttabelle.
    * Definition einer Spalte: [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe z.B. Angabe der Breite]}  # Definition einer Spalte
-* **searchType:** Suchbereich in der Karte, Anzeige aller Objekttreffer in der Tabelle oder nur aller Objekttreffer in dem derzeitigen Kartenausschnitt [all / currentExtent], default currentExtent
+* **searchType:** Suchbereich in der Karte, Anzeige aller Objekttreffer in der Tabelle oder nur aller Objekttreffer in dem derzeitigen Kartenausschnitt [all / currentExtent] (Standard: currentExtent).
 * **showExtendSearchSwitch:** Anzeige der searchType Selectbox zur Suche im Kartenausschnitt aktivieren oder deaktivieren [true/false]
 * **view:** Einstellungen zu der Objekttabelle
    * Detaillierte Informationen zu möglichen Angaben unter https://datatables.net/reference/option/
@@ -518,7 +518,7 @@ Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu d
                        title: Welcome to the digitize demo. Try the new Mapbender3 feature!
                        ...
 
-Bei jedem Eingabefeld können unabhängig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit kann man beispielsweise wichtige Felder hervorheben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld füllen.
+Bei jedem Eingabefeld können unabhängig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit können beispielsweise wichtige Felder hervorgehoben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld gefüllt werden.
 
 Verhaltensparameter:
 
@@ -576,7 +576,7 @@ Textfelder (type input)
                                                  - type: input                                        # Typ Textfeld
                                                    title: Title for the field                         # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: column_name                                  # Referenz zur Tabellenspalte
-                                                   copyClipboard: false                               # Button, der eingetragene Inhalte in die Zwischenablage kopiert (optional). [true/false] Standard ist false.
+                                                   copyClipboard: false                               # Button, der eingetragene Inhalte in die Zwischenablage kopiert (optional) (Standard: false).
                                                    mandatory: true                                    # Angabe ob Pflichtfeld (optional). [true/false]
                                                    mandatoryText: You have to provide information.    # Text, sofern Pflichtfeld nicht gefüllt wurde
                                                    infoText: 'Bitte geben Sie einen Wert an'          # Definition eines Informationstextes (optional)
@@ -599,7 +599,7 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
                                                    title: select some types                           # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: my_type                                      # Referenz zur Tabellenspalte
                                                    copyClipboard: false                               # Button, der den ausgewählten Wert in die Zwischenablage kopiert (optional).
-                                                   multiple: false                                    # Definition einer Mehrfachauswahl (multiselect). [true/false] Standard ist false.
+                                                   multiple: false                                    # Definition einer Mehrfachauswahl (multiselect). (Standard: false)
                                                    options:                                           # Definition der Optionen (key: value)
                                                        1: pub
                                                        2: bar
@@ -628,7 +628,7 @@ Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können 
                     flowers: flowers
 
 **Anmerkungen:** Ab Digitizer 1.2 wird für die Mehrfachauswahl eine vereinfachte Auswahlmöglichkeit genutzt, die auch die Suche innerhalb der Drop-Down-Liste ermöglicht. Die Navigation durch die Liste ist mit der Tastatur möglich. Mögliche Einträge werden beim Eintippen hevorgehoben. Eine vorhandene Auswahl kann über das kleine "x" Symbol wieder deaktiviert werden.
-Aktuelle Informationen zur Digitizer-Version findet man unter: https://github.com/mapbender/mapbender-digitizer
+Aktuelle Informationen zur Digitizer-Version finden sich unter: https://github.com/mapbender/mapbender-digitizer
 
 .. image:: ../../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
@@ -654,7 +654,7 @@ Beim Abspeichern von Einträgen werden die Schlüsselwörter in der Datenbank ab
                                                    title: Wählen Sie einen Typ aus    # Beschriftung mit dem Titel des Feldes (optional)
                                                    name: my_type                      # Referenz zur Tabellenspalte
                                                    copyClipboard: true                # Button, der den ausgewählten Wert in die Zwischenablage kopiert (optional).                                                   
-                                                   multiple: true                     # Definition einer Mehrfachauswahl (multiselect), Standard ist false
+                                                   multiple: true                     # Definition einer Mehrfachauswahl (multiselect). (Standard: false)
                                                    options:                           # Definition der Optionen (key: value)
                                                      a: a                             
                                                      b: b
@@ -730,7 +730,7 @@ Checkboxen (type checkbox)
                                                    title: Is this true?   # Beschriftung (optional)
                                                    name:  public          # Referenz zu Tabellenspalte
                                                    value: true            # angegebener Parameter beim Aktivieren der Checkbox wird in DB gespeichert (hier 'TRUE').
-                                                   checked: false         # Definiert, ob die Checkbox vordefiniert angehakt sein soll (true oder false). Standard ist false
+                                                   checked: false         # Definiert, ob die Checkbox vordefiniert angehakt sein soll. (Standard: false)
 
 
 
@@ -953,7 +953,7 @@ Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eine
 
   poi:
       ...
-      inlineSearch: true      # Suche in den Tabellenspalten, Standard ist true
+      inlineSearch: true      # Suche in den Tabellenspalten (Standard: true)
       ...
 
 
@@ -961,7 +961,7 @@ Kontextmenü
 -----------
 
 Über das Kontextmenü kann ein Objekt auf der Karte näher betrachtet werden.
-Nach der Aktivierung kann man über den rechten Mausklick auf einem Objekt ein Kontextmenü öffnen.
+Nach der Aktivierung lässt sich über den rechten Mausklick auf ein Objekt ein Kontextmenü öffnen.
 
 .. image:: ../../../../figures/digitizer_contextmenu.png
      :scale: 80
@@ -1046,7 +1046,7 @@ Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per ein
          - osm                         # Namensangabe nur bei Anwendungen unter app/config/application möglich
       [...]
       
-**Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Aktuelle Informationen findet man unter: https://github.com/mapbender/mapbender-digitizer
+**Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Mehr Informationen unter: https://github.com/mapbender/mapbender-digitizer
  
 
 
@@ -1138,7 +1138,7 @@ Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attri
 
 Man kann das Event je nach Anwendungsfall bei onBeforeInsert oder onBeforeUpdate eintragen.
 
-Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Datenbank ist, kann man auf sie nicht als Feature zugreifen, sondern nur über das jeweilige "item", eine interne Digitizer Speicherstruktur. Diese "item" orientieren sich am Formular und den dort angegebenen Attributen.
+Da zum Zeitpunkt des Editierens die Geometrie noch nicht persistent in der Datenbank ist, kann auf sie nicht als Feature zugegriffen werden, sondern nur über das jeweilige "Item", eine interne Digitizer Speicherstruktur. Diese "Items" orientieren sich am Formular und den dort angegebenen Attributen.
 
 .. code-block:: yaml
 
@@ -1151,7 +1151,7 @@ Bei dem Event wird der Wert des Feldes "geom2" mit dem Wert des Feldes "geom" ü
 
 **Speichern unterschiedlicher Geometrietypen:**
 
-Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
+Dieses Szenario ist zu einem konsturierten Beispiel erweiterbar, in dem gleichzeitig unterschiedliche Geometrietypen geschrieben werden. Mithilfe von PostGIS können Linien in Punkte interpoliert werden. Im Digitizer kann ein Event genutzt werden, um das richtige SQL Statement abzuschicken.
 
 .. code-block:: postgres
 
@@ -1164,7 +1164,7 @@ Dieses Szenario kann man zu einem konsturierten Beispiel erweitern, in dem gleic
                     $result  = $stmnt->fetchAll();
                     $item['geompoi'] = $result[0]['geom'];
 
-Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, greift man über das "item" auf die Geometrie (geomline). Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
+Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, muss über das "Item" auf die Geometrie (geomline) zugegriffen werden. Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
 
 Buttons
 -------
@@ -1241,8 +1241,7 @@ Darstellung (Styles)
 YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml
 ================================================================================
 
-Dieser Codeabschnitt zeigt, wie das Digitizer Element in eine auf einer
-YAML-Datei basierende Anwendung eingebaut werden kann.
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
 

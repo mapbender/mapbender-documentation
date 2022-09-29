@@ -1,7 +1,7 @@
 .. _yaml_de:
 
 YAML Konfiguration (Konfigurations- und Anwendungsdateien)
-===========================================================
+==========================================================
 
 Die folgenden Konfigurationsdateien sind zu finden unter application/app/config.
 
@@ -32,8 +32,8 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgenderma�
                 user:      "%database_user%"                # Benutzername für die Verbindung zur Datenbank.
                 password:  "%database_password%"            # Das Passwort des Datenbankbenutzers.
                 charset:    UTF8                            # Die Kodierung, die die Datenbank verwendet.
-                logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standardwert: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
-                profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standardwert: %kernel.debug%)
+                logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standard: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
+                profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standard: %kernel.debug%)
 
 
 * database_driver: Der Datenbanktreiber. Mögliche Werte sind:
@@ -244,8 +244,8 @@ Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als
                 user:      "%database_user%"                # Benutzername für die Verbindung zur Datenbank.
                 password:  "%database_password%"            # Das Passwort des Datenbankbenutzers.
                 charset:    UTF8                            # Die Kodierung, die die Datenbank verwendet.
-                logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standardwert: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
-                profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standardwert: %kernel.debug%)
+                logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standard: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
+                profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standard: %kernel.debug%)
 
 **Verwendung mehrerer Datenbanken**
 
@@ -291,7 +291,7 @@ YAML Anwendungsdateien
 
 Als YAML definierte Anwendungen können in dem Verzeichnis **app/config/applications** abgelegt werden. Die bekannten Beispielanwendungen “**Mapbender mobile**”, “**Mapbender Demo Map**” und “**Mapbender Demo Map basic**” liegen dort als einzelne YAML Dateien.
 
-Sollen die drei Beispielanwendungen nicht im Mapbender sichtbar sein, so kann man unter **app/config/applications** die einzelne Anwendung auswählen und deren Variable "published" auf "false" setzen.
+Sollen die drei Beispielanwendungen nicht im Mapbender sichtbar sein, so kann unter **app/config/applications** die einzelne Anwendung ausgewählt und deren Variable "published" auf "false" gesetzt werden.
 
 .. code-block:: yaml
 
@@ -312,44 +312,44 @@ Mapbender Demo Map
 Folgende Funktionen sind vorimplementiert:
 
 Toolbar
-    * Layer tree (Button)
-    * Featureinfo (Button)
-    * Print client (Button)
-    * Image Export (Button)
-    * Legend (Button)
-    * WMS loader (Button)
-    * GPS Position
-    * measure (line und area) (Buttons)
-    * about (About dialog)
-    * POI (Button)
+    * Ebenenbaum (Button)
+    * Information (Button)
+    * Druck (Button)
+    * Bildexport (Button)
+    * Legende (Button)
+    * WMS laden (Button)
+    * GPS-Position
+    * Messen (Linie und Fläche) (Buttons)
+    * Über-Mapbender-Dialog
+    * MeetingPoint (POI) (Button)
 
 Sidepane
-    * Layer tree
-    * Redlining
-    * Coordinates utility
-    * About Mapbender (HTML)
+    * Ebenenbaum
+    * Skizzen
+    * Koordinaten Utility
+    * Über-Mapbender-Dialog (HTML)
 
 Content
-    * Map
-    * Navigation toolbar
-    * Legend
-    * Featureinfo
-    * WMS loader
-    * Image export
-    * Print client
-    * measure line
-    * measure area
-    * Scale bar
-    * Layer tree
-    * Overview
-    * Scale display
-    * POI
+    * Karte
+    * Navigationswerkzeug
+    * Legende
+    * Information
+    * WMS laden
+    * Bildexport
+    * Druck
+    * Linie messen
+    * Fläche messen
+    * Maßstabsleiste
+    * Ebenenbaum
+    * Übersicht
+    * Maßstabsanzeige
+    * MeetingPoint (POI)
 
 Footer
-    * Activity Indicator
-    * Coordinates Display (mb.core.coordinates.class.title)
-    * SRS selector
-    * Scale selector
+    * Aktivitätsanzeige
+    * Koordinatenanzeige
+    * SRS Auswahl
+    * Maßstabsanzeige
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
@@ -383,24 +383,24 @@ Die Beispielanwendung kann als Mobile Template für die Erstellung von Anwendung
 Folgende Funktionen sind vorimplementiert:
 
 Footer
-    * Themes (Button)
-    * Base source switcher (Button)
-    * GPS Position
+    * Themen (Button)
+    * Themenwechsel (Button)
+    * GPS-Position
     * Imprint (Button)
-    * help (Button)
-    * about (Button)
+    * Hilfe (Button)
+    * Über-Mapbender-Dialog (Button)
 
 Content
-    * Map
-    * Navigation toolbar
+    * Karte
+    * Navigationswerkzeug
 
 Mobilepane
-    * Themes (Layer tree)
-    * Featureinfo
+    * Themen (Ebenenbaum)
+    * Information
     * Imprint (HTML)
-    * help (HTML)
-    * Base source switcher
-    * about (HTML)
+    * Hilfe (HTML)
+    * Themenwechsel
+    * Über-Mapbender-Dialog (HTML)
 
 
 
@@ -433,10 +433,10 @@ Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheid
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
+    app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
 
 Durch *> ~/Downloads/demo.yaml* wird eine neue Datei unter dem angegebenen Pfad erstellt.
-*$ app/console mapbender:application:export mapbender_user_yml* gibt den Inhalt auf der Konsole aus.
+*app/console mapbender:application:export mapbender_user_yml* gibt den Inhalt auf der Konsole aus.
 
 
 **Import über die Konsole**
@@ -445,7 +445,7 @@ YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportier
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:import ~/Downloads/demo.yaml
+    app/console mapbender:application:import ~/Downloads/demo.yaml
 
 
 **Anwendung über die Konsole klonen**
@@ -454,7 +454,7 @@ Klont eine existierende Anwendung.
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:clone mapbender_user_yml
+	app/console mapbender:application:clone mapbender_user_yml
 
 Die neue Anwendung erhält die Endung _imp1 und heißt somit mapbender_user_yml_imp1.
 
@@ -465,8 +465,8 @@ Die Hilfekommandos, welche die Import- & Exportfunktion und erweiterte Optionen 
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:import --help
+    app/console mapbender:application:import --help
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:export --help
+    app/console mapbender:application:export --help

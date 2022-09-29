@@ -35,7 +35,7 @@ Die Einbettung erzeugt eine neue Spalte in der Tabelle *mb_core_application*. Es
 YAML-Definition:
 ----------------
 
-Die Funktion kann auch über eine YAML-Anwendung definiert werden. Zu beachten ist hierbei der neue Parameter *persistentView*. Wird dieser weggelassen, dann entspricht dies *false*.
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden. Zu beachten ist hierbei der neue Parameter *persistentView*. Wird dieser weggelassen, dann entspricht dies *false*.
 
 
 .. code-block:: yaml
