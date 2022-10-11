@@ -28,8 +28,7 @@ You can define Searches (Routes) with the ``+`` Button. Each Search has a ``titl
 
 * **Routes:** Collection of search routes.
 * **Title**: Search Title (appears, when a search is added to Routes by using +)
-* **Configuration**: Field to configure the search
- (appears, when a search is added to Routes by using +)
+* **Configuration**: Field to configure the search (appears, when a search is added to Routes by using +)
 
 
 Route Configuration

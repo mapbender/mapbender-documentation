@@ -87,9 +87,9 @@ In the following section, we walk through an exemplary configuration of a Layert
 In the example, we defined one **Layerset** with one instance:
 
 * Layerset World: 
-    * Instance `OSM Demosource <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instance OSM Demo Service https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
 
-The instance of the OSM demosource is automatically included in the installation. Now this WMS needs to be integrated into an existing Layerset. Switch to the tab Layersets. In the following example, the Layerset "YAML main" was renamed to "World". 
+The instance of the OSM  Demo Service is automatically included in the installation. Now this WMS needs to be integrated into an existing Layerset. Switch to the tab Layersets. In the following example, the Layerset "YAML main" was renamed to "World". 
 In case of difficulties with the integration, the documentation of the `Layersets <../backend/layerset.html>`_ provides useful information.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple_en.png
@@ -209,11 +209,11 @@ In the following section, we walk through an exemplary configuration of a Layert
 In the example, we define two Layersets with two instances each:
 
 * Layerset Project NRW:
-  * Instance `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-  * Instance `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instance `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instance `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 * Layerset World: 
-  * Instance `OSM Demodienst <http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-  * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instance OSM  Demo Service http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+    * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
 For the configuration of the Layersets, the four services mentioned above were added as instances (For detailed information see above or in the documentation of the `Layersets <../backend/layerset.html>`_ and `Sources <../backend/source.html>`_).
 

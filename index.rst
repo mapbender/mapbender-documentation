@@ -33,6 +33,7 @@ Online version
 Older versions
 ====================================
 
+* https://docs.mapbender.org/3.2
 * https://docs.mapbender.org/3.0.8
 * https://docs.mapbender.org/3.0.7
 * https://docs.mapbender.org/3.0.6

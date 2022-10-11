@@ -122,7 +122,7 @@ Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
 
 Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php
------------------------------------------------------------------------
+-------------------------------------------------------------------------
 
 Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den
 normalen Betrieb- und eine Entwicklungsumgebung, in dem die Anwendungen

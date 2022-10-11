@@ -132,7 +132,7 @@ In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendu
 
 Es gibt drei verschiedene Möglichkeiten, durch die neue Anwendungen erstellt werden können:
 
-Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich auf der Seite :ref:`yaml_de:yaml-anwendungsdateien`. 
+Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich auf der Seite  `YAML Konfiguration <./customization/yaml.html>`_.
 
 Es können außerdem komplett neue Anwendungen über das Backend definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
 
@@ -232,7 +232,7 @@ Versuchen Sie es selbst
 Datenquellen (Sources) verwenden
 ================================
 
-In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist noch einmal in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`layerset_de` .
+In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist noch einmal in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`Layerst <layerset_de>` .
 
 Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
 
