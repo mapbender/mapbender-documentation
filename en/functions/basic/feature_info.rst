@@ -34,8 +34,14 @@ In the example configuration, the element FeatureInfo is integrated in the 'Cont
 * **Max count:** Maximum number of results that should be displayed in the result dialog.
 * **Width/Height:** Width/height of the dialog in px.
 * **Highlighting enabled:** Deactivates/activates FeatureInfo Highlighting (default: false).
-* **Default color** Sets color for selected objects.
-* **Hover color** Sets hover color for selected objects.
+* **Default fill color** Sets the fill color for selected objects.
+* **Default stroke color** Sets the stroke color for selected objects.
+* **Opacity (%) of the default color** Sets the opacity of the default color
+* **Stroke width (in pixels) of the default color** Sets the stroke width (in pixels) of the default color
+* **Hover fill color** Sets the hover fill color for selected objects.
+* **Hover stroke color** Sets the hover stroke color for selected objects.
+* **Opacity (%) of the hover color** Sets the opacity of the hover color
+* **Stroke width (in pixels) of the hover color** Sets the stroke width (in pixels) of the hover color
 
 A button is also needed for complete frontend integration. Further information on how to configurate a button: `Button <../misc/button.html>`_.
 
@@ -133,8 +139,13 @@ This template can be used to insert the element into a YAML application.
    height: 500                    # height of the dialog in pixels (default: 500)
    maxCount: 100	              # maximum count of hits to be displayed
    highlighting: false            # deactivates/activates FeatureInfo Highlighting (default: false)
-   featureColorDefault: #ffa500   # color to highlight selected objects
-   featureColorHover: #ff0000     # color to highlight selected objects during hovering
-
+   fillColorDefault: '#ffff00'    # fill color to highlight selected objects
+   strokeColorDefault: '#ff00ff'  # stroke color to highlight selected objects
+   opacityDefault: 25             # opacity for fill color of selected objects
+   strokeWidthDefault: 3          # line width to highlight selected objects
+   fillColorHover: '#00ffff'      # fill color to highlight selected objects during hovering
+   strokeColorHover: '#0000ff'    # stroke color to highlight selected objects during hovering
+   opacityHover: 50               # opacity for fill color of selected objects during hovering
+   strokeWidthHover: 5            # line width to highlight selected objects during hovering
 
 
