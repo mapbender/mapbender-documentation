@@ -16,10 +16,10 @@ Der Konfigurationsdialog:
 .. image:: ../../../figures/de/overview_configuration.png
      :scale: 80
 
-* **Maximieren:** Definiert, ob der Kartenrahmen beim Start maximiert (ausgeklappt) oder minimiert (eingeklappt) ist (Standard: true).
 * **Fixieren:** Definiert, ob die Übersichtskarte in ihrem Maßstab fixiert sein soll (Standard: false).
 * **Title:** Titel des Elements, wird in der Layouts-Liste angezeigt.
 * **Layerset:** Layerset, das im Kartenrahmen angezeigt werden soll.
+* **Sichtbarkeit:** Definiert, ob der Kartenrahmen beim Start maximiert (Initial offen) oder minimiert (Initial geschlossen) oder Dauerhaft offen (kein Button zum schließen) ist (Standard: Initial offen). 
 * **Width/Height:** Breite und Höhe der Übersichtskarte.
 * **Position:** Position des Übersichtskartenrahmens in der Anwendung; Auswahlmöglichkeiten: oben links, unten links, oben rechts, unten rechts.
 
@@ -29,7 +29,7 @@ Konfigurationsbeispiel
 .. image:: ../../../figures/de/overview_configuration_example.png
      :scale: 80
 
-Das Element bietet verschiedene Konfigurationsmöglichkeiten. Im Beispiel sind die Einstellungen *Maximieren* sowie *Fixieren* aktiviert. Dadurch wird das Element beim Öffnen der Anwendung direkt angezeigt (d.h. maximiert), zusätzlich ist die Ansicht der Karte fixiert. Ist die Übersicht nicht fixiert, dann passt sich die Übersichtskarte dem entsprechenden Kartenausschnitt der Hauptkarte an, sobald diese verschoben oder ihr Maßstab verändert wird. Als Startansicht beim Öffnen der Anwendung wird der Startextent angezeigt. Das Element hat im Beispiel den Standardtitel "Übersicht (overview)". Es ist außerdem notwendig, dass die Übersichtskarte mit einem Layerset verknüpft wird. In diesem Beispiel stehen folgende Layersets zur Auswahl:
+Das Element bietet verschiedene Konfigurationsmöglichkeiten. Im Beispiel sind die Einstellungen *Sichtbarkeit Initial offen* sowie *Fixieren* gesetzt. Dadurch wird das Element beim Öffnen der Anwendung direkt angezeigt (d.h. maximiert), zusätzlich ist die Ansicht der Karte fixiert. Ist die Übersicht nicht fixiert, dann passt sich die Übersichtskarte dem entsprechenden Kartenausschnitt der Hauptkarte an, sobald diese verschoben oder ihr Maßstab verändert wird. Als Startansicht beim Öffnen der Anwendung wird der Startextent angezeigt. Das Element hat im Beispiel den Standardtitel "Übersicht (overview)". Es ist außerdem notwendig, dass die Übersichtskarte mit einem Layerset verknüpft wird. In diesem Beispiel stehen folgende Layersets zur Auswahl:
 
 .. image:: ../../../figures/de/map_example_layersets.png
      :scale: 80
@@ -59,7 +59,6 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
    anchor: 'right-top'          # Ausrichtung der Übersicht (Standard: right-top)
                                 # Benutzen Sie inline z.B. für die Sidebar
                                 # Optionen: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   position: ['0px', '0px']     # Position der Übersicht in Relation zum Anker (Standard: x=0px, y=0px)
-   maximized: true              # true/false ob die Applikation beim Start maximiert ist (Standard: true)
+   visibility: open             # open/closed/open-permanent - open/closed will show a button to close the overview map (default: open), open-permanent will open the overview map and does not show a button
    fixed: true                  # true/false um den Übersichtsbereich zu fixieren (Standard: true)
 
