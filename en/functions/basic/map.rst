@@ -131,14 +131,6 @@ To pass a single POI, use the following URL format:
 
    ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
 
-
-To pass multiple POIs, use the following format:
-
-.. code-block:: php
-
-   ?poi[0][point]=363374,5621936&poi[0][label]=Label%201&poi[1][point]=366761,5623022&poi[1][label]=Label%202
-
-
 Passing BBOX
 ------------
 
