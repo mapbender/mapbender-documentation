@@ -34,8 +34,14 @@ Das Element FeatureInfo wird im Content eingebunden:
 * **Max count:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
 * **Width/Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
 * **Highlighting aktiv** Aktivierung des FeatureInfo Highlightings.
-* **Grundfarbe** Farbe, mit der ausgewählte Geometrien hervogehoben werden.
-* **Hover-Farbe** Farbe, mit der ausgewählte Geometrien nach kurzem Verweilen des Mauszeigers hervorgehoben werden.
+* **Füllfarbe** Füllfarbe, der ausgewählten Objekte
+* **Umrandungsfarbe** Umrandungsfarbe, der ausgewählten Objekte
+* **Opazität (%) der Füllfarbe** Setzt die Opazität in Prozent der Füllfarbe
+* **Umrandungsbreite (in Pixeln) der Standardfarbe** Setzt die Breite der Umrandungslinie in Pixeln
+* **Hover-Füllfarbe** Füllfarbe, der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
+* **Hover-Umrandungsfarbe** Umrandungsfarbe, der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
+* **Hover-Opazität (%) der Füllfarbe** Setzt die Opazität in Prozent der Füllfarbe beim Hovern.
+* **Hover-Umrandungsbreite (in Pixeln) der Standardfarbe** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
 
 Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
@@ -136,8 +142,13 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
    height: 500                    # Höhe des Dialog in Pixel (Standard: 500)
    maxCount: 100	              # Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll
    highlighting: false            # FeatureInfo Highlighting (Standard: false)
-   featureColorDefault: #ffa500   # Farbe zur Hervorhebung ausgewählter Geometrien
-   featureColorHover: #ff0000     # Farbe zur Hervorhebung beim Hovern über ausgewählte Geometrien
-
+   fillColorDefault: '#ffff00'    # Füllfarbe zur Hervorhebung ausgewählter Objekte
+   strokeColorDefault: '#ff00ff'  # Umrandungsfarbe zur Hervorhebung ausgewählter Objekte
+   opacityDefault: 25             # Opazität (%) der ausgewählten Objekte
+   strokeWidthDefault: 3          # Breite der Umrandungslinie der ausgewählten Objekte
+   fillColorHover: '#00ffff'      # Füllfarbe zur Hervorhebung beim Hovern über ausgewählte Objekte
+   strokeColorHover: '#0000ff'    # Umrandungsfarbe zur Hervorhebung beim Hovern über ausgewählte Objekte
+   opacityHover: 50               # Opazität (%) der ausgewählten Objekte beim Hovern
+   strokeWidthHover: 5            # Breite der Umrandungslinie der ausgewählten Objekte beim Hovern
 
 
