@@ -3,9 +3,9 @@
 Legende (Legend)
 ****************
 
-Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Dabei wird jeder einzelne Layer mit seinen Punkten, Flächen und Linien aufgelistet.
+Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Nicht jeder Layer verfügt dabei über eine Legende. Zusätzlich zum Legendenbild können der Titel des Dienstes, des Layers und der Gruppe (sofern vorhanden) angezeigt werde. 
 
-.. image:: ../../../figures/legend.png
+.. image:: ../../../figures/de/legend.png
      :scale: 80
 
 Konfiguration
@@ -17,7 +17,6 @@ Konfiguration
 
 * **Automatisches Öffnen:** true, wenn die Legende beim Start der Anwendung geöffnet werden soll (Standard: false).
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Titel der Datenquelle anzeigen:** zeigt den WMS Titel (Standard: true).
 * **Titel der Ebene anzeigen:** zeigt den Layertitel (Standard: true).
 * **Titel der gruppierten Ebenen anzeigen:** zeigt den Gruppenlayertitel für gruppierte Layer (Standard: true).
@@ -44,14 +43,14 @@ Das hier konfigurierte Element hat den Titel "Legende". Als *Target* wird die "K
 
 Diese Konfiguration ergibt folgendes Ergebnis in der Anwendung:
 
-.. image:: ../../../figures/legend_example_sidepane.png
+.. image:: ../../../figures/de/legend_example_sidepane.png
      :scale: 80
 
-Die Legende wird in diesem Fall als Blockelement in der Sidepane angeordnet. Falls die Legende in der Toolbar eingebunden werden soll, empfiehlt es sich, diese über einen Button zu konfigurieren und nicht über das Element Legende (siehe folgenden Abschnitt).
+Die Legende wurde in diesem Fall in der Sidepane eingefügt.
 
-Legende in der Toolbar
------------------------
-Die Legende kann auch als Button in der Toolbar eingebunden werden. Hierfür muss zuerst das Element Legende in der Anwendung unter dem Reiter Layouts im Content integriert werden.
+Legende in der Oberen Werkzueugleiste (Toolbar)
+-----------------------------------------------
+Die Legende kann auch als Button in der Toolbar eingebunden werden. Hierfür muss zuerst das Element Legende unter dem Reiter Layouts im Content eingefügt werden.
 
 .. image:: ../../../figures/de/add_content.png
      :scale: 80
@@ -74,7 +73,7 @@ Mit diesen Einstellungen sieht das Ergebnis in der Anwendung wie folgt aus:
 .. image:: ../../../figures/de/legend_example_toolbar.png
      :scale: 80
 
-In der Toolbar ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich das Dialogfeld und zeigt die Legende an.
+In der Oberen Werkzueugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende.
 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
