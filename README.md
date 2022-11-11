@@ -31,12 +31,13 @@ Example
 
 cd /data
 git clone git@github.com:mapbender/mapbender-documentation
-git checkout release/3.2.0
+cd mapbender-documentation
+git checkout master
 
 ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
 
 rm -rf _build
-sphinx-build . _build -A version=3.2.0
+sphinx-build . _build -A version=3.3
 
 http://localhost/mb-doc/
 ```

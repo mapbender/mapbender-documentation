@@ -132,7 +132,7 @@ The application overview site displays a list of all available applications. The
 
 There are three different options to create an application: 
 
-An application can be created out of an already existing one. This can be done via a click on the |mapbender-button-copy| button in the application overview. The application will receive the same title and URL title with the appendix *"imp"*. All previously defined elements and configurations will be transferred as well. Another possibility is the import of an application. Further information can be found on the following page: :ref:`yaml_de:yaml-application-files`. 
+An application can be created out of an already existing one. This can be done via a click on the |mapbender-button-copy| button in the application overview. The application will receive the same title and URL title with the appendix *"imp"*. All previously defined elements and configurations will be transferred as well. Another possibility is the import of an application. Further information can be found on the following page `YAML Configuration <./customization/yaml.html>`_.
 
 Furthermore, new applications can be created from scratch. The required steps are explained in the following:
 
@@ -232,7 +232,7 @@ Try it yourself
 4. Configure Sources
 ====================
 
-Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`_layerset:`.
+Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`Layerset <layerset>` .
 
 The sources pages provides a user with the following functions:
 

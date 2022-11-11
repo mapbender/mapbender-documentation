@@ -87,7 +87,7 @@ Im Folgenden gehen wir eine beispielhafte Konfiguration eines Layertrees mit Bas
 In dem folgenden Beispiel ist ein **Layerset** mit einer Instanz definiert:
 
 * Layerset World: 
-  * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instanz OSM Demodienst https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
 
 Die Instanz des OSM-Demodienstes ist bei der Installation automatisch dabei. Diese muss nur noch über den Reiter Layersets in ein bestehendes Layerset eingebunden werden. In dem folgenden Beispiel wurde das Layerset "YAML-main" in "World" umbenannt. 
 Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <../backend/layerset.html>`_ weiterhelfen. 
@@ -210,11 +210,11 @@ Im Folgenden gehen wir eine komplexe beispielhafte Konfiguration eines Layertree
 In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen definiert:
 
 * Layerset Project NRW:
-  * Instanz `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-  * Instanz `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instanz `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instanz `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 * Layerset World: 
-  * Instanz `OSM Demodienst <http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-  * Instanz `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instanz OSM Demodienst http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+    * Instanz `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Info s.o. oder in der Doku der `Layersets <../backend/layerset.html>`_ und `Dienste <../backend/source.html>`_).
 
