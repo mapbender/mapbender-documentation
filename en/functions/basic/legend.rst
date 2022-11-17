@@ -39,7 +39,7 @@ Then, choose the element "Legend" in the appearing window. The configurational d
 .. image:: ../../../figures/legend_example_sidepane_dialog.png
      :scale: 80
 
-Our configured element has the title "Legend". The legends opens automatically (set checkbox *Auto-open*). Moreover, the layer title and the title of all grouped layers appears (set checkboxes *Show layer title* and *Show grouped layer title*).
+Our configured element has the title "Legend". The legend opens automatically (set checkbox *Auto-open*). Moreover, the layer title and the title of all grouped layers will appear if the checkboxes *Show layer title* and *Show grouped layer title* are set.
 
 Given this configuration, the result looks like this:
 
@@ -50,7 +50,7 @@ In the example the legend was added to the sidepane.
 
 Legend in the toolbar
 ---------------------
-The legend element can be integrated with a button in the toolbar. First step: Open the application backend and add the legend element into the content section of the Layout-tab.
+The legend element can be integrated with a button in the toolbar. First step: Open the application backend and add the legend element into the content section of the Layout tab.
 
 .. image:: ../../../figures/de/add_content.png
      :scale: 80
