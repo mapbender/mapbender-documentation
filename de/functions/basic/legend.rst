@@ -3,7 +3,7 @@
 Legende (Legend)
 ****************
 
-Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Nicht jeder Layer verfügt dabei über eine Legende. Zusätzlich zum Legendenbild können der Titel des Dienstes, des Layers und der Gruppe (sofern vorhanden) angezeigt werde. 
+Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Nicht jeder Layer verfügt dabei über eine Legende. Zusätzlich zum Legendenbild können der Titel des Dienstes, des Layers und der Gruppe (sofern vorhanden) angezeigt werden. 
 
 .. image:: ../../../figures/de/legend.png
      :scale: 80
@@ -39,7 +39,7 @@ Im Dialogfeld wird das Element "Legende" ausgewählt. Anschließend öffnet sich
 .. image:: ../../../figures/de/legend_example_sidepane_dialog.png
      :scale: 80
 
-Das hier konfigurierte Element hat den Titel "Legende". Als *Target* wird die "Karte" ausgewählt. Die Legende öffnet sich automatisch (Häkchen bei *Automatisches Öffnen*). Der Titel der Ebenen wird angezeigt sowie der Titel der gruppierten Ebenen (Häkchen bei *Titel der Ebene anzeigen* und *Titel der gruppierten Ebene anzeigen*).
+Das hier konfigurierte Element hat den Titel "Legende". Die Legende öffnet sich automatisch (Häkchen bei *Automatisches Öffnen*). Der Titel der Ebenen wird angezeigt sowie der Titel der gruppierten Ebenen (Häkchen bei *Titel der Ebene anzeigen* und *Titel der gruppierten Ebene anzeigen*).
 
 Diese Konfiguration ergibt folgendes Ergebnis in der Anwendung:
 
