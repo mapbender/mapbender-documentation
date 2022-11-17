@@ -38,7 +38,7 @@ Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``img src='ht
 .. code-block:: yaml
 
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
-     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
+     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'>
 
 .. image:: ../../../figures/de/html_example_logo.png
      :scale: 80

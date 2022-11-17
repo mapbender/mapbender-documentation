@@ -3,7 +3,7 @@
 Legend
 ******
 
-The legend object shows a legend of the layers that are displayed in the map. Every single layer is listed which includes point, line and/or polygon objects.
+The legend object shows a legend of the layers that are displayed in the map. Not every layer provides a legend. In addition to the legend image you can display the service title, layer name and group name (if a group exists).
 
 .. image:: ../../../figures/legend.png
      :scale: 80
@@ -17,8 +17,6 @@ Configuration
 
 * **Auto-open:** If activated, the legend opens when the application is started (default: active)
 * **Title:** Title of the element. The title will be listed in "Layouts". Is also shown next to the button, if "Show layer title" is activated.
-* **Target:** ID of Map element to query.
-
 * **Show source title:** shows WMS/source title (default: true)
 * **Show layer title:** shows layer title (default: true)
 * **Show grouped layer title:** shows group title for grouped layers (default: true)
@@ -41,19 +39,18 @@ Then, choose the element "Legend" in the appearing window. The configurational d
 .. image:: ../../../figures/legend_example_sidepane_dialog.png
      :scale: 80
 
-Our configured element has the title "Legend". *Target* is set to "Map". The legends opens automatically (set checkbox *Auto-open*). Moreover, the layer title and the title of all grouped layers appears (set checkboxes *Show layer title* and *Show grouped layer title*).
+Our configured element has the title "Legend". The legend opens automatically (set checkbox *Auto-open*). Moreover, the layer title and the title of all grouped layers will appear if the checkboxes *Show layer title* and *Show grouped layer title* are set.
 
 Given this configuration, the result looks like this:
 
 .. image:: ../../../figures/legend_example_sidepane.png
      :scale: 80
 
+In the example the legend was added to the sidepane.
 
-The legend will be set as "blockelement" in the sidepane now. If the legend shall be integrated into the toolbar, it is recommended to include it over a button and not over the element button (see next chapter).
-
-Legend in the toolbar:
-----------------------
-The legend element can be integrated with a button in the toolbar. First step: Integrate the legend element. Open the application backend and add the element into the content section of the Layout-tab.
+Legend in the toolbar
+---------------------
+The legend element can be integrated with a button in the toolbar. First step: Open the application backend and add the legend element into the content section of the Layout tab.
 
 .. image:: ../../../figures/de/add_content.png
      :scale: 80

@@ -16,10 +16,10 @@ The configuration dialog offers the following settings:
 .. image:: ../../../figures/overview_configuration.png
      :scale: 80
 
-* **Maximize:** Opens the element on start (default: true).
 * **Fix:** Fixes the overview extent (default: false).
 * **Title:** Title of the element, will be listed in "Layouts".
 * **Layerset:** Refers to a previously defined layerset, e.g. overview.
+* **Visibility:** Initially open/Initially closed/Permanently open - Defines whether the overview will be open or closed on start. The first two options will show a button to close the overview map. The third option provides an overview map and does not show a button. (default: Initially open)
 * **Width/Height:** Width and height of the element.
 * **Position:** Position of the overview map frame in the application; options are: top left, bottom left, top right and bottom right.
 
@@ -29,7 +29,7 @@ Configuration example
 .. image:: ../../../figures/overview_configuration_example.png
      :scale: 80
 
-The element provides various configuration options. In the example, the settings *Maximize* and *Fix* are activated. As a result, the element is displayed (i.e. maximized) when the application is opened and the view of the map is fixed. If the latter function is deactivated, the overview adapts as soon as the map is moved or the scale is changed. The start extent is displayed when the application is opened. In the example, the element has the title "Overview". It is necessary that the overview map is linked to a layerset. The following layersets are available:
+The element provides various configuration options. In the example, the settings *Visibility Initially open* and *Fix* are activated. As a result, the element is displayed (i.e. maximized) when the application is opened and the view of the map is fixed. If the latter function is deactivated, the overview adapts as soon as the map is moved or the scale is changed. The start extent is displayed when the application is opened. In the example, the element has the title "Overview". It is necessary that the overview map is linked to a layerset. The following layersets are available:
 
 .. image:: ../../../figures/map_example_layersets.png
      :scale: 80
@@ -60,7 +60,6 @@ This template can be used to insert the element into a YAML application.
    anchor: 'right-top'          # overview alignment (default: 'right-top')
                                 # use inline e.g. in sidebar
                                 # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   position: ['0px', '0px']     # overview position in relation to anchor, default: x=0px, y=0px
-   maximized: true              # true/false to open/close on start (default: true)
+   visibility: open             # open/closed/open-permanent to open/close on start will show an button to close the overview map (default: open), open-permanent will open the overview map and does not show a button
    fixed: true                  # true/false to fix the overview extent (default: true)
 

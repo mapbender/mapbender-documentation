@@ -38,7 +38,7 @@ In this example, the Mapbender Logo was integrated in the sidepane (``img src='h
 .. code-block:: yaml
 
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
-     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'></a>
+     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'>
 
 .. image:: ../../../figures/html_example_logo.png
      :scale: 80
@@ -67,7 +67,7 @@ The HTML-Code could look like this:
 
 .. code-block:: yaml
 
-     <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{  application.title }} </span></b>
+     <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{ application.title }} </span></b>
 
 The application title is defined through ``{{ application.title }}``. The term "Anwendung" is an addition and will display independently from the actual title. The style-block (``style=``) defines font size (``font-size:25px``), font width (``<b></b>``), font color (``color:#b6dd18``) as well as position (``margin-right:50vw``) of the title.
 
@@ -84,14 +84,14 @@ This variable displays the name of the active user:
 
 	<p>Username: {{ app.user.username }}</p>
 
-In this example, the username is displayed in the toolbar:
+In this example, the user name is displayed in the toolbar:
 	
 .. image:: ../../../figures/html_example_user_name.png
      :scale: 80
     
 * Variable: **group.title**
 
-The group of a user cannot be defined in a single expression, because Twig 1.40 only supports the map-filter in higher versions. In order to integrate this variable, a loop will be used:
+The group of a user cannot be defined in a single expression, because Twig only supports the map-filter in higher versions. In order to integrate this variable, a loop will be used:
 
 .. code-block:: yaml
 
@@ -131,5 +131,4 @@ This template can be used to insert the element into a YAML application.
     class: Mapbender\CoreBundle\Element\HTMLElement
     content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> #The variables "application" and "entity" are available in the content.
     classes: my-special-css-class
-
 
