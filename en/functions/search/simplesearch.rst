@@ -7,7 +7,7 @@ Simple Search offers a single field search or keyword search. The search query i
 to a search service. 
 The search servers Apache Solr, Nominatim, photon or an OGC API Features service can be used.
 
-An input field is offered which can be integrated directly into the toolbar or the sidebar. 
+An input field is offered which can be integrated directly into any region. Added to content you have to define the position. 
 Simple Search sends the entered search term to a configurable URL and receives JSON-formatted data, which contain a label and geometry attributes for each entry.
 
 The geometry data can be encoded in WKT or GeoJSON format.
@@ -21,13 +21,13 @@ It is configurable which information from the result json should be shown as res
 Configuration
 =============
 
-.. image:: ../../../figures/simplesearch_configuration_a.png
+.. image:: ../../../figures/simplesearch_configuration.png
      :scale: 80
 
-.. image:: ../../../figures/simplesearch_configuration_b.png
-     :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Position:** Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+* **Placeholder:** Text to display when the search fiels is empty. If placeholder is not defined the content of title is used.
 * **Query URL:** Solr URL for the search (e.g. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``) or Nominatim URL.
 * **Query URL key:** The query parameter key to append  (e.g. ``q``).
 * **Query Whitespace replacement pattern:** Pattern for replacing white spaces.
@@ -73,7 +73,8 @@ YAML-Definition
 ---------------
 
 .. code-block:: yaml
-
+   placeholder: 'please search'                                                       # Text to display when the search fiels is empty. If placeholder is not defined the content of title is used.
+   anchor: 'right-bottom'                                                             # Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
    query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8        # Example Solr URL (e.g. ``http://localhost:8080/solr/core/0/select?wt=json&indent=true``) or Nominatim URL.
    query_key: q                                                                       # The query parameter key to append
    query_ws_replace:                                                                  # Pattern for replacing white spaces.

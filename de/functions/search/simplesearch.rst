@@ -7,26 +7,26 @@ Die Einfache Suche bietet eine Einfeldsuche oder Schlagwortsuche.
 Die Suchanfrage wird dabei an einen Suchdienst übermittelt. 
 Als Such-Server können Apache Solr, Nominatim, photon oder ein OGC API Features Dienst verwendet werden.
 
-Es wird ein Eingabefeld angeboten, welches direkt in die Toolbar oder in der Seitenleiste (Sidepane) eingebunden werden kann. SimpleSearch sendet den eingegebenen Suchbegriff an eine konfigurierbare URL und empfängt JSON-formatierte Daten, welche eine Beschriftung und Geometrieattribute für jeden Eintrag beinhalten.
+Es wird ein Suchfeld angeboten, das in jede Region eingebunden werden kann. SimpleSearch sendet den eingegebenen Suchbegriff an eine konfigurierbare URL und empfängt JSON-formatierte Daten, welche eine Beschriftung und Geometrieattribute für jeden Eintrag beinhalten.
 
 Die Geometriedaten können in WKT oder in GeoJSON-Format codiert werden.
 
 Es kann frei konfiguriert werden, welche Informationen in der Trefferauswahl angezeigt werden sollen.
 
-.. image:: ../../../figures/simplesearch.png
+.. image:: ../../../figures/de/simplesearch.png
      :scale: 80
 
 
 Konfiguration
 =============
 
-.. image:: ../../../figures/de/simplesearch_configuration_a.png
+.. image:: ../../../figures/de/simplesearch_configuration.png
      :scale: 80
 
-.. image:: ../../../figures/de/simplesearch_configuration_b.png
-     :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+**Position:** Positionierung (nur bei Nutzung im Kartenbereich)
+* **Platzhalter:** Text, der im Suchfeld angezeigt wird, wenn dieses leer ist. Wird playeholder nicht gesetzt, wird der Titel verwendet. 
 * **Query URL:** Solr bzw. Nominatim URL, an die der eingegebene Suchbegriff gesendet wird (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
 * **Query URL key:** Der Suchparameterschlüssel, der angehängt wird (z.B. ``q``).
 * **Query Whitespace replacement pattern:** Muster zum Austausch von Leerzeichen.
@@ -73,7 +73,8 @@ YAML-Definition
 ---------------
 
 .. code-block:: yaml
-
+   placeholder: 'Bitte Suchbegriff eingeben....'                                      # Text, der im Suchfeld angezeigt wird, wenn dieses leer ist. Wird playeholder nicht gesetzt, wird der Titel verwendet. 
+   anchor: 'right-bottom'                                                             # Positionierung (nur bei Nutzung im Kartenbereich). Optionen: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
    query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8        # Solr URL (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``) oder Nominatim URL.
    query_key: q                                                                       # Der Suchparameterschlüssel, der angehängt wird
    query_ws_replace:                                                                  # Pattern zum Austausch von Leerzeichen.
