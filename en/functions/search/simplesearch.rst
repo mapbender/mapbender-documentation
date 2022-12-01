@@ -44,7 +44,7 @@ Configuration
 * **Delay:** Autocomplete delay. Use 0 to disable autocomplete (e.g. ``300``).
 * **Result buffer:** Buffer result geometry with this (map units) before zooming (e.g. ``10``).
 * **Result minscale/maxscale:** Scale restrictions for zooming, ~ for none  (e.g. ``1000`` und ``5000``).
-* **Result icon url:** Icon to display as result marker (e.g. ``http://demo.mapbender.org/bundles/mapbendercore/image/pin_red.png``).
+* **Result icon url:** Icon to display as result marker (e.g. ``/bundles/mapbendercore/image/pin_red.png``).
 * **Result icon offset:**  Offset x and y for the icon (e.g. ``0,0``).
 
 
