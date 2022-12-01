@@ -24,7 +24,7 @@ Das Element wird im Backend in die Anwendung eingebunden.
 
 * **Title:** Titel des HTML-Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden.
 * **Content:** Inhalt des HTML-Elements, z.B. Bild oder Link. Der Content kann die Variablen "application" und "entity" beinhalten.
-* **Classes:** CSS-Klasse
+* **Classes:** Alternativ kann auch auf eine CSS-Klasse für das HTML-Element verwiesen werden. Die im CSS-Editor definiert werden kann.
 
 
 Konfigurationsbeispiele
@@ -33,12 +33,12 @@ Konfigurationsbeispiele
 Bild einbinden:
 ---------------
 
-Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'``). Es besitzt eine definierte Höhe (``height='60px'``), Hintergrundfarbe und Transparenz (``background-color:rgb(255, 255, 255, 0.9)``) sowie einen bestimmten Seitenrandabstand (``padding:10px``). Diese Eigenschaften werden im Styling-Bereich (``style=``) definiert.
+Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``<img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg' />``). Es kann eine definierte Höhe (``height='60px'``) angegeben werden. Es kann eine Hintergrundfarbe soowie Transparenz (``background-color:rgb(240, 240, 240, 0.9)``) gesetzt werden und beispielsweise ein bestimmter Seitenrandabstand (``padding:10px``). Diese Eigenschaften werden im Styling-Bereich (``style=``) definiert.
 
 .. code-block:: yaml
 
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
-     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'>
+     height='60px' style='background-color:rgb(240, 240, 240, 0.9); padding:10px'>
 
 .. image:: ../../../figures/de/html_example_logo.png
      :scale: 80
@@ -52,7 +52,7 @@ Das zuvor eingebundene Logo kann um eine Linkverknüpfung erweitert werden. Der 
 
      <a href='https://mapbender.org' target='_blank'>
      <img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg'
-     height='60px' style='background-color:rgb(255, 255, 255, 0.9); padding:10px'> </a>
+     height='60px' style='background-color:rgb(240, 240, 240, 0.9); padding:10px'> </a>
 
 Variablen & HTML-Element
 ------------------------
