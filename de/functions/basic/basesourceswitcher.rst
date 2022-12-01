@@ -59,6 +59,7 @@ Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge
 
 * **Title**: Name der Themenkarte.
 * **Group**: Optionale Zuweisung zu einer Themengruppe.
+* **Position:** Positionierung (nur bei Nutzung im Kartenbereich)
 * **Instances**: Auswahl der Instanzen für die Themenkarte.
 
 
@@ -72,6 +73,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
     title:                                              # Titel
     tooltip:                                            # Text des Tooltips
     target: map                                         # ID des Kartenelements
+    anchor: 'right-bottom'                              # Positionierung nur bei Nutzung im Kartenbereich (Standard: right-bottom) - Optionen: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
     sourcesets:                                         # Liste der Sourcesets.
         - { title: sourcesetname, group: groupname,
             sources: [sourceId]}                        # sourceset: Titel,
