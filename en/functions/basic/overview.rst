@@ -60,6 +60,6 @@ This template can be used to insert the element into a YAML application.
    anchor: 'right-top'          # overview alignment (default: 'right-top')
                                 # use inline e.g. in sidebar
                                 # Options: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   visibility: open             # open/closed/open-permanent to open/close on start will show an button to close the overview map (default: open), open-permanent will open the overview map and does not show a button
+   visibility: open             # open/closed/open-permanent to open/closed on start will show a button to close the overview map (default: open), open-permanent will open the overview map and does not show a button
    fixed: true                  # true/false to fix the overview extent (default: true)
 
