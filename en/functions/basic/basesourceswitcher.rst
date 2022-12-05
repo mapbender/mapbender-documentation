@@ -46,13 +46,13 @@ The configuration occurs in 2 steps:
 
 * **Title:** Title of the element.
 * **Tooltip:** The text entered as a tooltip will be indicated by hovering over the element with the mouse cursor a longer time.
-* **Target:** Id of Map element, activated after the click.
 * **Instancesets:** One or many Instancesets can be defined. Select one or more instances and assign a title and group (optional).
 
 In the configuration example you can see that either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list.
 
 * **Title**: Title of the BaseSource.
 * **Group**: Optional group name.
+* **Position:** Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
 * **Instances**: Sources for the BaseSource.
 
 
@@ -66,6 +66,7 @@ This template can be used to insert the element into a YAML application.
     title: 'BaseSourceSwitcher'                         # title
     tooltip: 'BaseSourceSwitcher'                       # text to use as tooltip
     target: map                                         # Id of Map element
+    anchor: 'right-bottom'                              # Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
     sourcesets:                                         # List of sourcesets
         - { title: sourcesetname, group: groupname,
             sources: [sourceId]}                        # sourceset: title,
