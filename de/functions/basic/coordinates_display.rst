@@ -41,10 +41,10 @@ Konfiguration
 * **Beschriftung anzeigen (Show label):** Schaltet die Beschriftung an/aus. Die Beschriftung richtet sich nach dem Title.
 * **Title:** Titel des Elements. Dieser wird links neben den Koordinaten angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Num digits:** Anzahl der Nachkommastellen der Koordinaten.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Empty:** Angezeigter Text, wenn sich die Maus nicht in der Karte befindet (Standard: 'x= - y= -').
 * **Prefix:** Präfix vor der X-Koordinate (Standard: 'x= ').
 * **Separator:** Separator nach X- und vor Y-Koordinate (Standard: ' y= ').
+* **Position:** Positionierung (nur bei Nutzung im Kartenbereich)
 
 YAML-Definition:
 ----------------
@@ -54,12 +54,12 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
 .. code-block:: yaml
 
    numDigits: 2                   # die Anzahl der Nachkommastellen, die jede Koordinate haben soll
-   target: ~                      # ID des Kartenelements
+   target: map                    # ID des Kartenelements
    label: true                    # false/true, um den Button zu beschriften (Standard: true).
    empty: 'x= - y= -'             # zeigt diesen Text, wenn die Maus sich nicht in der Karte befindet.
    prefix: 'x= '                  # zeigt ein Präfix vor der X-Koordinate.
    separator: ' y= '              # zeigt einen Separator vor der Y-Koordinate.
-
+   anchor: 'right-bottom'         # Positionierung nur bei Nutzung im Kartenbereich (Standard: right-bottom) - Optionen: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
 
 CSS-Styling
 ===========
