@@ -44,6 +44,7 @@ Bei Anpassung der folgenden Parameter (kein Haken bei *Fixieren*, *Position*: un
 .. image:: ../../../figures/de/overview_example_left-bottom.png
      :scale: 80
 
+
 YAML-Definition:
 ----------------
 
@@ -59,6 +60,6 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
    anchor: 'right-top'          # Ausrichtung der Übersicht (Standard: right-top)
                                 # Benutzen Sie inline z.B. für die Sidebar
                                 # Optionen: 'inline', 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-   visibility: open             # open/closed/open-permanent - open/closed will show a button to close the overview map (default: open), open-permanent will open the overview map and does not show a button
+   visibility: open             # open/closed/open-permanent - open/closed zeigt einen Button zum Öffnen/Schließen (default: open), open-permanent zeigt den Button nicht an
    fixed: true                  # true/false um den Übersichtsbereich zu fixieren (Standard: true)
 
