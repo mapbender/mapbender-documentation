@@ -11,13 +11,13 @@ Read on for a detailed description on a productive system.
 Requirements
 ------------
 
-* PHP NTS (version 5.6 - 7.1, https://windows.php.net/download/)
+* PHP NTS >= 7.1 https://windows.php.net/download/)
 * Apache installation (https://www.apachelounge.com/download/ , run as service with the following modules):
  
   * mod_rewrite
   * mod_fcgid
  
-* set up PostgreSQL database (version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+* set up PostgreSQL database (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
   
   * established database for Mapbender configuration 
   * if necessary: own user for access
@@ -142,7 +142,7 @@ Configuration PostgreSQL
 ------------------------
 
 To configure the database, use the following default configuration (which is part of app/config/parameters.yml).
-For more information on the database configuration, see :ref:`yaml_en`.
+For more information on the database configuration, see :ref:`yaml`.
 
 
 .. code-block:: yaml
@@ -163,16 +163,25 @@ Open the windows shell and initialize the database connection with the following
     cd c:\mapbender
     php.exe app/console doctrine:database:create
     php.exe app/console doctrine:schema:create
-    php.exe app/console assets:install web
-    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
-    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixture/ORM/Application/ --append
+    php.exe app/console mapbender:database:init -v
+    php.exe bin/composer run reimport-example-apps
+
+
+To gain database access, you have to create a default user via
+
+.. code-block:: text
+
+    php.exe app/console fom:user:resetroot
+
+
+Find further information in :ref:`installation_configuration`
 
 
 First steps
 -----------
 
 
-The Mapbender installation can now be accessed under **http://hostname/mapbender/**.
+The Mapbender installation can now be accessed under **http://[hostname]/mapbender/**.
 User data by default:
 
 username: "root", passwort: "root"
@@ -185,6 +194,14 @@ More information at:  `Mapbender Quickstart Document <../en/quickstart.html>`_.
 
 * http://localhost/mapbender/
 
-Open the Symfony Welcome Script config.php. The script will check if all required components are installed.
 
-* http://localhost/mapbender/config.php
+Check the system configuration and Mapbender requirements with:
+
+.. code-block:: text
+
+    app/console mapbender:config:check
+
+
+Further information can be found at: https://doc.mapbender.org/en/customization/commands.html#app-console-mapbender-config-check
+
+

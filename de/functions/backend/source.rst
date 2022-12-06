@@ -1,7 +1,7 @@
 .. _source_de:
 
-Source (Datenquelle)
-====================
+Datenquellen (Sources)
+======================
 
 Über die Datenquellen können Sie OGC-WMS Dienste in der Version 1.1.1 und 1.3.0 in Mapbender registrieren.
 

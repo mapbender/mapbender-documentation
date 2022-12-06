@@ -3,7 +3,7 @@
 Dimensions handler
 ******************
 
-The dimension handler can be used to integrate WMS services with a time dimension. WMS-Time services are registered as a normal WMS data source. If a dimension is specified in the service, it is displayed in the layer metadata.
+The dimensions handler can be used to integrate WMS services with a time dimension. WMS-Time services are registered as a normal WMS data source. If a dimension is specified in the service, it is displayed in the layer metadata.
 
 .. code-block:: resource
 
@@ -62,7 +62,7 @@ Timeslider as element
 ----------------------
 
 The layers can be controlled by the dimensions handler element via a central slider. This element can be integrated into the sidepane, toolbar and footer.
-The configuration of the dimension handler is done in three steps:
+The configuration of the dimensions handler is done in three steps:
 
 * **Creating the element**: First the element needs to be created and saved. Afterwards the element closes (see configuration).
 * **Creating a dimensionsset**: To define a dimensionsset, you need to create a new set in the element via the "+" button. After entering a title, the item must be saved. Then the element closes.
@@ -135,12 +135,4 @@ Layertree configuration
             menu:
                 - [...]
                 - dimension
-
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\WmsBundle\\Element\\DimensionsHandler
-* **Widget:** 
-* **Style:** 
 

@@ -1,4 +1,4 @@
-.. _yaml_en:
+.. _yaml:
 
 YAML Configuration (Configuration and Application files)
 ========================================================
@@ -11,8 +11,8 @@ parameters.yml
 Fundamental parameters are specified here.
 
 
-**Database**
-************
+Database
+********
 
 To configurate the database the files config.yml and parameters.yml are needed.
 The file config.yml contains placeholders for variables, which are specified in the file parameters.yml.
@@ -49,7 +49,7 @@ The default database definiton set in config.yml is as follows:
   Please notice: Necessary PHP drivers need to been installed and activated.
 
 
-Example: 
+Example:
 Database configuration in parameters.yml, when PostgreSQL is used:
 
 .. code-block:: yaml
@@ -61,21 +61,21 @@ Database configuration in parameters.yml, when PostgreSQL is used:
     database_path:     ~
     database_user:     postgres
     database_password: secret
-    
-    
-**Use of several databases**
-****************************
 
-With Mapbender you can use several databases. This is recommended when you want to keep your data seperated from Mapbender data. Or when you want to use code that doesn't belong to a Mapbender bundle. 
 
-You already need a second database for *geo data search* (with SearchRouter)  and data collection (Digitizer). 
+Use of several databases
+************************
+
+With Mapbender you can use several databases. This is recommended when you want to keep your data seperated from Mapbender data. Or when you want to use code that doesn't belong to a Mapbender bundle.
+
+You already need a second database for *geo data search* (with SearchRouter)  and data collection (Digitizer).
 
 The default database connection (``default_connection: default``) is used by Mapbender.
 
 If you want to use another database, you have to define a database connection with a different name.
 
 .. code-block:: yaml
-                
+
     parameters:
         # database connection "default"
         database_driver:   pdo_pgsql
@@ -94,112 +94,116 @@ If you want to use another database, you have to define a database connection wi
         database2_path:     ~
         database2_user:     postgres
         database2_password: postgres
-        
-        
+
+
 Now you can refer to the database **search_db** in the elements SearchRouter and Digitizer.
 
 More Information:
-  
+
 Symfony documentation <http://symfony.com/doc/current/best_practices/configuration.html>`_)
-  
+
 Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine project <http://www.doctrine-project.org/>`_).
 
 
 
-**Disclaimer**
-**************
+Disclaimer
+**********
 
-.. image:: ../../../figures/disclaimer.png
+.. image:: ../../figures/disclaimer.png
 
-A disclaimer can be added through the use of site links. 
+A disclaimer can be added through the use of site links.
 
 .. code-block:: yaml
-    
+
     mapbender.sitelinks:
-      - link: http://mapbender.org/en/about-contact				# Link URL
-        text: Imprint & Contact									# Link text
-      - link: http://mapbender.org/en/privacy-policy
-        text: Privacy-Policy
+      - link: https://mapbender.org/en/legal-notice/				# Link URL
+        text: Imprint & Contact									    # Link text
+      - link: https://mapbender.org/en/privacy-policy/
+        text: Privacy Policy
 
 Site links will be seperated by "|".
 
 
-**Language setting**
-*********************
+Language settings
+*****************
 
-The language (locale) of the whole Mapbender installation can be changed, but not the language of a single application. 
+Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **app/config/parameters.yml**.
+If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language. We recommend en (English) or de (German) as fallback options.
 
   Following language codes are available:
-    * en for English (standard),
+    * en for English (default),
     * de for German,
+    * tr for Turkish,
     * es for Spanish,
     * it for Italian,
     * nl for Dutch,
     * pt for Portugese,
     * ru for Russian.
-    
+
 Configuration example:
 
 .. code-block:: yaml
-   
-   # locale en, de, it, es, ru, nl, pt are available
+
+   # locale en, de, it, tr, es, ru, nl, pt are available
     fallback_locale:   en
-    locale:            en
+    locale:            en    
     secret:            ThisTokenIsNotSoSecretChangeIt
-    
-More information: http://doc.mapbender.org/en/book/translation.html
+
+More information: https://doc.mapbender.org/en/architecture/translation.html
 
 
-**logo**
-*********
-
-The logo (default is the Mapbender logo) can be changed in parameters.yml. This change has a global impact on the whole Mapbender installation.
+Logo
+****
+In parameters.yml, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
-    branding.logo:     new_logo.jpg
+    branding.logo: ./bundles/mapbendercore/image/logo_mb.png
+    branding.login_backdrop: ./bundles/mapbendercore/image/body.png
 
- The file of the logo needs to be added under application/web.
- 
 
- **Mailer**
-**********
+ The files must be accessible under application/web.
+
+
+Mailer
+*******
 
 Mailer information in parameters.yml (e.g. smtp or sendmail).
+
 Configuration example:
 
 .. code-block:: yaml
-   
+
         mailer_transport:  smtp
         mailer_host:       localhost
         mailer_user:       ~
         mailer_password:   ~
-       
+
 The functions 'Self-Registration' and 'reset password' need a mailer.
-More Information :ref:`users_en`.
+
+More information in chapter :ref:`users`.
 
 
- **Project name**
-*****************
-
+Project name
+************
 The name of the project (default: Mapbender) can be changed in parameters.yml. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
-    branding.project_name:     Example    
+    branding.project_name: Geoportal
 
 
 **Important note:** In parameters.yml **tabulators may not be used for indentation** instead you need to use space.
 
 
-**Proxy settings**
-***********************
+Proxy settings
+**************
 If you use a proxy, you need to change parameters.yml.
 
 Configuration example:
 
 .. code-block:: yaml
-    
+
     # OWSProxy Configuration
         ows_proxy3_logging: false
         ows_proxy3_obfuscate_client_ip: true
@@ -211,11 +215,11 @@ Configuration example:
         ows_proxy3_password: ~
         ows_proxy3_noproxy:
             - 192.168.1.123
- 
- 
- 
- 
- 
+
+
+
+
+
 config.yml
 -----------
 
@@ -224,8 +228,8 @@ config.yml
 * **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
 
 
-**Database**
-*************
+Database
+********
 Important: Every database defined in parameters.yml needs to have a placeholder in config.yml as well:
 
 .. code-block:: yaml
@@ -247,8 +251,8 @@ Important: Every database defined in parameters.yml needs to have a placeholder 
                 profiling: "%kernel.debug%"                 # Profiling SQL requests. This option can be turned of in production. (standard: %kernel.debug%)
 
 
-**Use of several databases**
-****************************
+Use of several databases
+************************
 Example with two database connections in **config.yml**:
 
 .. code-block:: yaml
@@ -281,14 +285,14 @@ Example with two database connections in **config.yml**:
                     charset:    UTF8
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
-                    
-More information under parameters.yml.                
+
+More information under parameters.yml.
 
 
 YAML Application files
 -----------------------
 
-YAML application files are stored under **app/config/applications**. 
+YAML application files are stored under **app/config/applications**.
 “**Mapbender mobile**”, “**Mapbender Demo Map**” and “**Mapbender Demo Map basic**” are pre-implemented as example applications.
 
 If you do not want the three example applications to be visible, you can change the variable 'published' to 'false'.
@@ -300,8 +304,8 @@ If you do not want the three example applications to be visible, you can change 
 			mapbender_mobile:
 				[...]
 				published: false
-				
-Now the applications will not be visible for users (except for root user). 
+
+Now the applications will not be visible for users (except for root user).
 
 New YAML applications can be placed in the folder and will be automatically recognized by Mapbender.
 
@@ -325,7 +329,7 @@ Toolbar
 
 Sidepane
     * Layer tree
-    * Redlining
+    * Sketch
     * Coordinates utility
     * About Mapbender (HTML)
 
@@ -337,8 +341,8 @@ Content
     * WMS loader
     * Image export
     * Print client
-    * line 
-    * area
+    * measure line
+    * measure area
     * Scale bar
     * Layer tree
     * Overview
@@ -352,7 +356,7 @@ Footer
     * Scale selector
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
-    
+
 Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
 
 
@@ -362,23 +366,23 @@ Mapbender Demo Map basic
 
 Differences to Mapbender Demo Map:
 
-Toolbar  
+Toolbar
     Instead of 'POI', 'Coordinates utility' is integrated.
 
-Sidepane  
+Sidepane
     No functions pre-implemented.
 
-Content  
+Content
     Instead of 'Scale display' and 'POI', the function 'Coordinates utility' is integrated.
 
 Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
 
 
 
-Mapbender mobile 
+Mapbender mobile
 ----------------
 
-For a mobile template on smatphones and tablets.
+For a mobile template on smartphones and tablets.
 
 Following functions are pre-implemented:
 
@@ -401,15 +405,15 @@ Mobilepane
     * help (HTML)
     * Base source switcher
     * about (HTML)
-    
-    
-    
+
+
+
 Export/import YAML application files over the user interface
 ------------------------------------------------------------
 
 **Export**
 
-You can expport applications as JSON or YAML under **Applications --> Export**.
+You can export applications as JSON or YAML under **Applications --> Export**.
 
 .. image:: ../../figures/export.png
 
@@ -418,12 +422,12 @@ You can expport applications as JSON or YAML under **Applications --> Export**.
 
 You can import the export file into a Mapbender installation under **Applications --> Import**.
 
-.. image:: ../../figures/export.png
+.. image:: ../../figures/import.png
 
 
 
-Export/import/clone YAML application files over the console 
------------------------------------------------------
+Export/import/clone YAML application files over the console
+-----------------------------------------------------------
 
 **Export**
 
@@ -435,10 +439,10 @@ The former is produced by a machine and the latter is code written by a develope
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
-    
+	app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
+
 *> ~/Downloads/demo.yaml* creates a new file under the specified path
-*$ app/console mapbender:application:export mapbender_user_yml* shows the data on the console.
+*app/console mapbender:application:export mapbender_user_yml* shows the data on the console.
 
 
 **Import**
@@ -447,7 +451,7 @@ YAML files that have been exported over the user interface or console can be imp
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:import ~/Downloads/demo.yaml 
+	app/console mapbender:application:import ~/Downloads/demo.yaml
 
 
 **Clone**
@@ -456,8 +460,8 @@ Clone an existing application.
 
 .. code-block:: bash
 
-	$ app/console mapbender:application:clone mapbender_user_yml
-	
+	app/console mapbender:application:clone mapbender_user_yml
+
 The name of the new application is mapbender_user_yml_imp1.
 
 
@@ -465,10 +469,8 @@ The name of the new application is mapbender_user_yml_imp1.
 
 .. code-block:: bash
 
-    $ app/console mapbender:application:import --help
-    
+    app/console mapbender:application:import --help
+
 .. code-block:: bash
 
-    $ app/console mapbender:application:export --help
-
-    
+    app/console mapbender:application:export --help

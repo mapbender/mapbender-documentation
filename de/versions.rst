@@ -3,14 +3,183 @@
 Versionshistorie
 ================
 
-`English Version of this document. <../en/versions.html>`_
+`English version of this document. <../en/versions.html>`_
 
 Die Übersicht der Meilensteine finden Sie auf `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
-.. _versions:
 
 
-Version 3.0.8
+Version 3.2.9
+-------------
+
+Release Datum: 28.01.2022
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v329
+
+
+Version 3.2.8
+-------------
+
+Release Datum: 02.11.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v328
+
+
+Version 3.2.7
+-------------
+
+Release Datum: 07.09.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v327
+
+
+Version 3.2.6
+-------------
+
+Release Datum: 09.08.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v326
+
+
+Version 3.2.5
+-------------
+
+Release Datum: 08.06.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v325
+
+
+Version 3.2.4
+-------------
+
+Release Datum: 04.03.2021
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v324
+
+
+Version 3.2.3
+-------------
+
+Release Datum: 21.12.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v323
+
+
+Version 3.2.2
+-------------
+
+Release Datum: 02.11.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v322
+
+
+Version 3.2.1
+-------------
+
+Release Datum: 06.08.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v321
+
+
+Version 3.2.0
+-------------
+
+Release Datum: 29.07.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v320
+
+
+Version 3.0.8.6
+---------------
+
+Release Datum: 15.09.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3086
+
+
+Version 3.0.8.5
+---------------
+
+Release Datum: 05.02.2020
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3085
+
+
+Version 3.0.8.4
+---------------
+
+Release Datum: 04.09.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3084
+
+
+Version 3.0.8.3
+---------------
+
+Release Datum: 05.07.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3083
+
+
+Version 3.0.8.2.1
+-----------------
+
+Release Datum: 05.07.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v30821
+
+
+Version 3.0.8.2
+---------------
+
+Release Datum: 03.07.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3082
+
+
+Version 3.0.8.1
+---------------
+
+Release Datum: 14.05.2019
+
+**Verbesserungen und Bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3081
+
+
+Version 3.0.8.0
 ---------------
 
 Release Datum: 12.04.2019
@@ -18,7 +187,7 @@ Release Datum: 12.04.2019
 
 **Verbesserungen und Bugfixes:**
 
-* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v.3.0.8
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v308
 
 **Hinweise zur Aktualisierung**
 
@@ -56,7 +225,7 @@ Release Datum: 26.09.2018
 **Verbesserungen und Bugfixes:**
 
 * Die Beschreibung zu den Fixes ist in den Repository-Links zu finden
-* Aktualisierung Mapbender-Starter Repository auf `v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
+* Aktualisierung `Mapbender-Starter v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
 * Aktualisierung Mapbender Repository auf `v3.0.7.5 <https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5>`_
 * Aktualisierung Owsproxy Repository auf `v3.0.6.4 <https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4>`_, includes Owsproxy dependencies
 * Aktualisierung mapbender/vis-ui.js Repository auf `0.0.72 <https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72>`_
@@ -91,7 +260,7 @@ Bitte führen sie wieder ein **app/console doctrine:schema:update** durch, um di
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update
+                app/console doctrine:schema:update
 
 Falls der Update Befehl fehlschlägt, z.B. mit der PostgreSQL Meldung ``SQLSTATE[22001]: String data, right truncated:`` und ``7 FEHLER:  Wert zu lang für Typ character varying(255)``, dann haben Sie einen Schlüsselwort-Eintrag in der Tabelle ``mb_core_keyword``, der 255 Zeichen überschreitet. Diesen können Sie mit folgendem SQL-Statement herausfinden:
 
@@ -212,7 +381,7 @@ Verschiedenes:
   * :ref:`search_de`
   * :ref:`export_de`
   * :ref:`editing_de`
-  * :ref:`wmc_de`
+  * WMC
   * :ref:`backend_de`
   * :ref:`fom_de`
   * :ref:`misc_de`
@@ -241,7 +410,7 @@ Bitte führen sie ein **app/console doctrine:schema:update** durch, wenn Sie auf
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update
+                app/console doctrine:schema:update
 
 
 Version 3.0.7.2, 3.0.7.1 und 3.0.7.0
@@ -507,14 +676,14 @@ Verzeichnis, in das YAML-basierende Anwendungen abgelegt werden können. Als Bei
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update --dump-sql
+                app/console doctrine:schema:update --dump-sql
                 ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
                 ALTER TABLE mb_core_keyword ALTER value DROP DEFAULT;
 
 
 
 
-Milestone 3.0.5.3
+Version 3.0.5.3
 -----------------
 
 Release Datum: 04.02.2016
@@ -524,7 +693,7 @@ Release Datum: 04.02.2016
 
 Besondere Änderungen:
 
-- Performance: Die CSS, JavaScript und Translation Dateien werden nun im `Produktionsmodus <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_ im Symfony Cache gehalten. Dies kann insbesondere bei langsamen Servern zu Performancesteigerungen führen. Die Änderung gilt nicht für den `Entwicklermodus (app_dev.php) <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
+- Performance: Die CSS, JavaScript und Translation Dateien werden nun im `Produktionsmodus <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_ im Symfony Cache gehalten. Dies kann insbesondere bei langsamen Servern zu Performancesteigerungen führen. Die Änderung gilt nicht für den `Entwicklungsmodus (app_dev.php) <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
 - Das Paket `eslider/sassc-binaries <https://github.com/eSlider/sassc-binaries>`_ bietet nun auch einen sassc Compiler für 32-bit Linux Systeme an. Dies führte zu Anzeigeproblemen unter 32-bit Linux Systemen (http://lists.osgeo.org/pipermail/mapbender_users/2015-December/004768.html)
 - Redlining: Die Inhalte des Redlining Elements sind nun sichtbar und das Element kann sowohl als Dialog als auch Element in der Sidepane verwendet werden. Siehe auch die `Dokumentation zum Redlining Element <functions/editing/redlining.html>`_. Die Scrollbar bei den Geometrie-Types im Konfigurationsdialog wird korrekt angezeigt.
 
@@ -592,7 +761,7 @@ Allgemeine Änderungen:
 
     
     
-Milestone 3.0.5.2
+Version 3.0.5.2
 -----------------
 
 Release Datum: 27.10.2015
@@ -647,7 +816,7 @@ Release Datum: 27.10.2015
 
 
 
-Milestone 3.0.5.1
+Version 3.0.5.1
 -----------------
 
 Release Datum: 26.08.2015
@@ -696,7 +865,7 @@ Release Datum: 26.08.2015
 
 
  
-Milestone 3.0.5.0
+Version 3.0.5.0
 -----------------
 
 Release Datum: 01.07.2015
@@ -751,7 +920,7 @@ Release Datum: 01.07.2015
 * Beim Kopieren einer Anwendung von Mapbender 3.0.4.x muss in der Map/Overview der jeweilige Layerset neu gesetzt werden.
                     
 
-Milestone 3.0.4.1
+Version 3.0.4.1
 -----------------
 
 Release Datum: 23-01-2015
@@ -778,7 +947,7 @@ Release Datum: 23-01-2015
 * https://github.com/mapbender/mapbender/milestones/3.0.4.1
  
 
-Milestone 3.0.4.0
+Version 3.0.4.0
 -----------------
 
 Release Datum: 12-09-2014
@@ -796,7 +965,7 @@ Release Datum: 12-09-2014
 * spanische Übersetzung
  
 
-Milestone 3.0.3
+Version 3.0.3
 ----------------
 
 Release Datum: 17-03-2014
@@ -818,7 +987,7 @@ Release Datum: 17-03-2014
 * Funktion zur Validierung von WMS GetCapabilities Dokumenten
  
 
-Milestone 3.0.2
+Version 3.0.2
 ---------------
 
 Release Datum: 27-11-2013
@@ -829,7 +998,7 @@ Release Datum: 27-11-2013
 * WMSLoader Erweiterung WMS über Link hinzufügen
  
 
-Milestone 3.0.1
+Version 3.0.1
 ---------------
 
 Release Datum: 06-09-2013
@@ -843,7 +1012,7 @@ Release Datum: 06-09-2013
 * Bug fixes
  
 
-Milestone 3.0.0.2
+Version 3.0.0.2
 -----------------
 
 Bugfix-Release Datum: 19-07-2013
@@ -852,7 +1021,7 @@ Bugfix-Release Datum: 19-07-2013
 
  
 
-Milestone 3.0.0.1
+Version 3.0.0.1
 -----------------
 
 Bugfix-Release Datum: 07-06-2013
@@ -861,7 +1030,7 @@ Bugfix-Release Datum: 07-06-2013
 
  
 
-Milestone 3.0.0.0
+Version 3.0.0.0
 -----------------
 
 Release Datum: 29-05-2013

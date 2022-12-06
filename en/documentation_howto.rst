@@ -10,7 +10,7 @@ You find the Mapbender Documentation at:
 
 https://doc.mapbender.org
 
-The Documentation is build from the mapbender-docmentation repository at Github. This repository is used to build and deploy the http://doc.mapbender.org website on a nightly base. The website code is generated using Sphinx, therefore the documentation source is written in Restructured Text.
+The Documentation is build from the mapbender-docmentation repository at Github. This repository is used to build and deploy the https://doc.mapbender.org website. The website code is generated using Sphinx, therefore the documentation source is written in Restructured Text.
 
 This HowTo concentrates on the build of the documentation at http://doc.mapbender.org.
 
@@ -47,44 +47,35 @@ Every language (en - english, de - german) has the same file structure.
       index.rst        # refers to TheBook, Developer's Book & the Bundle Documentation
       bundles.rst      # lists the chapters of this category - refers to rst files
       development.rst  # lists the chapters of this category - refers to rst files
-      thebook.rst      # lists the chapters of this category - refers to rst files
-      /book
-        ....
-        /development
+      /architecture
+      /development
           ....
-      /bundles
-          /Mapbender
-            /CoreBundle
-              index.rst             # refers to the elements, entitiy & service documentation
-              template_element.rst  # template to use for new element documentation
-              /elements
-                legend.rst
-                ...
-              /services
-                ...
-            /WmsBundle
-              ...
-          /FOM
-            ...
+      /functions
+          /backend
+          /basic
+          ....
 
 
 How to build the documentation via Sphinx?
 ******************************************
-We generate the webside code from the rst-files using Sphinx.
+We generate the website code from the rst-files using Sphinx.
 
 To build the website locally, you need to install Sphinx. In Debian-based distributions this is done via:
 
 
 .. code-block:: bash
 
-  apt-get install python-sphinx
+    sudo apt-get install sphinx-common  python3-sphinx
+    sudo apt-get install pip3
+    sudo pip3 install sphinxcontrib-phpdomain
 
 
 You can then build the documentation by running
 
 .. code-block:: bash
 
-  sphinx-build . output
+    sphinx-build . _build -A version=3.2.0
+
 
 You can also use the generate.sh shell script if you like.
 
@@ -128,7 +119,7 @@ Images (figures)
 Images for the documentation are **all** located at
 
 * mapbender-documentation/figures
-* create images with size 800 x 600px (you can resize your browser window f.e. with web developer to this size)
+* create images with size 800 x 600px (you can resize your browser window e.g. with web developer to this size)
 * have a look at quickstart.rst about how to refer to an image
 
 
@@ -137,7 +128,7 @@ Quickstart
 The Mapbender Quickstart is a tutorial to get to know Mapbender. It is used on OSGeo-Live too http://live.osgeo.org.
 
 If you want to add a new lesson to the Quickstart:
- * add the subject of you lesson at the beginning of the document (This Quick Start describes how to: ...)
+ * add the subject of your lesson at the beginning of the document (This Quick Start describes how to: ...)
  * add the new lesson to the document and provide a screenshot if this makes sense
  * images are stored in the ../../../figures-directory
 
@@ -157,7 +148,7 @@ Here are the steps you have to do:
   # get the documentation files from github
   cd /data
   git clone git@github.com:mapbender/mapbender-documentation
-  cd /mapbender-documentation/en/bundles/Mapbender/CoreBundle
+  cd /mapbender-documentation/en/functions/basic
 
   # create a rst-file. Use the template for element documentation!
   cp template_element.rst elements/add_wms.rst
@@ -166,18 +157,22 @@ Here are the steps you have to do:
 
   # build the the documentation locally to see how your documentation looks like
   cd /data/mapbender-documentation/
-  sphinx-build . output
+  rm -Rf _build
+  sphinx-build . _build -A version=3.2.0
 
   # have a look at the documentation in your browser (example location). Is everything ok? Any changes needed?
-  file:///data/mapbender-documentation/output/index.html
+  ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
+  http://localhost/mb-doc/
 
   # add, commit and push your new file to the mapbender-documentation repository
   # replace <element_name> with the element name, dont forget to remove the <, >
-  git add en/bundles/Mapbender/CoreBundle/elements/<element_name>.rst
-  git commit -m 'new documentation for element <element_name>' en/bundles/Mapbender/CoreBundle/elements/<element_name>.rst
-  git push
+  git checkout -b feature/add_wms
+  git add en/functions/basic/add_wms.rst
+  git commit -m 'new documentation for element <element_name>'
+  git push --set-upstream origin feature/add_wms
 
   # get the actual files from the mapbender-documentation repository
+  git checkout master
   git pull
 
 

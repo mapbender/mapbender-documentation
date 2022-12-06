@@ -1,9 +1,9 @@
 .. _components:
 
 Components
-#####################
+##########
 
-Mapbender is made up of different components. On the server side we use Symfony as a framework which comes along with powerfull components like Doctrine, Twig, Monolog and more.
+Mapbender is made up of different components. On the server side we use Symfony as a framework which comes along with powerful components like Doctrine, Twig, Monolog and more.
 
 On the client side we use OpenLayers, MapQuery and jQuery & jQuery UI.
 
@@ -15,20 +15,11 @@ We offer a Mapbender Starter package. With the Mapbender Starter package you can
      :scale: 60
 
 
-
-
 Symfony
 ********
-
-.. image:: http://symfony.com/images/common/logo/logo_symfony_header.png
-  :scale: 60 %
-  :alt: Symfony Project page
-  :align: center
-  :target: http://symfony.com/
-
 Symfony is a full object oriented PHP Web Development Framework. It builds blocks for all modern web application needs. It is a collection of software and a development methodology. It relies on the philosophy of building blocks. It is optimized for speed. It uses Byte Code Cache.
 
-Here comes just a list of some components Symfony offers:
+Here is a list of some components Symfony offers:
 
 * Symfony config.php to check the prerequisites
 * Symfony Profiler 
@@ -39,20 +30,14 @@ Here comes just a list of some components Symfony offers:
 * Logging via Monolog
 * Security
 
-The project has a very good documentation 
+The project has a very good documentation: 
 
 * TheBook http://symfony.com/doc/current/book/index.html
 
 
 OpenLayers
 **********
-.. image:: http://www.openlayers.org/images/OpenLayers.trac.png
-  :scale: 80 %
-  :alt: OpenLayers Project page
-  :align: center
-  :target: http://openlayers.org/
-
-OpenLayers is a powerfull software for web maps. It supports lot of data sources and functionality.
+OpenLayers is a powerful software for web maps. It supports a lot of data sources and functionality.
 
 Read more about OpenLayers at http://openlayers.org/
 
@@ -61,19 +46,11 @@ You find example applications with OpenLayers at http://dev.openlayers.org/examp
 
 jQuery and jQuery UI
 ********************
-.. TODO find a nice logo
-  .. image:: http://upload.wikimedia.org/wikipedia/de/d/d3/Logo_jQuery.svg
-  :scale: 60 %
-  :alt: jQuery Project page
-  :align: center
-  :target: http://jquery.com/
-
-
 jQuery is a feature-rich JavaScript library. jQuery UI is a set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library.  
 
- http://jquery.com
+Read more about jquery at http://jquery.com
 
- http://jqueryui.com/
+Read more about jquery UI at http://jqueryui.com/
 
 
 Mapbender
@@ -105,12 +82,13 @@ It contains demo applications which are defined in the mapbender.yml with WMS, W
 
 Mapbender Starter can be used as a boiler template to start Mapbender projects.
 
+Find the GitHub Repository here: https://github.com/mapbender/mapbender-starter
+
 
 External Repositories
 *********************
 You find more code connected to Mapbender at GitHub, which is not part of the main project. Other providers can offer Bundles for Mapbender like the DesktopIntegrationBundle which is provided by `WhereGroup <http://wheregroup.com>`__ and sponsored by customers.
 
-WhereGroup offers Bundles for Mapbender at:
- https://github.com/WhereGroup
+WhereGroup offers Bundles for Mapbender at: https://github.com/WhereGroup
 
 

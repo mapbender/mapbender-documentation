@@ -1,33 +1,23 @@
+.. _users:
 
 Users
 =====
 
-User are implemented as FOM\\UserBundle\\Entity\\User and stored in the database.
-The entity has only some basic information about the user itself, more complex
-user data will have to be implemented by user profiles (yet to be done).
+User are implemented as FOM\\UserBundle\\Entity\\User and stored in the database. The entity has only some basic information about the user itself, more complex user data will have to be implemented by user profiles (yet to be done).
 
-The bundles provides all means to administrate users by admin as well as self-
-registration and password recovery.
+The bundle provides all means to administrate users by admin as well as self-registration and password recovery.
 
-The user with the id 1 is special, as this user is created during installation
-and will always be given full access. If all is lost, you can use this user
-to manage everything. And in the event that the credentials for this user are
-also lost, a console command (fom:user:resetroot) is available for resetting.
+The user with the id 1 (root) is special, as this user is created during installation and will always be given full access. If all is lost, you can use this user to manage everything. And in the event that the credentials for this user are also lost, a console command (fom:user:resetroot) is available for resetting.
 
 
 Forgot Password
 ---------------
 
-If a user has forgot his/her password, he can use the "Forgot password?"
-link in the Login-screen to request a new one. For that he types in his
-username or e-mail-adress.
+If a user has forgotten his/her password, he can use the "Forgot password?" link in the Login screen to request a new one. For that he types in his username or email address.
 
-.. image:: ../../../../en/functions/backend/FOM/user_forgot_password.png
+.. image:: ../../../../figures/fom/user_forgot_password.png
 
-After that he gets an e-mail with a link, which leads him to a site where he
-can reset his password. The link isn't valid anymore after this
-operation. The text of the mail can be customized in the
-/FOM/UserBundle/Resources/translations/messages.en.xlf file.
+After that, the user should receive an e-mail with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the /FOM/UserBundle/Resources/translations/messages.en.xlf file.
 
 The functionality can be switched off in the config.yml.
 
@@ -37,49 +27,35 @@ The functionality can be switched off in the config.yml.
                     reset_password: true # true/false
 
 
+Registration
+------------
 
-Registering
------------
-
-Users can selfregister themselves in Mapbender. For this you have to adjust
-the setting fom_user:selfregister in the config.yml to true.
+Users can self-register themselves in Mapbender. For this you have to adjust the setting fom_user:selfregister in the config.yml to true.
 
 .. code-block:: yaml
 
                 fom_user:
                     selfregister: false # true/false
 
-The Login-dialog contains a "Register" link. This openes a page where the
-user can type in his/her name, password and e-mail adresss.
+The Login-dialog contains a "Register" link. This opens a page where the user can type in his/her name, password and e-mail adresss.
 
-.. image:: ../../../../en/functions/backend/FOM/user_self_register.png
+.. image:: ../../../../figures/fom/user_self_register.png
 
+After that he gets a confirmation mail to complete the registration. Until that time he is only managed as an inactive user in Mapbender.
 
-After that he gets a confirmation mail to complete the registration. Until
-that time he is only managed as inactive user in Mapbender.
-
-The text of the confirmation mail can be customized in the
-/FOM/UserBundle/Resources/translations/messages.en.xlf file.
+The text of the confirmation mail can be customized in the /FOM/UserBundle/Resources/translations/messages.en.xlf file.
 
 
 Activation of users
 -------------------
 
-Since Mapbender 3.0.5.3. Users can be set activated or deactivated by
-Administrators with the User-ACL-right of at least "edit". For this purpose,
-a checkbox exists in the Edit User dialog.
+Users can be set activated or deactivated by Administrators with the User-ACL-Right of at least *edit*. For this purpose, a checkbox exists in the Edit User dialog. A user with administration rights cannot activate or deactivate himself.
 
-A user with administration rights cannot activate or deactivate himself.
+.. image:: ../../../../figures/fom/edit_user_activated.png
 
-.. image:: ../../../../en/functions/backend/FOM/edit_user_activated.png
+A user who is deactivated cannot login into Mapbender anymore until he gets activated again.
 
-A user who is deactivated cannot login into Mapbender anymore until he gets
-activated again.
-
-.. image:: ../../../../en/functions/backend/FOM/user_account_is_disabled.png
-
-Users which have self-registered themselves but have not approved the
-activation mail can now be activated by an administrator.
+Users which have self-registered themselves but have not approved the activation mail can now be activated by an administrator.
 
 
 Managing users with the security key feature
@@ -87,23 +63,19 @@ Managing users with the security key feature
 
 Inside every Mapbender application, there is a possibility to adjust the rights of certain users and maintain visibility of what they are allowed to do. You can set these preferences in the "Layouts"-tab.
 
-Next to every element is a security key. If you click on the key, you can adjust the certain rights of each user. Just add users who should gain access to the element with the "+" symbol in the pop-up window. A set checkmark next to the user account provides the essential rights for the respective user.
+Next to every element is a security key. If you click on the key, you can adjust the specific element rights of a user. Just add users who should gain access to the element with the "+" symbol in the pop-up window. A set checkmark next to the user account provides the essential rights for the respective user.
 
 After setting specific access rights, the security key turns red. If you hover over the key with the cursor, you will see the names of the users who have rights to the element.
 
-.. image:: ../../../../en/functions/backend/FOM/element_security_key_popup.png
+.. image:: ../../../../figures/fom/element_security_key_popup.png
 
 
 Login Failures
 --------------
 
-Login failures are responded with the Message "Bad credentials". For
-security reasons it is not shown if the error is is based on a wrong
-username or a wrong password. Login failures will not lock the account
-indefinately after four attempts.  Rather the account will be locked for a
-given period of time.
+Login failures are responded with the Message "Bad credentials". For security reasons it is not shown if the error is based on a wrong username or a wrong password. Login failures will not lock the account indefinitely after four attempts.  Rather the account will be locked for a given period of time.
 
-The config.yml allows to adjust the behaviour:
+The config.yml allows to adjust this behaviour:
 
 .. code-block:: yaml
 

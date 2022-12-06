@@ -1,9 +1,9 @@
 .. _imageexport:
 
-ImageExport
-***********
+Image Export
+************
 
-ImageExport allows you to export your current map-view. You can choose png or jpeg format.
+Image Export allows you to export your current map view. You can choose .png or .jpeg format.
 
 .. image:: ../../../figures/image_export.png
      :scale: 80
@@ -15,19 +15,16 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. The title will be displayed besides the button if "Show label" is activated.
-* **Target:** Target element (Title(ID)) of the button.
 
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
-   target: ~                        # Id of Map element to query (e.g. map)
+   class: Mapbender\PrintBundle\Element\ImageExport
+   target: map                       # Id of Map element to query (e.g. map)
 
 You need a button to show this element. See :ref:`button` for inherited configuration options.
 
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\PrintBundle\\Element\\ImageExport
-* **Widget:** mapbender.element.imageExport.js

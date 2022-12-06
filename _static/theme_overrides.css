@@ -12,8 +12,8 @@
  * Background of logo upper left
  */
 .wy-side-nav-search {
-    background-color: #e0e0e0;
-    color: #000;
+    background-color: #fff;
+    color: #3A3A3A;
 }
 
 /*
@@ -31,10 +31,10 @@
 }
 
 /*
- * Menu Color of inactive entry in nice blue ($nav-background-color)
+ * Menu Color of inactive entry in nice blue ($nav-background-color) ALT 008fc3
  */
 .wy-nav-side {
-    background: #008fc3;
+    background: #0087b9; 
 }
 
 /*
@@ -69,4 +69,16 @@
  */
 .wy-side-nav-search input[type="text"] {
 	border-radius: 0px;
+}
+
+.wy-nav-content-wrap {
+  background: none;
+}
+
+/*
+* Content area
+*/
+.wy-nav-content {
+  max-width: 1000px;
+  color: #3A3A3A;
 }

@@ -4,8 +4,8 @@ Editierung
 ==========
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    editing/digitizer.rst
-   editing/redlining.rst
+   editing/datamanager.rst
    editing/sketch.rst

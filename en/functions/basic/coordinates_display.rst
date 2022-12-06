@@ -38,29 +38,29 @@ Configuration
 .. image:: ../../../figures/coordinates_display_configuration.png
      :scale: 80
 
-* **Show title label:** Enable or disable text (title).
-* **Title:** Title of the element. The title will be listed in "Layouts". It will be indicated if "Show label" is activated.
-* **Tooltip:** Text that will be indicated if the mouse hovers over the button for a longer time.
-* **Anchor:** Anchoring of the element (left-top, left-bottom, right-top, right-bottom). Determines the position of the element in the layout.
+* **Show label:** Show a label which incorporates the title and appears next to the coordinates.
+* **Title:** Title of the element. It will appear next to the coordinates if "Show label" is activated.
 * **Num digits:** Number of decimal digits of the coordinates.
-* **Target:** ID of the map element to which the element refers.
-* **Empty:** Text displayed when the mouse is not in the map (default: 'x = - y = -').
-* **Prefix:** Prefix in front of the X-coordinate (Standard '= x').
-* **Separator:** Separator following the X-coordinate and before Y-coordinate (default: ' y= ').
+* **Empty:** Text displayed when the mouse is not on the map (default: 'x = - y = -').
+* **Prefix:** Prefix in front of the X coordinate (default: '= x').
+* **Separator:** Separator in between the X coordinate and Y coordinate (default: ' y= ').
+* **Position:** Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
 
 
 YAML-Definition:
 ----------------
 
+This template can be used to insert the element into a YAML application.
+
 .. code-block:: yaml
 
-   tooltip: 'coordinates display' # text to use as tooltip
-   numDigits: 2                   # the number of digits each coordinate shall have when being rendered, default 2
-   target: ~                      # id of Map element to query
-   label: true                    # true/false to label coordinates display, default is false
-   empty: 'x= - y= -'             # show the following text, if the mouse is not on the map
-   prefix: 'x= '                  # show prefix before x-coordinate
-   separator: ' y= '              # show separator before y-coordinate
+   numDigits: 2                   # the number of digits each coordinate shall have when being rendered (default: 2)
+   target: map                    # id of Map element to query
+   label: true                    # true/false to label coordinates display (default: false)
+   empty: 'x= - y= -'             # show this text if the mouse is not on the map
+   prefix: 'x= '                  # show prefix before x coordinate
+   separator: ' y= '              # show separator before y coordinate
+   anchor: 'right-bottom'         # Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
 
 
 CSS-Styling
@@ -74,10 +74,3 @@ The element can be customized with the following CSS-style, for example to incre
                     width: 500px;
                 }
 
-
-Class, Widget & Style
-=====================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\CoordinatesDisplay
-* **Widget:** mapbender.element.coordinatesdisplay.js
-* **Style:** mapbender.elements.css

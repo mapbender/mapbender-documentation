@@ -3,19 +3,190 @@
 Version history
 ===============
 
-`German Version of this document. <../de/versions.html>`_
+`German version of this document. <../de/versions.html>`_
 
-You find the milestones at: https://github.com/mapbender/mapbender/milestones
+You can find the milestones at `Github <https://github.com/mapbender/mapbender/milestones>`_.
 
-Version 3.0.8
----------------
 
-Release date: 12.04.2019
 
+Version 3.2.9
+-------------
+
+Release date: 28.01.2022
 
 **Improvements and bugfixes:**
 
-* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v.3.0.8
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v329
+
+
+Version 3.2.8
+-------------
+
+Release date: 02.11.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v328
+
+
+Version 3.2.7
+-------------
+
+Release date: 07.09.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v327
+
+
+Version 3.2.6
+-------------
+
+Release date: 09.08.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v326
+
+
+Version 3.2.5
+-------------
+
+Release date: 08.06.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v325
+
+
+Version 3.2.4
+-------------
+
+Release date: 04.03.2021
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v324
+
+
+Version 3.2.3
+-------------
+
+Release date: 21.12.2020
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v323
+
+
+Version 3.2.2
+-------------
+
+Release date: 02.11.2020
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v322
+
+
+Version 3.2.1
+-------------
+
+Release date: 06.08.2020
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v321
+
+
+Version 3.2.0
+-------------
+
+Release date: 29.07.2020
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v320
+
+
+Version 3.0.8.6
+---------------
+
+Release date: 15.09.2020
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3086 
+
+
+Version 3.0.8.5
+---------------
+
+Release date: 05.02.2020
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3085
+
+
+Version 3.0.8.4
+---------------
+
+Release date: 04.09.2019
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3084
+
+
+Version 3.0.8.3
+---------------
+
+Release date: 05.07.2019
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3083
+
+
+Version 3.0.8.2.1
+-----------------
+
+Release date: 05.07.2019
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v30821
+
+
+Version 3.0.8.2
+---------------
+
+Release date: 03.07.2019
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3082
+
+
+Version 3.0.8.1
+---------------
+
+Release date: 14.05.2019
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v3081
+
+
+Version 3.0.8
+-------------
+
+Release date: 12.04.2019
+
+**Improvements and bugfixes:**
+
+* https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md#v308
 
 **Upgrading**
 
@@ -53,7 +224,7 @@ Release date: 26.09.2018
 **Improvements and bugfixes:**
 
 * Find the description of the fixes in the repository links
-* Update Mapbender-Starter `v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
+* Update `Mapbender-Starter v3.0.7.5 <https://github.com/mapbender/mapbender-starter/releases/tag/v3.0.7.5>`_
 * Update Mapbender to `v3.0.7.5 <https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5>`_
 * Update Owsproxy to `v3.0.6.4 <https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4>`_, includes Owsproxy dependencies
 * Update mapbender/vis-ui.js to `0.0.72 <https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72>`_
@@ -88,7 +259,7 @@ Please call again the **app/console doctrine:schema:update** command to set back
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update
+                app/console doctrine:schema:update
 
 If this statement fails, for example with the PostgreSQL error ``SQLSTATE[22001]: String data, right truncated:`` and ``7 ERROR:  Value too long for type character varying(255)``, you probably have a keyword-entry in the table ``mb_core_keyword``, that exceeds the length of 255 characters. You can find out this entry with the following SQL-statement:
 
@@ -213,7 +384,7 @@ Miscellaneous:
   * :ref:`search`
   * :ref:`export`
   * :ref:`editing`
-  * :ref:`wmc`
+  * WMC
   * :ref:`backend`
   * :ref:`fom`
   * :ref:`misc`
@@ -242,7 +413,7 @@ Please call the command **app/console doctrine:schema:update** for the Update to
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update
+                app/console doctrine:schema:update
 
 
 Version 3.0.7.2, 3.0.7.1 und 3.0.7.0
@@ -514,13 +685,13 @@ Directory where YAML-based application definition are stored. As an example the 
 
 .. code-block:: bash
 
-                $ app/console doctrine:schema:update --dump-sql
+                app/console doctrine:schema:update --dump-sql
                 ALTER TABLE mb_core_keyword ALTER value TYPE TEXT;
                 ALTER TABLE mb_core_keyword ALTER value DROP DEFAULT;
 
 
 
-Milestone 3.0.5.3
+Version 3.0.5.3
 -----------------
 
 Release date: 04.02.2016
@@ -596,7 +767,7 @@ General changes:
 
 
 
-Milestone 3.0.5.2
+Version 3.0.5.2
 -----------------
 
 Release Datum: 27.10.2015
@@ -648,7 +819,7 @@ Release Datum: 27.10.2015
                       login_delay_after_fail: 2 # Seconds
 
 
-Milestone 3.0.5.1
+Version 3.0.5.1
 -----------------
 
 Release Datum: 26.08.2015
@@ -695,7 +866,7 @@ Release Datum: 26.08.2015
 - Regional Template removed
 
 
-Milestone 3.0.5.0
+Version 3.0.5.0
 -----------------
 
 Release Date: 01.07.2015
@@ -750,7 +921,7 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
 * After copying an application from Mapbender 3.0.4.x you have to set the layerset in the map/overview element.
 
 
-Milestone 3.0.4.1
+Version 3.0.4.1
 -----------------
 
 Release Datum: 23-01-2015
@@ -777,8 +948,8 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
 * https://github.com/mapbender/mapbender/milestones/3.0.4.1
 
 
-Milestone 3.0.4.0
------------------
+Version 3.0.4.0
+---------------
 
 release date: 12-09-2014
 
@@ -796,7 +967,7 @@ For details have a look at https://github.com/mapbender/mapbender-starter/blob/d
 * spanish translation
 
 
-Milestone 3.0.3
+Version 3.0.3
 ---------------
 
 release date: 17-03-2014
@@ -814,12 +985,12 @@ For details have a look at: https://github.com/mapbender/mapbender/issues?milest
 * Print with overview
 * Sidepane with different elements (chnage via button)
 * Layertree context menue to change opacity and to zoom to layer
-* Open application with parameters (f.e. position)
+* Open application with parameters (e.g. position)
 * ACL for elements
 * Added function for validate WMS GetCapabilities documents
 
 
-Milestone 3.0.2
+Version 3.0.2
 ---------------
 
 release date: 27-11-2013
@@ -831,7 +1002,7 @@ For details have a look at https://github.com/mapbender/mapbender/issues?milesto
 * WMSLoader enhancement to load a WMS from a link
 
 
-Milestone 3.0.1
+Version 3.0.1
 ---------------
 
 release date: 06-09-2013
@@ -845,7 +1016,7 @@ For details have a look at https://github.com/mapbender/mapbender/issues?milesto
 * Bug fixes
 
 
-Milestone 3.0.0.2
+Version 3.0.0.2
 -----------------
 
 Bugfix-Release Date: 19-07-2013
@@ -854,7 +1025,7 @@ For details have a look at: https://github.com/mapbender/mapbender/issues?milest
 
 
 
-Milestone 3.0.0.1
+Version 3.0.0.1
 -----------------
 
 Bugfix-Release Date: 07-06-2013
@@ -863,7 +1034,7 @@ For details have a look at: https://github.com/mapbender/mapbender/issues?milest
 
 
 
-Milestone 3.0.0.0
+Version 3.0.0.0
 -----------------
 
 release date: 29-05-2013

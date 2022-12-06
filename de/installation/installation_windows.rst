@@ -10,14 +10,14 @@ Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
 Voraussetzungen
 ---------------
 
-* PHP NTS (ab Version 5.6, maximal 7.1, https://windows.php.net/download/)
+* PHP NTS  >= 7.1 https://windows.php.net/download/)
 * Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/)   
   mit folgenden aktivierten Modulen:
  
   * mod_rewrite
   * mod_fcgid
  
-* eingerichtete PostgreSQL Datenbank (Version < 10, https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+* eingerichtete PostgreSQL Datenbank (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
   
   * vorhandene Datenbank für die Mapbender Konfiguration
   * ggf. eigenen Benutzer für Zugriff
@@ -29,7 +29,7 @@ Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf 
 Konfiguration PHP
 -----------------
 
-* Entpacken des Zip-Archives, z.B. nach c:\php
+* Entpacken des Zip-Archives, z.B. nach c:\\php
 * Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-Verzeichnis nicht richtig gesetzt.
 
 * Es muss deshalb geprüft werden, ob die folgenden Variablen (php.ini) gesetzt sind:
@@ -63,7 +63,7 @@ Konfiguration PHP
 Entpacken und im Webserver registrieren
 ---------------------------------------
 
-Download der aktuellen Mapbender Version (https://mapbender.org/builds/mapbender-starter-current.zip) und entpacken nach c:\mapbender\
+Download der aktuellen Mapbender Version (https://mapbender.org/builds/mapbender-starter-current.zip) und entpacken nach c:\\mapbender\\
     
 
 Konfiguration Apache 
@@ -80,7 +80,7 @@ In der httpd.conf am Ende einfügen:
                 # Include directory conf.d
                 Include "conf/conf.d/*.conf"
 
-Datei **<apache>\conf\conf.d\mapbender.conf** mit dem folgenden Inhalt anlegen:
+Datei **<apache>\\conf\\conf.d\\mapbender.conf** mit dem folgenden Inhalt anlegen:
   
 .. code-block:: apache
 
@@ -103,7 +103,7 @@ Der Apache Webserverdienst muss im Anschluss neu gestartet werden.
 mod_fcgid
 ---------
 
-Datei **<apache>\conf\conf.d\fcgi.conf** mit dem folgenden Inhalt anlegen:
+Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
 
 .. code-block:: apacheconf
 
@@ -143,8 +143,8 @@ Datei **<apache>\conf\conf.d\fcgi.conf** mit dem folgenden Inhalt anlegen:
 Konfiguration PostgreSQL
 ------------------------
 
-Konfiguration der Datenbankverbindung (app/config/parameters.yml).
-Weitere Informationen im Kapitel :ref:`database_de`.
+Konfiguration der Datenbankverbindung in (app/config/parameters.yml).
+Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 .. code-block:: yaml
 
@@ -163,16 +163,23 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
     cd c:\mapbender
     php.exe app/console doctrine:database:create
     php.exe app/console doctrine:schema:create
-    php.exe app/console assets:install web
-    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
-    php.exe app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixture/ORM/Application/ --append
+    php.exe app/console mapbender:database:init -v
+    php.exe bin/composer run reimport-example-apps
+    
 
+Für den Zugriff auf die Datenbank muss der Standardbenutzer mit folgendem Befehl angelegt werden:
+
+.. code-block:: text
+
+    php.exe app/console fom:user:resetroot
+
+Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`
 
 
 Der erste Start
 ---------------
 
-Die Mapbender Installation kann unter **http://hostname/mapbender/** aufgerufen werden.
+Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufen werden.
   
 Per Voreinstellung lauten die Anmeldedaten:
 
@@ -188,6 +195,17 @@ Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
 * http://localhost/mapbender/
 
-Das Symfony Welcome Script config.php öffnen. Das Skript prüft, ob alle notwendigen Komponenten installiert wurden und ob die Konfiguration erfolgte. Sofern noch Probleme vorliegen, sollten diese behoben werden.
- 
-* http://localhost/mapbender/config.php
+Überprüfen Sie in der Konfiguration, ob bestimmte Abhängigkeiten nicht erfüllt werden mit:
+
+
+.. code-block:: text
+
+    app/console mapbender:config:check
+    
+     
+Weitere Informationen dazu finden Sie unter: https://doc.mapbender.org/de/customization/commands.html#app-console-mapbender-config-check
+    
+
+
+
+

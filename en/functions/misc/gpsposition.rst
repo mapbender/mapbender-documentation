@@ -1,6 +1,6 @@
 .. _gpspostion:
 
-GPS-Position
+GPS Position
 ************
 
 This element provides a button to navigate to your current position and display a symbol at that position. The scale will not be changed until you activate ``zoom to accuracy (zoom to accuracy on first position)``.
@@ -9,7 +9,7 @@ The function is built upon the `Geolocation-API <https://www.w3.org/TR/geolocati
 
 The midpoint shows the probable position of the device, the outer circle the accuracy of the positioning, that means the region where the position is probably to find.
 
-Compatibility: Internet Explorer and MS Edge devliver without a GPS-reciever at the machine imprecise informationen. This behaviour is also observable with other applications.
+Compatibility: Internet Explorer and MS Edge deliver without a GPS-reciever at the machine imprecise information. This behaviour is also observable with other applications.
 
 .. image:: ../../../figures/gps_position.png
      :scale: 80
@@ -20,30 +20,27 @@ Configuration
 .. image:: ../../../figures/gps_position_configuration.png
      :scale: 80
 
-* **Show label:** Switches the button label on/off.
-* **Autostart:** true/false, default is false.
+* **Show label:** Switches the button label on/off (default: on).
+* **Autostart:** Starts element when opening the application (default: off).
 * **Title:** Title of the element.
-* **Tooltip:** The text entered as a tool tip will be indicated by hovering over the element with the mouse cursor a longer time.
-* **Icon:** icon to display on button.
-* **Target:** Id of Map element, activated after the click.
-* **Average:** calculates the average of the last at parameter average defined amount of received GPS coordinates, default 1.
-* **Refreshinterval:**  refresh interval in ms, default is 5000 ms.
-* **Follow:** default false, true refreshes the map for every received GPS position received, only use with WMS in tiled mode.
-* **Center on first position:** center map only on first received GPS position.
-* **Zoom to accuracy:** zoom map according to received GPS position accuracy.
-* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy.
+* **Tooltip:** This text will be displayed during hovering over the element with the cursor.
+* **Icon:** Icon to display on button.
+* **Average:** Calculates the average of the last at parameter average defined amount of received GPS coordinates (default: 1).
+* **Follow:** Refreshes the map for every received GPS position received, only use with WMS in tiled mode (default: off).
+* **Center on first position:** Centers map only on first received GPS position (default: on).
+* **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy (default: on).
 
 
 YAML-Definition:
 ----------------
 
-The element is placed as a button into the toolbar.
+This template can be used to insert the element into a YAML application. The element is placed as a button into the toolbar.
 
 .. code-block:: yaml
                 
                 class: Mapbender\CoreBundle\Element\GpsPosition
-                label: true                         # true/false to label button, default is true
-                autoStart: false	                # true/false, default is false
+                label: true                         # true/false to label button (default: true)
+                autoStart: false	                # true/false (default: false)
                 title: GPS-Position                 # title of the button
                 tooltip: GPS-Position               # text to use as tool tip
                 icon: gpsposition                   # icon to display on button
@@ -54,11 +51,4 @@ The element is placed as a button into the toolbar.
                 centerOnFirstPosition: true         # center map only on first received gps position
                 zoomToAccuracy: false               # zoom map according to received gps position accuracy
                 zoomToAccuracyOnFirstPosition: true # zoom map according to first received gps position accuracy
-
-Class, Widget & Style
-======================
-
-* **Class:** Mapbender\\CoreBundle\\Element\\GpsPosition
-* **Widget:** mapbender.element.gpsPostion.js
-* **Style:** mapbender.element.gpsPosition.css
 

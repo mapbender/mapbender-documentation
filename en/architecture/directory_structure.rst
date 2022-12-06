@@ -25,7 +25,7 @@ Basic configuration files of Mapbender are placed in the app/config directory. T
 
 * config.yml
 
-More Information: :ref:`yaml_en`.
+More Information: :ref:`yaml`.
 
   
 app/config/applications
@@ -33,7 +33,7 @@ app/config/applications
 
 The directory app/config/applications contains all applications that are defined in a YAML file. 
 
-More Information: :ref:`yaml_en`.
+More Information: :ref:`yaml` .
 
 
 bin
@@ -97,7 +97,7 @@ web
 
 This directory has to be published by the webserver. The ALIAS has to refer to this directory. 
 
-It controlls: 
+It controls: 
 
 * the FrontendController (PHP-Script, which can be called). These are **app.php** for the productive-system and **app_dev.php** for the development version. The development version contains the profiler for perfomance tests and more.
 * this directory contains the static resoures like css, js, favicon etc.
