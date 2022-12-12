@@ -25,7 +25,7 @@ Konfiguration
 
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-**Position:** Positionierung (nur bei Nutzung im Kartenbereich)
+* *Position:** Positionierung (nur bei Nutzung im Kartenbereich)
 * **Platzhalter:** Text, der im Suchfeld angezeigt wird, wenn dieses leer ist. Wird playeholder nicht gesetzt, wird der Titel verwendet. 
 * **Query URL:** Solr bzw. Nominatim URL, an die der eingegebene Suchbegriff gesendet wird (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
 * **Query URL key:** Der Suchparameterschlüssel, der angehängt wird (z.B. ``q``).
@@ -73,6 +73,7 @@ YAML-Definition
 ---------------
 
 .. code-block:: yaml
+
    placeholder: 'Bitte Suchbegriff eingeben....'                                      # Text, der im Suchfeld angezeigt wird, wenn dieses leer ist. Wird playeholder nicht gesetzt, wird der Titel verwendet. 
    anchor: 'right-bottom'                                                             # Positionierung (nur bei Nutzung im Kartenbereich). Optionen: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
    query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8        # Solr URL (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``) oder Nominatim URL.
