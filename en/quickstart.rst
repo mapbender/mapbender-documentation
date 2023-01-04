@@ -120,7 +120,7 @@ The application overview site displays a list of all available applications. The
  * |mapbender-button-copy| button to duplicate the application
  * |mapbender-button-export| button to export the application
  * |mapbender-button-edit| button to edit the application
- * |mapbender-button-publish| button to publish/unpublish the application
+ * |mapbender-button-publish| button to make the application available for anonymous users
  * |mapbender-button-delete| button to delete the application
 
   .. image:: ../figures/mapbender_app_dev.png
@@ -152,7 +152,7 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. Click *"save"* to save and create your application. It is now possible to add elements (e.g. map, navigation bar, legend) and services to your applicaiton.
 
-Applications can be re-edited at any point. In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or made visible/invisible to not logged-in users (|mapbender-button-publish|). 
+Applications can be re-edited at any point. In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
 
   .. image:: ../figures/mapbender_create_application.png
      :scale: 80
@@ -440,9 +440,9 @@ Assign an Application to a User/Group
 
 #. Choose ``Security``
 
-#. Publish your application by ``Security --> public access``. Alternatively, one can use the |mapbender-button-publish| ``Button``. If this option is activated, also anonymous users will gain access to the application.
+#. Make your application accessable to the public by ``Security --> public access``. Alternatively, one can use the |mapbender-button-publish| ``Button``. If this option is activated, also anonymous users will gain access to the application.
 
-#. Set permissions for specific users/groups.
+#. Alternatively to public access you can set permissions for specific users/groups.
 
   .. image:: ../figures/mapbender_security.png
      :scale: 80

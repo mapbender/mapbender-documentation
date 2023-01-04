@@ -35,7 +35,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 #. Wählen Sie ``Sicherheit``.
 
-#. Veröffentlichen oder verbergen Sie Ihre Anwendung für alle über die Auswahl **Öffentlicher Zugriff** unter ``Sicherheit`` (oder alternativ über den **Anwendung publizieren/verbergen**-Button in der Anwendungsübersicht).
+#. Machen Sie ihre Anwendung öffentlich zugänglich über die Auswahl **Öffentlicher Zugriff** unter ``Sicherheit`` (oder alternativ über den **Anwendung publizieren/verbergen**-Button in der Anwendungsübersicht).
 
 #. Fügen Sie für individuelle Einstellungen alternativ Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie eine Anwendung einem oder mehreren Benutzer(n)/Gruppe(n) zu.
 
@@ -43,6 +43,8 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 #. Alternativ können Sie auch unter ``Sicherheit --> Globale Zugriffssteuerungsliste (ACL) --> Anwendungen`` schnell Berechtigungen von Benutzern/Gruppen für alle Anwendungen festlegen.
 
+  .. image:: ../../../../figures/de/mapbender_security.png
+     :scale: 80
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
 ================================================
@@ -59,6 +61,8 @@ Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Z
 
 #. Testen Sie die Konfiguration, indem Sie die Anwendung mit Benutzern aufrufen, die (keine) Berechtigungen zum Element erhalten haben.
 
+  .. image:: ../../../../figures/fom/element_security_key_popup.png
+     :scale: 80
 
 Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
 =====================================================
