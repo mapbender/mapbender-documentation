@@ -73,6 +73,7 @@ YAML-Definition
 ---------------
 
 .. code-block:: yaml
+
    placeholder: 'please search'                                                       # Text to display when the search fiels is empty. If placeholder is not defined the content of title is used.
    anchor: 'right-bottom'                                                             # Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
    query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8        # Example Solr URL (e.g. ``http://localhost:8080/solr/core/0/select?wt=json&indent=true``) or Nominatim URL.
