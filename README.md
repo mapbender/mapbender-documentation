@@ -36,6 +36,8 @@ git checkout master
 
 ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
 
+pip3 install sphinx-rtd-theme
+
 rm -rf _build
 sphinx-build . _build -A version=3.3
 
