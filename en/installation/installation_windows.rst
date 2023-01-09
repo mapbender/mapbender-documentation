@@ -5,22 +5,24 @@ Installation on Windows
 
 For a quick installation (e.g. on a test system), use the MS4W-Installer (https://ms4w.com/download.html).
 
-Read on for a detailed description on a productive system. 
+Read on for a detailed description on a productive system.
+
+Mapbender needs a database to store information. The Mapbender download package contains a SQLite databse that is ready to use. For production we recommend the use of a PostgreSQL database.
 
 
 Requirements
 ------------
 
-* PHP NTS >= 7.1 https://windows.php.net/download/)
+* PHP NTS >= 7.4 https://windows.php.net/download/)
 * Apache installation (https://www.apachelounge.com/download/ , run as service with the following modules):
  
   * mod_rewrite
   * mod_fcgid
  
-* set up PostgreSQL database (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+* PostgreSQL Installation (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
   
-  * established database for Mapbender configuration 
-  * if necessary: own user for access
+  * It is recommended to use a PostgreSQL database for Mapbender. 
+  * It is recommended to create a database user to access the Mapbender database.
 
 
 Nginx can also be used as web server, but it will not be discussed in this manual.   
@@ -29,9 +31,7 @@ Nginx can also be used as web server, but it will not be discussed in this manua
 Configuration PHP
 -----------------
 
-Unzip the Zip archive, for example under c:\php .
-
-Based on the PHP-version, PHP-variables won't be set correctly in the temp-directory.
+Unzip the Zip archive, for example under c:\\php .
 
 * It needs to be checked if the following variables (php.ini) are set correctly:
 
@@ -41,7 +41,7 @@ Based on the PHP-version, PHP-variables won't be set correctly in the temp-direc
     upload_tmp_dir
     date.timezone
 
-* the path from PHP-bin directory to the PATH-variable (Windows environment variable) needs to be set
+* the path from PHP-bin directory to the PATH variable (Windows environment variable) needs to be set
 * activate the required PHP extensions in the php.ini configuration file:
 
 .. code-block:: ini
@@ -49,7 +49,7 @@ Based on the PHP-version, PHP-variables won't be set correctly in the temp-direc
     # php.ini
     extension=php_curl.dll
     extension=php_fileinfo.dll
-    extension=php_gd2.dll
+    extension=php_gd.dll
     extension=php_intl.dll
     extension=php_pdo_pgsql.dll
     extension=php_pdo_sqlite.dll
@@ -59,11 +59,13 @@ Based on the PHP-version, PHP-variables won't be set correctly in the temp-direc
     extension=php_zip.dll
     extension=php_bz2.dll
 
+* Please check the Mapbender FAQ page for further PHP settings:  `FAQ <../faq.html>`_. 
 
-Unpack and register to web server
----------------------------------
 
-Download the current Mapbender version (https://mapbender.org/builds/mapbender-starter-current.zip) and unzip it into c:\mapbender\
+Extract Mapbender and register to web server
+--------------------------------------------
+
+Download the current Mapbender version (https://mapbender.org/builds/mapbender-starter-current.zip) and unzip it into c:\\mapbender\\
 
 
 Configuration Apache
@@ -78,7 +80,7 @@ Add the following code at the end of file httpd.conf :
                 # Include directory conf.d
                 Include "conf/conf.d/*.conf"
 
-Create file **<apache>\conf\conf.d\mapbender.conf** with:
+Create file **<apache>\\conf\\conf.d\\mapbender.conf** with:
 
 .. code-block:: apache
 
@@ -94,13 +96,14 @@ Create file **<apache>\conf\conf.d\mapbender.conf** with:
   RewriteRule ^(.*)$ app.php [QSA,L]
  </Directory>
 
-Reload Apache.
+
+Restart Apache.
 
 
 mod_fcgid
 ---------
 
-Create file **<apache>\conf\conf.d\fcgi.conf** with:
+Create file **<apache>\\conf\\conf.d\\fcgi.conf** with:
 
 .. code-block:: apacheconf
 
@@ -137,13 +140,12 @@ Create file **<apache>\conf\conf.d\fcgi.conf** with:
     </Files>
 
 
-
 Configuration PostgreSQL
 ------------------------
 
-To configure the database, use the following default configuration (which is part of app/config/parameters.yml).
-For more information on the database configuration, see :ref:`yaml`.
+The configuration of the Mapbender database is done in the file app/config/parameters.yml.
 
+For more information on the database configuration, see :ref:`yaml`.
 
 .. code-block:: yaml
 
@@ -166,8 +168,7 @@ Open the windows shell and initialize the database connection with the following
     php.exe app/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
 
-
-To gain database access, you have to create a default user via
+To administrate Mapbender you need a user. Create root user for access:
 
 .. code-block:: text
 
@@ -180,13 +181,9 @@ Find further information in :ref:`installation_configuration`
 First steps
 -----------
 
-
 The Mapbender installation can now be accessed under **http://[hostname]/mapbender/**.
-User data by default:
 
-username: "root", passwort: "root"
-
-More information at:  `Mapbender Quickstart Document <../en/quickstart.html>`_. 
+More information at:  `Mapbender Quickstart Document <../quickstart.html>`_. 
 
 
 
@@ -194,14 +191,18 @@ More information at:  `Mapbender Quickstart Document <../en/quickstart.html>`_.
 
 * http://localhost/mapbender/
 
+username: "root", password: "root" (if you use the SQLite database shipped with Mapbender)
 
-Check the system configuration and Mapbender requirements with:
+Troubleshooting is available via the following command (must be executed in the application directory):
 
-.. code-block:: text
+.. code-block:: yaml
 
-    app/console mapbender:config:check
+	php.exe app/console mapbender:config:check
 
+.. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
 
 Further information can be found at: https://doc.mapbender.org/en/customization/commands.html#app-console-mapbender-config-check
 
+Congratulations! Mapbender is now set up correctly and ready for further configuration.
+Find Information about the first steps with Mapbender: `Mapbender Quickstart Document <../en/quickstart.html>`_.
 

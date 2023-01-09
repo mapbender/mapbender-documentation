@@ -30,6 +30,7 @@ Installation der benötigten PHP-Extensions:
 
     sudo apt install php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
+* Bitte prüfen Sie die Mapbender FAQ-Seite für weitere PHP-Einstellungen:  `FAQ <../faq.html>`_. 
 
 
 Entpacken und im Webserver registrieren
@@ -104,8 +105,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 .. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
-Informationen zur Ersteinrichtung von Mapbender finden sich unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
-
+Informationen zu den ersten Schritten mit Mapbender finden sich unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
 
 Optional
