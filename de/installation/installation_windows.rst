@@ -1,29 +1,32 @@
 .. _installation_windows_de:
 
-Installation auf Windows
-########################
+Installation unter Windows
+##########################
 
 Für eine schnelle Installation als Testsystem kann der MS4W-Installer (https://ms4w.com/download.html) benutzt werden. 
+
 Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
+
+Mapbender benötigt eine Datenbank zur Speicherung der Administrationsinformation. Das Installationspaket enthält bereits eine SQLite Datenbank, die direkt verwendet werden kann. Für den produktiven Einsatz wird allerdings die Nutzung einer PostgreSQL Datenbank empfohlen.
 
 
 Voraussetzungen
 ---------------
 
-* PHP NTS  >= 7.1 https://windows.php.net/download/)
+* PHP NTS >= 7.4 https://windows.php.net/download/)
 * Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/)   
   mit folgenden aktivierten Modulen:
  
   * mod_rewrite
   * mod_fcgid
  
-* eingerichtete PostgreSQL Datenbank (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+* PostgreSQL Installation (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
   
-  * vorhandene Datenbank für die Mapbender Konfiguration
-  * ggf. eigenen Benutzer für Zugriff
+  * Es wird empfohlen eine PostgreSQL Datenbank für Mapbender zu verwenden.
+  * Es wird empfohlen einen eigenen Datenbankbenutzer für den Zugriff auf die Mapbender Datenbank anzulegen.
 
 
-Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf nicht weiter eingegangen.
+Als Webserver kann auch Nginx verwendet werden. In dieser Anleitung wird darauf nicht weiter eingegangen.
 
 
 Konfiguration PHP
@@ -42,14 +45,14 @@ Konfiguration PHP
 
 * der Pfad vom PHP-bin Verzeichnis zur PATH-Variable (Windows-Umgebungsvariable) muss hinzugefügt werden
 
-* Aktivierung der benötigten PHP-Erweiterungen in der php.ini Konfigurationsdatei:
+* Aktivieren Sie die benötigten PHP-Erweiterungen in der php.ini Konfigurationsdatei:
 
 .. code-block:: ini
 
     # php.ini
     extension=php_curl.dll
     extension=php_fileinfo.dll
-    extension=php_gd2.dll
+    extension=php_gd.dll
     extension=php_intl.dll
     extension=php_pdo_pgsql.dll
     extension=php_pdo_sqlite.dll
@@ -58,15 +61,17 @@ Konfiguration PHP
     extension=php_mbstring.dll
     extension=php_zip.dll
     extension=php_bz2.dll
-    
-    
-Entpacken und im Webserver registrieren
----------------------------------------
+
+* Bitte prüfen Sie die Mapbender FAQ-Seite für weitere PHP-Einstellungen:  `FAQ <../faq.html>`_. 
+
+
+Mapbender entpacken und im Webserver registrieren
+-------------------------------------------------
 
 Download der aktuellen Mapbender Version (https://mapbender.org/builds/mapbender-starter-current.zip) und entpacken nach c:\\mapbender\\
     
 
-Konfiguration Apache 
+Konfiguration Apache
 --------------------
 
 * ein Unterordner "conf.d" muss im Verzeichnis <apache>/conf erstellt werden
@@ -143,7 +148,8 @@ Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
 Konfiguration PostgreSQL
 ------------------------
 
-Konfiguration der Datenbankverbindung in (app/config/parameters.yml).
+Konfiguration der Datenbankverbindung erfolgt in der Datei app/config/parameters.yml.
+
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 .. code-block:: yaml
@@ -165,9 +171,8 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
     php.exe app/console doctrine:schema:create
     php.exe app/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
-    
 
-Für den Zugriff auf die Datenbank muss der Standardbenutzer mit folgendem Befehl angelegt werden:
+Für die Administration von Mapbedner wird ein Root-Benutzer benötigt. Dieser Benutzer wird über den folgende Befehl angelegt:
 
 .. code-block:: text
 
@@ -180,10 +185,6 @@ Der erste Start
 ---------------
 
 Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufen werden.
-  
-Per Voreinstellung lauten die Anmeldedaten:
-
-Benutzername: "root", Passwort: "root"
 
 Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
@@ -195,17 +196,19 @@ Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
 
 * http://localhost/mapbender/
 
-Überprüfen Sie in der Konfiguration, ob bestimmte Abhängigkeiten nicht erfüllt werden mit:
+Per Voreinstellung lauten die Anmeldedaten (wenn die SQLite Datenbank verwendet wurde)
 
+Benutzername: "root", Passwort: "root"
 
-.. code-block:: text
+Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
-    app/console mapbender:config:check
-    
-     
+.. code-block:: yaml
+
+	php.exe app/console mapbender:config:check
+
+.. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
+
 Weitere Informationen dazu finden Sie unter: https://doc.mapbender.org/de/customization/commands.html#app-console-mapbender-config-check
-    
 
-
-
-
+Glückwunsch! Mapbender wurde erfolgreich installiert.
+Informationen zu den ersten Schritten mit Mapbender finden sich unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
