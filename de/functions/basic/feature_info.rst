@@ -13,35 +13,27 @@ Der Dienst Krankenhäuser NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WM
 Konfiguration
 =============
 
-Das Element FeatureInfo wird im Content eingebunden:
-
-
-.. image:: ../../../figures/de/feature_info_content.png
-     :scale: 80
-
 .. image:: ../../../figures/de/feature_info_configuration.png
      :scale: 80
 
 
-
 * **Automatisches Öffnen:** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: false).
-* **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht (Standard: false).
-* **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Standard: true).
-* **Nur valide zeigen** Anzeige von validen WMS
+* **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht (Standard: true).
+* **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Standard: false).
+* **Nur valide zeigen** Anzeige von ausschließlich validen WMS (Standard: false).
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Display type:** Anzeige der Information als Tabs oder in Accordionform (Standard: tabs).
 * **Max count:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
 * **Width/Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
 * **Highlighting aktiv** Aktivierung des FeatureInfo Highlightings.
-* **Füllfarbe** Füllfarbe, der ausgewählten Objekte
-* **Umrandungsfarbe** Umrandungsfarbe, der ausgewählten Objekte
-* **Opazität (%) der Füllfarbe** Setzt die Opazität in Prozent der Füllfarbe
-* **Umrandungsbreite (in Pixeln) der Standardfarbe** Setzt die Breite der Umrandungslinie in Pixeln
-* **Hover-Füllfarbe** Füllfarbe, der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
-* **Hover-Umrandungsfarbe** Umrandungsfarbe, der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
-* **Hover-Opazität (%) der Füllfarbe** Setzt die Opazität in Prozent der Füllfarbe beim Hovern.
-* **Hover-Umrandungsbreite (in Pixeln) der Standardfarbe** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
+* **Füllfarbe** Füllfarbe der ausgewählten Objekte.
+* **Strichfarbe** Umrandungsfarbe der ausgewählten Objekte.
+* **Deckkraft (%)** Setzt die Opazität der Füllfarbe in Prozent.
+* **Linienstärke (in Pixeln)** Setzt die Breite der Umrandungslinie in Pixeln.
+* **Hover-Füllfarbe** Füllfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
+* **Hover-Strichfarbe** Umrandungsfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
+* **Hover-Opazität (%) der Füllfarbe** Setzt die Opazität der Füllfarbe in Prozent beim Hovern.
+* **Hover-Linienstärke (in Pixeln)** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
 
 Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
 
@@ -92,10 +84,7 @@ Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Dr
 FeatureInfo Highlighting
 ------------------------
 
-Einzelne Geometrien eines WMS können über die Infoabfrage in der Karte farblich hervorgehoben werden. Dies ist besonders bei der Arbeit mit umfangreichen WMS hilfreich, da so einzelne Geometrien leichter zugeordnet werden können.
-
-.. image:: ../../../figures/de/feature_info_configuration_highlighting.png
-     :scale: 80
+Einzelne Geometrien eines WMS können über die Infoabfrage in der Karte farblich hervorgehoben werden. Dies ist beispielsweise bei der Arbeit mit umfangreichen WMS hilfreich, da so einzelne Geometrien leichter zugeordnet werden können.
 
 Eine Infoabfrage mit aktiviertem FeatureInfo Highlighting könnte beispielsweise folgendermaßen aussehen:
 

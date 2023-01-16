@@ -40,22 +40,19 @@ Konfiguration nicht aktivierter ausgewählter root-Layer - Thema ist beim Start 
      :scale: 80
 
 
-Die Konfiguration geschieht in zwei Schritten im Content-Bereich:
+Die Konfiguration des Elements geschieht in zwei Schritten:
 
-#. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel, Tooltip und Target)
+#. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel und Tooltip)
 #. Hinzufügen von Themen mit einer oder mehrerer Quellen und optionaler Definition einer Gruppe
 
+* **Title:** Titel des Elements.
+* **Tooltip:** Text, der erscheint, wenn der Mauszeiger längere Zeit über dem Hintergrundwechsler gehalten wird.
+* **Instancesets:** Es können eine oder mehrere Themengruppen definiert werden. Diese verweisen auf eine Auswahl an Instanzen und sind mit einem Titel und einem Gruppennamen (optional) versehen.
 
 .. image:: ../../../figures/de/basesourceswitcher_de.png
      :scale: 80
 
-
-* **Title:** Titel des Elements.
-* **Tooltip:** Text, der erscheint, wenn der Mauszeiger längere Zeit über dem Hintergrundwechsler gehalten wird.
-* **Target:** Zielelement des Buttons, das bei Anklicken des Buttons ausgelöst wird.
-* **Instancesets:** Es können eine oder mehrere Themengruppen definiert werden. Diese verweisen auf eine Auswahl an Instanzen und sind mit einem Titel und einem Gruppennamen (optional) versehen.
-
-Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden, die dann über eine Dropdown-Liste zusammengefasst werden.
+Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden, die dann über eine Dropdown-Liste zusammengefasst werden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden.
 
 * **Title**: Name der Themenkarte.
 * **Group**: Optionale Zuweisung zu einer Themengruppe.

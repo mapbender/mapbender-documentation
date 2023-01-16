@@ -82,7 +82,6 @@ Konfiguration
 
 * **Title**: Titel des Elements
 * **Tooltip**: Beschriftung des Elements bei Mouseover
-* **Target**: Kartenelement für die Verknüpfung
 * **Dimensionsset**: Gruppe für die zeitliche Dimensionsanzeige mit Titel (**Title**), Layergruppe (**Group**) und zeitlicher Dimensionsspanne (**Extent**)
 
 Im folgenden Abschnitt sind die YAML-Definitionen für das Element und die Einbindung in dem Dienst und Ebenenbaum aufgeführt. 

@@ -121,22 +121,9 @@ For a better understanding of the functions and their usage, we now edit the Lay
 
            Configuration of the simple Layertree in the content.           
 
-When configuring the Layersets, the function Basesource is activated as default. This is important for the `BaseSourceSwitcher <../basic/basesourceswitcher.html>`_, which allows you to switch between predefined themes. By enabling **Show sase sources**, instances that have been loaded as a base source in the application are displayed in the Layertree.
+By enabling **Show base sources**, instances that have been loaded as a base source in the application are displayed in the Layertree.
 
-If you activate **Autoopen**, the Layertree is open by default when you start the application and does not need to be activated by clicking on a button or the unfolding of a sidebar. The **Title** of the element is displayed in the "Layouts" list and allows you to distinguish between different elements. The **Target** is the ID of the map element.
-
-By specifying a **Type**, the display of the Layertree can be defined. There are two display options:
-
-:Dialog: 
-  You have to choose *Dialog* when the Layertree is integrated via a button and the configuration element is in the content.
-:Element:
-  You have to choose *Element* when the Layertree is integrated via the sidepane. 
-
-.. figure:: ../../../figures/layertree/layertree_type_map.png
-           :scale: 80
-           :alt: Type specification for the display of the Layertree.
-
-           Type specification for the display of the Layertree.
+If you activate **Autoopen**, the Layertree is open by default and does not need to be activated by clicking on a button or the unfolding of a sidebar. The **Title** of the element is displayed in the "Layouts" list and allows you to distinguish between different elements.
 
 Via the **Menu** a number of buttons can be activated, which are then available in the layertree.
 

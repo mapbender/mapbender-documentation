@@ -16,7 +16,6 @@ Konfiguration
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird im Backend in der Layouts Liste angezeigt. In der Anwendung selbst wird der Titel im Messfenster angezeigt.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Type:** Typ des Elements, entweder 'line' oder 'area' (misst nur einzelne Linien oder addiert diese zu einer Fläche).
 
 YAML-Definition:

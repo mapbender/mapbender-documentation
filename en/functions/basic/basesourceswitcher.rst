@@ -38,17 +38,17 @@ Configuration with selected root layer - sourceset is not active on start:
 
 The configuration occurs in 2 steps:
 
-#. Create a Base source switcher Element with Title, Tooltip and Target
+#. Create a Base source switcher Element with Title and Tooltip
 #. Add sourceset(s) with one or more sources and definition of a group (optional)
-
-.. image:: ../../../figures/basesourceswitcher_configuration.png
-     :scale: 80
 
 * **Title:** Title of the element.
 * **Tooltip:** The text entered as a tooltip will be indicated by hovering over the element with the mouse cursor a longer time.
 * **Instancesets:** One or many Instancesets can be defined. Select one or more instances and assign a title and group (optional).
 
-In the configuration example you can see that either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list.
+.. image:: ../../../figures/basesourceswitcher_configuration.png
+     :scale: 80
+
+In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list.
 
 * **Title**: Title of the BaseSource.
 * **Group**: Optional group name.

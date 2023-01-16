@@ -122,22 +122,9 @@ Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bear
 
            Einrichtung des einfachen Layertrees im Content-Bereich.
 
-Bei der Konfiguration der Layersets ist standardisiert das Häckchen Basesource aktiviert. Dieses ist wichtig für den `Themenwechsler <basesourceswitcher.html>`_, mit dem zwischen vordefinierten Themen gewechselt werden kann. Über das Häckchen bei **BaseSources anzeigen** werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch in dem Layertree angezeigt. 
+Über die Checkbox **BaseSources anzeigen** werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch im Layertree angezeigt.
 
-Wenn **Automatisches Öffnen** aktiv ist, ist der Layertree direkt beim Öffnen der Anwendung offen und muss nicht erst durch das Klicken auf einen Button oder das Aufklappen einer Seitenleiste aktiviert werden. Der **Titel** des Elements wird in der "Layouts"-Liste angezeigt und ermöglicht, mehrere Elemente voneinander zu unterscheiden. **Target** ist die ID des Kartenelements, auf das sich das Element bezieht.
-
-Durch die Angabe eines **Type** kann die Anzeige des Layertrees in der Anwendung definiert werden. Bei der Angabe handelt es sich um ein Pflichtfeld. Dabei gibt es zwei Anzeigeoptionen:  
-
-:Dialog: 
-  Der Type *Dialog* muss gewählt werden, wenn der Layertree über einen Button eingebunden wird und sich das Konfigurations-Element im Content-Bereich befindet.
-:Element:
-  Für die Einbindung des Layertrees im Sidepane-Bereich muss der Type *Element* gewählt werden.
-
-.. figure:: ../../../figures/layertree/layertree_type_map.png
-           :scale: 80
-           :alt: Position des Layertrees als Element und Dialog in der Anwendung.
-
-           Position des Layertrees als Element und Dialog in der Anwendung.
+Wenn **Automatisches Öffnen** aktiv ist, wird der Layertree direkt beim Anwendungsstart geöffnet und muss nicht erst durch einen Button-Klick oder das Aufklappen der Seitenleiste aktiviert werden. Der **Titel** des Elements wird in der "Layouts"-Liste angezeigt und ermöglicht, mehrere Elemente voneinander zu unterscheiden.
 
 Über **Menu** kann eine Auswahl von Buttons aktiviert werden, die dann dem Benutzer der Anwendung im Ebenenbaum zur Verfügung gestellt werden.
 

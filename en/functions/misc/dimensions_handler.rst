@@ -81,7 +81,6 @@ Configuration
 
 * **Title**: Title of the element
 * **Tooltip**: Labeling of the element on mouseover
-* **target**: map element to target
 * **Dimensionsset**: Group for display of time extent with a title (**Title**), layergroup (**Group**) and time dimension extent (**Extent**)
 
 The following section lists the YAML definitions for the element and the inclusion in the service and leveltree.
