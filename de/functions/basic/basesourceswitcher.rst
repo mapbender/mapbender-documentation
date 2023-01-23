@@ -1,18 +1,15 @@
 .. _basesourceswitcher_de:
 
-Themenwechsel (BaseSourceSwitcher)
-**********************************
+Hintergrund wechseln
+********************
 
-Mit diesem Element kann zwischen vordefinierten Themen (BaseSources), z. B. Hintergrundkarten, gewechselt werden. Die Definition der BaseSources erfolgt in der Anwendung im Reiter Layersets für den entsprechenden Layer. Die Bearbeitungsoberfläche des gewünschten Layers muss dazu geöffnet werden. Um diesen als BaseSource verwenden zu können, ist es notwendig, ein Häkchen bei Basesource zu setzen.
-
-Über Buttons kann zwischen den verschiedenen Themen gewechselt werden. Es kann dabei immer nur ein Thema aktiv sein.
-
-Zu jeder Datenquelle kann eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
+Mit dem Element "Hintergrund wechseln" kann mithilfe von Buttons zwischen den verschiedenen Hintergrundkarten gewechselt werden. Es kann dabei immer nur ein Thema aktiv sein. 
+Zu jeder Datenquelle kann im Element eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
 .. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
 
-Der BaseSourceSwitcher kann auch in der Seitenleiste eingebunden werden. Dabei ist keine Definition von Gruppen möglich.
+Das Element kann auch in der Sidepane eingebunden werden. Dabei ist keine Definition von Gruppen möglich.
 
 .. image:: ../../../figures/de/basesourceswitcher_sidepane.png
      :scale: 80
@@ -21,12 +18,10 @@ Der BaseSourceSwitcher kann auch in der Seitenleiste eingebunden werden. Dabei i
 Konfiguration
 =============
 
-**Vorbereitung**: Um den BaseSourceSwitcher konfigurieren zu können, 
-müssen WMS-Instanzen als BaseSource definiert sein (Checkbox BaseSource: aktiv). 
-Beachten Sie, dass in der Anwendung beim Start die Themen aktiviert werden, 
-bei denen der root-Layer aktiv ist.
+**Vorbereitung**: Zur Definition einer Hintergrundkarte mit dem Element müssen zuvor im Backend (Reiter: Layerset) mindestens zwei gewünschte Layer konfiguriert werden. Um sie verwenden zu können, ist in den Layer-Einstellungen das Anhaken der Checkbox "Basesource" erforderlich.
+Beachten Sie, dass in der Anwendung beim Start die Themen aktiviert werden, bei denen der root-Layer aktiv ist.
 
-.. image:: ../../../figures/basesourceswitcher_basesource.png
+.. image:: ../../../figures/de/basesourceswitcher_basesource.png
      :scale: 80
 
 Konfiguration aktiver ausgewählter root-Layer - Thema ist aktiv beim Start:
@@ -42,22 +37,22 @@ Konfiguration nicht aktivierter ausgewählter root-Layer - Thema ist beim Start 
 
 Die Konfiguration des Elements geschieht in zwei Schritten:
 
-#. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel und Tooltip)
+#. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel, Tooltip; bei Einbindung in Kartenbereich: Position)
 #. Hinzufügen von Themen mit einer oder mehrerer Quellen und optionaler Definition einer Gruppe
 
 * **Title:** Titel des Elements.
 * **Tooltip:** Text, der erscheint, wenn der Mauszeiger längere Zeit über dem Hintergrundwechsler gehalten wird.
-* **Instancesets:** Es können eine oder mehrere Themengruppen definiert werden. Diese verweisen auf eine Auswahl an Instanzen und sind mit einem Titel und einem Gruppennamen (optional) versehen.
+* **Instancesets:** Es können eine oder mehrere Themengruppen definiert werden. Diese verweisen auf eine Auswahl an Instanzen und sind mit einem Titel und einem Gruppennamen (optional) zu versehen.
 
 .. image:: ../../../figures/de/basesourceswitcher_de.png
      :scale: 80
 
-Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden, die dann über eine Dropdown-Liste zusammengefasst werden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden.
+Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden, die dann über eine Dropdown-Liste zusammengefasst werden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
 
-* **Title**: Name der Themenkarte.
+* **Title**: Name der Hintergrundkarte.
 * **Group**: Optionale Zuweisung zu einer Themengruppe.
-* **Position:** Positionierung (nur bei Nutzung im Kartenbereich)
-* **Instances**: Auswahl der Instanzen für die Themenkarte.
+* **Position:** Positionierung (nur bei Nutzung im Kartenbereich). Möglichkeiten: 'Oben links', 'Unten links', 'Oben rechts', 'Unten rechts'
+* **Instances**: Auswahl der Instanzen für die Hintergrundkarte.
 
 
 YAML-Definition:
