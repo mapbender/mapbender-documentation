@@ -14,12 +14,12 @@ The dimensions handler can be used to integrate WMS services with a time dimensi
 .. image:: ../../../figures/wmst_source.png
      :scale: 80
 
-WMS-T are inserted almost exactly like traditional WMS in the layersets, but the time parameter still has to be activated. If this is not activated, the dimensions of the service are ignored and the standard value is used when calling the layer in the map content.
+WMS-T are inserted almost like WMS in the layersets, with the exception that the time parameter still has to be activated. If this is not activated, the dimensions of the service are ignored and the default value is used when calling the layer in the map content.
 
-If the service supports a time dimension, the instance displays the "Dimensions" button. By clicking on this button, the supported time parameters are displayed and the time can be activated by clicking the checkbox.
+If a service supports a time dimension, the instance displays the "Dimensions" button. By clicking on this button, the supported time parameters are displayed and time values can be activated by clicking the checkbox.
 After another click on the button, the detailed form opens, in which the usage can be further defined. Here you can further restrict the values ​​from the WMS service. To set up the service, the following definitions of time parameters are necessary:
 
-* **Query type**: multiple, nearest oder current
+* **Query type**: multiple, nearest, current
 * **Name**: value TIME (name=time)
 * **Units**: format for temporal dimensions (ISO 8601:2000)
 * **Unit symbol**:
@@ -32,27 +32,24 @@ After another click on the button, the detailed form opens, in which the usage c
 
 The element supports the following time variables:
 
-* single time parameter
-* list of times
-* time interval
+* Single time parameter
+* List of times
+* Time interval
 
-Control of the time
-===================
+Controlling time parameters
+===========================
 
-There are two ways to control the time in the map. On the one hand, each service with an active time parameter can be controlled via the context menu of the layer in the layertree. In addition, a central slider can be integrated, which can be displayed in any area of ​​the application. The slider can be used to combine several layers with the same extent to control them centrally.
+There are two ways to control the time of the WMS. On the one hand, each service with an active time parameter can be controlled via the context menu of the layer in the layertree. In addition, a central slider can be integrated, which can be displayed in any area of ​​the application. The slider can be used to combine several layers with the same extent to control them centrally.
 
+Timeslider in context menu
+--------------------------
 
-Timeslider in context menue
----------------------------
-
-The timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the `Layertree <../basic/layertree.html>`_ element.
+A timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the `Layertree <../basic/layertree.html>`_ element.
 
 .. image:: ../../../figures/wmst_layertree.png
      :scale: 80
 
-Nach der Aktivierung in dem Ebenenbaum erscheint ein Zeitslider in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element über die Checkbox aktviert werden. Danch kann über die Maus die Zeitachse verschoben werden. 
-
-After activation in the layertree, a time slider appears in the context menu. To use the time, the element must be activated via the checkbox. Then you can move the timeslider via the mouse.
+After activation in the layertree, a time slider appears in the context menu. To use the feature, the element must first be activated via the checkbox. Then it's possible to alter the timeslider with the cursor.
 
 .. image:: ../../../figures/wmst_context_menu.png
      :scale: 80
@@ -61,14 +58,14 @@ After activation in the layertree, a time slider appears in the context menu. To
 Timeslider as element
 ----------------------
 
-The layers can be controlled by the dimensions handler element via a central slider. This element can be integrated into the sidepane, toolbar and footer.
+The layers can also be controlled by the dimensions handler element via a central slider. The dimensions handler can be integrated into sidepane, toolbar or footer.
 The configuration of the dimensions handler is done in three steps:
 
-* **Creating the element**: First the element needs to be created and saved. Afterwards the element closes (see configuration).
-* **Creating a dimensionsset**: To define a dimensionsset, you need to create a new set in the element via the "+" button. After entering a title, the item must be saved. Then the element closes.
-* **Definition the slider**: Then you can select the layer instances for the "group" in the element, that you want to control via the slider. Multiselect is supported, but only instances that have the same extent can be combined with each other.
+* **Creating the element**: First, the element needs to be created. To do that, integrate the Dimensions handler as new element in the Layouts tab of your Mapbender application.
+* **Defining a dimensionsset**: Next, define a dimensionsset. You can create a new set in the element via the "+" button. Type in a title for the set and select a Group.
+* **Defining the slider**: At last, you can select the layer instances for the dimensionset that you want to control via the slider. Multiselect is supported, but only instances that have the same extent can be combined with each other. In addition, after the first selection of an instance, a slider appears. There you can restrict the extent for the time display.
 
-When an instance is selected, all instances that do not conform to this default are no longer selectable. In addition, after the first selection of an instance, a slider appears. There you can restrict the extent for the time display.
+When an instance is selected, all instances that do not conform to this default are no longer selectable. Finally, save the configuration to add the Dimensions handler element to the Mapbender application.
 
 .. image:: ../../../figures/wmst_element.png
      :scale: 80
