@@ -41,22 +41,22 @@ Steuerung von Zeitvariablen
 
 Es bestehen zwei Möglichkeiten, die Zeitangabe in der Anwendung zu steuern. Zum einen kann jeder Dienst, für den der Time-Parameter aktiviert ist, über das Kontextmenü des Layers im Layertree gesteuert werden. Zum anderen kann ein zentraler Schieberegler eingebunden werden, der in einem beliebigen Bereich der Anwendung angezeigt werden kann. Über den Schieberegler können mehrere Kartenebenen mit demselben Kartenbereich zusammengefasst und zentral gesteuert werden.
 
-Zeitslider im Kontextmenü
--------------------------
+Schieberegler im Kontextmenü
+----------------------------
 
 Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers im integriert werden. Dazu muss die "Dimension" Option in dem `Ebenenbaum <../basic/layertree.html>`_, aktiviert werden. 
 
 .. image:: ../../../figures/de/wmst_layertree.png
      :scale: 80
 
-Nach der Aktivierung in dem Ebenenbaum erscheint ein Zeitslider in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element zuvor über die Checkbox aktviert werden. Danach kann die Zeitachse mithilfe des Cursors verschoben werden. 
+Nach der Aktivierung in dem Ebenenbaum erscheint ein Schieberegler in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element zuvor über die Checkbox aktviert werden. Danach kann die Zeitachse mithilfe des Cursors verschoben werden. 
 
 .. image:: ../../../figures/wmst_context_menu.png
      :scale: 80
 
 
-Zeitslider als Element
-----------------------
+Schieberegler als Element
+-------------------------
 
 Die Kartenebenen können mithilfe des Dimensions-Handlers über einen zentralen Schieberegler gesteuert werden. Dieses Element kann direkt (ohne Button-Verknüpfung) in die Sidepane, die obere Werkzeugleiste und in die Fußzeile integriert werden. 
 Die Konfiguration des Dimensions-Handlers erfolgt in drei Schritten:
