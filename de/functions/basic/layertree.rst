@@ -53,7 +53,7 @@ Um die unterschiedlichen Layersets im Layertree nutzen zu können, sind verschie
 #. Einrichtung des Layertrees selbst
 
 Über die **Layersets** werden die gewünschten Layer in die Anwendung eingebunden. 
-Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den Plus-Button **[1]** können neue Layersets erstellt werden. In die neuen Layersets können dann neue Layer über das Hinzufügen der bestehenden Instanzen **[2]** eingebunden werden. Das Layerset "overview" **[3]** wird – wie gehabt – für die Anzeige der Übersichtskarte verwendet. 
+Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den Plus-Button **[1]** können neue Layersets erstellt werden. In die neuen Layersets können dann neue Layer über das Hinzufügen der bestehenden Instanzen **[2]** eingebunden werden. Das Layerset "overview" **[3]** wird für die Anzeige der Übersichtskarte verwendet. 
 Eine genaue Dokumentation, wie die Dienste korrekt eingebunden werden können, findet sich unter der Dokumentation des `Layersets <../backend/layerset.html>`_ und der `Datenquellen <../backend/source.html>`_. 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset.png
@@ -164,12 +164,6 @@ Die Checkbox **Thematischer Layer** aktiviert die thematische Einteilung von Ebe
 
 Die Checkbox **Erlaubt sortieren im Layerbaum** steuert, ob ein freies Umsortieren von Ebenen per Drag & Drop im Ebenenbaum erfolgen darf.
 
-.. figure:: ../../../figures/layertree/layertree_configuration_1.png
-           :scale: 80 
-           :alt: Einrichtung des einfachen Layertrees im Content-Bereich.
-
-           Einrichtung des einfachen Layertrees im Content-Bereich.
-
 Durch einen Klick auf das Ordnersymbol des Layertrees links neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
@@ -230,22 +224,7 @@ Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kart
 
 **Einrichtung des thematischen Layertrees**
 
-Als letzter Schritt erfolgt die Einrichtung des Layertrees selbst. 
-Die in dem `Kartenelement <map.html>`_ angegebenen Instanzen können im Layertree noch genauer definiert werden. Die Erklärungen für den einfachen Ebenenbaum weiter oben können nützlich für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees sein.
-
-.. figure:: ../../../figures/layertree/layertree_configuration_1.png
-           :scale: 80 
-           :alt: Einrichtung des einfachen Layertrees im Content-Bereich.
-
-           Einrichtung des einfachen Layertrees im Content-Bereich.
-
-Für den thematischen Layertree binden wir den Ebenenbaum in diesem Beispiel in die Seitenleiste ein. Für die Einbindung in dem Sidepane-Bereich muss daher der Type *Element* gewählt werden.
-
-.. figure:: ../../../figures/layertree/layertree_type.png
-           :scale: 80
-           :alt: Einrichtung des Type Element.
-
-           Einrichtung des Type Element.
+Als letzter Schritt erfolgt die Einrichtung des Layertrees selbst. Für den thematischen Layertree binden wir den Ebenenbaum in diesem Beispiel in die Sidepane ein.
 
 Ist die Option **Thematischer Layer** ausgeschaltet, benutzt der Layertree nicht die konfigurierten Layersets und zeigt die einzelnen Instanzen ohne thematische Strukturierung in der Hauptebene an. Nun wollen wir jedoch die Layer über unsere thematischen Layersets anzeigen, daher aktivieren wir die Funktion **Thematischer Layer**. 
 Da wir in dem `Kartenelement <map.html>`_ beide Layersets in die Anwendung eingebunden haben, werden diese nun unter dem **Themen**-Bereich angezeigt.
@@ -258,21 +237,16 @@ Da wir in dem `Kartenelement <map.html>`_ beide Layersets in die Anwendung einge
 
 Damit die **Themen** in der Anwendung wie gewünscht angezeigt werden, gibt es verschiedene Einstellungsmöglichkeiten: 
 
-.. figure:: ../../../figures/layertree/layertree_example_sidepane_config.png
-           :scale: 80
-
 :[1] Thema anzeigen:
   Ist diese Option gesetzt, wird das Layerset als zusätzliche Ebene angezeigt. Ist diese Option nicht gesetzt, werden die enthaltenen Layer-Instanzen in der Hauptebene angezeigt.
 :[2] Thema offen oder geschlossen:
   Ist diese Option gesetzt (Symbol des geöffneten Ordners), ist das Thema im Layertree automatisch ausgeklappt.
 
-Wenn wir nun bei dem Themenset "World" die Standardeinstellungen beibehalten und bei dem Themenset "Project NRW" die anderen Optionen aktivieren, sieht die Konfiguration des Elements so aus: 
+Wenn wir nun bei dem Themenset “World” die Standardeinstellungen beibehalten und bei dem Themenset “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements so aus:
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_config.png
            :scale: 80
-           :alt: Einrichtung der thematischen Layersets im Content-Bereich.
-
-           Einrichtung der thematischen Layersets im Content-Bereich.
+           :alt: Backend-Konfiguration des thematischen Layertrees.
 
 Wir haben die Layersets somit als thematische Gruppen in den Ebenenbaum eingebunden. Durch die Konfiguration der thematischen Layer stellt sich der Layertree in der Anwendung nun wie folgt dar: 
 

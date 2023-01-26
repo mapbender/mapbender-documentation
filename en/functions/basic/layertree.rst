@@ -53,7 +53,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 #. Configuration of the map to display the Layersets 
 #. Configuration of the Layertree itself
 
-Through the use of the **Layersets**, the desired layers are included in the application. The instances are the references to the individual WMS services. With the plus-button **[1]**, new Layersets can be created. Then, new layers can be integrated in the application by adding the existing instances **[2]**. The Layerset "overview " **[3]** is - as usual - used for displaying the overview map.
+Through the use of the **Layersets**, the desired layers are included in the application. The instances are the references to the individual WMS services. With the plus-button **[1]**, new Layersets can be created. Then, new layers can be integrated in the application by adding the existing instances **[2]**. The Layerset "overview " **[3]** is used for displaying the overview map.
 For a detailed documentation on how the services can be integrated correctly, please head to the documentation of the `layersets <../backend/layerset.html>`_ and `sources <../backend/source.html>`_. 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_en.png
@@ -101,7 +101,8 @@ In case of difficulties with the integration, the documentation of the `Layerset
 **Configuration of the map to display the Layerset**
 
 In the next step, we configure the `Map element <../basic/map.html>`_ to display the Layersets in the **map**. To do this you need to switch to the tab "Layouts" and edit the map element in the content. 
-It is important that you put a tick in the field of the Layerset "World", so it appears in the application afterwards. If you have questions for further configuration of the `Map element <../basic/map.html>`_  the documentation can help.
+It is important that you put a tick in the field of the Layerset "World", so it appears in the application afterwards.
+If you have questions for further configuration of the `Map element <../basic/map.html>`_  the documentation can help.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple_en.png
            :scale: 80 
@@ -163,12 +164,6 @@ The checkbox **Thematic layer** activates the thematic division of levels. The n
 
 The checkbox **Allow Reorder at TOC** controls whether layers may be freely rearranged using drag & drop in the layertree.
 
-.. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
-           :scale: 80 
-           :alt: Configuration of a simple Layertree in the content. 
-
-           Configuration of a simple Layertree in the content.
-
 By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
@@ -229,22 +224,7 @@ If you have questions for further configuration of the map, you can view the doc
 
 **Configuration of the thematic Layertree itself**
 
-The last step is the creation of the Layertree itself.
-The instances in the `map element <../basic/map.html>`_  can be defined in more detail via the Layertree. For a general understanding of the functions and introduction tutorial to create a Layertree please note the already declared settings in the workflow for the simple Layertree.
-
-.. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
-           :scale: 80 
-           :alt: Configuration of the simple Layertree.
-
-           Configuration of the simple Layertree.
-
-For the thematic Layertree we add the element to the sidebar. For the integration into the Sidepane sector the element needs the type *Element*.
-
-.. figure:: ../../../figures/layertree/layertree_type.png
-           :scale: 80
-           :alt: Configuration of the type Element.
-
-           Configuration of the type Element.
+The last step is the creation of the Layertree itself. In this example, we add the thematic Layertree to the sidepane.
 
 If the option **Thematic layer** is disabled, the Layertree ignores the configured Layersets and shows the individual instances without thematic structuring in the main level. However, we want to show the layers of our thematic Layersets, so we activate the function **Thematic layer**.
 Since we inserted both Layersets into the `map element <../basic/map.html>`_ of the application, they are now displayed under the **Themes**-area.
@@ -257,9 +237,6 @@ Since we inserted both Layersets into the `map element <../basic/map.html>`_ of 
 
 Thus, to let the **themes** in the application appear as you want, there are several configuration options:
 
-.. figure:: ../../../figures/layertree/layertree_example_sidepane_config_en.png
-           :scale: 80
-
 :[1] View theme:
   If this option is set, the Layerset appears as an additional level. If this option is not set, the defined instances are displayed on the main level.
 :[2] Theme open or closed:
@@ -271,8 +248,6 @@ If we keep the default settings in the Theme Set "World" and activate the other 
            :scale: 80
            :alt: Configuration of the thematic Layertree in the content.
 
-           Configuration of the thematic Layertree in the content.
-
 Now we have the Layersets integrated as thematic groups. By configuring the thematic layer, the Layertree appears now like this:
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_en.png
@@ -281,8 +256,8 @@ Now we have the Layersets integrated as thematic groups. By configuring the them
 
            Configuration of the thematic Layertree in the sidepane.
 
-You can optionally use a button to show this element. See :ref:`button` for inherited configuration options. You also can define the layertree with a type element. Then, you can display the layertree in a frame like the sidebar.
 The Layerset "World" is displayed as a theme, but it is not open and the two buttons are not available. In the Layerset "Project NRW" the theme is shown unfolded upon opening the application. The layers can be activated via a button.
+
 
 YAML-Definition:
 =================
