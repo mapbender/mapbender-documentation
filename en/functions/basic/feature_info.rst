@@ -8,17 +8,10 @@ This element provides feature info capabilities to Mapbender. It works with WMS.
 .. image:: ../../../figures/feature_info.png
      :scale: 80
 
-The WMS 
-Krankenhäuser NRW' (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) from 'Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW' serves as example service.
-
+The WMS Krankenhäuser NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) from 'Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW' serves as example service.
 
 Configuration
 =============
-
-In the example configuration, the element FeatureInfo is integrated in the 'Content' area:
-
-.. image:: ../../../figures/feature_info_content.png
-     :scale: 80
 
 .. image:: ../../../figures/feature_info_configuration.png
      :scale: 80
@@ -29,19 +22,18 @@ In the example configuration, the element FeatureInfo is integrated in the 'Cont
 * **Print Result:** Offer a link to print the result of FeatureInfo (default: false).
 * **Only valid:** Display valid WMS (default: false).
 * **Title:** Title of the element. It will be indicated next to the button.
-* **Target:** ID of Map element to query.
 * **Display type:** Display of the information, tabs or accordion.
 * **Max count:** Maximum number of results that should be displayed in the result dialog.
 * **Width/Height:** Width/height of the dialog in px.
 * **Highlighting enabled:** Deactivates/activates FeatureInfo Highlighting (default: false).
 * **Default fill color** Sets the fill color for selected objects.
 * **Default stroke color** Sets the stroke color for selected objects.
-* **Opacity (%) of the default color** Sets the opacity of the default color
-* **Stroke width (in pixels) of the default color** Sets the stroke width (in pixels) of the default color
+* **Opacity (%) of the default color** Sets the opacity of the default color.
+* **Stroke width (pixels) of the default color** Sets the stroke width (in pixels) of the default color.
 * **Hover fill color** Sets the hover fill color for selected objects.
 * **Hover stroke color** Sets the hover stroke color for selected objects.
-* **Opacity (%) of the hover color** Sets the opacity of the hover color
-* **Stroke width (in pixels) of the hover color** Sets the stroke width (in pixels) of the hover color
+* **Opacity (%) of the hover color** Sets the opacity of the hover color.
+* **Stroke width (pixels) of the hover color** Sets the stroke width (in pixels) of the hover color.
 
 A button is also needed for complete frontend integration. Further information on how to configurate a button: `Button <../misc/button.html>`_.
 
@@ -100,9 +92,6 @@ A FeatureInfo request with activated highlighting could look like this:
 The figure above highlights several geometries in the map (Postcodes ('PLZ'): 53111, 53113 und 53115). The FeatureInfo dialog only displays information belonging to these geometries. The area 53115 is highlighted red due to hovering.
 
 FeatureInfo Highlighting is activated within the Feature Info element. Here, users get the option to choose a default and hover color.
-
-.. image:: ../../../figures/feature_info_configuration_highlighting.png
-     :scale: 80
 
 Furthermore, the HTML output of the FeatureInfo request has to be adjusted. In order to do so, the geometry query has to be hidded as a WKT in an HTML div (will not be displayed). In addition, the EPSG code must be transferred and there must be a unique ID in the HTML div (see configuration below). Mapbender evaluates this information and displays the geometries on the map. When you hover over the entries in the info window, the associated geometry is highlighted accordingly. The adaptation looks different depending on which WMS server software you are using. Adjustments can easily be made for MapServer, QGIS Server, GeoServer.
 

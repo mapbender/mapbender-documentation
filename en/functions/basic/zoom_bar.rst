@@ -16,8 +16,6 @@ Configuration
 
 * **Draggable:** Element is draggable or not (default: true)
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Target:** ID of Map element to query.
-* **Tooltip:** Text to use as tooltip.
 * **Components:** Components of the navigation toolbal (all selected by default). Options: Rotation, zoom to max extent, Back to start, Zoom in/out, Zoom slider
 * **Back to start:** Resets layer settings (default: false).
 * **Position:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar). Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom
@@ -41,10 +39,7 @@ In the application these components look like this:
 
 If you set a tick at **Draggable**, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
 
-**Rotation** enables changes of the map orientation. The following figure displays the map after one (left) and two (right) rotations. A click on the north arrow allows for a restoration of the original rotation.
-
-.. image:: ../../../figures/navigationtoolbar_rotation.png
-     :scale: 80
+**Rotation** enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
 
 Users can zoom to their smallest scale by **Zoom to max extent**. This *Max Extent* can be set individually in the `map element <map.html>`_ of the content.
 
@@ -56,11 +51,8 @@ It is possible to restore the initial center, scale, SRS and rotation with **Zoo
 .. image:: ../../../figures/navigationtoolbar_zoom_to_start.png
      :scale: 80
 
-**Zoom in/out** allows to zoom in (``+`` -button) and out (``–`` -button) of the map. The element automatically sets to the next higher or lower scale. Zoom steps can be defined in the map element as well. There users also have the option to deactivate fixed zoom steps.
+Finally, **Zoom in/out** allows to zoom in (``+`` -button) and out (``–`` -button) of the map. The element automatically sets to the next higher or lower scale. Zoom steps can be defined in the map element as well. There, users also have the option to deactivate fixed zoom steps.
 The component **Zoom slider** already includes *Zoom in/out*. Additionally, the user can select different scales from a bar.
-
-.. image:: ../../../figures/navigationtoolbar_zoom_in_out.png
-     :scale: 80
 
 
 YAML-Definition:

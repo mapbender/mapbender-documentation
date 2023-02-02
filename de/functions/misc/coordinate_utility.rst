@@ -21,18 +21,15 @@ Das Element wird im Backend entweder als Dialog zum Aufruf über einen Button od
 Konfiguration
 =============
 
-Fügen Sie das Element `Koordinaten Utility` bspw. in den Content-Bereich Ihrer Anwendung ein.
-
 .. image:: ../../../figures/de/coordinate_utility_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements
-* **Target:** Karte, auf der dieses Element funktioniert (Main Map)
-* **Type:** Dialog oder Element.
 * **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren können soll. Das Feld kann leer gelassen werden.
 * **Zoom-Level** Zoom-Level der Karte (Standard: 6)
 * **Koordinatensysteme von der Karte hinzufügen:** Die von dem `Kartenelement  <../basic/map>`_ angegebenen Koordinatensysteme werden automatisch vom Tool unterstützt. Diese werden in der Karte angegeben und auch im  `SRS Selector  <../basic/srs_selector>`_ unterstützt.
 
+Sofern das Koordinaten Utility im Kartenbereich eingebunden werden soll, muss ein damit verknüpfter `Button  <../misc/button>`_ entsprechend platziert werden. 
 
 Benutzung
 =========
@@ -46,6 +43,7 @@ Benutzung
 * Ändern Sie das Koordinatensystem im Dialog mithilfe der Drop-Down-Liste. Die Klick-Koordinate wird in diesem angegebenen Koordinatensystem angezeigt.
 * Die untere Zeile zeigt daher die Klickkoordinate noch in dem Original-Koordinatensystem der Karte.
 * Die Schaltfläche hinter jeder Eingabezeile erlauben es, den Koordinatenwert direkt in die Zwischenablage zu kopieren.
+* Wenn das Koordinaten Utility über die Sidepane eingebunden ist, kann über den Button `Koordinatensuche` zwischen einem Navigations- und einem Kooordinaten-Cursor gewechselt werden.
 
 **Zur Koordinate zoomen:**
 

@@ -26,7 +26,6 @@ Konfiguration
 * **Automatisches Aktivieren** Das Element wird automatisch aktiviert.
 * **Beim Schließen deaktivieren** Skizzen werden nach Schließung des Elements deaktiviert, d.h. nicht mehr in der Karte angezeigt.
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Target:** ID des Kartenelements, auf das sich das Element bezieht.
 * **Geometrytypes:** Liste der unterstützten Geometrietypen 
 
 

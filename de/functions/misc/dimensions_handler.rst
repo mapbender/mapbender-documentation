@@ -3,9 +3,7 @@
 Dimensions-Handler
 ******************
 
-Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions-Handler genutzt werden. 
-WMS-Time Dienste werden wie ganz normale WMS als Datenquelle registriert. 
-Wenn die Dienste über die Angabe einer zeitlichen Dimension verfügen, werden diese in den Layer-Metadaten angezeigt. 
+Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions-Handler genutzt werden. WMS-Time Dienste müssen dafür zunächst als WMS-Datenquelle registriert werden. Falls die WMS-Dienste über die Angabe einer zeitlichen Dimension verfügen, wird diese in den Layer-Metadaten angezeigt. 
 
 .. code-block:: resource
 
@@ -16,13 +14,12 @@ Wenn die Dienste über die Angabe einer zeitlichen Dimension verfügen, werden d
 .. image:: ../../../figures/wmst_source.png
      :scale: 80
 
+WMS-T werden wie herkömmliche WMS in die Layersets eingefügt, zusätzlich muss jedoch der Time-Parameter aktiviert werden. Wird dieser nicht aktiviert, dann werden die Dimensionen des Dienstes außer Acht gelassen und beim Aufruf der Kartenebene der Standardwert genutzt.
 
-WMS-T werden fast genau wie herkömmliche WMS in die Layersets eingefügt, dabei muss jedoch der Time-Parameter noch aktiviert werden. Wird dieser nicht aktiviert, dann werden die Dimensionen des Dienstes außer Acht gelassen und bei dem Aufruf der Kartenebene der Standardwert genutzt.
+Bei Diensten mit einer zeitlichen Dimension erscheint bei der Instanz die Schaltfläche "Dimensionen". Durch einen Klick auf diese Schaltfläche werden die unterstützten Zeit-Parameter angezeigt. Die zeitliche Dimension kann dort per Checkbox-Klick aktiviert werden. 
+Nach einem weiteren Klick in die Schaltfläche öffnet sich das Detailformular, in dem die Nutzung weiter definiert werden kann. Die Werte aus dem WMS-Dienst werden hier übernommen und können weiter eingeschränkt werden. Für die Einrichtung des Dienstes sind die folgenden Definitionen von Zeitparametern nötig: 
 
-Bei Diensten mit einer zeitlichen Dimension erscheint bei der Instanz die Schaltfläche "Dimensionen". Durch einen Klick auf diese Schaltfläche, werden die unterstützten Zeit-Parameter angezeigt und die Zeit kann über das Anklicken der Checkbox aktiviert werden. 
-Nach einem weiteren Klick in die Schaltfläche öffnet sich dann das Detailformular, in dem die Nutzung weiter definiert werden kann. Die Werte aus dem WMS-Dienst werden hier übernommen und können weiter eingeschränkt werden. Für die Einrichtung des Dienstes sind die folgenden Definitionen von Zeitparametern nötig: 
-
-* **Abfrageart**: multiple, nearest oder current
+* **Abfrageart**: multiple, nearest, current
 * **Name**: Wert TIME (name=time)
 * **Units**: Abbildungsformat für zeitliche Dimensionsangaben (ISO 8601:2000)
 * **Unit symbol**:
@@ -30,7 +27,7 @@ Nach einem weiteren Klick in die Schaltfläche öffnet sich dann das Detailformu
 * **Extent (extent slider)**: Unterstützter Zeitbereich  
 
 
-.. image:: ../../../figures/wmst_layer.png
+.. image:: ../../../figures/de/wmst_layer.png
      :scale: 80
 
 Das Element unterstützt die folgenden Zeitvariablen: 
@@ -39,37 +36,36 @@ Das Element unterstützt die folgenden Zeitvariablen:
 * Liste von Zeitpunkten
 * Zeitintervall 
 
-Steuerung der Zeit
-==================
+Steuerung von Zeitvariablen
+===========================
 
-Es bestehen zwei Möglichkeiten, die Zeitangabe in der Karte zu steuern. Zum einen kann jeder Dienst, für den der Time-Parameter aktiviert ist, über das Kontextmenü des Layers im Layertree gesteuert werden. Zudem kann ein zentraler Schieberegler eingebunden werden, der in einem beliebigen Bereich der Anwendung angezeigt werden kann. Über den Schieberegler könnne mehrere Kartenebenen mit dem selben Extent zusammengefasst und zentral gesteuert werden.
+Es bestehen zwei Möglichkeiten, die Zeitangabe in der Anwendung zu steuern. Zum einen kann jeder Dienst, für den der Time-Parameter aktiviert ist, über das Kontextmenü des Layers im Layertree gesteuert werden. Zum anderen kann ein zentraler Schieberegler eingebunden werden, der in einem beliebigen Bereich der Anwendung angezeigt werden kann. Über den Schieberegler können mehrere Kartenebenen mit demselben Kartenbereich zusammengefasst und zentral gesteuert werden.
 
-Zeitslider im Kontextmenü
--------------------------
+Schieberegler im Kontextmenü
+----------------------------
 
 Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers im integriert werden. Dazu muss die "Dimension" Option in dem `Ebenenbaum <../basic/layertree.html>`_, aktiviert werden. 
 
-.. image:: ../../../figures/wmst_layertree.png
+.. image:: ../../../figures/de/wmst_layertree.png
      :scale: 80
 
-Nach der Aktivierung in dem Ebenenbaum erscheint ein Zeitslider in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element über die Checkbox aktviert werden. Danch kann über die Maus die Zeitachse verschoben werden. 
+Nach der Aktivierung in dem Ebenenbaum erscheint ein Schieberegler in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element zuvor über die Checkbox aktviert werden. Danach kann die Zeitachse mithilfe des Cursors verschoben werden. 
 
 .. image:: ../../../figures/wmst_context_menu.png
      :scale: 80
 
 
+Schieberegler als Element
+-------------------------
 
-Zeitslider als Element
-----------------------
+Die Kartenebenen können mithilfe des Dimensions-Handlers über einen zentralen Schieberegler gesteuert werden. Dieses Element kann direkt (ohne Button-Verknüpfung) in die Sidepane, die obere Werkzeugleiste und in die Fußzeile integriert werden. 
+Die Konfiguration des Dimensions-Handlers erfolgt in drei Schritten:
 
-Die Kartenebenen können mithilfe von Dimensions-Handler über einen zentralen Slider gesteuert werden. Dieses Element kann in die Sidepane, Toolbar und in den Footer integriert werden. 
-Die Konfiguration des „Dimensionhandler erfolgt in drei Schritten:
+* **Anlegen des Elements**: Zuerst muss das Element im Backend (Layout-Bereich) als neues Element in einen der Bereiche Sidepane, obere Werkzeugleiste oder Fußleiste hinzugefügt werden.
+* **Definition eines Dimensionsets**: Anschließend erfolgt die Erstellung eines Dimensionsets über den „+“-Button. Hiernach muss ein Titel angegeben und eine Layerset-Instanz als Gruppe gewählt werden.
+* **Definition des Schiebereglers**: Zuletzt muss der Bereich, der über den Schieberegler gesteuert werden sollen, festgelegt werden. Eine Mehrfachauswahl ist möglich, aber es können nur Instanzen kombiniert werden, die den gleichen zeitlichen Extent besitzen.
 
-* **Anlegen des Elements**: Zuerst wird das Element definiert und gespeichert. Danach schließt sich das Element (siehe Konfiguration).
-* **Anlegen eines Dimensionsets**: Für die Erstellung eines Dimensionsets kann in dem Element über den „+“-Button ein neues Set angelegt werden. Nach der Eingabe eines Titels muss das Element gespeichert werden. Danach schließt sich das Element.
-* **Definition des Schiebereglers**: Danach kann in dem Element in dem Feld „Group“ die Instanzen aus dem Layerset ausgesucht werden, die über den Slider gesteuert werden sollen. Eine Mehrfachauswahl ist möglich, aber es können nur Instanzen mit einander kombiniert werden, die den gleichen zeitlichen Extent besitzen.
-
-Wenn eine Instanz ausgewählt wurde, sind alle Instanzen, die nicht dieser Vorgabe entsprechen, nicht mehr auswählbar. Zudem erscheint nach der ersten Auswahl einer Instanz ein Schieberegler, mit dem der Extent eingeschränkt werden kann.
+Wenn eine Instanz ausgewählt wurde, sind alle Instanzen, die nicht dieser Vorgabe entsprechen, nicht mehr auswählbar. Nach der Konfiguration kann das Dimensions-Handler Element gespeichert werden, um in der Anwendung zu erscheinen.
 
 .. image:: ../../../figures/wmst_element.png
      :scale: 80
@@ -77,12 +73,11 @@ Wenn eine Instanz ausgewählt wurde, sind alle Instanzen, die nicht dieser Vorga
 Konfiguration
 =============
 
-.. image:: ../../../figures/wmst_configuration.png
+.. image:: ../../../figures/de/wmst_configuration.png
      :scale: 80
 
 * **Title**: Titel des Elements
 * **Tooltip**: Beschriftung des Elements bei Mouseover
-* **Target**: Kartenelement für die Verknüpfung
 * **Dimensionsset**: Gruppe für die zeitliche Dimensionsanzeige mit Titel (**Title**), Layergruppe (**Group**) und zeitlicher Dimensionsspanne (**Extent**)
 
 Im folgenden Abschnitt sind die YAML-Definitionen für das Element und die Einbindung in dem Dienst und Ebenenbaum aufgeführt. 

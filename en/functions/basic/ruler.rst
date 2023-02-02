@@ -16,7 +16,6 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. It will be displayed in the measuring window in the application itself.
-* **Target:** ID of Map element to query.
 * **Type:** Choose type of element: line or area.
 
 YAML-Definition:

@@ -3,10 +3,7 @@
 Base source switcher
 ********************
 
-With this element you can switch between different predefined layers (BaseSources), e. g. background maps. You can define the layer as a BaseSource in the tab "Layersets" in the application. You have to edit the layer and set a checkmark at "BaseSource".
-
-The Base source switcher is a button group to change the map's background sources. It allows you to switch between predefined sourcesets. For every sourceset a button will be displayed in the client. Only one source set can be active at the same time.
-
+With this element you can switch between different predefined layers (BaseSources), e. g. background maps. The Base source switcher is a button group to change the map's background sources. For every sourceset a button will be displayed in the client. Only one source set can be active at the same time.
 You have the possibility to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
 
 .. image:: ../../../figures/basesourceswitcher.png
@@ -21,7 +18,8 @@ The Base source switcher can also be used in the sidepane. The definition of gro
 Configuration
 =============
 
-**Preparation**: In order to be able to configure the Base Source Switcher you have to define Service instances as Basesource (checkbox "Basesource" on). Please note that on start of an application all sourcesets with an activated root layer are active.
+**Preparation**: In order to be able to configure the Base source switcher, you have to define Service instances as BaseSource (checkbox "Basesource" on). You can define the layer as a BaseSource in the tab "Layersets" in the backend of the application. You have to edit the layer and set a checkmark at "BaseSource".
+Please note that on start of an application all sourcesets with an activated root layer are active.
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80
@@ -36,19 +34,19 @@ Configuration with selected root layer - sourceset is not active on start:
 .. image:: ../../../figures/basesourceswitcher_instance_not_active.png
      :scale: 80
 
-The configuration occurs in 2 steps:
+The configuration of the element itself occurs in two steps:
 
-#. Create a Base source switcher Element with Title, Tooltip and Target
+#. Create a Base source switcher element with Title, Tooltip (and, if configured in Map area: Position)
 #. Add sourceset(s) with one or more sources and definition of a group (optional)
+
+* **Title:** Title of the element.
+* **Tooltip:** The text entered as a tooltip will be indicated by hovering over the element with the cursor.
+* **Instancesets:** One or more instancesets can be defined. Select one or more instances and assign a title and group (optional).
 
 .. image:: ../../../figures/basesourceswitcher_configuration.png
      :scale: 80
 
-* **Title:** Title of the element.
-* **Tooltip:** The text entered as a tooltip will be indicated by hovering over the element with the mouse cursor a longer time.
-* **Instancesets:** One or many Instancesets can be defined. Select one or more instances and assign a title and group (optional).
-
-In the configuration example you can see that either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list.
+In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list. It's possible to move an instanceset in the configuration window via drag and drop.
 
 * **Title**: Title of the BaseSource.
 * **Group**: Optional group name.
