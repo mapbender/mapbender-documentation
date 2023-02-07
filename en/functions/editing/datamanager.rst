@@ -20,7 +20,7 @@ Configuration example
 
 The definition of the Data Manager is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the attribute form.
 
-.. hint:: If errors occur in the database, fields or form, various error messages appear. Via the normal call and app.php comes a general error message. If you want to see the exact error message, you should call the page via app_dev.php. In this case, detailed error messages about the error behavior appear.
+.. hint:: If errors occur in the database, fields or form, various error messages appear. The productive call and app.php will give a general error message. If you want to see the exact error message, you should call the page via app_dev.php. In this case, detailed error messages about the error behavior will appear.
 
 Data Manager is a good solution to store simple contact information in Mapbender:
 

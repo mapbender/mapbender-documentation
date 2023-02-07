@@ -300,7 +300,7 @@ Define text fields in the print template for every information you would like to
 *3. Call feature print from FeatureInfo*
 ----------------------------------------
 
-Note: FeatureInfo is the information output from a OGC WMS service. It offers information for features at a click position.
+.. note:: FeatureInfo is the information output from a OGC WMS service. It offers information for features at a click position.
 
 When you configure a WMS, you can generate a link with the following reference that will trigger the print with feature information.
 
@@ -335,7 +335,7 @@ To activate the functionality, add the following parameter to the digitizer conf
 
 With click on the print button the print dialog opens and offers the print templates that are defined for the feature type.
 
-Note: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
+.. note:: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
 
 
 Queued Print
@@ -375,7 +375,7 @@ After the setup, the queued print can be controlled with several bash commands, 
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. Detailed information on the commands:  `app/console commands <../../customization/commands.html>`_.
+.. note:: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. Detailed information on the commands:  `app/console commands <../../customization/commands.html>`_.
 
 
 *Queued print: Usage*
@@ -402,7 +402,7 @@ Memory Limits
 --------------
 
 Print jobs can be resource intensive and may exceed your initially set php.ini memory limit. Therefore it is possible to increase the required memory limit manually. This is an advantage for users who are working with large print templates.
-Note: Never reduce the memory limit.
+.. note:: Never reduce the memory limit.
 
 To increase the memory limits for the queued print, adjust `mapbender.print.queue.memory_limit` (string; default is 1G). Caution: This parameter does not allow 'null' as value.
 
