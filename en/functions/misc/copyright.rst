@@ -3,7 +3,7 @@
 Copyright
 *********
 
-The copyright elment can be used to show text (also HTML) in a dialog. The dialog can be shown automatically on start if needed. You can integrate Links and Images (see :ref:`html`).
+The copyright element can be used to show simple text or HTML in a window dialog. It can be opened automatically on application start. It is also possible to integrate links and images into the window (see :ref:`html`).
 
 
 .. image:: ../../../figures/copyright.png
@@ -15,7 +15,7 @@ Configuration
 .. image:: ../../../figures/copyright_configuration.png
      :scale: 80
 
-* **Autoopen:** Enable or disable autoopening of the copyright window, when starting the application (default: off).
+* **Autoopen:** Enable or disable autoopening of the copyright window while starting the application (default: off).
 * **Title:** Title of the element. It will be indicated next to the button.
 * **Tooltip:** Text used as a tooltip. It will be displayed when hovering with the cursor over the button. It also used as a header in the copyright window.
 * **Popup width:** Width of the Popup window (default: 300).
@@ -26,7 +26,7 @@ Configuration
 Refer to a twig file
 --------------------
 
-In the Content-area you can refer to a twig file. Please note that the twig file has to contain valid HTML.
+You can refer to a twig file in the Content area. Please note that the twig file has to contain valid HTML.
 
 .. image:: ../../../figures/copyright_configuration_include_twig.png
      :scale: 80
