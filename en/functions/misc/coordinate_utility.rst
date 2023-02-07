@@ -24,12 +24,11 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element.
-* **Target:** Map on which this tool works (Main Map)
 * **Srs List:** You can define additional SRS to which the tool has to transform the coordinates. This list can be left empty.
 * **Zoom-Level:** Zoom level of the map (default: 6)
 * **Add map's srs list:** The supported coordinate systems defined in the `Map element  <../basic/map>`_ are automatically used. These coordinate systems, defined in the map, are also used by the `SRS Selector  <../basic/srs_selector>`_ (default: true).
 
-If you define Coordinate Utility as a dialog, you need a `Button  <../misc/button>`_ that you place in the Toolbar. 
+If you define Coordinates Utility as a dialog, you need a `Button  <../misc/button>`_ that you place in the Toolbar. 
 
 
 Using the tool
@@ -40,11 +39,11 @@ Using the tool
 
 **Get Coordinate:**
 
-* If Coordinate Utility is opened as a dialog, the map reacts on a click. Click into the map and the click-coordinate is displayed in the dialog.
+* If Coordinates Utility is opened as a dialog, the map reacts on a click. Click into the map and the click-coordinate is displayed in the dialog.
 * Change the coordinate system with the dropdown-list. The click-coordinate is displayed in the given coordinate system.
 * The last line therefore shows the click-coordinate in the original coordinate system of the map.
 * The button at the end of each text-field allows to copy the coordinate directly into the clipboard.
-
+* If Coordinates Utility is opened via the Sidepane, the button `Coordinate search` will appear that allows switching between a pan-cursor and a coordinate-cursor.
 
 **Zoom to coordinate:**
 
