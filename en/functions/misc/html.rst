@@ -124,7 +124,7 @@ These variables could look as follows:
 Refer to a twig file
 --------------------
 
-In the Content-area you can refer to a twig file. Please note that the twig file has to contain valid HTML.
+You can refer to a twig file in the Content area. Please note that the twig file has to contain valid HTML.
 
 .. image:: ../../../figures/html_configuration_include_twig.png
      :scale: 80
