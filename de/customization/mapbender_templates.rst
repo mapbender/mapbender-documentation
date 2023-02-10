@@ -97,7 +97,7 @@ Bitte beachten Sie, dass derzeit nicht alle Elemente im Mobilen Template verwend
   * Layertree (anderes Design, nur der root-Layer-Titel eines Services wird angezeigt, Dienst können nur komplett de-/aktiviert werden)
   * BaseSourceSwitcher (anderes Design: Anzeige als Liste nicht als Buttons)
   * FeatureInfo
-  * Navigation Toolbar (Zoombar)
+  * Navigation Toolbar
   * HTML
   * Button
   * SimpleSearch

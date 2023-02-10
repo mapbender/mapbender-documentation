@@ -97,7 +97,7 @@ Please note that not all elements can be used with the Mobile template at the mo
   * Layertree (different design, will only show the root layer title of a service, you can only de-/activate a whole service)
   * BaseSourceSwitcher (different design: list not buttons)
   * FeatureInfo
-  * Navigation Toolbar (Zoombar)
+  * Navigation Toolbar
   * HTML
   * Button
   * SimpleSearch
