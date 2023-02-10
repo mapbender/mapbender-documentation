@@ -11,7 +11,7 @@ Wir stellen das Mapbender Core Bundle mit den Mapbender-Funktionalitäten bereit
 
 Außerdem bieten wir das Mapbender Starter Paket an. Mit diesem ist Mapbender leicht installierbar.
 
-  .. image:: ../../figures/mapbender3_components.png
+  .. image:: ../../figures/mapbender_components.png
      :scale: 60
 
 
