@@ -1,16 +1,18 @@
-.. _source:
+.. _sources:
 
-Source
-======
+Sources
+=======
 
-With the data sources, you can register OGC WMS in version 1.1.1 and 1.3.0 into Mapbender. 
+With the sources backend tab, it is possible to register OGC sources into your applications. 
 
 Further information about the registration process of services and their usage in Mapbender is available in the `Quickstart document <../../quickstart.html#loading-web-map-services>`_.
 
 .. image:: ../../../figures/entities/source_wms.png
      :scale: 80
 
-* **Service URL**: URL to the Capabilities document of the WMS service (z.B.: ``http://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities``)
+* **Type**: Predefined service type selection (OGC WMS or OGC WMTS / TMS).
+
+* **Service URL**: URL to the Capabilities document of the WMS service (e.g.: ``http://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities``)
 
 * **Username / Password**: Input of the username and the password for secured services.
 
