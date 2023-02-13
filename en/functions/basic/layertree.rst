@@ -1,7 +1,7 @@
 .. _layertree:
 
-Layertree - Table of Content (TOC)
-**********************************
+Layertree
+*********
 
 Functions
 =============
@@ -162,7 +162,7 @@ The function **Hide info** allows you to disable the FeatureInfo-function. Indep
 
 The checkbox **Thematic layer** activates the thematic division of levels. The next section contains further explanation on how to configure the thematic layertree.
 
-The checkbox **Allow Reorder at TOC** controls whether layers may be freely rearranged using drag & drop in the layertree.
+The checkbox **Allow Reorder at TOC** controls if layers are rearrangeable via drag & drop in the application's layertree (TOC).
 
 By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
 
