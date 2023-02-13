@@ -388,7 +388,7 @@ Probieren Sie es aus
 * Laden Sie das Workshop/DemoBundle herunter: https://github.com/mapbender/mapbender-workshop
 * Ändern Sie die Farbe Ihrer Icons.
 * Ändern Sie die Größe Ihrer Icons.
-* Ändern Sie die Farbe der Toolbar.
+* Ändern Sie die Farbe der Oberen Werkzeugleiste.
 * Benutzen sie ein Bild anstelle eines Font-Icons für Ihre Buttons.
 * Verschieben Sie die Übersichtskarte auf die linke Seite.
 * Schauen Sie in die Workshop-Dateien, um zu erfahren, wie das funktioniert.

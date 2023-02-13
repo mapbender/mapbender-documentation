@@ -3,7 +3,7 @@
 Karte (Map)
 ***********
 
-Die Karte basiert auf OpenLayers und wird als Element im Content-Bereich integriert.
+Die Karte basiert auf OpenLayers und wird als Element im Kartenbereich integriert.
 
 .. image:: ../../../figures/de/map.png
      :scale: 80
@@ -28,7 +28,7 @@ Konfiguration
 Konfigurationsbeispiel
 ======================
 
-Das Kartenelement (Map) muss unter Layouts im Content-Bereich integriert werden:
+Das Kartenelement (Map) muss unter Layouts im Kartenbereich integriert werden:
 
 .. image:: ../../../figures/de/add_content.png
      :scale: 80

@@ -14,7 +14,7 @@ Konfiguration
 
 .. note:: Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de`.
 
-Das Element kann entweder in der Sidepane oder als Button in der Toolbar integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
+Das Element kann entweder in der Sidepane oder als Button in der oberen Werkzeugleiste integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
 
 
 .. image:: ../../../figures/de/search_router_edit_de.png

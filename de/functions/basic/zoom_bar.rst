@@ -39,7 +39,7 @@ Wenn das Häkchen bei **Verschiebbar** gesetzt wurde, dann erscheint in der Anwe
 
 Mit **Rotation** kann die Ausrichtung der Karte verändert werden. Durch Klick auf den Nordpfeil ist es möglich, die Standardrotation (Nordausrichtung) wiederherzustellen.
 
-Es besteht die Möglichkeit, mit **Zoom to max extent** auf den kleinsten Maßstab zu zoomen. Dieser *Max Extent* wird vom Nutzer selbst innerhalb des `Kartenelements <map.html>`_ im Content-Bereich definiert.
+Es besteht die Möglichkeit, mit **Zoom to max extent** auf den kleinsten Maßstab zu zoomen. Dieser *Max Extent* wird vom Nutzer selbst innerhalb des `Kartenelements <map.html>`_ im Kartenbereich definiert.
 
 .. image:: ../../../figures/de/navigationtoolbar_zoom_to_max.png
      :scale: 80

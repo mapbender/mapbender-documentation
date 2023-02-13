@@ -3,7 +3,7 @@
 Map
 ***
 
-Map is based on OpenLayers. The element can be integrated via the content section.
+Map is based on OpenLayers. The element must be integrated into the Map area.
 
 .. image:: ../../../figures/map.png
      :scale: 80
@@ -28,7 +28,7 @@ Configuration
 Configuration example
 =====================
 
-The map element has to be included into the content section:
+The map element has to be included into the Map area:
 
 .. image:: ../../../figures/add_content.png
      :scale: 80

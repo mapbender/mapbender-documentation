@@ -3,7 +3,7 @@
 Mapbender Templates
 ###################
 
-Ein Mapbender Template bestimmt die grundlegende Darstellung (Farbe, Schrift etc.) einer Anwendung. Es definiert außerdem die Bereiche (z.B. Toolbar oder Sidepane), in welche neue Elemente eingefügt werden können.
+Ein Mapbender Template bestimmt die grundlegende Darstellung (Farbe, Schrift etc.) einer Anwendung. Es definiert außerdem die Bereiche (z.B. Kartenbereich, Sidepane), in welche neue Elemente eingefügt werden können.
 
 Es werden insgesamt drei Mapbender Templates bei der Installation mitgeliefert:
 
@@ -21,10 +21,10 @@ Schauen Sie sich die Demo zum Mapbender Fullscreen an: https://demo.mapbender.or
 
 Regionen des Fullscreen Templates:
 
-  * Toolbar (Bereich für die Platzierung von Buttons)
+  * Obere Werkzeugleiste (Bereich für die Platzierung von Buttons)
   * Sidepane (Seitenleiste für den Ebenenbaum, Legende, Suche,...)
-  * Content (Karte, Maßstabsleiste,...)
-  * Footer (Fußleiste mit Impressum, Aktivitätsanzeige...)
+  * Kartenbereich (Karte, Maßstabsleiste,...)
+  * Fußzeile (mit Impressum, Aktivitätsanzeige...)
 
 Besonderheiten:
 
@@ -85,9 +85,9 @@ Schauen Sie sich die Demo zum Mapbender Mobile Template an: https://demo.mapbend
 
 Regionen des Mobile Templates
 
-  * footer (Bereich für die Platzierung von Buttons)
-  * Content (map, navigation toolbar)
-  * Mobilepane (Bereich, der über der Karte eingeblendet wird, wenn sich Dialoge wie Themenauswahl, Hintergrundwechsel oder Infoabfrage öffnen)
+  * Fußzeile (Bereich für die Platzierung von Buttons)
+  * Kartenbereich (Karte, Navigationswerkzeug)
+  * MobilePane (Bereich, der über der Karte eingeblendet wird, wenn sich Dialoge wie Themenauswahl, Hintergrundwechsel oder Infoabfrage öffnen)
 
 
 Bitte beachten Sie, dass derzeit nicht alle Elemente im Mobilen Template verwendet werden können. Die folgende Liste führt die Element auf, die verwendet werden können:
@@ -97,7 +97,7 @@ Bitte beachten Sie, dass derzeit nicht alle Elemente im Mobilen Template verwend
   * Layertree (anderes Design, nur der root-Layer-Titel eines Services wird angezeigt, Dienst können nur komplett de-/aktiviert werden)
   * BaseSourceSwitcher (anderes Design: Anzeige als Liste nicht als Buttons)
   * FeatureInfo
-  * Navigation Toolbar
+  * Navigationswerkzeug
   * HTML
   * Button
   * SimpleSearch

@@ -22,10 +22,10 @@ View a demo of the Mapbender Fullscreen Template https://demo.mapbender.org/appl
 
 Regions of the Fullscreen Template:
 
-  * Toolbar (button region)
+  * Top toolbar (button region)
   * Sidepane (layertree, legend, search,...)
-  * Content (map, navigation toolbar, scalebar,...)
-  * Footer (impressum, scaledisplay, ...)
+  * Map area (map, navigation toolbar, scalebar,...)
+  * Footer (Copyright, scaledisplay, ...)
 
 Specials:
 
@@ -85,9 +85,9 @@ View a demo of the Mapbender Mobile Template https://demo.mapbender.org/applicat
 
 Regions of the mobile Template
 
-  * footer (button region)
-  * Content (map, navigation toolbar)
-  * Mobilepane (area that will overlapp the map, when a dialog like Layertree, FeatureInfo is displayed)
+  * Footer (button region)
+  * Map area (map, navigation toolbar)
+  * MobilePane (area that will overlap the map, when a dialog like Layertree or FeatureInfo is displayed)
 
 
 Please note that not all elements can be used with the Mobile template at the moment. Here is a list of the elements that can be used:

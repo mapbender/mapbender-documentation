@@ -898,8 +898,8 @@ Images, which are marked by the element file in a table column, can thus also di
 
 The image can be specified by specifying the two parameters src and name.
 
-* **src**: Url-path or file path (can be relative path)
-* **name**: Url-path or file path from the table column (can't be relative path)
+* **src**: Url-path or file path (can be a relative path)
+* **name**: Url-path or file path from the table column (can't be a relative path)
 * definition of name and src together: The content of the database column from name is taken. If the column is empty, the src is used.
 
 .. code-block:: yaml

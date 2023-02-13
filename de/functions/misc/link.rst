@@ -37,12 +37,12 @@ Mehr Informationen dazu unter:
 Konfigurationsbeispiele:
 =========================
 Je nach Ziel der Anwendung werden unterschiedliche Buttons benötigt, die verschiedene Funktionen bieten. Diese können nach Bedarf und Wunsch integriert werden. 
-Buttons können für Features eingebunden werden, die vorher im Content-Bereich konfiguriert wurden. Beispielsweise können die Legende oder die Linien- und/oder Flächenmessung über Buttons angesprochen werden:
+Buttons können für Features eingebunden werden, die vorher im Kartenbereich konfiguriert wurden. Beispielsweise können die Legende oder die Linien- und/oder Flächenmessung über Buttons angesprochen werden:
 
 Link zur Mapbender-Webseite
 ---------------------------
 
-Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Toolbar Bereich das Element Button ausgewählt werden.
+Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Bereich der oberen Werkzeugleiste das Element Button ausgewählt werden.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80

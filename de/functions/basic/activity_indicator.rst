@@ -6,7 +6,7 @@ Aktivitätsindikator (Activity Indicator)
 Der Aktivitätsindikator (Sanduhr) ist ein einfaches Modul, das Aktivitäten anzeigt (Ajax-Aufrufe und Kartenaufrufe). 
 In der voreingestellten Konfiguration wird ein Schrift-Symbol verwendet. 
 
-Der Aktivitätsindikator kann in Sidepane, Footer oder Toolbar implementiert werden. Standardmäßig sieht er folgendermaßen aus: 
+Der Aktivitätsindikator kann in Sidepane, oberer Werkzeugleiste oder Fußzeile implementiert werden. Standardmäßig sieht er folgendermaßen aus: 
 
 .. image:: ../../../figures/activity_indicator.png
      :scale: 100
