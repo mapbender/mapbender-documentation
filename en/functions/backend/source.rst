@@ -7,7 +7,7 @@ With the sources backend tab, it is possible to register OGC sources into your a
 
 Further information about the registration process of services and their usage in Mapbender is available in the `Quickstart document <../../quickstart.html#loading-web-map-services>`_.
 
-.. image:: ../../../figures/entities/source_wms.png
+.. image:: ../../../figures/source_wms.png
      :scale: 80
 
 * **Type**: Predefined service type selection (OGC WMS or OGC WMTS / TMS).
