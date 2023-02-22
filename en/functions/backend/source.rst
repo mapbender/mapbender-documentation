@@ -10,13 +10,13 @@ Further information about the registration process of services and their usage i
 .. image:: ../../../figures/source_wms.png
      :scale: 80
 
+
 Load sources
 ------------
 
-.. tip:: You should check your capabilties document in your browser before uploading the service.
+.. tip:: It is important to check the service before uploading it to Mapbender: to do that, open the getCapabilities-Request in your browser.
 
-#. To upload a source, click on ``Add source``:
-
+To upload a source, click on ``Add source``:
 
 * **Type**: Mandatory service type selection (OGC WMS or OGC WMTS / TMS).
 
@@ -24,26 +24,19 @@ Load sources
 
 * **Username / Password**: Input of the username and the password for secured services.
 
-
-#. Click on ``Load`` to upload the service in the repository.
-
-After a successful upload, Mapbender will provide an overview of the WMS information.
+Click on ``Load`` to upload the service in the repository.
 
   .. image:: ../figures/mapbender_add_source.png
      :scale: 80
 
 
-In general, OGC WMS Capabilities refer to ``xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd``. The supported namespaces in that schema are:
-
-  * http://www.w3.org/1999/xlink,
-  * http://www.opengis.net/wms,
-  * http://www.w3.org/2001/XMLSchema
+After a successful registration, Mapbender will provide an overview of the WMS information.
 
 
 Sources Overview
 ----------------
 
-The Sources and Shared instances sections list and provide additional information about the services registered in Mapbender:
+The sources and shared instances sections list and provide additional information about the services registered in Mapbender:
 
 * **Filter**: Search for services names, URLs, types and descriptions.
 * **Show metadata**: Shows metadata about a specific service. Opens a new field that lists specific metadata, Mapbender applications that use the source, contact information, details (e.g. WMS version) and layers.
@@ -54,8 +47,8 @@ The Sources and Shared instances sections list and provide additional informatio
 Sources menu button
 -------------------
 
-In the metadata dialog of a specific service, it is also possible to interact with a hamburger button menu (top right) that allows:
+In the metadata dialog of a specific service, it is also possible to click on the Sources menu button (top right) that allows:
 
 * **Update source**: Click the button to show a new field that allows a refresh of the service and its metadata.
 * **Create shared instance**: Creates a new shared instance from the specific service. The instance is listed in the Shared instances tab. 
-* **Delete**: Removes the registered service from Mapbender.
+* **Delete**: Removes the shared instance from Mapbender.
