@@ -53,5 +53,5 @@ Im Metadatendialog eines Dienstes befindet sich oben rechts außerdem das Datenq
 * **Freie Instanz erzeugen**: Erzeugt eine freie Instanz aus der Datenquelle. Diese wird im Bereich "Freie Instanzen" angezeigt. 
 * **Löschen**: Entfernt die freie Instanz aus Mapbender.
 
-  .. image:: ../../../figures/de/mapbender_source_configuration.png
+  .. image:: ../../../figures/de/mapbender_source_overview.png
      :scale: 80
