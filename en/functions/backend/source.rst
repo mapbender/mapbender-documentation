@@ -54,5 +54,5 @@ In the metadata dialog of a specific service, it is also possible to click on th
 * **Create shared instance**: Creates a new shared instance from the specific service. The instance is listed in the Shared instances tab. 
 * **Delete**: Removes the shared instance from Mapbender.
 
-  .. image:: ../../../figures/mapbender_source_overview.png
+  .. image:: ../../../figures/source_overview.png
      :scale: 80
