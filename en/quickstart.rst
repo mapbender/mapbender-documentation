@@ -265,7 +265,7 @@ Mapbender allows the integration of OGC Web Map Services (WMS) and Web Map Tile 
 
 #. After a successful upload, Mapbender will provide an overview of the WMS information.
 
-  .. image:: ../figures/mapbender_add_source.png
+  .. image:: ../figures/mapbender_add_sources.png
      :scale: 80
 
 

@@ -1,14 +1,11 @@
 .. _source:
 
-Source
-======
+Sources
+=======
 
-With the data sources, you can register OGC WMS in version 1.1.1 and 1.3.0 into Mapbender. 
+With Sources, you can register OGC WMS services in version 1.1.1 and 1.3.0 in Mapbender. 
 
 Further information about the registration process of services and their usage in Mapbender applications is available in the `Quickstart document <../../quickstart.html#loading-web-map-services>`_.
-
-.. image:: ../../../figures/source_wms.png
-     :scale: 80
 
 
 Load sources
@@ -16,7 +13,7 @@ Load sources
 
 .. tip:: It is important to check the service before uploading it to Mapbender: to do that, open the getCapabilities-Request in your browser.
 
-To upload a source, click on ``Add source``:
+To upload a service, click on ``Add source``:
 
 * **Type**: Mandatory service type selection (OGC WMS or OGC WMTS / TMS).
 
@@ -26,7 +23,7 @@ To upload a source, click on ``Add source``:
 
 Click on ``Load`` to upload the service in the repository.
 
-  .. image:: ../figures/mapbender_add_source.png
+  .. image:: ../../../figures/mapbender_add_sources.png
      :scale: 80
 
 
@@ -44,6 +41,10 @@ The sources and shared instances sections list and provide additional informatio
 * **Delete source**: Removes the registered service from Mapbender.
 
 
+  .. image:: ../../../figures/mapbender_sources.png
+     :scale: 80
+
+
 Sources menu button
 -------------------
 
@@ -52,3 +53,6 @@ In the metadata dialog of a specific service, it is also possible to click on th
 * **Update source**: Click the button to show a new field that allows a refresh of the service and its metadata.
 * **Create shared instance**: Creates a new shared instance from the specific service. The instance is listed in the Shared instances tab. 
 * **Delete**: Removes the shared instance from Mapbender.
+
+  .. image:: ../../../figures/mapbender_source_configuration.png
+     :scale: 80
