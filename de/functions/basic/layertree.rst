@@ -272,7 +272,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
     autoOpen: false                                     # Öffnet Layerbaum beim Start der Anwendung (Standard: false)
     showBaseSource: true                                # Zeigt den Basislayer an (Standard: true)
     showHeader: true                                    # Zeigt eine Überschrift, die die Anzahl der Services zählt (Standard: true)
-    menu: [opacity,zoomtolayer,metadata,removelayer]    # Zeigt ein Kontextmenü für den Layer an (wie Transparenz, Zoom auf Layer, Anzeige des Metadatendialogs,                                                             Layer entfernen)
+    menu: [opacity,zoomtolayer,metadata,removelayer]    # Zeigt ein Kontextmenü für den Layer an (wie Transparenz, Zoom auf Layer, Anzeige des Metadatendialogs, Layer entfernen)
     hideInfo: null               
     hideSelect: null             
     allowReorder                 

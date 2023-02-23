@@ -97,5 +97,5 @@ This template can be used to insert the element into a YAML application.
    showLayerTitle: true                 # true/false show layer title (default: true)
    showGroupedLayerTitle: true          # true/false show group title for grouped layers (default: true)
 
-You can optionally use a button to show this element. See :ref:`button` for inherited configuration options. You also can define the layertree with type element. Then you can display the layertree in a frame like the sidebar.
+You can optionally use a button to show this element. See :ref:`button` for inherited configuration options.
 
