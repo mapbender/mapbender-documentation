@@ -160,9 +160,9 @@ Durch einen Klick auf das Ordnersymbol des Layertrees links neben der Instanz k�
 
            Layertree Buttons.
 
-Die Checkbox neben dem jeweiligem Layernamen ermöglicht das An- und Ausschalten eines Layers. Ist die Checkbox aktiviert, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet, wie z.B. maßstabsabhängige Anzeigen.
+Die Checkbox neben einem Layernamen ermöglicht das An- und Ausschalten eines Layers. Ist die Checkbox aktiviert, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet, wie z.B. maßstabsabhängige Anzeigen.
 
-Das "i"-Symbol neben einem Layernamen zeigt an, ob die Informationsabfrage aktiviert ist. Wenn das "i"-Symbol keine Umrandung hat, ist die Informationsabfrage nicht aktiv. Wird diese durch einen Klick aktiviert, so wird das Symbol durch eine kreisliche Umrandung hinterlegt und bei einer Informationsabfrage erscheinen die Informationen zu dem Layer. 
+Das "i"-Symbol neben einem Layernamen zeigt an, ob die Informationsabfrage aktiviert ist. Wenn das "i"-Symbol keine Umrandung hat, ist die Informationsabfrage nicht aktiv. Wird diese durch einen Klick aktiviert, so wird das Symbol durch eine kreisliche Umrandung hinterlegt und bei einer Informationsabfrage erscheinen Layer-Informationen. 
 
 
 Workflow thematischer Layertree
