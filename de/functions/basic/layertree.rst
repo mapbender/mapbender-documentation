@@ -3,7 +3,6 @@
 Ebenenbaum (Layertree)
 **********************
 
-
 Funktionen
 ==========
 
@@ -29,7 +28,7 @@ Funktionen
 
            Thematischer Ebenenbaum in der Sidepane
 
-Zur Konfiguration des Layerbaums gibt es verschiedene Verknüpfungspunkte zu anderen Elementen, die beachtet werden müssen: 
+Zur Konfiguration des Ebenenbaums gibt es verschiedene Verknüpfungspunkte zu anderen Elementen, die beachtet werden müssen: 
 
 * `Layersets <../backend/layerset.html>`_
 * `Kartenelement <map.html>`_
@@ -256,10 +255,10 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
 
    .. code-block:: yaml    
 
-    title: layertree                                    # Titel des Layerbaums
+    title: layertree                                    # Titel des Ebenenbaums
     target: ~                                           # ID des Kartenelements  
-    type: ~                                             # Typ des Layerbaums (Element oder Dialog)
-    autoOpen: false                                     # Öffnet Layerbaum beim Start der Anwendung (Standard: false)
+    type: ~                                             # Typ des Ebenenbaums (Element oder Dialog)
+    autoOpen: false                                     # Öffnet den Ebenenbaum beim Anwendungsstart (Standard: false)
     showBaseSource: true                                # Zeigt den Basislayer an (Standard: true)
     showHeader: true                                    # Zeigt eine Überschrift, die die Anzahl der Services zählt (Standard: true)
     menu: [opacity,zoomtolayer,metadata,removelayer]    # Zeigt ein Kontextmenü für den Layer an (wie Transparenz, Zoom auf Layer, Anzeige des Metadatendialogs, Layer entfernen)
