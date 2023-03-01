@@ -311,7 +311,7 @@ Mapbender Demo Map
 
 Folgende Funktionen sind vorimplementiert:
 
-Toolbar
+Obere Werkzeugleiste
     * Ebenenbaum (Button)
     * Information (Button)
     * Druck (Button)
@@ -329,7 +329,7 @@ Sidepane
     * Koordinaten Utility
     * Über-Mapbender-Dialog (HTML)
 
-Content
+Kartenbereich
     * Karte
     * Navigationswerkzeug
     * Legende
@@ -345,7 +345,7 @@ Content
     * Maßstabsanzeige
     * MeetingPoint (POI)
 
-Footer
+Fußzeile
     * Aktivitätsanzeige
     * Koordinatenanzeige
     * SRS Auswahl
@@ -362,14 +362,14 @@ Mapbender Demo Map basic
 
 Unterschiede zu Mapbender Demo Map:
 
-Toolbar
-    Die Toolbar unterscheidet sich kaum von der in der Mapbender Demo Map Anwendung. Statt 'POI' ist 'Coordinates utility'      eingebunden.
+Obere Werkzeugleiste
+    Die Leiste unterscheidet sich kaum von der in der Mapbender Demo Map Anwendung. Statt 'POI' ist 'Koordinaten Utility' eingebunden.
 
 Sidepane
     Hier sind keine Funktionen vorimplementiert.
 
-Content
-    Statt der Funktionen 'Scale display' und 'POI' ist die Funktion 'Coordinates utility' eingebunden.
+Kartenbereich
+    Statt der Funktionen 'Maßstabsanzeige' und 'POI' ist die Funktion 'Koordinaten Utility' eingebunden.
 
 Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
 
@@ -382,7 +382,7 @@ Die Beispielanwendung kann als Mobile Template für die Erstellung von Anwendung
 
 Folgende Funktionen sind vorimplementiert:
 
-Footer
+Fußzeile
     * Themen (Button)
     * Themenwechsel (Button)
     * GPS-Position
@@ -390,7 +390,7 @@ Footer
     * Hilfe (Button)
     * Über-Mapbender-Dialog (Button)
 
-Content
+Kartenbereich
     * Karte
     * Navigationswerkzeug
 

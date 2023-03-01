@@ -26,8 +26,8 @@ Configuration
 
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Position:** Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-* **Placeholder:** Text to display when the search fiels is empty. If placeholder is not defined the content of title is used.
+* **Position:** Position (only when used in Map area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+* **Placeholder:** Text to display when the search fiels is empty. If a placeholder is not defined, the content of the title is used instead.
 * **Query URL:** Solr URL for the search (e.g. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``) or Nominatim URL.
 * **Query URL key:** The query parameter key to append  (e.g. ``q``).
 * **Query Whitespace replacement pattern:** Pattern for replacing white spaces.
@@ -74,8 +74,8 @@ YAML-Definition
 
 .. code-block:: yaml
 
-   placeholder: 'please search'                                                       # Text to display when the search fiels is empty. If placeholder is not defined the content of title is used.
-   anchor: 'right-bottom'                                                             # Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+   placeholder: 'please search'                                                       # Text to display when the search fiels is empty. If a placeholder is not defined, the content of the title is used.
+   anchor: 'right-bottom'                                                             # Position (only when used in Map area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
    query_url: http://example.com/solr/core/0/select?wt=json&indent=true&rows=8        # Example Solr URL (e.g. ``http://localhost:8080/solr/core/0/select?wt=json&indent=true``) or Nominatim URL.
    query_key: q                                                                       # The query parameter key to append
    query_ws_replace:                                                                  # Pattern for replacing white spaces.

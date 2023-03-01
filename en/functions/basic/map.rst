@@ -3,7 +3,7 @@
 Map
 ***
 
-Map is based on OpenLayers. The element can be integrated via the content section.
+Map is based on OpenLayers. The element must be integrated into the Map area.
 
 .. image:: ../../../figures/map.png
      :scale: 80
@@ -28,7 +28,7 @@ Configuration
 Configuration example
 =====================
 
-The map element has to be included into the content section:
+The map element has to be included into the Map area:
 
 .. image:: ../../../figures/add_content.png
      :scale: 80
@@ -42,7 +42,7 @@ In order to display all *Layersets* **(1)** on the map, they have to be activate
 
 The field *SRS* **(2)** defines the coordinate reference system that is used at application start. In this example, the coordinate reference system EPSG 25832 or ETRS89/UTM Zone 32N was chosen. If the application should support other coordinate systems, simply add those in the *Other SRS* **(7)** field. In this example, the following codes are used: 25833 (ETRS89/UTM Zone 33N), 31466 (DHDN/3-degree Gauss-Kruger Zone 2), 31467 (DHDN/3-degree Gauss-Kruger Zone 3), 3857 (WGS 84/Pseudo-Mercator) and 4326 (WGS 84).
 
-The field *max. Extent* **(3)** states the maximum zoomable extent of the map application. If there is data outside of the extent, it cannot be seen by the frontend user. The field *start Extent* **(4)** refers to the extent of the map that is visible when the application is started in the browser (in the example the city of Bonn). Furthermore, the field *scales (csv)* **(6)** defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`zoom_bar`. *Fixed zoom steps* **(5)** were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
+The field *max. Extent* **(3)** states the maximum zoomable extent of the map application. If there is data outside of the extent, it cannot be seen by the frontend user. The field *start Extent* **(4)** refers to the extent of the map that is visible when the application is started in the browser (in the example the city of Bonn). Furthermore, the field *scales (csv)* **(6)** defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`navigation_toolbar`. *Fixed zoom steps* **(5)** were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
 
 .. image:: ../../../figures/map_example_dialog.png
      :scale: 80

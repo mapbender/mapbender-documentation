@@ -93,7 +93,7 @@ Eine Infoabfrage mit aktiviertem FeatureInfo Highlighting könnte beispielsweise
 
 In der Abbildung wurden mehrere Geometrien in der Karte ausgewählt (PLZ: 53111, 53113 und 53115). Der FeatureInfo Dialog zeigt die Informationen zu diesen Objekten an. Die Fläche mit der PLZ 53115 wird durch Hovering rot in der Karte markiert.
 
-Das FeatureInfo Highlighting kann im FeatureInfo-Element im Content-Bereich aktiviert werden. Dort sind auch Grund- und Hoverfarbe auswählbar.
+Das FeatureInfo Highlighting kann im FeatureInfo-Element im Kartenbereich aktiviert werden. Dort sind auch Grund- und Hoverfarbe auswählbar.
 
 Darüber hinaus muss die HTML-Ausgabe der Infoabfrage angepasst werden. Hierfür ist es notwendig, dass die Geometrieabfrage versteckt als WKT über ein HTML-div erfolgt. Zusätzlich muss der EPSG-Code übergeben werden und eine eindeutige ID in dem HTML-div vorliegen (siehe Konfigurationsbeispiel unten).
 Mapbender wertet nach korrekter Konfiguration diese Informationen aus und stellt die Geometrien in der Karte dar. Beim Mouse-Over auf den Treffern des Infofensters wird die dazugehörige Geometrie farblich entsprechend hervorgehoben. Anpassungen können für MapServer, QGIS Server, GeoServer erfolgen.

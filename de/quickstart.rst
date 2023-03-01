@@ -161,13 +161,13 @@ Anwendungen können jederzeit bearbeitet werden. Von der Anwendungsübersichtsse
 3. Elemente in eine Anwendung einfügen
 ======================================
 
-Mapbender besteht aus den Bereichen Toolbar, Sidepane, Content und Footer. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
+Mapbender-Anwendungen bestehen aus den Bereichen Obere Werkzeugleiste, Sidepane, Kartenbereich und Fußzeile. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
 
 #. Wählen Sie ``Anwendungen -->`` |mapbender-button-edit| ``Button --> Layouts`` 
 
 #. Klicken Sie auf den |mapbender-button-add| ``Button`` neben einem Bereich, um einen Überblick über die dort verfügbaren Elemente zu erhalten.
 
-#. Wählen Sie ein Element aus der Liste aus. Beachten Sie dabei den jeweiligen Bereich Ihrer Anwendung. Es können nicht alle Elemente zu jedem Bereich hinzugefügt werden. Beispielsweise ist die Übersicht (overview) nur in den Content-Bereich integrierbar.
+#. Wählen Sie ein Element aus der Liste aus. Beachten Sie dabei den jeweiligen Bereich Ihrer Anwendung. Es können nicht alle Elemente zu jedem Bereich hinzugefügt werden. Beispielsweise ist die Übersicht (overview) nur in den Kartenbereich integrierbar.
 
 #. Konfigurieren Sie das Element. Hinweis: Wenn Sie ein Element z.B. **Karte (map)** auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
 
@@ -221,12 +221,12 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 Versuchen Sie es selbst
 -----------------------
 
-* Fügen Sie ein Kartenelement zum Content-Bereich Ihrer Anwendung hinzu.
-* Fügen Sie einen Ebenenbaum zum Content-Bereich Ihrer Anwendung hinzu.
-* Fügen Sie einen Button in die Toolbar ein, der den Layertree öffnet.
-* Fügen Sie das Navigationswerkzeug in den Content-Bereich hinzu.
+* Fügen Sie ein Kartenelement zum Kartenbereich der Anwendung hinzu.
+* Fügen Sie einen Ebenenbaum zum Kartenbereich der Anwendung hinzu.
+* Fügen Sie einen Button in die Fußzeile ein, der den Layertree öffnet.
+* Fügen Sie das Navigationswerkzeug in den Kartenbereich hinzu.
 * Fügen Sie ein Copyright-Element hinzu und ändern Sie den Copyright-Text.
-* Fügen Sie eine SRS Auswahl in den Footer-Bereich ein.
+* Fügen Sie eine SRS-Auswahl in die Fußzeile ein.
 
 
 Datenquellen (Sources) verwenden
