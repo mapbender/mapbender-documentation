@@ -120,6 +120,15 @@ Diese Variablen sehen in der Anwendung wie folgt aus:
 .. image:: ../../../figures/de/html_example_entity_title.png
      :scale: 80
 
+Verweis auf eine Twig-Datei
+---------------------------
+
+Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
+
+.. image:: ../../../figures/de/html_configuration_include_twig.png
+     :scale: 80
+
+
 YAML-Definition:
 ----------------
 

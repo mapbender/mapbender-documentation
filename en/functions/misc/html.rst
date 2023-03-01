@@ -120,6 +120,18 @@ These variables could look as follows:
 .. image:: ../../../figures/html_example_entity_title.png
      :scale: 80
 
+
+Refer to a twig file
+--------------------
+
+You can refer to a twig file in the Content area. Please note that the twig file has to contain valid HTML.
+
+.. image:: ../../../figures/html_configuration_include_twig.png
+     :scale: 80
+
+
+
+
 YAML-Definition:
 ----------------
 
