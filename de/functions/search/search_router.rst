@@ -12,7 +12,7 @@ Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die
 Konfiguration
 =============
 
-.. note:: Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de`.
+.. note:: **Hinweis:** Die Suche greift auf Tabellen in einer Datenbank zu. Dafür muss die Datenbank in Mapbender bekannt gegeben werden. Informationen dazu finden sich unter :ref:`yaml_de`.
 
 Das Element kann entweder in der Sidepane oder als Button in der oberen Werkzeugleiste integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
 
@@ -157,7 +157,7 @@ Die Auswahlmöglichkeiten werden im Bereich choices definiert. Dabei werden ein 
 * key - wird bei der Suchanfrage verwendet 
 * value - wird in der Auswahlbox angezeigt 
 
-..note: Ab Mapbender 3.2 sollte die Angabe in der Reihenfolge value: key erfolgen und die Typdefinition lautet type: Symfony\Component\Form\Extension\Core\Type\ChoiceType.
+.. note:: **Hinweis:** Ab Mapbender 3.2 sollte die Angabe in der Reihenfolge value: key erfolgen, die Typdefinition lautet type: Symfony\Component\Form\Extension\Core\Type\ChoiceType.
 
 * Typ choice; Beispiel für ein Feld mit Auswahlmöglichkeiten:
 

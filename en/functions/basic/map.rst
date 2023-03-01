@@ -15,7 +15,7 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Layersets:** Refers to a layerset. Note: Layersets have to be defined first and can then be referred to.
+* **Layersets:** Refers to a layerset. Layersets have to be defined first and can then be referred to.
 * **Tile size:** Size of the tiles of tiled WMS services.
 * **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
 * **Max. Extent:** Maximal map extent, defined by BBOX parameters.
