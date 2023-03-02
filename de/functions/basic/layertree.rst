@@ -97,6 +97,7 @@ Bei Schwierigkeiten bei der Einbindung kann die Dokumentation der `Layersets <..
 
 Als Nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_ zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Anwendungsreiter **Layouts** und bearbeiten dann das Kartenelement im Kartenbereich.
 Wichtig ist, dass im Bereich Layersets das Layerset World aktiviert wird, damit es in der Anwendung angezeigt wird. 
+
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple.png
@@ -109,6 +110,7 @@ Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kart
 
 Zuletzt erfolgt die Einrichtung des **Layertrees** selbst. 
 Die im Kartenelement angegebenen Instanzen können im Layertree präziser definiert werden. Wenn eine vordefinierte Anwendung kopiert wurde, sollte der Layertree bereits funktionieren. Beim erneuten Einbinden des Elements in die Anwendung kann dieses mit den Standardeinstellungen genutzt werden, ohne dass weitere Anpassungen zwingend notwendig sind.
+
 Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bearbeiten wir nun das Ebenenbaum-Element im Kartenbereich.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
@@ -116,6 +118,7 @@ Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bear
            :alt: Einrichtung des Layertrees im Kartenbereich.
 
            Einrichtung des Layertrees im Kartenbereich.
+
 
 Über die Checkbox **BaseSources anzeigen** werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch im Layertree angezeigt.
 
@@ -201,6 +204,7 @@ Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die 
 
 Als Nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_ zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement im Kartenbereich.
 Wichtig ist, dass bei dem Bereich Layersets beide Layersets "World" und "Project NRW" per Checkbox aktiviert sind, damit diese in der Anwendung angezeigt werden. 
+
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_komplex.png

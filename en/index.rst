@@ -41,9 +41,4 @@ Welcome to the Mapbender documentation
 .. toctree::
    :maxdepth: 1
 
-   documentation_howto
-
-.. toctree::
-   :maxdepth: 1
-
    versions

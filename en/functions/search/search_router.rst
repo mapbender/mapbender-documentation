@@ -155,7 +155,7 @@ You have to define the choices for the selectbox. You define a value and a key.
 * key - will be send in the search query
 * value - is show as text in selectbox
 
-..note: Please note that from Mapbender 3.2 you should use the value: key definition and type: Symfony\Component\Form\Extension\Core\Type\ChoiceType
+.. note:: From Mapbender 3.2 on onwards, you should use the value: key definition and type: Symfony\Component\Form\Extension\Core\Type\ChoiceType
 
 * Type choice; example with different selection options via dropdown:
 

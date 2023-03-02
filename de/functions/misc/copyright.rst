@@ -3,7 +3,7 @@
 Copyright
 *********
 
-Dieses Element zeigt die Nutzungsbedingungen ("Terms of use") in einem Dialog an.
+Dieses Element kann verwendet werden, um Text (auch HTML) in einem Dialog anzuzeigen. Der Dialog kann auf Wunsch beim Start automatisch erscheinen. Es können auch Links und Bilder integriert werden (siehe :ref:`html_de`).
 
 .. image:: ../../../figures/de/copyright.png
      :scale: 80
@@ -20,6 +20,16 @@ Konfiguration
 * **Popup width:** Breite des Popup Fensters (Standard: 300).
 * **Popup height:** Höhe des Popup Fensters (Standard: 170).
 * **Content:** Inhalt des Copyright Fensters. Dieser wird angezeigt, wenn das Element per Klick aktiviert wird (oder beim Start der Anwendung, wenn die "Automatisches Öffnen"-Option aktiviert wurde).
+
+
+Verweis auf eine Twig-Datei
+---------------------------
+
+Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
+
+.. image:: ../../../figures/de/copyright_configuration_include_twig.png
+     :scale: 80
+
 
 YAML-Definition:
 ----------------

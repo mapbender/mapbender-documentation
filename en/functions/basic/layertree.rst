@@ -100,6 +100,7 @@ In the next step, we configure the `Map element <../basic/map.html>`_ to display
 It is important that you activate the checkbox next to the "World" Layerset so it appears in the application afterwards.
 If you have questions for further configuration, the `Map element <../basic/map.html>`_ documentation can help.
 
+
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple_en.png
            :scale: 80 
            :alt:  Configuration of the map element to display the Layerset.
@@ -150,7 +151,7 @@ The function **Hide info** allows you to disable the FeatureInfo function. Indep
 
 The checkbox **Thematic layer** activates the thematic division of levels. The next section contains further explanation on how to configure the thematic layertree.
 
-The checkbox **Allow Reorder at TOC** controls whether layers may be freely rearranged using drag & drop in the layertree.
+The checkbox **Allow Reorder at TOC** controls if layers are rearrangeable via drag & drop in the application's layertree (TOC).
 
 By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
 
@@ -204,6 +205,7 @@ Now, we configure the `map element <../basic/map.html>`_  to display the Layerse
 It is now important that you set an active checkbox in the Layerset "World" AND Layerset "Project NRW", so that they both appear in the application.
 If you have questions regarding further configuration of the map, you can view its configuration in the `map element <../basic/map.html>`_.
 
+
 .. figure:: ../../../figures/layertree/layertree_configuration_map_komplex_en.png
            :scale: 80 
            :alt: Configuration of Layersets for a thematic Layertree.
@@ -222,6 +224,7 @@ Since we inserted both Layersets into the `map element <../basic/map.html>`_ of 
            :alt: Configuration of the thematic Layertree in the map area.
 
            Configuration of the thematic Layertree in the map area.
+
 
 Thus, to let the **themes** in the application appear as you want, there are several configuration options:
 

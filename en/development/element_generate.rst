@@ -3,9 +3,9 @@
 How to create your own Element?
 ###############################
 
-*Note*: This guide is under complete restructuring. We will provide a new documentation in the Contributing Guite in our Git-Repository:
+.. note:: This guide is under complete restructuring. We will provide a new documentation in the Contributing Guite in our Git-Repository:
 
-`https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_.
+`https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_.
 
 
 Mapbender offers an app/console command to create different elements:
@@ -15,7 +15,7 @@ Mapbender offers an app/console command to create different elements:
 * elements for map-click events
 * elements for map-box events
 
-*Please note:* The new generated element contains only a skeleton and has to be modivied after generation.
+.. hint:: The new generated element contains only a skeleton and has to be modified after generation.
 
 The following example show the generation and modification of a map-click element.
 

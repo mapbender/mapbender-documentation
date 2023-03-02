@@ -21,7 +21,7 @@ Konfiguration
 Anwendung wechseln Konfiguraton
 -------------------------------
 
-Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Toolbar Bereich das Element Anwendung wechseln ausgewählt werden.
+Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Bereich der oberen Werkzeugleiste das Element Anwendung wechseln ausgewählt werden.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80

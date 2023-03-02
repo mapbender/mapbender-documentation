@@ -48,9 +48,9 @@ Diese Konfiguration ergibt folgendes Ergebnis in der Anwendung:
 
 Die Legende wurde in diesem Fall in der Sidepane eingefügt.
 
-Legende in der Oberen Werkzueugleiste (Toolbar)
+Legende in der Oberen Werkzeugleiste (Toolbar)
 -----------------------------------------------
-Die Legende kann auch als Button in der Toolbar eingebunden werden. Hierfür muss zuerst das Element Legende unter dem Reiter Layouts im Content eingefügt werden.
+Die Legende kann auch als Button in der Werkzeugleiste eingebunden werden. Hierfür muss zuerst das Element Legende unter dem Reiter Layouts im Kartenbereich eingefügt werden.
 
 .. image:: ../../../figures/de/add_content.png
      :scale: 80
@@ -61,7 +61,7 @@ Für das Konfigurationsbeispiel wurden folgende Einstellungen gewählt:
      :scale: 80
 
 Für das Konfigurationsbeispiel wurde das Häkchen bei *Automatisches Öffnen* entfernt, sodass sich die Legende nur bei aktivem Klicken auf einen Button öffnet.
-Sobald dieses Element im Content eingebunden wurde, muss ein Button in der Toolbar eingefügt werden. Die Konfiguration von Buttons wird in der Mapbender-Dokumentation unter `Button <../misc/button.html>`_ beschrieben.
+Sobald dieses Element im Kartenbereich eingebunden wurde, muss ein Button in der oberen Werkzeugleiste eingefügt werden. Die Konfiguration von Buttons wird in der Mapbender-Dokumentation unter `Button <../misc/button.html>`_ beschrieben.
 
 Die Konfiguration eines Buttons für die Legende kann wie folgt aussehen:
 
@@ -73,7 +73,7 @@ Mit diesen Einstellungen sieht das Ergebnis in der Anwendung wie folgt aus:
 .. image:: ../../../figures/de/legend_example_toolbar.png
      :scale: 80
 
-In der Oberen Werkzueugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende.
+In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende.
 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 

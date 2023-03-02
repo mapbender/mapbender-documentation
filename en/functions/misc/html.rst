@@ -23,7 +23,7 @@ This element has to be integrated in the backend.
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts".
-* **Content:** Content of the HTML-element. The variables: "application" and "entity" are available in the content.
+* **Content:** Content of the HTML-element. The variables "application" and "entity" are available.
 * **Classes:** You can refer to a CSS class for the HTML element. The class can be defined in the css editor.
 
 
@@ -120,6 +120,18 @@ These variables could look as follows:
 .. image:: ../../../figures/html_example_entity_title.png
      :scale: 80
 
+
+Refer to a twig file
+--------------------
+
+You can refer to a twig file in the Content area. Please note that the twig file has to contain valid HTML.
+
+.. image:: ../../../figures/html_configuration_include_twig.png
+     :scale: 80
+
+
+
+
 YAML-Definition:
 ----------------
 
@@ -129,6 +141,6 @@ This template can be used to insert the element into a YAML application.
 
     title: 'HTML-Element'
     class: Mapbender\CoreBundle\Element\HTMLElement
-    content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> #The variables "application" and "entity" are available in the content.
+    content: <p>Hello, World!</p><p>Application: {{ application.title |trans }}</p> # The variables "application" and "entity" are available.
     classes: my-special-css-class
 

@@ -2,4 +2,4 @@
 
 Frontend architecture (Status Version 3.0.3.0)
 ##############################################
-.. image:: ../../figures/mapbender3_frontend_architecture.png
+.. image:: ../../figures/mapbender_frontend_architecture.png

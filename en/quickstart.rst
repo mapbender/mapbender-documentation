@@ -161,13 +161,13 @@ Applications can be re-edited at any point. In order to do so, navigate to the a
 3. Add elements to your application
 ===================================
 
-Mapbender consists of a toolbar, sidepane, content and footer. A variety of different elements can be added into these areas.
+Mapbender applications consist of a Top toolbar, Sidepane, Map area and Footer. A variety of different elements can be added into these areas.
 
 #. Choose ``Applications -->`` |mapbender-button-edit| ``Button --> Layouts``.
 
 #. Click on the |mapbender-button-add| ``Button`` to get an overview over the elements Mapbender provides in the corresponding area.
 
-#. Choose an element from the list. Notice that you have different areas in your application. Make sure to add the element to a region that makes sense. Elements can not be added to all regions. For instance, the overview map is not integrable into the content.
+#. Choose an element from the list. Notice that you have different areas in your application. Make sure to add the element to a region that makes sense. Not all elements can be added to all regions.
 
 #. Configure the element. Notice: When you select an element, for example **map**, you see that the element has a set of attributes. Each element offers individual attributes for configuration.
 
@@ -203,7 +203,7 @@ In the following, you find a complete list of all elements and their functionali
 * Link: Links to an external URL
 * Map: Creates the map element in which layersets and layers are integrated into
 * Navigation toolbar: Provides a floating control to pan and zoom in the map
-* Overview: Provides an overview map (only available in Content section)
+* Overview: Provides an overview map
 * POI: Creates a POI for sharing
 * Print client: Renders a Print dialog
 * SRS selector: Changes the map's spatial reference system
@@ -221,10 +221,10 @@ In the following, you find a complete list of all elements and their functionali
 Try it yourself
 ---------------
 
-* add a Map Element to the content of your application
-* add a Layertree to the content of your application
-* add a button that opens the Layertree to the top of your application
-* add the Navigation Toolbar to the content
+* add a Map to the Map area of your application
+* add a Layertree to the Map area of your application
+* add a button to the Top toolbar and combine it with the Layertree of your application
+* add the Navigation Toolbar to the Map area
 * add a Copyright and change the copyright text
 * add an SRS Selector to the footer
 
