@@ -4,7 +4,7 @@ Basisfunktionen
 ===============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    basic/activity_indicator.rst
    basic/basesourceswitcher.rst
