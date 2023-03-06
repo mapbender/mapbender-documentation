@@ -443,7 +443,8 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 #. Alternativ zum öffentlichen Zugriff können Sie individuelle Zugriffsrechte für einen Benutzer oder eine Gruppe setzen.
 
   .. image:: ../figures/de/mapbender_security.png
-
+     :scale: 80
+     
 Testen Sie die Konfiguration. Melden Sie sich dafür über ``Logout`` aus und melden sich unter einer neuen Benutzerbezeichnung an.
 
 
