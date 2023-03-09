@@ -397,10 +397,10 @@ Miscellaneous:
   * :ref:`html`
   * :ref:`legend`
   * :ref:`map`
+  * :ref:`navigation_toolbar`
   * :ref:`overview`
   * :ref:`search_router`
   * :ref:`srs_selector`
-  * :ref:`zoom_bar`
 
 * Improvements for the :ref:`printclient` and the new dynamic features on print-templates.
 
