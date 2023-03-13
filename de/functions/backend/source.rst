@@ -33,11 +33,11 @@ Nach einer erfolgreichen Dienstregistrierung zeigt Mapbender Informationen zum D
 Datenquellen - Übersicht
 ------------------------
 
-Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich eingeladenen und konfigurierten Dienste auf:
+Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen und konfigurierten Dienste auf:
 
 * **Filter**: Filtert die Dienste nach kontextspezifischer Eingabe, berücksichtigt Name, URL, Typ und Beschreibung.
 * **Metadaten anzeigen**: Zeigt die Metadaten eines ausgewählten Dienstes an. Öffnet einen neuen Bereich, der in mehreren Reitern Metadaten, Mapbender-Anwendungen mit Zugriff, Kontaktinformationen, Details (z.B. Version) und die Layer des Dienstes ausgibt.
-* **Datenquelle aktualisieren**: Bei Buttonklick wird der Bereich "Datenquelle aktualisieren" geöffnet, der den Service und die zugehörigen Metadaten aktualisiert.
+* **Datenquelle aktualisieren**: Aktualisiert die Dienst-Informationen durch erneutes Laden des getCapabilities-Dokuments.
 * **Datenquelle entfernen**: Entfernt den Dienst aus Mapbender.
 
 .. image:: ../../../figures/de/mapbender_sources.png
@@ -49,7 +49,7 @@ Datenquellen-Kontextmenü
 
 Im Metadatendialog eines Dienstes befindet sich oben rechts außerdem das Datenquellen-Kontextmenü. Es ermöglicht folgende Funktionen:
 
-* **Datenquelle aktualisieren**: Bei Buttonklick wird der Bereich "Datenquelle aktualisieren" geöffnet, der den Service und die zugehörigen Metadaten aktualisiert.
+* **Datenquelle aktualisieren**: Aktualisiert die Dienst-Informationen durch erneutes Laden des getCapabilities-Dokuments.
 * **Freie Instanz erzeugen**: Erzeugt eine freie Instanz aus der Datenquelle. Diese wird im Bereich "Freie Instanzen" angezeigt. 
 * **Löschen**: Entfernt die freie Instanz aus Mapbender.
 
