@@ -445,6 +445,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
   .. image:: ../figures/de/mapbender_security.png
      :width: 100%
 
+
 Testen Sie die Konfiguration. Melden Sie sich dafür über ``Logout`` aus und melden sich unter einer neuen Benutzerbezeichnung an.
 
 

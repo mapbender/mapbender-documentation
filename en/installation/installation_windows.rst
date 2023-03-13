@@ -204,5 +204,5 @@ Troubleshooting is available via the following command (must be executed in the 
 Further information can be found at: https://doc.mapbender.org/en/customization/commands.html#app-console-mapbender-config-check
 
 Congratulations! Mapbender is now set up correctly and ready for further configuration.
-Find Information about the first steps with Mapbender: `Mapbender Quickstart Document <../en/quickstart.html>`_.
+Find Information about the first steps with Mapbender: `Mapbender Quickstart Document <../quickstart.html>`_.
 
