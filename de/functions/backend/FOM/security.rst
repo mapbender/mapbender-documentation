@@ -25,7 +25,7 @@ Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Sie basieren 
 Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherheit`` die gewünschten Rechte zu.
 
   .. image:: /figures/mapbender_roles.png
-     :scale: 80
+     :width: 100%
 
 
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
@@ -44,7 +44,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 #. Alternativ können Sie auch unter ``Sicherheit --> Globale Zugriffssteuerungsliste (ACL) --> Anwendungen`` schnell Berechtigungen von Benutzern/Gruppen für alle Anwendungen festlegen.
 
   .. image:: ../../../../figures/de/mapbender_security.png
-     :scale: 80
+     :width: 100%
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
 ================================================
@@ -62,7 +62,7 @@ Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Z
 #. Testen Sie die Konfiguration, indem Sie die Anwendung mit Benutzern aufrufen, die (keine) Berechtigungen zum Element erhalten haben.
 
   .. image:: ../../../../figures/fom/element_security_key_popup.png
-     :scale: 80
+     :width: 100%
 
 Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
 =====================================================

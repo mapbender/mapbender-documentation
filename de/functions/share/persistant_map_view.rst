@@ -28,7 +28,7 @@ Konfiguration
 Persistente Kartenzustände werden über eine Checkbox für jede Anwendung unter dem Tab "Basisdaten" einzeln aktiviert.
 
 .. image:: ../../../figures/de/persistent_map_state.png
-     :scale: 80
+     :width: 100%
 
 Die Einbettung erzeugt eine neue Spalte in der Tabelle *mb_core_application*. Es muss deshalb eine Datenbankaktualisierung mit *app/console doctrine:schema:update --force* durchgeführt werden.
 

@@ -25,7 +25,7 @@ Mapbender provides different rights. They refer to the :doc:`Access Control List
 Assign roles to a user by ``Users --> Edit your User --> Security``.
 
   .. image:: ../../../../figures/mapbender_roles.png
-     :scale: 80
+     :width: 100%
 
 
 Assign an Application to a User/Group
@@ -44,7 +44,7 @@ Assign an Application to a User/Group
 #. Another method would be to choose ``Security --> Global Access Control Lists --> Applications`` to quickly set permissions for several users/groups to all applications.
 
   .. image:: ../../../../figures/mapbender_security.png
-     :scale: 80
+     :width: 100%
 
 
 Assign single elements to a User/Group
@@ -63,7 +63,7 @@ Per default, all elements are available to all users/groups that have permission
 #. Test your configuration. For example, open the application with a user account that has (no) rights to a previously configured element. 
 
   .. image:: ../../../../figures/fom/element_security_key_popup.png
-     :scale: 80
+     :width: 100%
 
 
 Assign a user to another User/Group

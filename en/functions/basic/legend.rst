@@ -24,14 +24,14 @@ Configuration
 The Legend element is integrated via a button or in the sidepane. If you look for configurational details for the button, head over to this page: `Button <../misc/button.html>`_.
 
 
-Configuration Examples:
-========================
+Configuration Examples
+======================
 
 Legend in the Sidepane:
 -----------------------
 If yout want to integrate a legend in the sidepane, click the ``+`` -button in the "Layouts"-tab (section "Sidepane").
 
-.. image:: ../../../figures/de/add_sidepane.png
+.. image:: ../../../figures/add_sidepane.png
      :scale: 80
 
 Then, choose the element "Legend" in the appearing window. The configurational dialog "Add element – Legend" will open.
@@ -50,15 +50,15 @@ In the example the legend was added to the sidepane.
 
 Legend in the toolbar
 ---------------------
-The legend element can be integrated with a button in the toolbar. First step: Open the application backend and add the legend element into the content section of the Layout tab.
+The legend element can be integrated with a button in the toolbar. First step: Open the application backend and add the legend element into the map area section of the Layout tab.
 
-.. image:: ../../../figures/de/add_content.png
+.. image:: ../../../figures/add_map_area.png
      :scale: 80
 
 In this example, the following settings are chosen:
 
 .. image:: ../../../figures/legend_example_toolbar_dialog.png
-     :scale: 80
+     :scale: 75
 
 In our example, the checkbox *Auto-open* is dismissed. Therefore, the legend opens only with a click on a button.
 This button has to be implemented into the toolbar section. For detailed instructions on buttons, see the Mapbender-Documentation page `Button <../misc/button.html>`_.
@@ -78,7 +78,7 @@ The toolbar shows the button for the legend element. If the button is clicked, t
 The activation and deactivation of checkboxes in the configurational settings leads to:
 
 .. image:: ../../../figures/legend_example_toolbar_checkboxes.png
-     :scale: 80
+     :width: 100%
 
 YAML-Definition:
 ----------------

@@ -14,7 +14,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/feature_info_configuration.png
-     :scale: 80
+     :align: center
 
 
 * **Automatisches Öffnen:** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: false).
@@ -43,17 +43,17 @@ Einstellungen im Ebenenbaum
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist aktiviert:
 
 .. image:: ../../../figures/de/feature_info_on.png
-     :scale: 80
+     :width: 50%
 
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist deaktiviert:
 
 .. image:: ../../../figures/de/feature_info_off.png
-     :scale: 80
+     :width: 50%
 
 Layer ist nicht sichtbar; es erfolgt keine FeatureInfo-Abfrage, auch wenn diese aktiviert ist:
 
 .. image:: ../../../figures/de/feature_info_on_layer_invisible.png
-     :scale: 80
+     :width: 50%
      
 
 Anzeige als Tabs und Accordion

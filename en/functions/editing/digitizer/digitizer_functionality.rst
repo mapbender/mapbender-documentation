@@ -11,7 +11,7 @@ Digitizer allows the editing of FeatureTypes. These are based on points, lines o
 * Generate areas with enclaves
 
 .. image:: ../../../../figures/Digitizer_geometries.png
-     :scale: 80
+     :width: 75%
 
 The following sections explain the different functionalities of Digitizer in accordance with its default configuration.
 

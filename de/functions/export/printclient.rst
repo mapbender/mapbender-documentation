@@ -32,7 +32,6 @@ Konfiguration des PrintClients
 
 Der PrintClient kann im Backend konfiguriert werden. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A4 bis A0 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
 
-
 .. image:: ../../../figures/de/print_client_configuration.png
      :scale: 80
 
@@ -100,7 +99,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
             label: Bearbeiter
             options: { required: true }
     replace_pattern:                                         # Für den Druck kann der Kartenaufruf verändert werden.
-    -                                                        # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer)
+            -                                                # Es können zusätzliche Parameter hinzugefügt werden (wie map_resolution für MapServer).
                 default: { 288: '&map_resolution=288' }
             -
                 pattern: 'stadtplan.xml'                     # oder es können für den Druck optimierte Dienste angefordert werden.
@@ -144,7 +143,7 @@ Optionale Felder (z.B. Titel, Kommentar, Bearbeiter) können über die Element-K
 Bei der Erstellung dynamischer Texte müssen die jeweiligen Objekte den passenden Namen haben, z.B. das Kommentarfeld **comment1** muss auch in der Vorlage **comment1** heißen. Zum Benennen der Objektfelder reicht es nicht den Textinhalt anzupassen. Die Felder müssen selektiert und über **Menü: Format --> Name...** angepasst werden.
 
 .. image:: ../../../figures/print_template_name.png
-    :scale: 80
+    :width: 100%
 
 Die Vorlage muss als PDF unter dem gleichen Namen wie die ODG-Datei exportiert werden. Namen werden ohne Dateierweiterung in der YML-Druck-Definition verwendet.
 
@@ -187,7 +186,7 @@ Legende auf der ersten Seite
 Neben dem Kartenbereich kann die Legende auf der ersten Seite der Druckvorlage integriert werden. Standardmäßig ist dieser Bereich nicht in den Druckvorlagen vorhanden. Für die Integration der Legende wird die LibreOffice Draw-Druckvorlage angepasst. Hierfür wird ein neues dynamisches Feld mit dem Namen "legend" auf der nicht druckbaren Ebene eingefügt. Die Bezeichnung des Feldes zu "legend" wird über **Menü: Format -> Name…** verändert. Sobald das Element platziert und benannt wurde, wird im Druck die Legende angezeigt. Abschließend muss die ODG-Datei als PDF exportiert und im gleichen Ordner abspeichert werden. Die Legende auf der ersten Seite kann wie folgt aussehen:
 
 .. image:: ../../../figures/print_client_example_legend.png
-     :scale: 80
+     :width: 100%
 
 
 Logo auf der Legendenseite
@@ -197,7 +196,7 @@ Sofern die Legende weiterhin auf einer zusätzlichen Seite erzeugt werden soll, 
 Das erzeugte PDF kann beispielsweise aus folgenden beiden Seiten bestehen:
 
 .. image:: ../../../figures/print_client_example_legendpage_image.png
-     :scale: 80
+     :width: 100%
 
 Auf der zweiten Seite erscheint das eingefügte Logo.
 
@@ -217,7 +216,7 @@ Alternativ kann über **Rechtsklick auf den markierten Text -> Zeichen ...** unt
 Die Veränderung der Farbe des dynamischen Feldes "title" in blau kann im Druck wie folgt aussehen:
 
 .. image:: ../../../figures/print_client_example_colour.png
-     :scale: 80
+     :width: 100%
 
 Analog zu der Veränderung der Schriftfarbe wird auch die Veränderung der Schriftgröße durchgeführt.
 
@@ -231,7 +230,7 @@ Gruppenabhängig können in der Druckausgabe unterschiedliche Bilder oder Beschr
 Ein gruppenabhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie folgt aussehen:
 
 .. image:: ../../../figures/de/print_client_example_groups.png
-     :scale: 80
+     :width: 100%
 
 Zur Nutzung dieser Funktion müssen Gruppen mit Benutzern erstellt und den Anwendungen die jeweiligen Gruppen zugewiesen werden. Weitere Informationen zur Funktionsweise der Gruppen- und Benutzerverwaltung unter `Mapbender Quickstart <../../quickstart.html>`_.
 
