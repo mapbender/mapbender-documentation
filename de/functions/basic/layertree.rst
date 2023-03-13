@@ -146,25 +146,21 @@ Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert w
 
            Kontextmenü der Layer im Layertree.
 
-Die Funktion **Visibility bei Ordnern ausblenden** ermöglicht die Sicherung der Deckkraft. Bei aktiver Funktion wird die Deckkraft der einzelnen Layer nicht angezeigt und kann nicht verändert werden.
+Die Funktion **Visibility bei Ordnern ausblenden** ermöglicht die Sicherung der Konfiguration der Deckkraft. Bei aktiver Funktion wird die Deckkraft der einzelnen Layer in der Anwenddung nicht angezeigt und kann nicht verändert werden.
 
-Die Checkbox **Info ausblenden** ermöglicht das Deaktivieren der Informationsabfrage. Die Einstellungen zur Informationsabfrage sind unabhängig von den Einstellungen in Layerset oder Dienst.
+Die Checkbox **Info ausblenden** ermöglicht das Ausblenden des "i"-Symbols; die Einstellungen zur Informationsabfrage sind unabhängig von den Einstellungen in Layerset oder Dienst. Das Symbol zeigt an, ob die Informationsabfrage aktiviert ist: Wenn es nicht umrandet ist, ist die Informationsabfrage nicht aktiv. Durch einen Klick wird die dunkle Umrandung aktiviert, sodass bei einer Informationsabfrage Layer-Informationen abgefragt werden können.
 
-Die Checkbox **Thematischer Layer** aktiviert die thematische Einteilung von Layern. Im nächsten Abschnitt erfolgt ein Anwendungsbeispiel zur Verdeutlichung.
+Die Checkbox **Thematischer Layer** aktiviert die thematische Einteilung von Layern. Dadurch werden die Layerset-Namen mit Ordnersymbol und Checkbox im Ebenenbaum angezeigt. Darüber hinaus kann definiert werden, ob ein Ordner beim Start geöffnet dargestellt werden soll. Durch einen Klick auf das Ordnersymbol des Layertrees neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste.
 
 Die Checkbox **Erlaubt sortieren im Layerbaum** steuert, ob ein freies Umsortieren von Layern per Drag & Drop im Ebenenbaum erfolgen darf.
 
-Durch einen Klick auf das Ordnersymbol des Layertrees links neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste.
+Die Checkbox neben einem Layernamen ermöglicht das An- und Ausschalten eines Layers. Ist die Checkbox aktiviert, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet (wie z.B. maßstabsabhängige Anzeigen).
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
            :alt: Layertree Buttons.
 
            Layertree Buttons.
-
-Die Checkbox neben einem Layernamen ermöglicht das An- und Ausschalten eines Layers. Ist die Checkbox aktiviert, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet, wie z.B. maßstabsabhängige Anzeigen.
-
-Das "i"-Symbol neben einem Layernamen zeigt an, ob die Informationsabfrage aktiviert ist. Wenn das "i"-Symbol keine Umrandung hat, ist die Informationsabfrage nicht aktiv. Wird diese durch einen Klick aktiviert, so wird das Symbol durch eine kreisliche Umrandung hinterlegt und bei einer Informationsabfrage erscheinen Layer-Informationen. 
 
 
 Workflow thematischer Layertree
