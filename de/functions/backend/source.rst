@@ -23,7 +23,7 @@ Datenquelle laden
 
 Mit einem Klick auf ``Laden`` wird der Dienst in Mapbender registriert.
 
-  .. image:: ../../../figures/de/mapbender_add_sources.png
+  .. image:: ../../../figures/de/mapbender_add_source.png
      :scale: 80
 
 

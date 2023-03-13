@@ -23,7 +23,7 @@ To register a service, click on ``Add source``:
 
 Click on ``Load`` to register the service to the repository.
 
-  .. image:: ../../../figures/mapbender_add_sources.png
+  .. image:: ../../../figures/mapbender_add_source.png
      :scale: 80
 
 
@@ -48,7 +48,7 @@ The sources and shared instances sections list and provide additional informatio
 Sources menu button
 -------------------
 
-In the metadata dialog of a specific service, it is also possible to click on the Sources menu button (top right) that allows:
+In the metadata dialog of a specific service, it is also possible to click on the menu button (top right) that allows:
 
 * **Update source**: Updates service information by reloading the getCapabilities document.
 * **Create shared instance**: Creates a new shared instance from the specific service. The instance is listed in the Shared instances tab. 

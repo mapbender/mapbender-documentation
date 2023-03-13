@@ -265,7 +265,7 @@ Sie können OGC Web Map Services (WMS) und Web Map Tile Services (WMTS) in Ihre 
 
 #. Nach erfolgreicher Registrierung des Dienstes zeigt Mapbender eine Übersicht der Informationen an, die der Dienst geliefert hat.
 
-  .. image:: ../figures/de/mapbender_add_sources.png
+  .. image:: ../figures/de/mapbender_add_source.png
      :scale: 80
 
 
