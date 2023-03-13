@@ -37,7 +37,7 @@ The sources and shared instances sections list and provide additional informatio
 
 * **Filter**: Search for services names, URLs, types and descriptions.
 * **Show metadata**: Shows metadata about a specific service. Opens a new field that lists specific metadata, Mapbender applications that use the source, contact information, details (e.g. service version) and layers.
-* **Update source**: Click the button to show a new field that allows a refresh of the service and its metadata.
+* **Update source**: Updates service information by reloading the getCapabilities document.
 * **Delete source**: Removes the registered service from Mapbender.
 
 
@@ -50,7 +50,7 @@ Sources menu button
 
 In the metadata dialog of a specific service, it is also possible to click on the Sources menu button (top right) that allows:
 
-* **Update source**: Click the button to show a new field that allows a refresh of the service and its metadata.
+* **Update source**: Updates service information by reloading the getCapabilities document.
 * **Create shared instance**: Creates a new shared instance from the specific service. The instance is listed in the Shared instances tab. 
 * **Delete**: Removes the registered shared instance from Mapbender.
 
