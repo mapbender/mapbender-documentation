@@ -6,7 +6,7 @@ Karte (Map)
 Die Karte basiert auf OpenLayers und wird als Element im Kartenbereich integriert.
 
 .. image:: ../../../figures/de/map.png
-     :scale: 80
+     :width: 75%
 
 Konfiguration
 =============
@@ -30,13 +30,13 @@ Konfigurationsbeispiel
 
 Das Kartenelement (Map) muss unter Layouts im Kartenbereich integriert werden:
 
-.. image:: ../../../figures/de/add_content.png
+.. image:: ../../../figures/de/add_map_area.png
      :scale: 80
 
 In der Karte können alle Instanzen angezeigt werden, welche im Layerset enthalten sind. Im vorliegenden Beispiel wird zwischen der *Hauptkarte/main* (1) und *Übersichtskarte/overview* (2) unterschieden.
 
 .. image:: ../../../figures/de/map_example_layersets.png
-     :scale: 80
+     :width: 100%
 
 Damit *Layersets* **(1)** auch in der Karte angezeigt werden, müssen diese im Kartenelement aktiviert werden. Eine Mehrfachauswahl ist hierbei auch möglich. Layersets, welche nicht ausgewählt wurden, können als Overview fungieren. Im Beispiel dient *main* als Haupt- und *overview* als Übersichtskarte.
 

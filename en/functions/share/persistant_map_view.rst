@@ -28,7 +28,7 @@ Configuration
 Persistent map view is enabled on a per-application basis with a new checkbox under the "Base data" tab.
 
 .. image:: ../../../figures/persistent_map_state.png
-     :scale: 80
+     :width: 100%
 
 This change introduces a new column in the *mb_core_application* table and therefore requires *app/console doctrine:schema:update --force* to be run.
 

@@ -6,7 +6,7 @@ HTML
 This element allows the integration of HTML anywhere in an application. Figures, links or e.g. texts can be inserted. The following illustration shows the integration of a Mapbender logo in footer, toolbar and sidepane:
 
 .. image:: ../../../figures/html_preview_example.png
-     :scale: 80
+     :width: 100%
  
 The following variables can be integrated in HTML:
 
@@ -74,7 +74,7 @@ The application title is defined through ``{{ application.title }}``. The term "
 The result for the configuration example looks like this:
 
 .. image:: ../../../figures/html_example_application_title.png
-     :scale: 80
+     :width: 100%
 
 * Variable: **app.user.username**
 
@@ -118,7 +118,7 @@ In the following, the variable ``{ entity.title }`` was integrated with the text
 These variables could look as follows:
 
 .. image:: ../../../figures/html_example_entity_title.png
-     :scale: 80
+     :width: 100%
 
 
 Refer to a twig file
@@ -128,8 +128,6 @@ You can refer to a twig file in the Content area. Please note that the twig file
 
 .. image:: ../../../figures/html_configuration_include_twig.png
      :scale: 80
-
-
 
 
 YAML-Definition:

@@ -35,37 +35,37 @@ Geometrien erstellen
 Die Punktzeichnung wird über den Button "Punkt" aktiviert/deaktiviert. Punkte werden über einen Einfachklick in die Karte definiert.
 
 .. image:: ../../../figures/de/sketch_create_points.png
-     :scale: 80
+     :width: 75%
 
 
 Die Linienzeichnung wird über den Button "Linie" aktiviert/deaktiviert. Liniensegmente werden mit einem Einfachklick definiert. Das Abschließen der Zeichnung erfolgt mit einem Doppelklick. 
 
 .. image:: ../../../figures/de/sketch_create_lines.png
-     :scale: 80
+     :width: 75%
 
 
 Die Polygonzeichnung wird über den Button "Polygon" aktiviert/deaktiviert. Eckpunkte werden mit einem Einfachklick definiert. Das Abschließen der Zeichnung erfolgt mit einem Doppelklick. 
 
 .. image:: ../../../figures/de/sketch_create_polygons.png
-     :scale: 80   
+     :width: 75%
 
 
 Die Rechteckzeichnung wird über den Button "Rechteck" aktiviert/deaktiviert. Rechtecke werden nach einem Einfachklick mit der Maus aufgezogen.
 
 .. image:: ../../../figures/de/sketch_create_rectangles.png
-     :scale: 80
+     :width: 75%
 
 
 Die Kreiszeichnung wird über den Button "Kreis" aktiviert/deaktiviert. Kreise werden nach einem Einfachklick mit der Maus aufgezogen.
 
 .. image:: ../../../figures/de/sketch_create_circles.png
-     :scale: 80     
+     :width: 75%
 
 
 Die Textsetzung wird über den Button "Text" aktiviert/deaktiviert. Damit eine Textsetzung erfolgen kann, muss der Text zunächst unter "Beschriftung" definiert werden. 
 
 .. image:: ../../../figures/de/sketch_create_texts.png
-     :scale: 80
+     :width: 75%
 
 
 
@@ -84,7 +84,7 @@ Zeichenmodus verlassen
 Der Zeichenmodus wird über den Button "Zeichnen beenden" deaktiviert.
 
 .. image:: ../../../figures/de/sketch_stop_drawing.png
-     :scale: 80
+     :width: 75%
 
 
 YAML-Definition:

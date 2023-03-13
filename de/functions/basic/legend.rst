@@ -29,7 +29,7 @@ Konfigurationsbeispiele
 
 Legende in der Sidepane
 -----------------------
-Die Legende in der Sidepane wird über das ``+`` -Zeichen in der Anwendung unter Layouts, Sidepane eingebunden.
+Die Legende in der Sidepane wird über das ``+`` -Zeichen im Backend der Anwendung unter Layouts - Sidepane eingebunden.
 
 .. image:: ../../../figures/de/add_sidepane.png
      :scale: 80
@@ -52,7 +52,7 @@ Legende in der Oberen Werkzeugleiste (Toolbar)
 -----------------------------------------------
 Die Legende kann auch als Button in der Werkzeugleiste eingebunden werden. Hierfür muss zuerst das Element Legende unter dem Reiter Layouts im Kartenbereich eingefügt werden.
 
-.. image:: ../../../figures/de/add_content.png
+.. image:: ../../../figures/de/add_map_area.png
      :scale: 80
 
 Für das Konfigurationsbeispiel wurden folgende Einstellungen gewählt:

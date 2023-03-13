@@ -8,7 +8,7 @@ Mapbender verfügt über einen CSS-Editor zur Anpassung des Stils (Farben, Grö�
 Der CSS-Editor befindet sich in der Applikation im Reiter "CSS".
 
 .. image:: ../../figures/de/css_editor.png
-     :scale: 80
+     :width: 100%
 
 .. tip:: Mithilfe von Browser-Entwicklerwerkzeugen ist es möglich, Elemente zu identifizieren, ihre Klassen in den CSS-Editor zu kopieren und dort anzupassen.
 

@@ -6,7 +6,7 @@ Map
 Map is based on OpenLayers. The element must be integrated into the Map area.
 
 .. image:: ../../../figures/map.png
-     :scale: 80
+     :width: 75%
 
 Configuration
 =============
@@ -30,13 +30,13 @@ Configuration example
 
 The map element has to be included into the Map area:
 
-.. image:: ../../../figures/add_content.png
+.. image:: ../../../figures/add_map_area.png
      :scale: 80
 
 The map can entail all instances that are defined in the layerset. The following example distinguishes between a *main* (1) and *overview* (2) layerset.
 
 .. image:: ../../../figures/map_example_layersets.png
-     :scale: 80
+     :width: 100%
 
 In order to display all *Layersets* **(1)** on the map, they have to be activated. Multiple selections are possible as well. De-selected layersets can function as an overview. In the example, *main* is displayed on the main map and *overview* as an overview map.
 

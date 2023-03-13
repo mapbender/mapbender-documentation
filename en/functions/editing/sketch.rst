@@ -36,37 +36,37 @@ Draw geometries
 Point drawing can be activated/deactivated via click on the button "point". Points are set via a single click on the map.
 
 .. image:: ../../../figures/sketch_create_points.png
-     :scale: 80
+     :width: 75%
 
 
 Line drawing can be activated/deactivated via click on the button "line". Line segments are set via a single click on the map. To finish drawing make a double click.
 
 .. image:: ../../../figures/sketch_create_lines.png
-     :scale: 80
+     :width: 75%
 
 
 Polygon drawing can be activated/deactivated via click on the button "polygon". Corner points are set via a single click on the map. To finish drawing make a double click.
 
 .. image:: ../../../figures/de/sketch_create_polygons.png
-     :scale: 80
+     :width: 75%
 
 
 Rectangle drawing can be activated/deactivated via click on the button "rectangle". Rectangles are drawn via drag and drop.
 
 .. image:: ../../../figures/sketch_create_rectangles.png
-     :scale: 80
+     :width: 75%
 
 
 Circles drawing can be activated/deactivated via a click on the button "circle". Circles are drawn via drag and drop.
 
 .. image:: ../../../figures/sketch_create_circles.png
-     :scale: 80     
+     :width: 75%
 
 
 Text setting is activated/deactivated via click on the button "text". A label has to be defined, before a text can be set.
 
 .. image:: ../../../figures/sketch_create_texts.png
-     :scale: 80
+     :width: 75%
 
 
 
@@ -85,7 +85,7 @@ Stop drawing
 To stop drawing click the pause button.
 
 .. image:: ../../../figures/sketch_stop_drawing.png
-     :scale: 80
+     :width: 75%
 
 
 YAML-Definition:

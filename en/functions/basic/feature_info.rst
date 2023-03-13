@@ -14,7 +14,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/feature_info_configuration.png
-     :scale: 80
+     :align: center
 
 
 * **Auto-open:** Enable or disable autoopening of the copyright window when starting the application (default: false).
@@ -42,17 +42,17 @@ Layertree settings
 The layer is visible and FeatureInfo request for the layer is activated.
 
 .. image:: ../../../figures/de/feature_info_on.png
-     :scale: 80
+     :width: 50%
 
 The layer is visible and the FeatureInfo request for the layer is deactivated.
  
 .. image:: ../../../figures/de/feature_info_off.png
-     :scale: 80
+     :width: 50%
 
 The layer is invisible and there will be no FeatureInfo request (even if FeatureInfo request is activated).
 
 .. image:: ../../../figures/de/feature_info_on_layer_invisible.png
-     :scale: 80
+     :width: 50%
      
 
 Display as tabs and accordion
