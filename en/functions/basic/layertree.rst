@@ -147,23 +147,19 @@ The individual functions can be activated by clicking on the buttons. All active
 
 The function **Hide visibility by folders** allows to save the configuration of the opacity. When active, the opacity of the individual layer is not displayed and cannot be changed.
 
-The function **Hide info** allows you to disable the FeatureInfo function. Independently of the settings in the Layerset or source, the FeatureInfo function will be deactivated.
+The function **Hide info** allows you to disable the "i"-icon. If enabled, the "i"-icon next to a layer name indicates if the FeatureInfo function is active for that layer. The function is inactive if the "i"-icon is grayed out. If you activate the function with a click, the icon will turn dark gray and be framed. If activated, the requested information of the layer appears in a dialogue box. 
 
-The checkbox **Thematic layer** activates the thematic division of levels. The next section contains further explanation on how to configure the thematic layertree.
+The checkbox **Thematic layer** activates the thematic division of levels. By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
 
 The checkbox **Allow Reorder at TOC** controls if layers are rearrangeable via drag & drop in the application's layertree (TOC).
 
-By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
+The checkbox next to its respective layer name allows to turn a layer on and off. If the checkbox is set, the Layer will appear on the map. However, it will continue to respect the defined rules of the Layerset (such as scale-dependent display).
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
            :alt: Layertree Buttons.
 
            Layertree Buttons.
-
-The checkbox next to its respective layer name allows to turn a layer on and off. If the checkbox is set, the Layer will appear on the map. However, it will continue to respect the defined rules of the Layerset, such as scale-dependent display.
-
-The "i"-icon next to a layer name indicates if the FeatureInfo-function is enabled. The FeatureInfo-function is inactive if the "i"-icon is grayed out. If you activate the function with a click, the icon is dark gray and has a frame. If activated, the requested information of the layer appears in a dialogue box. 
 
 
 Workflow thematic Layertree
