@@ -19,7 +19,7 @@ All that can be done using the console utility provided by `Symfony <http://symf
 
 .. note:: The console utility will write files in the app/cache and app/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
-.. note:: **Notice:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/, else mapbender/).
+.. note:: **Important:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/, else mapbender/).
 
 .. code-block:: yaml
 

@@ -23,26 +23,28 @@ The configuration dialog offers the following settings:
 * **Width/Height:** Width and height of the element.
 * **Position:** Position of the overview map frame in the application; options are: top left, bottom left, top right and bottom right.
 
-Configuration example
-=====================
+Configuration examples
+======================
 
 .. image:: ../../../figures/overview_configuration_example.png
      :scale: 80
 
-The element provides various configuration options. In the example, the settings *Visibility Initially open* and *Fix* are activated. As a result, the element is displayed (i.e. maximized) when the application is opened and the view of the map is fixed. If the latter function is deactivated, the overview adapts as soon as the map is moved or the scale is changed. The start extent is displayed when the application is opened. In the example, the element has the title "Overview". It is necessary that the overview map is linked to a layerset. The following layersets are available:
+The element provides various configuration options. In the example, the settings *Visibility Initially open* and *Fix* are activated. As a result, the element is displayed (i.e. maximized) when the application is opened and the view of the map is fixed.
+If the latter function is deactivated, the overview adapts as soon as the map is moved or the scale is changed. The start extent is displayed when the application is opened.
+In the example, the element has the title "Overview". It is necessary that the overview map is linked to a layerset. The following layersets are available:
 
 .. image:: ../../../figures/map_example_layersets.png
-     :scale: 80
+     :width: 100%
 
-In the example, the layerset "Overview" was chosen. Width and height of the element correspond to the default setting. The position is defined as "lower right". The element looks like this in the application:
+In this first example, the layerset "Overview" was chosen. Width and height of the element correspond to the default setting. The position is defined as "lower right". The element looks like this in the application:
 
 .. image:: ../../../figures/de/overview_example_right-bottom_fixed.png
      :scale: 80
 
-For the following parameters (unchecking *Fix*, *Position*: left-bottom, *Width* 400 and *Height* 200), overview will look like this:
+In the second example, an adjustment of the parameters (unchecking *Fix*, *Position*: left-bottom, *Width* 400 and *Height* 200) results in an overview like this:
 
 .. image:: ../../../figures/de/overview_example_left-bottom.png
-     :scale: 80
+     :width: 100%
 
 
 YAML-Definition:

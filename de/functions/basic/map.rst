@@ -3,10 +3,10 @@
 Karte (Map)
 ***********
 
-Die Karte basiert auf OpenLayers und wird als Element im Content-Bereich integriert.
+Die Karte basiert auf OpenLayers und wird als Element im Kartenbereich integriert.
 
 .. image:: ../../../figures/de/map.png
-     :scale: 80
+     :width: 75%
 
 Konfiguration
 =============
@@ -28,21 +28,21 @@ Konfiguration
 Konfigurationsbeispiel
 ======================
 
-Das Kartenelement (Map) muss unter Layouts im Content-Bereich integriert werden:
+Das Kartenelement (Map) muss unter Layouts im Kartenbereich integriert werden:
 
-.. image:: ../../../figures/de/add_content.png
+.. image:: ../../../figures/de/add_map_area.png
      :scale: 80
 
 In der Karte können alle Instanzen angezeigt werden, welche im Layerset enthalten sind. Im vorliegenden Beispiel wird zwischen der *Hauptkarte/main* (1) und *Übersichtskarte/overview* (2) unterschieden.
 
 .. image:: ../../../figures/de/map_example_layersets.png
-     :scale: 80
+     :width: 100%
 
 Damit *Layersets* **(1)** auch in der Karte angezeigt werden, müssen diese im Kartenelement aktiviert werden. Eine Mehrfachauswahl ist hierbei auch möglich. Layersets, welche nicht ausgewählt wurden, können als Overview fungieren. Im Beispiel dient *main* als Haupt- und *overview* als Übersichtskarte.
 
 Das Feld *SRS* **(2)** definiert das Koordinatenreferenzsystem. Im Beispiel ist dies EPSG 25832 bzw. ETRS89/UTM Zone 32N. Wenn andere Referenzsysteme zur Auswahl stehen sollen, werden diese unter *Other SRS* **(7)** angegeben. Im Beispiel umfasst dies: 25833 (ETRS89/UTM Zone 33N), 31466 (DHDN/3-degree Gauss-Krüger Zone 2), 31467 (DHDN/3-degree Gauss-Krüger Zone 3), 3857 (WGS 84/Pseudo-Mercator) und 4326 (WGS 84).
 
-Weiterhin kann das Feld *Max. Extent* **(3)** definiert werden. Dieses gibt den maximalen sichtbaren Kartenbereich an. Alles was außerhalb dieser Angabe liegt, wird vom Anwender nicht gesehen. Das Feld *Start Extent* **(4)** wiederum definiert den Startbereich, welcher beim Öffnen der Anwendung zu sehen ist. Im Beispiel wird das Stadtgebiet von Bonn angezeigt. Zudem definiert *Scales* **(6)** die unterschiedlichen Zoomstufen in der Anwendung. Zwischen diesen kann mithilfe von dem :ref:`scale_selector_de` oder der :ref:`zoom_bar_de` navigiert werden. Feste Maßstabsstufen **(5)** wurden dabei im Beispiel deaktiviert. Das heißt, es ist auch eine Auswahl anderer Maßstäbe über das Mausrad möglich.
+Weiterhin kann das Feld *Max. Extent* **(3)** definiert werden. Dieses gibt den maximalen sichtbaren Kartenbereich an. Alles was außerhalb dieser Angabe liegt, wird vom Anwender nicht gesehen. Das Feld *Start Extent* **(4)** wiederum definiert den Startbereich, welcher beim Öffnen der Anwendung zu sehen ist. Im Beispiel wird das Stadtgebiet von Bonn angezeigt. Zudem definiert *Scales* **(6)** die unterschiedlichen Zoomstufen in der Anwendung. Zwischen diesen kann mithilfe von dem :ref:`scale_selector_de` oder der :ref:`navigation_toolbar_de` navigiert werden. Feste Maßstabsstufen **(5)** wurden dabei im Beispiel deaktiviert. Das heißt, es ist auch eine Auswahl anderer Maßstäbe über das Mausrad möglich.
 
 .. image:: ../../../figures/de/map_example_dialog.png
      :scale: 80

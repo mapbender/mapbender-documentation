@@ -16,7 +16,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/activity_indicator_configuration.png
-     :scale: 80
+     :align: center
 
 * **Title:** Title of the element.
 * **Tooltip:** The text entered as a tooltip will be indicated by hovering over the element with the mouse cursor a longer time.

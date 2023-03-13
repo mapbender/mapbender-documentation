@@ -61,7 +61,7 @@ Diese Schnellstart-Anleitung beschreibt, wie Sie:
 Eine Mapbender Anwendung kann wie folgt aussehen:
 
   .. image:: ../figures/de/mapbender_basic_application.png
-     :scale: 80
+     :width: 100%
 
 Installation
 ============
@@ -87,12 +87,12 @@ Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über d
 * Start des Entwicklungsmodus: http://localhost/mapbender/app_dev.php
 
   .. image:: ../figures/de/mapbender_app_dev.png
-     :scale: 80
+     :width: 100%
 
 * Schauen Sie sich an, welche Information im Entwicklungsmodus angezeigt werden.
 
   .. image:: ../figures/mapbender_symfony_profiler.png
-     :scale: 80
+     :width: 100%
 
 
 Das Backend
@@ -124,7 +124,7 @@ In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendu
  * |mapbender-button-delete| Löschen der Anwendung
  
   .. image:: ../figures/de/mapbender_app_dev.png
-     :scale: 80
+     :width: 100%
      
 
 2. Eine Anwendung erstellen
@@ -155,19 +155,19 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 Anwendungen können jederzeit bearbeitet werden. Von der Anwendungsübersichtsseite aus ist eine Navigation zu jeder Applikation (mit gegebenen Nutzungsrechten) über den |mapbender-button-edit| ``Button`` möglich. Weiterhin findet sich hier ein |mapbender-button-show| Button für jede Anwendung, mit dem diese im Frontend aufgerufen werden kann. Es besteht außerdem die Option, Anwendungen zu |mapbender-button-export| exportieren, zu |mapbender-button-delete| löschen sowie diese für die Öffentlichkeit zugänglich zu machen |mapbender-button-publish| .
 
   .. image:: ../figures/de/mapbender_create_application.png
-     :scale: 80  
+     :width: 100%  
 
 
 3. Elemente in eine Anwendung einfügen
 ======================================
 
-Mapbender besteht aus den Bereichen Toolbar, Sidepane, Content und Footer. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
+Mapbender-Anwendungen bestehen aus den Bereichen Obere Werkzeugleiste, Sidepane, Kartenbereich und Fußzeile. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
 
 #. Wählen Sie ``Anwendungen -->`` |mapbender-button-edit| ``Button --> Layouts`` 
 
 #. Klicken Sie auf den |mapbender-button-add| ``Button`` neben einem Bereich, um einen Überblick über die dort verfügbaren Elemente zu erhalten.
 
-#. Wählen Sie ein Element aus der Liste aus. Beachten Sie dabei den jeweiligen Bereich Ihrer Anwendung. Es können nicht alle Elemente zu jedem Bereich hinzugefügt werden. Beispielsweise ist die Übersicht (overview) nur in den Content-Bereich integrierbar.
+#. Wählen Sie ein Element aus der Liste aus. Beachten Sie dabei den jeweiligen Bereich Ihrer Anwendung. Es können nicht alle Elemente zu jedem Bereich hinzugefügt werden. Beispielsweise ist die Übersicht (overview) nur in den Kartenbereich integrierbar.
 
 #. Konfigurieren Sie das Element. Hinweis: Wenn Sie ein Element z.B. **Karte (map)** auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
 
@@ -178,7 +178,7 @@ Mapbender besteht aus den Bereichen Toolbar, Sidepane, Content und Footer. In di
 Jetzt sollten sie eine Idee davon haben, wie einfach es ist, eine Mapbender-Anwendung zu konfigurieren.
 
   .. image:: ../figures/de/mapbender_application_add_element.png
-     :scale: 80
+     :width: 100%
 
 Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer Funktion. Detaillierte Informationen können Sie in den jeweiligen Kapiteln der `Mapbender Dokumentation <index.html>`_ nachlesen.
 
@@ -221,12 +221,12 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 Versuchen Sie es selbst
 -----------------------
 
-* Fügen Sie ein Kartenelement zum Content-Bereich Ihrer Anwendung hinzu.
-* Fügen Sie einen Ebenenbaum zum Content-Bereich Ihrer Anwendung hinzu.
-* Fügen Sie einen Button in die Toolbar ein, der den Layertree öffnet.
-* Fügen Sie das Navigationswerkzeug in den Content-Bereich hinzu.
+* Fügen Sie ein Kartenelement zum Kartenbereich der Anwendung hinzu.
+* Fügen Sie einen Ebenenbaum zum Kartenbereich der Anwendung hinzu.
+* Fügen Sie einen Button in die Fußzeile ein, der den Layertree öffnet.
+* Fügen Sie das Navigationswerkzeug in den Kartenbereich hinzu.
 * Fügen Sie ein Copyright-Element hinzu und ändern Sie den Copyright-Text.
-* Fügen Sie eine SRS Auswahl in den Footer-Bereich ein.
+* Fügen Sie eine SRS-Auswahl in die Fußzeile ein.
 
 
 Datenquellen (Sources) verwenden
@@ -243,7 +243,7 @@ Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
  * Datenquellen filtern
 
   .. image:: ../figures/de/mapbender_sources.png
-     :scale: 80
+     :width: 100%
      
      
 Laden von Datenquellen
@@ -266,7 +266,7 @@ Sie können OGC Web Map Services (WMS) und Web Map Tile Services (WMTS) in Ihre 
 #. Nach erfolgreicher Registrierung des Dienstes zeigt Mapbender eine Übersicht der Informationen an, die der Dienst geliefert hat.
 
   .. image:: ../figures/de/mapbender_add_sources.png
-     :scale: 80
+     :width: 100%
 
 
 Hinzufügen von Diensten zu Anwendungen
@@ -283,7 +283,7 @@ Nachdem ein Dienst in Mapbender geladen wurde, kann dieser zu einer oder mehrere
 #. Die Reihenfolge der Dienste kann über drag & drop verändert werden.
 
   .. image:: ../figures/de/mapbender_add_source_to_application.png
-     :scale: 80
+     :width: 100%
 
 Konfiguration von Diensten
 --------------------------
@@ -297,7 +297,7 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 #. Sie können die Reihenfolge der Layer über drag & drop ändern.
 
 .. image:: ../figures/de/mapbender_source_configuration.png
-   :scale: 80
+   :width: 100%
 
 **Dienstekonfiguration:**
 
@@ -328,7 +328,7 @@ In Mapbender können die Vendor Specific Parameter genutzt werden, um bspw. Benu
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
 .. image:: ../figures/de/layerset/mapbender_vendor_specific_parameter.png
-   :scale: 80
+   :width: 75%
 
 * Vstype: Mapbender spezifische Variablen: simple, Gruppe (groups), User (users)
 * Name: Parameter-Name im WMS Request
@@ -394,12 +394,12 @@ Benutzer anlegen
 #. Speichern Sie Ihren neuen Benutzer. Sie können alle Informationen auch im Nachhinein anpassen.
 
   .. image:: ../figures/de/mapbender_create_user.png
-   :scale: 80
+   :width: 100%
 
 Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reitern ``Gruppen`` und ``Sicherheit`` können dem Benutzer zusätzliche Parameter, bspw. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
 
   .. image:: ../figures/de/mapbender_assign_user_to_group.png
-   :scale: 80
+   :width: 100%
 
 
 Gruppen anlegen
@@ -443,7 +443,8 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 #. Alternativ zum öffentlichen Zugriff können Sie individuelle Zugriffsrechte für einen Benutzer oder eine Gruppe setzen.
 
   .. image:: ../figures/de/mapbender_security.png
-     :scale: 80
+     :width: 100%
+
 
 Testen Sie die Konfiguration. Melden Sie sich dafür über ``Logout`` aus und melden sich unter einer neuen Benutzerbezeichnung an.
 

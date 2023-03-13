@@ -6,7 +6,7 @@ Ansichtsverwaltung (View Manager)
 
 Das Element Ansichtsverwaltung erlaubt die Speicherung und Wiederverwendung von Kartenansichten. Folgende Kartenparameter sind hierin inbegriffen: Kartenposition, Maßstab, Koordinatenreferenzsystem, Drehung, Layer, Layerauswahl sowie Transparenz. Gesetzte Kartenansichten bleiben dabei auch nach Neuladen der Anwendung erhalten.
 
-.. note:: Hinweis: Die Ansichtsverwaltung wird bisher nur in der Sidepane unterstützt.
+.. note:: **Hinweis:** Die Ansichtsverwaltung wird bisher nur in der Sidepane unterstützt.
 
 .. image:: ../../../figures/de/view_manager_overview.png
      :scale: 80
@@ -21,7 +21,7 @@ Um eine neue Kartenansicht zu speichern, muss zunächst ein Titel für deren Re-
 
 In seiner einfachsten Form kann das Element zur Wiederverwendung von Kartenansichten verwendet werden. Diese Option ist immer vorhanden: Die zuvor gespeicherte Kartenansicht wird nach Klick auf den Abrufen-Button wiederhergestellt. Gespeicherte Ansichten können außerdem überschrieben oder gelöscht werden. Die Einträge in der Sidepane werden dabei entsprechend aktualisiert.
 
-.. note:: Hinweis: Aktuell unterstützt die Ansichtsverwaltung *nicht* folgende Konfigurationen:
+.. note:: **Hinweis:** Aktuell unterstützt die Ansichtsverwaltung *nicht* folgende Konfigurationen:
 
 * interaktiv hinzugefügte Instanzen (WMS laden)
 * interaktiv entfernte Instanzen (Ebenenbaum Kontextmenü)

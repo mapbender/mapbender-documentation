@@ -394,10 +394,10 @@ Verschiedenes:
   * :ref:`html_de`
   * :ref:`legend_de`
   * :ref:`map_de`
+  * :ref:`navigation_toolbar_de`
   * :ref:`overview_de`
   * :ref:`search_router_de`
   * :ref:`srs_selector_de`
-  * :ref:`zoom_bar_de`
 
 * Dokumentation: Erweiterung zu dem :ref:`printclient` und den neuen dynamischen Features bei den Drucktemplates.
 

@@ -3,7 +3,7 @@
 Über-Mapbender-Dialog (About Dialog)
 ************************************
 
-Dieses Element erstellt einen `Button <button.html>`_, der einen Dialog mit der aktuellen Mapbender Version anzeigt. Der Button kann in die Toolbar und in den Footer eingefügt werden.
+Dieses Element erstellt einen `Button <button.html>`_, der einen Dialog mit der aktuellen Mapbender Version anzeigt. Der Button kann in die obere Werkzeugleiste und in die Fußzeile eingefügt werden.
 
 .. image:: ../../../figures/de/about_dialog.png
      :scale: 80

@@ -86,6 +86,7 @@ This template can be used to insert the element into a YAML application.
     optional_fields:                # define optional fields (example title-field)
         title:                      # name of the optional fields, default is null (no optional fields are defined)
             label: Title            # label of the optional field
+            type: text              # type of the optional field
             options:                #
                 required: false     # true/false
         comment1:
@@ -142,12 +143,12 @@ Optional fields in the element definition (e.g. title, comment, editor) can be d
 When creating dynamic texts, each property must have the appropriate name, for example the field **comment1** must have the name **comment1** in the Open Office Draw file. For naming fields, it is not enough to apply the name to the content of the text field. Instead, the field needs to be selected and its object name edited. Select text field **--> Menu Edit --> name...** to change the name accordingly.
 
 .. image:: ../../../figures/print_template_name.png
-    :scale: 80
-
+    :width: 100%
 
 Export the template to .pdf under the same name as the .odg file. Use the name without its extension in the print yml-definition.
 
 The print script will read the information (position, size, font size, alignment) from the .odg-file and combines those with the fixed objects in the PDF template and the map image in Mapbender to generate your PDF.
+
 
 Printing elements in front of the map element
 ---------------------------------------------
@@ -185,7 +186,7 @@ Legend on the first page
 The legend can be integrated next to the map on the first page. This field is not included in the print template by default. To insert the legend the ODG print template file needs to be modified. A new dynamic field with the name "legend" on the non printable layer needs to be inserted. **Menu: Modify -> Name...** to change the name of the field to "legend". As final step,  the ODG-file has to be exported as PDF-file as described above and saved in the same directory. The result could look like this:
 
 .. image:: ../../../figures/print_client_example_legend.png
-    :scale: 80
+     :width: 100%
 
 
 Logo on the legend page
@@ -194,8 +195,7 @@ Logo on the legend page
 If the legend shall be created on an additional page, the logo can be placed on this page too. This can be achieved with the dynamic element "legendpage_image". A new field on the non-printable layer has to be created and the name changed to "legendpage_image" (**Menu: Modify -> Name...**). The desired logo or image has to be saved in the directory **app/Resources/MapbenderPrintBundle/images/** and its name needs to be changed to "legendpage_image.png". 
 
 .. image:: ../../../figures/print_client_example_legendpage_image.png
-    :scale: 80
-
+     :width: 100%
 
 Coloured texts
 --------------
@@ -213,7 +213,7 @@ Or **right-click the selected text** --> dialogue window **Character** --> **Fon
 The change of the colour of the dynamic field "title" to blue can look like this:
 
 .. image:: ../../../figures/print_client_example_colour.png
-     :scale: 80
+     :width: 100%
 
 The change of the font size works in an analogous manner.
 
@@ -229,7 +229,7 @@ Depending on the group, the print can contain different images or descriptions (
 The print with a group named "Group 1" could look like this:
 
 .. image:: ../../../figures/print_client_example_groups.png
-     :scale: 80
+     :width: 100%
 
 To use this feature, it is required that groups exist. How to create groups and users is described in the Mapbender documentation in the `Mapbender Quickstart <../../quickstart.html>`_.
 
@@ -300,7 +300,7 @@ Define text fields in the print template for every information you would like to
 *3. Call feature print from FeatureInfo*
 ----------------------------------------
 
-Note: FeatureInfo is the information output from a OGC WMS service. It offers information for features at a click position.
+.. note:: FeatureInfo is the information output from a OGC WMS service. It offers information for features at a click position.
 
 When you configure a WMS, you can generate a link with the following reference that will trigger the print with feature information.
 
@@ -335,7 +335,7 @@ To activate the functionality, add the following parameter to the digitizer conf
 
 With click on the print button the print dialog opens and offers the print templates that are defined for the feature type.
 
-Note: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
+.. note:: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
 
 
 Queued Print
@@ -375,7 +375,7 @@ After the setup, the queued print can be controlled with several bash commands, 
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-Note: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. Detailed information on the commands:  `app/console commands <../../customization/commands.html>`_.
+.. note:: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. Detailed information on the commands:  `app/console commands <../../customization/commands.html>`_.
 
 
 *Queued print: Usage*
@@ -402,7 +402,7 @@ Memory Limits
 --------------
 
 Print jobs can be resource intensive and may exceed your initially set php.ini memory limit. Therefore it is possible to increase the required memory limit manually. This is an advantage for users who are working with large print templates.
-Note: Never reduce the memory limit.
+.. note:: Never reduce the memory limit.
 
 To increase the memory limits for the queued print, adjust `mapbender.print.queue.memory_limit` (string; default is 1G). Caution: This parameter does not allow 'null' as value.
 

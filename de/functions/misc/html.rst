@@ -3,10 +3,10 @@
 HTML (Element)
 **************
 
-Dieses Element ermöglicht die Definition von HTML an beliebigen Stellen in der Anwendung. Dadurch können zum Beispiel Bilder, Links oder Texte eingebunden werden. Die folgende Abbildung zeigt die Integrierung des Mapbender-Logos in Footer, Toolbar und Seitenleiste.
+Dieses Element ermöglicht die Definition von HTML an beliebigen Stellen in der Anwendung. Dadurch können zum Beispiel Bilder, Links oder Texte eingebunden werden. Die folgende Abbildung zeigt die Integrierung des Mapbender-Logos in Fußzeile, oberer Werkzeugleiste und Sidepane.
 
 .. image:: ../../../figures/html_preview_example.png
-     :scale: 80
+     :width: 100%
 
 Es stehen grundsätzlich die folgenden Variablen im HTML-Element zur Verfügung:
 
@@ -74,7 +74,7 @@ Die Variable für den Anwendungstitel wird durch ``{{ application.title }}`` ein
 Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
 .. image:: ../../../figures/de/html_example_application_title.png
-     :scale: 80
+     :width: 100%
 
 * Variable: **app.user.username**
 
@@ -84,7 +84,7 @@ Diese Variable gibt den Namen des aktiven Nutzers im HTML-Element aus:
 
 	<p>Username: {{ app.user.username }}</p>
 
-Im Anwendungsbeispiel wird der Nutzername in der Toolbar angezeigt:
+Im Anwendungsbeispiel wird der Nutzername in der oberen Werkzeugleiste angezeigt:
 	
 .. image:: ../../../figures/de/html_example_user_name.png
      :scale: 80
@@ -100,7 +100,7 @@ Um Gruppentitel dennoch ausgeben zu können, wird eine Schleife im HTML-Element 
       <p>Gruppe #{{ index }}: {{ group.title }}</p>
   {% endfor %}
 
-Im Anwendungsbeispiel werden Index und Name der Gruppe in der Toolbar ausgegeben:
+Im Anwendungsbeispiel werden Index und Name der Gruppe in der oberen Werkzeugleiste ausgegeben:
 
 .. image:: ../../../figures/de/html_example_group_name.png
      :scale: 80
@@ -118,7 +118,16 @@ Im Folgenden wurde die Variable ``{ entity.title }`` mit dem Textzusatz "HTML-El
 Diese Variablen sehen in der Anwendung wie folgt aus:
 
 .. image:: ../../../figures/de/html_example_entity_title.png
+     :width: 100%
+
+Verweis auf eine Twig-Datei
+---------------------------
+
+Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
+
+.. image:: ../../../figures/de/html_configuration_include_twig.png
      :scale: 80
+
 
 YAML-Definition:
 ----------------

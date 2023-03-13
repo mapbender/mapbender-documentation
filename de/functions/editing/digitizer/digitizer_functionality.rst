@@ -11,7 +11,7 @@ Der Digitizer ermöglicht das Editieren von FeatureTypes. Diese basieren auf Pun
 * Erfassung von Polygonen mit Enklaven
 
 .. image:: ../../../../figures/de/Digitizer_geometries.png
-     :scale: 80
+     :width: 75%
 
 Die folgenden Abschnitte stellen die Arbeit mit Digitizer gemäß der Standardkonfiguration genauer vor.
 

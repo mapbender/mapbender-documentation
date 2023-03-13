@@ -14,7 +14,7 @@ The dimensions handler can be used to integrate WMS services with a time dimensi
 .. image:: ../../../figures/wmst_source.png
      :scale: 80
 
-WMS-T are inserted almost like WMS in the layersets, with the exception that the time parameter still has to be activated. If this is not activated, the dimensions of the service are ignored and the default value is used when calling the layer in the map content.
+WMS-T are inserted almost like WMS in the layersets, with the exception that the time parameter still has to be activated. If it is not activated, the dimensions of the service are ignored and the default value is used when calling the layer in the map.
 
 If a service supports a time dimension, the instance displays the "Dimensions" button. By clicking on this button, the supported time parameters are displayed and time values can be activated by clicking the checkbox.
 After another click on the button, the detailed form opens, in which the usage can be further defined. Here you can further restrict the values ​​from the WMS service. To set up the service, the following definitions of time parameters are necessary:

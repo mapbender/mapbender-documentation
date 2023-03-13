@@ -1,7 +1,7 @@
 .. _layertree:
 
-Layertree - Table of Content (TOC)
-**********************************
+Layertree
+*********
 
 Functions
 =============
@@ -100,7 +100,7 @@ In case of difficulties with the integration, the documentation of the `Layerset
 
 **Configuration of the map to display the Layerset**
 
-In the next step, we configure the `Map element <../basic/map.html>`_ to display the Layersets in the **map**. To do this you need to switch to the tab "Layouts" and edit the map element in the content. 
+In the next step, we configure the `Map element <../basic/map.html>`_ to display the Layersets in the **map**. To do this you need to switch to the tab "Layouts" and edit the map element in the Map area. 
 It is important that you put a tick in the field of the Layerset "World", so it appears in the application afterwards.
 If you have questions for further configuration of the `Map element <../basic/map.html>`_  the documentation can help.
 
@@ -114,13 +114,13 @@ If you have questions for further configuration of the `Map element <../basic/ma
 
 The last step is the configuration of the **Layertree**. 
 The instances specified in the map element can be defined in more detail with the Layertree. If a predefined application has been copied, the Layertree should work now. If the element is newly created, it can already be used with the default settings without necessary further adjustments.
-For a better understanding of the functions and their usage, we now edit the Layertree-Element in the content.
+For a better understanding of the functions and their usage, we now edit the Layertree-Element in the Map area.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1_en.png
            :scale: 80 
-           :alt: Configuration of the simple Layertree in the content.
+           :alt: Configuration of the simple Layertree in the Map area.
 
-           Configuration of the simple Layertree in the content.           
+           Configuration of the simple Layertree in the Map area.           
 
 By enabling **Show base sources**, instances that have been loaded as a base source in the application are displayed in the Layertree.
 
@@ -162,7 +162,7 @@ The function **Hide info** allows you to disable the FeatureInfo-function. Indep
 
 The checkbox **Thematic layer** activates the thematic division of levels. The next section contains further explanation on how to configure the thematic layertree.
 
-The checkbox **Allow Reorder at TOC** controls whether layers may be freely rearranged using drag & drop in the layertree.
+The checkbox **Allow Reorder at TOC** controls if layers are rearrangeable via drag & drop in the application's layertree (TOC).
 
 By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
 
@@ -212,7 +212,7 @@ The Layerset should now contain three Layersets. The **Overview** [1] for the ov
 
 **Configuration of the map to display the Layerset**
 
-Now we configurate the `map element <../basic/map.html>`_  to display the Layersets in the map. To do this we switch to the tab "layout" and edit the feature in the content area.
+Now we configurate the `map element <../basic/map.html>`_  to display the Layersets in the map. To do this we switch to the tab "layout" and edit the feature in the Map area.
 It is now important that you set an active checkbox in the Layerset "World" AND Layerset "Project NRW" so that they appear in the application later on.
 If you have questions for further configuration of the map, you can view the documentation of the `map element <../basic/map.html>`_.
 
@@ -231,9 +231,9 @@ Since we inserted both Layersets into the `map element <../basic/map.html>`_ of 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_2_en.png
            :scale: 80 
-           :alt: Configuration of the thematic Layertree in the content.
+           :alt: Configuration of the thematic Layertree in the Map area.
 
-           Configuration of the thematic Layertree in the content
+           Configuration of the thematic Layertree in the Map area
 
 Thus, to let the **themes** in the application appear as you want, there are several configuration options:
 
@@ -246,7 +246,7 @@ If we keep the default settings in the Theme Set "World" and activate the other 
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_config_en.png
            :scale: 80
-           :alt: Configuration of the thematic Layertree in the content.
+           :alt: Configuration of the thematic Layertree in the Map area.
 
 Now we have the Layersets integrated as thematic groups. By configuring the thematic layer, the Layertree appears now like this:
 

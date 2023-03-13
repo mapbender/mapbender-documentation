@@ -1,17 +1,17 @@
-.. _zoom_bar:
+.. _navigation_toolbar:
 
-Navigation Toolbar (Zoombar)
-****************************
+Navigation Toolbar
+******************
 
-This element simplifies navigation within the map via rotation and zoom. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The zoombar itself is draggable.
+This element simplifies navigation within the map via rotation and zoom. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The navigation toolbar itself is draggable.
 
-.. image:: ../../../figures/zoom_bar.png
+.. image:: ../../../figures/navigation_toolbar.png
      :scale: 80
 
 Configuration
 =============
 
-.. image:: ../../../figures/zoom_bar_configuration.png
+.. image:: ../../../figures/navigation_toolbar_configuration.png
      :scale: 80
 
 * **Draggable:** Element is draggable or not (default: true)
@@ -41,7 +41,7 @@ If you set a tick at **Draggable**, then a small cross will appear next to the n
 
 **Rotation** enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
 
-Users can zoom to their smallest scale by **Zoom to max extent**. This *Max Extent* can be set individually in the `map element <map.html>`_ of the content.
+Users can zoom to their smallest scale by **Zoom to max extent**. This *Max Extent* can be set individually in the `map element <map.html>`_ of the The element must be integrated into the Map area.
 
 .. image:: ../../../figures/navigationtoolbar_zoom_to_max.png
      :scale: 80

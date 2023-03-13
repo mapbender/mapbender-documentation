@@ -3,7 +3,7 @@
 URL teilen (Share URL)
 **********************
 
-Das Teilen von URLs kann durch den Einbau eines entsprechenden Elements vereinfacht werden. Dieses wird als Button in der Toolbar oder dem Footer eingebunden.
+Das Teilen von URLs kann durch den Einbau eines entsprechenden Elements vereinfacht werden. Dieses wird als Button in der oberen Werkzeugleiste oder der Fußzeile eingebunden.
 
 .. image:: ../../../figures/de/share_url.png
      :scale: 80

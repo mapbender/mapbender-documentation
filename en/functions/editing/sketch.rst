@@ -3,8 +3,8 @@
 Sketches
 ********
 
-The Sketches element allows creating, editing and deleting temporary geometries. Sketches are not saved within a database and will be lost after the browser window is refreshed or closed.
-Sketch geometries are displayed in the elements `Image Export <../export/imageexport.html>`_ and `PrintClient <../export/printclient.html>`_.
+The Sketches element allows creating, editing and deleting temporary objects. Sketches are not saved within a database and will be lost after the browser window is refreshed or closed.
+Sketch geometries will be exported into `Image Export <../export/imageexport.html>`_ and `PrintClient <../export/printclient.html>`_.
 
 The following geometry types can be sketched:
 
@@ -22,23 +22,23 @@ Configuration
 .. image:: ../../../figures/sketch_configuration.png
      :scale: 80
 
-* **Auto activate:** Opens the Sketches element on application start.
+* **Auto activate:** Opens the Sketch element on application start.
 * **Deactivate on close:** Sketches are deactivated after closure of the element.
 * **Title:** Title of the element. This is referenced by the button which opens the element.
 * **Geometrytypes:** Lists all geometrytypes (mandatory field).
-* **Colors:** Creates buttons for custom colors in the Sketches tool. Color values must be comma separated. Needs at least one input color (mandatory field).  
-* **Allow custom color:** Creates a custom color picker in the Sketches tool. Disable to show only defined CSS colors above.
+* **Colors:** Creates buttons for custom colors in the Sketch tool. Color values must be comma separated. Needs at least one input color (mandatory field).  
+* **Allow custom color:** Creates a custom color picker in the Sketch tool. Disable to show only the defined CSS colors.
 
 
 Draw geometries
 ---------------
 
-* **Point drawing:** is activated/deactivated with a click on the "Point" button. Points are set with a simple click on the map and will appear in the sketches table.
-* **Line drawing:** is activated/deactivated with a click on the "Line" button. Line segments are set via a single click on the map. To finish drawing, double click.
-* **Polygon drawing:** is activated/deactivated with a click on the "Polygon" button. Vertices are set via a single click. To finish drawing, double click anywhere in the map or single click on the last drawn vertex.
-* **Rectangle drawing:** is activated/deactivated with a click on the "Rectangle" button. Rectangles are created by two single clicks and panning the cursor around in between to shape the rectangle.
-* **Circle drawing:** is activated/deactivated with a click on the "Circle" button. For a circle, two single clicks are sufficient: One for the position of the circle center and one for the circumference.
-* **Text labels:** are activated/deactivated with a click on the "Text" button. A label has to be defined in the label field before a text is set. The label will be placed next to a point geometry.
+* **Point drawing:** is activated with a click on the "Point" button. Points are set with a simple click on the map and will appear in the Sketches table.
+* **Line drawing:** is activated with a click on the "Line" button. Line segments are set via a single click on the map. To finish drawing, double click.
+* **Polygon drawing:** is activated with a click on the "Polygon" button. Vertices are set via a single click. To finish drawing, double click anywhere in the map or single click on the last drawn vertex.
+* **Rectangle drawing:** is activated with a click on the "Rectangle" button. Rectangles are created by two single clicks.
+* **Circle drawing:** is activated with a click on the "Circle" button. For a circle, two single clicks are sufficient: One for the position of the circle center and one for the circumference. After the circle was created you can edit it and set a radius.
+* **Text labels:** are activated with a click on the "Text" button. A label has to be defined in the label field before a text is set.
 
 See the image below for sketch examples:
 
@@ -49,7 +49,7 @@ See the image below for sketch examples:
 Delete, Edit and Zoom
 ---------------------
 
-Drawn sketches can be individually deleted [1] or edited [2]. There is also the possibility to zoom the map extent to a particular geometry [3].
+Drawn sketches can be individually deleted [1] or edited [2]. There is also the possibility to zoom to a particular geometry [3].
 
 .. image:: ../../../figures/sketch_delete_edit_zoom.png
      :scale: 80
@@ -70,7 +70,7 @@ Stop drawing
 To interrupt a geometry drawing, click the stop button: Note that this deletes the current draft that is not yet saved to the table.
 
 .. image:: ../../../figures/sketch_stop_drawing.png
-     :scale: 80
+     :width: 75%
 
 
 YAML-Definition:

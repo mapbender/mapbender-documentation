@@ -17,6 +17,7 @@ To build the website locally, you need to install Sphinx. Install it in Debian-b
 sudo apt-get install sphinx-common python3-sphinx
 sudo apt-get install pip3
 sudo pip3 install sphinxcontrib-phpdomain
+sudo pip3 install sphinx-rtd-theme
 ```
 
 You can then build the documentation by running:
@@ -34,14 +35,14 @@ git clone git@github.com:mapbender/mapbender-documentation
 cd mapbender-documentation
 git checkout master
 
-ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
-
-pip3 install sphinx-rtd-theme
-
-rm -rf _build
 sphinx-build . _build -A version=3.3
 
+ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
+
 http://localhost/mb-doc/
+
+If you want rebuild the documentation delete the old version before
+rm -rf _build
 ```
 
 To participate in the documentation, create a fork and submit a pull request with your changes.

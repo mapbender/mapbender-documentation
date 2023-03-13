@@ -36,7 +36,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/coordinates_display_configuration.png
-     :scale: 80
+     :align: center
 
 * **Show label:** Show a label which incorporates the title and appears next to the coordinates.
 * **Title:** Title of the element. It will appear next to the coordinates if "Show label" is activated.
@@ -44,7 +44,7 @@ Configuration
 * **Empty:** Text displayed when the mouse is not on the map (default: 'x = - y = -').
 * **Prefix:** Prefix in front of the X coordinate (default: '= x').
 * **Separator:** Separator in between the X coordinate and Y coordinate (default: ' y= ').
-* **Position:** Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+* **Position:** Position (only when used in Map area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
 
 
 YAML-Definition:
@@ -60,7 +60,7 @@ This template can be used to insert the element into a YAML application.
    empty: 'x= - y= -'             # show this text if the mouse is not on the map
    prefix: 'x= '                  # show prefix before x coordinate
    separator: ' y= '              # show separator before y coordinate
-   anchor: 'right-bottom'         # Position (only when used in content area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+   anchor: 'right-bottom'         # Position (only when used in Map area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
 
 
 CSS-Styling

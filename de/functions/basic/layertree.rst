@@ -100,7 +100,7 @@ Bei Schwierigkeiten mit der Einbindung kann die Dokumentation der `Layersets <..
 
 **Einrichtung in der Karte zur Anzeige des Layersets**
 
-Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_  zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement über den Content-Bereich.
+Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_  zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement über den Kartenbereich.
 Wichtig ist nun, dass bei dem Bereich Layersets ein Häckchen bei dem Layerset World gesetzt ist, damit dieses Layerset später in der Anwendung angezeigt wird. 
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
 
@@ -114,13 +114,13 @@ Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kart
 
 Als letzter Schritt erfolgt die Einrichtung des **Layertrees** selbst. 
 Die in dem Kartenelement angegebenen Instanzen können im Layertree noch genauer definiert werden. Wenn eine vordefinierte Anwendung kopiert wurde, sollte der Layertree jetzt schon funktionieren. Beim erneuten Einbinden des Elements in die Anwendung kann dieses mit den Standardeinstellungen bereits genutzt werden, ohne dass weitere Anpassungen zwingend nötig sind.
-Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bearbeiten wir nun das Ebenenbaum-Element in dem Content-Bereich.
+Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bearbeiten wir nun das Ebenenbaum-Element im Kartenbereich.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
-           :alt: Einrichtung des einfachen Layertrees im Content-Bereich.
+           :alt: Einrichtung des einfachen Layertrees im Kartenbereich.
 
-           Einrichtung des einfachen Layertrees im Content-Bereich.
+           Einrichtung des einfachen Layertrees im Kartenbereich.
 
 Über die Checkbox **BaseSources anzeigen** werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch im Layertree angezeigt.
 
@@ -212,7 +212,7 @@ Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die 
 
 **Einrichtung in der Karte zur Anzeige der Layersets**
 
-Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_ zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement in dem Content-Bereich.
+Als nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_ zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement im Kartenbereich.
 Wichtig ist nun, dass bei dem Bereich Layersets ein Häckchen bei dem Layerset "World" UND dem Layerset "Project NRW" gesetzt ist, damit diese später in der Anwendung angezeigt werden. 
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
 
@@ -231,9 +231,9 @@ Da wir in dem `Kartenelement <map.html>`_ beide Layersets in die Anwendung einge
 
 .. figure:: ../../../figures/layertree/layertree_configuration_2.png
            :scale: 80 
-           :alt: Einrichtung des thematischen Layertrees im Content-Bereich.
+           :alt: Einrichtung des thematischen Layertrees im Kartenbereich.
 
-           Einrichtung des thematischen Layertrees im Content-Bereich.
+           Einrichtung des thematischen Layertrees im Kartenbereich.
 
 Damit die **Themen** in der Anwendung wie gewünscht angezeigt werden, gibt es verschiedene Einstellungsmöglichkeiten: 
 

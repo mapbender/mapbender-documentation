@@ -315,7 +315,7 @@ Mapbender Demo Map
 
 Following functions are pre implemented:
 
-Toolbar
+Top toolbar
     * Layer tree (Button)
     * Featureinfo (Button)
     * Print client (Button)
@@ -333,7 +333,7 @@ Sidepane
     * Coordinates utility
     * About Mapbender (HTML)
 
-Content
+Map area
     * Map
     * Navigation toolbar
     * Legend
@@ -372,7 +372,7 @@ Toolbar
 Sidepane
     No functions pre-implemented.
 
-Content
+Map area
     Instead of 'Scale display' and 'POI', the function 'Coordinates utility' is integrated.
 
 Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
@@ -394,7 +394,7 @@ Footer
     * help (Button)
     * about (Button)
 
-Content
+Map area
     * Map
     * Navigation toolbar
 

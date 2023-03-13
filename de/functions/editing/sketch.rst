@@ -3,8 +3,8 @@
 Skizzen (Sketch)
 ****************
 
-Mit diesem Element können temporär verfügbare Geometrien in der Karte erstellt werden. Diese werden nicht in einer Datenbank gespeichert und gehen beim browsergesteuerten Aktualisieren oder Schließen der Anwendung verloren.
-Erstellte Skizzen werden im `Bildexport <../export/imageexport.html>`_ und `Druck <../export/printclient.html>`_ angezeigt.
+Mit diesem Element können temporär verfügbare Objekte in der Karte erstellt werden. Diese werden nicht in einer Datenbank gespeichert und gehen beim browsergesteuerten Aktualisieren oder Schließen der Anwendung verloren.
+Erstellte Skizzen werden im `Bildexport <../export/imageexport.html>`_ und `Druck <../export/printclient.html>`_ ausgegeben.
 
 Mit Skizzen können folgende Geometrietypen erstellt werden:
 
@@ -33,23 +33,23 @@ Konfiguration
 Geometrien erstellen
 --------------------
 
-* **Punkt zeichnen:** wird über den Button "Punkt" aktiviert/deaktiviert. Punkte werden über einen Einfachklick in die Karte definiert.
-* **Linie zeichnen:** wird über den Button "Linie" aktiviert/deaktiviert. Liniensegmente werden mit einem Einfachklick definiert. Das Abschließen der Zeichnung erfolgt mit einem Doppelklick. 
-* **Polygon zeichnen:** wird über den Button "Polygon" aktiviert/deaktiviert. Eckpunkte werden mit einem Einfachklick definiert. Das Abschließen der Zeichnung erfolgt mit einem Doppelklick. 
-* **Rechteck zeichnen:** wird über den Button "Rechteck" aktiviert/deaktiviert. Rechtecke werden nach einem Einfachklick mit der Maus aufgezogen und mit einem erneuten Einfachklick erstellt.
-* **Kreis zeichnen:** wird über den Button "Kreis" aktiviert/deaktiviert. Kreise werden nach einem Einfachklick mit der Maus aufgezogen und mit einem erneuten Einfachklick erstellt.
-* **Text setzen:** wird über den Button "Text" aktiviert/deaktiviert. Damit eine Textsetzung erfolgen kann, muss der Text zunächst unter "Beschriftung" definiert werden. 
+* **Punkt zeichnen:** wird über den Button "Punkt" aktiviert. Punkte werden über einen Einfachklick in die Karte definiert.
+* **Linie zeichnen:** wird über den Button "Linie" aktiviert. Liniensegmente werden mit einem Einfachklick definiert. Das Abschließen der Zeichnung erfolgt mit einem Doppelklick. 
+* **Polygon zeichnen:** wird über den Button "Polygon" aktiviert. Eckpunkte werden mit einem Einfachklick definiert. Das Abschließen der Zeichnung erfolgt mit einem Doppelklick. 
+* **Rechteck zeichnen:** wird über den Button "Rechteck" aktiviert. Rechtecke werden nach einem Einfachklick mit der Maus aufgezogen und mit einem erneuten Einfachklick erstellt.
+* **Kreis zeichnen:** wird über den Button "Kreis" aktiviert. Kreise werden nach einem Einfachklick mit der Maus aufgezogen und mit einem erneuten Einfachklick erstellt. Nach dem Zeichnen eines Kreises kann dessen Radius über die Oberfläche angepasst werden.
+* **Text setzen:** wird über den Button "Text" aktiviert. Damit eine Textsetzung erfolgen kann, muss der Text zunächst unter "Beschriftung" definiert werden. 
 
 Beispiele für die verschiedenen Skizzengeometrien zeigt die Abbildung:
 
 .. image:: ../../../figures/de/sketch.png
-     :scale: 80
+     :width: 75%
 
 
 Löschen, Bearbeiten und Zoomen
 ------------------------------
 
-Gezeichnete Skizzen können individuell gelöscht [1] und bearbeitet [2] werden. Es besteht außerdem die Möglichkeit, auf einzelne Geometrien zu zoomen [3].
+Gezeichnete Skizzen können individuell gelöscht [1] bearbeitet [2] werden. Außerdem besteht die Möglichkeit, auf einzelne Geometrien zu zoomen [3].
 
 .. image:: ../../../figures/de/sketch_delete_edit_zoom.png
      :scale: 80
@@ -70,7 +70,7 @@ Zeichnen beenden
 Das Zeichnen von Skizzen kann mithilfe von "Zeichnen beenden" (Stop-Button) unterbrochen werden.
 
 .. image:: ../../../figures/de/sketch_stop_drawing.png
-     :scale: 80
+     :width: 75%
 
 
 YAML-Definition:

@@ -61,7 +61,7 @@ This quickstart describes how to:
 This is how a Mapbender application can look like:
 
   .. image:: ../figures/mapbender_basic_application.png
-     :scale: 80
+     :width: 100%
 
 Installation
 ============
@@ -87,12 +87,12 @@ Symfony offers a developer mode with lots of information about your application 
 * Start the developer mode: http://localhost/mapbender/app_dev.php
 
   .. image:: ../figures/mapbender_app_dev.png
-     :scale: 80
+     :width: 100%
 
 * Have a look at the information that is offered in the developer mode.
 
   .. image:: ../figures/mapbender_symfony_profiler.png
-     :scale: 80
+     :width: 100%
 
 
 Mapbender Backend
@@ -124,7 +124,7 @@ The application overview site displays a list of all available applications. The
  * |mapbender-button-delete| button to delete the application
 
   .. image:: ../figures/mapbender_app_dev.png
-     :scale: 80
+     :width: 100%
 
 
 2. Create an individual application
@@ -155,19 +155,19 @@ Furthermore, new applications can be created from scratch. The required steps ar
 Applications can be re-edited at any point. In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
 
   .. image:: ../figures/mapbender_create_application.png
-     :scale: 80
+     :width: 100%
 
 
 3. Add elements to your application
 ===================================
 
-Mapbender consists of a toolbar, sidepane, content and footer. A variety of different elements can be added into these areas.
+Mapbender applications consist of a Top toolbar, Sidepane, Map area and Footer. A variety of different elements can be added into these areas.
 
 #. Choose ``Applications -->`` |mapbender-button-edit| ``Button --> Layouts``.
 
 #. Click on the |mapbender-button-add| ``Button`` to get an overview over the elements Mapbender provides in the corresponding area.
 
-#. Choose an element from the list. Notice that you have different areas in your application. Make sure to add the element to a region that makes sense. Elements can not be added to all regions. For instance, the overview map is not integrable into the content.
+#. Choose an element from the list. Notice that you have different areas in your application. Make sure to add the element to a region that makes sense. Not all elements can be added to all regions.
 
 #. Configure the element. Notice: When you select an element, for example **map**, you see that the element has a set of attributes. Each element offers individual attributes for configuration.
 
@@ -178,7 +178,7 @@ Mapbender consists of a toolbar, sidepane, content and footer. A variety of diff
 Now you should have an idea about how easy it is to change a Mapbender application.
 
   .. image:: ../figures/mapbender_application_add_element.png
-     :scale: 80
+     :width: 100%
 
 In the following, you find a complete list of all elements and their functionalities. For a more detailed description, please have a look at the corresponding chapters in the `mapbender documentation <index.html>`_.
 
@@ -203,7 +203,7 @@ In the following, you find a complete list of all elements and their functionali
 * Link: Links to an external URL
 * Map: Creates the map element in which layersets and layers are integrated into
 * Navigation toolbar: Provides a floating control to pan and zoom in the map
-* Overview: Provides an overview map (only available in Content section)
+* Overview: Provides an overview map
 * POI: Creates a POI for sharing
 * Print client: Renders a Print dialog
 * SRS selector: Changes the map's spatial reference system
@@ -221,10 +221,10 @@ In the following, you find a complete list of all elements and their functionali
 Try it yourself
 ---------------
 
-* add a Map Element to the content of your application
-* add a Layertree to the content of your application
-* add a button that opens the Layertree to the top of your application
-* add the Navigation Toolbar to the content
+* add a Map to the Map area of your application
+* add a Layertree to the Map area of your application
+* add a button to the Top toolbar and combine it with the Layertree of your application
+* add the Navigation Toolbar to the Map area
 * add a Copyright and change the copyright text
 * add an SRS Selector to the footer
 
@@ -243,7 +243,7 @@ The sources pages provides a user with the following functions:
  * filter via text to search for sources
  
   .. image:: ../figures/mapbender_sources.png
-     :scale: 80
+     :width: 100%
 
 
 Load sources
@@ -266,7 +266,7 @@ Mapbender allows the integration of OGC Web Map Services (WMS) and Web Map Tile 
 #. After a successful upload, Mapbender will provide an overview of the WMS information.
 
   .. image:: ../figures/mapbender_add_source.png
-     :scale: 80
+     :width: 100%
 
 
 Add sources to an application
@@ -283,7 +283,7 @@ After uploading a service, it can be integrated into one or several application(
 #. The order of the layers can be changed via drag & drop.
 
   .. image:: ../figures/mapbender_add_source_to_application.png
-     :scale: 80
+     :width: 100%
 
 Source configuration
 --------------------
@@ -297,7 +297,7 @@ Sources can be individually configured. This can be useful if you, for instance,
 #. The order of the layers can also be changed via drag & drop.
 
 .. image:: ../figures/mapbender_source_configuration.png
-   :scale: 80
+   :width: 100%
 
 **Source configuration:**
 
@@ -328,7 +328,7 @@ You can use Vendor Specific Parameters in Mapbender for example to add the user-
 The following example shows the definition of the parameter “group”, which transfers the group-value of the logged-in user.
 
 .. image:: ../figures/layerset/mapbender_vendor_specific_parameter.png
-   :scale: 80
+   :width: 75%
 
 
 * Vstype: Mapbender specific variables. Group (groups), User (users), Simple
@@ -395,12 +395,12 @@ Create a user
 #. Save your new user. It is still possible to alter user information later on.
 
 .. image:: ../figures/mapbender_create_user.png
-     :scale: 80
+     :width: 100%
 
 You can provide more information about the user in the tab ``Profile``. In the ``Groups`` and ``Security`` tabs it is possible to assign the user additional parameters, e.g. the membership to a group.
 
 .. image:: ../figures/mapbender_assign_user_to_group.png
-     :scale: 80
+     :width: 100%
 
 
 Create a group
@@ -430,7 +430,7 @@ Mapbender provides different rights. They refer to the Symfony ACL System.
 Assign roles to a user by ``Security --> Users --> Edit your User --> Security``.
 
   .. image:: ../figures/mapbender_roles.png
-     :scale: 80
+     :width: 100%
 
 
 Assign an Application to a User/Group
@@ -445,7 +445,7 @@ Assign an Application to a User/Group
 #. Alternatively to public access you can set permissions for specific users/groups.
 
   .. image:: ../figures/mapbender_security.png
-     :scale: 80
+     :width: 100%
 
 Test your configuration. Logout from Mapbender by ``Logout``. Login again as the new user.
 

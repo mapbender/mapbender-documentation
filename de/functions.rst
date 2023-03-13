@@ -3,9 +3,6 @@
 Funktionen
 ==========
 
-..
-   functions/obsolet.rst
-
 .. toctree::
    :maxdepth: 2
 
@@ -15,5 +12,4 @@ Funktionen
    functions/editing.rst
    functions/share.rst
    functions/backend.rst
-   functions/backend/FOM/index.rst
    functions/misc.rst

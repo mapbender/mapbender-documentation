@@ -4,7 +4,7 @@ Base functions
 ==============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    basic/activity_indicator.rst
    basic/basesourceswitcher.rst
@@ -13,10 +13,10 @@ Base functions
    basic/layertree.rst
    basic/legend.rst
    basic/map.rst
+   basic/navigation_toolbar.rst
    basic/overview.rst
    basic/ruler.rst
    basic/scalebar.rst
    basic/scaledisplay.rst
    basic/scale_selector.rst
    basic/srs_selector.rst
-   basic/zoom_bar.rst
