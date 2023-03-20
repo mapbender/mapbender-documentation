@@ -150,6 +150,38 @@ F: Ich bekomme beim Ausführen von bootstrap bzw. von composer Update eine Depre
 A: Das ist abhängig von der PHP Version, auf der Sie diese Kommandos aufrufen und taucht bei PHP Versionen < 7 auf.
 
 
+SSL-Zertifikatsfehler
+~~~~~~~~~~~~~~~~~~~~~
+
+F: Wie kann ein SSL-Zertifikatsfehler behoben werden?
+
+A: Wenn beim Laden oder Aktualisieren einer OGC WMS-Datenquelle auf Windows-basierten Mapbender-Servern ein SSL-Zertifikatsproblem auftritt, müssen Sie die Datei ``cacert.pem`` aktualisieren und in Ihrer ``php.ini`` auf die Datei verweisen.
+
+Das Problem kann beim Zugriff auf einen Dienst über https auftreten. Der Fehler sieht wie folgt aus:
+
+.. code-block:: bash
+
+    cURL error 60: SSL certificate problem: unable to get local issuer certificate
+
+
+.. note:: Es gibt eine Datei ``cacert.pem``, die alle vertrauenswürdigen Zertifizierungsstellen auflistet. ``cacert.pem`` ist eine base64-kodierte Textdatei mit einer Definition aller vertrauenswürdigen Zertifizierungsstellen. Sie können die Datei unter https://curl.haxx.se/docs/caextract.html herunterladen.
+
+Der Fehler tritt auf, wenn die Datei nicht in der ``php.ini`` referenziert oder die ``cacert.pem`` nicht aktuell ist.
+
+Verweisen Sie auf ``cacert.pem`` in der ``php.ini``, um das Problem zu beheben:
+
+.. code-block:: bash
+
+    curl.cainfo="C:\[Ihr Pfad]\cacert.pem"
+
+    openssl.cafile="C:\[Ihr Pfad]\cacert.pem"
+
+
+Weitere Informationen finden Sie in der PHP-Dokumentation unter: https://www.php.net/manual/en/curl.configuration.php
+
+Wenn Sie ein individuelles, selbstsigniertes Zertifikat verwenden, können Sie die Informationen Ihrer Zertifizierungsstelle in der Datei ``cacert.pem`` hinzufügen. 
+
+
 Oracle
 ------
 
