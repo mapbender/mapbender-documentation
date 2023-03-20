@@ -5,7 +5,7 @@ Versionshistorie
 
 `English version of this document. <../en/versions.html>`_
 
-.. note:: **Hinweis:** Diese Versionshistorie wird nicht mehr gepflegt. Auf GitHub finden Sie den aktuellen `Changelog <https://github.com/mapbender/mapbender/blob/master/CHANGELOG.md>`_ und alle `Versionen-Milestones <https://github.com/mapbender/mapbender/milestones?direction=desc&sort=title&state=closed>`_.
+.. note:: **Hinweis:** Diese Versionshistorie wird nicht mehr gepflegt. Auf GitHub finden Sie den aktuellen `Changelog <https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md>`_ und alle `Versionen-Milestones <https://github.com/mapbender/mapbender/milestones?direction=desc&sort=title&state=closed>`_.
 
 
 
