@@ -9,7 +9,7 @@ General
 Services and their usage in applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: I would like to know in which applications a specific WMS service is registered. Is there a way to achive that?
+Q: I would like to know in which applications a specific WMS service is registered. Is there a way to achive that?
 
 A: The information is provided in the Administration Backend as Source information.
 
@@ -120,7 +120,7 @@ Installation
 Attempted to call function "imagecreatefrompng"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: I get an error when printing. I have looked into the logfiles (app/logs/prod.log) and found something like this:
+Q: I get an error when printing. I have looked into the logfiles (app/logs/prod.log) and found something like this:
 
 .. code-block:: php
 
@@ -130,8 +130,6 @@ F: I get an error when printing. I have looked into the logfiles (app/logs/prod.
                 at /srv/mapbender-starter/application/mapbender/src/Mapbender/PrintBundle/Component/PrintService.php line 310
 
 A: Please make sure you have installed the php-gd library.
-
-
 
 
 Deprecation Notices at composer or bootstrap Script
@@ -148,6 +146,38 @@ Q: I get a deprecation warning when I call bootstrap or composer update:
                 in phar:///srv/mapbender-starter/composer.phar/src/Composer/EventDispatcher/EventDispatcher.php:290
 
 A: This depends on the PHP version the system in running on and occurs on PHP versions < 7.
+
+
+SSL certificate problem
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Q: How can I fix my SSL certificate problem?
+
+A: When you get an SSL certificate problem error on loading or updating an OGC WMS data source on Windows-based Mapbender servers, you have to update your ``cacert.pem`` file and refer to it in your ``php.ini``.
+
+The problem can occur while accessing a service via https. It looks like this:
+
+.. code-block:: bash
+   
+    cURL error 60: SSL certificate problem: unable to get local issuer certificate
+
+
+.. note:: There is a file ``cacert.pem`` available that lists all trusted certificate authority. ``cacert.pem`` is a base64-encoded text file with a definition for all trusted certificate authorities. You can download the file from https://curl.haxx.se/docs/caextract.html.
+
+The error above occurs if the file is not referenced in ``php.ini`` or if ``cacert.pem`` is not up-to-date.
+
+How to refer to ``cacert.pem`` in ``php.ini``:
+ 
+.. code-block:: bash
+
+    curl.cainfo="C:\[your path]\cacert.pem"
+
+    openssl.cafile="C:\[your path]\cacert.pem"
+
+
+Find further information in the PHP documentation at: https://www.php.net/manual/en/curl.configuration.php
+
+If you use an individual self-signed certificate, you can add the information of your certificate authority to ``cacert.pem``. 
 
 
 Oracle
