@@ -19,11 +19,16 @@ needs_sphinx = '1.8'
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
+    'notfound.extension',
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinxcontrib.phpdomain'
 ]
+
+# -- notfound.extension
+notfound_template = "404.html"
+notfound_no_urls_prefix = None
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

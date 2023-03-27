@@ -1,14 +1,15 @@
-.. _page_not_found:
+.. _page_not_found: :orphan:
+    
 
-Page not found / Seite nicht gefunden (HTTP 404)
-################################################
+Page not found / Seite nicht gefunden (404 Not Found)
+#####################################################
 
 
 **Page not found**
 
 Ooops, the page you were looking for was moved or doesn't exist.
 
-Let's get back to the `Main Page <http://doc.mapbender.org/>`_.
+Let's get back to the `Main Page <https://doc.mapbender.org/>`_.
 
 -----
 
@@ -16,7 +17,7 @@ Let's get back to the `Main Page <http://doc.mapbender.org/>`_.
 
 Hoppla, die Seite, die Sie aufrufen wollten, wurde entweder verschoben oder existiert gar nicht.
 
-Lassen Sie uns zur `Hauptseite <http://doc.mapbender.org/>`_ zurückgehen.
+Lassen Sie uns zur `Hauptseite <https://doc.mapbender.org/>`_ zurückgehen.
 
 
      
