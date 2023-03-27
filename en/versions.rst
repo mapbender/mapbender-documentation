@@ -5,7 +5,7 @@ Version history
 
 `German version of this document. <../de/versions.html>`_
 
-You can find the milestones at `Github <https://github.com/mapbender/mapbender/milestones>`_.
+.. note:: This version history is no longer maintained. Please head over to GitHub to see the latest Mapbender `Changelog <https://github.com/mapbender/mapbender-starter/blob/master/CHANGELOG.md>`_ and `Version Milestones <https://github.com/mapbender/mapbender/milestones?direction=desc&sort=title&state=closed>`_.
 
 
 
