@@ -18,6 +18,7 @@ sudo apt-get install sphinx-common python3-sphinx
 sudo apt-get install pip3
 sudo pip3 install sphinxcontrib-phpdomain
 sudo pip3 install sphinx-rtd-theme
+sudo pip install sphinx-notfound-page
 ```
 
 You can then build the documentation by running:
