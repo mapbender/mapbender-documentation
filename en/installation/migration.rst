@@ -55,7 +55,7 @@ Migration to Mapbender 3.2
 
 You can migrate older Mapbender installations to Mapbender 3.2.
 
-Check the `Mapbender Update Process <https://doc.mapbender.org/en/installation/update.html>`_
+Check the `Mapbender Update Process <https://doc.mapbender.org/en/installation/installation_update.html>`_
 
 * Make sure you have PHP >= 7.1.0 and PHP < 8 
 * Provide a backup of your database. 
@@ -168,6 +168,8 @@ Digitizer is available for Mapbender >= 3.2.2. The new Digitizer Version is 1.4.
 
 
 There is a new style called unsaved.
+
+.. code-block:: yaml
 
     unsaved:
         strokeWidth: 3
