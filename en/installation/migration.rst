@@ -40,7 +40,7 @@ Styling is now possible via variables that can be passed to your application.
 Sketch
 ------
 
-* Sketch now supports to draw a circle with a defined radius. You draw the circle first and den edit the circle and define a radius.
+* Sketch now supports to draw a circle with a defined radius. You draw the circle first and then edit the circle and define a radius.
 * Sketch now allows to define colors to be offered to draw. You can also activate a color picker
 
 
