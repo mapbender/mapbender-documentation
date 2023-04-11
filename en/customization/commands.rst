@@ -521,8 +521,7 @@ Command to reload (update) a WMS source from given file.
 The following additional options are possible:
 
 * --deactivate-new-layers  If set, newly added layers will be deactivated in existing instances. Deactivated layers are not visible in the frontend.
-* --deselect-new-layers    If set, newly added layers will be deselected in existing instances. Deselected layers are not visible on the map by default, but appear in the layer tree and can be seleted by users.
-
+* --deselect-new-layers    If set, newly added layers will be deselected in existing instances. Deselected layers are not visible on the map by default, but appear in the layer tree and can be selected by users.
 
 
 app/console mapbender:wms:reload:url
@@ -540,7 +539,7 @@ The following additional options are possible:
 * --user=USER              Username (basicauth) [default: ""]
 * --password=PASSWORD      Password (basic auth) [default: ""]
 * --deactivate-new-layers  If set, newly added layers will be deactivated in existing instances. Deactivated layers are not visible in the frontend.
-* --deselect-new-layers    If set, newly added layers will be deselected in existing instances. Deselected layers are not visible on the map by default, but appear in the layer tree and can be seleted by users.
+* --deselect-new-layers    If set, newly added layers will be deselected in existing instances. Deselected layers are not visible on the map by default, but appear in the layer tree and can be selected by users.
 
 
 app/console mapbender:wms:show
