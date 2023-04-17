@@ -16,8 +16,15 @@ Further information about the registration process of services and their usage i
 
 * **Username / Password**: Input of the username and the password for secured services.
 
-  Gernerally, OGC WMS Capabilities refer to ``xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd``. The supported namespaces in that schema are:
+  In general, OGC WMS Capabilities refer to ``xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd``. The supported namespaces in that schema are:
   
   * http://www.w3.org/1999/xlink,
   * http://www.opengis.net/wms,
   * http://www.w3.org/2001/XMLSchema
+
+
+Update source
+-------------
+To update a source in the backend, you first need to navigate to the sources backend list. Find the layer you wish to update and click on the Refresh button to open its configuration settings.
+You can then update the WMS: Modify the URL (or other settings, such as user name and/or password). If you don't want to update your source, click the Cancel button at the bottom to discard any changes.
+If you want to save the changes, click the Load button to refresh the WMS.

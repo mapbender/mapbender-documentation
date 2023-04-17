@@ -10,6 +10,8 @@ Informationen zum Einbinden von Diensten und der Nutzung in Mapbender finden Sie
 .. image:: ../../../figures/de/source_wms.png
      :scale: 80
 
+* **Typ**: Vordefinierte Datentypauswahl (OGC WMS bzw. OGC WMTS / TMS).
+
 * **Dienst URL**: URL zum Capabilities-Dokument des WMS Dienstes (z.B.: ``http://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities``)
 
 * **Benutzername / Passwort**: Eingabe von Benutzername und Passwort bei gesicherten Diensten.
@@ -19,3 +21,10 @@ Informationen zum Einbinden von Diensten und der Nutzung in Mapbender finden Sie
   * http://www.w3.org/1999/xlink,
   * http://www.opengis.net/wms,
   * http://www.w3.org/2001/XMLSchema
+
+
+Datenquelle aktualisieren
+-------------------------
+Die Aktualisierung einer Datenquelle erfolgt zunächst über den Aufruf die Seite Datenquellen im Backend. Nachdem Sie den gewünschten Dienst in der Liste gefunden haben, betätigen Sie den Aktualisieren-Button.
+Anschließend kann die Datenquelle aktualisiert werden: Dazu ändern Sie die URL (oder andere Einstellungen wie Benutzername und/oder Passwort). Sofern die Datenquelle nicht aktualisiert werden soll, kann der Abbrechen-Button gedrückt werden, um alle getätigten Änderungen zu verwerfen.
+Falls die Änderungen vorgenommen werden sollen, klicken Sie auf den Laden-Button, um die Datenquelle zu aktualisieren. Diese aktualisierte Version wird anschließend in den Konfigurationseinstellungen angezeigt.
