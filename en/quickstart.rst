@@ -290,7 +290,7 @@ Source configuration
 
 Sources can be individually configured. This can be useful if you, for instance, don't want to display all layers, change the order or titles of the layers, prevent a layer's feature info output or adjust  the scale in which the layers are visible.
 
-#. Click on  ``Application -->`` |mapbender-button-edit| ``Button --> Layersets -->`` |mapbender-button-edit| ``Edit instance`` to configurate an instance.
+#. Click on  ``Application -->`` |mapbender-button-edit| ``Button --> Layersets -->`` |mapbender-button-edit| ``Edit instance`` to configure an instance.
 
 #. You can now change the instance configuration.
 
