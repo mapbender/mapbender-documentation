@@ -15,9 +15,9 @@ Migration to Mapbender 3.3.4
 
 .. code-block:: bash
 
-    $ app/console doctrine:schema:update --force
+    app/console doctrine:schema:update --force
 
-* Next, you need to configure CSRF tokens to be used during login by adding **csrf_token_generator: security.csrf.token_manager** to the form_login section in ``security.yml`` as follows:
+* Next, you need to configure CSRF tokens to be used during login to the **csrf_token_generator** form_login section in ``security.yml`` as follows:
 
 .. code-block:: yaml
 

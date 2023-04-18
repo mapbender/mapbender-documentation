@@ -13,7 +13,7 @@ Hier werden grundlegende Parameter von Mapbender bestimmt.
 
 Datenbank
 *********
-Zur Konfiguration der Datenbankverbindung werden die Dateien config.yml und parameters.yml verwendet. Während in der config.yml nur die Platzhalter angegeben werden, werden die Werte in der parameters.yml gefüllt. Die Standarddatenbankdefinition erfolgt in der config.yml.
+Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yml`` und ``config.yml`` verwendet. In der ``parameters.yml`` werden Variablen für die Datenbankverbindung definiert. Es können mehrere Datenbankverbindungen definiert werden. Die Variablen werden in der ``config.yml`` verarbeitet. Zu jeder Datenbankverbindung wird ein Alias vergeben.
 
 * database_driver: Der Datenbanktreiber. Mögliche Werte sind:
 
@@ -85,7 +85,7 @@ Disclaimer
 
 .. image:: ../../figures/disclaimer.png
 
-Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der parameters.yml ergänzt werden:
+Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der ``parameters.yml`` ergänzt werden:
 
 .. code-block:: yaml
 
@@ -100,7 +100,7 @@ Die Sitelinks werden mittels "|" voneinander getrennt.
 
 Logo und Login-Bild
 *******************
-In der parameters.yml kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
+In der ``parameters.yml`` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
 
 .. code-block:: yaml
 
@@ -131,19 +131,19 @@ Weitere Informationen im Kapitel :ref:`users_de`.
 
 Projektname
 ***********
-Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+Der Projektname (Standard: Mapbender) kann in der Datei ``parameters.yml`` angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Wichtiger Hinweis:** In der parameters.yml dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
+**Wichtiger Hinweis:** In der ``parameters.yml`` dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
 
 
 Proxy-Einstellungen
 *******************
-Wenn ein Proxy verwendet wird, muss dieser in der Datei parameters.yml im Bereich OWSProxy Configuration angegeben werden.
+Wenn ein Proxy verwendet wird, muss dieser in der Datei ``parameters.yml`` im Bereich OWSProxy Configuration angegeben werden.
 
 Eine Konfiguration könnte wie folgt aussehen:
 
@@ -197,7 +197,7 @@ Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Ans
 config.yml
 ----------
 
-Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
+Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die ``parameters.yml`` als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
 
 * **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
@@ -205,7 +205,7 @@ Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeit
 
 Datenbank
 *********
-Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen:
+Wichtig: Jede Datenbank, die in der ``parameters.yml`` definiert wird, muss auch als Platzhalter in der ``config.yml`` stehen:
 
 .. code-block:: yaml
 

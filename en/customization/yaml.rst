@@ -13,7 +13,7 @@ The following fundamental Mapbender parameters are specified here.
 
 Database
 ********
-To configurate the database the files config.yml and parameters.yml are needed. The file config.yml contains placeholders for variables, which are specified in the file parameters.yml. For the default database definiton set in ``config.yml``, see below.
+The files ``parameters.yml`` and ``config.yml`` are needed to configure databases in Mapbender. In ``parameters.yml``, (multiple) variables for database connection(s) can be defined. These variables are being processed in ``config.yml``. An alias is assigned to each database connection.
 
 * database_driver: Database driver. Possible values are:
 
@@ -140,7 +140,7 @@ In parameters.yml, you can refer to your own logo and to an alternative image fo
 
 Mailer
 *******
-Mailer information in parameters.yml (e.g. smtp or sendmail).
+Mailer information in ``parameters.yml`` (e.g. smtp or sendmail).
 
 Configuration example:
 
@@ -158,19 +158,19 @@ More information in chapter :ref:`users`.
 
 Project name
 ************
-The name of the project (default: Mapbender) can be changed in parameters.yml. The change has a global impact on the whole Mapbender installation.
+The name of the project (default: Mapbender) can be changed in ``parameters.yml``. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Important note:** In parameters.yml **tabulators may not be used for indentation** instead you need to use space.
+**Important note:** In ``parameters.yml`` **tabulators may not be used for indentation** instead you need to use space.
 
 
 Proxy settings
 **************
-If you use a proxy, you need to change parameters.yml.
+If you use a proxy, you need to change ``parameters.yml``.
 
 Configuration example:
 
@@ -204,7 +204,7 @@ config.yml
 
 Database
 ********
-Important: Every database defined in parameters.yml needs to have a placeholder in config.yml as well:
+Important: Every database defined in parameters.yml needs to have a placeholder in ``config.yml`` as well:
 
 .. code-block:: yaml
 
@@ -227,7 +227,7 @@ Important: Every database defined in parameters.yml needs to have a placeholder 
 
 Use of several databases
 ************************
-Example with two database connections in **config.yml**:
+Example with two database connections in ``config.yml``:
 
 .. code-block:: yaml
 
@@ -260,7 +260,7 @@ Example with two database connections in **config.yml**:
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
 
-More information under parameters.yml.
+More information under ``parameters.yml``.
 
 
 YAML Application files
