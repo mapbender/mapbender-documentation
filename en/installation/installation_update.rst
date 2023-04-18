@@ -17,6 +17,10 @@ To update Mapbender you have to do the following steps:
 * At https://doc.mapbender.org/en/installation/installation_ubuntu.html under the section **Unpack and register in your Web-Server** you can see how the config file for the Apache Alias should look like
 * That's all! Have a look at your new Mapbender version
 
+.. hint::
+    
+    Please follow the migration instructions on specific Mapbender versions, see the :ref:`migration`.
+
 
 Update Example for Linux
 --------------------------
