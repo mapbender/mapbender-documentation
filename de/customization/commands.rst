@@ -526,6 +526,12 @@ Befehl um einen WMS in Mapbender zu aktualisieren. Dabei wird die WMS-ID und ein
    app/console mapbender:wms:reload:url 76 /var/www/html/service.xml
 
 
+Folgende zusätzliche Optionen sind möglich:
+
+* --deactivate-new-layers  Sofern gesetzt, werden neu hinzugekommene Layer in Instanzen, in denen diese vorkommen, deaktiviert. Deaktivierte Layer werden weder in der Karte noch im Ebenenbaum dargestellt.
+* --deselect-new-layers    Sofern gesetzt, werden neu hinzugekommene Layer in Instanzen, in denen diese vorkommen, deselektiert. Nicht ausgewählte Layer werden standardmäßig nicht in der Karte dargestellt, erscheinen aber im Ebenenbaum und können dort vom Benutzer ausgewählt werden.
+
+
 app/console mapbender:wms:reload:url
 ************************************
 
@@ -534,6 +540,14 @@ Befehl um einen WMS in Mapbender zu aktualisieren. Dabei wird die WMS-ID und ein
 .. code-block:: yaml
 
    app/console mapbender:wms:reload:url 76 https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+
+
+Folgende zusätzliche Optionen sind möglich:
+
+* --user=USER              Benutzername (basic auth) [default: ""]
+* --password=PASSWORD      Passwort (basic auth) [default: ""]
+* --deactivate-new-layers  Sofern gesetzt, werden neu hinzugekommene Layer in Instanzen, in denen diese vorkommen, deaktiviert. Deaktivierte Layer werden weder in der Karte noch im Ebenenbaum dargestellt.
+* --deselect-new-layers    Sofern gesetzt, werden neu hinzugekommene Layer in Instanzen, in denen diese vorkommen, deselektiert. Nicht ausgewählte Layer werden standardmäßig nicht in der Karte dargestellt, erscheinen aber im Ebenenbaum und können dort vom Benutzer ausgewählt werden.
 
 
 app/console mapbender:wms:show
