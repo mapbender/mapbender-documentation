@@ -116,7 +116,7 @@ Sie können die Anwendungen, die in dem Ordner applications definiert sind, in d
 Konfigurationsdateien
 ---------------------
 
-Die Konfiguratuionsdateien liegen unter **app/config**. 
+Die Konfigurationsdateien liegen unter **app/config**. 
 
 Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
