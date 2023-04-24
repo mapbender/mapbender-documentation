@@ -232,7 +232,7 @@ Versuchen Sie es selbst
 Datenquellen (Sources) verwenden
 ================================
 
-In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist noch einmal in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`Layerst <layerset_de>` .
+In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`Layerst <layerset_de>` .
 
 Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
 
@@ -257,11 +257,11 @@ Sie können OGC Web Map Services (WMS) und Web Map Tile Services (WMTS) in Ihre 
 
 #. Definieren Sie den *"Typ"* des Dienstes: OGC WMS oder OGC WMTS / TMS.
 
-#. Geben Sie den Link zur getCapabilities URL in das Textfeld *"Dienst-URL"* ein.
+#. Geben Sie den Link zur getCapabilities URL in das Textfeld *Dienst-URL* ein.
 
 #. Geben Sie Benutzername und Kennwort ein, sofern der Dienst eine Authentifizierung benötigt.
 
-#. Klicken Sie *"Laden"*, um den Dienst in das Dienst-Repository zu laden.
+#. Klicken Sie ``Laden``, um den Dienst in das Dienst-Repository zu laden.
 
 #. Nach erfolgreicher Registrierung des Dienstes zeigt Mapbender eine Übersicht der Informationen an, die der Dienst geliefert hat.
 
@@ -280,7 +280,7 @@ Nachdem ein Dienst in Mapbender geladen wurde, kann dieser zu einer oder mehrere
 
 #. Jetzt können Sie Dienste zum Layerset hinzufügen. Wählen Sie dafür den |mapbender-button-add| ``Button`` des jeweiligen Layersets.
 
-#. Die Reihenfolge der Dienste kann über drag & drop verändert werden.
+#. Die Reihenfolge der Dienste kann über Drag & Drop verändert werden.
 
   .. image:: ../figures/de/mapbender_add_source_to_application.png
      :width: 100%
@@ -294,7 +294,7 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 
 #. Sie können nun Ihren Dienst konfigurieren.
 
-#. Sie können die Reihenfolge der Layer über drag & drop ändern.
+#. Sie können die Reihenfolge der Layer über Drag & Drop ändern.
 
 .. image:: ../figures/de/mapbender_source_configuration.png
    :width: 100%
