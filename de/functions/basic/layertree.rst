@@ -48,10 +48,10 @@ Um Layersets im Layertree nutzen zu können, sind verschiedene Anpassungen notwe
 #. Einrichtung des Layertrees selbst
 
 Über den Reiter **Layerset** können Layersets definiert und Layer in eine Anwendung eingebunden werden. 
-Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den Plus-Button **[1]** kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im Backend registrierten Instanzen **[2]** einbinden. Das Layerset "overview" **[3]** wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
+Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den großen Plus-Button kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im Backend registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
 Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, findet sich unter der `Datenquellen <../backend/source.html>`_ und `Layersets <../backend/layerset.html>`_. 
 
-.. figure:: ../../../figures/layertree/layertree_configuration_layerset.png
+.. figure:: ../../../figures/de/mapbender_add_source_to_application.png
            :scale: 80
            :alt: Einrichtung von Layersets für die Einbindung in den Layertree.
 
@@ -232,10 +232,10 @@ Damit die **Themen** in der Anwendung wie gewünscht angezeigt werden, gibt es v
 Wenn wir im Themenset “World” die Standardeinstellungen beibehalten und im Themenset “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements wie folgt aus:
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_config.png
-           :scale: 80
-           :alt: Backend-Konfiguration des thematischen Layertrees.
+          :scale: 80
+          :alt: Backend-Konfiguration des thematischen Layertrees.
 
-            Backend-Konfiguration des thematischen Layertrees.
+          Backend-Konfiguration des thematischen Layertrees.
 
 Wir haben die Layersets somit als thematische Gruppen in den Ebenenbaum eingebunden. Durch die Konfiguration der thematischen Layer stellt sich der Layertree in der Anwendung nun wie folgt dar: 
 

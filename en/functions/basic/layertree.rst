@@ -49,10 +49,10 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 #. Configuration of the Layertree itself
 
 Layers are included in the application via the **Layerset** tab in the backend.
-The instances are the references to the individual WMS services. With the plus-button **[1]**, new Layersets can be created. Then, new layers can be integrated in the application by adding registered instances **[2]**. In the example, the Layerset "overview" **[3]** is used for displaying the overview map.
+The instances are the references to the individual WMS services. With the large plus button, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
 For a detailed documentation on how the services can be integrated and registered correctly, please head to the documentation of `layersets <../backend/layerset.html>`_ and `sources <../backend/source.html>`_. 
 
-.. figure:: ../../../figures/layertree/layertree_configuration_layerset_en.png
+.. figure:: ../../../figures/mapbender_add_source_to_application.png
            :scale: 80
            :alt: Configuration of various Layersets for integration into the Layertree.
 

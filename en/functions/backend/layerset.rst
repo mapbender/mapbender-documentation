@@ -186,4 +186,6 @@ Further information
 
 * The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../basic/layertree>`_
 
-* Likewise layersets can be switched on or off in the `Map element <../basic/map>`_.
+* Layersets can be switched on or off for a map completely in the `Map element <../basic/map>`_ settings.
+
+* Likewise, individual thematic layersets can be (de)activated via checkbox in the layerset configuration so that they are (not) visible in the map on application startup.
