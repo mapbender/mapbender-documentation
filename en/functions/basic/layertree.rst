@@ -233,9 +233,9 @@ If we keep the default settings in the theme "World" and activate the other opti
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_config_en.png
            :scale: 80
-           :alt: Backend configuration of the thematic Layertree.
+           :alt: Backend configuration of the thematic layers.
 
-           Backend configuration of the thematic Layertree.
+           Backend configuration of the thematic layers.
 
 Now we have the Layersets integrated as thematic groups. By configuring the thematic layer, the Layertree appears as follows:
 

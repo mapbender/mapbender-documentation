@@ -41,25 +41,25 @@ Konfiguration
 Allgemeine Konfiguration
 ------------------------
 
-Um Layersets im Layertree nutzen zu können, sind verschiedene Anpassungen notwendig. Diese betreffen die:
+Um Layersets im Ebenenbaum nutzen zu können, sind verschiedene Anpassungen notwendig. Diese betreffen die:
 
 #. Einrichtung unterschiedlicher Layersets
 #. Einrichtung in der Karte zur Anzeige der Layersets
-#. Einrichtung des Layertrees selbst
+#. Einrichtung des Ebenenbaums selbst
 
-Über den Reiter **Layerset** können Layersets definiert und Layer in eine Anwendung eingebunden werden. 
+Über den Reiter **Layerset** können Layersets definiert und Datenquellen in eine Anwendung eingebunden werden. 
 Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den großen Plus-Button kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im Backend registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
 Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, findet sich unter der `Datenquellen <../backend/source.html>`_ und `Layersets <../backend/layerset.html>`_. 
 
 .. figure:: ../../../figures/de/mapbender_add_source_to_application.png
            :scale: 80
-           :alt: Einrichtung von Layersets für die Einbindung in den Layertree.
+           :alt: Einrichtung von Layersets für die Einbindung in den Ebenenbaum.
 
-           Einrichtung von Layersets für die Einbindung in den Layertree.
+           Einrichtung von Layersets für die Einbindung in den Ebenenbaum.
 
 Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen, müssen diese im `Kartenelement <map.html>`_ angegeben werden. 
 Durch das Aktivieren der gewünschten Layersets wird definiert, ob diese in der Kartenansicht verwendet werden. 
-Auch wird hierüber die Reihenfolge definiert, in der die Layersets im Layertree und in der Karte erscheinen: Die Einträge in der Auflistung können per Drag & Drop verschoben werden.
+Auch wird hierüber die Reihenfolge definiert, in der die Layersets im Ebenenbaum und in der Karte erscheinen: Die Einträge in der Auflistung können per Drag & Drop verschoben werden.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple.png
            :scale: 80
@@ -68,14 +68,14 @@ Auch wird hierüber die Reihenfolge definiert, in der die Layersets im Layertree
            Einrichtung der Layersets im Kartenelement.
 
 
-Workflow einfacher Layertree
+Workflow einfacher Ebenenbaum
 ----------------------------
 
-Im Folgenden gehen wir eine beispielhafte Konfiguration eines Layertrees mit Basisfunktionen in drei Schritten durch: 
+Im Folgenden gehen wir eine beispielhafte Konfiguration eines Ebenenbaums mit Basisfunktionen in drei Schritten durch: 
 
 #. Einrichtung eines Layersets
 #. Einrichtung in der Karte zur Anzeige des Layersets
-#. Einrichtung des Layertrees
+#. Einrichtung des Ebenenbaums
 
 **Einrichtung eines Layersets**
 
@@ -89,9 +89,9 @@ Bei Schwierigkeiten bei der Einbindung kann die Dokumentation der `Layersets <..
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple.png
            :scale: 80
-           :alt: Einrichtung eines Layersets für die Einbindung in den Layertree.
+           :alt: Einrichtung eines Layersets für die Einbindung in den Ebenenbaum.
 
-           Einrichtung eines Layersets für die Einbindung in den Layertree.
+           Einrichtung eines Layersets für die Einbindung in den Ebenenbaum.
 
 **Einrichtung in der Karte zur Anzeige des Layersets**
 
@@ -106,23 +106,23 @@ Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kart
 
            Einrichtung im Kartenelement zur Anzeige des Layersets.
 
-**Einrichtung des Layertrees**
+**Einrichtung des Ebenenbaums**
 
-Zuletzt erfolgt die Einrichtung des **Layertrees** selbst. 
-Die im Kartenelement angegebenen Instanzen können im Layertree präziser definiert werden. Wenn eine vordefinierte Anwendung kopiert wurde, sollte der Layertree bereits funktionieren. Beim erneuten Einbinden des Elements in die Anwendung kann dieses mit den Standardeinstellungen genutzt werden, ohne dass weitere Anpassungen zwingend notwendig sind.
+Zuletzt erfolgt die Einrichtung des **Ebenenbaums** selbst. 
+Die im Kartenelement angegebenen Instanzen können im Ebenenbaum präziser definiert werden. Wenn eine vordefinierte Anwendung kopiert wurde, sollte der Ebenenbaum bereits funktionieren. Beim erneuten Einbinden des Elements in die Anwendung kann dieses mit den Standardeinstellungen genutzt werden, ohne dass weitere Anpassungen zwingend notwendig sind.
 
-Für das Verstehen der Funktionen und das eigene Erstellen eines Layertrees bearbeiten wir nun das Ebenenbaum-Element im Kartenbereich.
+Für das Verstehen der Funktionen und das eigene Erstellen eines Ebenenbaums bearbeiten wir nun das Ebenenbaum-Element im Kartenbereich.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_1.png
            :scale: 80 
-           :alt: Einrichtung des Layertrees im Kartenbereich.
+           :alt: Einrichtung des Ebenenbaums im Kartenbereich.
 
-           Einrichtung des Layertrees im Kartenbereich.
+           Einrichtung des Ebenenbaums im Kartenbereich.
 
 
-Über die Checkbox **BaseSources anzeigen** werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch im Layertree angezeigt.
+Über die Checkbox **BaseSources anzeigen** werden Instanzen, die als Basesource in die Anwendung geladen wurden, auch im Ebenenbaum angezeigt.
 
-Wenn **Automatisches Öffnen** aktiv ist, wird der Layertree beim Anwendungsstart geöffnet. Der **Titel** des Elements ermöglicht die Unterscheidung mehrerer eingebundener Ebenenbäume.
+Wenn **Automatisches Öffnen** aktiv ist, wird der Ebenenbaum beim Anwendungsstart geöffnet. Der **Titel** des Elements ermöglicht die Unterscheidung mehrerer eingebundener Ebenenbäume.
 
 Über **Menu** kann eine Auswahl von Funktionen aktiviert werden, die dann im Ebenenbaum zur Verfügung gestellt werden.
 
@@ -138,19 +138,19 @@ Wenn **Automatisches Öffnen** aktiv ist, wird der Layertree beim Anwendungsstar
 
            Konfiguration der Funktionen für das Kontextmenü.
 
-Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert werden. Alle aktiven Funktionen werden farbig hinterlegt. In der Anwendung erscheint im Layertree rechts neben jedem Layer ein Kontextmenü. Durch einen Klick auf das Menü klappt ein Fenster auf und die zuvor aktivierten Funktionen können genutzt werden. Durch einen Klick auf den x-Button oben rechts kann das Menü wieder geschlossen werden.
+Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert werden. Alle aktiven Funktionen werden farbig hinterlegt. In der Anwendung erscheint im Ebenenbaum rechts neben jedem Layer ein Kontextmenü. Durch einen Klick auf das Menü klappt ein Fenster auf und die zuvor aktivierten Funktionen können genutzt werden. Durch einen Klick auf den x-Button oben rechts kann das Menü wieder geschlossen werden.
 
 .. figure:: ../../../figures/layertree/layertree_menu_map.png
            :scale: 80
-           :alt: Kontextmenü der Layer im Layertree.
+           :alt: Kontextmenü der Layer im Ebenenbaum.
 
-           Kontextmenü der Layer im Layertree.
+           Kontextmenü der Layer im Ebenenbaum.
 
 Die Funktion **Visibility bei Ordnern ausblenden** ermöglicht die Sicherung der Konfiguration der Deckkraft. Bei aktiver Funktion wird die Deckkraft der einzelnen Layer in der Anwenddung nicht angezeigt und kann nicht verändert werden.
 
 Die Checkbox **Info ausblenden** ermöglicht das Ausblenden des "i"-Symbols; die Einstellungen zur Informationsabfrage sind unabhängig von den Einstellungen in Layerset oder Dienst. Das Symbol zeigt an, ob die Informationsabfrage aktiviert ist: Wenn es nicht umrandet ist, ist die Informationsabfrage nicht aktiv. Durch einen Klick wird die dunkle Umrandung aktiviert, sodass bei einer Informationsabfrage Layer-Informationen abgefragt werden können.
 
-Die Checkbox **Thematischer Layer** aktiviert die thematische Einteilung von Layern. Dadurch werden die Layerset-Namen mit Ordnersymbol und Checkbox im Ebenenbaum angezeigt. Darüber hinaus kann definiert werden, ob ein Ordner beim Start geöffnet dargestellt werden soll. Durch einen Klick auf das Ordnersymbol des Layertrees neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste.
+Die Checkbox **Thematischer Layer** aktiviert die thematische Einteilung von Layern. Dadurch werden die Layerset-Namen mit Ordnersymbol und Checkbox im Ebenenbaum angezeigt. Darüber hinaus kann definiert werden, ob ein Ordner beim Start geöffnet dargestellt werden soll. Durch einen Klick auf das Ordnersymbol des Ebenenbaums neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste.
 
 Die Checkbox **Erlaubt sortieren im Layerbaum** steuert, ob ein freies Umsortieren von Layern per Drag & Drop im Ebenenbaum erfolgen darf.
 
@@ -158,19 +158,19 @@ Die Checkbox neben einem Layernamen ermöglicht das An- und Ausschalten eines La
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
-           :alt: Layertree Buttons.
+           :alt: Ebenenbaum Buttons.
 
-           Layertree Buttons.
+           Ebenenbaum Buttons.
 
 
-Workflow thematischer Layertree
--------------------------------
+Workflow thematischer Ebenenbaum
+--------------------------------
 
-Im Folgenden gehen wir eine beispielhafte Konfiguration eines Layertrees mit erweiterten Funktionen in drei Schritten durch: 
+Im Folgenden gehen wir eine beispielhafte Konfiguration eines Ebenenbaums mit erweiterten Funktionen in drei Schritten durch: 
 
 #. Einrichtung mehrerer Layersets
 #. Einrichtung in der Karte zur Anzeige der Layersets
-#. Einrichtung des thematischen Layertrees
+#. Einrichtung des thematischen Ebenenbaums
 
 **Einrichtung mehrerer Layersets**
 
@@ -190,9 +190,9 @@ Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex.png
            :scale: 80
-           :alt: Konfiguration der Layersets für den thematischen Layertree.
+           :alt: Konfiguration der Layersets für den thematischen Ebenenbaum.
 
-           Konfiguration der Layersets für den thematischen Layertree.
+           Konfiguration der Layersets für den thematischen Ebenenbaum.
 
 Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die Übersichtskarte, das **Project NRW** Layerset [2] mit den zwei regionalen Datensets aus NRW und das **World**-Layerset [3] mit den überregionalen Layern. 
 
@@ -205,39 +205,39 @@ Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kart
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_komplex.png
            :scale: 80 
-           :alt: Konfiguration der Layersets für den thematischen Layertree.
+           :alt: Konfiguration der Layersets für den thematischen Ebenenbaum.
 
-           Konfiguration des Kartenelements für den thematischen Layertree.
+           Konfiguration des Kartenelements für den thematischen Ebenenbaum.
 
-**Einrichtung des thematischen Layertrees**
+**Einrichtung des thematischen Ebenenbaums**
 
-Als letzter Schritt erfolgt die Einrichtung des Layertrees selbst. Für den thematischen Layertree binden wir den Ebenenbaum in diesem Beispiel in die Sidepane ein.
+Als letzter Schritt erfolgt die Einrichtung des Ebenenbaums selbst. Für den thematischen Ebenenbaum binden wir den Ebenenbaum in diesem Beispiel in die Sidepane ein.
 
-Ist die Option **Thematischer Layer** ausgeschaltet, benutzt der Layertree nicht die konfigurierten Layersets und zeigt die einzelnen Instanzen ohne thematische Strukturierung in der Hauptebene an. Nun wollen wir jedoch die Layer über unsere thematischen Layersets anzeigen, daher aktivieren wir die Funktion **Thematischer Layer**. 
+Ist die Option **Thematischer Layer** ausgeschaltet, benutzt der Ebenenbaum nicht die konfigurierten Layersets und zeigt die einzelnen Instanzen ohne thematische Strukturierung in der Hauptebene an. Nun wollen wir jedoch die Layer über unsere thematischen Layersets anzeigen, daher aktivieren wir die Funktion **Thematischer Layer**. 
 Da wir im `Kartenelement <map.html>`_ beide Layersets in die Anwendung eingebunden haben, werden diese nun unter dem **Themen**-Bereich angezeigt.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_2.png
            :scale: 80 
-           :alt: Einrichtung des thematischen Layertrees im Kartenbereich.
+           :alt: Einrichtung des thematischen Ebenenbaums im Kartenbereich.
 
-           Einrichtung des thematischen Layertrees im Kartenbereich.
+           Einrichtung des thematischen Ebenenbaums im Kartenbereich.
 
 Damit die **Themen** in der Anwendung wie gewünscht angezeigt werden, gibt es verschiedene Einstellungsmöglichkeiten: 
 
 :[1] Thema anzeigen:
   Ist diese Option gesetzt, wird das Layerset als zusätzliche Ebene angezeigt. Ist diese Option nicht gesetzt, werden die enthaltenen Layer-Instanzen in der Hauptebene angezeigt.
 :[2] Thema offen oder geschlossen:
-  Ist diese Option gesetzt (Symbol des geöffneten Ordners), ist das Thema im Layertree automatisch ausgeklappt.
+  Ist diese Option gesetzt (Symbol des geöffneten Ordners), ist das Thema im Ebenenbaum automatisch ausgeklappt.
 
-Wenn wir im Themenset “World” die Standardeinstellungen beibehalten und im Themenset “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements wie folgt aus:
+Wenn wir im Thema “World” die Standardeinstellungen beibehalten und im Thema “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements wie folgt aus:
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_config.png
           :scale: 80
-          :alt: Backend-Konfiguration des thematischen Layertrees.
+          :alt: Backend-Konfiguration Thematische Layer.
 
-          Backend-Konfiguration des thematischen Layertrees.
+          Backend-Konfiguration Thematische Layer.
 
-Wir haben die Layersets somit als thematische Gruppen in den Ebenenbaum eingebunden. Durch die Konfiguration der thematischen Layer stellt sich der Layertree in der Anwendung nun wie folgt dar: 
+Wir haben die Layersets somit als thematische Gruppen in den Ebenenbaum eingebunden. Durch die Konfiguration der thematischen Layer stellt sich der Ebenenbaum in der Anwendung nun wie folgt dar: 
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane.png
            :scale: 80
