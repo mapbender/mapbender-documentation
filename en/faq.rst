@@ -83,7 +83,7 @@ Q: My WMS service does not return images in my ImageExport or my PrintClient. Co
 
 A: This can have different reasons. Under some circumstances, the requested pixel dimension of a WMS can get too large.
 
-In this case, add the ``mapbender.imaageexport.renderer.wms.max_getmap_size`` (default 8192) parameter to your ``parameters.yml`` file. This sets the largest possible ``WIDTH=`` and ``HEIGHT=`` parameter values for WMS requests generated from the ImageExport and PrintClient elements.
+In this case, add the ``mapbender.imaageexport.renderer.wms.max_getmap_size`` (default: 8192) parameter to your ``parameters.yml`` file. This sets the largest possible ``WIDTH=`` and ``HEIGHT=`` parameter values for WMS requests generated from the ImageExport and PrintClient elements. Moreover, the maximum resolution is defined in the ``MaxWidth`` or ``MaxHeight`` fields of the GetCapabilities request for the service, therefore it's helpful to check the service request for a value to be entered.
 
 ``WIDTH=`` and ``HEIGHT=`` parameters can also be limited separately: Adjust ``mapbender.imaageexport.renderer.wms.max_getmap_size.x`` for the ``WIDTH=`` limit, and ``mapbender.imaageexport.renderer.wms.max_getmap_size.y`` for the ``HEIGHT=`` limit.
 
