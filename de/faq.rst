@@ -77,12 +77,22 @@ Setzen Sie in dem Fall den Parameter hoch, beispielsweise auf 2000. Die Zahl hä
    max_input_vars = 1000
 
 
+Maximale WMS-Kachelgröße für Druck und Export anpassen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: Wenn ich eine Karte mit einem WMS-Dienst als Bild exportieren oder drucken möchte, erscheint der Dienst anschließend nicht in meiner Datei.
+
+A: Dies kann verschiedene Gründe haben. Unter bestimmten Umständen kann die angeforderte Pixelabmessung eines WMS zu groß werden, sodass der Dienst in diesem Fall keine Bilder mehr liefert.
+
+In diesem Fall fügen Sie zu Ihrer ``parameters.yml`` den ``mapbender.imaageexport.renderer.wms.max_getmap_size`` (Standard: 8192) Parameter hinzu. Dadurch werden größtmögliche ``WIDTH=``- und ``HEIGHT=``-Werte für WMS-Druck/Export-Anfragen festgelegt.
+
+Die ``WIDTH=``- und ``HEIGHT=``-Parameter können auch unabhängig voneinander definiert werden. Verwenden Sie ``mapbender.imaageexport.renderer.wms.max_getmap_size.x`` für den ``WIDTH=``- und ``mapbender.imaageexport.renderer.wms.max_getmap_size.y`` für den ``HEIGHT=``-Parameter.
+
 
 Meine Anwendung kann nicht kopiert werden
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 F: Ich habe eine komplexe Anwendung und möchte sie kopieren. Das schlägt fehl.
-
 
 A: Eine mögliche Ursache ist, dass PHP nicht das Arbeiten mit großen Dateien (YAML-Export/Import, etc.) erlaubt. Das tritt v.a. bei Fast-CGI auf. Dafür dient der PHP Parameter MaxRequestLen, den Sie in der Konfiguration von FCGI anpassen können.
 

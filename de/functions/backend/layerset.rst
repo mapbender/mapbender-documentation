@@ -1,7 +1,7 @@
 .. _layerset_de:
 
-Layersets
-*********
+Layerset
+********
 
 Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS-Dienste) beinhalten kann. Ein typisches Beispiel ist die Unterscheidung zwischen dem Layerset "main" (Hauptkarte) und "overview" (Übersichtskarte). Es besteht die Möglichkeit, weitere Layersets zu definieren. Diese werden entweder in der Karte direkt oder auch im Layertree als eigener Ordner dargestellt (thematische Layer).
 
@@ -40,13 +40,13 @@ Der Screenshot zeigt die `private Instanz <layerset.rst#freie-und-private-instan
 
 - **Sichtbarkeit:** Der Dienst kann mit dieser Schaltfläche sichtbar geschaltet werden.
 
-- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den `BaseSourceSwitcher <../basic/basesourceswitcher>`_, der nur BaseSources anzeigen soll und auf den `Layertree <../basic/layertree>`_, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch die `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_ weiter unten.
+- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den `BaseSourceSwitcher <../basic/basesourceswitcher>`_, der nur BaseSources anzeigen soll und auf den `Layertree <../basic/layertree>`_, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch unter `Hinweise <hinweise-layersets_>`_.
 
-- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe die `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_ weiter unten.
+- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe auch unter `Hinweise <hinweise-layersets_>`_.
 
 - **Transparenz:** Ist dieser Schalter aktiviert (und das ist er standardmäßig) wird der Dienst mit transparentem Hintergrund angefordert. Also im WMS GetMap-Request mit dem Parameter ``TRANSPARENT=TRUE``.
 
-- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert (Standard: nicht gekachelt). Siehe die folgenden `Hinweise <layerset.rst#hinweise-zu-den-auswirkungen-der-einzelnen-konfigurationen>`_.
+- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert (Standard: nicht gekachelt). Siehe auch unter `Hinweise <hinweise-layersets_>`_.
 
 
 **Layer-Reihenfolge:**
@@ -130,6 +130,7 @@ Layerkonfiguration
 * Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar).
 * Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil wählen.
 
+.. _hinweise-layersets:
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen
 ==========================================================
@@ -179,7 +180,9 @@ Momentan eignet sich das Element, um den Dienst nur an bestimmte Benutzer und Gr
 Weitere Informationen
 ---------------------
 
-* Information zur Benutzung von Layersets finden Sie auch im `Quickstart <../../quickstart#konfiguration-von-diensten>`_
+* Information zur Benutzung von Layersets finden Sie auch im `Schnellstart <../../quickstartl#datenquellen-sources-verwenden>`_.
+
+* Tipps, wie sich das Kacheln von WMS begrenzen lässt, finden Sie in den `FAQs <../../FAQ#performance>`_.
 
 * Die Bedeutung der Layersets für die Anzeige im Layertree ist im Abschnitt zu den Thematischen Layern in der `Layertree-Dokumentation <../basic/layertree>`_ beschrieben.
 
