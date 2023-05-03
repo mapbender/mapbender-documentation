@@ -56,7 +56,7 @@ Drawn sketches can be individually deleted [1] or edited [2]. There is also the 
 
 
 Color picker
------------
+------------
 
 It's possible to pick colors after setting up the configuration parameters (see above). If done correctly, buttons offering the colors will appear.
 Clicking on one of the color buttons determines the color for the next feature drawn, or, if currently editing a feature (click on "Edit geometry" icon in table listing), immediately updates that feature to that color. This will work with the geometry that isn't saved to the table yet, too.

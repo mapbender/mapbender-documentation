@@ -235,7 +235,7 @@ Wenn wir im Themenset “World” die Standardeinstellungen beibehalten und im T
            :scale: 80
            :alt: Backend-Konfiguration des thematischen Layertrees.
 
-            Backend-Konfiguration des thematischen Layertrees.
+           Backend-Konfiguration des thematischen Layertrees.
 
 Wir haben die Layersets somit als thematische Gruppen in den Ebenenbaum eingebunden. Durch die Konfiguration der thematischen Layer stellt sich der Layertree in der Anwendung nun wie folgt dar: 
 
