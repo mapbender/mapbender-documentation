@@ -30,7 +30,7 @@ The PrintClient element can be implemented both as a dialog (via a button) and a
 Configuration
 -------------
 
-The Printclient can be configurated in the backend. It relies on print templates (format A0 to A4). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
+The Printclient can be configured in the backend. It relies on print templates (format A0 to A4). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
 
 .. image:: ../../../figures/print_client_configuration.png
      :scale: 80

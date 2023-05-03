@@ -12,7 +12,7 @@ Layersets are logical containers, that can contain one or more layerset-instance
 Layerset-instances
 ==================
 
-Layerset-instances contain options to configurate certain WMS parameters: image-format, info-format, exception-format, scales for the different layers etc. Layerset-instances can be configured by clicking on the gear symbol. 
+Layerset-instances contain options to configure certain WMS parameters: image-format, info-format, exception-format, scales for the different layers etc. Layerset-instances can be configured by clicking on the gear symbol. 
 
 .. image:: ../../../figures/layerset/mapbender_wms_application_settings.png
            :scale: 80

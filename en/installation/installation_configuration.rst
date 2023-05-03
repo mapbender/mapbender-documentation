@@ -117,9 +117,9 @@ It is possible to (re-)import applications from the applications folder into the
 Configuration files
 -------------------
 
-The basic configuration is done inside the **app/config/parameters.yml** file. 
+The configuration files are located under **app/config**.
 
-More Information: :ref:`yaml`.
+Find more information in: :ref:`yaml`.
 
 
 Production and Development environment and Caching: app.php and app_dev.php

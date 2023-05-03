@@ -8,35 +8,12 @@ The following Configuration files are under application/app/config.
 
 parameters.yml
 --------------
-Fundamental parameters are specified here.
+The following fundamental Mapbender parameters are specified here.
 
 
 Database
 ********
-
-To configurate the database the files config.yml and parameters.yml are needed.
-The file config.yml contains placeholders for variables, which are specified in the file parameters.yml.
-
-The default database definiton set in config.yml is as follows:
-
-.. code-block:: yaml
-
-    doctrine:                                               # Values, surrounded by %-marks, are variables
-        dbal:
-            default_connection: default                     # Database connection, used as standard in Mapbender (``default_connection: default``).
-            connections:
-                default:
-                driver:    "%database_driver%"              # More information below the code
-                host:      "%database_host%"                # Database host on which the database runs. Either name of the host (e.g. localhost) or IP address (e.g. 127.0.0.1).
-                port:      "%database_port%"                # Port, the database listens to (e.g. 5432 for PostgreSQL).
-                dbname:    "%database_name%"                # Name of the database (e.g. mapbender). Create a database with the command ``doctrine:database:create`` bzw. ``doctrine:schema:create``. More information:  `Installation<../installation.html>`_.
-                path:      "%database_path%"                # %database_path%, path to the file of the SQLite database. If you don't use a SQ-lite database, write (~) or ``null``.
-                user:      "%database_user%"                # User name for database connection.
-                password:  "%database_password%"            # Password.
-                charset:    UTF8                            # Coding of the database.
-                logging:   "%kernel.debug%"                 # Option, SQLs won't be logged (standard: %kernel.debug%). `More information: <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
-                profiling: "%kernel.debug%"                 # Profiling SQL requests. This option can be turned of in production. (standard: %kernel.debug%)
-
+The files ``parameters.yml`` and ``config.yml`` are needed to configure databases in Mapbender. In ``parameters.yml``, (multiple) variables for database connection(s) can be defined. These variables are being processed in ``config.yml``. An alias is assigned to each database connection.
 
 * database_driver: Database driver. Possible values are:
 
@@ -46,11 +23,10 @@ The default database definiton set in config.yml is as follows:
   * oci8 - Oracle OCI8 driver
   * pdo_oci - Oracle PDO driver
 
-  Please notice: Necessary PHP drivers need to been installed and activated.
-
+  Please note: Necessary PHP drivers need to be installed and activated.
 
 Example:
-Database configuration in parameters.yml, when PostgreSQL is used:
+Database configuration in ``parameters.yml``, when PostgreSQL is used:
 
 .. code-block:: yaml
 
@@ -65,10 +41,9 @@ Database configuration in parameters.yml, when PostgreSQL is used:
 
 Use of several databases
 ************************
+Mapbender can handle several databases. This is recommended if you want to keep your data seperated from Mapbender data. Or if you want to use code that doesn't belong to a Mapbender bundle.
 
-With Mapbender you can use several databases. This is recommended when you want to keep your data seperated from Mapbender data. Or when you want to use code that doesn't belong to a Mapbender bundle.
-
-You already need a second database for *geo data search* (with SearchRouter)  and data collection (Digitizer).
+You need a second database for *geo data search* (with SearchRouter)  and data collection (Digitizer).
 
 The default database connection (``default_connection: default``) is used by Mapbender.
 
@@ -96,14 +71,13 @@ If you want to use another database, you have to define a database connection wi
         database2_password: postgres
 
 
-Now you can refer to the database **search_db** in the elements SearchRouter and Digitizer.
+Now, you can refer to the database **search_db** in the elements SearchRouter and Digitizer.
 
-More Information:
+More information:
 
 Symfony documentation <http://symfony.com/doc/current/best_practices/configuration.html>`_)
 
 Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine project <http://www.doctrine-project.org/>`_).
-
 
 
 Disclaimer
@@ -126,7 +100,6 @@ Site links will be seperated by "|".
 
 Language settings
 *****************
-
 Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **app/config/parameters.yml**.
 If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language. We recommend en (English) or de (German) as fallback options.
 
@@ -167,8 +140,7 @@ In parameters.yml, you can refer to your own logo and to an alternative image fo
 
 Mailer
 *******
-
-Mailer information in parameters.yml (e.g. smtp or sendmail).
+Mailer information in ``parameters.yml`` (e.g. smtp or sendmail).
 
 Configuration example:
 
@@ -186,19 +158,19 @@ More information in chapter :ref:`users`.
 
 Project name
 ************
-The name of the project (default: Mapbender) can be changed in parameters.yml. The change has a global impact on the whole Mapbender installation.
+The name of the project (default: Mapbender) can be changed in ``parameters.yml``. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Important note:** In parameters.yml **tabulators may not be used for indentation** instead you need to use space.
+**Important note:** In ``parameters.yml`` **tabulators may not be used for indentation** instead you need to use space.
 
 
 Proxy settings
 **************
-If you use a proxy, you need to change parameters.yml.
+If you use a proxy, you need to change ``parameters.yml``.
 
 Configuration example:
 
@@ -217,7 +189,9 @@ Configuration example:
             - 192.168.1.123
 
 
-
+SSL certificate
+***************
+For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
 
 config.yml
@@ -230,7 +204,7 @@ config.yml
 
 Database
 ********
-Important: Every database defined in parameters.yml needs to have a placeholder in config.yml as well:
+Important: Every database defined in parameters.yml needs to have a placeholder in ``config.yml`` as well:
 
 .. code-block:: yaml
 
@@ -253,7 +227,7 @@ Important: Every database defined in parameters.yml needs to have a placeholder 
 
 Use of several databases
 ************************
-Example with two database connections in **config.yml**:
+Example with two database connections in ``config.yml``:
 
 .. code-block:: yaml
 
@@ -286,7 +260,7 @@ Example with two database connections in **config.yml**:
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
 
-More information under parameters.yml.
+More information under ``parameters.yml``.
 
 
 YAML Application files

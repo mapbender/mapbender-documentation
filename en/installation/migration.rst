@@ -8,6 +8,26 @@ Migration Guide
     This page gives migration instructions on specific Mapbender versions. For general tips on updating, see the :ref:`installation_update` page instead.
 
 
+Migration to Mapbender 3.3.4
+****************************
+
+* Please update the database schema. Run:
+
+.. code-block:: bash
+
+    app/console doctrine:schema:update --force
+
+* Next, you need to configure CSRF tokens to be used during login to the **csrf_token_generator** form_login section in ``security.yml`` as follows:
+
+.. code-block:: yaml
+
+    form_login:
+        check_path: /user/login/check
+        login_path: /user/login
+        csrf_token_generator: security.csrf.token_manager
+
+* For productive environments, it is important to install an SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+
 Migration to Mapbender 3.3
 **************************
 
