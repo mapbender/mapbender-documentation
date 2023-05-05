@@ -69,7 +69,7 @@ Auch wird hierüber die Reihenfolge definiert, in der die Layersets im Ebenenbau
 
 
 Workflow einfacher Ebenenbaum
-----------------------------
+-----------------------------
 
 Im Folgenden gehen wir eine beispielhafte Konfiguration eines Ebenenbaums mit Basisfunktionen in drei Schritten durch: 
 
