@@ -182,7 +182,9 @@ The item is useful for passing the service on only to specific users and groups.
 Further information
 -------------------
 
-* You can find information about using layersets in the `Quickstart <../../quickstart#configure-your-wms>`_.
+* You can find information about using layersets in the `Quickstart <../../quickstart#configure-sources>`_.
+
+* Further tips on manipulating WMS can be found in the `FAQs <../../faq#performance>`_.
 
 * The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../basic/layertree>`_
 
