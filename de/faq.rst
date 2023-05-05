@@ -82,9 +82,9 @@ Maximale WMS-Kachelgröße für Druck und Export anpassen
 
 F: Wenn ich eine Karte mit einem WMS-Dienst als Bild exportieren oder drucken möchte, erscheint der Dienst anschließend nicht in meiner Datei.
 
-A: Dies kann verschiedene Gründe haben. Unter bestimmten Umständen kann die angeforderte Pixelabmessung eines WMS zu groß sein, sodass der Dienst in diesem Fall keine Bilder mehr liefert.
+A: Dies kann verschiedene Gründe haben. Unter bestimmten Umständen kann die angeforderte Pixelausdehnung für den WMS zu groß sein, sodass der Dienst in diesem Fall keine Bilder mehr liefert.
 
-In diesem Fall fügen Sie zu Ihrer ``parameters.yml`` den ``mapbender.imaageexport.renderer.wms.max_getmap_size`` (Standard: 8192) Parameter hinzu. Durch diesen werden die größtmöglichen ``WIDTH=``- und ``HEIGHT=``-Werte für WMS-Druck/Export-Anfragen festgelegt. Im GetCapabilities-Request des jeweiligen Dienstes wird die maximale Auflösung unter ``MaxWidth`` bzw. ``MaxHeight`` definiert, sodass der der GetCapabilities-Request den einzutragenen Wert bereits vorgibt.
+In diesem Fall fügen Sie zu Ihrer ``parameters.yml`` den ``mapbender.imaageexport.renderer.wms.max_getmap_size`` (Standard: 8192) Parameter hinzu. Durch diesen werden die größtmöglichen ``WIDTH=``- und ``HEIGHT=``-Werte für WMS-Druck/Export-Anfragen festgelegt. Im GetCapabilities-Request des jeweiligen Dienstes wird die maximale Auflösung unter ``MaxWidth`` bzw. ``MaxHeight`` definiert, sodass der getCapabilities-Request das Limit bereits vorgibt.
 
 Die ``WIDTH=``- und ``HEIGHT=``-Parameter können auch unabhängig voneinander definiert werden. Verwenden Sie ``mapbender.imaageexport.renderer.wms.max_getmap_size.x`` für den ``WIDTH=``- und ``mapbender.imaageexport.renderer.wms.max_getmap_size.y`` für den ``HEIGHT=``-Parameter.
 
