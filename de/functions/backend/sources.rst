@@ -1,5 +1,7 @@
 .. _sources_de:
 
+  .. |mapbender-button-update| image:: ../../../figures/mapbender_button_update.png
+
 Datenquellen (Sources)
 ======================
 
@@ -21,6 +23,7 @@ Datenquelle laden
 
 * **Benutzername / Passwort**: Eingabe von Benutzername und Passwort bei gesicherten Diensten.
 
+
 Mit einem Klick auf ``Laden`` wird der Dienst in Mapbender registriert.
 
   .. image:: ../../../figures/de/mapbender_add_source.png
@@ -40,7 +43,7 @@ Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen u
 * **Datenquelle aktualisieren**: Aktualisiert die Dienst-Informationen durch erneutes Laden des getCapabilities-Dokuments.
 * **Datenquelle entfernen**: Entfernt den Dienst aus Mapbender.
 
-.. image:: ../../../figures/de/mapbender_sources.png
+  .. image:: ../../../figures/de/mapbender_sources.png
      :scale: 80
 
 
@@ -55,3 +58,25 @@ Im Metadatendialog eines Dienstes befindet sich oben rechts außerdem das Datenq
 
   .. image:: ../../../figures/de/source_overview.png
      :scale: 80
+
+
+Datenquellen aktualisieren
+--------------------------
+Die Aktualisierung einer Datenquelle erfolgt zunächst über den Aufruf der Seite ``Datenquellen`` im Backend.
+Wählen Sie aus der Liste die zu aktualisierende Datenquelle aus. Es ist möglich, die Liste anhand des Suchfelds nach Diensten zu filtern.
+Klicken Sie anschließend neben der gewünschten Datenquelle auf den |mapbender-button-update| ``Datenquelle aktualisieren``-Button.
+Dadurch öffnet sich die Aktualisierungsmaske. Hier können Sie auch die URL oder Benutzername / Passwort des Dienstes anpassen.
+
+.. hint:: Datenquellen lassen sich auch aktualisieren, ohne dass Änderungen vorgenommen wurden. Das Capabilities-Dokument wird neu eingelesen.
+
+Zusätzlich bietet die Maske zwei Checkboxen an:
+
+.. image:: ../../../figures/de/mapbender_update_source.png
+     :width: 100%
+
+
+* **Neu hinzugefügte Layer aktivieren**: Ist der Haken an dieser Checkbox gesetzt, sind durch die Aktualisierung neu geladene Dienst-Layer automatisch in Anwendungen aktiv. Ist der Haken nicht gesetzt, erscheinen neue Layer nicht im Ebenenbaum.
+* **Neu hinzugefügte Layer auswählen**: Ist der Haken an dieser Checkbox gesetzt, werden durch die Aktualisierung neu geladene Dienst-Layer automatisch in Anwendungen sichtbar und sind aktiv. Dazu muss allerdings auch ``Neu hinzugefügte Layer aktivieren`` gesetzt sein. Ist ``Neu hinzugefügte Layer auswählen`` nicht gesetzt, erscheint der Layer zwar im Ebenenbaum, ist aber nicht aktiviert.
+
+Falls die Änderungen vorgenommen werden sollen, klicken Sie auf den ``Laden``-Button, um die Datenquelle zu aktualisieren. Dabei wird das getCapabilities-Dokument neu ausgelesen. Die aktualisierte Version wird anschließend in den Konfigurationseinstellungen angezeigt und Änderungen werden in Anwendungen, in denen der Dienst verwendet wird, angewandt.
+

@@ -183,4 +183,6 @@ Weitere Informationen
 
 * Die Bedeutung der Layersets für die Anzeige im Layertree ist im Abschnitt zu den Thematischen Layern in der `Layertree-Dokumentation <../basic/layertree>`_ beschrieben.
 
-* Ebenso können einzelne Layersets in der `Karte <../basic/map>`_ an- und abgeschaltet werden.
+* Einzelne Layersets können in den Einstellungen zur `Karte <../basic/map>`_ komplett an- bzw. abgeschaltet werden.
+
+* Ebenso können einzelne thematische Layersets in der Layerset-Konfiguration per Checkbox bei Anwendungsstart (de-)aktiviert werden.

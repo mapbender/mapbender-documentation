@@ -255,13 +255,13 @@ Mapbender allows the integration of OGC Web Map Services (WMS) and Web Map Tile 
 
 #. To upload a source, click on ``Add source``.
 
-#. Define the *"Type"* of the source: OGC WMS oder OGC WMTS / TMS.
+#. Define the *"Type"* of the source: OGC WMS or OGC WMTS / TMS.
 
-#. Provide the link to the getCapabilities URL in the field *"Service URL"*.
+#. Provide the link to the getCapabilities URL in the field *Service URL*.
 
-#. Define username and password in case your source requires it.
+#. Define username and password (in case your source requires it).
 
-#. Click on *"Load"* to register the service in the repository.
+#. Click on ``Load`` to upload the service into the repository.
 
 #. After a successful upload, Mapbender will provide an overview of the WMS information.
 
@@ -276,7 +276,7 @@ After uploading a service, it can be integrated into one or several application(
 
 #. Navigate to your application overview page. Click on the |mapbender-button-edit| ``Button`` of the desired application and navigate to the tab *Layersets*.
 
-#. In the section *layersets* you can integrate uploaded sources into your application. Click on |mapbender-button-add| ``Button`` next to the filter function to create a layerset. All layers have to be assigned to one layerset. Provide a name for it (e.g. "main" for the main map and "overview" for the overview map).
+#. In the *Layersets* section you can integrate uploaded sources into your application. Click on |mapbender-button-add| ``Button`` next to the filter function to create a layerset. All layers have to be assigned to at least one layerset. Provide a name for it (e.g. "main" for the main map and "overview" for the overview map).
 
 #. Now you can add layers to the layerset. Click on the |mapbender-button-add| ``Button`` next to the desired layerset.
 
@@ -288,9 +288,9 @@ After uploading a service, it can be integrated into one or several application(
 Source configuration
 --------------------
 
-Sources can be individually configured. This can be useful if you, for instance, don't want to display all layers, change the order or titles of the layers, prevent a layer's feature info output or adjust  the scale in which the layers are visible.
+Sources can be individually configured. This can be useful if you, for instance, don't want to display all layers, change the order or titles of the layers, prevent a layer's feature info output or adjust the scale in which the layers are visible.
 
-#. Click on  ``Application -->`` |mapbender-button-edit| ``Button --> Layersets -->`` |mapbender-button-edit| ``Edit instance`` to configure an instance.
+#. Click on  ``Application -->`` |mapbender-button-edit| ``Button`` --> ``Layersets`` --> |mapbender-button-edit| ``Edit instance`` to configure an instance.
 
 #. You can now change the instance configuration.
 

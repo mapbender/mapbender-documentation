@@ -53,14 +53,14 @@ Styling
 Styling is now possible via variables that can be passed to your application. 
 
 * `Mapbender <https://github.com/mapbender/mapbender/blob/master/src/Mapbender/CoreBundle/Resources/public/sass/libs/_variables.scss>`_
-* Create your own scss file, see `Example <https://github.com/mapbender/mapbender-workshop/tree/master/src/Workshop/DemoBundle/Resources/public/demo_variables_blue.scss>`_ in Demo Bundle.
-* Modify your template - add function getSassVariablesAssets and refer to your scss file see, see `Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Template/DemoFullscreen.php#L23>`_ in Demo Bundle.
+* Create your own scss file, see this `Demo Bundle SCSS Example <https://github.com/mapbender/mapbender-workshop/tree/master/src/Workshop/DemoBundle/Resources/public/demo_variables_blue.scss>`_.
+* Modify your template - add function getSassVariablesAssets and refer to your scss file see, see this `Demo Bundle Template Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Template/DemoFullscreen.php#L23>`_.
 
 
 Sketch
 ------
 
-* Sketch now supports to draw a circle with a defined radius. You draw the circle first and den edit the circle and define a radius.
+* Sketch now supports to draw a circle with a defined radius. You draw the circle first and then edit the circle and define a radius.
 * Sketch now allows to define colors to be offered to draw. You can also activate a color picker
 
 

@@ -1,5 +1,7 @@
 .. _sources:
 
+  .. |mapbender-button-update| image:: ../../../figures/mapbender_button_update.png
+
 Sources
 =======
 
@@ -40,7 +42,6 @@ The sources and shared instances sections list and provide additional informatio
 * **Update source**: Updates service information by reloading the getCapabilities document.
 * **Delete source**: Removes the registered service from Mapbender.
 
-
   .. image:: ../../../figures/mapbender_sources.png
      :scale: 80
 
@@ -56,3 +57,25 @@ In the metadata dialog of a specific service, it is also possible to click on th
 
   .. image:: ../../../figures/source_overview.png
      :scale: 80
+
+
+Updating sources
+----------------
+To update a source in the backend, you first need to navigate to the ``Sources`` backend list.
+On this page, look for the layer you wish to update via scrolling or use the search box.
+After you've found it, click on its |mapbender-button-update| ``Refresh`` button.
+You can then update the WMS: If you wish, modify the URL or other settings, such as user name and/or password.
+
+.. hint:: Of course, it is possible to update a source without changing any parameters. The Capabilities document is loaded again. 
+
+Moreover, there are two checkboxes handling layer updates:
+
+.. image:: ../../../figures/mapbender_update_source.png
+     :width: 100%
+
+
+* **Activate newly added layers**: If active, the newly added layers will automatically set active in embedded applications. If the checkbox is not checked, new layers will not appear in the layertree.
+* **Select newly added layers**: If active, the newly added layers will automatically be visible and set active in embedded applications. However, ``Activate newly added layers`` must also be set for this. If ``Select newly added layers`` is not set, the layer will appear in the layertree but will not be activated.
+
+If you want to save the changes, click the ``Load`` button to refresh the WMS. This will re-read the getCapabilities document. The updated version will be displayed in the configuration settings, with changes applied in applications using the service.
+
