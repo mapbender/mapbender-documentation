@@ -64,13 +64,13 @@ Der Farbwähler, der im Backend mit **Farbanpassung erlauben** aktiviert werden 
 Sofern das Auswählen von Farben komplett deaktiviert und stattdessen nur eine einzige Farbe angeboten werden soll, muss die gewünschte Farbe im Konfigurationsdialog definiert und die Checkbox **Farbanpassung erlauben** deaktiviert werden.
 
 
-Zeichnen beenden
-----------------
+Zeichnen abbrechen
+------------------
 
-Das Zeichnen von Skizzen kann mithilfe von "Zeichnen beenden" (Stop-Button) unterbrochen werden.
+Das Zeichnen von Skizzen kann mithilfe von "Zeichnen abbrechen" (Stop-Button) unterbrochen werden.
 
 .. image:: ../../../figures/de/sketch_stop_drawing.png
-     :width: 75%
+     :scale: 80
 
 
 YAML-Definition:
