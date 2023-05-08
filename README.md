@@ -19,6 +19,7 @@ sudo apt-get install pip3
 sudo pip3 install sphinxcontrib-phpdomain
 sudo pip3 install sphinx-rtd-theme
 sudo pip install sphinx-notfound-page
+sudo pip install sphinx_copybutton
 ```
 
 You can then build the documentation by running:
