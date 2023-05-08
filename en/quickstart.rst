@@ -152,10 +152,11 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. Click *"save"* to save and create your application. It is now possible to add elements (e.g. map, navigation bar, legend) and services to your applicaiton.
 
-Applications can be re-edited at any point. In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
-
   .. image:: ../figures/mapbender_create_application.png
      :width: 100%
+
+
+Applications can be re-edited at any point. In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
 
 
 3. Add elements to your application
@@ -290,7 +291,7 @@ Source configuration
 
 Sources can be individually configured. This can be useful if you, for instance, don't want to display all layers, change the order or titles of the layers, prevent a layer's feature info output or adjust the scale in which the layers are visible.
 
-#. Click on  ``Application -->`` |mapbender-button-edit| ``Button`` --> ``Layersets`` --> |mapbender-button-edit| ``Edit instance`` to configure an instance.
+#. Click on  ``Application -->`` |mapbender-button-edit| --> ``Layersets`` --> |mapbender-button-edit| ``Edit instance`` to configure an instance.
 
 #. You can now change the instance configuration.
 
@@ -455,13 +456,13 @@ Assign elements to a User/Group
 
 Per default, all elements are accessible to users/groups if they have access to that particular application. This can be modified for each element. 
 
-#. Edit your application by ``Application --> `` |mapbender-button-edit| ``Button`` .
+#. Edit your application by pressing the |mapbender-button-edit| ``Edit Button`` .
 
-#. Choose ``Layouts``
+#. In your application settings, choose ``Layouts``.
 
-#. Every element has a |mapbender-button-key| ``Acl-Button``.
+#. Every element has a |mapbender-button-key| ``Acl button``.
 
-#. Choose the |mapbender-button-key| ``Acl-button`` from the element that should be only available for special users/groups.
+#. Choose the |mapbender-button-key| ``Acl button`` from the element that should be only available for special users/groups.
 
 #. Assign one or more users or groups to the element. Then, set permissions like view, edit, delete, operator, master, owner
 
