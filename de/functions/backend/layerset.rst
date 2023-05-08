@@ -16,7 +16,7 @@ Layerset-Instanzen enthalten unterschiedliche Optionen, mit denen WMS-Dienste an
 .. image:: ../../../figures/de/layerset/mapbender_wms_application_settings.png
 
 Sobald ein WMS-Dienst in ein Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
-Der Screenshot zeigt die `private Instanz <layerset.rst#freie-und-private-instanzen>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2. Die Layerset-Instanz selbst hat die Laufnummer 28.
+Der Screenshot zeigt die `private Instanz <#freie-und-private-instanzen>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2. Die Layerset-Instanz selbst hat die Laufnummer 28.
 
 **Die Eigenschaften aus den WMS-Capabilities:**
 
@@ -58,7 +58,7 @@ Es gibt zwei Möglichkeiten, wie die Layerreihenfolge dem Layerbaum übergeben w
 
 Diese Unterscheidung hat ihre Ursprünge in der Art und Weise wie WMS-Dienste und Capabilities-Dokumente aufgebaut sind.
 
-Die `OGC Referenzimplementierung eines WMS <http://www.opengeospatial.org/standards/wms/quickstart>`_ beschreibt den Aufbau eines Beispiel WMS unter: `http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3 <http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3>`_
+Die `OGC E-Learning Modul für Web Map Services <https://opengeospatial.github.io/e-learning/wms/text/basic-main.html#introduction>`_ beschreibt den Aufbau eines Beispiel-WMS.
 
 Dieser WMS zeigt einige Punkt-, Linien- und Flächenobjekte und Rasterbilder an. Das Capabilities Dokument listet dabei die Bilddaten (z.B. DTM) weiter oben als die Punkte (z.B. osm_points als vorletzter Layer). Dieses Prinzip übernimmt Mapbender sowohl in den DataSources, wo der Dienst in Mapbender eingeladen und registriert wird, als auch in den Layerset-Instanzen.
 
@@ -180,11 +180,11 @@ Momentan eignet sich das Element, um den Dienst nur an bestimmte Benutzer und Gr
 Weitere Informationen
 ---------------------
 
-* Information zur Benutzung von Layersets finden Sie auch im `Schnellstart <../../quickstartl#datenquellen-sources-verwenden>`_.
+* Information zur Benutzung von Layersets finden Sie auch im `Schnellstart <../../quickstart#datenquellen-sources-verwenden>`_.
 
-* Tipps, wie sich das Kacheln von WMS begrenzen lässt, finden Sie in den `FAQs <../../FAQ#performance>`_.
+* Tipps, wie sich das Kacheln von WMS begrenzen lässt, finden Sie in den `FAQs <../../faq#performance>`_.
 
-* Die Bedeutung der Layersets für die Anzeige im Layertree ist im Abschnitt zu den Thematischen Layern in der `Layertree-Dokumentation <../basic/layertree>`_ beschrieben.
+* Die Bedeutung der Layersets für die Anzeige im Layertree ist im Abschnitt zu den Thematischen Layern in der `Layertree-Dokumentation <../basic/layertree#workflow-thematischer-ebenenbaum>`_ beschrieben.
 
 * Einzelne Layersets können in den Einstellungen zur `Karte <../basic/map>`_ komplett an- bzw. abgeschaltet werden.
 

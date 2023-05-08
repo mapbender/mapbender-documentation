@@ -19,7 +19,7 @@ Layerset-instances contain options to configure certain WMS parameters: image-fo
 
 As soon a WMS service is integrated in a layerset, it is linked as a layerset-instance within the application.
 
-The screenshot above shows the `bound instance <layerset.rst#shared-and-bound-instances>`_ ``2/28`` based on a WMS service. The associated data source is number 2, the layerers instance itself has the number 28. It is based on the WhereGroup OSM service and can be configured for the application in this dialog.
+The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ ``2/28`` based on a WMS service. The associated data source is number 2, the layer's instance itself has the number 28. It is based on the WhereGroup OSM service and can be configured for the application in this dialog.
 
 **The properties of the WMS-Capabilities:**
 
@@ -61,7 +61,7 @@ There are two ways to pass a layer order to the layer tree:
 
 This distinction has its origins in the way WMS services and capabilities documents are built.
 
-The `OGC reference-implementierung of a WMS <http://www.opengeospatial.org/standards/wms/quickstart>`_ describes the structure of an example WMS at: `http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3 <http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3>`_
+The `OGC e-learning module for Web Map Services <https://opengeospatial.github.io/e-learning/wms/text/basic-main.html#introduction>`_ describes the structure of an example WMS.
 
 This WMS displays some point, line and polygon objects and raster images. The Capabilities document lists images (e.g. DTM) more at the top of the document than points (e.g. osm_points as the penultimate layer). Mapbender takes this approach both in the DataSources, where the service is loaded and registered in Mapbender, as well as in the Layerset instances.
 
@@ -145,7 +145,7 @@ Basesources
 
 There are many ways to fill the Layertree and work with basic services:
 - e.g. by hiding them in the layer tree and using the `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
-- or by work with the possibilities of the `thematic layer tree <../basic/layerertree>`_, to create different layersets and distribute the basic services and thematic services in them to place them in the layer tree.
+- or by work with the possibilities of the `thematic layer tree <../basic/layertree>`_, to create different layersets and distribute the basic services and thematic services in them to place them in the layer tree.
 
 Which option you choose depends entirely on your preferences.
 
@@ -167,7 +167,7 @@ There are also some WMS services that only support a maximum image size that can
 Vendor Specific Parameter
 -------------------------
 
-In a layererset instance, vendor specific parameters are appended to the WMS request. The implementation follows the specifications of the multi-dimensional data in the WMS specification. In Mapbender, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values ​​can also be transmitted. The following example shows the definition of a parameter "group", which passes on the group of the user currently logged into Mapbender.
+In a layerset instance, vendor specific parameters are appended to the WMS request. The implementation follows the specifications of the multi-dimensional data in the WMS specification. In Mapbender, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values ​​can also be transmitted. The following example shows the definition of a parameter "group", which passes on the group of the user currently logged into Mapbender.
 
 .. image:: ../../../figures/layerset/mapbender_vendor_specific_parameter.png
 
@@ -186,7 +186,7 @@ Further information
 
 * Further tips on manipulating WMS can be found in the `FAQs <../../faq#performance>`_.
 
-* The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../basic/layertree>`_
+* The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../basic/layertree#workflow-thematic-layertree>`_.
 
 * Layersets can be switched on or off for a map completely in the `Map element <../basic/map>`_ settings.
 
