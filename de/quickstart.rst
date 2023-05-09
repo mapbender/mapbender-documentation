@@ -156,7 +156,7 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
      :width: 100%
 
 
-Anwendungen können jederzeit bearbeitet werden. Von der Anwendungsübersichtsseite aus ist eine Navigation zu jeder Applikation (mit gegebenen Nutzungsrechten) über den |mapbender-button-edit| ``Button`` möglich. Weiterhin findet sich hier ein |mapbender-button-show| Button für jede Anwendung, mit dem diese im Frontend aufgerufen werden kann. Es besteht außerdem die Option, Anwendungen zu |mapbender-button-export| exportieren, zu |mapbender-button-delete| löschen sowie diese für die Öffentlichkeit zugänglich zu machen |mapbender-button-publish|.
+Anwendungen können bearbeitet werden: Von der Anwendungsübersichtsseite aus ist eine Navigation zu jeder Applikation (mit gegebenen Nutzungsrechten) über den |mapbender-button-edit| ``Button`` möglich. Weiterhin findet sich hier ein |mapbender-button-show| Button für jede Anwendung, mit dem diese im Frontend aufgerufen werden kann. Es besteht außerdem die Option, Anwendungen zu |mapbender-button-export| exportieren, zu |mapbender-button-delete| löschen sowie diese für die Öffentlichkeit zugänglich zu machen |mapbender-button-publish|.
 
 
 3. Elemente in eine Anwendung einfügen

@@ -140,7 +140,7 @@ Basesources
 
 Es gibt viele Möglichkeiten, den Layertree zu füllen und mit Basisdiensten zu arbeiten:
 - Bspw. durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
-- Oder auch mit den Möglichkeiten des `thematischen Layerbaums <../basic/layertree>`_ zu arbeiten, verschiedene Layersets anzulegen und die Basisdienste und thematischen Dienste dort zu verteilen und im Layerbaum zu unterscheiden.
+- Oder auch mit den Möglichkeiten des `thematischen Layerbaums <../basic/layertree>`_ zu arbeiten. Diese Option zeigt den Namen des Layersets entlang eines Ordners und einer Checkbox im Ebenenbaum. Dabei lässt sich konfigurieren, ob der Ordner nach dem Öffnen der Anwendung angezeigt werden soll; zudem ist es möglich, den Ordner aufgeklappt darzustellen.
 
 Für welche Möglichkeit Sie sich entscheiden, hängt ganz von Ihren Vorlieben ab.
 
@@ -163,7 +163,7 @@ Es gibt des Weiteren noch hier und da WMS-Dienste, die nur eine maximale Kartenb
 Vendor Specific Parameter
 -------------------------
 
-In einer Layerset Instanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der multi-dimensionalen Daten in der WMS Spezifikation.
+In einer Dienstinstanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden.
 In Mapbender können die Vendor Specific Parameter genutzt werden, um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS-Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
@@ -186,6 +186,6 @@ Weitere Informationen
 
 * Die Bedeutung der Layersets für die Anzeige im Layertree ist im Abschnitt zu den Thematischen Layern in der `Layertree-Dokumentation <../basic/layertree#workflow-thematischer-ebenenbaum>`_ beschrieben.
 
-* Einzelne Layersets können in den Einstellungen zur `Karte <../basic/map>`_ komplett an- bzw. abgeschaltet werden.
+* Einzelne Layersets können in den Einstellungen zur `Karte <../basic/map>`_ für die jeweilige Anwendung an- bzw. abgeschaltet werden.
 
 * Ebenso können einzelne thematische Layersets in der Layerset-Konfiguration per Checkbox bei Anwendungsstart (de-)aktiviert werden.

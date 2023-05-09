@@ -156,7 +156,7 @@ Furthermore, new applications can be created from scratch. The required steps ar
      :width: 100%
 
 
-Applications can be re-edited at any point. In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
+It is possible to edit applications: In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
 
 
 3. Add elements to your application

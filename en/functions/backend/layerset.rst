@@ -145,7 +145,7 @@ Basesources
 
 There are many ways to fill the Layertree and work with basic services:
 - e.g. by hiding them in the layer tree and using the `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
-- or by work with the possibilities of the `thematic layer tree <../basic/layertree>`_, to create different layersets and distribute the basic services and thematic services in them to place them in the layer tree.
+- or by work with the possibilities of the `thematic layer tree <../basic/layertree>`_. This option will show the layerset name with a folder and checkbox in the layertree. You can define whether the layerset's folder should be shown and whether it should be opened on start.
 
 Which option you choose depends entirely on your preferences.
 
@@ -167,7 +167,7 @@ There are also some WMS services that only support a maximum image size that can
 Vendor Specific Parameter
 -------------------------
 
-In a layerset instance, vendor specific parameters are appended to the WMS request. The implementation follows the specifications of the multi-dimensional data in the WMS specification. In Mapbender, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values ​​can also be transmitted. The following example shows the definition of a parameter "group", which passes on the group of the user currently logged into Mapbender.
+In a service instance, vendor specific parameters are appended to the WMS request. In Mapbender, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values ​​can also be transmitted. The following example shows the definition of a parameter "group", which passes on the group of the user currently logged into Mapbender.
 
 .. image:: ../../../figures/layerset/mapbender_vendor_specific_parameter.png
 
@@ -188,6 +188,6 @@ Further information
 
 * The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../basic/layertree#workflow-thematic-layertree>`_.
 
-* Layersets can be switched on or off for a map completely in the `Map element <../basic/map>`_ settings.
+* Disabling one or more layersets for an application is possible in its `Map element <../basic/map>`_ settings.
 
 * Likewise, individual thematic layersets can be (de)activated via checkbox in the layerset configuration so that they are (not) visible in the map on application startup.
