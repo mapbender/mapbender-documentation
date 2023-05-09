@@ -3,7 +3,7 @@
 Translation in Mapbender
 ########################
 
-Mapbender uses the translator service which is a Symfony component. You get more information at the `Symfony Translation Documentation <http://symfony.com/doc/2.8/book/translation.html>`_ and `Translator Class Documentation <http://api.symfony.com/2.8/Symfony/Component/Translation.html>`_ . 
+Mapbender uses the translator service which is a Symfony component. You get more information at the `Symfony Translation Documentation <https://symfony.com/doc/2.8/book/translation.html>`_. 
 
 In the code you use the function **trans** to translate a text into another language.
 
@@ -160,16 +160,14 @@ Since Git is a distributed versioning system, it is very convenient for each dev
 
 Web hosting services like GitLab or GitHub provide this option if you visit the main code repository and press the button "Fork". This way the developer can make changes to a personal isolated repository. Then one can ask the rest of the developers to review the code and merge accordingly through a "pull request".
 
-After forking the official repositories, your working repositories are: https://github.com/your_id/mapbender and https://github.com/your_id/mapbender
-
 
 Github - editing on GitHub
 ==========================
 
 * you can edit files directly on GitHub.
-* navigate to the file, e.g. https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/CoreBundle/Resources/translations/messages.de.yml
-* edit the file
-* save changes and create a new branch for this commit and start a pull request
+* navigate to the file,
+* edit the file,
+* save changes and create a new branch for this commit and start a pull request.
 
 
 git - working on the command line
@@ -241,7 +239,7 @@ You can do it by logging in your github account and go to the branch you changed
 
 You can review and comment your request before submitting. To submit, click on the Create pull request green button. Then, you're done ! Good job !
 
-More information about Github pull request here: https://help.github.com/articles/using-pull-requests/ 
+More information about Github pull request here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests 
 
 Working with files:
 

@@ -32,7 +32,7 @@ Git branch conventions
 **********************
 
 We follow the Git Flow branching model (Read more about it in the
-`original document <http://nvie.com/posts/a-successful-git-branching-model/>`_
+`original document <https://nvie.com/posts/a-successful-git-branching-model/>`_
 describing it). Basically that boils down to having at least two branches:
 
 * develop - for the daily work, always has the latest merged commits, and is
@@ -105,7 +105,7 @@ There are some rules you should keep in mind:
 * **when you close a ticket**, please:
 
   * add a comment in the ticket and **refer to the commit**,
-  * refer to the documentation at http://doc.mapbender.org or a demo if possibile.
+  * refer to the documentation at https://doc.mapbender.org or a demo if possibile.
 
 
 
@@ -146,7 +146,7 @@ How to build a new Mapbender build
 
 * Resolve and close all tickets for the relevant milestone: https://github.com/mapbender/mapbender/milestones
 
-* Update http://doc.mapbender.org/en/book/versions.html
+* Update https://doc.mapbender.org/en/book/versions.html
 
 * Update Changelog.md for mapbender-starter, mapbender, owsproxy, fom.
 
@@ -214,12 +214,12 @@ How to build a new Mapbender build
 * Move TAR.GZ and ZIP file to /sites/www.mapbender.org/builds
 * Update symbolic links ("version".zip and "version".tar.gz and current.tar.gz and current.zip)
 * Move current doc to docs.mapbender.org (get it from web/docs. Remove the api folder).
-* Edit actual release link http://mapbender.org/en/download (english) and http://mapbender.org/de/download (german)
+* Edit actual release link https://mapbender.org/en/download (english) and https://mapbender.org/mapbender-herunterladen/ (german)
 * Write release mail to mapbender-user and mapbender-dev 
-* Only for major releases write release mail to news_item@osgeo.org (see also http://www.osgeo.org/content/news/submit_news.html)
+* Only for major releases write release mail to news_item@osgeo.org (see also https://www.osgeo.org/about/faq/osgeo-mailing-lists/)
 * Twitter on https://twitter.com/mapbender
-* Update http://demo.mapbender.org and http://sandbox.mapbender.org
-* Create a version based installation http://3053.mapbender.org
+* Update https://demo.mapbender.org and https://sandbox.mapbender.org
+* Create a version based installation https://version.mapbender.org
 
 
 

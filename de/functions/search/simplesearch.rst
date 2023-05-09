@@ -101,14 +101,14 @@ Einrichtung von Solr:
 =====================
 
 * **Download**: https://solr.apache.org/downloads.html
-* **Dokumentation**: https://solr.apache.org/guide
-* **Tutorial**: https://solr.apache.org/guide/solr-tutorial.html
+* **Dokumentation**: https://solr.apache.org/guide/solr/latest/index.html
+* **Tutorial**: https://solr.apache.org/guide/solr/latest/getting-started/solr-tutorial.html
 
 Einrichtung von Nominatim:
 ==========================
 
-* **Download**: http://nominatim.org/release-docs/latest/admin/Installation/
-* **Dokumentation**: http://nominatim.org/release-docs/latest/
+* **Download**: https://nominatim.org/release-docs/latest/admin/Installation/
+* **Dokumentation**: https://nominatim.org/release-docs/latest/
 
 Einrichtung von photon:
 =======================

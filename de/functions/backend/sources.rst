@@ -7,7 +7,7 @@ Datenquellen (Sources)
 
 Über den Backend-Menübereich Datenquellen können OGC WMS- und WMTS/TMS-Dienste in den Versionen 1.1.1 und 1.3.0 registriert werden.
 
-Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im `Quickstart Dokument <../../quickstart.html#laden-von-web-map-services>`_.
+Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im `Quickstart Dokument <../../quickstart.html#laden-von-datenquellen>`_.
 
 
 Datenquelle laden

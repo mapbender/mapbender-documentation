@@ -41,7 +41,7 @@ Wenn Sie SQL bevorzugen, können Sie die WMS-ID der Datenquelle im folgenden SQL
 app.php und app_dev.php: Wozu sind diese da?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Siehe die `Details zur Konfiguration von Mapbender <installation/configuration.html>`_, im Kapitel `Produktions- und Enwicklungsumgebung und Caches: app.php und app_dev.php <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
+Siehe die `Details zur Konfiguration von Mapbender <installation/installation_installation_configuration.html>`_, im Kapitel `Produktions- und Enwicklungsumgebung und Caches: app.php und app_dev.php <installation/installation_configuration.html#produktions-und-entwicklungsumgebung-und-caches-app-php-und-app-dev-php>`_.
 
 Im produktiven Einsatz rufen Sie Mapbender über die app.php-Datei auf. 
 Erst wenn Sie selbst etwas entwickeln (an den Twig-Dateien, CSS oder JS-Dateien) oder 
@@ -52,7 +52,7 @@ Der Entwicklermodus gibt mehr informationen aus und zeigt ausführliche Fehlerme
 Was ist der Cache und wann muss ich ihn löschen?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Auch für diese Frage, siehe die `Details zur Konfiguration von Mapbender <installation/configuration.html>`_, im Kapitel `Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php <installation/configuration.html#produktions-und-entwicklerumgebung-und-caches-app-php-und-app-dev-php>`_.
+Auch für diese Frage siehe die `Details zur Konfiguration von Mapbender <installation/installation_configuration.html>`_, im Kapitel `Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php <installation/installation_configuration.html#produktions-und-entwicklungsumgebung-und-caches-app-php-und-app-dev-php>`_.
 
 Sie löschen die Inhalte vom ``mapbender/app/cache/`` Ordner, nicht den cache-Ordner selbst. Also das ``prod``- und - falls vorhanden - das ``dev``-Verzeichnis. Die zwei Verzeichnisse können ohne Bedenken gelöscht werden. 
 Beim nächsten Aufruf von Mapbedner werden im Cache erneut Dateien abgelegt.
@@ -66,7 +66,7 @@ Arbeiten mit WMS-Diensten mit zahlreichen Layern
 
 F: Beim Laden von WMS mit vielen Layern (mehr als 100 Layer) in eine Anwendung werden in der Konfiguration der `Layerset-Instance <functions/backend/layerset.html>`_  nur Teile der Layer übernommen und angezeigt. Die WMS-Instance kann auch nicht abgespeichert werden. Warum?
 
-A: Mittels des PHP-Parameters `max-input_vars <http://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_ kann die Zahl der Eingabe-Variablen erhöht werden. 
+A: Mittels des PHP-Parameters `max-input_vars <https:////php.net/manual/de/info.configuration.php#ini.max-input-vars>`_ kann die Zahl der Eingabe-Variablen erhöht werden. 
 Der Standardwert liegt bei 1000. 
 Die Zahl der Eingabe Variablen ist bei einem WMS mit vielen Layern sehr hoch, vergleichbar mit der Anzahl der Auswahlmöglichkeiten innerhalb des WMS-Instance Dialogs. 
 Setzen Sie in dem Fall den Parameter hoch, beispielsweise auf 2000. Die Zahl hängt direkt mit der Anzahl der Layer im WMS zusammen.
@@ -174,7 +174,7 @@ Das Problem kann beim Zugriff auf einen Dienst über https auftreten. Der Fehler
     cURL error 60: SSL certificate problem: unable to get local issuer certificate
 
 
-.. note:: Es gibt eine Datei ``cacert.pem``, die alle vertrauenswürdigen Zertifizierungsstellen auflistet. ``cacert.pem`` ist eine base64-kodierte Textdatei mit einer Definition aller vertrauenswürdigen Zertifizierungsstellen. Sie können die Datei unter https://curl.haxx.se/docs/caextract.html herunterladen.
+.. note:: Es gibt eine Datei ``cacert.pem``, die alle vertrauenswürdigen Zertifizierungsstellen auflistet. ``cacert.pem`` ist eine base64-kodierte Textdatei mit einer Definition aller vertrauenswürdigen Zertifizierungsstellen. Sie können die Datei unter https://curl.se/docs/caextract.html herunterladen.
 
 Der Fehler tritt auf, wenn die Datei nicht in der ``php.ini`` referenziert oder die ``cacert.pem`` nicht aktuell ist.
 
@@ -223,7 +223,7 @@ Es handelt sich dabei um die Verknüpfung zu einer Service-Klasse, die von Doctr
 
 Ursachen können sein: Ländereinstellungen des Betriebssystems sein (z.B. Windows), Einstellungen des Oracle-Clients, Einstellungen während der Installation von Oracle.
 
-Mehr Informationen auf der Doctrine Seite: `http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html <http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html>`_
+Mehr Informationen auf der Doctrine Seite: `https:////www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html <https://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html>`_
 
 
 Welche Rechte benötigt der Mapbender User auf der Oracle-Datenbank?
@@ -241,7 +241,7 @@ Der Zugriff auf Oracle-Datenbanken ist langsam
 
 F: Beim Zugriff auf Oracle-Datenbanken reagiert Mapbender teilweise recht langsam, Abfragen dauern länger als gewöhnlich. Was kann ich anpassen?
 
-A: Es gibt zwei Parameter in der php.ini, mit der die Zugriffe auf die Oracle Datenbanken verbessert werden können: `oci8.max_persistent <http://php.net/manual/de/oci8.configuration.php#ini.oci8.max-persistent>`_ und `oci8.default_prefetch <http://php.net/manual/de/oci8.configuration.php#ini.oci8.default-prefetch>`_. Passen Sie diese an.
+A: Es gibt zwei Parameter in der php.ini, mit der die Zugriffe auf die Oracle Datenbanken verbessert werden können: `oci8.max_persistent <https://php.net/manual/de/oci8.configuration.php#ini.oci8.max-persistent>`_ und `oci8.default_prefetch <https:////php.net/manual/de/oci8.configuration.php#ini.oci8.default-prefetch>`_. Passen Sie diese an.
 
 .. code-block:: bash
 

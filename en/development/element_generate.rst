@@ -99,8 +99,6 @@ You will get a summary of actions
   - PHP class (src/Workshop/DemoBundle/Element/MapKlick.php)
   - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
 
-Follow up actions
-Read about adapting your bare-bone element at `generate element <element_generate.html>`_.
 
 Edit your new element for your needs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -186,11 +184,11 @@ modified _mapClickWorker() opens OpenStreetMap
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Alternatively you could open a new window with an URL and add the coordinates as parameters. You can open OpenStreetMap and center to the coordinates of the click event.
 
-http://www.openstreetmap.org/export#map=15/50.7311/7.0985
+https://www.openstreetmap.org/export#map=15/50.7311/7.0985
 
 .. code-block:: js
   
  _mapClickWorker: function(coordinates) {
-        window.open('http://www.openstreetmap.org/export#map=15/' + coordinates.world.y + '/' + coordinates.world.x);
+        window.open('https://www.openstreetmap.org/export#map=15/' + coordinates.world.y + '/' + coordinates.world.x);
     }
 
