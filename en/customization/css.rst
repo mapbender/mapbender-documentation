@@ -12,3 +12,19 @@ The CSS editor is located in the "CSS" tab of every application.
 
 .. tip:: A browser inspect tool can help you to find out the CSS classes you want to change.
 
+
+Example
+=======
+
+The CSS editor can be useful for extending Mapbender's functionality: In the example below, the provided code block creates a scrollbar for applications with an expandable side menu, enhancing the application's usability on mobile devices.
+
+.. code-block:: css
+
+  // Scrollbar in Toolbox
+  .dropdown-menu {
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+  }
+
+
+The function itself can be found in the ``Layout`` tab of the backend: Click the gear icon and activate the checkbox ``Generate menu for buttons``.
