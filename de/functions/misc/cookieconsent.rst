@@ -18,11 +18,12 @@ Konfiguration
 
 Die Konfiguration findet in der ``parameters.yml``-Datei unter ``app/config/parameters.yml`` statt und gilt für die gesamte Mapbender-Instanz. Dazu muss der Parameter  ``mapbender.cookieconsent:`` mit dem Wert ``true`` oder ``false`` übergeben werden. Ist der Abschnitt nicht vorhanden oder der Parameterwert ``false`` gesetzt, wird das Banner nicht angezeigt.
 
-.. tip:: Nach dem Ändern des Parameters müssen Sie die Inhalte des Cache-Verzeichnisses (``app/cache/\*``) löschen.
-
 Beispiel:
 
 .. code-block:: yaml
 
     #Mapbender Cookie Consent Message
     mapbender.cookieconsent: true
+
+
+.. tip:: Nach dem Ändern des Parameters müssen Sie die Inhalte des Cache-Verzeichnisses (``app/cache/\*``) löschen.

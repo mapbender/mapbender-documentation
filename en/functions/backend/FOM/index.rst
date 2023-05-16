@@ -1,7 +1,7 @@
 .. _fom:
 
-FOMUserBundle - Users and Security
-===================================
+Security (FOMUserBundle)
+========================
 
 .. toctree::
    :maxdepth: 1

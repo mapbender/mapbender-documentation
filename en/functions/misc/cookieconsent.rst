@@ -7,7 +7,6 @@ Applications support displaying a cookie banner which is customized via the Mapb
 
 The banner is displayed in any application on the first run.
 
-
 .. image:: ../../../figures/cookiebanner.png
            :scale: 80
 
@@ -19,11 +18,12 @@ Configuration
 
 Configuration takes place in the ``parameters.yml`` file under ``app/config/parameters.yml`` and accounts for the whole Mapbender instance. Please add the parameter ``mapbender.cookieconsent:`` with the value ``true`` or ``false``. If the parameter is missing or the value is set to ``false``, the banner will not be displayed in your applications.
 
-.. tip:: After changing these parameters you have to clean the contents of the cache-directory (``app/cache/\*``).
-
 Example:
 
 .. code-block:: yaml
 
     #Mapbender Cookie Consent Message
     mapbender.cookieconsent: true
+
+
+.. tip:: After changing these parameters you have to clean the contents of the cache-directory (``app/cache/\*``).

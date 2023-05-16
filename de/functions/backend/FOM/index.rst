@@ -1,7 +1,7 @@
 .. _fom_de:
 
-FOM UserBundle - Benutzer und Absicherung
-=========================================
+Sicherheit (FOM UserBundle)
+===========================
 
 .. toctree::
    :maxdepth: 1

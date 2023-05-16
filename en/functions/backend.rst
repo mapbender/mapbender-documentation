@@ -4,11 +4,13 @@ Backend
 =======
 
 .. toctree::
+   :maxdepth: 2
+
+   backend/applications/index.rst
+
+.. toctree::
    :maxdepth: 1
    
-   backend/cookieconsent.rst
-   backend/layerset.rst
-   backend/responsive.rst
    backend/sources.rst
    
 .. toctree::

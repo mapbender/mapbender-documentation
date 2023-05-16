@@ -7,7 +7,7 @@ Mapbender verfügt über einen CSS-Editor zur Anpassung des Stils (Farben, Grö�
 
 Der CSS-Editor befindet sich in der Applikation im Reiter "CSS".
 
-.. image:: ../../figures/de/css_editor.png
+.. image:: ../../../../figures/de/css_editor.png
      :width: 100%
 
 .. tip:: Mithilfe von Browser-Entwicklerwerkzeugen ist es möglich, Elemente zu identifizieren, ihre Klassen in den CSS-Editor zu kopieren und dort anzupassen.
@@ -27,4 +27,4 @@ Der CSS-Editor ist unter anderem auch zur Funktionserweiterung von Mapbender nü
   }
 
 
-Die Menü-Funktion kann im ``Layout``-Tab des Backends gefunden werden: Klicken Sie auf das Zahnradsymbol und aktivieren anschließend das Kontrollkästchen "Menü für Schaltflächen generieren".
+Die Menü-Funktion kann im ``Layouts``-Tab des Backends gefunden werden: Klicken Sie auf das Zahnradsymbol und aktivieren anschließend das Kontrollkästchen "Menü für Schaltflächen generieren".
