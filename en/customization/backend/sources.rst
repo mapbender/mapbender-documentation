@@ -26,7 +26,7 @@ To register a service, click on ``Add source``:
 Click on ``Load`` to register the service to the repository.
 
   .. image:: ../../../figures/mapbender_add_source.png
-     :scale: 80
+     :width: 100%
 
 
 After a successful registration, Mapbender will provide an overview of the service.

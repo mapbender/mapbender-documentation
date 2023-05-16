@@ -72,7 +72,8 @@ Die Option "Bildschirmtyp" legt fest, für welche Geräteart (Alle, Mobil oder D
 
 Die Position gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
 
-Die Checkbox "Geschlossen starten" hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über den einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
+Die Checkbox "Geschlossen starten" hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
+
 
 Mobiles Template
 ****************
@@ -94,8 +95,8 @@ Bitte beachten Sie, dass derzeit nicht alle Elemente im Mobilen Template verwend
 
   * Map
   * GPS-Position
-  * Layertree (anderes Design, nur der root-Layer-Titel eines Services wird angezeigt, Dienst können nur komplett de-/aktiviert werden)
-  * BaseSourceSwitcher (anderes Design: Anzeige als Liste nicht als Buttons)
+  * Layertree (anderes Design, nur der root-Layer-Titel eines Services wird angezeigt, Dienste können nur komplett de-/aktiviert werden)
+  * BaseSourceSwitcher (anderes Design: Anzeige als Liste, nicht als Buttons)
   * FeatureInfo
   * Navigationswerkzeug
   * HTML

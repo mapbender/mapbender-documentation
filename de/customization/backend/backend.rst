@@ -1,4 +1,4 @@
-.. _backend:
+.. _backend_de:
 
 Backend
 =======
@@ -6,14 +6,14 @@ Backend
 .. toctree::
    :maxdepth: 2
 
-   backend/applications/index.rst
+   applications/index.rst
 
 .. toctree::
    :maxdepth: 1
    
-   backend/sources.rst
+   sources.rst
    
 .. toctree::
    :maxdepth: 2
 
-   backend/FOM/index.rst
+   FOM/index.rst
