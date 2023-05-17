@@ -1,7 +1,7 @@
 .. _security:
 
 Security Concepts
-=================
+#################
 
 Security as provided by the FOMUserBundle is anchored on these base concepts:
 

@@ -12,6 +12,7 @@ Sicherheit wird im FOM User Bundle bereitgestellt und basiert auf diesen Konzept
 
 Rechte
 ******
+
 Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Sie basieren auf :doc:`Access Control Lists (ACL) <acl>`.
 
 * view - anzeigen
@@ -45,6 +46,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
   .. image:: ../../../../figures/de/mapbender_security.png
      :width: 100%
 
+
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
 ************************************************
 
@@ -62,6 +64,7 @@ Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Z
 
   .. image:: ../../../../figures/fom/element_security_key_popup.png
      :width: 100%
+
 
 Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
 *****************************************************
