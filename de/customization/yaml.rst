@@ -387,14 +387,14 @@ Export/Import von YAML Anwendungsdateien über die Benutzeroberfläche
 
 **Export**
 
-Sie können eine Anwendung unter **Anwendungen → Exportieren** als JSON oder YAML exportieren.
+Sie können eine Anwendung unter **Anwendungen** → **Exportieren** als JSON oder YAML exportieren.
 
 .. image:: ../../figures/de/Export_Applikation.png
 
 
 **Import**
 
-Unter **Anwendungen → Importieren** kann die Exportdatei in eine Mapbender-Installation importiert werden.
+Unter **Anwendungen** → **Importieren** kann die Exportdatei in eine Mapbender-Installation importiert werden.
 
 .. image:: ../../figures/de/Import_Applikation.png
 

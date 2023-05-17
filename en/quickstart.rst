@@ -163,7 +163,7 @@ Applications can be re-edited at any point. In order to do so, navigate to the a
 
 Mapbender applications consist of a Top toolbar, Sidepane, Map area and Footer. A variety of different elements can be added into these areas.
 
-#. Choose ``Applications →`` |mapbender-button-edit| ``Button → Layouts``.
+#. Choose ``Applications`` → |mapbender-button-edit| ``Button`` → ``Layouts``.
 
 #. Click on the |mapbender-button-add| ``Button`` to get an overview over the elements Mapbender provides in the corresponding area.
 
@@ -290,7 +290,7 @@ Source configuration
 
 Sources can be individually configured. This can be useful if you, for instance, don't want to display all layers, change the order or titles of the layers, prevent a layer's feature info output or adjust the scale in which the layers are visible.
 
-#. Click on  ``Application →`` |mapbender-button-edit| ``Button`` → ``Layersets`` → |mapbender-button-edit| ``Edit instance`` to configure an instance.
+#. Click on  ``Application`` → |mapbender-button-edit| ``Button`` → ``Layersets`` → |mapbender-button-edit| ``Edit instance`` to configure an instance.
 
 #. You can now change the instance configuration.
 
@@ -384,7 +384,7 @@ A user can get permissions to access one or a set of applications and services.
 Create a user
 -------------
 
-#. To create a user, go to ``Security → Users → Add new user``.
+#. To create a user, go to ``Security`` → ``Users`` → ``Add new user``.
 
 #. Choose a name for your user.
 
@@ -406,7 +406,7 @@ You can provide more information about the user in the tab ``Profile``. In the `
 Create a group
 --------------
 
-#. Create a group by ``Security → Groups → Add new Group``.
+#. Create a group by ``Security`` → ``Groups`` → ``Add new Group``.
 
 #. Define a name and a description for your group.
 
@@ -427,7 +427,7 @@ Mapbender provides different rights. They refer to the Symfony ACL System.
 * master: Whether someone is allowed to perform all of the above actions and in addition is allowed to grant any of the above permissions to others.
 * owner: Whether someone owns the object. An owner can perform any of the above actions and grant master and owner permissions.
 
-Assign roles to a user by ``Security → Users → Edit your User → Security``.
+Assign roles to a user by ``Security`` → ``Users`` → ``Edit your User`` → ``Security``.
 
   .. image:: ../figures/mapbender_roles.png
      :width: 100%
@@ -436,11 +436,11 @@ Assign roles to a user by ``Security → Users → Edit your User → Security``
 Assign an Application to a User/Group
 -------------------------------------
 
-#. Edit your application via ``Application → `` |mapbender-button-edit| ``Edit-Button``.
+#. Edit your application via ``Application`` → |mapbender-button-edit| ``Edit-Button``.
 
 #. Choose ``Security``
 
-#. Make your application accessable to the public by ``Security → public access``. Alternatively, one can use the |mapbender-button-publish| ``Button``. If this option is activated, also anonymous users will gain access to the application.
+#. Make your application accessable to the public by ``Security`` → ``public access``. Alternatively, one can use the |mapbender-button-publish| ``Button``. If this option is activated, also anonymous users will gain access to the application.
 
 #. Alternatively to public access you can set permissions for specific users/groups.
 
@@ -455,7 +455,7 @@ Assign elements to a User/Group
 
 Per default, all elements are accessible to users/groups if they have access to that particular application. This can be modified for each element. 
 
-#. Edit your application by ``Application → `` |mapbender-button-edit| ``Button`` .
+#. Edit your application by ``Application`` → |mapbender-button-edit| ``Button``.
 
 #. Choose ``Layouts``
 

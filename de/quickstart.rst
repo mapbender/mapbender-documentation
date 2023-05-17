@@ -163,7 +163,7 @@ Anwendungen können jederzeit bearbeitet werden. Von der Anwendungsübersichtsse
 
 Mapbender-Anwendungen bestehen aus den Bereichen Obere Werkzeugleiste, Sidepane, Kartenbereich und Fußzeile. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
 
-#. Wählen Sie ``Anwendungen →`` |mapbender-button-edit| ``Button → Layouts`` 
+#. Wählen Sie ``Anwendungen`` → |mapbender-button-edit| ``Button`` → ``Layouts`` 
 
 #. Klicken Sie auf den |mapbender-button-add| ``Button`` neben einem Bereich, um einen Überblick über die dort verfügbaren Elemente zu erhalten.
 
@@ -290,7 +290,7 @@ Konfiguration von Diensten
 
 Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie sich nicht alle Ebenen anzeigen lassen, oder Sie möchten die Reihenfolge oder den Titel der Ebenen ändern, die Info-Abfrage für einzelne Ebenen verhindern oder den Minimal-/Maximalmaßstab ändern.
 
-#. Wählen Sie  ``Anwendung →`` |mapbender-button-edit| ``Button → Layerset →`` |mapbender-button-edit| ``Instanz bearbeiten``, um eine Instanz zu konfigurieren.
+#. Wählen Sie  ``Anwendung`` → |mapbender-button-edit| ``Button`` → ``Layerset`` → |mapbender-button-edit| ``Instanz bearbeiten``, um eine Instanz zu konfigurieren.
 
 #. Sie können nun Ihren Dienst konfigurieren.
 
@@ -381,7 +381,7 @@ Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. N
 Benutzer anlegen
 ----------------
 
-#. Um einen Benutzer anzulegen, gehen Sie zu ``Sicherheit → Benutzer → Neuen Benutzer hinzufügen``.
+#. Um einen Benutzer anzulegen, gehen Sie zu ``Sicherheit`` → ``Benutzer`` → ``Neuen Benutzer hinzufügen``.
 
 #. Wählen Sie einen Benutzernamen.
 
@@ -405,7 +405,7 @@ Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reite
 Gruppen anlegen
 ---------------
 
-#. Erzeugen Sie eine Gruppe über  ``Sicherheit → Gruppen → Neue Gruppe hinzufügen``.
+#. Erzeugen Sie eine Gruppe über  ``Sicherheit`` → ``Gruppen`` → ``Neue Gruppe hinzufügen``.
 
 #. Wählen Sie einen Namen und eine Beschreibung für Ihre Gruppe.
 
@@ -426,7 +426,7 @@ Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Diese beruhen
 * master: kann anzeigen, editieren und löschen und diese Rechte außerdem weitergeben
 * owner: Besitzer darf alles (darf auch master- und owner-Recht vergeben)
 
-Weisen Sie einem Benutzer über ``Sicherheit → Benutzer → Benutzer bearbeiten → Sicherheit`` Rechte zu.
+Weisen Sie einem Benutzer über ``Sicherheit`` → ``Benutzer`` → ``Benutzer bearbeiten`` → ``Sicherheit`` Rechte zu.
 
   .. image:: ../figures/de/mapbender_roles.png
 
