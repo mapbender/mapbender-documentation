@@ -22,7 +22,7 @@ Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Sie basieren 
 * master - kann anzeigen, editieren, löschen und diese Rechte außerdem weitergeben
 * owner - Besitzer, darf alles (inkl. Vergabe von master und owner Recht)
 
-Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherheit`` die gewünschten Rechte zu.
+Weisen Sie einem Benutzer über **Benutzer** → **Benutzer bearbeiten** → **Sicherheit** die gewünschten Rechte zu.
 
   .. image:: /figures/mapbender_roles.png
      :width: 100%
@@ -31,9 +31,9 @@ Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherhei
 Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
 *****************************************************
 
-#. Bearbeiten Sie Ihre Benutzer über ``Sicherheit --> Benutzer``.
+#. Bearbeiten Sie Ihre Benutzer über **Sicherheit** → **Benutzer**.
 
-#. Wählen Sie ``Sicherheit``.
+#. Wählen Sie **Sicherheit**.
 
 #. Weisen Sie Benutzern/Gruppen individuelle Berechtigungen auf den individuellen Benutzer zu. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie Benutzer(n)/Gruppe(n) einen Benutzer zu.
 
