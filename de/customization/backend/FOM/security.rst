@@ -51,13 +51,13 @@ Zuweisen einzelner Elemente zu Benutzern/Gruppen
 
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Für einzelne Elemente kann der Zugriff noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Bearbeiten``.
+#. Bearbeiten Sie Ihre Anwendung.
 
 #. Wählen Sie ``Layouts``.
 
 #. Jedes Element verfügt über einen eigenen ``AcL-Element``-Button (Schlüssel). Wählen Sie den Button zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
 
-#. Fügen Sie Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. Das Element wird so innerhalb der Anwendung abgesichert und nur bestimmten Benutzer(n)/Gruppe(n) zugänglich.
+#. Fügen Sie Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend die view-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
 
 #. Testen Sie die Konfiguration, indem Sie die Anwendung mit Benutzern aufrufen, die (keine) Berechtigungen zum Element erhalten haben.
 

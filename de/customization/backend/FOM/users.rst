@@ -62,18 +62,6 @@ Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender an
 Benutzer, die sich selbst registriert haben, aber die Freischaltungsmail noch nicht bestätigt haben, können so von einem Administrator per Hand freigeschaltet werden.
 
 
-User-Management per Sicherheitsschlüsselabfrage
------------------------------------------------
-
-Die Möglichkeit der Rechtevergabe kann in jeder Mapbender-Applikation anpasst werden. Im Tab "Layouts" findet sich diese Einstellung in Form eines Schlüssels neben jedem Element.
-
-Mit einem Klick auf den Schlüssel wird der Benutzerzugriff auf ein Element angepasst. Im Anschluss kann ein Nutzer hinzugefügt werden. Dies geschieht über das "+"-Symbol.
-
-Ein gesetzter Haken neben dem entsprechenden Nutzer-Account erlaubt dem jeweiligen Nutzer den Zugriff. Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
-
-.. image:: ../../../../figures/de/fom/element_security_key_popup.png
-
-
 Login Fehler
 ------------
 
