@@ -37,15 +37,15 @@ Die Obere Werkzeugleiste und die Fußzeile bieten folgende Konfigurationsmöglic
   * Checkbox ``Schaltflächen zu Menü zusammenfassen``
   * ``Menütitel``-Textfeld
 
-Bei der Auswahl eines Bildschirmtyps wird der Bereich für andere Gerätearten ausgeblendet.
+Bei der Auswahl eines **Bildschirmtyps** wird der Bereich für andere Gerätearten ausgeblendet.
 
 .. note:: Die Auswahl eines Bildschirmtyps ist im Mapbender Mobile Template nicht möglich.
 
-Die Ausrichtung bestimmt über die Positionierung der Elemente innerhalb der Bereiche.
+Die **Ausrichtung** bestimmt über die Positionierung der Elemente innerhalb der Bereiche.
 
-Mithilfe der Checkbox kann ein Ausklappmenü konfiguriert werden, welches die in den Bereich eingebundenen Elemente umfasst.
+Mithilfe der **Checkbox** kann ein Ausklappmenü konfiguriert werden, welches die in den Bereich eingebundenen Elemente umfasst.
 
-Über das Textfeld ist es außerdem möglich, dem Ausklappmenü eine Beschriftung zuzuweisen.
+Über das **Textfeld** ist es außerdem möglich, dem Ausklappmenü eine Beschriftung zuzuweisen.
 
 .. tip:: **Hinweis**: Das Ausklappmenü ist besonders sinnvoll, wenn die Anwendung für mobile Endgeräte ausgerichtet sein soll. Unter :ref:`CSS_de` findet sich ein Codebaustein, der dem Menü einen Scrollbalken hinzufügt und somit die Bedienbarkeit bei Anwendungen mit vielen Elementen erhöht. 
 
@@ -67,7 +67,7 @@ Im Anschluss können folgende Optionen konfiguriert werden:
      :width: 100%
 
 
-Die Option "Typ" zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an:
+Die Option **Typ** zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an:
 
   - ``Akkordeon`` zeigt alle hinzugefügten Elemente in Reitern.
 
@@ -76,11 +76,11 @@ Die Option "Typ" zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an:
   - ``Unformatiert`` verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an.
 
 
-Der Bildschirmtyp legt fest, für welche Geräteart (Alle, Mobil oder Desktop) die Sidepane angezeigt werden soll.
+Der **Bildschirmtyp** legt fest, für welche Geräteart (Alle, Mobil oder Desktop) die Sidepane angezeigt werden soll.
 
-Über die Breite kann ein Pixelwert definiert werden, der die Breite der Sidepane in der Anwendung verändert.
+Über die **Breite** kann ein Pixelwert definiert werden, der die Breite der Sidepane in der Anwendung verändert.
 
-Die Position gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
+Die **Position** gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
 
 Die Checkbox ``Geschlossen starten`` hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
 
@@ -111,7 +111,7 @@ Mapbender bietet ein responsives Webdesign zur besseren Übersichtlichkeit an. E
 .. image:: ../../../../figures/de/responsive_design_overview.png
      :width: 100%
 
-Alternativ kann das Design auch für ganze Bereiche definiert werden. 
+Alternativ kann das Design auch für ganze Bereiche über die Option **Bildschirmtyp** definiert werden. 
 
 
 Bearbeiten
