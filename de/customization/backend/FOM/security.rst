@@ -28,44 +28,6 @@ Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherhei
      :width: 100%
 
 
-Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
-*******************************************************
-
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Bearbeiten``.
-
-#. Wählen Sie ``Sicherheit``.
-
-#. Machen Sie ihre Anwendung öffentlich zugänglich über die Auswahl **Öffentlicher Zugriff** unter ``Sicherheit`` (oder alternativ über den **Anwendung publizieren/verbergen**-Button in der Anwendungsübersicht).
-
-#. Fügen Sie für individuelle Einstellungen alternativ Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie eine Anwendung einem oder mehreren Benutzer(n)/Gruppe(n) zu.
-
-#. Melden Sie sich erneut unter der ausgewählten Benutzerbezeichnung an, um die Rechtevergabe zu testen.
-
-#. Alternativ können Sie auch unter ``Sicherheit --> Globale Zugriffssteuerungsliste (ACL) --> Anwendungen`` schnell Berechtigungen von Benutzern/Gruppen für alle Anwendungen festlegen.
-
-  .. image:: ../../../../figures/de/mapbender_security.png
-     :width: 100%
-
-
-Zuweisen einzelner Elemente zu Benutzern/Gruppen
-************************************************
-
-Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Für einzelne Elemente kann der Zugriff noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
-
-#. Bearbeiten Sie Ihre Anwendung.
-
-#. Wählen Sie ``Layouts``.
-
-#. Jedes Element verfügt über einen eigenen ``AcL-Element``-Button (Schlüssel). Wählen Sie den Button zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
-
-#. Fügen Sie Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend die view-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
-
-#. Testen Sie die Konfiguration, indem Sie die Anwendung mit Benutzern aufrufen, die (keine) Berechtigungen zum Element erhalten haben.
-
-  .. image:: ../../../../figures/fom/element_security_key_popup.png
-     :width: 100%
-
-
 Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
 *****************************************************
 
@@ -73,6 +35,6 @@ Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
 
 #. Wählen Sie ``Sicherheit``.
 
-#. Weisen Sie Benutzern/Gruppen individuelle Berechtigungen auf den individuellen Benutzer zu. Fügen Sie Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie Benutzer(n)/Gruppe(n) einen Benutzer zu.
+#. Weisen Sie Benutzern/Gruppen individuelle Berechtigungen auf den individuellen Benutzer zu. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie Benutzer(n)/Gruppe(n) einen Benutzer zu.
 
 #. Melden Sie sich unter dem Benutzer bzw. der Gruppe mit neuen Rechten an, um die Rechtevergabe zu testen. Je nach Konfiguration ist es so z.B. möglich, dass alle Teilnehmer einer Gruppe Berechtigungen über einen bestimmten Benutzer haben und dessen Account bearbeiten oder löschen können.

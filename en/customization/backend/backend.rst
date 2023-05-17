@@ -14,6 +14,6 @@ Backend
    sources.rst
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    FOM/index.rst

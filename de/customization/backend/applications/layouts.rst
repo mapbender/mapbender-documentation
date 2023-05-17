@@ -128,7 +128,7 @@ Ein gewähltes Element lässt sich auf diese Weise explizit sichtbar bzw. nicht 
 
   #. Wählen Sie den Schlüssel-Button zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
 
-  #. Fügen Sie Benutzer oder Gruppen über den Plus-Button hinzu. Setzen Sie anschließend die view-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
+  #. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend die view-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
 
 .. image:: ../../../../figures/de/fom/acl_secure_element.png
      :width: 100%

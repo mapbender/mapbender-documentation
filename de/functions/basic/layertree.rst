@@ -48,7 +48,7 @@ Um Layersets im Ebenenbaum nutzen zu können, sind verschiedene Anpassungen notw
 #. Einrichtung des Ebenenbaums selbst
 
 Über den Reiter **Layerset** können Layersets definiert und Datenquellen in eine Anwendung eingebunden werden. 
-Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den großen Plus-Button kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im Backend registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
+Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den großen ``+``-Button kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im Backend registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
 Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, findet sich unter der `Datenquellen <../backend/source.html>`_ und `Layersets <../backend/layerset.html>`_. 
 
 .. figure:: ../../../figures/de/mapbender_add_source_to_application.png
