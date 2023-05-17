@@ -25,7 +25,7 @@ Das ``+`` -Zeichen rechts oberhalb des Bereichs ermöglicht das Hinzufügen von 
 
 Alle eingebauten Funktionen lassen sich per Drag & Drop zwischen den Regionen verschieben.
 
-Mit der Ausnahme des Kartenbereichs und der MobilePane lassen sich alle Regionen über das Einstellungsrad in der oberen rechten Ecke individuell konfigurieren. Detaillierte Informationen zu Einschränkungen sind unter Mapbender Templates zusammengefasst.
+Mit der Ausnahme des Kartenbereichs und der MobilePane lassen sich alle Regionen über das Einstellungsrad in der oberen rechten Ecke individuell konfigurieren. Detaillierte Informationen zu den Templates sind unter :ref:`mapbender_templates_de` zusammengefasst.
 
 
 Konfigurationsmöglichkeiten der Oberen Werkzeugleiste und Fußzeile
