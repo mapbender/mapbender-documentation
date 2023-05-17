@@ -43,7 +43,7 @@ The sources and shared instances sections list and provide additional informatio
 * **Delete source**: Removes the registered service from Mapbender.
 
   .. image:: ../../../figures/mapbender_sources.png
-     :scale: 80
+     :width: 100%
 
 
 Sources menu button
@@ -56,7 +56,7 @@ In the metadata dialog of a specific service, it is also possible to click on th
 * **Delete**: Removes the registered shared instance from Mapbender.
 
   .. image:: ../../../figures/source_overview.png
-     :scale: 80
+     :width: 100%
 
 
 Updating sources

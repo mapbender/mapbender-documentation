@@ -27,7 +27,7 @@ Datenquelle laden
 Mit einem Klick auf ``Laden`` wird der Dienst in Mapbender registriert.
 
   .. image:: ../../../figures/de/mapbender_add_source.png
-     :scale: 80
+     :width: 100%
 
 
 Nach einer erfolgreichen Dienstregistrierung zeigt Mapbender Informationen zum Dienst in einem Übersichtsfenster an.
@@ -44,7 +44,7 @@ Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen u
 * **Datenquelle entfernen**: Entfernt den Dienst aus Mapbender.
 
   .. image:: ../../../figures/de/mapbender_sources.png
-     :scale: 80
+     :width: 100%
 
 
 Datenquellen-Kontextmenü
@@ -57,7 +57,7 @@ Im Metadatendialog eines Dienstes befindet sich oben rechts außerdem das Datenq
 * **Löschen**: Entfernt die freie Instanz aus Mapbender.
 
   .. image:: ../../../figures/de/source_overview.png
-     :scale: 80
+     :width: 100%
 
 
 Datenquellen aktualisieren
