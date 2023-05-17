@@ -11,7 +11,7 @@ Security as provided by the FOMUserBundle is anchored on these base concepts:
 
 
 Rights management
-=================
+*****************
 
 Mapbender provides different rights. They refer to the :doc:`Access Control Lists (ACL) <acl>`.
 
@@ -29,7 +29,7 @@ Assign roles to a user by ``Users --> Edit your User --> Security``.
 
 
 Assign an Application to a User/Group
-=====================================
+*************************************
 
 #. Edit your application by ``Application --> Edit-Button``.
 
@@ -48,7 +48,7 @@ Assign an Application to a User/Group
 
 
 Assign single elements to a User/Group
-======================================
+**************************************
 
 Per default, all elements are available to all users/groups that have permission to an application. It is possible to hide single elements from individual users/groups like this: 
 
@@ -67,7 +67,7 @@ Per default, all elements are available to all users/groups that have permission
 
 
 Assign a user to another User/Group
-===================================
+***********************************
 
 #. Edit a user by clicking ``Security --> Users``.
 

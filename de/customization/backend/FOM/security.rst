@@ -1,7 +1,7 @@
 .. _security_de:
 
 Sicherheitskonzepte
-===================
+###################
 
 Sicherheit wird im FOM User Bundle bereitgestellt und basiert auf diesen Konzepten:
 
@@ -11,8 +11,7 @@ Sicherheit wird im FOM User Bundle bereitgestellt und basiert auf diesen Konzept
 
 
 Rechte
-========
-
+******
 Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Sie basieren auf :doc:`Access Control Lists (ACL) <acl>`.
 
 * view - anzeigen
@@ -29,7 +28,7 @@ Weisen Sie einem Benutzer über ``Benutzer --> Benutzer bearbeiten --> Sicherhei
 
 
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
-=======================================================
+*******************************************************
 
 #. Bearbeiten Sie Ihre Anwendung über ``Anwendungen --> Bearbeiten``.
 
@@ -47,7 +46,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
      :width: 100%
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
-================================================
+************************************************
 
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Für einzelne Elemente kann der Zugriff noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
@@ -65,7 +64,7 @@ Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Z
      :width: 100%
 
 Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
-=====================================================
+*****************************************************
 
 #. Bearbeiten Sie Ihre Benutzer über ``Sicherheit --> Benutzer``.
 
