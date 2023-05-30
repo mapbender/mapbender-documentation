@@ -21,6 +21,11 @@ Welcome to the Mapbender documentation
 .. toctree::
    :maxdepth: 2
 
+   backend
+   
+.. toctree::
+   :maxdepth: 2
+
    customization
 
 .. toctree::

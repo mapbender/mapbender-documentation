@@ -131,7 +131,7 @@ Ein gewähltes Element lässt sich auf diese Weise explizit sichtbar bzw. nicht 
   #. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend die view-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
 
 .. image:: ../../../../figures/de/fom/acl_secure_element.png
-     :scale: 80
+     :width: 100%
 
 
 Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.

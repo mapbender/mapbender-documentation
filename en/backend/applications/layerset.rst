@@ -6,7 +6,7 @@ Layerset
 Layersets are logical containers, that can contain one or more layerset-instances (WMS services). A typical example is the differentiation between a layerset "main" for the main map and a layerset "overview" for the overview map. You can define more layersets to show them optionally on the map or to use them in the layertree in their own folders (thematic layers).
 
 .. image:: ../../../../figures/layerset/mapbender_service_edit.png
-           :scale: 80
+           :width: 100%
 
 
 Layerset-instances
@@ -15,7 +15,7 @@ Layerset-instances
 Layerset-instances contain options to configure certain WMS parameters: image-format, info-format, exception-format, scales for the different layers etc. Layerset-instances can be configured by clicking on the gear symbol. 
 
 .. image:: ../../../../figures/layerset/mapbender_wms_application_settings.png
-           :scale: 80
+           :width: 100%
 
 As soon a WMS service is integrated in a layerset, it is linked as a layerset-instance within the application.
 
@@ -118,7 +118,7 @@ Layer Configuration
 The layer table offers several checkboxes and two scale visibility fields that adjust the functionality of your Service Instance. Please note that the checkbox on top changes all the layer instances for the respective configuration at once.
 
 .. image:: ../../../../figures/layerset/layerset_instance.png
-           :scale: 80
+           :width: 100%
 
 * Title: Layer title from Service information shown in Mapbender, adjustable.
 * Active (on/off): Enables/disables a layer for the individual application layer. If not set, all other checkboxes of the same layer will be ignored.
