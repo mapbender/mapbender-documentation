@@ -434,7 +434,7 @@ Weisen Sie einem Benutzer über ``Sicherheit`` → ``Benutzer`` → ``Benutzer b
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 -------------------------------------------------------
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen →`` |mapbender-button-edit| ``Button`` einer Anwendung.
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen`` → |mapbender-button-edit| ``Button`` einer Anwendung.
 
 #. Wählen Sie ``Sicherheit``.
 
@@ -454,7 +454,7 @@ Zuweisen einzelner Elemente zu Benutzern/Gruppen
 
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Der Zugriff kann darüber hinaus für einzelne Elemente noch genauer definiert werden, sodass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen →`` |mapbender-button-edit| ``Button`` einer Anwendung.
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen`` → |mapbender-button-edit| ``Button`` einer Anwendung.
 
 #. Wählen Sie ``Layouts``.
 

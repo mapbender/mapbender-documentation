@@ -11,6 +11,7 @@ Es werden insgesamt drei Mapbender Templates bei der Installation mitgeliefert:
 * Basis Template (Fullscreen ohne Sidepane)
 * Mobiles Template
 
+
 Fullscreen Template
 *******************
 

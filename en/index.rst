@@ -19,7 +19,7 @@ Welcome to the Mapbender documentation
    functions
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    backend
    

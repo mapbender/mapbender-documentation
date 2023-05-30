@@ -6,7 +6,7 @@ Layouts
 Im diesem Reiter werden die Regionen einer Anwendung definiert, in die Elemente bzw. Funktionen eingebaut werden können. Für unterschiedliche Template-Vorlagen gibt es unterschiedliche Regionen (auch: Bereiche oder Layouts).
 Eine Übersicht über alle Elemente gibt es unter :ref:`functions_de`.
 
-Layouts des Fullscreen Templates:
+Layout des Fullscreen Templates:
 
   * Obere Werkzeugleiste (Bereich für die Platzierung von Buttons)
   * Sidepane (Seitenleiste für den Ebenenbaum, Legende, Suche,...)
@@ -14,7 +14,7 @@ Layouts des Fullscreen Templates:
   * Fußzeile (mit Impressum, Aktivitätsanzeige...)
 
 
-Layouts des Mobilen Templates:
+Layout des Mobilen Templates:
 
   * Fußzeile (Bereich für die Platzierung von Buttons)
   * Kartenbereich (Karte, Navigationswerkzeug)
@@ -56,11 +56,11 @@ Das Fullscreen Template bietet eine vielseitig konfigurierbare Sidepane an.
 Die Ansichtsoptionen für die Sidepane können im Sidepane-Bereich im Mapbender-Backend ausgewählt werden. Dazu genügt ein Klick auf das Einstellungsrad.
 Im Anschluss können folgende Optionen konfiguriert werden:
 
-  * Typ
-  * Bildschirmtyp
-  * Breite (in Pixeln)
-  * Position
-  * Checkbox ``Geschlossen starten``
+    * Typ
+    * Bildschirmtyp
+    * Breite (in Pixeln)
+    * Position
+    * Checkbox **Geschlossen starten**
 
 
 .. image:: ../../../figures/de/sidepane_backend.png
@@ -82,7 +82,7 @@ Der **Bildschirmtyp** legt fest, für welche Geräteart (Alle, Mobil oder Deskto
 
 Die **Position** gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
 
-Die Checkbox ``Geschlossen starten`` hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
+Die Checkbox **Geschlossen starten** hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
 
 
 Element-Buttonleiste
@@ -121,14 +121,14 @@ Bearbeiten
 
 Acl Element
 ===========
-Öffnet einen ``Element sichern``-Dialog, der ein explizites Konfigurieren der :ref:`acl_de` Regel ``View`` für Benutzer und Gruppen ermöglicht.
+Öffnet einen **Element sichern**-Dialog, der ein explizites Konfigurieren der :ref:`acl_de` Regel **View** für Benutzer und Gruppen ermöglicht.
 
 Ein gewähltes Element lässt sich auf diese Weise explizit sichtbar bzw. nicht sichtbar schalten. Standardmäßig ist die elementspezifische Acl-Konfiguration deaktiviert (grauer Schlüssel-Button), sodass pro Element keine berechtigungsabhängigen Einschränkungen gelten.
 
 
   #. Wählen Sie den Schlüssel-Button zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
 
-  #. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend die view-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
+  #. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend die **view**-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
 
 .. image:: ../../../figures/de/fom/acl_secure_element.png
      :width: 100%

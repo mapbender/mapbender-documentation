@@ -9,11 +9,11 @@ Backend
    backend/applications/index.rst
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
    backend/sources.rst
    
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    backend/FOM/index.rst

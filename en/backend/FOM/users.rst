@@ -58,18 +58,6 @@ A user who is deactivated cannot login into Mapbender anymore until he gets acti
 Users which have self-registered themselves but have not approved the activation mail can now be activated by an administrator.
 
 
-Managing users with the security key feature
---------------------------------------------
-
-Inside every Mapbender application, there is a possibility to adjust the rights of certain users and maintain visibility of what they are allowed to do. You can set these preferences in the "Layouts"-tab.
-
-Next to every element is a security key. If you click on the key, you can adjust the specific element rights of a user. Just add users who should gain access to the element with the "+" symbol in the pop-up window. A set checkmark next to the user account provides the essential rights for the respective user.
-
-After setting specific access rights, the security key turns red. If you hover over the key with the cursor, you will see the names of the users who have rights to the element.
-
-.. image:: ../../../figures/fom/element_security_key_popup.png
-
-
 Login Failures
 --------------
 

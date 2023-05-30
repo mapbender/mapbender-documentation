@@ -3,18 +3,8 @@
 Basisdaten
 ##########
 
-Das Anlegen einer neuen Mapbender-Anwendung ist mit dem Ausfüllen der individuellen Basisdaten der Anwendung verbunden. Pflichtfelder müssen ausgefüllt werden, um die Anwendung erstellen zu können.
+Die Basisdaten bestimmen die grundlegenden Informationen und Einstellungen einer Anwendung. Die Basisdaten sind über eine Maske in den Anwendungseinstellungen im Backend wie folgt konfigurierbar:
 
-Bereits konfigurierte Basisdaten aus bestehenden Anwendungen können jederzeit nachträglich geändert werden.
-
-Mehr Details zu den verschiedenen Möglichkeiten der Anwendungserstellung finden Sie im :ref:`Quickstart Dokument <quickstart_de>`.
-
-
-  .. image:: /figures/de/mapbender_create_application.png
-     :width: 100%
-
-
-* **Vorlage**: Fullscreen, Fullscreen alternative, Mapbender Mobile template.
 
 * **Titel**: Titel der Anwendung, frei ausfüllbares Textfeld.
 
@@ -28,3 +18,9 @@ Mehr Details zu den verschiedenen Möglichkeiten der Anwendungserstellung finden
 
 * **Kartenzustand merken**: Speichert sitzungsübergreifend den Zustand bestimmter Kartenparameter und -einstellungen. Weitere Informationen finden Sie auf der Seite zu den :ref:`Share-Elementen <persistant_map_view_de>`.
 
+
+  .. image:: /figures/de/mapbender_create_application.png
+     :width: 100%
+
+
+Mehr Details zu den verschiedenen Möglichkeiten der Anwendungserstellung finden Sie im :ref:`Schnellstart <quickstart_de>`.

@@ -1,5 +1,6 @@
 .. _sources_de:
 
+  .. |mapbender-button-add| image:: ../../figures/mapbender_button_add.png
   .. |mapbender-button-update| image:: ../../figures/mapbender_button_update.png
 
 Datenquellen (Sources)
@@ -15,7 +16,7 @@ Datenquelle laden
 
 .. tip:: **Hinweis**: Es ist wichtig, dass die Datenquelle vor dem Hochladen auf ihre Richtigkeit überprüft wird. Dies erfolgt über den Aufruf des getCapabilities-Requests im Browser.
 
-``Datenquelle hinzufügen``: Button zum Hinzufügen eines Dienstes, öffnet einen Konfigurationsbereich mit folgenden Parametern:
+Um einen Dienst zu laden, drücken Sie auf |mapbender-button-add| **Datenquelle hinzufügen**. Dies öffnet einen Konfigurationsbereich mit folgenden Parametern:
 
 * **Typ**: Dropdown-Auswahl zwischen Datentyp OGC WMS und OGC WMTS / TMS (Pflichtangabe).
 
@@ -64,7 +65,7 @@ Datenquellen aktualisieren
 --------------------------
 Die Aktualisierung einer Datenquelle erfolgt zunächst über den Aufruf der Seite ``Datenquellen`` im Backend.
 Wählen Sie aus der Liste die zu aktualisierende Datenquelle aus. Es ist möglich, die Liste anhand des Suchfelds nach Diensten zu filtern.
-Klicken Sie anschließend neben der gewünschten Datenquelle auf den |mapbender-button-update| ``Datenquelle aktualisieren``-Button.
+Klicken Sie anschließend neben der gewünschten Datenquelle auf den |mapbender-button-update| **Datenquelle aktualisieren**-Button.
 Dadurch öffnet sich die Aktualisierungsmaske. Hier können Sie auch die URL oder Benutzername / Passwort des Dienstes anpassen.
 
 .. hint:: Datenquellen lassen sich auch aktualisieren, ohne dass Änderungen vorgenommen wurden. Das Capabilities-Dokument wird neu eingelesen.

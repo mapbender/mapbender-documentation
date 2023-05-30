@@ -5,8 +5,11 @@ Sicherheit
 Jede Anwendung verfügt über individuelle Sicherheitseinstellungen: Hier können Sie unterschiedliche Berechtigungen explizit pro Anwendung zuweisen.
 
 
-Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
-*******************************************************
+Anwendungszuweisungen
+*********************
+
+Standardmäßig stehen Benutzern/Gruppen alle Anwendungen zur Verfügung, die mit ausreichenden Berechtigungen Zugriff auf das Backend haben. Für einzelne Anwendungen kann der Zugriff noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
+
 #. Bearbeiten Sie Ihre **Anwendung**.
 
 #. Wählen Sie **Sicherheit**.
@@ -21,8 +24,8 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
      :width: 100%
 
 
-Zuweisen einzelner Elemente zu Benutzern/Gruppen
-************************************************
+Elementzuweisungen
+******************
 
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Für einzelne Elemente kann der Zugriff noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
