@@ -5,7 +5,7 @@ Layerset
 
 Layersets are logical containers, that can contain one or more layerset-instances (WMS services). A typical example is the differentiation between a layerset "main" for the main map and a layerset "overview" for the overview map. You can define more layersets to show them optionally on the map or to use them in the layertree in their own folders (thematic layers).
 
-.. image:: ../../../../figures/layerset/mapbender_service_edit.png
+.. image:: ../../../figures/layerset/mapbender_service_edit.png
            :width: 100%
 
 
@@ -14,7 +14,7 @@ Layerset-instances
 
 Layerset-instances contain options to configure certain WMS parameters: image-format, info-format, exception-format, scales for the different layers etc. Layerset-instances can be configured by clicking on the gear symbol. 
 
-.. image:: ../../../../figures/layerset/mapbender_wms_application_settings.png
+.. image:: ../../../figures/layerset/mapbender_wms_application_settings.png
            :width: 100%
 
 As soon a WMS service is integrated in a layerset, it is linked as a layerset-instance within the application.
@@ -91,23 +91,23 @@ By default, all layerset-instances are created as bound instances. Bound instanc
 
 A bound instance can be transformed into a shared instance by clicking on the blue button labeled "Convert to shared instance". To transform a shared instance back into a bound instance the same button, now labeled "Convert to private instance", can be used.
 
-.. image:: ../../../../figures/layerset/convert_to_shared_instance.png
+.. image:: ../../../figures/layerset/convert_to_shared_instance.png
 
 Shared instances are marked with a Wi-Fi symbol in the "type" column of the layerset overview.
 
-.. image:: ../../../../figures/layerset/convert_to_bound_instance.png
+.. image:: ../../../figures/layerset/convert_to_bound_instance.png
 
 Bound instances are marked with an anchor symbol in the "type" column of the layerset overview.
 
-.. image:: ../../../../figures/layerset/instances_labels.png
+.. image:: ../../../figures/layerset/instances_labels.png
 
 Shared instances will appear as sepatrate data sources. To incorporate a shared instance into an application simply add a data source to the application and select the shared instance from the list.    
 
-.. image:: ../../../../figures/layerset/incorporate_shared_instance.png
+.. image:: ../../../figures/layerset/incorporate_shared_instance.png
 
 All shared instances can be viewed under **Sources -> Shared instances**
 
-.. image:: ../../../../figures/layerset/shared_instances_overview.png
+.. image:: ../../../figures/layerset/shared_instances_overview.png
 
 
 .. _layer_configuration:
@@ -117,7 +117,7 @@ Layer Configuration
 
 The layer table offers several checkboxes and two scale visibility fields that adjust the functionality of your Service Instance. Please note that the checkbox on top changes all the layer instances for the respective configuration at once.
 
-.. image:: ../../../../figures/layerset/layerset_instance.png
+.. image:: ../../../figures/layerset/layerset_instance.png
            :width: 100%
 
 * Title: Layer title from Service information shown in Mapbender, adjustable.
@@ -169,7 +169,7 @@ Vendor Specific Parameter
 
 In a layererset instance, vendor specific parameters are appended to the WMS request. The implementation follows the specifications of the multi-dimensional data in the WMS specification. In Mapbender, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values ​​can also be transmitted. The following example shows the definition of a parameter "group", which passes on the group of the user currently logged into Mapbender.
 
-.. image:: ../../../../figures/layerset/mapbender_vendor_specific_parameter.png
+.. image:: ../../../figures/layerset/mapbender_vendor_specific_parameter.png
 
 * Name: Parameter name in WMS request.
 * Default: Default value.

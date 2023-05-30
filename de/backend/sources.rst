@@ -1,6 +1,6 @@
 .. _sources_de:
 
-  .. |mapbender-button-update| image:: ../../../figures/mapbender_button_update.png
+  .. |mapbender-button-update| image:: ../../figures/mapbender_button_update.png
 
 Datenquellen (Sources)
 ======================
@@ -26,7 +26,7 @@ Datenquelle laden
 
 Mit einem Klick auf ``Laden`` wird der Dienst in Mapbender registriert.
 
-  .. image:: ../../../figures/de/mapbender_add_source.png
+  .. image:: ../../figures/de/mapbender_add_source.png
      :width: 100%
 
 
@@ -43,7 +43,7 @@ Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen u
 * **Datenquelle aktualisieren**: Aktualisiert die Dienst-Informationen durch erneutes Laden des getCapabilities-Dokuments.
 * **Datenquelle entfernen**: Entfernt den Dienst aus Mapbender.
 
-  .. image:: ../../../figures/de/mapbender_sources.png
+  .. image:: ../../figures/de/mapbender_sources.png
      :width: 100%
 
 
@@ -56,7 +56,7 @@ Im Metadatendialog eines Dienstes befindet sich oben rechts außerdem das Datenq
 * **Freie Instanz erzeugen**: Erzeugt eine freie Instanz aus der Datenquelle. Diese wird im Bereich "Freie Instanzen" angezeigt. 
 * **Löschen**: Entfernt die freie Instanz aus Mapbender.
 
-  .. image:: ../../../figures/de/source_overview.png
+  .. image:: ../../figures/de/source_overview.png
      :width: 100%
 
 
@@ -71,7 +71,7 @@ Dadurch öffnet sich die Aktualisierungsmaske. Hier können Sie auch die URL ode
 
 Zusätzlich bietet die Maske zwei Checkboxen an:
 
-.. image:: ../../../figures/de/mapbender_update_source.png
+.. image:: ../../figures/de/mapbender_update_source.png
      :width: 100%
 
 

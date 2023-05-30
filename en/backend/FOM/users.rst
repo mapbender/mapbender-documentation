@@ -15,7 +15,7 @@ Forgot Password
 
 If a user has forgotten his/her password, he can use the "Forgot password?" link in the Login screen to request a new one. For that he types in his username or email address.
 
-.. image:: ../../../../figures/fom/user_forgot_password.png
+.. image:: ../../../figures/fom/user_forgot_password.png
 
 After that, the user should receive an e-mail with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the /FOM/UserBundle/Resources/translations/messages.en.xlf file.
 
@@ -39,7 +39,7 @@ Users can self-register themselves in Mapbender. For this you have to adjust the
 
 The Login-dialog contains a "Register" link. This opens a page where the user can type in his/her name, password and e-mail adresss.
 
-.. image:: ../../../../figures/fom/user_self_register.png
+.. image:: ../../../figures/fom/user_self_register.png
 
 After that he gets a confirmation mail to complete the registration. Until that time he is only managed as an inactive user in Mapbender.
 
@@ -51,7 +51,7 @@ Activation of users
 
 Users can be set activated or deactivated by Administrators with the User-ACL-Right of at least *edit*. For this purpose, a checkbox exists in the Edit User dialog. A user with administration rights cannot activate or deactivate himself.
 
-.. image:: ../../../../figures/fom/edit_user_activated.png
+.. image:: ../../../figures/fom/edit_user_activated.png
 
 A user who is deactivated cannot login into Mapbender anymore until he gets activated again.
 
@@ -67,7 +67,7 @@ Next to every element is a security key. If you click on the key, you can adjust
 
 After setting specific access rights, the security key turns red. If you hover over the key with the cursor, you will see the names of the users who have rights to the element.
 
-.. image:: ../../../../figures/fom/element_security_key_popup.png
+.. image:: ../../../figures/fom/element_security_key_popup.png
 
 
 Login Failures

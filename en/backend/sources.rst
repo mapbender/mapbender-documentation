@@ -1,6 +1,6 @@
 .. _sources:
 
-  .. |mapbender-button-update| image:: ../../../figures/mapbender_button_update.png
+  .. |mapbender-button-update| image:: ../../figures/mapbender_button_update.png
 
 Sources
 =======
@@ -25,7 +25,7 @@ To register a service, click on ``Add source``:
 
 Click on ``Load`` to register the service to the repository.
 
-  .. image:: ../../../figures/mapbender_add_source.png
+  .. image:: ../../figures/mapbender_add_source.png
      :width: 100%
 
 
@@ -42,7 +42,7 @@ The sources and shared instances sections list and provide additional informatio
 * **Update source**: Updates service information by reloading the getCapabilities document.
 * **Delete source**: Removes the registered service from Mapbender.
 
-  .. image:: ../../../figures/mapbender_sources.png
+  .. image:: ../../figures/mapbender_sources.png
      :width: 100%
 
 
@@ -55,7 +55,7 @@ In the metadata dialog of a specific service, it is also possible to click on th
 * **Create shared instance**: Creates a new shared instance from the specific service. The instance is listed in the Shared instances tab.
 * **Delete**: Removes the registered shared instance from Mapbender.
 
-  .. image:: ../../../figures/source_overview.png
+  .. image:: ../../figures/source_overview.png
      :width: 100%
 
 
@@ -70,7 +70,7 @@ You can then update the WMS: If you wish, modify the URL or other settings, such
 
 Moreover, there are two checkboxes handling layer updates:
 
-.. image:: ../../../figures/mapbender_update_source.png
+.. image:: ../../figures/mapbender_update_source.png
      :width: 100%
 
 

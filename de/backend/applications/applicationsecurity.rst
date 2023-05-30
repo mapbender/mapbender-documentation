@@ -17,7 +17,7 @@ Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 
 #. Melden Sie sich erneut unter der ausgewählten Benutzerbezeichnung an, um die Rechtevergabe zu testen.
 
-  .. image:: ../../../../figures/de/mapbender_security.png
+  .. image:: ../../../figures/de/mapbender_security.png
      :width: 100%
 
 
@@ -36,5 +36,5 @@ Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Z
 
 #. Testen Sie die Konfiguration, indem Sie die Anwendung mit Benutzern aufrufen, die (keine) Berechtigungen zum Element erhalten haben.
 
-  .. image:: ../../../../figures/fom/element_security_key_popup.png
+  .. image:: ../../../figures/fom/element_security_key_popup.png
      :width: 100%

@@ -5,7 +5,7 @@ Layerset
 
 Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS-Dienste) beinhalten kann. Ein typisches Beispiel ist die Unterscheidung zwischen dem Layerset "main" (Hauptkarte) und "overview" (Übersichtskarte). Es besteht die Möglichkeit, weitere Layersets zu definieren. Diese werden entweder in der Karte direkt oder auch im Layertree als eigener Ordner dargestellt (thematische Layer).
 
-.. image:: ../../../../figures/de/layerset/mapbender_service_edit.png
+.. image:: ../../../figures/de/layerset/mapbender_service_edit.png
 
 
 Layerset-Instanzen
@@ -13,7 +13,7 @@ Layerset-Instanzen
 
 Layerset-Instanzen enthalten unterschiedliche Optionen, mit denen WMS-Dienste angesprochen werden können: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr. Aus der Layerset-Übersicht können mit dem Zahnrad-Button einzelne Instanzen konfiguriert werden.
 
-.. image:: ../../../../figures/de/layerset/mapbender_wms_application_settings.png
+.. image:: ../../../figures/de/layerset/mapbender_wms_application_settings.png
 
 Sobald ein WMS-Dienst in ein Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
 Der Screenshot zeigt die `private Instanz <layerset.rst#freie-und-private-instanzen>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2. Die Layerset-Instanz selbst hat die Laufnummer 28.
@@ -88,23 +88,23 @@ Alle Layerset-Instanzen werden standardmäßig als private Instanzen erstellt. P
 
 Eine Layerset-Instanz kann in der Bearbeitungsansicht über den blauen Button "In freie Instanz umwandeln" umgeändert werden. Über den gleichen Button lässt sich eine freie Instanz wieder in eine private Instanz umwandeln.
 
-.. image:: ../../../../figures/de/layerset/convert_to_shared_instance.png
+.. image:: ../../../figures/de/layerset/convert_to_shared_instance.png
 
 In der Layersets-Übersicht sind freie Instanzen in der Spalte "Typ" mit einem Funk-Symbol gekennzeichnet.
 
-.. image:: ../../../../figures/de/layerset/convert_to_bound_instance.png
+.. image:: ../../../figures/de/layerset/convert_to_bound_instance.png
 
 Private Instanzen sind wiederum mit einem Anker-Symbol gekennzeichnet.
 
-.. image:: ../../../../figures/de/layerset/instances_labels.png
+.. image:: ../../../figures/de/layerset/instances_labels.png
 
 Um eine freie Instanz in eine Anwendung einzubinden, kann diese als Datenquelle beim Hinzufügen einer Instanz ausgewählt werden.
 
-.. image:: ../../../../figures/de/layerset/incorporate_shared_instance.png
+.. image:: ../../../figures/de/layerset/incorporate_shared_instance.png
 
 Zu einer Übersicht aller freien Instanzen kann über das Menü zu **Datenquellen -> Freie Instanzen** navigiert werden.
 
-.. image:: ../../../../figures/de/layerset/shared_instances_overview.png
+.. image:: ../../../figures/de/layerset/shared_instances_overview.png
 
 
 .. _layer_konfiguration:
@@ -114,7 +114,7 @@ Layerkonfiguration
 
 Über die verschiedenen Checkboxen können Sie verschiedene Einstellungen treffen. Beachten Sie dabei, dass die oberste Checkbox der Liste jeweils für alle Instanzen denselben Status auswählt.
 
-.. image:: ../../../../figures/de/layerset/layerset_instance.png
+.. image:: ../../../figures/de/layerset/layerset_instance.png
 
 * Titel: Layertitel der Service Information (anpassbar).
 * Aktiv an/aus (active on/off): Aktiviert/deaktiviert ein Thema in dieser Anwendung. Sobald dieser Haken nicht gesetzt ist, werden alle anderen Haken derselben Instanz ignoriert.
@@ -167,7 +167,7 @@ In einer Layerset Instanz können Vendor Specific Parameter angegeben werden, di
 In Mapbender können die Vendor Specific Parameter genutzt werden, um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS-Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
-.. image:: ../../../../figures/de/layerset/mapbender_vendor_specific_parameter.png
+.. image:: ../../../figures/de/layerset/mapbender_vendor_specific_parameter.png
 
 * Name: Parameter Name im WMS Request.
 * default: Standardwert

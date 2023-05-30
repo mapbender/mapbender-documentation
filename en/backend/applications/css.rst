@@ -7,7 +7,7 @@ Mapbender offers an CSS editor for every application which easily allows you to 
 
 The CSS editor is located in the "CSS" tab of every application.
 
-.. image:: ../../../../figures/css_editor.png
+.. image:: ../../../figures/css_editor.png
      :width: 100%
 
 .. tip:: A browser inspect tool can help you to find out the CSS classes you want to change.

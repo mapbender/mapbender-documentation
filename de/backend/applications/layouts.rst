@@ -63,7 +63,7 @@ Im Anschluss können folgende Optionen konfiguriert werden:
   * Checkbox ``Geschlossen starten``
 
 
-.. image:: ../../../../figures/de/sidepane_backend.png
+.. image:: ../../../figures/de/sidepane_backend.png
      :width: 100%
 
 
@@ -108,7 +108,7 @@ Responsives Design
 ==================
 Mapbender bietet ein responsives Webdesign zur besseren Übersichtlichkeit an. Elemente können für unterschiedliche Ansichten individuell konfiguriert werden (Mobile Endgeräte, große Bildschirme oder beides).
 
-.. image:: ../../../../figures/de/responsive_design_overview.png
+.. image:: ../../../figures/de/responsive_design_overview.png
      :width: 100%
 
 Alternativ kann das Design auch für ganze Bereiche über die Option **Bildschirmtyp** definiert werden. 
@@ -130,13 +130,13 @@ Ein gewähltes Element lässt sich auf diese Weise explizit sichtbar bzw. nicht 
 
   #. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend die view-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
 
-.. image:: ../../../../figures/de/fom/acl_secure_element.png
+.. image:: ../../../figures/de/fom/acl_secure_element.png
      :width: 100%
 
 
 Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
 
-.. image:: ../../../../figures/de/fom/element_security_key_popup.png
+.. image:: ../../../figures/de/fom/element_security_key_popup.png
      :width: 100%
 
 

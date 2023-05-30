@@ -19,7 +19,7 @@ Passwort vergessen
 
 Falls ein Benutzer sein Passwort vergessen hat, kann er in der Login-Maske über den Link "Passwort vergessen" ein neues Passwort anfordern. Dazu gibt er dann seinen Benutzernamen oder seine E-Mail Adresse an.
 
-.. image:: ../../../../figures/de/fom/user_forgot_password.png
+.. image:: ../../../figures/de/fom/user_forgot_password.png
 
 Danach bekommt der Benutzer eine E-Mail mit einem Link zur Zurücksetzung des Passworts. Der Link ist nach der Nutzung nicht mehr gültig. Der Text der Mail kann in der Datei /FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
 
@@ -43,7 +43,7 @@ Benutzer können sich in Mapbender selbst registrieren. Vorher muss in der confi
 
 Im Login-Dialog erscheint der "Register" Link. Der Benutzer wird zu einer Maske geführt, in der er Name, Passwort und E-Mail Adresse angeben kann.
 
-.. image:: ../../../../figures/de/fom/user_self_register.png
+.. image:: ../../../figures/de/fom/user_self_register.png
 
 Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung abschließen kann. Bis zu diesem Zeitpunkt ist er als inaktiver Nutzer in Mapbender hinterlegt.
 
@@ -55,7 +55,7 @@ Aktivieren von Nutzern
 
 Benutzer können von Administratoren mit der ACL-Rolle *edit* aktiviert oder deaktiviert werden. Ein Benutzer mit Administrationsrechten kann sich selbst nicht aktivieren oder deaktivieren.
 
-.. image:: ../../../../figures/de/fom/edit_user_activated.png
+.. image:: ../../../figures/de/fom/edit_user_activated.png
 
 Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender anmelden, bis er wieder aktiviert wird.
 
