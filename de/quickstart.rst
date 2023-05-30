@@ -80,7 +80,7 @@ Falls Sie Schwierigkeiten haben Mapbender zu starten, überprüfen Sie, ob der A
 
 
 Starten von Mapbender im Entwicklungsmodus 
-==========================================
+------------------------------------------
 
 Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über die Anwendung an (Logging, Fehlermeldungen, Datenbankabfragen, Speicherverbrauch, Zeit und mehr). Dieser Modus ist nur über localhost verfügbar.
 
@@ -96,7 +96,7 @@ Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über d
 
 
 Das Backend
-===========
+-----------
 
 #. Nach dem erfolgreichen Start erscheint die Anwendungsübersicht des Mapbender-Backends. Das Backend listet nicht angemeldeten Besuchern die öffentlichen Anwendungen auf. Die Anwendungen werden mit Vorschaubild, Titel, URL-Titel und Beschreibung aufgelistet.
 
@@ -108,7 +108,7 @@ Nach erfolgreicher Anmeldung werden Sie zum Administrationsbackend weitergeleite
 
 
 Anwendungsübersicht
-===================
+-------------------
 
 In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendungen. Für den Administrator stehen folgende Funktionen zur Verfügung:
 

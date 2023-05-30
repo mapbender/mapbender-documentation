@@ -80,7 +80,7 @@ If you have any difficulties running Mapbender, please check whether your Apache
 
 
 Start Mapbender in developer mode 
-=================================
+---------------------------------
 
 Symfony offers a developer mode with lots of information about your application (logging, exceptions, database queries, memory usage, time and more). This mode is only available from localhost.
 
@@ -96,7 +96,7 @@ Symfony offers a developer mode with lots of information about your application 
 
 
 Mapbender Backend
-=================
+-----------------
 
 #. After a successful Mapbender startup, the application overview page in the backend will appear. The applications are listed with a screenshot, title, URL title and description.
 
@@ -108,7 +108,7 @@ After a successful login you will be directed to the ``Mapbender administration 
 
 
 Application overview
-====================
+--------------------
 
 The application overview site displays a list of all available applications. The root user has access to the following functions:
 
