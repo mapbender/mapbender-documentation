@@ -387,7 +387,7 @@ Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen ü
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen, also bspw.: app/console mapbender:print:queue:clean. Zur genauen Vorgehensweise siehe die Informationen auf der Seite `app/console commands <../../customization/commands.html>`_.
+Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen, also bspw.: app/console mapbender:print:queue:clean. Zur genauen Vorgehensweise siehe die Informationen auf der Seite `app/console Befehle <../../customization/commands.html>`_.
 
 
 *Warteschleifendruck: Durchführung*
