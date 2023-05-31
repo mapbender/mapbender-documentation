@@ -355,7 +355,7 @@ Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwend
 Warteschleifendruck
 -------------------
 
-Der Warteschleifendruck ist ein neues Druckfeature in Mapbender, welches einen erweiterten Hintergrunddruck erlaubt. Dieses experimentelle Feature ist seit Mapbender 3.0.8 implementiert. Es ist standardmäßig nicht aktiviert, da bei komplexeren Systemen Probleme mit der Cache-Speicher-Regeneration auftreten können. Sobald aktiviert, kann das Feature entweder händisch über die Kommandozeile angestoßen oder über einen Cronjob automatisiert werden. Der Warteschleifendruck hilft dabei, ressourcenintensive Druckjobs mit langen Ausführungszeiten zu verbessern, indem diese in eine Warteschleife, die im Hintergrund abgearbeitet wird, ausgelagert werden. Währenddessen können Sie mit Mapbender anderweitig weiterarbeiten.
+Der Warteschleifendruck ist ein Druckfeature in Mapbender, welches einen erweiterten Hintergrunddruck erlaubt. Dieses experimentelle Feature ist seit Mapbender 3.0.8 implementiert. Es ist standardmäßig nicht aktiviert, da bei komplexeren Systemen Probleme mit der Cache-Speicher-Regeneration auftreten können. Sobald aktiviert, kann das Feature entweder händisch über die Kommandozeile angestoßen oder über einen Cronjob automatisiert werden. Der Warteschleifendruck hilft dabei, ressourcenintensive Druckjobs mit langen Ausführungszeiten zu verbessern, indem diese in eine Warteschleife, die im Hintergrund abgearbeitet wird, ausgelagert werden. Währenddessen können Sie mit Mapbender anderweitig weiterarbeiten.
 
 
 *Warteschleifendruck: Konfiguration*
@@ -413,15 +413,29 @@ Speicherbegrenzungen
 *Warteschleifendruck*
 ---------------------
 
-Da der Druck möglicherweise speicherintensiver sein kann als anfangs in Ihren PHP-Einstellungen festgelegt, kann der benötigte Speicher durch manuelle Konfiguration erhöht werden. Dies ist für Anwender, die mit größeren Ausdrucken arbeiten möchten, besonders von Vorteil.
-Bemerkung: Die Speicherbegrenzung sollte nicht reduziert werden.
-
+Da der Warteschleifendruck möglicherweise speicherintensiver sein kann als anfangs in Ihren PHP-Einstellungen festgelegt, kann der benötigte Speicher durch manuelle Konfiguration erhöht werden. Dies ist für Anwender, die mit größeren Ausdrucken arbeiten möchten, besonders von Vorteil.
 Der Parameter `mapbender.print.queue.memory_limit` (string; Standard: 1G) muss angepasst werden, um die Speicherbegrenzung speziell für den Warteschleifendruck zu erhöhen. Vorsicht: Dieser Parameter erlaubt keine "null"-Werte.
+
+.. note:: Bemerkung: Reduzieren Sie die Speicherbegrenzung nicht.
 
 
 *Direktdruck*
 -------------
 
-Über den Parameter `mapbender.print.memory_limit` (string or null; Standard: null) kann das Speicherlimit angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
+Über den Parameter `mapbender.print.memory_limit` (string or null; Standard: null) kann das Speicherlimit auch für den Direktdruck angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
 Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an, der Wert "-1" steht für unbegrenzte Speichernutzung.
 
+
+WMS-Kachelgröße begrenzen
+-------------------------
+
+Sofern der Druck einen WMS-Dienst nicht erfolgreich in die PDF-Datei exportieren sollte, muss in der parameters.yml-Datei eine Ergänzung vorgenommen werden.
+Das hat damit zu tun, dass unter bestimmten Umständen die angeforderte Pixelausdehnung für den WMS zu groß ist, sodass der Dienst keine Bilder mehr liefert.
+
+.. code-block:: yaml
+
+    mapbender.imaageexport.renderer.wms.max_getmap_size: 8192
+
+
+Durch diese Begrenzung werden die größtmöglichen WIDTH=- und HEIGHT=-Werte für die Exportanfrage festgelegt. Im GetCapabilities-Request des jeweiligen Dienstes wird die maximale Auflösung unter ``MaxWidth`` bzw. ``MaxHeight`` definiert, sodass der getCapabilities-Request das Limit bereits vorgibt - bei `8192` handelt es sich um den Standardwert, der eventuell weiter angepasst werden muss.
+Die oben genannten Parameter können auch unabhängig voneinander definiert werden. Verwenden Sie ``mapbender.imaageexport.renderer.wms.max_getmap_size.x`` für den **WIDTH=**- und ``mapbender.imaageexport.renderer.wms.max_getmap_size.y`` für den **HEIGHT=**-Parameter.
