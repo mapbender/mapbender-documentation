@@ -21,7 +21,7 @@ Cache
 
 F: Was ist der Cache und wann muss ich ihn löschen?
 
-A: Der Cache ist eine Art Zwischenspeicher, aus dem Mapbender auf häufig benutzte Dateien zugreift. Der Cache kann aus unterschiedlichen Gründen erneuert werden. Sie löschen dabei jedoch nur die Inhalte innerhalb des ``mapbender/app/cache/`` Ordners. In der Mapbender-Verzeichnisstruktur sind das das ``prod``- und - falls vorhanden - das ``dev``-Verzeichnis.
+A: Der Cache ist ein Zwischenspeicher, aus dem Mapbender auf häufig benutzte Dateien zugreift. Der Cache kann ohne Weiteres gelöscht werden. Sie löschen dabei jedoch nur die Inhalte innerhalb des ``mapbender/app/cache/`` Ordners. In der Mapbender-Verzeichnisstruktur sind das das ``prod``- und - falls vorhanden - das ``dev``-Verzeichnis.
 
 Diese zwei Verzeichnisse können ohne Bedenken gelöscht werden. Beim nächsten Aufruf von Mapbender werden im Cache der entsprechenden Umgebung erneut Dateien abgelegt.
 
