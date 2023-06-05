@@ -68,7 +68,6 @@ F: Ich habe eine komplexe Anwendung, die ich kopieren möchte, was aber fehlschl
 
 A: Eine mögliche Ursache kann sein, dass PHP das Arbeiten mit großen Dateien nicht erlaubt. Das tritt vor allem bei FastCGI auf. Dafür dient der Parameter ``MaxRequestLen``, den Sie in der FastCGI-Konfigurationsdatei anpassen können.
 
-
 .. code-block:: bash
 
    # mod_fcgi.conf (Windows)
@@ -170,7 +169,6 @@ Der Fehler sieht wie folgt aus:
 
 
 .. note:: Es gibt eine ``cacert.pem`` Datei, die alle vertrauenswürdigen Zertifizierungsstellen auflistet. ``cacert.pem`` ist base64-kodiert und definiert alle vertrauenswürdigen Zertifizierungsstellen. Sie können die Datei unter https://curl.haxx.se/docs/caextract.html herunterladen.
-
 
 Der Fehler tritt auf, wenn die Datei nicht in der ``php.ini`` referenziert oder die ``cacert.pem`` nicht aktuell ist.
 
