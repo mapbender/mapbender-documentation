@@ -5,7 +5,7 @@ Aktualisierung von Mapbender auf eine neuere Version
 
 Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
-* Laden Sie die neuste Version von http://mapbender.org/builds/ herunter
+* Laden Sie die neuste Version von https://mapbender.org/builds/ herunter
 * Sichern Sie Ihre Konfigurationsdateien (parameters.yml und config.yml) und Ihre alte Mapbender Version (Dateien und Datenbank)
 * Ersetzen Sie die Dateien durch die neuen Mapbender-Dateien
 * Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen
@@ -28,7 +28,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 .. code-block:: bash
 
  # Laden Sie die neue Version herunter
- wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
+ wget -O https://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
  
  tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz
  
@@ -79,7 +79,7 @@ Aktualisierungsbeispiel für Windows
  
 .. code-block:: bash
 
- # Laden Sie die neue Version herunter http://mapbender.org/builds/
+ # Laden Sie die neue Version herunter https://mapbender.org/builds/
   
  # Sichern Sie die alte Version (Dateien und Datenbank)
  

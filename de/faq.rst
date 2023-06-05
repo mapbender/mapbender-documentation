@@ -68,6 +68,7 @@ F: Ich habe eine komplexe Anwendung, die ich kopieren möchte, was aber fehlschl
 
 A: Eine mögliche Ursache kann sein, dass PHP das Arbeiten mit großen Dateien nicht erlaubt. Das tritt vor allem bei FastCGI auf. Dafür dient der Parameter ``MaxRequestLen``, den Sie in der FastCGI-Konfigurationsdatei anpassen können.
 
+
 .. code-block:: bash
 
    # mod_fcgi.conf (Windows)
@@ -170,6 +171,7 @@ Der Fehler sieht wie folgt aus:
 
 .. note:: Es gibt eine ``cacert.pem`` Datei, die alle vertrauenswürdigen Zertifizierungsstellen auflistet. ``cacert.pem`` ist base64-kodiert und definiert alle vertrauenswürdigen Zertifizierungsstellen. Sie können die Datei unter https://curl.haxx.se/docs/caextract.html herunterladen.
 
+
 Der Fehler tritt auf, wenn die Datei nicht in der ``php.ini`` referenziert oder die ``cacert.pem`` nicht aktuell ist.
 
 Verweisen Sie auf ``cacert.pem`` in der ``php.ini``, um das Problem zu beheben:
@@ -269,6 +271,7 @@ Langsamer Zugriff auf Oracle-Datenbanken
 F: Beim Zugriff auf Oracle-Datenbanken reagiert Mapbender teilweise recht langsam, Abfragen dauern länger als gewöhnlich. Was kann ich anpassen?
 
 A: Es gibt zwei Parameter in der ``php.ini``, mit der die Zugriffe auf die Oracle Datenbanken verbessert werden können: `oci8.max_persistent <http://php.net/manual/de/oci8.configuration.php#ini.oci8.max-persistent>`_ und `oci8.default_prefetch <http://php.net/manual/de/oci8.configuration.php#ini.oci8.default-prefetch>`_. Passen Sie diese an.
+
 
 .. code-block:: bash
 

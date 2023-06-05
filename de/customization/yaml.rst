@@ -75,9 +75,9 @@ In den Elementen SearchRouter und Digitizer kann nun auf die Datenbankverbindung
 
 Weitere Informationen unter:
 
-Symfony Dokumentation <http://symfony.com/doc/current/best_practices/configuration.html>`_)
+Symfony Dokumentation <https://symfony.com/doc/current/best_practices/configuration.html>`_)
 
-Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <http://www.doctrine-project.org/>`_).
+Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <https://www.doctrine-project.org/>`_).
 
 
 Disclaimer

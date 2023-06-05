@@ -36,7 +36,7 @@ Letztere basieren auf einem `IconSet <https://github.com/mapbender/icons>`_, das
 Mehr Informationen dazu unter:
 
 * https://github.com/mapbender/icons
-* http://rawgit.com/mapbender/icons/master/demo.html
+* https://rawgit.com/mapbender/icons/master/demo.html
 
 Konfigurationsbeispiele:
 =========================

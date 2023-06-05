@@ -32,25 +32,23 @@ Diese Komponenten bietet Symfony an:
 
 Mehr über Symfony und dessen Funktionsweisen findet sich in der offiziellen Dokumentation: 
 
-* http://symfony.com/doc/current/book/index.html
+* https://symfony.com/doc/current/book/index.html
 
 
 OpenLayers
 **********
 OpenLayers ist eine JavaScript-Bibliothek, die das Anzeigen von Geodaten im Webbrowser ermöglicht.
 
-Mehr über OpenLayers findet sich auf der offiziellen Website unter: http://openlayers.org/
-
-Beispiele für die Funktionen von OpenLayers finden sich unter: http://dev.openlayers.org/examples/
+Mehr über OpenLayers findet sich auf der offiziellen Website unter: https://openlayers.org/
 
 
 jQuery and jQuery UI
 ********************
 jQuery ist eine Standard-JavaScript-Bibliothek. jQuery UI bietet eine Sammlung von Benutzeroberflächenelementen auf Grundlage der jQuery JavaScript Bibliothek an.  
 
-Mehr über jquery: http://jquery.com
+Mehr über jquery: https://jquery.com
 
-Mehr über jquery UI: http://jqueryui.com/
+Mehr über jquery UI: https://jqueryui.com/
 
 
 Mapbender
@@ -87,7 +85,7 @@ Link zum GitHub-Repository: https://github.com/mapbender/mapbender-starter
 
 Externe Repositories
 *********************
-Noch mehr mit Mapbender zusammenhängende Repositories finden sich auf GitHub. Verschiedene Anbieter können auf dieser Plattform Mapbender-spezifische Bundles anbieten; bspw. das DesktopIntegrationBundle, welches von der `WhereGroup <http://wheregroup.com>`__ bereitgestellt und von Kunden gesponsert wird.
+Noch mehr mit Mapbender zusammenhängende Repositories finden sich auf GitHub. Verschiedene Anbieter können auf dieser Plattform Mapbender-spezifische Bundles anbieten; bspw. das DesktopIntegrationBundle, welches von der `WhereGroup <https://wheregroup.com>`__ bereitgestellt und von Kunden gesponsert wird.
 
-Die WhereGroup bietet Mapbender-Bundles unter an: https://github.com/WhereGroup
+Die WhereGroup bietet Mapbender-Bundles in GitHub an: https://github.com/WhereGroup
 

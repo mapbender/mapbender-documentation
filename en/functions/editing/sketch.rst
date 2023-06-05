@@ -43,7 +43,7 @@ Draw geometries
 See the image below for sketch examples:
 
 .. image:: ../../../figures/sketch.png
-     :scale: 80
+     :width: 100%
 
 
 Delete, Edit and Zoom
@@ -67,10 +67,10 @@ If the element is configured with only a single color and the frontend color pic
 Stop drawing
 ------------
 
-To interrupt a geometry drawing, click the stop button: Note that this deletes the current draft that is not yet saved to the table.
+To interrupt a drawing, click the stop button: Note that this deletes your current draft.
 
 .. image:: ../../../figures/sketch_stop_drawing.png
-     :width: 75%
+     :width: 100%
 
 
 YAML-Definition:
