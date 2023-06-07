@@ -3,9 +3,7 @@
 CSS editor
 ##########
 
-Mapbender offers an CSS editor for every application which easily allows you to change its style (colors, sizes, icons, ...). In the editor it is possible to define additional CSS classes that will overwrite the default style. 
-
-The CSS editor is located in the "CSS" tab of every application.
+Mapbender offers an CSS editor for every application which easily allows you to change its style (colors, sizes, icons, ...). It is possible to define additional CSS classes that will overwrite the default style. You can use scss in the editor. And you can refer to an scss-file in your bundle. 
 
 .. image:: ../../../figures/css_editor.png
      :width: 100%
@@ -16,7 +14,9 @@ The CSS editor is located in the "CSS" tab of every application.
 Example
 =======
 
-The CSS editor can be useful for extending Mapbender's functionality: In the example below, the provided code block creates a scrollbar for applications with an expandable side menu, enhancing the application's usability on mobile devices.
+Add scrollbar to the top toolbar
+--------------------------------
+When you use the menu option in the top toolbar you can define at what size of the screen the height should be reduced and a scrollbar should appear. This enhances the usability of the application on mobile devices.
 
 .. code-block:: css
 
@@ -27,4 +27,4 @@ The CSS editor can be useful for extending Mapbender's functionality: In the exa
   }
 
 
-The function itself can be found in the ``Layouts`` tab of the backend: Click the gear icon and activate the checkbox ``Generate menu for buttons``.
+The function itself can be found in the ``Layouts`` tab of the backend: Click the gear button and activate the checkbox ``Generate menu for buttons``.
