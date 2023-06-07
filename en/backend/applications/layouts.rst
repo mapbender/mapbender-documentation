@@ -53,13 +53,11 @@ The Top toolbar and the Footer provide the following configuration options:
 
 Configuration of the Sidepane
 *****************************
-The fullscreen template offers an adjustable Sidepane.
-The Sidepane style can be changed via Mapbender backend (in the Sidepane section of the Layouts tab).
+The Sidepane provide the following configuration options through their |mapbender-button-edit| button:
 
 .. image:: ../../../figures/sidepane_backend.png
     :alt: Mapbender Sidepane Options
 
-The |mapbender-button-edit| button in the Sidepane section shows the following options:
 
 * **Type** (Accordion, Buttons, Unstyled. Default: Accordion): See explanation below.
 * **Screen type** (Any, Mobile, Desktop. Default Any): The region will not be displayed when other screen types are used. Any - will always show the region.
