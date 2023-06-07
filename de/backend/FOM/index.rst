@@ -10,4 +10,3 @@ Sicherheit (FOM UserBundle)
    acl
    users
    roles_groups
-   examples

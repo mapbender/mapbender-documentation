@@ -10,4 +10,3 @@ Security (FOMUserBundle)
    acl
    users
    roles_groups
-   examples
