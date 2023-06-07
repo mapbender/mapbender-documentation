@@ -1,71 +1,71 @@
 .. _layouts:
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
+ .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
+
+ .. |mapbender-button-key| image:: ../../../figures/mapbender_button_key.png
+
 Layouts
 #######
 
-The Layouts tab defines the regions of an application, into which elements or functions are implemented. Different templates can have different regions (also known as areas or layouts). 
+In the Layouts section of an application you get an overview of the regions (layout sections) of the application. In the regions, the elements of the application are listed.
 An overview of all elements is available under :ref:`functions`.
+
+.. note:: Different templates can have different regions: In the demo applications you can see two different region layouts. Not every element can be used in every region. Mapbender cares about that.
+
 
 Layout of the Fullscreen template:
 
-  * Top toolbar (button region)
-  * Sidepane (Area for the Layertree, Legend, Search,...)
-  * Map area (with Map, Scalebar,...)
-  * Footer (with Copyright, Activity Indicator,...)
+  * Top toolbar (region for Buttons, Links, HTML,...)
+  * Sidepane (region for Layertree, Legend, Search, Print, HTML,...)
+  * Map area (region for Map, Scalebar,...)
+  * Footer (region for Copyright, Activity Indicator, Scale select,...)
 
 
 Layout of the Mobile template:
 
-  * Footer (button region)
-  * Map area (with Map, navigation toolbar)
-  * MobilePane (area that will overlap the map, when a dialog like Layertree or FeatureInfo is displayed)
+  * Footer (region for Copyright, Activity Indicator, Scale select,...)
+  * Map area (region for Map, Scalebar,...)
+  * MobilePane (region for dialogs like Layertree, Legend, BaseSourceSwicther, FeatureInfo,...)
 
 
-The  ``+`` button located at the top right of each region allows adding elements. After pressing the button, a dialog box will open, which allows for the selection of an element and its subsequent configuration.
+The |mapbender-button-add| button located at the top right of each region allows adding elements. After pressing the button, a dialog will open, which allows for the selection of an element and its subsequent configuration.
 
-All built-in functions can be moved between regions using drag and drop.
+All elements in an application can be moved between regions using drag and drop.
 
-With the exception of the Map area and the MobilePane, all regions can be individually configured using the gear icon in the top right corner. Detailed information about the templates is summarized under :ref:`mapbender_templates`.
+The regions themselves can be configured using the |mapbender-button-edit| button at right. There is no configuration option for region Map area and MobilePane.
+
+The regions Top toolbar and Footer provide the following configuration options:
 
 
 Configuration of the Top toolbar and the Footer
 ***********************************************
-The Top toolbar and the Footer provide the following configuration options through their gear icons:
+The Top toolbar and the Footer provide the following configuration options:
 
-  * Screen type (Any, Mobile, Desktop)
-  * Alignment (Left, Right, Center. Default: Left)
-  * Checkbox ``Generate menu for buttons``
-  * ``Menu label`` input field
+* **Screen type** (Any, Mobile, Desktop. Default: Any): The region will not be displayed when other screen types are used. *Any* will always show the region.
+* **Alignment** (Left, Right, Center. Default: Right): Sets the alignment for the buttons, texts, links.
+* **Generate menu for buttons**:Creates a dropdown menu for the elements.
+* **Menu label input field**: Labeling for the dropdown menu.
 
-If a specific **Screen type** is selected, Mapbender will hide the region when using other screen types.
-
-.. note:: You cannot choose a Screen type in the Mapbender Mobile Template.
-
-**Alignment** adjusts the positioning of all elements in an area.
-
-The checkbox **Generate menu for buttons** configures a dropdown menu for the elements of the area.
-
-The dropdown menu can be labeled via the **Menu label** input field.
-
-.. tip:: **Note**: Using the dropdown menu is especially handy on mobile devices. There's a code snippet in :ref:`CSS` that adds a scroll bar to the menu and helps to increase the user experience. 
+.. tip:: **Note**: Using the dropdown menu is especially handy on mobile devices. There is a code snippet in :ref:`CSS` that adds a scroll bar to the menu and helps to increase the user experience. 
 
 
-Configuration of the sidepane
+Configuration of the Sidepane
 *****************************
-The fullscreen template offers an adjustable sidepane.
-The sidepane style can be changed via Mapbender backend (in the sidepane section of the Layouts tab).
-The gear icon in the sidepane section shows the following options:
-
-    * Type
-    * Screen type
-    * Width (in px)
-    * Position
-    * Checkbox **Initially closed**
-
+The fullscreen template offers an adjustable Sidepane.
+The Sidepane style can be changed via Mapbender backend (in the Sidepane section of the Layouts tab).
 
 .. image:: ../../../figures/sidepane_backend.png
-     :width: 100%
+    :alt: Mapbender Sidepane Options
 
+The |mapbender-button-edit| button in the Sidepane section shows the following options:
+
+* **Type** (Accordion, Buttons, Unstyled. Default: Accordion): See explanation below.
+* **Screen type** (Any, Mobile, Desktop. Default Any): The region will not be displayed when other screen types are used. Any - will always show the region.
+* **Width** (in px) (in px. Default: 350px): Width of the Sidepane in Pixels.
+* **Position** (Left, Right. Default: Left): Defines the placement of the sidepane.
+* **Initially closed** (Default: disabled): Defines whether the Sidepane should be closed or open on start of the application.
 
 The option **Type** adjusts the inserted elements:
 
@@ -76,59 +76,36 @@ The option **Type** adjusts the inserted elements:
 - ``Unstyled`` does not contain any styling options at all and displays the elements in the configured backend order.
 
 
-The option **Screen type** defines the device on which the sidepane is visible (any, mobile or desktop).
-
-The option **Width** takes a pixel value and adjusts the sidepane width accordingly.
-
-**Position** defines the placement of the sidepane: "Left" or "Right" can be selected.
-
-The checkbox **Initially closed** hides the sidepane after the application is opened. It is possible to show or re-hide the sidepane while using the application.
-
-
 Button area (Elements)
 **********************
-The button area helps configuring elements in their specific regions. The following button functions are available:
+Every element offers a set of buttons for configuration. The button area helps configuring elements in their specific regions.
+The following button functions are available:
 
-  * Toggle show/hide element
-  * Show on mobile screens
-  * Show on Desktop screens
-  * Edit (gear icon)
-  * :ref:`acl_de` element
-  * Delete
+.. image:: ../../../figures/mapbender_layouts_button_area.png
 
 
-Toggle show/hide element
-========================
-With the eye icon, it is possible to toggle an element between a shown or a hidden status. A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the backend.
-
-If you want to display or hide one or more elements only for a specific screen type, it is recommended to utilize the features of responsive design instead.
-
-
-Responsive Design
-=================
-Mapbender offers a responsive design for greater usability. Every element in the toolbar and sidepane can be individually configured to appear for mobile and/or desktop resolutions.
-
-.. image:: ../../../figures/responsive_design_overview.png
-     :width: 100%
-
-It is also possible to define templates for whole layout sections. This way, all associated elements will be automatically invisible when entering the respective view mode.
+* **Toggle show/hide element**: A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the backend.
+* **Show on mobile screens**: Displays an element only on mobile-sized screens.
+* **Show on Desktop screens**: Displays an element only on Desktop-sized screens.
+* **Edit**: Adjusts an element.
+* **ACL element**: Sets specific visibility permissions for an element.
+* **Delete**: Removes an element from both front- and backend.
 
 
 Edit
 ====
-Opens the configuration mask for a specific element. To look up a setting for a specific function, check the element under :ref:`functions` itself.
+The |mapbender-button-edit| button opens a configuration mask for a specific element. The :ref:`functions` overview page can help you to look up a setting for a specific element.
 
 
 Acl element
 ===========
-Opens a **Secure element** window that allows configuration of the :ref:`acl` **View** right for users/groups.
+The |mapbender-button-key| button opens a **Secure element** window that allows configuration of the :ref:`acl` **View** right for users/groups. 
 
-With this, the visibility of an element can be set. At first, Acl configuration is inactive (gray key button), so that there are now access restrictions per element by default.
+Without configuration, an element has no access restriction and is avaible to the users/groups that can access the application.
 
+When via Acl element View access rights are set, only the defined users/groups get access to the element.
 
-  #. Next to every element is a security key. If you click on a key, you can adjust the specific element rights of a user.
-
-  #. Just add users who should gain access to the element with the ``+`` button in the pop-up window. A set checkmark next to the user account provides the essential rights for the respective user.
+Add users to restrict access to them with the |mapbender-button-add| button. A set checkmark next to the user account provides the necessary rights.
 
 .. image:: ../../../figures/de/fom/acl_secure_element.png
      :width: 100%
@@ -145,4 +122,4 @@ You can find more security details under :ref:`security`.
 
 Delete
 ======
-Removes an element from both front- and backend. This process requires confirmation before it is executed.
+Removes an element from both front- and backend.
