@@ -1,11 +1,43 @@
 .. _layerset_de:
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
+ .. |mapbender-button-checkbox| image:: ../../../figures/mapbender_button_checkbox.png
+
+ .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
+
+ .. |mapbender-button-delete| image:: ../../../figures/mapbender_button_delete.png
+
+ .. |mapbender-button-publish| image:: ../../../figures/mapbender_button_publish.png
+
+
 Layerset
 ********
 
-Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS-Dienste) beinhalten kann. Ein typisches Beispiel ist die Unterscheidung zwischen dem Layerset "main" (Hauptkarte) und "overview" (Übersichtskarte). Es besteht die Möglichkeit, weitere Layersets zu definieren. Diese werden entweder in der Karte direkt oder auch im Layertree als eigener Ordner dargestellt (thematische Layer).
+Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS-Dienste) beinhalten kann.
+In den Demo-Anwendungen sind zwei Layersets definiert: Das Layerset "Main" für die Hauptkarte und das Layerset "Overview" für die Übersichtskarte. Die Namen der Layersets können frei gewählt werden. Außerdem können mehrere Layersets im Kartenelement ausgewählt werden. Zudem zeigt der Ebenenbaum den Namen der Layersets an, wenn die Option der thematischen Layer aktiviert ist.
+
+
+Layerset-Übersichtsseite
+========================
+Durch einen Klick auf **Layersets** wird die Übersichtsseite aufgerufen, auf der die Layersets konfiguriert werden. Jedes Layerset wird als Liste mit zugehörigen Diensten dargestellt. Die Übersichtsseite bietet folgende Funktionen:
+
+Layerset-Ebene
+--------------
+ * |mapbender-button-add|: Layerset hinzufügen (großer Button)
+ * |mapbender-button-add|: Instanz hinzufügen (kleiner Button)
+ * |mapbender-button-edit|: Layerset bearbeiten
+ * |mapbender-button-checkbox|: Layerset beim Anwendungsstart aktivieren/deaktivieren
+ * |mapbender-button-delete|: Layerset löschen
+
+Instanz-Ebene
+-------------
+ * |mapbender-button-publish|: Instanz an/aus
+ * |mapbender-button-edit|: Instanz bearbeiten
+ * |mapbender-button-delete|: Instanz löschen
 
 .. image:: ../../../figures/de/layerset/mapbender_service_edit.png
+     :width: 100%
 
 
 Layerset-Instanzen

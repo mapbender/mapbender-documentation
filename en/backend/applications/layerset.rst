@@ -1,12 +1,41 @@
 .. _layerset:
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
+ .. |mapbender-button-checkbox| image:: ../../../figures/mapbender_button_checkbox.png
+
+ .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
+
+ .. |mapbender-button-delete| image:: ../../../figures/mapbender_button_delete.png
+
+ .. |mapbender-button-publish| image:: ../../../figures/mapbender_button_publish.png
+
+
 Layerset
 ********
 
-Layersets are logical containers, that can contain one or more layerset-instances (WMS services). A typical example is the differentiation between a layerset "main" for the main map and a layerset "overview" for the overview map. You can define more layersets to show them optionally on the map or to use them in the layertree in their own folders (thematic layers).
+Layersets are logical containers that can contain one or more layerset-instances (WMS services). In the demo applications two layersets are defined: Layerset "main" for the main map and layerset "overview" for the overview map. The names of the layersets can be freely chosen. Moreover, more than one layerset can be chosen in the map element. Layertree shows the layerset name when thematic layers is activated.
 
-.. image:: ../../../figures/layerset/mapbender_service_edit.png
-           :width: 100%
+Layerset Overview Page
+========================
+This page shows all layersets of an application. Every layerset is displayed as a container that holds services. On the page, there are buttons that help to manage the layersets:
+
+Layerset actions
+----------------
+ * |mapbender-button-add|: Add layerset (large button)
+ * |mapbender-button-add|: Add instance (small button)
+ * |mapbender-button-edit|: Edit layerset
+ * |mapbender-button-checkbox|: Set layerset as active on application startup
+ * |mapbender-button-delete|: Delete layerset
+
+Instance actions
+----------------
+ * |mapbender-button-publish|: Toggle show/hide instance
+ * |mapbender-button-edit|: Edit instance
+ * |mapbender-button-delete|: Delete instance
+
+.. image:: ../../../figures/de/layerset/mapbender_service_edit.png
+     :width: 100%
 
 
 Layerset-instances
@@ -191,6 +220,6 @@ Further information
 
 * The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the :ref:`layertree documentation <layertree>`.
 
-* Layersets can be switched on or off for a map completely in the :ref:`Map element <map>` settings.
+* Layersets can be completely switched on or off for a map in the :ref:`Map element <map>` settings.
 
 * Likewise, individual thematic layersets can be (de)activated via checkbox in the layerset configuration so that they are (not) visible in the map on application startup.
