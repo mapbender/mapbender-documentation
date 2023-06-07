@@ -13,7 +13,6 @@ https://doc.mapbender.org
 The Documentation is build from the mapbender-documentation repository at Github. This repository is used to build and deploy the https://doc.mapbender.org website. The website code is generated using Sphinx, therefore the documentation source is written in Restructured Text.
 
 
-
 Edit documentation at Git Repository mapbender-documentation
 ************************************************************
 
@@ -77,6 +76,7 @@ Images for the documentation are **all** located at
 
 Quickstart
 **********
+
 The Mapbender Quickstart is a tutorial to get to know Mapbender. It is used on OSGeoLive too http://live.osgeo.org.
 
 If you want to add a new lesson to the Quickstart:
@@ -136,6 +136,6 @@ Working with reStructured Text (rst)
 
 For more info for rst-files and reStructured Text, take a look at these documentations:
 
-* `Wikipedia reStructured Text <http://en.wikipedia.org/wiki/ReStructuredText>`_
-* `reStructured Text on docutils at SourceForge <http://docutils.sourceforge.net/rst.html>`_
-* `Quick reStructuredText <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+* `Wikipedia reStructured Text <https://en.wikipedia.org/wiki/ReStructuredText>`_
+* `reStructured Text on docutils at SourceForge <https://docutils.sourceforge.net/rst.html>`_
+* `Quick reStructuredText <https://docutils.sourceforge.net/docs/user/rst/quickref.html>`_

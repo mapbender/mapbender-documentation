@@ -148,14 +148,15 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Wählen Sie unter *"Karten-Engine"* die von Ihnen bevorzugte OpenLayers-Version aus.
 
-#. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie auf der Seite zu den `Share-Elementen <share.html>`_.
+#. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie auf der Seite zu den `Share-Elementen <./functions/share.html>`_.
 
 #. Klicken Sie *"Speichern"*, um die Anwendung zu erzeugen. Nach der Erstellung können Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Dienste hinzufügen.
 
-Anwendungen können jederzeit bearbeitet werden. Von der Anwendungsübersichtsseite aus ist eine Navigation zu jeder Applikation (mit gegebenen Nutzungsrechten) über den |mapbender-button-edit| ``Button`` möglich. Weiterhin findet sich hier ein |mapbender-button-show| Button für jede Anwendung, mit dem diese im Frontend aufgerufen werden kann. Es besteht außerdem die Option, Anwendungen zu |mapbender-button-export| exportieren, zu |mapbender-button-delete| löschen sowie diese für die Öffentlichkeit zugänglich zu machen |mapbender-button-publish| .
-
   .. image:: ../figures/de/mapbender_create_application.png
      :width: 100%
+
+
+Anwendungen können bearbeitet werden: Von der Anwendungsübersichtsseite aus ist eine Navigation zu jeder Applikation (mit gegebenen Nutzungsrechten) über den |mapbender-button-edit| ``Button`` möglich. Weiterhin findet sich hier ein |mapbender-button-show| Button für jede Anwendung, mit dem diese im Frontend aufgerufen werden kann. Es besteht außerdem die Option, Anwendungen zu |mapbender-button-export| exportieren, zu |mapbender-button-delete| löschen sowie diese für die Öffentlichkeit zugänglich zu machen |mapbender-button-publish|.
 
 
 3. Elemente in eine Anwendung einfügen
@@ -317,7 +318,7 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 
 **Dimensionen:**
 
-Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz. Weitere Informationen hierzu finden Sie auf der Seite des `Dimensions Handler <dimensions_handler.html>`_.
+Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz. Weitere Informationen hierzu finden Sie auf der Seite des `Dimensions Handler <./functions/misc/dimensions_handler.html>`_.
 
 **Vendor Specific Parameter:**
 

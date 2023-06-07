@@ -6,9 +6,9 @@
 Datenquellen (Sources)
 ======================
 
-Über den Backend-Menübereich Datenquellen können OGC WMS- und WMTS/TMS-Dienste in den Versionen 1.1.1 und 1.3.0 in Mapbender registriert werden.
+Über den Backend-Menübereich Datenquellen können OGC WMS- und WMTS/TMS-Dienste in den Versionen 1.1.1 und 1.3.0 registriert werden.
 
-Informationen zum Einbinden von Diensten und die Nutzung in Mapbender-Anwendungen finden Sie im `Quickstart Dokument <../../quickstart.html#laden-von-web-map-services>`_.
+Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im `Quickstart Dokument <../../quickstart.html#laden-von-datenquellen>`_.
 
 
 Datenquelle laden
@@ -16,16 +16,18 @@ Datenquelle laden
 
 .. tip:: **Hinweis**: Es ist wichtig, dass die Datenquelle vor dem Hochladen auf ihre Richtigkeit überprüft wird. Dies erfolgt über den Aufruf des getCapabilities-Requests im Browser.
 
+
 Um einen Dienst zu laden, drücken Sie auf |mapbender-button-add| **Datenquelle hinzufügen**. Dies öffnet einen Konfigurationsbereich mit folgenden Parametern:
 
 * **Typ**: Dropdown-Auswahl zwischen Datentyp OGC WMS und OGC WMTS / TMS (Pflichtangabe).
 
-* **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z.B. für OGC WMS Version 1.3.0: ``http://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities``)
+* **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z. B. für `OGC WMS Version 1.3.0 <https://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities>`_)
 
 * **Benutzername / Passwort**: Eingabe von Benutzername und Passwort bei gesicherten Diensten.
 
 
-Mit einem Klick auf ``Laden`` wird der Dienst in Mapbender registriert.
+Mit einem Klick auf ``Laden`` wird der Dienst registriert.
+
 
   .. image:: ../../figures/de/mapbender_add_source.png
      :width: 100%
@@ -44,6 +46,7 @@ Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen u
 * **Datenquelle aktualisieren**: Aktualisiert die Dienst-Informationen durch erneutes Laden des getCapabilities-Dokuments.
 * **Datenquelle entfernen**: Entfernt den Dienst aus Mapbender.
 
+
   .. image:: ../../figures/de/mapbender_sources.png
      :width: 100%
 
@@ -56,6 +59,7 @@ Im Metadatendialog eines Dienstes befindet sich oben rechts außerdem das Datenq
 * **Datenquelle aktualisieren**: Aktualisiert die Dienst-Informationen durch erneutes Laden des getCapabilities-Dokuments.
 * **Freie Instanz erzeugen**: Erzeugt eine freie Instanz aus der Datenquelle. Diese wird im Bereich "Freie Instanzen" angezeigt. 
 * **Löschen**: Entfernt die freie Instanz aus Mapbender.
+
 
   .. image:: ../../figures/de/source_overview.png
      :width: 100%

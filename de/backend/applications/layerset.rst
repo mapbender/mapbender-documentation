@@ -90,7 +90,7 @@ Es gibt zwei Möglichkeiten, wie die Layerreihenfolge dem Layerbaum übergeben w
 
 Diese Unterscheidung hat ihre Ursprünge in der Art und Weise wie WMS-Dienste und Capabilities-Dokumente aufgebaut sind.
 
-Die `OGC Referenzimplementierung eines WMS <http://www.opengeospatial.org/standards/wms/quickstart>`_ beschreibt den Aufbau eines Beispiel WMS unter: `http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3 <http://metaspatial.net/cgi-bin/ogc-wms.xml?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3>`_
+Die `OGC E-Learning Modul für Web Map Services <https://opengeospatial.github.io/e-learning/wms/text/basic-main.html#introduction>`_ beschreibt den Aufbau eines Beispiel-WMS.
 
 Dieser WMS zeigt einige Punkt-, Linien- und Flächenobjekte und Rasterbilder an. Das Capabilities Dokument listet dabei die Bilddaten (z.B. DTM) weiter oben als die Punkte (z.B. osm_points als vorletzter Layer). Dieses Prinzip übernimmt Mapbender sowohl in den DataSources, wo der Dienst in Mapbender eingeladen und registriert wird, als auch in den Layerset-Instanzen.
 
@@ -171,10 +171,11 @@ Hinweise zu den Auswirkungen der einzelnen Konfigurationen
 Basesources
 -----------
 
-Es gibt verschiedene Möglichkeiten, den Ebenenbaum zu füllen und mit Basisdiensten zu arbeiten:
+Es gibt verschiedene Möglichkeiten, den Ebenenbaum zu füllen und mit Basesources zu arbeiten:
 
-* Bspw. durch das Verstecken im Layerbaum und das Nutzen des :ref:`Hintergrundwechslers <basesourceswitcher_de>`.
-* Oder mit den Möglichkeiten des :ref:`Ebenenbaums <layertree_de>` zu arbeiten, verschiedene Layersets anzulegen und die Basisdienste und thematischen Dienste dort zu verteilen und im Layerbaum zu unterscheiden.
+- Bspw. durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
+- Oder auch mit den Möglichkeiten im `Ebenenbaum mit der thematische Layer <../basic/layertree>`_ zu arbeiten. Diese Option zeigt den Namen des Layersets entlang eines Ordners und einer Checkbox im Ebenenbaum. Dabei lässt sich konfigurieren, ob der Ordner nach dem Öffnen der Anwendung angezeigt werden soll; zudem ist es möglich, den Ordner aufgeklappt darzustellen.
+
 
 
 Proxy
@@ -196,7 +197,7 @@ Es gibt des Weiteren noch hier und da WMS-Dienste, die nur eine maximale Kartenb
 Vendor Specific Parameter
 -------------------------
 
-In einer Layerset Instanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der multi-dimensionalen Daten in der WMS Spezifikation.
+In einer Dienstinstanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden.
 In Mapbender können die Vendor Specific Parameter genutzt werden, um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS-Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
@@ -213,12 +214,13 @@ Momentan eignet sich das Element, um den Dienst nur an bestimmte Benutzer und Gr
 Weitere Informationen
 ---------------------
 
-* Information zur Benutzung von Layersets finden Sie auch im :ref:`Schnellstart <quickstart_de>`.
 
-* Tipps, wie sich das Kacheln von WMS begrenzen lässt, finden Sie in den :ref:`FAQ_de`.
+* Information zur Benutzung von Layersets finden Sie auch im `Schnellstart <../../quickstart#datenquellen-sources-verwenden>`_.
 
-* Die Bedeutung der Layersets für die Anzeige im Layertree ist im Abschnitt zu den Thematischen Layern unter :ref:`layertree_de` beschrieben.
+* Tipps, wie sich das Kacheln von WMS begrenzen lässt, finden Sie in den `FAQs <../../faq#performance>`_.
 
-* Einzelne Layersets können in den Einstellungen zur :ref:`map_de` komplett an- bzw. abgeschaltet werden.
+* Die Bedeutung der Layersets für die Anzeige im Ebenenbaum ist im Abschnitt zu den Thematischen Layern in der `Layertree-Dokumentation <../basic/layertree#workflow-thematischer-ebenenbaum>`_ beschrieben.
 
-* Ebenso können einzelne thematische Layersets in der Layerset-Konfiguration per Checkbox bei Anwendungsstart (de-)aktiviert werden.
+* Einzelne Layersets können in den Einstellungen zur `Karte <../basic/map>`_ für die jeweilige Anwendung an- bzw. abgeschaltet werden.
+
+* Ebenso können bei der Anzeige thematischer Layer die Layersets in der Layerset-Konfiguration per Checkbox bei Anwendungsstart (de-)aktiviert werden.

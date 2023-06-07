@@ -15,7 +15,7 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 * Initialisieren der Datenbank
 * Laden der Anwendungen der mapbender.yml Definition in die Datenbank
 
-Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <http://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
+Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
 
 .. note:: **Hinweis:** Das console-Hilfsprogramm wird Dateien in die Verzeichnisse app/cache und app/logs schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis app/db und die SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP- Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
@@ -125,10 +125,10 @@ Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php
 -------------------------------------------------------------------------
 
 Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den
-normalen Betrieb- und eine Entwicklungsumgebung, in dem die Anwendungen
+normalen Betrieb und eine Entwicklungsumgebung, in dem die Anwendungen
 getestet werden können. Dieses Konzept orientiert sich an den
 `"Environments" im Symfony Framework
-<http://symfony.com/doc/current/book/configuration.html>`_.
+<https://symfony.com/doc/current/book/configuration.html>`_.
 
 Die Produktionsumgebung wird mit der URL http://localhost/app.php
 aufgerufen, die Entwicklungsumgebung mit der URL

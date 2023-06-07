@@ -16,8 +16,7 @@ Read more about Templates in Mapbender at :ref:`templates`.
 
 Documentation
 *************
-If you want to know more about twig check out the documentation under http://twig.sensiolabs.org .
-You find a good introduction in the Symfony documentation **Creating and using Templates** http://symfony.com/doc/current/templating.html
+You can find a good introduction about Twig in the Symfony documentation **Creating and using Templates** https://symfony.com/doc/current/templates.html
 
  
 Twig Syntax

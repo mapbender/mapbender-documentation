@@ -12,7 +12,7 @@ Setup
 -----
 
 Der Data Manager benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
-Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../../customization/yaml.html>`_.
+Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../customization/yaml.html>`_.
 
 Konfigurationsbeispiel
 ----------------------

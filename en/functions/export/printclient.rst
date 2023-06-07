@@ -402,6 +402,7 @@ Memory Limits
 --------------
 
 Print jobs can be resource intensive and may exceed your initially set php.ini memory limit. Therefore it is possible to increase the required memory limit manually. This is an advantage for users who are working with large print templates.
+
 .. note:: Never reduce the memory limit.
 
 To increase the memory limits for the queued print, adjust `mapbender.print.queue.memory_limit` (string; default is 1G). Caution: This parameter does not allow 'null' as value.
@@ -415,3 +416,17 @@ If the parameter is set to 'null', Mapbender print will look for your php.ini va
 If you set the parameter to a value which is accepted by your php.ini-configuration file, Mapbender print uses this limit instead of the php.ini limit (possible values are e.g. 512M, 2G, 2048M, etc.)
 Use '-1' for unrestricted memory usage.
 
+
+Set a WMS Tile Size Limit
+-------------------------
+
+If the printing process fails to export a WMS service into the PDF file, the following amendment needs to be made in the parameters.yml file.
+This is because, under certain circumstances, the requested pixel size for the WMS is too large, resulting in the service no longer delivering images.
+
+.. code-block:: yaml
+
+    mapbender.imaageexport.renderer.wms.max_getmap_size: 8192
+
+    
+These limitations set the maximum possible WIDTH= and HEIGHT= values for the export request. In the GetCapabilities request of the respective service, the maximum resolution is defined under `MaxWidth` and `MaxHeight`, which means that the getCapabilities request already sets the limit - `8192` is the default value, which may need to be further adjusted.
+The mentioned parameters can also be defined independently of each other: Use ``mapbender.imageexport.renderer.wms.max_getmap_size.x`` for the **WIDTH=** parameter and ``mapbender.imageexport.renderer.wms.max_getmap_size.y`` for the **HEIGHT=** parameter.

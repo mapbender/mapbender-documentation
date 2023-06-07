@@ -22,7 +22,7 @@ Twig Template
 
 Jedes Element benötigt ein HTML-Element. In den meisten Fällen kann das ein DIV-Element sein, aber es kann auch komplexer sein.
 
-Für Mapbender wird `Twig <http://twig.sensiolabs.org/>`_ verwendet. Eine einfache Twig-Vorlage für ein Element kann wie folgt aussehen:
+Für Mapbender wird Twig verwendet. Eine einfache Twig-Vorlage für ein Element kann wie folgt aussehen:
 
 .. code-block:: html+jinja
 
@@ -37,7 +37,7 @@ Mehrere Angaben müssen gesetzt werden:
 JavaScript Widgets
 ++++++++++++++++++
 
-Element Widgets werden unter Verwendung der jQuery UI `widget factory <http://wiki.jqueryui.com/w/page/12138135/Widget%20factory>`_ erzeugt.
+Element Widgets werden unter Verwendung der jQuery UI `widget factory <https://jqueryui.pbworks.com/w/page/12138135/Widget%20factory>`_ erzeugt.
 Dies gewährleistet eine einheitliche Struktur für die Widget-Entwicklung und bietet:
 
 * voreingestellte Optionen. 
