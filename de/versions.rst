@@ -284,7 +284,7 @@ Release Datum: 13.07.2018
 
 **Neue Funktionen:**
 
-* QGIS Server Layerreihenfolgende, dokumentiert unter der Rubrik :ref:`layerset_de`
+* QGIS Server Layerreihenfolgende, dokumentiert unter der Rubrik layerset_de
 * Neues Element: :ref:`coordinate_utility_de`
 * Mouse-Over im SearchRouter
 * GPS Button im POI

@@ -172,22 +172,23 @@ Proxy settings
 **************
 If you use a proxy, you need to change ``parameters.yml``.
 
+.. hint:: OWSProxy3 is a transparent Buzz-based proxy that uses cURL for connection to web resources via/without a proxy server.
+
 Configuration example:
 
 .. code-block:: yaml
 
     # OWSProxy Configuration
-        ows_proxy3_logging: false
-        ows_proxy3_obfuscate_client_ip: true
-        ows_proxy3_host: myproxy
-        ows_proxy3_port: 8080
+        ows_proxy3_logging: false             # logging of requests, default is false, true logs in table owsproxy_log 
+        ows_proxy3_obfuscate_client_ip: true  # obfuscats a client ip, default is true, true will hide the last byte of the client's ip address
+        ows_proxy3_host: myproxy              # proxy definition for connnection via a proxy server. Host name of the proxy server
+        ows_proxy3_port: 8080                 # proxy definition for connnection via a proxy server. Port name of the proxy server
         ows_proxy3_connecttimeout: 60
         ows_proxy3_timeout: 90
-        ows_proxy3_user: ~
-        ows_proxy3_password: ~
-        ows_proxy3_noproxy:
+        ows_proxy3_user: ~                    # user name for proxy server (set user for proxy server if needed)
+        ows_proxy3_password: ~                # password for proxy server (set password for proxy server if defined)
+        ows_proxy3_noproxy:                   # list of hosts for connnections without proxy server
             - 192.168.1.123
-
 
 SSL certificate
 ***************
