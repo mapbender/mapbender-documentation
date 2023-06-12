@@ -7,9 +7,8 @@ Functions
    :maxdepth: 2
 
    functions/basic.rst
-   functions/search.rst
-   functions/export.rst
    functions/editing.rst
+   functions/export.rst
+   functions/search.rst
    functions/share.rst
-   functions/backend.rst
    functions/misc.rst

@@ -9,6 +9,7 @@ Other
    misc/about_dialog.rst
    misc/applicationswitcher.rst
    misc/button.rst
+   misc/cookieconsent.rst
    misc/link.rst
    misc/coordinate_utility.rst
    misc/copyright.rst

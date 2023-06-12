@@ -48,8 +48,10 @@ Um Layersets im Ebenenbaum nutzen zu können, sind verschiedene Anpassungen notw
 #. Einrichtung des Ebenenbaums selbst
 
 Über den Reiter **Layerset** können Layersets definiert und Datenquellen in eine Anwendung eingebunden werden. 
-Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den großen Plus-Button kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im Backend registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
-Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, findet sich unter der `Datenquellen <../backend/sources.html>`_ und `Layersets <../backend/layerset.html>`_. 
+
+Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den großen ``+``-Button kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im Backend registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
+Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, findet sich unter der `Datenquellen <../backend/source.html>`_ und `Layersets <../backend/layerset.html>`_. 
+
 
 .. figure:: ../../../figures/de/mapbender_add_source_to_application.png
            :scale: 80
@@ -178,6 +180,7 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
 * Layerset Project NRW:
     * Instanz `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
     * Instanz `Wald NRW <https://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+
 * Layerset World: 
     * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
     * Instanz `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 

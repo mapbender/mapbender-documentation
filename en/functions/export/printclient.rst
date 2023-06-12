@@ -140,7 +140,7 @@ The following objects are available by default in Mapbender:
 
 Optional fields in the element definition (e.g. title, comment, editor) can be defined and added to the Open Office Draw file. They need to be inserted into the non-printable area of the file, or else they will appear in the generated template PDF.
 
-When creating dynamic texts, each property must have the appropriate name, for example the field **comment1** must have the name **comment1** in the Open Office Draw file. For naming fields, it is not enough to apply the name to the content of the text field. Instead, the field needs to be selected and its object name edited. Select text field **--> Menu Edit --> name...** to change the name accordingly.
+When creating dynamic texts, each property must have the appropriate name, for example the field **comment1** must have the name **comment1** in the Open Office Draw file. For naming fields, it is not enough to apply the name to the content of the text field. Instead, the field needs to be selected and its object name edited. Select text field **→ Menu Edit → name...** to change the name accordingly.
 
 .. image:: ../../../figures/print_template_name.png
     :width: 100%
@@ -163,11 +163,11 @@ Adapt templates:
 
   - Arrange elements into the foreground
 
-    + Right click Arrange --> To the front
+    + Right click Arrange → To the front
 
   - Arrange map element into the background
 
-    + Right click Arrange --> To the back
+    + Right click Arrange → To the back
 
 * Select all
 
@@ -205,7 +205,7 @@ The text in the print template can be changed in many ways. Besides the size of 
 .. image:: ../../../figures/print_client_example_colour_nav.png
      :scale: 80
 
-Or **right-click the selected text** --> dialogue window **Character** --> **Font Effects** --> **Font color**.
+Or **right-click the selected text** → dialogue window **Character** → **Font Effects** → **Font color**.
 
 .. image:: ../../../figures/print_client_example_colour_dialog.png
      :scale: 80

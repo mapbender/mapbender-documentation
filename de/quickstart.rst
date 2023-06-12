@@ -80,7 +80,7 @@ Falls Sie Schwierigkeiten haben Mapbender zu starten, überprüfen Sie, ob der A
 
 
 Starten von Mapbender im Entwicklungsmodus 
-==========================================
+------------------------------------------
 
 Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über die Anwendung an (Logging, Fehlermeldungen, Datenbankabfragen, Speicherverbrauch, Zeit und mehr). Dieser Modus ist nur über localhost verfügbar.
 
@@ -96,7 +96,7 @@ Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über d
 
 
 Das Backend
-===========
+-----------
 
 #. Nach dem erfolgreichen Start erscheint die Anwendungsübersicht des Mapbender-Backends. Das Backend listet nicht angemeldeten Besuchern die öffentlichen Anwendungen auf. Die Anwendungen werden mit Vorschaubild, Titel, URL-Titel und Beschreibung aufgelistet.
 
@@ -108,7 +108,7 @@ Nach erfolgreicher Anmeldung werden Sie zum Administrationsbackend weitergeleite
 
 
 Anwendungsübersicht
-===================
+-------------------
 
 In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendungen. Für den Administrator stehen folgende Funktionen zur Verfügung:
 
@@ -164,7 +164,7 @@ Anwendungen können bearbeitet werden: Von der Anwendungsübersichtsseite aus is
 
 Mapbender-Anwendungen bestehen aus den Bereichen Obere Werkzeugleiste, Sidepane, Kartenbereich und Fußzeile. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
 
-#. Wählen Sie ``Anwendungen -->`` |mapbender-button-edit| ``Button --> Layouts`` 
+#. Wählen Sie ``Anwendungen`` → |mapbender-button-edit| ``Button`` → ``Layouts`` 
 
 #. Klicken Sie auf den |mapbender-button-add| ``Button`` neben einem Bereich, um einen Überblick über die dort verfügbaren Elemente zu erhalten.
 
@@ -233,7 +233,7 @@ Versuchen Sie es selbst
 Datenquellen (Sources) verwenden
 ================================
 
-In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`Layerst <layerset_de>` .
+In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`Layerset <layerset_de>` .
 
 Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
 
@@ -291,7 +291,7 @@ Konfiguration von Diensten
 
 Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie sich nicht alle Ebenen anzeigen lassen, oder Sie möchten die Reihenfolge oder den Titel der Ebenen ändern, die Info-Abfrage für einzelne Ebenen verhindern oder den Minimal-/Maximalmaßstab ändern.
 
-#. Wählen Sie  ``Anwendung -->`` |mapbender-button-edit| ``Button --> Layerset -->`` |mapbender-button-edit| ``Instanz bearbeiten``, um eine Instanz zu konfigurieren.
+#. Wählen Sie  ``Anwendung`` → |mapbender-button-edit| ``Button`` → ``Layerset`` → |mapbender-button-edit| ``Instanz bearbeiten``, um eine Instanz zu konfigurieren.
 
 #. Sie können nun Ihren Dienst konfigurieren.
 
@@ -382,7 +382,7 @@ Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. N
 Benutzer anlegen
 ----------------
 
-#. Um einen Benutzer anzulegen, gehen Sie zu ``Sicherheit --> Benutzer --> Neuen Benutzer hinzufügen``.
+#. Um einen Benutzer anzulegen, gehen Sie zu ``Sicherheit`` → ``Benutzer`` → ``Neuen Benutzer hinzufügen``.
 
 #. Wählen Sie einen Benutzernamen.
 
@@ -406,7 +406,7 @@ Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reite
 Gruppen anlegen
 ---------------
 
-#. Erzeugen Sie eine Gruppe über  ``Sicherheit --> Gruppen --> Neue Gruppe hinzufügen``.
+#. Erzeugen Sie eine Gruppe über  ``Sicherheit`` → ``Gruppen`` → ``Neue Gruppe hinzufügen``.
 
 #. Wählen Sie einen Namen und eine Beschreibung für Ihre Gruppe.
 
@@ -427,7 +427,7 @@ Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Diese beruhen
 * master: kann anzeigen, editieren und löschen und diese Rechte außerdem weitergeben
 * owner: Besitzer darf alles (darf auch master- und owner-Recht vergeben)
 
-Weisen Sie einem Benutzer über ``Sicherheit --> Benutzer --> Benutzer bearbeiten --> Sicherheit`` Rechte zu.
+Weisen Sie einem Benutzer über ``Sicherheit`` → ``Benutzer`` → ``Benutzer bearbeiten`` → ``Sicherheit`` Rechte zu.
 
   .. image:: ../figures/de/mapbender_roles.png
 
@@ -435,7 +435,7 @@ Weisen Sie einem Benutzer über ``Sicherheit --> Benutzer --> Benutzer bearbeite
 Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
 -------------------------------------------------------
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen -->`` |mapbender-button-edit| ``Button`` einer Anwendung.
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen`` → |mapbender-button-edit| ``Button`` einer Anwendung.
 
 #. Wählen Sie ``Sicherheit``.
 
@@ -455,7 +455,7 @@ Zuweisen einzelner Elemente zu Benutzern/Gruppen
 
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Der Zugriff kann darüber hinaus für einzelne Elemente noch genauer definiert werden, sodass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen -->`` |mapbender-button-edit| ``Button`` einer Anwendung.
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen`` → |mapbender-button-edit| ``Button`` einer Anwendung.
 
 #. Wählen Sie ``Layouts``.
 

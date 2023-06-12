@@ -150,15 +150,15 @@ Eine Konfiguration könnte wie folgt aussehen:
 .. code-block:: yaml
 
     # OWSProxy Configuration
-        ows_proxy3_logging: false
-        ows_proxy3_obfuscate_client_ip: true
-        ows_proxy3_host: myproxy
-        ows_proxy3_port: 8080
+        ows_proxy3_logging: false             # Protokollierung von Anfragen, Standard ist false, true protokolliert in Tabelle owsproxy_log 
+        ows_proxy3_obfuscate_client_ip: true  # Verbergen der Client IP, Standard ist true, true verbirgt das letzte Byte der IP-Adresse des Clients
+        ows_proxy3_host: myproxy              # Proxy-Definition für die Verbindung über einen Proxy-Server. Hostname des Proxyservers
+        ows_proxy3_port: 8080                 # Proxy-Definition für die Verbindung über einen Proxy-Server. Port des Proxyservers
         ows_proxy3_connecttimeout: 60
         ows_proxy3_timeout: 90
-        ows_proxy3_user: ~
-        ows_proxy3_password: ~
-        ows_proxy3_noproxy:
+        ows_proxy3_user: ~                    # Benutzername für Proxyserver (bei Bedarf Benutzer für Proxyserver festlegen)
+        ows_proxy3_password: ~                # Passwort für den Proxy-Server (setzen Sie das Passwort für den Proxy-Server, falls definiert)
+        ows_proxy3_noproxy:                   # Liste der Hosts, bei denen die Verbindungen nicht über den Proxyserver erfolgen soll
             - 192.168.1.123
 
 
@@ -387,14 +387,14 @@ Export/Import von YAML Anwendungsdateien über die Benutzeroberfläche
 
 **Export**
 
-Sie können eine Anwendung unter **Anwendungen --> Exportieren** als JSON oder YAML exportieren.
+Sie können eine Anwendung unter **Anwendungen** → **Exportieren** als JSON oder YAML exportieren.
 
 .. image:: ../../figures/de/Export_Applikation.png
 
 
 **Import**
 
-Unter **Anwendungen --> Importieren** kann die Exportdatei in eine Mapbender-Installation importiert werden.
+Unter **Anwendungen** → **Importieren** kann die Exportdatei in eine Mapbender-Installation importiert werden.
 
 .. image:: ../../figures/de/Import_Applikation.png
 

@@ -48,8 +48,9 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 #. Configuration of the Layertree itself
 
 Layers are included in the application via the **Layerset** tab in the backend.
-The instances are the references to the individual WMS services. With the large plus button, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
-For a detailed documentation on how the services can be integrated and registered correctly, please head to the documentation of `layersets <../backend/layerset.html>`_ and `sources <../backend/sources.html>`_. 
+
+The instances are the references to the individual WMS services. With the large ``+`` button, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
+For a detailed documentation on how the services can be integrated and registered correctly, please head to the documentation of `layersets <../backend/layerset.html>`_ and `sources <../backend/source.html>`_.
 
 .. figure:: ../../../figures/mapbender_add_source_to_application.png
            :scale: 80
@@ -178,6 +179,7 @@ In the example, we define two layersets with two instances each:
 * Layerset Project NRW:
     * Instance `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
     * Instance `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+
 * Layerset World: 
     * Instance OSM  Demo Service http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
     * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 

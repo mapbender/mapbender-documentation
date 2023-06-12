@@ -1,4 +1,4 @@
-.. persistant_map_view:
+.. _persistant_map_view:
 
 Persistent map view
 *******************

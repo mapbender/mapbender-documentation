@@ -283,7 +283,7 @@ Release date: 13.07.2018
 
 **New functions:**
 
-* QGIS Server layer ordering, documented at :ref:`layerset`
+* QGIS Server layer ordering, documented at layerset
 * New element: :ref:`coordinate_utility`
 * Mouse-Over in SearchRouter
 * GPS Button in POI
