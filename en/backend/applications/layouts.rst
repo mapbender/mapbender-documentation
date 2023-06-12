@@ -80,6 +80,7 @@ Every element offers a set of buttons for configuration. The button area helps c
 The following button functions are available:
 
 .. image:: ../../../figures/mapbender_layouts_button_area.png
+    :alt: Mapbender Button Area
 
 
 * **Toggle show/hide element**: A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the backend.

@@ -56,14 +56,14 @@ Sidepane-Konfigurationsmöglichkeiten
 Die Ansichtsoptionen für die Sidepane können im Sidepane-Bereich im Mapbender-Backend ausgewählt werden. Dazu genügt ein Klick auf den |mapbender-button-edit| Button:
 
 .. image:: ../../../figures/de/sidepane_backend.png
-     :width: 100%
+    :alt: Mapbender Sidepane Konfiguration
 
 
-    * **Typ**: Siehe Funktionsbeschreibung unten.
-    * **Bildschirmtyp** (Alle, Mobil, Desktop. Standard: Alle) Bei dieser Option wird der Bereich für die nicht ausgewählte Geräteart ausgeblendet. *Alle* zeigt die Region auf allen Geräten an.
-    * **Breite** (in Pixeln, Standard: 350 px) Definiert über einen Pixelwert die Breite der Sidepane in der Anwendung.
-    * **Position** (Links, Rechts. Standard: Links) gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
-    * Checkbox **Geschlossen starten** (Standard: deaktiviert) hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & wieder einklappbar.
+* **Typ**: Siehe Funktionsbeschreibung unten.
+* **Bildschirmtyp** (Alle, Mobil, Desktop. Standard: Alle) Bei dieser Option wird der Bereich für die nicht ausgewählte Geräteart ausgeblendet. *Alle* zeigt die Region auf allen Geräten an.
+* **Breite** (in Pixeln, Standard: 350 px) Definiert über einen Pixelwert die Breite der Sidepane in der Anwendung.
+* **Position** (Links, Rechts. Standard: Links) gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
+* **Geschlossen starten** (Standard: deaktiviert) hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & wieder einklappbar.
 
 Die Option **Typ** zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an:
 
@@ -80,14 +80,15 @@ Jedem Element kann ein konfigurierter Button zugewiesen werden. Die Buttonleiste
 Dabei verfügen die Buttons über folgende Optionen:
 
 .. image:: ../../../figures/mapbender_layouts_button_area.png
+    :alt: Buttonleiste der Elemente
 
 
-  * **aktiv/inaktiv**: Ein aktives Element ist in der Anwendung freigeschaltet. Ein inaktives Element kann zwar bearbeitet werden, ist aber in der Anwendung ausgeblendet.
-  * **Auf Mobilgeräten anzeigen**: Zeigt Elemente nur auf mobilen Geräten an.
-  * **Auf großen Bildschrimen anzeigen**: Zeigt Elemente nur auf Desktop-Geräten an.
-  * **Bearbeiten**: Erlaubt die Anpassung des Elements.
-  * **ACL Element**: Erlaubt die Konfiguration von Element-Sichtbarkeiten bei bestimmten Berechtigungen.
-  * **Löschen**: Entfernt ein Element vom Back- und Frontend.
+* **aktiv/inaktiv**: Ein aktives Element ist in der Anwendung freigeschaltet. Ein inaktives Element kann zwar bearbeitet werden, ist aber in der Anwendung ausgeblendet.
+* **Auf Mobilgeräten anzeigen**: Zeigt Elemente nur auf mobilen Geräten an.
+* **Auf großen Bildschrimen anzeigen**: Zeigt Elemente nur auf Desktop-Geräten an.
+* **Bearbeiten**: Erlaubt die Anpassung des Elements.
+* **ACL Element**: Erlaubt die Konfiguration von Element-Sichtbarkeiten bei bestimmten Berechtigungen.
+* **Löschen**: Entfernt ein Element vom Back- und Frontend.
 
 
 Bearbeiten
