@@ -1,71 +1,69 @@
 .. _layouts_de:
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
+ .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
+
+ .. |mapbender-button-key| image:: ../../../figures/mapbender_button_key.png
+  
 Layouts
 #######
 
-Im diesem Reiter werden die Regionen einer Anwendung definiert, in die Elemente bzw. Funktionen eingebaut werden können. Für unterschiedliche Template-Vorlagen gibt es unterschiedliche Regionen (auch: Bereiche oder Layouts).
+In Layouts werden die Regionen einer Anwendung und die in ihnen enthaltenen Elemente aufgelistet.
 Eine Übersicht über alle Elemente gibt es unter :ref:`functions_de`.
+
+.. note:: Unterschiedliche Templates können durch unterschiedliche Regionen strukturiert sein.
+
 
 Layout des Fullscreen Templates:
 
-  * Obere Werkzeugleiste (Bereich für die Platzierung von Buttons)
-  * Sidepane (Seitenleiste für den Ebenenbaum, Legende, Suche,...)
-  * Kartenbereich (Karte, Maßstabsleiste,...)
-  * Fußzeile (mit Impressum, Aktivitätsanzeige...)
+  * Obere Werkzeugleiste (Region für die Platzierung von Buttons, Links, HTML, ...)
+  * Sidepane (Seitenleisten-Region für den Ebenenbaum, die Legende, die Suche, den Druck, HTML, ...)
+  * Kartenbereich (Region für die Karte, die Maßstabsleiste, ...)
+  * Fußzeile (Region für das Impressum, die Aktivitätsanzeige, die Maßstabsauswahl, ...)
 
 
 Layout des Mobilen Templates:
 
-  * Fußzeile (Bereich für die Platzierung von Buttons)
-  * Kartenbereich (Karte, Navigationswerkzeug)
-  * MobilePane (Bereich, der über der Karte eingeblendet wird, wenn sich Dialoge wie Themenauswahl, Hintergrundwechsel oder Infoabfrage öffnen)
+  * Fußzeile (Region für das Copyright, die Aktivitätsanzeige, die Maßstabsauswahl, ...)
+  * Kartenbereich (Region für die Karte, die Maßstabsleiste, ...)
+  * MobilePane (Region für Dialoge wie den Ebenenbaum, die Legende, den Hintergrundwechsler, die Infoabfrage, ...)
 
 
-Das ``+`` -Zeichen rechts oberhalb des Bereichs ermöglicht das Hinzufügen von Elementen. Zuvor öffnet sich eine Dialogmaske, die die Auswahl eines Elements und dessen anschließende Konfiguration ermöglicht.
+Der |mapbender-button-add| Button rechts oberhalb des Bereichs ermöglicht das Hinzufügen von Elementen. Nach dem Klick auf den Button öffnet sich eine Dialogmaske, die die Auswahl eines Elements und dessen anschließende Konfiguration ermöglicht.
 
 Alle eingebauten Funktionen lassen sich per Drag & Drop zwischen den Regionen verschieben.
 
-Mit der Ausnahme des Kartenbereichs und der MobilePane lassen sich alle Regionen über das Einstellungsrad in der oberen rechten Ecke individuell konfigurieren.
+Die Regionen können über den |mapbender-button-edit| Button in der oberen rechten Ecke individuell konfiguriert werden.
+
+Die unterschiedlichen Regionen bieten folgende Konfigurationsmöglichkeiten:
 
 
 Konfigurationsmöglichkeiten der Oberen Werkzeugleiste und Fußzeile
 ******************************************************************
-Die Obere Werkzeugleiste und die Fußzeile bieten folgende Konfigurationsmöglichkeiten über das Einstellungsrad an:
+Die Regionen der Oberen Werkzeugleiste und der Fußzeile bieten folgende Konfigurationsmöglichkeiten über den |mapbender-button-edit| Button an:
 
-  * Bildschirmtyp (Alle, Mobil, Desktop)
-  * Ausrichtung (Links, Rechts, Zentriert. Standard: Links)
-  * Checkbox ``Schaltflächen zu Menü zusammenfassen``
-  * ``Menütitel``-Textfeld
+  * **Bildschirmtyp** (Alle, Mobil, Desktop. Standard: Alle) Bei dieser Option wird der Bereich für die nicht ausgewählte Geräteart ausgeblendet. *Alle* zeigt die Region auf allen Geräten an.
+  * **Ausrichtung** (Links, Rechts, Zentriert. Standard: Rechts.): Die Ausrichtung definiert die Positionierung der Elemente innerhalb der Bereiche.
+  * **Checkbox Schaltflächen zu Menü zusammenfassen**: Konfiguriert ein Ausklappmenü, welches die in den Bereich eingebundenen Elemente umfasst.
+  * **Menütitel-Textfeld**: Mit dieser Textbox lässt sich dem Ausklappmenü eine Beschriftung zuweisen.
 
-Bei der Auswahl eines **Bildschirmtyps** wird der Bereich für andere Gerätearten ausgeblendet.
-
-.. note:: Die Auswahl eines Bildschirmtyps ist im Mapbender Mobile Template nicht möglich.
-
-Die **Ausrichtung** bestimmt über die Positionierung der Elemente innerhalb der Bereiche.
-
-Mithilfe der **Checkbox** kann ein Ausklappmenü konfiguriert werden, welches die in den Bereich eingebundenen Elemente umfasst.
-
-Über das **Textfeld** ist es außerdem möglich, dem Ausklappmenü eine Beschriftung zuzuweisen.
-
-.. tip:: **Hinweis**: Das Ausklappmenü ist besonders sinnvoll, wenn die Anwendung für mobile Endgeräte ausgerichtet sein soll. Unter :ref:`CSS_de` findet sich ein Codebaustein, der dem Menü einen Scrollbalken hinzufügt und somit die Bedienbarkeit bei Anwendungen mit vielen Elementen erhöht. 
+.. tip:: **Hinweis**: Das Ausklappmenü ist besonders sinnvoll, wenn die Anwendung für mobile Endgeräte ausgerichtet sein soll. Unter :ref:`CSS_de` findet sich ein Codebaustein, der die Bedienbarkeit bei Anwendungen mit vielen Elementen erhöht. 
 
 
 Sidepane-Konfigurationsmöglichkeiten
 ************************************
-Das Fullscreen Template bietet eine vielseitig konfigurierbare Sidepane an.
-Die Ansichtsoptionen für die Sidepane können im Sidepane-Bereich im Mapbender-Backend ausgewählt werden. Dazu genügt ein Klick auf das Einstellungsrad.
-Im Anschluss können folgende Optionen konfiguriert werden:
-
-    * Typ
-    * Bildschirmtyp
-    * Breite (in Pixeln)
-    * Position
-    * Checkbox **Geschlossen starten**
-
+Die Ansichtsoptionen für die Sidepane können im Sidepane-Bereich im Mapbender-Backend ausgewählt werden. Dazu genügt ein Klick auf den |mapbender-button-edit| Button:
 
 .. image:: ../../../figures/de/sidepane_backend.png
-     :width: 100%
+    :alt: Mapbender Sidepane Konfiguration
 
+
+* **Typ**: Siehe Funktionsbeschreibung unten.
+* **Bildschirmtyp** (Alle, Mobil, Desktop. Standard: Alle) Bei dieser Option wird der Bereich für die nicht ausgewählte Geräteart ausgeblendet. *Alle* zeigt die Region auf allen Geräten an.
+* **Breite** (in Pixeln, Standard: 350 px) Definiert über einen Pixelwert die Breite der Sidepane in der Anwendung.
+* **Position** (Links, Rechts. Standard: Links) gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
+* **Geschlossen starten** (Standard: deaktiviert) hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & wieder einklappbar.
 
 Die Option **Typ** zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an:
 
@@ -76,59 +74,37 @@ Die Option **Typ** zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an
   - ``Unformatiert`` verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an.
 
 
-Der **Bildschirmtyp** legt fest, für welche Geräteart (Alle, Mobil oder Desktop) die Sidepane angezeigt werden soll.
-
-Über die **Breite** kann ein Pixelwert definiert werden, der die Breite der Sidepane in der Anwendung verändert.
-
-Die **Position** gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
-
-Die Checkbox **Geschlossen starten** hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & erneut einklappbar.
-
-
 Element-Buttonleiste
 ********************
-Die Buttonleiste dient der Konfiguration eines Elements. Die Buttons liefern folgende Optionen:
+Jedem Element kann ein konfigurierter Button zugewiesen werden. Die Buttonleiste dient der Konfiguration dieser Buttons.
+Dabei verfügen die Buttons über folgende Optionen:
 
-  * aktiv/inaktiv
-  * Auf Mobilgeräten anzeigen
-  * Auf großen Bildschrimen anzeigen
-  * Bearbeiten
-  * :ref:`acl_de` Element
-  * Löschen
+.. image:: ../../../figures/mapbender_layouts_button_area.png
+    :alt: Buttonleiste der Elemente
 
 
-Element aktiv/inaktiv schalten
-==============================
-Über den Auge-Button kann der Status eines Elements zwischen aktiv und inaktiv geschaltet werden. Ein aktives Element ist im Frontend sichtbar. Ein inaktives Element ist im Frontend nicht sichtbar, es lässt sich jedoch im Backend weiterhin konfigurieren.
-
-Wenn ein oder mehrere Elemente nur für einen bestimmten Bildschirmtyp angezeigt oder ausgeblendet werden soll, nutzen Sie stattdessen die Funktionen des Responsiven Designs.
-
-
-Responsives Design
-==================
-Mapbender bietet ein responsives Webdesign zur besseren Übersichtlichkeit an. Elemente können für unterschiedliche Ansichten individuell konfiguriert werden (Mobile Endgeräte, große Bildschirme oder beides).
-
-.. image:: ../../../figures/de/responsive_design_overview.png
-     :width: 100%
-
-Alternativ kann das Design auch für ganze Bereiche über die Option **Bildschirmtyp** definiert werden. 
+* **aktiv/inaktiv**: Ein aktives Element ist in der Anwendung freigeschaltet. Ein inaktives Element kann zwar bearbeitet werden, ist aber in der Anwendung ausgeblendet.
+* **Auf Mobilgeräten anzeigen**: Zeigt Elemente nur auf mobilen Geräten an.
+* **Auf großen Bildschrimen anzeigen**: Zeigt Elemente nur auf Desktop-Geräten an.
+* **Bearbeiten**: Erlaubt die Anpassung des Elements.
+* **ACL Element**: Erlaubt die Konfiguration von Element-Sichtbarkeiten bei bestimmten Berechtigungen.
+* **Löschen**: Entfernt ein Element vom Back- und Frontend.
 
 
 Bearbeiten
 ==========
-Öffnet die individuelle Konfigurationsmaske eines Elements. Diese finden Sie in der Dokumentation des jeweiligen Elements unter :ref:`functions_de`.
+Öffnet über den |mapbender-button-edit| Button die individuelle Konfigurationsmaske eines Elements. Diese finden Sie in der Dokumentation des jeweiligen Elements unter :ref:`functions_de`.
 
 
 Acl Element
 ===========
-Öffnet einen **Element sichern**-Dialog, der ein explizites Konfigurieren der :ref:`acl_de` Regel **View** für Benutzer und Gruppen ermöglicht.
+Öffnet über den |mapbender-button-key| Button einen **Element sichern**-Dialog, der ein explizites Konfigurieren der :ref:`acl_de` Regel **View** für Benutzer und Gruppen ermöglicht.
 
-Ein gewähltes Element lässt sich auf diese Weise explizit sichtbar bzw. nicht sichtbar schalten. Standardmäßig ist die elementspezifische Acl-Konfiguration deaktiviert (grauer Schlüssel-Button), sodass pro Element keine berechtigungsabhängigen Einschränkungen gelten.
+Ist dies nicht konfiguriert, hat das Element keine expliziten Zugangsbeschränkungen und sollte allen Benutzern und Gruppen zur Verfügung stehen.
 
+Sofern die **View**-Regel für bestimmte Benutzer oder Gruppen gesetzt ist, können ausschließlich dort Eingetragene auf das Element zugreifen.
 
-  #. Wählen Sie den Schlüssel-Button zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
-
-  #. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend die **view**-Berechtigung. Das Element wird so innerhalb der Anwendung abgesichert und nur den gewählten Benutzer(n)/Gruppe(n) zugänglich.
+Beschränken Sie den Zugriff, indem Sie Benutzer über den |mapbender-button-add| Button hinzufügen. Eine gesetzte Checkbox zeigt an, dass die benötigten Berechtigungen zur Verfügung stehen.
 
 .. image:: ../../../figures/de/fom/acl_secure_element.png
      :width: 100%
@@ -136,7 +112,7 @@ Ein gewähltes Element lässt sich auf diese Weise explizit sichtbar bzw. nicht 
 
 Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
 
-.. image:: ../../../figures/de/fom/element_security_key_popup.png
+.. image:: ../../../figures/fom/element_security_key_popup.png
      :width: 100%
 
 
@@ -145,4 +121,4 @@ Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :re
 
 Löschen
 ==========
-Löscht das Element mitsamt der konfigurierten Einstellung aus Front- und Backend. Der Löschvorgang muss im Anschluss bestätigt werden.
+Löscht das Element mitsamt der konfigurierten Einstellung aus Front- und Backend.

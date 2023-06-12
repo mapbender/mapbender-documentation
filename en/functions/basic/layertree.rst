@@ -30,9 +30,9 @@ Functions
 
 Please also configure the elements below that are connected to the Layertree:
 
-* `Layersets <../backend/layerset.html>`_
+* `Layersets <../../backend/applications/layerset.html>`_
 * `Map element <../basic/map.html>`_
-* `Sources <../backend/sources.html>`_
+* `Sources <../../backend/sources.html>`_
 
 
 Configuration
@@ -50,7 +50,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 Layers are included in the application via the **Layerset** tab in the backend.
 
 The instances are the references to the individual WMS services. With the large ``+`` button, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
-For a detailed documentation on how the services can be integrated and registered correctly, please head to the documentation of `layersets <../backend/layerset.html>`_ and `sources <../backend/source.html>`_.
+For a detailed documentation on how the services can be integrated and registered correctly, please head to the documentation of `layersets <../../backend/applications/layerset.html>`_ and `sources <../../backend/sources.html>`_.
 
 .. figure:: ../../../figures/mapbender_add_source_to_application.png
            :scale: 80
@@ -86,7 +86,7 @@ In the example, we defined one **Layerset** with one instance:
     * Instance OSM Demo Service https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
 
 The registered instance of the OSM  Demo Service is automatically included in Mapbender's installation. The WMS only has to be integrated into an existing Layerset. Switch to the tab Layersets. The following example uses the Layerset "World". 
-In case of difficulties with the integration, the `Layersets <../backend/layerset.html>`_ documentation provides useful information.
+In case of difficulties with the integration, the `Layersets <../../backend/applications/layerset.html>`_ documentation provides useful information.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple_en.png
            :scale: 80
@@ -184,7 +184,7 @@ In the example, we define two layersets with two instances each:
     * Instance OSM  Demo Service http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
     * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
-For the configuration of the layersets, the four services mentioned above were added as instances (For detailed information see above or in the documentation of the `Layersets <../backend/layerset.html>`_ and `Sources <../backend/sources.html>`_).
+For the configuration of the layersets, the four services mentioned above were added as instances (For detailed information see above or in the documentation of the `Layersets <../../backend/applications/layerset.html>`_ and `Sources <../../backend/sources.html>`_).
 
 For this example, the above mentioned steps were performed to add the Layerset "World" **[2]** with the instance "osm". Now we add the instance "GEBCO" in this Layerset. 
 To use the thematic grouping, we create a new Layerset named "Project NRW" **[3]** and load the two instances "DTK50 NRW" and "Forest NRW" into our new Layerset "Project NRW".  
