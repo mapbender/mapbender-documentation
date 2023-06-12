@@ -122,7 +122,7 @@ Adjust the height with this parameter and an individual value:
 Working with large WMS Services with many layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: When I try to use a WMS Service with many layers (> 100) into an application, the configuration of the `Layerset-Instance <functions/backend/layerset.html>`_ only takes and presents an incorrect amount of layers. In addition, the wms instance cannot be saved. Why?
+Q: When I try to use a WMS Service with many layers (> 100) into an application, the configuration of the `Layerset-Instance <backend/applications/layerset.html>`_ only takes and presents an incorrect amount of layers. In addition, the wms instance cannot be saved. Why?
 
 A: To solve the problem, navigate to the php parameter `max-input_vars <https://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_. It defines the number of possible input variables. The default value is 1000 (depending on the php version). 
 For a WMS with many layers, the number of input values is higher than the default value. You have to change the parameter to a higher value (e.g. 2000). 
