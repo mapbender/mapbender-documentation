@@ -20,7 +20,7 @@ Configuration
 * **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
 * **Max. Extent:** Maximal map extent, defined by BBOX parameters.
 * **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
-* **Default resolution [dpi]**: The default resolution adapts to the screen resolution based on the configured value in dpi.
+* **Default resolution [dpi]**: The default resolution adapts to the screen resolution based on the configured value in dpi. Default: 96 dpi.
 * **Fixed zoom steps:** This option activates a zoom behaviour with fixed scales. This is useful to increase visual quality of services that are cached on very particular resolution steps only. When set true, scale denominator snaps to one of the values given in the *scales* option as defined below (default: false).
 * **Scales (csv):** A csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
 * **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
