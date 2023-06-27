@@ -47,7 +47,7 @@ The field *max. Extent* states the maximum zoomable extent of the map applicatio
 
 The *Default resolution* in dpi defines the resolution of the device being used; the corresponding default value of 96 dpi can be adjusted through this field. If the displayed resolution of the map does not match that of the WMS service, changing this value can help to align the map accordingly.
 
-.. note:: The scale-dependent display currently only works reliably on desktops with regular resolution.
+.. note:: The scale-dependent resolution currently only works reliably on desktops with regular resolution. Moreover, *Default resolution* is only available from Mapbender 3.3.5 onwards.
 
 Furthermore, the field *scales (csv)* defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`navigation_toolbar`. *Fixed zoom steps* were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
      
