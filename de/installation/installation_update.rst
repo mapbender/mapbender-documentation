@@ -28,7 +28,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 .. code-block:: bash
 
  # Laden Sie die neue Version herunter
- wget -O https://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
+ wget https://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
  
  tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz
  
