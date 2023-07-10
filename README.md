@@ -8,9 +8,6 @@ The sources are [on Github](https://github.com/mapbender/mapbender-documentation
 
 The website code is generated using [Sphinx](http://sphinx-doc.org/), therefore the documentation source is written in [Restructured Text](http://sphinx-doc.org/rest.html).
 
-You can find instructions on how the documentation is structured in chapter [How to write Mapbender Documentation?](http://doc.mapbender.org/en/book/development/documentation_howto.html) or directly [in this Git-Repository](https://github.com/mapbender/mapbender-documentation/blob/master/en/documentation_howto.rst).
-
-
 To build the website locally, you need to install Sphinx. Install it in Debian-based distributions via
 
 ```bash
