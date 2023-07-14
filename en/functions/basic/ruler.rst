@@ -16,7 +16,15 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. It will be displayed in the measuring window in the application itself.
-* **Type:** Choose type of element: line or area.
+* **Geometry:** Choose type of element: line or area. Mandatory field.
+* **Helptext:** Displays a help text. The default value `mb.core.ruler.help` translates to "Double-click to end drawing" (depending on the browser's display language).
+* **Line width while drawing:** Pixel value that defines the stroke width during drawing.
+* **Stroke color:** RGBA value that defines the stroke color. Can be changed using a color picker after clicking on the input field.
+* **Stroke width (pixels):** Pixel value that defines the stroke width of the measured geometry.
+* **Fill color:** RGBA value that defines the fill color of a measured area. Can be changed using a color picker after clicking on the input field. When *Line* geometry is selected, this option has no effect.
+* **Font color:** RGBA value that defines the font color of the calculated result displayed within the geometry. Can be changed using a color picker after clicking on the input field. When *Line* geometry is selected, this option has no effect.
+* **Font size:** Numeric value that defines the font size of the area displayed within the geometry. When *Line* geometry is selected, this option has no effect.
+
 
 YAML-Definition:
 ----------------

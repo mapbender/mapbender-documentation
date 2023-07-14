@@ -16,7 +16,15 @@ Konfiguration
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird im Backend in der Layouts Liste angezeigt. In der Anwendung selbst wird der Titel im Messfenster angezeigt.
-* **Type:** Typ des Elements, entweder 'line' oder 'area' (misst nur einzelne Linien oder addiert diese zu einer Fläche).
+* **Geometrie:** Typ des Elements, entweder 'line' oder 'area' (misst nur einzelne Linien oder addiert diese zu einer Fläche). Pflichtfeld.
+* **Hilfetext:** Gibt einen Hilfetext aus: Der Standardwert mb.core.ruler.help bedeutet "Doppelklicken zum Beenden" (je nach Anzeigesprache des Browsers).
+* **Linienstärke während des Zeichnens:** Zahlenwert in Pixel, der die Strichstärke während des Zeichnens definiert.
+* **Strichfarbe:** RGBA-Wert, der die Strichfarbe definiert. Kann nach einem Klick in die Eingabemaske über einen Farbwähler geändert werden.
+* **Linienstärke (Pixel):** Zahlenwert in Pixel, der die Strichstärke der gemessenen Geometrie definiert.
+* **Füllfarbe:** RGBA-Wert, der die Füllfarbe einer Fläche definiert. Kann nach einem Klick in die Eingabemaske über einen Farbwähler geändert werden. Wird als Geometrie *Linie* gewählt, bleibt die Option ohne Effekt.
+* **Schriftfarbe:** RGBA-Wert, der die Schriftfarbe des in der Geometrie angezeigten numerischen Flächeninhalts ausgibt. Kann nach einem Klick in die Eingabemaske über einen Farbwähler geändert werden. Wird als Geometrie *Linie* gewählt, bleibt die Option ohne Effekt.
+* **Schriftgröße:** Zahlenwert, der die Schriftgröße der in der Geometrie angezeigten Fläche definiert. Wird als Geometrie *Linie* gewählt, bleibt die Option ohne Effekt.
+
 
 YAML-Definition:
 ----------------
