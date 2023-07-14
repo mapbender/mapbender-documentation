@@ -229,7 +229,7 @@ Beim Laden der neuen Anwendung wird eine CSS-Datei im web/assets-Verzeichnis ang
 
 * ``web/assets/WorkshopDemoBundle__demo_fullscreen__css.css``
 
-Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter ``web/assets`` generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
+Wenn Sie die CSS-Datei weiter bearbeiten, müssen Sie die unter ``web/assets`` generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
 
 .. code-block:: bash
 
