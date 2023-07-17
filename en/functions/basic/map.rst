@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/map_dialog.png
-     :scale: 80
+     :width: 75%
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Layersets:** Refers to a layerset. Layersets have to be defined first and can then be referred to.
@@ -20,6 +20,7 @@ Configuration
 * **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
 * **Max. Extent:** Maximal map extent, defined by BBOX parameters.
 * **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
+* **Default resolution [dpi]**: The default resolution adapts to the screen resolution based on the configured value in dpi. Default: 96 dpi.
 * **Fixed zoom steps:** This option activates a zoom behaviour with fixed scales. This is useful to increase visual quality of services that are cached on very particular resolution steps only. When set true, scale denominator snaps to one of the values given in the *scales* option as defined below (default: false).
 * **Scales (csv):** A csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
 * **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
@@ -38,14 +39,17 @@ The map can entail all instances that are defined in the layerset. The following
 .. image:: ../../../figures/map_example_layersets.png
      :width: 100%
 
-In order to display all *Layersets* **(1)** on the map, they have to be activated. Multiple selections are possible as well. De-selected layersets can function as an overview. In the example, *main* is displayed on the main map and *overview* as an overview map.
+In order to display all *Layersets* on the map, they have to be activated. Multiple selections are possible as well. De-selected layersets can function as an :ref:`overview`. In the example, *main* is displayed on the main map and *overview* as an overview map.
 
-The field *SRS* **(2)** defines the coordinate reference system that is used at application start. In this example, the coordinate reference system EPSG 25832 or ETRS89/UTM Zone 32N was chosen. If the application should support other coordinate systems, simply add those in the *Other SRS* **(7)** field. In this example, the following codes are used: 25833 (ETRS89/UTM Zone 33N), 31466 (DHDN/3-degree Gauss-Kruger Zone 2), 31467 (DHDN/3-degree Gauss-Kruger Zone 3), 3857 (WGS 84/Pseudo-Mercator) and 4326 (WGS 84).
+The field *SRS* defines the coordinate reference system that is used at application start. In this example, the coordinate reference system EPSG:25832 or ETRS89/UTM Zone 32N was chosen. If the application should support other coordinate systems, simply add those in the *Other SRS* field. In this example, the following codes are used: EPSG:25833 (ETRS89/UTM Zone 33N), EPSG:31466 (DHDN/3-degree Gauss-Kruger Zone 2), EPSG:31467 (DHDN/3-degree Gauss-Kruger Zone 3), EPSG:3857 (WGS 84/Pseudo-Mercator) and EPSG:4326 (WGS 84).
 
-The field *max. Extent* **(3)** states the maximum zoomable extent of the map application. If there is data outside of the extent, it cannot be seen by the frontend user. The field *start Extent* **(4)** refers to the extent of the map that is visible when the application is started in the browser (in the example the city of Bonn). Furthermore, the field *scales (csv)* **(6)** defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`navigation_toolbar`. *Fixed zoom steps* **(5)** were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
+The field *max. Extent* states the maximum zoomable extent of the map application. If there is data outside of the extent, it will not appear in the map. The field *start Extent* refers to the extent of the map that is visible when the application is started in the browser (in this example: the city of Bonn).
 
-.. image:: ../../../figures/map_example_dialog.png
-     :scale: 80
+The *Default resolution* in dpi defines the resolution of the device being used; the corresponding default value of 96 dpi can be adjusted through this field. If the displayed resolution of the map does not match that of the WMS service, changing this value can help to align the map accordingly.
+
+.. note:: The scale-dependent resolution currently only works reliably on desktops with regular resolution. Moreover, *Default resolution* is only available from Mapbender 3.3.5 onwards.
+
+Furthermore, the field *scales (csv)* defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`navigation_toolbar`. *Fixed zoom steps* were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
      
 
 YAML-Definition:
