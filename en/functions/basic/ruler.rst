@@ -3,8 +3,8 @@
 Line/Area Ruler
 ***************
 
-The ruler is used to draw a line or area and display length/area in a dialog. You need a button to show this element. See :ref:`button` for inherited configuration options.
-To use both functions (measuring areas and lines) in an application, you need two buttons that are in the same pre-defined group. Selecting a type determines whether the element measures lines or areas. Each ruler element can only measure either lines or areas.
+The ruler is used to draw a line or area and display its length or area in a dialog. You need a :ref:`button` to show this element.
+Each ruler element can only measure either lines or areas. To use both functions (measuring areas and lines) in an application, you need two buttons that are in the same pre-defined group.
 
 .. image:: ../../../figures/ruler.png
      :scale: 80
