@@ -37,4 +37,9 @@ This template can be used to insert the element into a YAML application.
    class: Mapbender\CoreBundle\Element\Ruler # Class of element
    target: map                               # ID of Map element to query, e.g. 'map'
    type: line                                # Choose type 'line' or 'area'
-
+   strokeColor: 'rgba(16, 101, 93, 0.8)'     # Choose rgba value (line and area)
+   fillColor: rgba(100, 100, 100, 0.5)       # Choose rgba value (area only)
+   fontColor: 'rgba(0,0,0,1)'                # Choose rgba value (area only)
+   fontSize: 14                              # Choose numeric value (area only)
+   strokeWidth: 4                            # Choose pixel value (line and area)
+   strokeWidthWhileDrawing: 3                # Choose pixel value (line and area)
