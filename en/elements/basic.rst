@@ -1,7 +1,7 @@
-.. _basic_de:
+.. _basic:
 
-Basisfunktionen
-===============
+Base elements
+=============
 
 .. toctree::
    :maxdepth: 1
@@ -17,6 +17,6 @@ Basisfunktionen
    basic/overview.rst
    basic/ruler.rst
    basic/scalebar.rst
-   basic/scaledisplay.rst 
+   basic/scaledisplay.rst
    basic/scale_selector.rst
    basic/srs_selector.rst

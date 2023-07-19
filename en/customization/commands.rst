@@ -190,7 +190,7 @@ The queued print is disabled by default because it requires some external integr
 
 	mapbender.print.queueable: true
 
-Read more about the general characteristics of queued print at https://doc.mapbender.org/en/functions/export/printclient.html#queued-print or https://github.com/mapbender/mapbender/pull/1070
+Read more about the general characteristics of queued print at https://doc.mapbender.org/en/elements/export/printclient.html#queued-print or https://github.com/mapbender/mapbender/pull/1070
 
 The print assistant is then updated in the backend of Mapbender and two new lines appear: mode and queue. 
 Mode is set to "queue" and queue is set to "global", if the print jobs are expected to be accessible to all colleagues. 

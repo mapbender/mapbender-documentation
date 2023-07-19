@@ -331,7 +331,7 @@ Fußzeile
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
+Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/elements.html
 
 
 
@@ -349,7 +349,7 @@ Sidepane
 Kartenbereich
     Statt der Funktionen 'Maßstabsanzeige' und 'POI' ist die Funktion 'Koordinaten Utility' eingebunden.
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
+Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/elements.html
 
 
 

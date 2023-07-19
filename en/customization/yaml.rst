@@ -103,7 +103,8 @@ Language settings
 Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **app/config/parameters.yml**.
 If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language. We recommend en (English) or de (German) as fallback options.
 
-  Following language codes are available:
+Available language codes are:
+
     * en for English (default),
     * de for German,
     * tr for Turkish,
@@ -288,7 +289,7 @@ New YAML applications can be placed in the folder and will be automatically reco
 Mapbender Demo Map
 ------------------
 
-Following functions are pre implemented:
+The following elements are pre-implemented:
 
 Top toolbar
     * Layer tree (Button)
@@ -332,7 +333,7 @@ Footer
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
+Detailed descriptions of the elements: https://doc.mapbender.org/de/elements.html
 
 
 
@@ -345,12 +346,12 @@ Toolbar
     Instead of 'POI', 'Coordinates utility' is integrated.
 
 Sidepane
-    No functions pre-implemented.
+    No elements pre-implemented.
 
 Map area
-    Instead of 'Scale display' and 'POI', the function 'Coordinates utility' is integrated.
+    Instead of 'Scale display' and 'POI', the element 'Coordinates utility' is integrated.
 
-Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
+Detailed descriptions of the elements: https://doc.mapbender.org/de/elements.html
 
 
 
@@ -359,7 +360,7 @@ Mapbender mobile
 
 For a mobile template on smartphones and tablets.
 
-Following functions are pre-implemented:
+The following elements are pre-implemented:
 
 Footer
     * Themes (Button)

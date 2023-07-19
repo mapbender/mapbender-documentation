@@ -10,7 +10,7 @@ Layouts
 #######
 
 In Layouts werden die Regionen einer Anwendung und die in ihnen enthaltenen Elemente aufgelistet.
-Eine Übersicht über alle Elemente gibt es unter :ref:`functions_de`.
+Eine Übersicht über alle Elemente gibt es unter :ref:`elements_de`.
 
 .. note:: Unterschiedliche Templates können durch unterschiedliche Regionen strukturiert sein.
 
@@ -93,7 +93,7 @@ Dabei verfügen die Buttons über folgende Optionen:
 
 Bearbeiten
 ==========
-Öffnet über den |mapbender-button-edit| Button die individuelle Konfigurationsmaske eines Elements. Diese finden Sie in der Dokumentation des jeweiligen Elements unter :ref:`functions_de`.
+Öffnet über den |mapbender-button-edit| Button die individuelle Konfigurationsmaske eines Elements. Diese finden Sie in der Dokumentation des jeweiligen Elements unter :ref:`elements_de`.
 
 
 Acl Element

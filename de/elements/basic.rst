@@ -1,6 +1,6 @@
-.. _basic:
+.. _basic_de:
 
-Base functions
+Basis-Elemente
 ==============
 
 .. toctree::
@@ -17,6 +17,6 @@ Base functions
    basic/overview.rst
    basic/ruler.rst
    basic/scalebar.rst
-   basic/scaledisplay.rst
+   basic/scaledisplay.rst 
    basic/scale_selector.rst
    basic/srs_selector.rst
