@@ -41,7 +41,7 @@ This template can be used to insert the element into a YAML application.
 How to add a WMS by defining a link
 ====================================
 
-You can add a WMS to Mapbender by defining a link, e. g. in your :ref:`WMS featureinfo<feature_info>` or your search results. The link has to look like this:
+You can add a WMS to Mapbender by defining a link, e. g. in your :ref:`feature_info` or your search results. The link has to look like this:
 
 .. code-block:: html
 
