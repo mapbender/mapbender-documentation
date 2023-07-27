@@ -120,7 +120,7 @@ Weisen Sie zur Veränderung der Höhe diesem Parameter einen Wert zu:
 Problem bei WMS-Diensten mit vielen Layern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Beim Laden eines WMS mit vielen Layern (über 100) in eine Anwendung werden in der Konfiguration der `Layerset-Instance <backend/applications/layerset.html>`_  nur Teile der Layer übernommen und angezeigt. Die WMS-Instance kann außerdem nicht abgespeichert werden. Gibt es einen Weg, den WMS dennoch zu verwenden?
+F: Beim Laden eines WMS mit vielen Layern (über 100) in eine Anwendung werden in der :ref:`layerset`-Konfiguration nur Teile der Layer übernommen und angezeigt. Die WMS-Instance kann außerdem nicht abgespeichert werden. Gibt es einen Weg, den WMS dennoch zu verwenden?
 
 A: Mittels des PHP-Parameters `max-input_vars <https://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_ kann die Zahl der Eingabe-Variablen erhöht werden. Der Standardwert liegt bei 1000. 
 Die Zahl der Eingabe-Variablen ist bei einem WMS mit vielen Layern sehr hoch, vergleichbar mit der Anzahl der Auswahlmöglichkeiten innerhalb des WMS-Instance-Dialogs. Setzen Sie bei der Arbeit mit großen WMS mit vielen Layern den Parameter hoch, beispielsweise auf 2000. Die Zahl hängt direkt mit der Anzahl der Layer im WMS zusammen.

@@ -30,9 +30,9 @@ Funktionen
 
 Zur Konfiguration des Ebenenbaums gibt es verschiedene Verknüpfungspunkte zu anderen Elementen, die beachtet werden müssen: 
 
-* `Layersets <../../backend/applications/layerset.html>`_
-* `Kartenelement <map.html>`_
-* `Datenquellen <../../backend/sources.html>`_
+* :ref:`layerset_de`
+* :ref:`map_de`
+* :ref:`sources_de`
 
 
 Konfiguration
@@ -50,7 +50,7 @@ Um Layersets im Ebenenbaum nutzen zu können, sind verschiedene Anpassungen notw
 Über den Reiter **Layerset** können Layersets definiert und Datenquellen in eine Anwendung eingebunden werden. 
 
 Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den großen ``+``-Button kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im Backend registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
-Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, findet sich unter der `Datenquellen <../../backend/sources.html>`_ und `Layersets <../../backend/applications/layerset.html>`_. 
+Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, findet sich unter :ref:`sources_de` und :ref:`layerset_de`. 
 
 
 .. figure:: ../../../figures/de/mapbender_add_source_to_application.png
@@ -59,7 +59,7 @@ Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, 
 
            Einrichtung von Layersets für die Einbindung in den Ebenenbaum.
 
-Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen, müssen diese im `Kartenelement <map.html>`_ angegeben werden. 
+Damit die neu eingebundenen Layersets auch in der Anwendung erscheinen, müssen diese im :ref:`Kartenelement <map_de>` angegeben werden. 
 Durch das Aktivieren der gewünschten Layersets wird definiert, ob diese in der Kartenansicht verwendet werden. 
 Auch wird hierüber die Reihenfolge definiert, in der die Layersets im Ebenenbaum und in der Karte erscheinen: Die Einträge in der Auflistung können per Drag & Drop verschoben werden.
 
@@ -87,7 +87,7 @@ Im Beispiel ist ein **Layerset** mit einer Instanz definiert:
     * Instanz OSM Demodienst https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
 
 Die registrierte Instanz des OSM-Demodienstes wird bei der Installation von Mapbender bereits mitgeliefert. Diese muss nur noch über den Anwendungsreiter **Layerset** in ein Layerset eingebunden werden. Im Beispiel wurde das Layerset "World" genutzt. 
-Bei Schwierigkeiten bei der Einbindung kann die Dokumentation der `Layersets <../../backend/applications/layerset.html>`_ weiterhelfen. 
+Bei Schwierigkeiten bei der Einbindung kann die Dokumentation der :ref:`layerset_de` weiterhelfen. 
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_simple.png
            :scale: 80
@@ -97,10 +97,10 @@ Bei Schwierigkeiten bei der Einbindung kann die Dokumentation der `Layersets <..
 
 **Einrichtung in der Karte zur Anzeige des Layersets**
 
-Als Nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_ zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Anwendungsreiter **Layouts** und bearbeiten dann das Kartenelement im Kartenbereich.
+Als Nächstes erfolgt die Einrichtung des :ref:`Kartenelements <map_de>` zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Anwendungsreiter **Layouts** und bearbeiten dann das Kartenelement im Kartenbereich.
 Wichtig ist, dass im Bereich Layersets das Layerset World aktiviert wird, damit es in der Anwendung angezeigt wird. 
 
-Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
+Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des :ref:`Kartenelements <map_de>` weiterhelfen.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_simple.png
            :scale: 80 
@@ -185,7 +185,7 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
     * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
     * Instanz `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
-Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der `Layersets <../../backend/applications/layerset.html>`_ und `Dienste <../backend/sources.html>`_).
+Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der :ref:`layerset_de` und `Dienste <../backend/sources.html>`_).
 
 Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[3]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset die Instanz "GEBCO" hinzu. 
 Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" **[2]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein.
@@ -200,10 +200,10 @@ Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die 
 
 **Einrichtung in der Karte zur Anzeige der Layersets**
 
-Als Nächstes erfolgt die Einrichtung des `Kartenelements <map.html>`_ zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement im Kartenbereich.
+Als Nächstes erfolgt die Einrichtung des :ref:`Kartenelements <map_de>` zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement im Kartenbereich.
 Wichtig ist, dass bei dem Bereich Layersets beide Layersets "World" und "Project NRW" per Checkbox aktiviert sind, damit diese in der Anwendung angezeigt werden. 
 
-Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des `Kartenelements <map.html>`_ weiterhelfen.
+Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des :ref:`Kartenelements <map_de>` weiterhelfen.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_map_komplex.png
            :scale: 80 

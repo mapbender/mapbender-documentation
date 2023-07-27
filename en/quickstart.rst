@@ -67,12 +67,12 @@ Installation
 ============
 
 This quickstart explains the basics of Mapbender and serves as a quick introduction after your first successful installation.
-For the installation of Mapbender have a look at `Installation <installation.html>`_.
+For the installation of Mapbender have a look at :ref:`installation`.
 
 1. Start Mapbender
 ==================
 
-#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender/app.php (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at `Installation <installation.html>`_).
+#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender/app.php (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at :ref:`installation`).
  
 #. The application should then appear in your browser window.
 

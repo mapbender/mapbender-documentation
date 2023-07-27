@@ -66,13 +66,13 @@ Eine Mapbender Anwendung kann wie folgt aussehen:
 Installation
 ============
 
-Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installation und bietet einen schnellen Einstieg in die Mapbender-Oberfläche. Hinweise zur Installation von Mapbender finden Sie unter `Installation <installation.html>`_.
+Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installation und bietet einen schnellen Einstieg in die Mapbender-Oberfläche. Hinweise zur Installation von Mapbender finden Sie unter :ref:`installation_de`.
 
 
 1. Mapbender starten
 ====================
 
-#. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender/app.php (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch `Installation <installation.html>`_).
+#. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender/app.php (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch :ref:`installation_de`).
 
 #. Das Mapbender-Backend sollte anschließend im Browserfenster erscheinen.
 
@@ -132,7 +132,7 @@ In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendu
 
 Es gibt drei verschiedene Möglichkeiten, durch die neue Anwendungen erstellt werden können:
 
-Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich auf der Seite  `YAML Konfiguration <./customization/yaml.html>`_.
+Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich unter :ref:`yaml_de`.
 
 Es können außerdem komplett neue Anwendungen über das Backend definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
 
@@ -140,7 +140,7 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Wählen Sie anschließend eine Vorlage für die Anwendung. Diese bestimmt den Aufbau der Anwendung. Zur Auswahl stehen: Fullscreen, Fullscreen alternative, Mapbender Mobile template. Es ist ebenfalls möglich, eigene Vorlagen anzulegen und neuen Anwendungen zuzuordnen.
 
-.. tip:: Beachten Sie, dass Layout-, Icon- und Farbanpassungen online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter `Wie werden eigene Vorlagen (templates) erzeugt? <customization/templates.html>`_.
+.. tip:: Beachten Sie, dass Layout-, Icon- und Farbanpassungen online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter :ref:`templates_de`.
 
 #. Geben Sie einen Titel, einen URL-Titel und ggf. eine Beschreibung für die Anwendung an. Titel und URL-Titel können identisch sein. Letzterer muss sich nach den Standards der festgelegten URL-Syntax richten.
 
@@ -148,7 +148,7 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Wählen Sie unter *"Karten-Engine"* die von Ihnen bevorzugte OpenLayers-Version aus.
 
-#. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie auf der Seite zu den `Share-Elementen <./functions/share.html>`_.
+#. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie unter :ref:`share_de`.
 
 #. Klicken Sie *"Speichern"*, um die Anwendung zu erzeugen. Nach der Erstellung können Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Dienste hinzufügen.
 
@@ -181,7 +181,7 @@ Jetzt sollten sie eine Idee davon haben, wie einfach es ist, eine Mapbender-Anwe
   .. image:: ../figures/de/mapbender_application_add_element.png
      :width: 100%
 
-Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer Funktion. Detaillierte Informationen können Sie in den jeweiligen Kapiteln der `Mapbender Dokumentation <index.html>`_ nachlesen.
+Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer Funktion. Detaillierte Informationen können Sie in den jeweiligen Kapiteln der :ref:`Mapbender Dokumentation <welcome_de>` nachlesen.
 
 * Aktivitätsanzeige: zeigt die HTTP-Aktivität an
 * Ansichtsverwaltung: speichert Kartenzustände zum späteren Abruf
@@ -318,7 +318,7 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 
 **Dimensionen:**
 
-Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz. Weitere Informationen hierzu finden Sie auf der Seite des `Dimensions Handler <./functions/misc/dimensions_handler.html>`_.
+Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz. Weitere Informationen hierzu finden Sie unter :ref:`Dimensions Handler <dimensions_handler_de>`.
 
 **Vendor Specific Parameter:**
 

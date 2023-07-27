@@ -20,8 +20,7 @@ Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu k√
 Installation
 ************
 
-Die Installation aus den Git-Quellen ist im Kapitel `Git-basierte Installation <../installation/installation_git.html>`_ beschrieben.
-
+Die Installation aus den Git-Quellen heraus wird unter :ref:`Git-basierte Installation <installation_git_de>` beschrieben.
 
 
 Wo gibt es Hilfe?

@@ -3,7 +3,7 @@
 Koordinatenanzeige (Coordinates Display)
 ****************************************
 
-Das Koordinatenanzeige-Element zeigt die Kartenkoordinaten der aktuellen Mausposition an. Die Koordinaten sind abhängig vom eingestellten räumlichen Referenzsystem, welches im `Spatial Reference System Selector <srs_selector.html>`_ geändert werden kann.
+Das Koordinatenanzeige-Element zeigt die Kartenkoordinaten der aktuellen Mausposition an. Die Koordinaten sind abhängig vom eingestellten räumlichen Referenzsystem, welches im :ref:`srs_selector_de` geändert werden kann.
 
 So sieht die Koordinatenanzeige für unterschiedliche Koordinatensysteme aus:
 
