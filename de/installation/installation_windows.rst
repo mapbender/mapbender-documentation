@@ -205,7 +205,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 .. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
 
-Weitere Informationen dazu finden Sie unter: https://doc.mapbender.org/de/customization/commands.html#app-console-mapbender-config-check
+Weitere Informationen dazu finden Sie unter :ref:`mapbender_config_check_de`.
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
 Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`quickstart_de`.

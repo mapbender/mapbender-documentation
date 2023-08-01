@@ -122,7 +122,7 @@ Configuration example:
     locale:            en    
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-More information: https://doc.mapbender.org/en/architecture/translation.html
+More information in :ref:`translation`.
 
 
 Logo
@@ -332,7 +332,7 @@ Footer
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
+Detailed descriptions of the :ref:`functions`
 
 
 
@@ -350,7 +350,7 @@ Sidepane
 Map area
     Instead of 'Scale display' and 'POI', the function 'Coordinates utility' is integrated.
 
-Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
+Detailed descriptions of the :ref:`functions`
 
 
 

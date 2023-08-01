@@ -5,7 +5,7 @@ Sources
 
 With Sources, you can register OGC WMS and OGC WMTS/TMS services in version 1.1.1 and 1.3.0 in Mapbender.
 
-Further information about the registration process of services and their usage in applications is available in the `Quickstart document <../../quickstart.html#load-sources>`_.
+Further information about the registration process of services and their usage in applications is available in the Quickstart chapter :ref:`load_sources`.
 
 
 Load sources

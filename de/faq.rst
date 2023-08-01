@@ -13,7 +13,7 @@ F: Wozu sind die unterschiedlichen Umgebungen da?
 
 A: Für den gewöhnlichen produktiven Einsatz rufen Sie Mapbender über die app.php-Datei auf. Erst wenn Sie selbst etwas (an den Twig-, CSS- oder JS-Dateien) entwickeln, nutzen Sie den Aufruf über die app_dev.php-Datei. Der dahinterstehende Entwicklungsmodus gibt mehr Informationen aus, indem er z. B. detailliertere Fehlermeldungen anzeigt. 
 
-Mehr Details zu den Umgebungen gibt es im Kapitel `Produktions- und Enwicklungsumgebung und Caches: app.php und app_dev.php <installation/installation_configuration.html#produktions-und-entwicklungsumgebung-und-caches-app-php-und-app-dev-php>`_.
+Mehr Details zu den Umgebungen gibt es im Kapitel :ref:`app_cache_de`.
 
 
 Cache
@@ -25,7 +25,7 @@ A: Der Cache ist ein Zwischenspeicher, aus dem Mapbender auf häufig benutzte Da
 
 Diese zwei Verzeichnisse können ohne Bedenken gelöscht werden. Beim nächsten Aufruf von Mapbender werden im Cache der entsprechenden Umgebung erneut Dateien abgelegt.
 
-Mehr Details zum Cache gibt es im Kapitel `Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php <installation/installation_configuration.html#produktions-und-entwicklungsumgebung-und-caches-app-php-und-app-dev-php>`_.
+Mehr Details zum Cache gibt es im Kapitel :ref:`app_cache_de`.
 
 
 Dienste in Anwendungen

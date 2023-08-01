@@ -13,7 +13,7 @@ Q: What purpose do app.php and app_dev.php have?
 
 A: For productive use you'll use the app.php file. Only if you develop something (TWIG-files, CSS or JS-files) or for debugging, you'll open Mapbender with the app_dev.php in developer mode. This is because the developer mode provides more information and error messages. 
 
-For further information on the modes, please take a look at the chapter `Details of the configuration of Mapbender - Production- and Development environment and Caching: app.php and app_dev.php <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_.
+For further information on the modes, please take a look at the chapter :ref:`app_cache`.
 
 
 Cache
@@ -25,7 +25,7 @@ A: The cache is a small storage area, where Mapbender accesses frequently needed
 
 It is no problem to delete these directories. When you run Mapbender again, new files will be stored again in the cache directory.
 
-For further information on the cache, please take a look at the chapter `Details of the configuration of Mapbender - Production- and Development environment and Caching: app.php and app_dev.php <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_.
+For further information on the cache, please take a look at the chapter :ref:`app_cache`.
 
 
 Services and their usage in applications

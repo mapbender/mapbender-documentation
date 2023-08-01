@@ -352,6 +352,8 @@ Das gewünschte Gebiet kann auswählt werden und ein PDF erzeugt. Das PDF beinha
 Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwender nicht daran, den Rahmen in einen Bereich zu verschieben, der nicht das ausgewählte Objekt enthält. Die ausgedruckte Objektinformation passt dann nicht zur Darstellung in der Karte.
 
 
+.. _queued_print_de:
+  
 Warteschleifendruck
 -------------------
 

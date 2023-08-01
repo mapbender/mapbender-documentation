@@ -245,8 +245,10 @@ Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
 
   .. image:: ../figures/de/mapbender_sources.png
      :width: 100%
-     
-     
+
+
+.. _load_sources_de:
+
 Laden von Datenquellen
 ----------------------
 

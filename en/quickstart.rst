@@ -247,6 +247,8 @@ The sources pages provides a user with the following functions:
      :width: 100%
 
 
+.. _load_sources:
+
 Load sources
 ------------
 
