@@ -183,40 +183,41 @@ Jetzt sollten sie eine Idee davon haben, wie einfach es ist, eine Mapbender-Anwe
 
 Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer Funktion. Detaillierte Informationen können Sie in den jeweiligen Kapiteln der `Mapbender Dokumentation <index.html>`_ nachlesen.
 
-* Aktivitätsanzeige: zeigt die HTTP-Aktivität an
-* Ansichtsverwaltung: speichert Kartenzustände zum späteren Abruf
-* Anwendung wechseln: wechselt unter Beibehaltung der aktuellen Kartenposition zu einer anderen Anwendung
-* Bildexport: exportiert einen Kartenausschnitt
-* Button: bindet ein Element als Button ein
-* Copyright: zeigt Nutzungsbedingungen an
-* Data manager: erzeugt und speichert Sachinformationen in einer Datenbank 
-* Digitizer: erzeugt und speichert Geometrieinformationen in einer Datenbank
-* Dimensions-Handler: bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein
-* Druck: erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können
-* Ebenenbaum: gibt eine Übersicht über alle eingebundenen Layersets und Layer
-* Einfache Suche: erstellt eine Einfeldsuche
-* GPS-Position: erzeugt einen Button zur Anzeige der eigenen GPS-Position
-* HTML: bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links
-* Hintergrund wechseln: ermöglicht den Wechsel zwischen selbst definierten Hintergrundkarten
-* Information: gibt Informationen eines Dienstes aus
-* Karte: erstellt ein zentrales Kartenelement, in welches die Layersets und Layer eingebunden sind
-* Koordinaten Utility: transformiert Koordinaten und navigiert zu ihnen auf der Karte
-* Koordinatenanzeige: zeigt Mausposition in den Kartenkoordinaten an
-* Legende: zeigt die Legende von aktiven Diensten an
-* Linien- und Flächenmessung: erlaubt das Messen von Linien und Flächen in der Karte
-* Link: verlinkt zu einer externen URL
-* Maßstabsanzeige: zeigt aktuellen Maßstab numerisch an
-* Maßstabsauswahl: gibt eine Auswahlbox mit den verfügbaren Maßstäben zum Wechseln dieser an
-* Maßstabsleiste: zeigt den aktuellen Maßstab graphisch an
-* MeetingPoint (POI): generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird
-* Navigationswerkzeug: ermöglicht die Navigation in der Karte über ein graphisches Steuerelement
-* SRS Auswahl: generiert die Möglichkeit, eine Projektion (SRS) über eine Auswahlbox zu wechseln
-* Skizzen: ermöglicht das Zeichnen verschiedener Formen in der Karte
-* Suchen: ermöglicht die Konfiguration von individuellen Suchen
-* URL teilen: teilt die aktuelle Kartenansicht über eine URL
-* WMS laden: lädt einen WMS per getCapabilities-Request
-* Über Mapbender-Dialog: zeigt Informationen über Mapbender an
-* Übersicht (overview): zeigt eine kleinere Übersichtskarte über der Hauptkarte an
+* :ref:`activity_indicator_de` : zeigt die HTTP-Aktivität an
+* :ref:`view_manager_de` : speichert Kartenzustände zum späteren Abruf
+* :ref:`applicationswitcher_de` : wechselt unter Beibehaltung der aktuellen Kartenposition zu einer anderen Anwendung
+* :ref:`imageexport_de` : exportiert einen Kartenausschnitt
+* :ref:`button_de` : bindet ein Element als Button ein
+* :ref:`copyright_de` : zeigt Nutzungsbedingungen an
+* :ref:`datamanager_de` : erzeugt und speichert Sachinformationen in einer Datenbank 
+* :ref:`digitizer_de` : erzeugt und speichert Geometrieinformationen in einer Datenbank
+* :ref:`dimensions_handler_de` : bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein
+* :ref:`printclient_de` : erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können
+* :ref:`layertree_de`: gibt eine Übersicht über alle eingebundenen Layersets und Layer
+* :ref:`simplesearch_de` : erstellt eine Einfeldsuche
+* :ref:`gpspostion_de` : erzeugt einen Button zur Anzeige der eigenen GPS-Position
+* :ref:`html_de`: bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links
+* :ref:`basesourceswitcher_de` : ermöglicht den Wechsel zwischen selbst definierten Hintergrundkarten
+* :ref:`feature_info_de`: gibt Informationen eines Dienstes aus
+* :ref:`map_de`: erstellt ein zentrales Kartenelement, in welches die Layersets und Layer eingebunden sind
+* :ref:`coordinate_utility_de` : transformiert Koordinaten und navigiert zu ihnen auf der Karte
+* :ref:`coordinates_display_de`: zeigt Mausposition in den Kartenkoordinaten an
+* :ref:`legend_de`: zeigt die Legende von aktiven Diensten an
+* :ref:`ruler_de` : erlaubt das Messen von Linien und Flächen in der Karte
+* :ref:`link_de`: verlinkt zu einer externen URL
+* :ref:`scaledisplay_de` : zeigt aktuellen Maßstab numerisch an
+* :ref:`scale_selector_de` : dieses Element zeigt eine Auswahlbox mit Maßstäben an.
+* :ref:`simplesearch_de` : gibt eine Auswahlbox mit den verfügbaren Maßstäben zum Wechseln dieser an
+* :ref:`scalebar_de`: zeigt den aktuellen Maßstab graphisch an
+* :ref:`poi_de` : generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird
+* :ref:`navigation_toolbar_de` : ermöglicht die Navigation in der Karte über ein graphisches Steuerelement
+* :ref:`srs_selector_de` : generiert die Möglichkeit, eine Projektion (SRS) über eine Auswahlbox zu wechseln
+* :ref:`sketch_de` : ermöglicht das Zeichnen verschiedener Formen in der Karte
+* :ref:`search_router_de` : ermöglicht die Konfiguration von individuellen Suchen
+* :ref:`shareurl_de` : teilt die aktuelle Kartenansicht über eine URL
+* :ref:`wms_loader_de` : lädt einen WMS per getCapabilities-Request
+* :ref:`about_dialog_de` : zeigt Informationen über Mapbender an
+* :ref:`overview_de` : zeigt eine kleinere Übersichtskarte über der Hauptkarte an
 
 
 Versuchen Sie es selbst
