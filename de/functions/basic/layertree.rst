@@ -131,7 +131,7 @@ Wenn **Automatisches Öffnen** aktiv ist, wird der Ebenenbaum beim Anwendungssta
 * *Opacity* (Deckkraft eines einzelnen Layers verändern)
 * *Zoom to layer* (Layer zentriert in seiner vollen Ausdehnung anzeigen)
 * *Metadata* (Metadaten eines Layers anzeigen)
-* *Dimension* (Dimension eines Layers kontrollieren - mehr Informationen unter `Dimensions handler <../misc/dimensions_handler.html>`_ )
+* *Dimension* (Dimension eines Layers kontrollieren - mehr Informationen unter :ref:`dimensions_handler_de` )
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
@@ -185,7 +185,7 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
     * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
     * Instanz `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
-Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der :ref:`layerset_de` und `Dienste <../backend/sources.html>`_).
+Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der :ref:`layerset_de` und :ref:`sources_de`).
 
 Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[3]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset die Instanz "GEBCO" hinzu. 
 Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" **[2]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein.
@@ -216,7 +216,7 @@ Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des :ref:
 Als letzter Schritt erfolgt die Einrichtung des Ebenenbaums selbst. Für den thematischen Ebenenbaum binden wir den Ebenenbaum in diesem Beispiel in die Sidepane ein.
 
 Ist die Option **Thematischer Layer** ausgeschaltet, benutzt der Ebenenbaum nicht die konfigurierten Layersets und zeigt die einzelnen Instanzen ohne thematische Strukturierung in der Hauptebene an. Nun wollen wir jedoch die Layer über unsere thematischen Layersets anzeigen, daher aktivieren wir die Funktion **Thematischer Layer**. 
-Da wir im `Kartenelement <map.html>`_ beide Layersets in die Anwendung eingebunden haben, werden diese nun unter dem **Themen**-Bereich angezeigt.
+Da wir in der :ref:`map_de` beide Layersets in die Anwendung eingebunden haben, werden diese nun unter dem **Themen**-Bereich angezeigt.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_2.png
            :scale: 80 

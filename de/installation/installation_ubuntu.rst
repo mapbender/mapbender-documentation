@@ -4,7 +4,7 @@ Installation auf Ubuntu/Debian
 ##############################
 
 Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**).
-Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter `Installation auf dem Symfony eigenen Webserver <installation_symfony.html>`_.
+Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter :ref:`installation_symfony_de`.
 
 .. hint:: Für den Produktiveinsatz wird PostgreSQL empfohlen. Weitere Installationshinweise finden Sie im Kapitel `Optional > Mapbender Einrichtung auf PostgreSQL <#optional>`_.
 
@@ -30,7 +30,7 @@ Installation der benötigten PHP-Extensions:
 
     sudo apt install php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
-* Bitte prüfen Sie die Mapbender FAQ-Seite für weitere PHP-Einstellungen:  `FAQ <../faq.html>`_. 
+* Bitte prüfen Sie die :ref:`faq_de` für weitere PHP-Einstellungen. 
 
 
 Entpacken und im Webserver registrieren
@@ -105,7 +105,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 .. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
-Informationen zu den ersten Schritten mit Mapbender finden sich unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
+Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`quickstart_de`.
 
 
 Optional

@@ -14,7 +14,7 @@ You can only use the element in the sidepane.
 * **Schemes:** YAML-Definition of the element Digitizer
 
 The Ditigitzer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. 
-Read more about this at `database <../../../customization/yaml.html>`_.
+Read more about this under :ref:`yaml`.
 
 The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
 If errors occur in the database, fields or form, various error messages appear. Via the normal call and app.php comes a general error message.

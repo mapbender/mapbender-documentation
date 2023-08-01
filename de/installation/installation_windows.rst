@@ -62,7 +62,7 @@ Konfiguration PHP
     extension=php_zip.dll
     extension=php_bz2.dll
 
-* Bitte prüfen Sie die Mapbender FAQ-Seite für weitere PHP-Einstellungen:  `FAQ <../faq.html>`_. 
+* Bitte prüfen Sie die :ref:`faq_de` für weitere PHP-Einstellungen. 
 
 
 Mapbender entpacken und im Webserver registrieren
@@ -186,9 +186,6 @@ Der erste Start
 
 Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufen werden.
 
-Weitere Schritte unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
-
-
 
 **Überprüfung**
 
@@ -211,4 +208,4 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 Weitere Informationen dazu finden Sie unter: https://doc.mapbender.org/de/customization/commands.html#app-console-mapbender-config-check
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
-Informationen zu den ersten Schritten mit Mapbender finden sich unter:  `Mapbender Quickstart Dokument <../quickstart.html>`_.
+Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`quickstart_de`.

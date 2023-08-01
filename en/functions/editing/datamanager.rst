@@ -3,7 +3,7 @@
 Data Manager
 ************
 
-The element Data Manager is similar to the `Digitizer <digitizer.html>`_. 
+The element Data Manager is similar to the :ref:`digitizer`. 
 However, Data Manager only works with nonspatial data, i. e. you can not create geometries.
 
 Data Manager can be used to maintain reference tables for example a table with contact information.
@@ -12,7 +12,7 @@ Setup
 -----
 
 The Data Manager needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with. 
-Read more about this at `database <../../../customization/yaml.html>`_.
+Read more about this under :ref:`yaml`.
 
 
 Configuration example

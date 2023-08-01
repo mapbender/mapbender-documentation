@@ -4,7 +4,7 @@ Skizzen (Sketch)
 ****************
 
 Mit diesem Element können temporär verfügbare Objekte in der Karte erstellt werden. Diese werden nicht in einer Datenbank gespeichert und gehen beim browsergesteuerten Aktualisieren oder Schließen der Anwendung verloren.
-Erstellte Skizzen werden im `Bildexport <../export/imageexport.html>`_ und `Druck <../export/printclient.html>`_ ausgegeben.
+Erstellte Skizzen werden im :ref:`imageexport_de` und :ref:`printclient_de` ausgegeben.
 
 Mit Skizzen können folgende Geometrietypen erstellt werden:
 

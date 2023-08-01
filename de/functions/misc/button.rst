@@ -3,7 +3,7 @@
 Button
 ******
 
-Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die `Legende <../basic/legend.html>`_, `Layertree (Layerbaum) <../basic/layertree.html>`_, `FeatureInfo (Infoabfrage) <../basic/feature_info.html>`_, `Linien- und Flächenberechnung <../basic/ruler.html>`_ und der `Druck <../export/printclient.html>`_ benötigen einen Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element in den Kartenbereich oder die Fußleiste eingebunden wurde.
+Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die :ref:`legend_de`, :ref:`layertree_de`, :ref:`feature_info_de`, :ref:`ruler_de` und der :ref:`printclient_de` benötigen einen Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element in den Kartenbereich oder die Fußleiste eingebunden wurde.
 
 Buttons können optional gruppiert werden, sodass nur ein Button in der Gruppe aktiviert ist. Dies wird im Gruppen-Parameter eingestellt.
 Es kann außerdem ein Button definiert werden, der sich auf eine Webseite oder ein Script bezieht und bei Aktivierung zu diesem weiterleitet. Bei dem Parameter *Target* stehen nur Funktionen zur Auswahl, die vorher in der Anwendung unter dem Reiter *Layouts* entweder in den Kartenbereich oder die Fußleiste eingebunden wurden.
@@ -46,7 +46,7 @@ Buttons können für Features eingebunden werden, die vorher im Kartenbereich ko
 Button für die Legende
 -----------------------
 
-Für Karten sind Legenden sehr hilfreich, da sich so die Betrachter der Karte über den Inhalt informieren können. Die Legende ist in diesem Anwendungsbeispiel im Kartenbereich eingebunden. Wie eine Legende konfiguriert wird, wird in der Dokumentation unter `Legende <../basic/legend.html>`_ beschrieben.
+Für Karten sind Legenden sehr hilfreich, da sich so die Betrachter der Karte über den Inhalt informieren können. Die Legende ist in diesem Anwendungsbeispiel im Kartenbereich eingebunden. Wie eine Legende konfiguriert wird, wird in der Dokumentation unter :ref:`legend_de` beschrieben.
 Der Button für eine Legende wird wie folgt eingebunden:
 
 Zuerst muss über das ``+`` - Zeichen in der Anwendung (unter Layouts, Obere Werkzeugleiste) das Element Button ausgewählt werden.
@@ -95,7 +95,7 @@ Der Button wird, wie schon der Legendenbutton, über das ``+`` - Zeichen in der 
      
 Im Anwendungsbeispiel ist die Bezeichnung (*Title*) des Buttons "Linienmessung". Als *Target* wird das vorher im Kartenbereich erstellte Element "line" eingebunden. Um die Gruppierung mit der Flächenmessung möglich zu machen, wird im Feld *Group* ein Gruppenname vergeben. Hier lautet die Bezeichnung der Gruppe "messen". Dieser Gruppenname wird analog auch bei dem Button für die Flächenmessung eingetragen. Der Text "Linien messen" wird beim Platzieren der Maus auf dem Button angezeigt (*Tooltip*). Als *Icon* wird "Line ruler" gewählt.
 
-Das Element "line" wurde mithilfe der Funktion Linien-/Flächenmessung erstellt und als Linienmessung konfiguriert. Wie das Element Linien-/Flächenmessung konfiguriert wird, wird in der Dokumentation unter `Linien-/Flächenmessung <../basic/ruler.html>`_ beschrieben.
+Das Element "line" wurde mithilfe der Funktion Linien-/Flächenmessung erstellt und als Linienmessung konfiguriert. Wie das Element Linien-/Flächenmessung konfiguriert wird, wird in der Dokumentation unter :ref:`ruler_de` beschrieben.
 
 Der Button für die Flächenmessung wird analog eingebunden. Der Dialog der Konfiguration des Buttons sieht im Konfigurationsbeispiel wie folgt aus:
 
