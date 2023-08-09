@@ -208,4 +208,4 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 Weitere Informationen dazu finden Sie unter :ref:`mapbender_config_check_de`.
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
-Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`quickstart_de`.
+Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`Mapbender Schnellstart <quickstart_de>`.

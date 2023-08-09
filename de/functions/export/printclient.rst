@@ -232,7 +232,7 @@ Ein gruppenabhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie folg
 .. image:: ../../../figures/de/print_client_example_groups.png
      :width: 100%
 
-Zur Nutzung dieser Funktion müssen Gruppen mit Benutzern erstellt und den Anwendungen die jeweiligen Gruppen zugewiesen werden. Weitere Informationen zur Funktionsweise der Gruppen- und Benutzerverwaltung stehen im :ref:`quickstart_de`.
+Zur Nutzung dieser Funktion müssen Gruppen mit Benutzern erstellt und den Anwendungen die jeweiligen Gruppen zugewiesen werden. Weitere Informationen zur Funktionsweise der Gruppen- und Benutzerverwaltung stehen im :ref:`Mapbender Schnellstart <quickstart_de>`.
 
 *Dynamisches Bild*
 ------------------

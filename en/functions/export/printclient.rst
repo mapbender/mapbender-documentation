@@ -231,7 +231,7 @@ The print with a group named "Group 1" could look like this:
 .. image:: ../../../figures/print_client_example_groups.png
      :width: 100%
 
-To use this feature, it is required that groups exist. How to create groups and users is described in the Mapbender documentation in the :ref:`quickstart`.
+To use this feature, it is required that groups exist. How to create groups and users is described in the Mapbender documentation in the :ref:`Mapbender Quickstart <quickstart>`.
 
 The description of the group will be displayed in the field "dynamic_text" (e.g. copyright message).
 The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. 
