@@ -3,7 +3,7 @@
 About Dialog
 ************
 
-This element creates a `button <button.html>`_ which shows a simple about dialog, listing Mapbender's version. The button can be placed into the toolbar and the footer region.
+This element creates a :ref:`button` which shows a simple about dialog, listing the version of your Mapbender installation. The button can be placed into the toolbar and the footer region.
 
 .. image:: ../../../figures/about_dialog.png
      :scale: 80

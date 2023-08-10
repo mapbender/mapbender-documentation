@@ -3,7 +3,7 @@
 Data Manager
 ************
 
-Der Data Manager ähnelt in seiner Funktionalität dem `Digitizer <digitizer.html>`_. Der Data Manager speichert allerdings nur Sachdaten und keine Geodaten.
+Der Data Manager ähnelt in seiner Funktionalität dem :ref:`digitizer_de`. Der Data Manager speichert allerdings nur Sachdaten und keine Geodaten.
 
 Der Data Manager kann zur Pflege von Referenztabllen verwendet werden, beispielsweise einer Tabelle mit Kontaktinformationen.
 
@@ -12,7 +12,7 @@ Setup
 -----
 
 Der Data Manager benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
-Mehr zu diesem Thema finden Sie unter `Konfiguration der Datenbank <../../customization/yaml.html>`_.
+Mehr zu diesem Thema finden Sie unter :ref:`Konfiguration der Datenbank <yaml_de>`.
 
 Konfigurationsbeispiel
 ----------------------

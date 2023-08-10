@@ -13,12 +13,12 @@ Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 * Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von mapbender/web/uploads/ in das mapbender/web/uploads Verzeichnis Ihrer neuen Mapbender Version
 * Wenn Sie Ihre eigenen Templates verwenden sollten, müssen Sie diese mit denen der neuen Version vergleichen (kam es zu Änderungen?)
 * Importieren Sie die Demo-Anwendungen (über den Befehl bin/composer run reimport-example-apps oder über die Web-Administration), um sich den neusten Stand der Entwicklungen anzuschauen
-* Unter https://doc.mapbender.org/de/installation/installation_ubuntu.html im Bereich **Entpacken und im Webserver registrieren** ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte
+* Unter :ref:`installation_ubuntu_de` im Bereich **Entpacken und im Webserver registrieren** ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte
 * Das war's auch schon! Schauen Sie sich Ihre neue Mapbender Version an.
 
 .. hint::
     
-    Folgen Sie bitte zusätzlich den Migrationshinweisen für bestimmte Versionen unter https://doc.mapbender.org/en/installation/migration.html.
+    Folgen Sie bitte zusätzlich den :ref:`Migrationshinweisen für bestimmte Versionen<migration>`.
 
 
 Aktualisierungsbeispiel für Linux

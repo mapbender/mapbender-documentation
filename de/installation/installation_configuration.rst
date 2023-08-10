@@ -118,8 +118,9 @@ Konfigurationsdateien
 
 Die Konfigurationsdateien liegen unter **app/config**. 
 
-Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
+Mehr Informationen dazu finden Sie im Kapitel: :ref:`yaml_de`.
 
+.. _app_cache_de:
 
 Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php
 -------------------------------------------------------------------------

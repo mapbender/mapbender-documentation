@@ -22,7 +22,8 @@ Configuration
 * **Default format:** image/png, image/gif, image/jpeg (default: image/png).
 * **Default info format:** text/html, text/xml, text/plain (default: text/html).
 
-You need a button to show this element. See `button <button.html>`_ for inherited configuration options.
+You need a :ref:`button` to show this element.
+
 
 YAML-Definition:
 ----------------
@@ -41,7 +42,7 @@ This template can be used to insert the element into a YAML application.
 How to add a WMS by defining a link
 ====================================
 
-You can add a WMS to Mapbender by defining a link, e. g. in your :ref:`WMS featureinfo<feature_info>` or your search results. The link has to look like this:
+You can add a WMS to Mapbender by defining a link, e. g. in your :ref:`feature_info` or your search results. The link has to look like this:
 
 .. code-block:: html
 

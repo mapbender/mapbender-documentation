@@ -66,13 +66,13 @@ Eine Mapbender Anwendung kann wie folgt aussehen:
 Installation
 ============
 
-Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installation und bietet einen schnellen Einstieg in die Mapbender-Oberfläche. Hinweise zur Installation von Mapbender finden Sie unter `Installation <installation.html>`_.
+Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installation und bietet einen schnellen Einstieg in die Mapbender-Oberfläche. Hinweise zur Installation von Mapbender finden Sie unter :ref:`installation_de`.
 
 
 1. Mapbender starten
 ====================
 
-#. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender/app.php (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch `Installation <installation.html>`_).
+#. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender/app.php (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch :ref:`installation_de`).
 
 #. Das Mapbender-Backend sollte anschließend im Browserfenster erscheinen.
 
@@ -132,7 +132,7 @@ In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendu
 
 Es gibt drei verschiedene Möglichkeiten, durch die neue Anwendungen erstellt werden können:
 
-Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich auf der Seite  `YAML Konfiguration <./customization/yaml.html>`_.
+Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich unter :ref:`yaml_de`.
 
 Es können außerdem komplett neue Anwendungen über das Backend definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
 
@@ -140,7 +140,7 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Wählen Sie anschließend eine Vorlage für die Anwendung. Diese bestimmt den Aufbau der Anwendung. Zur Auswahl stehen: Fullscreen, Fullscreen alternative, Mapbender Mobile template. Es ist ebenfalls möglich, eigene Vorlagen anzulegen und neuen Anwendungen zuzuordnen.
 
-.. tip:: Beachten Sie, dass Layout-, Icon- und Farbanpassungen online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter `Wie werden eigene Vorlagen (templates) erzeugt? <customization/templates.html>`_.
+.. tip:: Beachten Sie, dass Layout-, Icon- und Farbanpassungen online über den CSS_Editor oder in css- und twig-Dateien erfolgen. Lesen Sie dazu die Dokumentation unter :ref:`templates_de`.
 
 #. Geben Sie einen Titel, einen URL-Titel und ggf. eine Beschreibung für die Anwendung an. Titel und URL-Titel können identisch sein. Letzterer muss sich nach den Standards der festgelegten URL-Syntax richten.
 
@@ -148,7 +148,8 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Wählen Sie unter *"Karten-Engine"* die von Ihnen bevorzugte OpenLayers-Version aus.
 
-#. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie auf der Seite zu den `Share-Elementen <./elements/share.html>`_.
+#. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie unter :ref:`share_de`.
+
 
 #. Klicken Sie *"Speichern"*, um die Anwendung zu erzeugen. Nach der Erstellung können Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Dienste hinzufügen.
 
@@ -181,42 +182,43 @@ Jetzt sollten sie eine Idee davon haben, wie einfach es ist, eine Mapbender-Anwe
   .. image:: ../figures/de/mapbender_application_add_element.png
      :width: 100%
 
-Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer Funktion. Detaillierte Informationen können Sie in den jeweiligen Kapiteln der `Mapbender Dokumentation <index.html>`_ nachlesen.
+Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer Funktion. Detaillierte Informationen können Sie in den jeweiligen Kapiteln der :ref:`Mapbender Dokumentation <welcome_de>` nachlesen.
 
-* Aktivitätsanzeige: zeigt die HTTP-Aktivität an
-* Ansichtsverwaltung: speichert Kartenzustände zum späteren Abruf
-* Anwendung wechseln: wechselt unter Beibehaltung der aktuellen Kartenposition zu einer anderen Anwendung
-* Bildexport: exportiert einen Kartenausschnitt
-* Button: bindet ein Element als Button ein
-* Copyright: zeigt Nutzungsbedingungen an
-* Data manager: erzeugt und speichert Sachinformationen in einer Datenbank 
-* Digitizer: erzeugt und speichert Geometrieinformationen in einer Datenbank
-* Dimensions-Handler: bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein
-* Druck: erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können
-* Ebenenbaum: gibt eine Übersicht über alle eingebundenen Layersets und Layer
-* Einfache Suche: erstellt eine Einfeldsuche
-* GPS-Position: erzeugt einen Button zur Anzeige der eigenen GPS-Position
-* HTML: bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links
-* Hintergrund wechseln: ermöglicht den Wechsel zwischen selbst definierten Hintergrundkarten
-* Information: gibt Informationen eines Dienstes aus
-* Karte: erstellt ein zentrales Kartenelement, in welches die Layersets und Layer eingebunden sind
-* Koordinaten Utility: transformiert Koordinaten und navigiert zu ihnen auf der Karte
-* Koordinatenanzeige: zeigt Mausposition in den Kartenkoordinaten an
-* Legende: zeigt die Legende von aktiven Diensten an
-* Linien- und Flächenmessung: erlaubt das Messen von Linien und Flächen in der Karte
-* Link: verlinkt zu einer externen URL
-* Maßstabsanzeige: zeigt aktuellen Maßstab numerisch an
-* Maßstabsauswahl: gibt eine Auswahlbox mit den verfügbaren Maßstäben zum Wechseln dieser an
-* Maßstabsleiste: zeigt den aktuellen Maßstab graphisch an
-* MeetingPoint (POI): generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird
-* Navigationswerkzeug: ermöglicht die Navigation in der Karte über ein graphisches Steuerelement
-* SRS Auswahl: generiert die Möglichkeit, eine Projektion (SRS) über eine Auswahlbox zu wechseln
-* Skizzen: ermöglicht das Zeichnen verschiedener Formen in der Karte
-* Suchen: ermöglicht die Konfiguration von individuellen Suchen
-* URL teilen: teilt die aktuelle Kartenansicht über eine URL
-* WMS laden: lädt einen WMS per getCapabilities-Request
-* Über Mapbender-Dialog: zeigt Informationen über Mapbender an
-* Übersicht (overview): zeigt eine kleinere Übersichtskarte über der Hauptkarte an
+* :ref:`activity_indicator_de` : zeigt die HTTP-Aktivität an
+* :ref:`view_manager_de` : speichert Kartenzustände zum späteren Abruf
+* :ref:`applicationswitcher_de` : wechselt unter Beibehaltung der aktuellen Kartenposition zu einer anderen Anwendung
+* :ref:`imageexport_de` : exportiert einen Kartenausschnitt
+* :ref:`button_de` : bindet ein Element als Button ein
+* :ref:`copyright_de` : zeigt Nutzungsbedingungen an
+* :ref:`datamanager_de` : erzeugt und speichert Sachinformationen in einer Datenbank 
+* :ref:`digitizer_de` : erzeugt und speichert Geometrieinformationen in einer Datenbank
+* :ref:`dimensions_handler_de` : bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein
+* :ref:`printclient_de` : erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können
+* :ref:`layertree_de`: gibt eine Übersicht über alle eingebundenen Layersets und Layer
+* :ref:`simplesearch_de` : erstellt eine Einfeldsuche
+* :ref:`gpspostion_de` : erzeugt einen Button zur Anzeige der eigenen GPS-Position
+* :ref:`html_de`: bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links
+* :ref:`basesourceswitcher_de` : ermöglicht den Wechsel zwischen selbst definierten Hintergrundkarten
+* :ref:`feature_info_de`: gibt Informationen eines Dienstes aus
+* :ref:`map_de`: erstellt ein zentrales Kartenelement, in welches die Layersets und Layer eingebunden sind
+* :ref:`coordinate_utility_de` : transformiert Koordinaten und navigiert zu ihnen auf der Karte
+* :ref:`coordinates_display_de`: zeigt Mausposition in den Kartenkoordinaten an
+* :ref:`legend_de`: zeigt die Legende von aktiven Diensten an
+* :ref:`ruler_de` : erlaubt das Messen von Linien und Flächen in der Karte
+* :ref:`link_de`: verlinkt zu einer externen URL
+* :ref:`scaledisplay_de` : zeigt aktuellen Maßstab numerisch an
+* :ref:`scale_selector_de` : dieses Element zeigt eine Auswahlbox mit Maßstäben an.
+* :ref:`simplesearch_de` : gibt eine Auswahlbox mit den verfügbaren Maßstäben zum Wechseln dieser an
+* :ref:`scalebar_de`: zeigt den aktuellen Maßstab graphisch an
+* :ref:`poi_de` : generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird
+* :ref:`navigation_toolbar_de` : ermöglicht die Navigation in der Karte über ein graphisches Steuerelement
+* :ref:`srs_selector_de` : generiert die Möglichkeit, eine Projektion (SRS) über eine Auswahlbox zu wechseln
+* :ref:`sketch_de` : ermöglicht das Zeichnen verschiedener Formen in der Karte
+* :ref:`search_router_de` : ermöglicht die Konfiguration von individuellen Suchen
+* :ref:`shareurl_de` : teilt die aktuelle Kartenansicht über eine URL
+* :ref:`wms_loader_de` : lädt einen WMS per getCapabilities-Request
+* :ref:`about_dialog_de` : zeigt Informationen über Mapbender an
+* :ref:`overview_de` : zeigt eine kleinere Übersichtskarte über der Hauptkarte an
 
 
 Versuchen Sie es selbst
@@ -233,7 +235,7 @@ Versuchen Sie es selbst
 Datenquellen (Sources) verwenden
 ================================
 
-In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich auf der Seite :ref:`Layerset <layerset_de>` .
+In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich unter :ref:`layerset_de`.
 
 Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
 
@@ -245,8 +247,10 @@ Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
 
   .. image:: ../figures/de/mapbender_sources.png
      :width: 100%
-     
-     
+
+
+.. _load_sources_de:
+
 Laden von Datenquellen
 ----------------------
 
@@ -318,7 +322,8 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 
 **Dimensionen:**
 
-Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz. Weitere Informationen hierzu finden Sie auf der Seite des `Dimensions Handler <./elements/misc/dimensions_handler.html>`_.
+Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz. Weitere Informationen hierzu finden Sie unter :ref:`Dimensions Handler <dimensions_handler_de>`.
+
 
 **Vendor Specific Parameter:**
 

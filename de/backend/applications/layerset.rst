@@ -1,5 +1,8 @@
 .. _layerset_de:
 
+Layerset
+********
+
  .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
 
  .. |mapbender-button-checkbox| image:: ../../../figures/mapbender_button_checkbox.png
@@ -10,13 +13,8 @@
 
  .. |mapbender-button-publish| image:: ../../../figures/mapbender_button_publish.png
 
-
-Layerset
-********
-
 Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS-Dienste) beinhalten kann.
 In den Demo-Anwendungen sind zwei Layersets definiert: Das Layerset "Main" für die Hauptkarte und das Layerset "Overview" für die Übersichtskarte. Die Namen der Layersets können frei gewählt werden. Außerdem können mehrere Layersets im Kartenelement ausgewählt werden. Zudem zeigt der Ebenenbaum den Namen der Layersets an, wenn die Option der thematischen Layer aktiviert ist.
-
 
 Layerset-Übersichtsseite
 ========================

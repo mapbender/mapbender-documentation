@@ -3,7 +3,7 @@
 Button
 ******
 
-The button element provides a push button widget. Some elements like `Legend <../basic/legend.html>`_ , `Layertree <../basic/layertree.html>`_, `FeatureInfo <../basic/feature_info.html>`_, `Line/Area Ruler <../basic/ruler.html>`_ and  `PrintClient <../export/printclient.html>`_ need a button to be displayed/activated if not defined in a frame.
+The button element provides a push button widget. Some elements like :ref:`legend`, :ref:`layertree`, :ref:`feature_info`, :ref:`ruler` and :ref:`printclient` need a button to be displayed/activated if not defined in a frame.
 
 Buttons optionally can be grouped, so that only one button in a group can be active at any given time. This is done by the group paramter.
 You can define a button that refers to a website or script using the click paramter. You can only choose features as target parameter, which have been added in the Map area or footer before.
@@ -46,7 +46,7 @@ You can add buttons for features which are integrated in the Map area. For examp
 Button for the legend element
 ------------------------------
 
-The legend is very helpful because it provides information about the Map area. In this user example, the legend is integrated in the Map area. You can find a descripton of how to configure the legend element in this documentation at `Legend <../basic/legend.html>`_.
+The legend is very helpful because it provides information about the Map area. In this user example, the legend is integrated in the Map area. You can find a descripton of how to configure the legend element in this documentation under :ref:`legend`.
 You can add a button for the legend by following these steps:
 
 First, you have to select the button element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
@@ -96,7 +96,7 @@ You can add this button, like the legend button, by clicking on the ``+`` -symbo
 .. image:: ../../../figures/de/button_distance_dialog.png
      :scale: 80
      
-In this example, the title (*Title*) of the button is "Line ruler". The element references to a *Target* called "line". This element was created beforehand with the feature Line/Area Ruler. You can find a description on how to create this feature under `Line/Area Ruler <../basic/ruler.html>`_.
+In this example, the title (*Title*) of the button is "Line ruler". The element references to a *Target* called "line". This element was created beforehand with the feature Line/Area Ruler. You can find a description on how to create this feature under :ref:`ruler`.
 
 To group this button and the button for the area ruler, you have to put a group name in the field *Group*. In this example, the name of the group is "measure". You also have to add this group name to the button for the area ruler. 
 

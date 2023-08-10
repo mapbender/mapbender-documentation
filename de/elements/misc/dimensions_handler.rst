@@ -44,7 +44,7 @@ Es bestehen zwei Möglichkeiten, die Zeitangabe in der Anwendung zu steuern. Zum
 Schieberegler im Kontextmenü
 ----------------------------
 
-Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers im integriert werden. Dazu muss die "Dimension" Option in dem `Ebenenbaum <../basic/layertree.html>`_, aktiviert werden. 
+Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers im integriert werden. Dazu muss die Option "Dimension" im :ref:`layertree_de` aktiviert werden. 
 
 .. image:: ../../../figures/de/wmst_layertree.png
      :scale: 80

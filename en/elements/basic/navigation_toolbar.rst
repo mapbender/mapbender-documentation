@@ -41,7 +41,7 @@ If you set a tick at **Draggable**, then a small cross will appear next to the n
 
 **Rotation** enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
 
-Users can zoom to their smallest scale by **Zoom to max extent**. This *Max Extent* can be set individually in the `map element <map.html>`_ of the The element must be integrated into the Map area.
+Users can zoom to their smallest scale by **Zoom to max extent**. This *Max Extent* can be set individually in the :ref:`map element <map>`. The element must be integrated into the Map area.
 
 .. image:: ../../../figures/navigationtoolbar_zoom_to_max.png
      :scale: 80

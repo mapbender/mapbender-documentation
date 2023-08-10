@@ -60,6 +60,22 @@ Now, take a look at the documentation page in your browser. Is everything ok? Ar
 
 Below you'll find some basic conventions about documentation writing.
 
+### Crosslinks
+
+Create crosslinks to refer to another documentation page with a label. Labels that refer to a page are always in the first line of the file. Feel free to add labels above headings, if you want to refer to these instead.
+
+```bash
+    .. _activity_indicator:
+```
+
+Add the crosslink to your documentation text section like this:
+
+```bash
+    After this text is a link to :ref:`activity_indicator`.
+```
+
+Note that German labels always use the `_de` suffix.
+
 ### Images (figures)
 
 Images for the documentation are located at mapbender-documentation/figures

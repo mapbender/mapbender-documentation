@@ -1,5 +1,8 @@
 .. _layerset:
 
+Layerset
+********
+
  .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
 
  .. |mapbender-button-checkbox| image:: ../../../figures/mapbender_button_checkbox.png
@@ -9,11 +12,7 @@
  .. |mapbender-button-delete| image:: ../../../figures/mapbender_button_delete.png
 
  .. |mapbender-button-publish| image:: ../../../figures/mapbender_button_publish.png
-
-
-Layerset
-********
-
+     
 Layersets are logical containers that can contain one or more layerset-instances (WMS services). In the demo applications two layersets are defined: Layerset "main" for the main map and layerset "overview" for the overview map. The names of the layersets can be freely chosen. Moreover, more than one layerset can be chosen in the map element. Layertree shows the layerset name when thematic layers is activated.
 
 Layerset Overview Page
@@ -57,13 +56,13 @@ The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ `
 
 - **Format:** The image format which is used to get the map images for the application via the GetMap request. For raster data and aerial imagery the JPG format is recommended, in case of street maps the PNG format should be preferred. If you are in doubt use PNG.
 
-- **Infoformat:** The format which is used for the GetFeatureInfo requests to the WMS. If you are in doubt use text/html or an analog HTML format that can be used in the dialog of the :ref:`FeatureInfo <feature_info>` element. Another possibility is text/plain.
+- **Infoformat:** The format which is used for the GetFeatureInfo requests to the WMS. If you are in doubt use text/html or an analog HTML format that can be used in the dialog of the :ref:`feature_info` element. Another possibility is text/plain.
 
 - **Exceptionformat:** The format for error-messages that are returned by the WMS service.
 
 **The properties for the application**
 
-- **Opacity:** Choose the Opacity in percent. This value can be changed by the user in the  :ref:`Layertree <layertree>`, if it's made available in the corresponding menu.
+- **Opacity:** Choose the Opacity in percent. This value can be changed by the user in the  :ref:`layertree`, if it's made available in the corresponding menu.
 
 - **Tile buffer:** This parameter applies to services that are tiled and specifies whether to retrieve more surrounding tiles. With that they are already downloaded and visible during a pan movement. The higher the value, the more surrounding tiles are retrieved. Default: 0.
 
@@ -193,7 +192,7 @@ Tiling, map-size and performance
 
 The "Tiled" parameter is used to request the map image in individual tiles rather than as a whole image. This should be turned on in general, if you use `Mapproxy <https://mapproxy.de/>`_ to provide a tiled service. But it also makes sense for normal, un-tiled services, since the perceived waiting time for the user gets lower: The map image appears, although not all tiles have been retrieved yet.
 
-Keep in mind that the number of requests to a WMS increases rapidly: Depending on the screen resolution and the set tile size in the :ref:`Map element <map>` many requests are sent to the server. Although the returned images are not very large (usually you set tile sizes of 256x256 or 512x512 pixels), they are large in numbers. This is also valid in regard to the **tile buffer**. So it is a trade-off and a case-by-case distinction how to address the service. The performance can also be increased by setting the scales of a layer in the layerset-instance.
+Keep in mind that the number of requests to a WMS increases rapidly: Depending on the screen resolution and the set tile size in the :ref:`map`, many requests are sent to the server. Although the returned images are not very large (usually you set tile sizes of 256x256 or 512x512 pixels), they are large in numbers. This is also valid in regard to the **tile buffer**. So it is a trade-off and a case-by-case distinction how to address the service. The performance can also be increased by setting the scales of a layer in the layerset-instance.
 
 There are also some WMS services that only support a maximum image size that cannot be used with the high resolutions request that Mapbender can call. The Fullscreen template can be sized to the maximum screen width and the requested map image is then approximately the width and height of the visible browser window.
 

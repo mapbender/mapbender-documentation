@@ -105,25 +105,27 @@ If a translation of your browser's set language is missing in Mapbender, it will
 
 Available language codes are:
 
-    * en for English (default),
-    * de for German,
-    * tr for Turkish,
-    * es for Spanish,
-    * it for Italian,
-    * nl for Dutch,
-    * pt for Portugese,
-    * ru for Russian.
+    * en for English (default)
+    * de for German
+    * es for Spanish
+    * fr for French
+    * it for Italian
+    * nl for Dutch
+    * pt for Portugese
+    * ru for Russian
+    * tr for Turkish
+    * uk for Ukrainian     
 
 Configuration example:
 
 .. code-block:: yaml
 
-   # locale en, de, it, tr, es, ru, nl, pt are available
+    # locale en, de, es, fr, it, nl, pt, ru, tr, uk are available
     fallback_locale:   en
     locale:            en    
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-More information: https://doc.mapbender.org/en/architecture/translation.html
+More information in :ref:`translation`.
 
 
 Logo
@@ -218,7 +220,7 @@ Important: Every database defined in parameters.yml needs to have a placeholder 
                 driver:    "%database_driver%"              # More information below the code
                 host:      "%database_host%"                # Database host on which the database runs. Either name of the host (e.g. localhost) or IP address (e.g. 127.0.0.1).
                 port:      "%database_port%"                # Port, the database listens to (e.g. 5432 for PostgreSQL).
-                dbname:    "%database_name%"                # Name of the database (e.g. mapbender). Create a database with the command ``doctrine:database:create`` bzw. ``doctrine:schema:create``. More information:  `Installation<../installation.html>`_.
+                dbname:    "%database_name%"                # Name of the database (e.g. mapbender). Create a database with the command ``doctrine:database:create`` bzw. ``doctrine:schema:create``.
                 path:      "%database_path%"                # %database_path%, path to the file of the SQLite database. If you don't use a SQ-lite database, write (~) or ``null``.
                 user:      "%database_user%"                # User name for database connection.
                 password:  "%database_password%"            # Password.
@@ -333,7 +335,8 @@ Footer
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Detailed descriptions of the elements: https://doc.mapbender.org/de/elements.html
+Detailed descriptions of the elements at :ref:`elements`
+
 
 
 
@@ -351,7 +354,7 @@ Sidepane
 Map area
     Instead of 'Scale display' and 'POI', the element 'Coordinates utility' is integrated.
 
-Detailed descriptions of the elements: https://doc.mapbender.org/de/elements.html
+Detailed descriptions of the elements at :ref:`elements`.
 
 
 

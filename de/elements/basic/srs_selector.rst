@@ -4,7 +4,7 @@ SRS Auswahl (SRS Selector)
 **************************
 
 Mit der SRS Auswahl kann das räumliche Referenzsystem (SRS) der Karte geändert werden.
-Nach der Konfiguration stehen die Koordinatensysteme der Karte in einer Selectbox zur Auswahl, die vorher im `Kartenelement <map.html>`_ definiert wurden.
+Nach der Konfiguration stehen die Koordinatensysteme der Karte in einer Selectbox zur Auswahl, die vorher im :ref:`Kartenelement <map_de>` definiert wurden.
 
 .. image:: ../../../figures/srs_selector.png
      :scale: 100

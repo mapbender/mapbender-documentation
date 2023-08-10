@@ -231,7 +231,7 @@ The print with a group named "Group 1" could look like this:
 .. image:: ../../../figures/print_client_example_groups.png
      :width: 100%
 
-To use this feature, it is required that groups exist. How to create groups and users is described in the Mapbender documentation in the `Mapbender Quickstart <../../quickstart.html>`_.
+To use this feature, it is required that groups exist. How to create groups and users is described in the Mapbender documentation in the :ref:`Mapbender Quickstart <quickstart>`.
 
 The description of the group will be displayed in the field "dynamic_text" (e.g. copyright message).
 The element "dynamic_text" looks for a group description that is given in the first assigned group of the print. You can implement the dynamic text independently from the dynamic image. 
@@ -338,6 +338,8 @@ With click on the print button the print dialog opens and offers the print templ
 .. note:: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
 
 
+.. _queued_print:
+
 Queued Print
 ------------
 
@@ -375,7 +377,7 @@ After the setup, the queued print can be controlled with several bash commands, 
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-.. note:: To run the commands, open a terminal and head to the Mapbender application directory. Then, execute a command like this: 'app/console mapbender:print:queue:clean'. Detailed information on the commands:  `app/console commands <../../customization/commands.html>`_.
+.. note:: To run the commands, open a terminal and head to the Mapbender application directory. Find detailed information on the commands under :ref:`commands`.
 
 
 *Queued print: Usage*

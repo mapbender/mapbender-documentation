@@ -5,15 +5,15 @@ Sicherheitskonzepte
 
 Sicherheit wird im FOM User Bundle bereitgestellt und basiert auf diesen Konzepten:
 
-- :doc:`Benutzer <users>`
-- :doc:`Rollen und Gruppen <roles_groups>`
-- :doc:`Access Control Lists (ACL) <acl>`
+- :ref:`users_de`
+- :ref:`roles_groups_de`
+- :ref:`acl_de`
 
 
 Rechte
 ******
 
-Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Sie basieren auf :doc:`Access Control Lists (ACL) <acl>`.
+Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Sie basieren auf :ref:`acl_de`.
 
 * view - anzeigen
 * edit - editieren

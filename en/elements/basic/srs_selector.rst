@@ -3,7 +3,7 @@
 SRS Selector
 ************
 
-The spatial reference system selector changes the map's spatial reference system. The selectbox offers SRS that are defined within the `map element <map.html>`_.
+The spatial reference system selector changes the map's spatial reference system. The selectbox offers SRS that are defined within the :ref:`Map element <map>`.
 
 .. image:: ../../../figures/srs_selector.png
      :scale: 100

@@ -11,8 +11,8 @@ Das ermöglicht Ihnen einen schnellen Test von Mapbender, ohne eine Integration 
  
 In dieser Anleitung wird die im Installationspaket mitgelieferte SQLite-Datenbank verwendet.
 
-* Bitte prüfen Sie die Systemvoraussetzungen in der Installationsanleitung `Linux <installation_ubuntu.html>`_ bzw. `Windows <installation_windows.html>`_ 
-* Laden Sie die aktuellen Mapbender-Version herunter https://mapbender.org/builds/
+* Bitte prüfen Sie die Systemvoraussetzungen unter :ref:`Linux <installation_ubuntu_de>` bzw. :ref:`Windows <installation_windows_de>`.
+* Laden Sie die aktuellen Mapbender-Version herunter https://mapbender.org/builds/.
 * Entpacken in ein beliebiges Verzeichnis.
 * Starten Sie den Symfony-eigenen Webserver.
 

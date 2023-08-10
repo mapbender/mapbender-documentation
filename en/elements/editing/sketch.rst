@@ -4,7 +4,7 @@ Sketches
 ********
 
 The Sketches element allows creating, editing and deleting temporary objects. Sketches are not saved within a database and will be lost after the browser window is refreshed or closed.
-Sketch geometries will be exported into `Image Export <../export/imageexport.html>`_ and `PrintClient <../export/printclient.html>`_.
+Sketch geometries will be exported into :ref:`imageexport` and :ref:`printclient`.
 
 The following geometry types can be sketched:
 
