@@ -122,7 +122,7 @@ Configuration example:
     locale:            en    
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-More information: https://doc.mapbender.org/en/architecture/translation.html
+More information in :ref:`translation`.
 
 
 Logo
@@ -217,7 +217,7 @@ Important: Every database defined in parameters.yml needs to have a placeholder 
                 driver:    "%database_driver%"              # More information below the code
                 host:      "%database_host%"                # Database host on which the database runs. Either name of the host (e.g. localhost) or IP address (e.g. 127.0.0.1).
                 port:      "%database_port%"                # Port, the database listens to (e.g. 5432 for PostgreSQL).
-                dbname:    "%database_name%"                # Name of the database (e.g. mapbender). Create a database with the command ``doctrine:database:create`` bzw. ``doctrine:schema:create``. More information:  `Installation<../installation.html>`_.
+                dbname:    "%database_name%"                # Name of the database (e.g. mapbender). Create a database with the command ``doctrine:database:create`` bzw. ``doctrine:schema:create``.
                 path:      "%database_path%"                # %database_path%, path to the file of the SQLite database. If you don't use a SQ-lite database, write (~) or ``null``.
                 user:      "%database_user%"                # User name for database connection.
                 password:  "%database_password%"            # Password.
@@ -332,7 +332,7 @@ Footer
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
+Detailed descriptions of the :ref:`functions`
 
 
 
@@ -350,7 +350,7 @@ Sidepane
 Map area
     Instead of 'Scale display' and 'POI', the function 'Coordinates utility' is integrated.
 
-Detailed descriptions of the functions: https://doc.mapbender.org/de/functions.html
+Detailed descriptions of the :ref:`functions`
 
 
 

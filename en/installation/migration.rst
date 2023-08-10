@@ -75,7 +75,7 @@ Migration to Mapbender 3.2
 
 You can migrate older Mapbender installations to Mapbender 3.2.
 
-Check the `Mapbender Update Process <https://doc.mapbender.org/en/installation/installation_update.html>`_
+Check the :ref:`installation_update` Guide.
 
 * Make sure you have PHP >= 7.1.0 and PHP < 8 
 * Provide a backup of your database. 
@@ -121,6 +121,8 @@ You can update the configuration with the following SQL.
 
 3. For choice: Please note that key or value are passed flipped that means value and the key- see also `Best Practices Page <https://github.com/mapbender/mapbender/wiki/Best-practices:-form-types#inversion-of-choices>`_
 
+.. code-block:: sql
+    
     choices:
         Bonn - this is the value not the key: Bonn
         Cologne - this is the value not the key: Cologne

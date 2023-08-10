@@ -67,12 +67,12 @@ Installation
 ============
 
 This quickstart explains the basics of Mapbender and serves as a quick introduction after your first successful installation.
-For the installation of Mapbender have a look at `Installation <installation.html>`_.
+For the installation of Mapbender have a look at :ref:`installation`.
 
 1. Start Mapbender
 ==================
 
-#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender/app.php (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at `Installation <installation.html>`_).
+#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender/app.php (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at :ref:`installation`).
  
 #. The application should then appear in your browser window.
 
@@ -132,7 +132,7 @@ The application overview site displays a list of all available applications. The
 
 There are three different options to create an application: 
 
-An application can be created out of an already existing one. This can be done via a click on the |mapbender-button-copy| button in the application overview. The application will receive the same title and URL title with the appendix *"imp"*. All previously defined elements and configurations will be transferred as well. Another possibility is the import of an application. Further information can be found on the following page `YAML Configuration <./customization/yaml.html>`_.
+An application can be created out of an already existing one. This can be done via a click on the |mapbender-button-copy| button in the application overview. The application will receive the same title and URL title with the appendix *"imp"*. All previously defined elements and configurations will be transferred as well. Another possibility is the import of an application. Further information can be found under :ref:`yaml`.
 
 Furthermore, new applications can be created from scratch. The required steps are explained in the following:
 
@@ -140,7 +140,7 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. After that, select a template in order to define the layout of your application. The options are: Fullscreen, Fullscreen alternative, Mapbender Mobile template. It is also possible to define your own template and assign it to a new application.
 
-.. tip:: Please note that the style-, icon- and layout-configurations are set up via css- and twig-files. Read more about template generation at `How to create your own Template? <customization/templates.html>`_.
+.. tip:: Please note that the style-, icon- and layout-configurations are set up via css- and twig-files. Read more about template generation under :ref:`templates`.
 
 #. Define a title, URL title and a description (optional). Title and URL title can be identical. However, the URL title has to follow the usual URL syntax.
 
@@ -148,7 +148,7 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. Under the section Map engine, choose your preferred OpenLayers version to manage the application's map.
 
-#. Set a tick at *"persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found on the following site: `share <share.html>`_.
+#. Set a tick at *"persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found in :ref:`share`.
 
 #. Click *"save"* to save and create your application. It is now possible to add elements (e.g. map, navigation bar, legend) and services to your applicaiton.
 
@@ -181,7 +181,7 @@ Now you should have an idea about how easy it is to change a Mapbender applicati
   .. image:: ../figures/mapbender_application_add_element.png
      :width: 100%
 
-In the following, you find a complete list of all elements and their functionalities. For a more detailed description, please have a look at the corresponding chapters in the `mapbender documentation <index.html>`_.
+In the following, you find a complete list of all elements and their functionalities. For a more detailed description, please have a look at the corresponding chapters in the :ref:`Table of Contents<welcome>`.
 
 * About dialog: Shows information about Mapbender in an about dialog
 * Activity indicator: Shows HTTP activity
@@ -233,7 +233,7 @@ Try it yourself
 4. Configure Sources
 ====================
 
-Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`Layerset <layerset>` .
+Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`layerset`.
 
 The sources pages provides a user with the following functions:
 
@@ -246,6 +246,8 @@ The sources pages provides a user with the following functions:
   .. image:: ../figures/mapbender_sources.png
      :width: 100%
 
+
+.. _load_sources:
 
 Load sources
 ------------
@@ -322,7 +324,7 @@ Sources can be individually configured. This can be useful if you, for instance,
 
 **Dimensions:**
 
-This function is relevant for sources with a time dimension. Further information can be found on the following page: `Dimensions Handler <dimensions_handler.html>`_.
+This function is relevant for sources with a time dimension. Further information can be found under :ref:`dimensions_handler`.
 
 **Vendor Specific Parameter:**
 

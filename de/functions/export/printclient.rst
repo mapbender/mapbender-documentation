@@ -232,7 +232,7 @@ Ein gruppenabhängiger Druck könnte bei einer Gruppe namens "Gruppe 1" wie folg
 .. image:: ../../../figures/de/print_client_example_groups.png
      :width: 100%
 
-Zur Nutzung dieser Funktion müssen Gruppen mit Benutzern erstellt und den Anwendungen die jeweiligen Gruppen zugewiesen werden. Weitere Informationen zur Funktionsweise der Gruppen- und Benutzerverwaltung unter `Mapbender Quickstart <../../quickstart.html>`_.
+Zur Nutzung dieser Funktion müssen Gruppen mit Benutzern erstellt und den Anwendungen die jeweiligen Gruppen zugewiesen werden. Weitere Informationen zur Funktionsweise der Gruppen- und Benutzerverwaltung stehen im :ref:`Mapbender Schnellstart <quickstart_de>`.
 
 *Dynamisches Bild*
 ------------------
@@ -352,6 +352,8 @@ Das gewünschte Gebiet kann auswählt werden und ein PDF erzeugt. Das PDF beinha
 Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwender nicht daran, den Rahmen in einen Bereich zu verschieben, der nicht das ausgewählte Objekt enthält. Die ausgedruckte Objektinformation passt dann nicht zur Darstellung in der Karte.
 
 
+.. _queued_print_de:
+  
 Warteschleifendruck
 -------------------
 
@@ -387,7 +389,7 @@ Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen ü
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen, also bspw.: app/console mapbender:print:queue:clean. Zur genauen Vorgehensweise siehe die Informationen auf der Seite `app/console Befehle <../../customization/commands.html>`_.
+.. hint:: Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen. Zur genauen Vorgehensweise siehe die Informationen auf der Seite :ref:`commands_de`.
 
 
 *Warteschleifendruck: Durchführung*

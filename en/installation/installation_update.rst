@@ -14,7 +14,7 @@ To update Mapbender you have to do the following steps:
 * Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?)
 * print templates: if you use your own print templates: copy them back to app/Resources/MapbenderPrintBundle/templates/.
 * Import the demo applications either via bin/composer run reimport-example-apps or via the web administration
-* At https://doc.mapbender.org/en/installation/installation_ubuntu.html under the section **Unpack and register in your Web-Server** you can see how the config file for the Apache Alias should look like
+* At :ref:`installation_ubuntu` under the section **Unpack and register in your Web-Server** you can see how the config file for the Apache Alias should look like
 * That's all! Have a look at your new Mapbender version
 
 .. hint::

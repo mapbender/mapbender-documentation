@@ -13,7 +13,7 @@ F: Wozu sind die unterschiedlichen Umgebungen da?
 
 A: Für den gewöhnlichen produktiven Einsatz rufen Sie Mapbender über die app.php-Datei auf. Erst wenn Sie selbst etwas (an den Twig-, CSS- oder JS-Dateien) entwickeln, nutzen Sie den Aufruf über die app_dev.php-Datei. Der dahinterstehende Entwicklungsmodus gibt mehr Informationen aus, indem er z. B. detailliertere Fehlermeldungen anzeigt. 
 
-Mehr Details zu den Umgebungen gibt es im Kapitel `Produktions- und Enwicklungsumgebung und Caches: app.php und app_dev.php <installation/installation_configuration.html#produktions-und-entwicklungsumgebung-und-caches-app-php-und-app-dev-php>`_.
+Mehr Details zu den Umgebungen gibt es im Kapitel :ref:`app_cache_de`.
 
 
 Cache
@@ -25,7 +25,7 @@ A: Der Cache ist ein Zwischenspeicher, aus dem Mapbender auf häufig benutzte Da
 
 Diese zwei Verzeichnisse können ohne Bedenken gelöscht werden. Beim nächsten Aufruf von Mapbender werden im Cache der entsprechenden Umgebung erneut Dateien abgelegt.
 
-Mehr Details zum Cache gibt es im Kapitel `Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php <installation/installation_configuration.html#produktions-und-entwicklungsumgebung-und-caches-app-php-und-app-dev-php>`_.
+Mehr Details zum Cache gibt es im Kapitel :ref:`app_cache_de`.
 
 
 Dienste in Anwendungen
@@ -120,7 +120,7 @@ Weisen Sie zur Veränderung der Höhe diesem Parameter einen Wert zu:
 Problem bei WMS-Diensten mit vielen Layern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Beim Laden eines WMS mit vielen Layern (über 100) in eine Anwendung werden in der Konfiguration der `Layerset-Instance <backend/applications/layerset.html>`_  nur Teile der Layer übernommen und angezeigt. Die WMS-Instance kann außerdem nicht abgespeichert werden. Gibt es einen Weg, den WMS dennoch zu verwenden?
+F: Beim Laden eines WMS mit vielen Layern (über 100) in eine Anwendung werden in der :ref:`layerset`-Konfiguration nur Teile der Layer übernommen und angezeigt. Die WMS-Instance kann außerdem nicht abgespeichert werden. Gibt es einen Weg, den WMS dennoch zu verwenden?
 
 A: Mittels des PHP-Parameters `max-input_vars <https://php.net/manual/de/info.configuration.php#ini.max-input-vars>`_ kann die Zahl der Eingabe-Variablen erhöht werden. Der Standardwert liegt bei 1000. 
 Die Zahl der Eingabe-Variablen ist bei einem WMS mit vielen Layern sehr hoch, vergleichbar mit der Anzahl der Auswahlmöglichkeiten innerhalb des WMS-Instance-Dialogs. Setzen Sie bei der Arbeit mit großen WMS mit vielen Layern den Parameter hoch, beispielsweise auf 2000. Die Zahl hängt direkt mit der Anzahl der Layer im WMS zusammen.

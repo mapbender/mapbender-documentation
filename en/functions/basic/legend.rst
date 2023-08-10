@@ -21,7 +21,7 @@ Configuration
 * **Show layer title:** shows layer title (default: true)
 * **Show grouped layer title:** shows group title for grouped layers (default: true)
 
-The Legend element is integrated via a button or in the sidepane. If you look for configurational details for the button, head over to this page: `Button <../misc/button.html>`_.
+The Legend element is integrated via a :ref:`button` or in the sidepane.
 
 
 Configuration Examples
@@ -61,7 +61,7 @@ In this example, the following settings are chosen:
      :scale: 75
 
 In our example, the checkbox *Auto-open* is dismissed. Therefore, the legend opens only with a click on a button.
-This button has to be implemented into the toolbar section. For detailed instructions on buttons, see the Mapbender-Documentation page `Button <../misc/button.html>`_.
+This :ref:`button` has to be implemented into the toolbar section.
 
 The configuration of a button can look like this:
 

@@ -35,7 +35,7 @@ Konfiguration
 * **Hover-Opazität (%) der Füllfarbe** Setzt die Opazität der Füllfarbe in Prozent beim Hovern.
 * **Hover-Linienstärke (in Pixeln)** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
 
-Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter `Button <../misc/button.html>`_.
+Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :ref:`button_de`.
 
 Einstellungen im Ebenenbaum
 ---------------------------

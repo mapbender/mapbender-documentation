@@ -5,15 +5,15 @@ Security Concepts
 
 Security as provided by the FOMUserBundle is anchored on these base concepts:
 
-- :doc:`Users <users>`
-- :doc:`Roles and Groups <roles_groups>`
-- :doc:`ACL <acl>`
+- :ref:`users`
+- :ref:`roles_groups`
+- :ref:`acl`
 
 
 Rights management
 *****************
 
-Mapbender provides different rights. They refer to the :doc:`Access Control Lists (ACL) <acl>`.
+Mapbender provides different rights. They refer to the :ref:`acl`.
 
 * view - Whether someone is allowed to view the object.
 * edit - Whether someone is allowed to make changes to the object.

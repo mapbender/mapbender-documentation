@@ -25,7 +25,7 @@ to Mapbender:
 Installation
 ************
 
-The installation procedure from Git is described in the chapter `Git-based installation <../installation/installation_git.html>`_.
+The installation procedure from Git is described under :ref:`installation_git`.
 
 
 Getting Help

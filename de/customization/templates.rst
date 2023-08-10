@@ -7,7 +7,7 @@ Mapbender beinhaltet bereits Anwendungs-Vorlagen, sie befinden sich im Mapbender
 Häufig sollen jedoch eigene Anwendungs-Vorlagen und Administrationsoberflächen mit eigenem Corporate Design verwendet werden.
 Um Probleme bei einem Upgrade zu vermeiden, sollte für personalisierte Oberflächen ein eigenes Bundle verwendet werden.
 
-Der Stil einer einzelnen Anwendung kann ebenfalls über den :ref:`CSS-Editor <css_de>` angepasst werden.
+Der Stil einer einzelnen Anwendung kann ebenfalls über den :ref:`css_de` angepasst werden.
 
 
 Wie werden eigene Vorlagen erzeugt?

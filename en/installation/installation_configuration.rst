@@ -121,6 +121,7 @@ The configuration files are located under **app/config**.
 
 Find more information in: :ref:`yaml`.
 
+.. _app_cache:
 
 Production and Development environment and Caching: app.php and app_dev.php
 ---------------------------------------------------------------------------

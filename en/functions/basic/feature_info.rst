@@ -35,7 +35,7 @@ Configuration
 * **Opacity (%) of the hover color** Sets the opacity of the hover color.
 * **Stroke width (pixels) of the hover color** Sets the stroke width (in pixels) of the hover color.
 
-A button is also needed for complete frontend integration. Further information on how to configure a button: `Button <../misc/button.html>`_.
+A :ref:`button` is also needed for complete frontend integration.
 
 Layertree settings
 ------------------

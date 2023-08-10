@@ -187,7 +187,7 @@ Eine Konfiguration könnte wie folgt aussehen:
     locale:            de    
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-Weitere Informationen unter https://doc.mapbender.org/en/architecture/translation.html
+Weitere Informationen unter :ref:`translation`.
 
 
 SSL Zertifikat
@@ -217,7 +217,7 @@ Wichtig: Jede Datenbank, die in der ``parameters.yml`` definiert wird, muss auch
                 driver:    "%database_driver%"              # Mehr Information unterhalb des Codes
                 host:      "%database_host%"                # Der Host, auf dem die Datenbank läuft. Entweder der Name (z.B. localhost) oder die IP-Adresse (z.B. 127.0.0.1).
                 port:      "%database_port%"                # Der Port, auf dem die Datenbank lauscht (z.B. 5432 für PostgreSQL).
-                dbname:    "%database_name%"                # Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <../installation.html>`_ für Details.
+                dbname:    "%database_name%"                # Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``.
                 path:      "%database_path%"                # Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
                 user:      "%database_user%"                # Benutzername für die Verbindung zur Datenbank.
                 password:  "%database_password%"            # Das Passwort des Datenbankbenutzers.
@@ -331,7 +331,7 @@ Fußzeile
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
+Ausführliche Beschreibungen der einzelnen Funktionen unter :ref:`functions_de`.
 
 
 
@@ -349,7 +349,7 @@ Sidepane
 Kartenbereich
     Statt der Funktionen 'Maßstabsanzeige' und 'POI' ist die Funktion 'Koordinaten Utility' eingebunden.
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
+Ausführliche Beschreibungen der einzelnen Funktionen unter :ref:`functions_de`.
 
 
 

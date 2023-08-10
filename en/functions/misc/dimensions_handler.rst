@@ -44,7 +44,7 @@ There are two ways to control the time of the WMS. On the one hand, each service
 Timeslider in context menu
 --------------------------
 
-A timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the `Layertree <../basic/layertree.html>`_ element.
+A timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the :ref:`layertree` element.
 
 .. image:: ../../../figures/wmst_layertree.png
      :scale: 80

@@ -1,20 +1,19 @@
 .. _sources:
 
-  .. |mapbender-button-add| image:: ../../figures/mapbender_button_add.png
-  .. |mapbender-button-update| image:: ../../figures/mapbender_button_update.png
-
 Sources
 =======
 
 With Sources, you can register OGC WMS and OGC WMTS/TMS services in version 1.1.1 and 1.3.0 in Mapbender.
 
-Further information about the registration process of services and their usage in applications is available in the `Quickstart document <../../quickstart.html#load-sources>`_.
+Further information about the registration process of services and their usage in applications is available in the Quickstart chapter :ref:`load_sources`.
 
 
 Load sources
 ------------
 
 .. tip:: It is important to check the service before it is registered in Mapbender. To do that, open the getCapabilities-Request (see example in Service URL) in your browser.
+
+  .. |mapbender-button-add| image:: ../../figures/mapbender_button_add.png
 
 To register a service, click on |mapbender-button-add| **Add source**:
 
@@ -65,6 +64,9 @@ In the metadata dialog of a specific service, it is also possible to click on th
 
 Updating sources
 ----------------
+
+  .. |mapbender-button-update| image:: ../../figures/mapbender_button_update.png
+
 To update a source in the backend, you first need to navigate to the ``Sources`` backend list.
 On this page, look for the layer you wish to update via scrolling or use the search box.
 After you've found it, click on its |mapbender-button-update| **Refresh** button.
