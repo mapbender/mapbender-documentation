@@ -3,25 +3,24 @@
 Einführung
 ##########
 
-Diese Dokumentation ist an Mapbender-Entwickler gerichtet und behandelt Themen, die von Mapbender-Administratoren und -Benutzern nicht benötigt werden.
+Diese Dokumentation ist an Mapbender-Entwickler gerichtet und behandelt Themen, 
+die von Mapbender-Administratoren und -Benutzern nicht benötigt werden.
 
 Dinge, die es zu beachten gilt
 ******************************
 
 Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu können:
 
-* Objektorientiertes PHP: Verwendet wird PHP > 5.6,  welches objektorientierte Programmierung ermöglicht.
-* Symfony: Mapbender baut auf Symfony auf. Folgen Sie der Anleitung `Symfony
-  <https://symfony.com/doc/current/index.html>`_, dort erfahren Sie mehr über Controller, Vorlagen usw.
+* Objektorientiertes PHP: Verwendet wird PHP > 5.6, welches objektorientierte Programmierung ermöglicht.
+* Symfony: Mapbender baut auf Symfony auf. Folgen Sie der `Symfony-Dokumentation
+  <https://symfony.com/doc/current/index.html>`_, dort erfahren Sie mehr.
 * Docblock-Anmerkungen: Es wird ApiGen zu Erstellung der Dokumentation verwendet.
-* JavaScript: jQuery wird häufig verwendet, v.a. kommt hier die jQuery UI Widget Factory häufig zum Einsatz. Das Verständnis davon ist essentiell, um JavaScript-Code zu schreiben.
-
+* JavaScript: jQuery wird häufig verwendet, vor allem kommt die jQuery UI Widget Factory häufig zum Einsatz. Das Verständnis davon ist essentiell, um JavaScript-Code zu schreiben.
 
 Installation
 ************
 
-Die Installation aus den Git-Quellen heraus wird unter :ref:`Git-basierte Installation <installation_git_de>` beschrieben.
-
+Die Installation aus den Git-Quellen heraus wird unter :ref:`installation_git_de` beschrieben.
 
 Wo gibt es Hilfe?
 *****************
@@ -41,7 +40,6 @@ Bibliotheken und Frameworks:
 
 Themen
 ******
-
 
 .. toctree::
    :maxdepth: 1
