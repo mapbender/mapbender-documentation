@@ -50,7 +50,6 @@ Topics
    element_generate
    elements
    frontend_architecture
-   git
    proxy
    requestresponse
    symfony
