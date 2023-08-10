@@ -353,7 +353,7 @@ Kartenbereich
     Statt der Elemente 'Maßstabsanzeige' und 'POI' ist das Elemente 'Koordinaten Utility' eingebunden.
 
 
-Ausführliche Beschreibungen der einzelnen Elemente unter :ref:`elemente_de`.
+Ausführliche Beschreibungen der einzelnen Elemente unter :ref:`elements_de`.
 
 
 
