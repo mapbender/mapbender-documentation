@@ -183,40 +183,43 @@ Now you should have an idea about how easy it is to change a Mapbender applicati
 
 In the following, you find a complete list of all elements and their functionalities. For a more detailed description, please have a look at the corresponding chapters in the :ref:`Table of Contents<welcome>`.
 
-* About dialog: Shows information about Mapbender in an about dialog
-* Activity indicator: Shows HTTP activity
-* Application switcher:	Switches to another application while maintaining the current map position
-* Base source switcher:	Changes the map's background sources
-* Button: Integrate another element as a button
-* Coordinates display: Shows the map coordinates of your mouse position
-* Coordinates utility: Transforms coordinates to different SRS and navigates to them on the map
-* Copyright: Shows terms of use
-* Data manager: Create and manage non-spatial data
-* Digitizer: Create and manage spatial data
-* Dimensions handler: Manage sources with a time dimension
-* FeatureInfo: Gives information about sources
-* GPS Position: Renders a button to show the GPS position
-* HTML: Offers free definition of HTML to integrate pictures, texts or links			
-* Image export: Exports the current map view (format options: png or jpeg)
-* Layer tree: Gives an overview of map layersets and layers
-* Legend: Displays legend of active themes on the map
-* Line/Area Ruler: Enables to measure a line/area and display its length/area in a dialog
-* Link: Links to an external URL
-* Map: Creates the map element in which layersets and layers are integrated into
-* Navigation toolbar: Provides a floating control to pan and zoom in the map
-* Overview: Provides an overview map
-* POI: Creates a POI for sharing
-* Print client: Renders a Print dialog
-* SRS selector: Changes the map's spatial reference system
-* Scale bar: Displays a small line indicator representing the current map scale
-* Scale display: Displays the current map scale
-* Scale selector: Displays and changes a map scale
-* Search router: Enables a configurable search via SQL
-* Share URL: Shares the current map view via URL
-* Simple Search: Enables a configurable search on JSON sources (e.g. Solr)
-* Sketches: Enables a drawing tool with different shapes
-* View manager: Saves map states for later restoration
-* WMS loader: Loads a WMS via a getCapabilities-Request
+* :ref:`about_dialog` :  Shows information about Mapbender in an about dialog
+* :ref:`activity_indicator` : Shows HTTP activity
+* :ref:`view_manager` : Saves map states for later restoration
+* :ref:`applicationswitcher` : Switches to another application while maintaining the current map position
+* :ref:`imageexport` : Exports the current map view (format options: png or jpeg)
+* :ref:`button` : Integrate another element as a button
+* :ref:`copyright` : Shows terms of use
+* :ref:`datamanager` : erzeugt und speichert Sachinformationen in einer Datenbank 
+* :ref:`digitizer` : Create and manage spatial data
+* :ref:`dimensions_handler` : Manage sources with a time dimension
+* :ref:`printclient` : Renders a Print dialog
+* :ref:`layertree`: Gives an overview of map layersets and layers
+* :ref:`simplesearch` : erstellt eine Einfeldsuche
+* :ref:`gpspostion` : Renders a button to show the GPS position
+* :ref:`html`: Offers free definition of HTML to integrate pictures, texts or links	
+* :ref:`basesourceswitcher` : Changes the map's background sources
+* :ref:`feature_info`: Gives information about sources
+* :ref:`map`: Creates the map element in which layersets and layers are integrated into
+* :ref:`coordinate_utility` : Transforms coordinates to different SRS and navigates to them on the map
+* :ref:`coordinates_display`: Shows the map coordinates of your mouse position
+* :ref:`legend`: Displays legend of active themes on the map
+* :ref:`ruler` : Enables to measure a line/area and display its length/area in a dialog
+* :ref:`link`: Links to an external URL
+* :ref:`scaledisplay` : Displays the current map scale
+* :ref:`simplesearch` : Enables a configurable search on JSON sources (e.g. Solr)
+* :ref:`scalebar`: Displays a small line indicator representing the current map scale
+* :ref:`scale_selector`: Displays and changes a map scale
+* :ref:`poi` : Creates a POI for sharing
+* :ref:`navigation_toolbar` : Provides a floating control to pan and zoom in the map
+* :ref:`srs_selector` : Changes the map's spatial reference system
+* :ref:`sketch` : Enables a drawing tool with different shapes
+* :ref:`search_router` : Enables a configurable search via SQL
+* :ref:`shareurl` : Shares the current map view via URL
+* :ref:`wms_loader` : Loads a WMS via a getCapabilities-Request
+* :ref:`about_dialog` : Shows information about Mapbender in an about dialog
+* :ref:`overview` : Provides an overview map
+
 
 
 Try it yourself
