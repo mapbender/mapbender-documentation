@@ -378,7 +378,7 @@ Miscellaneous:
 
 * New design of the documentation. We have changed the theme to the Sphinx RTD theme. The documentation is now easily readable on mobile devices. You can also print out specific pages.
 
-* Restructuring of the documentation. The specific :ref:`functions` are sectioned into:
+* Restructuring of the documentation. The specific :ref:`elements` are sectioned into:
   
   * :ref:`basic`
   * :ref:`search`
@@ -521,7 +521,7 @@ Release date: 05.05.2017
 - The login-dialog (registration, forgotten password) is optimized for mobile devices to achieve a better workflow to secured mobile applications.
 - New added layerset instances are now per default not marked as base-source.
 
-- The `Copyright element popup <functions/misc/copyright.html>`_ can be defined with a height and a width.
+- The `Copyright element popup <elements/misc/copyright.html>`_ can be defined with a height and a width.
 
 - Deleting a layerset led in some cases to a corrupt map element and a wrong layertree.
 
@@ -560,14 +560,14 @@ Release date: 05.05.2017
 
 - User-Interface: Scrolling of a drop-down list in backend, for example the icons for the buttons, did also scroll the background.
 
-- "Only valid" Checkbox on `loading a  WMS <functions/backend/source.html>`_ is now per default not activated anymore.
+- "Only valid" Checkbox on `loading a  WMS <elements/backend/source.html>`_ is now per default not activated anymore.
 
  - Reformatted messages if the schemes of a WMS are not accessible when adding a WMS.
 
-- The `SearchRouter <functions/search/search_router.html>`_ shows, if placed in the sidebar, the Search and Reset buttons.
+- The `SearchRouter <elements/search/search_router.html>`_ shows, if placed in the sidebar, the Search and Reset buttons.
 
-- Internet Explorer Compatibility: Adjustments in the `Zoombar <functions/basic/zoom_bar.html>`_..
-- Internet Explorer Compatibility: Adjustments in the `OverviewMap <functions/basic/overview.html>`_.
+- Internet Explorer Compatibility: Adjustments in the `Zoombar <elements/basic/zoom_bar.html>`_..
+- Internet Explorer Compatibility: Adjustments in the `OverviewMap <elements/basic/overview.html>`_.
 - MS Egde Compatibility: Trying to fix the Import Dialog (https://connect.microsoft.com/IE/feedback/details/1574105/microsoft-edge-file-upload-bug-build-10240-rtm)
 
 - Improvement of the performance on *some* Windows installations through  WinCachePHP and PHP Opcache (for details see `Installation under Windows <installation/installation_windows.html>`_)
@@ -579,7 +579,7 @@ Release date: 05.05.2017
 
 **FOM and Security:**
 
-- `Show the users  <functions/backend/FOM/users.html>`_ who have a access on an element in an application.
+- `Show the users  <elements/backend/FOM/users.html>`_ who have a access on an element in an application.
 - Rework of the Secure Elements dialog.
 - User with the role View for services are allowed to view the Metadata and to load the services into an application.
 
@@ -637,7 +637,7 @@ Release date: 05.05.2017
 
 **Digitizer**
 
-- Update `Digitizer <functions/editing/digitizer.html>`_ to version 1.1.
+- Update `Digitizer <elements/editing/digitizer.html>`_ to version 1.1.
 - Printing of Multipolygons.
 - Objects don't appear in the printout if they are not displayed in the Digitizer.
 - MinScale restriction added
@@ -655,7 +655,7 @@ Release date: 05.05.2017
 - Introduction of the `FAQ <faq.html>`_.
 - Introduction of Contributing Guide for `Mapbender-Starter <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_ and `OWSProxy <https://github.com/mapbender/owsproxy3/blob/release/3.0.6/CONTRIBUTING.md>`_. Mapbender itself and FOM will follow. This is the main documentation for developers and contributors of Mapbender.
 - The developer documentation will be maintained there and be transferred step-by-step from this user-documentation. So in the future this documentation here will be more for users and the developers have their documentation directly in the source code of the different modules.
-- Better `Layertree <functions/basic/layertree.html>`_ documentation
+- Better `Layertree <elements/basic/layertree.html>`_ documentation
 
 
 **config.yml Anpassungen**
@@ -703,16 +703,16 @@ Notable Modifications:
 
 - Performance: The CSS, JavaScript and Translation files are now held in the Symfony Cache for the `production mode <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_. This can lead to better performance on slower machines. These cache is not used by the `development-mode <installation/configuration.html#production-and-development-environment-and-caching-app-php-and-app-dev-php>`_.
 - The package `eslider/sassc-binaries <https://github.com/eSlider/sassc-binaries>`_ offers now a sassc Compiler for 32-bit Linux systems. This led to a wrong display on 32-bit Linux-Systems (http://lists.osgeo.org/pipermail/mapbender_users/2015-December/004768.html)
-- Redlining: The contents of the Redlining element is visible and Redlining can now be used as a Dialog or an Element in the Sidepane. See also the `documentation of the Redlining Element <functions/editing/redlining.html>`_. The scroll bar for the Geometry-Types in the configuration dialog is now displayed correctly.
+- Redlining: The contents of the Redlining element is visible and Redlining can now be used as a Dialog or an Element in the Sidepane. See also the `documentation of the Redlining Element <elements/editing/redlining.html>`_. The scroll bar for the Geometry-Types in the configuration dialog is now displayed correctly.
 
 Users and security:
 
-- Users can be switched active or inactive by an Administrator, who has at least the ACL-user-right "operator". This can be used for users, who have self-registered but not yet activated their account. See the `documentation of user-management <functions/backend/FOM/users.html>`_ for details.
-- The text, translations and styles for the Self-Register process and the Password Reset are improved. Also the `Documentation <functions/backend/FOM/users.html>`_ is adjusted.
+- Users can be switched active or inactive by an Administrator, who has at least the ACL-user-right "operator". This can be used for users, who have self-registered but not yet activated their account. See the `documentation of user-management <elements/backend/FOM/users.html>`_ for details.
+- The text, translations and styles for the Self-Register process and the Password Reset are improved. Also the `Documentation <elements/backend/FOM/users.html>`_ is adjusted.
 
 Print and export image:
 
-- The `Print module <functions/export/printclient.html>`_ can now also be used in the Sidepane.
+- The `Print module <elements/export/printclient.html>`_ can now also be used in the Sidepane.
 - Print legend: The size of the legend in the print-out was scaled down to improve the quality.
 - Print-templates: The default print-templates have changed. The padding of the dynamic texts to their border and their justification were improved.
 - Print: The Print configuration messed up mandatory (required: true) and optional fields (required: false), if they were used in combination. Optional fields were partly shown as mandatory (Github #380).
@@ -732,12 +732,12 @@ Individual Elements:
   - *Note:* WMS services exists, which define a legend in the root-layer element. According to the WMS-specification, this legend will be inherited by sub-layers who itself haven't defined a legend (for example if they only contain the annotations). The effect is similar in MB3 but the cause is different, so that in these cases a change in the WMS capabilities is needed (define a static legend image for these layers).
 
 - **Thematic Layer**: Fix in switching layers on and off which are in their own Layerset but not displayed as a thematic layer.
-- **Coordinate display**: The coordinate-element display doesn't show "null" as prefix or separator anymore, although the field was defined as empty. The element has get a fixed with so that the layout in the footer region is more sable. The value can be changed (see the chapter `CSS-customizing of the element <functions/basic/coordinates_display.html>`_).
-- **SearchRouter**: The content of the result uses the whole space of the dialog and fits itself to changes of the size. In the sidebar the whole height is used. The search router can be configured `with a width and a height <functions/search/search_router.html>`_.
-- **ScaleSelector**: The width of the element can be `customized with a CSS-Statement <functions/basic/scale_selector.html>`_ and is no more set to 155 pixel.
+- **Coordinate display**: The coordinate-element display doesn't show "null" as prefix or separator anymore, although the field was defined as empty. The element has get a fixed with so that the layout in the footer region is more sable. The value can be changed (see the chapter `CSS-customizing of the element <elements/basic/coordinates_display.html>`_).
+- **SearchRouter**: The content of the result uses the whole space of the dialog and fits itself to changes of the size. In the sidebar the whole height is used. The search router can be configured `with a width and a height <elements/search/search_router.html>`_.
+- **ScaleSelector**: The width of the element can be `customized with a CSS-Statement <elements/basic/scale_selector.html>`_ and is no more set to 155 pixel.
 - If all layer in a **layerset-instance** are set to visible=off they were not visible in the layertree and the legend. This is fixed.
 - Improvements in the styling of the **POI dialog** if "usemailto" is set to false.
-- **Layertree**: Titles are now shown per default with a length of 40. The default value has been changed. You can set the `parameter Titlemaxlength in the configuration dialog <functions/basic/layertree.html>`_.
+- **Layertree**: Titles are now shown per default with a length of 40. The default value has been changed. You can set the `parameter Titlemaxlength in the configuration dialog <elements/basic/layertree.html>`_.
 - **GPS**: Improvements in the GPS handling.
 
 General changes:
@@ -762,7 +762,7 @@ General changes:
 
 **Known Issues:**
 
-- The Sketch Tool doesn't work correctly and will be built into the `Redlining Tool <functions/editing/redlining.html>`_.
+- The Sketch Tool doesn't work correctly and will be built into the `Redlining Tool <elements/editing/redlining.html>`_.
 - Share map doesn't work for Facebook, Twitter und Google+.
 
 
@@ -793,13 +793,13 @@ Release Datum: 27.10.2015
 - Administration data source: No form data auto-complete from the browser for username and password.
 - Mobile application: Design in Firefox for Android.
 - Update 3.0.4.x: FeatureInfo autoopen=true is kept.
-- Doku: FOM `UserBundle translation <functions/backend/FOM/index.html>`_ and `additional information for failed user logins <functions/backend/FOM/users.html>`_.
-- Doku: URL parameter scale in `map element <functions/basic/map.html>`_.
-- Doku: `WMC Loader <functions/wmc/wmc_loader.html>`_ and KeepSources.
+- Doku: FOM `UserBundle translation <elements/backend/FOM/index.html>`_ and `additional information for failed user logins <elements/backend/FOM/users.html>`_.
+- Doku: URL parameter scale in `map element <elements/basic/map.html>`_.
+- Doku: `WMC Loader <elements/wmc/wmc_loader.html>`_ and KeepSources.
 
 **Changes in config.yml:**
 
-* The following changes are optional parameters for the behaviour of the login (see also `the chapter in the FOM bundle for details <functions/backend/FOM/users.html>`_):
+* The following changes are optional parameters for the behaviour of the login (see also `the chapter in the FOM bundle for details <elements/backend/FOM/users.html>`_):
 
     .. code-block:: yaml
 
@@ -824,7 +824,7 @@ Version 3.0.5.1
 
 Release Datum: 26.08.2015
 
-**New functions**: in the `Map element <functions/basic/map.html>`_ and in the `Print client <functions/export/printclient.html>`_:
+**New functions**: in the `Map element <elements/basic/map.html>`_ and in the `Print client <elements/export/printclient.html>`_:
 
 * Map: OpenLayers TileSize: You can set the tile-size for the map. Default: 256x256.
 * Map: Delay before Tiles: For WMS-T, for example with temporal parameters (in future)
@@ -879,9 +879,9 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
 
 * **Print with legend:** The print element supports the print-out of the legend on a seperate page. This can be set with a checkbox.
 
-* **Configurable layertree:** The layertree supports the usage of more than one layerset. You have to adjust the map element to define which layersets should be shown and the layertree element itself. The usage is documented `on the Layertree page <functions/basic/layertree.html>`_.
+* **Configurable layertree:** The layertree supports the usage of more than one layerset. You have to adjust the map element to define which layersets should be shown and the layertree element itself. The usage is documented `on the Layertree page <elements/basic/layertree.html>`_.
 
-* **Improved FeatureInfo dialog:** You can set a) the width and height of the FeatureInfo dialog, b) if the dialog should show the original format of the WMS and c) if it should only open if a valid entry is found (otherwise a messagebox is displayed). See the documentation of the `FeatureInfo Dialog <functions/basic/feature_info.html>`_.
+* **Improved FeatureInfo dialog:** You can set a) the width and height of the FeatureInfo dialog, b) if the dialog should show the original format of the WMS and c) if it should only open if a valid entry is found (otherwise a messagebox is displayed). See the documentation of the `FeatureInfo Dialog <elements/basic/feature_info.html>`_.
 
 * **Mobile template:** A new modern mobile template is provided.
 
@@ -893,7 +893,7 @@ For details have a look at:  https://github.com/mapbender/mapbender-starter/blob
 
 * **New button colletion:** The new buttons are based on a new font, the old buttons are available under the "FontAwesome" name.
 
-* **Starting mapbender with URL parameters:** Mapbender3 can be started with URL parameters. See the documentation of `URL parameters <functions/basic/map.html#controlling-by-url>`_.
+* **Starting mapbender with URL parameters:** Mapbender3 can be started with URL parameters. See the documentation of `URL parameters <elements/basic/map.html#controlling-by-url>`_.
 
 * New translations for Portuguese and Russian.
 

@@ -10,7 +10,7 @@ Layouts
 #######
 
 In the Layouts section of an application you get an overview of the regions (layout sections) of the application. In the regions, the elements of the application are listed.
-An overview of all elements is available under :ref:`functions`.
+An overview of all elements is available under :ref:`elements`.
 
 .. note:: Different templates can have different regions: In the demo applications you can see two different region layouts. Not every element can be used in every region. Mapbender cares about that.
 
@@ -93,7 +93,7 @@ The following button functions are available:
 
 Edit
 ====
-The |mapbender-button-edit| button opens a configuration mask for a specific element. The :ref:`functions` overview page can help you to look up a setting for a specific element.
+The |mapbender-button-edit| button opens a configuration mask for a specific element. The :ref:`elements` overview page can help you to look up a setting for a specific element.
 
 
 Acl element

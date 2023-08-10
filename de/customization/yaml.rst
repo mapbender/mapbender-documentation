@@ -169,20 +169,23 @@ Es ist jedoch möglich, eine bevorzugte Sprache (fallback) zu definieren, die Ma
 Dies kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
 
   Folgende Sprachcodes sind verfügbar:
-    * en für Englisch (Standard),
-    * de für Deutsch,
-    * tr für Türkisch,
-    * es für Spanisch,
-    * it für Italienisch,
-    * nl für Niederländisch,
-    * pt für Portugiesisch,
-    * ru für Russisch.
+
+    * en für Englisch (Standard)
+    * de für Deutsch
+    * es für Spanisch
+    * fr für französisch,
+    * it für Italienisch
+    * nl für Niederländisch
+    * pt für Portugiesisch
+    * ru für Russisch
+    * tr für Türkisch
+    * uk für Ukrainisch
 
 Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
 
-   # en, de, tr, it, es, ru, nl, pt are available
+    # locale en, de, es, fr, it, nl, pt, ru, tr, uk are available
     fallback_locale:   en
     locale:            de    
     secret:            ThisTokenIsNotSoSecretChangeIt
@@ -331,7 +334,7 @@ Fußzeile
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter :ref:`functions_de`.
+Ausführliche Beschreibungen der einzelnen Elemente finden sich unter :ref:`elements_de`.
 
 
 
@@ -344,12 +347,14 @@ Obere Werkzeugleiste
     Die Leiste unterscheidet sich kaum von der in der Mapbender Demo Map Anwendung. Statt 'POI' ist 'Koordinaten Utility' eingebunden.
 
 Sidepane
-    Hier sind keine Funktionen vorimplementiert.
+    Hier sind keine Elemente eingebunden.
 
 Kartenbereich
-    Statt der Funktionen 'Maßstabsanzeige' und 'POI' ist die Funktion 'Koordinaten Utility' eingebunden.
+    Statt der Elemente 'Maßstabsanzeige' und 'POI' ist das Elemente 'Koordinaten Utility' eingebunden.
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter :ref:`functions_de`.
+
+Ausführliche Beschreibungen der einzelnen Elemente unter :ref:`elements_de`.
+
 
 
 

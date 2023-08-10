@@ -47,7 +47,7 @@ rm -rf _build
 To participate in the documentation, create a fork and submit a pull request with your changes. In your fork, write new content, e.g.:
 
 ```bash
-  cd /mapbender-documentation/en/functions/basic # Let's assume that you want to create a docs page that is part of the Mapbender CoreBundle. Switch to the folder where your file should be located.
+  cd /mapbender-documentation/en/elements/basic # Let's assume that you want to create a docs page that is part of the Mapbender CoreBundle. Switch to the folder where your file should be located.
   cp overview.rst basic/add_wms.rst  # Create a rst-file. E.g., copy the overview.rst as template for your add_wms.rst documentation file.
   # Write the documentation: keep it short and simple. Use the structure of the document.
   sphinx-build . _build -A version=3.3.0 # Build the documentation locally to see how your documentation looks like. Adjust the version number (if necessary).
@@ -101,7 +101,7 @@ The two fully supported languages (i.e.: en - english, de - german) should have 
       /architecture
       /development
           ....
-      /functions
+      /elements
           /backend
           /basic
           ....

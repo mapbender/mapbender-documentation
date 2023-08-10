@@ -190,7 +190,7 @@ Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine exter
 
 	mapbender.print.queueable: true
 
-Weitere Informationen gibt es im Kapitel :ref:`queued_print_de` sowie unter https://github.com/mapbender/mapbender/pull/1070.
+Weitere Informationen zum Warteschleifendruck gibt es im Kapitel :ref:`queued_print_de` sowie unter https://github.com/mapbender/mapbender/pull/1070.
 
 Anschließend wird im Backend des Mapbenders der Druckassistent aktualisiert und es erscheinen zwei neue Zeilen, Modus und Warteschleife.
 

@@ -150,6 +150,7 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie unter :ref:`share_de`.
 
+
 #. Klicken Sie *"Speichern"*, um die Anwendung zu erzeugen. Nach der Erstellung können Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Dienste hinzufügen.
 
   .. image:: ../figures/de/mapbender_create_application.png
@@ -322,6 +323,7 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 **Dimensionen:**
 
 Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz. Weitere Informationen hierzu finden Sie unter :ref:`Dimensions Handler <dimensions_handler_de>`.
+
 
 **Vendor Specific Parameter:**
 

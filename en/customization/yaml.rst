@@ -103,21 +103,24 @@ Language settings
 Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **app/config/parameters.yml**.
 If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language. We recommend en (English) or de (German) as fallback options.
 
-  Following language codes are available:
-    * en for English (default),
-    * de for German,
-    * tr for Turkish,
-    * es for Spanish,
-    * it for Italian,
-    * nl for Dutch,
-    * pt for Portugese,
-    * ru for Russian.
+Available language codes are:
+
+    * en for English (default)
+    * de for German
+    * es for Spanish
+    * fr for French
+    * it for Italian
+    * nl for Dutch
+    * pt for Portugese
+    * ru for Russian
+    * tr for Turkish
+    * uk for Ukrainian     
 
 Configuration example:
 
 .. code-block:: yaml
 
-   # locale en, de, it, tr, es, ru, nl, pt are available
+    # locale en, de, es, fr, it, nl, pt, ru, tr, uk are available
     fallback_locale:   en
     locale:            en    
     secret:            ThisTokenIsNotSoSecretChangeIt
@@ -288,7 +291,7 @@ New YAML applications can be placed in the folder and will be automatically reco
 Mapbender Demo Map
 ------------------
 
-Following functions are pre implemented:
+The following elements are pre-implemented:
 
 Top toolbar
     * Layer tree (Button)
@@ -332,7 +335,8 @@ Footer
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Detailed descriptions of the :ref:`functions`
+Detailed descriptions of the elements at :ref:`elements`
+
 
 
 
@@ -345,12 +349,12 @@ Toolbar
     Instead of 'POI', 'Coordinates utility' is integrated.
 
 Sidepane
-    No functions pre-implemented.
+    No elements pre-implemented.
 
 Map area
-    Instead of 'Scale display' and 'POI', the function 'Coordinates utility' is integrated.
+    Instead of 'Scale display' and 'POI', the element 'Coordinates utility' is integrated.
 
-Detailed descriptions of the :ref:`functions`
+Detailed descriptions of the elements at :ref:`elements`.
 
 
 
@@ -359,7 +363,7 @@ Mapbender mobile
 
 For a mobile template on smartphones and tablets.
 
-Following functions are pre-implemented:
+The following elements are pre-implemented:
 
 Footer
     * Themes (Button)
