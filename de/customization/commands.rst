@@ -190,8 +190,7 @@ Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine exter
 
 	mapbender.print.queueable: true
 
-Weitere Informationen zum Warteschleifendruck können Sie hier nachlesen https://doc.mapbender.org/de/functions/export/printclient.html#warteschleifendruck
-sowie https://github.com/mapbender/mapbender/pull/1070
+Weitere Informationen zum Warteschleifendruck gibt es im Kapitel :ref:`queued_print_de` sowie unter https://github.com/mapbender/mapbender/pull/1070.
 
 Anschließend wird im Backend des Mapbenders der Druckassistent aktualisiert und es erscheinen zwei neue Zeilen, Modus und Warteschleife.
 
@@ -526,6 +525,12 @@ Befehl um einen WMS in Mapbender zu aktualisieren. Dabei wird die WMS-ID und ein
    app/console mapbender:wms:reload:url 76 /var/www/html/service.xml
 
 
+Folgende zusätzliche Optionen sind möglich:
+
+* --deactivate-new-layers  Sofern gesetzt, werden neu hinzugekommene Layer in Instanzen, in denen diese vorkommen, deaktiviert. Deaktivierte Layer werden weder in der Karte noch im Ebenenbaum dargestellt.
+* --deselect-new-layers    Sofern gesetzt, werden neu hinzugekommene Layer in Instanzen, in denen diese vorkommen, deselektiert. Nicht ausgewählte Layer werden standardmäßig nicht in der Karte dargestellt, erscheinen aber im Ebenenbaum und können dort vom Benutzer ausgewählt werden.
+
+
 app/console mapbender:wms:reload:url
 ************************************
 
@@ -534,6 +539,14 @@ Befehl um einen WMS in Mapbender zu aktualisieren. Dabei wird die WMS-ID und ein
 .. code-block:: yaml
 
    app/console mapbender:wms:reload:url 76 https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+
+
+Folgende zusätzliche Optionen sind möglich:
+
+* --user=USER              Benutzername (basic auth) [default: ""]
+* --password=PASSWORD      Passwort (basic auth) [default: ""]
+* --deactivate-new-layers  Sofern gesetzt, werden neu hinzugekommene Layer in Instanzen, in denen diese vorkommen, deaktiviert. Deaktivierte Layer werden weder in der Karte noch im Ebenenbaum dargestellt.
+* --deselect-new-layers    Sofern gesetzt, werden neu hinzugekommene Layer in Instanzen, in denen diese vorkommen, deselektiert. Nicht ausgewählte Layer werden standardmäßig nicht in der Karte dargestellt, erscheinen aber im Ebenenbaum und können dort vom Benutzer ausgewählt werden.
 
 
 app/console mapbender:wms:show
@@ -588,6 +601,8 @@ Aktualisiert den Hostnamen in den Quell-URLs, ohne die Funktionen/Capabilities n
 	14 urls unchanged
    
     
+
+.. _mapbender_config_check_de:
 
 app/console mapbender:config:check 
 **********************************

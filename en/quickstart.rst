@@ -67,12 +67,12 @@ Installation
 ============
 
 This quickstart explains the basics of Mapbender and serves as a quick introduction after your first successful installation.
-For the installation of Mapbender have a look at `Installation <installation.html>`_.
+For the installation of Mapbender have a look at :ref:`installation`.
 
 1. Start Mapbender
 ==================
 
-#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender/app.php (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at `Installation <installation.html>`_).
+#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender/app.php (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at :ref:`installation`).
  
 #. The application should then appear in your browser window.
 
@@ -80,7 +80,7 @@ If you have any difficulties running Mapbender, please check whether your Apache
 
 
 Start Mapbender in developer mode 
-=================================
+---------------------------------
 
 Symfony offers a developer mode with lots of information about your application (logging, exceptions, database queries, memory usage, time and more). This mode is only available from localhost.
 
@@ -96,7 +96,7 @@ Symfony offers a developer mode with lots of information about your application 
 
 
 Mapbender Backend
-=================
+-----------------
 
 #. After a successful Mapbender startup, the application overview page in the backend will appear. The applications are listed with a screenshot, title, URL title and description.
 
@@ -108,7 +108,7 @@ After a successful login you will be directed to the ``Mapbender administration 
 
 
 Application overview
-====================
+--------------------
 
 The application overview site displays a list of all available applications. The root user has access to the following functions:
 
@@ -132,7 +132,7 @@ The application overview site displays a list of all available applications. The
 
 There are three different options to create an application: 
 
-An application can be created out of an already existing one. This can be done via a click on the |mapbender-button-copy| button in the application overview. The application will receive the same title and URL title with the appendix *"imp"*. All previously defined elements and configurations will be transferred as well. Another possibility is the import of an application. Further information can be found on the following page `YAML Configuration <./customization/yaml.html>`_.
+An application can be created out of an already existing one. This can be done via a click on the |mapbender-button-copy| button in the application overview. The application will receive the same title and URL title with the appendix *"imp"*. All previously defined elements and configurations will be transferred as well. Another possibility is the import of an application. Further information can be found under :ref:`yaml`.
 
 Furthermore, new applications can be created from scratch. The required steps are explained in the following:
 
@@ -140,7 +140,7 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. After that, select a template in order to define the layout of your application. The options are: Fullscreen, Fullscreen alternative, Mapbender Mobile template. It is also possible to define your own template and assign it to a new application.
 
-.. tip:: Please note that the style-, icon- and layout-configurations are set up via css- and twig-files. Read more about template generation at `How to create your own Template? <customization/templates.html>`_.
+.. tip:: Please note that the style-, icon- and layout-configurations are set up via css- and twig-files. Read more about template generation under :ref:`templates`.
 
 #. Define a title, URL title and a description (optional). Title and URL title can be identical. However, the URL title has to follow the usual URL syntax.
 
@@ -148,14 +148,15 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. Under the section Map engine, choose your preferred OpenLayers version to manage the application's map.
 
-#. Set a tick at *"persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found on the following site: `share <share.html>`_.
+#. Set a tick at *"persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found in :ref:`share`.
 
 #. Click *"save"* to save and create your application. It is now possible to add elements (e.g. map, navigation bar, legend) and services to your applicaiton.
 
-Applications can be re-edited at any point. In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
-
   .. image:: ../figures/mapbender_create_application.png
      :width: 100%
+
+
+It is possible to edit applications: In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
 
 
 3. Add elements to your application
@@ -163,7 +164,7 @@ Applications can be re-edited at any point. In order to do so, navigate to the a
 
 Mapbender applications consist of a Top toolbar, Sidepane, Map area and Footer. A variety of different elements can be added into these areas.
 
-#. Choose ``Applications -->`` |mapbender-button-edit| ``Button --> Layouts``.
+#. Choose ``Applications`` → |mapbender-button-edit| ``Button`` → ``Layouts``.
 
 #. Click on the |mapbender-button-add| ``Button`` to get an overview over the elements Mapbender provides in the corresponding area.
 
@@ -180,42 +181,45 @@ Now you should have an idea about how easy it is to change a Mapbender applicati
   .. image:: ../figures/mapbender_application_add_element.png
      :width: 100%
 
-In the following, you find a complete list of all elements and their functionalities. For a more detailed description, please have a look at the corresponding chapters in the `mapbender documentation <index.html>`_.
+In the following, you find a complete list of all elements and their functionalities. For a more detailed description, please have a look at the corresponding chapters in the :ref:`Table of Contents<welcome>`.
 
-* About dialog: Shows information about Mapbender in an about dialog
-* Activity indicator: Shows HTTP activity
-* Application switcher:	Switches to another application while maintaining the current map position
-* Base source switcher:	Changes the map's background sources
-* Button: Integrate another element as a button
-* Coordinates display: Shows the map coordinates of your mouse position
-* Coordinates utility: Transforms coordinates to different SRS and navigates to them on the map
-* Copyright: Shows terms of use
-* Data manager: Create and manage non-spatial data
-* Digitizer: Create and manage spatial data
-* Dimensions handler: Manage sources with a time dimension
-* FeatureInfo: Gives information about sources
-* GPS Position: Renders a button to show the GPS position
-* HTML: Offers free definition of HTML to integrate pictures, texts or links			
-* Image export: Exports the current map view (format options: png or jpeg)
-* Layer tree: Gives an overview of map layersets and layers
-* Legend: Displays legend of active themes on the map
-* Line/Area Ruler: Enables to measure a line/area and display its length/area in a dialog
-* Link: Links to an external URL
-* Map: Creates the map element in which layersets and layers are integrated into
-* Navigation toolbar: Provides a floating control to pan and zoom in the map
-* Overview: Provides an overview map
-* POI: Creates a POI for sharing
-* Print client: Renders a Print dialog
-* SRS selector: Changes the map's spatial reference system
-* Scale bar: Displays a small line indicator representing the current map scale
-* Scale display: Displays the current map scale
-* Scale selector: Displays and changes a map scale
-* Search router: Enables a configurable search via SQL
-* Share URL: Shares the current map view via URL
-* Simple Search: Enables a configurable search on JSON sources (e.g. Solr)
-* Sketches: Enables a drawing tool with different shapes
-* View manager: Saves map states for later restoration
-* WMS loader: Loads a WMS via a getCapabilities-Request
+* :ref:`about_dialog` :  Shows information about Mapbender in an about dialog
+* :ref:`activity_indicator` : Shows HTTP activity
+* :ref:`view_manager` : Saves map states for later restoration
+* :ref:`applicationswitcher` : Switches to another application while maintaining the current map position
+* :ref:`imageexport` : Exports the current map view (format options: png or jpeg)
+* :ref:`button` : Integrate another element as a button
+* :ref:`copyright` : Shows terms of use
+* :ref:`datamanager` : erzeugt und speichert Sachinformationen in einer Datenbank 
+* :ref:`digitizer` : Create and manage spatial data
+* :ref:`dimensions_handler` : Manage sources with a time dimension
+* :ref:`printclient` : Renders a Print dialog
+* :ref:`layertree`: Gives an overview of map layersets and layers
+* :ref:`simplesearch` : erstellt eine Einfeldsuche
+* :ref:`gpspostion` : Renders a button to show the GPS position
+* :ref:`html`: Offers free definition of HTML to integrate pictures, texts or links	
+* :ref:`basesourceswitcher` : Changes the map's background sources
+* :ref:`feature_info`: Gives information about sources
+* :ref:`map`: Creates the map element in which layersets and layers are integrated into
+* :ref:`coordinate_utility` : Transforms coordinates to different SRS and navigates to them on the map
+* :ref:`coordinates_display`: Shows the map coordinates of your mouse position
+* :ref:`legend`: Displays legend of active themes on the map
+* :ref:`ruler` : Enables to measure a line/area and display its length/area in a dialog
+* :ref:`link`: Links to an external URL
+* :ref:`scaledisplay` : Displays the current map scale
+* :ref:`simplesearch` : Enables a configurable search on JSON sources (e.g. Solr)
+* :ref:`scalebar`: Displays a small line indicator representing the current map scale
+* :ref:`scale_selector`: Displays and changes a map scale
+* :ref:`poi` : Creates a POI for sharing
+* :ref:`navigation_toolbar` : Provides a floating control to pan and zoom in the map
+* :ref:`srs_selector` : Changes the map's spatial reference system
+* :ref:`sketch` : Enables a drawing tool with different shapes
+* :ref:`search_router` : Enables a configurable search via SQL
+* :ref:`shareurl` : Shares the current map view via URL
+* :ref:`wms_loader` : Loads a WMS via a getCapabilities-Request
+* :ref:`about_dialog` : Shows information about Mapbender in an about dialog
+* :ref:`overview` : Provides an overview map
+
 
 
 Try it yourself
@@ -232,7 +236,7 @@ Try it yourself
 4. Configure Sources
 ====================
 
-Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`Layerset <layerset>` .
+Mapbender can handle sources of the type OGC WMS or OGC WMTS / TMS. Via a click on ``Sources``, one can navigate to an overview of all uploaded sources. There is a second list called *"Shared instances*" which only provides sources of the type shared. Further information about bound and shared instances can be found here: :ref:`layerset`.
 
 The sources pages provides a user with the following functions:
 
@@ -246,6 +250,8 @@ The sources pages provides a user with the following functions:
      :width: 100%
 
 
+.. _load_sources:
+
 Load sources
 ------------
 
@@ -255,13 +261,13 @@ Mapbender allows the integration of OGC Web Map Services (WMS) and Web Map Tile 
 
 #. To upload a source, click on ``Add source``.
 
-#. Define the *"Type"* of the source: OGC WMS oder OGC WMTS / TMS.
+#. Define the *"Type"* of the source: OGC WMS or OGC WMTS / TMS.
 
-#. Provide the link to the getCapabilities URL in the field *"Service-URL"*.
+#. Provide the link to the getCapabilities URL in the field *Service URL*.
 
-#. Define username and password in case your source requires it.
+#. Define username and password (in case your source requires it).
 
-#. Click on *"load"* to upload the service in the repository.
+#. Click on ``Load`` to upload the service into the repository.
 
 #. After a successful upload, Mapbender will provide an overview of the WMS information.
 
@@ -276,7 +282,7 @@ After uploading a service, it can be integrated into one or several application(
 
 #. Navigate to your application overview page. Click on the |mapbender-button-edit| ``Button`` of the desired application and navigate to the tab *Layersets*.
 
-#. In the section *layersets* you can integrate uploaded sources into your application. Click on |mapbender-button-add| ``Button`` next to the filter function to create a layerset. All layers have to be assigned to one layerset. Provide a name for it (e.g. "main" for the main map and "overview" for the overview map).
+#. In the *Layersets* section you can integrate uploaded sources into your application. Click on |mapbender-button-add| ``Button`` next to the filter function to create a layerset. All layers have to be assigned to at least one layerset. Provide a name for it (e.g. "main" for the main map and "overview" for the overview map).
 
 #. Now you can add layers to the layerset. Click on the |mapbender-button-add| ``Button`` next to the desired layerset.
 
@@ -288,9 +294,9 @@ After uploading a service, it can be integrated into one or several application(
 Source configuration
 --------------------
 
-Sources can be individually configured. This can be useful if you, for instance, don't want to display all layers, change the order or titles of the layers, prevent a layer's feature info output or adjust  the scale in which the layers are visible.
+Sources can be individually configured. This can be useful if you, for instance, don't want to display all layers, change the order or titles of the layers, prevent a layer's feature info output or adjust the scale in which the layers are visible.
 
-#. Click on  ``Application -->`` |mapbender-button-edit| ``Button --> Layersets -->`` |mapbender-button-edit| ``Edit instance`` to configurate an instance.
+#. Click on  ``Application`` → |mapbender-button-edit| → ``Layersets`` → |mapbender-button-edit| ``Edit instance`` to configure an instance.
 
 #. You can now change the instance configuration.
 
@@ -317,7 +323,7 @@ Sources can be individually configured. This can be useful if you, for instance,
 
 **Dimensions:**
 
-This function is relevant for sources with a time dimension. Further information can be found on the following page: `Dimensions Handler <dimensions_handler.html>`_.
+This function is relevant for sources with a time dimension. Further information can be found under :ref:`dimensions_handler`.
 
 **Vendor Specific Parameter:**
 
@@ -384,7 +390,7 @@ A user can get permissions to access one or a set of applications and services.
 Create a user
 -------------
 
-#. To create a user, go to ``Security --> Users --> Add new user``.
+#. To create a user, go to ``Security`` → ``Users`` → ``Add new user``.
 
 #. Choose a name for your user.
 
@@ -406,7 +412,7 @@ You can provide more information about the user in the tab ``Profile``. In the `
 Create a group
 --------------
 
-#. Create a group by ``Security --> Groups --> Add new Group``.
+#. Create a group by ``Security`` → ``Groups`` → ``Add new Group``.
 
 #. Define a name and a description for your group.
 
@@ -427,7 +433,7 @@ Mapbender provides different rights. They refer to the Symfony ACL System.
 * master: Whether someone is allowed to perform all of the above actions and in addition is allowed to grant any of the above permissions to others.
 * owner: Whether someone owns the object. An owner can perform any of the above actions and grant master and owner permissions.
 
-Assign roles to a user by ``Security --> Users --> Edit your User --> Security``.
+Assign roles to a user by ``Security`` → ``Users`` → ``Edit your User`` → ``Security``.
 
   .. image:: ../figures/mapbender_roles.png
      :width: 100%
@@ -436,11 +442,11 @@ Assign roles to a user by ``Security --> Users --> Edit your User --> Security``
 Assign an Application to a User/Group
 -------------------------------------
 
-#. Edit your application via ``Application --> `` |mapbender-button-edit| ``Edit-Button``.
+#. Edit your application via ``Application`` → |mapbender-button-edit| ``Edit-Button``.
 
 #. Choose ``Security``
 
-#. Make your application accessable to the public by ``Security --> public access``. Alternatively, one can use the |mapbender-button-publish| ``Button``. If this option is activated, also anonymous users will gain access to the application.
+#. Make your application accessable to the public by ``Security`` → ``public access``. Alternatively, one can use the |mapbender-button-publish| ``Button``. If this option is activated, also anonymous users will gain access to the application.
 
 #. Alternatively to public access you can set permissions for specific users/groups.
 
@@ -455,13 +461,13 @@ Assign elements to a User/Group
 
 Per default, all elements are accessible to users/groups if they have access to that particular application. This can be modified for each element. 
 
-#. Edit your application by ``Application --> `` |mapbender-button-edit| ``Button`` .
+#. Edit your application by pressing the |mapbender-button-edit| ``Edit Button`` .
 
-#. Choose ``Layouts``
+#. In your application settings, choose ``Layouts``.
 
-#. Every element has a |mapbender-button-key| ``Acl-Button``.
+#. Every element has a |mapbender-button-key| ``Acl button``.
 
-#. Choose the |mapbender-button-key| ``Acl-button`` from the element that should be only available for special users/groups.
+#. Choose the |mapbender-button-key| ``Acl button`` from the element that should be only available for special users/groups.
 
 #. Assign one or more users or groups to the element. Then, set permissions like view, edit, delete, operator, master, owner
 

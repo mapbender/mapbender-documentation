@@ -59,7 +59,7 @@ Unzip the Zip archive, for example under c:\\php .
     extension=php_zip.dll
     extension=php_bz2.dll
 
-* Please check the Mapbender FAQ page for further PHP settings:  `FAQ <../faq.html>`_. 
+* Please check the :ref:`faq` for further PHP settings. 
 
 
 Extract Mapbender and register to web server
@@ -183,9 +183,6 @@ First steps
 
 The Mapbender installation can now be accessed under **http://[hostname]/mapbender/**.
 
-More information at:  `Mapbender Quickstart Document <../quickstart.html>`_. 
-
-
 
 **Check if the alias is working**
 
@@ -201,8 +198,8 @@ Troubleshooting is available via the following command (must be executed in the 
 
 .. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
 
-Further information can be found at: https://doc.mapbender.org/en/customization/commands.html#app-console-mapbender-config-check
+Further information can be found at :ref:`mapbender_config_check`.
 
 Congratulations! Mapbender is now set up correctly and ready for further configuration.
-Find Information about the first steps with Mapbender: `Mapbender Quickstart Document <../quickstart.html>`_.
+Find Information about the first steps with Mapbender in the :ref:`Mapbender Quickstart <quickstart>`.
 

@@ -16,8 +16,13 @@ Willkommen bei der Mapbender Dokumentation
 .. toctree::
    :maxdepth: 3
 
-   functions
+   elements
 
+.. toctree::
+   :maxdepth: 3
+
+   backend
+   
 .. toctree::
    :maxdepth: 2
 

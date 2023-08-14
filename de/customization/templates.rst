@@ -7,7 +7,7 @@ Mapbender beinhaltet bereits Anwendungs-Vorlagen, sie befinden sich im Mapbender
 Häufig sollen jedoch eigene Anwendungs-Vorlagen und Administrationsoberflächen mit eigenem Corporate Design verwendet werden.
 Um Probleme bei einem Upgrade zu vermeiden, sollte für personalisierte Oberflächen ein eigenes Bundle verwendet werden.
 
-Der Stil einer einzelnen Anwendung kann ebenfalls über den integrierten CSS-Editor angepasst werden. Die Dokumentation zum css-Editor finden Sie unter :doc:`Wie kann der Stil einer Anwendung mit dem CSS-Editor angepasst werden? <css>`.
+Der Stil einer einzelnen Anwendung kann ebenfalls über den :ref:`css_de` angepasst werden.
 
 
 Wie werden eigene Vorlagen erzeugt?
@@ -229,7 +229,7 @@ Beim Laden der neuen Anwendung wird eine CSS-Datei im web/assets-Verzeichnis ang
 
 * ``web/assets/WorkshopDemoBundle__demo_fullscreen__css.css``
 
-Wenn Sie die CSS-Datei weiter bearbeiten müssen Sie die unter ``web/assets`` generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
+Wenn Sie die CSS-Datei weiter bearbeiten, müssen Sie die unter ``web/assets`` generierte Datei löschen, damit diese neu geschrieben wird und die Änderungen wirksam werden. Der Browser-Cache sollte ebenfalls geleert werden.
 
 .. code-block:: bash
 

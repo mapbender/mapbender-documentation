@@ -5,36 +5,15 @@ YAML Konfiguration (Konfigurations- und Anwendungsdateien)
 
 Die folgenden Konfigurationsdateien sind zu finden unter application/app/config.
 
+
 parameters.yml
 --------------
+Hier werden grundlegende Parameter von Mapbender bestimmt.
 
-Hier werden grundlegende Parameter von Mapbender bestimmt:
 
 Datenbank
 *********
-
-Zur Konfiguration der Datenbankverbindung werden die Dateien config.yml und parameters.yml verwendet. Während in der config.yml nur die Platzhalter angegeben werden, werden die Werte in der parameters.yml gefüllt.
-
-Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgendermaßen aus:
-
-.. code-block:: yaml
-
-    doctrine:                                               # Bei Werten, die von dem %-Zeichen umschlossen werden,handelt es sich um Variablen
-        dbal:
-            default_connection: default                     # gibt die Datenbankverbindung an, die standardmäßig von Mapbender verwendet werden soll (``default_connection: default``).
-            connections:
-                default:
-                driver:    "%database_driver%"              # Mehr Information unterhalb des Codes
-                host:      "%database_host%"                # Der Host, auf dem die Datenbank läuft. Entweder der Name (z.B. localhost) oder die IP-Adresse (z.B. 127.0.0.1).
-                port:      "%database_port%"                # Der Port, auf dem die Datenbank lauscht (z.B. 5432 für PostgreSQL).
-                dbname:    "%database_name%"                # Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <../installation.html>`_ für Details.
-                path:      "%database_path%"                # Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
-                user:      "%database_user%"                # Benutzername für die Verbindung zur Datenbank.
-                password:  "%database_password%"            # Das Passwort des Datenbankbenutzers.
-                charset:    UTF8                            # Die Kodierung, die die Datenbank verwendet.
-                logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standard: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
-                profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standard: %kernel.debug%)
-
+Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yml`` und ``config.yml`` verwendet. In der ``parameters.yml`` werden Variablen für die Datenbankverbindung definiert. Es können mehrere Datenbankverbindungen definiert werden. Die Variablen werden in der ``config.yml`` verarbeitet. Zu jeder Datenbankverbindung wird ein Alias vergeben.
 
 * database_driver: Der Datenbanktreiber. Mögliche Werte sind:
 
@@ -47,7 +26,7 @@ Die Standarddatenbankdefinition erfolgt in der config.yml und sieht folgenderma�
   Beachten Sie, dass Sie den entsprechenden PHP-Treiber installiert bzw. aktiviert haben.
 
 Beispiel:
-Die Datenbankkonfiguration in der parameters.yml sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
+Die Datenbankkonfiguration in der ``parameters.yml`` sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
 
 .. code-block:: yaml
 
@@ -59,9 +38,9 @@ Die Datenbankkonfiguration in der parameters.yml sieht folgendermaßen aus, wenn
     database_user:     postgres
     database_password: geheim
 
+
 Verwendung mehrerer Datenbanken
 *******************************
-
 Mit Mapbender können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender-Bundle gehört.
 
 Eine zweite Datenbank benötigen Sie ebenfalls für die *Geodatensuche* (über den SearchRouter) und die Datenerfassung (Digitizer). Die Geodaten sollten grundsätzlich in einer anderen Datenbank als der Mapbender Datenbank gesichert werden.
@@ -91,14 +70,14 @@ Wenn Sie eine weitere Datenbank verwenden möchten, müssen Sie eine zweite Date
         database2_user:     postgres
         database2_password: postgres
 
-In den Elementen SearchRouter und Digitizer kann nun auf die Datenbankverbindung (connection) mit dem Namen **search_db** verwiesen werden.
 
+In den Elementen SearchRouter und Digitizer kann nun auf die Datenbankverbindung (connection) mit dem Namen **search_db** verwiesen werden.
 
 Weitere Informationen unter:
 
-Symfony Dokumentation <http://symfony.com/doc/current/best_practices/configuration.html>`_)
+Symfony Dokumentation <https://symfony.com/doc/current/best_practices/configuration.html>`_)
 
-Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <http://www.doctrine-project.org/>`_).
+Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <https://www.doctrine-project.org/>`_).
 
 
 Disclaimer
@@ -106,7 +85,7 @@ Disclaimer
 
 .. image:: ../../figures/disclaimer.png
 
-Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der parameters.yml ergänzt werden:
+Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der ``parameters.yml`` ergänzt werden:
 
 .. code-block:: yaml
 
@@ -121,8 +100,7 @@ Die Sitelinks werden mittels "|" voneinander getrennt.
 
 Logo und Login-Bild
 *******************
-
-In der parameters.yml kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
+In der ``parameters.yml`` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
 
 .. code-block:: yaml
 
@@ -135,7 +113,6 @@ Die Dateien müssen unter application/web verfügbar sein.
 
 Mailer
 ******
-
 Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
 Eine Konfiguration könnte wie folgt aussehen:
 
@@ -154,72 +131,76 @@ Weitere Informationen im Kapitel :ref:`users_de`.
 
 Projektname
 ***********
-
-Der Projektname (Standard: Mapbender) kann in der Datei parameters.yml angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+Der Projektname (Standard: Mapbender) kann in der Datei ``parameters.yml`` angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Wichtiger Hinweis:** In der parameters.yml dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
+**Wichtiger Hinweis:** In der ``parameters.yml`` dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
 
 
 Proxy-Einstellungen
 *******************
-
-Wenn ein Proxy verwendet wird, muss dieser in der Datei parameters.yml im Bereich OWSProxy Configuration angegeben werden.
+Wenn ein Proxy verwendet wird, muss dieser in der Datei ``parameters.yml`` im Bereich OWSProxy Configuration angegeben werden.
 
 Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
 
     # OWSProxy Configuration
-        ows_proxy3_logging: false
-        ows_proxy3_obfuscate_client_ip: true
-        ows_proxy3_host: myproxy
-        ows_proxy3_port: 8080
+        ows_proxy3_logging: false             # Protokollierung von Anfragen, Standard ist false, true protokolliert in Tabelle owsproxy_log 
+        ows_proxy3_obfuscate_client_ip: true  # Verbergen der Client IP, Standard ist true, true verbirgt das letzte Byte der IP-Adresse des Clients
+        ows_proxy3_host: myproxy              # Proxy-Definition für die Verbindung über einen Proxy-Server. Hostname des Proxyservers
+        ows_proxy3_port: 8080                 # Proxy-Definition für die Verbindung über einen Proxy-Server. Port des Proxyservers
         ows_proxy3_connecttimeout: 60
         ows_proxy3_timeout: 90
-        ows_proxy3_user: ~
-        ows_proxy3_password: ~
-        ows_proxy3_noproxy:
+        ows_proxy3_user: ~                    # Benutzername für Proxyserver (bei Bedarf Benutzer für Proxyserver festlegen)
+        ows_proxy3_password: ~                # Passwort für den Proxy-Server (setzen Sie das Passwort für den Proxy-Server, falls definiert)
+        ows_proxy3_noproxy:                   # Liste der Hosts, bei denen die Verbindungen nicht über den Proxyserver erfolgen soll
             - 192.168.1.123
 
 
 Spracheinstellung
 *****************
-
 Mapbender verwendet automatisch die ausgewählte Sprache der Browsereinstellungen.
 Es ist jedoch möglich, eine bevorzugte Sprache (fallback) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt. Es werden Englisch und/oder Deutsch aufgrund ihres hohen Übersetzungsanteils empfohlen.
 Dies kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
 
   Folgende Sprachcodes sind verfügbar:
-    * en für Englisch (Standard),
-    * de für Deutsch,
-    * tr für Türkisch,
-    * es für Spanisch,
-    * it für Italienisch,
-    * nl für Niederländisch,
-    * pt für Portugiesisch,
-    * ru für Russisch.
+
+    * en für Englisch (Standard)
+    * de für Deutsch
+    * es für Spanisch
+    * fr für französisch,
+    * it für Italienisch
+    * nl für Niederländisch
+    * pt für Portugiesisch
+    * ru für Russisch
+    * tr für Türkisch
+    * uk für Ukrainisch
 
 Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
 
-   # en, de, tr, it, es, ru, nl, pt are available
+    # locale en, de, es, fr, it, nl, pt, ru, tr, uk are available
     fallback_locale:   en
     locale:            de    
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-Weitere Informationen unter https://doc.mapbender.org/en/architecture/translation.html
+Weitere Informationen unter :ref:`translation`.
 
+
+SSL Zertifikat
+**************
+Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Anschließend muss die Variable ``parameters.cookie_secure`` in Ihrer ``parameters.yml`` auf ``true`` gesetzt werden. Dadurch wird sichergestellt, dass das Login-Cookie nur über sichere Verbindungen übertragen wird.
 
 config.yml
 ----------
 
-Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die parameters.yml als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
+Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die ``parameters.yml`` als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
 
 * **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
@@ -227,7 +208,7 @@ Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeit
 
 Datenbank
 *********
-Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als Platzhalter in der config.yml stehen:
+Wichtig: Jede Datenbank, die in der ``parameters.yml`` definiert wird, muss auch als Platzhalter in der ``config.yml`` stehen:
 
 .. code-block:: yaml
 
@@ -239,7 +220,7 @@ Wichtig: Jede Datenbank, die in der parameters.yml definiert wird, muss auch als
                 driver:    "%database_driver%"              # Mehr Information unterhalb des Codes
                 host:      "%database_host%"                # Der Host, auf dem die Datenbank läuft. Entweder der Name (z.B. localhost) oder die IP-Adresse (z.B. 127.0.0.1).
                 port:      "%database_port%"                # Der Port, auf dem die Datenbank lauscht (z.B. 5432 für PostgreSQL).
-                dbname:    "%database_name%"                # Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``. Siehe die `Installationsanleitung <../installation.html>`_ für Details.
+                dbname:    "%database_name%"                # Der Name der Datenbank (z.B. mapbender). Erstellen Sie die Datenbank mit dem Befehl ``doctrine:database:create`` bzw. ``doctrine:schema:create``.
                 path:      "%database_path%"                # Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
                 user:      "%database_user%"                # Benutzername für die Verbindung zur Datenbank.
                 password:  "%database_password%"            # Das Passwort des Datenbankbenutzers.
@@ -353,7 +334,7 @@ Fußzeile
     * © OpenStreetMap contributors (Button)
     * HTML-powered by Mapbender (HTML)
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
+Ausführliche Beschreibungen der einzelnen Elemente finden sich unter :ref:`elements_de`.
 
 
 
@@ -366,12 +347,14 @@ Obere Werkzeugleiste
     Die Leiste unterscheidet sich kaum von der in der Mapbender Demo Map Anwendung. Statt 'POI' ist 'Koordinaten Utility' eingebunden.
 
 Sidepane
-    Hier sind keine Funktionen vorimplementiert.
+    Hier sind keine Elemente eingebunden.
 
 Kartenbereich
-    Statt der Funktionen 'Maßstabsanzeige' und 'POI' ist die Funktion 'Koordinaten Utility' eingebunden.
+    Statt der Elemente 'Maßstabsanzeige' und 'POI' ist das Elemente 'Koordinaten Utility' eingebunden.
 
-Ausführliche Beschreibungen der einzelnen Funktionen unter https://doc.mapbender.org/de/functions.html
+
+Ausführliche Beschreibungen der einzelnen Elemente unter :ref:`elements_de`.
+
 
 
 
@@ -409,14 +392,14 @@ Export/Import von YAML Anwendungsdateien über die Benutzeroberfläche
 
 **Export**
 
-Sie können eine Anwendung unter **Anwendungen --> Exportieren** als JSON oder YAML exportieren.
+Sie können eine Anwendung unter **Anwendungen** → **Exportieren** als JSON oder YAML exportieren.
 
 .. image:: ../../figures/de/Export_Applikation.png
 
 
 **Import**
 
-Unter **Anwendungen --> Importieren** kann die Exportdatei in eine Mapbender-Installation importiert werden.
+Unter **Anwendungen** → **Importieren** kann die Exportdatei in eine Mapbender-Installation importiert werden.
 
 .. image:: ../../figures/de/Import_Applikation.png
 

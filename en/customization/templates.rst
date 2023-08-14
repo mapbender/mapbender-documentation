@@ -7,7 +7,7 @@ Mapbender comes with application templates out of the box, you can find them in 
 
 To prevent overwriting your custom templates after an Mapbender upgrade you should create an extra bundle to safely store your custom files.
 
-You can also change the style of your application with the built-in CSS-Editor. You find the documentation about the CSS-editor at :doc:`How to change the style of your application with the CSS-editor? <css>`.
+You can also change the style of your application with the built-in :ref:`CSS-Editor <css>`.
 
 
 How to create your own template?

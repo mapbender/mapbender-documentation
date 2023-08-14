@@ -5,7 +5,7 @@ Aktualisierung von Mapbender auf eine neuere Version
 
 Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
-* Laden Sie die neuste Version von http://mapbender.org/builds/ herunter
+* Laden Sie die neuste Version von https://mapbender.org/builds/ herunter
 * Sichern Sie Ihre Konfigurationsdateien (parameters.yml und config.yml) und Ihre alte Mapbender Version (Dateien und Datenbank)
 * Ersetzen Sie die Dateien durch die neuen Mapbender-Dateien
 * Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen
@@ -13,8 +13,12 @@ Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 * Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von mapbender/web/uploads/ in das mapbender/web/uploads Verzeichnis Ihrer neuen Mapbender Version
 * Wenn Sie Ihre eigenen Templates verwenden sollten, müssen Sie diese mit denen der neuen Version vergleichen (kam es zu Änderungen?)
 * Importieren Sie die Demo-Anwendungen (über den Befehl bin/composer run reimport-example-apps oder über die Web-Administration), um sich den neusten Stand der Entwicklungen anzuschauen
-* Unter https://doc.mapbender.org/de/installation/installation_ubuntu.html im Bereich **Entpacken und im Webserver registrieren** ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte
+* Unter :ref:`installation_ubuntu_de` im Bereich **Entpacken und im Webserver registrieren** ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte
 * Das war's auch schon! Schauen Sie sich Ihre neue Mapbender Version an.
+
+.. hint::
+    
+    Folgen Sie bitte zusätzlich den :ref:`Migrationshinweisen für bestimmte Versionen<migration>`.
 
 
 Aktualisierungsbeispiel für Linux
@@ -24,7 +28,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 .. code-block:: bash
 
  # Laden Sie die neue Version herunter
- wget -O http://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
+ wget https://mapbender.org/builds/mapbender-starter-current.tar.gz /tmp/build_mapbender/
  
  tar xfz /tmp/build_mapbender/mapbender-starter-current.tar.gz
  
@@ -75,7 +79,7 @@ Aktualisierungsbeispiel für Windows
  
 .. code-block:: bash
 
- # Laden Sie die neue Version herunter http://mapbender.org/builds/
+ # Laden Sie die neue Version herunter https://mapbender.org/builds/
   
  # Sichern Sie die alte Version (Dateien und Datenbank)
  

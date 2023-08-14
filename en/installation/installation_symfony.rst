@@ -11,7 +11,7 @@ This setup allows a quick test of Mapbender without an integration into an exter
 
 In this document we assume that the SQLite database is used.
 
-* Please check the installation documentation for `Linux <installation_ubuntu.html>`_ respectively `Windows <installation_windows.html>`_ 
+* Please check the installation documentation for :ref:`Linux <installation_ubuntu>` respectively :ref:`Windows <installation_windows>`. 
 * Download the current Mapbender version https://mapbender.org/builds/.
 * Extract Mapbender in an arbitrary directory.
 * Start the Symfony webserver.

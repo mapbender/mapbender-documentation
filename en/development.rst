@@ -18,3 +18,4 @@ Development
    development/proxy.rst
    development/symfony.rst
    development/twig.rst
+   documentation_howto.rst

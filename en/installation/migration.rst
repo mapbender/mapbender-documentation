@@ -8,6 +8,26 @@ Migration Guide
     This page gives migration instructions on specific Mapbender versions. For general tips on updating, see the :ref:`installation_update` page instead.
 
 
+Migration to Mapbender 3.3.4
+****************************
+
+* Please update the database schema. Run:
+
+.. code-block:: bash
+
+    app/console doctrine:schema:update --force
+
+* Next, you need to configure CSRF tokens to be used during login to the **csrf_token_generator** form_login section in ``security.yml`` as follows:
+
+.. code-block:: yaml
+
+    form_login:
+        check_path: /user/login/check
+        login_path: /user/login
+        csrf_token_generator: security.csrf.token_manager
+
+* For productive environments, it is important to install an SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+
 Migration to Mapbender 3.3
 **************************
 
@@ -33,14 +53,14 @@ Styling
 Styling is now possible via variables that can be passed to your application. 
 
 * `Mapbender <https://github.com/mapbender/mapbender/blob/master/src/Mapbender/CoreBundle/Resources/public/sass/libs/_variables.scss>`_
-* Create your own scss file, see `Example <https://github.com/mapbender/mapbender-workshop/tree/master/src/Workshop/DemoBundle/Resources/public/demo_variables_blue.scss>`_ in Demo Bundle.
-* Modify your template - add function getSassVariablesAssets and refer to your scss file see, see `Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Template/DemoFullscreen.php#L23>`_ in Demo Bundle.
+* Create your own scss file, see this `Demo Bundle SCSS Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Resources/public/demo_variables_blue.scss>`_.
+* Modify your template - add function getSassVariablesAssets and refer to your scss file see, see this `Demo Bundle Template Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Template/DemoFullscreen.php#L23>`_.
 
 
 Sketch
 ------
 
-* Sketch now supports to draw a circle with a defined radius. You draw the circle first and den edit the circle and define a radius.
+* Sketch now supports to draw a circle with a defined radius. You draw the circle first and then edit the circle and define a radius.
 * Sketch now allows to define colors to be offered to draw. You can also activate a color picker
 
 
@@ -55,7 +75,7 @@ Migration to Mapbender 3.2
 
 You can migrate older Mapbender installations to Mapbender 3.2.
 
-Check the `Mapbender Update Process <https://doc.mapbender.org/en/installation/update.html>`_
+Check the :ref:`installation_update` Guide.
 
 * Make sure you have PHP >= 7.1.0 and PHP < 8 
 * Provide a backup of your database. 
@@ -101,6 +121,8 @@ You can update the configuration with the following SQL.
 
 3. For choice: Please note that key or value are passed flipped that means value and the key- see also `Best Practices Page <https://github.com/mapbender/mapbender/wiki/Best-practices:-form-types#inversion-of-choices>`_
 
+.. code-block:: sql
+    
     choices:
         Bonn - this is the value not the key: Bonn
         Cologne - this is the value not the key: Cologne
@@ -168,6 +190,8 @@ Digitizer is available for Mapbender >= 3.2.2. The new Digitizer Version is 1.4.
 
 
 There is a new style called unsaved.
+
+.. code-block:: yaml
 
     unsaved:
         strokeWidth: 3
