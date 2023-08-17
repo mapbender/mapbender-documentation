@@ -3,8 +3,8 @@
 Introduction
 ############
 
-This book is targeted at Mapbender developers and will cover useful topics
-not needed by administrators or users of Mapbender installations.
+This book is targeted at Mapbender developers and will cover useful topics not needed by administrators or users of Mapbender installations.
+
 
 Things to consider
 ******************
@@ -17,10 +17,18 @@ There are a couple of things you should be familiar with in order to contribute 
 * Docblock annotations: We use ApiGen to generate code documentation.
 * JavaScript: We use jQuery a lot and especially the jQuery UI widget factory. These are essential to understand to write maintainable JavaScript code.
 
+
 Installation
 ************
 
 The installation procedure from Git is described under :ref:`installation_git`.
+
+
+Modules and bundles
+*******************
+
+Please refer to the respective sections in the `CONTRIBUTING.md` guide to understand what `modules <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#modules>`_ and what `bundles <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundles>`_ are, and how the latter can be `created <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundle-creation>`_.
+
 
 Getting Help
 ************
@@ -44,13 +52,10 @@ Topics
 .. toctree::
    :maxdepth: 1
 
-   bundle
    controllers
    conventions
-   element_generate
    elements
+   element_generate
    frontend_architecture
-   proxy
    requestresponse
-   symfony
    twig

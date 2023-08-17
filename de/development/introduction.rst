@@ -3,8 +3,8 @@
 Einführung
 ##########
 
-Diese Dokumentation ist an Mapbender-Entwickler gerichtet und behandelt Themen, 
-die von Mapbender-Administratoren und -Benutzern nicht benötigt werden.
+Diese Dokumentation ist an Mapbender-Entwickler gerichtet und behandelt Themen, die von Mapbender-Administratoren und -Benutzern nicht benötigt werden.
+
 
 Dinge, die es zu beachten gilt
 ******************************
@@ -17,10 +17,18 @@ Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu k�
 * Docblock-Anmerkungen: Es wird ApiGen zu Erstellung der Dokumentation verwendet.
 * JavaScript: jQuery wird häufig verwendet, vor allem kommt die jQuery UI Widget Factory häufig zum Einsatz. Das Verständnis davon ist essentiell, um JavaScript-Code zu schreiben.
 
+
 Installation
 ************
 
 Die Installation aus den Git-Quellen heraus wird unter :ref:`installation_git_de` beschrieben.
+
+
+Module und Bundles
+******************
+
+Bitte beachten Sie die jeweiligen Beiträge im Entwicklungshandbuch `CONTRIBUTING.md`, um zu erfahren, was ein `Modul <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#modules>`_ und was ein `Bundle <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundles>`_ ist und wie letzteres `erstellt <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundle-creation>`_ werden kann.
+
 
 Wo gibt es Hilfe?
 *****************
