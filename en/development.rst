@@ -11,7 +11,5 @@ Development
    development/conventions.rst
    development/elements.rst
    development/element_generate.rst
-   development/frontend_architecture.rst
    development/requestresponse.rst
-   development/twig.rst
    documentation_howto.rst
