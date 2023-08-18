@@ -291,100 +291,32 @@ New YAML applications can be placed in the folder and will be automatically reco
 Mapbender Demo Map
 ------------------
 
-The following elements are pre-implemented:
+This is the main Demo application. Should be used for a desktop based application.
 
-Top toolbar
-    * Layer tree (Button)
-    * Featureinfo (Button)
-    * Print client (Button)
-    * Image Export (Button)
-    * Legend (Button)
-    * WMS loader (Button)
-    * GPS Position
-    * measure (line und area) (Buttons)
-    * about (About dialog)
-    * POI (Button)
-
-Sidepane
-    * Layer tree
-    * Sketch
-    * Coordinates utility
-    * About Mapbender (HTML)
-
-Map area
-    * Map
-    * Navigation toolbar
-    * Legend
-    * Featureinfo
-    * WMS loader
-    * Image export
-    * Print client
-    * measure line
-    * measure area
-    * Scale bar
-    * Layer tree
-    * Overview
-    * Scale display
-    * POI
-
-Footer
-    * Activity Indicator
-    * Coordinates Display (mb.core.coordinates.class.title)
-    * SRS selector
-    * Scale selector
-    * © OpenStreetMap contributors (Button)
-    * HTML-powered by Mapbender (HTML)
-
-Detailed descriptions of the elements at :ref:`elements`
-
-
+Detailed descriptions of the elements at :ref:`elements`.
 
 
 Mapbender Demo Map basic
 ------------------------
 
-Differences to Mapbender Demo Map:
+Differences to the main Demo Map:
 
 Toolbar
-    Instead of 'POI', 'Coordinates utility' is integrated.
+    Uses :ref:`coordinate_utility` instead of :ref:`POI`.
 
 Sidepane
-    No elements pre-implemented.
+    Has no elements pre-implemented.
 
 Map area
-    Instead of 'Scale display' and 'POI', the element 'Coordinates utility' is integrated.
+    Uses :ref:`coordinate_utility` instead of :ref:`scaledisplay` and :ref:`POI`.
 
 Detailed descriptions of the elements at :ref:`elements`.
-
 
 
 Mapbender mobile
 ----------------
 
 For a mobile template on smartphones and tablets.
-
-The following elements are pre-implemented:
-
-Footer
-    * Themes (Button)
-    * Base source switcher (Button)
-    * GPS Position
-    * Imprint (Button)
-    * help (Button)
-    * about (Button)
-
-Map area
-    * Map
-    * Navigation toolbar
-
-Mobilepane
-    * Themes (Layer tree)
-    * Featureinfo
-    * Imprint (HTML)
-    * help (HTML)
-    * Base source switcher
-    * about (HTML)
-
 
 
 Export/import YAML application files over the user interface
@@ -408,6 +340,8 @@ You can import the export file into a Mapbender installation under **Application
 Export/import/clone YAML application files over the console
 -----------------------------------------------------------
 
+Please go to :ref:`app_command_export_import_clone` to see the console commands. Find a few introductional words about what's possible with applications over the console below.
+
 **Export**
 
 Applications can be exported as .json or .yml -file over the console.
@@ -416,40 +350,13 @@ A YAML file that has been exported over the console cannot be placed under app/c
 The YAML format that is produced by exporting over the console is different from the YAML format of the files under app/config/application.
 The former is produced by a machine and the latter is code written by a developer.
 
-.. code-block:: bash
-
-	app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
-
-*> ~/Downloads/demo.yaml* creates a new file under the specified path
-*app/console mapbender:application:export mapbender_user_yml* shows the data on the console.
-
 
 **Import**
 
 YAML files that have been exported over the user interface or console can be imported over the console.
-
-.. code-block:: bash
-
-	app/console mapbender:application:import ~/Downloads/demo.yaml
 
 
 **Clone**
 
 Clone an existing application.
 
-.. code-block:: bash
-
-	app/console mapbender:application:clone mapbender_user_yml
-
-The name of the new application is mapbender_user_yml_imp1.
-
-
-**Help for the commands**
-
-.. code-block:: bash
-
-    app/console mapbender:application:import --help
-
-.. code-block:: bash
-
-    app/console mapbender:application:export --help

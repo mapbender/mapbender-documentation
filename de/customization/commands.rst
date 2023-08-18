@@ -17,7 +17,7 @@ Achten Sie beim Ausführen der Befehle darauf, dass Sie sich im richtigen Verzei
 Hilfe zu den Befehlen
 ---------------------
 
-  .. code-block:: yaml
+.. code-block:: yaml
 
     app/console  
 
@@ -29,8 +29,10 @@ Die Hilfe für jeden Befehl kann mit [Befehl] --help aufgerufen werden, z.B.:
     app/console mapbender:user:create --help
    
 
-Anwendungs-Export und Import
-----------------------------
+.. _app_command_export_import_clone_de:
+
+Anwendungs-Export, Import und Klonen
+------------------------------------
 
 app/console mapbender:application:export 
 ****************************************
@@ -54,6 +56,17 @@ You can import an application from a JSON-file. Mapbender will automatically cho
     
     Imported 1 applications
     * mapbender_user_db_imp2
+
+
+app/console mapbender:application:clone
+***************************************
+
+Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen. Dadurch wird eine neue Anwendung mit einem *_imp* Suffix im Anwendungsnamen erzeugt. 
+Im untenstehenden Beispiel heißt die neue Anwendung `mapbender_user_yml_imp1`.
+
+.. code-block:: bash
+
+	app/console mapbender:application:clone mapbender_user_yml
 
 
 Benutzerverwaltung
@@ -190,7 +203,7 @@ Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine exter
 
 	mapbender.print.queueable: true
 
-Weitere Informationen zum Warteschleifendruck gibt es im Kapitel :ref:`queued_print_de` sowie unter https://github.com/mapbender/mapbender/pull/1070.
+Weitere Informationen zum Warteschleifendruck gibt es im Kapitel :ref:`queued_print_de` sowie auf `GitHub <https://github.com/mapbender/mapbender/pull/1070>`_.
 
 Anschließend wird im Backend des Mapbenders der Druckassistent aktualisiert und es erscheinen zwei neue Zeilen, Modus und Warteschleife.
 
@@ -564,7 +577,7 @@ Befehl zum Anzeigen von Informationen zu einem WMS. Hierbei wird die ID der WMS 
      * * osm-grey OpenStreetMap (grey scale)
 
 
-
+sphinxcontrib-phpdomain
 app/console mapbender:wms:validate:url 
 **************************************
 
