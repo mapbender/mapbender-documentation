@@ -344,15 +344,14 @@ Bitte gehen Sie zu :ref:`app_command_export_import_clone_de`, um entsprechende K
 
 Anwendungen können als .json oder.yml - Datei über die Konsole exportiert werden.
 Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
-Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter app/config/application. Ersteres wurde maschinell erzeugt, letzteres von einem Programmierer.
-
+Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter app/config/application.
 
 **Import über die Konsole**
 
-YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole importiert werden.
+YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole via app/console importiert werden.
 
 
 **Anwendung über die Konsole klonen**
 
-Klont eine existierende Anwendung.
+Klont/Kopiert eine existierende Anwendung.
 
