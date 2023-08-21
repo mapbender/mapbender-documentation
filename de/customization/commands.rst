@@ -231,7 +231,7 @@ Optional kann die Anzahl der Prozesse und die maximale Ausführungszeit limitier
 app/console mapbender:print:queue:rerun 
 ****************************************
 
- Dieser Befehl führt einen Druckwarteschlangenauftrag erneut aus. Die Angabe der ID ist dabei erforderlich.
+Dieser Befehl führt einen Druckwarteschlangenauftrag erneut aus. Die Angabe der ID ist dabei erforderlich.
  
 .. code-block:: yaml
 
@@ -577,7 +577,6 @@ Befehl zum Anzeigen von Informationen zu einem WMS. Hierbei wird die ID der WMS 
      * * osm-grey OpenStreetMap (grey scale)
 
 
-sphinxcontrib-phpdomain
 app/console mapbender:wms:validate:url 
 **************************************
 
