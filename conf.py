@@ -341,17 +341,16 @@ texinfo_documents = [
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
 
-# Override RTD_Theme CSS
-# https://github.com/rtfd/sphinx_rtd_theme/issues/117
 html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # overrides for wide tables in RTD theme
-    ],
     'display_github': True, # Add 'Edit on Github' link instead of 'View page source'
     'github_user': 'mapbender',
     'github_repo': 'mapbender-documentation',
     'github_version': 'master/'
 }
+
+html_css_files = [
+  'theme_overrides.css'
+]
 
 # -- Options for epub output ------------------------------------------------
 
