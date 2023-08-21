@@ -17,7 +17,7 @@ Make sure you are in the correct directory (above the app directory)
 Help command
 ------------
 
-  .. code-block:: yaml
+.. code-block:: yaml
 
     app/console  
 
@@ -29,8 +29,10 @@ The parameter --help displays the help message for every command for example:
     app/console mapbender:user:create --help
    
 
-Application Export & Import
-----------------------------
+.. _app_command_export_import_clone:
+
+Application Export, Import & Cloning
+------------------------------------
 
 app/console mapbender:application:export 
 ****************************************
@@ -53,6 +55,17 @@ You can import an application from a JSON or YAML-file. Mapbender will automatic
     
     Imported 1 applications
     * mapbender_user_db_imp2
+
+
+app/console mapbender:application:clone
+***************************************
+
+You can clone an existing application in the Application backend. This will create a new application with a *_imp* suffix as application name.
+In the example below, the name of the new application becomes `mapbender_user_yml_imp1`.
+
+.. code-block:: bash
+
+	app/console mapbender:application:clone mapbender_user_yml
 
 
 User administration
@@ -190,7 +203,7 @@ The queued print is disabled by default because it requires some external integr
 
 	mapbender.print.queueable: true
 
-Read more about the general characteristics of queued print at :ref:`queued_print`. Also here: https://github.com/mapbender/mapbender/pull/1070
+Read more about the general characteristics of queued print at :ref:`queued_print`. Also `here <https://github.com/mapbender/mapbender/pull/1070>`_
 
 
 The print assistant is then updated in the backend of Mapbender and two new lines appear: mode and queue. 

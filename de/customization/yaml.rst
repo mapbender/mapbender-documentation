@@ -288,101 +288,32 @@ Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgele
 Mapbender Demo Map
 ------------------
 
-Folgende Funktionen sind vorimplementiert:
+Dies ist die Demo-Anwendung, die für eine Desktop-Anwendung standardmäßig verwendet werden sollte.
 
-Obere Werkzeugleiste
-    * Ebenenbaum (Button)
-    * Information (Button)
-    * Druck (Button)
-    * Bildexport (Button)
-    * Legende (Button)
-    * WMS laden (Button)
-    * GPS-Position
-    * Messen (Linie und Fläche) (Buttons)
-    * Über-Mapbender-Dialog
-    * MeetingPoint (POI) (Button)
-
-Sidepane
-    * Ebenenbaum
-    * Skizzen
-    * Koordinaten Utility
-    * Über-Mapbender-Dialog (HTML)
-
-Kartenbereich
-    * Karte
-    * Navigationswerkzeug
-    * Legende
-    * Information
-    * WMS laden
-    * Bildexport
-    * Druck
-    * Linie messen
-    * Fläche messen
-    * Maßstabsleiste
-    * Ebenenbaum
-    * Übersicht
-    * Maßstabsanzeige
-    * MeetingPoint (POI)
-
-Fußzeile
-    * Aktivitätsanzeige
-    * Koordinatenanzeige
-    * SRS Auswahl
-    * Maßstabsanzeige
-    * © OpenStreetMap contributors (Button)
-    * HTML-powered by Mapbender (HTML)
-
-Ausführliche Beschreibungen der einzelnen Elemente finden sich unter :ref:`elements_de`.
-
+Detaillierte Beschreibungen zu den enthaltenen Elementen finden Sie unter :ref:`elements_de`.
 
 
 Mapbender Demo Map basic
 ------------------------
 
-Unterschiede zu Mapbender Demo Map:
+Die zweite Demoanwendung, welche folgende Unterschiede zur Hauptanwendung aufweist:
 
-Obere Werkzeugleiste
-    Die Leiste unterscheidet sich kaum von der in der Mapbender Demo Map Anwendung. Statt 'POI' ist 'Koordinaten Utility' eingebunden.
+Werkzeugleiste
+    Verwendet :ref:`coordinate_utility_de` anstelle von :ref:`POI_de`.
 
-Sidepane
-    Hier sind keine Elemente eingebunden.
+Seitenbereich
+    Enthält keine im Voraus konfigurierten Elemente.
 
 Kartenbereich
-    Statt der Elemente 'Maßstabsanzeige' und 'POI' ist das Elemente 'Koordinaten Utility' eingebunden.
+    Verwendet :ref:`coordinate_utility_de` anstelle von :ref:`scaledisplay_de` und :ref:`POI_de`.
 
-
-Ausführliche Beschreibungen der einzelnen Elemente unter :ref:`elements_de`.
-
-
+Detaillierte Beschreibungen der Elemente finden Sie unter :ref:`elements_de`.
 
 
 Mapbender mobile
 ----------------
 
-Die Beispielanwendung kann als Mobile Template für die Erstellung von Anwendungen für Smatphones oder Tablets verwendet werden.
-
-Folgende Funktionen sind vorimplementiert:
-
-Fußzeile
-    * Themen (Button)
-    * Themenwechsel (Button)
-    * GPS-Position
-    * Imprint (Button)
-    * Hilfe (Button)
-    * Über-Mapbender-Dialog (Button)
-
-Kartenbereich
-    * Karte
-    * Navigationswerkzeug
-
-Mobilepane
-    * Themen (Ebenenbaum)
-    * Information
-    * Imprint (HTML)
-    * Hilfe (HTML)
-    * Themenwechsel
-    * Über-Mapbender-Dialog (HTML)
-
+Diese Anwendung dient als mobile Vorlage für Smartphones und Tablets.
 
 
 Export/Import von YAML Anwendungsdateien über die Benutzeroberfläche
@@ -402,52 +333,23 @@ Unter **Anwendungen** → **Importieren** kann die Exportdatei in eine Mapbender
 .. image:: ../../figures/de/Import_Applikation.png
 
 
-
 Export/Import/Klonen von YAML Anwendungsdateien über die Konsole
 ----------------------------------------------------------------
+
+Bitte gehen Sie zu :ref:`app_command_export_import_clone_de`, um entsprechende Konsolenbefehle einzusehen. Nachfolgend finden Sie einige einführende Worte darüber, was mit Anwendungen über die Konsole möglich ist.
 
 **Export über die Konsole**
 
 Anwendungen können als .json oder.yml - Datei über die Konsole exportiert werden.
 Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
-Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter app/config/application. Ersteres wurde von einer Maschine erzeugt, letzteres von einem Programmierer.
-
-.. code-block:: bash
-
-    app/console mapbender:application:export mapbender_user_yml > ~/Downloads/demo.yaml
-
-Durch *> ~/Downloads/demo.yaml* wird eine neue Datei unter dem angegebenen Pfad erstellt.
-*app/console mapbender:application:export mapbender_user_yml* gibt den Inhalt auf der Konsole aus.
-
+Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter app/config/application.
 
 **Import über die Konsole**
 
-YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole importiert werden.
-
-.. code-block:: bash
-
-    app/console mapbender:application:import ~/Downloads/demo.yaml
+YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole via app/console importiert werden.
 
 
 **Anwendung über die Konsole klonen**
 
-Klont eine existierende Anwendung.
+Klont/Kopiert eine existierende Anwendung.
 
-.. code-block:: bash
-
-	app/console mapbender:application:clone mapbender_user_yml
-
-Die neue Anwendung erhält die Endung _imp1 und heißt somit mapbender_user_yml_imp1.
-
-
-**Hilfe zu den Befehlen**
-
-Die Hilfekommandos, welche die Import- & Exportfunktion und erweiterte Optionen genauer erläutern, lauten:
-
-.. code-block:: bash
-
-    app/console mapbender:application:import --help
-
-.. code-block:: bash
-
-    app/console mapbender:application:export --help
