@@ -3,18 +3,18 @@
 Git-basierte Installation
 ##########################
 
-Wir haben die Installation aus den Git-Quellen direkt im README.md Mapbender-Starter Git-Repository geschrieben:
+Eine Anleitung zur Installation aus den Git-Quellen finden Sie in der README.md im mapbender-starter Git-Repository:
 
 `https://github.com/mapbender/mapbender-starter/blob/master/README.md <https://github.com/mapbender/mapbender-starter/blob/master/README.md>`_.
 
-In den Quellen finden Sie auch den Contributing Guide, der die Schritte zur Entwicklung mit Mapbender vorstellt:
+In den Quellen finden Sie auch den Contributing Guide, der auf die Mapbender Entwicklung eingeht:
 
 `https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_.
 
-Überblick: Die Git-basierte Installation ist für die Entwicklung von Mapbender gedacht oder für projektspezifische Anpassungen, die in einem geklonten Mapbender-Starter abgelegt werden können. Dort können Sie ihre eigenen Templates, Ihre eigenen Anwendungen oder eigene Bundles hinterlegen. Über den Composer laden Sie dann die Module Mapbender, OWSProxy, FOM, Digitizer und alle weiteren in der Version ein, die sie benötigen. Bei einem Update des Mapbenders vergleichen Sie den Stand der Mapbender-Starter-Repositories. Die grundsätzlichen Anpassungen sind die Versionen in der ``composer.json``.
+Die Git-basierte Installation ist für die Entwicklung von Mapbender gedacht oder für projektspezifische Anpassungen, die in einem geklonten mapbender-starter abgelegt werden können. Dort können Sie ihre eigenen Druckvorlagen, eigene Bundles, eigenen Templates, eigenes CSS oder twig, sowie angepasste Dateien hinterlegen.
 
 
 Kurze Anmerkung zu Git
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Für mehr Informationen zu Mapbender Branches und Git siehe in den `Development Guide auf GitHub <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#feature-branch>`_.
+Informationen zu Mapbender Branches und Git finden Sie im `Development Guide auf GitHub <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#feature-branch>`_.

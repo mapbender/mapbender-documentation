@@ -6,8 +6,8 @@ Einführung
 Diese Dokumentation ist an Mapbender-Entwickler gerichtet und behandelt Themen, die von Mapbender-Administratoren und -Benutzern nicht benötigt werden.
 
 
-Dinge, die es zu beachten gilt
-******************************
+Was ist zu beachten?
+********************
 
 Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu können:
 
@@ -25,7 +25,7 @@ Die Installation aus den Git-Quellen heraus wird unter :ref:`installation_git_de
 Module und Bundles
 ******************
 
-Bitte beachten Sie die jeweiligen Beiträge im Entwicklungshandbuch `CONTRIBUTING.md`, um zu erfahren, was ein `Modul <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#modules>`_ und was ein `Bundle <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundles>`_ ist und wie letzteres `erstellt <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundle-creation>`_ werden kann.
+Bitte beachten Sie die jeweiligen Beiträge im Entwicklungshandbuch `CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_, um zu erfahren, was ein `Modul <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#modules>`_ und was ein `Bundle <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundles>`_ ist und wie letzteres `erstellt <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundle-creation>`_ werden kann.
 
 
 Twig
@@ -47,7 +47,6 @@ Mailinglisten
 Bibliotheken und Frameworks:
 
 * `Symfony framework <https://www.symfony.com/>`_
-* `PHPUnit documentation <https://phpunit.de/>`_
 * `Composer documentation <https://getcomposer.org/doc/>`_
 * `General GitHub documentation <https://support.github.com/>`_
 * `GitHub pull request documentation <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request>`_
