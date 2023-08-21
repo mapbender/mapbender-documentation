@@ -348,7 +348,6 @@ Applications can be exported as .json or .yml -file over the console.
 
 A YAML file that has been exported over the console cannot be placed under app/config/application to be imported in a Mapbender installation.
 The YAML format that is produced by exporting over the console is different from the YAML format of the files under app/config/application.
-The former is produced by a machine and the latter is code written by a developer.
 
 
 **Import**
@@ -358,5 +357,5 @@ YAML files that have been exported over the user interface or console can be imp
 
 **Clone**
 
-Clone an existing application.
+Clone/Copy an existing application.
 
