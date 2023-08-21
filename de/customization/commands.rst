@@ -61,7 +61,7 @@ You can import an application from a JSON-file. Mapbender will automatically cho
 app/console mapbender:application:clone
 ***************************************
 
-Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen. Dadurch wird eine neue Anwendung mit einem *_imp* Suffix im Anwendungsnamen erzeugt. 
+Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen, also kopieren. Dadurch wird eine neue Anwendung mit einem *_imp* Suffix im Anwendungsnamen erzeugt. 
 Im untenstehenden Beispiel heißt die neue Anwendung `mapbender_user_yml_imp1`.
 
 .. code-block:: bash
