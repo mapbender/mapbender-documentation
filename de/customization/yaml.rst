@@ -73,9 +73,7 @@ Wenn Sie eine weitere Datenbank verwenden möchten, müssen Sie eine zweite Date
 
 In den Elementen SearchRouter und Digitizer kann nun auf die Datenbankverbindung (connection) mit dem Namen **search_db** verwiesen werden.
 
-Weitere Informationen unter:
-
-Symfony Dokumentation <https://symfony.com/doc/current/best_practices/configuration.html>`_)
+Weitere Information über diese Konfigurationsmöglichkeit gibt es in der `Symfony Dokumentation <https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration>`_.
 
 Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken und bietet einen objektrelationalen Mapper und eine Datenbankabstraktionsschicht (`Doctrine Projektseite <https://www.doctrine-project.org/>`_).
 

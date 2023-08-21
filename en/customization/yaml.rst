@@ -73,9 +73,7 @@ If you want to use another database, you have to define a database connection wi
 
 Now, you can refer to the database **search_db** in the elements SearchRouter and Digitizer.
 
-More information:
-
-Symfony documentation <http://symfony.com/doc/current/best_practices/configuration.html>`_)
+To learn more about this structure, visit the `Symfony documentation <https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration>`_.
 
 Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine project <http://www.doctrine-project.org/>`_).
 
