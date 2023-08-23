@@ -7,7 +7,7 @@ Page not found / Seite nicht gefunden (404 Not Found)
 
 **Page not found**
 
-The page you were looking for doesn not exist.
+The page you were looking for does not exist.
 
 Back to `Main Page <https://doc.mapbender.org/>`_.
 
@@ -15,10 +15,9 @@ Back to `Main Page <https://doc.mapbender.org/>`_.
 
 **Seite nicht gefunden**
 
-Die Seite, die Sie aufgerufen haben existiert nicht.
+Die Seite, die Sie aufgerufen haben, existiert nicht.
 
-
-Zurück zur `Hauptseite <https://doc.mapbender.org/de/index.html>`_ zurückgehen.
+Zurück zur `Hauptseite <https://doc.mapbender.org/de/>`_ zurückgehen.
 
 
 
