@@ -15,13 +15,12 @@ Datenbank
 *********
 Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yml`` und ``config.yml`` verwendet. In der ``parameters.yml`` werden Variablen für die Datenbankverbindung definiert. Es können mehrere Datenbankverbindungen definiert werden. Die Variablen werden in der ``config.yml`` verarbeitet. Zu jeder Datenbankverbindung wird ein Alias vergeben.
 
-* database_driver: Der Datenbanktreiber. Mögliche Werte sind:
-
-  * pdo_sqlite - SQLite PDO driver
-  * pdo_mysql - MySQL PDO driver
-  * pdo_pgsql - PostgreSQL PDO driver
-  * oci8 - Oracle OCI8 driver
-  * pdo_oci - Oracle PDO driver
+* **database_driver**: Der Datenbanktreiber. Mögliche Werte sind:
+    * pdo_sqlite - SQLite PDO driver
+    * pdo_mysql - MySQL PDO driver
+    * pdo_pgsql - PostgreSQL PDO driver
+    * oci8 - Oracle OCI8 driver
+    * pdo_oci - Oracle PDO driver
 
   Beachten Sie, dass Sie den entsprechenden PHP-Treiber installiert bzw. aktiviert haben.
 
@@ -168,16 +167,16 @@ Dies kann nur für die gesamte Mapbender Installation angepasst werden (nicht f�
 
   Folgende Sprachcodes sind verfügbar:
 
-    * en für Englisch (Standard)
-    * de für Deutsch
-    * es für Spanisch
-    * fr für französisch,
-    * it für Italienisch
-    * nl für Niederländisch
-    * pt für Portugiesisch
-    * ru für Russisch
-    * tr für Türkisch
-    * uk für Ukrainisch
+* en für Englisch (Standard)
+* de für Deutsch
+* es für Spanisch
+* fr für französisch,
+* it für Italienisch
+* nl für Niederländisch
+* pt für Portugiesisch
+* ru für Russisch
+* tr für Türkisch
+* uk für Ukrainisch
 
 Eine Konfiguration könnte wie folgt aussehen:
 

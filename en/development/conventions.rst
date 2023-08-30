@@ -9,21 +9,16 @@ Code conventions
 * variable names / way of coding 
 * Code documentation
 * trans convention - where to put translation
-
-
-* document the x steps on the way to a new functionality
-
-  * define the topic
-  * create a ticket
-  * create a workflow
-  * discuss the workflow with the core team and find a final solution
-  * do the programming
-  * insert License
-  * test
-  * documentation in mapbender-documentation --> rst
-  * close the ticket
-
- 
+* **document** the steps on the way to a new functionality
+    * define the topic
+    * create a ticket
+    * create a workflow
+    * discuss the workflow with the core team and find a final solution
+    * do the programming
+    * insert License
+    * test
+    * documentation in mapbender-documentation --> rst
+    * close the ticket 
 * where to put a module/element
 * naming vor files (referred to symfony convention)
 
@@ -82,30 +77,25 @@ We create a milestone for every version of Mapbender:
 
 There are some rules you should keep in mind:
 
-* **write understandable tickets!!**
+* **Write understandable tickets:**
 
-* **write your title** so that the issue is already described in the title: 
-
-  * Browser - Backend/Frontend - element - issue 
-  * like: Firefox - Frontend - layertree - option visible is not handled in frontend
-  * see ticket https://github.com/mapbender/mapbender/issues/48
-* write **comments** with all necessary information: 
-  * for bugs: describe step by step how the error can be reproduced
-  * for features: describe feature and functionality
-* when you create a new ticket do not assign it to a milestone or developer, if you are not sure
-
-* **add labels** to your ticket 
-  * bug - describes a bug that orrurs in a special version of Mapbender (add info about the version)
-  * feature - new feature
-  * enhancement - stands for feature enhancement
-  * wip - work in progress
-
-* when you work on a ticket or close it please **assign a user and milestone**
-
-* **when you close a ticket**, please:
-
-  * add a comment in the ticket and **refer to the commit**,
-  * refer to the documentation at https://doc.mapbender.org or a demo if possibile.
+* **Write your title** so that the issue is already described in the title: 
+    * Browser - Backend/Frontend - element - issue 
+    * like: Firefox - Frontend - layertree - option visible is not handled in frontend
+    * see ticket https://github.com/mapbender/mapbender/issues/48
+* Write **comments** with all necessary information: 
+    * for bugs: describe step by step how the error can be reproduced
+    * for features: describe feature and functionality
+* When you create a new ticket do not assign it to a milestone or developer, if you are not sure
+* **Add labels** to your ticket 
+    * Bug - describes a bug that orrurs in a special version of Mapbender (add info about the version)
+    * Feature - new feature
+    * Enhancement - stands for feature enhancement
+    * WIP - work in progress
+* When you work on a ticket or close it please **assign a user and milestone**
+* **When you close a ticket**, please:
+    * add a comment in the ticket and **refer to the commit**,
+    * refer to the documentation at https://doc.mapbender.org or a demo if possibile.
 
 
 
@@ -145,30 +135,22 @@ How to build a new Mapbender build
 **********************************
 
 * Resolve and close all tickets for the relevant milestone: https://github.com/mapbender/mapbender/milestones
-
 * Update https://doc.mapbender.org/en/book/versions.html
-
 * Update Changelog.md for mapbender-starter, mapbender, owsproxy, fom.
-
 * Update version number in parameters.yml.dist and push
-
 * Update version number in composer.json
-
-* Tagging: Tag at Github. You have nice capabilities for creating good tags and descriptions.
-
-  * Mapbender
-  * OWSProxy
-  * FOM
-  * Mapbender-starter
-  * Documentation
-
-* Create Pull-request to merge release branch into master
-
-  * Mapbender
-  * OWSProxy
-  * FOM
-  * Mapbender-starter
-  * Documentation
+* **Tagging**: Tag at Github. You have nice capabilities for creating good tags and descriptions.
+    * Mapbender
+    * OWSProxy
+    * FOM
+    * Mapbender-starter
+    * Documentation
+* Create **Pull requests** to merge release branch into master
+    * Mapbender
+    * OWSProxy
+    * FOM
+    * Mapbender-starter
+    * Documentation
 
 
 * Clone the source-code from the release branch

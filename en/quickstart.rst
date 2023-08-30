@@ -39,12 +39,12 @@ Mapbender is a web based geoportal framework to publish, register, view, navigat
 
 With this code base, we will continue the Mapbender idea of being a Geoportal framework. Key features of Mapbender are:
 
-  * Applications can be setup, configured and styled right from within the browser.
-  * Services (e.g. WMS) can be managed inside a service repository and linked to applications.
-  * Rights management are easy to maintain, for individual users and groups, whether you store them inside the database or in an LDAP.
-  * Search modules can be configured.
-  * Applications for digitalization can be setup.
-  * Mobile template can be used to provide applications for smartphones and tablets.
+* Applications can be setup, configured and styled right from within the browser.
+* Services (e.g. WMS) can be managed inside a service repository and linked to applications.
+* Rights management are easy to maintain, for individual users and groups, whether you store them inside the database or in an LDAP.
+* Search modules can be configured.
+* Applications for digitalization can be setup.
+* Mobile template can be used to provide applications for smartphones and tablets.
 
 You will need nothing but a web browser for this quickstart.
 

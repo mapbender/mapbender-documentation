@@ -372,15 +372,13 @@ Die möglichen Optionen sind:
 * **label:** Beschriftung mit dem Namen der Erfassungsoberfläche
 * **minScale:** Minimaler Maßstab, ab dem die Features in der Karte angezeigt werden (z.B. minscale: 5000 = Anzeige ab einem Maßstab über 1:5000, beim rauszoomen)
 * **featureType:** Verbindung zur Datenbank
-
-  * connection: Name der Datenbank-Verbindung aus der parameters/config.yml
-  * table: Name der Tabelle, in der das FeatureType gespeichert wird
-  * uniqueId: Name der Spalte mit dem eindeutigen Identifier (Standard bei Leerwert: [id])
-  * geomType: Geometrietyp
-  * geomField: Attributspalte, in der die Geometrie liegt.
-  * srid: Koordinatensystem im EPSG-Code
-  * filter: Datenfilter über Werte in einer definierten Spalte, z.B. filter: interests = 'maps'
-
+    * connection: Name der Datenbank-Verbindung aus der parameters/config.yml
+    * table: Name der Tabelle, in der das FeatureType gespeichert wird
+    * uniqueId: Name der Spalte mit dem eindeutigen Identifier (Standard bei Leerwert: [id])
+    * geomType: Geometrietyp
+    * geomField: Attributspalte, in der die Geometrie liegt.
+    * srid: Koordinatensystem im EPSG-Code
+    * filter: Datenfilter über Werte in einer definierten Spalte, z.B. filter: interests = 'maps'
 * **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular (Standard: true).
 * **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird (Standard: 100).
 * **allowEditData:** Daten dürfen editiert und gespeichert werden [true/false]. Es erscheint immer eine Speichern Schaltfläche.
@@ -473,13 +471,14 @@ Definition der Objekttabelle
 Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte gezoomt werden und das Bearbeitungsformular kann geöffnet werden. Die Objekttabelle ist sortierbar. Die Breite der einzelnen Spalten kann optional in Prozent oder Pixeln angegeben werden.
 
 * **tableFields:** Definition der Spalten für die Objekttabelle.
-   * Definition einer Spalte: [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe z.B. Angabe der Breite]}  # Definition einer Spalte
+    * Definition einer Spalte: [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe, z.B. Angabe der Breite]}
 * **searchType:** Suchbereich in der Karte, Anzeige aller Objekttreffer in der Tabelle oder nur aller Objekttreffer in dem derzeitigen Kartenausschnitt [all / currentExtent] (Standard: currentExtent).
 * **showExtendSearchSwitch:** Anzeige der searchType Selectbox zur Suche im Kartenausschnitt aktivieren oder deaktivieren [true/false]
 * **view:** Einstellungen zu der Objekttabelle
-   * Detaillierte Informationen zu möglichen Angaben unter https://datatables.net/reference/option/
    * **type**: Templatename [table]
    * **settings**: Einstellungen zum Funktionsumfang der Objekttabelle *(neu hinzugefügt, noch nicht vollst. dokumentiert!)*
+
+Detaillierte Informationen zu möglichen Angaben finden Sie unter https://datatables.net/reference/option/
 
 .. code-block:: yaml
 

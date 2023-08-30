@@ -49,9 +49,9 @@ The Printclient can be configured in the backend. It relies on print templates (
 
 With the configuration of the following values it is possible to enable optional fields in the print dialog. An example (title, two comment fields, name) is offered in the YAML definition.
 
-  * **title**: name of the optional field, default value is null (no optional fields are defined).
-  * **label**: Label of the optional field.
-  * **options**: { required: true } : Type of the optional field. Has to be true or false.
+* **title**: name of the optional field, default value is null (no optional fields are defined).
+* **label**: Label of the optional field.
+* **options**: { required: true } : Type of the optional field. Has to be true or false.
 
 * **Display required fields first**: If this checkbox is active, your defined required fields appear utmost.
 

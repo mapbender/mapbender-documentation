@@ -17,17 +17,17 @@ Eine Übersicht über alle Elemente gibt es unter :ref:`elements_de`.
 
 Layout des Fullscreen Templates:
 
-  * Obere Werkzeugleiste (Region für die Platzierung von Buttons, Links, HTML, ...)
-  * Sidepane (Seitenleisten-Region für den Ebenenbaum, die Legende, die Suche, den Druck, HTML, ...)
-  * Kartenbereich (Region für die Karte, die Maßstabsleiste, ...)
-  * Fußzeile (Region für das Impressum, die Aktivitätsanzeige, die Maßstabsauswahl, ...)
+* Obere Werkzeugleiste (Region für die Platzierung von Buttons, Links, HTML, ...)
+* Sidepane (Seitenleisten-Region für den Ebenenbaum, die Legende, die Suche, den Druck, HTML, ...)
+* Kartenbereich (Region für die Karte, die Maßstabsleiste, ...)
+* Fußzeile (Region für das Impressum, die Aktivitätsanzeige, die Maßstabsauswahl, ...)
 
 
 Layout des Mobilen Templates:
 
-  * Fußzeile (Region für das Copyright, die Aktivitätsanzeige, die Maßstabsauswahl, ...)
-  * Kartenbereich (Region für die Karte, die Maßstabsleiste, ...)
-  * MobilePane (Region für Dialoge wie den Ebenenbaum, die Legende, den Hintergrundwechsler, die Infoabfrage, ...)
+* Fußzeile (Region für das Copyright, die Aktivitätsanzeige, die Maßstabsauswahl, ...)
+* Kartenbereich (Region für die Karte, die Maßstabsleiste, ...)
+* MobilePane (Region für Dialoge wie den Ebenenbaum, die Legende, den Hintergrundwechsler, die Infoabfrage, ...)
 
 
 Der |mapbender-button-add| Button rechts oberhalb des Bereichs ermöglicht das Hinzufügen von Elementen. Nach dem Klick auf den Button öffnet sich eine Dialogmaske, die die Auswahl eines Elements und dessen anschließende Konfiguration ermöglicht.
@@ -43,10 +43,10 @@ Konfigurationsmöglichkeiten der Oberen Werkzeugleiste und Fußzeile
 ******************************************************************
 Die Regionen der Oberen Werkzeugleiste und der Fußzeile bieten folgende Konfigurationsmöglichkeiten über den |mapbender-button-edit| Button an:
 
-  * **Bildschirmtyp** (Alle, Mobil, Desktop. Standard: Alle) Bei dieser Option wird der Bereich für die nicht ausgewählte Geräteart ausgeblendet. *Alle* zeigt die Region auf allen Geräten an.
-  * **Ausrichtung** (Links, Rechts, Zentriert. Standard: Rechts.): Die Ausrichtung definiert die Positionierung der Elemente innerhalb der Bereiche.
-  * **Checkbox Schaltflächen zu Menü zusammenfassen**: Konfiguriert ein Ausklappmenü, welches die in den Bereich eingebundenen Elemente umfasst.
-  * **Menütitel-Textfeld**: Mit dieser Textbox lässt sich dem Ausklappmenü eine Beschriftung zuweisen.
+* **Bildschirmtyp** (Alle, Mobil, Desktop. Standard: Alle) Bei dieser Option wird der Bereich für die nicht ausgewählte Geräteart ausgeblendet. *Alle* zeigt die Region auf allen Geräten an.
+* **Ausrichtung** (Links, Rechts, Zentriert. Standard: Rechts.): Die Ausrichtung definiert die Positionierung der Elemente innerhalb der Bereiche.
+* **Checkbox Schaltflächen zu Menü zusammenfassen**: Konfiguriert ein Ausklappmenü, welches die in den Bereich eingebundenen Elemente umfasst.
+* **Menütitel-Textfeld**: Mit dieser Textbox lässt sich dem Ausklappmenü eine Beschriftung zuweisen.
 
 .. tip:: **Hinweis**: Das Ausklappmenü ist besonders sinnvoll, wenn die Anwendung für mobile Endgeräte ausgerichtet sein soll. Unter :ref:`CSS_de` findet sich ein Codebaustein, der die Bedienbarkeit bei Anwendungen mit vielen Elementen erhöht. 
 
@@ -67,11 +67,9 @@ Die Ansichtsoptionen für die Sidepane können im Sidepane-Bereich im Mapbender-
 
 Die Option **Typ** zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an:
 
-  - ``Akkordeon`` zeigt alle hinzugefügten Elemente in Reitern.
-
-  - ``Buttons`` zeigt alle hinzugefügten Elemente über Buttons.
-
-  - ``Unformatiert`` verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an.
+- ``Akkordeon`` zeigt alle hinzugefügten Elemente in Reitern.
+- ``Buttons`` zeigt alle hinzugefügten Elemente über Buttons.
+- ``Unformatiert`` verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an.
 
 
 Element-Buttonleiste

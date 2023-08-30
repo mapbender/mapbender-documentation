@@ -3,7 +3,7 @@
 Installation auf Ubuntu/Debian
 ##############################
 
-Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (die Datenbank liegt unter **<mapbender>/app/db/demo.sqlite**).
+Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (sie liegt unter <mapbender>/app/db/demo.sqlite).
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter :ref:`installation_symfony_de`.
 
 .. hint:: Für den Produktiveinsatz wird PostgreSQL empfohlen. Weitere Installationshinweise finden Sie im Kapitel `Optional > Mapbender Einrichtung auf PostgreSQL <#optional>`_.
@@ -14,10 +14,8 @@ Voraussetzungen
 
 - PHP >= 7.4
 - Apache Installation mit folgenden aktivierten Modulen:
-
-  * mod_rewrite
-  * libapache2-mod-php
-
+    - mod_rewrite
+    - libapache2-mod-php
 Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf nicht weiter eingegangen.
 
 
@@ -165,7 +163,7 @@ Root-Benutzer für Zugriff anlegen:
 
    app/console fom:user:resetroot
 
-Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`
+Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`.
 
 
 **Mapbender Einrichtung auf MySQL**

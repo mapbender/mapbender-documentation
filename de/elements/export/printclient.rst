@@ -49,9 +49,9 @@ Der PrintClient kann im Backend konfiguriert werden. Er greift dabei auf Druckvo
 
 Über die Konfiguration folgender Werte können optionale Felder im Druckdialog ermöglicht werden. Eine Beispielkonfiguration mit vier Feldern (Titel, zwei Kommentarfelder, Bearbeiter) gibt die YAML-Definition.
 
-  * **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
-  * **label**: Beschriftung des optionalen Feldes.
-  * **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
+* **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
+* **label**: Beschriftung des optionalen Feldes.
+* **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
 
 * **Zeige Pflichtfelder zuerst (Display required fields first)**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
 
@@ -108,14 +108,14 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
 Verzeichnisse
 -------------
 
-**Der Nordpfeil:**
-* Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Er kann durch ein anderes Bild ersetzt werden.
+* **Der Nordpfeil:**
+    * Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Er kann durch ein anderes Bild ersetzt werden.
 
-**Die Print Templates:**
-* Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
+* **Die Print Templates:**
+    * Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
 
-**Die Druckdateien:**
-* Die Druckdateien werden in dem Standard-Downloadordner Ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
+* **Die Druckdateien:**
+    * Die Druckdateien werden in dem Standard-Downloadordner Ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
 
 
 Erstellen einer individuellen Vorlage
@@ -160,24 +160,13 @@ Für die Nutzung dieser Funktion müssen die Templates angepasst und transparent
 Templates anpassen:
 
 * Elemente neu anordnen, am besten vor weißem Hintergrund
-
-  - Anordnung der Elemente im Vordergrund
-
-    + Rechtsklick Anordnung -> Ganz nach vorn
-
-  - Anordnung Karte = ganz nach hinten
-
-    + Rechtsklick Anordnung -> Ganz nach hinten
-
+    * Anordnung der Elemente im Vordergrund (Rechtsklick Anordnung → Ganz nach vorn)
+    * Anordnung Karte = ganz nach hinten (Rechtsklick Anordnung → Ganz nach hinten)
 * Alles selektieren
-
-  - STRG + A drücken
-
+    * STRG + A drücken
 * Selektion als PDF drucken
-
-  - Exportieren als PDF
-
-  - Bereich Auswahl statt Alle
+    * Exportieren als PDF
+    * Bereich Auswahl statt Alle
 
 
 Legende auf der ersten Seite
