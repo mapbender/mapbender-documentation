@@ -160,20 +160,13 @@ To use this function, the templates have to be adapted and transparent PDF templ
 Adapt templates:
 
 * Reorder elements in front of white background
-
-  - Arrange elements into the foreground (right-click Arrange → To the front)
-
-  - Arrange map element into the background (right-click Arrange → To the back)
-
+    * Arrange elements into the foreground (right-click Arrange → To the front)
+    * Arrange map element into the background (right-click Arrange → To the back)
 * Select all
-
-  - Press CTRL + A
-
+    * Press CTRL + A
 * Print selection as PDF
-
-  -  Export as PDF
-
-  -  Selection instead of All
+    * Export as PDF
+    * Selection instead of All
 
 
 Legend on the first page
