@@ -161,13 +161,9 @@ Adapt templates:
 
 * Reorder elements in front of white background
 
-  - Arrange elements into the foreground
+  - Arrange elements into the foreground (right-click Arrange → To the front)
 
-    + Right click Arrange → To the front
-
-  - Arrange map element into the background
-
-    + Right click Arrange → To the back
+  - Arrange map element into the background (right-click Arrange → To the back)
 
 * Select all
 
