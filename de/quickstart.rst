@@ -329,7 +329,7 @@ Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz.
 
 In einer Layerset-Instanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der multi-dimensionalen Daten in der WMS-Spezifikation.
 
-In Mapbender können die Vendor Specific Parameter genutzt werden, um bspw. Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
+In Mapbender können die Vendor Specific Parameter genutzt werden, um z.B. Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
 
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
@@ -402,7 +402,7 @@ Benutzer anlegen
   .. image:: ../figures/de/mapbender_create_user.png
    :width: 100%
 
-Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reitern ``Gruppen`` und ``Sicherheit`` können dem Benutzer zusätzliche Parameter, bspw. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
+Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reitern ``Gruppen`` und ``Sicherheit`` können dem Benutzer zusätzliche Parameter, z.B. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
 
   .. image:: ../figures/de/mapbender_assign_user_to_group.png
    :width: 100%

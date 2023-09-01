@@ -85,7 +85,7 @@ Link zum GitHub-Repository: https://github.com/mapbender/mapbender-starter
 
 Externe Repositories
 *********************
-Noch mehr mit Mapbender zusammenhängende Repositories finden sich auf GitHub. Verschiedene Anbieter können auf dieser Plattform Mapbender-spezifische Bundles anbieten; bspw. das DesktopIntegrationBundle, welches von der `WhereGroup <https://wheregroup.com>`__ bereitgestellt und von Kunden gesponsert wird.
+Noch mehr mit Mapbender zusammenhängende Repositories finden sich auf GitHub. Verschiedene Anbieter können auf dieser Plattform Mapbender-spezifische Bundles anbieten; z.B. das DesktopIntegrationBundle, welches von der `WhereGroup <https://wheregroup.com>`__ bereitgestellt und von Kunden gesponsert wird.
 
 Die WhereGroup bietet Mapbender-Bundles in GitHub an: https://github.com/WhereGroup
 

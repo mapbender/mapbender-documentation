@@ -239,7 +239,7 @@ Sobald "dynamic_image" im Drucklayout vorliegt, wird nach einem Bild mit dem Nam
 *Dynamischer Text*
 ------------------
 
-Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe im Ausdruck eingetragen. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und bspw. für Copyright-Hinweise nutzen.
+Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe im Ausdruck eingetragen. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und beispielweise für Copyright-Hinweise nutzen.
 
 
 
@@ -421,7 +421,7 @@ Der Parameter `mapbender.print.queue.memory_limit` (string; Standard: 1G) muss a
 *Direktdruck*
 -------------
 
-Über den Parameter `mapbender.print.memory_limit` (string or null; Standard: null) kann das Speicherlimit auch für den Direktdruck angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
+Über den Parameter `mapbender.print.memory_limit` (string or null; Standard: null) kann das Speicherlimit auch für den Direktdruck angepasst werden (mögliche Werte sind z.B. 512M, 2G, 2048M, etc.).
 Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an, der Wert "-1" steht für unbegrenzte Speichernutzung.
 
 
