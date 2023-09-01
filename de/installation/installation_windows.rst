@@ -13,11 +13,11 @@ Mapbender benötigt eine Datenbank zur Speicherung der Administrationsinformatio
 Voraussetzungen
 ---------------
 
-1. PHP NTS >= 7.4 https://windows.php.net/download/)
-2. Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/) mit folgenden aktivierten Modulen:
+* PHP NTS >= 7.4 https://windows.php.net/download/)
+* Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/) mit folgenden aktivierten Modulen:
     * mod_rewrite
     * mod_fcgid
-3. PostgreSQL Installation (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)   
+* PostgreSQL Installation (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
     * Es wird empfohlen, eine PostgreSQL Datenbank für Mapbender zu verwenden.
     * Es wird empfohlen, einen eigenen Datenbankbenutzer für den Zugriff auf die Mapbender Datenbank anzulegen.
 

@@ -14,10 +14,10 @@ Requirements
 ------------
 
 * PHP NTS >= 7.4 https://windows.php.net/download/)
-* **Apache installation** (https://www.apachelounge.com/download/, run as service with these modules):
+* Apache installation (https://www.apachelounge.com/download/, run as service with these modules):
     * mod_rewrite
     * mod_fcgid
-* **PostgreSQL** Installation (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+* PostgreSQL Installation (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
     * It is recommended to use a PostgreSQL database for Mapbender. 
     * It is recommended to create a database user to access the Mapbender database.
 

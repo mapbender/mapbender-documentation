@@ -14,6 +14,9 @@ Requirements
 * Apache installation with the following modules activated:
     * mod_rewrite
     * libapache2-mod-php
+* PostgreSQL Installation
+    * It is recommended to use a PostgreSQL database for Mapbender.
+    * It is recommended to create a database user to access the Mapbender database.
 
 Nginx can also be used as web server (this will not be discussed in detail here).
 

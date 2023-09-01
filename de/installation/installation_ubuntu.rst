@@ -12,10 +12,14 @@ Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finde
 Voraussetzungen
 ---------------
 
-- PHP >= 7.4
-- Apache Installation mit folgenden aktivierten Modulen:
-    - mod_rewrite
-    - libapache2-mod-php
+* PHP >= 7.4
+* Apache Installation mit folgenden aktivierten Modulen:
+    * mod_rewrite
+    * libapache2-mod-php
+* PostgreSQL Installation
+    * Es wird empfohlen, eine PostgreSQL Datenbank für Mapbender zu verwenden.
+    * Es wird empfohlen, einen eigenen Datenbankbenutzer für den Zugriff auf die Mapbender Datenbank anzulegen.
+
 Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf nicht weiter eingegangen.
 
 
