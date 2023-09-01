@@ -108,14 +108,22 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
 Verzeichnisse
 -------------
 
-* **Der Nordpfeil:**
-    * Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Er kann durch ein anderes Bild ersetzt werden.
+**Der Nordpfeil**
 
-* **Die Print Templates:**
-    * Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
+* Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**.
+* Der NOrdpfeil kann durch ein anderes Bild ersetzt werden.
 
-* **Die Druckdateien:**
-    * Die Druckdateien werden in dem Standard-Downloadordner Ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
+
+**Die Print-Templates**
+
+* Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**.
+* Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
+
+
+**Die Druck-Dateien (pdf)**
+
+* Die Druckdateien werden in dem Standard-Download-Ordner Ihres Webbrowsers abgelegt oder direkt im Browser angezeigt je nach Browserkonfiguration.
+* Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
 
 
 Erstellen einer individuellen Vorlage

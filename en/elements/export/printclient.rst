@@ -109,13 +109,20 @@ Directories
 -----------
 
 **The northarrow**
-* The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. The "north arrow" image can be replaced to use a different image instead.
+
+* The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**.
+* The "north arrow" image can be replaced to use a different image instead.
+
 
 **The print templates**
+
 * The print templates can be found under **app/Resources/MapbenderPrintBundle/templates/**. 
 
-**The print files**
-Mapbender saves its generated print files in the browser's default download folder. If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
+
+**The print pdf output**
+
+* Mapbender saves its generated print files in the browser's default download folder or shows them directly in your browser (depending on your browser settings).
+* If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
 
 
 Create your individual templates
