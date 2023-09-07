@@ -44,17 +44,17 @@ Unzip the Zip archive, for example under c:\\php .
 .. code-block:: ini
 
     # php.ini
-    extension=php_curl.dll
-    extension=php_fileinfo.dll
-    extension=php_gd.dll
-    extension=php_intl.dll
-    extension=php_pdo_pgsql.dll
-    extension=php_pdo_sqlite.dll
-    extension=php_pgsql.dll
-    extension=php_openssl.dll
-    extension=php_mbstring.dll
-    extension=php_zip.dll
-    extension=php_bz2.dll
+    extension=php_curl
+    extension=php_fileinfo
+    extension=php_gd
+    extension=php_intl
+    extension=php_pdo_pgsql
+    extension=php_pdo_sqlite
+    extension=php_pgsql
+    extension=php_openssl
+    extension=php_mbstring
+    extension=php_zip
+    extension=php_bz2
 
 * Please check the :ref:`faq` for further PHP settings. 
 
