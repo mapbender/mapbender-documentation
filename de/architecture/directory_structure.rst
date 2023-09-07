@@ -101,7 +101,7 @@ Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Der ALIAS muss auf
 
 Es kontrolliert:
 
-* den FrontendController (PHP-Script, welches aufgerufen werden kann). Das sind **app.php** für die Produktiv-Umgebung und **app_dev.php** für die Entwicklungsversion. Die Entwicklungsversion beinhaltet bspw. die Instrumente für Performance-Tests.
+* den FrontendController (PHP-Script, welches aufgerufen werden kann). Das sind **app.php** für die Produktiv-Umgebung und **app_dev.php** für die Entwicklungsversion. Die Entwicklungsversion beinhaltet z.B. die Instrumente für Performance-Tests.
 
 * dieses Verzeichnis beinhaltet die statischen Ressourcen wie css, js, favicon etc.
 

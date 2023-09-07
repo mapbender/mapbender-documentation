@@ -173,13 +173,13 @@ Digitizer is available for Mapbender >= 3.2.2. The new Digitizer Version is 1.4.
 * You can find a demo in the `Workshop bundle <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/app/config/applications/mapbender_digitize_demo.yml>`_
 * maxResults - is supported again to limit the number of features that are loaded to the application (if not defined all features will be used) (digitizer >=1.4.9)
 * For font definitions, see `issue 1308 <https://github.com/mapbender/mapbender/issues/1308>`_
-  - fontSize: 38 definition without px 
-  - labelxOffset: 18 (not supported in 3.2.3)
-  - labelYOffset: 18 (not supported in 3.2.3)
+    * fontSize: 38 definition without px 
+    * labelxOffset: 18 (not supported in 3.2.3)
+    * labelYOffset: 18 (not supported in 3.2.3)
 * Types that are not supported in 3.2.4
-  - upload
-  - select with multiselect
-  - coordinates
+    * upload
+    * select with multiselect
+    * coordinates
 * Clustering not implemented in 3.2.x
 * Style definition is limited not all OL2 styles can be defined
 * Support styling features with icons (interpret externalGraphic, graphicWidth, graphicHeight properties) (Mapbender >=3.2.7)

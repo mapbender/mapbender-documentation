@@ -17,17 +17,17 @@ An overview of all elements is available under :ref:`elements`.
 
 Layout of the Fullscreen template:
 
-  * Top toolbar (region for Buttons, Links, HTML,...)
-  * Sidepane (region for Layertree, Legend, Search, Print, HTML,...)
-  * Map area (region for Map, Scalebar,...)
-  * Footer (region for Copyright, Activity Indicator, Scale select,...)
+* Top toolbar (region for Buttons, Links, HTML,...)
+* Sidepane (region for Layertree, Legend, Search, Print, HTML,...)
+* Map area (region for Map, Scalebar,...)
+* Footer (region for Copyright, Activity Indicator, Scale select,...)
 
 
 Layout of the Mobile template:
 
-  * Footer (region for Copyright, Activity Indicator, Scale select,...)
-  * Map area (region for Map, Scalebar,...)
-  * MobilePane (region for dialogs like Layertree, Legend, BaseSourceSwicther, FeatureInfo,...)
+* Footer (region for Copyright, Activity Indicator, Scale select,...)
+* Map area (region for Map, Scalebar,...)
+* MobilePane (region for dialogs like Layertree, Legend, BaseSourceSwicther, FeatureInfo,...)
 
 
 The |mapbender-button-add| button located at the top right of each region allows adding elements. After pressing the button, a dialog will open, which allows for the selection of an element and its subsequent configuration.

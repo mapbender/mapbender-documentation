@@ -49,9 +49,9 @@ The Printclient can be configured in the backend. It relies on print templates (
 
 With the configuration of the following values it is possible to enable optional fields in the print dialog. An example (title, two comment fields, name) is offered in the YAML definition.
 
-  * **title**: name of the optional field, default value is null (no optional fields are defined).
-  * **label**: Label of the optional field.
-  * **options**: { required: true } : Type of the optional field. Has to be true or false.
+* **title**: name of the optional field, default value is null (no optional fields are defined).
+* **label**: Label of the optional field.
+* **options**: { required: true } : Type of the optional field. Has to be true or false.
 
 * **Display required fields first**: If this checkbox is active, your defined required fields appear utmost.
 
@@ -109,13 +109,20 @@ Directories
 -----------
 
 **The northarrow**
-* The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**. The "north arrow" image can be replaced to use a different image instead.
+
+* The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**.
+* The "north arrow" image can be replaced to use a different image instead.
+
 
 **The print templates**
+
 * The print templates can be found under **app/Resources/MapbenderPrintBundle/templates/**. 
 
-**The print files**
-Mapbender saves its generated print files in the browser's default download folder. If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
+
+**The print pdf output**
+
+* Mapbender saves its generated print files in the browser's default download folder or shows them directly in your browser (depending on your browser settings).
+* If the queued print is used, the files will be saved under the Mapbender directory **web/prints/**.
 
 
 Create your individual templates
@@ -160,24 +167,13 @@ To use this function, the templates have to be adapted and transparent PDF templ
 Adapt templates:
 
 * Reorder elements in front of white background
-
-  - Arrange elements into the foreground
-
-    + Right click Arrange → To the front
-
-  - Arrange map element into the background
-
-    + Right click Arrange → To the back
-
+    * Arrange elements into the foreground (right-click Arrange → To the front)
+    * Arrange map element into the background (right-click Arrange → To the back)
 * Select all
-
-  - Press CTRL + A
-
+    * Press CTRL + A
 * Print selection as PDF
-
-  -  Export as PDF
-
-  -  Selection instead of All
+    * Export as PDF
+    * Selection instead of All
 
 
 Legend on the first page

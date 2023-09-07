@@ -49,9 +49,9 @@ Der PrintClient kann im Backend konfiguriert werden. Er greift dabei auf Druckvo
 
 Über die Konfiguration folgender Werte können optionale Felder im Druckdialog ermöglicht werden. Eine Beispielkonfiguration mit vier Feldern (Titel, zwei Kommentarfelder, Bearbeiter) gibt die YAML-Definition.
 
-  * **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
-  * **label**: Beschriftung des optionalen Feldes.
-  * **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
+* **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
+* **label**: Beschriftung des optionalen Feldes.
+* **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
 
 * **Zeige Pflichtfelder zuerst (Display required fields first)**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
 
@@ -108,14 +108,22 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
 Verzeichnisse
 -------------
 
-**Der Nordpfeil:**
-* Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**. Er kann durch ein anderes Bild ersetzt werden.
+**Der Nordpfeil**
 
-**Die Print Templates:**
-* Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**. Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
+* Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**.
+* Der NOrdpfeil kann durch ein anderes Bild ersetzt werden.
 
-**Die Druckdateien:**
-* Die Druckdateien werden in dem Standard-Downloadordner Ihres Webbrowsers abgelegt. Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
+
+**Die Print-Templates**
+
+* Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**.
+* Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
+
+
+**Die Druck-Dateien (pdf)**
+
+* Die Druckdateien werden in dem Standard-Download-Ordner Ihres Webbrowsers abgelegt oder direkt im Browser angezeigt je nach Browserkonfiguration.
+* Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
 
 
 Erstellen einer individuellen Vorlage
@@ -160,24 +168,13 @@ Für die Nutzung dieser Funktion müssen die Templates angepasst und transparent
 Templates anpassen:
 
 * Elemente neu anordnen, am besten vor weißem Hintergrund
-
-  - Anordnung der Elemente im Vordergrund
-
-    + Rechtsklick Anordnung -> Ganz nach vorn
-
-  - Anordnung Karte = ganz nach hinten
-
-    + Rechtsklick Anordnung -> Ganz nach hinten
-
+    * Anordnung der Elemente im Vordergrund (Rechtsklick Anordnung → Ganz nach vorn)
+    * Anordnung Karte = ganz nach hinten (Rechtsklick Anordnung → Ganz nach hinten)
 * Alles selektieren
-
-  - STRG + A drücken
-
+    * STRG + A drücken
 * Selektion als PDF drucken
-
-  - Exportieren als PDF
-
-  - Bereich Auswahl statt Alle
+    * Exportieren als PDF
+    * Bereich Auswahl statt Alle
 
 
 Legende auf der ersten Seite
@@ -242,7 +239,7 @@ Sobald "dynamic_image" im Drucklayout vorliegt, wird nach einem Bild mit dem Nam
 *Dynamischer Text*
 ------------------
 
-Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe im Ausdruck eingetragen. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und bspw. für Copyright-Hinweise nutzen.
+Über das Element "dynamic_text" wird die Gruppenbeschreibung der ersten zugewiesenen Gruppe im Ausdruck eingetragen. Das Textfeld verhält sich genauso wie andere Textfelder und kann beliebig viele Zeichen enthalten. Sie können den dynamischen Text unabhängig von dem dynamischen Bild einbinden und beispielweise für Copyright-Hinweise nutzen.
 
 
 
@@ -424,7 +421,7 @@ Der Parameter `mapbender.print.queue.memory_limit` (string; Standard: 1G) muss a
 *Direktdruck*
 -------------
 
-Über den Parameter `mapbender.print.memory_limit` (string or null; Standard: null) kann das Speicherlimit auch für den Direktdruck angepasst werden (mögliche Werte sind bspw. 512M, 2G, 2048M, etc.).
+Über den Parameter `mapbender.print.memory_limit` (string or null; Standard: null) kann das Speicherlimit auch für den Direktdruck angepasst werden (mögliche Werte sind z.B. 512M, 2G, 2048M, etc.).
 Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene php.ini-Begrenzung an, der Wert "-1" steht für unbegrenzte Speichernutzung.
 
 

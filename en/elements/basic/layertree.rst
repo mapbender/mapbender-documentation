@@ -82,7 +82,7 @@ In the following section, we walk through an exemplary configuration of a Layert
 
 In the example, we defined one **Layerset** with one instance:
 
-* Layerset World: 
+* Layerset **World**: 
     * Instance OSM Demo Service https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
 
 The registered instance of the OSM  Demo Service is automatically included in Mapbender's installation. The WMS only has to be integrated into an existing Layerset. Switch to the tab Layersets. The following example uses the Layerset "World". 
@@ -176,11 +176,11 @@ In the following section, we walk through an exemplary configuration of a Layert
 
 In the example, we define two layersets with two instances each:
 
-* Layerset Project NRW:
+* Layerset **Project NRW**:
     * Instance `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
     * Instance `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
-* Layerset World: 
+* Layerset **World**: 
     * Instance OSM  Demo Service http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
     * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 

@@ -15,13 +15,12 @@ Database
 ********
 The files ``parameters.yml`` and ``config.yml`` are needed to configure databases in Mapbender. In ``parameters.yml``, (multiple) variables for database connection(s) can be defined. These variables are being processed in ``config.yml``. An alias is assigned to each database connection.
 
-* database_driver: Database driver. Possible values are:
-
-  * pdo_sqlite - SQLite PDO driver
-  * pdo_mysql - MySQL PDO driver
-  * pdo_pgsql - PostgreSQL PDO driver
-  * oci8 - Oracle OCI8 driver
-  * pdo_oci - Oracle PDO driver
+* **database_driver**: Database driver. Possible values are:
+    * pdo_sqlite - SQLite PDO driver
+    * pdo_mysql - MySQL PDO driver
+    * pdo_pgsql - PostgreSQL PDO driver
+    * oci8 - Oracle OCI8 driver
+    * pdo_oci - Oracle PDO driver
 
   Please note: Necessary PHP drivers need to be installed and activated.
 
@@ -103,16 +102,16 @@ If a translation of your browser's set language is missing in Mapbender, it will
 
 Available language codes are:
 
-    * en for English (default)
-    * de for German
-    * es for Spanish
-    * fr for French
-    * it for Italian
-    * nl for Dutch
-    * pt for Portugese
-    * ru for Russian
-    * tr for Turkish
-    * uk for Ukrainian     
+* en for English (default)
+* de for German
+* es for Spanish
+* fr for French
+* it for Italian
+* nl for Dutch
+* pt for Portugese
+* ru for Russian
+* tr for Turkish
+* uk for Ukrainian     
 
 Configuration example:
 

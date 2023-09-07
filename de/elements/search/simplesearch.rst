@@ -31,10 +31,10 @@ Konfiguration
 * **Query URL key:** Der Suchparameterschlüssel, der angehängt wird (z.B. ``q``).
 * **Query Whitespace replacement pattern:** Muster zum Austausch von Leerzeichen.
 * **Query key format:** Einfaches Suchformat (z.B. ``%s``).
-* **Token search/ replace (JavaScript regex):** Tokenizer spaltet/ sucht/ ersetzt regexp.
-  * Token, z.B.: ``[^a-zA-Z0-9äöüÄÖÜß]``
-  * Token search, z.B.: ``([a-zA-ZäöüÄÖÜß]{3,})``
-  * Token replace, z.B.: ``$1*``    
+* **Token search/replace (JavaScript regex):** Tokenizer spaltet/sucht/ersetzt regexp.
+    * **Token**, z.B.: ``[^a-zA-Z0-9äöüÄÖÜß]``
+    * **Token search**, z.B..: ``([a-zA-ZäöüÄÖÜß]{3,})``
+    * **Token replace**, z.B..: ``$1*``
 * **Collection path:** Dies kann ein Attributspfad sein, der vom Abfrageergebnis extrahiert wird (z.B. ``response.docs``).
 * **Label attribut:** Attribut oder mehrere Attribute , die als Ergebnis angezeigt werden sollen.
 * **Geom attribut:** Attributname der Geodaten (z.B. ``geom``).

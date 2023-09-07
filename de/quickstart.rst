@@ -38,13 +38,13 @@ Mapbender ist ein webbasiertes Geoportal-Framework zum Veröffentlichen, Registr
 
 Mit dieser Code-Grundlage wird die Idee eines Geoportal-Frameworks fortgesetzt. Zentrale Mapbender-Funktionen sind:
 
-  * Anwendungen können direkt im Browser erstellt, konfiguriert und gestylt werden.
-  * Dienste (wie WMS) können in einem Dienst-Repository verwaltet und mit Anwendungen verbunden werden.
-  * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
-  * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
-  * Suchen können konfiguriert werden.
-  * Anwendungen zur Digitalisierung können aufgebaut werden.
-  * Anwendungen können flexibel für Smartphones und Tablets angelegt werden.
+* Anwendungen können direkt im Browser erstellt, konfiguriert und gestylt werden.
+* Dienste (wie WMS) können in einem Dienst-Repository verwaltet und mit Anwendungen verbunden werden.
+* Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
+* Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
+* Suchen können konfiguriert werden.
+* Anwendungen zur Digitalisierung können aufgebaut werden.
+* Anwendungen können flexibel für Smartphones und Tablets angelegt werden.
 
 Sie brauchen nichts weiter als einen Webbrowser für diesen Schnellstart.
 
@@ -329,7 +329,7 @@ Diese Funktion ist für WMS-Dienste mit einer zeitlichen Dimension von Relevanz.
 
 In einer Layerset-Instanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden. Die Umsetzung folgt den Angaben der multi-dimensionalen Daten in der WMS-Spezifikation.
 
-In Mapbender können die Vendor Specific Parameter genutzt werden, um bspw. Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
+In Mapbender können die Vendor Specific Parameter genutzt werden, um z.B. Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
 
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
@@ -402,7 +402,7 @@ Benutzer anlegen
   .. image:: ../figures/de/mapbender_create_user.png
    :width: 100%
 
-Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reitern ``Gruppen`` und ``Sicherheit`` können dem Benutzer zusätzliche Parameter, bspw. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
+Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reitern ``Gruppen`` und ``Sicherheit`` können dem Benutzer zusätzliche Parameter, z.B. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
 
   .. image:: ../figures/de/mapbender_assign_user_to_group.png
    :width: 100%

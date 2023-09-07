@@ -380,15 +380,13 @@ The possible options are:
 * **label:** Label of the Digitizer popup
 * **minScale:** Minimum scale, where the features should be displayed in the map (e.g. minscale: 5000 = show from a scale 'over' 1:5000, when zooming out).
 * **featureType:** Connection to the database
-
-  * connection: Name of the database-connection from the parameters/config.yml
-  * table: Table-name in which the FeatureTypes are stored
-  * uniqueId: Column-name with the unique identifier
-  * geomType: Geometry-type
-  * geomField: Column-name in which the geometry is stored
-  * srid: Coordinate-system in EPSG-code
-  * filter: Data filters for values ​​in a defined column, e.g. filter: interests = 'maps' 
-
+    * connection: Name of the database-connection from the parameters/config.yml
+    * table: Table-name in which the FeatureTypes are stored
+    * uniqueId: Column-name with the unique identifier
+    * geomType: Geometry-type
+    * geomField: Column-name in which the geometry is stored
+    * srid: Coordinate-system in EPSG-code
+    * filter: Data filters for values ​​in a defined column, e.g. filter: interests = 'maps' 
 * **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data (default: true)
 * **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
 * **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. The Save button is always visible.
@@ -485,13 +483,14 @@ The Digitizer provides an object table. It can be used to navigate to features (
 The width of the individual columns can optionally be specified in percent or pixels.
 
 * **tableFields:** define the columns for the feature table. 
-   * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
+    * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
 * **searchType:** search extent in the map, display of all features in the result table or only features displayed in the current extent [all / currentExtent] (default: currentExtent).
 * **showExtendSearchSwitch:** Activate or deactivate the display of the searchType selectbox for searching in the curret extent [true/false]
 * **view:** Settings for the object result table
-   * Detailed information on possible configurations under https://datatables.net/reference/option/
-   * **type**: Templatename [table]
-   * **settings**: Settings for the functions of the result table *(Newly added, not fully documented!)*
+    * **type**: Templatename [table]
+    * **settings**: Settings for the functions of the result table *(Newly added, not fully documented!)*
+
+You can find more detailed information on possible configurations under https://datatables.net/reference/option/.
 
 .. code-block:: yaml
 
