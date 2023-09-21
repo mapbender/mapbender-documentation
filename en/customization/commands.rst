@@ -13,7 +13,8 @@ Make sure you are in the correct directory (above the app directory)
 
 * mapbender (installation via package)
 
-    
+.. _app_command_help:
+   
 Help command
 ------------
 
@@ -22,7 +23,7 @@ Help command
     app/console  
 
 
-The parameter --help displays the help message for every command for example:   
+The parameter --help displays the help message for every command, for example:   
 
 .. code-block:: yaml
 
@@ -594,11 +595,19 @@ Other
 app/console mapbender:source:rewrite:host 
 *****************************************
 
-Command to update the host name in the source URLs. Like this it is not necessary to reload Service capabilities.
+Use this command to update the hostname in the source URLs, eliminating the need to reload service capabilities.
 
 .. code-block:: yaml
 
-    app/console mapbender:source:rewrite:host "https://osm-demo.wheregroup.com" "http://osm-demo.wheregroup.com" 
+  mapbender:source:rewrite:host [options] [--] <from> <to>
+
+As usual, the :ref:`app_command_help` shows more options.
+
+Example to update the hostname:
+
+.. code-block:: yaml
+
+    app/console mapbender:source:rewrite:host "http://osm-demo.wheregroup.com" "https://osm-demo.wheregroup.com" 
     
 	3 modified urls in WMS source #5 / OpenStreetMap (OSM) Demo WhereGroup
 	Summary:
