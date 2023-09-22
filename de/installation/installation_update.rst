@@ -110,7 +110,7 @@ Aktualisierungsbeispiel für Windows
 
  # Sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version.
  # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/web/uploads.
- # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach c/MapbenderPrintBundle/templates/
+ # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach config/MapbenderPrintBundle/templates/
 
 
 

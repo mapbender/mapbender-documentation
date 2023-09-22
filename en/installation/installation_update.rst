@@ -109,6 +109,6 @@ Update Example for Windows
 
  # if you use screenshots: copy the screenshots from the old version back to mapbender/web/uploads
  # if you have individual templates: merge the templates with the new Mapbender version
- # if you use your own print templates: copy them back to c/MapbenderPrintBundle/templates/
+ # if you use your own print templates: copy them back to config/MapbenderPrintBundle/templates/
  
 
