@@ -140,16 +140,13 @@ In parameters.yml, you can refer to your own logo and to an alternative image fo
 
 Mailer
 *******
-Mailer information in ``parameters.yml`` (e.g. smtp or sendmail).
+Mailer information are inserted in ``parameters.yml`` via the `mailer_dsn` parameter (e.g. smtp or sendmail).
 
 Configuration example:
 
 .. code-block:: yaml
 
-        mailer_transport:  smtp
-        mailer_host:       localhost
-        mailer_user:       ~
-        mailer_password:   ~
+    mailer_dsn: smtp://user:pass@smtp.example.com:25
 
 The functions 'Self-Registration' and 'reset password' need a mailer.
 

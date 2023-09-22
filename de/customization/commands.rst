@@ -401,14 +401,14 @@ Dies geschieht zum Beispiel, wenn ein Auftrag in der Datenbank gelöscht oder de
 Mailer
 ------
 
-app/console debug:swiftmailer
-*****************************
+app/console debug:framework.mailer
+**********************************
 
 Zeigt die/den konfigurierten Mailer an.
 
 .. code-block:: yaml
 
-	app/console debug:swiftmailer 
+	app/console debug:framework.mailer 
     
     
 Server

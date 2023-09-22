@@ -110,15 +110,12 @@ Die Dateien müssen unter application/web verfügbar sein.
 
 Mailer
 ******
-Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
+Die Mailerangaben werden in der ``parameters.yml`` über `mailer_dsn` eingetragen.
 Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
 
-        mailer_transport:  smtp
-        mailer_host:       localhost
-        mailer_user:       ~
-        mailer_password:   ~
+    mailer_dsn: smtp://user:pass@smtp.example.com:25
 
 
 Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.

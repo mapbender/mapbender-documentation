@@ -400,14 +400,14 @@ gcfiles means "garbage collection files". This command deletes unreferenced file
 Mailer
 ------
 
-app/console debug:swiftmailer
-*****************************
+app/console debug:framework.mailer
+**********************************
 
 Command displays the configured mailer(s)
 
 .. code-block:: yaml
 
-	app/console debug:swiftmailer 
+	app/console debug:framework.mailer 
 
    
 Server
