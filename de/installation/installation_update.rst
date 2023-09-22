@@ -47,7 +47,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # Vergleichen Sie die Dateien parameters.yml, config.yml und sofern verwendet die mapbender.yml.
  # Sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version.
  # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/web/uploads.
- # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach mapbender/app/Resources/MapbenderPrintBundle/templates/.
+ # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach config/MapbenderPrintBundle/templates/.
 
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte der Apache Gruppe (www-data) zu.
  sudo chmod -R ugo+r /var/www/mapbender
@@ -110,7 +110,7 @@ Aktualisierungsbeispiel für Windows
 
  # Sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version.
  # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/web/uploads.
- # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach mapbender/app/Resources/MapbenderPrintBundle/templates/
+ # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach c/MapbenderPrintBundle/templates/
 
 
 

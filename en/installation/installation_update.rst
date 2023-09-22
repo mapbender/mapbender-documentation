@@ -12,7 +12,7 @@ To update Mapbender you have to do the following steps:
 * update your Mapbender database
 * copy the screenshots from your old Mapbender version from /web/uploads/ to the folder /web/uploads of your new installation
 * Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?)
-* print templates: if you use your own print templates: copy them back to app/Resources/MapbenderPrintBundle/templates/.
+* print templates: if you use your own print templates: copy them back to config/MapbenderPrintBundle/templates/.
 * Import the demo applications either via bin/composer run reimport-example-apps or via the web administration
 * At :ref:`installation_ubuntu` under the section **Unpack and register in your Web-Server** you can see how the config file for the Apache Alias should look like
 * That's all! Have a look at your new Mapbender version
@@ -47,7 +47,7 @@ Have a look at the steps as commands
  # merge parameters.yml, config.yml and if used mapbender.yml 
  # if you use screenshots: copy the screenshots from the old version back to mapbender/web/uploads
  # if you have individual templates: merge the templates with the new Mapbender version
- # if you use your own print templates: copy them back to mapbender/app/Resources/MapbenderPrintBundle/templates/
+ # if you use your own print templates: copy them back to config/MapbenderPrintBundle/templates/
  
  # change the accessrights and owner of the files
  sudo chmod -R ugo+r /var/www/mapbender
@@ -109,6 +109,6 @@ Update Example for Windows
 
  # if you use screenshots: copy the screenshots from the old version back to mapbender/web/uploads
  # if you have individual templates: merge the templates with the new Mapbender version
- # if you use your own print templates: copy them back to mapbender/app/Resources/MapbenderPrintBundle/templates/
+ # if you use your own print templates: copy them back to c/MapbenderPrintBundle/templates/
  
 

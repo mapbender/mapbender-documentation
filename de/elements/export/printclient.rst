@@ -73,7 +73,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
     target: map                                              # ID des Kartenelements
     type: dialog                                             # element oder dialog, default ist dialog
     templates:
-        - { template: a4portrait, label: A4 Portrait}	     # Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in app/Resources/MapbenderPrintBundle
+        - { template: a4portrait, label: A4 Portrait}	     # Vorlagen (template): Vorlagename, Vorlagedateiname ohne Dateierweiterung (Mapbender sucht die Datei a4portrait.odg und a4portrait.pdf), die Vorlagedateien befinden sich in config/MapbenderPrintBundle
         - { template: a4landscape, label: A4 Landscape}      # Vorlagebeschriftung im Druckdialog
     scales: [5000, 10000, 25000]                             # Maßstäbe definieren, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, kann ein beliebiger Maßstab in einem Textfeld definiert werden.
     quality_levels:                                          # die Qualität in dpi definieren und die dazugehörige Beschriftung angegeben
@@ -110,13 +110,13 @@ Verzeichnisse
 
 **Der Nordpfeil**
 
-* Das Bild des Nordpfeils befindet sich unter **app/Resources/MapbenderPrintBundle/images/**.
+* Das Bild des Nordpfeils befindet sich unter **config/MapbenderPrintBundle/images/**.
 * Der NOrdpfeil kann durch ein anderes Bild ersetzt werden.
 
 
 **Die Print-Templates**
 
-* Die Vorlagen befinden sich unter **app/Resources/MapbenderPrintBundle/templates/**.
+* Die Vorlagen befinden sich unter **config/MapbenderPrintBundle/templates/**.
 * Es können eigene Druckvorlagen erstellt und hinzugefügt werden.
 
 
@@ -189,7 +189,7 @@ Neben dem Kartenbereich kann die Legende auf der ersten Seite der Druckvorlage i
 Logo auf der Legendenseite
 --------------------------
 
-Sofern die Legende weiterhin auf einer zusätzlichen Seite erzeugt werden soll, kann auf der zweiten Seite ebenfalls ein Logo eingebunden werden. Dies erfolgt über das dynamische Element "legendpage_image". Hierfür wird ein neues Feld in der nicht druckbaren Ebene eingefügt, über **Menü: Format -> Name...** in "legendpage_image" umbenannt und an gewünschter Stelle platziert. Das Logo oder Bild wird im Ordner **app/Resources/MapbenderPrintBundle/images/** unter dem Namen "legendpage_image.png" abgespeichert.
+Sofern die Legende weiterhin auf einer zusätzlichen Seite erzeugt werden soll, kann auf der zweiten Seite ebenfalls ein Logo eingebunden werden. Dies erfolgt über das dynamische Element "legendpage_image". Hierfür wird ein neues Feld in der nicht druckbaren Ebene eingefügt, über **Menü: Format -> Name...** in "legendpage_image" umbenannt und an gewünschter Stelle platziert. Das Logo oder Bild wird im Ordner **config/MapbenderPrintBundle/images/** unter dem Namen "legendpage_image.png" abgespeichert.
 Das erzeugte PDF kann beispielsweise aus folgenden beiden Seiten bestehen:
 
 .. image:: ../../../figures/print_client_example_legendpage_image.png
@@ -234,7 +234,7 @@ Zur Nutzung dieser Funktion müssen Gruppen mit Benutzern erstellt und den Anwen
 *Dynamisches Bild*
 ------------------
 
-Sobald "dynamic_image" im Drucklayout vorliegt, wird nach einem Bild mit dem Namen der ersten zugewiesenen Gruppe gesucht und dieses im Bereich des Elements "dynamic_image" ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Die verschiedenen Bilder je Gruppe werden im Ordner **app/Resources/MapbenderPrintBundle/images/** unter dem jeweiligen Namen der Gruppe abgelegt (z.B. Gruppenname ist "Gruppe 1", dann lautet der Name des Bildes Gruppe 1.png).
+Sobald "dynamic_image" im Drucklayout vorliegt, wird nach einem Bild mit dem Namen der ersten zugewiesenen Gruppe gesucht und dieses im Bereich des Elements "dynamic_image" ausgegeben. Hierbei wird die Höhe zur Orientierung verwendet und die Breite entsprechend angepasst. Die verschiedenen Bilder je Gruppe werden im Ordner **config/MapbenderPrintBundle/images/** unter dem jeweiligen Namen der Gruppe abgelegt (z.B. Gruppenname ist "Gruppe 1", dann lautet der Name des Bildes Gruppe 1.png).
 
 *Dynamischer Text*
 ------------------

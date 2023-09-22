@@ -42,7 +42,7 @@ The Printclient can be configured in the backend. It relies on print templates (
 * **legend checkbox checked**: if true, the legend checkbox is checked by default
 * **file_prefix**: defines a file prefix for the PDF that is generated when creating a PDF (file_prefix_date.pdf will be created)
 * **quality_levels**: defines quality levels in DPI values.
-* **templates**: template name. Add template file name without file extensions (Mapbender is looking for two files, e.g. a4portrait.odg & a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle. Deleting or adding templates is possible with the "+"- or "x" buttons.
+* **templates**: template name. Add template file name without file extensions (Mapbender is looking for two files, e.g. a4portrait.odg & a4portrait.pdf), Template files are located at config/MapbenderPrintBundle. Deleting or adding templates is possible with the "+"- or "x" buttons.
 * **label**: defines a template label for the selectbox in the frontend.
 
 * **optional_fields**:
@@ -73,7 +73,7 @@ This template can be used to insert the element into a YAML application.
     target: map                    # Id of Map element to query
     type: dialog                   # element or dialog, default is dialog
     templates:
-        - { template: a4portrait, label: A4 Portrait}	# template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at app/Resources/MapbenderPrintBundle
+        - { template: a4portrait, label: A4 Portrait}	# template name, template file name without file extension (Mapbender is looking for file a4portrait.odg an a4portrait.pdf), Template files are located at config/MapbenderPrintBundle
         - { template: a4landscape, label: A4 Landscape} 	# template label in the dialog
     scales: [5000, 10000, 25000]    # define scales to choose from select-box or if empty free scale can be defined in a text-field
     quality_levels:					# define quality levels in dpi
@@ -110,13 +110,13 @@ Directories
 
 **The northarrow**
 
-* The "north arrow" image is located at **app/Resources/MapbenderPrintBundle/images/**.
+* The "north arrow" image is located at **config/MapbenderPrintBundle/images/**.
 * The "north arrow" image can be replaced to use a different image instead.
 
 
 **The print templates**
 
-* The print templates can be found under **app/Resources/MapbenderPrintBundle/templates/**. 
+* The print templates can be found under **config/MapbenderPrintBundle/templates/**. 
 
 
 **The print pdf output**
@@ -188,7 +188,7 @@ The legend can be integrated next to the map on the first page. This field is no
 Logo on the legend page
 -----------------------
 
-If the legend shall be created on an additional page, the logo can be placed on this page too. This can be achieved with the dynamic element "legendpage_image". A new field on the non-printable layer has to be created and the name changed to "legendpage_image" (**Menu: Modify -> Name...**). The desired logo or image has to be saved in the directory **app/Resources/MapbenderPrintBundle/images/** and its name needs to be changed to "legendpage_image.png". 
+If the legend shall be created on an additional page, the logo can be placed on this page too. This can be achieved with the dynamic element "legendpage_image". A new field on the non-printable layer has to be created and the name changed to "legendpage_image" (**Menu: Modify -> Name...**). The desired logo or image has to be saved in the directory **config/MapbenderPrintBundle/images/** and its name needs to be changed to "legendpage_image.png". 
 
 .. image:: ../../../figures/print_client_example_legendpage_image.png
      :width: 100%
