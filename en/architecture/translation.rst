@@ -69,7 +69,7 @@ This is how a translation file messages.de.yml for German translation could look
 
 .. code-block:: php
 
- app/console cache:clear
+ bin/console cache:clear
 
 
 How can you activate translation?

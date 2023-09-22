@@ -11,7 +11,7 @@ Das Bundle enthält Möglichkeiten für folgende Optionen:
 * Registierung eines Benutzers
 * Zurücksetzung des eigenen Passworts
 
-Der Benutzer mit der ID 1 (root) ist besonders, da dieser Benutzer bei der Installation erstellt wird und immer alle Rechte hat. Falls alle Stricke reißen, können Sie mit diesem Benutzer alles verwalten. Und falls Sie gar die Anmeldedaten vergessen haben sollten, können Sie über ein app/console Kommando den Benutzer zurücksetzen: *fom:user:resetroot*.
+Der Benutzer mit der ID 1 (root) ist besonders, da dieser Benutzer bei der Installation erstellt wird und immer alle Rechte hat. Falls alle Stricke reißen, können Sie mit diesem Benutzer alles verwalten. Und falls Sie gar die Anmeldedaten vergessen haben sollten, können Sie über ein bin/console Kommando den Benutzer zurücksetzen: *fom:user:resetroot*.
 
 
 Passwort vergessen

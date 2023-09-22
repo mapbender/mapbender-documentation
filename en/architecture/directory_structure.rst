@@ -13,7 +13,7 @@ This directory contains:
 * the applicationkernel (app/AppKernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
 * the application specific resource directory (Resources)
-* the command line application for maintaining and management tasks (app/console)
+* the command line application for maintaining and management tasks (bin/console)
 
 
 app/config
@@ -111,9 +111,9 @@ web/bundles
 
 .. code-block:: yaml
 
-     app/console assets:install --symlink web
+     bin/console assets:install --symlink web
 
-* **Notice**: if you use Windows you can't create symbolic links and therefore you have to run the command (**app/console assets:install web**) after every change in the code to copy the files to the directory.
+* **Notice**: if you use Windows you can't create symbolic links and therefore you have to run the command (**bin/console assets:install web**) after every change in the code to copy the files to the directory.
 
 
 src

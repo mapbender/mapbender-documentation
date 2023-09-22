@@ -98,7 +98,7 @@ Troubleshooting is available via the following command (must be executed in the 
 
 .. code-block:: yaml
 
-	app/console mapbender:config:check
+	bin/console mapbender:config:check
 
 .. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
 
@@ -152,16 +152,16 @@ Initialisation of the database connection:
  .. code-block:: bash
 
     cd /var/www/mapbender
-    app/console doctrine:database:create
-    app/console doctrine:schema:create
-    app/console mapbender:database:init -v
+    bin/console doctrine:database:create
+    bin/console doctrine:schema:create
+    bin/console mapbender:database:init -v
     bin/composer run reimport-example-apps
     
 Create root user for access:
 
 .. code-block:: bash
 
-   app/console fom:user:resetroot
+   bin/console fom:user:resetroot
 
 Find further information in :ref:`installation_configuration`
 

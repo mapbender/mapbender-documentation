@@ -160,16 +160,16 @@ Open the windows shell and initialize the database connection with the following
 .. code-block:: text
  
     cd c:\mapbender
-    php.exe app/console doctrine:database:create
-    php.exe app/console doctrine:schema:create
-    php.exe app/console mapbender:database:init -v
+    php.exe bin/console doctrine:database:create
+    php.exe bin/console doctrine:schema:create
+    php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
 
 To administrate Mapbender you need a user. Create root user for access:
 
 .. code-block:: text
 
-    php.exe app/console fom:user:resetroot
+    php.exe bin/console fom:user:resetroot
 
 
 Find further information in :ref:`installation_configuration`
@@ -191,7 +191,7 @@ Troubleshooting is available via the following command (must be executed in the 
 
 .. code-block:: yaml
 
-	php.exe app/console mapbender:config:check
+	php.exe bin/console mapbender:config:check
 
 .. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
 

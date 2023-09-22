@@ -388,7 +388,7 @@ To start the printing process, type in the bash command
 
 .. code-block:: yaml
 
-    app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
+    bin/console mapbender:print:queue:next --max-jobs=0 --max-time=0
 
 to execute a print process in the command line. This process starts all the jobs that are added into the print queue list automatically. Alternatively, you can choose to adjust the parameters and create a fitting cronjob. Terminate the process with 'CTRL + C'. If a print job is finished, it will be listed as "finished" in the status column of the list. Afterwards, the PDF button will open the printable PDF file.
 

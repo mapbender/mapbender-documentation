@@ -13,7 +13,7 @@ Dieses Verzeichnis beinhaltet:
 * applicationkernel (app/AppKernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
 * das Autoladen (autoload.php)
 * spezielle Ressourcen für die Anwendungen (Resources)
-* die Kommandozeilen-Anwendungen für Pflege und Management (app/console)
+* die Kommandozeilen-Anwendungen für Pflege und Management (bin/console)
 
 
 app/config
@@ -114,9 +114,9 @@ web/bundles
 
 .. code-block:: yaml
 
-     app/console assets:install --symlink web
+     bin/console assets:install --symlink web
 
-* **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das folgende Kommando (**app/console assets:install web**) nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
+* **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das folgende Kommando (**bin/console assets:install web**) nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
 
 
 src

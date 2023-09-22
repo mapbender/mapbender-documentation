@@ -55,14 +55,14 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 
  # Aktualisieren Sie Ihre Mapbender Datenbank
  cd /var/www/mapbender/
- app/console doctrine:schema:update --dump-sql
- app/console doctrine:schema:update --force
+ bin/console doctrine:schema:update --dump-sql
+ bin/console doctrine:schema:update --force
 
  # Importieren Sie die Demo-Anwendungen, um sich den neusten Stand der Entwicklungen anzuschauen
  bin/composer run reimport-example-apps
 
  # Aufbau der symbolischen Links
- app/console assets:install web --symlink --relative
+ bin/console assets:install web --symlink --relative
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte der Apache Gruppe (www-data) zu.
  sudo chmod -R ug+r /var/www/mapbender
@@ -86,25 +86,25 @@ Aktualisierungsbeispiel für Windows
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender.
  # Vorher müssen Sie diese händisch auf neue Parameter und Änderungen überprüfen.
  
- # Rufen Sie die app/console Befehle über die php.exe auf.
+ # Rufen Sie die bin/console Befehle über die php.exe auf.
  # Hierzu müssen Sie ein Standardeingabefenster öffnen.
  c:
  cd mapbender
  
  # Aktualisieren Sie Ihre Mapbender Datenbank
- php.exe app/console doctrine:schema:update --dump-sql
- php.exe app/console doctrine:schema:update --force
+ php.exe bin/console doctrine:schema:update --dump-sql
+ php.exe bin/console doctrine:schema:update --force
  
  # Hinweise für MS4W Anwender:
  #     - stellen Sie sicher, dass Sie die setenv.bat-Datei ausführen, um die benötigten PATH-Variablen für PHP zu setzen
  #     - ggf. müssen Sie die benötigte Erweiterung auf der Kommandozeile im Aufruf übergeben z.B. 
- #            php -d extension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll app/console doctrine:schema:update --dump-sql
+ #            php -d extension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll bin/console doctrine:schema:update --dump-sql
   
  # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
  php.exe bin/composer run reimport-example-apps
 
  # Ausspielen in den web-Bereich
- php.exe app/console assets:install web
+ php.exe bin/console assets:install web
 
  # Löschen Sie den Cache und die Logdateien unter mapbender/var/cache und mapbender/var/logs
 

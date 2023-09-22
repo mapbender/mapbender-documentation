@@ -18,7 +18,7 @@ In this document we assume that the SQLite database is used.
 
 .. code-block:: bash
 
-    app/console server:run
+    bin/console server:run
 
 The command runs a local web server. By default, the server listens on 127.0.0.1 address 
 and the port number is automatically selected as the first free port starting from 8000.
@@ -35,7 +35,7 @@ You also could change the default address and port by passing them as an argumen
 
 .. code-block:: bash
 
-    app/console server:run 127.0.0.1:80002
+    bin/console server:run 127.0.0.1:80002
                                                                                                                                                                                                                                          
     [OK] Server listening on http://127.0.0.1:8002                                                                         
          

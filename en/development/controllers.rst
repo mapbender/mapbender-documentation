@@ -17,7 +17,7 @@ To get an overview off all defined routes by using the console command.
 .. code-block:: yaml
 
  cd mapbender/application
- app/console router:debug
+ bin/console router:debug
 
  [router] Current routes
  Name                                        Method Pattern
@@ -47,7 +47,7 @@ The command lists all routes with their names, allowed methods and URL pattern. 
 
 .. code-block:: yaml
 
- app/console router:debug mapbender_core_user_login
+ bin/console router:debug mapbender_core_user_login
 
  [router] Route "mapbender_core_user_login"
  Name         mapbender_core_user_login

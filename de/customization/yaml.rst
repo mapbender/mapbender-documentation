@@ -345,7 +345,7 @@ Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheid
 
 **Import über die Konsole**
 
-YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole via app/console importiert werden.
+YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole via bin/console importiert werden.
 
 
 **Anwendung über die Konsole klonen**

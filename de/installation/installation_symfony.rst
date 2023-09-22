@@ -18,7 +18,7 @@ In dieser Anleitung wird die im Installationspaket mitgelieferte SQLite-Datenban
 
 .. code-block:: bash
 
-    app/console server:run
+    bin/console server:run
 
 Der Befehl führt einen lokalen Webserver aus. 
 
@@ -33,7 +33,7 @@ Die gewünschte Adresse kann auch über die Angabe der IP und des Ports angegebe
 
 .. code-block:: bash
 
-    app/console server:run 127.0.0.1:80002
+    bin/console server:run 127.0.0.1:80002
                                                                                                                                                                                                                                          
     [OK] Server listening on http://127.0.0.1:8002                                                                         
          

@@ -30,7 +30,7 @@ Persistent map view is enabled on a per-application basis with a new checkbox un
 .. image:: ../../../figures/persistent_map_state.png
      :width: 100%
 
-This change introduces a new column in the *mb_core_application* table and therefore requires *app/console doctrine:schema:update --force* to be run.
+This change introduces a new column in the *mb_core_application* table and therefore requires *bin/console doctrine:schema:update --force* to be run.
 
 YAML-Definition:
 ----------------

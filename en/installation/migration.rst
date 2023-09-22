@@ -15,7 +15,7 @@ Migration to Mapbender 3.3.4
 
 .. code-block:: bash
 
-    app/console doctrine:schema:update --force
+    bin/console doctrine:schema:update --force
 
 * Next, you need to configure CSRF tokens to be used during login to the **csrf_token_generator** form_login section in ``security.yml`` as follows:
 
@@ -33,7 +33,7 @@ Migration to Mapbender 3.3
 
 * Make sure you have PHP >= 7.4 or PHP 8.x
 * Provide a backup of your database. 
-* Update your database schema to 3.3 with app/console doctrine:schema:update --force
+* Update your database schema to 3.3 with bin/console doctrine:schema:update --force
 * config.yml: Please note that in the doctrine connection configuration variables must be set with quotes, for example '%database_driver%'
 * CAUTION: Please note that the eye at application is used from (3.2.x) onwards to make the application available for the anonymous user (public access). Before 3.2.x, the eye/checkbox at security was used to publish an application.  
 
@@ -79,7 +79,7 @@ Check the :ref:`installation_update` Guide.
 
 * Make sure you have PHP >= 7.1.0 and PHP < 8 
 * Provide a backup of your database. 
-* Update your database schema to 3.2 with app/console doctrine:schema:update --force
+* Update your database schema to 3.2 with bin/console doctrine:schema:update --force
 * CAUTION: Please note that the eye at application is from (3.2.x) used to make the application available for the anonymous user (public access). Before the eye /checkbox at security was used to publish an application.  
 
 Some elements may not work after the update and may need a closer look.

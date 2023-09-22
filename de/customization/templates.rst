@@ -302,9 +302,9 @@ Aktualisieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - C
 
 .. code-block:: bash
 
-    app/console assets:install web
+    bin/console assets:install web
     oder
-    app/console assets:install web --symlink --relative
+    bin/console assets:install web --symlink --relative
 
 
 Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste erscheinen.

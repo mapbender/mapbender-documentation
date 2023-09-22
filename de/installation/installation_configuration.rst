@@ -19,7 +19,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfon
 
 .. note:: **Hinweis:** Das console-Hilfsprogramm wird Dateien in die Verzeichnisse var/cache und var/logs schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis var/db und die SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP- Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
-.. note:: **Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus, dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ , andernfalls mapbender/).
+.. note:: **Wichtiger Hinweis:** Die folgenden bin/console Schritte gehen davon aus, dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ , andernfalls mapbender/).
 
 .. code-block:: yaml
 
@@ -44,7 +44,7 @@ Mit Symfony kann die Datenbank erzeugt werden. Beachten Sie, dass dazu die benö
 
 .. code-block:: yaml
 
-   app/console doctrine:database:create
+   bin/console doctrine:database:create
 
 
 Erzeugen des Datenbankschemas
@@ -54,7 +54,7 @@ Erzeugen des Datenbankschemas über Symfony:
 
 .. code-block:: yaml
 
-    app/console doctrine:schema:create
+    bin/console doctrine:schema:create
 
     
 Kopieren des Asset Bundles
@@ -64,14 +64,14 @@ Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien
 
 .. code-block:: yaml
 
-    app/console assets:install web
+    bin/console assets:install web
 
 
 Sie können auch einen symbolischen Link verwenden, statt die Dateien zu kopieren.  Dies erleichtert die Bearbeitung der abhängigen Dateien in den bundle-Verzeichnissen.
 
 .. code-block:: yaml
 
-   app/console assets:install web --symlink --relative
+   bin/console assets:install web --symlink --relative
 
 
 Erzeugen des administrativen Benutzers
@@ -81,7 +81,7 @@ Der erste Benutzer, der alle Privilegien hat, wird mit folgendem Kommando erzeug
 
 .. code-block:: yaml
 
-    app/console fom:user:resetroot
+    bin/console fom:user:resetroot
 
 Dieses Kommando wird interaktiv alle notwendigen Informationen abfragen und den Benutzer in der Datenbank erzeugen.
 
@@ -89,7 +89,7 @@ Sie können auch den Modus "silent" verwenden, wenn Sie ein Skript nutzen möcht
 
 .. code-block:: yaml
 
-    app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
+    bin/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
 
 
 Initialisieren der Datenbank
@@ -99,7 +99,7 @@ Führen Sie das nachfolgende Kommando aus, um die Datenbank zu initialisieren un
 
 .. code-block:: yaml
 
-    app/console mapbender:database:init
+    bin/console mapbender:database:init
 
 
 Importieren von Anwendungen aus application/app/config/applications

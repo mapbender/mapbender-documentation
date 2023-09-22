@@ -102,7 +102,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 .. code-block:: yaml
 
-	app/console mapbender:config:check
+	bin/console mapbender:config:check
 
 .. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
 
@@ -156,16 +156,16 @@ Initialisierung der Datenbank:
 .. code-block:: bash
 
     cd /var/www/mapbender
-    app/console doctrine:database:create
-    app/console doctrine:schema:create
-    app/console mapbender:database:init -v
+    bin/console doctrine:database:create
+    bin/console doctrine:schema:create
+    bin/console mapbender:database:init -v
     bin/composer run reimport-example-apps
 
 Root-Benutzer für Zugriff anlegen:
 
 .. code-block:: bash
 
-   app/console fom:user:resetroot
+   bin/console fom:user:resetroot
 
 Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`.
 

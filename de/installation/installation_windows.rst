@@ -163,16 +163,16 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
 .. code-block:: text
  
     cd c:\mapbender
-    php.exe app/console doctrine:database:create
-    php.exe app/console doctrine:schema:create
-    php.exe app/console mapbender:database:init -v
+    php.exe bin/console doctrine:database:create
+    php.exe bin/console doctrine:schema:create
+    php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
 
 Für die Administration von Mapbedner wird ein Root-Benutzer benötigt. Dieser Benutzer wird über den folgende Befehl angelegt:
 
 .. code-block:: text
 
-    php.exe app/console fom:user:resetroot
+    php.exe bin/console fom:user:resetroot
 
 Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`
 
@@ -197,7 +197,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 .. code-block:: yaml
 
-	php.exe app/console mapbender:config:check
+	php.exe bin/console mapbender:config:check
 
 .. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
 

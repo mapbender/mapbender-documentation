@@ -386,7 +386,7 @@ Nach Initialisierung des Warteschleifendrucks stehen die folgenden Funktionen ü
     mapbender:print:queue:rerun
     mapbender:print:runJob
 
-.. hint:: Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und app/console den jeweiligen Befehlen voranstellen. Zur genauen Vorgehensweise siehe die Informationen auf der Seite :ref:`commands_de`.
+.. hint:: Bemerkung: Zur Ausführung der Befehle muss sich der Benutzer im application-Verzeichnis befinden und bin/console den jeweiligen Befehlen voranstellen. Zur genauen Vorgehensweise siehe die Informationen auf der Seite :ref:`commands_de`.
 
 
 *Warteschleifendruck: Durchführung*
@@ -401,7 +401,7 @@ Neu ist, dass die Druckaufträge im Hintergrund erst nach Start des Prozesses
 
 .. code-block:: yaml
 
-    app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
+    bin/console mapbender:print:queue:next --max-jobs=0 --max-time=0
 
 in der Kommandozeile ausgeführt werden. Er bewirkt, dass nach dem Klick auf den Drucken-Button der Druck entsprechend seiner Position in der Warteliste über die Kommandozeile durchführt wird. Der Prozess wird über die Tastenkombination "Strg+C" beendet. Nach abgeschlossener Generierung der Dateien (erkennbar über den Status "fertig" in der Liste der Druckaufträge) können diese über den PDF-Button geöffnet werden können.
 

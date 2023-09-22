@@ -43,7 +43,7 @@ configured database user is allowed to do so. Call the console utility like this
 
 .. code-block:: yaml
 
-   app/console doctrine:database:create
+   bin/console doctrine:database:create
 
 
 Creating the database schema
@@ -53,7 +53,7 @@ Symfony will create the database schema for you:
 
 .. code-block:: yaml
 
-    app/console doctrine:schema:create
+    bin/console doctrine:schema:create
 
 
 
@@ -65,7 +65,7 @@ but these need to be copied into the public web folder:
 
 .. code-block:: yaml
 
-    app/console assets:install web
+    bin/console assets:install web
 
 
 Alternatively, as a developer, you might want to use the symlink switch on that command to
@@ -74,7 +74,7 @@ directories way easier.
 
 .. code-block:: yaml
 
-   app/console assets:install web --symlink --relative
+   bin/console assets:install web --symlink --relative
 
 
 Creating the administrative user
@@ -84,7 +84,7 @@ The first user - which has all privileges - must be created using the command:
 
 .. code-block:: yaml
 
-    app/console fom:user:resetroot
+    bin/console fom:user:resetroot
 
 This will interactively ask all information needed and create the user in the
 database.
@@ -93,7 +93,7 @@ Alternatively, there is a silent mode you can use, if you want to use a script t
 
 .. code-block:: yaml
 
-    app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
+    bin/console fom:user:resetroot --username="root" --password="root" --email="root@example.com" --silent
 
 Initialize the database
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -102,7 +102,7 @@ Initializing the database can be done using the command:
 
 .. code-block:: yaml
 
-    app/console mapbender:database:init
+    bin/console mapbender:database:init
 
 Importing applications from application/app/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

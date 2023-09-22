@@ -8,7 +8,7 @@ Wie können eigene Elemente erzeugt werden?
 `https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_.
 
 
-Mapbender bietet einen app/console-Befehl zur Erzeugung von Elementen. 
+Mapbender bietet einen bin/console-Befehl zur Erzeugung von Elementen. 
 
 Hierbei können vier verschiedene Typen von Elementen generiert werden:
 
@@ -28,24 +28,24 @@ Die Arbeitsschritte zum Erzeugen von eigenen Elementen
 Die Arbeitsschritte auf dem Weg zum eigenen Element.
 
 * Erzeugen Sie ein eigenes Bundle
-* Erzeugen Sie ein Element mit Hilfe von app/console
+* Erzeugen Sie ein Element mit Hilfe von bin/console
 * Passen Sie das Element an Ihre Bedürfnisse an
 * Fügen Sie das Element in die Funktion *getElements()* ein, um es über das Backend verfügbar zu machen
 
 
 
-Anlegen eines eigenen Bundles mit app/console generate:bundle
+Anlegen eines eigenen Bundles mit bin/console generate:bundle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Hilfe zum Befehl erhalten Sie über die Option help:
 
 .. code-block:: bash
 
- app/console generate:bundle --help
+ bin/console generate:bundle --help
 
 .. code-block:: bash
 
- app/console generate:bundle --namespace=Workshop/DemoBundle --dir=src 
+ bin/console generate:bundle --namespace=Workshop/DemoBundle --dir=src 
 
 
 Für die Erstellung müssen noch einige Angaben gemacht werden:
@@ -75,14 +75,14 @@ Für die Erstellung müssen noch einige Angaben gemacht werden:
 Nach diesen Schritten liegt das neue Bundle im Verzeichnis src vor. Außerdem wurde das Bundle in der Datei AppKernel.php registriert. In der Datei routing.yml wurde eine neue Route für das Bundle eingetragen.
 
 
-Eigene Elemente über app/console generieren
+Eigene Elemente über bin/console generieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Auflistung der Mapbender app/console Befehle:
+Auflistung der Mapbender bin/console Befehle:
 
 .. code-block:: bash
 
- app/console list mapbender
+ bin/console list mapbender
  
  Available commands for the "mapbender" namespace:
   mapbender:assets:dump            Dump all Mapbender application assets.
@@ -95,7 +95,7 @@ Die Hilfe zum Befehl erhalten Sie über die Option help:
 
 .. code-block:: bash
 
- app/console mapbender:generate:element --help
+ bin/console mapbender:generate:element --help
 
 
 
@@ -104,7 +104,7 @@ Erzeugen Sie ein Element über den folgende Befehl:
 
 .. code-block:: bash
 
- app/console mapbender:generate:element --type "map-click" "Workshop\DemoBundle" MapKlick src
+ bin/console mapbender:generate:element --type "map-click" "Workshop\DemoBundle" MapKlick src
 
 
 Es wird eine Übersicht über die erfolgte Aktion ausgegeben. Es wurde eine PHP-Datei und eine js-Datei erzeugt.

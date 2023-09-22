@@ -8,7 +8,7 @@ How to create your own Element?
 `https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_.
 
 
-Mapbender offers an app/console command to create different elements:
+Mapbender offers an bin/console command to create different elements:
 
 * general elements
 * buttons
@@ -26,23 +26,23 @@ The steps to create your own Element?
 There are some steps you have to follow on the way to your own element.
 
 * create your own bundle
-* create an element via app/console
+* create an element via bin/console
 * edit your new element for your needs
 * add the new element to the function *getElements()* to make it available from the backend
 
 
-Use app/console to generate your own bundle
+Use bin/console to generate your own bundle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Find out more about the command with help:
 
 .. code-block:: bash
 
- app/console generate:bundle --help
+ bin/console generate:bundle --help
 
 .. code-block:: bash
 
- app/console generate:bundle --namespace=Workshop/DemoBundle --dir=src 
+ bin/console generate:bundle --namespace=Workshop/DemoBundle --dir=src 
 
 
 You have to answer some questions before the element will be created:
@@ -72,21 +72,21 @@ You have to answer some questions before the element will be created:
 After this steps you new bundle is available at src. The bundle is already registered in the File AppKernel.php. In the file routing.yml you will find a new entry for the bundle.
 
 
-Use app/console to generate a new element
+Use bin/console to generate a new element
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Find out more about the command with help:
 
 .. code-block:: bash
 
- app/console mapbender:generate:element --help
+ bin/console mapbender:generate:element --help
 
 
 Generate a new element with the following command:
 
 .. code-block:: bash
 
- app/console mapbender:generate:element --type "map-click" "Workshop\DemoBundle" MapKlick src
+ bin/console mapbender:generate:element --type "map-click" "Workshop\DemoBundle" MapKlick src
 
 
 You will get a summary of actions
