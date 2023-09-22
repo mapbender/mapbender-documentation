@@ -126,13 +126,13 @@ In der Template-Datei wird der Name des Templates, die Regionen die angelegt wer
             )
         );
         protected static $css               = array(
-            '@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss',
-            '@WorkshopDemoBundle/Resources/public/demo_fullscreen.scss',
+            '@MapbenderCoreBundle/public/sass/template/fullscreen.scss',
+            '@WorkshopDemoBundle/public/demo_fullscreen.scss',
         );
         protected static $js                = array(
-            '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
-            '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js',
-            '@MapbenderCoreBundle/Resources/public/mapbender.container.info.js',
+            '@FOMCoreBundle/public/js/frontend/sidepane.js',
+            '@FOMCoreBundle/public/js/frontend/tabcontainer.js',
+            '@MapbenderCoreBundle/public/mapbender.container.info.js',
             '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
             "/components/vis-ui.js/vis-ui.js-built.js"
         );
@@ -160,7 +160,7 @@ Es muss lediglich das CSS definiert werden, das vom Standard der Elemente abweic
 
 Mit Hilfe der Entwicklerwerkzeuge Ihres Browsers können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
-Ihre CSS-Datei könnte wie folgt heißen: ``src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css`` und die folgende Definition enthalten:
+Ihre CSS-Datei könnte wie folgt heißen: ``src/Workshop/DemoBundle/public/demo_fullscreen.css`` und die folgende Definition enthalten:
 
 .. code-block:: css
 

@@ -127,13 +127,13 @@ In the template file you define the name of your template, the regions that you 
             )
         );
         protected static $css               = array(
-            '@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss',
-            '@WorkshopDemoBundle/Resources/public/demo_fullscreen.scss',
+            '@MapbenderCoreBundle/public/sass/template/fullscreen.scss',
+            '@WorkshopDemoBundle/public/demo_fullscreen.scss',
         );
         protected static $js                = array(
-            '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
-            '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js',
-            '@MapbenderCoreBundle/Resources/public/mapbender.container.info.js',
+            '@FOMCoreBundle/public/js/frontend/sidepane.js',
+            '@FOMCoreBundle/public/js/frontend/tabcontainer.js',
+            '@MapbenderCoreBundle/public/mapbender.container.info.js',
             '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
             "/components/vis-ui.js/vis-ui.js-built.js"
         );
@@ -159,7 +159,7 @@ Create an empty css-file and fill it with content. You only have to define the p
 
 Firebug can help you to find out the styles you want to change.
 
-Your file could be named like this: ``src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css`` and have the following definition:
+Your file could be named like this: ``src/Workshop/DemoBundle/public/demo_fullscreen.css`` and have the following definition:
 
 .. code-block:: css
 

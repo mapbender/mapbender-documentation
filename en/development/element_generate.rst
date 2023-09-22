@@ -97,7 +97,7 @@ You will get a summary of actions
  - Your element WorkshopDemoBundle\Element\MapKlick has been created.
  - The following files have been created:
   - PHP class (src/Workshop/DemoBundle/Element/MapKlick.php)
-  - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
+  - jQuery widget (src/Workshop/DemoBundle/public/mapbender.element.mapklick.js)
 
 
 Edit your new element for your needs
@@ -159,7 +159,7 @@ Note that the configuration for your generated element is done in YAML syntax. I
 Change the action on Click event
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you generated a map-click element you get an event on click and an action. The action can be modified. Have a look in the JQuery widget file (mapbender/src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js). 
+When you generated a map-click element you get an event on click and an action. The action can be modified. Have a look in the JQuery widget file (mapbender/src/Workshop/DemoBundle/public/mapbender.element.mapklick.js). 
 
 You will find the function *_mapClickHandler()* that determines the coordinates from the click event and passes them to the function *_mapClickWorker()*. The new generated element will show the coordinates of the click event in an alert box.
 

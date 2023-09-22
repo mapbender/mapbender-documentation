@@ -115,7 +115,7 @@ Es wird eine Übersicht über die erfolgte Aktion ausgegeben. Es wurde eine PHP-
  - Your element WorkshopDemoBundle\Element\MapKlick has been created.
  - The following files have been created:
   - PHP class (src/Workshop/DemoBundle/Element/MapKlick.php)
-  - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
+  - jQuery widget (src/Workshop/DemoBundle/public/mapbender.element.mapklick.js)
 
 
 Anpassung des eigenen Elements
@@ -176,7 +176,7 @@ Erstellen Sie eine Anwendung und fügen Sie das neue Element zu der Anwendung hi
 Ändern der Aktion des Klick-Ereignisses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wenn Sie ein map-click-Element erzeugen, reagiert dieses auf das Klick-Ereignis mit einer Aktion. Diese Aktion kann modifiziert werden. Schauen Sie sich dazu die JQuery widget Datei an (mapbender/src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js). 
+Wenn Sie ein map-click-Element erzeugen, reagiert dieses auf das Klick-Ereignis mit einer Aktion. Diese Aktion kann modifiziert werden. Schauen Sie sich dazu die JQuery widget Datei an (mapbender/src/Workshop/DemoBundle/public/mapbender.element.mapklick.js). 
 
 Hier finden Sie die Funktion *_mapClickHandler()*, die die Koordinaten des Klick-Ereignisses ermittelt und an die Funktion *_mapClickWorker()* weitergibt. Standarmäßig gibt das neu generierte Element die Pixelposition und Koordinate des Klicks in einem Dialog aus.
 
