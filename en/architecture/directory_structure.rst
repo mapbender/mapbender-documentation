@@ -8,7 +8,7 @@ app
 This directory contains:
 
 * the php-Cache (var/cache)
-* the logs (app/logs)
+* the logs (var/logs)
 * the configurations (app/config)
 * the applicationkernel (app/AppKernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 

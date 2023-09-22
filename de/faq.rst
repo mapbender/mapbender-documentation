@@ -137,7 +137,7 @@ Installation
 Fehlermeldung beim Drucken
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Ich bekomme einen Fehler beim Drucken. Das Log (app/logs/prod.log) wirft folgende Fehlermeldung:
+F: Ich bekomme einen Fehler beim Drucken. Das Log (var/logs/prod.log) wirft folgende Fehlermeldung:
 
 .. code-block:: php
 

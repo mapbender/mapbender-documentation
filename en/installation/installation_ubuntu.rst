@@ -79,7 +79,7 @@ Directory rights
 
  sudo chown -R :www-data /var/www/mapbender
 
- sudo chmod -R ug+w /var/www/mapbender/app/logs
+ sudo chmod -R ug+w /var/www/mapbender/var/logs
  sudo chmod -R ug+w /var/www/mapbender/var/cache
  sudo chmod -R ug+w /var/www/mapbender/web/uploads
 

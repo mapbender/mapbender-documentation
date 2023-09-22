@@ -68,9 +68,9 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  sudo chmod -R ug+r /var/www/mapbender
  sudo chown -R :www-data /var/www/mapbender
 
- # Sie benötigen Schreibrechte für die Verzeichnisse var/cache und app/logs.
+ # Sie benötigen Schreibrechte für die Verzeichnisse var/cache und var/logs.
  sudo chmod -R ug+w /var/www/mapbender/var/cache
- sudo chmod -R ug+w /var/www/mapbender/app/logs
+ sudo chmod -R ug+w /var/www/mapbender/var/logs
  sudo chmod -R ug+w /var/www/mapbender/web/uploads
 
 
@@ -106,7 +106,7 @@ Aktualisierungsbeispiel für Windows
  # Ausspielen in den web-Bereich
  php.exe app/console assets:install web
 
- # Löschen Sie den Cache und die Logdateien unter mapbender/var/cache und mapbender/app/logs
+ # Löschen Sie den Cache und die Logdateien unter mapbender/var/cache und mapbender/var/logs
 
  # Sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version.
  # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/web/uploads.
