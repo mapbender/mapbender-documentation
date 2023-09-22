@@ -3,7 +3,7 @@
 Installation auf Ubuntu/Debian
 ##############################
 
-Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (sie liegt unter <mapbender>/app/db/demo.sqlite).
+Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (sie liegt unter <mapbender>/var/db/demo.sqlite).
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter :ref:`installation_symfony_de`.
 
 .. hint:: Für den Produktiveinsatz wird PostgreSQL empfohlen. Weitere Installationshinweise finden Sie im Kapitel `Optional > Mapbender Einrichtung auf PostgreSQL <#optional>`_.
@@ -85,7 +85,7 @@ Verzeichnisrechte
  sudo chmod -R ug+w /var/www/mapbender/var/cache
  sudo chmod -R ug+w /var/www/mapbender/web/uploads
 
- sudo chmod -R ug+w /var/www/mapbender/app/db/demo.sqlite
+ sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
 
 
 Nächste Schritte

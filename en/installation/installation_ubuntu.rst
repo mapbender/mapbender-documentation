@@ -3,7 +3,7 @@
 Installation on Ubuntu/Debian
 #############################
 
-Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under **<mapbender>/app/db/demo.sqlite**).
+Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under **<mapbender>/var/db/demo.sqlite**).
 
 .. hint:: For productive use PostgreSQL is recommended. You can find the neccessary configuration steps in chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
 
@@ -83,7 +83,7 @@ Directory rights
  sudo chmod -R ug+w /var/www/mapbender/var/cache
  sudo chmod -R ug+w /var/www/mapbender/web/uploads
 
- sudo chmod -R ug+w /var/www/mapbender/app/db/demo.sqlite
+ sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
 
 
 First steps

@@ -17,7 +17,7 @@ In the following, we will describe the configurational steps of Mapbender a bit 
 
 All that can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which the Mapbender framework is built upon. There's a mayor caveat though you should understand before continuing:
 
-.. note:: The console utility will write files in the var/cache and var/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
+.. note:: The console utility will write files in the var/cache and var/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the var/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
 .. note:: **Important:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/, else mapbender/).
 
