@@ -1,6 +1,6 @@
 .. _commands:
 
-app/console commands
+bin/console commands
 ====================
 
 Mapbender provides commands that can be executed via the command line. Some of the commands are provided by the Symfony components, others belong to Mapbender. 
@@ -19,14 +19,14 @@ Help command
 
 .. code-block:: yaml
 
-    app/console  
+    bin/console  
 
 
 The parameter --help displays the help message for every command for example:   
 
 .. code-block:: yaml
 
-    app/console mapbender:user:create --help
+    bin/console mapbender:user:create --help
    
 
 .. _app_command_export_import_clone:
@@ -34,30 +34,30 @@ The parameter --help displays the help message for every command for example:
 Application Export, Import & Cloning
 ------------------------------------
 
-app/console mapbender:application:export 
+bin/console mapbender:application:export 
 ****************************************
 
 You can export an application as JSON- or YAML-file. In the command you have to add the Url title (slug) of the application and define the export file.
 
 .. code-block:: yaml
 
-   app/console mapbender:application:export mapbender_user_db --format=json > export.json
+   bin/console mapbender:application:export mapbender_user_db --format=json > export.json
 
 
-app/console mapbender:application:import
+bin/console mapbender:application:import
 ****************************************
 
 You can import an application from a JSON or YAML-file. Mapbender will automatically choose a new name if the name already excists.  
 
 .. code-block:: yaml
    
-   app/console mapbender:application:import export.json
+   bin/console mapbender:application:import export.json
     
     Imported 1 applications
     * mapbender_user_db_imp2
 
 
-app/console mapbender:application:clone
+bin/console mapbender:application:clone
 ***************************************
 
 You can clone an existing application in the Application backend. This will create a new application with a *_imp* suffix as application name.
@@ -65,13 +65,13 @@ In the example below, the name of the new application becomes `mapbender_user_ym
 
 .. code-block:: bash
 
-	app/console mapbender:application:clone mapbender_user_yml
+	bin/console mapbender:application:clone mapbender_user_yml
 
 
 User administration
 --------------------
 
-app/console mapbender:user:create 
+bin/console mapbender:user:create 
 *********************************
 
 Command to create a new user on the command line. 
@@ -80,9 +80,9 @@ User name, email and password are mandatory. User name and email have to be uniq
 
 .. code-block:: yaml
 
-    app/console mapbender:user:create --help
-    app/console mapbender:user:create --password <password> --email <email> <name>
-    app/console mapbender:user:create --password mypassword123 --email max.mustermann@mapbender.org 'Max Mustermann' 
+    bin/console mapbender:user:create --help
+    bin/console mapbender:user:create --password <password> --email <email> <name>
+    bin/console mapbender:user:create --password mypassword123 --email max.mustermann@mapbender.org 'Max Mustermann' 
    
    
 **Update user settings**
@@ -98,12 +98,12 @@ The user name cannot be changed.
 
 .. code-block:: yaml
    
-    app/console mapbender:user:create --update --password <password> --email <email> <name>
+    bin/console mapbender:user:create --update --password <password> --email <email> <name>
 
-    app/console mapbender:user:create --update --password mypassword8910 --email max.mustermann@mapbender.org 'Max Mustermann'
+    bin/console mapbender:user:create --update --password mypassword8910 --email max.mustermann@mapbender.org 'Max Mustermann'
     
 
-app/console fom:user:resetroot
+bin/console fom:user:resetroot
 ******************************
 
 Command to create or update the root account. User name, email and password must be assigned for creation.
@@ -113,16 +113,16 @@ During the update, the unique assignment is made via the already existing ID, th
 
 .. code-block:: yaml
 
-	app/console fom:user:resetroot
+	bin/console fom:user:resetroot
 
 
 .. code-block:: yaml
 
-	app/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
+	bin/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
 
 
 
-app/console mapbender:user:list
+bin/console mapbender:user:list
 *******************************
 
 Command to list all existing users with their ID and user name and the time of creation.
@@ -130,7 +130,7 @@ Command to list all existing users with their ID and user name and the time of c
 
 .. code-block:: yaml
 
-	app/console mapbender:user:list
+	bin/console mapbender:user:list
         
 	User #3 name: max_mustermann since 2019-10-14 12:10:44
     
@@ -138,7 +138,7 @@ Command to list all existing users with their ID and user name and the time of c
 Database
 ---------
     
-app/console mapbender:database:upgrade 
+bin/console mapbender:database:upgrade 
 **************************************
 
 Command to update the Mapbender database. 
@@ -146,7 +146,7 @@ Command to update the Mapbender database.
 
 .. code-block:: yaml
 
-	app/console mapbender:database:upgrade 
+	bin/console mapbender:database:upgrade 
 	
 	Updating map element configs
 	Found 28 map elements
@@ -156,7 +156,7 @@ Command to update the Mapbender database.
 
 
 
-app/console doctrine:database:create 
+bin/console doctrine:database:create 
 ************************************
 
 The command is used only once during installation and creates the administration database for Mapbender. The database connection can be found in the parameters.yml file. 
@@ -164,11 +164,11 @@ The command is used only once during installation and creates the administration
 
 .. code-block:: yaml
 
-	app/console doctrine:database:create
+	bin/console doctrine:database:create
 
 
 
-app/console doctrine:schema:create 
+bin/console doctrine:schema:create 
 **********************************
 
 The command is used only once during installation and creates the database schema, which means that the tables required by Mapbender are created.
@@ -176,10 +176,10 @@ The command is used only once during installation and creates the database schem
 
 .. code-block:: yaml
 
-	app/console doctrine:schema:create
+	bin/console doctrine:schema:create
 	
 	
-app/console doctrine:schema:validate
+bin/console doctrine:schema:validate
 ************************************
 
 Validate whether that the database is up-to-date.
@@ -187,14 +187,14 @@ Validate whether that the database is up-to-date.
 
 .. code-block:: yaml	
 
-	app/console doctrine:schema:validate
+	bin/console doctrine:schema:validate
 	[Mapping]  OK - The mapping files are correct.
 
 
 Print
 -----
 
-app/console mapbender:print:queue:next
+bin/console mapbender:print:queue:next
 **************************************
 
 The queued print is disabled by default because it requires some external integration setup. To run print jobs via the command line, the following parameter must be added to the parameters.yml file and set to TRUE to enable queued printing.
@@ -215,14 +215,14 @@ To run the jobs the following commands can be used.
 
 .. code-block:: yaml		
 
-	app/console mapbender:print:queue:next
+	bin/console mapbender:print:queue:next
 	
 The command mapbender:print:queue:next executes the next print job in the queue. For a potentially infinite process, the following options can be set to 0.
 
 
 .. code-block:: yaml
 
-	app/console mapbender:print:queue:next --max-jobs=0 --max-time=0
+	bin/console mapbender:print:queue:next --max-jobs=0 --max-time=0
 
 Optionally you can set a limit for the number of jobs to process and the maximum time for a job.  
 
@@ -230,32 +230,32 @@ Optionally you can set a limit for the number of jobs to process and the maximum
 * --max-time=MAX-TIME  
 
 
-app/console mapbender:print:queue:rerun 
+bin/console mapbender:print:queue:rerun 
 ***************************************
 
 This command reruns a print queue job. The ID for the job must be set. 
 
 .. code-block:: yaml
 
-	app/console mapbender:print:queue:rerun 1
+	bin/console mapbender:print:queue:rerun 1
 	
 	Starting processing of queued job #1
 	PDF for queued job #1 rendered to /data/mapbender/application/app/../web/prints/mapbender_20191104103745.pdf
 
 	
 	
-app/console mapbender:print:queue:dumpjob 
+bin/console mapbender:print:queue:dumpjob 
 *****************************************
 
 This command dumps the queued print job from the database to JSON or YAML. The ID of the print job is required. This ID can be determined from the open print queue in the Mapbender application.
 
 .. code-block:: yaml
 
-	app/console mapbender:print:queue:dumpjob [options] [--] <id>
+	bin/console mapbender:print:queue:dumpjob [options] [--] <id>
     
-    app/console mapbender:print:queue:dumpjob 2 > print_configuration.json
+    bin/console mapbender:print:queue:dumpjob 2 > print_configuration.json
 	
-	app/console mapbender:print:queue:dumpjob 2 
+	bin/console mapbender:print:queue:dumpjob 2 
     {
         "template": "a4portrait",
         "quality": "288",
@@ -348,18 +348,18 @@ This command dumps the queued print job from the database to JSON or YAML. The I
         }
     }
 
-app/console mapbender:print:runJob
+bin/console mapbender:print:runJob
 **********************************
 
-Command to run a print job from a saved job definition. The JSON file created with the previously described command (app/console mapbender:print:dumpjob) will create a pdf print output.
+Command to run a print job from a saved job definition. The JSON file created with the previously described command (bin/console mapbender:print:dumpjob) will create a pdf print output.
 		
 
 .. code-block:: yaml	
 
-	app/console mapbender:print:runJob print_configuration.json /tmp/print.pdf
+	bin/console mapbender:print:runJob print_configuration.json /tmp/print.pdf
 	
 
-app/console mapbender:print:queue:repair 
+bin/console mapbender:print:queue:repair 
 ****************************************
 
 If a print job in the queue has crashed, e.g. a WMS service is not accessible, printing cannot be performed. 
@@ -368,31 +368,31 @@ The command resets the status of the print jobs so that they can be executed aga
 
 .. code-block:: yaml		
 
-	app/console mapbender:print:queue:repair 
+	bin/console mapbender:print:queue:repair 
 	
 	
-app/console mapbender:print:queue:clean
+bin/console mapbender:print:queue:clean
 ***************************************
 
 This command purges old jobs from the print queue (database and files). This includes created PDFs as well as corresponding database entries for the print jobs which are listed in the table called "mb_print_queue". With the command the expiring age can be set, for example, 20 can be used to delete all jobs older than 20 days.
 
 .. code-block:: yaml	
 	
-	app/console mapbender:print:queue:clean 20
+	bin/console mapbender:print:queue:clean 20
 	
 	Print queue clean process started.
 	Deleted 0 print queue item(s)
 
 
 
-app/console mapbender:print:queue:gcfiles 
+bin/console mapbender:print:queue:gcfiles 
 *****************************************
 
 gcfiles means "garbage collection files". This command deletes unreferenced files from print queue storage path. This can happen, for example, if a job is deleted from the database or the file path to the PDFs is no longer up-to-date.
 
 .. code-block:: yaml
 
-	app/console mapbender:print:queue:gcfiles
+	bin/console mapbender:print:queue:gcfiles
 	
 	No unreferenced local files found
 
@@ -400,20 +400,20 @@ gcfiles means "garbage collection files". This command deletes unreferenced file
 Mailer
 ------
 
-app/console debug:framework.mailer
+bin/console debug:framework.mailer
 **********************************
 
 Command displays the configured mailer(s)
 
 .. code-block:: yaml
 
-	app/console debug:framework.mailer 
+	bin/console debug:framework.mailer 
 
    
 Server
 ------
  
-app/console server:run
+bin/console server:run
 **********************
 
 This command runs the PHP's built-in web server. The terminal displays that the server is running on the given local address (http://127.0.0.1:8000). 
@@ -425,14 +425,14 @@ Quit the server with CONTROL-C.
 
 .. code-block:: yaml
 
-	app/console server:run
+	bin/console server:run
 	
 	[OK] Server running on http://127.0.0.1:8000                                                                           
     	// Quit the server with CONTROL-C. 
     
 
 
-app/console server:start
+bin/console server:start
 ************************
 
 The command starts the PHP's built-in web server in the background. 
@@ -442,12 +442,12 @@ In the terminal appears a message saying that the web server is listening on the
 
 .. code-block:: yaml
 
-	app/console server:start
+	bin/console server:start
 	
 	[OK] Web server listening on http://127.0.0.1:8000        
 
 
-app/console server:stop
+bin/console server:stop
 ***********************
 
 The command stops the PHP's built-in web server. A message appears in the terminal that the server with this specified address was stopped (http://127.0.0.1:8000).
@@ -455,11 +455,11 @@ The command stops the PHP's built-in web server. A message appears in the termin
 
 .. code-block:: yaml
 
-	app/console server:stop
+	bin/console server:stop
 	
 	
 
-app/console server:status
+bin/console server:status
 *************************
 
 Outputs the status of the built-in web server for the given address.
@@ -467,12 +467,12 @@ Outputs the status of the built-in web server for the given address.
 
 .. code-block:: yaml
 
-	app/console server:status
+	bin/console server:status
     
  
 Clear cache 
 
-app/console cache:clear
+bin/console cache:clear
 ***********************
 
 The command clear the cache directory.
@@ -483,7 +483,7 @@ Dev:
 
 .. code-block:: yaml
 
-		app/console cache:clear --env=dev
+		bin/console cache:clear --env=dev
         
 		
 Prod:
@@ -491,20 +491,20 @@ Prod:
 
 .. code-block:: yaml	
 
-		app/console cache:clear --env=prod --no-debug
+		bin/console cache:clear --env=prod --no-debug
         
     
 WMS Services
 ------------
 
-app/console mapbender:wms:add
+bin/console mapbender:wms:add
 ***********************************
 
 Adds a new WMS Source to your Mapbender Service repository.
 
 .. code-block:: yaml
 
-    app/console mapbender:wms:add https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+    bin/console mapbender:wms:add https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
     
     * <empty name> OpenStreetMap (WhereGroup)
     * * osm OpenStreetMap
@@ -512,24 +512,24 @@ Adds a new WMS Source to your Mapbender Service repository.
     Saved new source #76
 
 
-app/console mapbender:wms:parse:url
+bin/console mapbender:wms:parse:url
 ***********************************
 
 Command to parse a GetCapabilities document by url. The command can be used to validate a WMS Url.
 
 .. code-block:: yaml
 
-    app/console mapbender:wms:parse:url --validate https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+    bin/console mapbender:wms:parse:url --validate https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
 
 
-app/console mapbender:wms:reload:file
+bin/console mapbender:wms:reload:file
 *************************************
 
 Command to reload (update) a WMS source from given file.
 
 .. code-block:: yaml
 
-   app/console mapbender:wms:reload:url 76 /var/www/html/service.xml
+   bin/console mapbender:wms:reload:url 76 /var/www/html/service.xml
 
 
 The following additional options are possible:
@@ -538,14 +538,14 @@ The following additional options are possible:
 * --deselect-new-layers    If set, newly added layers will be deselected in existing instances. Deselected layers are not visible on the map by default, but appear in the layer tree and can be selected by users.
 
 
-app/console mapbender:wms:reload:url
+bin/console mapbender:wms:reload:url
 ************************************
 
 Command to reload (update) a WMS source from given url.
 
 .. code-block:: yaml
 
-   app/console mapbender:wms:reload:url 76 https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
+   bin/console mapbender:wms:reload:url 76 https://osm-demo.wheregroup.com/service?VERSION=1.3.0&Service=WMS&request=getCapabilities
 
 
 The following additional options are possible:
@@ -556,14 +556,14 @@ The following additional options are possible:
 * --deselect-new-layers    If set, newly added layers will be deselected in existing instances. Deselected layers are not visible on the map by default, but appear in the layer tree and can be selected by users.
 
 
-app/console mapbender:wms:show
+bin/console mapbender:wms:show
 ******************************
 
 Command to displays layer information of a persisted WMS source. You have to parse the ID of the WMS Source to get the information.
 
 .. code-block:: yaml
 
-   app/console mapbender:wms:show 76
+   bin/console mapbender:wms:show 76
    
      Source describes 3 layers:
      * <empty name> OpenStreetMap (WhereGroup)
@@ -572,14 +572,14 @@ Command to displays layer information of a persisted WMS source. You have to par
 
 
 
-app/console mapbender:wms:validate:url 
+bin/console mapbender:wms:validate:url 
 **************************************
 
 Command to check the accessibility of the WMS data source. The available layers are listed, if the service is accessible. 
 
 .. code-block:: yaml
 
-    app/console mapbender:wms:validate:url "https://osm-demo.wheregroup.com/service?VERSION=1.3.0"
+    bin/console mapbender:wms:validate:url "https://osm-demo.wheregroup.com/service?VERSION=1.3.0"
     
 	WMS source loaded and validated
 	Source describes 3 layers:
@@ -591,14 +591,14 @@ Command to check the accessibility of the WMS data source. The available layers 
 Other
 -----
 
-app/console mapbender:source:rewrite:host 
+bin/console mapbender:source:rewrite:host 
 *****************************************
 
 Command to update the host name in the source URLs. Like this it is not necessary to reload Service capabilities.
 
 .. code-block:: yaml
 
-    app/console mapbender:source:rewrite:host "https://osm-demo.wheregroup.com" "http://osm-demo.wheregroup.com" 
+    bin/console mapbender:source:rewrite:host "https://osm-demo.wheregroup.com" "http://osm-demo.wheregroup.com" 
     
 	3 modified urls in WMS source #5 / OpenStreetMap (OSM) Demo WhereGroup
 	Summary:
@@ -610,14 +610,14 @@ Command to update the host name in the source URLs. Like this it is not necessar
 
 .. _mapbender_config_check:
 
-app/console mapbender:config:check 
+bin/console mapbender:config:check 
 **********************************
 
 Command to check the system configuration and mapbender requirements. Useful command to determine whether dependencies are compliant and database access works.
 
 .. code-block:: yaml
 
-	app/console mapbender:config:check 
+	bin/console mapbender:config:check 
 
 
 .. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
@@ -635,23 +635,23 @@ The following requirements are checked and displayed:
 * loaded PHP extensions
 * Directory permissions
 
-app/console mapbender:version
+bin/console mapbender:version
 *****************************
 
 The command outputs the current version of Mapbender.
 
 .. code-block:: yaml
 
-	app/console mapbender:version
+	bin/console mapbender:version
 	 
 	Mapbender 3.3.4
  
 	
-app/console debug:config
+bin/console debug:config
 ************************
 
 Command lists all registered bundles (packages) and, if available, their aliases.
  
 .. code-block:: yaml		
 
-	app/console debug:config	
+	bin/console debug:config	
