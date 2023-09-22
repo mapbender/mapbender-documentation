@@ -7,7 +7,7 @@ app
 ***
 Dieses Verzeichnis beinhaltet:
 
-* php-Cache (app/cache)
+* php-Cache (var/cache)
 * log-Verzeichnis (app/logs)
 * Konfigurationsdateien (app/config)
 * applicationkernel (app/AppKernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)

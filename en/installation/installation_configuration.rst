@@ -17,7 +17,7 @@ In the following, we will describe the configurational steps of Mapbender a bit 
 
 All that can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which the Mapbender framework is built upon. There's a mayor caveat though you should understand before continuing:
 
-.. note:: The console utility will write files in the app/cache and app/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
+.. note:: The console utility will write files in the var/cache and app/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the app/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
 .. note:: **Important:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/, else mapbender/).
 
@@ -147,7 +147,7 @@ There are differences in the behaviour of app.php and app_dev.php:
   CSS, JavaScript and Translation files, among others.
 
   The production environment caches all these files and puts them into the
-  app/cache folder.
+  var/cache folder.
 
 * The development environment gives out error messages and stack traces
   to the user interface. The production environment logs them into the file
@@ -157,10 +157,10 @@ There are differences in the behaviour of app.php and app_dev.php:
   things that are important for developers but are not supposed to be visible for
   common users.
 
-The directory app/cache contains the cache files. It contains directories
+The directory var/cache contains the cache files. It contains directories
 for each environment (prod and dev). But the mechanism of the dev-cache, as
 described before, behaves differently.
 
 If changes of the Mapbender interface or the code are made, the
-cache directory (app/cache) has to be cleared to see the changes in the
+cache directory (var/cache) has to be cleared to see the changes in the
 application.

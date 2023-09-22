@@ -68,8 +68,8 @@ Have a look at the steps as commands
  sudo chmod -R ug+r /var/www/mapbender
  sudo chown -R :www-data /var/www/mapbender
 
- # You have to set write permission to app/cache and app/logs.
- sudo chmod -R ug+w /var/www/mapbender/app/cache
+ # You have to set write permission to var/cache and app/logs.
+ sudo chmod -R ug+w /var/www/mapbender/var/cache
  sudo chmod -R ug+w /var/www/mapbender/app/logs
  sudo chmod -R ug+w /var/www/mapbender/web/uploads
 
@@ -105,7 +105,7 @@ Update Example for Windows
  # Export files to the web-directory
  php.exe app/console assets:install web
 
- # Delete your cache and the logdateien at mapbender/app/cache und mapbender/app/logs
+ # Delete your cache and the logdateien at mapbender/var/cache und mapbender/app/logs
 
  # if you use screenshots: copy the screenshots from the old version back to mapbender/web/uploads
  # if you have individual templates: merge the templates with the new Mapbender version

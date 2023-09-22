@@ -21,7 +21,7 @@ Cache
 
 Q: What is the cache and when do I have to clear it?
 
-A: The cache is a small storage area, where Mapbender accesses frequently needed application data. Cache clearing can be useful to refresh your Mapbender installation. You'll delete the contents of the ``mapbender/app/cache/`` directory, not the folder itself. In detail, the ``prod`` and - if present - the ``dev`` directory.
+A: The cache is a small storage area, where Mapbender accesses frequently needed application data. Cache clearing can be useful to refresh your Mapbender installation. You'll delete the contents of the ``mapbender/var/cache/`` directory, not the folder itself. In detail, the ``prod`` and - if present - the ``dev`` directory.
 
 It is no problem to delete these directories. When you run Mapbender again, new files will be stored again in the cache directory.
 

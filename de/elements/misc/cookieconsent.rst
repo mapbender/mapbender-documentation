@@ -26,4 +26,4 @@ Beispiel:
     mapbender.cookieconsent: true
 
 
-.. tip:: Nach dem Ändern des Parameters müssen Sie die Inhalte des Cache-Verzeichnisses (``app/cache/\*``) löschen.
+.. tip:: Nach dem Ändern des Parameters müssen Sie die Inhalte des Cache-Verzeichnisses (``var/cache/\*``) löschen.

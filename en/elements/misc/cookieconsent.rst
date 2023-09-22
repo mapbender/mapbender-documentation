@@ -26,4 +26,4 @@ Example:
     mapbender.cookieconsent: true
 
 
-.. tip:: After changing these parameters you have to clean the contents of the cache-directory (``app/cache/\*``).
+.. tip:: After changing these parameters you have to clean the contents of the cache-directory (``var/cache/\*``).

@@ -17,7 +17,7 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 
 Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
 
-.. note:: **Hinweis:** Das console-Hilfsprogramm wird Dateien in die Verzeichnisse app/cache und app/logs schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis app/db und die SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP- Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
+.. note:: **Hinweis:** Das console-Hilfsprogramm wird Dateien in die Verzeichnisse var/cache und app/logs schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis app/db und die SQLite Datenbank.  Wenn Sie die Applikation in Ihrem Browser öffnen, wird der Server-PHP- Prozess versuchen, auf  diese Dateien zuzugreifen oder in die Verzeichnisse zu schreiben mit anderen Benutzerrechten. Stellen Sie sicher,  dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
 .. note:: **Wichtiger Hinweis:** Die folgenden app/console Schritte gehen davon aus, dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ , andernfalls mapbender/).
 
@@ -146,7 +146,7 @@ Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
   Im Detail werden in der Entwicklungsumgebung von Mapbender u.a. die CSS,
   JavaScript und Übersetzungsdateien nicht gecacht.
 
-  In der Produktionsumgebung werden diese aber in app/cache abgelegt.
+  In der Produktionsumgebung werden diese aber in var/cache abgelegt.
 
 * In der Entwicklungsumgebung werden Fehlermeldungen und ihr Stacktrace direkt
   an der Oberfläche angezeigt. In der Produktionsumgebung werden die
@@ -156,11 +156,11 @@ Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
   protokolliert, die nur für die Entwickler, aber nicht für Außenstehende
   sichtbar sein sollten.
 
-Das Verzeichnis app/cache enthält die einzelnen Cache-Dateien. Es werden
+Das Verzeichnis var/cache enthält die einzelnen Cache-Dateien. Es werden
 Verzeichnisse für jede Umgebung (prod und dev) angelegt, das Verhalten des
 dev-Caches ist aber, wie angesprochen, anders.
 
 Bei Änderungen an der Oberfläche oder im Code von Mapbender ist das Cache
-Verzeichnis (app/cache) zu leeren, damit die Änderungen in der
+Verzeichnis (var/cache) zu leeren, damit die Änderungen in der
 Produktionsumgebung sichtbar werden.
 
