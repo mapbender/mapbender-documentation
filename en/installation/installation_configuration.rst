@@ -104,7 +104,7 @@ Initializing the database can be done using the command:
 
     bin/console mapbender:database:init
 
-Importing applications from application/app/config/applications
+Importing applications from application/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is possible to (re-)import applications from the applications folder into the database with the command:

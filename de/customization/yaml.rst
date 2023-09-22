@@ -3,7 +3,7 @@
 YAML Konfiguration (Konfigurations- und Anwendungsdateien)
 ==========================================================
 
-Die folgenden Konfigurationsdateien sind zu finden unter application/app/config.
+Die folgenden Konfigurationsdateien sind zu finden unter application/config.
 
 
 parameters.yml

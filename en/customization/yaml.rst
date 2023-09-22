@@ -3,7 +3,7 @@
 YAML Configuration (Configuration and Application files)
 ========================================================
 
-The following Configuration files are under application/app/config.
+The following Configuration files are under application/config.
 
 
 parameters.yml

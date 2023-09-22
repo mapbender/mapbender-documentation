@@ -102,7 +102,7 @@ Führen Sie das nachfolgende Kommando aus, um die Datenbank zu initialisieren un
     bin/console mapbender:database:init
 
 
-Importieren von Anwendungen aus application/app/config/applications
+Importieren von Anwendungen aus application/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
