@@ -138,7 +138,7 @@ Installation PHP-PostgreSQL Treiber:
    sudo apt install php-pgsql
 
 
-Konfiguration der Datenbankverbindung in (app/config/parameters.yml).
+Konfiguration der Datenbankverbindung in (application/config/parameters.yml).
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 .. code-block:: yaml

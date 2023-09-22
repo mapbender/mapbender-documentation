@@ -133,7 +133,7 @@ Installation PHP-PostgreSQL driver
 
    sudo apt install php-pgsql
 
-Configuration of database connection (app/config/parameters.yml):
+Configuration of database connection (application/config/parameters.yml):
 
 .. code-block:: yaml
 

@@ -9,17 +9,17 @@ Dieses Verzeichnis beinhaltet:
 
 * php-Cache (var/cache)
 * log-Verzeichnis (var/logs)
-* Konfigurationsdateien (app/config)
+* Konfigurationsdateien (application/config)
 * applicationkernel (app/AppKernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
 * das Autoladen (autoload.php)
 * spezielle Ressourcen für die Anwendungen (Resources)
 * die Kommandozeilen-Anwendungen für Pflege und Management (bin/console)
 
 
-app/config
+application/config
 ----------
 
-Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis app/config. Zwei Dateien sind dabei von besonderer Bedeutung:
+Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis application/config. Zwei Dateien sind dabei von besonderer Bedeutung:
 
 * parameters.yml
 * config.yml
@@ -27,10 +27,10 @@ Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis app/confi
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 
-app/config/applications
+application/config/applications
 -----------------------
 
-Als YAML definierte Anwendungen können in dem Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien.
+Als YAML definierte Anwendungen können in dem Verzeichnis application/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien.
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 

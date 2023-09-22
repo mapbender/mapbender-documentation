@@ -9,17 +9,17 @@ This directory contains:
 
 * the php-Cache (var/cache)
 * the logs (var/logs)
-* the configurations (app/config)
+* the configurations (application/config)
 * the applicationkernel (app/AppKernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
 * the application specific resource directory (Resources)
 * the command line application for maintaining and management tasks (bin/console)
 
 
-app/config
+application/config
 ----------
 
-Basic configuration files of Mapbender are placed in the app/config directory. Two files are of particular importance:
+Basic configuration files of Mapbender are placed in the application/config directory. Two files are of particular importance:
 
 * parameters.yml
 
@@ -28,10 +28,10 @@ Basic configuration files of Mapbender are placed in the app/config directory. T
 More Information: :ref:`yaml`.
 
   
-app/config/applications
+application/config/applications
 -----------------------
 
-The directory app/config/applications contains all applications that are defined in a YAML file. 
+The directory application/config/applications contains all applications that are defined in a YAML file. 
 
 More Information: :ref:`yaml` .
 

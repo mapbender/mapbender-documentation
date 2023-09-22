@@ -1049,7 +1049,7 @@ If the YAML application is used in the /application folder, it can be specified 
        refreshLayersAfterFeatureSave:  # If no entry is made in this area no map refresh is carried out after saving 
          - 17
          - 18
-         - osm        # specify by unique name only with applications in app/config/application
+         - osm        # specify by unique name only with applications in application/config/application
       [...]
 
 **Notes:** Map-Refresh after save is available from Digitizer version 1.2. Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer

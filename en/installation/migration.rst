@@ -96,7 +96,7 @@ If it makes sense, update all applications to map_engine_code current.
 SearchRouter
 ============
 
-In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/app/config/applications/mapbender_demo_nrw.yml>`_
+In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/application/config/applications/mapbender_demo_nrw.yml>`_
 
 1. deprecated empty: use placeholder instead
 
@@ -137,7 +137,7 @@ SimpleSearch element was improved. You can now define the projection of the resu
 SimpleSearch Supports Nominatim, Photon from version 3.2.5 - see workshop demo applications
 
 
-1. Define sourceSrs in your SimpleSearch definition. If not defined, the default ('EPSG:4326') should be chosen. You can find an example at `this Configuration file <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/app/config/applications/mapbender_demo_nrw.yml>`_
+1. Define sourceSrs in your SimpleSearch definition. If not defined, the default ('EPSG:4326') should be chosen. You can find an example at `this Configuration file <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/application/config/applications/mapbender_demo_nrw.yml>`_
 
                      sourceSrs: 'EPSG:25832'
 
@@ -170,7 +170,7 @@ Digitizer is available for Mapbender >= 3.2.2. The new Digitizer Version is 1.4.
 
 * See `list of deprecated features <https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4>`_
 * See also `digitizer php file <https://github.com/mapbender/mapbender-digitizer/blob/1.4/Element/Digitizer.php>`_
-* You can find a demo in the `Workshop bundle <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/app/config/applications/mapbender_digitize_demo.yml>`_
+* You can find a demo in the `Workshop bundle <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/application/config/applications/mapbender_digitize_demo.yml>`_
 * maxResults - is supported again to limit the number of features that are loaded to the application (if not defined all features will be used) (digitizer >=1.4.9)
 * For font definitions, see `issue 1308 <https://github.com/mapbender/mapbender/issues/1308>`_
     * fontSize: 38 definition without px 

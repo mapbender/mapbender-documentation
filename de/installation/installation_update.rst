@@ -40,8 +40,8 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  mv /var/www/mapbender-starter-v3.3.2 /var/www/mapbender
  
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
- cp /var/www/mapbender_save/app/config/parameters.yml /var/www/mapbender/app/config/parameters.yml
- cp /var/www/mapbender_save/app/config/config.yml /var/www/mapbender/app/config/config.yml 
+ cp /var/www/mapbender_save/application/config/parameters.yml /var/www/mapbender/application/config/parameters.yml
+ cp /var/www/mapbender_save/application/config/config.yml /var/www/mapbender/application/config/config.yml 
  
  # Händisch müssen Sie nun die Konfigurationsdateien auf neue Parameter überprüfen.
  # Vergleichen Sie die Dateien parameters.yml, config.yml und sofern verwendet die mapbender.yml.

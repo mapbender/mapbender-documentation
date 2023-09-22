@@ -319,7 +319,7 @@ There are different ways of how to use the new template:
 Usage in YAML-applications
 **************************
 
-You can adjust the YAML-applications in app/config/applications and change the template parameter.
+You can adjust the YAML-applications in application/config/applications and change the template parameter.
 
 .. code-block:: yaml
 

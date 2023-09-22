@@ -144,7 +144,7 @@ Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
 Konfiguration PostgreSQL
 ------------------------
 
-Konfiguration der Datenbankverbindung erfolgt in der Datei app/config/parameters.yml.
+Konfiguration der Datenbankverbindung erfolgt in der Datei application/config/parameters.yml.
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 

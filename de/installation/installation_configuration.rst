@@ -32,7 +32,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfon
 Anpassen der Konfigurationsdatei
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``app/config/parameters.yml`` gespeichert.
+Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``application/config/parameters.yml`` gespeichert.
 
 Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
@@ -116,7 +116,7 @@ Sie können die Anwendungen, die in dem Ordner applications definiert sind, in d
 Konfigurationsdateien
 ---------------------
 
-Die Konfigurationsdateien liegen unter **app/config**. 
+Die Konfigurationsdateien liegen unter **application/config**. 
 
 Mehr Informationen dazu finden Sie im Kapitel: :ref:`yaml_de`.
 

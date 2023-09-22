@@ -16,7 +16,7 @@ Sobald die Mitteilung akzeptiert wurde, taucht das Banner so lange nicht auf, bi
 Konfiguration
 -------------
 
-Die Konfiguration findet in der ``parameters.yml``-Datei unter ``app/config/parameters.yml`` statt und gilt für die gesamte Mapbender-Instanz. Dazu muss der Parameter  ``mapbender.cookieconsent:`` mit dem Wert ``true`` oder ``false`` übergeben werden. Ist der Abschnitt nicht vorhanden oder der Parameterwert ``false`` gesetzt, wird das Banner nicht angezeigt.
+Die Konfiguration findet in der ``parameters.yml``-Datei unter ``application/config/parameters.yml`` statt und gilt für die gesamte Mapbender-Instanz. Dazu muss der Parameter  ``mapbender.cookieconsent:`` mit dem Wert ``true`` oder ``false`` übergeben werden. Ist der Abschnitt nicht vorhanden oder der Parameterwert ``false`` gesetzt, wird das Banner nicht angezeigt.
 
 Beispiel:
 

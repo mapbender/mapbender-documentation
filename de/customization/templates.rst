@@ -319,7 +319,7 @@ Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
 Einbindung in YAML-Anwendungen
 ******************************
 
-Sie können nun die YAML-Anwendungen unter ``app/config/applications`` anpassen und auf das neue Template verweisen.
+Sie können nun die YAML-Anwendungen unter ``application/config/applications`` anpassen und auf das neue Template verweisen.
 
 .. code-block:: yaml
 

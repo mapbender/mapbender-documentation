@@ -140,7 +140,7 @@ Create file **<apache>\\conf\\conf.d\\fcgi.conf** with:
 Configuration PostgreSQL
 ------------------------
 
-The configuration of the Mapbender database is done in the file app/config/parameters.yml.
+The configuration of the Mapbender database is done in the file application/config/parameters.yml.
 
 For more information on the database configuration, see :ref:`yaml`.
 

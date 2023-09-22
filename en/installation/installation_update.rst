@@ -40,8 +40,8 @@ Have a look at the steps as commands
  mv /var/www/mapbender-starter-v3.3.2 /var/www/mapbender
  
  # copy your old configuration files to the new version
- cp /var/www/mapbender_save/app/config/parameters.yml /var/www/mapbender/app/config/parameters.yml
- cp /var/www/mapbender_save/app/config/config.yml /var/www/mapbender/app/config/config.yml 
+ cp /var/www/mapbender_save/application/config/parameters.yml /var/www/mapbender/application/config/parameters.yml
+ cp /var/www/mapbender_save/application/config/config.yml /var/www/mapbender/application/config/config.yml 
  
  # manual step
  # merge parameters.yml, config.yml and if used mapbender.yml 

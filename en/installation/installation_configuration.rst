@@ -31,7 +31,7 @@ All that can be done using the console utility provided by `Symfony <http://symf
 
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Database connection parameters are stored together with some more configuration parameters in the file ``app/config/parameters.yml``. 
+Database connection parameters are stored together with some more configuration parameters in the file ``application/config/parameters.yml``. 
 
 More Information: :ref:`yaml`.
 
@@ -117,7 +117,7 @@ It is possible to (re-)import applications from the applications folder into the
 Configuration files
 -------------------
 
-The configuration files are located under **app/config**.
+The configuration files are located under **application/config**.
 
 Find more information in: :ref:`yaml`.
 
