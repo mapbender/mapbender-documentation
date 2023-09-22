@@ -20,7 +20,7 @@ How to create your own template?
 * Create a template PHP-file to register your template
 * Create your own Twig-file
 * Create your own CSS-file(s)
-* Register your bundle in app/AppKernel.php
+* Register your bundle in scr/Kernel.php
 * Use your template
 
 To help you we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files with the following links:
@@ -256,12 +256,12 @@ Alternatively, it is possible to copy a twig-file and adjust it afterwards.
   cp fom/src/FOM/ManagerBundle/Resources/views/manager.html.twig app/Resources/FOMManagerBundle/views/
 
 
-Register your bundle in app/AppKernel.php
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Register your bundle in scr/Kernel.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You have to register your template:
 
-* mapbender/app/AppKernel.php
+* mapbender/scr/Kernel.php
 
 .. code-block:: php
 

@@ -20,7 +20,7 @@ Wie werden eigene Vorlagen erzeugt?
 * Template PHP-Datei zur Registrierung der eigenen Vorlage erzeugen
 * Erzeugen einer eigenen Twig-Datei
 * Erzeugen eigener CSS-Datei(en)
-* Registrierung des Bundles in der Datei app/AppKernel.php
+* Registrierung des Bundles in der Datei scr/Kernel.php
 * Verwenden der neuen Vorlage
 
 
@@ -263,12 +263,12 @@ Bei unveränderter Übernahme der Stylevorgaben sieht die Administration dann so
 
 
 
-Registrieren des Bundles in app/AppKernel.php
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Registrieren des Bundles in scr/Kernel.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
-* ``mapbender/app/AppKernel.php``
+* ``mapbender/scr/Kernel.php``
 
 .. code-block:: php
 
