@@ -13,7 +13,8 @@ Achten Sie beim Ausführen der Befehle darauf, dass Sie sich im richtigen Verzei
 
 * mapbender (bei der Paketinstallation)
 
-    
+.. _app_command_help_de:
+
 Hilfe zu den Befehlen
 ---------------------
 
@@ -603,7 +604,15 @@ Aktualisiert den Hostnamen in den Quell-URLs, ohne die Funktionen/Capabilities n
 
 .. code-block:: yaml
 
-    app/console mapbender:source:rewrite:host "https://osm-demo.wheregroup.com" "http://osm-demo.wheregroup.com" 
+  mapbender:source:rewrite:host [options] [--] <from> <to>
+
+Vergessen Sie nicht, dass Sie sich auch hier weitere Optionen über :ref:`app_command_help_de` anzeigen lassen können.
+
+Umsetzungsbeispiel für die Aktualisierung eines Hostnamens:
+
+.. code-block:: yaml
+
+    app/console mapbender:source:rewrite:host "http://osm-demo.wheregroup.com" "https://osm-demo.wheregroup.com" 
     
 	3 modified urls in WMS source #5 / OpenStreetMap (OSM) Demo WhereGroup
 	Summary:
