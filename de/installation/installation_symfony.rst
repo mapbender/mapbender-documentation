@@ -20,9 +20,14 @@ In dieser Anleitung wird die im Installationspaket mitgelieferte SQLite-Datenban
     symfony server:start --no-tls
 
 
-Der Befehl führt einen lokalen Webserver aus, sodass Mapbender nun auf dem lokalen Rechner erreichbar ist.
+Der Befehl führt einen lokalen Webserver aus, sodass Mapbender nun auf dem lokalen Rechner erreichbar ist und die Konsole den Status des Servers mitprotokolliert.
 
-Beachten Sie, dass über diesen Aufruf standardmäßig die Entwicklungsumgebung genutzt wird und die Konsole den Status des Servers mitprotokolliert.
+.. note:: Beachten Sie, dass über diesen Aufruf die Anwendungsumgebung (``prod`` oder ``dev``) definiert werden kann:
+
+.. code-block:: bash
+
+    APP_ENV=prod symfony server:start --no-tls
+
 
 Der gewünschte Server-Port kann auch als Argument mitgegeben werden (siehe unten). Weitere Optionen werden ausgegeben, wenn der ``--help`` Parameter mitgegeben wurde.
 

@@ -430,6 +430,13 @@ Mit Control -C kann der Server wieder gestoppt werden.
       http://127.0.0.1:8000
 
 
+.. hint:: Sie können dem Server die Anwendungsumgebung als ``APP_ENV=prod`` oder ``APP_ENV=dev`` mitgeben.   
+    
+.. code-block:: bash
+
+    APP_ENV=prod symfony server:start --no-tls
+    
+     
 Cache löschen
 -------------
 

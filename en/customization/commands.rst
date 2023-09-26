@@ -428,8 +428,14 @@ You can stop the server again with Control -C.
       The Web server is using PHP CLI 8.2.10
       http://127.0.0.1:8000
 
+
+.. hint:: It is still possible to define the application environment with a preceding ``APP_ENV=prod`` or ``APP_ENV=dev``.   
     
- 
+.. code-block:: bash
+
+    APP_ENV=prod symfony server:start --no-tls
+    
+     
 Clear cache 
 -----------
 

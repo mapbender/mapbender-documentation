@@ -24,7 +24,12 @@ The command runs a local web server. By default, the server listens on 127.0.0.1
 
 Now Mapbender is available on the local machine with the address http://127.0.0.1:8000/. 
 
-Please note that Mapbender runs in the developer environment per default.
+.. note:: Please note that you can pass the application environment (``prod`` or ``dev``) with the command below.
+
+.. code-block:: bash
+
+    APP_ENV=prod symfony server:start --no-tls
+
 
 You could also change the default port by passing it as an argument. For more options, check the ``--help`` flag:
 
