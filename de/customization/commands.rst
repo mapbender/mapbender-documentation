@@ -410,62 +410,24 @@ Zeigt die/den konfigurierten Mailer an.
 Server
 ------
 
-bin/console server:run
-**********************
+symfony server:start --no-tls
+*****************************
 
-Der Befehl führt den von PHP eingebauten Webserver aus. Im Terminal erscheint eine Meldung, dass der Server läuft und zeigt die lokale Adresse an (http://127.0.0.1:8000). 
-In diesem Modus kann lokal mit Mapbender gearbeitet werden.
+Als Voraussetzung für den Symfony-Entwicklungsserver muss zunächst `Symfony CLI <https://symfony.com/download>`_ installiert werden. Im Anschluss führt der Befehl den darin enthaltenen lokalen Webserver aus. Im Terminal wird zusätzlich der Status-Log des Servers mitprotokolliert, während dieser aktiv ist.
 
-Mit Control -C kann der Server wieder gestoppt werden. 
+Mit Control -C kann der Server wieder gestoppt werden.
 
+.. note:: Der Symfony Entwicklungsserver kann Einschränkungen unterliegen, die die Performanz der Anwendung in bestimmten Fällen reduziert. Er dient primär Testzwecken.
 
+.. code-block:: yaml
+	
+	symfony server:start --no-tls
 
 .. code-block:: yaml
 
-	bin/console server:run
-	
-	[OK] Server running on http://127.0.0.1:8000                                                                           
-    // Quit the server with CONTROL-C. 
-    
-
-
-bin/console server:start
-************************
-
-Der Befehl startet den von PHP eingebauten Webserver im Hintergrund. 
-
-Im Terminal erscheint eine Meldung, dass der Server auf die angegebene Adresse hört (http://127.0.0.1:8000)
-
-
-.. code-block:: yaml
-
-	bin/console server:start
-	
-	[OK] Web server listening on http://127.0.0.1:8000        
-
-
-bin/console server:stop
-***********************
-
-Der Befehl stoppt den von PHP eingebauten Webserver im Hintergrund. Im Terminal erscheint eine Meldung, dass der Server mit angegebener Adresse gestoppt wurde (http://127.0.0.1:8000)
-
-
-.. code-block:: yaml
-
-	bin/console server:stop
-	
-	
-
-bin/console server:status
-*************************
-
-Dieser Befehl gibt den Status des lokalen Webservers aus.
-
-
-.. code-block:: yaml
-
-	bin/console server:status
-
+ [OK] Web server listening
+      The Web server is using PHP CLI 8.2.10
+      http://127.0.0.1:8000
 
 
 Cache löschen

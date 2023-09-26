@@ -3,8 +3,7 @@
 Installation von Mapbender unter Verwendung des Symfony-eigenen Webservers
 ##########################################################################
 
-Mapbender baut auf das `Symfony <https://symfony.com/>`_ Framework auf und kann 
-daher den `Symfony-eigenen Webserver <https://symfony.com/doc/current/setup/symfony_server.html>`_ nutzen. 
+Mapbender baut auf das `Symfony <https://symfony.com/>`_ Framework auf und kann daher das `Symfony CLI Entwicklungswerkzeug <https://symfony.com/download>`_ für einen lokalen Webserver nutzen. 
 Das ermöglicht Ihnen einen schnellen Test von Mapbender, ohne eine Integration in einen Webserver vorzunehmen. 
 
 .. hint:: Der Symfony-eigene Webserver eignet sich nicht für die Produktivumgebungen.
@@ -14,29 +13,26 @@ In dieser Anleitung wird die im Installationspaket mitgelieferte SQLite-Datenban
 * Bitte prüfen Sie die Systemvoraussetzungen unter :ref:`Linux <installation_ubuntu_de>` bzw. :ref:`Windows <installation_windows_de>`.
 * Laden Sie die aktuellen Mapbender-Version herunter https://mapbender.org/builds/.
 * Entpacken in ein beliebiges Verzeichnis.
-* Starten Sie den Symfony-eigenen Webserver.
+* Starten Sie den Symfony-eigenen Webserver:
 
 .. code-block:: bash
 
-    bin/console server:run
+    symfony server:start --no-tls
 
-Der Befehl führt einen lokalen Webserver aus. 
 
-Standardmäßig lauscht der Server auf die Adresse 127.0.0.1 und den ersten freien Port ab 8000.
+Der Befehl führt einen lokalen Webserver aus, sodass Mapbender nun auf dem lokalen Rechner erreichbar ist.
 
-Mapbender ist nun auf dem lokalen Rechner über die Adresse  http://127.0.0.1:8001/ erreichbar. 
-Beachten Sie, dass über diesen Aufruf standardmäßig der Entwickler-Modus gestartet wird.
+Beachten Sie, dass über diesen Aufruf standardmäßig die Entwicklungsumgebung genutzt wird und die Konsole den Status des Servers mitprotokolliert.
 
-Sie können den Aufruf auch mehrfach ausführen. Es wird dann der nächste freie Port verwendet.
-
-Die gewünschte Adresse kann auch über die Angabe der IP und des Ports angegeben werden:
+Der gewünschte Server-Port kann auch als Argument mitgegeben werden (siehe unten). Weitere Optionen werden ausgegeben, wenn der ``--help`` Parameter mitgegeben wurde.
 
 .. code-block:: bash
 
-    bin/console server:run 127.0.0.1:80002
-                                                                                                                                                                                                                                         
-    [OK] Server listening on http://127.0.0.1:8002                                                                         
-         
-    // Quit the server with CONTROL-C.                                                                                     
+    symfony server:start --no-tls -port=8002
 
-    [Mon Jan 31 15:56:57 2022] PHP 7.4.3 Development Server (http://127.0.0.1:8002) started
+
+.. code-block:: yaml
+
+ [OK] Web server listening
+      The Web server is using PHP CLI 8.2.10
+      http://127.0.0.1:8002

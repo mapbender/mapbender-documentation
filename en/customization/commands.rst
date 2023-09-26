@@ -409,64 +409,29 @@ Command displays the configured mailer(s)
 Server
 ------
  
-bin/console server:run
-**********************
+symfony server:start --no-tls
+*****************************
 
-This command runs the PHP's built-in web server. The terminal displays that the server is running on the given local address (http://127.0.0.1:8000). 
-In this mode you can work locally with Mapbender.
+As a prerequisite for the Symfony development server, the `Symfony CLI <https://symfony.com/download>`_ must be installed. Following a successful installation, the command launches the development server. In this mode, it is possible to open your local Mapbender. The terminal additionally logs the status of the server while it is active.
 
-Quit the server with CONTROL-C. 
+You can stop the server again with Control -C.
 
-
-
-.. code-block:: yaml
-
-	bin/console server:run
-	
-	[OK] Server running on http://127.0.0.1:8000                                                                           
-    	// Quit the server with CONTROL-C. 
-    
-
-
-bin/console server:start
-************************
-
-The command starts the PHP's built-in web server in the background. 
-
-In the terminal appears a message saying that the web server is listening on the displayed address (http://127.0.0.1:8000)
-
+.. note:: The Symfony development server may have limitations that reduce the performance of the application in certain cases. It should be used for testing purposes.
 
 .. code-block:: yaml
 
-	bin/console server:start
-	
-	[OK] Web server listening on http://127.0.0.1:8000        
-
-
-bin/console server:stop
-***********************
-
-The command stops the PHP's built-in web server. A message appears in the terminal that the server with this specified address was stopped (http://127.0.0.1:8000).
-
+    symfony server:start --no-tls
 
 .. code-block:: yaml
 
-	bin/console server:stop
-	
-	
+ [OK] Web server listening
+      The Web server is using PHP CLI 8.2.10
+      http://127.0.0.1:8000
 
-bin/console server:status
-*************************
-
-Outputs the status of the built-in web server for the given address.
-
-
-.. code-block:: yaml
-
-	bin/console server:status
     
  
 Clear cache 
+-----------
 
 bin/console cache:clear
 ***********************
@@ -629,7 +594,7 @@ Command to check the system configuration and mapbender requirements. Useful com
 
 The following requirements are checked and displayed:
 
-* Databse connections
+* Database connections
 * PHP Version 
 * System requirements 
 * Asset Folders

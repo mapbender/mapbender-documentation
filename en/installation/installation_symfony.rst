@@ -3,8 +3,7 @@
 Installation of Mapbender using Symfony built-in webserver
 ##########################################################
 
-Mapbender is built on the `Symfony <http://symfony.com/>`_ Framework and therefore 
-can make use of the `Symfony built-in webserver <http://symfony.com/doc/current/cookbook/web_server/built_in.html>`_. 
+Mapbender is built on the `Symfony <http://symfony.com/>`_ Framework and therefore can make use of the `Symfony CLI developer tool <https://symfony.com/download>`_, which needs to be installed first. 
 This setup allows a quick test of Mapbender without an integration into an external webserver. 
 
 .. hint:: The use of the Symfony built-in webserver is not suitable for production environments. 
@@ -14,31 +13,28 @@ In this document we assume that the SQLite database is used.
 * Please check the installation documentation for :ref:`Linux <installation_ubuntu>` respectively :ref:`Windows <installation_windows>`. 
 * Download the current Mapbender version https://mapbender.org/builds/.
 * Extract Mapbender in an arbitrary directory.
-* Start the Symfony webserver.
+* Start the Symfony webserver:
 
 .. code-block:: bash
 
-    bin/console server:run
-
-The command runs a local web server. By default, the server listens on 127.0.0.1 address 
-and the port number is automatically selected as the first free port starting from 8000.
-
-Now Mapbender is available on the local machine with the address http://127.0.0.1:8001/. 
-Please note that Mapbender runs in the developer mode per default.
+    symfony server:start --no-tls
 
 
+The command runs a local web server. By default, the server listens on 127.0.0.1 address and the port number is automatically selected as the first free port starting from 8000.
 
-If you run the command several times Symfony will choose the next available port.
+Now Mapbender is available on the local machine with the address http://127.0.0.1:8000/. 
 
+Please note that Mapbender runs in the developer environment per default.
 
-You also could change the default address and port by passing them as an argument:
+You could also change the default port by passing it as an argument. For more options, check the ``--help`` flag:
 
 .. code-block:: bash
 
-    bin/console server:run 127.0.0.1:80002
-                                                                                                                                                                                                                                         
-    [OK] Server listening on http://127.0.0.1:8002                                                                         
-         
-    // Quit the server with CONTROL-C.                                                                                     
+    symfony server:start --no-tls -port=8002
 
-    [Mon Jan 31 15:56:57 2022] PHP 7.4.3 Development Server (http://127.0.0.1:8002) started
+
+.. code-block:: yaml
+
+ [OK] Web server listening
+      The Web server is using PHP CLI 8.2.10
+      http://127.0.0.1:8002
