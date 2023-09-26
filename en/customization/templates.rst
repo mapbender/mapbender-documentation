@@ -20,7 +20,7 @@ How to create your own template?
 * Create a template PHP-file to register your template
 * Create your own Twig-file
 * Create your own CSS-file(s)
-* Register your bundle in scr/Kernel.php
+* Register your bundle in src/AppKernel.php
 * Use your template
 
 To help you we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files with the following links:
@@ -127,13 +127,13 @@ In the template file you define the name of your template, the regions that you 
             )
         );
         protected static $css               = array(
-            '@MapbenderCoreBundle/public/sass/template/fullscreen.scss',
-            '@WorkshopDemoBundle/public/demo_fullscreen.scss',
+            '@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss',
+            '@WorkshopDemoBundle/Resources/public/demo_fullscreen.scss',
         );
         protected static $js                = array(
-            '@FOMCoreBundle/public/js/frontend/sidepane.js',
-            '@FOMCoreBundle/public/js/frontend/tabcontainer.js',
-            '@MapbenderCoreBundle/public/mapbender.container.info.js',
+            '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
+            '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js',
+            '@MapbenderCoreBundle/Resources/public/mapbender.container.info.js',
             '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
             "/components/vis-ui.js/vis-ui.js-built.js"
         );
@@ -256,8 +256,8 @@ Alternatively, it is possible to copy a twig-file and adjust it afterwards.
   cp fom/src/FOM/ManagerBundle/Resources/views/manager.html.twig app/Resources/FOMManagerBundle/views/
 
 
-Register your bundle in scr/Kernel.php
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Register your bundle in config/bundles.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You have to register your template:
 
@@ -284,32 +284,28 @@ You have to register your template:
  }
  
 
-Add write access to the web-directory for your webserver user.
+Add write access to the ``public`` directory for your webserver user.
 
 .. code-block:: bash
 
-    chmod ug+w web
+    chmod ug+w public
 
 
-Update the web-directory. Each bundle has it's own assets - CSS files, JavaScript files, images and more -
-but these need to be copied into the public web folder:
-
-.. code-block:: bash
-
-    bin/console assets:install web
-
-
-Alternatively, as a developer, you might want to use the symlink switch on that command to
-symlink instead of copy. This will make editing assets inside the bundle
-directories way easier.
+Update the ``public`` directory. Each bundle has its own assets - CSS files, JavaScript files, images and more - but these need to be copied into the public web folder:
 
 .. code-block:: bash
 
-   bin/console assets:install web --symlink --relative
+    bin/console assets:install public
+
+
+Alternatively, as a developer, you might want to use the symlink switch on that command to symlink instead of copy. This will make editing assets inside the bundle directories way easier.
+
+.. code-block:: bash
+
+   bin/console assets:install public --symlink --relative
 
 
 Now your template should show up in the template list when you create a new application.
-
 
 
 How to use a new template
@@ -319,7 +315,7 @@ There are different ways of how to use the new template:
 Usage in YAML-applications
 **************************
 
-You can adjust the YAML-applications in application/config/applications and change the template parameter.
+You can adjust the YAML-applications in ``config/applications`` and change the template parameter.
 
 .. code-block:: yaml
 

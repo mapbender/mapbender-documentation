@@ -62,7 +62,7 @@ Have a look at the steps as commands
  bin/composer run reimport-example-apps
 
  # Update the symbolic links
- bin/console assets:install web --symlink --relative
+ bin/console assets:install public --symlink --relative
  
  # change the access rights and group of the files
  sudo chmod -R ug+r /var/www/mapbender
@@ -103,7 +103,7 @@ Update Example for Windows
  php.exe bin/composer run reimport-example-apps
 
  # Export files to the web-directory
- php.exe bin/console assets:install web
+ php.exe bin/console assets:install public
 
  # Delete your cache and the logdateien at mapbender/var/cache und mapbender/var/logs
 

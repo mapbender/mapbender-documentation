@@ -65,7 +65,7 @@ but these need to be copied into the public web folder:
 
 .. code-block:: yaml
 
-    bin/console assets:install web
+    bin/console assets:install public
 
 
 Alternatively, as a developer, you might want to use the symlink switch on that command to
@@ -74,7 +74,7 @@ directories way easier.
 
 .. code-block:: yaml
 
-   bin/console assets:install web --symlink --relative
+   bin/console assets:install public --symlink --relative
 
 
 Creating the administrative user

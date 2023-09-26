@@ -115,7 +115,7 @@ Es wird eine Übersicht über die erfolgte Aktion ausgegeben. Es wurde eine PHP-
  - Your element WorkshopDemoBundle\Element\MapKlick has been created.
  - The following files have been created:
   - PHP class (src/Workshop/DemoBundle/Element/MapKlick.php)
-  - jQuery widget (src/Workshop/DemoBundle/public/mapbender.element.mapklick.js)
+  - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
 
 
 Anpassung des eigenen Elements

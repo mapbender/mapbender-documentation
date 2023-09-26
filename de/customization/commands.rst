@@ -397,14 +397,14 @@ Dies geschieht zum Beispiel, wenn ein Auftrag in der Datenbank gelöscht oder de
 Mailer
 ------
 
-bin/console debug:framework.mailer
-**********************************
+bin/console debug:config framework mailer
+*****************************************
 
 Zeigt die/den konfigurierten Mailer an.
 
 .. code-block:: yaml
 
-	bin/console debug:framework.mailer 
+    bin/console debug:config framework mailer 
     
     
 Server

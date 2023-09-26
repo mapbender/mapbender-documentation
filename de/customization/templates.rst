@@ -20,7 +20,7 @@ Wie werden eigene Vorlagen erzeugt?
 * Template PHP-Datei zur Registrierung der eigenen Vorlage erzeugen
 * Erzeugen einer eigenen Twig-Datei
 * Erzeugen eigener CSS-Datei(en)
-* Registrierung des Bundles in der Datei scr/Kernel.php
+* Registrierung des Bundles in src/AppKernel.php
 * Verwenden der neuen Vorlage
 
 
@@ -126,13 +126,13 @@ In der Template-Datei wird der Name des Templates, die Regionen die angelegt wer
             )
         );
         protected static $css               = array(
-            '@MapbenderCoreBundle/public/sass/template/fullscreen.scss',
-            '@WorkshopDemoBundle/public/demo_fullscreen.scss',
+            '@MapbenderCoreBundle/Resources/public/sass/template/fullscreen.scss',
+            '@WorkshopDemoBundle/Resources/public/demo_fullscreen.scss',
         );
         protected static $js                = array(
-            '@FOMCoreBundle/public/js/frontend/sidepane.js',
-            '@FOMCoreBundle/public/js/frontend/tabcontainer.js',
-            '@MapbenderCoreBundle/public/mapbender.container.info.js',
+            '@FOMCoreBundle/Resources/public/js/frontend/sidepane.js',
+            '@FOMCoreBundle/Resources/public/js/frontend/tabcontainer.js',
+            '@MapbenderCoreBundle/Resources/public/mapbender.container.info.js',
             '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
             "/components/vis-ui.js/vis-ui.js-built.js"
         );
@@ -160,7 +160,7 @@ Es muss lediglich das CSS definiert werden, das vom Standard der Elemente abweic
 
 Mit Hilfe der Entwicklerwerkzeuge Ihres Browsers können Sie die bestehende Definition ermitteln, in Ihre CSS-Datei kopieren und hier anpassen.
 
-Ihre CSS-Datei könnte wie folgt heißen: ``src/Workshop/DemoBundle/public/demo_fullscreen.css`` und die folgende Definition enthalten:
+Ihre CSS-Datei könnte wie folgt heißen: ``src/Workshop/DemoBundle/Resources/public/demo_fullscreen.css`` und die folgende Definition enthalten:
 
 .. code-block:: css
 
@@ -263,8 +263,8 @@ Bei unveränderter Übernahme der Stylevorgaben sieht die Administration dann so
 
 
 
-Registrieren des Bundles in scr/Kernel.php
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Registrieren des Bundles in config/bundles.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
@@ -291,20 +291,20 @@ Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
  }
  
 
-Setzen Sie Schreibrechte für das web-Verzeichnis für Ihren Webserver-Benutzer.
+Setzen Sie Schreibrechte für das public-Verzeichnis für Ihren Webserver-Benutzer.
 
 .. code-block:: bash
 
-    chmod ug+w web
+    chmod ug+w public
 
 
-Aktualisieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - CSS Dateien, JavaScript Dateien, Bilder und mehr - diese müssen in das öffentliche web-Verzeichnis kopiert werden. Mit der Option symlink werden die Dateien nicht kopiert. Es wird stattdessen ein symbolischer Link erzeugt. Dies erleichtert das Editieren innerhalb des Bundles.
+Aktualisieren Sie das public-Verzeichnis. Jedes Bundle hat seine eigenen Assets - CSS Dateien, JavaScript-Dateien, Bilder und mehr - diese müssen in das public-Verzeichnis kopiert werden. Mit der Option symlink werden die Dateien nicht kopiert. Es wird stattdessen ein symbolischer Link erzeugt. Dies erleichtert das Editieren innerhalb des Bundles.
 
 .. code-block:: bash
 
-    bin/console assets:install web
+    bin/console assets:install public
     oder
-    bin/console assets:install web --symlink --relative
+    bin/console assets:install public --symlink --relative
 
 
 Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste erscheinen.
@@ -319,7 +319,7 @@ Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
 Einbindung in YAML-Anwendungen
 ******************************
 
-Sie können nun die YAML-Anwendungen unter ``application/config/applications`` anpassen und auf das neue Template verweisen.
+Sie können nun die YAML-Anwendungen unter ``config/applications`` anpassen und auf das neue Template verweisen.
 
 .. code-block:: yaml
 

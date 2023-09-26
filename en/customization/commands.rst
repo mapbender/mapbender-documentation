@@ -396,14 +396,14 @@ gcfiles means "garbage collection files". This command deletes unreferenced file
 Mailer
 ------
 
-bin/console debug:framework.mailer
-**********************************
+bin/console debug:config framework mailer
+*****************************************
 
 Command displays the configured mailer(s)
 
 .. code-block:: yaml
 
-	bin/console debug:framework.mailer 
+    bin/console debug:config framework mailer 
 
    
 Server

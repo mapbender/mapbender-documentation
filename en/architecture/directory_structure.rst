@@ -9,17 +9,17 @@ This directory contains:
 
 * the php-Cache (var/cache)
 * the logs (var/logs)
-* the configurations (application/config)
+* the configuration directory (config)
 * the applicationkernel (app/AppKernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
 * the application specific resource directory (Resources)
 * the command line application for maintaining and management tasks (bin/console)
 
 
-application/config
-----------
+config
+------
 
-Basic configuration files of Mapbender are placed in the application/config directory. Two files are of particular importance:
+Basic configuration files of Mapbender are placed in the config directory. Two files are of particular importance:
 
 * parameters.yml
 
@@ -28,10 +28,10 @@ Basic configuration files of Mapbender are placed in the application/config dire
 More Information: :ref:`yaml`.
 
   
-application/config/applications
------------------------
+config/applications
+-------------------
 
-The directory application/config/applications contains all applications that are defined in a YAML file. 
+The directory config/applications contains all applications that are defined in a YAML file. 
 
 More Information: :ref:`yaml` .
 
@@ -106,14 +106,14 @@ It controls:
 web/bundles
 -----------
 
-* here the static resources of the single bundles are stored.
-* the following command copies the resources from the bundles to the folder. 
+* storage for the static resources of the single bundles.
+* the following command copies the resources from the bundles to the folder: 
 
 .. code-block:: yaml
 
-     bin/console assets:install --symlink web
+     bin/console assets:install --symlink public
 
-* **Notice**: if you use Windows you can't create symbolic links and therefore you have to run the command (**bin/console assets:install web**) after every change in the code to copy the files to the directory.
+* **Notice**: If you use Windows, you cannot create symbolic links and therefore have to run the command (**bin/console assets:install public**) to copy the files to the directory after every change in the code.
 
 
 src

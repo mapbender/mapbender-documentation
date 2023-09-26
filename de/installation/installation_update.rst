@@ -62,7 +62,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  bin/composer run reimport-example-apps
 
  # Aufbau der symbolischen Links
- bin/console assets:install web --symlink --relative
+ bin/console assets:install public --symlink --relative
  
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte der Apache Gruppe (www-data) zu.
  sudo chmod -R ug+r /var/www/mapbender
@@ -104,7 +104,7 @@ Aktualisierungsbeispiel für Windows
  php.exe bin/composer run reimport-example-apps
 
  # Ausspielen in den web-Bereich
- php.exe bin/console assets:install web
+ php.exe bin/console assets:install public
 
  # Löschen Sie den Cache und die Logdateien unter mapbender/var/cache und mapbender/var/logs
 

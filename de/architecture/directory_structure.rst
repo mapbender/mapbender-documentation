@@ -7,19 +7,19 @@ app
 ***
 Dieses Verzeichnis beinhaltet:
 
-* php-Cache (var/cache)
-* log-Verzeichnis (var/logs)
-* Konfigurationsdateien (application/config)
+* den php-Cache (var/cache)
+* das log-Verzeichnis (var/logs)
+* das Konfigurationsverzeichnis (config)
 * applicationkernel (app/AppKernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
 * das Autoladen (autoload.php)
-* spezielle Ressourcen für die Anwendungen (Resources)
+* Verzeichnis für spezielle Anwendungsressourcen (Resources)
 * die Kommandozeilen-Anwendungen für Pflege und Management (bin/console)
 
 
-application/config
-----------
+config
+------
 
-Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis application/config. Zwei Dateien sind dabei von besonderer Bedeutung:
+Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis config. Zwei Dateien sind dabei von besonderer Bedeutung:
 
 * parameters.yml
 * config.yml
@@ -27,10 +27,10 @@ Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis applicati
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 
-application/config/applications
------------------------
+config/applications
+-------------------
 
-Als YAML definierte Anwendungen können in dem Verzeichnis application/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien.
+Als YAML definierte Anwendungen können in dem Verzeichnis config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien.
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
@@ -110,13 +110,13 @@ web/bundles
 -----------
 
 * Hier sind die statischen Ressourcen der einzelnen Bundles gespeichert.
-* Das folgende Kommando kopiert die Ressourcen von den Bundles zu dem Ordner.
+* Das folgende Kommando kopiert die Ressourcen der Bundles in den Ordner:
 
 .. code-block:: yaml
 
-     bin/console assets:install --symlink web
+     bin/console assets:install --symlink public
 
-* **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das folgende Kommando (**bin/console assets:install web**) nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
+* **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das folgende Kommando (**bin/console assets:install public**) nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
 
 
 src

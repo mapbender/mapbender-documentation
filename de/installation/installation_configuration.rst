@@ -64,14 +64,14 @@ Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien
 
 .. code-block:: yaml
 
-    bin/console assets:install web
+    bin/console assets:install public
 
 
 Sie können auch einen symbolischen Link verwenden, statt die Dateien zu kopieren.  Dies erleichtert die Bearbeitung der abhängigen Dateien in den bundle-Verzeichnissen.
 
 .. code-block:: yaml
 
-   bin/console assets:install web --symlink --relative
+   bin/console assets:install public --symlink --relative
 
 
 Erzeugen des administrativen Benutzers
