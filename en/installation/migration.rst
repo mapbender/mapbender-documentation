@@ -7,6 +7,10 @@ Migration Guide
     
     This page gives migration instructions on specific Mapbender versions. For general tips on updating, see the :ref:`installation_update` page instead.
 
+.. note::
+    
+    For in-depth information from the Mapbender development team, also see the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/UPGRADING.md>`_.
+    
 
 Migration to Mapbender 3.3.4
 ****************************
