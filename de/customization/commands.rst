@@ -18,12 +18,7 @@ Achten Sie beim Ausführen der Befehle darauf, dass Sie sich im richtigen Verzei
 Hilfe zu den Befehlen
 ---------------------
 
-.. code-block:: yaml
-
-    bin/console  
-
-
-Die Hilfe für jeden Befehl kann mit [Befehl] --help aufgerufen werden, z.B.:  
+Die Hilfe für jeden Befehl kann mit dem ``--help`` Parameter aufgerufen werden, z. B.:  
 
 .. code-block:: yaml
 

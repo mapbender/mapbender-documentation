@@ -18,12 +18,7 @@ Make sure you are in the correct directory (above the app directory)
 Help command
 ------------
 
-.. code-block:: yaml
-
-    bin/console  
-
-
-The parameter --help displays the help message for every command, for example:   
+The parameter ``--help`` displays the help message for every command, for example:   
 
 .. code-block:: yaml
 
