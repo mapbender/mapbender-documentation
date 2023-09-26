@@ -33,9 +33,8 @@ Die Arbeitsschritte auf dem Weg zum eigenen Element.
 * Fügen Sie das Element in die Funktion *getElements()* ein, um es über das Backend verfügbar zu machen
 
 
-
 Anlegen eines eigenen Bundles mit bin/console generate:bundle
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Hilfe zum Befehl erhalten Sie über die Option help:
 
@@ -72,50 +71,7 @@ Für die Erstellung müssen noch einige Angaben gemacht werden:
  
  Confirm automatic update of the Routing [yes]? yes
  
-Nach diesen Schritten liegt das neue Bundle im Verzeichnis src vor. Außerdem wurde das Bundle in der Datei AppKernel.php registriert. In der Datei routing.yml wurde eine neue Route für das Bundle eingetragen.
-
-
-Eigene Elemente über bin/console generieren
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Auflistung der Mapbender bin/console Befehle:
-
-.. code-block:: bash
-
- bin/console list mapbender
- 
- Available commands for the "mapbender" namespace:
-  mapbender:assets:dump            Dump all Mapbender application assets.
-  mapbender:generate:element       Generates a Mapbender element
-  mapbender:generate:template      Generates a Mapbender application template
-
-
-
-Die Hilfe zum Befehl erhalten Sie über die Option help:
-
-.. code-block:: bash
-
- bin/console mapbender:generate:element --help
-
-
-
-
-Erzeugen Sie ein Element über den folgende Befehl:
-
-.. code-block:: bash
-
- bin/console mapbender:generate:element --type "map-click" "Workshop\DemoBundle" MapKlick src
-
-
-Es wird eine Übersicht über die erfolgte Aktion ausgegeben. Es wurde eine PHP-Datei und eine js-Datei erzeugt.
-
-.. code-block:: bash
-
- Summary of actions
- - Your element WorkshopDemoBundle\Element\MapKlick has been created.
- - The following files have been created:
-  - PHP class (src/Workshop/DemoBundle/Element/MapKlick.php)
-  - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
+Nach diesen Schritten liegt das neue Bundle im Verzeichnis src vor. Außerdem wurde das Bundle in der Datei Kernel.php registriert. In der Datei routing.yml wurde eine neue Route für das Bundle eingetragen.
 
 
 Anpassung des eigenen Elements

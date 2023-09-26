@@ -10,7 +10,7 @@ Dieses Verzeichnis beinhaltet:
 * den php-Cache (var/cache)
 * das log-Verzeichnis (var/logs)
 * das Konfigurationsverzeichnis (config)
-* applicationkernel (app/AppKernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
+* applicationkernel (src/Kernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
 * das Autoladen (autoload.php)
 * Verzeichnis für spezielle Anwendungsressourcen (Resources)
 * die Kommandozeilen-Anwendungen für Pflege und Management (bin/console)

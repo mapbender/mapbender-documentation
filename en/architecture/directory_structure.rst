@@ -10,7 +10,7 @@ This directory contains:
 * the php-Cache (var/cache)
 * the logs (var/logs)
 * the configuration directory (config)
-* the applicationkernel (app/AppKernel.php) (this is called by the FrontendControllers and controlls the whole application)
+* the applicationkernel (src/Kernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
 * the application specific resource directory (Resources)
 * the command line application for maintaining and management tasks (bin/console)

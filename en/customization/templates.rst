@@ -20,7 +20,7 @@ How to create your own template?
 * Create a template PHP-file to register your template
 * Create your own Twig-file
 * Create your own CSS-file(s)
-* Register your bundle in src/AppKernel.php
+* Register your bundle in src/Kernel.php
 * Use your template
 
 To help you we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files with the following links:
@@ -259,32 +259,7 @@ Alternatively, it is possible to copy a twig-file and adjust it afterwards.
 Register your bundle in config/bundles.php
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You have to register your template:
-
-* mapbender/src/Kernel.php
-
-.. code-block:: php
-
- class AppKernel extends Kernel
- {
-    public function registerBundles()
-    {
-        $bundles = array(
-
-            ....
-
-            // Mapbender bundles
-            new Mapbender\CoreBundle\MapbenderCoreBundle(),
-            ...
-
-	        new Workshop\DemoBundle\WorkshopDemoBundle(),
-
-        );
-    }
- }
- 
-
-Add write access to the ``public`` directory for your webserver user.
+Add write access to the ``public`` directory for your webserver user, if need be:
 
 .. code-block:: bash
 
