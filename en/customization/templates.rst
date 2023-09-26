@@ -261,7 +261,7 @@ Register your bundle in config/bundles.php
 
 You have to register your template:
 
-* mapbender/scr/Kernel.php
+* mapbender/src/Kernel.php
 
 .. code-block:: php
 

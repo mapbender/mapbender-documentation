@@ -268,7 +268,7 @@ Registrieren des Bundles in config/bundles.php
 
 Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
 
-* ``mapbender/scr/Kernel.php``
+* ``mapbender/src/Kernel.php``
 
 .. code-block:: php
 
