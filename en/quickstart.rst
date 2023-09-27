@@ -72,27 +72,31 @@ For the installation of Mapbender have a look at :ref:`installation`.
 1. Start Mapbender
 ==================
 
-#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender/app.php (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at :ref:`installation`).
+#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at :ref:`installation`).
  
 #. The application should then appear in your browser window.
 
 If you have any difficulties running Mapbender, please check whether your Apache web server and your PostgreSQL database are running without errors.
 
 
-Start Mapbender in developer mode 
----------------------------------
+Start Mapbender in a productive environment
+-------------------------------------------
 
-Symfony offers a developer mode with lots of information about your application (logging, exceptions, database queries, memory usage, time and more). This mode is only available from localhost.
+Mapbender offers two environments: dev (default) and prod.
 
-* Start the developer mode: http://localhost/mapbender/app_dev.php
+The development environment shows full error messages including stack traces in the browser and enables the Symfony debug console and profiler. Also, caching is disabled.
+The productive environment enables caching and only shows generic error messages. More specific error messages are written into logfiles.
 
-  .. image:: ../figures/mapbender_app_dev.png
-     :width: 100%
+The environment can be set via the ``APP_ENV`` variable. Make sure to change this to `prod` when deploying your application for the public. The value can be changed in several ways:
 
-* Have a look at the information that is offered in the developer mode.
+* by editing the ``APP_ENV`` variable in the `.env` file,
+* by adding a `.env.local` file and overriding the value there,
+* by setting an environment variable in your Apache2 vHost configuration: ``SetEnv APP_ENV prod``,
+* by explicitly setting it when starting the local webserver:
 
-  .. image:: ../figures/mapbender_symfony_profiler.png
-     :width: 100%
+.. code-block:: bash
+
+    APP_ENV=prod symfony server:start --no-tls
 
 
 Mapbender Backend
