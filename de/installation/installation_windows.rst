@@ -85,16 +85,15 @@ Datei **<apache>\\conf\\conf.d\\mapbender.conf** mit dem folgenden Inhalt anlege
   
 .. code-block:: apache
 
- Alias /mapbender c:/mapbender/web/
- <Directory c:/mapbender/web/>
+ Alias /mapbender c:/mapbender/public/
+ <Directory c:/mapbender/public/>
   Options MultiViews FollowSymLinks
-  DirectoryIndex app.php
   Require all granted
  
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.*)$ app.php [QSA,L]
+  RewriteRule ^(.*)$ index.php [QSA,L]
  </Directory>
 
 

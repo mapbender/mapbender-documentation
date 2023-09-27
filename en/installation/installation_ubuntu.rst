@@ -52,16 +52,15 @@ Create the file **/etc/apache2/sites-available/mapbender.conf** with the followi
 
 .. code-block:: apache
 
- Alias /mapbender /var/www/mapbender/web/
- <Directory /var/www/mapbender/web/>
+ Alias /mapbender /var/www/mapbender/public/
+ <Directory /var/www/mapbender/public/>
   Options MultiViews FollowSymLinks
-  DirectoryIndex app.php
   Require all granted
 
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.*)$ app.php [QSA,L]
+  RewriteRule ^(.*)$ index.php [QSA,L]
  </Directory>
 
 Activate the site and reload Apache:
