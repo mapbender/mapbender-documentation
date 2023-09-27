@@ -12,8 +12,6 @@ Die Basisdaten bestimmen die grundlegenden Informationen und Einstellungen einer
 
 * **Vorschaubild**: Aus dem Dateiverzeichnis hochladbare Bilddatei, die als Vorschaubild in der Anwendungsübersicht angezeigt wird. Klicken Sie auf den Button "*Datei auswählen"*.
 
-* **Karten-Engine**: Auswahl der Kartenengine zwischen OpenLayers 2 (veraltet) und OpenLayers 6.
-
 * **Beschreibung**: Beschreibung der Anwendung, frei ausfüllbares Textfeld.
 
 * **Kartenzustand merken**: Speichert sitzungsübergreifend den Zustand bestimmter Kartenparameter und -einstellungen. Weitere Informationen finden Sie auf der Seite zu den :ref:`Share-Elementen <persistant_map_view_de>`.
