@@ -79,6 +79,8 @@ For the installation of Mapbender have a look at :ref:`installation`.
 If you have any difficulties running Mapbender, please check whether your Apache web server and your PostgreSQL database are running without errors.
 
 
+.. _environments:
+
 Start Mapbender in a productive environment
 -------------------------------------------
 

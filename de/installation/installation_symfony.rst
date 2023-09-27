@@ -22,7 +22,7 @@ In dieser Anleitung wird die im Installationspaket mitgelieferte SQLite-Datenban
 
 Der Befehl führt einen lokalen Webserver aus, sodass Mapbender nun auf dem lokalen Rechner erreichbar ist und die Konsole den Status des Servers mitprotokolliert.
 
-.. note:: Beachten Sie, dass über diesen Aufruf die Anwendungsumgebung (``prod`` oder ``dev``) definiert werden kann:
+.. note:: Beachten Sie, dass über diesen Aufruf die Anwendungsumgebung (`prod` oder `dev`) definiert werden kann:
 
 .. code-block:: bash
 

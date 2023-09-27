@@ -21,7 +21,7 @@ Die Definition des Data Managers erfolgt im YAML-Syntax.
 Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, den Formularaufbau.
 
 
-.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
+.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`environments_de`.
 
 
 Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu speichern.

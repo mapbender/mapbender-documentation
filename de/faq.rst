@@ -6,14 +6,14 @@ FAQ - Häufig gestellte Fragen
 Allgemeines
 -----------
 
-app.php und app_dev.php
-~~~~~~~~~~~~~~~~~~~~~~~
+Umgebungen: `prod` und `dev`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Wozu sind die unterschiedlichen Umgebungen da?
+F: Wozu sind diese Umgebungen da?
 
-A: Für den gewöhnlichen produktiven Einsatz rufen Sie Mapbender über die app.php-Datei auf. Erst wenn Sie selbst etwas (an den Twig-, CSS- oder JS-Dateien) entwickeln, nutzen Sie den Aufruf über die app_dev.php-Datei. Der dahinterstehende Entwicklungsmodus gibt mehr Informationen aus, indem er z. B. detailliertere Fehlermeldungen anzeigt. 
+A: Für den produktiven Einsatz rufen Sie Mapbender über die `prod`-Umgebung auf. Erst wenn Sie selbst etwas (an den Twig-, CSS- oder JS-Dateien) entwickeln, nutzen Sie den Aufruf über die `dev`-Umgebung. Der dahinterstehende Entwicklungsmodus gibt mehr Informationen aus, indem er z. B. detailliertere Fehlermeldungen anzeigt. 
 
-Mehr Details zu den Umgebungen gibt es im Kapitel :ref:`app_cache_de`.
+Mehr Details zu den Umgebungen gibt es im Kapitel :ref:`environments_de`.
 
 
 Cache

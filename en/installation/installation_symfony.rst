@@ -24,7 +24,7 @@ The command runs a local web server. By default, the server listens on 127.0.0.1
 
 Now Mapbender is available on the local machine with the address http://127.0.0.1:8000/. 
 
-.. note:: Please note that you can pass the application environment (``prod`` or ``dev``) with the command below.
+.. note:: Please note that you can pass the application environment (`prod` or `dev`) with the command below.
 
 .. code-block:: bash
 

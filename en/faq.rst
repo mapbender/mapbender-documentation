@@ -6,14 +6,14 @@ FAQ - Frequently Asked Questions
 General
 -------
 
-app.php and app_dev.php
-~~~~~~~~~~~~~~~~~~~~~~~
+Environments: `prod` and `dev`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: What purpose do app.php and app_dev.php have?
+Q: Why does Mapbender offer environments?
 
-A: For productive use you'll use the app.php file. Only if you develop something (TWIG-files, CSS or JS-files) or for debugging, you'll open Mapbender with the app_dev.php in developer mode. This is because the developer mode provides more information and error messages. 
+A: For productive use, you'll use the `prod` environment. If you develop something (TWIG-files, CSS or JS-files) or want to debug, you should use the `dev` environment. This is because this mode provides more information and error messages. 
 
-For further information on the modes, please take a look at the chapter :ref:`app_cache`.
+For further information on the environments, please take a look at the chapter :ref:`environments`.
 
 
 Cache
