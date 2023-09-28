@@ -173,7 +173,21 @@ Mit dem Befehl wird bei der Installation das Datenbankschema angelegt, d.h. es w
 .. code-block:: yaml
 
 	bin/console doctrine:schema:create
-	
+
+
+bin/console doctrine:schema:update 
+**********************************
+
+Der Befehl wird beim Update auf eine Mapbender Version benötigt. Er generiert die SQL-Befehle, um die Datenbank auf das Schema der neuen Version zu aktualisieren. 
+
+.. code-block:: yaml
+
+	bin/console doctrine:schema:update --dump-sql
+    bin/console doctrine:schema:update --force
+		
++ --dump-sql - zeigt die Änderungen im Schema an
++ --force - führt die Änderungen im Schema aus
+
 	
 bin/console doctrine:schema:validate
 ************************************
@@ -568,7 +582,7 @@ Aktualisiert den Hostnamen in den Quell-URLs, ohne die Funktionen/Capabilities n
 
 .. code-block:: yaml
 
-    mapbender:source:rewrite:host [options] [--] <from> <to>
+    bin/console mapbender:source:rewrite:host [options] [--] <from> <to>
 
 Vergessen Sie nicht, dass Sie sich auch hier weitere Optionen über :ref:`app_command_help_de` anzeigen lassen können.
 

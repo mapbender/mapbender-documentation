@@ -173,8 +173,22 @@ The command is used only once during installation and creates the database schem
 .. code-block:: yaml
 
 	bin/console doctrine:schema:create
-	
-	
+
+
+bin/console doctrine:schema:update 
+**********************************
+
+The command is needed on Mapbender update. It generates the SQL needed to synchronize the database schema to the new Mapbender version. 
+
+.. code-block:: yaml
+
+	bin/console doctrine:schema:update --dump-sql
+    bin/console doctrine:schema:update --force
+		
++ --dump-sql - show the changes in the database schema
++ --force - exceutes the changes in the database schema
+
+
 bin/console doctrine:schema:validate
 ************************************
 
@@ -565,7 +579,7 @@ Use this command to update the hostname in the source URLs, eliminating the need
 
 .. code-block:: yaml
 
-  mapbender:source:rewrite:host [options] [--] <from> <to>
+  bin/console mapbender:source:rewrite:host [options] [--] <from> <to>
 
 As usual, the :ref:`app_command_help` shows more options.
 
@@ -581,7 +595,7 @@ Example to update the hostname:
 	3 urls changed
 	4 sources unchanged
 	14 urls unchanged
-    
+
 
 .. _mapbender_config_check:
 

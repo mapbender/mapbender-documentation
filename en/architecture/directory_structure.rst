@@ -19,11 +19,11 @@ This directory contains:
 config
 ------
 
-Basic configuration files of Mapbender are placed in the config directory. Two files are of particular importance:
+Basic configuration files of Mapbender are placed in the config directory and the config/packages directory. Two files are of particular importance:
 
 * parameters.yml
 
-* config.yml
+* packages/doctrine.yaml
 
 More Information: :ref:`yaml`.
 
@@ -103,7 +103,7 @@ It controls:
 * this directory contains the static resoures like css, js, favicon etc.
 
 
-web/bundles
+public/bundles
 -----------
 
 * storage for the static resources of the single bundles.
@@ -119,7 +119,7 @@ web/bundles
 src
 ***
 
-* directory for applications specific bundles (similar to the former x-directories in Mapbender 2.x)
+* directory for applications specific bundles
 
 
 vendor
