@@ -6,11 +6,11 @@ Aktualisierung von Mapbender auf eine neuere Version
 Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
 * Laden Sie die neuste Version von https://mapbender.org/builds/ herunter
-* Sichern Sie Ihre Konfigurationsdateien (parameters.yml und config.yml) und Ihre alte Mapbender Version (Dateien und Datenbank)
+* Sichern Sie Ihre Konfigurationsdateien (parameters.yml und die Dateien im Verzeichnis config/packages) und Ihre alte Mapbender Version (Dateien und Datenbank)
 * Ersetzen Sie die Dateien durch die neuen Mapbender-Dateien
 * Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen
 * Aktualisieren Sie Ihre Mapbender-Datenbank
-* Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von mapbender/web/uploads/ in das mapbender/web/uploads Verzeichnis Ihrer neuen Mapbender Version
+* Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von mapbender/public/uploads/ in das mapbender/public/uploads Verzeichnis Ihrer neuen Mapbender Version
 * Wenn Sie Ihre eigenen Templates verwenden sollten, müssen Sie diese mit denen der neuen Version vergleichen (kam es zu Änderungen?)
 * Importieren Sie die Demo-Anwendungen (über den Befehl bin/composer run reimport-example-apps oder über die Web-Administration), um sich den neusten Stand der Entwicklungen anzuschauen
 * Unter :ref:`installation_ubuntu_de` im Bereich **Entpacken und im Webserver registrieren** ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte
@@ -36,17 +36,17 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  mv /var/www/mapbender /var/www/mapbender_save
  
  # Aktivieren Sie den Code der neuen Version
- cp -R /tmp/build_mapbender/mapbender-starter-v3.3.2 /var/www/
- mv /var/www/mapbender-starter-v3.3.2 /var/www/mapbender
+ cp -R /tmp/build_mapbender/mapbender-starter-v4.0.0 /var/www/
+ mv /var/www/mapbender-starter-v4.0.0 /var/www/mapbender
  
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
  cp /var/www/mapbender_save/application/config/parameters.yml /var/www/mapbender/application/config/parameters.yml
- cp /var/www/mapbender_save/application/config/config.yml /var/www/mapbender/application/config/config.yml 
+ cp /var/www/mapbender_save/application/config/packages/doctrine.yaml /var/www/mapbender/application/packages/doctrine.yaml
  
  # Händisch müssen Sie nun die Konfigurationsdateien auf neue Parameter überprüfen.
- # Vergleichen Sie die Dateien parameters.yml, config.yml und sofern verwendet die mapbender.yml.
+ # Vergleichen Sie die Dateien parameters.yml,packages/doctrine.yaml und ggf. andere Dateien aus dem packages-Verzeichnis
  # Sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version.
- # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/web/uploads.
+ # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/public/uploads.
  # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach config/MapbenderPrintBundle/templates/.
 
  # Setzen Sie die Schreibrechte für Besitzer (u), Gruppe (g) und Andere (a). Weisen Sie die Skripte der Apache Gruppe (www-data) zu.
@@ -71,7 +71,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  # Sie benötigen Schreibrechte für die Verzeichnisse var/cache und var/logs.
  sudo chmod -R ug+w /var/www/mapbender/var/cache
  sudo chmod -R ug+w /var/www/mapbender/var/logs
- sudo chmod -R ug+w /var/www/mapbender/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
 
 Aktualisierungsbeispiel für Windows
@@ -94,12 +94,7 @@ Aktualisierungsbeispiel für Windows
  # Aktualisieren Sie Ihre Mapbender Datenbank
  php.exe bin/console doctrine:schema:update --dump-sql
  php.exe bin/console doctrine:schema:update --force
- 
- # Hinweise für MS4W Anwender:
- #     - stellen Sie sicher, dass Sie die setenv.bat-Datei ausführen, um die benötigten PATH-Variablen für PHP zu setzen
- #     - ggf. müssen Sie die benötigte Erweiterung auf der Kommandozeile im Aufruf übergeben z.B. 
- #            php -d extension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll bin/console doctrine:schema:update --dump-sql
-  
+
  # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
  php.exe bin/composer run reimport-example-apps
 
@@ -109,7 +104,7 @@ Aktualisierungsbeispiel für Windows
  # Löschen Sie den Cache und die Logdateien unter mapbender/var/cache und mapbender/var/logs
 
  # Sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version.
- # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/web/uploads.
+ # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/public/uploads.
  # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach config/MapbenderPrintBundle/templates/
 
 

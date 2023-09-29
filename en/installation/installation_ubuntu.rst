@@ -10,7 +10,7 @@ Mapbender is shipped with a preconfigured SQLite database which includes preconf
 Requirements
 ------------
 
-* PHP >= 7.4
+* PHP >= 8.0
 * Apache installation with the following modules activated:
     * mod_rewrite
     * libapache2-mod-php
@@ -80,7 +80,7 @@ Directory rights
 
  sudo chmod -R ug+w /var/www/mapbender/var/logs
  sudo chmod -R ug+w /var/www/mapbender/var/cache
- sudo chmod -R ug+w /var/www/mapbender/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
  sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
 

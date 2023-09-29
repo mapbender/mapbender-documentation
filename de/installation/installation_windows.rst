@@ -13,7 +13,7 @@ Mapbender benötigt eine Datenbank zur Speicherung der Administrationsinformatio
 Voraussetzungen
 ---------------
 
-* PHP NTS >= 7.4 https://windows.php.net/download/)
+* PHP NTS >= 8.0 https://windows.php.net/download/)
 * Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/) mit folgenden aktivierten Modulen:
     * mod_rewrite
     * mod_fcgid

@@ -6,11 +6,11 @@ Update Mapbender to a newer Version
 To update Mapbender you have to do the following steps:
 
 * get the new version from http://mapbender.org/builds/
-* save your configuration files (parameters.yml and config.yml) and your old Mapbender (files and database)
+* save your configuration files (parameters.yml and files from folder config/packages) and your old Mapbender (files and database)
 * replace the new files 
 * merge your configuration files (check for new parameters and changes)
 * update your Mapbender database
-* copy the screenshots from your old Mapbender version from /web/uploads/ to the folder /web/uploads of your new installation
+* copy the screenshots from your old Mapbender version from /public/uploads/ to the folder /public/uploads of your new installation
 * Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?)
 * print templates: if you use your own print templates: copy them back to config/MapbenderPrintBundle/templates/.
 * Import the demo applications either via bin/composer run reimport-example-apps or via the web administration
@@ -36,16 +36,16 @@ Have a look at the steps as commands
  mv /var/www/mapbender /var/www/mapbender_save
  
  # get the code of the new version
- cp -R /tmp/build_mapbender/mapbender-starter-v3.3.2 /var/www/
- mv /var/www/mapbender-starter-v3.3.2 /var/www/mapbender
+ cp -R /tmp/build_mapbender/mapbender-starter-v4.0.0 /var/www/
+ mv /var/www/mapbender-starter-v4.0.0 /var/www/mapbender
  
  # copy your old configuration files to the new version
  cp /var/www/mapbender_save/application/config/parameters.yml /var/www/mapbender/application/config/parameters.yml
- cp /var/www/mapbender_save/application/config/config.yml /var/www/mapbender/application/config/config.yml 
+ cp /var/www/mapbender_save/application/config/packages/doctrine.yaml /var/www/mapbender/application/config/packages/doctrine.yaml
  
  # manual step
- # merge parameters.yml, config.yml and if used mapbender.yml 
- # if you use screenshots: copy the screenshots from the old version back to mapbender/web/uploads
+ # merge parameters.yml, doctrine.yaml and other YAML files you use
+ # if you use screenshots: copy the screenshots from the old version back to mapbender/public/uploads
  # if you have individual templates: merge the templates with the new Mapbender version
  # if you use your own print templates: copy them back to config/MapbenderPrintBundle/templates/
  
@@ -71,7 +71,7 @@ Have a look at the steps as commands
  # You have to set write permission to var/cache and var/logs.
  sudo chmod -R ug+w /var/www/mapbender/var/cache
  sudo chmod -R ug+w /var/www/mapbender/var/logs
- sudo chmod -R ug+w /var/www/mapbender/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
 Update Example for Windows
 ------------------------------------
@@ -82,7 +82,7 @@ Update Example for Windows
    
  # Save the old version (files and database)
    
- # Copy the configuration files (parameters.yml and config.yml) to your new Mapbender version. 
+ # Copy the configuration files (parameters.yml and files from folder config/packages) to your new Mapbender version. 
  # You have to check the configuration files for changes (new parameter, other changes)
 
  # Call the bin/console commands with php.exe
@@ -94,11 +94,6 @@ Update Example for Windows
  php.exe bin/console doctrine:schema:update --dump-sql
  php.exe bin/console doctrine:schema:update --force
  
- # Notes for MS4W users:
- #     - be sure to first execute setenv.bat to properly set the required paths for PHP
- #     - you may have to also pass the extension you need, at the commandline, for example:
- #            php -d extension=C:\ms4w\Apache\php\ext\php_pdo_pgsql.dll bin/console doctrine:schema:update --dump-sql
- 
  # Import the applications from mapbender.yml to your database to get to know about the latest developments
  php.exe bin/composer run reimport-example-apps
 
@@ -107,7 +102,7 @@ Update Example for Windows
 
  # Delete your cache and the logdateien at mapbender/var/cache und mapbender/var/logs
 
- # if you use screenshots: copy the screenshots from the old version back to mapbender/web/uploads
+ # if you use screenshots: copy the screenshots from the old version back to mapbender/public/uploads
  # if you have individual templates: merge the templates with the new Mapbender version
  # if you use your own print templates: copy them back to config/MapbenderPrintBundle/templates/
  

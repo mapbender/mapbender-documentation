@@ -12,7 +12,7 @@ Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finde
 Voraussetzungen
 ---------------
 
-* PHP >= 7.4
+* PHP >= 8.0
 * Apache Installation mit folgenden aktivierten Modulen:
     * mod_rewrite
     * libapache2-mod-php
@@ -82,7 +82,7 @@ Verzeichnisrechte
 
  sudo chmod -R ug+w /var/www/mapbender/var/logs
  sudo chmod -R ug+w /var/www/mapbender/var/cache
- sudo chmod -R ug+w /var/www/mapbender/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
  sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
 
