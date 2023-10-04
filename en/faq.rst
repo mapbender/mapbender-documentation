@@ -188,6 +188,23 @@ If you use an individual self-signed certificate, you can add the information of
 Find further information in the PHP documentation at: https://www.php.net/manual/en/curl.configuration.php
 
 
+Manually install Symfony dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Q: After updating, I need to install a Symfony component for my Mapbender installation. How can I achieve this?
+
+A: It is possible to manually install Symfony components via the command line. This can be done using the following command:
+
+.. code-block:: bash
+   
+   ./bin/composer install symfony/your-bundle
+
+
+Just replace ``your-bundle`` with the corresponding component name.
+
+You can find a list of componentens and dependencies in the `GitHub Symfony project <https://github.com/symfony/symfony/blob/5.4/composer.json#L58>`_.
+
+
 Deprecation Notices at composer or bootstrap script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

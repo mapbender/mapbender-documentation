@@ -186,6 +186,23 @@ Wenn Sie ein individuelles, selbstsigniertes Zertifikat verwenden, können Sie d
 Weitere Informationen finden Sie in der PHP-Dokumentation unter: https://www.php.net/manual/en/curl.configuration.php
 
 
+Symfony Abhängigkeiten nachinstallieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: Nach dem Update von Mapbender muss für meine Installation eine Symfony Komponente nachinstalliert werden. Wie erreiche ich das?
+
+A: Es ist möglich, Symfony Komponenten über die Kommandozeile manuell nachzuinstallieren. Dies geschieht mithilfe des Befehls
+ 
+.. code-block:: bash
+   
+   ./bin/composer install symfony/your-bundle
+
+
+Ersetzen Sie einfach ``your-bundle`` mit dem Komponentennamen.
+
+Im `GitHub-Symfony-Projekt <https://github.com/symfony/symfony/blob/5.4/composer.json#L58>`_ finden Sie eine entsprechende Auflistung über die Abhängigkeiten.
+
+
 Warnungen im composer oder bootstrap Skript
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
