@@ -55,8 +55,8 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 
  # Aktualisieren Sie Ihre Mapbender Datenbank
  cd /var/www/mapbender/
- bin/console doctrine:schema:update --complete --dump-sql
- bin/console doctrine:schema:update --complete --force
+ bin/console doctrine:schema:update --dump-sql
+ bin/console doctrine:schema:update --force
 
  # Importieren Sie die Demo-Anwendungen, um sich den neusten Stand der Entwicklungen anzuschauen
  bin/composer run reimport-example-apps
@@ -92,8 +92,8 @@ Aktualisierungsbeispiel für Windows
  cd mapbender
  
  # Aktualisieren Sie Ihre Mapbender Datenbank
- php.exe bin/console doctrine:schema:update --complete --dump-sql
- php.exe bin/console doctrine:schema:update --complete --force
+ php.exe bin/console doctrine:schema:update --dump-sql
+ php.exe bin/console doctrine:schema:update --force
 
  # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
  php.exe bin/composer run reimport-example-apps
