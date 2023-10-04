@@ -83,9 +83,7 @@ User name, email and password are mandatory. User name and email have to be uniq
    
 **Update user settings**
 
-Information for a user can be updated.
-
-Following information can be updated:
+Information for a user can be updated:
 
 * email
 * password
@@ -185,8 +183,8 @@ The command is needed on Mapbender update. It generates the SQL needed to synchr
 	bin/console doctrine:schema:update --dump-sql
     bin/console doctrine:schema:update --force
 		
-+ --dump-sql - show the changes in the database schema
-+ --force - exceutes the changes in the database schema
+* --dump-sql    Shows changes in the database schema.
+* --force       Executes the changes in the database schema.
 
 
 bin/console doctrine:schema:validate
@@ -234,10 +232,11 @@ The command mapbender:print:queue:next executes the next print job in the queue.
 
 	bin/console mapbender:print:queue:next --max-jobs=0 --max-time=0
 
-Optionally you can set a limit for the number of jobs to process and the maximum time for a job.  
+Optional parameters:  
 
-* --max-jobs=MAX-JOBS
-* --max-time=MAX-TIME  
+* --max-jobs    Sets a limit for the maximum number of processed jobs.
+
+* --max-time    Sets a limit for the maximum time for the command to process.
 
 
 bin/console mapbender:print:queue:rerun 

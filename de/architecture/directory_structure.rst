@@ -106,8 +106,8 @@ Es kontrolliert:
 * dieses Verzeichnis beinhaltet die statischen Ressourcen wie css, js, favicon etc.
 
 
-web/bundles
------------
+public/bundles
+--------------
 
 * Hier sind die statischen Ressourcen der einzelnen Bundles gespeichert.
 * Das folgende Kommando kopiert die Ressourcen der Bundles in den Ordner:
@@ -122,7 +122,7 @@ web/bundles
 src
 ***
 
-* Verzeichnis für anwendungsspezifische Bundles (ähnlich der x-directories in Mapbender 2.x)
+* Verzeichnis für anwendungsspezifische Bundles
 
 
 vendor

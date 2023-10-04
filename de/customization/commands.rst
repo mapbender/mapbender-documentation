@@ -83,9 +83,7 @@ Dabei sind die Angabe von Benutzername, Email und Passwort erforderlich. Der Ben
    
 **Aktualisierung eines Benutzers**
 
-Die Angaben zu einem Benutzer können aktualisiert werden.
-
-Folgende Angaben können aktualisiert werden:
+Die folgendden Angaben zu einem Benutzer können aktualisiert werden:
 
 * E-Mail
 * Passwort
@@ -185,8 +183,8 @@ Der Befehl wird beim Update auf eine Mapbender Version benötigt. Er generiert d
 	bin/console doctrine:schema:update --dump-sql
     bin/console doctrine:schema:update --force
 		
-+ --dump-sql - zeigt die Änderungen im Schema an
-+ --force - führt die Änderungen im Schema aus
+* --dump-sql	Zeigt die Änderungen im Datenbankschema an.
+* --force		Führt die Änderungen im Schema aus.
 
 	
 bin/console doctrine:schema:validate
@@ -234,8 +232,8 @@ Es wird der nächste Druckauftrag ausgeführt, der in der Warteschleife steht. F
 
 Optional kann die Anzahl der Prozesse und die maximale Ausführungszeit limitiert werden.
 
-* --max-jobs=MAX-JOBS
-* --max-time=MAX-TIME  
+* --max-jobs	Limitiert die Prozessanzahl auf einen gewählten Wert.
+* --max-time	Limitiert die maximale Ausführungszeit für den Befehl.
 
 
 bin/console mapbender:print:queue:rerun 
