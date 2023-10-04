@@ -20,7 +20,7 @@ Wie werden eigene Vorlagen erzeugt?
 * Template PHP-Datei zur Registrierung der eigenen Vorlage erzeugen
 * Erzeugen einer eigenen Twig-Datei
 * Erzeugen eigener CSS-Datei(en)
-* Registrierung des Bundles in der Datei app/AppKernel.php
+* Registrierung des Bundles in src/Kernel.php
 * Verwenden der neuen Vorlage
 
 
@@ -263,48 +263,28 @@ Bei unveränderter Übernahme der Stylevorgaben sieht die Administration dann so
 
 
 
-Registrieren des Bundles in app/AppKernel.php
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Registrieren des Bundles in config/bundles.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Bevor Ihre neue Vorlage angezeigt wird, muss diese registriert werden:
-
-* ``mapbender/app/AppKernel.php``
-
-.. code-block:: php
-
- class AppKernel extends Kernel
- {
-    public function registerBundles()
-    {
-        $bundles = array(
-
-            ....
-
-            // Mapbender bundles
-            new Mapbender\CoreBundle\MapbenderCoreBundle(),
-            ...
-
-	        new Workshop\DemoBundle\WorkshopDemoBundle(),
-
-        );
-    }
- }
- 
-
-Setzen Sie Schreibrechte für das web-Verzeichnis für Ihren Webserver-Benutzer.
+Falls noch nicht geschehen, setzen Sie Schreibrechte für das public-Verzeichnis für Ihren Webserver-Benutzer:
 
 .. code-block:: bash
 
-    chmod ug+w web
+    chmod ug+w public
 
 
-Aktualisieren Sie das web-Verzeichnis. Jedes Bundle hat seine eigenen Assets - CSS Dateien, JavaScript Dateien, Bilder und mehr - diese müssen in das öffentliche web-Verzeichnis kopiert werden. Mit der Option symlink werden die Dateien nicht kopiert. Es wird stattdessen ein symbolischer Link erzeugt. Dies erleichtert das Editieren innerhalb des Bundles.
+Aktualisieren Sie das public-Verzeichnis. Jedes Bundle hat seine eigenen Assets - CSS Dateien, JavaScript-Dateien, Bilder und mehr - diese müssen in das public-Verzeichnis kopiert werden.
 
 .. code-block:: bash
 
-    app/console assets:install web
-    oder
-    app/console assets:install web --symlink --relative
+    bin/console assets:install public
+
+
+Mit der Option ``--symlink --relative`` werden die Dateien nicht kopiert. Es wird stattdessen ein symbolischer Link erzeugt. Dies erleichtert das Editieren innerhalb des Bundles.
+
+.. code-block:: bash
+
+   bin/console assets:install public --symlink --relative
 
 
 Jetzt sollte beim Anlegen einer neuen Anwendung die neue Vorlage in der Liste erscheinen.
@@ -319,7 +299,7 @@ Die neue Anwendungs-Vorlage kann über verschiedene Wege verwendet werden:
 Einbindung in YAML-Anwendungen
 ******************************
 
-Sie können nun die YAML-Anwendungen unter ``app/config/applications`` anpassen und auf das neue Template verweisen.
+Sie können nun die YAML-Anwendungen unter ``config/applications`` anpassen und auf das neue Template verweisen.
 
 .. code-block:: yaml
 
@@ -348,6 +328,7 @@ Wie kann der Anwendungstitel angepasst werden?
 Wie stelle ich die Sprache ein?
 
 Auf diese und weitere Fragen finden Sie Antworten im Kapitel :ref:`yaml_de`.
+
 
 Wie können eigene Buttons eingebunden werden?
 *********************************************

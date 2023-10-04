@@ -8,7 +8,7 @@ Wie können eigene Elemente erzeugt werden?
 `https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_.
 
 
-Mapbender bietet einen app/console-Befehl zur Erzeugung von Elementen. 
+Mapbender bietet einen bin/console-Befehl zur Erzeugung von Elementen. 
 
 Hierbei können vier verschiedene Typen von Elementen generiert werden:
 
@@ -28,24 +28,23 @@ Die Arbeitsschritte zum Erzeugen von eigenen Elementen
 Die Arbeitsschritte auf dem Weg zum eigenen Element.
 
 * Erzeugen Sie ein eigenes Bundle
-* Erzeugen Sie ein Element mit Hilfe von app/console
+* Erzeugen Sie ein Element mit Hilfe von bin/console
 * Passen Sie das Element an Ihre Bedürfnisse an
 * Fügen Sie das Element in die Funktion *getElements()* ein, um es über das Backend verfügbar zu machen
 
 
-
-Anlegen eines eigenen Bundles mit app/console generate:bundle
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Anlegen eines eigenen Bundles mit bin/console generate:bundle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Hilfe zum Befehl erhalten Sie über die Option help:
 
 .. code-block:: bash
 
- app/console generate:bundle --help
+ bin/console generate:bundle --help
 
 .. code-block:: bash
 
- app/console generate:bundle --namespace=Workshop/DemoBundle --dir=src 
+ bin/console generate:bundle --namespace=Workshop/DemoBundle --dir=src 
 
 
 Für die Erstellung müssen noch einige Angaben gemacht werden:
@@ -72,50 +71,7 @@ Für die Erstellung müssen noch einige Angaben gemacht werden:
  
  Confirm automatic update of the Routing [yes]? yes
  
-Nach diesen Schritten liegt das neue Bundle im Verzeichnis src vor. Außerdem wurde das Bundle in der Datei AppKernel.php registriert. In der Datei routing.yml wurde eine neue Route für das Bundle eingetragen.
-
-
-Eigene Elemente über app/console generieren
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Auflistung der Mapbender app/console Befehle:
-
-.. code-block:: bash
-
- app/console list mapbender
- 
- Available commands for the "mapbender" namespace:
-  mapbender:assets:dump            Dump all Mapbender application assets.
-  mapbender:generate:element       Generates a Mapbender element
-  mapbender:generate:template      Generates a Mapbender application template
-
-
-
-Die Hilfe zum Befehl erhalten Sie über die Option help:
-
-.. code-block:: bash
-
- app/console mapbender:generate:element --help
-
-
-
-
-Erzeugen Sie ein Element über den folgende Befehl:
-
-.. code-block:: bash
-
- app/console mapbender:generate:element --type "map-click" "Workshop\DemoBundle" MapKlick src
-
-
-Es wird eine Übersicht über die erfolgte Aktion ausgegeben. Es wurde eine PHP-Datei und eine js-Datei erzeugt.
-
-.. code-block:: bash
-
- Summary of actions
- - Your element WorkshopDemoBundle\Element\MapKlick has been created.
- - The following files have been created:
-  - PHP class (src/Workshop/DemoBundle/Element/MapKlick.php)
-  - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
+Nach diesen Schritten liegt das neue Bundle im Verzeichnis src vor. Außerdem wurde das Bundle in der Datei Kernel.php registriert. In der Datei routing.yml wurde eine neue Route für das Bundle eingetragen.
 
 
 Anpassung des eigenen Elements
@@ -176,7 +132,7 @@ Erstellen Sie eine Anwendung und fügen Sie das neue Element zu der Anwendung hi
 Ändern der Aktion des Klick-Ereignisses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wenn Sie ein map-click-Element erzeugen, reagiert dieses auf das Klick-Ereignis mit einer Aktion. Diese Aktion kann modifiziert werden. Schauen Sie sich dazu die JQuery widget Datei an (mapbender/src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js). 
+Wenn Sie ein map-click-Element erzeugen, reagiert dieses auf das Klick-Ereignis mit einer Aktion. Diese Aktion kann modifiziert werden. Schauen Sie sich dazu die JQuery widget Datei an (mapbender/src/Workshop/DemoBundle/public/mapbender.element.mapklick.js). 
 
 Hier finden Sie die Funktion *_mapClickHandler()*, die die Koordinaten des Klick-Ereignisses ermittelt und an die Funktion *_mapClickWorker()* weitergibt. Standarmäßig gibt das neu generierte Element die Pixelposition und Koordinate des Klicks in einem Dialog aus.
 

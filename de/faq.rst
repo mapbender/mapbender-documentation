@@ -6,14 +6,14 @@ FAQ - Häufig gestellte Fragen
 Allgemeines
 -----------
 
-app.php und app_dev.php
-~~~~~~~~~~~~~~~~~~~~~~~
+Umgebungen: `prod` und `dev`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Wozu sind die unterschiedlichen Umgebungen da?
+F: Wozu sind diese Umgebungen da?
 
-A: Für den gewöhnlichen produktiven Einsatz rufen Sie Mapbender über die app.php-Datei auf. Erst wenn Sie selbst etwas (an den Twig-, CSS- oder JS-Dateien) entwickeln, nutzen Sie den Aufruf über die app_dev.php-Datei. Der dahinterstehende Entwicklungsmodus gibt mehr Informationen aus, indem er z. B. detailliertere Fehlermeldungen anzeigt. 
+A: Für den produktiven Einsatz rufen Sie Mapbender über die `prod`-Umgebung auf. Erst wenn Sie selbst etwas (an den Twig-, CSS- oder JS-Dateien) entwickeln, nutzen Sie den Aufruf über die `dev`-Umgebung. Der dahinterstehende Entwicklungsmodus gibt mehr Informationen aus, indem er z. B. detailliertere Fehlermeldungen anzeigt. 
 
-Mehr Details zu den Umgebungen gibt es im Kapitel :ref:`app_cache_de`.
+Mehr Details zu den Umgebungen gibt es im Kapitel :ref:`environments_de`.
 
 
 Cache
@@ -21,7 +21,7 @@ Cache
 
 F: Was ist der Cache und wann muss ich ihn löschen?
 
-A: Der Cache ist ein Zwischenspeicher, aus dem Mapbender auf häufig benutzte Dateien zugreift. Der Cache kann ohne Weiteres gelöscht werden. Sie löschen dabei jedoch nur die Inhalte innerhalb des ``mapbender/app/cache/`` Ordners. In der Mapbender-Verzeichnisstruktur sind das das ``prod``- und - falls vorhanden - das ``dev``-Verzeichnis.
+A: Der Cache ist ein Zwischenspeicher, aus dem Mapbender auf häufig benutzte Dateien zugreift. Der Cache kann ohne Weiteres gelöscht werden. Sie löschen dabei jedoch nur die Inhalte innerhalb des ``mapbender/var/cache/`` Ordners. In der Mapbender-Verzeichnisstruktur sind das das ``prod``- und - falls vorhanden - das ``dev``-Verzeichnis.
 
 Diese zwei Verzeichnisse können ohne Bedenken gelöscht werden. Beim nächsten Aufruf von Mapbender werden im Cache der entsprechenden Umgebung erneut Dateien abgelegt.
 
@@ -137,7 +137,7 @@ Installation
 Fehlermeldung beim Drucken
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F: Ich bekomme einen Fehler beim Drucken. Das Log (app/logs/prod.log) wirft folgende Fehlermeldung:
+F: Ich bekomme einen Fehler beim Drucken. Das Log (var/logs/prod.log) wirft folgende Fehlermeldung:
 
 .. code-block:: php
 
@@ -184,6 +184,23 @@ Verweisen Sie auf ``cacert.pem`` in der ``php.ini``, um das Problem zu beheben:
 Wenn Sie ein individuelles, selbstsigniertes Zertifikat verwenden, können Sie die Informationen Ihrer Zertifizierungsstelle in der Datei ``cacert.pem`` hinzufügen. 
 
 Weitere Informationen finden Sie in der PHP-Dokumentation unter: https://www.php.net/manual/en/curl.configuration.php
+
+
+Symfony Abhängigkeiten nachinstallieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: Nach dem Update von Mapbender muss für meine Installation eine Symfony Komponente nachinstalliert werden. Wie erreiche ich das?
+
+A: Es ist möglich, Symfony Komponenten über die Kommandozeile manuell nachzuinstallieren. Dies geschieht mithilfe des Befehls
+ 
+.. code-block:: bash
+   
+   ./bin/composer install symfony/your-bundle
+
+
+Ersetzen Sie einfach ``your-bundle`` mit dem Komponentennamen.
+
+Im `GitHub-Symfony-Projekt <https://github.com/symfony/symfony/blob/5.4/composer.json#L58>`_ finden Sie eine entsprechende Auflistung über die Abhängigkeiten.
 
 
 Warnungen im composer oder bootstrap Skript

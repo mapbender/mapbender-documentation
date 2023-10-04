@@ -12,8 +12,6 @@ Base data determines the fundamental information and settings of an application.
 
 * **Thumbnail**: Uploadable image file from the file directory that will be displayed in the application overview. Click on **Select File**.
 
-* **Map engine**: Choose an engine, OpenLayers 2 (deprecated) and OpenLayers 6 are available.
-
 * **Description**: Text input field that can store the application's description, if provided.
 
 * **Persistent map state**: Stores the state of specific map parameters and settings across sessions. For more information, please see :ref:`Share Elements <persistant_map_view>`.

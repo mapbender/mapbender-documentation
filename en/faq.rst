@@ -6,14 +6,14 @@ FAQ - Frequently Asked Questions
 General
 -------
 
-app.php and app_dev.php
-~~~~~~~~~~~~~~~~~~~~~~~
+Environments: `prod` and `dev`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: What purpose do app.php and app_dev.php have?
+Q: Why does Mapbender offer environments?
 
-A: For productive use you'll use the app.php file. Only if you develop something (TWIG-files, CSS or JS-files) or for debugging, you'll open Mapbender with the app_dev.php in developer mode. This is because the developer mode provides more information and error messages. 
+A: For productive use, you'll use the `prod` environment. If you develop something (TWIG-files, CSS or JS-files) or want to debug, you should use the `dev` environment. This is because this mode provides more information and error messages. 
 
-For further information on the modes, please take a look at the chapter :ref:`app_cache`.
+For further information on the environments, please take a look at the chapter :ref:`environments`.
 
 
 Cache
@@ -21,7 +21,7 @@ Cache
 
 Q: What is the cache and when do I have to clear it?
 
-A: The cache is a small storage area, where Mapbender accesses frequently needed application data. Cache clearing can be useful to refresh your Mapbender installation. You'll delete the contents of the ``mapbender/app/cache/`` directory, not the folder itself. In detail, the ``prod`` and - if present - the ``dev`` directory.
+A: The cache is a small storage area, where Mapbender accesses frequently needed application data. Cache clearing can be useful to refresh your Mapbender installation. You'll delete the contents of the ``mapbender/var/cache/`` directory, not the folder itself. In detail, the ``prod`` and - if present - the ``dev`` directory.
 
 It is no problem to delete these directories. When you run Mapbender again, new files will be stored again in the cache directory.
 
@@ -139,7 +139,7 @@ Installation
 Attempted to call function "imagecreatefrompng"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: I get an error while trying to generate a print output. I have looked into Mapbender's logfile (app/logs/prod.log) and found something like this:
+Q: I get an error while trying to generate a print output. I have looked into Mapbender's logfile (var/logs/prod.log) and found something like this:
 
 .. code-block:: php
 
@@ -186,6 +186,23 @@ How to refer to ``cacert.pem`` in ``php.ini``:
 If you use an individual self-signed certificate, you can add the information of your certificate authority to ``cacert.pem``. 
 
 Find further information in the PHP documentation at: https://www.php.net/manual/en/curl.configuration.php
+
+
+Manually install Symfony dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Q: After updating, I need to install a Symfony component for my Mapbender installation. How can I achieve this?
+
+A: It is possible to manually install Symfony components via the command line. This can be done using the following command:
+
+.. code-block:: bash
+   
+   ./bin/composer install symfony/your-bundle
+
+
+Just replace ``your-bundle`` with the corresponding component name.
+
+You can find a list of componentens and dependencies in the `GitHub Symfony project <https://github.com/symfony/symfony/blob/5.4/composer.json#L58>`_.
 
 
 Deprecation Notices at composer or bootstrap script

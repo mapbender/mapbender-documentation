@@ -17,10 +17,11 @@ The Ditigitzer needs access to a database where the editable tables are. You hav
 Read more about this under :ref:`yaml`.
 
 The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
-If errors occur in the database, fields or form, various error messages appear. Via the normal call and app.php comes a general error message.
-If you want to reproduce the exact error, you should call the page via app_dev.php. In this case, detailed error messages about the error behavior appear.
 
-* **debug:** Display error messages, e.g. syntax error in SQL [experimentel]
+.. hint:: If errors occur in the database, fields or form, various error messages will appear. Here, the productive environment will only give a general error message. If you want to see the exact error, you should call the page as development environment. Find more under :ref:`environments`.
+
+
+* **debug:** Display error messages, e.g. syntax error in SQL [experimental]
 
 .. code-block:: yaml
 
@@ -1049,7 +1050,7 @@ If the YAML application is used in the /application folder, it can be specified 
        refreshLayersAfterFeatureSave:  # If no entry is made in this area no map refresh is carried out after saving 
          - 17
          - 18
-         - osm        # specify by unique name only with applications in app/config/application
+         - osm        # specify by unique name only with applications in application/config/application
       [...]
 
 **Notes:** Map-Refresh after save is available from Digitizer version 1.2. Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer

@@ -3,14 +3,14 @@
 Installation on Ubuntu/Debian
 #############################
 
-Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under **<mapbender>/app/db/demo.sqlite**).
+Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under **<mapbender>/var/db/demo.sqlite**).
 
 .. hint:: For productive use PostgreSQL is recommended. You can find the neccessary configuration steps in chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
 
 Requirements
 ------------
 
-* PHP >= 7.4
+* PHP >= 8.0
 * Apache installation with the following modules activated:
     * mod_rewrite
     * libapache2-mod-php
@@ -52,16 +52,15 @@ Create the file **/etc/apache2/sites-available/mapbender.conf** with the followi
 
 .. code-block:: apache
 
- Alias /mapbender /var/www/mapbender/web/
- <Directory /var/www/mapbender/web/>
+ Alias /mapbender /var/www/mapbender/public/
+ <Directory /var/www/mapbender/public/>
   Options MultiViews FollowSymLinks
-  DirectoryIndex app.php
   Require all granted
 
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.*)$ app.php [QSA,L]
+  RewriteRule ^(.*)$ index.php [QSA,L]
  </Directory>
 
 Activate the site and reload Apache:
@@ -79,11 +78,11 @@ Directory rights
 
  sudo chown -R :www-data /var/www/mapbender
 
- sudo chmod -R ug+w /var/www/mapbender/app/logs
- sudo chmod -R ug+w /var/www/mapbender/app/cache
- sudo chmod -R ug+w /var/www/mapbender/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender/var/logs
+ sudo chmod -R ug+w /var/www/mapbender/var/cache
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
- sudo chmod -R ug+w /var/www/mapbender/app/db/demo.sqlite
+ sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
 
 
 First steps
@@ -98,7 +97,7 @@ Troubleshooting is available via the following command (must be executed in the 
 
 .. code-block:: yaml
 
-	app/console mapbender:config:check
+	bin/console mapbender:config:check
 
 .. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
 
@@ -133,7 +132,7 @@ Installation PHP-PostgreSQL driver
 
    sudo apt install php-pgsql
 
-Configuration of database connection (app/config/parameters.yml):
+Configuration of database connection (application/config/parameters.yml):
 
 .. code-block:: yaml
 
@@ -152,16 +151,16 @@ Initialisation of the database connection:
  .. code-block:: bash
 
     cd /var/www/mapbender
-    app/console doctrine:database:create
-    app/console doctrine:schema:create
-    app/console mapbender:database:init -v
+    bin/console doctrine:database:create
+    bin/console doctrine:schema:create
+    bin/console mapbender:database:init -v
     bin/composer run reimport-example-apps
     
 Create root user for access:
 
 .. code-block:: bash
 
-   app/console fom:user:resetroot
+   bin/console fom:user:resetroot
 
 Find further information in :ref:`installation_configuration`
 

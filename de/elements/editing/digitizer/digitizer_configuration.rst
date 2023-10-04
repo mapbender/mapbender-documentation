@@ -17,9 +17,8 @@ Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editieren
 Mehr zu diesem Thema finden Sie unter :ref:`yaml_de`.
 
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
-Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehler erscheinen Fehlermeldungen. Über den normalen Aufruf und app.php kommt eine allgemeine Fehlermeldung.
-Falls Sie den genauen Fehler reproduzieren möchten, sollten Sie die Seite über app_dev.php aufrufen. Hier tauchen ausführliche Fehlermeldungen zum Fehlerverhalten auf.
 
+.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`environments_de`.
 
 
 YAML-Definition für das Element digitizer in der Textarea unter schemes
@@ -1042,7 +1041,7 @@ Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per ein
        refreshLayersAfterFeatureSave:  # bei keiner Angabe in diesem Bereich erfolgt kein Karten-Refresh nach Speichern
          - 17
          - 18
-         - osm                         # Namensangabe nur bei Anwendungen unter app/config/application möglich
+         - osm                         # Namensangabe nur bei Anwendungen unter application/config/application möglich
       [...]
       
 **Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Mehr Informationen unter: https://github.com/mapbender/mapbender-digitizer

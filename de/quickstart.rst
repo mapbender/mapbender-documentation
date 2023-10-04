@@ -72,27 +72,33 @@ Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installatio
 1. Mapbender starten
 ====================
 
-#. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender/app.php (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch :ref:`installation_de`).
+#. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch :ref:`installation_de`).
 
 #. Das Mapbender-Backend sollte anschließend im Browserfenster erscheinen.
 
 Falls Sie Schwierigkeiten haben Mapbender zu starten, überprüfen Sie, ob der Apache Web Server und die PostgreSQL-Datenbank korrekt funktionieren.
 
 
-Starten von Mapbender im Entwicklungsmodus 
-------------------------------------------
+.. _environments_de:
 
-Symfony bietet einen Entwicklungsmodus mit einer Reihe von Informationen über die Anwendung an (Logging, Fehlermeldungen, Datenbankabfragen, Speicherverbrauch, Zeit und mehr). Dieser Modus ist nur über localhost verfügbar.
+Starten von Mapbender als Produktivumgebung
+-------------------------------------------
 
-* Start des Entwicklungsmodus: http://localhost/mapbender/app_dev.php
+Mapbender bietet zwei Umgebungen an: dev (Standard) und prod.
 
-  .. image:: ../figures/de/mapbender_app_dev.png
-     :width: 100%
+Die Entwicklungsumgebung zeigt vollständige Fehlermeldungen (einschließlich Stacktraces) im Browser und aktiviert die Symfony-Debug-Konsole und den Profiler. Außerdem wird das Caching deaktiviert.
+In der Produktionsumgebung wird das Caching aktiviert, zusätzlich werden nur allgemeine Fehlermeldungen angezeigt. Ausführlichere Meldungen werden hingegen in die Logdateien geschrieben.
 
-* Schauen Sie sich an, welche Information im Entwicklungsmodus angezeigt werden.
+Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf `prod` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
 
-  .. image:: ../figures/mapbender_symfony_profiler.png
-     :width: 100%
+* durch Bearbeiten der ``APP_ENV``-Variable in der `.env`-Datei,
+* durch Hinzufügen einer `.env.local`-Datei und Überschreiben des Werts dort,
+* durch Festlegen einer Umgebungsvariable in Ihrer Apache2-vHost-Konfiguration: ``SetEnv APP_ENV prod``,
+* durch explizites Festlegen beim Starten des lokalen Webservers:
+
+.. code-block:: bash
+
+    APP_ENV=prod symfony server:start --no-tls
 
 
 Das Backend

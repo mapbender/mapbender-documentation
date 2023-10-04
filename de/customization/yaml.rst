@@ -3,7 +3,7 @@
 YAML Konfiguration (Konfigurations- und Anwendungsdateien)
 ==========================================================
 
-Die folgenden Konfigurationsdateien sind zu finden unter application/app/config.
+Die folgenden Konfigurationsdateien sind zu finden unter application/config.
 
 
 parameters.yml
@@ -110,15 +110,12 @@ Die Dateien müssen unter application/web verfügbar sein.
 
 Mailer
 ******
-Die Mailerangaben starten mit mailer (z.B. smtp oder sendmail).
+Die Mailerangaben werden in der ``parameters.yml`` über `mailer_dsn` eingetragen.
 Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
 
-        mailer_transport:  smtp
-        mailer_host:       localhost
-        mailer_user:       ~
-        mailer_password:   ~
+    mailer_dsn: smtp://user:pass@smtp.example.com:25
 
 
 Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
@@ -267,9 +264,9 @@ Weitere Informationen weiter oben unter parameters.yml.
 YAML Anwendungsdateien
 ----------------------
 
-Als YAML definierte Anwendungen können in dem Verzeichnis **app/config/applications** abgelegt werden. Die bekannten Beispielanwendungen “**Mapbender mobile**”, “**Mapbender Demo Map**” und “**Mapbender Demo Map basic**” liegen dort als einzelne YAML Dateien.
+Als YAML definierte Anwendungen können in dem Verzeichnis **application/config/applications** abgelegt werden. Die bekannten Beispielanwendungen “**Mapbender mobile**”, “**Mapbender Demo Map**” und “**Mapbender Demo Map basic**” liegen dort als einzelne YAML Dateien.
 
-Sollen die drei Beispielanwendungen nicht im Mapbender sichtbar sein, so kann unter **app/config/applications** die einzelne Anwendung ausgewählt und deren Variable "published" auf "false" gesetzt werden.
+Sollen die drei Beispielanwendungen nicht im Mapbender sichtbar sein, so kann unter **application/config/applications** die einzelne Anwendung ausgewählt und deren Variable "published" auf "false" gesetzt werden.
 
 .. code-block:: yaml
 
@@ -340,12 +337,12 @@ Bitte gehen Sie zu :ref:`app_command_export_import_clone_de`, um entsprechende K
 **Export über die Konsole**
 
 Anwendungen können als .json oder.yml - Datei über die Konsole exportiert werden.
-Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter app/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
-Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter app/config/application.
+Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter application/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
+Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter application/config/application.
 
 **Import über die Konsole**
 
-YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole via app/console importiert werden.
+YAML-Dateien, die zuvor über die Benutzeroberfläche oder die Konsole exportiert wurden, können über die Konsole via bin/console importiert werden.
 
 
 **Anwendung über die Konsole klonen**

@@ -8,7 +8,7 @@ How to create your own Element?
 `https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_.
 
 
-Mapbender offers an app/console command to create different elements:
+Mapbender offers an bin/console command to create different elements:
 
 * general elements
 * buttons
@@ -20,29 +20,29 @@ Mapbender offers an app/console command to create different elements:
 The following example show the generation and modification of a map-click element.
 
 
-The steps to create your own Element?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The steps to create your own Element
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are some steps you have to follow on the way to your own element.
 
 * create your own bundle
-* create an element via app/console
+* create an element via bin/console
 * edit your new element for your needs
 * add the new element to the function *getElements()* to make it available from the backend
 
 
-Use app/console to generate your own bundle
+Use bin/console to generate your own bundle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Find out more about the command with help:
 
 .. code-block:: bash
 
- app/console generate:bundle --help
+ bin/console generate:bundle --help
 
 .. code-block:: bash
 
- app/console generate:bundle --namespace=Workshop/DemoBundle --dir=src 
+ bin/console generate:bundle --namespace=Workshop/DemoBundle --dir=src 
 
 
 You have to answer some questions before the element will be created:
@@ -69,35 +69,7 @@ You have to answer some questions before the element will be created:
  
  Confirm automatic update of the Routing [yes]? yes
  
-After this steps you new bundle is available at src. The bundle is already registered in the File AppKernel.php. In the file routing.yml you will find a new entry for the bundle.
-
-
-Use app/console to generate a new element
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Find out more about the command with help:
-
-.. code-block:: bash
-
- app/console mapbender:generate:element --help
-
-
-Generate a new element with the following command:
-
-.. code-block:: bash
-
- app/console mapbender:generate:element --type "map-click" "Workshop\DemoBundle" MapKlick src
-
-
-You will get a summary of actions
- 
-.. code-block:: bash
-
- Summary of actions
- - Your element WorkshopDemoBundle\Element\MapKlick has been created.
- - The following files have been created:
-  - PHP class (src/Workshop/DemoBundle/Element/MapKlick.php)
-  - jQuery widget (src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js)
+After this steps you new bundle is available at src. The bundle is already registered in the file Kernel.php. In the file routing.yml you will find a new entry for the bundle.
 
 
 Edit your new element for your needs
@@ -159,7 +131,7 @@ Note that the configuration for your generated element is done in YAML syntax. I
 Change the action on Click event
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you generated a map-click element you get an event on click and an action. The action can be modified. Have a look in the JQuery widget file (mapbender/src/Workshop/DemoBundle/Resources/public/mapbender.element.mapklick.js). 
+When you generated a map-click element you get an event on click and an action. The action can be modified. Have a look in the JQuery widget file (mapbender/src/Workshop/DemoBundle/public/mapbender.element.mapklick.js). 
 
 You will find the function *_mapClickHandler()* that determines the coordinates from the click event and passes them to the function *_mapClickWorker()*. The new generated element will show the coordinates of the click event in an alert box.
 

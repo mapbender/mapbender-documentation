@@ -13,7 +13,7 @@ Mapbender needs a database to store information. The Mapbender download package 
 Requirements
 ------------
 
-* PHP NTS >= 7.4 https://windows.php.net/download/)
+* PHP NTS >= 8.0 https://windows.php.net/download/)
 * Apache installation (https://www.apachelounge.com/download/, run as service with these modules):
     * mod_rewrite
     * mod_fcgid
@@ -81,16 +81,15 @@ Create file **<apache>\\conf\\conf.d\\mapbender.conf** with:
 
 .. code-block:: apache
 
- Alias /mapbender c:/mapbender/web/
- <Directory c:/mapbender/web/>
+ Alias /mapbender c:/mapbender/public/
+ <Directory c:/mapbender/public/>
   Options MultiViews FollowSymLinks
-  DirectoryIndex app.php
   Require all granted
  
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.*)$ app.php [QSA,L]
+  RewriteRule ^(.*)$ index.php [QSA,L]
  </Directory>
 
 
@@ -140,7 +139,7 @@ Create file **<apache>\\conf\\conf.d\\fcgi.conf** with:
 Configuration PostgreSQL
 ------------------------
 
-The configuration of the Mapbender database is done in the file app/config/parameters.yml.
+The configuration of the Mapbender database is done in the file application/config/parameters.yml.
 
 For more information on the database configuration, see :ref:`yaml`.
 
@@ -160,16 +159,16 @@ Open the windows shell and initialize the database connection with the following
 .. code-block:: text
  
     cd c:\mapbender
-    php.exe app/console doctrine:database:create
-    php.exe app/console doctrine:schema:create
-    php.exe app/console mapbender:database:init -v
+    php.exe bin/console doctrine:database:create
+    php.exe bin/console doctrine:schema:create
+    php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
 
 To administrate Mapbender you need a user. Create root user for access:
 
 .. code-block:: text
 
-    php.exe app/console fom:user:resetroot
+    php.exe bin/console fom:user:resetroot
 
 
 Find further information in :ref:`installation_configuration`
@@ -191,7 +190,7 @@ Troubleshooting is available via the following command (must be executed in the 
 
 .. code-block:: yaml
 
-	php.exe app/console mapbender:config:check
+	php.exe bin/console mapbender:config:check
 
 .. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
 

@@ -3,7 +3,7 @@
 YAML Configuration (Configuration and Application files)
 ========================================================
 
-The following Configuration files are under application/app/config.
+The following Configuration files are under application/config.
 
 
 parameters.yml
@@ -97,7 +97,7 @@ Site links will be seperated by "|".
 
 Language settings
 *****************
-Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **app/config/parameters.yml**.
+Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **application/config/parameters.yml**.
 If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language. We recommend en (English) or de (German) as fallback options.
 
 Available language codes are:
@@ -140,16 +140,13 @@ In parameters.yml, you can refer to your own logo and to an alternative image fo
 
 Mailer
 *******
-Mailer information in ``parameters.yml`` (e.g. smtp or sendmail).
+Mailer information are inserted in ``parameters.yml`` via the `mailer_dsn` parameter (e.g. smtp or sendmail).
 
 Configuration example:
 
 .. code-block:: yaml
 
-        mailer_transport:  smtp
-        mailer_host:       localhost
-        mailer_user:       ~
-        mailer_password:   ~
+    mailer_dsn: smtp://user:pass@smtp.example.com:25
 
 The functions 'Self-Registration' and 'reset password' need a mailer.
 
@@ -267,7 +264,7 @@ More information under ``parameters.yml``.
 YAML Application files
 -----------------------
 
-YAML application files are stored under **app/config/applications**.
+YAML application files are stored under **application/config/applications**.
 “**Mapbender mobile**”, “**Mapbender Demo Map**” and “**Mapbender Demo Map basic**” are pre-implemented as example applications.
 
 If you do not want the three example applications to be visible, you can change the variable 'published' to 'false'.
@@ -343,8 +340,8 @@ Please go to :ref:`app_command_export_import_clone` to see the console commands.
 
 Applications can be exported as .json or .yml -file over the console.
 
-A YAML file that has been exported over the console cannot be placed under app/config/application to be imported in a Mapbender installation.
-The YAML format that is produced by exporting over the console is different from the YAML format of the files under app/config/application.
+A YAML file that has been exported over the console cannot be placed under application/config/application to be imported in a Mapbender installation.
+The YAML format that is produced by exporting over the console is different from the YAML format of the files under application/config/application.
 
 
 **Import**

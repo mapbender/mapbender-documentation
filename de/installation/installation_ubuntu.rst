@@ -3,7 +3,7 @@
 Installation auf Ubuntu/Debian
 ##############################
 
-Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (sie liegt unter <mapbender>/app/db/demo.sqlite).
+Die mitgelieferte SQLite Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (sie liegt unter <mapbender>/var/db/demo.sqlite).
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter :ref:`installation_symfony_de`.
 
 .. hint:: Für den Produktiveinsatz wird PostgreSQL empfohlen. Weitere Installationshinweise finden Sie im Kapitel `Optional > Mapbender Einrichtung auf PostgreSQL <#optional>`_.
@@ -12,7 +12,7 @@ Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finde
 Voraussetzungen
 ---------------
 
-* PHP >= 7.4
+* PHP >= 8.0
 * Apache Installation mit folgenden aktivierten Modulen:
     * mod_rewrite
     * libapache2-mod-php
@@ -54,16 +54,15 @@ Datei **/etc/apache2/sites-available/mapbender.conf** mit dem folgenden Inhalt a
 
 .. code-block:: apache
 
- Alias /mapbender /var/www/mapbender/web/
- <Directory /var/www/mapbender/web/>
+ Alias /mapbender /var/www/mapbender/public/
+ <Directory /var/www/mapbender/public/>
   Options MultiViews FollowSymLinks
-  DirectoryIndex app.php
   Require all granted
 
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.*)$ app.php [QSA,L]
+  RewriteRule ^(.*)$ index.php [QSA,L]
  </Directory>
 
 Aktivieren der Seite und Apache neu starten:
@@ -81,11 +80,11 @@ Verzeichnisrechte
 
  sudo chown -R :www-data /var/www/mapbender
 
- sudo chmod -R ug+w /var/www/mapbender/app/logs
- sudo chmod -R ug+w /var/www/mapbender/app/cache
- sudo chmod -R ug+w /var/www/mapbender/web/uploads
+ sudo chmod -R ug+w /var/www/mapbender/var/logs
+ sudo chmod -R ug+w /var/www/mapbender/var/cache
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
- sudo chmod -R ug+w /var/www/mapbender/app/db/demo.sqlite
+ sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
 
 
 Nächste Schritte
@@ -102,7 +101,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 .. code-block:: yaml
 
-	app/console mapbender:config:check
+	bin/console mapbender:config:check
 
 .. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
 
@@ -138,7 +137,7 @@ Installation PHP-PostgreSQL Treiber:
    sudo apt install php-pgsql
 
 
-Konfiguration der Datenbankverbindung in (app/config/parameters.yml).
+Konfiguration der Datenbankverbindung in (application/config/parameters.yml).
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 .. code-block:: yaml
@@ -156,16 +155,16 @@ Initialisierung der Datenbank:
 .. code-block:: bash
 
     cd /var/www/mapbender
-    app/console doctrine:database:create
-    app/console doctrine:schema:create
-    app/console mapbender:database:init -v
+    bin/console doctrine:database:create
+    bin/console doctrine:schema:create
+    bin/console mapbender:database:init -v
     bin/composer run reimport-example-apps
 
 Root-Benutzer für Zugriff anlegen:
 
 .. code-block:: bash
 
-   app/console fom:user:resetroot
+   bin/console fom:user:resetroot
 
 Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`.
 

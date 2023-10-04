@@ -7,30 +7,30 @@ app
 ***
 Dieses Verzeichnis beinhaltet:
 
-* php-Cache (app/cache)
-* log-Verzeichnis (app/logs)
-* Konfigurationsdateien (app/config)
-* applicationkernel (app/AppKernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
+* den php-Cache (var/cache)
+* das log-Verzeichnis (var/logs)
+* das Konfigurationsverzeichnis (config)
+* applicationkernel (src/Kernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
 * das Autoladen (autoload.php)
-* spezielle Ressourcen für die Anwendungen (Resources)
-* die Kommandozeilen-Anwendungen für Pflege und Management (app/console)
+* Verzeichnis für spezielle Anwendungsressourcen (Resources)
+* die Kommandozeilen-Anwendungen für Pflege und Management (bin/console)
 
 
-app/config
-----------
+config
+------
 
-Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis app/config. Zwei Dateien sind dabei von besonderer Bedeutung:
+Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis config sowie im Verzeichnis config/packages. Zwei Dateien sind dabei von besonderer Bedeutung:
 
 * parameters.yml
-* config.yml
+* packages/doctrine.yaml
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 
-app/config/applications
------------------------
+config/applications
+-------------------
 
-Als YAML definierte Anwendungen können in dem Verzeichnis app/config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien.
+Als YAML definierte Anwendungen können in dem Verzeichnis config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien.
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
@@ -106,23 +106,23 @@ Es kontrolliert:
 * dieses Verzeichnis beinhaltet die statischen Ressourcen wie css, js, favicon etc.
 
 
-web/bundles
------------
+public/bundles
+--------------
 
 * Hier sind die statischen Ressourcen der einzelnen Bundles gespeichert.
-* Das folgende Kommando kopiert die Ressourcen von den Bundles zu dem Ordner.
+* Das folgende Kommando kopiert die Ressourcen der Bundles in den Ordner:
 
 .. code-block:: yaml
 
-     app/console assets:install --symlink web
+     bin/console assets:install --symlink public
 
-* **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das folgende Kommando (**app/console assets:install web**) nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
+* **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das folgende Kommando (**bin/console assets:install public**) nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
 
 
 src
 ***
 
-* Verzeichnis für anwendungsspezifische Bundles (ähnlich der x-directories in Mapbender 2.x)
+* Verzeichnis für anwendungsspezifische Bundles
 
 
 vendor
