@@ -55,8 +55,8 @@ Have a look at the steps as commands
  
  # Update your Mapbender database
  cd /var/www/mapbender/
- bin/console doctrine:schema:update --dump-sql
- bin/console doctrine:schema:update --force
+ bin/console doctrine:schema:update --complete --dump-sql
+ bin/console doctrine:schema:update --complete --force
   
  # Import the mapbender demo applications
  bin/composer run reimport-example-apps
@@ -91,8 +91,8 @@ Update Example for Windows
  cd mapbender
  
  # Update your Mapbender database
- php.exe bin/console doctrine:schema:update --dump-sql
- php.exe bin/console doctrine:schema:update --force
+ php.exe bin/console doctrine:schema:update --complete --dump-sql
+ php.exe bin/console doctrine:schema:update --complete --force
  
  # Import the applications from mapbender.yml to your database to get to know about the latest developments
  php.exe bin/composer run reimport-example-apps
