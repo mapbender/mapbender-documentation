@@ -180,7 +180,7 @@ Der Befehl wird beim Update auf eine Mapbender Version benötigt. Er generiert d
 
 .. code-block:: yaml
 
-	bin/console doctrine:schema:update --dump-sql
+    bin/console doctrine:schema:update --dump-sql
     bin/console doctrine:schema:update --force
 		
 * --dump-sql	Zeigt die Änderungen im Datenbankschema an.
