@@ -68,7 +68,7 @@ Have a look at the steps as commands
  sudo chmod -R ug+r /var/www/mapbender
  sudo chown -R :www-data /var/www/mapbender
 
- # You have to set write permission to var/cache and var/logs.
+ # You have to set write permission to var/cache and var/log.
  sudo chmod -R ug+w /var/www/mapbender/application/var/cache
  sudo chmod -R ug+w /var/www/mapbender/application/var/log
  sudo chmod -R ug+w /var/www/mapbender/application/public/uploads

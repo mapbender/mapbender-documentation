@@ -139,7 +139,7 @@ Installation
 Attempted to call function "imagecreatefrompng"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: I get an error while trying to generate a print output. I have looked into Mapbender's logfile (var/logs/prod.log) and found something like this:
+Q: I get an error while trying to generate a print output. I have looked into Mapbender's logfile (var/log/prod.log) and found something like this:
 
 .. code-block:: php
 

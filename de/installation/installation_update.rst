@@ -68,7 +68,7 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  sudo chmod -R ug+r /var/www/mapbender
  sudo chown -R :www-data /var/www/mapbender
 
- # Sie benötigen Schreibrechte für die Verzeichnisse var/cache und var/logs.
+ # Sie benötigen Schreibrechte für die Verzeichnisse var/cache und var/log.
  sudo chmod -R ug+w /var/www/mapbender/application/var/cache
  sudo chmod -R ug+w /var/www/mapbender/application/var/log
  sudo chmod -R ug+w /var/www/mapbender/application/public/uploads
