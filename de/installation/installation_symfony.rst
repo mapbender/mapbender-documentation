@@ -4,7 +4,7 @@ Installation von Mapbender unter Verwendung des Symfony-eigenen Webservers
 ##########################################################################
 
 Mapbender baut auf das `Symfony <https://symfony.com/>`_ Framework auf und kann daher das `Symfony CLI Entwicklungswerkzeug <https://symfony.com/download>`_ für einen lokalen Webserver nutzen. 
-Das ermöglicht Ihnen einen schnellen Test von Mapbender, ohne eine Integration in einen Webserver vorzunehmen. 
+Die Installation im Symfony Webserver beschreibt, wie Mapbender sich mithilfe von Symfony-eigenen Mechanismen schnell konfigurieren lässt. Das ermöglicht Ihnen einen schnellen Test, ohne eine Integration in einen Webserver vorzunehmen. 
 
 .. hint:: Der Symfony-eigene Webserver eignet sich nicht für die Produktivumgebungen.
  

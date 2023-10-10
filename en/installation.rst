@@ -3,7 +3,7 @@
 Installation
 ============
 
-We provide installation instructions for different operating systems. The installation with Symfony describes how you can use Symfony build-in mechanisms to take a quick look at Mapbender.
+This page provides an overview over the different operating system installation instructions.
 
 Installation and update guide for Mapbender users:
 

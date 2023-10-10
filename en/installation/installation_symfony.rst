@@ -4,7 +4,7 @@ Installation of Mapbender using Symfony built-in webserver
 ##########################################################
 
 Mapbender is built on the `Symfony <http://symfony.com/>`_ Framework and therefore can make use of the `Symfony CLI developer tool <https://symfony.com/download>`_, which needs to be installed first. 
-This setup allows a quick test of Mapbender without an integration into an external webserver. 
+The installation with Symfony describes how you can use built-in Symfony mechanisms to take a quick look at Mapbender. This setup allows a quick test without an integration into an external webserver. 
 
 .. hint:: The use of the Symfony built-in webserver is not suitable for production environments. 
 
