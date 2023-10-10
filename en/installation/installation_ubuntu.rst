@@ -3,9 +3,8 @@
 Installation on Ubuntu/Debian
 #############################
 
-Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under **<mapbender>/var/db/demo.sqlite**).
-
-.. hint:: For productive use PostgreSQL is recommended. You can find the neccessary configuration steps in chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
+Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under ``<mapbender>/var/db/demo.sqlite``).
+You can find instructions for a test installation based on the Symfony web server at :ref:`installation_symfony`.
 
 Requirements
 ------------
@@ -19,6 +18,8 @@ Requirements
     * It is recommended to create a database user to access the Mapbender database.
 
 Nginx can also be used as web server (this will not be discussed in detail here).
+
+.. hint:: PostgreSQL is strongly recommended for productive use. Look up the neccessary configurational steps in the chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
 
 
 Preparation
@@ -36,7 +37,7 @@ Installation of mandatory PHP extensions:
 Unpack and register to web server
 ---------------------------------
 
-Download the current Mapbender version and unzip it into /var/www/mapbender or a different location:
+Download the current Mapbender version and unzip it into ``/var/www/mapbender`` or a different location:
 
 .. code-block:: bash
 
@@ -48,7 +49,7 @@ Download the current Mapbender version and unzip it into /var/www/mapbender or a
 Configuration Apache 2.4
 ------------------------
 
-Create the file **/etc/apache2/sites-available/mapbender.conf** with the following content:
+Create the file ``/etc/apache2/sites-available/mapbender.conf`` with the following content:
 
 .. code-block:: apache
 
@@ -78,17 +79,17 @@ Directory rights
 
  sudo chown -R :www-data /var/www/mapbender
 
- sudo chmod -R ug+w /var/www/mapbender/var/logs
- sudo chmod -R ug+w /var/www/mapbender/var/cache
- sudo chmod -R ug+w /var/www/mapbender/public/uploads
+ sudo chmod -R ug+w /var/www/mapbender/application/var/log
+ sudo chmod -R ug+w /var/www/mapbender/application/var/cache
+ sudo chmod -R ug+w /var/www/mapbender/application/public/uploads
 
- sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
+ sudo chmod -R ug+w /var/www/mapbender/application/var/db/demo.sqlite
 
 
 First steps
 -----------
 
-The Mapbender installation can now be accessed under **http://[hostname]/mapbender/**.
+The Mapbender installation can now be accessed under ``http://[hostname]/mapbender/``.
 User data by default:
 
 username: "root", password: "root"
@@ -108,7 +109,8 @@ Find Information about the first steps with Mapbender in the :ref:`Mapbender Qui
 Optional
 --------
 
-**LDAP**
+LDAP
+++++
 
 To use the optional LDAP-connection, following PHP-LDAP-extension is required:
 
@@ -116,15 +118,17 @@ To use the optional LDAP-connection, following PHP-LDAP-extension is required:
 
    sudo apt install php-ldap
 
+.. _postgres_install_config:
 
-**Mapbender installation with PostgreSQL**
+Mapbender installation with PostgreSQL
+++++++++++++++++++++++++++++++++++++++
 
 Configuration of PostgreSQL database for productive use:
 
 Requirements:
 - configured PostgreSQL database
 - database for Mapbender configuration
-- PostgreSQl database user to access the database with create database right
+- PostgreSQl database user to access the database with *create database* right
 
 Installation PHP-PostgreSQL driver
 
@@ -148,38 +152,39 @@ For further information: :ref:`yaml`.
 
 Initialisation of the database connection:
 
- .. code-block:: bash
+.. code-block:: bash
 
-    cd /var/www/mapbender
-    bin/console doctrine:database:create
-    bin/console doctrine:schema:create
-    bin/console mapbender:database:init -v
-    bin/composer run reimport-example-apps
+ cd /var/www/mapbender
+ bin/console doctrine:database:create
+ bin/console doctrine:schema:create
+ bin/console mapbender:database:init -v
+ bin/composer run reimport-example-apps
     
 Create root user for access:
 
 .. code-block:: bash
 
-   bin/console fom:user:resetroot
+    bin/console fom:user:resetroot
 
-Find further information in :ref:`installation_configuration`
+Find further information in :ref:`installation_configuration`.
 
 
-**Mapbender installation with MySQL:**
+Mapbender installation with MySQL
+++++++++++++++++++++++++++++++++++
 
 Similar to configuration with PostgreSQL.
 
-Installation MySQL driver:
+Install the MySQL driver:
 
 .. code-block:: bash
 
    apt install php-mysql
 
-Following parameters (parameters.yml) need to be adapted:
+Adapt these parameters (in parameters.yml) accordingly:
 
 .. code-block:: yaml
 
                     database_driver:   pdo_mysql
                     database_port:     3306
 
-To initialize your database connection, see PostgreSQL.
+To initialize your database connection, see :ref:`postgres_install_config`.

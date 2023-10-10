@@ -28,12 +28,13 @@ All that can be done using the console utility provided by `Symfony <http://symf
    cd mapbender/application
 
 
-
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Database connection parameters are stored together with some more configuration parameters in the file ``application/config/parameters.yml``. 
 
 More Information: :ref:`yaml`.
+
 
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^
@@ -105,7 +106,7 @@ Initializing the database can be done using the command:
     bin/console mapbender:database:init
 
 Importing applications from application/config/applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is possible to (re-)import applications from the applications folder into the database with the command:
 
@@ -117,7 +118,7 @@ It is possible to (re-)import applications from the applications folder into the
 Configuration files
 -------------------
 
-The configuration files are located under **application/config**.
+The configuration files are located under ``application/config``.
 
 Find more information in: :ref:`yaml`.
 

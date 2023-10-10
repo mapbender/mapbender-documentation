@@ -20,9 +20,7 @@ In this document we assume that the SQLite database is used.
     symfony server:start --no-tls
 
 
-The command runs a local web server. By default, the server listens on 127.0.0.1 address and the port number is automatically selected as the first free port starting from 8000.
-
-Now Mapbender is available on the local machine with the address http://127.0.0.1:8000/. 
+The command runs a local web server, so that Mapbender is available on the local machine. By default, the server listens on 127.0.0.1 address and the port number is automatically selected as the first free port starting from 8000.
 
 .. note:: Please note that you can pass the application environment (`prod` or `dev`) with the command below.
 
