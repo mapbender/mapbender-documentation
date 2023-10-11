@@ -104,7 +104,7 @@ It controls:
 
 
 public/bundles
------------
+--------------
 
 * storage for the static resources of the single bundles.
 * the following command copies the resources from the bundles to the folder: 

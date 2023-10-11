@@ -13,7 +13,7 @@ Mapbender needs a database to store information. The Mapbender download package 
 Requirements
 ------------
 
-* PHP NTS >= 8.0 https://windows.php.net/download/)
+* PHP NTS >= 8.0 (https://windows.php.net/download/)
 * Apache installation (https://www.apachelounge.com/download/, run as service with these modules):
     * mod_rewrite
     * mod_fcgid

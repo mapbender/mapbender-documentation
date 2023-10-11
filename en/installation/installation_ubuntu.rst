@@ -6,6 +6,9 @@ Installation on Ubuntu/Debian
 Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under ``<mapbender>/var/db/demo.sqlite``).
 You can find instructions for a test installation based on the Symfony web server at :ref:`installation_symfony`.
 
+.. hint:: PostgreSQL is strongly recommended for productive use. Look up the neccessary configurational steps in the chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
+
+
 Requirements
 ------------
 
@@ -18,8 +21,6 @@ Requirements
     * It is recommended to create a database user to access the Mapbender database.
 
 Nginx can also be used as web server (this will not be discussed in detail here).
-
-.. hint:: PostgreSQL is strongly recommended for productive use. Look up the neccessary configurational steps in the chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
 
 
 Preparation
