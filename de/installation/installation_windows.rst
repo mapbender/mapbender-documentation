@@ -7,13 +7,13 @@ Für eine schnelle Installation als Testsystem kann der MS4W-Installer (https://
 
 Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
 
-Mapbender benötigt eine Datenbank zur Speicherung der Administrationsinformation. Das Installationspaket enthält bereits eine SQLite Datenbank, die direkt verwendet werden kann. Für den produktiven Einsatz wird allerdings die Nutzung einer PostgreSQL Datenbank empfohlen.
+Mapbender benötigt eine Datenbank zur Speicherung der Administrationsinformation. Das Installationspaket enthält bereits eine SQLite-Datenbank, die direkt verwendet werden kann. Für den produktiven Einsatz wird allerdings die Nutzung einer PostgreSQL Datenbank empfohlen.
 
 
 Voraussetzungen
 ---------------
 
-* PHP NTS >= 8.0 https://windows.php.net/download/)
+* PHP NTS >= 8.0 (https://windows.php.net/download/)
 * Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/) mit folgenden aktivierten Modulen:
     * mod_rewrite
     * mod_fcgid
@@ -188,7 +188,7 @@ Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufe
 
 * http://localhost/mapbender/
 
-Per Voreinstellung lauten die Anmeldedaten (wenn die SQLite Datenbank verwendet wurde)
+Per Voreinstellung lauten die Anmeldedaten (wenn die SQLite-Datenbank verwendet wurde)
 
 Benutzername: "root", Passwort: "root"
 

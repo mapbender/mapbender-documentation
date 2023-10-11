@@ -1,28 +1,27 @@
 .. _installation_symfony:
 
-Installation of Mapbender using Symfony built-in webserver
-##########################################################
+Launching Mapbender using the local Symfony web server
+######################################################
 
-Mapbender is built on the `Symfony <http://symfony.com/>`_ Framework and therefore can make use of the `Symfony CLI developer tool <https://symfony.com/download>`_, which needs to be installed first. 
-This setup allows a quick test of Mapbender without an integration into an external webserver. 
+Launching Mapbender on the local Symfony web server allows for quick configuration using Symfony's native mechanisms. This enables you to perform tests without the need to integrate it into a separately set up web server.
 
-.. hint:: The use of the Symfony built-in webserver is not suitable for production environments. 
+.. note:: The local web server bundle has been removed and replaced with the local Symfony web server. Install the `Symfony CLI development tool <https://symfony.com/download>`_ to use it.
+
+.. hint:: The use of the Symfony built-in web server is not suitable for production environments. 
 
 In this document we assume that the SQLite database is used.
 
 * Please check the installation documentation for :ref:`Linux <installation_ubuntu>` respectively :ref:`Windows <installation_windows>`. 
 * Download the current Mapbender version https://mapbender.org/builds/.
 * Extract Mapbender in an arbitrary directory.
-* Start the Symfony webserver:
+* Start the installed local Symfony web server.
 
 .. code-block:: bash
 
     symfony server:start --no-tls
 
 
-The command runs a local web server. By default, the server listens on 127.0.0.1 address and the port number is automatically selected as the first free port starting from 8000.
-
-Now Mapbender is available on the local machine with the address http://127.0.0.1:8000/. 
+The command runs a local web server, so that Mapbender is available on the local machine. By default, the server listens on 127.0.0.1 address and the port number is automatically selected as the first free port starting from 8000.
 
 .. note:: Please note that you can pass the application environment (`prod` or `dev`) with the command below.
 

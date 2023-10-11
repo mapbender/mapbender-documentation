@@ -8,7 +8,7 @@ app
 This directory contains:
 
 * the php-Cache (var/cache)
-* the logs (var/logs)
+* the logs (var/log)
 * the configuration directory (config)
 * the applicationkernel (src/Kernel.php) (this is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
@@ -104,7 +104,7 @@ It controls:
 
 
 public/bundles
------------
+--------------
 
 * storage for the static resources of the single bundles.
 * the following command copies the resources from the bundles to the folder: 

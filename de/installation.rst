@@ -3,9 +3,9 @@
 Installation
 ============
 
-Auf dieser Seite findet sich eine Übersicht über die unterschiedlichen Installationsanleitungen von Mapbender. Die Installation im Symfony Webserver beschreibt, wie Mapbender sich mithilfe von Symfony-eigenen Mechanismen schnell konfigurieren lässt.
+Auf dieser Seite findet sich eine Übersicht über die unterschiedlichen Installationsanleitungen von Mapbender.
 
-Installationsanleitung und Update
+Allgemeine Installationsanleitung und Update
 
 .. toctree::
    :maxdepth: 1
@@ -14,7 +14,7 @@ Installationsanleitung und Update
    installation/installation_windows.rst
    installation/installation_update.rst
 
-Installationsanleitung und Details für Entwickler
+Installationsanleitung und Details für die Mapbender-Entwicklung
 
 .. toctree::
    :maxdepth: 1

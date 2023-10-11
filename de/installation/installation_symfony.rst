@@ -1,10 +1,11 @@
 .. _installation_symfony_de:
 
-Installation von Mapbender unter Verwendung des Symfony-eigenen Webservers
-##########################################################################
+Aufruf von Mapbender unter Verwendung des lokalen Symfony Webservers
+####################################################################
 
-Mapbender baut auf das `Symfony <https://symfony.com/>`_ Framework auf und kann daher das `Symfony CLI Entwicklungswerkzeug <https://symfony.com/download>`_ für einen lokalen Webserver nutzen. 
-Das ermöglicht Ihnen einen schnellen Test von Mapbender, ohne eine Integration in einen Webserver vorzunehmen. 
+Der Aufruf von Mapbender im lokalen Symfony Webserver ermöglicht eine schnelle Konfiguration mithilfe von Symfony-eigenen Mechanismen. Das ermöglicht Ihnen einen schnellen Test, ohne eine Integration in einen eigens aufgesetzen Webserver vorzunehmen. 
+
+.. note:: Das lokale Webserver-Bundle wurde entfernt und durch den lokalen Symfony Web Server ersetzt. Installiere das `Symfony CLI Entwicklungswerkzeug <https://symfony.com/download>`_, um diesen zu nutzen. 
 
 .. hint:: Der Symfony-eigene Webserver eignet sich nicht für die Produktivumgebungen.
  
@@ -13,7 +14,7 @@ In dieser Anleitung wird die im Installationspaket mitgelieferte SQLite-Datenban
 * Bitte prüfen Sie die Systemvoraussetzungen unter :ref:`Linux <installation_ubuntu_de>` bzw. :ref:`Windows <installation_windows_de>`.
 * Laden Sie die aktuellen Mapbender-Version herunter https://mapbender.org/builds/.
 * Entpacken in ein beliebiges Verzeichnis.
-* Starten Sie den Symfony-eigenen Webserver:
+* Starten Sie den installierten lokalen Symfony Webserver.
 
 .. code-block:: bash
 

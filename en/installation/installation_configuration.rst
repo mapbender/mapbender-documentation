@@ -17,7 +17,7 @@ In the following, we will describe the configurational steps of Mapbender a bit 
 
 All that can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which the Mapbender framework is built upon. There's a mayor caveat though you should understand before continuing:
 
-.. note:: The console utility will write files in the var/cache and var/logs directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the var/db directory and the SQLite database within. When you open the application from within the browser, the server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
+.. note:: The console utility will write files in the var/cache and var/log directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the var/db directory and the SQLite database within. When you open the application from within the browser, the SQLite database with its server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
 .. note:: **Important:** The following steps assume that you are in the directory above the app directory (notice that for git installation that means mapbender/application/, else mapbender/).
 
@@ -28,12 +28,13 @@ All that can be done using the console utility provided by `Symfony <http://symf
    cd mapbender/application
 
 
-
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Database connection parameters are stored together with some more configuration parameters in the file ``application/config/parameters.yml``. 
 
 More Information: :ref:`yaml`.
+
 
 Creating the database
 ^^^^^^^^^^^^^^^^^^^^^
@@ -105,7 +106,7 @@ Initializing the database can be done using the command:
     bin/console mapbender:database:init
 
 Importing applications from application/config/applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is possible to (re-)import applications from the applications folder into the database with the command:
 
@@ -117,7 +118,7 @@ It is possible to (re-)import applications from the applications folder into the
 Configuration files
 -------------------
 
-The configuration files are located under **application/config**.
+The configuration files are located under ``application/config``.
 
 Find more information in: :ref:`yaml`.
 
