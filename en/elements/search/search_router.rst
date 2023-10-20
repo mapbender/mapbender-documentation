@@ -207,6 +207,7 @@ In the section **results** the definition for the result table and styling is no
     results:
         view: table
         count: true
+        exportcsv: true
         headers:
             gid: ID
             name: Name
@@ -219,7 +220,8 @@ In the section **results** the definition for the result table and styling is no
                 maxScale: null
 
 * **view**: is always set to table. No more options are possible
-* **count**: true or false to show the number of results
+* **count**: true or false to show the number of results (default true)
+* **exportcsv**: true or false to download the results as CSV file (default false)
 * **headers**: definition of the columns to display and the alternative labeling
 * **callback**: define the action for the click event on a result item
 * **event**: only click is supported
@@ -358,7 +360,7 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
         maxScale: 10000
     styleMap:                              # Styling points on the map
       default:                             # Styling of all points on the map
-        strokeColor: '#003366'        
+        strokeColor: '#003366'
         strokeOpacity: 1
         fillColor: '#3366cc'
         fillOpacity: 0.5
@@ -428,6 +430,7 @@ Example of a route-configuration in the ``configuration`` area:
     results:
       view: table
       count: true
+      exportcsv: true
       headers:
         id: ID
         name: Name
@@ -497,6 +500,7 @@ This template can be used to insert the element into a YAML application.
       results:
           view: table                                         # display results as table 
           count: true                                         # show number of results
+          exportcsv: true
           headers:                                            # column title
               gid: ID                                         # column name -> header
               name: Name
