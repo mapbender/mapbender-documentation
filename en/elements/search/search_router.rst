@@ -219,14 +219,14 @@ In the section **results** the definition for the result table and styling is no
                 minScale: null
                 maxScale: null
 
-* **view**: is always set to table. No more options are possible
-* **count**: true or false to show the number of results (default true)
-* **exportcsv**: true or false to download the results as CSV file (default false)
-* **headers**: definition of the columns to display and the alternative labeling
-* **callback**: define the action for the click event on a result item
-* **event**: only click is supported
-* **buffer**: zoom to the result item with a defined buffer
-* **minScale and maxScale**: zoom to the result item in a scale between minScale and maxScale
+* **view**: is always set to table. No more options are possible.
+* **count**: shows the number of results (default: true).
+* **exportcsv**: generates a download button to give out the results as CSV file (default: false).
+* **headers**: definition of the columns to display and the alternative labeling.
+* **callback**: define the action for the click event on a result item.
+* **event**: only click is supported.
+* **buffer**: zoom to the result item with a defined buffer.
+* **minScale and maxScale**: zoom to the result item in a scale between minScale and maxScale.
 
 
 Styling the Results
