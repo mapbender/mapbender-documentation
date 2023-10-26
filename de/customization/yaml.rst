@@ -319,14 +319,22 @@ Export/Import von YAML Anwendungsdateien über die Benutzeroberfläche
 
 Sie können eine Anwendung unter **Anwendungen** → **Exportieren** als JSON-Datei exportieren.
 
-.. image:: ../../figures/de/Export_Applikation.png
+Nutzen Sie dazu den Exportieren-Button, der sich in der Anwendungsübersicht im Button-Menü einer Anwendung befindet.
+
+.. image:: ../../figures/application_export_button.png
 
 
 **Import**
 
 Unter **Anwendungen** → **Importieren** kann eine Exportdatei in eine Mapbender-Installation importiert werden.
 
-.. image:: ../../figures/de/Import_Applikation.png
+Wählen Sie dazu zunächst den Button ``+ Anwendung anlegen``. Anschließend klicken Sie auf den Importieren-Button.
+
+.. image:: ../../figures/de/application_import_button.png
+
+Nutzen Sie danach die abgebildete Maske, um eine Importdatei als Anwendung zu laden.
+
+.. image:: ../../figures/de/import_dialog.png
 
 
 Export/Import/Klonen von YAML Anwendungsdateien über die Konsole

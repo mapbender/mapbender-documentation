@@ -313,22 +313,29 @@ Mapbender mobile
 For a mobile template on smartphones and tablets.
 
 
-Export/import YAML application files over the user interface
-------------------------------------------------------------
+Export/import YAML application files with the backend
+-----------------------------------------------------
 
 **Export**
 
-You can export applications as JSON under **Applications** → **Export**.
+You can export applications as JSON files under **Applications** → **Export**.
 
-.. image:: ../../figures/export.png
+You can locate the export button within the application overview page. Find it in the application's button menu.
+
+.. image:: ../../figures/application_export_button.png
 
 
 **Import**
 
-You can import an export file into a Mapbender installation under **Applications** → **Import**.
+Under **Applications** → **Import**, an export file can be imported into a Mapbender installation.
 
-.. image:: ../../figures/import.png
+To do this, first select the ``Create Application`` button. Then click on the Import button:
 
+.. image:: ../../figures/import_button.png
+
+Then, use the Import mask to load an import file as an application.
+
+.. image:: ../../figures/import_mask.png
 
 
 Export/import/clone YAML application files over the console
