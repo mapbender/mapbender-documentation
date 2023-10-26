@@ -13,7 +13,7 @@ In the following, we will describe the configurational steps of Mapbender a bit 
 * Copying the bundles' assets to the public web directory
 * Creating the "root" user
 * Initializing the database
-* Loading the applications of the mapbender.yml to your database
+* Loading the applications of the mapbender.yaml to your database
 
 All that can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which the Mapbender framework is built upon. There's a mayor caveat though you should understand before continuing:
 
@@ -31,7 +31,7 @@ All that can be done using the console utility provided by `Symfony <http://symf
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Database connection parameters are stored together with some more configuration parameters in the file ``application/config/parameters.yml``. 
+Database connection parameters are stored together with some more configuration parameters in the file ``application/config/parameters.yaml``. 
 
 More Information: :ref:`yaml`.
 

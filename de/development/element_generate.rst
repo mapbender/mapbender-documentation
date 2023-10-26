@@ -71,7 +71,7 @@ Für die Erstellung müssen noch einige Angaben gemacht werden:
  
  Confirm automatic update of the Routing [yes]? yes
  
-Nach diesen Schritten liegt das neue Bundle im Verzeichnis src vor. Außerdem wurde das Bundle in der Datei Kernel.php registriert. In der Datei routing.yml wurde eine neue Route für das Bundle eingetragen.
+Nach diesen Schritten liegt das neue Bundle im Verzeichnis src vor. Außerdem wurde das Bundle in der Datei Kernel.php registriert. In der Datei routing.yaml wurde eine neue Route für das Bundle eingetragen.
 
 
 Anpassung des eigenen Elements

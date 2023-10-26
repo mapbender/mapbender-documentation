@@ -69,7 +69,7 @@ You have to answer some questions before the element will be created:
  
  Confirm automatic update of the Routing [yes]? yes
  
-After this steps you new bundle is available at src. The bundle is already registered in the file Kernel.php. In the file routing.yml you will find a new entry for the bundle.
+After this steps you new bundle is available at src. The bundle is already registered in the file Kernel.php. In the file routing.yaml you will find a new entry for the bundle.
 
 
 Edit your new element for your needs

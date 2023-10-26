@@ -6,14 +6,14 @@ YAML Konfiguration (Konfigurations- und Anwendungsdateien)
 Die folgenden Konfigurationsdateien sind zu finden unter application/config.
 
 
-parameters.yml
---------------
+parameters.yaml
+---------------
 Hier werden grundlegende Parameter von Mapbender bestimmt.
 
 
 Datenbank
 *********
-Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yml`` und ``config.yml`` verwendet. In der ``parameters.yml`` werden Variablen für die Datenbankverbindung definiert. Es können mehrere Datenbankverbindungen definiert werden. Die Variablen werden in der ``config.yml`` verarbeitet. Zu jeder Datenbankverbindung wird ein Alias vergeben.
+Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yaml`` und ``doctrine.yaml`` verwendet. In der ``parameters.yaml`` werden Variablen für die Datenbankverbindung definiert. Es können mehrere Datenbankverbindungen definiert werden. Die Variablen werden in der ``doctrine.yaml`` verarbeitet. Zu jeder Datenbankverbindung wird ein Alias vergeben.
 
 * **database_driver**: Der Datenbanktreiber. Mögliche Werte sind:
     * pdo_sqlite - SQLite PDO driver
@@ -25,7 +25,7 @@ Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yml`` 
   Beachten Sie, dass Sie den entsprechenden PHP-Treiber installiert bzw. aktiviert haben.
 
 Beispiel:
-Die Datenbankkonfiguration in der ``parameters.yml`` sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
+Die Datenbankkonfiguration in der ``parameters.yaml`` sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
 
 .. code-block:: yaml
 
@@ -82,7 +82,7 @@ Disclaimer
 
 .. image:: ../../figures/disclaimer.png
 
-Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der ``parameters.yml`` ergänzt werden:
+Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der ``parameters.yaml`` ergänzt werden:
 
 .. code-block:: yaml
 
@@ -97,7 +97,7 @@ Die Sitelinks werden mittels "|" voneinander getrennt.
 
 Logo und Login-Bild
 *******************
-In der ``parameters.yml`` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
+In der ``parameters.yaml`` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
 
 .. code-block:: yaml
 
@@ -110,7 +110,7 @@ Die Dateien müssen unter application/web verfügbar sein.
 
 Mailer
 ******
-Die Mailerangaben werden in der ``parameters.yml`` über `mailer_dsn` eingetragen.
+Die Mailerangaben werden in der ``parameters.yaml`` über `mailer_dsn` eingetragen.
 Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
@@ -125,19 +125,19 @@ Weitere Informationen im Kapitel :ref:`users_de`.
 
 Projektname
 ***********
-Der Projektname (Standard: Mapbender) kann in der Datei ``parameters.yml`` angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+Der Projektname (Standard: Mapbender) kann in der Datei ``parameters.yaml`` angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Wichtiger Hinweis:** In der ``parameters.yml`` dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
+**Wichtiger Hinweis:** In der ``parameters.yaml`` dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
 
 
 Proxy-Einstellungen
 *******************
-Wenn ein Proxy verwendet wird, muss dieser in der Datei ``parameters.yml`` im Bereich OWSProxy Configuration angegeben werden.
+Wenn ein Proxy verwendet wird, muss dieser in der Datei ``parameters.yaml`` im Bereich OWSProxy Configuration angegeben werden.
 
 Eine Konfiguration könnte wie folgt aussehen:
 
@@ -189,12 +189,12 @@ Weitere Informationen unter :ref:`translation`.
 
 SSL Zertifikat
 **************
-Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Anschließend muss die Variable ``parameters.cookie_secure`` in Ihrer ``parameters.yml`` auf ``true`` gesetzt werden. Dadurch wird sichergestellt, dass das Login-Cookie nur über sichere Verbindungen übertragen wird.
+Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Anschließend muss die Variable ``parameters.cookie_secure`` in Ihrer ``parameters.yaml`` auf ``true`` gesetzt werden. Dadurch wird sichergestellt, dass das Login-Cookie nur über sichere Verbindungen übertragen wird.
 
-config.yml
-----------
+doctrine.yaml
+-------------
 
-Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die ``parameters.yml`` als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
+Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die ``parameters.yaml`` als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
 
 * **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
@@ -202,7 +202,7 @@ Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeit
 
 Datenbank
 *********
-Wichtig: Jede Datenbank, die in der ``parameters.yml`` definiert wird, muss auch als Platzhalter in der ``config.yml`` stehen:
+Wichtig: Jede Datenbank, die in der ``parameters.yaml`` definiert wird, muss auch als Platzhalter in der ``doctrine.yaml`` stehen:
 
 .. code-block:: yaml
 
@@ -224,7 +224,7 @@ Wichtig: Jede Datenbank, die in der ``parameters.yml`` definiert wird, muss auch
 
 **Verwendung mehrerer Datenbanken**
 
-Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **config.yml**:
+Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **doctrine.yaml**:
 
 .. code-block:: yaml
 
@@ -258,7 +258,7 @@ Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **config.yml**:
                     profiling: "%kernel.debug%"
 
 
-Weitere Informationen weiter oben unter parameters.yml.
+Weitere Informationen weiter oben unter parameters.yaml.
 
 
 YAML Anwendungsdateien
@@ -317,14 +317,14 @@ Export/Import von YAML Anwendungsdateien über die Benutzeroberfläche
 
 **Export**
 
-Sie können eine Anwendung unter **Anwendungen** → **Exportieren** als JSON oder YAML exportieren.
+Sie können eine Anwendung unter **Anwendungen** → **Exportieren** als JSON-Datei exportieren.
 
 .. image:: ../../figures/de/Export_Applikation.png
 
 
 **Import**
 
-Unter **Anwendungen** → **Importieren** kann die Exportdatei in eine Mapbender-Installation importiert werden.
+Unter **Anwendungen** → **Importieren** kann eine Exportdatei in eine Mapbender-Installation importiert werden.
 
 .. image:: ../../figures/de/Import_Applikation.png
 
@@ -336,7 +336,7 @@ Bitte gehen Sie zu :ref:`app_command_export_import_clone_de`, um entsprechende K
 
 **Export über die Konsole**
 
-Anwendungen können als .json oder.yml - Datei über die Konsole exportiert werden.
+Anwendungen können als .json oder .yaml - Datei über die Konsole exportiert werden.
 Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter application/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
 Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter application/config/application.
 

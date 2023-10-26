@@ -21,7 +21,7 @@ config
 
 Basic configuration files of Mapbender are placed in the config directory and the config/packages directory. Two files are of particular importance:
 
-* parameters.yml
+* parameters.yaml
 
 * packages/doctrine.yaml
 

@@ -21,7 +21,7 @@ config
 
 Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis config sowie im Verzeichnis config/packages. Zwei Dateien sind dabei von besonderer Bedeutung:
 
-* parameters.yml
+* parameters.yaml
 * packages/doctrine.yaml
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.

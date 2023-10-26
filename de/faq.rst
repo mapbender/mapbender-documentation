@@ -95,7 +95,7 @@ F: Wenn ich eine Karte mit einem WMS-Dienst als Bild exportieren oder drucken m�
 
 A: Dies kann verschiedene Gründe haben. Unter bestimmten Umständen kann die angeforderte Pixelausdehnung für den WMS zu groß sein, sodass der Dienst in diesem Fall keine Bilder mehr liefert.
 
-In diesem Fall fügen Sie zu Ihrer ``parameters.yml`` folgenden Parameter hinzu, wobei der hier eingetragene Standardwert dem Dienst entsprechend konfiguriert werden kann:
+In diesem Fall fügen Sie zu Ihrer ``parameters.yaml`` folgenden Parameter hinzu, wobei der hier eingetragene Standardwert dem Dienst entsprechend konfiguriert werden kann:
 
 .. code-block:: bash
 
@@ -249,7 +249,7 @@ F: Ich bekomme bei Oracle einen Fehler, wenn ich ``doctrine:schema:create`` ausf
                                                   PRIMARY KEY(id))':
                 ORA-01722: Ungültige Zahl
 
-A: Wahrscheinlich kommt Oracle nicht mit den Dezimaltrennern zurecht und erwartet ein Komma statt einem Punkt (also 1,25 statt 1.25). Das Einsetzen des nachfolgenden Statements am Ende der ``config.yml`` verhindert dies (Cache danach leeren):
+A: Wahrscheinlich kommt Oracle nicht mit den Dezimaltrennern zurecht und erwartet ein Komma statt einem Punkt (also 1,25 statt 1.25). Das Einsetzen des nachfolgenden Statements am Ende der ``doctrine.yaml`` verhindert dies (Cache danach leeren):
 
 .. code-block:: yaml
 
@@ -294,7 +294,7 @@ A: Es gibt zwei Parameter in der ``php.ini``, mit der die Zugriffe auf die Oracl
    oci8.default_prefetch = 100000
 
 
-Des Weiteren stellen Sie in der ``config.yml`` in der jeweiligen Datenbank-Verbindung den persistent-Parameter auf true.
+Des Weiteren stellen Sie in der ``doctrine.yaml`` in der jeweiligen Datenbank-Verbindung den persistent-Parameter auf true.
 
 .. code-block:: bash
 

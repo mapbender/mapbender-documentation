@@ -6,7 +6,7 @@ Aktualisierung von Mapbender auf eine neuere Version
 Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
 * Laden Sie die neuste Version von https://mapbender.org/builds/ herunter
-* Sichern Sie Ihre Konfigurationsdateien (parameters.yml und die Dateien im Verzeichnis config/packages) und Ihre alte Mapbender Version (Dateien und Datenbank)
+* Sichern Sie Ihre Konfigurationsdateien (parameters.yaml und die Dateien im Verzeichnis config/packages) und Ihre alte Mapbender Version (Dateien und Datenbank)
 * Ersetzen Sie die Dateien durch die neuen Mapbender-Dateien
 * Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen
 * Aktualisieren Sie Ihre Mapbender-Datenbank
@@ -40,11 +40,11 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  mv /var/www/mapbender-starter-v4.0.0 /var/www/mapbender
  
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
- cp /var/www/mapbender_save/application/config/parameters.yml /var/www/mapbender/application/config/parameters.yml
+ cp /var/www/mapbender_save/application/config/parameters.yaml /var/www/mapbender/application/config/parameters.yaml
  cp /var/www/mapbender_save/application/config/packages/doctrine.yaml /var/www/mapbender/application/packages/doctrine.yaml
  
  # Händisch müssen Sie nun die Konfigurationsdateien auf neue Parameter überprüfen.
- # Vergleichen Sie die Dateien parameters.yml,packages/doctrine.yaml und ggf. andere Dateien aus dem packages-Verzeichnis
+ # Vergleichen Sie die Dateien parameters.yaml,packages/doctrine.yaml und ggf. andere Dateien aus dem packages-Verzeichnis
  # Sofern Sie eigene Templates angelegt haben, vergleichen Sie diese mit der neuen Mapbender Version.
  # Sofern Sie Vorschaubilder hochgeladen haben: Kopieren Sie diese von der alten Version wieder nach mapbender/public/uploads.
  # Sofern Sie eigene Druckvorlagen verwenden: Kopieren Sie diese wieder nach config/MapbenderPrintBundle/templates/.
@@ -95,7 +95,7 @@ Aktualisierungsbeispiel für Windows
  php.exe bin/console doctrine:schema:update --dump-sql
  php.exe bin/console doctrine:schema:update --force
 
- # Importieren Sie die Anwendungen aus der mapbender.yml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
+ # Importieren Sie die Anwendungen aus der mapbender.yaml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
  php.exe bin/composer run reimport-example-apps
 
  # Ausspielen in den web-Bereich

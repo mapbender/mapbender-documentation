@@ -76,7 +76,7 @@ Mapbender Starter
 *****************
 Mapbender Starter ist ein Symfony Demo-Projekt welches Mapbender Bundles nutzt, um eine grundlegende Mapbender-Anwendung zu präsentieren.
 
-Es enthält die Standard-Demo-Anwendungen, welche in der mapbender.yml definiert werden. Diese sind über ein Web-Interface mit Authentifizierungsmöglichkeiten (Backend) eingebunden. Das Backend kann darüber hinaus genutzt werden, um Anwendungen, Benutzer und Gruppen zur Rechteverwaltung zu erstellen und verschiedene Dienste einzubinden.
+Es enthält die Standard-Demo-Anwendungen, welche in der mapbender.yaml definiert werden. Diese sind über ein Web-Interface mit Authentifizierungsmöglichkeiten (Backend) eingebunden. Das Backend kann darüber hinaus genutzt werden, um Anwendungen, Benutzer und Gruppen zur Rechteverwaltung zu erstellen und verschiedene Dienste einzubinden.
 
 Mapbender Starter kann als einfache Startmöglichkeit in das eigene Mapbender-Projekt genutzt werden.
 

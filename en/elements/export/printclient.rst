@@ -257,7 +257,7 @@ You find the configuration and an example print-template in the Workshop/DemoBun
 There are some steps you have to follow:
 
 1. Create a print template that refers to the feature columns
-2. Define a featureType and refer to your new print template in your config.yml
+2. Define a featureType and refer to your new print template in your doctrine.yaml
 3. Call feature print from FeatureInfo
 4. Or call feature print from digitizer
 
@@ -271,15 +271,15 @@ Define text fields in the print template for every information you would like to
  feature.name for column name of table poi
 
 
-*2. Define a featureType and refer to your new print template in your config.yml*
----------------------------------------------------------------------------------
+*2. Define a featureType and refer to your new print template in your doctrine.yaml*
+------------------------------------------------------------------------------------
 
 .. code-block:: yaml
 
  parameters:
    featureTypes:
      feature_demo:
-       connection: search_db   # Name of the database-connection from the config.yml
+       connection: search_db   # Name of the database-connection from the doctrine.yaml
        table: public.poi       # Table-name in which the FeatureTypes are stored
        uniqueId: a_gid         # Column-name with the unique identifier
        geomType: point         # Geometry-type
@@ -345,7 +345,7 @@ The queued print is an experimental print feature for Mapbender which comes with
 *Queued print: Configuration*
 -----------------------------
 
-To activate the queued print, open the parameters.yml file of your Mapbender installation and insert the following parameter:
+To activate the queued print, open the parameters.yaml file of your Mapbender installation and insert the following parameter:
 
 .. code-block:: yaml
 
@@ -418,7 +418,7 @@ Use '-1' for unrestricted memory usage.
 Set a WMS Tile Size Limit
 -------------------------
 
-If the printing process fails to export a WMS service into the PDF file, the following amendment needs to be made in the parameters.yml file.
+If the printing process fails to export a WMS service into the PDF file, the following amendment needs to be made in the parameters.yaml file.
 This is because, under certain circumstances, the requested pixel size for the WMS is too large, resulting in the service no longer delivering images.
 
 .. code-block:: yaml

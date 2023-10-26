@@ -6,14 +6,14 @@ YAML Configuration (Configuration and Application files)
 The following Configuration files are under application/config.
 
 
-parameters.yml
---------------
+parameters.yaml
+---------------
 The following fundamental Mapbender parameters are specified here.
 
 
 Database
 ********
-The files ``parameters.yml`` and ``config.yml`` are needed to configure databases in Mapbender. In ``parameters.yml``, (multiple) variables for database connection(s) can be defined. These variables are being processed in ``config.yml``. An alias is assigned to each database connection.
+The files ``parameters.yaml`` and ``doctrine.yaml`` are needed to configure databases in Mapbender. In ``parameters.yaml``, (multiple) variables for database connection(s) can be defined. These variables are being processed in ``doctrine.yaml``. An alias is assigned to each database connection.
 
 * **database_driver**: Database driver. Possible values are:
     * pdo_sqlite - SQLite PDO driver
@@ -25,7 +25,7 @@ The files ``parameters.yml`` and ``config.yml`` are needed to configure database
   Please note: Necessary PHP drivers need to be installed and activated.
 
 Example:
-Database configuration in ``parameters.yml``, when PostgreSQL is used:
+Database configuration in ``parameters.yaml``, when PostgreSQL is used:
 
 .. code-block:: yaml
 
@@ -97,7 +97,7 @@ Site links will be seperated by "|".
 
 Language settings
 *****************
-Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **application/config/parameters.yml**.
+Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **application/config/parameters.yaml**.
 If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language. We recommend en (English) or de (German) as fallback options.
 
 Available language codes are:
@@ -127,7 +127,7 @@ More information in :ref:`translation`.
 
 Logo
 ****
-In parameters.yml, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
+In parameters.yaml, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
@@ -140,7 +140,7 @@ In parameters.yml, you can refer to your own logo and to an alternative image fo
 
 Mailer
 *******
-Mailer information are inserted in ``parameters.yml`` via the `mailer_dsn` parameter (e.g. smtp or sendmail).
+Mailer information are inserted in ``parameters.yaml`` via the `mailer_dsn` parameter (e.g. smtp or sendmail).
 
 Configuration example:
 
@@ -155,19 +155,19 @@ More information in chapter :ref:`users`.
 
 Project name
 ************
-The name of the project (default: Mapbender) can be changed in ``parameters.yml``. The change has a global impact on the whole Mapbender installation.
+The name of the project (default: Mapbender) can be changed in ``parameters.yaml``. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Important note:** In ``parameters.yml`` **tabulators may not be used for indentation** instead you need to use space.
+**Important note:** In ``parameters.yaml`` **tabulators may not be used for indentation** instead you need to use space.
 
 
 Proxy settings
 **************
-If you use a proxy, you need to change ``parameters.yml``.
+If you use a proxy, you need to change ``parameters.yaml``.
 
 .. hint:: OWSProxy3 is a transparent Buzz-based proxy that uses cURL for connection to web resources via/without a proxy server.
 
@@ -189,11 +189,11 @@ Configuration example:
 
 SSL certificate
 ***************
-For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yaml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
 
-config.yml
------------
+doctrine.yaml
+-------------
 
 * **fom_user.selfregistration**: To enable or disable self-registration of users, change the fom_user.selfregistration parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
 * **fom_user.reset_password**: In the same way the possibility to reset passwords can be enabled or disabled.
@@ -202,7 +202,7 @@ config.yml
 
 Database
 ********
-Important: Every database defined in parameters.yml needs to have a placeholder in ``config.yml`` as well:
+Important: Every database defined in parameters.yaml needs to have a placeholder in ``doctrine.yaml`` as well:
 
 .. code-block:: yaml
 
@@ -225,7 +225,7 @@ Important: Every database defined in parameters.yml needs to have a placeholder 
 
 Use of several databases
 ************************
-Example with two database connections in ``config.yml``:
+Example with two database connections in ``doctrine.yaml``:
 
 .. code-block:: yaml
 
@@ -258,7 +258,7 @@ Example with two database connections in ``config.yml``:
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
 
-More information under ``parameters.yml``.
+More information under ``parameters.yaml``.
 
 
 YAML Application files
@@ -318,14 +318,14 @@ Export/import YAML application files over the user interface
 
 **Export**
 
-You can export applications as JSON or YAML under **Applications** → **Export**.
+You can export applications as JSON under **Applications** → **Export**.
 
 .. image:: ../../figures/export.png
 
 
 **Import**
 
-You can import the export file into a Mapbender installation under **Applications** → **Import**.
+You can import an export file into a Mapbender installation under **Applications** → **Import**.
 
 .. image:: ../../figures/import.png
 
@@ -334,11 +334,11 @@ You can import the export file into a Mapbender installation under **Application
 Export/import/clone YAML application files over the console
 -----------------------------------------------------------
 
-Please go to :ref:`app_command_export_import_clone` to see the console commands. Find a few introductional words about what's possible with applications over the console below.
+Please go to :ref:`app_command_export_import_clone` to see the console commands. Find a few introductional words about exporting and importing applications over the console below.
 
 **Export**
 
-Applications can be exported as .json or .yml -file over the console.
+Applications can be exported as .json or .yaml file over the console.
 
 A YAML file that has been exported over the console cannot be placed under application/config/application to be imported in a Mapbender installation.
 The YAML format that is produced by exporting over the console is different from the YAML format of the files under application/config/application.

@@ -13,7 +13,7 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 * Kopieren des bundle Assets in das öffentliche web-Verzeichnis
 * Erzeugen des "root" Benutzers
 * Initialisieren der Datenbank
-* Laden der Anwendungen der mapbender.yml Definition in die Datenbank
+* Laden der Anwendungen der mapbender.yaml Definition in die Datenbank
 
 Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
 
@@ -31,7 +31,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfon
 Anpassen der Konfigurationsdatei
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``application/config/parameters.yml`` gespeichert.
+Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``application/config/parameters.yaml`` gespeichert.
 
 Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 

@@ -153,7 +153,7 @@ Aktualisiert die Kartenelementkonfigurationen, falls neue vorhanden sind.
 bin/console doctrine:database:create 
 ************************************
 
-Der Befehl wird einmalig bei der Installation verwendet und legt die Administrationsdatenbank für Mapbender an. Die Angabe zur Datenbankverbindung befindet sich in der parameters.yml-Datei.
+Der Befehl wird einmalig bei der Installation verwendet und legt die Administrationsdatenbank für Mapbender an. Die Angabe zur Datenbankverbindung befindet sich in der parameters.yaml-Datei.
 
 
 .. code-block:: yaml
@@ -205,7 +205,7 @@ Druck
 bin/console mapbender:print:queue:next
 **************************************
 
-Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine externe Integration erfordert. Druckaufträge können danach über die Kommandozeile gesteuert werden. Dafür muss in der parameters.yml-Datei folgender Parameter hinzugefügt und auf TRUE gesetzt werden:
+Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine externe Integration erfordert. Druckaufträge können danach über die Kommandozeile gesteuert werden. Dafür muss in der parameters.yaml-Datei folgender Parameter hinzugefügt und auf TRUE gesetzt werden:
 
 .. code-block:: yaml
 

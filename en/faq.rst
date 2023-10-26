@@ -95,7 +95,7 @@ Q: My WMS service does not return images in my ImageExport or my PrintClient. Co
 
 A: This can have different reasons. Under some circumstances, the requested pixel dimension of a WMS can get too large.
 
-In this case, add the following parameter to your ``parameters.yml`` file - note that you have to adjust the default value according to your service.
+In this case, add the following parameter to your ``parameters.yaml`` file - note that you have to adjust the default value according to your service.
 
 .. code-block:: bash
 
@@ -251,7 +251,7 @@ Q: I get an error when I run ``doctrine:schema:create`` on Oracle. Why? The erro
                                                   PRIMARY KEY(id))':
                 ORA-01722: Invalid number
 
-A: Probably Oracle can't handle the decimal seperators and expects a comma instead of a point (e.g. 1,25 instead of 1.25). This can be adjusted with the following snippet at the end of the ``config.yml`` (clear cache afterwards).
+A: Probably Oracle can't handle the decimal seperators and expects a comma instead of a point (e.g. 1,25 instead of 1.25). This can be adjusted with the following snippet at the end of the ``doctrine.yaml`` (clear cache afterwards).
 
 .. code-block:: yaml
 
@@ -295,7 +295,7 @@ A: There are two parameters in ``php.ini`` which may tweak the performance of Ma
    oci8.default_prefetch = 100000
 
 
-Furthermore, change the respective persistent database connection parameter in ``config.yml`` to true.
+Furthermore, change the respective persistent database connection parameter in ``doctrine.yaml`` to true.
 
 .. code-block:: bash
 
