@@ -218,7 +218,9 @@ Important: Every database defined in parameters.yaml needs to have a placeholder
                 path:      "%database_path%"                # %database_path%, path to the file of the SQLite database. If you don't use a SQ-lite database, write (~) or ``null``.
                 user:      "%database_user%"                # User name for database connection.
                 password:  "%database_password%"            # Password.
+                persistent: true                            # Parameter specifying if the database connection should be established continuously.
                 charset:    UTF8                            # Coding of the database.
+                #server_version: '15'                       # Important: You MUST configure your server version, either here or in the DATABASE_URL env var (see .env file).
                 logging:   "%kernel.debug%"                 # Option, SQLs won't be logged (standard: %kernel.debug%). `More information: <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
                 profiling: "%kernel.debug%"                 # Profiling SQL requests. This option can be turned of in production. (standard: %kernel.debug%)
 
@@ -243,6 +245,7 @@ Example with two database connections in ``doctrine.yaml``:
                     user:      "%database_user%"
                     password:  "%database_password%"
                     charset:    UTF8
+                    #server_version: '15' 
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
                 # database connection search_db
@@ -255,6 +258,7 @@ Example with two database connections in ``doctrine.yaml``:
                     user:      "%database2_user%"
                     password:  "%database2_password%"
                     charset:    UTF8
+                    #server_version: '15' 
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
 

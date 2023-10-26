@@ -299,4 +299,4 @@ Furthermore, change the respective persistent database connection parameter in `
 
 .. code-block:: bash
 
-   persistent=true
+                persistent: true

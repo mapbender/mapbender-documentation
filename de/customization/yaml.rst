@@ -218,9 +218,11 @@ Wichtig: Jede Datenbank, die in der ``parameters.yaml`` definiert wird, muss auc
                 path:      "%database_path%"                # Der %database_path% ist der Pfad zur Datei der SQLite-Datenbank. Wenn Sie keine SQLite-Datenbank verwenden, schreiben Sie als Wert entweder eine Tilde (~) oder ``null``.
                 user:      "%database_user%"                # Benutzername für die Verbindung zur Datenbank.
                 password:  "%database_password%"            # Das Passwort des Datenbankbenutzers.
+                persistent: true                            # Parameter, ob die Verbindung zur Datenbank dauerhaft hergestellt werden soll.
                 charset:    UTF8                            # Die Kodierung, die die Datenbank verwendet.
                 logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standard: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
                 profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standard: %kernel.debug%)
+                #server_version: '15'                       # Wichtig: Sie MÜSSEN die Serverversion konfigurieren, entweder hier oder in der DATABASE_URL Umgebungsvariable (siehe .env-Datei).
 
 **Verwendung mehrerer Datenbanken**
 
@@ -242,6 +244,7 @@ Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **doctrine.yaml**:
                     user:      "%database_user%"
                     password:  "%database_password%"
                     charset:    UTF8
+                    #server_version: '15'
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
                 # Datenbankverbindung search_db
@@ -254,9 +257,9 @@ Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **doctrine.yaml**:
                     user:      "%database2_user%"
                     password:  "%database2_password%"
                     charset:    UTF8
+                    #server_version: '15'
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
-
 
 Weitere Informationen weiter oben unter parameters.yaml.
 
