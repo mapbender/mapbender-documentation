@@ -61,7 +61,7 @@ Hier erfolgt die Definition:
         name:
             type: Symfony\Component\Form\Extension\Core\Type\TextType
             options:
-                required: false
+                required: true
             compare: exact
         city:
             type: Symfony\Component\Form\Extension\Core\Type\TextType
@@ -208,6 +208,7 @@ Im Bereich **results** erfolgt die Definition zum Aufbau der Trefferliste und da
     results:
         view: table
         count: true
+        exportcsv: true
         headers:
             gid: ID
             name: Name
@@ -219,13 +220,14 @@ Im Bereich **results** erfolgt die Definition zum Aufbau der Trefferliste und da
                 minScale: null
                 maxScale: null
 
-* **view**: immer Angabe **table**. Derzeit keine weiteren Optionen
-* **count**: true oder false. Anzeige der Anzahl der Ergebnisse
-* **headers**: Definition der Ausgabespalten  und Spaltenbeschriftung
-* **callback**: Definition der Aktion beim Klick auf einzelne Treffer
-* **event**: immer Angabe **click**. Derzeit keine weiteren Optionen
-* **buffer**: Zoom zum Treffer mit einem definierten Puffer
-* **minScale and maxScale**: Zoom zum Treffer in einem Maßstab zwischen minScale und maxScale
+* **view**: immer Angabe **table**. Derzeit keine weiteren Optionen.
+* **count**: Zeigt die Anzahl der Ergebnisse an (Standard: true).
+* **exportcsv**: Erzeugt einen Button, der den Download der Trefferliste als CSV-Datei ermöglicht (Standard: false).
+* **headers**: Definition der Ausgabespalten  und Spaltenbeschriftung.
+* **callback**: Definition der Aktion beim Klick auf einzelne Treffer.
+* **event**: immer Angabe **click**. Derzeit keine weiteren Optionen.
+* **buffer**: Zoom zum Treffer mit einem definierten Puffer.
+* **minScale and maxScale**: Zoom zum Treffer in einem Maßstab zwischen minScale und maxScale.
 
 
 Styling der Ergebnisse
@@ -435,6 +437,7 @@ Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
     results:
       view: table
       count: true
+      exportcsv: true
       headers:
         id: ID
         name: Name
@@ -446,10 +449,11 @@ Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
           buffer: 10
           minScale: 500
           maxScale: 2500
-          
-          
+
+
+
 YAML-Definition 
-----------------
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
@@ -503,6 +507,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
       results:
           view: table                                   # Ansicht der Ergebnisse, Ausgabe z.B. als Tabelle
           count: true                                   # Anzahl der Treffer anzeigen
+          exportcsv: true
           headers:                                      # Bezeichnung der Tabellenüberschriften und der entsprechenden Ergebnisspalten
               gid: ID                                   # Spaltenname -> Überschrift
               name: Name
