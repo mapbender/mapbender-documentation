@@ -153,7 +153,7 @@ Command to update the Mapbender database.
 bin/console doctrine:database:create 
 ************************************
 
-The command is used only once during installation and creates the administration database for Mapbender. The database connection can be found in the parameters.yml file. 
+The command is used only once during installation and creates the administration database for Mapbender. The database connection can be found in the parameters.yaml file. 
 
 
 .. code-block:: yaml
@@ -205,7 +205,7 @@ Print
 bin/console mapbender:print:queue:next
 **************************************
 
-The queued print is disabled by default because it requires some external integration setup. To run print jobs via the command line, the following parameter must be added to the parameters.yml file and set to TRUE to enable queued printing.
+The queued print is disabled by default because it requires some external integration setup. To run print jobs via the command line, the following parameter must be added to the parameters.yaml file and set to TRUE to enable queued printing.
 
 .. code-block:: yaml
 

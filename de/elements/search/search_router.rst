@@ -49,7 +49,7 @@ Hier erfolgt die Definition:
 
     class: Mapbender\CoreBundle\Component\SQLSearchEngine
     class_options:
-        connection: geodata_db   # database alias from config.yml
+        connection: geodata_db   # database alias from doctrine.yaml
         relation: polygons       # search table
         attributes:              # columns that are used in the form and in the result table
           - gid

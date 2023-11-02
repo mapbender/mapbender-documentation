@@ -140,7 +140,7 @@ Installation PHP-PostgreSQL Treiber:
    sudo apt install php-pgsql
 
 
-Konfiguration der Datenbankverbindung in (application/config/parameters.yml).
+Konfiguration der Datenbankverbindung in (application/config/parameters.yaml).
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
 .. code-block:: yaml
@@ -184,7 +184,7 @@ Installation MySQL Treiber:
    apt install php-mysql
 
 
-Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Parameter (parameters.yml) angepasst werden:
+Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Parameter (parameters.yaml) angepasst werden:
 
 .. code-block:: yaml
 

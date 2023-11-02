@@ -19,7 +19,7 @@ If a user has forgotten his/her password, he can use the "Forgot password?" link
 
 After that, the user should receive an e-mail with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the /FOM/UserBundle/Resources/translations/messages.en.xlf file.
 
-The functionality can be switched off in the config.yml.
+The functionality can be switched off in the doctrine.yaml.
 
 .. code-block:: yaml
 
@@ -30,7 +30,7 @@ The functionality can be switched off in the config.yml.
 Registration
 ------------
 
-Users can self-register themselves in Mapbender. For this you have to adjust the setting fom_user:selfregister in the config.yml to true.
+Users can self-register themselves in Mapbender. For this you have to adjust the setting fom_user:selfregister in the doctrine.yaml to true.
 
 .. code-block:: yaml
 
@@ -63,7 +63,7 @@ Login Failures
 
 Login failures are responded with the Message "Bad credentials". For security reasons it is not shown if the error is based on a wrong username or a wrong password. Login failures will not lock the account indefinitely after four attempts.  Rather the account will be locked for a given period of time.
 
-The config.yml allows to adjust this behaviour:
+The doctrine.yaml allows to adjust this behaviour:
 
 .. code-block:: yaml
 

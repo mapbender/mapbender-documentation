@@ -137,7 +137,7 @@ How to build a new Mapbender build
 * Resolve and close all tickets for the relevant milestone: https://github.com/mapbender/mapbender/milestones
 * Update https://doc.mapbender.org/en/book/versions.html
 * Update Changelog.md for mapbender-starter, mapbender, owsproxy, fom.
-* Update version number in parameters.yml.dist and push
+* Update version number in parameters.yaml.dist and push
 * Update version number in composer.json
 * **Tagging**: Tag at Github. You have nice capabilities for creating good tags and descriptions.
     * Mapbender

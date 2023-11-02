@@ -371,7 +371,7 @@ Die möglichen Optionen sind:
 * **label:** Beschriftung mit dem Namen der Erfassungsoberfläche
 * **minScale:** Minimaler Maßstab, ab dem die Features in der Karte angezeigt werden (z.B. minscale: 5000 = Anzeige ab einem Maßstab über 1:5000, beim rauszoomen)
 * **featureType:** Verbindung zur Datenbank
-    * connection: Name der Datenbank-Verbindung aus der parameters/config.yml
+    * connection: Name der Datenbank-Verbindung aus der parameters/doctrine.yaml
     * table: Name der Tabelle, in der das FeatureType gespeichert wird
     * uniqueId: Name der Spalte mit dem eindeutigen Identifier (Standard bei Leerwert: [id])
     * geomType: Geometrietyp
@@ -1236,8 +1236,8 @@ Darstellung (Styles)
 * **label:** Beschriftung des Objekts mit festen Werten und/oder DB-Feldern, z.B. "ID ${nummmer}"
 * **labelOutlineColor:** Farbe der Umrandung von der Beschriftung [Farbwert/transparent]
 
-YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yml
-================================================================================
+YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yaml
+=================================================================================
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

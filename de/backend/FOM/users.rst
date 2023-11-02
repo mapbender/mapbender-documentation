@@ -23,7 +23,7 @@ Falls ein Benutzer sein Passwort vergessen hat, kann er in der Login-Maske über
 
 Danach bekommt der Benutzer eine E-Mail mit einem Link zur Zurücksetzung des Passworts. Der Link ist nach der Nutzung nicht mehr gültig. Der Text der Mail kann in der Datei /FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
 
-Die Funktionalität kann in der config.yml ausgeschaltet werden.
+Die Funktionalität kann in der doctrine.yaml ausgeschaltet werden.
 
 .. code-block:: yaml
 
@@ -34,7 +34,7 @@ Die Funktionalität kann in der config.yml ausgeschaltet werden.
 Registrierung
 -------------
 
-Benutzer können sich in Mapbender selbst registrieren. Vorher muss in der config.yml die Einstellung *fom_user:selfregister* auf true gestellt werden.
+Benutzer können sich in Mapbender selbst registrieren. Vorher muss in der doctrine.yaml die Einstellung *fom_user:selfregister* auf true gestellt werden.
 
 .. code-block:: yaml
 
@@ -67,7 +67,7 @@ Login Fehler
 
 Fehlerhafte Logins werden mit der Meldung "Login fehlerhaft" kommentiert. Loginfehler schließen den Account nicht dauerhaft aus. Vielmehr wird der Account für eine bestimmte Zeit ausgeschlossen (gelockt).
 
-Die config.yml ermöglicht die Anpassung dieses Verhaltens:
+Die doctrine.yaml ermöglicht die Anpassung dieses Verhaltens:
 
 .. code-block:: yaml
 

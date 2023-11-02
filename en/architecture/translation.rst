@@ -27,15 +27,15 @@ Example for PHP:
  echo $translator->trans('Hello World');
 
 
-yml-files for translations
-****************************
-The translations can be stored in different formats. We use yml-format for Mapbender. 
+yaml-files for translations
+***************************
+The translations can be stored in different formats. We use yaml-format for Mapbender.
 
 We use place holder for every text e.g. **mb.core.featureinfo.popup.btn.ok**. Like this you can define different translations for the same word which occurs in different modules.
 
-We translate the place holder to different languages. English is the default language that we provide. It is also defined as the fallback language in the parameters.yml file. The fallback language will be used if you define a language in parameters.yml that does not exist.
+We translate the place holder to different languages. English is the default language that we provide. It is also defined as the fallback language in the parameters.yaml file. The fallback language will be used if you define a language in parameters.yaml that does not exist.
 
-This is how a translation file messages.de.yml for German translation could look like.
+This is how a translation file messages.de.yaml for German translation could look like.
 
 .. code-block:: yaml
 
@@ -76,14 +76,14 @@ How can you activate translation?
 *********************************
 
 Mapbender is automatically adjusted to your browser's language.
-Moreover, you can set fallback language options in the configuration file **application/config/parameters.yml**. If a translation from your browser's default language is not translated in Mapbender yet, it will fall back to the predefined language instead. We recommend to set English and/or German as fallback options.
+Moreover, you can set fallback language options in the configuration file **application/config/parameters.yaml**. If a translation from your browser's default language is not translated in Mapbender yet, it will fall back to the predefined language instead. We recommend to set English and/or German as fallback options.
 
 .. code-block:: yaml
     
     fallback_locale:   en
     locale:            en
 
-Check whether translations (yml-files) for your language exist 
+Check whether translations (yaml-files) for your language exist
 
 * mapbender/src/Mapbender/CoreBundle/Resources/translations/
 * mapbender/src/Mapbender/ManagerBundle/Resources/translations/
@@ -96,21 +96,21 @@ Check whether translations (yml-files) for your language exist
 * ...
 
 
-Create yml-files for your language
-**********************************
+Create yaml-files for your language
+***********************************
 
 If your language is not translated yet, it is easy to add a new language.
 
-* Check the translation directories and create a new file by copying the English locale (messages.en.yml)
+* Check the translation directories and create a new file by copying the English locale (messages.en.yaml)
 * translate
-* set locale in your parameters.yml to the new language
+* set locale in your parameters.yaml to the new language
 * clear your cache
 * adjust your browser language to the translated language - Mapbender will be translated automatically.
 * if everything is fine with your new language, give the files to the Mapbender community - best would be a pull request on GitHub in the Mapbender repository.
 
 
 Naming conventions and locations
-**********************************
+********************************
 
 Symfony looks for translation files in the following directories in the following order:
 
@@ -136,7 +136,7 @@ Supporting more and more languages would be great for Mapbender. The Mapbender p
 
 This is what you have to do:
 
-* Option 1: send the new yml-files for your language to the Mapbender developer (mapbender@osgeo.org) or 
+* Option 1: send the new yaml-files for your language to the Mapbender developer (mapbender@osgeo.org) or
 
 * Option 2: create a pull request on GitHub.
 
@@ -208,13 +208,13 @@ optionally check to see what has changed.
 
 .. code-block:: yaml
     
-    git diff messages.de.yml
+    git diff messages.de.yaml
 
 3. add the changes into stage area
 
 .. code-block:: yaml
     
-    git add messages.de.yml
+    git add messages.de.yaml
 
 4. commit changes locally
 

@@ -267,7 +267,7 @@ Sie finden die Konfiguration und ein Beispiel-Drucktemplate im  Workshop/DemoBun
 Die folgenden Schritte müssen durchgeführt werden:
 
 1. Erzeugen eines Drucktemplates, das auf die Objektspalten verweist
-2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der config.yml
+2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der doctrine.yaml
 3. Druck über die Informationsabfrage aufrufen
 4. Alternativ: Aufruf des Drucks über die Digitalisierung
 
@@ -282,15 +282,15 @@ Im Drucktemplate ein Textfeld für die Informationen definieren, die für das se
   feature.name for column name of table poi
 
 
-*2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der config.yml*
--------------------------------------------------------------------------------------------
+*2. Definition eines featureTypes und Verweis auf das neue Drucktemplate in der doctrine.yaml*
+----------------------------------------------------------------------------------------------
 
 .. code-block:: yaml
 
  parameters:
    featureTypes:
      feature_demo:
-       connection: search_db   # Name der Datenbankverbindung von der config.yml
+       connection: search_db   # Name der Datenbankverbindung von der doctrine.yaml
        table: public.poi       # Tabellenname, in der sich die Objekte befinden
        uniqueId: a_gid         # Spaltennname mit der eindeutigen ID
        geomType: point         # Geometrietyp
@@ -360,7 +360,7 @@ Der Warteschleifendruck ist ein Druckfeature in Mapbender, welches einen erweite
 *Warteschleifendruck: Konfiguration*
 ------------------------------------
 
-Um den Warteschleifendruck zu aktivieren, muss die parameters.yml-Datei wie folgt ergänzt werden:
+Um den Warteschleifendruck zu aktivieren, muss die parameters.yaml-Datei wie folgt ergänzt werden:
 
 .. code-block:: yaml
 
@@ -428,7 +428,7 @@ Ist der Parameter "null" eingestellt, passt sich der Druck an die vorgegebene ph
 WMS-Kachelgröße begrenzen
 -------------------------
 
-Sofern der Druck einen WMS-Dienst nicht erfolgreich in die PDF-Datei exportieren sollte, muss in der parameters.yml-Datei eine Ergänzung vorgenommen werden.
+Sofern der Druck einen WMS-Dienst nicht erfolgreich in die PDF-Datei exportieren sollte, muss in der parameters.yaml-Datei eine Ergänzung vorgenommen werden.
 Das hat damit zu tun, dass unter bestimmten Umständen die angeforderte Pixelausdehnung für den WMS zu groß ist, sodass der Dienst keine Bilder mehr liefert.
 
 .. code-block:: yaml

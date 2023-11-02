@@ -381,7 +381,7 @@ The possible options are:
 * **label:** Label of the Digitizer popup
 * **minScale:** Minimum scale, where the features should be displayed in the map (e.g. minscale: 5000 = show from a scale 'over' 1:5000, when zooming out).
 * **featureType:** Connection to the database
-    * connection: Name of the database-connection from the parameters/config.yml
+    * connection: Name of the database-connection from the parameters/doctrine.yaml
     * table: Table-name in which the FeatureTypes are stored
     * uniqueId: Column-name with the unique identifier
     * geomType: Geometry-type
@@ -1244,8 +1244,8 @@ By specifying a style the way the objects are displayed on the map can be define
 * **label:** Labeling the object with fixed values ​​and / or DB fields, e.g. "ID ${nummmer}"
 * **labelOutlineColor:** Color of the border from the label [color value/transparent]
 
-YAML-Definition for the element Digitizer in mapbender.yml
-==========================================================
+YAML-Definition for the element Digitizer in mapbender.yaml
+===========================================================
 
 This template can be used to insert the element into a YAML application.
 

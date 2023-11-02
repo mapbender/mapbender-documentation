@@ -6,7 +6,7 @@ Update Mapbender to a newer Version
 To update Mapbender you have to do the following steps:
 
 * get the new version from http://mapbender.org/builds/
-* save your configuration files (parameters.yml and files from folder config/packages) and your old Mapbender (files and database)
+* save your configuration files (parameters.yaml and files from folder config/packages) and your old Mapbender (files and database)
 * replace the new files 
 * merge your configuration files (check for new parameters and changes)
 * update your Mapbender database
@@ -40,11 +40,11 @@ Have a look at the steps as commands
  mv /var/www/mapbender-starter-v4.0.0 /var/www/mapbender
  
  # copy your old configuration files to the new version
- cp /var/www/mapbender_save/application/config/parameters.yml /var/www/mapbender/application/config/parameters.yml
+ cp /var/www/mapbender_save/application/config/parameters.yaml /var/www/mapbender/application/config/parameters.yaml
  cp /var/www/mapbender_save/application/config/packages/doctrine.yaml /var/www/mapbender/application/config/packages/doctrine.yaml
  
  # manual step
- # merge parameters.yml, doctrine.yaml and other YAML files you use
+ # merge parameters.yaml, doctrine.yaml and other YAML files you use
  # if you use screenshots: copy the screenshots from the old version back to mapbender/public/uploads
  # if you have individual templates: merge the templates with the new Mapbender version
  # if you use your own print templates: copy them back to config/MapbenderPrintBundle/templates/
@@ -82,7 +82,7 @@ Update Example for Windows
    
  # Save the old version (files and database)
    
- # Copy the configuration files (parameters.yml and files from folder config/packages) to your new Mapbender version. 
+ # Copy the configuration files (parameters.yaml and files from folder config/packages) to your new Mapbender version. 
  # You have to check the configuration files for changes (new parameter, other changes)
 
  # Call the bin/console commands with php.exe
@@ -94,7 +94,7 @@ Update Example for Windows
  php.exe bin/console doctrine:schema:update --dump-sql
  php.exe bin/console doctrine:schema:update --force
  
- # Import the applications from mapbender.yml to your database to get to know about the latest developments
+ # Import the applications from mapbender.yaml to your database to get to know about the latest developments
  php.exe bin/composer run reimport-example-apps
 
  # Export files to the web-directory

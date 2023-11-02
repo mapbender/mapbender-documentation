@@ -10,7 +10,7 @@ This directory contains:
 * the php-Cache (var/cache)
 * the logs (var/log)
 * the configuration directory (config)
-* the applicationkernel (src/Kernel.php) (this is called by the FrontendControllers and controlls the whole application)
+* the application kernel (src/Kernel.php) (is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
 * the application specific resource directory (Resources)
 * the command line application for maintaining and management tasks (bin/console)
@@ -21,7 +21,7 @@ config
 
 Basic configuration files of Mapbender are placed in the config directory and the config/packages directory. Two files are of particular importance:
 
-* parameters.yml
+* parameters.yaml
 
 * packages/doctrine.yaml
 
@@ -39,28 +39,8 @@ More Information: :ref:`yaml` .
 bin
 ***
 
-Here are symlinks to the following binaries placed:
+Here you find some libraries.
 
-* apigen
-* composer
-* coveralls
-* doctrine
-* doctrine.php
-* phantomjs
-* phing
-* phpunit
-
-
-documentation
-*************
-
-Folder for this documentation.
-
-
-fom
-***
-
-Directory of the `FOM submodule <https://github.com/mapbender/fom>`_.
 
 
 mapbender
@@ -74,32 +54,18 @@ mapbender/...../translations
 
 Directory: mapbender/src/Mapbender/CoreBundle/Resources/translations/
 
-The translations are stored in `XLIFF textfiles <https://en.wikipedia.org/wiki/XLIFF>`_. Every language needs an xliff-file like messages.en.xlf for the English translation.
+The translations are stored in `YAML-Dateien <https://en.wikipedia.org/wiki/YAML>`_. Every language needs an YAML-file like messages.en.yaml for the English translation.
 
 
 
-owsproxy
-********
-
-Directory of the `OWSProxy submodule <https://github.com/mapbender/owsproxy3>`_.
-
-
-
-vendor
+public
 ******
-
-Directory for external libraries (loaded by composer) and further Mapbender modules (a.o. Digitizer, Mapbender-Icons).
-
-
-
-web
-***
 
 This directory has to be published by the webserver. The ALIAS has to refer to this directory. 
 
 It controls: 
 
-* the FrontendController (PHP-Script, which can be called). These are **app.php** for the productive-system and **app_dev.php** for the development version. The development version contains the profiler for perfomance tests and more.
+* index.php - the FrontendController (PHP-Script, which can be called).
 * this directory contains the static resoures like css, js, favicon etc.
 
 
@@ -111,9 +77,10 @@ public/bundles
 
 .. code-block:: yaml
 
-     bin/console assets:install --symlink public
+     bin/console assets:install --symlink --relative public
 
 * **Notice**: If you use Windows, you cannot create symbolic links and therefore have to run the command (**bin/console assets:install public**) to copy the files to the directory after every change in the code.
+
 
 
 src
@@ -124,4 +91,4 @@ src
 
 vendor
 ******
-* directory where all the Bundles which are used from Symfony are found. Resources are used by Symfony using the Autoloading.
+* Directory for external libraries (loaded by composer) are placed. Resources are used by Symfony using the Autoloading.
