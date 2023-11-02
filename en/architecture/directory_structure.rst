@@ -10,7 +10,7 @@ This directory contains:
 * the php-Cache (var/cache)
 * the logs (var/log)
 * the configuration directory (config)
-* the applicationkernel (src/Kernel.php) (this is called by the FrontendControllers and controlls the whole application)
+* the application kernel (src/Kernel.php) (is called by the FrontendControllers and controlls the whole application)
 * the Autoloading (autoload.php) 
 * the application specific resource directory (Resources)
 * the command line application for maintaining and management tasks (bin/console)
@@ -65,7 +65,7 @@ This directory has to be published by the webserver. The ALIAS has to refer to t
 
 It controls: 
 
-* the FrontendController (PHP-Script, which can be called). These are **app.php** for the productive-system and **app_dev.php** for the development version. The development version contains the profiler for perfomance tests and more.
+* index.php - the FrontendController (PHP-Script, which can be called).
 * this directory contains the static resoures like css, js, favicon etc.
 
 
