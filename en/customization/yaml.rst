@@ -98,7 +98,9 @@ Site links will be seperated by "|".
 Language settings
 *****************
 Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **application/config/parameters.yaml**.
-If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language. We recommend en (English) or de (German) as fallback options.
+If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language.
+
+The locale can only be set for the entire Mapbender installation (not for single applications).
 
 Available language codes are:
 
@@ -117,10 +119,20 @@ Configuration example:
 
 .. code-block:: yaml
 
-    # locale en, de, es, fr, it, nl, pt, ru, tr, uk are available
     fallback_locale:   en
     locale:            en    
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+
+You also can force Mapbender to use the language defined for the parameter locale to be used. to do this add mapbender.automatic_locale: false.
+
+.. code-block:: yaml
+
+    mapbender.automatic_locale: false
+    fallback_locale:   en
+    locale:            es
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
 
 More information in :ref:`translation`.
 
@@ -135,7 +147,7 @@ In parameters.yaml, you can refer to your own logo and to an alternative image f
     branding.login_backdrop: ./bundles/mapbendercore/image/body.png
 
 
- The files must be accessible under application/web.
+ The files must be accessible under application/public.
 
 
 Mailer

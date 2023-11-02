@@ -27,9 +27,9 @@ Example for PHP:
  echo $translator->trans('Hello World');
 
 
-yml-files for translations
-****************************
-The translations can be stored in different formats. We use yml-format for Mapbender. 
+yaml-files for translations
+***************************
+The translations can be stored in different formats. We use yaml-format for Mapbender.
 
 We use place holder for every text e.g. **mb.core.featureinfo.popup.btn.ok**. Like this you can define different translations for the same word which occurs in different modules.
 
@@ -83,7 +83,7 @@ Moreover, you can set fallback language options in the configuration file **appl
     fallback_locale:   en
     locale:            en
 
-Check whether translations (yml-files) for your language exist 
+Check whether translations (yaml-files) for your language exist
 
 * mapbender/src/Mapbender/CoreBundle/Resources/translations/
 * mapbender/src/Mapbender/ManagerBundle/Resources/translations/
@@ -96,8 +96,8 @@ Check whether translations (yml-files) for your language exist
 * ...
 
 
-Create yml-files for your language
-**********************************
+Create yaml-files for your language
+***********************************
 
 If your language is not translated yet, it is easy to add a new language.
 
@@ -110,7 +110,7 @@ If your language is not translated yet, it is easy to add a new language.
 
 
 Naming conventions and locations
-**********************************
+********************************
 
 Symfony looks for translation files in the following directories in the following order:
 
@@ -136,7 +136,7 @@ Supporting more and more languages would be great for Mapbender. The Mapbender p
 
 This is what you have to do:
 
-* Option 1: send the new yml-files for your language to the Mapbender developer (mapbender@osgeo.org) or 
+* Option 1: send the new yaml-files for your language to the Mapbender developer (mapbender@osgeo.org) or
 
 * Option 2: create a pull request on GitHub.
 

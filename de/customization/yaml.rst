@@ -105,7 +105,7 @@ In der ``parameters.yaml`` kann auf das eigene Logo und auf ein alternatives Bil
     branding.login_backdrop: ./bundles/mapbendercore/image/body.png
 
 
-Die Dateien müssen unter application/web verfügbar sein.
+Die Dateien müssen unter application/public verfügbar sein.
 
 
 Mailer
@@ -159,10 +159,11 @@ Eine Konfiguration könnte wie folgt aussehen:
 Spracheinstellung
 *****************
 Mapbender verwendet automatisch die ausgewählte Sprache der Browsereinstellungen.
-Es ist jedoch möglich, eine bevorzugte Sprache (fallback) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt. Es werden Englisch und/oder Deutsch aufgrund ihres hohen Übersetzungsanteils empfohlen.
-Dies kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
+Es ist jedoch möglich, eine bevorzugte Sprache (fallback_locale) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt.
 
-  Folgende Sprachcodes sind verfügbar:
+Die Sprache kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
+
+Folgende Sprachcodes sind verfügbar:
 
 * en für Englisch (Standard)
 * de für Deutsch
@@ -179,10 +180,20 @@ Eine Konfiguration könnte wie folgt aussehen:
 
 .. code-block:: yaml
 
-    # locale en, de, es, fr, it, nl, pt, ru, tr, uk are available
     fallback_locale:   en
     locale:            de    
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+
+Mapbender kann auch explizit eine Sprache verwenden. Dazu muss der Parameter mapbender.automatic_locale: false gesetzt werden. Anschließend nutzt Mapbender die unter locale definierte Spracheinstellung.
+
+.. code-block:: yaml
+
+    mapbender.automatic_locale: false
+    fallback_locale:   en
+    locale:            es
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
 
 Weitere Informationen unter :ref:`translation`.
 
