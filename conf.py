@@ -29,6 +29,7 @@ extensions = [
 
 # -- notfound.extension
 notfound_template = 'page.html'
+notfound_pagename = '404'
 notfound_urls_prefix = None
 notfound_context = {
     'title': 'Page not found',
