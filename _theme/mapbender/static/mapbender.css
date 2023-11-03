@@ -107,9 +107,6 @@ div.sphinxsidebar p {
     padding: 5px 20px;
 }
  
-div.sphinxsidebar p.topless {
-}
- 
 div.sphinxsidebar ul {
     margin: 10px 20px;
     padding: 0;
@@ -223,6 +220,7 @@ pre {
     border: 1px solid #C6C9CB;
     font-size: 1.1em;
     margin: 1.5em 0 1.5em 0;
+    box-shadow: 1px 1px 1px #d8d8d8;
     -webkit-box-shadow: 1px 1px 1px #d8d8d8;
     -moz-box-shadow: 1px 1px 1px #d8d8d8;
 }
