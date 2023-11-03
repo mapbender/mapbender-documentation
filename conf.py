@@ -28,7 +28,12 @@ extensions = [
 ]
 
 # -- notfound.extension
-notfound_template = "404.html"
+notfound_template = 'page.html'
+notfound_urls_prefix = None
+notfound_context = {
+    'title': 'Page not found',
+    'body': '<h1>Page not found</h1><p>The page you were looking for does not exist.</p><p>Back to <a href="https://doc.mapbender.org/">Main Page</a>.</p><hr><h1>Seite nicht gefunden</h1><p>Die Seite, die Sie aufgerufen haben, existiert nicht.</p><p>Zurück zur <a href="https://doc.mapbender.org/de/">Hauptseite</a>.</p><hr><img src="https://www.openhub.net/p/mapbender/widgets/project_partner_badge.gif" alt="Mapbender Project on Open Hub" align="right" target="https://www.openhub.net/p/mapbender?ref=sample" /><img src="https://doc.mapbender.org/_images/OSGeo_project.png" width="200px" alt="Mapbender is a Project of the OSGeo Foundation" align="center" target="https://www.osgeo.org/" /><img src="https://doc.mapbender.org/_images/mapbender_logo_font.png" width="400px" alt="Mapbender" align="center" target="https://mapbender.org/" />',
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
