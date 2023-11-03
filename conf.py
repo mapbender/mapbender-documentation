@@ -355,6 +355,7 @@ html_context = {
 }
 
 html_css_files = [
+#  'mapbender.css',
   'theme_overrides.css'
 ]
 
