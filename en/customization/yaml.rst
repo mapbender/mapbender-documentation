@@ -95,10 +95,10 @@ A disclaimer can be added through the use of site links.
 Site links will be seperated by "|".
 
 
-.. _configuration-icons:
+.. _custom-icons:
 
-Icons
-*****
+Customizing icons
+*****************
 By setting the following parameters, you can enable specific customization of icons:
 
 1. ``mapbender.icons.disable_default`` (default: false).

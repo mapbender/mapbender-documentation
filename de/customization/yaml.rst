@@ -95,10 +95,10 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
 Die Sitelinks werden mittels "|" voneinander getrennt.
 
 
-.. _konfiguration-icons:
+.. _custom-icons_de:
 
-Icons
-*****
+Icons anpassen
+**************
 Mithilfe des Setzens folgender Parameter wird die spezifische Anpassung von Icons ermöglicht:
 
 1. ``mapbender.icons.disable_default`` (Standardwert: false).
