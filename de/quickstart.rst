@@ -146,7 +146,7 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Wählen Sie anschließend eine Vorlage für die Anwendung. Diese bestimmt den Aufbau der Anwendung. Zur Auswahl stehen: Fullscreen, Fullscreen alternative, Mapbender Mobile template. Es ist ebenfalls möglich, eigene Vorlagen anzulegen und neuen Anwendungen zuzuordnen.
 
-.. tip:: Beachten Sie, dass Layout-, Icon- und Farbanpassungen online über den CSS-Editor und7oder lokal über Konfigurationsdateien erfolgen. Lesen Sie dazu die Dokumentation unter :ref:`templates_de`.
+.. tip:: Beachten Sie, dass Layout-, Icon- und Farbanpassungen online über den CSS-Editor und/oder lokal über Konfigurationsdateien erfolgen. Lesen Sie dazu die Dokumentation unter :ref:`templates_de`.
 
 #. Geben Sie einen Titel, einen URL-Titel und ggf. eine Beschreibung für die Anwendung an. Titel und URL-Titel können identisch sein. Letzterer muss sich nach den Standards der festgelegten URL-Syntax richten.
 
