@@ -146,7 +146,7 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. After that, select a template in order to define the layout of your application. The options are: Fullscreen, Fullscreen alternative, Mapbender Mobile template. It is also possible to define your own template and assign it to a new application.
 
-.. tip:: Please note that the style-, icon- and layout-configurations are set up in configuration files. Read more about template generation under :ref:`templates`.
+.. tip:: Please note that the style-, icon- and layout-configurations can be set up online via the CSS editor tab and/or via configuration files locally. Read more about template generation under :ref:`templates`.
 
 #. Define a title, URL title and a description (optional). Title and URL title can be identical. However, the URL title has to follow the usual URL syntax.
 
