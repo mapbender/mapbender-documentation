@@ -95,6 +95,46 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
 Die Sitelinks werden mittels "|" voneinander getrennt.
 
 
+.. _konfiguration-icons:
+
+Icons
+*****
+Mithilfe des Setzens folgender Parameter wird die spezifische Anpassung von Icons ermöglicht:
+
+1. ``mapbender.icons.disable_default`` (Standardwert: false).
+
+   - Wenn auf `true` gesetzt, werden die mitgelieferten Icons des Mapbender-Namespace im Button-Bearbeitungsformular deaktiviert. Dazu gehören die Icons About, Area Ruler, Feature Info, Image Export, Layer tree, Legend, Line ruler und Polygon. Diese werden z.B. für die ähnlich bezeichneten Elemente :ref:`about_dialog_de`, :ref:`ruler_de`, :ref:`feature_info_de`, :ref:`imageexport_de`, :ref:`layertree_de`, :ref:`legend_de`, :ref:`digitizer_de` und :ref:`sketch_de` verwendet.
+
+2. ``mapbender.icons.disable_default_fa`` (Standardwert: false).
+
+   - Wenn auf `true` gesetzt, werden die mitgelieferten Font Awesome-Icons im Button-Bearbeitungsformular deaktiviert. Dies betrifft alle anderen verfügbaren Icons, die nicht im Mapbender-Namespace enthalten sind.
+
+3. ``mapbender.icons.custom`` (Standardwert: ~).
+
+   - Ermöglicht das Hinzufügen weiterer Icons aus FontAwesome (eine Liste frei verfügbarer Icons finden Sie auf der `Font Awesome-Homepage <https://fontawesome.com/search?o=r&m=free>`_.
+   - Der Parameter ist ein Array von Objekten, die drei Schlüssel enthalten:
+
+     - `name`: Bezeichnung für dieses Icon, z.B. zur Verwendung in yaml-definierten Anwendungen.
+
+     - `title`: Beschreibung des Icons, wie es im Auswahlfeld im Bearbeitungsformular für Schaltflächen angezeigt wird.
+
+     - `class`: Vollständiger Klassenname (einschließlich "fa") des Icons. Kopieren Sie ihn aus dem unteren Teil des Popups, wenn Sie auf das Icon auf der Font Awesome-Homepage klicken.
+
+Mit diesen Konfigurationsoptionen können Sie die Icons in Mapbender an Ihre Anforderungen anpassen. Anbei ein Beispiel:
+
+.. code-block:: yaml
+    
+    mapbender.icons.disable_default: true
+    mapbender.icons.disable_default_fa: true
+    mapbender.icons.custom:
+        - name: iconSnowflake
+          title: Snowflake
+          class: fa-solid fa-snowflake
+        - name: iconHeartbeat
+          title: Heartbeat
+          class: fa-solid fa-heart-pulse
+
+
 Logo und Login-Bild
 *******************
 In der ``parameters.yaml`` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
