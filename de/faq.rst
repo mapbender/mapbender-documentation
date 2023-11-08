@@ -232,6 +232,14 @@ A: Möglichkeit 1 (über Git): Über die Konsole in das Verzeichnis application/
 Möglichkeit 2 (über Composer): "mapbender/mapbender": "dev-fix/meinfix" eintragen und ein Composer Update ausführen. Dabei werden aber auch alle anderen Vendor-Pakete aktualisiert. Rückgängig kann dies mit der Angabe des vorherigen Branches gemacht werden: Dazu erneut in application/mapbender gehen und den Branch auschecken.
 
 
+Überschreiben von Vorlagen
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+F: Wie kann ich Vorlagen in Bundles überschreiben und auf diese Weise das Erscheinungsbild bestimmter Elemente in Mapbender anpassen?
+
+A: Um Vorlagen in Bundles zu überschreiben, legen Sie einfach eine Twig-Datei mit dem gleichen Namen im Verzeichnis `templates/bundles/<bundlename>` ab. Wenn Sie z.B. das Erscheinungsbild der Koordinatenanzeige anpassen möchten (zu finden unter `Resources/views/Element/coordinatesdisplay.html.twig` im Mapbender CoreBundle), erstellen Sie eine Ersatzdatei unter `templates/bundles/MapbenderCoreBundle/Element/coordinatesdisplay.html.twig`. Diese neue Datei wird anstelle der ursprünglichen verwendet.
+
+
 Oracle
 ------
 
