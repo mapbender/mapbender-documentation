@@ -37,6 +37,37 @@ You can use them to create a layout. You can create a base layout and then overw
 Read more about Templates in Mapbender at :ref:`templates` or in the `Contributing Guide <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#generate-translations>`_ and find a good introduction about Twig in the `Symfony Template documentation <https://symfony.com/doc/current/templates.html>`_.
 
 
+Overriding JavaScript and CSS/Sass Resources
+********************************************
+
+Using the ApplicationAssetService class, JavaScript and CSS/Sass resources can be manually overridden:
+
+To do this, use ``mapbender.application_asset.service`` within a class, e.g., in the `boot` method of your bundle file with ``$this->container->get('mapbender.application_asset.service')``.
+Alternatively, you can achieve this behavior in any PHP file with ``<argument type="service" id="mapbender.application_asset.service" />``. Make sure to use a file that gets called, such as the template.
+
+Then, call ``ApplicationAssetService::registerAssetOverride`` or ``ApplicationAssetService::registerAssetOverrides`` to mark assets for replacement.
+Below you will find an example that utilizes custom resources for the **Button** class:
+
+.. code-block:: php
+
+   class MyBundle extends Bundle
+   {
+      [ ... ]
+
+      public function boot(): void
+      {
+         parent::boot();
+         $assetService = $this->container->get('mapbender.application_asset.service');
+         $assetService->registerAssetOverride('@MapbenderCoreBundle/Resources/public/sass/element/button.scss', '@MyBundle/Resources/public/element/my_button.scss');
+
+         $assetService->registerAssetOverrides([
+               '@MapbenderCoreBundle/Resources/public/sass/element/button.scss' => '@MyBundle/Resources/public/sass/element/my_button.scss',
+               '@MapbenderCoreBundle/Resources/public/js/element/button.js' => '@MyBundle/Resources/public/js/element/my_button.js',
+         ]);
+      }
+   }
+
+
 Getting Help
 ************
 
