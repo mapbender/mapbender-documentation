@@ -37,6 +37,42 @@ Sie kann verwendet werden, um ein Layout zu erstellen. Auf diese Weise kann ein 
 Lesen Sie mehr über Templates auf der Seite :ref:`templates_de` oder im `Contributing Guide <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#generate-translations>`_. Eine Einführung in Twig gibt außerdem die `Symfony Template Dokumentation <https://symfony.com/doc/current/templates.html>`_.
 
 
+.. _override_js_css_de:
+
+Überschreiben von JavaScript- und CSS/Sass-Ressourcen
+*****************************************************
+
+Unter Verwendung der ApplicationAssetService-Klasse sind JavaScript- und CSS/Sass-Ressourcen manuell überschreibbar:
+
+Nutzen Sie dazu ``mapbender.application_asset.service`` innerhalb einer Klasse, zum Beispiel in der `boot`-Methode Ihrer Bundle-Datei mit ``$this->container->get('mapbender.application_asset.service')``.
+Alternativ können Sie dieses Verhalten in einer beliebigen PHP-Datei mit ``<argument type="service" id="mapbender.application_asset.service" />`` erreichen. Stellen Sie bei dieser Methode wiederum sicher, dass Sie eine Datei verwenden, die aufgerufen wird (z.B. das Template).
+
+Rufen Sie anschließend ``ApplicationAssetService::registerAssetOverride`` oder ``ApplicationAssetService::registerAssetOverrides`` auf, um Assets für den Ersatz zu markieren.
+Nachfolgend finden Sie ein Beispiel, welches eigene Ressourcen für die **Button**-Klasse nutzt:
+
+.. code-block:: php
+
+   class MyBundle extends Bundle
+   {
+      [ ... ]
+
+      public function boot(): void
+      {
+         parent::boot();
+         $assetService = $this->container->get('mapbender.application_asset.service');
+         $assetService->registerAssetOverride('@MapbenderCoreBundle/Resources/public/sass/element/button.scss', '@MyBundle/Resources/public/element/my_button.scss');
+
+         $assetService->registerAssetOverrides([
+               '@MapbenderCoreBundle/Resources/public/sass/element/button.scss' => '@MyBundle/Resources/public/sass/element/my_button.scss',
+               '@MapbenderCoreBundle/Resources/public/js/element/button.js' => '@MyBundle/Resources/public/js/element/my_button.js',
+         ]);
+      }
+   }
+
+
+.. hint:: Alternativ ist es möglich, Ressourcen mithilfe :ref:`eines Parameters<override_js_css_yaml_de>` zu überschreiben.
+
+
 Wo gibt es Hilfe?
 *****************
 

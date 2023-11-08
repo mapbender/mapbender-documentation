@@ -239,9 +239,25 @@ Configuration example:
         ows_proxy3_noproxy:                   # list of hosts for connnections without proxy server
             - 192.168.1.123
 
+
 SSL certificate
 ***************
 For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yaml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+
+
+.. _override_js_css_yaml:
+
+Overriding JavaScript and CSS/Sass Resources
+********************************************
+To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`overriding in the bundle <override_js_css>`, you can add the following to your ``paramaters.yaml`` file:
+
+.. code-block:: yaml
+    
+    mapbender.asset_overrides:
+        "@MapbenderCoreBundle/Resources/public/sass/element/featureinfo.scss": "@@MyBundle/Resources/public/sass/element/custom_featureinfo.scss"
+
+
+.. note:: Please note that the @ sign in the replacement key must be escaped with an additional @@ sign.
 
 
 doctrine.yaml
