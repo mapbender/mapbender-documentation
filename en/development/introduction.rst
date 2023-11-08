@@ -69,6 +69,7 @@ Below you will find an example that utilizes custom resources for the **Button**
       }
    }
 
+.. hint:: It is also possible to override a resource :ref:`in the parameters.yaml file<override_js_css_yaml>`.
 
 Getting Help
 ************

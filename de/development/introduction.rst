@@ -48,7 +48,7 @@ Nutzen Sie dazu ``mapbender.application_asset.service`` innerhalb einer Klasse, 
 Alternativ können Sie dieses Verhalten in einer beliebigen PHP-Datei mit ``<argument type="service" id="mapbender.application_asset.service" />`` erreichen. Stellen Sie bei dieser Methode wiederum sicher, dass Sie eine Datei verwenden, die aufgerufen wird (z.B. das Template).
 
 Rufen Sie anschließend ``ApplicationAssetService::registerAssetOverride`` oder ``ApplicationAssetService::registerAssetOverrides`` auf, um Assets für den Ersatz zu markieren.
-Anhand finden Sie ein Beispiel, welches eigene Ressourcen für die **Button**-Klasse nutzt:
+Nachfolgend finden Sie ein Beispiel, welches eigene Ressourcen für die **Button**-Klasse nutzt:
 
 .. code-block:: php
 
@@ -68,6 +68,9 @@ Anhand finden Sie ein Beispiel, welches eigene Ressourcen für die **Button**-Kl
          ]);
       }
    }
+
+
+.. hint:: Alternativ ist es möglich, Ressourcen mithilfe :ref:`eines Parameters<override_js_css_yaml_de>` zu überschreiben.
 
 
 Wo gibt es Hilfe?

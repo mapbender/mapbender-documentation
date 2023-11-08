@@ -205,9 +205,11 @@ SSL certificate
 For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yaml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
 
+.. _override_js_css_yaml:
+
 Overriding JavaScript and CSS/Sass Resources
 ********************************************
-To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`this method <override_js_css>`, you can add the following to your ``paramaters.yml`` file:
+To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`overriding in the bundle <override_js_css>`, you can add the following to your ``paramaters.yaml`` file:
 
 .. code-block:: yaml
     

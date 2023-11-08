@@ -203,9 +203,11 @@ SSL Zertifikat
 Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Anschließend muss die Variable ``parameters.cookie_secure`` in Ihrer ``parameters.yaml`` auf ``true`` gesetzt werden. Dadurch wird sichergestellt, dass das Login-Cookie nur über sichere Verbindungen übertragen wird.
 
 
+.. _override_js_css_yaml_de:
+
 Überschreiben von JavaScript- und CSS/Sass-Ressourcen
 *****************************************************
-Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :ref:`zu dieser Methode<override_js_css_de>` in Ihrer ``paramaters.yml``-Datei Folgendes hinzufügen:
+Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :ref:`zum Überschreiben im Bundle selbst<override_js_css_de>` in Ihrer ``paramaters.yaml``-Datei Folgendes hinzufügen:
 
 .. code-block:: yaml
 
@@ -213,7 +215,7 @@ Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :r
         "@MapbenderCoreBundle/Resources/public/sass/element/featureinfo.scss": "@@MyBundle/Resources/public/sass/element/custom_featureinfo.scss"
 
 
-.. note:: Beachten Sie, dass das `@`-Zeichen im Ersetzungsschlüssel durch ein weiteres `@@`-Zeichen escaped werden muss.
+.. note:: Beachten Sie, dass das `@`-Zeichen im Ersetzungsschlüssel durch ein weiteres `@@`-Zeichen maskiert werden muss.
 
 
 doctrine.yaml
