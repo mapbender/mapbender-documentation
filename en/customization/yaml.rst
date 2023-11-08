@@ -95,6 +95,46 @@ A disclaimer can be added through the use of site links.
 Site links will be seperated by "|".
 
 
+.. _custom-icons:
+
+Customizing icons
+*****************
+By setting the following parameters, you can enable specific customization of icons:
+
+1. ``mapbender.icons.disable_default`` (default: false).
+
+   - When set to `true`, the default icons from the Mapbender namespace are disabled in the button edit form. These include the icons About, Area Ruler, Feature Info, Image Export, Layer tree, Legend, Line ruler, and Polygon. These are used, for example, for the similarly named elements: :ref:`about_dialog`, :ref:`ruler`, :ref:`feature_info`, :ref:`imageexport`, :ref:`layertree`, :ref:`legend`, :ref:`digitizer`, and :ref:`sketch`.
+
+2. ``mapbender.icons.disable_default_fa`` (default: false).
+
+   - When set to `true`, the default Font Awesome icons are disabled in the button edit form. This applies to all other available icons that are not in the Mapbender namespace.
+
+3. ``mapbender.icons.custom`` (default: ~).
+
+   - Allows adding more icons from FontAwesome (a list of freely available icons can be found on the `Font Awesome homepage <https://fontawesome.com/search?o=r&m=free>`_).
+   - The parameter is an array of objects containing three keys:
+
+     - `name`: Identifier for this icon, e.g., for usage in yaml-defined applications.
+
+     - `title`: Description of the icon as shown in the selection menu in the button edit form.
+
+     - `class`: Full class name (including "fa") of the icon. Copy it from the lower part of the popup when you click on the icon on the Font Awesome homepage.
+
+With these configuration options, you can customize the icons in Mapbender to suit your requirements. Here's an example:
+
+.. code-block:: yaml
+
+    mapbender.icons.disable_default: true
+    mapbender.icons.disable_default_fa: true
+    mapbender.icons.custom:
+        - name: iconSnowflake
+          title: Snowflake
+          class: fa-solid fa-snowflake
+        - name: iconHeartbeat
+          title: Heartbeat
+          class: fa-solid fa-heart-pulse
+
+
 Language settings
 *****************
 Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **application/config/parameters.yaml**.
