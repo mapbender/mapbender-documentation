@@ -80,6 +80,8 @@ This template can be used to include the map into a YAML application.
 Controlling by URL-parameters
 =============================
 
+.. _layer_visibility:
+
 Make Layer visible
 ------------------
 

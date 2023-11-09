@@ -63,6 +63,7 @@ This is how a Mapbender application can look like:
   .. image:: ../figures/mapbender_basic_application.png
      :width: 100%
 
+
 Installation
 ============
 
@@ -72,7 +73,7 @@ For the installation of Mapbender have a look at :ref:`installation`.
 1. Start Mapbender
 ==================
 
-#. Choose  ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at :ref:`installation`).
+#. Choose ``Mapbender`` from the start menu (if a shortcut was already created) or visit http://localhost/mapbender (this address can be slightly different depending on how the Apache Alias was created in the file /etc/apache2/sites-available/mapbender.conf, more information at :ref:`installation`).
  
 #. The application should then appear in your browser window.
 
@@ -148,11 +149,9 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 .. tip:: Please note that the style-, icon- and layout-configurations can be set up online via the CSS editor tab and/or via configuration files locally. Read more about template generation under :ref:`templates`.
 
-#. Define a title, URL title and a description (optional). Title and URL title can be identical. However, the URL title has to follow the usual URL syntax.
+#. Define a title, URL title and a description (optional). Title and URL title can be identical. However, the URL title has to follow the usual URL syntax: Typically, lowercase letters, numbers, as well as hyphens and underscores are allowed.
 
 #. A thumbnail can be uploaded as well. It will appear next to the application title on the application overview page. For this, select "*Select File"* below the thumbnail section.
-
-#. Under the section Map engine, choose your preferred OpenLayers version to manage the application's map.
 
 #. Set a tick at *"persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found in :ref:`share`.
 
@@ -160,9 +159,6 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
   .. image:: ../figures/mapbender_create_application.png
      :width: 100%
-
-
-It is possible to edit applications: In order to do so, navigate to the application overview. Here, you can click on a |mapbender-button-edit| ``Button`` for every application with corresponding editing rights. Furthermore, applications can be viewed in the Frontend via a |mapbender-button-show| Button. They can also be exported (|mapbender-button-export|), deleted (|mapbender-button-delete|) or give public access (|mapbender-button-publish|). 
 
 
 3. Add elements to your application
@@ -189,54 +185,39 @@ Now you should have an idea about how easy it is to change a Mapbender applicati
 
 In the following, you find a complete list of all elements and their functionalities. For a more detailed description, please have a look at the corresponding chapters in the :ref:`Table of Contents<welcome>`.
 
-* :ref:`about_dialog` :  Shows information about Mapbender in an about dialog
-* :ref:`activity_indicator` : Shows HTTP activity
-* :ref:`view_manager` : Saves map states for later restoration
-* :ref:`applicationswitcher` : Switches to another application while maintaining the current map position
-* :ref:`imageexport` : Exports the current map view (format options: png or jpeg)
-* :ref:`button` : Integrate another element as a button
-* :ref:`copyright` : Shows terms of use
-* :ref:`datamanager` : erzeugt und speichert Sachinformationen in einer Datenbank 
-* :ref:`digitizer` : Create and manage spatial data
-* :ref:`dimensions_handler` : Manage sources with a time dimension
-* :ref:`printclient` : Renders a Print dialog
-* :ref:`layertree`: Gives an overview of map layersets and layers
-* :ref:`simplesearch` : erstellt eine Einfeldsuche
-* :ref:`gpspostion` : Renders a button to show the GPS position
-* :ref:`html`: Offers free definition of HTML to integrate pictures, texts or links	
-* :ref:`basesourceswitcher` : Changes the map's background sources
-* :ref:`feature_info`: Gives information about sources
-* :ref:`map`: Creates the map element in which layersets and layers are integrated into
-* :ref:`coordinate_utility` : Transforms coordinates to different SRS and navigates to them on the map
-* :ref:`coordinates_display`: Shows the map coordinates of your mouse position
+* :ref:`about_dialog`: Show information about Mapbender in an about dialog
+* :ref:`activity_indicator`: Shows HTTP activity
+* :ref:`applicationswitcher`: Switch to another application while maintaining the current map position
+* :ref:`button`: Integrate another element as a button
+* :ref:`basesourceswitcher`: Change the map's background sources
+* :ref:`coordinate_utility`: Transform coordinates to different SRS and navigate to them on the map
+* :ref:`coordinates_display`: Show the map coordinates of your mouse position
+* :ref:`copyright`: Shows terms of use
+* :ref:`datamanager`: Create and save information in a database*
+* :ref:`digitizer`: Create and manage spatial data*
+* :ref:`dimensions_handler`: Manage sources with a time dimension
+* :ref:`imageexport`: Export the current map view (format options: png or jpeg)
 * :ref:`legend`: Displays legend of active themes on the map
-* :ref:`ruler` : Enables to measure a line/area and display its length/area in a dialog
 * :ref:`link`: Links to an external URL
-* :ref:`scaledisplay` : Displays the current map scale
-* :ref:`simplesearch` : Enables a configurable search on JSON sources (e.g. Solr)
+* :ref:`layertree`: Lists all included layer sets and layers with selection and sorting options
+* :ref:`map`: Creates the map element in which layersets and layers are integrated into
+* :ref:`overview`: Provides an overview map
+* :ref:`poi`: Create a POI for sharing
+* :ref:`printclient`: Render a Print dialog
+* :ref:`ruler`: Enables to measure a line/area and display its length/area in a dialog
+* :ref:`scaledisplay`: Displays the current map scale
 * :ref:`scalebar`: Displays a small line indicator representing the current map scale
 * :ref:`scale_selector`: Displays and changes a map scale
-* :ref:`poi` : Creates a POI for sharing
-* :ref:`navigation_toolbar` : Provides a floating control to pan and zoom in the map
-* :ref:`srs_selector` : Changes the map's spatial reference system
-* :ref:`sketch` : Enables a drawing tool with different shapes
-* :ref:`search_router` : Enables a configurable search via SQL
-* :ref:`shareurl` : Shares the current map view via URL
-* :ref:`wms_loader` : Loads a WMS via a getCapabilities-Request
-* :ref:`about_dialog` : Shows information about Mapbender in an about dialog
-* :ref:`overview` : Provides an overview map
+* :ref:`search_router`: Enables a configurable search via SQL
+* :ref:`simplesearch`: Enables a configurable search on JSON sources (e.g. Solr)
+* :ref:`simplesearch`: Enables a search
+* :ref:`sketch`: Enables a drawing tool with different shapes
+* :ref:`srs_selector`: Changes the map's spatial reference system
+* :ref:`shareurl`: Share the current map view via URL
+* :ref:`view_manager`: Save map states for later restoration
+* :ref:`wms_loader`: Load a WMS via a getCapabilities-Request
 
-
-
-Try it yourself
----------------
-
-* add a Map to the Map area of your application
-* add a Layertree to the Map area of your application
-* add a button to the Top toolbar and combine it with the Layertree of your application
-* add the Navigation Toolbar to the Map area
-* add a Copyright and change the copyright text
-* add an SRS Selector to the footer
+.. hint:: Items marked with an asterisk (*) require additional dependencies.
 
 
 4. Configure Sources
@@ -297,6 +278,7 @@ After uploading a service, it can be integrated into one or several application(
   .. image:: ../figures/mapbender_add_source_to_application.png
      :width: 100%
 
+
 Source configuration
 --------------------
 
@@ -311,17 +293,18 @@ Sources can be individually configured. This can be useful if you, for instance,
 .. image:: ../figures/mapbender_source_configuration.png
    :width: 100%
 
+
 **Source configuration:**
 
 * Title: Name of the application
-* Opacity: Opacity in percentage
+* Opacity: Opacity in percentage (0: transparent, 100: opaque)
 * Format: Format of the getMap-Requests
 * Infoformat: Format of the getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
 * Exceptionformat: Format for error messages
 * Tile buffer: This parameter is valid for tiles services and specifies if additional tiles should be requested. If the user pans the map, these tiles are already downloaded and visible. The higher the value the more tiles are requested (default: 0).
 * BBOX Factor: This parameter is valid for non-tiled WMS services. You can specify the size of the returned map-image. A value greater than 1 will request a bigger map-image (default: 1.25).
-* BaseSource: Should the service be handled as BaseSource (BaseSources can be shown/hidden in the layertree)
-* Proxy: If active, the service will be requested by Mapbender and not directly
+* BaseSource: If active, the service is handled as a BaseSource. Should be activated for full-screen background maps, such as street maps and satellite images, and where a simultaneous display is not needed.
+* Proxy: If active, the service will be requested by Mapbender and not directly. Should always be enabled for password-protected services, as otherwise the password will be readable by every user.
 * Transparency: default is active, the source is without a transparent background if it is deactivated (getMap-Request with Transparent=FALSE)
 * Tiled: you can request a WMS in tiles, default is not tiled (may be a good choice if your map is very big and the WMS service does not support the width/height)
 * Layer ordering: Handles the order of the layers in the service. Can be set toStandard  (reversed) and QGIS (same order).
@@ -331,13 +314,19 @@ Sources can be individually configured. This can be useful if you, for instance,
 
 This function is relevant for sources with a time dimension. Further information can be found under :ref:`dimensions_handler`.
 
+
 **Vendor Specific Parameter:**
 
 You can define Vendor Specific Parameters in a layerset instance to add them to a WMS request. This principle follows Multi-Dimensions in the WMS specification.
 
 You can use Vendor Specific Parameters in Mapbender for example to add the user- and group information of the logged-in user to a WMS request. You can also add hard coded values.
 
-The following example shows the definition of the parameter “group”, which transfers the group-value of the logged-in user.
+List of the possible parameters:
+
+* User: $email$, $groups$, $id$, $username$
+* Groups: $id$, $title$, $description$
+
+The following example shows the definition of the parameter “group”, which transfers the group value of the logged-in user.
 
 .. image:: ../figures/layerset/mapbender_vendor_specific_parameter.png
    :width: 75%
@@ -346,41 +335,27 @@ The following example shows the definition of the parameter “group”, which t
 * Vstype: Mapbender specific variables. Group (groups), User (users), Simple
 * Name: Parameter name of the WMS request
 * Default: Default value
-* Hidden: If this value is set, requests are send via a server so that the parameters are not directly visible
+* Hidden: If this value is set, requests are send via a server so that the parameters are not directly visible. Only works if `Proxy` is enabled for the service, too.
 
 Currently, the element can be used to transfer user- and group information, e.g. for a user the $id$ and for groups the value $group$.
 
 
 **Layer configuration:**
 
-* title: layer title
-* min./max. scale: scale scope
+* title: Layer title as shown in the layer tree. Default value is the getCapabilities requested title.
+* min./max. scale: scale scope (e.g., 1:100-1:1000)
 * active on/off: activates/deactivates a layer completely
 * select allow: layer is active when the application starts
 * select on: selectable in geodata explorer
 * info allow: layer info is active when the application starts
 * info on: layer provides feature info requests, info default activates the feature info functionality
-* toggle allowed: allows opening of folder at application start
+* toggle allowed: allows opening in the layer tree
 * toggle on: open folder on start of the application
-* layer ordering: allows to order layer according to the Standard or QGIS configuration.
 * more information (...): opens a dialog with detailed layer information:
-* ID: ID of the layer
+* ID: ID of the layer. Can be useful :ref:`to control <layer_visibility>`URL parameters.
 * Name: layer name of the service information (for getMap-Requests)
 * Style: if a WMS provides more than one style you can choose a different style than the default style.
 
-
-Try it yourself
----------------
-
-#. Load a source into Mapbender.
-
-#. Add a source to your application. 
-
-#. Change the configuration of your source.
-
-*Here is an example source:*
-
-* WhereGroup OSM WMS: https://osm-demo.wheregroup.com/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=getCapabilities
 
 5. User and group management
 ============================
