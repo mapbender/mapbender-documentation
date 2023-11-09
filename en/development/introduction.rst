@@ -94,7 +94,5 @@ Topics
    :maxdepth: 1
 
    controllers
-   conventions
    elements
    element_generate
-   requestresponse
