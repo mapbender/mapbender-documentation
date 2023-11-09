@@ -3,9 +3,9 @@
 Installation unter Windows
 ##########################
 
-Für eine schnelle Installation als Testsystem kann der MS4W-Installer (https://ms4w.com/download.html) benutzt werden. 
+.. Für eine schnelle Installation als Testsystem kann der MS4W-Installer (https://ms4w.com/download.html) benutzt werden. 
 
-Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
+.. Nachfolgend beschreiben wir die Installation für eine Produktivumgebung.
 
 Mapbender benötigt eine Datenbank zur Speicherung der Administrationsinformation. Das Installationspaket enthält bereits eine SQLite-Datenbank, die direkt verwendet werden kann. Für den produktiven Einsatz wird allerdings die Nutzung einer PostgreSQL Datenbank empfohlen.
 

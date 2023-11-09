@@ -148,11 +148,9 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 .. tip:: Beachten Sie, dass Layout-, Icon- und Farbanpassungen online über den CSS-Editor und/oder lokal über Konfigurationsdateien erfolgen. Lesen Sie dazu die Dokumentation unter :ref:`templates_de`.
 
-#. Geben Sie einen Titel, einen URL-Titel und ggf. eine Beschreibung für die Anwendung an. Titel und URL-Titel können identisch sein. Letzterer muss sich nach den Standards der festgelegten URL-Syntax richten.
+#. Geben Sie einen Titel, einen URL-Titel und ggf. eine Beschreibung für die Anwendung an. Titel und URL-Titel können identisch sein. Letzterer muss sich nach den Standards der festgelegten URL-Syntax richten: Üblicherweise sind Kleinbuchstaben, Zahlen sowie der Binde- und Unterstrich erlaubt.
 
 #. Laden Sie ggf. eine Bilddatei hoch. Diese wird dann als Vorschaubild in der Anwendungsübersicht angezeigt. Klicken Sie dazu unter dem Abschnitt Vorschaubild auf den Button "*Datei auswählen"*.
-
-#. Wählen Sie unter *"Karten-Engine"* die von Ihnen bevorzugte OpenLayers-Version aus.
 
 #. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie unter :ref:`share_de`.
 
@@ -161,9 +159,6 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
   .. image:: ../figures/de/mapbender_create_application.png
      :width: 100%
-
-
-Anwendungen können bearbeitet werden: Von der Anwendungsübersichtsseite aus ist eine Navigation zu jeder Applikation (mit gegebenen Nutzungsrechten) über den |mapbender-button-edit| ``Button`` möglich. Weiterhin findet sich hier ein |mapbender-button-show| Button für jede Anwendung, mit dem diese im Frontend aufgerufen werden kann. Es besteht außerdem die Option, Anwendungen zu |mapbender-button-export| exportieren, zu |mapbender-button-delete| löschen sowie diese für die Öffentlichkeit zugänglich zu machen |mapbender-button-publish|.
 
 
 3. Elemente in eine Anwendung einfügen
@@ -190,52 +185,43 @@ Jetzt sollten sie eine Idee davon haben, wie einfach es ist, eine Mapbender-Anwe
 
 Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer Funktion. Detaillierte Informationen können Sie in den jeweiligen Kapiteln der :ref:`Mapbender Dokumentation <welcome_de>` nachlesen.
 
-* :ref:`activity_indicator_de` : zeigt die HTTP-Aktivität an
-* :ref:`view_manager_de` : speichert Kartenzustände zum späteren Abruf
-* :ref:`applicationswitcher_de` : wechselt unter Beibehaltung der aktuellen Kartenposition zu einer anderen Anwendung
-* :ref:`imageexport_de` : exportiert einen Kartenausschnitt
-* :ref:`button_de` : bindet ein Element als Button ein
-* :ref:`copyright_de` : zeigt Nutzungsbedingungen an
-* :ref:`datamanager_de` : erzeugt und speichert Sachinformationen in einer Datenbank 
-* :ref:`digitizer_de` : erzeugt und speichert Geometrieinformationen in einer Datenbank
-* :ref:`dimensions_handler_de` : bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein
-* :ref:`printclient_de` : erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können
-* :ref:`layertree_de`: gibt eine Übersicht über alle eingebundenen Layersets und Layer
-* :ref:`simplesearch_de` : erstellt eine Einfeldsuche
-* :ref:`gpspostion_de` : erzeugt einen Button zur Anzeige der eigenen GPS-Position
-* :ref:`html_de`: bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links
-* :ref:`basesourceswitcher_de` : ermöglicht den Wechsel zwischen selbst definierten Hintergrundkarten
-* :ref:`feature_info_de`: gibt Informationen eines Dienstes aus
-* :ref:`map_de`: erstellt ein zentrales Kartenelement, in welches die Layersets und Layer eingebunden sind
-* :ref:`coordinate_utility_de` : transformiert Koordinaten und navigiert zu ihnen auf der Karte
+* :ref:`about_dialog_de`: zeigt Informationen über Mapbender an
+* :ref:`activity_indicator_de`: zeigt die HTTP-Aktivität an
+* :ref:`applicationswitcher_de`: wechselt unter Beibehaltung der aktuellen Kartenposition zu einer anderen Anwendung
+* :ref:`basesourceswitcher_de`: ermöglicht den Wechsel zwischen selbst definierten Hintergrundkarten
+* :ref:`button_de`: bindet ein Element als Button ein
+* :ref:`coordinate_utility_de`: transformiert Koordinaten und navigiert zu ihnen auf der Karte
 * :ref:`coordinates_display_de`: zeigt Mausposition in den Kartenkoordinaten an
+* :ref:`copyright_de`: zeigt Nutzungsbedingungen an
+* :ref:`datamanager_de`: erzeugt und speichert Sachinformationen in einer Datenbank*
+* :ref:`digitizer_de`: erzeugt und speichert Geometrieinformationen in einer Datenbank*
+* :ref:`dimensions_handler_de`: bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein
+* :ref:`feature_info_de`: gibt Informationen eines Dienstes aus
+* :ref:`gpspostion_de`: erzeugt einen Button zur Anzeige der eigenen GPS-Position
+* :ref:`html_de`: bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links
+* :ref:`imageexport_de`: exportiert einen Kartenausschnitt
+* :ref:`layertree_de`: Auflistung aller eingebundenen Layersets und Layer samt Auswahl- und Sortiermöglichkeiten
 * :ref:`legend_de`: zeigt die Legende von aktiven Diensten an
-* :ref:`ruler_de` : erlaubt das Messen von Linien und Flächen in der Karte
 * :ref:`link_de`: verlinkt zu einer externen URL
-* :ref:`scaledisplay_de` : zeigt aktuellen Maßstab numerisch an
-* :ref:`scale_selector_de` : dieses Element zeigt eine Auswahlbox mit Maßstäben an.
-* :ref:`simplesearch_de` : gibt eine Auswahlbox mit den verfügbaren Maßstäben zum Wechseln dieser an
+* :ref:`map_de`: erstellt ein zentrales Kartenelement, in welches die Layersets und Layer eingebunden sind
+* :ref:`navigation_toolbar_de`: ermöglicht die Navigation in der Karte über ein graphisches Steuerelement
+* :ref:`overview_de`: zeigt eine kleinere Übersichtskarte über der Hauptkarte an
+* :ref:`poi_de`: generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird
+* :ref:`printclient_de`: erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können
+* :ref:`ruler_de`: erlaubt das Messen von Linien und Flächen in der Karte
+* :ref:`scaledisplay_de`: zeigt aktuellen Maßstab numerisch an
+* :ref:`scale_selector_de`: dieses Element zeigt eine Auswahlbox mit Maßstäben an.
 * :ref:`scalebar_de`: zeigt den aktuellen Maßstab graphisch an
-* :ref:`poi_de` : generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird
-* :ref:`navigation_toolbar_de` : ermöglicht die Navigation in der Karte über ein graphisches Steuerelement
-* :ref:`srs_selector_de` : generiert die Möglichkeit, eine Projektion (SRS) über eine Auswahlbox zu wechseln
-* :ref:`sketch_de` : ermöglicht das Zeichnen verschiedener Formen in der Karte
-* :ref:`search_router_de` : ermöglicht die Konfiguration von individuellen Suchen
-* :ref:`shareurl_de` : teilt die aktuelle Kartenansicht über eine URL
-* :ref:`wms_loader_de` : lädt einen WMS per getCapabilities-Request
-* :ref:`about_dialog_de` : zeigt Informationen über Mapbender an
-* :ref:`overview_de` : zeigt eine kleinere Übersichtskarte über der Hauptkarte an
+* :ref:`search_router_de`: ermöglicht die Konfiguration von individuellen Suchen
+* :ref:`shareurl_de`: teilt die aktuelle Kartenansicht über eine URL
+* :ref:`simplesearch_de`: erstellt eine Einfeldsuche
+* :ref:`sketch_de`: ermöglicht das Zeichnen verschiedener Formen in der Karte
+* :ref:`srs_selector_de`: generiert die Möglichkeit, eine Projektion (SRS) über eine Auswahlbox zu wechseln
+* :ref:`view_manager_de`: speichert Kartenzustände zum späteren Abruf
+* :ref:`wms_loader_de`: lädt einen WMS per getCapabilities-Request
 
 
-Versuchen Sie es selbst
------------------------
-
-* Fügen Sie ein Kartenelement zum Kartenbereich der Anwendung hinzu.
-* Fügen Sie einen Ebenenbaum zum Kartenbereich der Anwendung hinzu.
-* Fügen Sie einen Button in die Fußzeile ein, der den Layertree öffnet.
-* Fügen Sie das Navigationswerkzeug in den Kartenbereich hinzu.
-* Fügen Sie ein Copyright-Element hinzu und ändern Sie den Copyright-Text.
-* Fügen Sie eine SRS-Auswahl in die Fußzeile ein.
+.. hint:: Mit einem * markierte Elemente benötigen zusätzliche Dependencies.
 
 
 Datenquellen (Sources) verwenden
@@ -313,14 +299,14 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 **Dienstekonfiguration:**
 
 * Titel: Titel des Dienstes
-* Opacity: Durchlässigkeit (Deckkraft) des Dienstes in Prozent
+* Opacity: Durchlässigkeit (Deckkraft) des Dienstes in Prozent (0: transparent, 100: undurchsichtig)
 * Format: Das Format für den getMap-Request
 * Infoformat: Das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
 * Exceptionformat: Das Format für Fehlermeldungen
 * Kachel-Puffer: Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen (Standard: 0).
 * BBOX-Faktor: Dieser Parameter gilt für Dienste, die nicht gekachelt angefordert werden. Hier kann angegeben werden, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Standard: 1.25
-* BaseSource: Der Dienst soll als BaseSource behandelt werden (BaseSources können im Ebenenbaum ein-/ausgeblendet werden)
-* Proxy: Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert
+* BaseSource: Der Dienst soll als BaseSource behandelt werden: Eine Aktivierung ist sinnvoll für vollflächige Hintergrundkarten, wie bspw. Straßenkarte und Satellit, bei denen eine gleichzeitige Anzeige wenig sinnvoll ist.
+* Proxy: Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Der Browser fordert dann nicht direkt den Dienst an. Für passwortgeschützte Dienste sollte diese Option immer aktiviert sein, da ansonsten das Passwort für jeden Benutzer auslesbar ist.
 * Transparenz: standardmäßig aktiviert, bei Deaktivierung wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit Transparent=FALSE)
 * gekachelt: Dienst wird in Kacheln angefordert. Kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt. (Standard: nicht gekachelt)
 * Layer-Reihenfolge: gibt eine Lesrichtung für die im Dienst enthaltenen Layer vor. Standard (umgekehrt) und QGIS-Style (gleiche Reihenfolge) sind auswählbar.
@@ -337,6 +323,11 @@ In einer Layerset-Instanz können Vendor Specific Parameter angegeben werden, di
 
 In Mapbender können die Vendor Specific Parameter genutzt werden, um z.B. Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
 
+Liste der möglichen Variablen:
+
+* User: $email$, $groups$, $id$, $username$
+* Groups: $id$, $title$, $description$
+
 Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
 .. image:: ../figures/de/layerset/mapbender_vendor_specific_parameter.png
@@ -345,41 +336,27 @@ Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
 * Vstype: Mapbender spezifische Variablen: simple, Gruppe (groups), User (users)
 * Name: Parameter-Name im WMS Request
 * Default: Standardwert
-* Hidden: Wenn "Hidden" gesetzt ist, werden die Anfragen serverseitig versendet, sodass die Parameter nicht direkt sichtbar sind
+* Hidden: Falls der Wert gesetzt ist, werden die Anfragen serverseitig versendet, sodass die Parameter nicht direkt sichtbar sind. Funktioniert nur, sofern der Dienst als `Proxy` angefragt wird.
 
 Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzugeben, z.B. für Benutzer die $id$ und für Gruppen den Parameter $groups$.
 
 
 **Layerkonfiguration:**
 
-* Titel: Layertitel, wird im Dienst-Repository angezeigt
-* Min./Max. Maßstab: Maßstabsbereich, in dem der Layer angezeigt wird
-* aktiv: aktiviert/deaktiviert einen Layer, sodass bei Deaktivierung die anderen Checkboxen dieses Layers ignoriert werden
+* Titel: Layertitel, wie er im Ebenenbaum angezeigt wird. Als Standard wird der Titel aus dem getCapabilities-Request genutzt.
+* Min./Max. Maßstab: Maßstabsbereich, in dem der Layer angezeigt wird (z.B.: 1:100 - 1:1000)
+* aktiv: aktiviert/deaktiviert einen Layer, sodass bei Deaktivierung in der Hierarchie untergeordnete ignoriert werden
 * Ausgewählt erlauben: Layer wird angezeigt und ist auswählbar im Ebenenbaum
 * Ausgewählt an: Layer ist bei Anwendungsstart aktiv
 * Info erlauben: Infoabfrage wird für diesen Layer zugelassen
 * Info an: Layer-Infoabfrage wird beim Start aktiviert
-* Aufklappen erlauben: Erlaubt aufklappen des Layers beim Start der Anwendung
+* Aufklappen erlauben: Erlaubt Aufklappen des Layers im Ebenenbaum
 * Aufklappen an: Klappt Layer beim Start der Anwendung auf
-* Layer-Reihenfolge: Layer können in der Standard- oder QGIS-Reihenfolge dargestellt werden.
-* Weitere Informationen (Drei-Punkte-Button): Öffnet einen Dialog mit weiteren Layer-Informationen:
-* ID: ID des Layers
-* Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
-* Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil (default) wählen.
+* Weitere Informationen (Drei-Punkte-Button): Öffnet einen Dialog mit weiteren Layer-Informationen
+    * ID: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <layer_visibility_de>`.
+    * Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
+    * Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil (default) wählen.
 
-
-Versuchen Sie es selber
------------------------
-
-#. Laden Sie verschiedene Dienste in Mapbender hinein.
-
-#. Fügen Sie einige Dienste zu Ihrer Anwendung hinzu. 
-
-#. Verändern Sie die Konfiguration der Dienste.
-
-*Hier ist ein Beispieldienst:*
-
-* WhereGroup OSM WMS: https://osm-demo.wheregroup.com/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=getCapabilities
 
 5. Benutzer- und Gruppenverwaltung
 ==================================

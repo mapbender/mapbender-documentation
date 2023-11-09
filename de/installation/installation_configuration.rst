@@ -15,7 +15,7 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 * Initialisieren der Datenbank
 * Laden der Anwendungen der mapbender.yaml Definition in die Datenbank
 
-Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch ein wichtiger Hinweis, bevor Sie fortfahren: 
+Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch einige wichtige Hinweise, bevor Sie fortfahren: 
 
 .. note:: **Hinweis:** Das console-Hilfsprogramm wird Dateien in die Verzeichnisse var/cache und var/log schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis var/db und die SQLite Datenbank. Wenn Sie die Applikation in Ihrem Browser öffnen, wird die SQLite-Datenbank mit Server-PHP-Prozess versuchen, auf diese Dateien zuzugreifen oder in die Verzeichnisse mit anderen Benutzerrechten zu schreiben. Stellen Sie sicher, dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
@@ -39,7 +39,11 @@ Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 Erzeugen der Datenbank
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Mit Symfony kann die Datenbank erzeugt werden. Beachten Sie, dass dazu die benötigten Datenbank-Benutzerrechte vorliegen. Rufen Sie folgenden Befehl mit dem console-Hilfsprogramm auf:
+.. hint:: Generell wird empfohlen, das Erzeugen der Datenbanken extern, etwa über ein graphisches Datenbank-Werkzeug wie bspw. `pgAdmin <https://www.pgadmin.org/>`_ vorzunehmen.
+
+Alternativ kann die Datenbank mit Symfony erzeugt werden. Beachten Sie, dass dazu die benötigten Datenbank-Benutzerrechte vorliegen müssen.
+
+Rufen Sie dazu folgenden Befehl mit dem console-Hilfsprogramm auf:
 
 .. code-block:: yaml
 
@@ -119,47 +123,24 @@ Die Konfigurationsdateien liegen unter ``application/config``.
 
 Mehr Informationen dazu finden Sie im Kapitel: :ref:`yaml_de`.
 
+
 .. _app_cache_de:
 
-Produktions- und Entwicklungsumgebung und Caches: app.php und app_dev.php
--------------------------------------------------------------------------
+Produktions- und Entwicklungsumgebung und Caches
+------------------------------------------------
 
-Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den
-normalen Betrieb und eine Entwicklungsumgebung, in dem die Anwendungen
-getestet werden können. Dieses Konzept orientiert sich an den
-`"Environments" im Symfony Framework
-<https://symfony.com/doc/current/book/configuration.html>`_.
+Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den normalen Betrieb und eine Entwicklungsumgebung, in dem die Anwendungen getestet werden können. Dieses Konzept orientiert sich an den `Configuration Environments <https://symfony.com/doc/current/configuration.html#configuration-environments>`_ im Symfony Framework.
 
-Die Produktionsumgebung wird mit der URL http://localhost/app.php
-aufgerufen, die Entwicklungsumgebung mit der URL
-http://localhost/app_dev.php. Der Aufruf über app_dev.php kann
-und sollte nur vom localhost erfolgen.
+Die Entwicklungsumgebung zeigt vollständige Fehlermeldungen (einschließlich Stacktraces) im Browser und aktiviert die Symfony-Debug-Konsole und den Profiler. Außerdem wird das Caching deaktiviert.
+In der Produktionsumgebung wird das Caching aktiviert, zusätzlich werden nur allgemeine Fehlermeldungen angezeigt. Ausführlichere Meldungen werden hingegen in die Logdateien geschrieben.
 
-Es gibt Unterschiede im Verhalten von app.php und app_dev.php:
+Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf `prod` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
 
-* Der Cache-Mechanismus verhält sich in der Entwicklungsumgebung anders: Es
-  werden nicht alle Dateien gecacht, so dass vorgenommene Änderungen direkt
-  sichtbar sind. Dadurch ist der Aufruf einer Anwendung über app_dev.php
-  immer langsamer als im Produktivbetrieb.
+* durch Bearbeiten der ``APP_ENV``-Variable in der `.env`-Datei,
+* durch Hinzufügen einer `.env.local`-Datei und Überschreiben des Werts dort,
+* durch Festlegen einer Umgebungsvariable in Ihrer Apache2-vHost-Konfiguration: ``SetEnv APP_ENV prod``,
+* durch explizites Festlegen beim Starten des lokalen Webservers:
 
-  Im Detail werden in der Entwicklungsumgebung von Mapbender u.a. die CSS,
-  JavaScript und Übersetzungsdateien nicht gecacht.
+.. code-block:: bash
 
-  In der Produktionsumgebung werden diese aber in var/cache abgelegt.
-
-* In der Entwicklungsumgebung werden Fehlermeldungen und ihr Stacktrace direkt
-  an der Oberfläche angezeigt. In der Produktionsumgebung werden die
-  Fehlermeldungen in die Datei app/log/prod.log geschrieben.
-
-* Die Entwicklungsumgebung zeigt den Symfony Profiler an. Dort werden Dinge
-  protokolliert, die nur für die Entwickler, aber nicht für Außenstehende
-  sichtbar sein sollten.
-
-Das Verzeichnis var/cache enthält die einzelnen Cache-Dateien. Es werden
-Verzeichnisse für jede Umgebung (prod und dev) angelegt, das Verhalten des
-dev-Caches ist aber, wie angesprochen, anders.
-
-Bei Änderungen an der Oberfläche oder im Code von Mapbender ist das Cache
-Verzeichnis (var/cache) zu leeren, damit die Änderungen in der
-Produktionsumgebung sichtbar werden.
-
+    APP_ENV=prod symfony server:start --no-tls

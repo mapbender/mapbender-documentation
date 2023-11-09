@@ -80,6 +80,8 @@ Diese Vorlage kann genutzt werden, um die Karte in einer YAML-Anwendung einzubin
 Kontrolle über URL-Parameter
 ============================
 
+.. _layer_visibility_de:
+
 Ebenen sichtbar machen
 ----------------------
 

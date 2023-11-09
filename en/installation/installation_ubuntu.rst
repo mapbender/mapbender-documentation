@@ -119,6 +119,8 @@ To use the optional LDAP-connection, following PHP-LDAP-extension is required:
 
    sudo apt install php-ldap
 
+.. note:: To use LDAP, the `LDAP-Bundle <https://github.com/mapbender/ldapBundle>`_ must be integrated into Mapbender. Further setup instructions can be found in the bundle's README.md on GitHub.
+
 .. _postgres_install_config:
 
 Mapbender installation with PostgreSQL
@@ -179,7 +181,7 @@ Install the MySQL driver:
 
 .. code-block:: bash
 
-   apt install php-mysql
+   sudo apt install php-mysql
 
 Adapt these parameters (in parameters.yaml) accordingly:
 
