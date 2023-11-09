@@ -115,11 +115,13 @@ Optional
 LDAP
 ++++
 
-Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:
+Zur Nutzung der optionalen LDAP-Anbindung wird zunächst die PHP-LDAP-Extension benötigt:
 
 .. code-block:: bash
 
    sudo apt install php-ldap
+
+.. note:: Zur Verwendung von LDAP muss im Anschluss außerdem das `LDAP-Bundle <https://github.com/mapbender/ldapBundle>`_ in Mapbender integriert werden. Weitere Anweisungen zur Einrichtung finden Sie in der README.md auf GitHub.
 
 .. _postgres_install_config_de:
 
@@ -181,7 +183,7 @@ Installation MySQL Treiber:
 
 .. code-block:: bash
 
-   apt install php-mysql
+   sudo apt install php-mysql
 
 
 Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Parameter (parameters.yaml) angepasst werden:

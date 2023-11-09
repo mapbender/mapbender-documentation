@@ -12,6 +12,12 @@ Migration Guide
     For in-depth information from the Mapbender development team, also see the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/UPGRADING.md>`_.
     
 
+Migration to Mapbender 4
+************************
+
+* For Mapbender 4, all ``.yml`` file extensions were transformed into ``.yaml``. When migrating, the corresponding syntax must be adjusted accordingly.
+
+
 Migration to Mapbender 3.3.4
 ****************************
 
