@@ -77,24 +77,20 @@ This template can be used to include the map into a YAML application.
 
 
 
-Controlling by URL-parameters
-=============================
+Controlling URL parameters
+==========================
 
 .. _layer_visibility:
 
 Make Layer visible
 ------------------
 
-If you have a layer with the id <layerid> in a service with the id <serviceid>, you may pass the URL parameter
-visiblelayers to turn the layer visible:
-
+If you have a layer with the id ``<layerid>`` in a service with the id ``<serviceid>``, you may pass the URL parameter ``visiblelayers`` to turn the layer visible:
 
 .. code-block:: php
 
   ?visiblelayers=<serviceid>/<layerid>
 
-
-You may also pass multiple layers separated by comma.
 
 The layerid and serviceid values are specific to an application. You can get
 the layerid and serviceid in the specific application, namely in the
@@ -104,20 +100,16 @@ on the right side. Click on the icon and a popup window will appear.
 .. image:: ../../../figures/wms_instance_layer_id.png
      :scale: 80
 
-The first value lists the internal SourceID and SourceLayerId (31-591). The
-seconds value lists the InstanceID and InstanceLayerId that we want to use
-now (73-836).
+The first value lists the internal SourceID and SourceLayerId (31-591).
+The second value lists the InstanceID and InstanceLayerId that we want to use now (73-836).
 
-Use this values for the "visibleLayers" parameter in your URL, and seperate them by a slash.
+Use these values for the ``visibleLayers`` parameter in your URL, and seperate them by a slash.
 
 For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836
 
-If you have two layers that are not visible by default, put the two values
-of layerid and serviceid into the URL and seperate them by a comma.
+If you have two layers that are not visible by default, put the two values of layerid and serviceid into the URL and seperate them by a comma.
 
 For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
-
-
 
 
 Passing POIs
