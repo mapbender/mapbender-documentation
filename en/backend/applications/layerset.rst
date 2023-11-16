@@ -72,13 +72,13 @@ The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ `
 
 - **Visible:** The service can be set visible with this option.
 
-- **BaseSource:** The service should be treated as a BaseSource. This affects the :ref:`BaseSourceSwitcher <basesourceswitcher>`, which should only display BaseSources, and the :ref:`Layertree <layertree>`, where these BaseSources can be hidden. See also the `hints <hints-layersets_>`_ below.
+- **BaseSource:** The service should be treated as a BaseSource. This affects the :ref:`BaseSourceSwitcher <basesourceswitcher>`, which should only display BaseSources, and the :ref:`Layertree <layertree>`, where these BaseSources can be hidden. See also the :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>` below.
 
-- **Proxy:** If activated, the service will be requested via a proxy in Mapbender. See the `hints <hints-layersets_>`_ below.
+- **Proxy:** If activated, the service will be requested via a proxy in Mapbender. See the :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>` below.
 
 - **Transparency:** If this switch is enabled (that is the default), the service is requested with a transparent background. So in the WMS GetMap request with the parameter ``TRANSPARENT=TRUE``.
 
-- **Tiled:** The service is requested in tiles. The standard is not tiled. See the following `hints <hints-layersets_>`_.
+- **Tiled:** The service is requested in tiles. The standard is not tiled. See the following :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>`.
 
 
 **Layer-Order:**
@@ -140,8 +140,6 @@ All shared instances can be viewed under **Sources** -> **Shared instances**.
 .. image:: ../../../figures/layerset/shared_instances_overview.png
 
 
-.. _layer_configuration:
-
 Layer Configuration
 ===================
 
@@ -165,8 +163,6 @@ The layer table offers several checkboxes and two scale visibility fields that a
 * **Layer's name**: Layer name of the service information (for getMap-Requests, not adjustable).
 * **Style**: If a WMS provides more than one style, you can choose a different style than the default style.
 
-
-.. _hints-layersets:
 
 Notes on the effects of each configuration
 ===========================================

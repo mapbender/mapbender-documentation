@@ -37,8 +37,6 @@ You can use them to create a layout. You can create a base layout and then overw
 Read more about Templates in Mapbender at :ref:`templates` or in the `Contributing Guide <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#generate-translations>`_ and find a good introduction about Twig in the `Symfony Template documentation <https://symfony.com/doc/current/templates.html>`_.
 
 
-.. _override_js_css:
-
 Overriding JavaScript and CSS/Sass Resources
 ********************************************
 
@@ -69,7 +67,7 @@ Below you will find an example that utilizes custom resources for the **Button**
       }
    }
 
-.. hint:: It is also possible to override a resource :ref:`in the parameters.yaml file<override_js_css_yaml>`.
+.. hint:: It is also possible to override a resource :ref:`in the parameters.yaml file<en/customization/yaml:Overriding JavaScript and CSS/Sass Resources>`.
 
 Getting Help
 ************

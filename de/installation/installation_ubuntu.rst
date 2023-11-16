@@ -123,7 +123,6 @@ Zur Nutzung der optionalen LDAP-Anbindung wird zunächst die PHP-LDAP-Extension 
 
 .. note:: Zur Verwendung von LDAP muss im Anschluss außerdem das `LDAP-Bundle <https://github.com/mapbender/ldapBundle>`_ in Mapbender integriert werden. Weitere Anweisungen zur Einrichtung finden Sie in der README.md auf GitHub.
 
-.. _postgres_install_config_de:
 
 Mapbender Einrichtung auf PostgreSQL
 ++++++++++++++++++++++++++++++++++++
@@ -193,4 +192,4 @@ Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Paramete
                     database_driver:   pdo_mysql
                     database_port:     3306
 
-Nachfolgend muss die Datenbank initialisiert werden, siehe :ref:`postgres_install_config_de`.
+Nachfolgend muss die Datenbank initialisiert werden, siehe :ref:`de/installation/installation_ubuntu:Mapbender Einrichtung auf PostgreSQL`.

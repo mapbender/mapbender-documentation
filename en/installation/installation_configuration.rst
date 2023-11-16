@@ -124,8 +124,6 @@ The configuration files are located under ``application/config``.
 Find more information in: :ref:`yaml`.
 
 
-.. _app_cache:
-
 Production and Development environment and Caching
 --------------------------------------------------
 

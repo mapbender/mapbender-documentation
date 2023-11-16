@@ -70,13 +70,13 @@ Der Screenshot zeigt die `private Instanz <#freie-und-private-instanzen>`_ ``2/2
 
 - **Sichtbarkeit:** Der Dienst kann mit dieser Schaltfläche sichtbar geschaltet werden.
 
-- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den :ref:`basesourceswitcher_de`, der nur BaseSources anzeigen soll und auf den :ref:`layertree_de`, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch unter `Hinweise <hinweise-layersets_>`_.
+- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den :ref:`basesourceswitcher_de`, der nur BaseSources anzeigen soll und auf den :ref:`layertree_de`, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch unter :ref:`Hinweise <de/backend/applications/layerset:Hinweise zu den Auswirkungen der einzelnen Konfigurationen>`.
 
-- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe auch unter `Hinweise <hinweise-layersets_>`.
+- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe auch unter :ref:`Hinweise <de/backend/applications/layerset:Hinweise zu den Auswirkungen der einzelnen Konfigurationen>`.
 
 - **Transparenz:** Ist dieser Schalter aktiviert (und das ist er standardmäßig) wird der Dienst mit transparentem Hintergrund angefordert. Also im WMS GetMap-Request mit dem Parameter ``TRANSPARENT=TRUE``.
 
-- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert (Standard: nicht gekachelt). Siehe auch unter `Hinweise <hinweise-layersets_>`.
+- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert (Standard: nicht gekachelt). Siehe auch unter :ref:`Hinweise <de/backend/applications/layerset:Hinweise zu den Auswirkungen der einzelnen Konfigurationen>`.
 
 
 **Layer-Reihenfolge:**
@@ -137,8 +137,6 @@ Zu einer Übersicht aller freien Instanzen kann über das Menü zu **Datenquelle
 .. image:: ../../../figures/de/layerset/shared_instances_overview.png
 
 
-.. _layer_konfiguration:
-
 Layerkonfiguration
 ==================
 
@@ -161,7 +159,6 @@ Layerkonfiguration
 * **Name**: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar).
 * **Style**: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil wählen.
 
-.. _hinweise-layersets:
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen
 ==========================================================

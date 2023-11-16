@@ -63,8 +63,9 @@ Eine Mapbender Anwendung kann wie folgt aussehen:
   .. image:: ../figures/de/mapbender_basic_application.png
      :width: 100%
 
-Installation
-============
+
+Mapbender installieren
+======================
 
 Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installation und bietet einen schnellen Einstieg in die Mapbender-Oberfläche. Hinweise zur Installation von Mapbender finden Sie unter :ref:`installation_de`.
 
@@ -78,8 +79,6 @@ Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installatio
 
 Falls Sie Schwierigkeiten haben Mapbender zu starten, überprüfen Sie, ob der Apache Web Server und die PostgreSQL-Datenbank korrekt funktionieren.
 
-
-.. _environments_de:
 
 Starten von Mapbender als Produktivumgebung
 -------------------------------------------
@@ -241,8 +240,6 @@ Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
      :width: 100%
 
 
-.. _load_sources_de:
-
 Laden von Datenquellen
 ----------------------
 
@@ -353,7 +350,7 @@ Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzug
 * Aufklappen erlauben: Erlaubt Aufklappen des Layers im Ebenenbaum
 * Aufklappen an: Klappt Layer beim Start der Anwendung auf
 * Weitere Informationen (Drei-Punkte-Button): Öffnet einen Dialog mit weiteren Layer-Informationen
-    * ID: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <layer_visibility_de>`.
+    * ID: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <de/elements/basic/map:Ebenen sichtbar machen>`.
     * Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
     * Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil (default) wählen.
 

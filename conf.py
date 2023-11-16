@@ -19,13 +19,18 @@ needs_sphinx = '1.8'
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.duration',
+    'sphinx.ext.coverage',
+    'sphinx.ext.todo',
     'notfound.extension',
     'sphinx_copybutton',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
     'sphinxcontrib.phpdomain'
 ]
+
+# Create unique sections for duplicate headings with autosectionlabel extension.
+autosectionlabel_prefix_document = True
 
 # -- notfound.extension
 notfound_template = "404.html"
