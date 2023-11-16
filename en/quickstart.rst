@@ -63,9 +63,8 @@ This is how a Mapbender application can look like:
   .. image:: ../figures/mapbender_basic_application.png
      :width: 100%
 
-
-Installation
-============
+Install Mapbender
+=================
 
 This quickstart explains the basics of Mapbender and serves as a quick introduction after your first successful installation.
 For the installation of Mapbender have a look at :ref:`installation`.
@@ -79,8 +78,6 @@ For the installation of Mapbender have a look at :ref:`installation`.
 
 If you have any difficulties running Mapbender, please check whether your Apache web server and your PostgreSQL database are running without errors.
 
-
-.. _environments:
 
 Start Mapbender in a productive environment
 -------------------------------------------
@@ -237,8 +234,6 @@ The sources pages provides a user with the following functions:
      :width: 100%
 
 
-.. _load_sources:
-
 Load sources
 ------------
 
@@ -352,7 +347,7 @@ Currently, the element can be used to transfer user- and group information, e.g.
 * toggle allowed: allows opening in the layer tree
 * toggle on: open folder on start of the application
 * more information (...): opens a dialog with detailed layer information
-    * ID: ID of the layer. Can be useful :ref:`to control <layer_visibility>`URL parameters.
+    * ID: ID of the layer. Can be useful :ref:`to control <en/elements/basic/map:Make Layer visible>` URL parameters.
     * Name: layer name of the service information (for getMap-Requests)
     * Style: if a WMS provides more than one style you can choose a different style than the default style.
 

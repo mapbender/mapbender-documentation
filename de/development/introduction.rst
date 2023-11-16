@@ -37,8 +37,6 @@ Sie kann verwendet werden, um ein Layout zu erstellen. Auf diese Weise kann ein 
 Lesen Sie mehr über Templates auf der Seite :ref:`templates_de` oder im `Contributing Guide <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#generate-translations>`_. Eine Einführung in Twig gibt außerdem die `Symfony Template Dokumentation <https://symfony.com/doc/current/templates.html>`_.
 
 
-.. _override_js_css_de:
-
 Überschreiben von JavaScript- und CSS/Sass-Ressourcen
 *****************************************************
 
@@ -70,7 +68,7 @@ Nachfolgend finden Sie ein Beispiel, welches eigene Ressourcen für die **Button
    }
 
 
-.. hint:: Alternativ ist es möglich, Ressourcen mithilfe :ref:`eines Parameters<override_js_css_yaml_de>` zu überschreiben.
+.. hint:: Alternativ ist es möglich, Ressourcen mithilfe :ref:`eines Parameters<de/customization/yaml:Überschreiben von JavaScript- und CSS/Sass-Ressourcen>` zu überschreiben.
 
 
 Wo gibt es Hilfe?

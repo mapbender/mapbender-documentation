@@ -11,8 +11,9 @@ parameters.yaml
 The following fundamental Mapbender parameters are specified here.
 
 
-Database
-********
+Database configuration
+**********************
+
 The files ``parameters.yaml`` and ``doctrine.yaml`` are needed to configure databases in Mapbender. In ``parameters.yaml``, (multiple) variables for database connection(s) can be defined. These variables are being processed in ``doctrine.yaml``. An alias is assigned to each database connection.
 
 * **database_driver**: Database driver. Possible values are:
@@ -94,8 +95,6 @@ A disclaimer can be added through the use of site links.
 
 Site links will be seperated by "|".
 
-
-.. _custom-icons:
 
 Customizing icons
 *****************
@@ -245,11 +244,9 @@ SSL certificate
 For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yaml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
 
-.. _override_js_css_yaml:
-
 Overriding JavaScript and CSS/Sass Resources
 ********************************************
-To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`overriding in the bundle <override_js_css>`, you can add the following to your ``paramaters.yaml`` file:
+To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`overriding in the bundle <en/development/introduction:Overriding JavaScript and CSS/Sass Resources>`, you can add the following to your ``paramaters.yaml`` file:
 
 .. code-block:: yaml
     
@@ -268,9 +265,10 @@ doctrine.yaml
 * **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
 
 
-Database
-********
-Important: Every database defined in parameters.yaml needs to have a placeholder in ``doctrine.yaml`` as well:
+Database placeholder
+********************
+
+.. note:: Every database defined in ``parameters.yaml`` needs to have a placeholder in ``doctrine.yaml`` as well:
 
 .. code-block:: yaml
 
@@ -293,8 +291,8 @@ Important: Every database defined in parameters.yaml needs to have a placeholder
                 profiling: "%kernel.debug%"                 # Profiling SQL requests. This option can be turned of in production. (standard: %kernel.debug%)
 
 
-Use of several databases
-************************
+Several database placeholders
+*****************************
 Example with two database connections in ``doctrine.yaml``:
 
 .. code-block:: yaml
@@ -413,7 +411,7 @@ Then, use the Import mask to load an import file as an application.
 Export/import/clone YAML application files over the console
 -----------------------------------------------------------
 
-Please go to :ref:`app_command_export_import_clone` to see the console commands. Find a few introductional words about exporting and importing applications over the console below.
+Please go to :ref:`en/customization/commands:Application Export, Import & Cloning` to see the console commands. Find a few introductional words about exporting and importing applications over the console below.
 
 **Export**
 

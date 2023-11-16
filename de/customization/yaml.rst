@@ -11,8 +11,9 @@ parameters.yaml
 Hier werden grundlegende Parameter von Mapbender bestimmt.
 
 
-Datenbank
-*********
+Datenbank-Konfiguration
+***********************
+
 Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yaml`` und ``doctrine.yaml`` verwendet. In der ``parameters.yaml`` werden Variablen für die Datenbankverbindung definiert. Es können mehrere Datenbankverbindungen definiert werden. Die Variablen werden in der ``doctrine.yaml`` verarbeitet. Zu jeder Datenbankverbindung wird ein Alias vergeben.
 
 * **database_driver**: Der Datenbanktreiber. Mögliche Werte sind:
@@ -94,8 +95,6 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
 
 Die Sitelinks werden mittels "|" voneinander getrennt.
 
-
-.. _custom-icons_de:
 
 Icons anpassen
 **************
@@ -243,11 +242,9 @@ SSL Zertifikat
 Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Anschließend muss die Variable ``parameters.cookie_secure`` in Ihrer ``parameters.yaml`` auf ``true`` gesetzt werden. Dadurch wird sichergestellt, dass das Login-Cookie nur über sichere Verbindungen übertragen wird.
 
 
-.. _override_js_css_yaml_de:
-
 Überschreiben von JavaScript- und CSS/Sass-Ressourcen
 *****************************************************
-Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :ref:`zum Überschreiben im Bundle selbst<override_js_css_de>` in Ihrer ``paramaters.yaml``-Datei Folgendes hinzufügen:
+Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :ref:`zum Überschreiben im Bundle selbst<de/development/introduction:Überschreiben von JavaScript- und CSS/Sass-Ressourcen>` in Ihrer ``paramaters.yaml``-Datei Folgendes hinzufügen:
 
 .. code-block:: yaml
 
@@ -267,9 +264,11 @@ Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeit
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
 * **framework.session.cookie_httponly**: Stellen Sie für HTTP-only session cookies sicher, dass der Parameter framework.session.cookie_httponly auf true steht.
 
-Datenbank
-*********
-Wichtig: Jede Datenbank, die in der ``parameters.yaml`` definiert wird, muss auch als Platzhalter in der ``doctrine.yaml`` stehen:
+
+Datenbank-Platzhalter
+*********************
+
+.. note:: Jede Datenbank, die in der ``parameters.yaml`` definiert wird, muss auch als Platzhalter in der ``doctrine.yaml`` stehen:
 
 .. code-block:: yaml
 
@@ -291,7 +290,9 @@ Wichtig: Jede Datenbank, die in der ``parameters.yaml`` definiert wird, muss auc
                 profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standard: %kernel.debug%)
                 #server_version: '15'                       # Wichtig: Sie MÜSSEN die Serverversion konfigurieren, entweder hier oder in der DATABASE_URL Umgebungsvariable (siehe .env-Datei).
 
-**Verwendung mehrerer Datenbanken**
+
+Verwendung mehrerer Datenbanken (doctrine.yaml)
+***********************************************
 
 Es folgt ein Beispiel mit zwei Datenbankverbindungen in der **doctrine.yaml**:
 
@@ -410,7 +411,7 @@ Nutzen Sie danach die abgebildete Maske, um eine Importdatei als Anwendung zu la
 Export/Import/Klonen von YAML Anwendungsdateien über die Konsole
 ----------------------------------------------------------------
 
-Bitte gehen Sie zu :ref:`app_command_export_import_clone_de`, um entsprechende Konsolenbefehle einzusehen. Nachfolgend finden Sie einige einführende Worte darüber, was mit Anwendungen über die Konsole möglich ist.
+Bitte gehen Sie zu :ref:`de/customization/commands:Anwendungs-Export, Import und Klonen`, um entsprechende Konsolenbefehle einzusehen. Nachfolgend finden Sie einige einführende Worte darüber, was mit Anwendungen über die Konsole möglich ist.
 
 **Export über die Konsole**
 

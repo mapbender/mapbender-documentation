@@ -124,8 +124,6 @@ Die Konfigurationsdateien liegen unter ``application/config``.
 Mehr Informationen dazu finden Sie im Kapitel: :ref:`yaml_de`.
 
 
-.. _app_cache_de:
-
 Produktions- und Entwicklungsumgebung und Caches
 ------------------------------------------------
 

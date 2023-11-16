@@ -13,7 +13,6 @@ Make sure you are in the correct directory (above the app directory)
 
 * mapbender (installation via package)
 
-.. _app_command_help:
    
 Help command
 ------------
@@ -24,8 +23,6 @@ The parameter ``--help`` displays the help message for every command, for exampl
 
     bin/console mapbender:user:create --help
    
-
-.. _app_command_export_import_clone:
 
 Application Export, Import & Cloning
 ------------------------------------
@@ -211,7 +208,7 @@ The queued print is disabled by default because it requires some external integr
 
 	mapbender.print.queueable: true
 
-Read more about the general characteristics of queued print at :ref:`queued_print`. Also `here <https://github.com/mapbender/mapbender/pull/1070>`_
+Read more about the general characteristics of queued print at :ref:`en/elements/export/printclient:Queued Print`. Also `here <https://github.com/mapbender/mapbender/pull/1070>`_
 
 
 The print assistant is then updated in the backend of Mapbender and two new lines appear: mode and queue. 
@@ -580,7 +577,7 @@ Use this command to update the hostname in the source URLs, eliminating the need
 
   bin/console mapbender:source:rewrite:host [options] [--] <from> <to>
 
-As usual, the :ref:`app_command_help` shows more options.
+As usual, the :ref:`en/customization/commands:Help command` shows more options.
 
 Example to update the hostname:
 
@@ -596,9 +593,7 @@ Example to update the hostname:
 	14 urls unchanged
 
 
-.. _mapbender_config_check:
-
-bin/console mapbender:config:check 
+bin/console mapbender:config:check
 **********************************
 
 Command to check the system configuration and mapbender requirements. Useful command to determine whether dependencies are compliant and database access works.
