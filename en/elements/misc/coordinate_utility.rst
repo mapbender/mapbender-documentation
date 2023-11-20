@@ -26,9 +26,9 @@ Configuration
 * **Title:** Title of the element.
 * **Srs List:** You can define additional SRS to which the tool has to transform the coordinates. This list can be left empty.
 * **Zoom-Level:** Zoom level of the map (default: 6)
-* **Add map's srs list:** The supported coordinate systems defined in the `Map element  <../basic/map>`_ are automatically used. These coordinate systems, defined in the map, are also used by the `SRS Selector  <../basic/srs_selector>`_ (default: true).
+* **Add map's srs list:** If checked, the supported coordinate systems defined in the :ref:`map` will automatically be used by this element and the :ref:`srs_selector` (default: true).
 
-If you define Coordinates Utility as a dialog, you need a `Button  <../misc/button>`_ that you place in the Toolbar. 
+If you define Coordinates Utility as a dialog, you need a :ref:`button` that you place in the Toolbar. 
 
 
 Using the tool

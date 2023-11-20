@@ -10,9 +10,6 @@ To prevent overwriting your custom templates after an Mapbender upgrade you shou
 You can also change the style of your application with the built-in :ref:`CSS-Editor <css>`.
 
 
-How to create your own template?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 **Steps for including your templates:**
 
 * Create your own bundle
@@ -26,7 +23,6 @@ How to create your own template?
 To help you we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files with the following links:
 
 * https://github.com/mapbender/mapbender-workshop/tree/master
-
 
 
 Create your own bundle

@@ -39,9 +39,9 @@ OpenLayers
 **********
 OpenLayers is a powerful software for web maps. It supports a lot of data sources and functionality.
 
-Read more about OpenLayers at http://openlayers.org/
+Read more about OpenLayers at https://openlayers.org/
 
-You find example applications with OpenLayers at http://dev.openlayers.org/examples/
+You find example applications with OpenLayers at https://openlayers.org/en/latest/examples/
 
 
 jQuery and jQuery UI

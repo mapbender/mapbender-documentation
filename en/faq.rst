@@ -13,7 +13,7 @@ Q: Why does Mapbender offer environments?
 
 A: For productive use, you'll use the `prod` environment. If you develop something (TWIG-files, CSS or JS-files) or want to debug, you should use the `dev` environment. This is because this mode provides more information and error messages. 
 
-For further information on the environments, please take a look at the chapter :ref:`environments`.
+For further information on the environments, please take a look at the chapter en/quickstart:Start Mapbender in a productive environment.
 
 
 Cache
@@ -25,7 +25,7 @@ A: The cache is a small storage area, where Mapbender accesses frequently needed
 
 It is no problem to delete these directories. When you run Mapbender again, new files will be stored again in the cache directory.
 
-For further information on the cache, please take a look at the chapter :ref:`app_cache`.
+For further information on the cache, please take a look at the chapter :ref:`en/installation/installation_configuration:Production and Development environment and Caching`.
 
 
 Services and their usage in applications
@@ -221,8 +221,8 @@ Q: I get a deprecation warning when I call bootstrap or composer update:
 A: This depends on the PHP version the system in running on and occurs on PHP versions < 7. Depending on the Mapbender release, we recommend different PHP versions that do not trigger the notices.
 
 
-Development
------------
+Developing
+----------
 
 Manual updates of modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~

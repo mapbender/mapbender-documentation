@@ -20,7 +20,7 @@ Configuration example
 
 The definition of the Data Manager is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the attribute form.
 
-.. hint:: If errors occur in the database, fields or form, various error messages will appear. Here, the productive environment will only give a general error message. If you want to see the exact error, you should call the page as development environment. Find more under :ref:`environments`.
+.. hint:: If errors occur in the database, fields or form, various error messages will appear. Here, the productive environment will only give a general error message. If you want to see the exact error, you should call the page as development environment. Find more under en/quickstart:Start Mapbender in a productive environment.
 
 Data Manager is a good solution to store simple contact information in Mapbender:
 

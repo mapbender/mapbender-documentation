@@ -63,19 +63,13 @@ Below you'll find some basic conventions about documentation writing.
 
 ### Crosslinks
 
-Create crosslinks to refer to another documentation page with a label. Labels that refer to a page are always in the first line of the file. Feel free to add labels above headings, if you want to refer to these instead.
+We use the [Sphinx Autosectionlabel extension](https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html) for referencing sections using the title of a section. The syntax is to combine the file path name, followed by a colon, followed by the section title name.
+
+For example, you can add a link to the Install Mapbender section of the english Quickstart document like this:
 
 ```bash
-    .. _activity_indicator:
+    The following class refers to the :ref:`en/quickstart:Install Mapbender` text section.
 ```
-
-Add the crosslink to your documentation text section like this:
-
-```bash
-    After this text is a link to :ref:`activity_indicator`.
-```
-
-Note that German labels always use the `_de` suffix.
 
 ### Images (figures)
 

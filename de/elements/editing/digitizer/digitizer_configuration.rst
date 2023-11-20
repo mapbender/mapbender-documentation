@@ -18,7 +18,7 @@ Mehr zu diesem Thema finden Sie unter :ref:`yaml_de`.
 
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 
-.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`environments_de`.
+.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`de/quickstart:Starten von Mapbender als Produktivumgebung`.
 
 
 YAML-Definition für das Element digitizer in der Textarea unter schemes
@@ -846,11 +846,11 @@ auf.
 
 Das Verzeichnis ist:
 
-* <mapbender>/web/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+* ``<mapbender>/web/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png``
 
 Die in der Datenbank verlinkte URL ist:
 
-* http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+* ``http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png``
 
 
 

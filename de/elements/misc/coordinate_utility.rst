@@ -27,9 +27,9 @@ Konfiguration
 * **Title:** Titel des Elements
 * **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren können soll. Das Feld kann leer gelassen werden.
 * **Zoom-Level** Zoom-Level der Karte (Standard: 6)
-* **Koordinatensysteme von der Karte hinzufügen:** Die von dem `Kartenelement  <../basic/map>`_ angegebenen Koordinatensysteme werden automatisch vom Tool unterstützt. Diese werden in der Karte angegeben und auch im  `SRS Selector  <../basic/srs_selector>`_ unterstützt.
+* **Koordinatensysteme von der Karte hinzufügen:** Ist die Checkbox aktiviert, werden die in der :ref:`map_de` angegebenen Koordinatensysteme automatisch von diesem Element und dem :ref:`srs_selector_de` unterstützt.
 
-Sofern das Koordinaten Utility im Kartenbereich eingebunden werden soll, muss ein damit verknüpfter `Button  <../misc/button>`_ entsprechend platziert werden. 
+Sofern das Koordinaten Utility im Kartenbereich eingebunden werden soll, muss ein damit verknüpfter :ref:`button_de` entsprechend platziert werden. 
 
 Benutzung
 =========

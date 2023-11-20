@@ -32,7 +32,7 @@ Diese Komponenten bietet Symfony an:
 
 Mehr über Symfony und dessen Funktionsweisen findet sich in der offiziellen Dokumentation: 
 
-* https://symfony.com/doc/current/book/index.html
+* https://symfony.com/doc/current/index.html
 
 
 OpenLayers

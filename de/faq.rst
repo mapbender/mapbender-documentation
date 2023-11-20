@@ -13,7 +13,7 @@ F: Wozu sind diese Umgebungen da?
 
 A: Für den produktiven Einsatz rufen Sie Mapbender über die `prod`-Umgebung auf. Erst wenn Sie selbst etwas (an den Twig-, CSS- oder JS-Dateien) entwickeln, nutzen Sie den Aufruf über die `dev`-Umgebung. Der dahinterstehende Entwicklungsmodus gibt mehr Informationen aus, indem er z. B. detailliertere Fehlermeldungen anzeigt. 
 
-Mehr Details zu den Umgebungen gibt es im Kapitel :ref:`environments_de`.
+Mehr Details zu den Umgebungen gibt es im Kapitel :ref:`de/quickstart:Starten von Mapbender als Produktivumgebung`.
 
 
 Cache
@@ -25,7 +25,7 @@ A: Der Cache ist ein Zwischenspeicher, aus dem Mapbender auf häufig benutzte Da
 
 Diese zwei Verzeichnisse können ohne Bedenken gelöscht werden. Beim nächsten Aufruf von Mapbender werden im Cache der entsprechenden Umgebung erneut Dateien abgelegt.
 
-Mehr Details zum Cache gibt es im Kapitel :ref:`app_cache_de`.
+Mehr Details zum Cache gibt es im Kapitel :ref:`de/installation/installation_configuration:Produktions- und Entwicklungsumgebung und Caches`.
 
 
 Dienste in Anwendungen

@@ -186,7 +186,7 @@ Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufe
 
 Überprüfen Sie, ob der Alias erreichbar ist:
 
-* http://localhost/mapbender/
+* ``http://localhost/mapbender/``
 
 Per Voreinstellung lauten die Anmeldedaten (wenn die SQLite-Datenbank verwendet wurde)
 
@@ -200,7 +200,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 .. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
 
-Weitere Informationen dazu finden Sie unter :ref:`mapbender_config_check_de`.
+Weitere Informationen dazu finden Sie unter :ref:`de/customization/commands:bin/console mapbender:config:check`.
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
 Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`Mapbender Schnellstart <quickstart_de>`.

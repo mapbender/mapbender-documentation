@@ -13,7 +13,6 @@ Achten Sie beim Ausführen der Befehle darauf, dass Sie sich im richtigen Verzei
 
 * mapbender (bei der Paketinstallation)
 
-.. _app_command_help_de:
 
 Hilfe zu den Befehlen
 ---------------------
@@ -24,8 +23,6 @@ Die Hilfe für jeden Befehl kann mit dem ``--help`` Parameter aufgerufen werden,
 
     bin/console mapbender:user:create --help
    
-
-.. _app_command_export_import_clone_de:
 
 Anwendungs-Export, Import und Klonen
 ------------------------------------
@@ -211,7 +208,7 @@ Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine exter
 
 	mapbender.print.queueable: true
 
-Weitere Informationen zum Warteschleifendruck gibt es im Kapitel :ref:`queued_print_de` sowie auf `GitHub <https://github.com/mapbender/mapbender/pull/1070>`_.
+Weitere Informationen zum Warteschleifendruck gibt es im Kapitel :ref:`de/elements/export/printclient:Warteschleifendruck` sowie auf `GitHub <https://github.com/mapbender/mapbender/pull/1070>`_.
 
 Anschließend wird im Backend des Mapbenders der Druckassistent aktualisiert und es erscheinen zwei neue Zeilen, Modus und Warteschleife.
 
@@ -582,7 +579,7 @@ Aktualisiert den Hostnamen in den Quell-URLs, ohne die Funktionen/Capabilities n
 
     bin/console mapbender:source:rewrite:host [options] [--] <from> <to>
 
-Vergessen Sie nicht, dass Sie sich auch hier weitere Optionen über :ref:`app_command_help_de` anzeigen lassen können.
+Vergessen Sie nicht, dass Sie sich auch hier weitere Optionen über :ref:`de/customization/commands:Hilfe zu den Befehlen` anzeigen lassen können.
 
 Umsetzungsbeispiel für die Aktualisierung eines Hostnamens:
 
@@ -597,10 +594,8 @@ Umsetzungsbeispiel für die Aktualisierung eines Hostnamens:
 	4 sources unchanged
 	14 urls unchanged
    
-    
-.. _mapbender_config_check_de:
 
-bin/console mapbender:config:check 
+bin/console mapbender:config:check
 **********************************
 
 Der Befehl prüft die Konfiguration und gibt zur Information die Systemkonfiguration aus. Dadurch kann ermittelt werden, ob Abhängigkeiten nicht erfüllt werden.
