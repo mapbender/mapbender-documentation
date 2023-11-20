@@ -96,13 +96,13 @@ If it makes sense, update all applications to map_engine_code current.
 SearchRouter
 ============
 
-In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/application/config/applications/mapbender_demo_nrw.yaml>`_
+In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/master/app/config/applications/mapbender_demo_nrw.yml>`_.
 
 1. deprecated empty: use placeholder instead
 
 2. For text and choice you have to define the full class-path.
 
-You also find information at `Best Practices Page <https://github.com/mapbender/mapbender/wiki/Best-practices:-form-types#inversion-of-choices>`_
+You also find information at `Best Practices Page <https://github.com/mapbender/mapbender/wiki/Best-practices:-form-types#inversion-of-choices>`_.
 
 You can update the configuration with the following SQL.
 
