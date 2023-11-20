@@ -862,11 +862,11 @@ The storage path and the name of the stored files can not yet be changed. The fi
 
 The filesystem path is:
 
-* <mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png
+* ``<mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png``
 
 The linked URL stored in the database column is:
 
-* http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png
+* ``http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png``
 
 .. code-block:: yaml
 

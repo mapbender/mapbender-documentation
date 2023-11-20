@@ -186,7 +186,7 @@ Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufe
 
 Überprüfen Sie, ob der Alias erreichbar ist:
 
-* http://localhost/mapbender/
+* ``http://localhost/mapbender/``
 
 Per Voreinstellung lauten die Anmeldedaten (wenn die SQLite-Datenbank verwendet wurde)
 

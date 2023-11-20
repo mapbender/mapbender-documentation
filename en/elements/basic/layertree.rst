@@ -164,7 +164,7 @@ The checkbox next to its respective layer name allows to turn a layer on and off
 
 
 Workflow thematic Layertree
--------------------------------
+---------------------------
 
 In the following section, we walk through an exemplary configuration of a Layertree with advanced features, such as thematic layersets, in three steps:
 

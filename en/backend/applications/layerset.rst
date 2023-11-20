@@ -211,12 +211,12 @@ The item is useful for passing the service on only to specific users and groups.
 Further information
 -------------------
 
-* You can find information about using layersets in the :ref:`Quickstart <quickstart>`.
+* You can find information about using layersets under Quickstart chapter :ref:`en/quickstart:4. Configure Sources`.
 
-* Further tips on manipulating WMS can be found in the :ref:`FAQs <faq>`.
+* Further tips on manipulating WMS can be found under :ref:`en/faq:performance`.
 
-* The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../basic/layertree#workflow-thematic-layertree>`_.
+* The relevance of layersets for the display in the layertree is described under :ref:`en/elements/basic/layertree:Workflow thematic Layertree`.
 
-* Disabling one or more layersets for an application is possible in its `Map element <../basic/map>`_ settings.
+* Disabling one or more layersets for an application is possible in its :ref:`map` settings.
 
 * Likewise, individual thematic layersets can be (de)activated via checkbox in the layerset configuration so that they are (not) visible in the map on application startup.

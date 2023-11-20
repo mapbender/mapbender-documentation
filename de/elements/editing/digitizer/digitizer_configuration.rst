@@ -846,11 +846,11 @@ auf.
 
 Das Verzeichnis ist:
 
-* <mapbender>/web/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+* ``<mapbender>/web/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png``
 
 Die in der Datenbank verlinkte URL ist:
 
-* http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+* ``http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png``
 
 
 

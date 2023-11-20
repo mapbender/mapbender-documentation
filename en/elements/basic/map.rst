@@ -108,12 +108,12 @@ now (73-836).
 
 Use this values for the "visibleLayers" parameter in your URL, and seperate them by a slash.
 
-For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836
+For example: ``http://localhost/mapbender/application/myapp?visiblelayers=73/836``
 
 If you have two layers that are not visible by default, put the two values
 of layerid and serviceid into the URL and seperate them by a comma.
 
-For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
+For example: ``http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840``
 
 
 

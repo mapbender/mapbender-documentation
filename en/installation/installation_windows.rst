@@ -182,7 +182,7 @@ The Mapbender installation can now be accessed under **http://[hostname]/mapbend
 
 **Check if the alias is working**
 
-* http://localhost/mapbender/
+* ``http://localhost/mapbender/``
 
 username: "root", password: "root" (if you use the SQLite database shipped with Mapbender)
 

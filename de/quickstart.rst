@@ -223,8 +223,8 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 .. hint:: Mit einem * markierte Elemente benötigen zusätzliche Dependencies.
 
 
-Datenquellen (Sources) verwenden
-================================
+4. Datenquellen (Sources) verwenden
+===================================
 
 In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich unter :ref:`layerset_de`.
 
