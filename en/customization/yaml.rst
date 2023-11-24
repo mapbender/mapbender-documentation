@@ -92,8 +92,19 @@ A disclaimer can be added through the use of site links.
         text: Imprint & Contact									    # Link text
       - link: https://mapbender.org/en/privacy-policy/
         text: Privacy Policy
+      - link: https://doc.mapbender.org/
+        text: Documentation
 
 Site links will be seperated by "|".
+
+
+Disabling Elements
+******************
+Disabling individual elements can be configured using the following parameter:
+
+.. code-block:: yaml
+
+    mapbender.disabled_elements:
 
 
 Customizing icons
@@ -136,8 +147,8 @@ With these configuration options, you can customize the icons in Mapbender to su
 
 Language settings
 *****************
-Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **application/config/parameters.yaml**.
-If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language.
+Mapbender is automatically adjusted to your browser's language.
+Yet it is also possible to set your preferred language via the `fallback_locale` parameter. If a translation of your browser's language is missing in Mapbender, it will take the defined language.
 
 The locale can only be set for the entire Mapbender installation (not for single applications).
 
@@ -163,7 +174,7 @@ Configuration example:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
 
-You also can force Mapbender to use the language defined for the parameter locale to be used. to do this add mapbender.automatic_locale: false.
+You also can force Mapbender to use the language defined for the parameter locale to be used. To do this, add ``mapbender.automatic_locale: false``.
 
 .. code-block:: yaml
 
@@ -176,17 +187,20 @@ You also can force Mapbender to use the language defined for the parameter local
 More information in :ref:`translation`.
 
 
-Logo
-****
-In parameters.yaml, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
+Branding
+********
+With the branding parameters, you can refer to your own brand. You can add a brand name, a project version, a brand image (logo), a custom favicon and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
-    branding.logo: ./bundles/mapbendercore/image/logo_mb.png
-    branding.login_backdrop: ./bundles/mapbendercore/image/body.png
+    branding.project_name: Geoportal powered by Mapbender
+    branding.project_version: 1.0
+    branding.logo: ./bundles/mapbendercore/image/OSGeo_project.png
+    branding.favicon: ./application/public/brand-favicon.ico
+    branding.login_backdrop: ./bundles/mapbendercore/image/login-backdrop.jpg
 
 
- The files must be accessible under application/public.
+The files must be accessible under ``application/public``.
 
 
 Mailer
@@ -202,18 +216,6 @@ Configuration example:
 The functions 'Self-Registration' and 'reset password' need a mailer.
 
 More information in chapter :ref:`users`.
-
-
-Project name
-************
-The name of the project (default: Mapbender) can be changed in ``parameters.yaml``. The change has a global impact on the whole Mapbender installation.
-
-.. code-block:: yaml
-
-    branding.project_name: Geoportal
-
-
-**Important note:** In ``parameters.yaml`` **tabulators may not be used for indentation** instead you need to use space.
 
 
 Proxy settings
