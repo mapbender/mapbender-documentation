@@ -13,23 +13,15 @@ You can only use the element in the sidepane.
 * **Target:** (ID) of the map.
 * **Schemes:** YAML-Definition of the element Digitizer
 
-The Ditigitzer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. 
+The Digitizer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. 
 Read more about this under :ref:`yaml`.
+
+.. hint:: It is not recommended to place spatial data into the "default" Mapbender database containing your Doctrine entities. You will encounter errors running Doctrine schema updates
 
 The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
 
-.. hint:: If errors occur in the database, fields or form, various error messages will appear. Here, the productive environment will only give a general error message. If you want to see the exact error, you should call the page as development environment. Find more under :ref:`environments`.
-
-
-* **debug:** Display error messages, e.g. syntax error in SQL [experimental]
-
-.. code-block:: yaml
-
-    poi:
-        [...]
-        debug: true
-        [...]        
-
+.. hint:: If errors occur in the database, fields or form, various error messages will appear. The productive environment will only give a general error message. If you want to see the exact error message, you should use the development environment. Find more under :ref:`environments`.
+ 
 
 YAML-Definition for the element Digitizer in the textarea schemes
 -----------------------------------------------------------------
@@ -42,7 +34,9 @@ The functionality of the built-in features and additional functions are explaine
 
     poi:
         label: point digitizing
-        inlineSearch: true
+        minScale: 5000
+        maxScale: 20000
+        maxResults: 500 
         featureType:
             connection: search_db
             table: poi
@@ -50,22 +44,34 @@ The functionality of the built-in features and additional functions are explaine
             geomType: point
             geomField: geom
             srid: 4326
-        openFormAfterEdit: true
-        zoomScaleDenominator: 500
-        allowEditData: true
-        allowDelete: true
-        allowDigitize: true
-        useContextMenu: true
+        #??allowCreate: true #Allow user to make new features (default true)
+        allowEditData: true # Allow attribute editing (default true)
+        allowDelete: true # Allow user to remove features from the database (default true)
+        allowDigitize: true # Allow geometry creation and editing (default true)
+        roles: #Show this schema only to users with (at least one of) these roles
+            - root
+            - ROLE_GROUP_EDITING
+        displayPermanent: true # Keep features visible on map even after switching to a different schema
+        displayOnInactive: true # Keep features visible on map even after deactivating Digitizer
+        continueDrawingAfterSave: # Keep drawing tool active after creating and saving a new feature (~fast batch mode feature creation)
+        printable: false
+        allowChangeVisibility: true
+        inlineSearch: true
+        searchType: currentExtent
+        pageLength: 5 # Limits the number of rows per page (default 16)
+        tableFields:
+            gid:
+                label: Nr.
+                width: 20%
+            name:
+                label: Name
+                width: 80%
         toolset:
             - type: drawPoint
             - type: moveFeature
         popup:
             title: point test suite
             width: 500px
-        searchType: currentExtent
-        tableFields:
-            gid: {label: Nr. , width: 20%}
-            name: {label: Name , width: 80%}
         styles:
             default:
                 strokeWidth: 2
@@ -79,6 +85,15 @@ The functionality of the built-in features and additional functions are explaine
                 strokeColor: '#0e6a9e'
                 fillOpacity: 0.7
                 pointRadius: 10
+            unsaved:
+                strokeWidth: 3
+                strokeColor: "#f0f0f0"
+                fillColor:   "#ffffff"
+                fillOpacity: 0.5
+                pointRadius: 6
+                label: 'Please save'
+                fontColor: red
+                fontSize: 18
         formItems:
            - type: tabs
              children:
@@ -261,11 +276,12 @@ The functionality of the built-in features and additional functions are explaine
 SQL for the demo tables
 -----------------------
 
-The following SQL commands must be executed in your database. You create three demo tables so that the individual functions can be tested using the YAML definition shown above.
+The following SQL statements must be executed in your database to create the three table for the demo. 
+With the three tables you can test the digitizer functionality using the YAML definition shown above.
 
 .. code-block:: postgres
 
-    create table public.poi (
+    CREATE TABLE public.poi (
         gid serial PRIMARY KEY,
         name varchar,
         type varchar,
@@ -290,7 +306,7 @@ The following SQL commands must be executed in your database. You create three d
 
 .. code-block:: postgres
 
-    create table public.lines (
+    CREATE TABLE  public.lines (
         gid serial PRIMARY KEY,
         name varchar,
         type varchar,
@@ -317,7 +333,7 @@ The following SQL commands must be executed in your database. You create three d
 
 .. code-block:: postgres
 
-    create table public.polygons (
+    CREATE TABLE public.polygons (
         gid serial PRIMARY KEY,
         name varchar,
         type varchar,
@@ -339,6 +355,7 @@ The following SQL commands must be executed in your database. You create three d
         x float,
         y float,
         city varchar,
+        style text,
         geom geometry(polygon,4326)
     );
     
@@ -359,6 +376,8 @@ A basic definition, here for the poi-example, may look like the following snippe
     poi:
         label: point digitizing
         minScale: 5000
+        maxScale: 20000
+        maxResults: 500 
         featureType:
             connection: search_db
             table: poi
@@ -378,102 +397,251 @@ A basic definition, here for the poi-example, may look like the following snippe
 
 The possible options are:
 
-* **label:** Label of the Digitizer popup
-* **minScale:** Minimum scale, where the features should be displayed in the map (e.g. minscale: 5000 = show from a scale 'over' 1:5000, when zooming out).
+* **label:** Label of the Digitizer configuration
+* **minScale:** Minimum scale denominator, when the features should be visualised
+* **maxScale:** Maximum scale denominator, when the features should be visualised
 * **featureType:** Connection to the database
-    * connection: Name of the database-connection from the parameters/doctrine.yaml
-    * table: Table-name in which the FeatureTypes are stored
-    * uniqueId: Column-name with the unique identifier
-    * geomType: Geometry-type
-    * geomField: Column-name in which the geometry is stored
-    * srid: Coordinate-system in EPSG-code
+    * connection: Name of the database connection see packages/doctrine.yaml
+    * table: Name of the feature table
+    * uniqueId: Column name of the unique identifier
+    * geomType: Geometry type - point, line, polygon, multipolygon
+    * geomField: name of the geometry column
+    * srid: Coordinate reference system of the geometry column - EPSG code (f.e. 4326)
     * filter: Data filters for values ​​in a defined column, e.g. filter: interests = 'maps' 
-* **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data (default: true)
-* **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
-* **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. The Save button is always visible.
-* **allowDigitize:** Allow to save data [true/false].
-* **allowDelete:** Allow to delete data [true/false]. The Delete button is always visible.
-* **allowDigitize:** Allow to create new features [true/false]. if false, no Digitizer buttons will occur (new Point, move, etc.).
-* **useContextMenu:** Show the context-menu of a feature. [true/false]
-* **allowCancelButton:** Show the Cancel button [true/false]. See `Save, Delete, Cancel <#save-delete-cancel>`_.
-* **allowDeleteByCancelNewGeometry:** If true: When you create a new feature, the Cancel button will behave like the Delete button: The feature is removed from the map and the table. This is not the case if you edit an existing feature. [true/false]
+* **allowChangeVisibility:** Offer buttons to toggle feature visibility (default true)
+
+   .. image:: ../../../../figures/digitizer/allowchangevisibility.png
+              :scale: 80
+
+* **allowCreate:** Allow user to create new features (default true)
+* **allowDelete:** Allow to delete data (default true)
+* **allowDigitize:** Allow geometry creation and editing (If false, no Digitizer buttons will occur (new Point, move, etc.). Attribute editing may still be allowed via allowEdit) (default true)
+* **allowEditData:** Allow attribute editing (default true)
+* **??allowCancelButton:** Show the Cancel button [true/false]. See `Save, Delete, Cancel <#save-delete-cancel>`_.
+* **??allowDeleteByCancelNewGeometry:** If true: When you create a new feature, the Cancel button will behave like the Delete button: The feature is removed from the map and the table. This is not the case if you edit an existing feature. [true/false]
 * **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
-* **allowLocate:** Navigation to a feature via the tabs-keyboard-button, simple for operation without mouse. [True / false]. An extra "zoomTo" Button is displayed for each feature.
+* **??allowLocate:** Navigation to a feature via the tabs-keyboard-button, simple for operation without mouse. [True / false]. An extra "zoomTo" Button is displayed for each feature.
 
    .. image:: ../../../../figures/digitizer/allowlocate.png
               :scale: 80
 
   
-* **allowChangeVisibility:** Allow to change the visibility of one feature in the map (visible / invisible). [true/false]. An Eye Symbol is displayed, which allows to hide or display each feature indiviudally.
-
-   .. image:: ../../../../figures/digitizer/allowchangevisibility.png
-              :scale: 80
-
-  
-* **showVisibilityNavigation:** Allow to change the visibility of all features in the map (visible / invisible). [true/false]
+* **??showVisibilityNavigation:** Allow to change the visibility of all features in the map (visible / invisible). [true/false]
   
    .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
               :scale: 80
 
-.. * **displayPermanent:** FeatureTypes are displayed permanently (with explicit, active or select) [true/false]
-
-
-Experimental:
-
-* **allowCustomerStyle:** Allow user-specific styles for features in the map [true/false]. This feature is experimental: For each feature you can set unique styles.
-
- .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
-              :scale: 80
-
- A style-manager is used to let you set the unique styles.
+* **allowCustomerStyle:** Allow user-specific styles for features in the map [true/false] (default false). For each feature you can set unique styles. If not set the default style is used. Only available for geomType line and multi-/polygon. Needs styleField definition in featureType section.
 
  .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
 
+* **allowRefresh:** Offer button to reload data (for tables frequently modified by concurrent users) (default false)
+* **continueDrawingAfterSave:** Keep drawing tool active after creating and saving a new feature (~fast batch mode feature creation)
+* **displayPermanent:** Keep features visible on map even after switching to a different schema (default false)
+* **displayOnInactive:** Keep features visible on map even after deactivating Digitizer (default false)
+* **pageLength:** Limits the number of rows per page (default 16)
+* **refreshLayersAfterFeatureSave:** List of Mapbender source instance ids / names (refer to "Layersets" tab in application backend) that will reload after any item is created, updated or deleted (default none)
+
+.. code-block:: yaml
+
+        refreshLayersAfterFeatureSave:
+            - mapbender_users # or WMS InstanceID
 
 
+* **roles:** List of Roles. Show this schema only to users with (at least one of) these roles
 
-Definition of the popup
------------------------
+.. code-block:: yaml
 
-In connection with the digitization, very complex forms can be generated for the acquisition of data.
+        roles: #Show this schema only to users with (at least one of) these roles
+            - root
+            - ROLE_GROUP_EDITING
+
+
+Combination schema
+------------------
+
+If a schema defines a combine setting (list of strings), it is treated as a combination schema. Data from multiple other schemas is then displayed together. The entries in the combine list must be the names of the sub-schemas to be combined.
+
+* A schema with combine only allows a reduced set of other settings.
+* It may define roles to limit user access to the whole combination.
+* It may define table to explicitly specify table formatting of data common to all referenced sub-schemas.
+* A schema referenced by a combine list may not itself define combine.
+
+.. code-block:: yaml
+
+                        schemes:
+                            combine_schemes_together:
+                                label: combine schemes (in this case poi and line)
+                                searchType: currentExtent # Initial state of checkbox for limiting feature loading to current visible map portion. [all / currentExtent] (default: currentExtent).
+                                combine:
+                                    - poi
+                                    - line
+                                roles: #Show this schema only to users with (at least one of) these roles
+                                    - root
+                                    - ROLE_GROUP_EDITING
+
+
+User specific data
+------------------
+
+Data shown in each schema can be separate for different users. 
+
+Each schema may define:
+
+* **filterUser** Keep data separate for each user (default false). Needs definition of userColumn in featureType.
+* **trackUser** Store the creating / modiying user (default false). Can be done without actually filtering selection. Needs definition of userColumn in featureType.
+
+Setting either of these to true additionally requires **userColumn** (string) to be defined in the dataStore / featureType definition. This must name a table column of sufficient length to store the user name.
+
+Note that with filterUser true, trackUser is implied and its setting, if present, is ignored.
+
+
+.. code-block:: yaml
+
+	    poi:
+		label: 'point digitizing'
+		filterUser: true
+		trackUser: true
+		featureType:
+		    connection: geodata_db
+		    table: poi
+		    uniqueId: gid
+		    geomType: point
+		    geomField: geom
+		    srid: 4326
+		    userColumn: user_name
+
+Configuring forms
+-----------------
+
+Very complex forms can be defined to collect attributes for your features.
     
+Each schema configuration contains a list of (potentially nested) objects under key formItems, defining the contents and structure of the form shown when an item is created or edited. 
+
+Note that this form will also be used purely as a detail display vehicle even if editing is disabled.
 
 .. image:: ../../../../figures/digitizer.png
      :scale: 80
 
-The following option for the construction of the forms are available:
+The following option for the construction of the forms are available as type:
 
 * Define more than one feature type for digitization. You can switch from one feature type to another with a select box.
 * It is possible to define a filter to only query a subset of your database table.
-* Textfields
-* Selectboxes, Multiselectboxes
-* Checkboxes and Radiobuttons 
-* Textareas
-* Datepicker
-* File upload and Image Display
-* Definition of tabs
-* Definition breakLines
-* Definition of Text 
+* Textfields (type: input)
+* Selectboxes, Multiselectboxes (type: select)
+* Checkboxes (type: checkbox) 
+* Radiobuttons (type: radioGroup)
+* Textareas (type: textArea)
+* Datepicker (type: date)
+* Color picker (type: colorPicker)
+* File upload (type: file)
+* Image Display (type: image)
+* Text (type: text or type: label)
+* Break line (type: breakLines)
+* Definition of tabs (type: tabs)
+
+Additional feature are:
 * Mandatory fields, regular expressions to validate the field input
 * Definition of help texts
 * Refresh after save
 * Possibility to copy entered information from a form into the clipboard via a button
 
 
+Form input fields
+-----------------
+
+Form input fields come in a multitude of different types, controlled by the type value. All inputs share a common set of configuration options:
+
+
+.. list-table::
+   :widths: 20 20 40 10
+   :header-rows: 1
+
+   * - name
+     - type
+     - description
+     - default
+   * - type
+     - string
+     - Type of form input field (see below)
+     - -none-
+   * - name
+     - string
+     - Database column mapped to the input
+     - -none-
+   * - value
+     - string
+     - Initial field value on newly created items
+     - -none-
+   * - title
+     - string
+     - Label text for form input field 
+     - -none-
+   * - attr
+     - object
+     - Mapping of HTML attributes to add to the input 
+     - -none-
+   * - infoText
+     - string
+     - Explanatory text placed in a tooltip next to the label 
+     - -none-
+   * - css
+     - object
+     - Mapping of CSS rules to add to the form group (container around label and input)
+     - -none-
+   * - cssClass
+     - string
+     - Added to the class attribute of the form group (container around label and input)
+     - -none-
+
+
 .. image:: ../../../../figures/digitizer_with_tabs.png
      :scale: 80
 
+Customization by attr object definitions
+----------------------------------------
+
+Many common customizations for inputs can be performed purely with the attr object. E.g. type "input" can be restricted to allow numbers only by overriding its HTML type attribute; all inputs can be made required or readonly.
 
 .. code-block:: yaml
 
-        popup:                                                          # Define the form as a popup. Further experimental adaptations here: http://api.jqueryui.com/dialog/
-            title: POI                                                  # Definition of the popup title
-            height: 400                                                 # height of the popup
-            width: 500                                                  # width of the popup
+	formItems:
+	  - type: input
+	    name: strictly_formatted_column
+	    title: Strict input pattern demo
+	    attr:
+		pattern: '\w{2}\d{3,}'
+		placeholder: Two letters followed by at least three digits
+		required: true
+	  - type: input
+	    name: numeric_column
+	    title: Numbers only
+	    attr:
+	      type: number
+	      min: 10
+	      max: 200
+	      step: 10
+	      required: true
+	  - type: textArea
+	    name: text_column
+	    title: Very large text area
+	    attr:
+	      rows: 10
 
-            #modal: true                                                # Everything except the form window is grayed out and the position and size of the window is fixed for the duration of the data collection.
-            #position: {at: "left+20px",  my: "left top-460px"}         # Position of the popup in the browser area
+
+Definition of the popup
+-----------------------
+
+You can define the following options for the popup:
+
+.. code-block:: yaml
+
+        popup:                 
+            title: POI    # Definition of the popup title
+            height: 400   # height of the popup, if not defined it will adapt to the content
+            width: 500    # width of the popup
+            width: 50vw   # half screen width
 
 
 
@@ -483,12 +651,12 @@ Definition of the feature table
 The Digitizer provides an object table. It can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
 The width of the individual columns can optionally be specified in percent or pixels.
 
-* **tableFields:** define the columns for the feature table. 
+* **tableFields:** Define the columns for the feature table. (default - display primary key only)
     * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
-* **searchType:** search extent in the map, display of all features in the result table or only features displayed in the current extent [all / currentExtent] (default: currentExtent).
-* **showExtendSearchSwitch:** Activate or deactivate the display of the searchType selectbox for searching in the curret extent [true/false]
-* **view:** Settings for the object result table
-    * **type**: Templatename [table]
+* **searchType:** Initial state of checkbox for limiting feature loading to current visible map portion. [all / currentExtent] (default: currentExtent).
+* **??showExtendSearchSwitch:** Activate or deactivate the display of the searchType selectbox for searching in the curret extent [true/false]
+* **??view:** Settings for the object result table
+    * **type**: Template name [table]
     * **settings**: Settings for the functions of the result table *(Newly added, not fully documented!)*
 
 You can find more detailed information on possible configurations under https://datatables.net/reference/option/.
@@ -496,11 +664,14 @@ You can find more detailed information on possible configurations under https://
 .. code-block:: yaml
 
         searchType: currentExtent
-        showExtendSearchSwitch: true
         tableFields:
-            gid: {label: Nr. , width: 20%}
-            name: {label: Name , width: 80%}
-        view:
+            gid:
+                label: Nr.
+                width: 20%
+            name:
+                label: Name
+                width: 80%
+        ??view:
             type: table
             settings:
                 info: true
@@ -512,23 +683,31 @@ You can find more detailed information on possible configurations under https://
                 order: [[1, "asc"]]  # 1 | 2 presort columns
 
 
-Tabs (type tabs)
-----------------
+Tabs (type: tabs)
+-----------------
 
 Form elements can be placed unto different Tabs. The formItem type "tabs" is used for this.
+
+Complex form dialogs can be organized into multiple tabs by inserting an object with type: tabs into the formItems list, and assigning it one or more tab specifications, which consist of title (text displayed on the tab) and children (contents of the tab).
 
 .. code-block:: yaml
 
         formItems:
-           - type: tabs                                                 # Type tabs creates tabs in the popup
-             children:                                                  # The tabs are defined as sub-objects (children) of the form.
-               - type: form
-                 title: Basic information                               # title of the tabs
-                 css: {padding: 10px}
-                 children:                                              # Multiple subobjects in groups can be used to arrange data in the form next to each other
-                     - type: label
-                       title: Welcome to the digitize demo. Try the new Mapbender feature!
-                       ...
+           - type: tabs             # Type tabs creates tabs in the popup
+             children:              # The tabs are defined as sub-objects (children) of the form.
+                 - title: '1. Basic information'    # text displayed on the tab
+                   css: {padding: 10px}
+                   children:                        
+                       # First tab form item specifications
+                       - type: label
+                         title: Welcome to the digitize demo. Try the new Mapbender feature!
+                         ...
+                 - title: '2. More information'    # text displayed on the tab
+                   children:                       
+                       # Second form item specifications
+                       - type: label
+                         title: Welcome to the digitize demo. Try the new Mapbender feature!
+                         ...
 
 For each input field the CSS-behavior and styling information can be assigned, regardless of the type. This can be used, for example, to highlight important fields or to fill an attribute field when editing another field.
 
@@ -925,6 +1104,9 @@ One way to work around this is to create a trigger that will merge the path and 
 Definition of the available toolsets (Toolset Type)
 ---------------------------------------------------
 
+Each schema may define a toolset setting to configure the types of drawing tools available during geometry creation. This should be a list of strings, or null for auto-configuration (which is the default).
+
+
 Toolset types:
 
 * **drawPoint** - Draw point
@@ -936,9 +1118,6 @@ Toolset types:
 * **drawDonut** - Draw a Donut (enclave)
 * **modifyFeature** - Move vertices of a geometry
 * **moveFeature** - Move geometry
-* **selectFeature** - Geometry de-/select (experimental). There is no interaction with the table yet and the available workflows are limited to the Delete operation.
-* **removeSelected** - delete selected geometry (experimental). Deletes all objects selected in the map.
-* **removeAll** - Caution: remove all geometries from the table
 
 YAML-Definition of toolset types
 
@@ -951,6 +1130,16 @@ YAML-Definition of toolset types
             - type: drawRectangle
             - type: drawDonut
             - type: removeSelected
+
+If toolset is set as an empty list, no geometry creation tools will be offered.
+
+If toolset is null or not set, and the connected feature type declares its geomType, Digitizer will reduce the selection of tools to to those compatible with the geomType (e.g. no line drawing for datasets containing only points or polygons).
+
+If neither toolset nor the geomType are defined, all supported tools are offered.
+
+If feature modification is allowed (via allowDigitize / allowEdit), vertex modification and feature translation tools will also be offered.
+
+If allowCreate is set to false, no creation tools from the toolset setting will be offered. drawDonut (inherently a modification, not creation tool) may still be offered, if editing is allowed.
 
 
 Search in the tables (inline Search)
