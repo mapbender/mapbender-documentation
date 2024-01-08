@@ -85,29 +85,27 @@ Kontrolle über URL-Parameter
 Ebenen sichtbar machen
 ----------------------
 
-Sie können die ID der Ebene mit der ID ``<layerid>`` und des Dienstes ``<serviceid>`` in der URL als Parameter übergeben, um einen Layer in der Startansicht zu aktivieren.
+Sie können die ID einer Ebene in der URL als Parameter übergeben, um diesen in der Startansicht zu aktivieren.
 
 .. code-block:: php
 
-  ?visiblelayers=<serviceid>/<layerid>
+  ?visiblelayers=<InstanceID>/<InstanceLayerID>
 
 
-Die Werte für layerid und serviceid sind spezifisch für eine Anwendung.
-Daher bekommen die Werte für layerid und serviceid in der jeweiligen Anwendung und zwar im Layerset und dort in einem Layer.
-Jeder Layer besitzt ein Icon mit drei Punkten auf der rechten Seite.
-Klicken Sie auf die drei Punkte des Layers, damit ein Popupfenster erscheint.
+Die Werte von InstanceID und InstanceLayerID sind immer anwendungsspezifisch.
+Um die benötigten Werte anzuzeigen, gibt es im Layerset-Tab der Anwendung neben jedem Layer ein Icon mit drei Punkten. Klicken Sie auf das Icon, damit ein Popupfenster erscheint.
 
 .. image:: ../../../figures/wms_instance_layer_id.png
      :scale: 80
 
-Der erste Wert nennt die interne SourceID und SourceLayerId (31-591).
-Der zweite Wert listet die InstanceID und InstanceLayerId, die wir im weiteren nutzen wollen (73-836).
+Im oberen Textfeld nennt der erste Wert die interne SourceID und die SourceLayerID (31-591).
+Der zweite Wert im gleichen Textfeld listet die InstanceID und InstanceLayerID (73-836).
 
-Nutzen Sie diese Werte für den ``visibleLayers`` Parameter in der URL und trennen Sie beide Werte mit einem Schrägstrich.
+Nutzen Sie den zweiten Wert für den ``visibleLayers``-Parameter in der URL und trennen Sie die zugehörigen Werte mit einem Schrägstrich (anstelle des Bindestrichs).
 
 Zum Beispiel: http://localhost/mapbender/application/myapp?visiblelayers=73/836
 
-Wenn Sie zwei per Voreinstellung nicht sichtbare Layer haben, fügen Sie beide Werte von layerid und serviceid in die URL und trennen diese mit einem Komma.
+Mehrere nicht-sichtbare Layer können in der URL kommasepariert übergeben werden. Fügen Sie dazu die jeweiligen InstanceIDs und InstanceLayerIDs nach dem gleichen Schema ein.
 
 Zum Beispiel: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
 
