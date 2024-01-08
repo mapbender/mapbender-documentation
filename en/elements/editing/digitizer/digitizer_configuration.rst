@@ -171,7 +171,6 @@ The functionality of the built-in features and additional functions are explaine
             srid: 4326
         openFormAfterEdit: true
         allowDelete: true
-        useContextMenu: true
         toolset:
             - type: drawLine
             - type: modifyFeature
@@ -386,6 +385,10 @@ A basic definition, here for the poi-example, may look like the following snippe
             geomField: geom
             srid: 4326
             filter: interests = 'maps'
+            # file upload location - customization per column on featureType (or dataStore) level
+            files:
+                - field: file_reference
+                  path: /data/demo/mapbender_upload_lines/
         openFormAfterEdit: true
         zoomScaleDenominator: 500
         allowEditData: true
@@ -511,6 +514,62 @@ Note that with filterUser true, trackUser is implied and its setting, if present
 		    geomField: geom
 		    srid: 4326
 		    userColumn: user_name
+
+
+Definition of the available toolsets (Toolset Type)
+---------------------------------------------------
+
+Each schema may define a toolset setting to configure the types of drawing tools available during geometry creation. This should be a list of strings, or null for auto-configuration (which is the default).
+
+
+Toolset types:
+
+* **drawPoint** - Draw point
+* **drawLine** - Draw a line
+* **drawPolygon** - Draw polygon
+* **drawRectangle** - Draw rectangle
+* **drawCircle** - Draw circle
+* **drawEllipse** - Draw ellipse
+* **drawDonut** - Draw a Donut (enclave)
+* **modifyFeature** - Move vertices of a geometry
+* **moveFeature** - Move geometry
+
+YAML-Definition of toolset types
+
+.. code-block:: yaml
+
+    polygon:
+        [...]
+        toolset:
+            - type: drawPolygon
+            - type: drawRectangle
+            - type: drawDonut
+            - type: removeSelected
+
+If toolset is set as an empty list, no geometry creation tools will be offered.
+
+If toolset is null or not set, and the connected feature type declares its geomType, Digitizer will reduce the selection of tools to to those compatible with the geomType (e.g. no line drawing for datasets containing only points or polygons).
+
+If neither toolset nor the geomType are defined, all supported tools are offered.
+
+If feature modification is allowed (via allowDigitize / allowEdit), vertex modification and feature translation tools will also be offered.
+
+If allowCreate is set to false, no creation tools from the toolset setting will be offered. drawDonut (inherently a modification, not creation tool) may still be offered, if editing is allowed.
+
+
+Search in the tables (inline Search)
+------------------------------------
+
+You can use the inline search to search for an element in the table. 
+The activated element displays a search bar above the table. It shows all the search results for records of the table.
+
+.. code-block:: yaml
+
+  poi:
+      ...
+      inlineSearch: true      # true: allows the search in the table (default: true).
+      ...
+
 
 Configuring forms
 -----------------
@@ -648,7 +707,7 @@ You can define the following options for the popup:
 Definition of the feature table
 -------------------------------
 
-The Digitizer provides an object table. It can be used to navigate to features (zoom on the objects) and open the editing form. The object table can be sorted. 
+The Digitizer provides an object table. It can be used to navigate to features and open the editing form. The object table can be sorted. 
 The width of the individual columns can optionally be specified in percent or pixels.
 
 * **tableFields:** Define the columns for the feature table. (default - display primary key only)
@@ -686,29 +745,29 @@ You can find more detailed information on possible configurations under https://
 Tabs (type: tabs)
 -----------------
 
-Form elements can be placed unto different Tabs. The formItem type "tabs" is used for this.
-
 Complex form dialogs can be organized into multiple tabs by inserting an object with type: tabs into the formItems list, and assigning it one or more tab specifications, which consist of title (text displayed on the tab) and children (contents of the tab).
 
 .. code-block:: yaml
 
         formItems:
-           - type: tabs             # Type tabs creates tabs in the popup
-             children:              # The tabs are defined as sub-objects (children) of the form.
-                 - title: '1. Basic information'    # text displayed on the tab
+           - type: tabs
+             children:
+                 - title: '1. Basic information'    # first tab, text displayed on the tab
                    css: {padding: 10px}
                    children:                        
                        # First tab form item specifications
                        - type: label
                          title: Welcome to the digitize demo. Try the new Mapbender feature!
                          ...
-                 - title: '2. More information'    # text displayed on the tab
+                 - title: '2. More information'    # second tab, text displayed on the tab
                    children:                       
                        # Second form item specifications
                        - type: label
                          title: Welcome to the digitize demo. Try the new Mapbender feature!
                          ...
 
+CSS-behaviour and styling fields
+--------------------------------
 For each input field the CSS-behavior and styling information can be assigned, regardless of the type. This can be used, for example, to highlight important fields or to fill an attribute field when editing another field.
 
 parameters: 
@@ -764,18 +823,38 @@ Text fields (type input)
 
 .. code-block:: yaml
 
-                                                 - type: input                                      # element type definition
-                                                   title: Title for the field                       # labeling (optional)
-                                                   name: column_name                                # reference to table column (optional)
-                                                   copyClipboard: false                             # true/false. if true, specify a button that copies entered information to the clipboard (default: false) (optional)
-                                                   mandatory: true                                  # specify mandatory field (optional)
-                                                   mandatoryText: You have to provide information.  # text occurs if the column is empty on save 
-                                                   cssClass: 'input-css'                            # css class to use as style for the input field (optional)
-                                                   value: 'default Text'                            # define a default value  (optional)
-                                                   placeholder: 'please edit this field'            # placeholder appears in the field as information (optional)
+         - type: input                                      # element type definition
+           title: Title for the field                       # Definition of a labeling (optional, if not defined no labeling is set)
+           name: column_name                                # Reference to table column 
+           copyClipboard: false                             # Offer a button that copies entered information to the clipboard (default: false) (optional)
+           #mandatory: true                                 # Specifies a mandatory field (optional), please use required instead
+           infoText: "Info: Please emter Information."      # Offer a button that that provides Intormation on mouse-over (optional)
+           mandatoryText: You have to provide information.  # Define text that is shown on save if no content is provided for a mandatory field (optional)
+           cssClass: 'input-css'                            # css class to use as style for the input field (optional)
+           value: 'default Text'                            # Define a default value  (optional)
+           css:                                             # CSS definition (optional)
+               color: green
+           cssClass:                                        # Added to the class attribute of the form group (container around label and input)
+           attr:
+               placeholder: 'please edit this field'        # placeholder appears in the field as information when field is empty (optional)
+               required: true
 
 
-Selectbox (selectbox or multiselect [type select])
+* **title:** Definition of a labeling (optional, if not defined no labeling is set)
+* **name:** Reference to table column (required)
+* **copyClipboard:** Offer a button that copies entered information to the clipboard (optional, default: false)
+* **infoText:** Offer a button that that provides Intormation on mouse-over (optional)
+* **mandatoryText:** Define text that is shown on save if no content is provided for a mandatory field (optional)
+* **value:** Define a default value  (optional)
+* **css:** CSS definition (optional)
+* **cssClass:** Added to the class attribute of the form group (container around label and input)
+
+Attributes (attr)
+* **placeholder:** placeholder appears in the field as information (optional)
+* **required:** Specifies a mandatory field (optional, default false)
+
+
+Selectbox or multiselect (type select)
 --------------------------------------------------
 
 By defining a selectbox, predefined values can be used in the form.
@@ -786,192 +865,213 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
 
 .. code-block:: yaml
 
-                                                 - type: select                     # element type definition
-                                                   title: select a type             # labeling (optional)
-                                                   name: my_type                    # reference to table column (optional)
-                                                   copyClipboard: false             # specify button that copies chosen values to the clipboard (optional). [true/false] (default: false).           
-                                                   multiple: false                  # define a multiselect (default: false)
-                                                   options:                         # definition of the options (key, value)
-                                                       1: pub
-                                                       2: bar
-                                                       3: pool
-                                                       4: garden
-                                                       5: playground
+         - type: select                     # element type definition
+           title: select a type             # labeling (optional)
+           name: type                    # reference to table column (optional)
+           select2: true                                   # Activates full text search for the select box (please note for multi: true full text search is activated by default) 
+           copyClipboard: false             # specify button that copies chosen values to the clipboard (optional). [true/false] (default: false).           
+           infoText: 'Help: Please choose a type.'
+           attr:
+               multiple: false              # define a multiselect (default: false)
+               required: required
+           options:                         # definition of the options (key, value)
+               '': 'Please select a type...'
+               'A': 'Type A'
+               'B': 'Type B'
+               'C': 'Type C'
+               'D': 'Type D'
+
+.. code-block:: yaml
+           
+           options: 
+               - label: 'Please select a type...'
+                 value: ''
+               - label: 'Type A'
+                 value: 'A'
+               - label: 'Type B'
+                 value: 'B'
+               - label: 'Type C'
+                 value: 'C'
+               - label: 'Type D'
+                 value: 'D'
+
+
+* **select2:** Activates full text search for the select box (please note for multiselectboxes (multi: true) full text search is activated by default) 
+* **multi:** Define a singleselectbox or multiselectbox (default: false)
+* **value:** Definition of the default value
+* **options with label and value:** Definition of the options (label, value)
+
 
 **(2) multiselect - several selectable entries**
 
-The Multiselect-Box is activated by the attribute "multiple: true". You can choose multiple entries in the selectbox. The usage and their requirements of the database may vary. In general with the example above, you can switch the "interests" in the POIs to multiselects. The database fields is still a character varying.
+The Multiselect-Box is activated by the attribute "multiple: true". You can choose multiple entries in the selectbox. 
 
+The usage and their requirements of the database table column may vary. In general with the example above, you can switch via multiple: true to multiselects. The database fields is still a character varying.
 
+The values are saved comma separeated in the table colummn.
+ 
 .. code-block:: yaml
 
-                -
-                  type: select
-                  multiple: true
-                  title: Interests
-                  name: interests
-                  copyClipboard: false
-                  options:
-                    maps: maps
-                    reading: reading
-                    swimming: swimming
-                    dancing: dancing
-                    beer: beer
-                    flowers: flowers
+         - type: select
+           title: Interests
+           name: type
+           attr:
+               multiple: true
+           options: 
+               - label: 'Please select a type...'
+                 value: ''
+               - label: 'Type A'
+                 value: 'A'
+               - label: 'Type B'
+                 value: 'B'
+               - label: 'Type C'
+                 value: 'C'
+               - label: 'Type D'
+                 value: 'D'
+                 attr:
+                     disabled: disabled
+           #value: A,C   # use comma-separated values for default multi-select value
 
-**Notes:** From Digitizer version 1.2 and up, the multiple selection provides an easier mechanism to choose an entry, which also allows a search in the drop-down-list. The navigation through the list is possible via keyboard. Possible entries are highlighted during typing. An already chosen entry can be removed by clicking the small "x" symbol.
-Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer
+
+**Notes:** The multiple selection provides an easier mechanism to choose an entry, which also allows a search in the drop-down-list. The navigation through the list is possible via keyboard. 
+Possible entries are highlighted during typing. An already chosen entry can be removed by clicking the small "x" symbol. An entry can also be marked as disabled.
+
 
 .. image:: ../../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
                     
 
-The SQL (if maps and reading were chosen):
 
-.. code-block:: postgres
+**Get options for the selectbox via SQL**
 
-                gisdb=> select interests from poi where gid=3;
-                interests
-                --------------
-                maps,reading
-                (1 row)
-
-The keywords are saved in the database (for example: "dancing: Tanzen" and "flowers: Blumen" stores "dancing,flowers"). It is possible to copy several values to the clipboard with CopyClipboard: true.
-
+With a SQL request, the values of the selectbox can be directly taken from a database table.
 
 .. code-block:: yaml
 
-                                                 - type: select                       # element type definition
-                                                   title: select some types           # labeling (optional)
-                                                   name: my_type                      # reference to table column (optional)
-                                                   copyClipboard: true                # Button which copies chosen values to the clipboard (optional)
-                                                   multiple: true                     # define a multiselect (default: false)
-                                                   options:
-                                                     a: a                             # definition of the options (key, value)
-                                                     b: b
-                                                     c: c
-
-
-**Get the options for the selectbox via SQL**
-
-With a SQL request, the values of the selectbox can be directly pulled from the database. In this case, the key value mapping is not possible and only the indices of the entries can be stored.
-
-.. code-block:: yaml
-
-                                                 - type: select                                                    # element type definition
-                                                   title: select some types                                        # labeling (optional)
-                                                   name: my_type                                                   # reference to table column
-                                                   connection: connectionName                                      # Define a connection selectbox via SQL
-                                                   sql: 'SELECT DISTINCT key, value FROM tableName order by value' # get the options of the
+         - type: select                                                    # element type definition
+           title: Choose a type                                            # labeling (optional)
+           name: type                                                      # reference to table column
+           connection: connectionName                                      # Define a connection selectbox via SQL
+           sql: 'SELECT DISTINCT type_name as label, type_id as value FROM types order by value;'    # get the options fro the selectbox
+           options: 
+               - label: 'Please select a type...'
+                 value: ''
 
 
 
 Text/Label (type label)
 -----------------------
 
+With type label you can write a non-editable text to the form window.
+
 .. code-block:: yaml
 
-                                                 - type: label                                    # element type definition, label writes a non-editable text to the form window.
-                                                   text: 'Please give information about the poi.' # define a text 
+         - type: label                                    # label writes a non-editable text to the form window.
+           text: 'Please give information about the poi.' # define a text 
+           css:
+              color: red
+
 
 Text (type text)
 ----------------
 
-Texts can be defined as a label in the form. In this case, fields of the data source can be accessed by using JavaScript.
+More powerful as type label is type text. You can access fields of the data source by using JavaScript with this type .
 
 .. code-block:: yaml
 
-                                                - type: text                          # Type text for generating dynamic texts from the database
-                                                  title:       Name                   # Label (optional)
-                                                  name:        name                   # Name of the field (optional)
-                                                  css:         {width: 80%}           # CSS definition (optional)
-                                                  text: data.gid + ': ' + data.name
-                                                  # Text definition in JavaScript
-                                                  # data - data is the object, that gives access to all fields.
-                                                  # z.B.: data.id + ':' + data.name
+        - type: text                          # Type text for generating dynamic texts from table columns
+          title: Name                   # Label (optional)
+          name: name                   # Name of the field (optional)
+          text: data.gid + ': ' + data.name
+          # Text definition in JavaScript
+          # data - data is the object, that gives access to all fields.
+          # for example: data.id + ':' + data.name
 
 
-Textareas (type textarea)
+Textareas (type textArea)
 -------------------------
 
 Similar to the text field via type input (see above), text areas can be created that can contain several lines using type textArea.
 
 .. code-block:: yaml
 
-                                                 - type: textArea                    # Typ textArea creates a text area
-                                                   rows: 4                           # Number of rows for the text area that appears when the form is opened. Field can be expanded by mouse in the form.
-                                                   name: beschreibung                # table column
-                                                   title: Bestandsaufnahme Bemerkung # Label (optional)
+         - type: textArea                    # Typ textArea creates a text area
+           rows: 4                           # Number of rows for the text area.
+           title: Description                # Label (optional)
+           name: abstract                    # table column
+
 
 
 Breaklines (type breakLine)
 ---------------------------
 
+Inserts a single HTML <hr> element. Supports adding free-form HTML attributes via attr object and custom cssClass.
+
 .. code-block:: yaml
 
-                                                 - type: breakLine                     # element type definition, will draw a line 
+         - type: breakLine                     # element type definition, will draw a line 
 
 
 Checkboxes (type checkbox)
 --------------------------
 
-.. code-block:: yaml
-
-                                                 - type:  checkbox        # Type checkbox creates a checkbox. When activated, the specified value (here 'TRUE') is written to the database.
-                                                   title: Is this true?   # Label (optional)
-                                                   name:  public          # table column 
-                                                   value: true            # parameter when activating the checkbox is stored in DB (here 'TRUE').
-                                                   checked: false         # [true/false] behaviour of the checkbox (default: false). Defines whether checkbox is pre-selected (checked) on load
-
-
-
-Mandatory fields
-----------------
-
-The notes for a mandatory field appear above the used fields. In the case of a missing entry in a defined mandatory field, this will be marked in red and (if defined) a speech bubble will appear. The object can not be saved if mandatory data is missing.
-
-.. note:: When using multiple tabs in the form, the creator may set an entry incorrectly on a non-visible tab in a mandatory field, so the saving process does not work. No error message appears outside the form. The applicant has to check the information in the form (label: red border/speech bubble with reference) before it can be stored correctly.
+Type checkbox creates an on/off checkbox.
 
 .. code-block:: yaml
 
-                                                 - type:  [Angabe zum Feldtyp]           # Each field can be made mandatory
-
-                                                   mandatory: true                       # true - field has to be set. Else you can't save the object. Regular expressions are possible too - see below.
-                                                   mandatorytitle: Mandatory info!       # Text that appears in the field when the field is not filled or filled with an invalid value.
-                                                   mandatoryText: Please choose a type!  # Text that is displayed in a speech bubble above the field when the field is not filled when it is saved or invalid.
-                                                   mandatory: /^\w+$/gi                  # You can define a regular expression to check the input for a field. You can check e.g. for email or numbers. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
-
-                                                   # Check if input is a number
-                                                   mandatory: /^[0-9]+$/
-                                                   mandatoryText: Only numbers are valid for this field!
-
-
-
-
+         - type:  checkbox        # Type checkbox creates a checkbox. When activated, the specified value is written to the database.
+           title: Is this true?   # Label (optional)
+           name:  public          # table column 
+           value: true            # Initial field value on newly created items (true/false, default false)
 
 
 Date-picker (type date)
 -----------------------
+
+Type date creates an input fields that allows you to enter a date, either with a textbox that validates the input or 
+a special date picker interface. It produces standard SQL date string format "YYYY-MM-DD".
 
 .. image:: ../../../../figures/digitizer_datepicker.png
      :scale: 80
 
 .. code-block:: yaml
 
-                     - type: date                                       # click in the textfield opens a datepicker
-                       title: favorite Date                             # Label (optional)
-                       name: date_favorite                              # data table
+                     - type: date                 # click in the textfield opens a datepicker
+                       title: favorite Date        # Label (optional)
+                       name: date_favorite         # table column
+                       attr:
+                           required: true
 
-Helptexts to the form-elements (attribute infotext)
----------------------------------------------------
 
-The infotext can appear over every field, regardless of whether this is a mandatory field or not. If a infotext is specified, an info button appears above the field. Clicking on this button opens the information text.
+Mandatory fields
+----------------
+
+The notes for a mandatory field appear below the used fields. 
+In the case of a missing entry in a required field, the field will be marked with a red border and a text (mandatroyText) will be displayed if defined. The object can not be saved if mandatory data is missing.
 
 .. code-block:: yaml
 
-                                                 - type:  [type name]                                              # every field, regardless of whether this is a mandatory field or not
+         - type:  [Angabe zum Feldtyp]           # Every filed type can be mandatory
+           attr:
+               required: true              # true/reuqired / false default is false
+               placeholder: This field is mandatory. Please provide content.
+               pattern:  /^\w+$/gi         # You can define a regular expression to check the input for a field. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
+                                           # pattern:  /^[0-9]+$/ # Check if input is a number
+           mandatory: true                 # please use required instead
+           mandatoryText: Please choose a type!  # Text displayed in case of a missing or invalid entry in a required field
+           mandatory: /^\w+$/gi                  # You can define a regular expression to check the input for a field. You can check e.g. for email or numbers. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
 
-                                                   infoText:  Please note - only numbers are valid for this field. # Notice which will be displayed by i-symbol
+
+
+Helptexts for the form-elements (attribute infoText)
+----------------------------------------------------
+
+If a infotext is specified, an info button appears above the field. Clicking on this button opens the information text.
+
+.. code-block:: yaml
+
+         - type:  [type name]              
+           infoText:  'Info: Please note - only numbers are valid for this field.' # Notice which will be displayed by i-symbol
 
 
 
@@ -980,7 +1080,7 @@ Element groups (type: fieldSet)
 
 Elements can be grouped together in one row to provide logical connections or save space. To define a group you have to set type fieldSet and afterwards define the children which shall be grouped.
 
-For each children you can define a width to control the pace for each element.
+For every children you can define css parameter for example a width to control the space for each element.
 
 .. code-block:: yaml
 
@@ -989,19 +1089,21 @@ For each children you can define a width to control the pace for each element.
                            - type: input
                              title: Firstname
                              name: firstname
-                             css: {width: 30%}    # Specifies the width of the group element. Together, the elements should be 100%.
+                             css: {width: 30%} 
                            - type: input
                              title: Lastname
                              name: lastname
-                             css: {width: 30%}
+                             css: 
+                                 width: 30%
                            - type: input
                              title: E-Mail
                              name: email
-                             css: {width: 40%}
+                             css: 
+                                 width: 40%
 
 
-Coordinate Fields (type coordinates)
-------------------------------------
+??Coordinate Fields (type coordinates)
+--------------------------------------
 
 For visual verification, manual entry or manual editing of point coordinates, the *coordinates* element can be used.
 
@@ -1050,19 +1152,15 @@ The linked URL stored in the database column is:
 .. code-block:: yaml
 
                     - type: file                     # Typ file for the upload of files
-                      title: Dateiupload             # Label (optional)
-                      text: Laden Sie ein Bild hoch. # Informationtext (optional)
-                      name: file_reference           # table column for the storage path
+                      title: File upload             # Label (optional)
+                      text: Please select a file     # Text on button (optional)
+                      name: file_reference           # table column to store the file name
+                      attr:
+                          accept: image/*            # Pre-selection of elements in the image format (window for file upload opens with restriction filter) 
+                                                     # Important: Other file-formats can be still uploaded
 
 
-                      # Experimental parameters:
-                      #accept: image/*               # Pre-selection of elements in the image format (window for file upload opens with restriction filter) 
-                                                     # Other file-formats can be still uploaded
-
-
-**Notes:** At this time, a "thumbnail" directory is created, which includes a smaller version of an image file. In future development this will be changed.
-
-A possibility to show the uploaded images is the image-element.
+It is possitble to show the uploaded images via type: image. 
 
 
 Images (type image)
@@ -1071,7 +1169,7 @@ Images (type image)
 .. image:: ../../../../figures/digitizer_image.png
      :scale: 80
 
-The image-element can be used to view a picture in the form. You can display images by specifying a URL in a database field or URL using the src parameter.
+Type image can be used to display images. You can display images by specifying a URL in a database field or URL using the src parameter.
 
 Images, which are marked by the element file in a table column, can thus also directly be integrated and displayed.
 
@@ -1085,7 +1183,7 @@ The image can be specified by specifying the two parameters src and name.
                       
                     - type: image                                         # Feature type field name image.
                       name: file_reference                                # Reference to the database column. If defined, the path or URL in the field can be used and replaces "src" option
-                      src: "../bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to an image. If the path is relative use relative: true.
+                      src: "../bundles/mapbendercore/image/logo_mb3.png"  # Specify a path or URL to a placeholder image. If the path is relative use relative: true.
                       relative: true                                      # Optional. If true, the "src" path is determined from the "/web" directory (default: false).
                       enlargeImage: true                                  # Image is enlarged to original size/maximum resolution by clicking on the preview image. It is not scaled to screen size.
 
@@ -1099,91 +1197,31 @@ Dynamic paths (eg "bundles/mapbendercore/image/[nr].png" or 'bundles/mapbenderco
 
 One way to work around this is to create a trigger that will merge the path and contents of a table field into the database column.
 
+Please not that an alternative upload location can be defined in the featureType section (see featureType).
 
-
-Definition of the available toolsets (Toolset Type)
----------------------------------------------------
-
-Each schema may define a toolset setting to configure the types of drawing tools available during geometry creation. This should be a list of strings, or null for auto-configuration (which is the default).
-
-
-Toolset types:
-
-* **drawPoint** - Draw point
-* **drawLine** - Draw a line
-* **drawPolygon** - Draw polygon
-* **drawRectangle** - Draw rectangle
-* **drawCircle** - Draw circle
-* **drawEllipse** - Draw ellipse
-* **drawDonut** - Draw a Donut (enclave)
-* **modifyFeature** - Move vertices of a geometry
-* **moveFeature** - Move geometry
-
-YAML-Definition of toolset types
 
 .. code-block:: yaml
-
-    polygon:
-        [...]
-        toolset:
-            - type: drawPolygon
-            - type: drawRectangle
-            - type: drawDonut
-            - type: removeSelected
-
-If toolset is set as an empty list, no geometry creation tools will be offered.
-
-If toolset is null or not set, and the connected feature type declares its geomType, Digitizer will reduce the selection of tools to to those compatible with the geomType (e.g. no line drawing for datasets containing only points or polygons).
-
-If neither toolset nor the geomType are defined, all supported tools are offered.
-
-If feature modification is allowed (via allowDigitize / allowEdit), vertex modification and feature translation tools will also be offered.
-
-If allowCreate is set to false, no creation tools from the toolset setting will be offered. drawDonut (inherently a modification, not creation tool) may still be offered, if editing is allowed.
-
-
-Search in the tables (inline Search)
-------------------------------------
-
-You can use the inline search to search for an element in the table. 
-The activated element displays a search bar above the table. It shows all the search results for records of the table.
-
-.. code-block:: yaml
-
-  poi:
-      ...
-      inlineSearch: true      # true: allows the search in the table (default: true).
-      ...
+                      
+         featureType:
+             []
+             # file upload location - customization per column on featureType (or dataStore) level
+             files:
+                 - field: file_reference
+                   path: /data/demo/mapbender_upload_lines/
 
 
 Context Menu
 ------------
 
-Using the context menu, an object on the map can be considered in more detail.
-After the activation you can open a context menu via the right mouse click on an object or cluster.
+The context menu is available for every feature by default. you can open the context menu via the right mouse click on an object.
 
 .. image:: ../../../../figures/digitizer_contextmenu.png
      :scale: 80
 
-Items of the Context Menu: 
-
-* **Zoom to:** Zoom to the map extent of the object
-* **Edit features:** Edit the features of the object. Opens the Digitizer dialog.
-* **Remove:** Remove the selected object.
-
-If the corresponding `basic definition <#feature-basic-definition>`_ (allowEditData, allowDelete) not defined, then they are also not available in the Context Menu. In the above example the delete function is not available for the polygons.
-
-.. code-block:: yaml
-
-  poi:
-      ...
-      useContextMenu: true
-      ...
 
 
-
-Clustering (experimental)
--------------------------
+?? ENTFALLENClustering (experimental)
+-------------------------------------
 
 By clustering the objects can be combined on the map. 
 Depending on the defined distance and zoom level different numbers of objects can be clustered.
@@ -1223,9 +1261,9 @@ Definition of the cluster element:
 Map-Refresh after save
 ----------------------
 
-After saving an object, the refresh can be activated using the *refreshLayersAfterFeatureSave* option. This parameter is used to reload the defined layer instances in the map-element. This makes changes regarded to WMS services directly visible in the map. This event is thrown only if the "Save" button of the attribute dialog is pressed.
+After saving an object the *refreshLayersAfterFeatureSave* option can force a reload of one or many WMS layer. 
 
-If the YAML application is used in the /application folder, it can be specified by a unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
+The layer can be specified by their name or by their instance-ID. 
 
 .. image:: ../../../../figures/digitizer/layerinstance_id.png
      :scale: 80
@@ -1235,23 +1273,20 @@ If the YAML application is used in the /application folder, it can be specified 
 
   poi:
       [...]
-       allowEditData: true
        refreshLayersAfterFeatureSave:  # If no entry is made in this area no map refresh is carried out after saving 
          - 17
          - 18
          - osm        # specify by unique name only with applications in application/config/application
       [...]
 
-**Notes:** Map-Refresh after save is available from Digitizer version 1.2. Check up-to-date information about digitizer versions: https://github.com/mapbender/mapbender-digitizer
 
 Duplicate features
 ------------------
 
-Already captured objects can be duplicated. This is done via a duplicate-button within the popup of the current selected already existing feature, via the context menu and the hit table.
-In order for the new object to be recognized better in the map, a color highlighting can be defined here.
+If you add copy to your configuration you enable the possibility to duplicate feature. This can then be done via a duplicate-button within the attribute form of a feature or via a button in the result table.
 
-The Duplicate button can be activated depending on a specific attribute value. This means that only when the corresponding attribute has a specific value (date> 0) the duplicate function works.
-
+* **copy:** Add copy section to enable duplicate feature
+* **enabled:** Activate duplicate feature (default false)
 * **data**: Define default values for attributes.
 * **rules**: Rule based duplicating (only if the filter/rule is active the object can be duplicated).
 * **style**: Styling of the duplicated feature (more at Design and Styles)
@@ -1261,11 +1296,11 @@ The Duplicate button can be activated depending on a specific attribute value. T
 
   poi:
       [...]
-       copy: # If no specification is made in this area you can't duplicate objects
-         enable: true
+       copy:
+         enable: true # activate duplicate feature (default false)
          data:
            date: 2017
-         rules:
+         ??rules:
            - feature.attributes.id > 10
          style:
            label: "Dupliziertes Objekt"
@@ -1294,9 +1329,7 @@ Different events exist that can be associated to a feature to manipulate attribu
 * **onBeforeRemove**: Event before deleting data
 * **onAfterRemove**: Event after deleting data
 
-In difference to the save-events, the update-events work only on an update of the data, not on creation.
-
-**Note:** The events are still in development and should be used with caution. The correct matching of the events and their dependencies are not yet finished and may be changed in future versions.
+In difference to the save events, the update events work only on an update of the data, not on creation.
 
 The following sections show some examples. If you want to set several parameters in an event, these can be listed in sequence, separated by a semicolon, e.g.
 
@@ -1316,12 +1349,12 @@ The following example shows how data can be written to an additional attribute c
 
 **Storage of group roles in an additional attribute-columns:**
 
-The following example shows how mapbender user data can be written to an additional attribute column. Here, this is done with the column "group" and the storage with the group roles of the user (userRoles). 
+The following example shows how Mapbender user and group information can be saved via $user and $userRoles. 
 
 .. code-block:: yaml
 
                 events:
-                  onBeforeSave: $feature->setAttribute('group', implode(',', $userRoles));
+                  onBeforeSave: $feature->setAttribute('user_name', $user ); $feature->setAttribute('group', implode(',', $userRoles));
 
 
 **Storage of attibute data in an additional attribute-columns:**
@@ -1359,8 +1392,9 @@ The above scenario can be extended to a slightly constructed example in which si
 
 The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL-statement and delivers it to the SQL-connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
 
-Buttons
--------
+
+??Buttons
+---------
 
 Further buttons can be defined for the popup forms. The events (by clicking on the buttons) can be freely defined with JavaScript. Thus, for example, mailto data can be generated for the integration of a mail.
 
@@ -1389,7 +1423,7 @@ By specifying a style the way the objects are displayed on the map can be define
 
 * **default**: defines the normal display of the objects on the map 
 * **select**: defines the appearance of the objects while mouseover
-* **selected**: defines the appearance of the objects after click event
+* **unsaved**: defines the appearance of the objects after click event
 
 
 .. code-block:: yaml
@@ -1398,30 +1432,30 @@ By specifying a style the way the objects are displayed on the map can be define
       ...
       styles:
           default:
-              graphic: true
               strokeWidth: 5
-              strokeColor: "transparent"
+              strokeColor: "#ff00ff"
               fillColor:  '#c0c0c0'
-              fillOpacity: 1
-              fillWidth: 2
-              # label: ${name} ${type}
-              # labelOutlineColor: '#eeeeee'
+              fillOpacity: 0.5
               pointRadius: 10
           select:
               strokeWidth: 1
               strokeColor: "#0e6a9e"
               fillOpacity: 0.7
               fillColor: "#0e6a9e"
-              label: ${name} ${type}
               pointRadius: 10
-          selected:
+              label: ${name} ${type}
+              fontColor: black
+              fontSize: 12
+              fontFamily: 'Arial, Courier New, monospace'
+              fontWeight: bold
+          unsaved:
               strokeWidth: 4
               strokeColor: "#648296"
               fillOpacity: 1
               fillColor: "#eeeeee"              
-              label: ${name} ${type}
+              label: 'Please save'
               pointRadius: 10
-      ...
+
 
 * **strokeColor:** Color of the border line [color value/transparent]
 * **strokeWidth:** Width of the border line [numeric]
@@ -1431,7 +1465,22 @@ By specifying a style the way the objects are displayed on the map can be define
 * **fillOpacity:** Transparency of the filling [0-1]
 * **pointRadius:** Radius around the center [numeric]
 * **label:** Labeling the object with fixed values ​​and / or DB fields, e.g. "ID ${nummmer}"
-* **labelOutlineColor:** Color of the border from the label [color value/transparent]
+* **??labelOutlineColor:** Color of the border from the label [color value/transparent]
+
+
+.. code-block:: yaml
+          
+          default:
+              graphic: true
+              externalGraphic: 'https://schulung.foss.academy/symbols/${symbol}.png'
+              graphicWidth: 30
+              graphicHeight: 30
+
+
+* **??graphic:** 
+* **??externalGraphic:** 
+* **??graphicWidth/graphicHeight:** 
+
 
 YAML-Definition for the element Digitizer in mapbender.yaml
 ===========================================================
