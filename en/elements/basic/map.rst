@@ -77,47 +77,35 @@ This template can be used to include the map into a YAML application.
 
 
 
-Controlling by URL-parameters
-=============================
+Controlling URL parameters
+==========================
 
 .. _layer_visibility:
 
 Make Layer visible
 ------------------
 
-If you have a layer with the id <layerid> in a service with the id <serviceid>, you may pass the URL parameter
-visiblelayers to turn the layer visible:
-
+If you have a layer with an ``<InstanceLayerID>`` in a service with an ``<InstanceID>``, you may pass them with the URL parameter ``visiblelayers`` to turn the layer visible:
 
 .. code-block:: php
 
-  ?visiblelayers=<serviceid>/<layerid>
+  ?visiblelayers=<InstanceID>/<InstanceLayerID>
 
 
-You may also pass multiple layers separated by comma.
-
-The layerid and serviceid values are specific to an application. You can get
-the layerid and serviceid in the specific application, namely in the
-layerset and there in a layer. Each layer has an icon with three small dots
-on the right side. Click on the icon and a popup window will appear.
+The InstanceID and InstanceLayerID values are specific to an application. To display these values, in the Layerset tab of the application, there are icons with three dots next to each layer. Click on the icon and a popup window will appear.
 
 .. image:: ../../../figures/wms_instance_layer_id.png
      :scale: 80
 
-The first value lists the internal SourceID and SourceLayerId (31-591). The
-seconds value lists the InstanceID and InstanceLayerId that we want to use
-now (73-836).
+In the textfield, the first value lists the SourceID and SourceLayerID (31-591). The second value lists the InstanceID and InstanceLayerID (73-836).
 
-Use this values for the "visibleLayers" parameter in your URL, and seperate them by a slash.
+We will use the second value for the ``visibleLayers`` parameter in your URL, and seperate them by a forward slash (instead of a hyphen).
 
 For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836
 
-If you have two layers that are not visible by default, put the two values
-of layerid and serviceid into the URL and seperate them by a comma.
+Multiple invisible layers can also be passed in the URL separated by commas. To do this, insert the respective InstanceIDs and InstanceLayerIDs using the same pattern.
 
 For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
-
-
 
 
 Passing POIs
