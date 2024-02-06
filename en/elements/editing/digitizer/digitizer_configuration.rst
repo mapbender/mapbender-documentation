@@ -385,6 +385,8 @@ A basic definition, here for the poi-example, may look like the following snippe
             geomField: geom
             srid: 4326
             filter: interests = 'maps'
+            userColumn: user_name
+            #styleField: style # only for line and polygon
             # file upload location - customization per column on featureType (or dataStore) level
             files:
                 - field: file_reference
@@ -410,7 +412,9 @@ The possible options are:
     * geomType: Geometry type - point, line, polygon, multipolygon
     * geomField: name of the geometry column
     * srid: Coordinate reference system of the geometry column - EPSG code (f.e. 4326)
-    * filter: Data filters for values ​​in a defined column, e.g. filter: interests = 'maps' 
+    * filter: Data filters for values in a defined column, e.g. filter: interests = 'maps'
+    * userColumn: stores the user name on save (see filterUser / trackUser)
+    * styleField: column to store the style for a feature (pnly for line and polygon with allowCustomStyle: true)
 * **allowChangeVisibility:** Offer buttons to toggle feature visibility (default true)
 
    .. image:: ../../../../figures/digitizer/allowchangevisibility.png
