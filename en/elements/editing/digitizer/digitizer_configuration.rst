@@ -658,8 +658,8 @@ Many common customizations for inputs can be performed purely with the attr obje
 	    name: strictly_formatted_column
 	    title: Strict input pattern demo
 	    attr:
-		pattern: '\w{2}\d{3,}'
-		placeholder: Two letters followed by at least three digits
+		  pattern: '\w{2}\d{3,}'
+		  placeholder: Two letters followed by at least three digits
 		required: true
 	  - type: input
 	    name: numeric_column
@@ -669,7 +669,7 @@ Many common customizations for inputs can be performed purely with the attr obje
 	      min: 10
 	      max: 200
 	      step: 10
-	      required: true
+	    required: true
 	  - type: textArea
 	    name: text_column
 	    title: Very large text area
@@ -701,12 +701,20 @@ The width of the individual columns can optionally be specified in percent or pi
 * **tableFields:** Define the columns for the feature table. (default - display primary key only)
     * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
 * **searchType:** Initial state of checkbox for limiting feature loading to current visible map portion. [all / currentExtent] (default: currentExtent).
+* **inlineSearch:** Allows the search in the table (default: true).
+* **paging:** De/activate paging (default true).
+* **pageLength:** Define the length of a page when paging is activated (default 16)
 
 You can find more detailed information on possible configurations under https://datatables.net/reference/option/.
 
 .. code-block:: yaml
 
+    poi:
+      []
         searchType: currentExtent
+        paging: true
+        pageLength: 10
+        inlineSearch: true
         tableFields:
             gid:
                 label: Nr.
