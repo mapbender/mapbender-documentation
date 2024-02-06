@@ -867,8 +867,9 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
 
          - type: select                     # element type definition
            title: select a type             # labeling (optional)
-           name: type                    # reference to table column (optional)
-           select2: true                                   # Activates full text search for the select box (please note for multi: true full text search is activated by default) 
+           name: type                       # reference to table column (optional)
+           select2: true                    # Activates full text search for the select box (please note for multi: true full text search is activated by default)
+           maximumSelectionLength: 2        # define the maximum number of possible selections (needs select2: true)
            copyClipboard: false             # specify button that copies chosen values to the clipboard (optional). [true/false] (default: false).           
            infoText: 'Help: Please choose a type.'
            attr:
@@ -1025,7 +1026,26 @@ Type checkbox creates an on/off checkbox.
            value: true            # Initial field value on newly created items (true/false, default false)
 
 
-Date-picker (type date)
+
+Radio buttons (type radioGroup)
+-------------------------------
+
+Type radioGroup creates radio buttons.
+
+.. code-block:: yaml
+
+        -   type: radioGroup      # Type radioGroup creates radio buttons. When activated, the specified value is written to the database.
+            title: Radiobuttons - Choose one # Label (optional)
+            name: test1           # table column
+            options:              # define the options
+                - label: Option 1
+                  value: v1
+                - label: Option 2
+                  value: v2
+            value: v2   # Pre-select second option by default for new items
+
+
+Date picker (type date)
 -----------------------
 
 Type date creates an input fields that allows you to enter a date, either with a textbox that validates the input or 
@@ -1036,37 +1056,61 @@ a special date picker interface. It produces standard SQL date string format "YY
 
 .. code-block:: yaml
 
-                     - type: date                 # click in the textfield opens a datepicker
+                     - type: date                  # click in the textfield opens a date picker
                        title: favorite Date        # Label (optional)
                        name: date_favorite         # table column
                        attr:
-                           required: true
+                           min: '2020-01-01'       # set the minimum selectable date
+                           max: '2030-01-01'       # set the maximum selectable date
+
+
+* **min**: Set the minimum selectable date. When set to null, there is no minimum. Optional attribute.
+* **max**: Set the maximum selectable date. When set to null, there is no maximum. Optional attribute.
+
+
+
+Color picker (type colorPicker)
+-----------------------
+
+Type colorPicker creates an input fields that allows you to enter a color value (in HEX form for example #ff00ff) or via a color picker interface.
+
+.. image:: ../../../../figures/digitizer/digitizer_colorpicker.png
+     :scale: 80
+
+.. code-block:: yaml
+
+                     - type: colorPicker      # click in the color area at the right side of the text field opens a color picker
+                       title: 'Fill color'    # Label (optional)
+                       name: fill_color       # table column
+                       value: 'ff00ff'        # predefine the value of the color picker
 
 
 Mandatory fields
 ----------------
 
-The notes for a mandatory field appear below the used fields. 
-In the case of a missing entry in a required field, the field will be marked with a red border and a text (mandatroyText) will be displayed if defined. The object can not be saved if mandatory data is missing.
+The object can not be saved if mandatory data is missing. In the case of a missing entry in a required field, the field will be marked with a red border and a text (mandatroyText) will be displayed if defined.
 
 .. code-block:: yaml
 
-         - type:  [Angabe zum Feldtyp]           # Every filed type can be mandatory
+         - type:  [Angabe zum Feldtyp]           # Every field type can be mandatory
            attr:
-               required: true              # true/reuqired / false default is false
-               placeholder: This field is mandatory. Please provide content.
-               pattern:  /^\w+$/gi         # You can define a regular expression to check the input for a field. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
+               placeholder: 'This field is mandatory....'  # Text will show up in the field and will disappear when you edit the field.
+                                                           # The text will not be saved.
+               pattern:  /^\w+$/gi         # You can define a regular expression to check the input for a field.
+                                           # Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
                                            # pattern:  /^[0-9]+$/ # Check if input is a number
-           mandatory: true                 # please use required instead
+           required: true                  # true/required / false default is false
            mandatoryText: Please choose a type!  # Text displayed in case of a missing or invalid entry in a required field
-           mandatory: /^\w+$/gi                  # You can define a regular expression to check the input for a field. You can check e.g. for email or numbers. Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
+           mandatory: /^\w+$/gi                  # You can define a regular expression to check the input for a field.
+                                                 # You can check e.g. for email or numbers.
+                                                 # Read more http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
 
 
 
-Helptexts for the form-elements (attribute infoText)
+Help text for form elements (attribute infoText)
 ----------------------------------------------------
 
-If a infotext is specified, an info button appears above the field. Clicking on this button opens the information text.
+If infoText is specified, an i-button appears above the field. Hover over this button opens the information text.
 
 .. code-block:: yaml
 
