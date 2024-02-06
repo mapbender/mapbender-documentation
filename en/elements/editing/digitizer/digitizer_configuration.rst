@@ -586,6 +586,7 @@ The following option for the construction of the forms are available as type:
 * Text (type: text or type: label)
 * Break line (type: breakLines)
 * Definition of tabs (type: tabs)
+* Definition of html (type: html)
 
 Additional feature are:
 * Mandatory fields, regular expressions to validate the field input
@@ -768,8 +769,8 @@ parameters:
                        input: |
                             var inputField = el;
                             var form = inputField.closest(".modal-body");
-                            var datenkennungField = form.find("[name='datenkennung']");
-                            datenkennungField.val(inputField.val());
+                            var lastnameField = form.find("[name='lastname']");
+                            lastnameField.val(inputField.val());
                        focus: |
                             var inputField = el;
                             var form = inputField.closest(".modal-body");
@@ -784,12 +785,14 @@ parameters:
                        css: {width: 30%}
                        # Highlight the year if you edit the date-field and autom. insert the year from the date
                        change: |
-                            var inputField = el;
-                            var form = inputField.closest(".modal-body");
-                            var yearField = form.find("[name='year']");
-                            var year = inputField.val().match(/\d+$/)[0];
-                            yearField.val(year);
-                            yearField.css("background-color","#ffc0c0");
+                          var inputField = el;
+                          var form = inputField.closest(".data-manager-edit-data");
+                          var yearField = form.find("[name='year']");
+                          var value = inputField.val()
+                          var year = value && value.match(/^\d{4}/)[0] || null;
+                          yearField.val(year);
+                          yearField.css("background-color","#ffc0c0");
+
 
 
 Text fields (type input)
@@ -1044,7 +1047,7 @@ a special date picker interface. It produces standard SQL date string format "YY
 
 
 Color picker (type colorPicker)
------------------------
+-------------------------------
 
 Type colorPicker creates an input fields that allows you to enter a color value (in HEX form for example #ff00ff) or via a color picker interface.
 
@@ -1057,6 +1060,22 @@ Type colorPicker creates an input fields that allows you to enter a color value 
                        title: 'Fill color'    # Label (optional)
                        name: fill_color       # table column
                        value: 'ff00ff'        # predefine the value of the color picker
+
+
+
+Write HTML (type html)
+----------------------
+
+Type html allows you to define html (for example button, links).
+
+.. image:: ../../../../figures/digitizer/digitizer_html.png
+     :scale: 80
+
+.. code-block:: yaml
+
+                     - type: html      # define html
+                       html: '<b>Read more at the </b><a href="https://mapbender.org" target="_blank">Mapbender-Webseite</a></br>'
+
 
 
 Mandatory fields
