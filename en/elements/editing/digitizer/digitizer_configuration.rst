@@ -657,19 +657,19 @@ Many common customizations for inputs can be performed purely with the attr obje
 	  - type: input
 	    name: strictly_formatted_column
 	    title: Strict input pattern demo
+        required: true
 	    attr:
 		  pattern: '\w{2}\d{3,}'
 		  placeholder: Two letters followed by at least three digits
-		required: true
 	  - type: input
 	    name: numeric_column
 	    title: Numbers only
+        required: true
 	    attr:
 	      type: number
 	      min: 10
 	      max: 200
 	      step: 10
-	    required: true
 	  - type: textArea
 	    name: text_column
 	    title: Very large text area
@@ -815,14 +815,13 @@ Text fields (type input)
            #mandatory: true                                 # Specifies a mandatory field (optional), please use required instead
            infoText: "Info: Please emter Information."      # Offer a button that that provides Intormation on mouse-over (optional)
            mandatoryText: You have to provide information.  # Define text that is shown on save if no content is provided for a mandatory field (optional)
-           cssClass: 'input-css'                            # css class to use as style for the input field (optional)
+           required: true
+           cssClass: 'input-css'                            # css class to use as style for the input field (optional).
            value: 'default Text'                            # Define a default value  (optional)
            css:                                             # CSS definition (optional)
                color: green
-           cssClass:                                        # Added to the class attribute of the form group (container around label and input)
            attr:
                placeholder: 'please edit this field'        # placeholder appears in the field as information when field is empty (optional)
-               required: true
 
 
 * **title:** Definition of a labeling (optional, if not defined no labeling is set)
@@ -858,8 +857,7 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
            copyClipboard: false             # specify button that copies chosen values to the clipboard (optional). [true/false] (default: false).           
            infoText: 'Help: Please choose a type.'
            attr:
-               multiple: false              # define a multiselect (default: false)
-               required: required
+               multiple: true              # define a multiselect (default: false)
            options:                         # definition of the options (key, value)
                '': 'Please select a type...'
                'A': 'Type A'
