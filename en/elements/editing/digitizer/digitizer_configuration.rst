@@ -421,10 +421,6 @@ The possible options are:
 * **allowDigitize:** Allow geometry creation and editing (If false, no Digitizer buttons will occur (new Point, move, etc.). Attribute editing may still be allowed via allowEdit) (default true)
 * **allowEditData:** Allow attribute editing (default true)
 * **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
-* **??allowLocate:** Navigation to a feature via the tabs-keyboard-button, simple for operation without mouse. [True / false]. An extra "zoomTo" Button is displayed for each feature.
-
-   .. image:: ../../../../figures/digitizer/allowlocate.png
-              :scale: 80
 
   
 * **??showVisibilityNavigation:** Allow to change the visibility of all features in the map (visible / invisible). [true/false]
