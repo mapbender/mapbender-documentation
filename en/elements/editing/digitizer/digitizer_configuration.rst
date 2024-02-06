@@ -421,14 +421,7 @@ The possible options are:
 * **allowDigitize:** Allow geometry creation and editing (If false, no Digitizer buttons will occur (new Point, move, etc.). Attribute editing may still be allowed via allowEdit) (default true)
 * **allowEditData:** Allow attribute editing (default true)
 * **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
-
-  
-* **??showVisibilityNavigation:** Allow to change the visibility of all features in the map (visible / invisible). [true/false]
-  
-   .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
-              :scale: 80
-
-* **allowCustomerStyle:** Allow user-specific styles for features in the map [true/false] (default false). For each feature you can set unique styles. If not set the default style is used. Only available for geomType line and multi-/polygon. Needs styleField definition in featureType section.
+* **allowCustomStyle:** Allow user-specific styles for features in the map [true/false] (default false). For each feature you can set unique styles. If not set the default style is used. Only available for geomType line and multi-/polygon. Needs styleField definition in featureType section.
 
  .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
@@ -708,9 +701,6 @@ The width of the individual columns can optionally be specified in percent or pi
     * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
 * **searchType:** Initial state of checkbox for limiting feature loading to current visible map portion. [all / currentExtent] (default: currentExtent).
 * **??showExtendSearchSwitch:** Activate or deactivate the display of the searchType selectbox for searching in the curret extent [true/false]
-* **??view:** Settings for the object result table
-    * **type**: Template name [table]
-    * **settings**: Settings for the functions of the result table *(Newly added, not fully documented!)*
 
 You can find more detailed information on possible configurations under https://datatables.net/reference/option/.
 
@@ -724,16 +714,7 @@ You can find more detailed information on possible configurations under https://
             name:
                 label: Name
                 width: 80%
-        ??view:
-            type: table
-            settings:
-                info: true
-                processing: false
-                ordering: true
-                paging: true
-                selectable: false
-                autoWidth: false
-                order: [[1, "asc"]]  # 1 | 2 presort columns
+
 
 
 Tabs (type: tabs)
