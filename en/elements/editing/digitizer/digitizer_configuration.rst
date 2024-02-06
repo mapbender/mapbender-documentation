@@ -893,6 +893,7 @@ The values are saved comma separeated in the table colummn.
          - type: select
            title: Interests
            name: type
+           maximumSelectionLength: 2 # maximum number of possible selections
            attr:
                multiple: true
            options: 
@@ -908,7 +909,7 @@ The values are saved comma separeated in the table colummn.
                  value: 'D'
                  attr:
                      disabled: disabled
-           #value: A,C   # use comma-separated values for default multi-select value
+           value: A,C   # use comma-separated values for default multi-select value
 
 
 **Notes:** The multiple selection provides an easier mechanism to choose an entry, which also allows a search in the drop-down-list. The navigation through the list is possible via keyboard. 
@@ -918,6 +919,12 @@ Possible entries are highlighted during typing. An already chosen entry can be r
 .. image:: ../../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
                     
+* **maximumSelectionLength**: maximum number of possible selections (optional parameter)
+
+
+.. image:: ../../../../figures/digitizer/digi_multiselect_maximumselectionlength.png
+     :scale: 80
+
 
 
 **Get options for the selectbox via SQL**
@@ -977,6 +984,8 @@ Similar to the text field via type input (see above), text areas can be created 
            rows: 4                           # Number of rows for the text area.
            title: Description                # Label (optional)
            name: abstract                    # table column
+
+* **rows**: Number of rows for the text area. Default is 7
 
 
 
