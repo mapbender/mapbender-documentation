@@ -1344,28 +1344,6 @@ The above scenario can be extended to a slightly constructed example in which si
 The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL-statement and delivers it to the SQL-connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
 
 
-??Buttons
----------
-
-Further buttons can be defined for the popup forms. The events (by clicking on the buttons) can be freely defined with JavaScript. Thus, for example, mailto data can be generated for the integration of a mail.
-
-.. code-block:: yaml
-
-  poi:
-      ...
-        popup:
-            title: polygon test suite
-            width: 500p
-            # resizible: true
-            buttons:
-              - text: message to editor
-                click: |
-                  var body = encodeURI("Sehr geehrter Herr/Frau xx,"+"\nLink:"+location.href);
-                  location.href = "mailto:firstname.lastname@mail.com?subject=New edit in webgis&body=Mail to editor for further edits.";
-              - text: message to controller
-                click: |
-                 location.href = "mailto:firstname.lastname@mail.com&subject=webgis&body=really?";
-
 
 Design and Styles
 -----------------
