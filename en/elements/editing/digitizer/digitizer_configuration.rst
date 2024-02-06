@@ -1405,6 +1405,10 @@ By specifying a style the way the objects are displayed on the map can be define
               fontSize: 12
               fontFamily: 'Arial, Courier New, monospace'
               fontWeight: bold
+              labelOutlineColor: white
+              labelOutlineWidth: 1
+              labelYOffset: -18
+              labelXOffset: -18
           unsaved:
               strokeWidth: 4
               strokeColor: "#648296"
@@ -1422,7 +1426,14 @@ By specifying a style the way the objects are displayed on the map can be define
 * **fillOpacity:** Transparency of the filling [0-1]
 * **pointRadius:** Radius around the center [numeric]
 * **label:** Label the object with fixed values and / or DB fields, e.g. "ID ${nummmer}"
-* **??labelOutlineColor:** Color of the border from the label [color value/transparent]
+* **fontColor:**  "#0000ff" #'${fontcolor}'
+* **fontSize:** Font size in pixel
+* **fontFamily:** Font family
+* **fontWeight:** Font weight (default normal)
+* **labelOutlineColor:** Color of the border from the label [color value/transparent]
+* **labelOutlineWidth:** Label outline width
+* **labelYOffset:** Label offset x (default 0)
+* **labelXOffset:** Label offset y (default 0)
 
 
 It is possible to refer to a graphic
