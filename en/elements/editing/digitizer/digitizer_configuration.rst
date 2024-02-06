@@ -1393,9 +1393,11 @@ By specifying a style the way the objects are displayed on the map can be define
 * **fillWidth:** Width of the filling [numeric]
 * **fillOpacity:** Transparency of the filling [0-1]
 * **pointRadius:** Radius around the center [numeric]
-* **label:** Labeling the object with fixed values ​​and / or DB fields, e.g. "ID ${nummmer}"
+* **label:** Label the object with fixed values and / or DB fields, e.g. "ID ${nummmer}"
 * **??labelOutlineColor:** Color of the border from the label [color value/transparent]
 
+
+It is possible to refer to a graphic
 
 .. code-block:: yaml
           
@@ -1406,9 +1408,9 @@ By specifying a style the way the objects are displayed on the map can be define
               graphicHeight: 30
 
 
-* **??graphic:** 
-* **??externalGraphic:** 
-* **??graphicWidth/graphicHeight:** 
+* **graphic:** [true/false]
+* **externalGraphic:** Define a link to an external graphic. You can use variables in the definition.
+* **graphicWidth/graphicHeight:** defline the width and height in pixel.
 
 
 YAML-Definition for the element Digitizer in mapbender.yaml
