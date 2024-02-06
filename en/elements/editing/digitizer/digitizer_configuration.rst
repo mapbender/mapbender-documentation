@@ -1120,33 +1120,6 @@ For every children you can define css parameter for example a width to control t
                                  width: 40%
 
 
-??Coordinate Fields (type coordinates)
---------------------------------------
-
-For visual verification, manual entry or manual editing of point coordinates, the *coordinates* element can be used.
-
-.. image:: ../../../../figures/digitizer_coordinates.png
-     :scale: 80
-
-.. code-block:: yaml
-                     
-                     - type: coordinates
-                       title_epsg: 'EPSG angeben'
-                       title_longitude: 'Longitude'
-                       title_latitude: 'Latitude'
-                       coordinatesFieldsOrder: ['epsg','x','y']
-                       title: ''
-                       css: {width: 100% }
-                       epsgCodes: [['EPSG:3857', 'EPSG:3857 (Pseudo Mercator)'], ['EPSG:4326', 'EPSG:4326 (WGS84)']]
-
-The possible special properties are:
-
-* **title_epsg**: the caption for the field to select the EPSG code of the coordinates
-* **title_longitude**: the title of the longitude field
-* **title_latitude**: the title of the latitude field
-* **coordinatesFieldsOrder**: a list of strings, describing the order in which the three input elements occur
-* **epsgCodes**: a list of tuples, each describing an EPSG code to select and its corresponding label in the form
-
 
 File upload (type file)
 -----------------------
@@ -1231,50 +1204,13 @@ Please not that an alternative upload location can be defined in the featureType
 Context Menu
 ------------
 
-The context menu is available for every feature by default. you can open the context menu via the right mouse click on an object.
+There is a context menu is available for every feature by default. You can open the context menu via the right mouse click on an object.
 
 .. image:: ../../../../figures/digitizer_contextmenu.png
      :scale: 80
 
 
 
-?? ENTFALLENClustering (experimental)
--------------------------------------
-
-By clustering the objects can be combined on the map. 
-Depending on the defined distance and zoom level different numbers of objects can be clustered.
-
-Due to the complexity of the Clustering, future versions may have changes in functionality and syntax, so we define that still as experimental. Dependencies are to the display of features in the current extent/all areas and the different geometry types.
-
-.. image:: ../../../../figures/digitizer_clustering.png
-     :scale: 80
-
-Definition of the cluster element: 
-
-* **scale:** Zoom level.
-* **distance:** distance between features in m to activate the clustering.
-* **disable:** zoom level to disable the clustering. 
-
-
-.. code-block:: yaml
-
-  poi:
-      ...
-      clustering:
-          -
-              scale: 10000        # Zoom level
-              distance: 60        # distance between features to cluster
-          -
-              scale: 2500
-              distance: 40
-          -
-              scale: 1000
-              distance: 20
-          -
-              scale: 500
-              distance: 1
-              disable: true       # disable clustering at defined zoomlevel
-      ...
 
 Map-Refresh after save
 ----------------------
@@ -1306,7 +1242,6 @@ If you add copy to your configuration you enable the possibility to duplicate fe
 * **copy:** Add copy section to enable duplicate feature
 * **enabled:** Activate duplicate feature (default false)
 * **data**: Define default values for attributes.
-* **rules**: Rule based duplicating (only if the filter/rule is active the object can be duplicated).
 * **style**: Styling of the duplicated feature (more at Design and Styles)
 * **on**: Events while duplicating process
 
@@ -1318,8 +1253,6 @@ If you add copy to your configuration you enable the possibility to duplicate fe
          enable: true # activate duplicate feature (default false)
          data:
            date: 2017
-         ??rules:
-           - feature.attributes.id > 10
          style:
            label: "Dupliziertes Objekt"
            fillColor: "#ff0000"
