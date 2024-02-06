@@ -700,7 +700,6 @@ The width of the individual columns can optionally be specified in percent or pi
 * **tableFields:** Define the columns for the feature table. (default - display primary key only)
     * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
 * **searchType:** Initial state of checkbox for limiting feature loading to current visible map portion. [all / currentExtent] (default: currentExtent).
-* **??showExtendSearchSwitch:** Activate or deactivate the display of the searchType selectbox for searching in the curret extent [true/false]
 
 You can find more detailed information on possible configurations under https://datatables.net/reference/option/.
 
