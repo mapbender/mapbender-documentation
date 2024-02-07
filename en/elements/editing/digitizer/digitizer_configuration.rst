@@ -386,7 +386,7 @@ A basic definition, here for the poi-example, may look like the following snippe
             srid: 4326
             filter: interests = 'maps'
             userColumn: user_name
-            #styleField: style # only for line and polygon
+            styleField: style
             # file upload location - customization per column on featureType (or dataStore) level
             files:
                 - field: file_reference
@@ -414,7 +414,7 @@ The possible options are:
     * srid: Coordinate reference system of the geometry column - EPSG code (f.e. 4326)
     * filter: Data filters for values in a defined column, e.g. filter: interests = 'maps'
     * userColumn: stores the user name on save (see filterUser / trackUser)
-    * styleField: column to store the style for a feature (pnly for line and polygon with allowCustomStyle: true)
+    * styleField: column to store the style for a feature
 * **allowChangeVisibility:** Offer buttons to toggle feature visibility (default true)
 
    .. image:: ../../../../figures/digitizer/allowchangevisibility.png
@@ -425,7 +425,7 @@ The possible options are:
 * **allowDigitize:** Allow geometry creation and editing (If false, no Digitizer buttons will occur (new Point, move, etc.). Attribute editing may still be allowed via allowEdit) (default true)
 * **allowEditData:** Allow attribute editing (default true)
 * **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
-* **allowCustomStyle:** Allow user-specific styles for features in the map [true/false] (default false). For each feature you can set unique styles. If not set the default style is used. Only available for geomType line and multi-/polygon. Needs styleField definition in featureType section.
+* **allowCustomStyle:** Allow user-specific styles for features in the map [true/false] (default false). For each feature you can set unique styles. If not set the default style is used. Needs styleField definition in featureType section.
 
  .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
@@ -752,6 +752,8 @@ Complex form dialogs can be organized into multiple tabs by inserting an object 
                        - type: label
                          title: Welcome to the digitize demo. Try the new Mapbender feature!
                          ...
+
+
 
 CSS-behaviour and styling fields
 --------------------------------
@@ -1096,7 +1098,6 @@ Type html allows you to define html (for example button, links).
                        html: '<b>Read more at the </b><a href="https://mapbender.org" target="_blank">Mapbender-Webseite</a></br>'
 
 
-
 Mandatory fields
 ----------------
 
@@ -1246,7 +1247,6 @@ There is a context menu is available for every feature by default. You can open 
 
 .. image:: ../../../../figures/digitizer_contextmenu.png
      :scale: 80
-
 
 
 
