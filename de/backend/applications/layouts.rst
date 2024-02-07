@@ -62,6 +62,7 @@ Die Ansichtsoptionen für die Sidepane können im Sidepane-Bereich im Mapbender-
 * **Typ**: Siehe Funktionsbeschreibung unten.
 * **Bildschirmtyp** (Alle, Mobil, Desktop. Standard: Alle) Bei dieser Option wird der Bereich für die nicht ausgewählte Geräteart ausgeblendet. *Alle* zeigt die Region auf allen Geräten an.
 * **Breite** (in Pixeln, Standard: 350 px) Definiert über einen Pixelwert die Breite der Sidepane in der Anwendung.
+* **Größe veränderbar** (Standard: true): Erlaubt das Verbreitern und Verkleinern der Seitenleiste.
 * **Position** (Links, Rechts. Standard: Links) gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
 * **Geschlossen starten** (Standard: deaktiviert) hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & wieder einklappbar.
 
@@ -70,6 +71,15 @@ Die Option **Typ** zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an
 - ``Akkordeon`` zeigt alle hinzugefügten Elemente in Reitern.
 - ``Buttons`` zeigt alle hinzugefügten Elemente über Buttons.
 - ``Unformatiert`` verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im Backend gewählten Reihenfolge untereinander an.
+
+Die Option **Größe verändern** geht von einer minimalen Breite von 120 px und einem Maximum von 95 % der Bildschirmbreite aus. Diese Werte können über CSS angepasst werden:
+
+.. code-block:: css
+   
+    .sidePane.resizable {
+      min-width: 200px;
+      max-width: 500px;
+    }
 
 
 Element-Buttonleiste
@@ -119,4 +129,4 @@ Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :re
 
 Löschen
 ==========
-Löscht das Element mitsamt der konfigurierten Einstellung aus Front- und Backend.
+Löscht das Element mitsamt der konfigurierten Einstellungen aus Front- und Backend.

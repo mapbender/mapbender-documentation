@@ -62,6 +62,7 @@ The Sidepane provide the following configuration options through their |mapbende
 * **Type** (Accordion, Buttons, Unstyled. Default: Accordion): See explanation below.
 * **Screen type** (Any, Mobile, Desktop. Default Any): The region will not be displayed when other screen types are used. Any - will always show the region.
 * **Width** (in px) (in px. Default: 350px): Width of the Sidepane in Pixels.
+* **Resizable** (Default: true): Allows to resize the width of the sidepane.
 * **Position** (Left, Right. Default: Left): Defines the placement of the sidepane.
 * **Initially closed** (Default: disabled): Defines whether the Sidepane should be closed or open on start of the application.
 
@@ -72,6 +73,15 @@ The option **Type** adjusts the inserted elements:
 - ``Buttons`` shows elements via buttons.
 
 - ``Unstyled`` does not contain any styling options at all and displays the elements in the configured backend order.
+
+The option **Resizable** uses a minimum size of 120px and a maximum of 95% of the screen's width. These values can be further restricted by using custom css:
+
+.. code-block:: css
+   
+    .sidePane.resizable {
+      min-width: 200px;
+      max-width: 500px;
+    }
 
 
 Button area (Elements)
@@ -121,4 +131,4 @@ You can find more security details under :ref:`security`.
 
 Delete
 ======
-Removes an element from both front- and backend.
+Removes an element from both the front- and backend.
