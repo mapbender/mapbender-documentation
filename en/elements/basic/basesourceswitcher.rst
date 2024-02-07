@@ -3,14 +3,16 @@
 Base source switcher
 ********************
 
-With this element you can switch between different predefined layers (BaseSources), e. g. background maps. The Base source switcher is a button group to change the map's background sources. For every sourceset a button will be displayed in the client. Only one source set can be active at the same time.
-You have the possibility to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
+With this element you can switch between different predefined layers (BaseSources), e. g. background maps. The Base source switcher is a button group to change the map's background sources. For every sourceset a button will be displayed in the client. Only one sourceset can be active at the same time.
+Base source switcher is also able to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
+Base source switcher can also be added into the sidepane.
+
+.. hint:: The definition of groups is not possible in the sidepane.
+
 
 .. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
-
-The Base source switcher can also be used in the sidepane. The definition of groups is not possible in the sidepane. 
-
+ 
 .. image:: ../../../figures/basesourceswitcher_sidepane.png
      :scale: 80
 
@@ -18,8 +20,10 @@ The Base source switcher can also be used in the sidepane. The definition of gro
 Configuration
 =============
 
-**Preparation**: In order to be able to configure the Base source switcher, you have to define Service instances as BaseSource (checkbox "Basesource" on). You can define the layer as a BaseSource in the tab "Layersets" in the backend of the application. You have to edit the layer and set a checkmark at "BaseSource".
-Please note that on start of an application all sourcesets with an activated root layer are active.
+**Preparation**: In order to be able to configure the Base source switcher, you have to define Service instances as BaseSource (checkbox "Basesource"). You can define the layer as a BaseSource in the tab "Layersets" in the backend of the application. You have to edit the layer and set a checkmark at "BaseSource".
+
+.. note:: On application start, all sourcesets with an activated root layer will be active.
+
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80
@@ -46,7 +50,7 @@ The configuration of the element itself occurs in two steps:
 .. image:: ../../../figures/basesourceswitcher_configuration.png
      :scale: 80
 
-In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the drop-down list. It's possible to move an instanceset in the configuration window via drag and drop.
+In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the dropdown list. It is possible to move an instanceset in the configuration window via drag and drop.
 
 * **Title**: Title of the BaseSource.
 * **Group**: Optional group name.

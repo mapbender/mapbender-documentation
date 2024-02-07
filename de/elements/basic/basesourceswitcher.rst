@@ -3,13 +3,15 @@
 Hintergrund wechseln
 ********************
 
-Mit dem Element "Hintergrund wechseln" kann mithilfe von Buttons zwischen den verschiedenen Hintergrundkarten gewechselt werden. Es kann dabei immer nur ein Thema aktiv sein. 
-Zu jeder Datenquelle kann im Element eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
+Mit dem Element "Hintergrund wechseln" kann mithilfe von Buttons zwischen verschiedenen Hintergrundkarten gewechselt werden. Dabei ist immer nur ein Thema aktiv. 
+Zu jeder Hintergrundkarte kann im Element eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
+Das Element kann auch in der Sidepane eingebunden werden.
+
+.. hint:: Beim Hinzufügen des Hintergrundwechslers in der Sidepane ist keine Definition von Gruppen möglich.
+
 
 .. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
-
-Das Element kann auch in der Sidepane eingebunden werden. Dabei ist keine Definition von Gruppen möglich.
 
 .. image:: ../../../figures/de/basesourceswitcher_sidepane.png
      :scale: 80
@@ -19,7 +21,8 @@ Konfiguration
 =============
 
 **Vorbereitung**: Zur Definition einer Hintergrundkarte mit dem Element müssen zuvor im Backend (Reiter: Layerset) mindestens zwei gewünschte Layer konfiguriert werden. Um sie verwenden zu können, ist in den Layer-Einstellungen das Anhaken der Checkbox "Basesource" erforderlich.
-Beachten Sie, dass in der Anwendung beim Start die Themen aktiviert werden, bei denen der root-Layer aktiv ist.
+
+.. note:: Beachten Sie, dass beim Anwendungsstart die Themen aktiviert werden, bei denen der root-Layer aktiv ist.
 
 .. image:: ../../../figures/de/basesourceswitcher_basesource.png
      :scale: 80
@@ -38,7 +41,7 @@ Konfiguration nicht aktivierter ausgewählter root-Layer - Thema ist beim Start 
 Die Konfiguration des Elements geschieht in zwei Schritten:
 
 #. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel, Tooltip; bei Einbindung in Kartenbereich: Position)
-#. Hinzufügen von Themen mit einer oder mehrerer Quellen und optionaler Definition einer Gruppe
+#. Hinzufügen von Themen mit einer oder mehreren Quellen und optionaler Definition einer Gruppe
 
 * **Title:** Titel des Elements.
 * **Tooltip:** Text, der erscheint, wenn der Mauszeiger längere Zeit über dem Hintergrundwechsler gehalten wird.
@@ -47,7 +50,7 @@ Die Konfiguration des Elements geschieht in zwei Schritten:
 .. image:: ../../../figures/de/basesourceswitcher_de.png
      :scale: 80
 
-Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden, die dann über eine Dropdown-Liste zusammengefasst werden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
+Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
 
 * **Title**: Name der Hintergrundkarte.
 * **Group**: Optionale Zuweisung zu einer Themengruppe.
