@@ -3,16 +3,14 @@
 Base source switcher
 ********************
 
-With this element you can switch between different predefined layers (BaseSources), e. g. background maps. The Base source switcher is a button group to change the map's background sources. For every sourceset a button will be displayed in the client. Only one sourceset can be active at the same time.
-Base source switcher is also able to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as title.
-Base source switcher can also be added into the sidepane.
-
-.. hint:: The definition of groups is not possible in the sidepane.
-
+Base source switcher is a group of button that enables the user to switch between different predefined layers (BaseSources), e. g. background maps. For every sourceset a button will be displayed in the client. Only one sourceset is active at the same time.
+Moreover, it is possible to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as the title.
 
 .. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
- 
+
+.. hint:: Base source switcher can also be added into the sidepane. The definition of groups is not possible in the sidepane.
+
 .. image:: ../../../figures/basesourceswitcher_sidepane.png
      :scale: 80
 
@@ -20,13 +18,12 @@ Base source switcher can also be added into the sidepane.
 Configuration
 =============
 
-**Preparation**: In order to be able to configure the Base source switcher, you have to define Service instances as BaseSource (checkbox "Basesource"). You can define the layer as a BaseSource in the tab "Layersets" in the backend of the application. You have to edit the layer and set a checkmark at "BaseSource".
-
-.. note:: On application start, all sourcesets with an activated root layer will be active.
-
+**Preparation**: In order to be able to configure the Base source switcher, you have to define Service instances as BaseSource (checkbox "Basesource"). You can define the layer as a BaseSource in the :ref:`layerset` tab in the backend of the application. You have to edit the layer and set a checkmark at "BaseSource".
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80
+
+.. note:: On application start, all sourcesets with an activated root layer will be active.
 
 Configuration with selected root layer - sourceset is active on start:
 

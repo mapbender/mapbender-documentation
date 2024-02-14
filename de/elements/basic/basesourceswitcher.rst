@@ -3,15 +3,13 @@
 Hintergrund wechseln
 ********************
 
-Mit dem Element "Hintergrund wechseln" kann mithilfe von Buttons zwischen verschiedenen Hintergrundkarten gewechselt werden. Dabei ist immer nur ein Thema aktiv. 
-Zu jeder Hintergrundkarte kann im Element eine Gruppe definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
-Das Element kann auch in der Sidepane eingebunden werden.
-
-.. hint:: Beim Hinzufügen des Hintergrundwechslers in der Sidepane ist keine Definition von Gruppen möglich.
-
+"Hintergrund wechseln" erstellt Buttons mit Themen, die dafür konfigurierte Layer im Kartenbereich sichtbar schalten. Auf diese Weise kann etwa zwischen verschiedenen Hintergrundkarten gewechselt werden. Dabei ist immer nur ein Thema aktiv. 
+Zusätzlich können Gruppen für die Hintergrund-Themen definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
 .. image:: ../../../figures/basesourceswitcher.png
      :scale: 80
+
+.. hint:: Das Element kann auch in der Sidepane eingebunden werden. Beim Hinzufügen des Hintergrundwechslers in der Sidepane ist keine Definition von Gruppen möglich.
 
 .. image:: ../../../figures/de/basesourceswitcher_sidepane.png
      :scale: 80
@@ -20,12 +18,12 @@ Das Element kann auch in der Sidepane eingebunden werden.
 Konfiguration
 =============
 
-**Vorbereitung**: Zur Definition einer Hintergrundkarte mit dem Element müssen zuvor im Backend (Reiter: Layerset) mindestens zwei gewünschte Layer konfiguriert werden. Um sie verwenden zu können, ist in den Layer-Einstellungen das Anhaken der Checkbox "Basesource" erforderlich.
-
-.. note:: Beachten Sie, dass beim Anwendungsstart die Themen aktiviert werden, bei denen der root-Layer aktiv ist.
+**Vorbereitung**: Zur Definition einer Hintergrundkarte mit dem Element müssen zuvor im Backend (Reiter: :ref:`layerset_de`) mindestens zwei Layer konfiguriert werden. Um sie verwenden zu können, ist in den Layer-Einstellungen das Anhaken der Checkbox "Basesource" erforderlich.
 
 .. image:: ../../../figures/de/basesourceswitcher_basesource.png
      :scale: 80
+
+.. note:: Beachten Sie, dass beim Anwendungsstart die Themen aktiviert werden, bei denen der root-Layer aktiv ist.
 
 Konfiguration aktiver ausgewählter root-Layer - Thema ist aktiv beim Start:
 
