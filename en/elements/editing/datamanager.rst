@@ -5,20 +5,18 @@ Data Manager
 
 The element Data Manager is similar to the :ref:`digitizer`. 
 However, Data Manager only works with nonspatial data, i. e. you can not create geometries.
-
-Data Manager can be used to maintain reference tables for example a table with contact information.
+Data Manager can be used to maintain reference tables, for example a table with contact information.
 
 Setup
 -----
-
-The Data Manager needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with. 
+Data Manager needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with. 
 Read more about this under :ref:`yaml`.
-
 
 Configuration example
 ---------------------
 
-The definition of the Data Manager is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the attribute form.
+The definition of the Data Manager is done in YAML syntax in the textarea configuration at schemes.
+Here you define the database connection, the editable tables, the attribute form.
 
 .. hint:: If errors occur in the database, fields or form, various error messages will appear. Here, the productive environment will only give a general error message. If you want to see the exact error, you should call the page as development environment. Find more under :ref:`environments`.
 
@@ -56,19 +54,21 @@ The following SQL commands must be executed in your database to create the conta
         date_favorite date,
 	color_favorite varchar
     );
-     
-Element Konfiguration
+
+
+Element configuration
 ---------------------
 
-The element can be integrated in the sidepane.
-     
+Afterwards, the element can be embedded into the sidepane.
+
 .. image:: ../../../figures/data_manager_configuration.png
      :scale: 80
+
 
 YAML-Definition
 ---------------
 
-You can find the necessary YAML-Code of the configuration example below:
+You can find the necessary YAML code of the configuration example below:
 
 .. code-block:: yaml
 
