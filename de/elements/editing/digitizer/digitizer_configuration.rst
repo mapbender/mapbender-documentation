@@ -1113,7 +1113,7 @@ Im folgenden einige Anwendungsbeispiele. Falls mehrere Parameter in einem Event 
 
 **Speichern von festen Sachdaten in zusätzlichen Attributspalte:**
 
-Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit der Spalte "interests" und dem festen Wert "maps". Beim Speichern wird der feste Wert in die Tabelle gespeichert und kann z.B. über einen Filter für die selektierte Anzeige genutzt werden. 
+Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werden können. Hier geschieht das mit der Spalte "interests" und dem festen Wert "maps". Beim Speichern wird der feste Wert in die Tabelle gespeichert und kann z.B. über einen Filter für die selektierte Anzeige genutzt werden. 
 
 .. code-block:: yaml
 
@@ -1122,7 +1122,7 @@ Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attri
 
 **Speichern von Gruppenrollen in zusätzlichen Attributspalte:**
 
-Das folgende Beispiel zeigt, wie Mapbender-Benutzerdaten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit der Spalte "group" und der Füllung mit den jeweiligen Gruppenrollen des Benutzers (userRoles)
+Das folgende Beispiel zeigt, wie Mapbender-Benutzerdaten beim Speichern in eine zusätzliche Attributspalte geschrieben werden können. Hier geschieht das mit der Spalte "group" und der Füllung mit den jeweiligen Gruppenrollen des Benutzers (userRoles)
 
 .. code-block:: yaml
 
@@ -1132,7 +1132,7 @@ Das folgende Beispiel zeigt, wie Mapbender-Benutzerdaten beim Speichern in eine 
 
 **Speichern von Sachdaten in zusätzlichen Attributspalten:**
 
-Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit den Spalten "geom" und "geom2". Beim Speichern sollen die Daten von geom in das Feld geom2 geschrieben werden.
+Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werden können. Hier geschieht das mit den Spalten "geom" und "geom2". Beim Speichern sollen die Daten von geom in das Feld geom2 geschrieben werden.
 
 Man kann das Event je nach Anwendungsfall bei onBeforeInsert oder onBeforeUpdate eintragen.
 

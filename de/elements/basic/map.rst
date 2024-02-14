@@ -2,8 +2,7 @@
 
 Karte (Map)
 ***********
-
-Die Karte basiert auf OpenLayers und wird als Element im Kartenbereich integriert.
+Die Karte markiert das zentrale Element, an dem eine Mapbender-Anwendung aufgebaut wird. Sie basiert auf OpenLayers und sollte als Element in den Kartenbereich integriert werden.
 
 .. image:: ../../../figures/de/map.png
      :width: 75%
@@ -15,11 +14,11 @@ Konfiguration
      :width: 75%
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Layersets:** Vorher konfiguriertes Layersets zur Anzeige der Hauptkarte (Thematische Karte, Hintergrundkarte).
+* **Layersets:** Wählen Sie das :ref:`layerset_de` aus, welches von der Karte dargestellt werden soll.
 * **Tile size:** Größe der Tiles bei gekachelten Diensten.
 * **SRS:** Koordinatenbezugssystem beim Start der Anwendung ("Spatial Reference System"). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
-* **Max. Kartenausdehnung:** Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert).
-* **Initiale Kartenausdehnung:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert).
+* **Max. Kartenausdehnung:** Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert). Bei Klick auf das Globus-Icon im :ref:`navigation_toolbar_de` wird auf diese Ausdehnung gezoomt.
+* **Initiale Kartenausdehnung:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert). Bei Klick auf das Haus-Icon im :ref:`navigation_toolbar_de` wird auf diese Ausdehnung gezoomt.
 * **Standard-Auflösung [dpi]:** Die Auflösung passt sich auf Basis dieses Wertes an die Auflösung des verwendeten Gerätes an. Standard: 96 dpi.
 * **Feste Maßstabsstufen:** Das Zoom-Verhalten wird hierdurch konfiguriert. Feste Maßstabsstufen verbessern die visuelle Qualität von Diensten, welche nur auf bestimmten Maßstäben zwischengespeichert werden. Ist die Einstellung aktiviert, dann können nur Maßstäbe ausgewählt werden, die auch unter *scales* im Folgenden definiert sind (Standard: false).
 * **Scales (csv):** Festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma getrennt).

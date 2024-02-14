@@ -2,8 +2,7 @@
 
 Map
 ***
-
-Map is based on OpenLayers. The element must be integrated into the Map area.
+The map marks the central element from which a Mapbender application is built. It is based on OpenLayers and should be integrated into the Map area.
 
 .. image:: ../../../figures/map.png
      :width: 75%
@@ -15,11 +14,11 @@ Configuration
      :width: 75%
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Layersets:** Refers to a layerset. Layersets have to be defined first and can then be referred to.
+* **Layersets:** Select which :ref:`layerset` will be displayed on the map.
 * **Tile size:** Size of the tiles of tiled WMS services.
 * **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
-* **Max. Extent:** Maximal map extent, defined by BBOX parameters.
-* **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
+* **Max. Extent:** Maximal map extent, defined by BBOX parameters. In response to clicking the globe icon in the :ref:`navigation_toolbar`, the view will zoom to this extent.
+* **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters. In response to clicking the house icon in the :ref:`navigation_toolbar`, the view will zoom to this extent.
 * **Default resolution [dpi]**: The default resolution adapts to the screen resolution based on the configured value in dpi. Default: 96 dpi.
 * **Fixed zoom steps:** This option activates a zoom behaviour with fixed scales. This is useful to increase visual quality of services that are cached on very particular resolution steps only. When set true, scale denominator snaps to one of the values given in the *scales* option as defined below (default: false).
 * **Scales (csv):** A csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
