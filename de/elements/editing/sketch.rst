@@ -22,7 +22,7 @@ Konfiguration
 .. image:: ../../../figures/de/sketch_configuration.png
      :scale: 80
 
-* **Automatisches Aktivieren:** Das Element wird beim Anwendungsstart automatisch geöffnet.
+* **Automatisch öffnen:** Das Element wird beim Anwendungsstart automatisch geöffnet.
 * **Beim Schließen deaktivieren:** Erstellte Skizzen werden nach Schließen des Elements (Button oder Sidepane) nicht mehr in der Karte angezeigt. Erneutes Öffnen zeigt erstellte Skizzen wieder an.
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Geometrytypes:** Liste der unterstützten Geometrietypen (Pflichtfeld)
