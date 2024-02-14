@@ -34,8 +34,8 @@ You can define a the field *Title*. This title will be displayed as tooltip on m
 With the checkbox *Open in new tab:*, you can define whether the new application should be opened in the same window (default) or in a new tab.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

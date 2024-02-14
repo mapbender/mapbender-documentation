@@ -55,8 +55,8 @@ Finally, **Zoom in/out** allows to zoom in (``+`` -button) and out (``–`` -but
 The component **Zoom slider** already includes *Zoom in/out*. Additionally, the user can select different scales from a bar.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

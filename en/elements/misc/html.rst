@@ -130,8 +130,8 @@ You can refer to a twig file in the Content area. Please note that the twig file
      :scale: 80
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

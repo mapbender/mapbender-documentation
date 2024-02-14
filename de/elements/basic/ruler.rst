@@ -26,8 +26,8 @@ Konfiguration
 * **Schriftgröße:** Zahlenwert, der die Schriftgröße der in der Geometrie angezeigten Fläche definiert. Wird als Geometrie *Linie* gewählt, bleibt die Option ohne Effekt.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Applikation einzubinden.
 

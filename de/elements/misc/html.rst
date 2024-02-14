@@ -129,8 +129,8 @@ Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachte
      :scale: 80
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

@@ -55,8 +55,8 @@ In the configuration example either one, none or several entries per instanceset
 * **Instances**: Sources for the BaseSource.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

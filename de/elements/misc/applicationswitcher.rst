@@ -32,8 +32,8 @@ Im Feld *Title* definieren Sie einen Text, der erscheinen soll, wenn die Maus ü
 Unter *Anwendungen* wählen Sie per Klick die Anwendungen aus, die zur Auswahl erscheinen sollen.
 Über die Checkbox *In neuem Tab öffnen* definieren Sie, ob die Anwendung beim Wechsel in einem neuen Browser-Tab geöffnet werden soll.
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

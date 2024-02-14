@@ -73,8 +73,8 @@ Das Zeichnen von Skizzen kann mithilfe von "Zeichnen abbrechen" (Stop-Button) un
      :width: 100%
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Applikation einzubinden.
 

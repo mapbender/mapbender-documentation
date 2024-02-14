@@ -24,8 +24,8 @@ Konfiguration
 
 Für das Element wird ein Button verwendet. Siehe unter :ref:`button_de` für weitere Informationen zu dessen Konfiguration.
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

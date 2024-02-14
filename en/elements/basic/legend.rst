@@ -80,8 +80,8 @@ The activation and deactivation of checkboxes in the configurational settings le
 .. image:: ../../../figures/legend_example_toolbar_checkboxes.png
      :width: 100%
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

@@ -56,8 +56,8 @@ Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge
 * **Instances**: Auswahl der Instanzen für die Hintergrundkarte.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

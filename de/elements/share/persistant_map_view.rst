@@ -32,8 +32,8 @@ Persistente Kartenzustände werden über eine Checkbox für jede Anwendung unter
 
 Die Einbettung erzeugt eine neue Spalte in der Tabelle *mb_core_application*. Es muss deshalb eine Datenbankaktualisierung mit *bin/console doctrine:schema:update --force* durchgeführt werden.
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden. Zu beachten ist hierbei der neue Parameter *persistentView*. Wird dieser weggelassen, dann entspricht dies *false*.
 

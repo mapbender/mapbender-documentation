@@ -23,8 +23,8 @@ Konfiguration
 * **Unit prefix:** Falls aktiviert, wird die Maßstabszahl nicht ausgeschrieben, sondern mit einem Präfix dargestellt, z.B. 1K für 1000 (Standard: false).
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

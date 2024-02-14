@@ -111,8 +111,8 @@ Die notwendige Anpassung wird hier am Beispiel von MapServer gezeigt. In der DAT
   </div>
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

@@ -80,8 +80,8 @@ Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legend
 .. image:: ../../../figures/de/legend_example_toolbar_checkboxes.png
      :scale: 80
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

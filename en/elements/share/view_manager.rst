@@ -44,8 +44,8 @@ Configuration
 .. image:: ../../../figures/view_manager_configuration.png
      :scale: 80
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

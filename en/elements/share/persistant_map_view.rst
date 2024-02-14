@@ -32,8 +32,8 @@ Persistent map view is enabled on a per-application basis with a new checkbox un
 
 This change introduces a new column in the *mb_core_application* table and therefore requires *bin/console doctrine:schema:update --force* to be run.
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application with a new *persistentView* entry on the top level. Omitting this entry is the same as setting it to false.
 

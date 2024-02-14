@@ -52,8 +52,8 @@ The *Default resolution* in dpi defines the resolution of the device being used;
 Furthermore, the field *scales (csv)* defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`navigation_toolbar`. *Fixed zoom steps* were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
      
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to include the map into a YAML application.
 

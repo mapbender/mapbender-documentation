@@ -108,8 +108,8 @@ The necessary adjustment is shown here using a configuration for MapServer. In t
   </div>
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 
