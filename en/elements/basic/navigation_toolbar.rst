@@ -20,7 +20,7 @@ Configuration
 * **Back to start:** Resets layer settings (default: false).
 * **Position:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar). Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom
 
-.. note::  The element must be integrated into the Map area.
+.. note:: The element must be integrated into the Map area.
 
 
 Components of the Navigation Toolbar element:

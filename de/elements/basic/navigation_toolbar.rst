@@ -20,8 +20,11 @@ Konfiguration
 * **Zurück zum Anfang** Zurücksetzen von Dienstzuständen (Standard: false).
 * **Position:** Ausrichtung des Navigationswerkzeugs (Standard: 'left-top'); Auswahlmöglichkeiten: inline (zum Einbinden in der Sidepane), left-top (oben links), left-bottom (unten links), right-top (oben rechts), right-bottom (unten rechts)
 
-Komponenten des Navigationswerkzeugs:
---------------------------------------
+.. note:: Das Element muss innerhalb des Kartenbereichs konfiguriert werden.
+
+Komponenten des Navigationswerkzeugs
+------------------------------------
+
 Im Konfigurationsdialog können unterschiedliche Komponenten (*Components*), also Funktionen des Navigationswerkszeugs, eingebunden werden. Diese Komponenten bestehen aus:
 
 *  Rotation
