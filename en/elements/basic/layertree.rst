@@ -146,8 +146,6 @@ The individual functions can be activated by clicking on the buttons. All active
 
            Context menu of the layer in the Layertree.          
 
-The function **Hide visibility by folders** allows to save the configuration of the opacity. When active, the opacity of the individual layer is not displayed and cannot be changed.
-
 The function **Hide info** allows you to disable the "i"-icon. If enabled, the "i"-icon next to a layer name indicates if the FeatureInfo function is active for that layer. The function is inactive if the "i"-icon is grayed out. If you activate the function with a click, the icon will turn dark gray and be framed. If activated, the requested information of the layer appears in a dialogue box. 
 
 The checkbox **Thematic layer** activates the thematic division of levels. By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
@@ -164,7 +162,7 @@ The checkbox next to its respective layer name allows to turn a layer on and off
 
 
 Workflow thematic Layertree
--------------------------------
+---------------------------
 
 In the following section, we walk through an exemplary configuration of a Layertree with advanced features, such as thematic layersets, in three steps:
 
@@ -211,7 +209,7 @@ If you have questions regarding further configuration of the map, you can view i
 
            Configuration of Layersets for a thematic Layertree.
 
-**Configuration of the thematic Layertree itself**
+**Configuration of the thematic Layertree**
 
 The last step is the creation of the Layertree itself. In this example, we add the thematic Layertree to the sidepane.
 
@@ -229,7 +227,7 @@ Thus, to let the **themes** in the application appear as you want, there are sev
 :[1] View theme:
   If this option is set, the Layerset appears as an additional level. If this option is not set, the defined instances are displayed on the main level.
 :[2] Theme open or closed:
-  If this option is set (symbol of the open folder), the theme in the Layertree is automatically opened or closed.
+  If this option is set (symbol of the open folder), the theme in the Layertree is automatically opened or closed (Condition: "View theme" is also checked).
 
 If we keep the default settings in the theme "World" and activate the other options in the theme "Project NRW", the configuration of the element will look like this:
 

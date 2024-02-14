@@ -147,8 +147,6 @@ Die einzelnen Funktionen können durch Klicken auf die Schaltfläche aktiviert w
 
            Kontextmenü der Layer im Ebenenbaum.
 
-Die Funktion **Visibility bei Ordnern ausblenden** ermöglicht die Sicherung der Konfiguration der Deckkraft. Bei aktiver Funktion wird die Deckkraft der einzelnen Layer in der Anwenddung nicht angezeigt und kann nicht verändert werden.
-
 Die Checkbox **Info ausblenden** ermöglicht das Ausblenden des "i"-Symbols; die Einstellungen zur Informationsabfrage sind unabhängig von den Einstellungen in Layerset oder Dienst. Das Symbol zeigt an, ob die Informationsabfrage aktiviert ist: Wenn es nicht umrandet ist, ist die Informationsabfrage nicht aktiv. Durch einen Klick wird die dunkle Umrandung aktiviert, sodass bei einer Informationsabfrage Layer-Informationen abgefragt werden können.
 
 Die Checkbox **Thematischer Layer** aktiviert die thematische Einteilung von Layern. Dadurch werden die Layerset-Namen mit Ordnersymbol und Checkbox im Ebenenbaum angezeigt. Darüber hinaus kann definiert werden, ob ein Ordner beim Start geöffnet dargestellt werden soll. Durch einen Klick auf das Ordnersymbol des Ebenenbaums neben der Instanz können die eingebundenen Layer angezeigt werden. Alle Layer, die vorher bei dem Einbinden in das Layerset aktiviert wurden, erscheinen nun in der Liste.
@@ -229,7 +227,7 @@ Damit die **Themen** in der Anwendung wie gewünscht angezeigt werden, gibt es v
 :[1] Thema anzeigen:
   Ist diese Option gesetzt, wird das Layerset als zusätzliche Ebene angezeigt. Ist diese Option nicht gesetzt, werden die enthaltenen Layer-Instanzen in der Hauptebene angezeigt.
 :[2] Thema offen oder geschlossen:
-  Ist diese Option gesetzt (Symbol des geöffneten Ordners), ist das Thema im Ebenenbaum automatisch ausgeklappt.
+  Ist diese Option gesetzt (Symbol des geöffneten Ordners), ist das Thema im Ebenenbaum automatisch ausgeklappt (sofern "Thema anzeigen" auch aktiv ist).
 
 Wenn wir im Thema “World” die Standardeinstellungen beibehalten und im Thema “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements wie folgt aus:
 
