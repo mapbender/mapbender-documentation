@@ -248,8 +248,8 @@ Wir haben die Layersets somit als thematische Gruppen in den Ebenenbaum eingebun
 Das Layerset "World" wird als Thema angezeigt, ist jedoch nicht geöffnet. Beim Layerset "Project NRW" wird das Thema beim Öffnen der Anwendung aufgeklappt gezeigt. Zusätzlich können alle Layer können über einen Button aktiviert werden.
 
 
-YAML-Definition:
-=================
+YAML-Definition
+===============
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

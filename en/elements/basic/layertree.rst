@@ -248,8 +248,8 @@ Now we have the Layersets integrated as thematic groups. By configuring the them
 The Layerset "World" is displayed as a theme, but it is closed and the two buttons are not available. In the Layerset "Project NRW" the theme is shown unfolded upon opening the application. The layers can be activated via a button.
 
 
-YAML-Definition:
-=================
+YAML-Definition
+===============
 
 This template can be used to insert the element into a YAML application.
 
