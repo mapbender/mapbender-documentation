@@ -18,9 +18,9 @@ Configuration
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons.
-* **Scale prefix:** Prefix shown with scale.
-* **Unit prefix:** Prefix shown with unit, e.g. 1K as 1000.
-* **Position:** Scale Display alignment (default: 'bottom right').
+* **Prefix:** Description shown before the actual scale. The standard ``mb.core.scaledisplay.label`` is rendered as *Scale* in the user's language.
+* **Shorten scale:** If checked, scale numbers higher than 1,000 will be shortened with a postpositioned ``K`` or ``M`` (e.g., 1K as 1000).
+* **Position:** Scale display alignment (default: 'bottom right').
 
 
 YAML-Definition

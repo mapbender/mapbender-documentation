@@ -19,8 +19,9 @@ Konfiguration
 
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden.
-* **Scale prefix:** Bezeichnung, die vor der Maßstabsangabe steht, z.B. "Maßstab".
-* **Unit prefix:** Falls aktiviert, wird die Maßstabszahl nicht ausgeschrieben, sondern mit einem Präfix dargestellt, z.B. 1K für 1000 (Standard: false).
+* **Präfix:** Bezeichnung, die vor der Maßstabsangabe steht. Der Standard ``mb.core.scaledisplay.label`` wird als Maßstab in der Sprache des Benutzers gerendert.
+* **Maßstab abkürzen:** Falls aktiviert, werden Maßstabszahlen über 1.000 nicht ausgeschrieben, sondern mit nachgestelltem ``K`` oder ``M`` versehen. z.B. 1K für 1000 (Standard: false).
+* **Position:** Position des Elements (Standard: 'Oben rechts').
 
 
 YAML-Definition
