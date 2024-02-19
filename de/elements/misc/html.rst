@@ -33,7 +33,7 @@ Konfigurationsbeispiele
 Bild einbinden:
 ---------------
 
-Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``<img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg' />``). Es kann eine definierte Höhe (``height='60px'``) angegeben werden. Es kann eine Hintergrundfarbe soowie Transparenz (``background-color:rgb(240, 240, 240, 0.9)``) gesetzt werden und beispielsweise ein bestimmter Seitenrandabstand (``padding:10px``). Diese Eigenschaften werden im Styling-Bereich (``style=``) definiert.
+Das Mapbender Logo wurde im Beispiel als Bild in die Seitenleiste eingebunden. Es kann eine definierte Höhe angegeben werden. Es kann eine Hintergrundfarbe, ein bestimmter Seitenrandabstand und die Transparenz gesetzt werden. Diese Eigenschaften werden im Styling-Bereich definiert.
 
 .. code-block:: yaml
 
@@ -46,7 +46,7 @@ Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``<img src='h
 Bild mit hinterlegtem Link einbinden:
 -------------------------------------
 
-Das zuvor eingebundene Logo kann um eine Linkverknüpfung erweitert werden. Der Link verweist auf die Mapbender-Webseite (``href='https://mapbender.org'``). Die Information ``target='_blank'`` sorgt dafür, dass sich der Link beim Klicken in einem neuen Tab öffnet.
+Das zuvor eingebundene Logo kann um eine Linkverknüpfung erweitert werden. Der Link verweist auf die Mapbender-Webseite. Die Information ``target='_blank'`` sorgt dafür, dass sich der Link beim Klicken in einem neuen Tab öffnet.
 
 .. code-block:: yaml
 
@@ -69,7 +69,7 @@ Der HTML-Code kann wie folgt aussehen:
 
      <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{ application.title }} </span></b>
 
-Die Variable für den Anwendungstitel wird durch ``{{ application.title }}`` eingebunden. Der Begriff "Anwendung" ist ein Textzusatz und erscheint unabhängig vom Titel. Durch den Style-Block (``style=``) wurden Schriftgröße (``font-size:25px``), Schriftbreite (``<b></b>``), Schriftfarbe (``color:#b6dd18``) sowie Position (``margin-right:50vw``) des Titels angepasst.
+Die Variable für den Anwendungstitel wird durch ``{{ application.title }}`` eingebunden. Der Begriff "Anwendung" ist ein Textzusatz und erscheint unabhängig vom Titel. Durch den Style-Block wurden Schriftgröße, Schriftbreite, Schriftfarbe sowie Position des Titels angepasst.
 
 Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
@@ -87,7 +87,6 @@ Diese Variable gibt den Namen des aktiven Nutzers im HTML-Element aus:
 Im Anwendungsbeispiel wird der Nutzername in der oberen Werkzeugleiste angezeigt:
 	
 .. image:: ../../../figures/de/html_example_user_name.png
-     :scale: 80
     
 * Variable: **group.title**
 
@@ -103,7 +102,6 @@ Um Gruppentitel dennoch ausgeben zu können, wird eine Schleife im HTML-Element 
 Im Anwendungsbeispiel werden Index und Name der Gruppe in der oberen Werkzeugleiste ausgegeben:
 
 .. image:: ../../../figures/de/html_example_group_name.png
-     :scale: 80
 
 * Variable: **"entity"**
 
