@@ -3,10 +3,14 @@
 Share
 =====
 
-Share offers a variety of possibilities that simplify the joint work with Mapbender applications:
-*Share URL* enables quick sharing of self-configured map states via URL, *View Manager* stores custom map states, *Application Switcher* enables cross-application switches and *Persistent Map View* simplifies the application compatibility with the web browser.
+Next, we will explore :ref:`shareurl`, :ref:`view_manager`, and :ref:`applicationswitcher`, all of which fall under the category of 'Share' as they streamline collaborative work within Mapbender applications.
 
-Certain view parameters are automatically contained in every application URL. 
+* :ref:`shareurl` enables quick sharing of self-configured map states via URL,
+* :ref:`view_manager` stores custom map states,
+* :ref:`applicationswitcher` enables cross-application switches,
+* :ref:`Persistent_Map_View` simplifies the application compatibility with the web browser.
+
+Moreover, certain map view parameters are automatically contained in every application URL. 
 Thus, users can share specific map views. 
 
 Contained view parameters include: 
@@ -22,12 +26,4 @@ If a URL is opened up in a new browser tab, previously mentioned view configurat
 
 Users will be sent back to the same part of the map if they refresh the page. They will not be sent back to the configured initial map view. In order to do so, users have to open the application again from the application list or manually delete the hash part of the application URL.
 
-.. note:: The following information is not saved by the URL: layer selection, sorting, runtime additions, geometry features or source additions via WMS loader.
-
-.. toctree::
-   :maxdepth: 1
-
-   share/shareurl.rst
-   share/view_manager.rst
-   share/persistant_map_view.rst
-
+.. note:: Not saved attributes are layer selection, sorting, runtime additions, geometry features or source additions via WMS loader.

@@ -1,4 +1,4 @@
-.. _persistant_map_view_de:
+.. _persistent_map_view_de:
 
 Persistente Kartenzustände
 **************************
