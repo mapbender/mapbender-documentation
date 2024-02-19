@@ -3,7 +3,7 @@
 Suchen (Search Router)
 **********************
 
-Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die Trefferausgabe sind dabei konfigurierbar. Zur Zeit wird eine SQL Suche unterstützt.
+Dieses Element erzeugt ein Suchformular mit Trefferausgabe, über das Objekte innerhalb der Karte lokalisiert werden können. Sowohl eine Verbindung zur Datenbank als auch das Formular und die Trefferausgabe sind über das :ref:`backend_de` konfigurierbar. Eine SQL-Suchfunktion wird unterstützt.
 
 .. image:: ../../../figures/de/search_router_de.png
      :scale: 80
@@ -99,32 +99,32 @@ Die jeweilige Tabellenspalte wird angegeben und mit Definitionen für type, opti
 Type
 ----
 
-Das Formular unterstützt zwei Typen - Typ text für Textfelder und Typ choice für Auswahlfelder. 
+Das Formular unterstützt zwei Typen - type text für Textfelder und type choice für Auswahlfelder. 
 
 Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguration erstellt werden. Die Konfiguration beginnt mit dem Spaltennamen (in den Beispielen sind es die Spalten name und usertype).
 
-* label - Sie können den Parameter label für die Spaltenbeschriftung angeben. Fehlt der Parameter wird der Tabellenspalten-Name mit führendem Großbuchstaben verwendet.
+* **label** - Sie können den Parameter label für die Spaltenbeschriftung angeben. Fehlt der Parameter wird der Tabellenspalten-Name mit führendem Großbuchstaben verwendet.
 
-* required - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard: false). Mit required: true wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
+* **required** - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard: false). Mit required: true wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
 
 Sie können außerdem den Vergleichsoperator definieren. Siehe 'comparison mode'.
 
 
-Typ text
-~~~~~~~~
+Type text
+~~~~~~~~~
 
-Über den Typ **text** können Textfelder in das Suchformular eingefügt werden.
+Über den Type **text** können Textfelder in das Suchformular eingefügt werden.
 
-Der Typ text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten müssen Sie zusätzliche additional attr-Parameter hinzufügen.
+Der type text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten, müssen Sie zusätzliche additional attr-Parameter hinzufügen.
 
 Unterstützte autocomplete-Paramter:
 
-* data-autocomplete: on - Parameter zum Aktivieren der Autovervollständigung
-* data-autocomplete-distinct: on - Gibt doppelte Ergebnisse der Autovervollständigung nur einmal aus
-* data-autocomplete-using: column1, column2 - Definiert weitere Spalte/n des Suchformulars, die bei der Autovervollständigung berücksichtigt werden sollen.
+* **data-autocomplete**: on - Parameter zum Aktivieren der Autovervollständigung
+* **data-autocomplete-distinct**: on - Gibt doppelte Ergebnisse der Autovervollständigung nur einmal aus
+* **data-autocomplete-using**: column1, column2 - Definiert weitere Spalte/n des Suchformulars, die bei der Autovervollständigung berücksichtigt werden sollen.
 
 
-* Typ text; Beispiel mit Autocomplete und Pflichtfeld:
+* **type text** Beispiel mit Autocomplete und Pflichtfeld:
 
 .. image:: ../../../figures/de/search_router_text_de.png
      :scale: 80
@@ -148,18 +148,18 @@ Unterstützte autocomplete-Paramter:
 Type choice
 ~~~~~~~~~~~
 
-Der Typ choice ermöglicht die Definition von Auswahlboxen in dem Suchformular.
+Der type **choice** ermöglicht die Definition von Auswahlboxen in dem Suchformular.
 
-* placeholder - Es kann ein Platzhaltertext definiert werden. Dieser erscheint wenn noch keine Auswahl erfolgte.
+* **placeholder** - Es kann ein Platzhaltertext definiert werden. Dieser erscheint wenn noch keine Auswahl erfolgte.
 
 Die Auswahlmöglichkeiten werden im Bereich choices definiert. Dabei werden ein Wert (value) und ein Schlüssel (key) angegeben.
 
-* key - wird bei der Suchanfrage verwendet 
-* value - wird in der Auswahlbox angezeigt 
+* **key** - wird bei der Suchanfrage verwendet 
+* **value** - wird in der Auswahlbox angezeigt 
 
 .. note:: **Hinweis:** Ab Mapbender 3.2 sollte die Angabe in der Reihenfolge value: key erfolgen, die Typdefinition lautet type: Symfony\Component\Form\Extension\Core\Type\ChoiceType.
 
-* Typ choice; Beispiel für ein Feld mit Auswahlmöglichkeiten:
+* **type choice** Beispiel für ein Feld mit Auswahlmöglichkeiten:
 
 .. image:: ../../../figures/de/search_router_choice_de.png
      :scale: 80
@@ -386,7 +386,7 @@ Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigu
 
 Dargestellt ist der Ausschnitt der yaml-Definiton, der das Formular konfiguriert. Tabellenspalten orga, town und usertype werden im Formular verwendet und sind jeweils als die Felder Mapbender User, Stadt und Nutzertyp eingebunden. Mapbender User und Stadt sind jeweils vom type Text. Nutzertyp hingegen gibt Auswahlmöglichkeiten in Form einer Dropdown-Liste vor. 
 
-Der Text, der angezeigt werden soll, wenn noch nichts ausgewählt wurde, ist hier "Bitte auswählen…" (siehe Nr. **1** – placeholder: ‚Bitte auswählen...‘). Der Titel über den Feldern wird mit label festgelegt (siehe Nr. **2**). Das Attribut data-autocomplete: ‚on‘ bewirkt, dass Vorschläge aus der Datenbank zu dem eingegebenen Begriff vorgegeben und als Dropdown angezeigt werden (siehe Nr. **3**). Da der Vergleichsmodus ilike (compare: ilike) konfiguriert wurde, muss der Begriff nicht exakt eingegeben werden. Die Suche findet ebenfalls Ergebnisse die ähnlich zu dem eingegebenen Begriff sind (siehe Nr. **4** – Wheregr (das g wurde klein geschrieben, trotzdem werden die Ergebnisse WhereGroup mit großem G gefunden)). Bei dem Feldtyp choice werden Auswahlmöglichkeiten vorgegeben. Diese Auswahlmöglichkeiten werden unter choices angegeben (siehe Nr. **5**). In der Tabelle sind die Auswahlmöglichkeiten als Zahlen hinterlegt (1, 2, 3, 4). In diesem Beispiel wurde jeder Zahl ein Text zugeordnet, der in der Dropdown-Liste angezeigt werden soll.
+Der Text, der angezeigt werden soll, wenn noch nichts ausgewählt wurde, ist hier "Bitte auswählen…" (siehe Nr. **1** – placeholder: ‚Bitte auswählen...‘). Der Titel über den Feldern wird mit label festgelegt (siehe Nr. **2**). Das Attribut data-autocomplete: ‚on‘ bewirkt, dass Vorschläge aus der Datenbank zu dem eingegebenen Begriff vorgegeben und als Dropdown angezeigt werden (siehe Nr. **3**). Da der Vergleichsmodus ilike (compare: ilike) konfiguriert wurde, muss der Begriff nicht exakt eingegeben werden. Die Suche findet ebenfalls Ergebnisse die ähnlich zu dem eingegebenen Begriff sind (siehe Nr. **4** – Wheregr (das g wurde klein geschrieben, trotzdem werden die Ergebnisse WhereGroup mit großem G gefunden)). Bei dem Feldtype choice werden Auswahlmöglichkeiten vorgegeben. Diese Auswahlmöglichkeiten werden unter choices angegeben (siehe Nr. **5**). In der Tabelle sind die Auswahlmöglichkeiten als Zahlen hinterlegt (1, 2, 3, 4). In diesem Beispiel wurde jeder Zahl ein Text zugeordnet, der in der Dropdown-Liste angezeigt werden soll.
 
 Eine vollständig ausgefüllte Suche nach dem Mapbender User WhereGroup, in der Stadt Bonn, des Nutzertyps Company und deren Ergebnis sieht wie folgt aus:
 

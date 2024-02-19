@@ -3,7 +3,7 @@
 Search Router
 *************
 
-This element creates a configurable search formular with a configurable result output in which generic SQL search is supported.
+The Search Router element enables users to locate items within the map by interfacing with a specified database connected via the :ref:`backend`. Both the search form and table output are customizable and facilitate generic SQL search functionality. This is achieved through the storage of geometries in the database, allowing users to query and display dynamic results on the map.
 
 .. image:: ../../../figures/search_router_en.png
      :scale: 80
@@ -101,9 +101,9 @@ The form supports two types - text and choice.
 You have to define a configuration for each table column you would like to provide in the 
 search form. The configuraton starts with the column name (in the example it is the column called name).
 
-* label - you can define a label parameter (if not defined the capitalized column name will be used).
+* **label** - you can define a label parameter (if not defined the capitalized column name will be used).
 
-* required: You can define whether a type should be required (default is false). With required: true a mandatory field is defined. That means that the user has to define a search term here before the search can run. Headings of required fields are marked with a red '*'.
+* **required**: You can define whether a type should be required (default is false). With required: true a mandatory field is defined. That means that the user has to define a search term here before the search can run. Headings of required fields are marked with a red '*'.
 
 You also can define a compare mode. See section 'comparison mode'.
 
@@ -117,12 +117,12 @@ Type text supports autocomplete. If you want to add autocomplete to the field yo
 
 Supported autocomplete paramters are:
 
-* data-autocomplete: on - parameter to activate autocomplete
-* data-autocomplete-distinct: on - paramter to activate distinct autocomplete
-* data-autocomplete-using: column1, column2 - define other column/s that should be also considered on autocomplete
+* **data-autocomplete**: on - parameter to activate autocomplete
+* **data-autocomplete-distinct**: on - paramter to activate distinct autocomplete
+* **data-autocomplete-using**: column1, column2 - define other column/s that should be also considered on autocomplete
 
 
-Type text; example with autocomplete:
+* **Type text** example with autocomplete:
 
 .. image:: ../../../figures/search_router_text_en.png
      :scale: 80
@@ -146,18 +146,18 @@ Type text; example with autocomplete:
 Type choice
 ~~~~~~~~~~~
 
-Type choice allows you to provide a selectbox in your search formular.
+Type **choice** allows you to provide a selectbox in your search formular.
 
 For type choice you can define a placeholder. This is a text that is shown before an option is selected.
 
 You have to define the choices for the selectbox. You define a value and a key. 
 
-* key - will be send in the search query
-* value - is show as text in selectbox
+* **key** - will be send in the search query
+* **value** - is show as text in selectbox
 
 .. note:: From Mapbender 3.2 on onwards, you should use the value: key definition and type: Symfony\Component\Form\Extension\Core\Type\ChoiceType
 
-* Type choice; example with different selection options via dropdown:
+* **type choice** example with different selection options via dropdown:
 
 .. image:: ../../../figures/search_router_choice_en.png
      :scale: 80
