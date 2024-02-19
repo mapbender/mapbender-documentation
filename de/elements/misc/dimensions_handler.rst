@@ -14,15 +14,15 @@ Für die Einbindung von WMS-Diensten mit einer zeitlichen Dimension kann der Dim
 .. image:: ../../../figures/wmst_source.png
      :scale: 80
 
-WMS-T werden wie herkömmliche WMS in die Layersets eingefügt, zusätzlich muss jedoch der Time-Parameter aktiviert werden. Wird dieser nicht aktiviert, dann werden die Dimensionen des Dienstes außer Acht gelassen und beim Aufruf der Kartenebene der Standardwert genutzt.
+WMS-T werden wie herkömmliche WMS in die Layersets eingefügt, zusätzlich muss jedoch der Time-Parameter aktiviert werden. Wird dieser nicht aktiviert, werden die Dimensionen des Dienstes außer Acht gelassen und beim Aufruf der Kartenebene der Standardwert genutzt.
 
-Bei Diensten mit einer zeitlichen Dimension erscheint bei der Instanz die Schaltfläche "Dimensionen". Durch einen Klick auf diese Schaltfläche werden die unterstützten Zeit-Parameter angezeigt. Die zeitliche Dimension kann dort per Checkbox-Klick aktiviert werden. 
+Bei Diensten mit einer zeitlichen Dimension erscheint bei der Instanz die Schaltfläche **Dimensionen**. Durch einen Klick auf diese Schaltfläche werden die unterstützten Zeit-Parameter angezeigt. Die zeitliche Dimension kann dort per Checkbox-Klick aktiviert werden. 
 Nach einem weiteren Klick in die Schaltfläche öffnet sich das Detailformular, in dem die Nutzung weiter definiert werden kann. Die Werte aus dem WMS-Dienst werden hier übernommen und können weiter eingeschränkt werden. Für die Einrichtung des Dienstes sind die folgenden Definitionen von Zeitparametern nötig: 
 
 * **Abfrageart**: multiple, nearest, current
 * **Name**: Wert TIME (name=time)
 * **Units**: Abbildungsformat für zeitliche Dimensionsangaben (ISO 8601:2000)
-* **Unit symbol**:
+* **Unit symbol**
 * **Default**: Standardzeitpunkt
 * **Extent (extent slider)**: Unterstützter Zeitbereich  
 
@@ -44,7 +44,7 @@ Es bestehen zwei Möglichkeiten, die Zeitangabe in der Anwendung zu steuern. Zum
 Schieberegler im Kontextmenü
 ----------------------------
 
-Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers im integriert werden. Dazu muss die Option "Dimension" im :ref:`layertree_de` aktiviert werden. 
+Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers im integriert werden. Dazu muss die Option **Dimension** im :ref:`layertree_de` aktiviert werden. 
 
 .. image:: ../../../figures/de/wmst_layertree.png
      :scale: 80

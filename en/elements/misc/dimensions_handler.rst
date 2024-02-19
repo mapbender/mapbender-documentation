@@ -16,13 +16,13 @@ The dimensions handler can be used to integrate WMS services with a time dimensi
 
 WMS-T are inserted almost like WMS in the layersets, with the exception that the time parameter still has to be activated. If it is not activated, the dimensions of the service are ignored and the default value is used when calling the layer in the map.
 
-If a service supports a time dimension, the instance displays the "Dimensions" button. By clicking on this button, the supported time parameters are displayed and time values can be activated by clicking the checkbox.
+If a service supports a time dimension, the instance displays the **Dimensions** button. By clicking on this button, the supported time parameters are displayed and time values can be activated by clicking the checkbox.
 After another click on the button, the detailed form opens, in which the usage can be further defined. Here you can further restrict the values ​​from the WMS service. To set up the service, the following definitions of time parameters are necessary:
 
 * **Query type**: multiple, nearest, current
 * **Name**: value TIME (name=time)
 * **Units**: format for temporal dimensions (ISO 8601:2000)
-* **Unit symbol**:
+* **Unit symbol**
 * **Default**: default time
 * **Extent (extent slider)**: Supported extent for the time dimension 
 
@@ -44,7 +44,7 @@ There are two ways to control the time of the WMS. On the one hand, each service
 Timeslider in context menu
 --------------------------
 
-A timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the "Dimension" option must be activated in the :ref:`layertree` element.
+A timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the **Dimension** option must be activated in the :ref:`layertree` element.
 
 .. image:: ../../../figures/wmst_layertree.png
      :scale: 80
