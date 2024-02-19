@@ -9,7 +9,7 @@
 Layouts
 #######
 
-In Layouts werden die Regionen einer Anwendung und die in ihnen enthaltenen Elemente aufgelistet.
+Im Layouts-Bereich des :ref:`backend_de` einer Anwendung werden die jeweiligen Frontend-Regionen der Anwendung und die in ihnen enthaltenen Elemente aufgelistet.
 Eine Übersicht über alle Elemente gibt es unter :ref:`elements_de`.
 
 .. note:: Unterschiedliche Templates können durch unterschiedliche Regionen strukturiert sein.

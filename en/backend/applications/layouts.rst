@@ -9,7 +9,7 @@
 Layouts
 #######
 
-In the Layouts section of an application you get an overview of the regions (layout sections) of the application. In the regions, the elements of the application are listed.
+The Layouts section in the :ref:`backend` of an application gives an overview of the regions (layout sections) of the application. In those regions, the elements of the application are listed.
 An overview of all elements is available under :ref:`elements`.
 
 .. note:: Different templates can have different regions: In the demo applications you can see two different region layouts. Not every element can be used in every region. Mapbender cares about that.
