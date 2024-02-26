@@ -1026,7 +1026,7 @@ Karten-Refresh nach Speichern
 
 Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option ``refreshLayersAfterFeatureSave`` aktiviert werden. Über diesen Parameter werden die definierten Layer-Instanzen aus dem Map-Element neu geladen. Damit werden Änderungen in WMS-Diensten direkt in der Karte sichtbar. Dieses Event wird nur gestartet, wenn der Speichern Knopf aus dem Attributdialog verwendet wird.
 
-Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
+Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im :ref:`backend_de` mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
 
 
 .. image:: ../../../../figures/digitizer/layerinstance_id.png

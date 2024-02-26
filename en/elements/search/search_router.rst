@@ -20,7 +20,7 @@ The element may be integrated into the sidepane or via a button into from the to
 .. image:: ../../../figures/search_router_edit_en.png
      :scale: 80
 
-* **Title:** Title of the element. The title will be listed in the Layouts section in the backend. It is shown as sidepane tab/button title (usage in sidepane) or dialog title (usage via button).
+* **Title:** Title of the element. The title will be listed in the Layouts section in the :ref:`backend`. It is shown as sidepane tab/button title (usage in sidepane) or dialog title (usage via button).
 * **Width:**  Width of the dialog (only for dialog, not sidepane)
 * **Height:**  Height of the dialog (only for dialog, not sidepane)
 

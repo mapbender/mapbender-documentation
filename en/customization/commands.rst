@@ -214,7 +214,7 @@ The queued print is disabled by default because it requires some external integr
 Read more about the general characteristics of queued print at :ref:`queued_print`. Also `here <https://github.com/mapbender/mapbender/pull/1070>`_
 
 
-The print assistant is then updated in the backend of Mapbender and two new lines appear: mode and queue. 
+The print assistant is then updated in the :ref:`backend` of Mapbender and two new lines appear: mode and queue. 
 Mode is set to "queue" and queue is set to "global", if the print jobs are expected to be accessible to all colleagues. 
 The new tab "Recent jobs" (which shows your scheduled print jobs) appears in the print client pop-up window. 
 

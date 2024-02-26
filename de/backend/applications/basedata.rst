@@ -3,7 +3,7 @@
 Basisdaten
 ##########
 
-Die Basisdaten bestimmen die grundlegenden Informationen und Einstellungen einer Anwendung. Die Basisdaten sind über eine Maske in den Anwendungseinstellungen im Backend wie folgt konfigurierbar:
+Die Basisdaten bestimmen die grundlegenden Informationen und Einstellungen einer Anwendung. Die Basisdaten sind über eine Maske in den Anwendungseinstellungen im :ref:`backend_de` wie folgt konfigurierbar:
 
 
 * **Titel**: Titel der Anwendung, frei ausfüllbares Textfeld.

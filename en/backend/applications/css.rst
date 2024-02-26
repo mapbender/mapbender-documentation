@@ -27,4 +27,4 @@ When you use the menu option in the top toolbar you can define at what size of t
   }
 
 
-The function itself can be found in the ``Layouts`` tab of the backend: Click the gear button and activate the checkbox ``Generate menu for buttons``.
+The function itself can be found in the :ref:`layouts` tab: Click the gear button and activate the checkbox ``Generate menu for buttons``.

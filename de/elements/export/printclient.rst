@@ -29,7 +29,7 @@ Das Element kann über einen Button aufgerufen oder in der Sidepane als Element 
 Konfiguration
 -------------
 
-Der PrintClient wird im Backend konfiguriert. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A0 bis A4 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
+Der PrintClient wird im :ref:`backend_de` konfiguriert. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A0 bis A4 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
 
 .. image:: ../../../figures/de/print_client_configuration.png
      :scale: 80
@@ -57,7 +57,7 @@ Der PrintClient wird im Backend konfiguriert. Er greift dabei auf Druckvorlagen 
 * **Zeige Pflichtfelder zuerst**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
 * **Replace pattern**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer).
 
-Im Backend finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein ausführliches und kommentiertes Beispiel steht weiter unten im Abschnitt YAML-Definition).
+Im :ref:`backend_de` finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein ausführliches und kommentiertes Beispiel steht weiter unten im Abschnitt YAML-Definition).
 
 .. image:: ../../../figures/de/print_client_configuration_enhanced.png
      :scale: 80

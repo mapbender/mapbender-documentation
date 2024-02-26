@@ -238,7 +238,7 @@ If you do further edits at your css file you may have to delete the generated cs
 Style the administrational pages
 ********************************
 
-Please change the following css-files for the backend pages:
+Please change the following css-files for the :ref:`backend` pages:
 
  * login.css : Change the design of the login page
  * manager.css : Change the design of the administration pages (e.g. application overview)

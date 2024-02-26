@@ -1,13 +1,13 @@
 .. _layouts:
 
+Layouts
+#######
+
  .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
 
  .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
 
  .. |mapbender-button-key| image:: ../../../figures/mapbender_button_key.png
-
-Layouts
-#######
 
 The Layouts section in the :ref:`backend` of an application gives an overview of the regions (layout sections) of the application. In those regions, the elements of the application are listed.
 An overview of all elements is available under :ref:`elements`.
@@ -71,7 +71,7 @@ The option **Type** adjusts the inserted elements:
 
 - ``Buttons`` shows elements via buttons.
 
-- ``Unstyled`` does not contain any styling options at all and displays the elements in the configured backend order.
+- ``Unstyled`` does not contain any styling options at all and displays the elements in the configured :ref:`backend` order.
 
 
 Button area (Elements)
@@ -83,12 +83,12 @@ The following button functions are available:
     :alt: Mapbender Button Area
 
 
-* **Toggle show/hide element**: A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the backend.
+* **Toggle show/hide element**: A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the :ref:`backend`.
 * **Show on mobile screens**: Displays an element only on mobile-sized screens.
 * **Show on Desktop screens**: Displays an element only on Desktop-sized screens.
 * **Edit**: Adjusts an element.
 * **ACL element**: Sets specific visibility permissions for an element.
-* **Delete**: Removes an element from both front- and backend.
+* **Delete**: Removes an element from both front- and :ref:`backend`.
 
 
 Edit
@@ -121,4 +121,4 @@ You can find more security details under :ref:`security`.
 
 Delete
 ======
-Removes an element from both front- and backend.
+Removes an element from both front- and :ref:`backend`.

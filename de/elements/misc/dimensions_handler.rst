@@ -61,7 +61,7 @@ Schieberegler als Element
 Die Kartenebenen können mithilfe des Dimensions-Handlers über einen zentralen Schieberegler gesteuert werden. Dieses Element kann direkt (ohne Button-Verknüpfung) in die Sidepane, die obere Werkzeugleiste und in die Fußzeile integriert werden. 
 Die Konfiguration des Dimensions-Handlers erfolgt in drei Schritten:
 
-* **Anlegen des Elements**: Zuerst muss das Element im Backend (Layout-Bereich) als neues Element in einen der Bereiche Sidepane, obere Werkzeugleiste oder Fußzeile hinzugefügt werden.
+* **Anlegen des Elements**: Zuerst muss das Element im :ref:`backend_de` (Layout-Bereich) als neues Element in einen der Bereiche Sidepane, obere Werkzeugleiste oder Fußzeile hinzugefügt werden.
 * **Definition eines Dimensionsets**: Anschließend erfolgt die Erstellung eines Dimensionsets über den „+“-Button. Hiernach muss ein Titel angegeben und eine Layerset-Instanz als Gruppe gewählt werden.
 * **Definition des Schiebereglers**: Zuletzt muss der Bereich, der über den Schieberegler gesteuert werden sollen, festgelegt werden. Eine Mehrfachauswahl ist möglich, aber es können nur Instanzen kombiniert werden, die den gleichen zeitlichen Extent besitzen.
 

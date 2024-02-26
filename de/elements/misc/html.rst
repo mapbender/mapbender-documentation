@@ -17,7 +17,7 @@ Es stehen grundsätzlich die folgenden Variablen im HTML-Element zur Verfügung:
 Konfiguration
 =============
 
-Das Element wird im Backend in die Anwendung eingebunden.
+Das Element wird im :ref:`backend_de` in die Anwendung eingebunden.
 
 .. image:: ../../../figures/de/html_element.png
      :scale: 80

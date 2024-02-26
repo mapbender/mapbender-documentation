@@ -213,7 +213,7 @@ Der Druck in der Warteschlange ist standardmäßig deaktiviert, da er eine exter
 
 Weitere Informationen zum Warteschleifendruck gibt es im Kapitel :ref:`queued_print_de` sowie auf `GitHub <https://github.com/mapbender/mapbender/pull/1070>`_.
 
-Anschließend wird im Backend des Mapbenders der Druckassistent aktualisiert und es erscheinen zwei neue Zeilen, Modus und Warteschleife.
+Anschließend wird im :ref:`backend_de` des Mapbenders der Druckassistent aktualisiert und es erscheinen zwei neue Zeilen, Modus und Warteschleife.
 
 Modus wird auf "Warteschleife" gesetzt und Warteschleife auf "global", wenn davon auszugehen ist, dass die Druckaufträge für alle Anwender zugänglich sind. 
 

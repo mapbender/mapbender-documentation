@@ -57,7 +57,7 @@ users will interact with.
 Backend
 =======
 
-The backend is where you configure your Mapbender installation. It's called
+The :ref:`backend` is where you configure your Mapbender installation. It's called
 the manager and allows your admins to manage users, roles, services,
 applications and elements.
 

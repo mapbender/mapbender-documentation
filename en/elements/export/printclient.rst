@@ -58,7 +58,7 @@ With the configuration of the following values it is possible to enable optional
 * **Display required fields first**: If this checkbox is active, your defined required fields appear utmost.
 * **Replace pattern**: You can modify the map request for printing. You can add additional parameters like map_resolution (for MapServer).
 
-Here's an example for the backend configuration (or look below in the YAML definition for an enhanced and commented example).
+Here's an example for the :ref:`backend` configuration (or look below in the YAML definition for an enhanced and commented example).
 
 .. image:: ../../../figures/print_client_configuration_enhanced.png
      :scale: 80

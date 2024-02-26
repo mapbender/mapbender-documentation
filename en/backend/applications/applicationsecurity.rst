@@ -8,7 +8,7 @@ Each application has its own security tab. Here, you can set individual permissi
 Assign an Application to a User/Group
 *************************************
 
-Per default, all applications are available to all users/groups that have specific permissions to the backend. Nethertheless, it is possible to hide applications from individual users/groups: 
+Per default, all applications are available to all users/groups that have specific permissions to the :ref:`backend`. Nethertheless, it is possible to hide applications from individual users/groups: 
 
 #. Edit your application by clicking **Application**.
 

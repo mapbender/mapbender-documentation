@@ -3,7 +3,7 @@
 Base data
 #########
 
-Base data determines the fundamental information and settings of an application. They can be configured through a mask in the application settings in the backend as follows:
+Base data determines the fundamental information and settings of an application. They can be configured through a mask in the application settings in the :ref:`backend` as follows:
 
 
 * **Title**: The application's name.

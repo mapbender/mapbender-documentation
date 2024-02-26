@@ -105,13 +105,13 @@ The environment can be set via the ``APP_ENV`` variable. Make sure to change thi
 Mapbender Backend
 -----------------
 
-#. After a successful Mapbender startup, the application overview page in the backend will appear. The applications are listed with a screenshot, title, URL title and description.
+#. After a successful Mapbender startup, the application overview page in the :ref:`backend` will appear. The applications are listed with a screenshot, title, URL title and description.
 
 #. You can open an application by click on the title, the screenshot or via the |mapbender-button-show| ``button``.
 
-#. A log-in is required to gain access into Mapbender's administration backend. In order to do so, click on **login** at the top-right of the login page. You can login with the user that was generated during installation. This could be ``root`` with the password ``root`` - this is the default user and password that you get after installation of Mapbender. Please change the root password if you want to run a productive environment. Please don't delete the user root. 
+#. A log-in is required to gain access into Mapbender's :ref:`backend`. In order to do so, click on **login** at the top-right of the login page. You can login with the user that was generated during installation. This could be ``root`` with the password ``root`` - this is the default user and password that you get after installation of Mapbender. Please change the root password if you want to run a productive environment. Please don't delete the user root. 
 
-After a successful login you will be directed to the ``Mapbender administration backend``.
+After a successful login you will be directed to the :ref:`backend`.
 
 
 Application overview
