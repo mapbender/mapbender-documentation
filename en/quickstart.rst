@@ -153,9 +153,11 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. A thumbnail can be uploaded as well. It will appear next to the application title on the application overview page. For this, select "*Select File"* below the thumbnail section.
 
-#. Set a tick at *"persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found in :ref:`share`.
+#. Set the checkmark at *"Persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found in :ref:`share`.
 
-#. Click *"save"* to save and create your application. It is now possible to add elements (e.g. map, navigation bar, legend) and services to your applicaiton.
+#. Set the checkmark at *"Show Splashscreen"* to generate a loading screen on application startup that indicates the loading time.
+
+#. Click *"Save"* to save and create your application. It is now possible to add elements (e.g. map, navigation bar, legend) and services to your applicaiton.
 
   .. image:: ../figures/mapbender_create_application.png
      :width: 100%

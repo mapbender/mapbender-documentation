@@ -14,8 +14,9 @@ Die Basisdaten bestimmen die grundlegenden Informationen und Einstellungen einer
 
 * **Beschreibung**: Beschreibung der Anwendung, frei ausfüllbares Textfeld.
 
-* **Kartenzustand merken**: Speichert sitzungsübergreifend den Zustand bestimmter Kartenparameter und -einstellungen. Weitere Informationen finden Sie auf der Seite zu den :ref:`Share-Elementen <persistant_map_view_de>`.
+* **Kartenzustand merken**: Speichert sitzungsübergreifend den Zustand bestimmter Kartenparameter und -einstellungen. Weitere Informationen finden Sie auf der Seite zu den :ref:`Share-Elementen <persistent_map_view_de>`.
 
+* **Ladescreen zeigen**: Zeigt einen Ladebildschirm bei Anwendungsstart an, der die Ladezeit graphisch überbrückt.
 
   .. image:: /figures/de/mapbender_create_application.png
      :width: 100%

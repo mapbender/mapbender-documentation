@@ -154,6 +154,7 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie unter :ref:`share_de`.
 
+#. Setzen Sie ein Häkchen bei *"Ladescreen anzeigen"*, um einen Ladebildschirm bei Anwendungsstart zu erzeugen, der die Ladezeit graphisch überbrückt.
 
 #. Klicken Sie *"Speichern"*, um die Anwendung zu erzeugen. Nach der Erstellung können Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Dienste hinzufügen.
 

@@ -14,8 +14,9 @@ Base data determines the fundamental information and settings of an application.
 
 * **Description**: Text input field that can store the application's description, if provided.
 
-* **Persistent map state**: Stores the state of specific map parameters and settings across sessions. For more information, please see :ref:`Share Elements <persistant_map_view>`.
+* **Persistent map state**: Stores the state of specific map parameters and settings across sessions. For more information, please see :ref:`Share Elements <persistent_map_view>`.
 
+* **Show Splashscreen**: Shows a splashscreen on application startup to indicate the loading time.
 
   .. image:: /figures/mapbender_create_application.png
      :width: 100%
