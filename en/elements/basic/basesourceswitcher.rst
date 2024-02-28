@@ -3,7 +3,7 @@
 Base source switcher
 ********************
 
-Base source switcher is a group of button that enables the user to switch between different predefined layers (BaseSources), e. g. background maps. For every sourceset a button will be displayed in the client. Only one sourceset is active at the same time.
+Base source switcher is a group of buttons that enables the user to switch between different predefined services (BaseSources), e. g. background maps. For every sourceset a button will be displayed in the client. Only one sourceset is active at the same time.
 Moreover, it is possible to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as the title.
 
 .. image:: ../../../figures/basesourceswitcher.png
@@ -18,7 +18,7 @@ Moreover, it is possible to define groups. All sourcesets of the same group will
 Configuration
 =============
 
-**Preparation**: In order to be able to configure the Base source switcher, you have to define Service instances as BaseSource (checkmark "Basesource"). You can define the layer as a BaseSource in the :ref:`layerset` tab in the :ref:`backend` of the application. You have to edit the layer and set a checkmark at "BaseSource".
+**Preparation**: In order to be able to configure the Base source switcher, you have to define service instances as BaseSource (checkbox "Basesource"). You can define the layer as a BaseSource in the :ref:`layerset` tab in the :ref:`backend` of the application. You have to edit the service and set a check mark at "BaseSource".
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80

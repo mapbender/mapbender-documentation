@@ -3,7 +3,7 @@
 Share
 =====
 
-Das Share-Tool bietet eine Vielzahl von Funktionen, die die gemeinsame Arbeit mit Kartenanwendungen erleichtern:
+Mapbender bietet eine Vielzahl von Funktionen, die die gemeinsame Arbeit mit Kartenanwendungen erleichtern:
 
 * :ref:`shareurl_de` ermöglicht das schnelle Teilen von selbstkonfigurierten Kartenanwendungszuständen via URL,
 * :ref:`view_manager_de` speichert Kartenzustände und erstellt eine Liste dieser in der Sidepane,
