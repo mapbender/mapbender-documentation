@@ -3,7 +3,7 @@
 Hintergrund wechseln
 ********************
 
-"Hintergrund wechseln" erstellt Buttons mit Themen, die dafür konfigurierte Layer im Kartenbereich sichtbar schalten. Auf diese Weise kann etwa zwischen verschiedenen Hintergrundkarten gewechselt werden. Dabei ist immer nur ein Thema aktiv. 
+"Hintergrund wechseln" erstellt Buttons mit Themen, um zuvor für diesen Zweck konfigurierte Dienste im Kartenbereich sichtbar zu schalten. Auf diese Weise kann etwa zwischen verschiedenen Hintergrundkarten gewechselt werden. Dabei ist immer nur ein Thema aktiv. 
 Zusätzlich können Gruppen für die Hintergrund-Themen definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
 .. image:: ../../../figures/basesourceswitcher.png
@@ -18,7 +18,7 @@ Zusätzlich können Gruppen für die Hintergrund-Themen definiert werden. Alle D
 Konfiguration
 =============
 
-**Vorbereitung**: Zur Definition einer Hintergrundkarte mit dem Element müssen zuvor im Backend (Reiter: :ref:`layerset_de`) mindestens zwei Layer konfiguriert werden. Um sie verwenden zu können, ist in den Layer-Einstellungen das Anhaken der Checkbox "Basesource" erforderlich.
+**Vorbereitung**: Zur Definition einer Hintergrundkarte mit dem Element müssen zuvor im Backend (Reiter: :ref:`layerset_de`) mindestens zwei Dienste konfiguriert werden. Um sie verwenden zu können, ist in den Layerset-Einstellungen eines Dienstes das Anhaken der Checkbox "Basesource" erforderlich.
 
 .. image:: ../../../figures/de/basesourceswitcher_basesource.png
      :scale: 80
