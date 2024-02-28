@@ -3,7 +3,7 @@
 Navigation Toolbar
 ******************
 
-This element is a tool to simplify navigation within the map via rotation, zoom and buttons. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The navigation toolbar itself is draggable.
+This element is a tool to simplify navigation within the map via rotation, zoom and buttons. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The navigation toolbar itself can be configured to be draggable.
 
 .. image:: ../../../figures/navigation_toolbar.png
      :scale: 80

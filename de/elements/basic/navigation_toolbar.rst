@@ -3,7 +3,7 @@
 Navigationswerkzeug (Navigation Toolbar)
 ****************************************
 
-Das Element erleichtert die Navigation in der Karte (Rotation und Zoom) durch entsprechende Buttons. Der Kartenmaßstab kann dabei individuell über eine Leiste angesprungen oder über die Zoom in/out-Buttons abgeändert werden. Es besteht zudem die Möglichkeit, auf die maximale Kartenausdehnung zu zoomen oder zum Anfangszustand zurück zu navigieren. Das Navigationselement selbst ist verschiebbar.
+Das Element erleichtert die Navigation in der Karte (Rotation und Zoom) durch entsprechende Buttons. Der Kartenmaßstab kann dabei individuell über eine Leiste angesprungen oder über die Zoom in/out-Buttons abgeändert werden. Es besteht zudem die Möglichkeit, auf die maximale Kartenausdehnung zu zoomen oder zum Anfangszustand zurück zu navigieren. Das Navigationselement kann verschoben werden, wenn die Option aktiviert wird.
 
 .. image:: ../../../figures/de/navigation_toolbar.png
    :scale: 80
