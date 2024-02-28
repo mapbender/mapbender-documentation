@@ -19,7 +19,7 @@ Konfiguration
 
 * **Kartenzustand merken**: Speichert sitzungsübergreifend den Zustand bestimmter Kartenparameter und -einstellungen. Weitere Informationen finden Sie auf der Seite zu den :ref:`Share-Elementen <persistent_map_view_de>`.
 
-* **Ladescreen zeigen**: Zeigt einen Ladebildschirm bei Anwendungsstart an, der die Ladezeit graphisch überbrückt.
+* **Ladescreen zeigen**: Zeigt ein Bild bei Anwendungsstart an, das die Ladezeit graphisch überbrückt.
 
   .. image:: /figures/de/mapbender_create_application.png
      :width: 80%
