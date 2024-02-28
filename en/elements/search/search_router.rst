@@ -3,7 +3,7 @@
 Search Router
 *************
 
-The Search Router element enables users to locate items within the map by interfacing with a specified database connected via the :ref:`backend`. Both the search form and table output are customizable and facilitate generic SQL search functionality. This is achieved through the storage of geometries in the database, allowing users to query and display dynamic results on the map.
+The Search Router element enables users to locate items within the map by interfacing with a specified database connected via the :ref:`backend`. Both the search form and table output are customizable and facilitate generic SQL search functionality via PostgreSQL tables. This is achieved through the storage of geometries in the database, allowing users to query and display dynamic results on the map.
 
 .. image:: ../../../figures/search_router_en.png
      :scale: 80

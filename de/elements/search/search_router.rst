@@ -3,7 +3,7 @@
 Suchen (Search Router)
 **********************
 
-Dieses Element erzeugt ein Suchformular mit Trefferausgabe, über das Objekte innerhalb der Karte lokalisiert werden können. Sowohl eine Verbindung zur Datenbank als auch das Formular und die Trefferausgabe sind über das :ref:`backend_de` konfigurierbar. Eine SQL-Suchfunktion wird unterstützt.
+Dieses Element erzeugt ein Suchformular mit Trefferausgabe, über das Objekte innerhalb der Karte lokalisiert werden können. Sowohl eine Verbindung zur Datenbank als auch das Formular und die Trefferausgabe sind über das :ref:`backend_de` konfigurierbar. Derzeit werden PostgreSQL-Tabellen als Grundlage für Suchen unterstützt.
 
 .. image:: ../../../figures/de/search_router_de.png
      :scale: 80
@@ -96,10 +96,10 @@ Im Bereich **form** können Textfelder und Auswahlboxen für das Suchformular de
 Die jeweilige Tabellenspalte wird angegeben und mit Definitionen für type, options und compare versehen.
 
 
-Type
-----
+Typ
+---
 
-Das Formular unterstützt zwei Typen - type text für Textfelder und type choice für Auswahlfelder. 
+Das Formular unterstützt zwei Typen - *text* für Textfelder und *choice* für Auswahlfelder. 
 
 Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguration erstellt werden. Die Konfiguration beginnt mit dem Spaltennamen (in den Beispielen sind es die Spalten name und usertype).
 
@@ -110,12 +110,12 @@ Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguratio
 Sie können außerdem den Vergleichsoperator definieren. Siehe 'comparison mode'.
 
 
-Type text
-~~~~~~~~~
+Typ text
+~~~~~~~~
 
-Über den Type **text** können Textfelder in das Suchformular eingefügt werden.
+Über den Typ **text** können Textfelder in das Suchformular eingefügt werden.
 
-Der type text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten, müssen Sie zusätzliche additional attr-Parameter hinzufügen.
+Text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten, müssen Sie zusätzliche additional attr-Parameter hinzufügen.
 
 Unterstützte autocomplete-Paramter:
 
@@ -145,10 +145,10 @@ Unterstützte autocomplete-Paramter:
             compare: exact                                          
 
 
-Type choice
-~~~~~~~~~~~
+Typ choice
+~~~~~~~~~~
 
-Der type **choice** ermöglicht die Definition von Auswahlboxen in dem Suchformular.
+Der Typ **choice** ermöglicht die Definition von Auswahlboxen in dem Suchformular.
 
 * **placeholder** - Es kann ein Platzhaltertext definiert werden. Dieser erscheint wenn noch keine Auswahl erfolgte.
 
