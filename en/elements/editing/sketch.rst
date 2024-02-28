@@ -22,7 +22,7 @@ Configuration
 .. image:: ../../../figures/sketch_configuration.png
      :scale: 80
 
-* **Open automatically:** Opens the Sketch element on application start.
+* **Open automatically:** Opens the Sketch element on application start (default: off).
 * **Deactivate on close:** Sketches are deactivated after closure of the element.
 * **Title:** Title of the element. This is referenced by the button which opens the element.
 * **Geometrytypes:** Lists all geometrytypes (mandatory field).
