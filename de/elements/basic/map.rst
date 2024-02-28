@@ -2,7 +2,7 @@
 
 Karte (Map)
 ***********
-Die Karte markiert das zentrale Element, an dem eine Mapbender-Anwendung aufgebaut wird. Sie basiert auf OpenLayers und sollte als Element in den Kartenbereich integriert werden.
+Die Karte ist das zentrale Element einer Anwendung. Sie basiert auf OpenLayers und wird als Element in den Kartenbereich im :ref:`backend_de` integriert.
 
 .. image:: ../../../figures/de/map.png
      :width: 75%
@@ -11,14 +11,14 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/map_dialog.png
-     :width: 75%
+     :width: 50%
 
-* **Title:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Layersets:** Wählen Sie das :ref:`layerset_de` aus, welches von der Karte dargestellt werden soll.
+* **Title:** Titel des Elements. Dieser wird im :ref:`layouts_de`-Bereich angezeigt.
+* **Layersets:** Wählen Sie ein oder mehrere :ref:`layerset_de` aus, die vom Kartenelement dargestellt werden sollen. Dabei kann die Reihenfolge der Layersets via Drag-and-drop verändert werden.
 * **Tile size:** Größe der Tiles bei gekachelten Diensten.
-* **SRS:** Koordinatenbezugssystem beim Start der Anwendung ("Spatial Reference System"). Zwei Arten der SRS Definition werden unterstützt: EPSG: CODE oder EPSG:CODE|MEIN SRS TITEL.
-* **Max. Kartenausdehnung:** Maximaler Kartenbereich (BBOX mit min/max x/y, die Ausschnitt definiert). Bei Klick auf das Globus-Icon im :ref:`navigation_toolbar_de` wird auf diese Ausdehnung gezoomt.
-* **Initiale Kartenausdehnung:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y, die Ausschnitt definiert). Bei Klick auf das Haus-Icon im :ref:`navigation_toolbar_de` wird auf diese Ausdehnung gezoomt.
+* **SRS:** Koordinatenbezugssystem beim Start der Anwendung ("Spatial Reference System"). Zwei Arten der SRS Definition werden unterstützt: EPSG:CODE oder EPSG:CODE|MEIN SRS TITEL. Wird kein eigener SRS-Titel definiert, so wird die Standarddefinition aus der Title-Spalte der Tabelle *mb_core_srs* verwendet.
+* **Max. Kartenausdehnung:** Maximaler Kartenbereich (BBOX mit min/max x/y). Ein Umgebungsrechteck, das den Ausschnitt definiert. Bei Klick auf das Globus-Icon im :ref:`navigation_toolbar_de` wird auf die maximale Ausdehnung gezoomt.
+* **Initiale Kartenausdehnung:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y). Ein Umgebungsrechteck, das den Ausschnitt definiert. Bei Klick auf das Haus-Icon im :ref:`navigation_toolbar_de` wird auf die initiale Ausdehnung gezoomt.
 * **Standard-Auflösung [dpi]:** Die Auflösung passt sich auf Basis dieses Wertes an die Auflösung des verwendeten Gerätes an. Standard: 96 dpi.
 * **Feste Maßstabsstufen:** Das Zoom-Verhalten wird hierdurch konfiguriert. Feste Maßstabsstufen verbessern die visuelle Qualität von Diensten, welche nur auf bestimmten Maßstäben zwischengespeichert werden. Ist die Einstellung aktiviert, dann können nur Maßstäbe ausgewählt werden, die auch unter *scales* im Folgenden definiert sind (Standard: false).
 * **Scales (csv):** Festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma getrennt).
