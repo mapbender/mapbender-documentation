@@ -270,14 +270,9 @@ Die Konfiguration beinhaltet drei Stilkonfigurationen:
                fillColor: '#0000ff'
                fillOpacity: 1
 
-Wird Opacity auf 0 gesetzt (fillOpacity: 0), so wird die Fläche nicht gefüllt, sondern transparent dargestellt. In der default-Definition wird lediglich eine grüne Umrandung
- dargestellt (strokeColor: '#00ff00'). 
 
-Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt uns sind mit leichter Opazität versehen. 
-Sie verfügen über eine blaue Umrandung. 
-
-Die temporäre Darstellung beim Mouse-Hover über ein Ergebnis erfolgt in blau. 
-
+Wird Opacity auf 0 gesetzt (fillOpacity: 0), so wird die Fläche nicht gefüllt, sondern transparent dargestellt. In der default-Definition wird lediglich eine grüne Umrandung dargestellt (strokeColor: '#00ff00'). 
+Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt und sind mit leichter Opazität versehen. Sie verfügen über eine blaue Umrandung. Die temporäre Darstellung beim Mouse-Hover über ein Ergebnis erfolgt in blau. 
 
 .. image:: ../../../figures/de/search_router_example_colour_purplegreen.png
      :scale: 80
@@ -285,7 +280,6 @@ Die temporäre Darstellung beim Mouse-Hover über ein Ergebnis erfolgt in blau.
 Die styleMap-Angaben überschreiben Standardangaben. Daher müssen Sie lediglich die Angaben setzen, die Sie überschreiben möchten. Wenn Sie die Angaben weglassen wird der default-Stil verwendet.
 
 Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
-
 
 
 Konfigurationsbeispiele
@@ -384,9 +378,7 @@ Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigu
 .. image:: ../../../figures/de/search_router_example_search_description.png
      :scale: 80
 
-Dargestellt ist der Ausschnitt der yaml-Definiton, der das Formular konfiguriert. Tabellenspalten orga, town und usertype werden im Formular verwendet und sind jeweils als die Felder Mapbender User, Stadt und Nutzertyp eingebunden. Mapbender User und Stadt sind jeweils vom type Text. Nutzertyp hingegen gibt Auswahlmöglichkeiten in Form einer Dropdown-Liste vor. 
-
-Der Text, der angezeigt werden soll, wenn noch nichts ausgewählt wurde, ist hier "Bitte auswählen…" (siehe Nr. **1** – placeholder: ‚Bitte auswählen...‘). Der Titel über den Feldern wird mit label festgelegt (siehe Nr. **2**). Das Attribut data-autocomplete: ‚on‘ bewirkt, dass Vorschläge aus der Datenbank zu dem eingegebenen Begriff vorgegeben und als Dropdown angezeigt werden (siehe Nr. **3**). Da der Vergleichsmodus ilike (compare: ilike) konfiguriert wurde, muss der Begriff nicht exakt eingegeben werden. Die Suche findet ebenfalls Ergebnisse die ähnlich zu dem eingegebenen Begriff sind (siehe Nr. **4** – Wheregr (das g wurde klein geschrieben, trotzdem werden die Ergebnisse WhereGroup mit großem G gefunden)). Bei dem Feldtype choice werden Auswahlmöglichkeiten vorgegeben. Diese Auswahlmöglichkeiten werden unter choices angegeben (siehe Nr. **5**). In der Tabelle sind die Auswahlmöglichkeiten als Zahlen hinterlegt (1, 2, 3, 4). In diesem Beispiel wurde jeder Zahl ein Text zugeordnet, der in der Dropdown-Liste angezeigt werden soll.
+Dargestellt ist der Ausschnitt der yaml-Definiton, der das Formular konfiguriert. Tabellenspalten *orga*, *town* und *usertype* werden im Formular verwendet und sind jeweils als die Felder *Mapbender User*, *Stadt* und *Nutzertyp* eingebunden. *Mapbender User* und *Stadt* sind jeweils vom Typ Text. *Nutzertyp* gibt hingegen Auswahlmöglichkeiten in Form einer Dropdown-Liste vor. 
 
 Eine vollständig ausgefüllte Suche nach dem Mapbender User WhereGroup, in der Stadt Bonn, des Nutzertyps Company und deren Ergebnis sieht wie folgt aus:
 
@@ -398,7 +390,7 @@ Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigu
 .. image:: ../../../figures/de/search_router_example_results_description.png
      :scale: 80
 
-Auf dieser Abbildung ist lediglich die Konfiguration der Ergebnisse angezeigt. Die Anzahl der Ergebnisse wird aufgrund von count: true (siehe Nr. **1**) angezeigt. Anschließend werden die Spaltentitel unter headers definiert (siehe Nr. **2**). Hier wird zuerst die Bezeichnung der Spalte in der Tabelle angegeben, sodass definiert wird auf welche Tabellenspalte sich die Ergebnisanzeige bezieht. Nach dem Doppelpunkt wird dann angegeben, welcher Titel in der Anwendung angezeigt werden soll. In dem Block styleMap wird das Styling der Punkte vorgenommen. Der Block default (siehe Nr. **3**) bezieht sieht dabei auf alle Punkte und der Block select (siehe Nr. **4**) nur auf das ausgewählte Objekt.
+Auf dieser Abbildung ist lediglich die Konfiguration der Ergebnisse angezeigt. Die Anzahl der Ergebnisse wird aufgrund von `count: true` angezeigt. Anschließend werden die Spaltentitel unter *headers* definiert. Hier wird zuerst die Bezeichnung der Spalte in der Tabelle angegeben, sodass definiert wird, auf welche Tabellenspalte sich die Ergebnisanzeige bezieht. Nach dem Doppelpunkt wird angegeben, welcher Titel in der Anwendung angezeigt werden soll. Im Block *styleMap* wird das Styling der Punkte vorgenommen. Der Block *default* bezieht sieht dabei auf alle Punkte und der Block *select* nur auf das ausgewählte Objekt.
 
 Da keines dieser Felder ein Pflichtfeld ist, kann die Suchabfrage auch nur mithilfe eines Feldes erfolgen.
 
