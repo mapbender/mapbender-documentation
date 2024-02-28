@@ -25,8 +25,8 @@ Configuration
 * **Tile activiy class:** CSS class to indicate tile loading activity.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

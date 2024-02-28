@@ -47,8 +47,8 @@ In the second example, an adjustment of the parameters (unchecking *Fix*, *Posit
      :width: 100%
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

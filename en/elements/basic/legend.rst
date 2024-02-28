@@ -50,7 +50,7 @@ In the example the legend was added to the sidepane.
 
 Legend in the toolbar
 ---------------------
-The legend element can be integrated with a button in the toolbar. First step: Open the application backend and add the legend element into the map area section of the Layout tab.
+The legend element can be integrated with a button in the toolbar. First step: Open the application :ref:`backend` and add the legend element into the map area section of the :ref:`layouts` tab.
 
 .. image:: ../../../figures/add_map_area.png
      :scale: 80
@@ -80,8 +80,8 @@ The activation and deactivation of checkboxes in the configurational settings le
 .. image:: ../../../figures/legend_example_toolbar_checkboxes.png
      :width: 100%
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

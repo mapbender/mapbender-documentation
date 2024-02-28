@@ -22,7 +22,7 @@ Konfiguration
 .. image:: ../../../figures/de/sketch_configuration.png
      :scale: 80
 
-* **Automatisches Aktivieren:** Das Element wird beim Anwendungsstart automatisch geöffnet.
+* **Automatisch öffnen:** Das Element wird beim Anwendungsstart automatisch geöffnet (Standard: deaktiviert).
 * **Beim Schließen deaktivieren:** Erstellte Skizzen werden nach Schließen des Elements (Button oder Sidepane) nicht mehr in der Karte angezeigt. Erneutes Öffnen zeigt erstellte Skizzen wieder an.
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Geometrytypes:** Liste der unterstützten Geometrietypen (Pflichtfeld)
@@ -58,9 +58,9 @@ Gezeichnete Skizzen können individuell gelöscht [1] bearbeitet [2] werden. Au�
 Farbauswahl ändern
 ------------------
 
-Nach der Konfiguration im Backend finden sich Farben als Button im Skizzen-Werkzeug. Um einer Skizze eine bestimmte Farbe zuzuweisen, muss zunächst das gewünschte Geometriewerkzeug und anschließend der gewünschte Farbbutton angeklickt werden.
+Nach der Konfiguration im :ref:`backend_de` finden sich Farben als Button im Skizzen-Werkzeug. Um einer Skizze eine bestimmte Farbe zuzuweisen, muss zunächst das gewünschte Geometriewerkzeug und anschließend der gewünschte Farbbutton angeklickt werden.
 Auch bereits gespeicherte Geometrien lassen sich farblich anpassen: Dazu muss eine Skizze per Klick auf "Editieren der Geometrie" (Bearbeiten-Button) ausgewählt und anschließend die gewünschte Farbe per Mausklick zugewiesen werden. Ein Farbwechsel per Klick auf den entsprechenden Farb-Button ist auch während des Erstellens einer Geometrie möglich.
-Der Farbwähler, der im Backend mit **Farbanpassung erlauben** aktiviert werden kann, erlaubt eine freie Farbwahl auf Anwendungsebene.
+Der Farbwähler, der im :ref:`backend_de` mit **Farbanpassung erlauben** aktiviert werden kann, erlaubt eine freie Farbwahl auf Anwendungsebene.
 Sofern das Auswählen von Farben komplett deaktiviert und stattdessen nur eine einzige Farbe angeboten werden soll, muss die gewünschte Farbe im Konfigurationsdialog definiert und die Checkbox **Farbanpassung erlauben** deaktiviert werden.
 
 
@@ -73,8 +73,8 @@ Das Zeichnen von Skizzen kann mithilfe von "Zeichnen abbrechen" (Stop-Button) un
      :width: 100%
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Applikation einzubinden.
 

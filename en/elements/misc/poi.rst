@@ -21,8 +21,8 @@ Configuration
 * **Body:** Defines text to display. 
 * **GPS Position:** Defines GPS Position in the map.
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

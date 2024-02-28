@@ -31,8 +31,8 @@ Configuration
 * **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy (default: on).
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application. The element is placed as a button into the toolbar.
 

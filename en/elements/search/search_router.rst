@@ -3,7 +3,7 @@
 Search Router
 *************
 
-This element creates a configurable search formular with a configurable result output in which generic SQL search is supported.
+The Search Router element enables users to locate items within the map by interfacing with a specified database connected via the :ref:`backend`. Both the search form and table output are customizable and facilitate generic SQL search functionality via PostgreSQL tables. This is achieved through the storage of geometries in the database, allowing users to query and display dynamic results on the map.
 
 .. image:: ../../../figures/search_router_en.png
      :scale: 80
@@ -20,7 +20,7 @@ The element may be integrated into the sidepane or via a button into from the to
 .. image:: ../../../figures/search_router_edit_en.png
      :scale: 80
 
-* **Title:** Title of the element. The title will be listed in the Layouts section in the backend. It is shown as sidepane tab/button title (usage in sidepane) or dialog title (usage via button).
+* **Title:** Title of the element. The title will be listed in the Layouts section in the :ref:`backend`. It is shown as sidepane tab/button title (usage in sidepane) or dialog title (usage via button).
 * **Width:**  Width of the dialog (only for dialog, not sidepane)
 * **Height:**  Height of the dialog (only for dialog, not sidepane)
 
@@ -101,9 +101,9 @@ The form supports two types - text and choice.
 You have to define a configuration for each table column you would like to provide in the 
 search form. The configuraton starts with the column name (in the example it is the column called name).
 
-* label - you can define a label parameter (if not defined the capitalized column name will be used).
+* **label** - you can define a label parameter (if not defined the capitalized column name will be used).
 
-* required: You can define whether a type should be required (default is false). With required: true a mandatory field is defined. That means that the user has to define a search term here before the search can run. Headings of required fields are marked with a red '*'.
+* **required**: You can define whether a type should be required (default is false). With required: true a mandatory field is defined. That means that the user has to define a search term here before the search can run. Headings of required fields are marked with a red '*'.
 
 You also can define a compare mode. See section 'comparison mode'.
 
@@ -117,12 +117,12 @@ Type text supports autocomplete. If you want to add autocomplete to the field yo
 
 Supported autocomplete paramters are:
 
-* data-autocomplete: on - parameter to activate autocomplete
-* data-autocomplete-distinct: on - paramter to activate distinct autocomplete
-* data-autocomplete-using: column1, column2 - define other column/s that should be also considered on autocomplete
+* **data-autocomplete**: on - parameter to activate autocomplete
+* **data-autocomplete-distinct**: on - paramter to activate distinct autocomplete
+* **data-autocomplete-using**: column1, column2 - define other column/s that should be also considered on autocomplete
 
 
-Type text; example with autocomplete:
+* **Type text** example with autocomplete:
 
 .. image:: ../../../figures/search_router_text_en.png
      :scale: 80
@@ -146,18 +146,18 @@ Type text; example with autocomplete:
 Type choice
 ~~~~~~~~~~~
 
-Type choice allows you to provide a selectbox in your search formular.
+Type **choice** allows you to provide a selectbox in your search formular.
 
 For type choice you can define a placeholder. This is a text that is shown before an option is selected.
 
 You have to define the choices for the selectbox. You define a value and a key. 
 
-* key - will be send in the search query
-* value - is show as text in selectbox
+* **key** - will be send in the search query
+* **value** - is show as text in selectbox
 
 .. note:: From Mapbender 3.2 on onwards, you should use the value: key definition and type: Symfony\Component\Form\Extension\Core\Type\ChoiceType
 
-* Type choice; example with different selection options via dropdown:
+* **type choice** example with different selection options via dropdown:
 
 .. image:: ../../../figures/search_router_choice_en.png
      :scale: 80
@@ -270,9 +270,7 @@ Three different styles are configured:
                fillOpacity: 1
           
 In the default style the point-symbol interior is transparent (fillOpacity: 0). Only their outlines will be drawn in green. 
-
 The selected features will be drawn with a purple fill and an opacity of 0.8. The outline of the symbol is blue. 
-
 The temporary symbols on mouse-hover are blue points. 
 
 .. image:: ../../../figures/de/search_router_example_colour_purplegreen.png
@@ -300,7 +298,7 @@ The confguration dialouge for this example looks like this:
 .. image:: ../../../figures/search_router_example_dialog.png
      :scale: 80
 
-The element title (*Title*) is Search. It is again displayed as a title in the sidepane. The checkbox is unchecked, because the element is implemented into the sidepane and not as a button. The *Timeout factor* is set to 2. The fields *Width* and *Height* are filled, but they won't be used in this application, because the element is configured in the sidepane. It is implemented via the ``+`` -Symbol and *Routes* into the search, called (*Title*) Mapbender User. The yaml-Configuration of the Element is written in *Configuration*. In Completion it reads:
+The element title (*Title*) is Search. It is again displayed as a title in the sidepane. The checkbox is unchecked, because the element is implemented into the sidepane and not as a button. The *Timeout factor* is set to 2. The fields *Width* and *Height* are filled, but they won't be used in this application, because the element is configured in the sidepane. It is implemented via the ``+`` -Symbol and *Routes* into the search, called (*Title*) Mapbender User. The yaml-Configuration of the Element is written in *Configuration*. Here is the complete configuration:
 
 .. code-block:: yaml
 
@@ -380,7 +378,7 @@ This picture illustrates which consequences the configurations in the yaml-defin
 .. image:: ../../../figures/search_router_example_search_description.png
      :scale: 80
 
-Displayed is the excerpt of the yaml-definition configuring the formula. Columns orga, town and usertype are used in the formula and implemented as the fields Mapebender User, Town and Usertype. Mapbender User and Town are type text, Usertype can be of various types. The text that should be displayed here, if nothing is selected yet, is "Please select…" (Nr. **1** – placeholder: ‚Please select...‘). The title above these fields is set with a label (Nr. **2**). The attribute data-autocomplete: ‚on‘ results in a dropdown menu with recommendations from the database (Nr. **3**). Because compare: ilike is enabled it is not necessary to write the exact word. The search will find results that are only similar to the written term (Nr. **4** – Wheregr (the g is lowercase, nevertheless WhereGroup with uppercase G was found). The fieldtype choice is variable, possibilities are defined in choices (Nr. **5**). The table contains the possibilities as numbers (1, 2, 3, 4). In this example every number represents a text, which should be displayed in the dropdown menu.
+Displayed is the excerpt of the yaml-definition configuring the formula. Columns *orga*, *town* and *usertype* are used in the formula and implemented as the fields *Mapbender User*, *Town* and *Usertype*. *Mapbender User* and *Town* are type text, *Usertype* can be of various types.
 
 A complete search for the Mapbender User WhereGroup, in the Town Bonn, of the Usertype Company and the found results will look like this:
 
@@ -392,9 +390,10 @@ This picture illustrates the consequences our configuration of the yaml-defnitio
 .. image:: ../../../figures/de/search_router_example_results_description.png
      :scale: 80
 
-Here only the configuration of the results is shown. The number of results is shown because count: true (Nr. **1**) is enabled. The titles of the columns are defined in headeers (Nr. **2**). Here the name of the column is mentioned first, to define which results are referenced. After the colon we set the title which will be displayed in the application. In the block styleMap the points are styled. The block default (Nr. **3**) references all points, and the block select (Nr. **4**) only selected points.
+Here, only the configuration of the results is shown. The number of results is shown because *count: true* is enabled. The titles of the columns are defined in *headers*. Here, the name of the column is mentioned first, to define which results are referenced. After the colon, we set the title which will be displayed in the application. In the block *styleMap*, the points are styled. The block *default* references all points, and the block *select* only selected points.
 
-Because none of these fields are mandatory the search will work wih only on field.
+Because none of these fields are mandatory, the search will work wih only on field.
+
 
 2. Example
 -----------

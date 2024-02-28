@@ -137,8 +137,6 @@ Shared instances will appear as sepatrate data sources. To incorporate a shared 
 
 All shared instances can be viewed under **Sources** -> **Shared instances**.
 
-.. image:: ../../../figures/layerset/shared_instances_overview.png
-
 
 .. _layer_configuration:
 
@@ -151,8 +149,8 @@ The layer table offers several checkboxes and two scale visibility fields that a
            :width: 100%
 
 * **Title**: Layer title from Service information shown in Mapbender, adjustable.
-* **Active** (on/off): Enables/disables a layer for the individual application layer. If not set, all other checkboxes of the same layer will be ignored.
 * **Minscale / maxscale**: the scale range in which the layer should be displayed, 0 or no entry = no scale limitation.
+* **Active** (on/off): Enables/disables a layer for the individual application layer. If not set, all other checkboxes of the same layer will be ignored.
 * **Select allow**: Layer is active when the application starts.
 * **Select on**: Selectable in geodata explorer.
 * **Info allow**: layer info is active when the application starts.

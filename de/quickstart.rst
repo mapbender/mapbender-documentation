@@ -74,7 +74,7 @@ Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installatio
 
 #. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch :ref:`installation_de`).
 
-#. Das Mapbender-Backend sollte anschließend im Browserfenster erscheinen.
+#. Das Mapbender-:ref:`backend_de` sollte anschließend im Browserfenster erscheinen.
 
 Falls Sie Schwierigkeiten haben Mapbender zu starten, überprüfen Sie, ob der Apache Web Server und die PostgreSQL-Datenbank korrekt funktionieren.
 
@@ -104,11 +104,11 @@ Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. St
 Das Backend
 -----------
 
-#. Nach dem erfolgreichen Start erscheint die Anwendungsübersicht des Mapbender-Backends. Das Backend listet nicht angemeldeten Besuchern die öffentlichen Anwendungen auf. Die Anwendungen werden mit Vorschaubild, Titel, URL-Titel und Beschreibung aufgelistet.
+#. Nach dem erfolgreichen Start erscheint die Anwendungsübersicht des Mapbender-Backends. Das :ref:`backend_de` listet nicht angemeldeten Besuchern die öffentlichen Anwendungen auf. Die Anwendungen werden mit Vorschaubild, Titel, URL-Titel und Beschreibung aufgelistet.
 
 #. Eine Anwendung kann per Klick auf den Titel, das Vorschaubild oder über |mapbender-button-show| aufgerufen werden.
 
-#. Um Mapbender verwalten zu können, muss zunächst eine Anmeldung in das Backend erfolgen. Klicken Sie auf den Link **Anmelden** oben rechts, um die Anmeldeseite aufzurufen. Sie können sich mit dem Benutzer anmelden, der während der Installation erzeugt wurde. Er kann ``root`` heißen mit dem Kennwort ``root`` - dies ist der Standardbenutzer/das Standardkennwort nach der Installation von Mapbender. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben. Löschen Sie den Benutzer ``root`` nicht. 
+#. Um Mapbender verwalten zu können, muss zunächst eine Anmeldung in das :ref:`backend_de` erfolgen. Klicken Sie auf den Link **Anmelden** oben rechts, um die Anmeldeseite aufzurufen. Sie können sich mit dem Benutzer anmelden, der während der Installation erzeugt wurde. Er kann ``root`` heißen mit dem Kennwort ``root`` - dies ist der Standardbenutzer/das Standardkennwort nach der Installation von Mapbender. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben. Löschen Sie den Benutzer ``root`` nicht. 
 
 Nach erfolgreicher Anmeldung werden Sie zum Administrationsbackend weitergeleitet.
 
@@ -140,7 +140,7 @@ Es gibt drei verschiedene Möglichkeiten, durch die neue Anwendungen erstellt we
 
 Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_imp"*. Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich unter :ref:`yaml_de`.
 
-Es können außerdem komplett neue Anwendungen über das Backend definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
+Es können außerdem komplett neue Anwendungen über das :ref:`backend_de` definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
 
 #. Wählen Sie zunächst den Button *"Anwendung anlegen"* auf der Anwendungsübersichtsseite.
 
@@ -154,6 +154,7 @@ Es können außerdem komplett neue Anwendungen über das Backend definiert werde
 
 #. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie unter :ref:`share_de`.
 
+#. Setzen Sie ein Häkchen bei *"Ladescreen anzeigen"*, um ein Bild bei Anwendungsstart anzuzeigen, das die Ladezeit graphisch überbrückt.
 
 #. Klicken Sie *"Speichern"*, um die Anwendung zu erzeugen. Nach der Erstellung können Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Dienste hinzufügen.
 
@@ -378,7 +379,7 @@ Benutzer anlegen
 
 #. Wählen Sie ein Passwort für Ihren Benutzer aus und bestätigen Sie unter Passwort wiederholen.
 
-#. Die Checkbox ``aktiviert`` gibt dem erstellten Account Zugriffsrechte auf das Mapbender-Backend.
+#. Die Checkbox ``aktiviert`` gibt dem erstellten Account Zugriffsrechte auf das Mapbender-:ref:`backend_de`.
 
 #. Speichern Sie Ihren neuen Benutzer. Sie können alle Informationen auch im Nachhinein anpassen.
 

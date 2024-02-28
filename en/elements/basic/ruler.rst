@@ -26,8 +26,8 @@ Configuration
 * **Font size:** Numeric value that defines the font size of the area displayed within the geometry. When *Line* geometry is selected, this option has no effect.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

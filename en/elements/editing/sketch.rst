@@ -22,7 +22,7 @@ Configuration
 .. image:: ../../../figures/sketch_configuration.png
      :scale: 80
 
-* **Auto activate:** Opens the Sketch element on application start.
+* **Open automatically:** Opens the Sketch element on application start (default: off).
 * **Deactivate on close:** Sketches are deactivated after closure of the element.
 * **Title:** Title of the element. This is referenced by the button which opens the element.
 * **Geometrytypes:** Lists all geometrytypes (mandatory field).
@@ -73,8 +73,8 @@ To interrupt a drawing, click the stop button: Note that this deletes your curre
      :width: 100%
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

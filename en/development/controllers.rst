@@ -90,7 +90,7 @@ Elements of an application can provide Ajax endpoints for their client side widg
 
 Backend
 ~~~~~~~
-The backend is handled by the ManagerBundle, which provides (will provide) a consistent backend for managing all aspects of a Mapbender application: applications, layers, elements, users, settings.
+The :ref:`backend` is handled by the ManagerBundle, which provides (will provide) a consistent backend for managing all aspects of a Mapbender application: applications, layers, elements, users, settings.
 
 For each section an own controller class exists within this bundle:
 

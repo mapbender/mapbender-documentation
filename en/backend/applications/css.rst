@@ -11,8 +11,8 @@ Mapbender offers an CSS editor for every application which easily allows you to 
 .. tip:: A browser inspect tool can help you to find out the CSS classes you want to change.
 
 
-Example
-=======
+Examples
+========
 
 Add scrollbar to the top toolbar
 --------------------------------
@@ -27,4 +27,20 @@ When you use the menu option in the top toolbar you can define at what size of t
   }
 
 
-The function itself can be found in the ``Layouts`` tab of the backend: Click the gear button and activate the checkbox ``Generate menu for buttons``.
+The function itself can be found in the :ref:`layouts` tab: Click the gear button and activate the checkbox ``Generate menu for buttons``.
+
+
+Adjust the splashscreen
+-----------------------
+
+If your Mapbender application has its splashscreen active via :ref:`basedata`, it is possible to customize it further via CSS:
+
+.. code-block:: CSS
+
+    :root {
+        --primary: #079ee0;                                 /* application-wide primary color, will be used as the loading indicator's color */
+        --splashscreen-border: none;                        /* border around the splashscreen dialog, generate using e.g. https://html-css-js.com/css/generator/border-outline/ */
+        --splashscreen-border-radius: 25px;                 /* determines the radius of rounded corners around the dialog */
+        --splashscreen-background: rgba(255,255,255,0.8);   /* background color of the splashscreen */
+        --splashscreen-fade-out-duration: 200ms;            /* animation duration of the fade out */
+    }

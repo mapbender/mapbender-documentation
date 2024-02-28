@@ -19,8 +19,8 @@ Configuration
 * **Units:** Scale bar units 'kilometer' or 'miles' (default: kilometer).
 * **Position:** Scale bar alignment (default: Bottom right).
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 
