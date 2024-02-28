@@ -50,7 +50,7 @@ In the example the legend was added to the sidepane.
 
 Legend in the toolbar
 ---------------------
-The legend element can be integrated with a button in the toolbar. First step: Open the application backend and add the legend element into the map area section of the Layout tab.
+The legend element can be integrated with a button in the toolbar. First step: Open the application :ref:`backend` and add the legend element into the map area section of the :ref:`layouts` tab.
 
 .. image:: ../../../figures/add_map_area.png
      :scale: 80

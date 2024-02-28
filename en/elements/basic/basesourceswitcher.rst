@@ -18,7 +18,7 @@ Moreover, it is possible to define groups. All sourcesets of the same group will
 Configuration
 =============
 
-**Preparation**: In order to be able to configure the Base source switcher, you have to define service instances as BaseSource (checkbox "Basesource"). You can define the service as a BaseSource in the :ref:`layerset` tab in the backend of the application. You have to edit the service and set a check mark at "BaseSource".
+**Preparation**: In order to be able to configure the Base source switcher, you have to define service instances as BaseSource (checkbox "Basesource"). You can define the layer as a BaseSource in the :ref:`layerset` tab in the :ref:`backend` of the application. You have to edit the service and set a check mark at "BaseSource".
 
 .. image:: ../../../figures/basesourceswitcher_basesource.png
      :scale: 80

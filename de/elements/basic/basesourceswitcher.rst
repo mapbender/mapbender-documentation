@@ -18,7 +18,7 @@ Zusätzlich können Gruppen für die Hintergrund-Themen definiert werden. Alle D
 Konfiguration
 =============
 
-**Vorbereitung**: Zur Definition einer Hintergrundkarte mit dem Element müssen zuvor im Backend (Reiter: :ref:`layerset_de`) mindestens zwei Dienste konfiguriert werden. Um sie verwenden zu können, ist in den Layerset-Einstellungen eines Dienstes das Anhaken der Checkbox "Basesource" erforderlich.
+**Vorbereitung**: Zur Definition einer Hintergrundkarte mit dem Element müssen zuvor im :ref:`backend_de` (Reiter: :ref:`layerset_de`) mindestens zwei Dienste konfiguriert werden. Um sie verwenden zu können, ist in den Layerset-Einstellungen eines Dienstes das Anhaken der Checkbox "Basesource" erforderlich.
 
 .. image:: ../../../figures/de/basesourceswitcher_basesource.png
      :scale: 80

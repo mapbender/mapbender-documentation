@@ -47,7 +47,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 #. Configuration of the map to display the Layersets 
 #. Configuration of the Layertree itself
 
-Layers are included in the application via the **Layerset** tab in the backend.
+Layers are included in the application via the **Layerset** tab in the :ref:`backend`.
 
 The instances are the references to the individual WMS services. With the large ``+`` button, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
 For a detailed documentation on how the services can be integrated and registered correctly, please head over to the :ref:`layerset` and :ref:`sources` documentation..
@@ -197,7 +197,7 @@ The Layerset should now contain three Layersets. The **Overview** [1] for the ov
 
 **Configuration of the map to display the Layerset**
 
-Now, we configure the :ref:`Map element <map>` to display the Layersets in the map. To do this, we switch to the **Layouts** backend tab and edit the feature in the map area.
+Now, we configure the :ref:`Map element <map>` to display the Layersets in the map. To do this, we switch to the :ref:`layouts` tab and edit the feature in the map area.
 It is now important that you set an active checkbox in the Layerset "World" AND Layerset "Project NRW", so that they both appear in the application.
 
 If you have questions regarding further configuration of the map, you can view its configuration in the :ref:`Map element <map>`.

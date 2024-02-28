@@ -39,7 +39,7 @@ In the application these components look like this:
 .. image:: ../../../figures/navigationtoolbar_features.png
      :scale: 80
 
-If you set a tick at **Draggable**, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
+If you set the checkmark at **Draggable**, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
 
 **Rotation** enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
 

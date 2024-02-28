@@ -17,7 +17,7 @@ The following variables can be integrated in HTML:
 Configuration
 =============
 
-This element has to be integrated in the backend.
+This element has to be integrated in the :ref:`backend`.
 
 .. image:: ../../../figures/html_element.png
      :scale: 80

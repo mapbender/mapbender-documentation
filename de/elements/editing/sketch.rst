@@ -58,9 +58,9 @@ Gezeichnete Skizzen können individuell gelöscht [1] bearbeitet [2] werden. Au�
 Farbauswahl ändern
 ------------------
 
-Nach der Konfiguration im Backend finden sich Farben als Button im Skizzen-Werkzeug. Um einer Skizze eine bestimmte Farbe zuzuweisen, muss zunächst das gewünschte Geometriewerkzeug und anschließend der gewünschte Farbbutton angeklickt werden.
+Nach der Konfiguration im :ref:`backend_de` finden sich Farben als Button im Skizzen-Werkzeug. Um einer Skizze eine bestimmte Farbe zuzuweisen, muss zunächst das gewünschte Geometriewerkzeug und anschließend der gewünschte Farbbutton angeklickt werden.
 Auch bereits gespeicherte Geometrien lassen sich farblich anpassen: Dazu muss eine Skizze per Klick auf "Editieren der Geometrie" (Bearbeiten-Button) ausgewählt und anschließend die gewünschte Farbe per Mausklick zugewiesen werden. Ein Farbwechsel per Klick auf den entsprechenden Farb-Button ist auch während des Erstellens einer Geometrie möglich.
-Der Farbwähler, der im Backend mit **Farbanpassung erlauben** aktiviert werden kann, erlaubt eine freie Farbwahl auf Anwendungsebene.
+Der Farbwähler, der im :ref:`backend_de` mit **Farbanpassung erlauben** aktiviert werden kann, erlaubt eine freie Farbwahl auf Anwendungsebene.
 Sofern das Auswählen von Farben komplett deaktiviert und stattdessen nur eine einzige Farbe angeboten werden soll, muss die gewünschte Farbe im Konfigurationsdialog definiert und die Checkbox **Farbanpassung erlauben** deaktiviert werden.
 
 

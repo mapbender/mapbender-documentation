@@ -15,7 +15,7 @@ Konfiguration
 .. image:: ../../../figures/de/ruler_configuration.png
      :scale: 80
 
-* **Title:** Titel des Elements. Dieser wird im Backend in der Layouts Liste angezeigt. In der Anwendung selbst wird der Titel im Messfenster angezeigt.
+* **Title:** Titel des Elements. Dieser wird im :ref:`backend_de` in der Layouts Liste angezeigt. In der Anwendung selbst wird der Titel im Messfenster angezeigt.
 * **Geometrie:** Typ des Elements, entweder 'Linie' oder 'Fläche' (definiert, ob das Element eine Strecken- oder eine Flächenmessung erstellt). Pflichtfeld.
 * **Hilfetext:** Definition eines individuellen Hilfetextes. Der Standardwert mb.core.ruler.help ist in der Mapbender Übersetzungsdatei definiert und enthält auf Deutsch den Text "Doppelklicken zum Beenden". Der Text variiert je nach Anzeigesprache des Browsers.
 * **Linienstärke während des Zeichnens:** Zahlenwert in Pixel, der die Strichstärke während des Zeichnens definiert.
