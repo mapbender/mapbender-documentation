@@ -92,8 +92,18 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
         text: Impressum & Kontakt									# Link Text
       - link: https://mapbender.org/datenschutz
         text: Datenschutz
+      - link: https://doc.mapbender.org/
+        text: Dokumentation
 
 Die Sitelinks werden mittels "|" voneinander getrennt.
+
+Elemente deaktivieren
+*********************
+Die Deaktivierung von einzelnen Elementen kann über den nachfolgenden Parameter konfiguriert werden:
+
+.. code-block:: yaml
+
+    mapbender.disabled_elements:
 
 
 Icons anpassen
@@ -134,17 +144,20 @@ Mit diesen Konfigurationsoptionen können Sie die Icons in Mapbender an Ihre Anf
           class: fa-solid fa-heart-pulse
 
 
-Logo und Login-Bild
-*******************
-In der ``parameters.yaml`` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
+Branding
+********
+
+Mithilfe der Branding-Parameter kann ein eigener Projektname, eine eigene Versionsnummer, ein Logo, eine eigene Favoriten-Symbolgrafik und ein alternatives Bild für den Login verwendet werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
 
 .. code-block:: yaml
 
-    branding.logo: ./bundles/mapbendercore/image/logo_mb.png
-    branding.login_backdrop: ./bundles/mapbendercore/image/body.png
+    branding.project_name: Geoportal powered by Mapbender
+    branding.project_version: 1.0
+    branding.logo: ./bundles/mapbendercore/image/OSGeo_project.png
+    branding.favicon: ./application/public/brand-favicon.ico
+    branding.login_backdrop: ./bundles/mapbendercore/image/login-backdrop.jpg
 
-
-Die Dateien müssen unter application/public verfügbar sein.
+Die Dateien müssen unter ``application/public`` verfügbar sein.
 
 
 Mailer
@@ -160,18 +173,6 @@ Eine Konfiguration könnte wie folgt aussehen:
 Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
 
 Weitere Informationen im Kapitel :ref:`users_de`.
-
-
-Projektname
-***********
-Der Projektname (Standard: Mapbender) kann in der Datei ``parameters.yaml`` angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
-
-.. code-block:: yaml
-
-    branding.project_name: Geoportal
-
-
-**Wichtiger Hinweis:** In der ``parameters.yaml`` dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
 
 
 Proxy-Einstellungen
@@ -198,7 +199,7 @@ Eine Konfiguration könnte wie folgt aussehen:
 Spracheinstellung
 *****************
 Mapbender verwendet automatisch die ausgewählte Sprache der Browsereinstellungen.
-Es ist jedoch möglich, eine bevorzugte Sprache (fallback_locale) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt.
+Es ist jedoch möglich, eine bevorzugte Sprache (`fallback_locale`) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt.
 
 Die Sprache kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
 
@@ -224,7 +225,7 @@ Eine Konfiguration könnte wie folgt aussehen:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
 
-Mapbender kann auch explizit eine Sprache verwenden. Dazu muss der Parameter mapbender.automatic_locale: false gesetzt werden. Anschließend nutzt Mapbender die unter locale definierte Spracheinstellung.
+Mapbender kann auch explizit eine Sprache verwenden. Dazu muss der Parameter ``mapbender.automatic_locale: false`` gesetzt werden. Anschließend nutzt Mapbender die unter locale definierte Spracheinstellung.
 
 .. code-block:: yaml
 
