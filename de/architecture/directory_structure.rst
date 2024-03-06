@@ -69,7 +69,7 @@ Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Der Alias muss auf
 Es kontrolliert:
 
 * index.php: FrontendController (PHP-Script, welches aufgerufen werden kann).
-* index_dev.php: FrontendController als Zugangspunkt in die Entwicklungsumgebung.
+* index_dev.php: FrontendController als Zugangspunkt in die Entwicklungsumgebung. Kann standardmäßig nur von lokalen IP-Adressen aufgerufen werden.
 * dieses Verzeichnis beinhaltet die statischen Ressourcen wie css, js, favicon etc.
 
 
