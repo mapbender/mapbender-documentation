@@ -33,7 +33,7 @@ Anwendungs-Export, Import und Klonen
 bin/console mapbender:application:export 
 ****************************************
 
-Eine Anwendung kann als JSON- oder YAML-Datei exportiert werden. Dabei muss der Anwendungs-Url-Titel (slug) angebeben werden und eine Exportdatei definiert werden.
+Eine Anwendung kann als JSON- oder YAML-Datei exportiert werden. Dabei muss der Anwendungs-URL-Titel (slug) angebeben werden und eine Exportdatei definiert werden.
 
 .. code-block:: yaml
 
@@ -44,7 +44,6 @@ bin/console mapbender:application:import
 ****************************************
 
 Eine Anwendung kann aus einer JSON- oder YAML-Datei importiert werden. Mapbender wählt automatisch einen neuen Namen, wenn der Name bereits vorliegt. 
-You can import an application from a JSON-file. Mapbender will automatically choose a new name if the name already excists.  
 
 .. code-block:: yaml
    
@@ -57,8 +56,8 @@ You can import an application from a JSON-file. Mapbender will automatically cho
 bin/console mapbender:application:clone
 ***************************************
 
-Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen, also kopieren. Dadurch wird eine neue Anwendung mit einem *_imp* Suffix im Anwendungsnamen erzeugt. 
-Im untenstehenden Beispiel heißt die neue Anwendung `mapbender_user_yml_imp1`.
+Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen. Dadurch wird je eine neue Anwendung mit einem Suffix im Anwendungsnamen erzeugt. Bei yaml-Anwendungen wird ein *_db*-Suffix, bei Anwendungen aus der Datenbank ein *_imp*-Suffix angehängt. 
+Im untenstehenden Beispiel heißt die neue Anwendung `mapbender_user_yml_imp1`, weil sie aus der Datenbank heraus geklont wird.
 
 .. code-block:: bash
 

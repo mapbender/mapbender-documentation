@@ -56,8 +56,8 @@ You can import an application from a JSON or YAML-file. Mapbender will automatic
 bin/console mapbender:application:clone
 ***************************************
 
-You can clone an existing application in the Application backend. This will create a new application with a *_imp* suffix as application name.
-In the example below, the name of the new application becomes `mapbender_user_yml_imp1`.
+You can also clone an existing application in the application backend. This will generate a new application with a suffix added to the application name. For yaml applications, a *_db* suffix is appended, while for applications from the database, a *_imp* suffix is added.
+In the example below, the new application is named `mapbender_user_yml_imp1` because it is cloned from the database.
 
 .. code-block:: bash
 
