@@ -13,7 +13,7 @@ The following fundamental Mapbender parameters are specified here.
 
 Database
 ********
-The files ``parameters.yaml`` and ``doctrine.yaml`` are needed to configure databases in Mapbender. In ``parameters.yaml``, (multiple) variables for database connection(s) can be defined. These variables are being processed in ``doctrine.yaml``. An alias is assigned to each database connection.
+The files `.env` and `doctrine.yaml` are needed to configure databases in Mapbender. In `.env`, (multiple) variables for database connection(s) can be defined. These variables are being processed in `doctrine.yaml`. An alias is assigned to each database connection.
 
 * **database_driver**: Database driver. Possible values are:
     * pdo_sqlite - SQLite PDO driver
@@ -25,7 +25,7 @@ The files ``parameters.yaml`` and ``doctrine.yaml`` are needed to configure data
   Please note: Necessary PHP drivers need to be installed and activated.
 
 Example:
-Database configuration in ``parameters.yaml``, when PostgreSQL is used:
+Database configuration in `.env`, when PostgreSQL is used:
 
 .. code-block:: yaml
 
@@ -70,7 +70,7 @@ If you want to use another database, you have to define a database connection wi
         database2_password: postgres
 
 
-Now, you can refer to the database **search_db** in the elements SearchRouter and Digitizer.
+Now, you can refer to the database *search_db* in the elements SearchRouter and Digitizer.
 
 To learn more about this structure, visit the `Symfony documentation <https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration>`_.
 
@@ -192,34 +192,42 @@ In parameters.yaml, you can refer to your own logo and to an alternative image f
 
 Mailer
 *******
-Mailer information are inserted in ``parameters.yaml`` via the `mailer_dsn` parameter (e.g. smtp or sendmail).
+Mailer information are inserted in the `mailer.yaml` file via environment variables in your `.env.local` (e.g. smtp or sendmail).
 
-Configuration example:
+Default and configuration example (commented out) in `.env`:
+
+.. code-block:: bash
+
+    #MAILER_DSN=smtp://user:pass@smtp.example.com:25
+    MAILER_DSN=null://null
+
+The environment variable will be inserted into the ``dsn`` parameter in the `mailer.yaml` file.
 
 .. code-block:: yaml
 
-    mailer_dsn: smtp://user:pass@smtp.example.com:25
+    framework:
+        mailer:
+            dsn: '%env(MAILER_DSN)%'
 
-The functions 'Self-Registration' and 'reset password' need a mailer.
 
-More information in chapter :ref:`users`.
+The functions 'Self-Registration' and 'reset password' need a mailer. More information in chapter :ref:`users`.
 
 
 Project name
 ************
-The name of the project (default: Mapbender) can be changed in ``parameters.yaml``. The change has a global impact on the whole Mapbender installation.
+The name of the project (default: Mapbender) can be changed in `parameters.yaml`. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Important note:** In ``parameters.yaml`` **tabulators may not be used for indentation** instead you need to use space.
+**Important note:** In `parameters.yaml` **tabulators may not be used for indentation** instead you need to use space.
 
 
 Proxy settings
 **************
-If you use a proxy, you need to change ``parameters.yaml``.
+If you use a proxy, you need to change `parameters.yaml`.
 
 .. hint:: OWSProxy3 is a transparent Buzz-based proxy that uses cURL for connection to web resources via/without a proxy server.
 
@@ -242,7 +250,7 @@ Configuration example:
 
 SSL certificate
 ***************
-For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yaml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your `parameters.yaml` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
 
 .. _override_js_css_yaml:
@@ -270,7 +278,7 @@ doctrine.yaml
 
 Database
 ********
-Important: Every database defined in parameters.yaml needs to have a placeholder in ``doctrine.yaml`` as well:
+Important: Every database defined in parameters.yaml needs to have a placeholder in `doctrine.yaml` as well:
 
 .. code-block:: yaml
 
@@ -295,7 +303,7 @@ Important: Every database defined in parameters.yaml needs to have a placeholder
 
 Use of several databases
 ************************
-Example with two database connections in ``doctrine.yaml``:
+Example with two database connections in `doctrine.yaml`:
 
 .. code-block:: yaml
 
@@ -330,7 +338,7 @@ Example with two database connections in ``doctrine.yaml``:
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
 
-More information under ``parameters.yaml``.
+More information under `parameters.yaml`.
 
 
 YAML Application files

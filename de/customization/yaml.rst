@@ -13,7 +13,7 @@ Hier werden grundlegende Parameter von Mapbender bestimmt.
 
 Datenbank
 *********
-Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yaml`` und ``doctrine.yaml`` verwendet. In der ``parameters.yaml`` werden Variablen für die Datenbankverbindung definiert. Es können mehrere Datenbankverbindungen definiert werden. Die Variablen werden in der ``doctrine.yaml`` verarbeitet. Zu jeder Datenbankverbindung wird ein Alias vergeben.
+Zur Konfiguration der Datenbankverbindung werden die Dateien `.env` und `doctrine.yaml` verwendet. In der `.env` werden Variablen für die Datenbankverbindung definiert. Es können mehrere Datenbankverbindungen definiert werden. Die Variablen werden in der `doctrine.yaml` verarbeitet. Zu jeder Datenbankverbindung wird ein Alias vergeben.
 
 * **database_driver**: Der Datenbanktreiber. Mögliche Werte sind:
     * pdo_sqlite - SQLite PDO driver
@@ -25,7 +25,7 @@ Zur Konfiguration der Datenbankverbindung werden die Dateien ``parameters.yaml``
   Beachten Sie, dass Sie den entsprechenden PHP-Treiber installiert bzw. aktiviert haben.
 
 Beispiel:
-Die Datenbankkonfiguration in der ``parameters.yaml`` sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
+Die Datenbankkonfiguration in der `.env` sieht folgendermaßen aus, wenn PostgreSQL verwendet wird:
 
 .. code-block:: yaml
 
@@ -70,7 +70,7 @@ Wenn Sie eine weitere Datenbank verwenden möchten, müssen Sie eine zweite Date
         database2_password: postgres
 
 
-In den Elementen SearchRouter und Digitizer kann nun auf die Datenbankverbindung (connection) mit dem Namen **search_db** verwiesen werden.
+In den Elementen SearchRouter und Digitizer kann nun auf die Datenbankverbindung (connection) mit dem Namen *search_db* verwiesen werden.
 
 Weitere Information über diese Konfigurationsmöglichkeit gibt es in der `Symfony Dokumentation <https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration>`_.
 
@@ -82,7 +82,7 @@ Disclaimer
 
 .. image:: ../../figures/disclaimer.png
 
-Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der ``parameters.yaml`` ergänzt werden:
+Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der `parameters.yaml` ergänzt werden:
 
 .. code-block:: yaml
 
@@ -137,7 +137,7 @@ Mit diesen Konfigurationsoptionen können Sie die Icons in Mapbender an Ihre Anf
 
 Logo und Login-Bild
 *******************
-In der ``parameters.yaml`` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
+In der `parameters.yaml` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
 
 .. code-block:: yaml
 
@@ -150,34 +150,41 @@ Die Dateien müssen unter application/public verfügbar sein.
 
 Mailer
 ******
-Die Mailerangaben werden in der ``parameters.yaml`` über `mailer_dsn` eingetragen.
-Eine Konfiguration könnte wie folgt aussehen:
+Die Mailerangaben werden in der `.env.local` Datei über eine Umgebungsvariable in der `mailer.yaml` eingetragen.
+
+Standard- und Beispielkonfiguration (auskommentiert) in der `.env`:
+
+.. code-block:: bash
+
+    #MAILER_DSN=smtp://user:pass@smtp.example.com:25
+    MAILER_DSN=null://null
+
+Die Umgebungsvariable wird danach im ``dsn`` Parameter in der `mailer.yaml` übertragen.
 
 .. code-block:: yaml
 
-    mailer_dsn: smtp://user:pass@smtp.example.com:25
-
-
-Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt.
-
-Weitere Informationen im Kapitel :ref:`users_de`.
+    framework:
+        mailer:
+            dsn: '%env(MAILER_DSN)%'
+           
+Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt. Weitere Informationen im Kapitel :ref:`users_de`.
 
 
 Projektname
 ***********
-Der Projektname (Standard: Mapbender) kann in der Datei ``parameters.yaml`` angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
+Der Projektname (Standard: Mapbender) kann in der Datei `parameters.yaml` angepasst werden. Diese Änderung wirkt sich global auf die gesamte Mapbender Installation aus.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Wichtiger Hinweis:** In der ``parameters.yaml`` dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
+**Wichtiger Hinweis:** In der `parameters.yaml` dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
 
 
 Proxy-Einstellungen
 *******************
-Wenn ein Proxy verwendet wird, muss dieser in der Datei ``parameters.yaml`` im Bereich OWSProxy Configuration angegeben werden.
+Wenn ein Proxy verwendet wird, muss dieser in der Datei `parameters.yaml` im Bereich OWSProxy Configuration angegeben werden.
 
 Eine Konfiguration könnte wie folgt aussehen:
 
@@ -240,7 +247,7 @@ Weitere Informationen unter :ref:`translation`.
 
 SSL Zertifikat
 **************
-Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Anschließend muss die Variable ``parameters.cookie_secure`` in Ihrer ``parameters.yaml`` auf ``true`` gesetzt werden. Dadurch wird sichergestellt, dass das Login-Cookie nur über sichere Verbindungen übertragen wird.
+Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Anschließend muss die Variable ``parameters.cookie_secure`` in Ihrer `parameters.yaml` auf ``true`` gesetzt werden. Dadurch wird sichergestellt, dass das Login-Cookie nur über sichere Verbindungen übertragen wird.
 
 
 .. _override_js_css_yaml_de:
@@ -261,7 +268,7 @@ Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :r
 doctrine.yaml
 -------------
 
-Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die ``parameters.yaml`` als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
+Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die `parameters.yaml` als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
 
 * **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
@@ -269,7 +276,7 @@ Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeit
 
 Datenbank
 *********
-Wichtig: Jede Datenbank, die in der ``parameters.yaml`` definiert wird, muss auch als Platzhalter in der ``doctrine.yaml`` stehen:
+Wichtig: Jede Datenbank, die in der `parameters.yaml` definiert wird, muss auch als Platzhalter in der `doctrine.yaml` stehen:
 
 .. code-block:: yaml
 
