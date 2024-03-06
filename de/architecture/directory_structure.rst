@@ -63,13 +63,13 @@ Die Übersetzungen werden in `YAML-Dateien <https://en.wikipedia.org/wiki/YAML>`
 public
 ******
 
-Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Der ALIAS muss auf dieses Verzeichnis verweisen.
+Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Der Alias muss auf dieses Verzeichnis verweisen.
 
 
 Es kontrolliert:
 
-* index.php - den FrontendController (PHP-Script, welches aufgerufen werden kann).
-
+* index.php: FrontendController (PHP-Script, welches aufgerufen werden kann).
+* index_dev.php: FrontendController als Zugangspunkt in die Entwicklungsumgebung.
 * dieses Verzeichnis beinhaltet die statischen Ressourcen wie css, js, favicon etc.
 
 
