@@ -1,9 +1,9 @@
 .. _share_overview:
 
-Introduction
-************
+Share (Overview)
+****************
 
-Next, we will explore functions which fall under the category of 'Share' as they streamline collaborative work within Mapbender applications.
+Mapbender offers multiple functions that simplify collaborative work within applications.
 
 * :ref:`shareurl` enables quick sharing of self-configured map states via URL,
 * :ref:`view_manager` stores custom map states,

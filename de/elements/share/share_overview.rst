@@ -1,7 +1,7 @@
 .. _share_overview_de:
 
-Überblick
-=========
+Share-Funktionen: Überblick
+===========================
 
 Mapbender bietet eine Vielzahl von Funktionen, die die gemeinsame Arbeit mit Kartenanwendungen erleichtern:
 

@@ -1,7 +1,7 @@
 .. _share_de:
 
-Share
-=====
+Share-Funktionen
+================
 
 .. toctree::
    :maxdepth: 1
