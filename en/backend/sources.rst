@@ -67,7 +67,7 @@ Updating sources
 
   .. |mapbender-button-update| image:: ../../figures/mapbender_button_update.png
 
-To update a source in the backend, you first need to navigate to the ``Sources`` backend list.
+To update a source in the :ref:`backend`, you first need to navigate to the ``Sources`` :ref:`backend` list.
 On this page, look for the layer you wish to update via scrolling or use the search box.
 After you've found it, click on its |mapbender-button-update| **Refresh** button.
 You can then update the WMS: If you wish, modify the URL or other settings, such as user name and/or password.

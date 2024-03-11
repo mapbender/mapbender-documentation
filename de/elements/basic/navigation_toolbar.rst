@@ -3,7 +3,7 @@
 Navigationswerkzeug (Navigation Toolbar)
 ****************************************
 
-Das Element erleichtert die Navigation in der Karte durch Rotation und Zoom. Der Kartenmaßstab kann individuell über eine Leiste angesprungen oder über die Zoom in/out-Buttons abgeändert werden. Es besteht zudem die Möglichkeit, auf die maximale Kartenausdehnung zu zoomen oder zum Anfangszustand zurück zu navigieren. Das Navigationselement selbst ist verschiebbar.
+Das Element erleichtert die Navigation in der Karte (Rotation und Zoom) durch entsprechende Buttons. Der Kartenmaßstab kann dabei individuell über eine Leiste angesprungen oder über die Zoom in/out-Buttons abgeändert werden. Es besteht zudem die Möglichkeit, auf die maximale Kartenausdehnung zu zoomen oder zum Anfangszustand zurück zu navigieren. Das Navigationselement kann verschoben werden, wenn die Option aktiviert wird.
 
 .. image:: ../../../figures/de/navigation_toolbar.png
    :scale: 80
@@ -20,8 +20,11 @@ Konfiguration
 * **Zurück zum Anfang** Zurücksetzen von Dienstzuständen (Standard: false).
 * **Position:** Ausrichtung des Navigationswerkzeugs (Standard: 'left-top'); Auswahlmöglichkeiten: inline (zum Einbinden in der Sidepane), left-top (oben links), left-bottom (unten links), right-top (oben rechts), right-bottom (unten rechts)
 
-Komponenten des Navigationswerkzeugs:
---------------------------------------
+.. note:: Das Element muss innerhalb des Kartenbereichs konfiguriert werden.
+
+Komponenten des Navigationswerkzeugs
+------------------------------------
+
 Im Konfigurationsdialog können unterschiedliche Komponenten (*Components*), also Funktionen des Navigationswerkszeugs, eingebunden werden. Diese Komponenten bestehen aus:
 
 *  Rotation
@@ -39,7 +42,7 @@ Wenn das Häkchen bei **Verschiebbar** gesetzt wurde, dann erscheint in der Anwe
 
 Mit **Rotation** kann die Ausrichtung der Karte verändert werden. Durch Klick auf den Nordpfeil ist es möglich, die Standardrotation (Nordausrichtung) wiederherzustellen.
 
-Es besteht die Möglichkeit, mit **Zoom to max extent** auf den kleinsten Maßstab zu zoomen. Dieser *Max Extent* wird vom Nutzer selbst innerhalb des :ref:`Kartenelements <map_de>` im Kartenbereich definiert.
+Es besteht die Möglichkeit, mit **Zoom to max extent** auf den kleinsten Maßstab zu zoomen. Dieser wird innerhalb des :ref:`Kartenelements <map_de>` im Kartenbereich definiert.
 
 .. image:: ../../../figures/de/navigationtoolbar_zoom_to_max.png
    :width: 100%
@@ -53,8 +56,8 @@ Nutzer können außerdem die anfänglichen Einstellungen von Maßstab, Koordinat
 Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/out*, in welcher auch ``+`` und ``–`` -Zeichen zur Verfügung stehen. Zusätzlich besteht diese Komponente aus einer Leiste, die die möglichen Zoomstufen als auswählbare Punkte anzeigt.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

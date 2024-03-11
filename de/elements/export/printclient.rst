@@ -3,21 +3,20 @@
 Druck (PrintClient)
 *******************
 
-Das Druckelement ermöglicht den Druck eines auswählbaren Kartenbereichs. Im Folgenden wird zunächst der allgemeine Aufbau und die Konfiguration des PrintClients erklärt. Danach folgt eine Einführung in die Erstellung individueller Druckvorlagen. Im letzten Teil wird auf den Druckvorgang selbst eingegangen und wie dieser konfiguriert werden kann. 
-
+Das Druckelement ermöglicht den Druck eines auswählbaren Kartenausschnitts. Diese Dokumentation bietet einen Überblick über dessen Einrichtung und Konfiguration, skizziert die Erstellung individueller Druckvorlagen und erläutert den Druckvorgang sowie seine Konfigurationsoptionen. 
 
 Allgemeines
 ===========
 
 Mit dem PrintClient können folgende Druckeinstellungen beeinflusst werden:
 
- * Druckvorlage,
- * Qualität,
- * Maßstab,
- * Drehung des Ausschnitts,
- * Titel,
- * Aktivierung/Deaktivierung einer Legende,
- * Optional können Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden.
+ * Druckvorlage
+ * Qualität
+ * Maßstab
+ * Drehung des Ausschnitts
+ * Titel
+ * Aktivierung/Deaktivierung einer Legende
+ * Optionale Textfelder (z.B. Titel, Kommentar, Bemerkung).
 
 .. image:: ../../../figures/de/print_client.png
      :scale: 80
@@ -27,10 +26,10 @@ Das Element kann über einen Button aufgerufen oder in der Sidepane als Element 
 .. image:: ../../../figures/print_client_sidebar.png
      :scale: 80     
      
-Konfiguration des PrintClients
-------------------------------
+Konfiguration
+-------------
 
-Der PrintClient kann im Backend konfiguriert werden. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A4 bis A0 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
+Der PrintClient wird im :ref:`backend_de` konfiguriert. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A0 bis A4 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
 
 .. image:: ../../../figures/de/print_client_configuration.png
      :scale: 80
@@ -42,22 +41,23 @@ Der PrintClient kann im Backend konfiguriert werden. Er greift dabei auf Druckvo
 * **Legenden Checkbox aktiv**: definiert, ob die "Legende drucken" - Checkbox bei Anwendungsstart aktiv ist
 * **File prefix**: Anpassung des Dateinamens für das PDF. Dieser setzt sich aus dem definierbarem Prefix und der Datums- und Uhrzeitangabe des Drucks zusammen.
 * **Qualitätsstufen**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
+
+**Templates**
+
 * **Template**: Verweis auf die Druckvorlage (z.B. a4portrait). Löschen und Hinzufügen von Vorlagen ist über die "+"- bzw. "x"-Symbole möglich.
 * **Beschriftung (Label)**: Bezeichnung der Druckvorlagen im Frontend (z.B. Portrait A4).
 
-* **Optionale Felder (optional fields)**:
+**Optionale Felder**
 
 Über die Konfiguration folgender Werte können optionale Felder im Druckdialog ermöglicht werden. Eine Beispielkonfiguration mit vier Feldern (Titel, zwei Kommentarfelder, Bearbeiter) gibt die YAML-Definition.
 
-* **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
+* **Titel**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
 * **label**: Beschriftung des optionalen Feldes.
-* **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
-
-* **Zeige Pflichtfelder zuerst (Display required fields first)**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
-
+* **options**: Typ des optionalen Feldes, muss true oder false sein.
+* **Zeige Pflichtfelder zuerst**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
 * **Replace pattern**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer).
 
-Im Backend finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein ausführliches und kommentiertes Beispiel steht weiter unten im Abschnitt YAML-Definition).
+Im :ref:`backend_de` finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein ausführliches und kommentiertes Beispiel steht weiter unten im Abschnitt YAML-Definition).
 
 .. image:: ../../../figures/de/print_client_configuration_enhanced.png
      :scale: 80

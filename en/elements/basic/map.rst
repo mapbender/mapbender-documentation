@@ -2,8 +2,7 @@
 
 Map
 ***
-
-Map is based on OpenLayers. The element must be integrated into the Map area.
+The map is the central element of a Mapbender application. It is based on OpenLayers and has be integrated into the Map area of the :ref:`backend`.
 
 .. image:: ../../../figures/map.png
      :width: 75%
@@ -12,14 +11,14 @@ Configuration
 =============
 
 .. image:: ../../../figures/map_dialog.png
-     :width: 75%
+     :width: 50%
 
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Layersets:** Refers to a layerset. Layersets have to be defined first and can then be referred to.
+* **Title:** Title of the element. It will be listed in the :ref:`layouts` section.
+* **Layersets:** Select which :ref:`layerset` will be displayed on the map. Their order is changeable via drag & drop.
 * **Tile size:** Size of the tiles of tiled WMS services.
-* **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
-* **Max. Extent:** Maximal map extent, defined by BBOX parameters.
-* **Start Extent:** Map extent that is visible at application launch. Defined by BBOX parameters.
+* **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE. If you do not enable a custom SRS title, the default title for each SRS from the *mb_core_srs* table is used.
+* **Max. Extent:** Maximal map extent, defined by BBOX parameters. This rectangle defines the possible map extent. In response to clicking the globe icon in the :ref:`navigation_toolbar`, the map view will zoom out to this extent.
+* **Start Extent:** Map extent that is visible at application launch, defined by BBOX parameters. This rectangle defines the start map extent. In response to clicking the home icon in the :ref:`navigation_toolbar`, the map view will zoom to this extent.
 * **Default resolution [dpi]**: The default resolution adapts to the screen resolution based on the configured value in dpi. Default: 96 dpi.
 * **Fixed zoom steps:** This option activates a zoom behaviour with fixed scales. This is useful to increase visual quality of services that are cached on very particular resolution steps only. When set true, scale denominator snaps to one of the values given in the *scales* option as defined below (default: false).
 * **Scales (csv):** A csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
@@ -52,8 +51,8 @@ The *Default resolution* in dpi defines the resolution of the device being used;
 Furthermore, the field *scales (csv)* defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`navigation_toolbar`. *Fixed zoom steps* were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
      
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to include the map into a YAML application.
 

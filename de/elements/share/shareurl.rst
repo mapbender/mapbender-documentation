@@ -24,8 +24,8 @@ Konfiguration
 .. image:: ../../../figures/de/share_url_configuration.png
      :scale: 80
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

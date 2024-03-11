@@ -3,12 +3,17 @@
 Share
 =====
 
-Das Share-Tool bietet eine Vielzahl von Funktionen, die die gemeinsame Arbeit mit Kartenanwendungen erleichtern: URL teilen ermöglicht das schnelle Teilen von selbstkonfigurierten Kartenanwendungszuständen via URL, Ansichtsverwaltung speichert Kartenzustände und erstellt eine Liste dieser in der Sidepane, Anwendung wechseln ermöglicht schnelle Applikationssprünge und Persistente Kartenzustände erleichtert die Anwendungskompatibilität mit dem Webbrowser.
+Mapbender bietet eine Vielzahl von Funktionen, die die gemeinsame Arbeit mit Kartenanwendungen erleichtern:
 
-Mapbender hinterlegt bestimmte Kartenparameter automatisch in jeder Anwendungs-URL. 
+* :ref:`shareurl_de` ermöglicht das schnelle Teilen von selbstkonfigurierten Kartenanwendungszuständen via URL,
+* :ref:`view_manager_de` speichert Kartenzustände und erstellt eine Liste dieser in der Sidepane,
+* :ref:`applicationswitcher_de` ermöglicht schnelle Applikationssprünge,
+* :ref:`persistent_map_view_de` erleichtert die Anwendungskompatibilität mit dem Webbrowser.
+
+Außerdem hinterlegt Mapbender bestimmte Kartenparameter automatisch in jeder Anwendungs-URL. 
 Dadurch ist es möglich, aktuell gewählte Kartenparameter durch Teilen der URL an andere weiterzuleiten. 
 
-Die URL beinhaltet folgende Kartenparameter:
+Die URL beinhaltet folgende Parameter:
 
 * Kartenposition
 * Maßstab
@@ -21,12 +26,4 @@ Wenn eine URL in einem neuen Browserfenster geöffnet wird, dann erfolgt auch di
 
 Nach dem Neuladen des Browserfensters werden Anwender zum jeweiligen Kartenausschnitt zurückgeschickt. Soll zur Start-Konfiguration zurück navigiert werden, dann muss die Anwendung entweder komplett neu geöffnet werden oder eine manuelle Anpassung der URL erfolgen.
 
-.. note:: **Hinweis:** Folgende Informationen werden nicht hinterlegt: Layer-Auswahl, Layer-Sortierung, temporäre Geometrien, Laufzeitergänzungen, Transparenz sowie interaktiv hinzugefügte Instanzen.
-
-.. toctree::
-   :maxdepth: 1
-
-   share/shareurl.rst
-   share/view_manager.rst
-   share/persistant_map_view.rst
-
+.. note:: Folgende Eigenschaften werden nicht in der URL hinterlegt: Layer-Auswahl, Layer-Sortierung, temporäre Geometrien, Laufzeitergänzungen, Transparenz, sowie interaktiv hinzugefügte Instanzen.

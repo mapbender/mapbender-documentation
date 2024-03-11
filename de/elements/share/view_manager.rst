@@ -3,13 +3,24 @@
 Ansichtsverwaltung (View Manager)
 *********************************
 
+Das Element Ansichtsverwaltung erlaubt das Speichern und Wiederverwenden von Kartenansichten. Folgende Kartenparameter sind Teil einer Ansicht:
 
-Das Element Ansichtsverwaltung erlaubt die Speicherung und Wiederverwendung von Kartenansichten. Folgende Kartenparameter sind hierin inbegriffen: Kartenposition, Maßstab, Koordinatenreferenzsystem, Drehung, Layer, Layerauswahl sowie Transparenz. Gesetzte Kartenansichten bleiben dabei auch nach Neuladen der Anwendung erhalten.
+* Drehung
+* Kartenposition
+* Koordinatenreferenzsystem
+* Layer aus :ref:`sources_de`
+* Ausgewählte :ref:`Layersets<layerset_de>`
+* Maßstab
+* Transparenz
 
-.. note:: **Hinweis:** Die Ansichtsverwaltung wird bisher nur in der Sidepane unterstützt.
+Gesetzte Kartenansichten bleiben nach Neuladen der Anwendung erhalten.
 
 .. image:: ../../../figures/de/view_manager_overview.png
      :scale: 80
+
+
+.. note:: **Hinweis:** Die Ansichtsverwaltung wird bisher nur in der Sidepane unterstützt.
+
 
 Nutzung
 -------
@@ -21,12 +32,13 @@ Um eine neue Kartenansicht zu speichern, muss zunächst ein Titel für deren Re-
 
 In seiner einfachsten Form kann das Element zur Wiederverwendung von Kartenansichten verwendet werden. Diese Option ist immer vorhanden: Die zuvor gespeicherte Kartenansicht wird nach Klick auf den Abrufen-Button wiederhergestellt. Gespeicherte Ansichten können außerdem überschrieben oder gelöscht werden. Die Einträge in der Sidepane werden dabei entsprechend aktualisiert.
 
-.. note:: **Hinweis:** Aktuell unterstützt die Ansichtsverwaltung *nicht* folgende Konfigurationen:
+Die folgenden Konfigurationen werden **nicht** in die Ansichtsverwaltung integriert:
 
-* interaktiv hinzugefügte Instanzen (WMS laden)
-* interaktiv entfernte Instanzen (Ebenenbaum Kontextmenü)
-* alle Werte für WMS-Dimensionen
-* dynamisch veränderte Geometrien (Digitizer etc.)
+* Interaktiv hinzugefügte Instanzen (:ref:`wms_loader_de`)
+* Interaktiv entfernte Instanzen (:ref:`layertree_de` Kontextmenü)
+* Alle Werte für WMS-Dimensionen
+* Dynamisch veränderte Geometrien (:ref:`digitizer_de` etc.)
+
 
 Zugriffsrechte
 --------------
@@ -41,12 +53,12 @@ Anonyme Nutzer sind generell von der Arbeit mit privaten Ansichten ausgeschlosse
 Konfiguration
 =============
 
-
 .. image:: ../../../figures/de/view_manager_configuration.png
      :scale: 80
 
-YAML-Definition:
-----------------
+
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
@@ -55,6 +67,6 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
    publicEntries        # String oder leer (Falsche Werte deaktivieren öffentliche Ansichten komplett); andere erlaubte Werte sind ro (nur Lesezugriff), rw (Lese- und Schreibzugriff), rwd (Lese- und Schreibzugriff sowie Löscherlaubnis) (Standard: ro).
    privateEntries       # Schaltet Privatnutzerzustände an mit vollem Zugriff auf Optionen "Speichern", "Wiederverwenden" sowie "Löschen" (Standard: true).
    allowAnonymousSave   # Gibt Speicherrecht für öffentliche Ansichten auch an anonyme Nutzer (Standard: false).
-   showDate:            # Zeigt Datum der Erzeugung bzw. Aktualisierung (Standard: true)
+   showDate             # Zeigt Datum der Erzeugung bzw. Aktualisierung (Standard: true)
 
 

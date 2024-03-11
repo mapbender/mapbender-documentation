@@ -8,7 +8,7 @@ Jede Anwendung verfügt über individuelle Sicherheitseinstellungen: Hier könne
 Anwendungszuweisungen
 *********************
 
-Standardmäßig stehen Benutzern/Gruppen alle Anwendungen zur Verfügung, die mit ausreichenden Berechtigungen Zugriff auf das Backend haben. Für einzelne Anwendungen kann der Zugriff noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
+Standardmäßig stehen Benutzern/Gruppen alle Anwendungen zur Verfügung, die mit ausreichenden Berechtigungen Zugriff auf das :ref:`backend_de` haben. Für einzelne Anwendungen kann der Zugriff noch genauer definiert werden, so dass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
 #. Bearbeiten Sie Ihre **Anwendung**.
 

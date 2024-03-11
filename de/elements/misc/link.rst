@@ -59,8 +59,8 @@ Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole a
      :scale: 80
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

@@ -4,7 +4,7 @@ Export / Druck
 ==============
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    export/imageexport.rst
    export/printclient.rst

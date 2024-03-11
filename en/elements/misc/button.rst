@@ -122,8 +122,8 @@ If the button line ruler is active, it looks like this:
 As soon as you click on the button area ruler, the feature line ruler is deactivated and the feature area ruler activated.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

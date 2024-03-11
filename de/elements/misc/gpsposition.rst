@@ -31,8 +31,8 @@ Konfiguration
 * **Zoom to accuracy on first position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position (Standard: true).
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
