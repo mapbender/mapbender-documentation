@@ -292,6 +292,7 @@ With the three tables you can test the digitizer functionality using the YAML de
         lastname varchar,
         email varchar,
         interests varchar,
+        category varchar,
         user_name varchar,
         group_name varchar,
         modification_date date,
@@ -886,11 +887,23 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
                  value: 'D'
 
 
+If you define useValuesAsKeys: true you only have to refer to the values. The values will be used as keys too. Please be aware that without the parameter or with useValuesAsKeys: false a number will be used.
+
+.. code-block:: yaml
+
+            useValuesAsKeys: true
+            options:
+                - A
+                - B
+                - C
+                - D
+
+
 * **select2:** Activates full text search for the select box (please note for multiselectboxes (multi: true) full text search is activated by default) 
 * **multi:** Define a singleselectbox or multiselectbox (default: false)
 * **value:** Definition of the default value
 * **options with label and value:** Definition of the options (label, value)
-
+* **useValuesAsKeys:** The values will be used as keys too. Else it will be a number that will be assigned for each option (default: false)
 
 **(2) multiselect - several selectable entries**
 
