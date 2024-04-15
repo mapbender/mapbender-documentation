@@ -81,30 +81,50 @@ Controlling URL parameters
 
 .. _layer_visibility:
 
-Make Layer visible
-------------------
+Making layers visible
+---------------------
 
-If you have a layer with an ``<InstanceLayerID>`` in a service with an ``<InstanceID>``, you may pass them with the URL parameter ``visiblelayers`` to turn the layer visible:
+You can transmit certain layer attributes with the URL parameter ``visiblelayers`` to activate them on application startup:
+
+* <SourceName>
+* <LayerName>
+* <InstanceID>
+* <InstanceLayerID>
+
+**SourceName/LayerName**: This allows layers along the combination of source name and layer name to be transferred as parameters:
+
+.. code-block:: php
+
+  ?visiblelayers=<SourceName>/<LayerName>
+
+**InstanceID/InstanceLayerID**: This allows a transmission of the application-specific values of InstanceID and InstanceLayerID:
 
 .. code-block:: php
 
   ?visiblelayers=<InstanceID>/<InstanceLayerID>
 
+To display the attribute values, there is an icon with three dots next to each layer in the layerset tab of an application.
+Click on the icon to open a info window.
 
-The InstanceID and InstanceLayerID values are specific to an application. To display these values, in the Layerset tab of the application, there are icons with three dots next to each layer. Click on the icon and a popup window will appear.
+.. image:: ../../../figures/wms_visiblelayer_attributevalues.png
+     scale: 80
 
-.. image:: ../../../figures/wms_instance_layer_id.png
-     :scale: 80
+The first value in the upper text field is the internal SourceID and the SourceLayerID (31-591).
+The second value in the upper text field is the InstanceID and the InstanceLayerID (73-836).
+The second text field contains either the source or layer name, depending on whether the instance itself or a layer was selected via the three-dot menu.
 
-In the textfield, the first value lists the SourceID and SourceLayerID (31-591). The second value lists the InstanceID and InstanceLayerID (73-836).
+For an Instance(Layer)ID transfer, use the *second* value combination after the slash for the ``visibleLayers`` parameter in the URL.
+Separate the two associated values with a slash (instead of a hyphen):
 
-We will use the second value for the ``visibleLayers`` parameter in your URL, and seperate them by a forward slash (instead of a hyphen).
+For example: ``https://localhost/mapbender/application/myapp?visiblelayers=73/836``
 
-For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836
+Separate two or more non-visible layers by commas. To do this, insert the respective attribute values according to the same scheme:
 
-Multiple invisible layers can also be passed in the URL separated by commas. To do this, insert the respective InstanceIDs and InstanceLayerIDs using the same pattern.
+For example: ``https://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840``
 
-For example: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
+Combinations of names and ID values are also possible:
+
+``https://localhost/mapbender/application/myapp?visiblelayers=Mapbender/Mapbender_Names,Mapbender/Mapbender_User,39/149``
 
 
 Passing POIs

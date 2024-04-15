@@ -84,41 +84,59 @@ Kontrolle über URL-Parameter
 Ebenen sichtbar machen
 ----------------------
 
-Sie können die ID einer Ebene in der URL als Parameter übergeben, um diesen in der Startansicht zu aktivieren.
+Sie können bestimmte Ebenenattribute mit dem URL-Parameter ``visiblelayers`` übermitteln, um diese in der Startansicht zu aktivieren:
+
+* <SourceName>
+* <LayerName>
+* <InstanceID>
+* <InstanceLayerID>
+
+**SourceName/LayerName**: Auf diese Weise können Ebenen entlang der Kombination aus Dienst- und Layernamen als Parameter übermittelt werden:
+
+.. code-block:: php
+
+  ?visiblelayers=<SourceName>/<LayerName>
+
+**InstanceID/InstanceLayerID**: Auf diese Weise werden die anwendungsspezifischen Werte von InstanceID und InstanceLayerID übermittelt:
 
 .. code-block:: php
 
   ?visiblelayers=<InstanceID>/<InstanceLayerID>
 
+Um die Attributwerte anzuzeigen, gibt es im Layerset-Tab einer Anwendung neben jedem Layer ein Icon mit drei Punkten.
+Klicken Sie auf das Icon, damit ein Popupfenster erscheint.
 
-Die Werte von InstanceID und InstanceLayerID sind immer anwendungsspezifisch.
-Um die benötigten Werte anzuzeigen, gibt es im Layerset-Tab der Anwendung neben jedem Layer ein Icon mit drei Punkten. Klicken Sie auf das Icon, damit ein Popupfenster erscheint.
-
-.. image:: ../../../figures/wms_instance_layer_id.png
+.. image:: ../../../figures/wms_visiblelayer_attributevalues.png
      :scale: 80
 
-Im oberen Textfeld nennt der erste Wert die interne SourceID und die SourceLayerID (31-591).
-Der zweite Wert im gleichen Textfeld listet die InstanceID und InstanceLayerID (73-836).
+Der erste Wert im oberen Textfeld nennt die interne SourceID und die SourceLayerID (31-591).
+Der zweite Wert im oberen Textfeld nennt die InstanceID und die InstanceLayerID (73-836).
+Im zweiten Textfeld stehen entweder Source- oder Layername, je nachdem, ob die Instanz selbst oder ein Layer über das Drei-Punkte-Menü angewählt wurde.
 
-Nutzen Sie den zweiten Wert für den ``visibleLayers``-Parameter in der URL und trennen Sie die zugehörigen Werte mit einem Schrägstrich (anstelle des Bindestrichs).
+Nutzen Sie für eine ID-Übergabe die *zweite* Wertkombination nach dem Schrägstrich für den ``visibleLayers``-Parameter in der URL.
+Trennen Sie die beiden Werte mit einem Schrägstrich (anstelle des Bindestrichs):
 
-Zum Beispiel: http://localhost/mapbender/application/myapp?visiblelayers=73/836
+Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=73/836``
 
-Mehrere nicht-sichtbare Layer können in der URL kommasepariert übergeben werden. Fügen Sie dazu die jeweiligen InstanceIDs und InstanceLayerIDs nach dem gleichen Schema ein.
+Zwei oder mehr nicht-sichtbare Layer können kommasepariert übermittelt werden. Fügen Sie dazu die jeweiligen Attributwerte nach demselben Schema ein:
 
-Zum Beispiel: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
+Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840``
+
+Auch Kombinationen aus Namen und ID-Werten sind möglich:
+
+``https://localhost/mapbender/application/myapp?visiblelayers=Mapbender/Mapbender_Names,Mapbender/Mapbender_User,39/149``
 
 
-Punkte übergeben
-----------------
+Punkte übertragen
+-----------------
 
-Sie können einen oder mehrere Punkte in der URL übergeben. Jeder Punkt verfügt dabei über die folgenden Parameter:
+Sie können einen oder mehrere Punkte in der URL übertragen. Jeder Punkt verfügt dabei über die folgenden Parameter:
 
 - Punkt (point): Koordinatenpaar, die Werte werden mit Komma getrennt (zwingend)
 - Beschriftung (label): Beschriftung, die angezeigt werden soll (optional)
 - Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional. Die Angabe ist nur bei der Anzeige eines Punktes sinnvoll)
 
-Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150 % der Gesamt-Boundingbox.
+Wenn Sie mehr als einen Punkt im Aufruf übermitteln, zoomt die Karte auf 150 % der Gesamt-Boundingbox.
 
 Format für die Übergabe eines Punktes:
 
@@ -126,20 +144,20 @@ Format für die Übergabe eines Punktes:
 
    ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
 
-Rechteck (BBOX) übergeben
--------------------------
+Rechteck (BBOX) übertragen
+--------------------------
 
-Es kann ein Rechteck (BBOX) beim Start übergeben werden. Es wird dann auf dieses Rechteck gezoomt. Der Aufruf sieht wie folgt aus:
+Es kann ein Rechteck (BBOX) beim Start übertragen werden. Es wird dann auf dieses Rechteck gezoomt. Der Aufruf sieht wie folgt aus:
 
 .. code-block:: php
 
    ?bbox=364286,5622263,365979,5622806
 
 
-Maßstab übergeben
------------------
+Maßstab übermitteln
+-------------------
 
-Es kann der gewünschte Maßstab aus der Liste der verfügbaren Maßstäbe übergeben werden.
+Es kann der gewünschte Maßstab aus der Liste der verfügbaren Maßstäbe übertragen werden.
 
 .. code-block:: php
 
@@ -147,10 +165,10 @@ Es kann der gewünschte Maßstab aus der Liste der verfügbaren Maßstäbe über
 
 
 
-SRS (Projektion) übergeben
---------------------------
+SRS (Projektion) übermitteln
+----------------------------
 
-Es kann eine gewünschte Projektion für den Start der Anwendung übergeben werden.
+Es kann eine gewünschte Projektion für den Start der Anwendung übertragen werden.
 
 .. code-block:: php
 
@@ -161,7 +179,7 @@ Es kann eine gewünschte Projektion für den Start der Anwendung übergeben werd
 Center - Zentrieren der Anwendung
 ---------------------------------
 
-Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentriert werden soll. Sie benötigen zusätzlich die Angabe der Projektion.
+Es kann eine Koordinate beim Start übertragen werden, die in der Anwendung zentriert werden soll. Sie benötigen zusätzlich die Angabe der Projektion.
 
 .. code-block:: php
 
@@ -171,5 +189,5 @@ Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentr
 Weitere Startparameter
 ----------------------
 
-Die Elemente WMS Loader und WMC Loader stellen ebenfalls Parameter zur Verfügung, die beim Start einer Anwendung übergeben werden können. Schauen Sie sich für nähere Informationen die Dokumentation dieser Elemente an.
+Die Elemente WMS Loader und WMC Loader stellen ebenfalls Parameter zur Verfügung, die beim Start einer Anwendung übertragen werden können. Schauen Sie sich für nähere Informationen die Dokumentation dieser Elemente an.
 
