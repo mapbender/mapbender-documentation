@@ -106,21 +106,21 @@ Sie können bestimmte Ebenenattribute mit dem URL-Parameter ``visiblelayers`` ü
 Um die Attributwerte anzuzeigen, gibt es im Layerset-Tab einer Anwendung neben jedem Layer ein Icon mit drei Punkten.
 Klicken Sie auf das Icon, damit ein Popupfenster erscheint.
 
-.. image:: ../../../figures/wms_visiblelayer_attributevalues.png
+.. image:: ../../../figures/wms_visiblelayers_attributevalues.png
      :scale: 80
 
-Der erste Wert im oberen Textfeld nennt die interne SourceID und die SourceLayerID (31-591).
-Der zweite Wert im oberen Textfeld nennt die InstanceID und die InstanceLayerID (73-836).
+Der erste Wert im oberen Textfeld nennt die interne SourceID und die SourceLayerID (3-15).
+Der zweite Wert im oberen Textfeld nennt die InstanceID und die InstanceLayerID (4-79).
 Im zweiten Textfeld stehen entweder Source- oder Layername, je nachdem, ob die Instanz selbst oder ein Layer über das Drei-Punkte-Menü angewählt wurde.
 
 Nutzen Sie für eine ID-Übergabe die *zweite* Wertkombination nach dem Schrägstrich für den ``visibleLayers``-Parameter in der URL.
 Trennen Sie die beiden Werte mit einem Schrägstrich (anstelle des Bindestrichs):
 
-Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=73/836``
+Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79``
 
 Zwei oder mehr nicht-sichtbare Layer können kommasepariert übermittelt werden. Fügen Sie dazu die jeweiligen Attributwerte nach demselben Schema ein:
 
-Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840``
+Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79,1/42``
 
 Auch Kombinationen aus Namen und ID-Werten sind möglich:
 

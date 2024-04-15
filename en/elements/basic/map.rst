@@ -106,21 +106,21 @@ You can transmit certain layer attributes with the URL parameter ``visiblelayers
 To display the attribute values, there is an icon with three dots next to each layer in the layerset tab of an application.
 Click on the icon to open a info window.
 
-.. image:: ../../../figures/wms_visiblelayer_attributevalues.png
+.. image:: ../../../figures/wms_visiblelayers_attributevalues.png
      scale: 80
 
-The first value in the upper text field is the internal SourceID and the SourceLayerID (31-591).
-The second value in the upper text field is the InstanceID and the InstanceLayerID (73-836).
+The first value in the upper text field is the internal SourceID and the SourceLayerID (3-15).
+The second value in the upper text field is the InstanceID and the InstanceLayerID (4-79).
 The second text field contains either the source or layer name, depending on whether the instance itself or a layer was selected via the three-dot menu.
 
 For an Instance(Layer)ID transfer, use the *second* value combination after the slash for the ``visibleLayers`` parameter in the URL.
 Separate the two associated values with a slash (instead of a hyphen):
 
-For example: ``https://localhost/mapbender/application/myapp?visiblelayers=73/836``
+For example: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79``
 
 Separate two or more non-visible layers by commas. To do this, insert the respective attribute values according to the same scheme:
 
-For example: ``https://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840``
+For example: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79,1/42``
 
 Combinations of names and ID values are also possible:
 
