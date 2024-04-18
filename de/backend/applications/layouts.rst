@@ -107,7 +107,7 @@ Die Option **Größe verändern** geht von einer minimalen Breite von 120 px und
 
 YAML-Konfiguration
 ==================
-Diese Vorlage kann zur Eigenschaftenkonfiguration der Sidepane in einer YAML-Anwendung verwendet werden:
+Diese Vorlage kann zur **Eigenschaftenkonfiguration** der Sidepane in einer YAML-Anwendung verwendet werden:
 
 .. code-block:: yaml
 

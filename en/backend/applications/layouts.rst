@@ -50,9 +50,9 @@ The Top toolbar and the Footer provide the following configuration options:
 
 .. tip:: **Note**: Using the dropdown menu is especially handy on mobile devices. There is a code snippet in :ref:`CSS` that adds a scroll bar to the menu and helps to increase the user experience. 
 
-YAML-Configuration
+YAML Configuration
 ==================
-This template can be used to configure the properties of the toolbar in a YAML application:
+This template can be used to configure the **properties** of the toolbar in a YAML application:
 
 .. code-block:: yaml
 
@@ -63,7 +63,7 @@ This template can be used to configure the properties of the toolbar in a YAML a
         generate_button_menu: false # true/false
         menu_label: "Menu" # NULL or text
 
-Besides, this template can be used to configure the properties of the footer in a YAML application:
+Besides, this template can be used to configure the **properties** of the footer in a YAML application:
 
 .. code-block:: yaml
 
@@ -106,9 +106,9 @@ The option **Resizable** uses a minimum size of 120 px and a maximum of 95 % of 
       max-width: 500px;
     }
 
-YAML-Configuration
+YAML Configuration
 ==================
-This template can be used to configure the properties of the sidepane in a YAML application:
+This template can be used to configure the **properties** of the sidepane in a YAML application:
 
 .. code-block:: yaml
 
