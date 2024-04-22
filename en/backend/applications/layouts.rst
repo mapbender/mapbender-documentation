@@ -50,6 +50,29 @@ The Top toolbar and the Footer provide the following configuration options:
 
 .. tip:: **Note**: Using the dropdown menu is especially handy on mobile devices. There is a code snippet in :ref:`CSS` that adds a scroll bar to the menu and helps to increase the user experience. 
 
+YAML Configuration
+==================
+This template can be used to configure the **properties** of the toolbar in a YAML application:
+
+.. code-block:: yaml
+
+    - name: toolbar
+      properties:
+        item_alignment: right  # right/left/center
+        screenType: all         # desktop/mobile/all
+        generate_button_menu: false # true/false
+        menu_label: "Menu" # NULL or text
+
+Besides, this template can be used to configure the **properties** of the footer in a YAML application:
+
+.. code-block:: yaml
+
+    - name: footer
+      properties:
+        item_alignment: right # right/left/center
+        screenType: all # all/desktop/mobile
+        generate_button_menu: false # true/false
+        menu_label: "Menu" # NULL or text
 
 Configuration of the Sidepane
 *****************************
@@ -74,7 +97,7 @@ The option **Type** adjusts the inserted elements:
 
 - ``Unstyled`` does not contain any styling options at all and displays the elements in the configured :ref:`backend` order.
 
-The option **Resizable** uses a minimum size of 120px and a maximum of 95% of the screen's width. These values can be further restricted by using custom css:
+The option **Resizable** uses a minimum size of 120 px and a maximum of 95 % of the screen's width. These values can be further restricted by using custom css:
 
 .. code-block:: css
    
@@ -83,6 +106,19 @@ The option **Resizable** uses a minimum size of 120px and a maximum of 95% of th
       max-width: 500px;
     }
 
+YAML Configuration
+==================
+This template can be used to configure the **properties** of the sidepane in a YAML application:
+
+.. code-block:: yaml
+
+    - name: sidepane
+      properties:
+        name: accordion # tabs (for button) / accordion / NULL (for unstyled)
+        align: right # right/left
+        closed: false # true/false
+        screenType: all # all/desktop/mobile
+        width: "654px"
 
 Button area (Elements)
 **********************
