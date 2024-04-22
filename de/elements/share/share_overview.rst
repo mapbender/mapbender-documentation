@@ -1,7 +1,7 @@
 .. _share_overview_de:
 
 Share-Elemente: Überblick
-===========================
+=========================
 
 Mapbender bietet eine Vielzahl an Elementen, die die gemeinsame Arbeit mit Kartenanwendungen erleichtern:
 
