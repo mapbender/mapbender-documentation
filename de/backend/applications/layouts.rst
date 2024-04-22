@@ -50,6 +50,30 @@ Die Regionen der Oberen Werkzeugleiste und der Fußzeile bieten folgende Konfigu
 
 .. tip:: **Hinweis**: Das Ausklappmenü ist besonders sinnvoll, wenn die Anwendung für mobile Endgeräte ausgerichtet sein soll. Unter :ref:`CSS_de` findet sich ein Codebaustein, der die Bedienbarkeit bei Anwendungen mit vielen Elementen erhöht. 
 
+YAML-Konfiguration
+==================
+Diese Vorlage kann zur **Eigenschaftenkonfiguration** der Oberen Werkzeugleiste in einer YAML-Anwendung verwendet werden:
+
+.. code-block:: yaml
+
+    - name: toolbar
+      properties:
+        item_alignment: right  # right/left/center
+        screenType: all         # desktop/mobile/all
+        generate_button_menu: false # true/false
+        menu_label: "Menu" # NULL or text
+
+Außerdem kann diese Vorlage verwendet werden, um eine **Eigenschaftenkonfiguration** für die Fußzeile einer YAML-Anwendung vorzunehmen:
+
+.. code-block:: yaml
+
+    - name: footer
+      properties:
+        item_alignment: right # right/left/center
+        screenType: all # all/desktop/mobile
+        generate_button_menu: false # true/false
+        menu_label: "Menu" # NULL or text
+
 
 Sidepane-Konfigurationsmöglichkeiten
 ************************************
@@ -81,6 +105,19 @@ Die Option **Größe verändern** geht von einer minimalen Breite von 120 px und
       max-width: 500px;
     }
 
+YAML-Konfiguration
+==================
+Diese Vorlage kann zur **Eigenschaftenkonfiguration** der Sidepane in einer YAML-Anwendung verwendet werden:
+
+.. code-block:: yaml
+
+    - name: sidepane
+      properties:
+        name: accordion # tabs (für Button) / accordion (für Akkordeon) / NULL (für unformatiert)
+        align: right # right/left
+        closed: false # true/false
+        screenType: all # all/desktop/mobile
+        width: "654px"
 
 Element-Buttonleiste
 ********************
@@ -89,7 +126,6 @@ Dabei verfügen die Buttons über folgende Optionen:
 
 .. image:: ../../../figures/mapbender_layouts_button_area.png
     :alt: Buttonleiste der Elemente
-
 
 * **aktiv/inaktiv**: Ein aktives Element ist in der Anwendung freigeschaltet. Ein inaktives Element kann zwar bearbeitet werden, ist aber in der Anwendung ausgeblendet.
 * **Auf Mobilgeräten anzeigen**: Zeigt Elemente nur auf mobilen Geräten an.
