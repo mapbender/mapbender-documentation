@@ -63,7 +63,7 @@ Diese Vorlage kann zur **Eigenschaftenkonfiguration** der Oberen Werkzeugleiste 
         generate_button_menu: false # true/false
         menu_label: "Menu" # NULL or text
 
-Außerdem kann diese Vorlage verwendet werden, um eine **Eigenschaftenkonfiguration** an der Fußzeile einer YAML-Anwendung vorzunehmen:
+Außerdem kann diese Vorlage verwendet werden, um eine **Eigenschaftenkonfiguration** für die Fußzeile einer YAML-Anwendung vorzunehmen:
 
 .. code-block:: yaml
 
