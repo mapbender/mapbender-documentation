@@ -1,7 +1,7 @@
 .. _share:
 
-Share
-=====
+Share elements
+==============
 
 .. toctree::
    :maxdepth: 1
