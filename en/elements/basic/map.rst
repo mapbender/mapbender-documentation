@@ -46,7 +46,7 @@ The field *max. Extent* states the maximum zoomable extent of the map applicatio
 
 The *Default resolution* in dpi defines the resolution of the device being used; the corresponding default value of 96 dpi can be adjusted through this field. If the displayed resolution of the map does not match that of the WMS service, changing this value can help to align the map accordingly.
 
-.. note:: The scale-dependent resolution currently only works reliably on desktops with regular resolution. Moreover, *Default resolution* is only available from Mapbender 3.3.5 onwards.
+.. note:: The scale-dependent resolution currently only works reliably on desktops with regular resolution.
 
 Furthermore, the field *scales (csv)* defines the scales that are usable in the application. It is possible to switch between the defined scales with :ref:`scale_selector` or :ref:`navigation_toolbar`. *Fixed zoom steps* were deactivated in the example. That means it is possible to display undefined zoom levels via mouse scrolling.
      
@@ -79,23 +79,15 @@ This template can be used to include the map into a YAML application.
 Controlling URL parameters
 ==========================
 
-.. _layer_visibility:
+.. _layer_activation:
 
-Making layers visible
----------------------
+Activating Layers
+-----------------
 
-You can transmit certain layer attributes with the URL parameter ``visiblelayers`` to activate them on application startup:
+Mapbender enables the option of activating layers when an application is started via ``visiblelayers``. Activation is possible either via `ID` or `Name`.
 
-* <SourceName>
-* <LayerName>
-* <InstanceID>
-* <InstanceLayerID>
-
-**SourceName/LayerName**: This allows layers along the combination of source name and layer name to be transferred as parameters:
-
-.. code-block:: php
-
-  ?visiblelayers=<SourceName>/<LayerName>
+* **ID**: <InstanceID>/<InstanceLayerID>
+* **Name**: <RootLayerName>/<LayerName>
 
 **InstanceID/InstanceLayerID**: This allows a transmission of the application-specific values of InstanceID and InstanceLayerID:
 
@@ -103,17 +95,25 @@ You can transmit certain layer attributes with the URL parameter ``visiblelayers
 
   ?visiblelayers=<InstanceID>/<InstanceLayerID>
 
+**RootLayerName/LayerName**: This allows layers along the combination of RootLayerNamename and LayerName to be transferred as parameters:
+
+.. code-block:: php
+
+  ?visiblelayers=<RootLayerName>/<LayerName>
+
+.. hint:: Please note that the IDs change after every refresh of the service. Passing the name may therefore be the more constant solution.
+
 To display the attribute values, there is an icon with three dots next to each layer in the layerset tab of an application.
-Click on the icon to open a info window.
+Click on the icon to open a info window:
 
-.. image:: ../../../figures/wms_visiblelayers_attributevalues.png
-     scale: 80
+.. image:: ../../../figures/layerset/layerset_instance_dotmenu.png
+     :scale: 80
 
-The first value in the upper text field is the internal SourceID and the SourceLayerID (3-15).
-The second value in the upper text field is the InstanceID and the InstanceLayerID (4-79).
-The second text field contains either the source or layer name, depending on whether the instance itself or a layer was selected via the three-dot menu.
+* **ID**: The first value in the upper text field is the internal `SourceID` and the `SourceLayerID` (3-15). The second value in the upper text field is the `InstanceID` and the `InstanceLayerID` (4-79).
+* **Layer's Name**: The second text field contains the `LayerName`. The output of the first line will instead pass the `RootLayerName`.
+* **Style**: Styling alternatives can be selected in the third drop-down field (if available).
 
-For an Instance(Layer)ID transfer, use the *second* value combination after the slash for the ``visibleLayers`` parameter in the URL.
+For an Instance(Layer)ID transfer, use the *second* value combination after the slash for the ``visiblelayers`` parameter in the URL.
 Separate the two associated values with a slash (instead of a hyphen):
 
 For example: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79``
@@ -130,19 +130,18 @@ Combinations of names and ID values are also possible:
 Passing POIs
 ------------
 
-You can pass one or more POIs in the URL. Each POI has the following parameters:
+You can pass a POI in the URL. A POI has the following parameters:
 
-- point: coordinate pair with values separated by comma (mandatory)
-- label: Label to display (optional)
-- scale: Scale to show POI in (optional, makes only sense with one POI)
+- point: coordinate pair as comma-separated values (mandatory),
+- label: Label to display (optional),
+- scale: Scale to show POI in (optional).
 
-If you pass more than one POI, the map will zoom to 150% of the POIs bounding.
-
-To pass a single POI, use the following URL format:
+To pass a POI, use the following URL format:
 
 .. code-block:: php
+   
+   ?poi[point]=368777,5619411&poi[label]=Rheinaue&poi[scale]=10000
 
-   ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
 
 Passing BBOX
 ------------
@@ -174,10 +173,10 @@ You can pass a favorite EPSG code you want to use on start of the application by
    ?srs=EPSG:4326
 
 
-Passing Center
---------------
+Passing a centered Coordinate
+-----------------------------
 
-You can pass a coordinate. The application will open and display the coordinate in the center. In this case, you also have to set the SRS.
+You can pass a coordinate. The application will open and display the coordinate in the center.
 
 .. code-block:: php
 

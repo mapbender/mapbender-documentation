@@ -354,7 +354,7 @@ Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzug
 * Aufklappen erlauben: Erlaubt Aufklappen des Layers im Ebenenbaum
 * Aufklappen an: Klappt Layer beim Start der Anwendung auf
 * Weitere Informationen (Drei-Punkte-Button): Öffnet einen Dialog mit weiteren Layer-Informationen
-    * ID: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <layer_visibility_de>`.
+    * ID: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <layer_activation_de>`.
     * Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
     * Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil (default) wählen.
 
