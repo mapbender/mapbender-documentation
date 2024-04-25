@@ -354,7 +354,7 @@ Currently, the element can be used to transfer user- and group information, e.g.
 * toggle allowed: allows opening in the layer tree
 * toggle on: open folder on start of the application
 * more information (...): opens a dialog with detailed layer information
-    * ID: ID of the layer. Can be useful :ref:`to control <layer_visibility>` URL parameters.
+    * ID: ID of the layer. Can be useful :ref:`to control <layer_activation>` URL parameters.
     * Name: layer name of the service information (for getMap-Requests)
     * Style: if a WMS provides more than one style you can choose a different style than the default style.
 

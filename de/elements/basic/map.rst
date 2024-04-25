@@ -46,7 +46,7 @@ Weiterhin muss das Feld *Max. Kartenausdehnung* definiert werden. Dieses gibt de
 
 Die Standard-Auflösung in dpi definiert die Auflösung des verwendeten Geräts; der zugehörige Standardwert von 96 dpi ist über dieses Feld anpassbar. Falls die dargestellte Auflösung der Karte nicht mit der des WMS-Dienstes übereinstimmt, kann eine Veränderung des Werts helfen, um die Karte passend darzustellen.
 
-.. note:: Hinweis: Die maßstabsabhängige Anzeige funktioniert derzeit nur auf Desktops mit regulärer Auflösung zuverlässig. Die Funktion *Standard-Auflösung* ist ab Mapbender-Version 3.3.5 implementiert.
+.. note:: Hinweis: Die maßstabsabhängige Anzeige funktioniert derzeit nur auf Desktops mit regulärer Auflösung zuverlässig.
 
 Zuletzt definiert *Scales (csv)* die unterschiedlichen Maßstabsstufen in der Anwendung. Zwischen diesen kann mithilfe des :ref:`scale_selector_de` oder der :ref:`navigation_toolbar_de` navigiert werden. Feste Maßstabsstufen wurden dabei im Beispiel deaktiviert, weshalb auch eine Auswahl anderer Maßstäbe über das Mausrad möglich ist.
 
@@ -79,52 +79,71 @@ Diese Vorlage kann genutzt werden, um die Karte in einer YAML-Anwendung einzubin
 Kontrolle über URL-Parameter
 ============================
 
-.. _layer_visibility_de:
+.. _layer_activation_de:
 
-Ebenen sichtbar machen
-----------------------
+Ebenen aktivieren
+-----------------
 
-Sie können die ID einer Ebene in der URL als Parameter übergeben, um diesen in der Startansicht zu aktivieren.
+Mapbender ermöglicht über den URL-Parameter ``visiblelayers`` die Möglichkeit, Layer unabhängig von ihrer Backend-Konfiguration beim Start einer Anwendung zu aktivieren. Hierbei kann die Aktivierung entweder via `ID` oder `Name` erfolgen:
+
+* **ID**: <InstanceID>/<InstanceLayerID>
+* **Name**: <RootLayerName>/<LayerName>
+
+**InstanceID/InstanceLayerID**: Auf diese Weise werden die anwendungsspezifischen Werte von InstanceID und InstanceLayerID übergeben:
 
 .. code-block:: php
 
   ?visiblelayers=<InstanceID>/<InstanceLayerID>
 
+**RootLayerName/LayerName**: Auf diese Weise werden Ebenen entlang der Kombination aus RootLayer- und Layernamen als Parameter übergeben:
 
-Die Werte von InstanceID und InstanceLayerID sind immer anwendungsspezifisch.
-Um die benötigten Werte anzuzeigen, gibt es im Layerset-Tab der Anwendung neben jedem Layer ein Icon mit drei Punkten. Klicken Sie auf das Icon, damit ein Popupfenster erscheint.
+.. code-block:: php
 
-.. image:: ../../../figures/wms_instance_layer_id.png
+  ?visiblelayers=<RootLayerName>/<LayerName>
+  
+.. hint:: Bitte beachten Sie, dass sich die IDs nach jedem Dienst-Update ändern. Die Übergabe des Names ist daher ggf. die konstantere Lösung.
+
+Um weitere Layereigenschaften anzuzeigen, gibt es im Layerset-Reiter bei der Instanz-Konfiguration neben jedem Layer ein Icon mit drei Punkten.
+Klicken Sie auf das Icon, damit ein Informationsfenster erscheint:
+
+.. image:: ../../../figures/de/layerset/layerset_instance_dotmenu.png
      :scale: 80
 
-Im oberen Textfeld nennt der erste Wert die interne SourceID und die SourceLayerID (31-591).
-Der zweite Wert im gleichen Textfeld listet die InstanceID und InstanceLayerID (73-836).
+* **ID**: Der erste Wert im oberen Textfeld nennt die interne `SourceID` und die `SourceLayerID` (3-15). Der zweite Wert im oberen Textfeld nennt die `InstanceID` und die `InstanceLayerID` (4-79).
+* **Name**: Im zweiten Textfeld steht der `LayerName`. Dabei wird in der ersten Zeile der `RootLayerName` ausgegeben.
+* **Style**: Im dritten Dropdownfeld können Stylingalternativen ausgewählt werden, sofern verfügbar.
 
-Nutzen Sie den zweiten Wert für den ``visibleLayers``-Parameter in der URL und trennen Sie die zugehörigen Werte mit einem Schrägstrich (anstelle des Bindestrichs).
+Nutzen Sie für eine ID-Übergabe die *zweite* Wertkombination nach dem Schrägstrich für den ``visiblelayers``-Parameter in der URL.
+Trennen Sie die beiden Werte mit einem Schrägstrich (anstelle des Bindestrichs):
 
-Zum Beispiel: http://localhost/mapbender/application/myapp?visiblelayers=73/836
+Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79``
 
-Mehrere nicht-sichtbare Layer können in der URL kommasepariert übergeben werden. Fügen Sie dazu die jeweiligen InstanceIDs und InstanceLayerIDs nach dem gleichen Schema ein.
+Zwei oder mehr nicht-sichtbare Layer können kommasepariert übergeben werden. Fügen Sie dazu die jeweiligen Attributwerte nach demselben Schema ein:
 
-Zum Beispiel: http://localhost/mapbender/application/myapp?visiblelayers=73/836,73/840
+Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79,1/42``
+
+Auch Kombinationen aus Namen und ID-Werten sind möglich:
+
+``https://localhost/mapbender/application/myapp?visiblelayers=Mapbender/Mapbender_Names,Mapbender/Mapbender_User,39/149``
 
 
-Punkte übergeben
-----------------
+POI übergeben
+-------------
 
-Sie können einen oder mehrere Punkte in der URL übergeben. Jeder Punkt verfügt dabei über die folgenden Parameter:
+Sie können beim Aufruf mit der URL Koordinaten übergeben. Die damit verknüpfte Position wird anschießend auf der Karte mithilfe eines (optional beschriftbaren) POI markiert.
 
-- Punkt (point): Koordinatenpaar, die Werte werden mit Komma getrennt (zwingend)
-- Beschriftung (label): Beschriftung, die angezeigt werden soll (optional)
-- Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional. Die Angabe ist nur bei der Anzeige eines Punktes sinnvoll)
+Jeder POI verfügt dabei über die folgenden Parameter:
 
-Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150 % der Gesamt-Boundingbox.
+- Punkt (point): Koordinate, die Werte werden mit Komma getrennt (Pflichtfeld),
+- Beschriftung (label): Beschriftung, die angezeigt werden soll (optional),
+- Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional).
 
 Format für die Übergabe eines Punktes:
 
 .. code-block:: php
 
-   ?poi[point]=363374,5621936&poi[label]=Label&poi[scale]=5000
+   ?poi[point]=368777,5619411&poi[label]=Rheinaue&poi[scale]=10000
+
 
 Rechteck (BBOX) übergeben
 -------------------------
@@ -158,10 +177,10 @@ Es kann eine gewünschte Projektion für den Start der Anwendung übergeben werd
 
 
 
-Center - Zentrieren der Anwendung
----------------------------------
+Anwendung über Koordinate zentrieren
+------------------------------------
 
-Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentriert werden soll. Sie benötigen zusätzlich die Angabe der Projektion.
+Es kann eine Koordinate beim Start übergeben werden, die in der Anwendung zentriert werden soll.
 
 .. code-block:: php
 
