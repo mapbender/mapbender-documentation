@@ -44,6 +44,7 @@ To configure the splashscreen image, follow the steps below:
 
 
    - **Array**: Utilize an array format where keys correspond to the application's slug. This allows you to customize the splashscreen image for each application. Use the key ``default`` to provide a fallback image for applications not explicitly defined.
+
    .. code-block:: yaml
 
     parameters:
