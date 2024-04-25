@@ -103,7 +103,7 @@ Mapbender enables the option of activating layers when an application is started
 
 .. hint:: Please note that the IDs change after every refresh of the service. Passing the name may therefore be the more constant solution.
 
-To display the attribute values, there is an icon with three dots next to each layer in the layerset tab of an application.
+To display the layer properties, there is an icon with three dots next to each layer in the layerset tab of an application.
 Click on the icon to open a info window:
 
 .. image:: ../../../figures/layerset/layerset_instance_dotmenu.png
@@ -118,7 +118,7 @@ Separate the two associated values with a slash (instead of a hyphen):
 
 For example: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79``
 
-Separate two or more non-visible layers by commas. To do this, insert the respective attribute values according to the same scheme:
+Separate two or more non-visible layers by commas. To do this, insert the respective values according to the same scheme:
 
 For example: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79,1/42``
 
