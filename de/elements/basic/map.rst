@@ -95,7 +95,7 @@ Mapbender ermöglicht über den URL-Parameter ``visiblelayers`` die Möglichkeit
 
   ?visiblelayers=<InstanceID>/<InstanceLayerID>
 
-**RootLayerName/LayerName**: Auf diese Weise werden Ebenen entlang der Kombination aus Dienst- und Layernamen als Parameter übergeben:
+**RootLayerName/LayerName**: Auf diese Weise werden Ebenen entlang der Kombination aus RootLayer- und Layernamen als Parameter übergeben:
 
 .. code-block:: php
 
@@ -127,12 +127,14 @@ Auch Kombinationen aus Namen und ID-Werten sind möglich:
 ``https://localhost/mapbender/application/myapp?visiblelayers=Mapbender/Mapbender_Names,Mapbender/Mapbender_User,39/149``
 
 
-Punkte übergeben
-----------------
+POI übergeben
+-------------
 
-Sie können einen Punkt in der Karte mit der URL übergeben. Jeder Punkt verfügt dabei über die folgenden Parameter:
+Sie können beim Aufruf mit der URL Koordinaten übergeben. Die damit verknüpfte Position wird anschießend auf der Karte mithilfe eines (optional beschriftbaren) POI markiert.
 
-- Punkt (point): Koordinatenpaar, die Werte werden mit Komma getrennt (Pflichtfeld),
+Jeder POI verfügt dabei über die folgenden Parameter:
+
+- Punkt (point): Koordinate, die Werte werden mit Komma getrennt (Pflichtfeld),
 - Beschriftung (label): Beschriftung, die angezeigt werden soll (optional),
 - Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional).
 

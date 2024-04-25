@@ -95,7 +95,7 @@ Mapbender enables the option of activating layers when an application is started
 
   ?visiblelayers=<InstanceID>/<InstanceLayerID>
 
-**RootLayerName/LayerName**: This allows layers along the combination of RootLayerNamename and LayerName to be transferred as parameters:
+**RootLayerName/LayerName**: This allows layers along the combination of RootLayer- and LayerName to be transferred as parameters:
 
 .. code-block:: php
 
@@ -130,9 +130,9 @@ Combinations of names and ID values are also possible:
 Passing POIs
 ------------
 
-You can pass a POI in the URL. A POI has the following parameters:
+You can pass coordinates with the URL. The linked position will be marked on the map using a POI (which can optionally be labelled).
 
-- point: coordinate pair as comma-separated values (mandatory),
+- point: coordinates as comma-separated values (mandatory),
 - label: Label to display (optional),
 - scale: Scale to show POI in (optional).
 
