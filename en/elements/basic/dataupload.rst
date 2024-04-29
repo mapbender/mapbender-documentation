@@ -35,6 +35,7 @@ YAML-Definition
 This tamplate can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
+     
      dataupload:
      class: Mapbender\CoreBundle\Element\DataUpload
      target: map

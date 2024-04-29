@@ -37,6 +37,7 @@ YAML-Definition
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
 .. code-block:: yaml
+     
      dataupload:
      class: Mapbender\CoreBundle\Element\DataUpload
      target: map
