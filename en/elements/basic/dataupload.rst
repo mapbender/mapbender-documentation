@@ -1,10 +1,13 @@
-Data Uploader
-*************
+Data Upload
+***********
 
 With the Data Upload you can use polygons and multipolygons you already have in a file format, without having to do it manually inside Mapbender.
 
 Files in GeoJSON, KML, GML and GPX format are accepted with drag and drop or from your files.
 Additionally, you either choose a CRS or let Mapbender 'Determine projection automatically'. The file size should not exceed 10 MB.
+
+Configuration
+-------------
 
 .. image:: ../../../figures/dataupload_configuration.png
      :scale: 100

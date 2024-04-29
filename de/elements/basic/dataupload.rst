@@ -1,15 +1,18 @@
 Data Upload
-*************
+***********
 
 Mit dem Data Upload kannst du Polygone, Multipolygone, die schon in einem Format gespeichert sind, ohne diese dann in Mapbender händisch gezeichnet werden müssen. 
 
 Sie können Dateien im GeoJSON-, KML-, GML- und GPX-Format per Drag & Drop oder aus Ihren Dateien hochladen.
 Zusätzlich wählen Sie entweder ein CRS oder lassen Mapbender 'Projektion automatisch bestimmen'. Die Dateigröße sollte 10 MB nicht überschreiten.
 
+Konfiguration
+-------------
+
 .. image:: ../../../figures/dataupload_configuration.png
      :scale: 100
 
-* **Beschriftung anzeigen**: Zeigt ein LAble mit dem Titel und erscheint neben den Koordinaten.
+* **Beschriftung anzeigen (Show label)**: Zeigt ein LAble mit dem Titel und erscheint neben den Koordinaten.
 * **Title**: Title des Elements. Es wird neben den Koordinaten erscheinen, wenn “Beschriftung anzeigen” aktiviert ist.
 * **Target**: ID des Kartenelements.
 * **Gruppe**: Optionaler Gruppenname.
@@ -21,7 +24,6 @@ Anschließend in Mapbender wird der Data Upload auf der Seite angezeigt und neue
 
 Nachdem das Polygon hochgeladen wurde, wird es auf der Karte angezeigt.
 Dort kann der Layer (un)sichtbar, zoomen zum Layer oder Layer löschen.
-
 
 .. image:: ../../../figures/dataupload.png
      :scale: 100
