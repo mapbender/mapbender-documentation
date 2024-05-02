@@ -9,7 +9,7 @@ Base elements
    basic/activity_indicator.rst
    basic/basesourceswitcher.rst
    basic/coordinates_display.rst
-   basic/data_uploader.rst
+   basic/data_upload.rst
    basic/feature_info.rst
    basic/layertree.rst
    basic/legend.rst

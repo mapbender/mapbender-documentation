@@ -12,8 +12,8 @@ Configuration
 .. image:: ../../../figures/dataupload_configuration.png
      :scale: 100
 
-* **Show lable**: Show a label which incorporates the title and appears next to the coordinates.
-* **Title**: Title of the element. It will appear next to the coordinates if “Show label” is activated.
+* **Show lable**: Shows a label which incorporates the title and appears next to the coordinates.
+* **Title**: Title of the element. It will appear next to the coordinates if 'Show label' is activated.
 * **Target**: Id of Map element to query
 * **Group**: Optional group name.
 * **Tooltip**: The text entered as a tooltip will be indicated by hovering over the element with the cursor.

@@ -1,7 +1,7 @@
-Data Upload
+Daten Laden
 ***********
 
-Mit dem Data Upload kannst du Polygone, Multipolygone, die schon in einem Format gespeichert sind, ohne diese dann in Mapbender händisch gezeichnet werden müssen. 
+Mit dem Daten Laden können Polygone, Multipolygone hochgeladen werden, die schon in einem Format gespeichert sind, ohne diese dann in Mapbender händisch gezeichnet werden müssen. 
 
 Sie können Dateien im GeoJSON-, KML-, GML- und GPX-Format per Drag & Drop oder aus Ihren Dateien hochladen.
 Zusätzlich wählen Sie entweder ein CRS oder lassen Mapbender 'Projektion automatisch bestimmen'. Die Dateigröße sollte 10 MB nicht überschreiten.
@@ -12,18 +12,15 @@ Konfiguration
 .. image:: ../../../figures/dataupload_configuration.png
      :scale: 100
 
-* **Beschriftung anzeigen (Show label)**: Zeigt ein LAble mit dem Titel und erscheint neben den Koordinaten.
-* **Title**: Title des Elements. Es wird neben den Koordinaten erscheinen, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Beschriftung anzeigen (Show label)**: Zeigt ein Lable mit dem Titel und erscheint neben den Koordinaten.
+* **Title**: Title des Elements. Es wird neben den Koordinaten erscheinen, wenn 'Beschriftung anzeigen' aktiviert ist.
 * **Target**: ID des Kartenelements.
 * **Gruppe**: Optionaler Gruppenname.
 * **Tooltip**: Der eingegebene Text wird angezeigt, wenn mit dem Cursor über ein Element geht.
-* **Icon**: Choose an icon that will be displayed as the button of the element in the map.
+* **Icon**: Sie können ein Icon für den Knopf in der Anwendung wählen.
 
-Nach der Wahl der Applikation steht in den Einstellungen der Data Upload unter der Sektion Sidepane als letztes.
-Anschließend in Mapbender wird der Data Upload auf der Seite angezeigt und neue Dateien können über drag and drop oder auf 'Datei wählen' klicken, um auf das Ordnersystem zugreifen zu können.
-
-Nachdem das Polygon hochgeladen wurde, wird es auf der Karte angezeigt.
-Dort kann der Layer (un)sichtbar, zoomen zum Layer oder Layer löschen.
+Nach der Wahl der Applikation steht in den Einstellungen das Daten Laden unter der Sektion des Seitenpanels als oder an der oberen Leiste.
+Anschließend wird das Daten Laden in Mapbender auf der Seite angezeigt und neue Dateien können über drag and drop oder auf 'Datei wählen' klicken, um im Ordnersystem nach einer Datei zu suchen.
 
 .. image:: ../../../figures/dataupload.png
      :scale: 100
