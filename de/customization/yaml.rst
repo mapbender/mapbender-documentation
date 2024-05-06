@@ -3,7 +3,7 @@
 YAML Konfiguration (Konfigurations- und Anwendungsdateien)
 ==========================================================
 
-Die folgenden Konfigurationsdateien sind zu finden unter application/config.
+Die folgenden Konfigurationsdateien liegen unter `application/config` und dessen Unterverzeichnissen:
 
 
 doctrine.yaml
@@ -51,18 +51,21 @@ Es folgt ein Beispiel mit zwei Datenbankverbindungen in der `doctrine.yaml`:
                     #server_version: '15'
                     logging:   "%kernel.debug%"
                     profiling: "%kernel.debug%"
-                # Datenbankverbindung search_db
-                search_db:
-                    url: '%env(resolve:SEARCH_DB_DATABASE_URL)%'
-                    charset:    UTF8
+                # Datenbankverbindung geodata_db
+                geodata_db:
+                    url: '%env(resolve:GEOBASIS_DATABASE_URL)%'
+                    persistent: true
+                    charset:  UTF8
+                    logging: '%kernel.debug%'
+                    profiling: '%kernel.debug%'
+                    # IMPORTANT: You MUST configure your server version,
+                    # either here or in the DATABASE_URL env var (see .env file)
                     #server_version: '15'
-                    logging:   "%kernel.debug%"
-                    profiling: "%kernel.debug%"
 
 
-.env
-----
-In dieser Datei werden zentrale Umgebungsvariablen zusammengeführt.
+.env (bzw. .env.local)
+----------------------
+In dieser Datei werden zentrale Umgebungsvariablen zusammengeführt:
 
 
 Datenbank
@@ -99,24 +102,27 @@ Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken un
 
 Mailer
 ******
-Die Mailerangaben werden in der `.env` Datei über eine Umgebungsvariable in der `mailer.yaml` eingetragen.
+Die Mailerangaben werden in der `.env.local` Datei über eine Umgebungsvariable in der `fom.yaml` eingetragen.
 
-Standard- und Beispielkonfiguration (auskommentiert) in der `.env`:
+Standard- und Beispielkonfiguration (auskommentiert) in der `.env.local`:
 
 .. code-block:: bash
 
     #MAILER_DSN=smtp://user:pass@smtp.example.com:25
     MAILER_DSN=null://null
 
-Die Umgebungsvariable wird danach im ``dsn`` Parameter in der `mailer.yaml` übertragen.
+Der Mailer-Einstellugnen selbst werden in `fom.yaml` konfiguriert.
 
 .. code-block:: yaml
 
-    framework:
-        mailer:
-            dsn: '%env(MAILER_DSN)%'
+    fom_user:
+        selfregister: false
+        reset_password: true
+        max_reset_time: 1
+        mail_from_address: info@mapbender.org
+        mail_from_name: Mapbender Team
            
-Ein Mailer wird für die Funktionen 'Self-Registration' und 'Passwort zurücksetzen' benötigt. Weitere Informationen im Kapitel :ref:`users_de`.
+.. hint:: Ein Mailer wird für die Funktionen 'Registrierung' und 'Passwort zurücksetzen' benötigt. Weitere Informationen im Kapitel :ref:`users_de`.
 
 
 parameters.yaml
