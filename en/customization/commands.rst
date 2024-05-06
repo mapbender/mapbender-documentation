@@ -478,7 +478,7 @@ WMS Services
 ------------
 
 bin/console mapbender:wms:add
-***********************************
+*****************************
 
 Adds a new WMS Source to your Mapbender Service repository.
 
@@ -490,6 +490,23 @@ Adds a new WMS Source to your Mapbender Service repository.
     * * osm OpenStreetMap
     * * osm-grey OpenStreetMap (grey scale)
     Saved new source #76
+
+
+bin/console mapbender:wms:assign
+********************************
+
+Adds a WMS source instance from the sources repository to a Mapbender application.
+
+.. code-block:: yaml
+
+	bin/console mapbender:wms:assign <application> <source> [<layerset>]
+
+Configuration
+-------------
+
+* `application`: ID or slug of the application,
+* `source`: ID of the WMS service,
+* `layerset` (optional): ID or name of the layerset. The default value is *main* or the first layerset in the application.
 
 
 bin/console mapbender:wms:parse:url
@@ -550,23 +567,6 @@ Command to displays layer information of a persisted WMS source. You have to par
      * * osm OpenStreetMap
      * * osm-grey OpenStreetMap (grey scale)
 
-
-
-bin/console mapbender:wms:validate:url 
-**************************************
-
-Command to check the accessibility of the WMS data source. The available layers are listed, if the service is accessible. 
-
-.. code-block:: yaml
-
-    bin/console mapbender:wms:validate:url "https://osm-demo.wheregroup.com/service?VERSION=1.3.0"
-    
-	WMS source loaded and validated
-	Source describes 3 layers:
-	* OpenStreetMap (WhereGroup)
-	* OpenStreetMap
-	* OpenStreetMap (grey scale)
-    
     
 Other
 -----
