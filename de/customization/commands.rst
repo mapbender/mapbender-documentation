@@ -33,11 +33,20 @@ Anwendungs-Export, Import und Klonen
 bin/console mapbender:application:export 
 ****************************************
 
-Eine Anwendung kann als JSON- oder YAML-Datei exportiert werden. Dabei muss der Anwendungs-URL-Titel (slug) angebeben werden und eine Exportdatei definiert werden.
+Eine Anwendung kann als JSON- oder YAML-Datei exportiert werden. Dabei muss der Anwendungs-URL-Titel (slug) angebeben und eine Exportdatei definiert werden.
+
+Für .json-Dateien (Export über den Browser möglich):
 
 .. code-block:: yaml
 
    bin/console mapbender:application:export mapbender_user_db --format=json > export.json
+
+
+Für .yaml-Dateien (Export nur über die Kommandozeile möglich):
+
+.. code-block:: yaml
+
+   bin/console mapbender:application:export mapbender_user_db --format=yaml > export.yaml
 
 
 bin/console mapbender:application:import
@@ -56,8 +65,7 @@ Eine Anwendung kann aus einer JSON- oder YAML-Datei importiert werden. Mapbender
 bin/console mapbender:application:clone
 ***************************************
 
-Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen. Dadurch wird je eine neue Anwendung mit einem Suffix im Anwendungsnamen erzeugt. Bei yaml-Anwendungen wird ein *_db*-Suffix, bei Anwendungen aus der Datenbank ein *_imp*-Suffix angehängt. 
-Im untenstehenden Beispiel heißt die neue Anwendung `mapbender_user_yml_imp1`, weil sie aus der Datenbank heraus geklont wird.
+Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen. Dadurch wird eine neue Anwendung mit einem Suffix im Anwendungsnamen erzeugt. Bei yaml-Anwendungen wird ein *_db*-Suffix, bei Anwendungen aus der Datenbank ein *_imp*-Suffix angehängt. 
 
 .. code-block:: bash
 
@@ -82,7 +90,7 @@ Dabei sind die Angabe von Benutzername, Email und Passwort erforderlich. Der Ben
    
 **Aktualisierung eines Benutzers**
 
-Die folgendden Angaben zu einem Benutzer können aktualisiert werden:
+Die folgenden Angaben zu einem Benutzer können aktualisiert werden:
 
 * E-Mail
 * Passwort
