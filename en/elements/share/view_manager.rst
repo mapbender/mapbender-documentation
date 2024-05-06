@@ -63,9 +63,10 @@ This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 
-   publicEntries        # String or empty (falsy value disables public entries entirely); other allowed values are ro (read only), rw (allow read and write), rwd (allow read and write and deletion) (default: ro)
-   privateEntries       # Turns user-private states on, with full usage (save, reapply, delete) (default: true)
-   allowAnonymousSave   # Extend right to save public entries also to anonymous users (default: false)
-   showDate             # Show date of creation or last update in entry listing (default: true)
-
-
+  viewmanager:
+    title: View Manager                              # Title of the element
+    class: Mapbender\CoreBundle\Element\ViewManager  # Path to element class
+    publicEntries: rw                                # String or empty (falsy value disables public entries entirely); other allowed values are ro (read only), rw (allow read and write), rwd (allow read and write and deletion) (default: ro).
+    privateEntries: true                             # Turns user-private states on, with full usage (save, reapply, delete) (default: true).
+    allowAnonymousSave: true                         # Extend right to save public entries also to anonymous users (default: false).
+    showDate: true                                   # Show date of creation or last update in entry listing (default: true).
