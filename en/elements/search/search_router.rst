@@ -221,7 +221,10 @@ In the section **results** the definition for the result table and styling is no
 
 * **view**: is always set to table. No more options are possible.
 * **count**: shows the number of results (default: true).
-* **exportcsv**: generates a download button to give out the results as CSV file (default: false).
+* **exportcsv**: generates a download button to give out the results as CSV file (default: false). 
+* **sortBy**:  optional, define an attribute by attribute name the search results should be sorted by (default no sorting).
+* **sortOrder**: optional, define how to sort the results ascending (asc) or descending (desc) (default: asc)
+* **zoomToResultExtent**: define whether zoom to result should be activated (default: false).
 * **headers**: definition of the columns to display and the alternative labeling.
 * **callback**: define the action for the click event on a result item.
 * **event**: only click is supported.
@@ -257,6 +260,15 @@ Three different styles are configured:
                 fillColor: '#f0f0f0'    # fill color               
                 fillOpacity: 0          # fill opacity, (0 full transparency)
                 pointRadius: 6          # size of the point symbol
+                label: ${name} - ${gid} # Attribut to use for labeling or fiexed text
+                fontColor: "#ff0000"    # font color
+                fontSize: 30px          # font size in piexels
+                fontFamily: 'Arial, Courier New, monospace'
+                fontWeight: bold        # font weight 
+                labelOutlineColor: '#ffff00' # font outline
+                labelOutlineWidth: 1    # font outline width
+                labelXOffset: -18       # Offset X-axis
+                labelYOffset: -18       # Offset Y-axis
             select:
                 strokeColor: '#0000ff'
                 strokeOpacity: 1
@@ -264,10 +276,12 @@ Three different styles are configured:
                 fillColor: '#ff00ff'
                 fillOpacity: 0.8
                 pointRadius: 10
+                label: ${name}
             temporary:
                strokeColor: '#0000ff'
                fillColor: '#0000ff'
                fillOpacity: 1
+               label: 'fixed Text'
           
 In the default style the point-symbol interior is transparent (fillOpacity: 0). Only their outlines will be drawn in green. 
 The selected features will be drawn with a purple fill and an opacity of 0.8. The outline of the symbol is blue. 

@@ -223,6 +223,9 @@ Im Bereich **results** erfolgt die Definition zum Aufbau der Trefferliste und da
 * **view**: immer Angabe **table**. Derzeit keine weiteren Optionen.
 * **count**: Zeigt die Anzahl der Ergebnisse an (Standard: true).
 * **exportcsv**: Erzeugt einen Button, der den Download der Trefferliste als CSV-Datei ermöglicht (Standard: false).
+* **sortBy**:  optional. Definition, ob eine Sortierung nach einem Attribut erfolgen soll. Angabe via attributname (Standard: keine Sortierung).
+* **sortOrder**: optional. Definition, ob die Sortierung aufsteigend (asc) oder absteigend (desc) erfolgen soll (Standard: asc)
+* **zoomToResultExtent**: Definition, ob direkt auf den Bereich der Ergebnisse gezoomt werden soll (Standard: false).
 * **headers**: Definition der Ausgabespalten  und Spaltenbeschriftung.
 * **callback**: Definition der Aktion beim Klick auf einzelne Treffer.
 * **event**: immer Angabe **click**. Derzeit keine weiteren Optionen.
@@ -258,6 +261,15 @@ Die Konfiguration beinhaltet drei Stilkonfigurationen:
                 fillColor: '#f0f0f0'    # Füllfarbe                
                 fillOpacity: 0          # Opazität der Füllung, 0 - voll transparent
                 pointRadius: 6          # Größe des Punktsymbols
+                label: ${name} - ${gid} # Attribut/e für die Beschriftung oder fester Text
+                fontColor: "#ff0000"    # Beschriftungsfarbe
+                fontSize: 30px          # Schriftgröße
+                fontFamily: 'Arial, Courier New, monospace' # Schriftart
+                fontWeight: bold
+                labelOutlineColor: '#ffff00' # Schriftumrandungsfarbe
+                labelOutlineWidth: 1    # Breite der Umrandung
+                labelXOffset: -18       # Versatz X-Achse
+                labelYOffset: -18       # Versatz Y-Achse
             select:
                 strokeColor: '#0000ff'
                 strokeOpacity: 1
