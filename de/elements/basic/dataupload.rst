@@ -1,11 +1,11 @@
-Daten Laden
+Daten laden
 ***********
 
-Mit dem Element *Daten Laden* können Punkte, Linien, Polygone und Multipolygone aus Geodaten in Mapbender hochgeladen werden.
-Sie können Dateien im GeoJSON-, KML-, GML- und GPX-Format per Drag and drop oder mithilfe des Ordnersystems der Dateiverwaltung hochladen.
+Mit dem Element *Daten laden* können Punkte, Linien, Polygone und Multipolygone aus Geodaten in den Formaten GeoJSON-, KML-, GML- und GPX geladen werden.
+Sie können eine oder mehrere Dateien per drag & drop oder durch Auswahl aus dem Dateisystem hochladen.
 Für eine passende Projektion wählen Sie entweder ein eigenes Koordinatenreferenzsystem oder nutzen das Feature *Projektion automatisch bestimmen*.
 
-.. hint:: Die Dateigröße sollte 10 MB nicht überschreiten. Diese Einstellung kann in der YAML-Definition angepasst werden.
+.. hint:: Die Dateigröße sollte 10 MB nicht überschreiten. In der Elementkonfiguration kann eine maximale Dateigröße definiert werden.
 
 Konfiguration
 -------------

@@ -1,10 +1,11 @@
 Data Upload
 ***********
 
-The *Data Upload* element lets you upload geodata points, lines, polygons, and multipolygons.
-Supported file formats are GeoJSON, KML, GML, and GPX. You can either choose a fitting CRS or use the feature *Determine projection automatically*.
+The *Data Upload* element allows you to upload geodata points, lines, polygons, and multipolygons. Supported geodata file formats are GeoJSON, KML, GML, and GPX.
+Drag and drop or select from the file system to upload one or more files.
+You can either choose a fitting CRS or use the feature *Determine projection automatically*.
 
-.. hint:: The file size should not exceed 10 MB. Nethertheless, it is possible to change this restriction with the YAML configuration.
+.. hint:: The file size should not exceed 10 MB. A maximum file size can be defined in the element configuration.
 
 Configuration
 -------------
@@ -21,14 +22,13 @@ Configuration
 * **Icon**: Choose an icon that will be displayed as the button of the element in the map.
 
 After the element has been added to the backend, it is displayed at the corresponding position in Mapbender.
-Then, you will find the element in the application and are able to either drag and drop files into it or upload them via the 'Choose file' button.
 
 .. image:: ../../../figures/dataupload.png
      :width: 100%
 
 
 After an object is uploaded, it will be shown in the map and the element list.
-There you can toggle its visibility, zoom to it, or delete it again.
+There, you can toggle its visibility, zoom to it, or delete it again.
 
 
 YAML Definition
