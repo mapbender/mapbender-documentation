@@ -127,7 +127,8 @@ Zur Nutzung der optionalen LDAP-Anbindung wird die PHP-LDAP-Extension benötigt:
 Für den Einsatz in einer Produktivumgebung wird nachfolgend die Konfiguration einer PostgreSQL Datenbank beschrieben.
 
 Voraussetzungen:
-- eingerichtete PostgreSQL Datenbank (Version < 10)
+
+- eingerichtete PostgreSQL Datenbank
 - vorhandene Datenbank zur Mapbender Konfiguration
 - ggf. eigenen Benutzer für Zugriff
 
