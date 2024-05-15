@@ -22,7 +22,7 @@ Datenbank
 
 .. code-block:: yaml
 
-    doctrine:                                               # Bei Werten, die von dem %-Zeichen umschlossen werden,handelt es sich um Variablen
+    doctrine:
         dbal:
             default_connection: default                     # gibt die Datenbankverbindung an, die standardmäßig von Mapbender verwendet werden soll (``default_connection: default``).
             connections:
@@ -63,14 +63,15 @@ Es folgt ein Beispiel mit zwei Datenbankverbindungen in der `doctrine.yaml`:
                     #server_version: '15'
 
 
-.env (bzw. .env.local)
-----------------------
+.env bzw. .env.local
+--------------------
 In dieser Datei werden zentrale Umgebungsvariablen zusammengeführt:
 
 
 Datenbank
 *********
-Zur Konfiguration der Datenbankverbindung werden die Dateien `.env` und `doctrine.yaml` verwendet. In der `.env` wird die Umgebungsvariable für die Datenbankverbindung definiert. Diese wird in der `doctrine.yaml` aufgelöst. Alternativ können in der `doctrine.yaml` auch mehrere Datenbankverbindungen definiert werden. Zu jeder Datenbankverbindung wird ein Alias vergeben.
+Zur Konfiguration der Datenbankverbindung werden die Dateien `.env` und `doctrine.yaml` verwendet. In der `.env` wird die Umgebungsvariable für die Datenbankverbindung definiert. `.env` wird von `.env.local` überschrieben.
+Diese wird in der `doctrine.yaml` ausgelesen. In der `doctrine.yaml` können auch mehrere Datenbankverbindungen definiert werden. Zu jeder Datenbankverbindung wird ein Alias vergeben.
 
 Beispiel:
 Die Datenbankkonfiguration in der `.env` sieht standardmäßig folgendermaßen aus, sofern die mitinstallierte SQLite-Datenbank verwendet wird:
@@ -80,7 +81,7 @@ Die Datenbankkonfiguration in der `.env` sieht standardmäßig folgendermaßen a
     MAPBENDER_DATABASE_URL="sqlite:///%kernel.project_dir%/var/db/demo.sqlite"
 
 Beispiel:
-Die Datenbankkonfiguration in der `.env` sieht wie folgt aus, wenn eine Suchdatenbank via PostgreSQL referenziert wird:
+Die Datenbankkonfiguration in der `.env.local` sieht wie folgt aus, wenn eine Suchdatenbank via PostgreSQL referenziert wird:
 
 .. code-block:: bash
 
@@ -89,11 +90,11 @@ Die Datenbankkonfiguration in der `.env` sieht wie folgt aus, wenn eine Suchdate
 
 Verwendung mehrerer Datenbanken
 *******************************
-Mit Mapbender können Sie auch mehrere Datenbanken verwenden. Dies wird empfohlen, wenn Sie Ihre eigenen Daten von den Mapbender-Daten trennen möchten. Das kann nützlich sein, wenn Sie eigenen Code verwenden, der nicht zu einem Mapbender-Bundle gehört.
-Eine zweite Datenbank benötigen Sie ebenfalls für die Geodatensuche (über den :ref:`search_router_de`) und die Datenerfassung (:ref:`digitizer_de`). Die Geodaten sollten grundsätzlich in einer anderen Datenbank als der Mapbender Datenbank gesichert werden.
+Mit Mapbender können Sie auch mehrere Datenbanken verwenden. Dies wird bei der Einbindung von Geodaten empfohlen. Diese sollten getrennt von der Mapbender-Datenbank liegen.
+Eine zweite Datenbank benötigen Sie ebenfalls für die Geodatensuche (über den :ref:`search_router_de`) und die Datenerfassung (:ref:`digitizer_de`).
 Die Standard-Datenbankverbindung (``default_connection: default``) wird von Mapbender verwendet.
 
-Wenn Sie eine weitere Datenbank verwenden möchten, müssen Sie eine zweite Datenbankverbindung mit einem anderen Namen in der `.env`-Datei definieren.
+Wenn Sie eine weitere Datenbank verwenden möchten, müssen Sie eine zweite Datenbankverbindung mit einem anderen Namen in der `.env.local`-Datei definieren.
 In den Elementen :ref:`search_router_de` und :ref:`digitizer_de` kann nun auf die Datenbankverbindung (connection) mit dem Namen *search_db* verwiesen werden.
 
 Weitere Information über diese Konfigurationsmöglichkeit gibt es in der `Symfony Dokumentation <https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration>`_.
@@ -102,9 +103,7 @@ Mapbender verwendet Doctrine. Doctrine ist eine Sammlung von PHP-Bibliotheken un
 
 Mailer
 ******
-Die Mailerangaben werden in der `.env.local` Datei über eine Umgebungsvariable in der `fom.yaml` eingetragen.
-
-Standard- und Beispielkonfiguration (auskommentiert) in der `.env.local`:
+Die Angabe zum Mailer wird in der `.env.local` Datei über die Variable ``MAILER_DSN`` definiert.
 
 .. code-block:: bash
 
@@ -144,8 +143,6 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
         text: Impressum & Kontakt									# Link Text
       - link: https://mapbender.org/datenschutz
         text: Datenschutz
-
-Die Sitelinks werden mittels "|" voneinander getrennt.
 
 
 .. _custom-icons_de:

@@ -20,7 +20,7 @@ Database
 
 .. code-block:: yaml
 
-    doctrine:                                               # Values, surrounded by %-marks, are variables
+    doctrine:
         dbal:
             default_connection: default                     # Database connection, used as standard in Mapbender (``default_connection: default``).
             connections:
@@ -69,10 +69,11 @@ This file handles necessary environmental variables:
 
 Database
 ********
-The files `.env` and `doctrine.yaml` are needed to configure databases in Mapbender. In `.env`, (multiple) variables for database connection(s) can be defined. These variables are being processed in `doctrine.yaml`. An alias is assigned to each database connection.
+The files `.env` and `doctrine.yaml` are used to configure database connections in Mapbender. In `.env`, (multiple) variables for database connection(s) can be defined. The `.env` is overwritten by `.env.local`.
+This is read by `doctrine.yaml`. Several database connections can also be defined in `doctrine.yaml`. An alias is assigned to each database connection.
 
 Example:
-Database configuration in `.env` with the default database variable, if the pre-installed SQLite database is used:
+Database configuration in `.env.local` with the default database variable, if the pre-installed SQLite database is used:
 
 .. code-block:: bash
 
@@ -87,11 +88,11 @@ When using PostgreSQL (e.g. for the use with :ref:`search_router`), use the foll
 
 Use of several databases
 ************************
-Mapbender can handle several databases. This is recommended if you want to keep your data seperated from Mapbender data. Or if you want to use code that doesn't belong to a Mapbender bundle.
+Mapbender also allows you to use several databases. This is recommended when integrating geodata. These should be stored separately from the Mapbender database.
 You need a second database for geo data search (with SearchRouter) and data collection (Digitizer).
 The default database connection (``default_connection: default``) is used by Mapbender.
 
-If you want to use another database, you just have to define a database connection with a different name in your `.env` file.
+If you want to use another database, you just have to define a database connection with a different name in your `.env.local` file.
 Now, you can refer to the database *search_db* in the elements SearchRouter and Digitizer.
 
 To learn more about this structure, visit the `Symfony documentation <https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration>`_.
@@ -100,9 +101,7 @@ Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine pro
 
 Mailer
 *******
-Mailer information are inserted in the `fom.yaml` file via environment variables in your `.env.local` (e.g. smtp or sendmail).
-
-Default and configuration example (commented out) in `.env.local`:
+The mailer information is defined in the `.env.local` file via the ``MAILER_DSN`` variable.
 
 .. code-block:: bash
 
@@ -143,8 +142,6 @@ A disclaimer can be added through the use of site links.
         text: Imprint & Contact									    # Link text
       - link: https://mapbender.org/en/privacy-policy/
         text: Privacy Policy
-
-Site links will be seperated by "|".
 
 
 .. _custom-icons:
