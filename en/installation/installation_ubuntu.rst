@@ -123,6 +123,7 @@ To use the optional LDAP-connection, following PHP-LDAP-extension is required:
 Configuration of PostgreSQL database for productive use:
 
 Requirements:
+
 - configured PostgreSQL database
 - database for Mapbender configuration
 - PostgreSQl database user to access the database with create database right
