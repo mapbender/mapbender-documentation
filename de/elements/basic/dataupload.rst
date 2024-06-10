@@ -1,11 +1,15 @@
 Daten laden
 ***********
 
-Mit dem Element *Daten laden* können Punkte, Linien, Polygone und Multipolygone aus Geodaten in den Formaten GeoJSON-, KML-, GML- und GPX geladen werden.
+Mit **Daten laden** können Punkte, Linien, Polygone und Multipolygone aus Geodaten in den Formaten GeoJSON-, KML-, GML- und GPX geladen werden.
 Sie können eine oder mehrere Dateien per drag & drop oder durch Auswahl aus dem Dateisystem hochladen.
 Für eine passende Projektion wählen Sie entweder ein eigenes Koordinatenreferenzsystem oder nutzen das Feature *Projektion automatisch bestimmen*.
 
-.. hint:: Die Dateigröße sollte 10 MB nicht überschreiten. In der Elementkonfiguration kann eine maximale Dateigröße definiert werden.
+.. hint:: Die Dateigröße ist begrenzt. In der Elementkonfiguration kann eine maximale Größe definiert werden.
+
+.. image:: ../../../figures/dataupload.png
+     :width: 100%
+
 
 Konfiguration
 -------------
@@ -23,10 +27,6 @@ Konfiguration
 
 Nachdem das Element dem Backend hinzugefügt wurde, wird es in Mapbender an der entsprechenden Position angezeigt.
 Anschließend können neue Dateien sowohl über Drag and drop als auch über den 'Datei wählen'-Button hinzugefügt werden.
-
-.. image:: ../../../figures/dataupload.png
-     :width: 100%
-
 Nachdem eine Datei hochgeladen wurde, werden die Objekte auf der Karte angezeigt und in der Sidepane gelistet.
 Über die Liste können Sie die Objektsichtbarkeit einstellen, auf das Objekt zoomen oder es löschen.
 
@@ -38,8 +38,8 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
 
 .. code-block:: yaml
      
-     dataupload:
-     class: Mapbender\CoreBundle\Element\DataUpload
-     target: map
-     maxFileSize: 10
-     helpText: mb.core.dataupload.admin.helpText
+ dataupload:
+    class: Mapbender\CoreBundle\Element\DataUpload     # Element class name
+    target: map                                        # Element target
+    maxFileSize: 10                                    # Maximum file size (Megabyte)
+    helpText: mb.core.dataupload.admin.helpText        # Text that appears as help dialog
