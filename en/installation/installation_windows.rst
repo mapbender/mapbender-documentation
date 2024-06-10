@@ -182,7 +182,7 @@ The Mapbender installation can now be accessed under **http://[hostname]/mapbend
 
 **Check if the alias is working**
 
-* http://localhost/mapbender/
+* ``http://localhost/mapbender/``
 
 username: "root", password: "root" (if you use the SQLite database shipped with Mapbender)
 
@@ -194,7 +194,7 @@ Troubleshooting is available via the following command (must be executed in the 
 
 .. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
 
-Further information can be found at :ref:`mapbender_config_check`.
+Further information can be found at :ref:`en/customization/commands:bin/console mapbender:config:check`.
 
 Congratulations! Mapbender is now set up correctly and ready for further configuration.
 Find Information about the first steps with Mapbender in the :ref:`Mapbender Quickstart <quickstart>`.

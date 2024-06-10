@@ -156,9 +156,9 @@ Standarddefinition der Funktion mapClickWorker
 Angepassung der Funktion mapClickWorker() zum Aufruf einer URL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Alternativ kann beispielsweise ein neues Fenster mit einer URL geöffnet und die Koordinaten als Parameter übergeben werden. So können Sie beispielsweise OpenStreetMap aufrufen und die Koordinate des Klickereignisses zentrieren.
+Alternativ kann beispielsweise ein neues Fenster mit einer URL geöffnet und die Koordinaten als Parameter übergeben werden. So können Sie beispielsweise OpenStreetMap aufrufen und die Koordinate des Klickereignisses zentrieren:
 
-https://www.openstreetmap.org/export#map=15/50.7311/7.0985
+``https://www.openstreetmap.org/export#map=15/50.7311/7.0985``
 
 .. code-block:: js
   

@@ -18,7 +18,7 @@ Read more about this under :ref:`yaml`.
 
 The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
 
-.. hint:: If errors occur in the database, fields or form, various error messages will appear. Here, the productive environment will only give a general error message. If you want to see the exact error, you should call the page as development environment. Find more under :ref:`environments`.
+.. hint:: If errors occur in the database, fields or form, various error messages will appear. Here, the productive environment will only give a general error message. If you want to see the exact error, you should call the page as development environment. Find more under en/quickstart:Start Mapbender in a productive environment.
 
 
 * **debug:** Display error messages, e.g. syntax error in SQL [experimental]
@@ -862,11 +862,11 @@ The storage path and the name of the stored files can not yet be changed. The fi
 
 The filesystem path is:
 
-* <mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png
+* ``<mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png``
 
 The linked URL stored in the database column is:
 
-* http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png
+* ``http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png``
 
 .. code-block:: yaml
 

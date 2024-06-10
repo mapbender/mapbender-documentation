@@ -15,10 +15,14 @@ Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeit
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
 * **framework.session.cookie_httponly**: Stellen Sie für HTTP-only session cookies sicher, dass der Parameter framework.session.cookie_httponly auf true steht.
 
-Datenbank
-*********
 
-.. note:: Jede Datenbank, die in der `.env` definiert wird, muss als Platzhalter in der `doctrine.yaml` stehen:
+Datenbank-Konfiguration
+***********************
+
+Zur Konfiguration der Datenbankverbindung erfolgt in den Dateien ``.env.local`` und ``doctrine.yaml``. In der ``.env.local`` wird die Datenbankverbindung definiert in einer Variable. Die Variablen werden in der ``doctrine.yaml`` angegeben.
+
+
+.. note:: Jede Datenbank, die in der `.env` definiert wird, kann in der `doctrine.yaml` unter url zu einer Verbindung angegeben werden:
 
 .. code-block:: yaml
 
@@ -143,9 +147,20 @@ Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgen
         text: Impressum & Kontakt									# Link Text
       - link: https://mapbender.org/datenschutz
         text: Datenschutz
+      - link: https://doc.mapbender.org/
+        text: Dokumentation
+
+Die Sitelinks werden mittels "|" voneinander getrennt.
+
+Elemente deaktivieren
+*********************
+Die Deaktivierung von einzelnen Elementen kann über den nachfolgenden Parameter konfiguriert werden:
+
+.. code-block:: yaml
+
+    mapbender.disabled_elements:
 
 
-.. _custom-icons_de:
 
 Icons anpassen
 **************
@@ -185,17 +200,23 @@ Mit diesen Konfigurationsoptionen können Sie die Icons in Mapbender an Ihre Anf
           class: fa-solid fa-heart-pulse
 
 
+
 Logo und Login-Bild
 *******************
 In der `parameters.yaml` kann auf das eigene Logo und auf ein alternatives Bild für den Login verwiesen werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
 
+Mithilfe der Branding-Parameter kann ein eigener Projektname, eine eigene Versionsnummer, ein Logo, eine eigene Favoriten-Symbolgrafik und ein alternatives Bild für den Login verwendet werden. Diese Änderung wirkt sich global auf die gesamte Mapbender-Installation aus.
+
 .. code-block:: yaml
 
-    branding.logo: ./bundles/mapbendercore/image/logo_mb.png
-    branding.login_backdrop: ./bundles/mapbendercore/image/body.png
+    branding.project_name: Geoportal powered by Mapbender
+    branding.project_version: 1.0
+    branding.logo: ./bundles/mapbendercore/image/OSGeo_project.png
+    branding.favicon: ./application/public/brand-favicon.ico
+    branding.login_backdrop: ./bundles/mapbendercore/image/login-backdrop.jpg
 
+Die Dateien müssen unter ``application/public`` verfügbar sein.
 
-Die Dateien müssen unter application/public verfügbar sein.
 
 
 Projektname
@@ -234,7 +255,7 @@ Eine Konfiguration könnte wie folgt aussehen:
 Spracheinstellung
 *****************
 Mapbender verwendet automatisch die ausgewählte Sprache der Browsereinstellungen.
-Es ist jedoch möglich, eine bevorzugte Sprache (fallback_locale) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt.
+Es ist jedoch möglich, eine bevorzugte Sprache (`fallback_locale`) zu definieren, die Mapbender bei unvollständigen Übersetzungen anstelle der Browsersprache nutzt.
 
 Die Sprache kann nur für die gesamte Mapbender Installation angepasst werden (nicht für einzelne Anwendungen).
 
@@ -260,7 +281,7 @@ Eine Konfiguration könnte wie folgt aussehen:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
 
-Mapbender kann auch explizit eine Sprache verwenden. Dazu muss der Parameter mapbender.automatic_locale: false gesetzt werden. Anschließend nutzt Mapbender die unter locale definierte Spracheinstellung.
+Mapbender kann auch explizit eine Sprache verwenden. Dazu muss der Parameter ``mapbender.automatic_locale: false`` gesetzt werden. Anschließend nutzt Mapbender die unter locale definierte Spracheinstellung.
 
 .. code-block:: yaml
 
@@ -278,11 +299,9 @@ SSL Zertifikat
 Für Produktivumgebungen ist die Installation eines SSL-Zertifikats wichtig. Anschließend muss die Variable ``parameters.cookie_secure`` in Ihrer `parameters.yaml` auf ``true`` gesetzt werden. Dadurch wird sichergestellt, dass das Login-Cookie nur über sichere Verbindungen übertragen wird.
 
 
-.. _override_js_css_yaml_de:
-
 Überschreiben von JavaScript- und CSS/Sass-Ressourcen
 *****************************************************
-Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :ref:`zum Überschreiben im Bundle selbst<override_js_css_de>` in Ihrer ``paramaters.yaml``-Datei Folgendes hinzufügen:
+Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :ref:`zum Überschreiben im Bundle selbst<de/development/introduction:Überschreiben von JavaScript- und CSS/Sass-Ressourcen>` in Ihrer ``paramaters.yaml``-Datei Folgendes hinzufügen:
 
 .. code-block:: yaml
 
@@ -372,7 +391,7 @@ Nutzen Sie danach die abgebildete Maske, um eine Importdatei als Anwendung zu la
 Export/Import/Klonen von YAML Anwendungsdateien über die Konsole
 ----------------------------------------------------------------
 
-Bitte gehen Sie zu :ref:`app_command_export_import_clone_de`, um entsprechende Konsolenbefehle einzusehen. Nachfolgend finden Sie einige einführende Worte darüber, was mit Anwendungen über die Konsole möglich ist.
+Bitte gehen Sie zu :ref:`de/customization/commands:Anwendungs-Export, Import und Klonen`, um entsprechende Konsolenbefehle einzusehen. Nachfolgend finden Sie einige einführende Worte darüber, was mit Anwendungen über die Konsole möglich ist.
 
 **Export über die Konsole**
 

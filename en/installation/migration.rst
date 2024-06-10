@@ -54,30 +54,20 @@ To update from 3.2.x to 3.3.x should be quite easy.
     If you update from a version < 3.2, you have to follow the steps described at the `Migration to Mapbender 3.2 <#Migration to Mapbender 3.2>`_ section below.
 
 
-New features
-============
-
-Styling
--------
-
-Styling is now possible via variables that can be passed to your application. 
-
-* `Mapbender <https://github.com/mapbender/mapbender/blob/master/src/Mapbender/CoreBundle/Resources/public/sass/libs/_variables.scss>`_
-* Create your own scss file, see this `Demo Bundle SCSS Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Resources/public/demo_variables_blue.scss>`_.
-* Modify your template - add function getSassVariablesAssets and refer to your scss file see, see this `Demo Bundle Template Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Template/DemoFullscreen.php#L23>`_.
 
 
-Sketch
-------
-
-* Sketch now supports to draw a circle with a defined radius. You draw the circle first and then edit the circle and define a radius.
-* Sketch now allows to define colors to be offered to draw. You can also activate a color picker
 
 
-FeatureInfo
------------
 
-* FeatureInfo Highlight now allows to style the fill and stroke and opacity
+
+
+
+
+
+
+
+
+
 
 
 Migration to Mapbender 3.2
@@ -106,13 +96,13 @@ If it makes sense, update all applications to map_engine_code current.
 SearchRouter
 ============
 
-In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/application/config/applications/mapbender_demo_nrw.yaml>`_
+In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/master/app/config/applications/mapbender_demo_nrw.yml>`_.
 
 1. deprecated empty: use placeholder instead
 
 2. For text and choice you have to define the full class-path.
 
-You also find information at `Best Practices Page <https://github.com/mapbender/mapbender/wiki/Best-practices:-form-types#inversion-of-choices>`_
+You also find information at `Best Practices Page <https://github.com/mapbender/mapbender/wiki/Best-practices:-form-types#inversion-of-choices>`_.
 
 You can update the configuration with the following SQL.
 
@@ -139,8 +129,8 @@ You can update the configuration with the following SQL.
         Siegburg - this is the value not the key: Siegburg
 
 
-SimpleSearch
-============
+Migrating SimpleSearch
+======================
 
 SimpleSearch element was improved. You can now define the projection of the result that comes from the Solr Service. Mapbender will then transform the result to the projection of the map.
 
@@ -156,12 +146,12 @@ SimpleSearch Supports Nominatim, Photon from version 3.2.5 - see workshop demo a
                      query_ws_replace: +
 
 
-BaseSourceSwitcher
-==================
+Migrating BaseSourceSwitcher
+============================
 
-Please note that on start of an application, all WMS are activated where the root-Layer is activated.
+Please note that on start of an application, all WMS are activated where the root layer is activated.
 
-Before 3.2, it was possible to activate all Basesource and only the first WMS was visible on start.
+Before 3.2, it was possible to activate all BaseSources, where only the first WMS was visible on start.
 
 
 Template / CSS
@@ -173,8 +163,8 @@ CSS change. Plus, there will be a big redesign in backend and frontend in the up
 * Define your template as desktop-template
 
 
-Digitizer
-=========
+Migrating Digitizer
+===================
 
 Digitizer is available for Mapbender >= 3.2.2. The new Digitizer Version is 1.4. Some functionality is not updated to 1.4 already (e.g. cluster).
 
@@ -224,8 +214,8 @@ Make sure that your WMS provides a proper extent for all supported EPSG-codes (t
 Else it can happen that a layer is not requested for the given extent of your map.
 
 
-Sketch
-======
+Notice on the Sketch element
+============================
 
 Redlining was renamed to Sketch (>= 3.2.3).
 

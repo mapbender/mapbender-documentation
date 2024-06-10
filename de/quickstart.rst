@@ -63,8 +63,9 @@ Eine Mapbender Anwendung kann wie folgt aussehen:
   .. image:: ../figures/de/mapbender_basic_application.png
      :width: 100%
 
-Installation
-============
+
+Mapbender installieren
+======================
 
 Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installation und bietet einen schnellen Einstieg in die Mapbender-Oberfläche. Hinweise zur Installation von Mapbender finden Sie unter :ref:`installation_de`.
 
@@ -78,8 +79,6 @@ Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installatio
 
 Falls Sie Schwierigkeiten haben Mapbender zu starten, überprüfen Sie, ob der Apache Web Server und die PostgreSQL-Datenbank korrekt funktionieren.
 
-
-.. _environments_de:
 
 Starten von Mapbender als Produktivumgebung
 -------------------------------------------
@@ -225,8 +224,8 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 .. hint:: Mit einem * markierte Elemente benötigen zusätzliche Dependencies.
 
 
-Datenquellen (Sources) verwenden
-================================
+4. Datenquellen (Sources) verwenden
+===================================
 
 In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich unter :ref:`layerset_de`.
 
@@ -241,8 +240,6 @@ Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
   .. image:: ../figures/de/mapbender_sources.png
      :width: 100%
 
-
-.. _load_sources_de:
 
 Laden von Datenquellen
 ----------------------
