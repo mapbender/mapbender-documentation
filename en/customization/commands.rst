@@ -35,9 +35,18 @@ bin/console mapbender:application:export
 
 You can export an application as JSON- or YAML-file. In the command you have to add the Url title (slug) of the application and define the export file.
 
+For .json files (also available via browser):
+
 .. code-block:: yaml
 
    bin/console mapbender:application:export mapbender_user_db --format=json > export.json
+
+
+For .yaml files (only via command line):
+
+.. code-block:: yaml
+
+   bin/console mapbender:application:export mapbender_user_db --format=yaml > export.yaml
 
 
 bin/console mapbender:application:import
@@ -56,8 +65,7 @@ You can import an application from a JSON or YAML-file. Mapbender will automatic
 bin/console mapbender:application:clone
 ***************************************
 
-You can clone an existing application in the Application backend. This will create a new application with a *_imp* suffix as application name.
-In the example below, the name of the new application becomes `mapbender_user_yml_imp1`.
+In the application backend, you can also clone an existing application. This will generate a new application with a suffix added to the application name. For yaml applications, a *_db* suffix is appended, while for applications from the database, a *_imp* suffix is added.
 
 .. code-block:: bash
 

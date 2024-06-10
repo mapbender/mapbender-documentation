@@ -93,7 +93,7 @@ The productive environment enables caching and only shows generic error messages
 The environment can be set via the ``APP_ENV`` variable. Make sure to change this to `prod` when deploying your application for the public. The value can be changed in several ways:
 
 * by editing the ``APP_ENV`` variable in the `.env` file,
-* by adding a `.env.local` file and overriding the value there,
+* by overriding the value in an `.env.local` file,
 * by setting an environment variable in your Apache2 vHost configuration: ``SetEnv APP_ENV prod``,
 * by explicitly setting it when starting the local webserver:
 

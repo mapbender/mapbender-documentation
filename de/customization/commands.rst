@@ -33,18 +33,26 @@ Anwendungs-Export, Import und Klonen
 bin/console mapbender:application:export 
 ****************************************
 
-Eine Anwendung kann als JSON- oder YAML-Datei exportiert werden. Dabei muss der Anwendungs-Url-Titel (slug) angebeben werden und eine Exportdatei definiert werden.
+Eine Anwendung kann als JSON- oder YAML-Datei exportiert werden. Dabei muss der Anwendungs-URL-Titel (slug) angebeben und eine Exportdatei definiert werden.
+
+Für .json-Dateien (Export über den Browser möglich):
 
 .. code-block:: yaml
 
    bin/console mapbender:application:export mapbender_user_db --format=json > export.json
 
 
+Für .yaml-Dateien (Export nur über die Kommandozeile möglich):
+
+.. code-block:: yaml
+
+   bin/console mapbender:application:export mapbender_user_db --format=yaml > export.yaml
+
+
 bin/console mapbender:application:import
 ****************************************
 
 Eine Anwendung kann aus einer JSON- oder YAML-Datei importiert werden. Mapbender wählt automatisch einen neuen Namen, wenn der Name bereits vorliegt. 
-You can import an application from a JSON-file. Mapbender will automatically choose a new name if the name already excists.  
 
 .. code-block:: yaml
    
@@ -57,8 +65,7 @@ You can import an application from a JSON-file. Mapbender will automatically cho
 bin/console mapbender:application:clone
 ***************************************
 
-Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen, also kopieren. Dadurch wird eine neue Anwendung mit einem *_imp* Suffix im Anwendungsnamen erzeugt. 
-Im untenstehenden Beispiel heißt die neue Anwendung `mapbender_user_yml_imp1`.
+Sie können auch eine bestehende Anwendung im Anwendungs-Backend klonen. Dadurch wird eine neue Anwendung mit einem Suffix im Anwendungsnamen erzeugt. Bei yaml-Anwendungen wird ein *_db*-Suffix, bei Anwendungen aus der Datenbank ein *_imp*-Suffix angehängt. 
 
 .. code-block:: bash
 
@@ -83,7 +90,7 @@ Dabei sind die Angabe von Benutzername, Email und Passwort erforderlich. Der Ben
    
 **Aktualisierung eines Benutzers**
 
-Die folgendden Angaben zu einem Benutzer können aktualisiert werden:
+Die folgenden Angaben zu einem Benutzer können aktualisiert werden:
 
 * E-Mail
 * Passwort

@@ -65,7 +65,8 @@ This directory has to be published by the webserver. The ALIAS has to refer to t
 
 It controls: 
 
-* index.php - the FrontendController (PHP-Script, which can be called).
+* index.php - the FrontendController (PHP script which can be called).
+* index_dev.php - FrontendController for easy access to the development environment. By default, it can only be accessed from local IP addresses.
 * this directory contains the static resoures like css, js, favicon etc.
 
 
