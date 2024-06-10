@@ -13,7 +13,7 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 * Kopieren des bundle Assets in das öffentliche web-Verzeichnis
 * Erzeugen des "root" Benutzers
 * Initialisieren der Datenbank
-* Laden der Anwendungen der mapbender.yaml Definition in die Datenbank
+* Laden der Demo-Anwendungen in die Datenbank
 
 Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch einige wichtige Hinweise, bevor Sie fortfahren: 
 
@@ -31,7 +31,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfon
 Anpassen der Konfigurationsdatei
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``application/config/parameters.yaml`` gespeichert.
+Die Parameter der Datenbankverbindung sind in der Datei .env.local gespeichert. Weitere Konfigurationsparameter finden sich in der Datei ``application/config/parameters.yaml`` und anderen Dateien im config-Verzeichnis.
 
 Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
@@ -123,16 +123,49 @@ Die Konfigurationsdateien liegen unter ``application/config``.
 
 Mehr Informationen dazu finden Sie im Kapitel: :ref:`yaml_de`.
 
+Außerdem die Datei env.local und .env im Verzeichnis application.
+
 
 .. _app_cache_de:
 
 Produktions- und Entwicklungsumgebung und Caches
 ------------------------------------------------
 
-Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den normalen Betrieb und eine Entwicklungsumgebung, in dem die Anwendungen getestet werden können. Dieses Konzept orientiert sich an den `Configuration Environments <https://symfony.com/doc/current/configuration.html#configuration-environments>`_ im Symfony Framework.
+Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den
+normalen Betrieb und eine Entwicklungsumgebung, in dem die Anwendungen
+getestet werden können. Dieses Konzept orientiert sich an den
+`"Environments" im Symfony Framework
+<https://symfony.com/doc/current/book/configuration.html>`_.
 
-Die Entwicklungsumgebung zeigt vollständige Fehlermeldungen (einschließlich Stacktraces) im Browser und aktiviert die Symfony-Debug-Konsole und den Profiler. Außerdem wird das Caching deaktiviert.
-In der Produktionsumgebung wird das Caching aktiviert, zusätzlich werden nur allgemeine Fehlermeldungen angezeigt. Ausführlichere Meldungen werden hingegen in die Logdateien geschrieben.
+Die Produktionsumgebung wird mit der URL http://localhost/index.php
+aufgerufen, die Entwicklungsumgebung mit der URL
+http://localhost/index_dev.php. Der Aufruf über index_dev.php kann
+und sollte nur vom localhost erfolgen.
+Sie können die Datei index_dev.php anpassen und IP-Adressen hinzufügen, so dass auch von diesen Adressen der Entwicklungsmodus erreicbar ist.
+
+Es gibt Unterschiede im Verhalten von index.php und index_dev.php:
+
+* Der Cache-Mechanismus verhält sich in der Entwicklungsumgebung anders: Es
+  werden nicht alle Dateien gecacht, so dass vorgenommene Änderungen direkt
+  sichtbar sind. Dadurch ist der Aufruf einer Anwendung über index_dev.php
+  immer langsamer als im Produktivbetrieb.
+
+  Im Detail werden in der Entwicklungsumgebung von Mapbender u.a. die CSS,
+  JavaScript und Übersetzungsdateien nicht gecacht.
+
+  In der Produktionsumgebung werden diese aber in var/cache abgelegt.
+
+* In der Entwicklungsumgebung werden Fehlermeldungen und ihr Stacktrace direkt
+  an der Oberfläche angezeigt. In der Produktionsumgebung werden die
+  Fehlermeldungen in die Datei var/log/prod.log geschrieben.
+
+* Die Entwicklungsumgebung zeigt den Symfony Profiler an. Dort werden Dinge
+  protokolliert, die nur für die Entwickler, aber nicht für Außenstehende
+  sichtbar sein sollten.
+
+Das Verzeichnis var/cache enthält die einzelnen Cache-Dateien. Es werden
+Verzeichnisse für jede Umgebung (prod und dev) angelegt, das Verhalten des
+dev-Caches ist aber, wie angesprochen, anders.
 
 Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf `prod` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
 

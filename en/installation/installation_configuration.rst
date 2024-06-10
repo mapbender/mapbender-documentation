@@ -13,7 +13,7 @@ In the following, we will describe the configurational steps of Mapbender a bit 
 * Copying the bundles' assets to the public web directory
 * Creating the "root" user
 * Initializing the database
-* Loading the applications of the mapbender.yaml to your database
+* Loading the demo applications to your database
 
 All that can be done using the console utility provided by `Symfony <http://symfony.com/>`_, on which the Mapbender framework is built upon. There's some mayor caveats though you should understand before continuing:
 
@@ -31,7 +31,7 @@ All that can be done using the console utility provided by `Symfony <http://symf
 Adapting the configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Database connection parameters are stored together with some more configuration parameters in the file ``application/config/parameters.yaml``. 
+Database connection parameters are stored together in the file .env.local. Other configuration parameters are defined in the file ``application/config/parameters.yaml`` and other files in the config directory.
 
 More Information: :ref:`yaml`.
 
@@ -123,6 +123,8 @@ The configuration files are located under ``application/config``.
 
 Find more information in: :ref:`yaml`.
 
+Also have a look at the .env.local file at application.
+
 
 .. _app_cache:
 
@@ -131,8 +133,41 @@ Production and Development environment and Caching
 
 Mapbender provides two environments: a production environment for the general operation and a development environment in which the application can be tested. This concept follows the `Configuration Environments <https://symfony.com/doc/current/configuration.html#configuration-environments>`_ in the Symfony framework.
 
-The development environment shows full error messages including stack traces in the browser and enables the Symfony debug console and profiler. Also, caching is disabled.
-The productive environment enables caching and only shows generic error messages. More specific error messages are written into logfiles.
+The production environment is called with the URL
+http://localhost/index.php, the development environment with the
+URL http://localhost/index_dev.php. The call with index_dev.php is restricted
+and should only be available from localhost. 
+You can modify the index_dev.php file and add IP addresses to be able to access the development environment from other locations.
+
+There are differences in the behaviour of the production and development environment:
+
+* The cache mechanism of the development environment behaves differently: Not
+  all files are cached, thus code changes are directly
+  visible. Therefore, the usage of index_dev.php is always slower than the
+  production environment.
+
+  In detail, the development environment of Mapbender does not cache the
+  CSS, JavaScript and Translation files, among others.
+
+  The production environment caches all these files and puts them into the
+  var/cache folder.
+
+* The development environment gives out error messages and stack traces
+  to the user interface. The production environment logs them into the file
+  var/log/prod.log.
+
+* The development environment shows the Symfony Profiler. This tool logs
+  things that are important for developers but are not supposed to be visible for
+  common users.
+
+The directory var/cache contains the cache files. It contains directories
+for each environment (prod and dev). But the mechanism of the dev cache, as
+described before, behaves differently.
+
+If changes of the Mapbender interface or the code are made, the
+cache directory (var/cache) has to be cleared to see the changes in the
+application.
+
 
 The environment can be set via the ``APP_ENV`` variable. Make sure to change this to `prod` when deploying your application for the public. The value can be changed in several ways:
 
