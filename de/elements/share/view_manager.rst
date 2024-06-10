@@ -64,9 +64,10 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
 
 .. code-block:: yaml
 
-   publicEntries        # String oder leer (Falsche Werte deaktivieren öffentliche Ansichten komplett); andere erlaubte Werte sind ro (nur Lesezugriff), rw (Lese- und Schreibzugriff), rwd (Lese- und Schreibzugriff sowie Löscherlaubnis) (Standard: ro).
-   privateEntries       # Schaltet Privatnutzerzustände an mit vollem Zugriff auf Optionen "Speichern", "Wiederverwenden" sowie "Löschen" (Standard: true).
-   allowAnonymousSave   # Gibt Speicherrecht für öffentliche Ansichten auch an anonyme Nutzer (Standard: false).
-   showDate             # Zeigt Datum der Erzeugung bzw. Aktualisierung (Standard: true)
-
-
+  viewmanager:
+    title: View Manager                                # Titel des Elements.
+    class: Mapbender\CoreBundle\Element\ViewManager    # Klasse des Elements.
+    publicEntries: rw                                  # String oder leer (Falsche Werte deaktivieren öffentliche Ansichten komplett); andere erlaubte Werte sind ro (nur Lesezugriff), rw (Lese- und Schreibzugriff), rwd (Lese- und Schreibzugriff sowie Löscherlaubnis) (Standard: ro).
+    privateEntries: true                               # Schaltet Privatnutzerzustände an mit vollem Zugriff auf Optionen "Speichern", "Wiederverwenden" sowie "Löschen" (Standard: true).
+    allowAnonymousSave: true                           # Gibt Speicherrecht für öffentliche Ansichten auch an anonyme Nutzer (Standard: false).
+    showDate: true                                     # Zeigt Datum der Erzeugung bzw. Aktualisierung (Standard: true)
