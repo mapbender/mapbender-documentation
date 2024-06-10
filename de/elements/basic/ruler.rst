@@ -3,8 +3,8 @@
 Linien-/Flächenmessung (Line/Area Ruler)
 ****************************************
 
-Mit dem Lineal wird eine Geometrie gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Für das Element wird ein :ref:`button_de` verwendet.
-Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst. Für die Nutzung beider Geometrietypen in einer Anwendung werden zwei Buttons benötigt, die in einer gemeinsamen Gruppe sind.
+Mit dem Lineal wird eine Geometrie gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Das Element kann in der Sidepane oder mit einem :ref:`button_de` verwendet werden.
+Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst oder der Benutzer die Auswahl trifft.
 
 .. image:: ../../../figures/de/ruler.png
      :scale: 80
