@@ -79,7 +79,6 @@ Malinglists:
 Libraries and frameworks:
 
 * `Symfony framework <https://www.symfony.com/>`_
-* `PHPUnit documentation <https://phpunit.de/>`_
 * `Composer documentation <https://getcomposer.org/doc/>`_
 * `General GitHub documentation <https://help.github.com/>`_
 * `GitHub pull request documentation <https://help.github.com/send-pull-requests/>`_

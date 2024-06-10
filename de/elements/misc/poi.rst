@@ -22,8 +22,8 @@ Konfiguration
 * **GPS:** Erlaubt eine GPS Positionierung.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

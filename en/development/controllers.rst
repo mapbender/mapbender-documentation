@@ -88,9 +88,11 @@ Elements of an application can provide Ajax endpoints for their client side widg
 
 **Note:** This controller calls the **httpAction** method if the element class and passes the $action parameter and returns the response given by that function. So for the real magic for element Ajax behaviour take a look at the httpAction method of the elements.
 
+
 The Backend
 ~~~~~~~~~~~
-The backend is handled by the ManagerBundle, which provides (will provide) a consistent backend for managing all aspects of a Mapbender application: applications, layers, elements, users, settings.
+The :ref:`backend` is handled by the ManagerBundle, which provides (will provide) a consistent backend for managing all aspects of a Mapbender application: applications, layers, elements, users, settings.
+
 
 For each section an own controller class exists within this bundle:
 

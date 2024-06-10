@@ -19,8 +19,8 @@ Konfiguration
 * **Units:** Die wählbaren Einheiten der Maßstabsleiste:'kilometer' oder 'miles' (Standard: kilometer)
 * **Position:** Ausrichtung der Maßstabsleiste (Standard: Unten rechts).
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

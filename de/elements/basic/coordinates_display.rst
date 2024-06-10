@@ -3,7 +3,7 @@
 Koordinatenanzeige (Coordinates Display)
 ****************************************
 
-Das Koordinatenanzeige-Element zeigt die Kartenkoordinaten der aktuellen Mausposition an. Die Koordinaten sind abhängig vom eingestellten räumlichen Referenzsystem, welches im :ref:`srs_selector_de` geändert werden kann.
+Die Koordinatenanzeige zeigt die Mausposition in den Kartenkoordinaten an. Die Koordinaten sind abhängig vom eingestellten räumlichen Referenzsystem, welches im :ref:`srs_selector_de` geändert werden kann.
 
 So sieht die Koordinatenanzeige für unterschiedliche Koordinatensysteme aus:
 
@@ -12,18 +12,15 @@ ETRS89 / UTM zone 32N (EPSG:25832):
 .. image:: ../../../figures/de/coordinates_display_etrs89_zone32.png
      :scale: 80
 
-
 DHDN / 3-degree Gauss-Kruger zone 2 (EPSG:31466):
 
 .. image:: ../../../figures/de/coordinates_display_gauss_krueger_zone2.png
      :scale: 80
 
-
 WGS 84 (EPSG:4326):
 
 .. image:: ../../../figures/de/coordinates_display_wgs84.png
      :scale: 80
-
 
 WGS 84 / Pseudo-Mercator (EPSG:3857):
 
@@ -31,12 +28,11 @@ WGS 84 / Pseudo-Mercator (EPSG:3857):
      :scale: 80
 
 
-
 Konfiguration
 =============
 
 .. image:: ../../../figures/de/coordinates_display_configuration.png
-     :align: center
+     :scale: 75
 
 * **Beschriftung anzeigen (Show label):** Schaltet die Beschriftung an/aus. Die Beschriftung richtet sich nach dem Title.
 * **Title:** Titel des Elements. Dieser wird links neben den Koordinaten angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
@@ -46,8 +42,8 @@ Konfiguration
 * **Separator:** Separator nach X- und vor Y-Koordinate (Standard: ' y= ').
 * **Position:** Positionierung (nur bei Nutzung im Kartenbereich)
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

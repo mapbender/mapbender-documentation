@@ -3,7 +3,7 @@
 Suchen (Search Router)
 **********************
 
-Dieses Element erzeugt ein Suchformular mit Trefferausgabe. Das Formular und die Trefferausgabe sind dabei konfigurierbar. Zur Zeit wird eine SQL Suche unterstützt.
+Dieses Element erzeugt ein Suchformular mit Trefferausgabe, über das Objekte innerhalb der Karte lokalisiert werden können. Sowohl eine Verbindung zur Datenbank als auch das Formular und die Trefferausgabe sind über das :ref:`backend_de` konfigurierbar. Derzeit werden PostgreSQL-Tabellen als Grundlage für Suchen unterstützt.
 
 .. image:: ../../../figures/de/search_router_de.png
      :scale: 80
@@ -96,16 +96,16 @@ Im Bereich **form** können Textfelder und Auswahlboxen für das Suchformular de
 Die jeweilige Tabellenspalte wird angegeben und mit Definitionen für type, options und compare versehen.
 
 
-Type
-----
+Typ
+---
 
-Das Formular unterstützt zwei Typen - Typ text für Textfelder und Typ choice für Auswahlfelder. 
+Das Formular unterstützt zwei Typen - *text* für Textfelder und *choice* für Auswahlfelder. 
 
 Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguration erstellt werden. Die Konfiguration beginnt mit dem Spaltennamen (in den Beispielen sind es die Spalten name und usertype).
 
-* label - Sie können den Parameter label für die Spaltenbeschriftung angeben. Fehlt der Parameter wird der Tabellenspalten-Name mit führendem Großbuchstaben verwendet.
+* **label** - Sie können den Parameter label für die Spaltenbeschriftung angeben. Fehlt der Parameter wird der Tabellenspalten-Name mit führendem Großbuchstaben verwendet.
 
-* required - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard: false). Mit required: true wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
+* **required** - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard: false). Mit required: true wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
 
 Sie können außerdem den Vergleichsoperator definieren. Siehe 'comparison mode'.
 
@@ -115,16 +115,16 @@ Typ text
 
 Über den Typ **text** können Textfelder in das Suchformular eingefügt werden.
 
-Der Typ text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten müssen Sie zusätzliche additional attr-Parameter hinzufügen.
+Text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten, müssen Sie zusätzliche additional attr-Parameter hinzufügen.
 
 Unterstützte autocomplete-Paramter:
 
-* data-autocomplete: on - Parameter zum Aktivieren der Autovervollständigung
-* data-autocomplete-distinct: on - Gibt doppelte Ergebnisse der Autovervollständigung nur einmal aus
-* data-autocomplete-using: column1, column2 - Definiert weitere Spalte/n des Suchformulars, die bei der Autovervollständigung berücksichtigt werden sollen.
+* **data-autocomplete**: on - Parameter zum Aktivieren der Autovervollständigung
+* **data-autocomplete-distinct**: on - Gibt doppelte Ergebnisse der Autovervollständigung nur einmal aus
+* **data-autocomplete-using**: column1, column2 - Definiert weitere Spalte/n des Suchformulars, die bei der Autovervollständigung berücksichtigt werden sollen.
 
 
-* Typ text; Beispiel mit Autocomplete und Pflichtfeld:
+* **type text** Beispiel mit Autocomplete und Pflichtfeld:
 
 .. image:: ../../../figures/de/search_router_text_de.png
      :scale: 80
@@ -145,21 +145,21 @@ Unterstützte autocomplete-Paramter:
             compare: exact                                          
 
 
-Type choice
-~~~~~~~~~~~
+Typ choice
+~~~~~~~~~~
 
-Der Typ choice ermöglicht die Definition von Auswahlboxen in dem Suchformular.
+Der Typ **choice** ermöglicht die Definition von Auswahlboxen in dem Suchformular.
 
-* placeholder - Es kann ein Platzhaltertext definiert werden. Dieser erscheint wenn noch keine Auswahl erfolgte.
+* **placeholder** - Es kann ein Platzhaltertext definiert werden. Dieser erscheint wenn noch keine Auswahl erfolgte.
 
 Die Auswahlmöglichkeiten werden im Bereich choices definiert. Dabei werden ein Wert (value) und ein Schlüssel (key) angegeben.
 
-* key - wird bei der Suchanfrage verwendet 
-* value - wird in der Auswahlbox angezeigt 
+* **key** - wird bei der Suchanfrage verwendet 
+* **value** - wird in der Auswahlbox angezeigt 
 
 .. note:: **Hinweis:** Ab Mapbender 3.2 sollte die Angabe in der Reihenfolge value: key erfolgen, die Typdefinition lautet type: Symfony\Component\Form\Extension\Core\Type\ChoiceType.
 
-* Typ choice; Beispiel für ein Feld mit Auswahlmöglichkeiten:
+* **type choice** Beispiel für ein Feld mit Auswahlmöglichkeiten:
 
 .. image:: ../../../figures/de/search_router_choice_de.png
      :scale: 80
@@ -223,6 +223,9 @@ Im Bereich **results** erfolgt die Definition zum Aufbau der Trefferliste und da
 * **view**: immer Angabe **table**. Derzeit keine weiteren Optionen.
 * **count**: Zeigt die Anzahl der Ergebnisse an (Standard: true).
 * **exportcsv**: Erzeugt einen Button, der den Download der Trefferliste als CSV-Datei ermöglicht (Standard: false).
+* **sortBy**:  optional. Definition, ob eine Sortierung nach einem Attribut erfolgen soll. Angabe via attributname (Standard: keine Sortierung).
+* **sortOrder**: optional. Definition, ob die Sortierung aufsteigend (asc) oder absteigend (desc) erfolgen soll (Standard: asc)
+* **zoomToResultExtent**: Definition, ob direkt auf den Bereich der Ergebnisse gezoomt werden soll (Standard: false).
 * **headers**: Definition der Ausgabespalten  und Spaltenbeschriftung.
 * **callback**: Definition der Aktion beim Klick auf einzelne Treffer.
 * **event**: immer Angabe **click**. Derzeit keine weiteren Optionen.
@@ -258,6 +261,15 @@ Die Konfiguration beinhaltet drei Stilkonfigurationen:
                 fillColor: '#f0f0f0'    # Füllfarbe                
                 fillOpacity: 0          # Opazität der Füllung, 0 - voll transparent
                 pointRadius: 6          # Größe des Punktsymbols
+                label: ${name} - ${gid} # Attribut/e für die Beschriftung oder fester Text
+                fontColor: "#ff0000"    # Beschriftungsfarbe
+                fontSize: 30px          # Schriftgröße
+                fontFamily: 'Arial, Courier New, monospace' # Schriftart
+                fontWeight: bold
+                labelOutlineColor: '#ffff00' # Schriftumrandungsfarbe
+                labelOutlineWidth: 1    # Breite der Umrandung
+                labelXOffset: -18       # Versatz X-Achse
+                labelYOffset: -18       # Versatz Y-Achse
             select:
                 strokeColor: '#0000ff'
                 strokeOpacity: 1
@@ -270,14 +282,9 @@ Die Konfiguration beinhaltet drei Stilkonfigurationen:
                fillColor: '#0000ff'
                fillOpacity: 1
 
-Wird Opacity auf 0 gesetzt (fillOpacity: 0), so wird die Fläche nicht gefüllt, sondern transparent dargestellt. In der default-Definition wird lediglich eine grüne Umrandung
- dargestellt (strokeColor: '#00ff00'). 
 
-Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt uns sind mit leichter Opazität versehen. 
-Sie verfügen über eine blaue Umrandung. 
-
-Die temporäre Darstellung beim Mouse-Hover über ein Ergebnis erfolgt in blau. 
-
+Wird Opacity auf 0 gesetzt (fillOpacity: 0), so wird die Fläche nicht gefüllt, sondern transparent dargestellt. In der default-Definition wird lediglich eine grüne Umrandung dargestellt (strokeColor: '#00ff00'). 
+Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt und sind mit leichter Opazität versehen. Sie verfügen über eine blaue Umrandung. Die temporäre Darstellung beim Mouse-Hover über ein Ergebnis erfolgt in blau. 
 
 .. image:: ../../../figures/de/search_router_example_colour_purplegreen.png
      :scale: 80
@@ -285,7 +292,6 @@ Die temporäre Darstellung beim Mouse-Hover über ein Ergebnis erfolgt in blau.
 Die styleMap-Angaben überschreiben Standardangaben. Daher müssen Sie lediglich die Angaben setzen, die Sie überschreiben möchten. Wenn Sie die Angaben weglassen wird der default-Stil verwendet.
 
 Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
-
 
 
 Konfigurationsbeispiele
@@ -384,9 +390,7 @@ Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigu
 .. image:: ../../../figures/de/search_router_example_search_description.png
      :scale: 80
 
-Dargestellt ist der Ausschnitt der yaml-Definiton, der das Formular konfiguriert. Tabellenspalten orga, town und usertype werden im Formular verwendet und sind jeweils als die Felder Mapbender User, Stadt und Nutzertyp eingebunden. Mapbender User und Stadt sind jeweils vom type Text. Nutzertyp hingegen gibt Auswahlmöglichkeiten in Form einer Dropdown-Liste vor. 
-
-Der Text, der angezeigt werden soll, wenn noch nichts ausgewählt wurde, ist hier "Bitte auswählen…" (siehe Nr. **1** – placeholder: ‚Bitte auswählen...‘). Der Titel über den Feldern wird mit label festgelegt (siehe Nr. **2**). Das Attribut data-autocomplete: ‚on‘ bewirkt, dass Vorschläge aus der Datenbank zu dem eingegebenen Begriff vorgegeben und als Dropdown angezeigt werden (siehe Nr. **3**). Da der Vergleichsmodus ilike (compare: ilike) konfiguriert wurde, muss der Begriff nicht exakt eingegeben werden. Die Suche findet ebenfalls Ergebnisse die ähnlich zu dem eingegebenen Begriff sind (siehe Nr. **4** – Wheregr (das g wurde klein geschrieben, trotzdem werden die Ergebnisse WhereGroup mit großem G gefunden)). Bei dem Feldtyp choice werden Auswahlmöglichkeiten vorgegeben. Diese Auswahlmöglichkeiten werden unter choices angegeben (siehe Nr. **5**). In der Tabelle sind die Auswahlmöglichkeiten als Zahlen hinterlegt (1, 2, 3, 4). In diesem Beispiel wurde jeder Zahl ein Text zugeordnet, der in der Dropdown-Liste angezeigt werden soll.
+Dargestellt ist der Ausschnitt der yaml-Definiton, der das Formular konfiguriert. Tabellenspalten *orga*, *town* und *usertype* werden im Formular verwendet und sind jeweils als die Felder *Mapbender User*, *Stadt* und *Nutzertyp* eingebunden. *Mapbender User* und *Stadt* sind jeweils vom Typ Text. *Nutzertyp* gibt hingegen Auswahlmöglichkeiten in Form einer Dropdown-Liste vor. 
 
 Eine vollständig ausgefüllte Suche nach dem Mapbender User WhereGroup, in der Stadt Bonn, des Nutzertyps Company und deren Ergebnis sieht wie folgt aus:
 
@@ -398,7 +402,7 @@ Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigu
 .. image:: ../../../figures/de/search_router_example_results_description.png
      :scale: 80
 
-Auf dieser Abbildung ist lediglich die Konfiguration der Ergebnisse angezeigt. Die Anzahl der Ergebnisse wird aufgrund von count: true (siehe Nr. **1**) angezeigt. Anschließend werden die Spaltentitel unter headers definiert (siehe Nr. **2**). Hier wird zuerst die Bezeichnung der Spalte in der Tabelle angegeben, sodass definiert wird auf welche Tabellenspalte sich die Ergebnisanzeige bezieht. Nach dem Doppelpunkt wird dann angegeben, welcher Titel in der Anwendung angezeigt werden soll. In dem Block styleMap wird das Styling der Punkte vorgenommen. Der Block default (siehe Nr. **3**) bezieht sieht dabei auf alle Punkte und der Block select (siehe Nr. **4**) nur auf das ausgewählte Objekt.
+Auf dieser Abbildung ist lediglich die Konfiguration der Ergebnisse angezeigt. Die Anzahl der Ergebnisse wird aufgrund von `count: true` angezeigt. Anschließend werden die Spaltentitel unter *headers* definiert. Hier wird zuerst die Bezeichnung der Spalte in der Tabelle angegeben, sodass definiert wird, auf welche Tabellenspalte sich die Ergebnisanzeige bezieht. Nach dem Doppelpunkt wird angegeben, welcher Titel in der Anwendung angezeigt werden soll. Im Block *styleMap* wird das Styling der Punkte vorgenommen. Der Block *default* bezieht sieht dabei auf alle Punkte und der Block *select* nur auf das ausgewählte Objekt.
 
 Da keines dieser Felder ein Pflichtfeld ist, kann die Suchabfrage auch nur mithilfe eines Feldes erfolgen.
 

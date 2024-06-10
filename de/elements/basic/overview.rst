@@ -47,8 +47,8 @@ Ein alternatives Konfigurationsbeispiel kann die Anpassung der folgenden Paramet
      :width: 100%
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

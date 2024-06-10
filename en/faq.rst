@@ -33,7 +33,7 @@ Services and their usage in applications
 
 Q: I would like to know in which applications a specific WMS service is registered. Is there a way to achive that?
 
-A: For users with permission, this information is provided in the Backend:
+A: For users with permission, this information is provided in the :ref:`backend`:
 
 * Go to ``Sources`` and find your source,
 * Select it with a click on the button ``Show Metadata``, then go to the tab ``Applications``,

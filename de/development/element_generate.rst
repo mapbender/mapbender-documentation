@@ -30,7 +30,7 @@ Die Arbeitsschritte auf dem Weg zum eigenen Element.
 * Erzeugen Sie ein eigenes Bundle
 * Erzeugen Sie ein Element mit Hilfe von bin/console
 * Passen Sie das Element an Ihre Bedürfnisse an
-* Fügen Sie das Element in die Funktion *getElements()* ein, um es über das Backend verfügbar zu machen
+* Fügen Sie das Element in die Funktion *getElements()* ein, um es über das :ref:`backend_de` verfügbar zu machen
 
 
 Anlegen eines eigenen Bundles mit bin/console generate:bundle
@@ -101,7 +101,7 @@ Registrierung des neuen Elements
 
 Ein Element kann registriert werden, indem es in der Funktion *getElements()* in der Datei src/Workshop/DemoBundle/WorkshopDemoBundle.php aufgeführt wird. Nach der Erstellung liegt diese Funktion vorerst nicht vor. Fügen Sie diese ein. Außerdem muss die Referenz zum MapbernderCoreBundle eingetragen werden (use Mapbender\\CoreBundle...). Sie müssen weiterhin angeben, dass die Klasse das MapbenderBundle erweitert.
 
-Durch diesen Eintrag kann das Element im Backend bei der Anwendungskonfiguration ausgewählt werden.
+Durch diesen Eintrag kann das Element im :ref:`backend_de` bei der Anwendungskonfiguration ausgewählt werden.
 
 .. code-block:: html+php
 

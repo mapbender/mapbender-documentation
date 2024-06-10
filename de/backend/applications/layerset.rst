@@ -134,7 +134,6 @@ Um eine freie Instanz in eine Anwendung einzubinden, kann diese als Datenquelle 
 
 Zu einer Übersicht aller freien Instanzen kann über das Menü zu **Datenquellen -> Freie Instanzen** navigiert werden.
 
-.. image:: ../../../figures/de/layerset/shared_instances_overview.png
 
 
 Layerkonfiguration

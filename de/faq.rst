@@ -33,7 +33,7 @@ Dienste in Anwendungen
 
 F: In welchen meiner Anwendungen ist ein bestimmter WMS-Dienst eingebaut?
 
-A: Diese Information ist für angemeldete Nutzer mit entsprechenden Berechtigungen über das Backend im Bereich ``Datenquellen`` verfügbar:
+A: Diese Information ist für angemeldete Nutzer mit entsprechenden Berechtigungen über das :ref:`backend_de` im Bereich :ref:`sources_de` verfügbar:
 
 * Gehen Sie im oberen Menü zu Datenquellen,
 * Wählen Sie per Klick auf den Button ``Metadaten anzeigen`` eine Datenquelle aus und klicken anschließend auf den Reiter ``Anwendungen``,

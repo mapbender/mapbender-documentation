@@ -19,8 +19,8 @@ Configuration
 * **Tooltip:** Text to use as a tooltip. Appears when hovering over the icon. 
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

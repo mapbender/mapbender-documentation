@@ -25,8 +25,8 @@ Configuration
 You need a :ref:`button` to show this element.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

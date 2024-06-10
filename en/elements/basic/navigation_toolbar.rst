@@ -3,7 +3,7 @@
 Navigation Toolbar
 ******************
 
-This element simplifies navigation within the map via rotation and zoom. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The navigation toolbar itself is draggable.
+This element is a tool to simplify navigation within the map via rotation, zoom and buttons. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The navigation toolbar itself can be configured to be draggable.
 
 .. image:: ../../../figures/navigation_toolbar.png
      :scale: 80
@@ -19,6 +19,8 @@ Configuration
 * **Components:** Components of the navigation toolbal (all selected by default). Options: Rotation, zoom to max extent, Back to start, Zoom in/out, Zoom slider
 * **Back to start:** Resets layer settings (default: false).
 * **Position:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar). Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom
+
+.. note:: The element must be integrated into the Map area.
 
 
 Components of the Navigation Toolbar element:
@@ -37,11 +39,11 @@ In the application these components look like this:
 .. image:: ../../../figures/navigationtoolbar_features.png
      :scale: 80
 
-If you set a tick at **Draggable**, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
+If you set the checkmark at **Draggable**, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
 
 **Rotation** enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
 
-Users can zoom to their smallest scale by **Zoom to max extent**. This *Max Extent* can be set individually in the :ref:`map element <map>`. The element must be integrated into the Map area.
+Users can zoom to the smallest map scale by **Zoom to max extent**. This can be set individually in the :ref:`map element <map>`.
 
 .. image:: ../../../figures/navigationtoolbar_zoom_to_max.png
      :scale: 80
@@ -55,8 +57,8 @@ Finally, **Zoom in/out** allows to zoom in (``+`` -button) and out (``–`` -but
 The component **Zoom slider** already includes *Zoom in/out*. Additionally, the user can select different scales from a bar.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

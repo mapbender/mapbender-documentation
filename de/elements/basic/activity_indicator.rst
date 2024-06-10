@@ -25,8 +25,8 @@ Konfiguration
 * **Tile activiy class:** CSS Klasse, die Kartenaufrufe anzeigt
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

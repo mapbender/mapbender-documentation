@@ -135,7 +135,7 @@ In der Produktionsumgebung wird das Caching aktiviert, zusätzlich werden nur al
 Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf `prod` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
 
 * durch Bearbeiten der ``APP_ENV``-Variable in der `.env`-Datei,
-* durch Hinzufügen einer `.env.local`-Datei und Überschreiben des Werts dort,
+* durch Überschreiben des Werts in einer `.env.local`-Datei,
 * durch Festlegen einer Umgebungsvariable in Ihrer Apache2-vHost-Konfiguration: ``SetEnv APP_ENV prod``,
 * durch explizites Festlegen beim Starten des lokalen Webservers:
 

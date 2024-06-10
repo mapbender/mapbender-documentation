@@ -11,12 +11,11 @@ The website code is generated using [Sphinx](http://sphinx-doc.org/), therefore 
 To build the website locally, you need to install Sphinx first. Install it in Debian-based distributions via
 
 ```bash
-sudo apt-get install sphinx-common python3-sphinx
-sudo apt-get install pip3
-sudo pip3 install sphinxcontrib-phpdomain
-sudo pip3 install sphinx-rtd-theme
-sudo pip install sphinx-notfound-page
-sudo pip install sphinx_copybutton
+sudo apt install sphinx-common python3-sphinx
+sudo apt install python3-sphinxcontrib.phpdomain
+sudo apt install python3-sphinx-rtd-theme
+sudo apt install python3-sphinx-notfound-page
+sudo apt install python3-sphinx-copybutton
 ```
 
 You can then build the documentation by running:
@@ -33,7 +32,7 @@ git clone git@github.com:mapbender/mapbender-documentation
 cd mapbender-documentation
 git checkout master
 
-sphinx-build . _build -A version=3.3
+sphinx-build . _build -A version=4.0
 
 ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
 

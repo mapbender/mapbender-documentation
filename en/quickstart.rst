@@ -90,7 +90,7 @@ The productive environment enables caching and only shows generic error messages
 The environment can be set via the ``APP_ENV`` variable. Make sure to change this to `prod` when deploying your application for the public. The value can be changed in several ways:
 
 * by editing the ``APP_ENV`` variable in the `.env` file,
-* by adding a `.env.local` file and overriding the value there,
+* by overriding the value in an `.env.local` file,
 * by setting an environment variable in your Apache2 vHost configuration: ``SetEnv APP_ENV prod``,
 * by explicitly setting it when starting the local webserver:
 
@@ -102,13 +102,13 @@ The environment can be set via the ``APP_ENV`` variable. Make sure to change thi
 Mapbender Backend
 -----------------
 
-#. After a successful Mapbender startup, the application overview page in the backend will appear. The applications are listed with a screenshot, title, URL title and description.
+#. After a successful Mapbender startup, the application overview page in the :ref:`backend` will appear. The applications are listed with a screenshot, title, URL title and description.
 
 #. You can open an application by click on the title, the screenshot or via the |mapbender-button-show| ``button``.
 
-#. A log-in is required to gain access into Mapbender's administration backend. In order to do so, click on **login** at the top-right of the login page. You can login with the user that was generated during installation. This could be ``root`` with the password ``root`` - this is the default user and password that you get after installation of Mapbender. Please change the root password if you want to run a productive environment. Please don't delete the user root. 
+#. A log-in is required to gain access into Mapbender's :ref:`backend`. In order to do so, click on **login** at the top-right of the login page. You can login with the user that was generated during installation. This could be ``root`` with the password ``root`` - this is the default user and password that you get after installation of Mapbender. Please change the root password if you want to run a productive environment. Please don't delete the user root. 
 
-After a successful login you will be directed to the ``Mapbender administration backend``.
+After a successful login you will be directed to the :ref:`backend`.
 
 
 Application overview
@@ -150,9 +150,11 @@ Furthermore, new applications can be created from scratch. The required steps ar
 
 #. A thumbnail can be uploaded as well. It will appear next to the application title on the application overview page. For this, select "*Select File"* below the thumbnail section.
 
-#. Set a tick at *"persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found in :ref:`share`.
+#. Set the checkmark at *"Persistent map state"*, to make certain map parameters and configurations persistent. Further information can be found in :ref:`share`.
 
-#. Click *"save"* to save and create your application. It is now possible to add elements (e.g. map, navigation bar, legend) and services to your applicaiton.
+#. Set the checkmark at *"Show Splashscreen"* to generate a loading screen on application startup that indicates the loading time.
+
+#. Click *"Save"* to save and create your application. It is now possible to add elements (e.g. map, navigation bar, legend) and services to your applicaiton.
 
   .. image:: ../figures/mapbender_create_application.png
      :width: 100%

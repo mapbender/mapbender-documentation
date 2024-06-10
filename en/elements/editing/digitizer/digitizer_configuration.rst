@@ -1036,7 +1036,7 @@ Map-Refresh after save
 
 After saving an object, the refresh can be activated using the *refreshLayersAfterFeatureSave* option. This parameter is used to reload the defined layer instances in the map-element. This makes changes regarded to WMS services directly visible in the map. This event is thrown only if the "Save" button of the attribute dialog is pressed.
 
-If the YAML application is used in the /application folder, it can be specified by a unique name or by the instance-ID. If the applications are edited using the graphical user interface in the backend with the digitizer-element, it can be specified by the instance-ID.
+If the YAML application is used in the /application folder, it can be specified by a unique name or by the instance-ID. If the applications are edited using the graphical user interface in the :ref:`backend` with the digitizer-element, it can be specified by the instance-ID.
 
 .. image:: ../../../../figures/digitizer/layerinstance_id.png
      :scale: 80

@@ -1,9 +1,9 @@
 .. _coordinate_utility_de:
 
-Koordinaten Utility (Coordinate Utility)
-****************************************
+Koordinaten Utility
+*******************
 
-Über das Element *Koordinaten Utility* lassen sich zwei Dinge realisieren:
+Koordinaten Utility erlaubt zwei verschiedene Koordinatenoperationen:
 
 1. Es kann zu einem Punkt mithilfe des zugehörigen eingegebenen Koordinatenpunkts gesprungen werden.
 2. Es kann der Klickpunkt aus der Karte anzeigt werden.
@@ -13,9 +13,7 @@ Beide Funktionen werden über eine Oberfläche realisiert.
 .. image:: ../../../figures/de/coordinate_utility.png
      :scale: 80
 
-In beiden Fällen ist eine dynamische Koordinatentransformation möglich, so dass auch Punkte anderer Koordinatensysteme eingegeben werden können.
-Zusätzlich besteht bei dem Element die Möglichkeit, die Koordinaten über einen Button in die Zwischenablage zu kopieren.
-Das Element wird im Backend entweder als Dialog zum Aufruf über einen Button oder als Element in der Seitenleiste eingebunden.
+In beiden Fällen ist zusätzlich eine dynamische Koordinatentransformation möglich, so dass auch Punkte anderer Koordinatensysteme eingegeben werden können.
 
 
 Konfiguration
@@ -27,7 +25,8 @@ Konfiguration
 * **Title:** Titel des Elements
 * **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren können soll. Das Feld kann leer gelassen werden.
 * **Zoom-Level** Zoom-Level der Karte (Standard: 6)
-* **Koordinatensysteme von der Karte hinzufügen:** Ist die Checkbox aktiviert, werden die in der :ref:`map_de` angegebenen Koordinatensysteme automatisch von diesem Element und dem :ref:`srs_selector_de` unterstützt.
+* **Koordinatensysteme von der Karte hinzufügen:** Ist die Checkbox aktiviert, so werden die von der :ref:`map_de` angegebenen Koordinatensysteme automatisch vom Tool unterstützt. Diese werden in der Karte angegeben und auch im  :ref:`srs_selector_de` unterstützt.
+
 
 Sofern das Koordinaten Utility im Kartenbereich eingebunden werden soll, muss ein damit verknüpfter :ref:`button_de` entsprechend platziert werden. 
 
@@ -37,15 +36,15 @@ Benutzung
 .. image:: ../../../figures/de/coordinate_utility.png
      :scale: 80
 
-**Koordinate abgreifen:**
+**Koordinate abgreifen**
 
 * Ist das Koordinaten Utility als Dialog geöffnet, reagiert die Karte auf einen Klick. Klicken Sie in die Karte und die Klickkoordinate wird in dem Dialog angezeigt.
 * Ändern Sie das Koordinatensystem im Dialog mithilfe der Drop-Down-Liste. Die Klick-Koordinate wird in diesem angegebenen Koordinatensystem angezeigt.
 * Die untere Zeile zeigt daher die Klickkoordinate noch in dem Original-Koordinatensystem der Karte.
 * Die Schaltfläche hinter jeder Eingabezeile erlauben es, den Koordinatenwert direkt in die Zwischenablage zu kopieren.
-* Wenn das Koordinaten Utility über die Sidepane eingebunden ist, kann über den Button `Koordinatensuche` zwischen einem Navigations- und einem Kooordinaten-Cursor gewechselt werden.
+* Wenn das Koordinaten Utility über die Sidepane eingebunden ist, kann über den Button **Koordinatensuche** zwischen einem Navigations- und einem Kooordinaten-Cursor gewechselt werden.
 
-**Zur Koordinate zoomen:**
+**Zur Koordinate zoomen**
 
 * In dem Textfeld können eigene Koordinaten angegeben werden. Diese müssen in dem Koordinatensystem eingegeben werden, welches in der Drop-Down-Liste darüber festgelegt wurde.
 * Über einen Klick auf die Schaltfläche **Karte zentrieren** wird zu dem Punkt gezoomt und dieser mit einem orangenen Symbol angezeigt.

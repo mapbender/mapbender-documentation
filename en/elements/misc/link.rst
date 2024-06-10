@@ -59,8 +59,8 @@ In the field *Tooltip*, you can define a text that will be displaced as tooltip 
      :scale: 80
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

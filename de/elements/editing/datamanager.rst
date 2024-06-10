@@ -3,26 +3,22 @@
 Data Manager
 ************
 
-Der Data Manager ähnelt in seiner Funktionalität dem :ref:`digitizer_de`. Der Data Manager speichert allerdings nur Sachdaten und keine Geodaten.
+Der Data Manager ähnelt in seiner Funktionalität dem :ref:`digitizer_de`.
+Allerdings speichert das Element nur Sachdaten und keine Geodaten.
+Es kann zur Pflege von Referenztabellen verwendet werden, beispielsweise einer Tabelle mit Kontaktinformationen.
 
-Der Data Manager kann zur Pflege von Referenztabllen verwendet werden, beispielsweise einer Tabelle mit Kontaktinformationen.
-
-
-Setup
------
-
+Konfiguration
+-------------
 Der Data Manager benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
 Mehr zu diesem Thema finden Sie unter :ref:`Konfiguration der Datenbank <yaml_de>`.
 
 Konfigurationsbeispiel
 ----------------------
-
-Die Definition des Data Managers erfolgt im YAML-Syntax. 
-Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, den Formularaufbau.
-
+    
+Die Definition des Data Managers erfolgt in YAML-Syntax. 
+Hier definieren Sie die Datenbankverbindung, die editierbaren Felder und den Formularaufbau.
 
 .. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`de/quickstart:Starten von Mapbender als Produktivumgebung`.
-
 
 Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu speichern.
 
@@ -35,9 +31,9 @@ In dem dargestellten Konfigurationsbeispiel öffnet sich eine Eingabevorlage nac
      :scale: 80
 
 SQL for the contact table
---------------------------
+-------------------------
 
-The following SQL commands must be executed in your database to create the contact table for the example.
+Die nachfolgenden SQL-Befehle müssen in Ihrer Datenbankumgebung ausgeführt werden, um die Kontakttabelle aus dem Beispiel zu erstellen.
 
 .. code-block:: postgres
 
@@ -63,10 +59,11 @@ The following SQL commands must be executed in your database to create the conta
 Element-Konfiguration
 ---------------------
 
-Das Element kann danach in die Seitenleiste eingebettet werden.
+Das Element kann danach in die Sidepane eingebettet werden.
 
 .. image:: ../../../figures/de/data_manager_configuration.png
      :scale: 80
+
 
 YAML-Definition
 ---------------

@@ -47,7 +47,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 #. Configuration of the map to display the Layersets 
 #. Configuration of the Layertree itself
 
-Layers are included in the application via the **Layerset** tab in the backend.
+Layers are included in the application via the **Layerset** tab in the :ref:`backend`.
 
 The instances are the references to the individual WMS services. With the large ``+`` button, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
 For a detailed documentation on how the services can be integrated and registered correctly, please head over to the :ref:`layerset` and :ref:`sources` documentation..
@@ -146,8 +146,6 @@ The individual functions can be activated by clicking on the buttons. All active
 
            Context menu of the layer in the Layertree.          
 
-The function **Hide visibility by folders** allows to save the configuration of the opacity. When active, the opacity of the individual layer is not displayed and cannot be changed.
-
 The function **Hide info** allows you to disable the "i"-icon. If enabled, the "i"-icon next to a layer name indicates if the FeatureInfo function is active for that layer. The function is inactive if the "i"-icon is grayed out. If you activate the function with a click, the icon will turn dark gray and be framed. If activated, the requested information of the layer appears in a dialogue box. 
 
 The checkbox **Thematic layer** activates the thematic division of levels. By clicking on the folder icon of the Layertree to the left of the instance, the embedded layers can be displayed. All layers that have been previously activated in the Layerset now appear in the list.
@@ -199,7 +197,7 @@ The Layerset should now contain three Layersets. The **Overview** [1] for the ov
 
 **Configuration of the map to display the Layerset**
 
-Now, we configure the :ref:`Map element <map>` to display the Layersets in the map. To do this, we switch to the **Layouts** backend tab and edit the feature in the map area.
+Now, we configure the :ref:`Map element <map>` to display the Layersets in the map. To do this, we switch to the :ref:`layouts` tab and edit the feature in the map area.
 It is now important that you set an active checkbox in the Layerset "World" AND Layerset "Project NRW", so that they both appear in the application.
 
 If you have questions regarding further configuration of the map, you can view its configuration in the :ref:`Map element <map>`.
@@ -211,7 +209,7 @@ If you have questions regarding further configuration of the map, you can view i
 
            Configuration of Layersets for a thematic Layertree.
 
-**Configuration of the thematic Layertree itself**
+**Configuration of the thematic Layertree**
 
 The last step is the creation of the Layertree itself. In this example, we add the thematic Layertree to the sidepane.
 
@@ -229,7 +227,7 @@ Thus, to let the **themes** in the application appear as you want, there are sev
 :[1] View theme:
   If this option is set, the Layerset appears as an additional level. If this option is not set, the defined instances are displayed on the main level.
 :[2] Theme open or closed:
-  If this option is set (symbol of the open folder), the theme in the Layertree is automatically opened or closed.
+  If this option is set (symbol of the open folder), the theme in the Layertree is automatically opened or closed (Condition: "View theme" is also checked).
 
 If we keep the default settings in the theme "World" and activate the other options in the theme "Project NRW", the configuration of the element will look like this:
 
@@ -250,8 +248,8 @@ Now we have the Layersets integrated as thematic groups. By configuring the them
 The Layerset "World" is displayed as a theme, but it is closed and the two buttons are not available. In the Layerset "Project NRW" the theme is shown unfolded upon opening the application. The layers can be activated via a button.
 
 
-YAML-Definition:
-=================
+YAML-Definition
+===============
 
 This template can be used to insert the element into a YAML application.
 
