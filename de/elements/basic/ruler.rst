@@ -3,8 +3,8 @@
 Linien-/Flächenmessung (Line/Area Ruler)
 ****************************************
 
-Mit dem Lineal wird eine Geometrie gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Das Element kann in der Sidepane oder mit einem :ref:`button_de` verwendet werden.
-Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst oder der Benutzer die Auswahl trifft.
+Mit dem Messen-Werkzeug wird eine Geometrie gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Das Element kann in der Sidepane oder mit einem :ref:`button_de` verwendet werden.
+Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst oder beides und so der Benutzer die Auswahl im Client treffen kann.
 
 .. image:: ../../../figures/de/ruler.png
      :scale: 80
@@ -33,7 +33,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Applikation einz
 
 .. code-block:: yaml
 
-   title: mb.core.ruler.tag.line             # 'line', 'area' oder beliebigen Titel wählen
+   title: mb.core.ruler.tag.line             # 'line', 'area' oder 'vom Nutzer auswählbar'
    class: Mapbender\CoreBundle\Element\Ruler # Element-Klasse
    target: map                               # ID des Kartenelements, z.B. 'map'
    type: line                                # Wählen Sie Typ 'line' oder 'area'
