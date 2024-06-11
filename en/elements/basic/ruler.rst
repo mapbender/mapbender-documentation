@@ -3,8 +3,8 @@
 Line/Area Ruler
 ***************
 
-The ruler is used to draw a line or area and display its length or area in a dialog. You need a :ref:`button` to show this element.
-Each ruler element can only measure either lines or areas. To use both functions (measuring areas and lines) in an application, you need two buttons that are in the same pre-defined group.
+The ruler is used to draw a line or area and display its length or area in a dialog. The element can be used in the sidepane or with a :ref:`button`.
+Selecting a type determines whether the element measures lines or areas or whether both options are offered and the user can make the selection in the client.
 
 .. image:: ../../../figures/ruler.png
      :scale: 80
@@ -33,7 +33,7 @@ This template can be used to insert the element into a YAML application.
 
 .. code-block:: yaml
 
-   title: mb.core.ruler.tag.line             # Choose 'line', 'area' or another title
+   title: mb.core.ruler.tag.line             # Choose 'line', 'area' or 'selectable by the user'
    class: Mapbender\CoreBundle\Element\Ruler # Class of element
    target: map                               # ID of Map element to query, e.g. 'map'
    type: line                                # Choose type 'line' or 'area'
