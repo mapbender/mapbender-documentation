@@ -3,7 +3,8 @@
 FeatureInfo
 ***********
 
-This element provides feature info capabilities to Mapbender. It works with WMS.
+FeatureInfo offers the possibility of obtaining information about features with a mouse click on a layer. 
+The element works with supported WMS services. It can be integrated into the sidepane or within a :ref:`button`.
 
 .. image:: ../../../figures/feature_info.png
      :scale: 80
@@ -14,7 +15,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/feature_info_configuration.png
-     :align: center
+     :scale: 80
 
 
 * **Auto-open:** Enable or disable autoopening of the copyright window when starting the application (default: false).
@@ -35,7 +36,6 @@ Configuration
 * **Opacity (%) of the hover color** Sets the opacity of the hover color.
 * **Stroke width (pixels) of the hover color** Sets the stroke width (in pixels) of the hover color.
 
-A :ref:`button` is also needed for complete frontend integration.
 
 Layertree settings
 ------------------
