@@ -18,7 +18,7 @@ Konfigurationsbeispiel
 Die Definition des Data Managers erfolgt in YAML-Syntax. 
 Hier definieren Sie die Datenbankverbindung, die editierbaren Felder und den Formularaufbau.
 
-.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`environments_de`.
+.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`de/quickstart:Starten von Mapbender als Produktivumgebung`.
 
 Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu speichern.
 

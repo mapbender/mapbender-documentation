@@ -79,12 +79,12 @@ Diese Vorlage kann genutzt werden, um die Karte in einer YAML-Anwendung einzubin
 Kontrolle über URL-Parameter
 ============================
 
-.. _layer_activation_de:
 
 Ebenen aktivieren
 -----------------
 
 Mapbender ermöglicht über den URL-Parameter ``visiblelayers`` die Möglichkeit, Layer unabhängig von ihrer Backend-Konfiguration beim Start einer Anwendung zu aktivieren. Hierbei kann die Aktivierung entweder via `ID` oder `Name` erfolgen:
+
 
 * **ID**: <InstanceID>/<InstanceLayerID>
 * **Name**: <RootLayerName>/<LayerName>
@@ -116,9 +116,12 @@ Klicken Sie auf das Icon, damit ein Informationsfenster erscheint:
 Nutzen Sie für eine ID-Übergabe die *zweite* Wertkombination nach dem Schrägstrich für den ``visiblelayers``-Parameter in der URL.
 Trennen Sie die beiden Werte mit einem Schrägstrich (anstelle des Bindestrichs):
 
+
 Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79``
 
+
 Zwei oder mehr nicht-sichtbare Layer können kommasepariert übergeben werden. Fügen Sie dazu die jeweiligen Attributwerte nach demselben Schema ein:
+
 
 Zum Beispiel: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79,1/42``
 

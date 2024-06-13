@@ -79,12 +79,12 @@ This template can be used to include the map into a YAML application.
 Controlling URL parameters
 ==========================
 
-.. _layer_activation:
 
 Activating Layers
 -----------------
 
 Mapbender enables the option of activating layers when an application is started via ``visiblelayers``. Activation is possible either via `ID` or `Name`.
+
 
 * **ID**: <InstanceID>/<InstanceLayerID>
 * **Name**: <RootLayerName>/<LayerName>
@@ -116,11 +116,15 @@ Click on the icon to open a info window:
 For an Instance(Layer)ID transfer, use the *second* value combination after the slash for the ``visiblelayers`` parameter in the URL.
 Separate the two associated values with a slash (instead of a hyphen):
 
+
 For example: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79``
+
 
 Separate two or more non-visible layers by commas. To do this, insert the respective values according to the same scheme:
 
+
 For example: ``https://localhost/mapbender/application/myapp?visiblelayers=4/79,1/42``
+
 
 Combinations of names and ID values are also possible:
 

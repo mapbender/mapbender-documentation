@@ -72,8 +72,8 @@ Mapbender Controllers
 *********************
 A Mapbender installation uses a particular set of controller classes and functions. This chapter will give a short list of these, so you can inspect them more easily.
 
-Frontend
-~~~~~~~~
+The Frontend
+~~~~~~~~~~~~
 The frontend is basically "the application" (or GUI as it has been called in Mapbender 2 - and even there this term was incorrect). Each application is routed to the ApplicationController class of the CoreBundle:
 
 .. code-block:: yaml
@@ -88,9 +88,11 @@ Elements of an application can provide Ajax endpoints for their client side widg
 
 **Note:** This controller calls the **httpAction** method if the element class and passes the $action parameter and returns the response given by that function. So for the real magic for element Ajax behaviour take a look at the httpAction method of the elements.
 
-Backend
-~~~~~~~
+
+The Backend
+~~~~~~~~~~~
 The :ref:`backend` is handled by the ManagerBundle, which provides (will provide) a consistent backend for managing all aspects of a Mapbender application: applications, layers, elements, users, settings.
+
 
 For each section an own controller class exists within this bundle:
 

@@ -31,7 +31,7 @@ For some symbols you can choose between two different types of icons:
 
 The latter are based on a `IconSet <https://github.com/mapbender/icons>`_, which is delivered with Mapbender as a module. We recommend to use the symbols from this library.
 
-.. hint:: It is also possible to deactivate an icon set and/or to use other icons. For more, see :ref:`custom-icons`.
+.. hint:: It is also possible to deactivate an icon set and/or to use other icons. For more, see :ref:`en/customization/yaml:Customizing icons`.
 
 More information on icons under:
 

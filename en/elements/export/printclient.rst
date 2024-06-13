@@ -335,8 +335,6 @@ With click on the print button the print dialog opens and offers the print templ
 .. note:: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
 
 
-.. _queued_print:
-
 Queued Print
 ------------
 

@@ -13,8 +13,11 @@ doctrine.yaml
 * **fom_user.reset_password**: In the same way the possibility to reset passwords can be enabled or disabled.
 * **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
 
-Database
-********
+
+Database configuration
+**********************
+
+The files ``.env.local`` and ``doctrine.yaml`` are needed to configure databases in Mapbender. In ``.env.local``, (multiple) variables and definitions for database connection(s) can be defined. These variables are being processed in ``doctrine.yaml``. 
 
 .. note:: Every database defined in `.env` needs to have a placeholder in `doctrine.yaml`:
 
@@ -142,9 +145,18 @@ A disclaimer can be added through the use of site links.
         text: Imprint & Contact									    # Link text
       - link: https://mapbender.org/en/privacy-policy/
         text: Privacy Policy
+      - link: https://doc.mapbender.org/
+        text: Documentation
 
 
-.. _custom-icons:
+Disabling Elements
+******************
+Disabling individual elements can be configured using the following parameter:
+
+.. code-block:: yaml
+
+    mapbender.disabled_elements:
+
 
 Customizing icons
 *****************
@@ -186,8 +198,8 @@ With these configuration options, you can customize the icons in Mapbender to su
 
 Language settings
 *****************
-Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **application/config/parameters.yaml**.
-If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language.
+Mapbender is automatically adjusted to your browser's language.
+Yet it is also possible to set your preferred language via the `fallback_locale` parameter. If a translation of your browser's language is missing in Mapbender, it will take the defined language.
 
 The locale can only be set for the entire Mapbender installation (not for single applications).
 
@@ -213,7 +225,7 @@ Configuration example:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
 
-You also can force Mapbender to use the language defined for the parameter locale to be used. to do this add mapbender.automatic_locale: false.
+You also can force Mapbender to use the language defined for the parameter locale to be used. To do this, add ``mapbender.automatic_locale: false``.
 
 .. code-block:: yaml
 
@@ -226,17 +238,21 @@ You also can force Mapbender to use the language defined for the parameter local
 More information in :ref:`translation`.
 
 
-Logo
-****
+Logo and branding
+*****************
 In `parameters.yaml`, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
+
 
 .. code-block:: yaml
 
-    branding.logo: ./bundles/mapbendercore/image/logo_mb.png
-    branding.login_backdrop: ./bundles/mapbendercore/image/body.png
+    branding.project_name: Geoportal powered by Mapbender
+    branding.project_version: 1.0
+    branding.logo: ./bundles/mapbendercore/image/OSGeo_project.png
+    branding.favicon: ./application/public/brand-favicon.ico
+    branding.login_backdrop: ./bundles/mapbendercore/image/login-backdrop.jpg
 
 
- The files must be accessible under application/public.
+The files must be accessible under ``application/public``.
 
 
 Project name
@@ -279,11 +295,9 @@ SSL certificate
 For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your `parameters.yaml` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
 
-.. _override_js_css_yaml:
-
 Overriding JavaScript and CSS/Sass Resources
 ********************************************
-To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`overriding in the bundle <override_js_css>`, you can add the following to your ``paramaters.yaml`` file:
+To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`overriding in the bundle <en/development/introduction:Overriding JavaScript and CSS/Sass Resources>`, you can add the following to your ``paramaters.yaml`` file:
 
 .. code-block:: yaml
     
@@ -374,7 +388,7 @@ Then, use the Import mask to load an import file as an application.
 Export/import/clone YAML application files over the console
 -----------------------------------------------------------
 
-Please go to :ref:`app_command_export_import_clone` to see the console commands. Find a few introductional words about exporting and importing applications over the console below.
+Please go to :ref:`en/customization/commands:Application Export, Import & Cloning` to see the console commands. Find a few introductional words about exporting and importing applications over the console below.
 
 **Export**
 
