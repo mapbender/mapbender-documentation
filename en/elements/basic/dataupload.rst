@@ -2,7 +2,7 @@ Data Upload
 ***********
 
 **Data Upload** allows you to upload geodata as points, lines, polygons and multipolygons. Supported geodata file formats are GeoJSON, KML, GML, and GPX.
-Simply drag and drop the files into the element or select them from the file system manually.
+Simply drag and drop the files into the element or choose them from within a file manager window.
 You can either choose a fitting CRS or use the feature *Determine projection automatically*.
 
 .. hint:: File size is limited. A maximum file size can be defined in the element configuration.
@@ -18,14 +18,11 @@ Configuration
      :width: 100%
 
 
-* **Show label**: Shows a label which incorporates the title and appears next to the coordinates.
-* **Title**: Title of the element. It will appear next to the coordinates if 'Show label' is activated.
-* **Target**: Id of the Map element to query.
-* **Group**: Optional group name.
-* **Tooltip**: Hint text entered as a tooltip will be indicated by hovering over the element with the cursor.
-* **Icon**: Choose an icon that will be displayed as the button of the element in the map.
+* **Title**: Title of the element, appears in the header of the element.
+* **Max. filesize (MB)**: Maximum permitted file size in megabytes. Default: 10 MB.
+* **Help text**: Define a help text that is displayed above the upload field of the element.
 
-After the element has been added to the backend, it is displayed at the corresponding position in Mapbender.
+After **Data Upload** has been added to the backend, it is displayed at the corresponding position in Mapbender.
 After an object is uploaded, it will be shown in the map and the element list.
 There, you can toggle its visibility, zoom to it, or delete it again.
 
