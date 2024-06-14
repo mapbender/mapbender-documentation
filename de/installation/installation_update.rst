@@ -18,7 +18,7 @@ Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
 .. hint::
     
-    Folgen Sie bitte zusätzlich den :ref:`Migrationshinweisen für bestimmte Versionen<migration>`.
+    Folgen Sie bitte zusätzlich den :ref:`Migrationshinweisen für bestimmte Versionen<migration_de>`.
 
 
 Aktualisierungsbeispiel für Linux

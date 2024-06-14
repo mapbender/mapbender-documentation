@@ -1,7 +1,7 @@
 .. _migration_de:
 
-Leitfaden zur Migration
-#######################
+Migrations-Leitfaden
+####################
 
 .. hint::
 
