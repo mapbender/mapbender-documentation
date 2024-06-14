@@ -3,7 +3,7 @@
 Einrichtung des Digitizers
 ==========================
 
-Das Element kann nur in der Sidepane eingebettet werden.
+Das Element kann nur in der Sidepane eingebettet werden. Das Element kann mehrfach ind er Seitenleiste eingebunden werden.
 
 .. image:: ../../../../figures/digitizer_configuration.png
      :scale: 80
@@ -11,7 +11,7 @@ Das Element kann nur in der Sidepane eingebettet werden.
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Elemente voneinander zu unterscheiden.
 * **Target:** Zielelement (Titel(ID)) der Karte.
-* **Schemes:** YAML-Definition für das Element "digitizer"
+* **Schemes:** YAML-Definition für das Element Digitizer
 
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
 Mehr zu diesem Thema finden Sie unter :ref:`yaml_de`.
@@ -32,7 +32,9 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
 
     poi:
         label: point digitizing
-        inlineSearch: true
+        minScale: 5000
+        maxScale: 20000
+        maxResults: 500 
         featureType:
             connection: search_db
             table: poi
@@ -40,12 +42,27 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
             geomType: point
             geomField: geom
             srid: 4326
-        openFormAfterEdit: true
-        zoomScaleDenominator: 500
-        allowEditData: true
-        allowDelete: true
-        allowDigitize: true
-        useContextMenu: true
+        allowEditData: true # Allow attribute editing (default true)
+        allowDelete: true # Allow user to remove features from the database (default true)
+        allowDigitize: true # Allow geometry creation and editing (default true)
+        roles: #Show this schema only to users with (at least one of) these roles
+            - root
+            - ROLE_GROUP_EDITING
+        displayPermanent: true # Keep features visible on map even after switching to a different schema
+        displayOnInactive: true # Keep features visible on map even after deactivating Digitizer
+        continueDrawingAfterSave: # Keep drawing tool active after creating and saving a new feature (~fast batch mode feature creation)
+        printable: false
+        allowChangeVisibility: true
+        inlineSearch: true
+        searchType: currentExtent
+        pageLength: 5 # Limits the number of rows per page (default 16)
+        tableFields:
+            gid:
+                label: Nr.
+                width: 20%
+            name:
+                label: Name
+                width: 80%
         toolset:
             - type: drawPoint
             - type: moveFeature
@@ -69,6 +86,15 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
                 strokeColor: '#0e6a9e'
                 fillOpacity: 0.7
                 pointRadius: 10
+            unsaved:
+                strokeWidth: 3
+                strokeColor: "#f0f0f0"
+                fillColor:   "#ffffff"
+                fillOpacity: 0.5
+                pointRadius: 6
+                label: 'Please save'
+                fontColor: red
+                fontSize: 18
         formItems:
            - type: tabs
              children:
@@ -125,8 +151,8 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
                        options: {maps: maps, reading: reading, swimming: swimming, dancing: dancing, beer: beer, flowers: flowers}
                      - type: date
                        title: favorite Date
-                       name: date_favorite                     
-                       mandatory: true                                  
+                       name: date_favorite
+                       mandatory: true
                        css: {width: 25%}
                      - type: breakLine
                      - type: breakLine
@@ -146,7 +172,6 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
             srid: 4326
         openFormAfterEdit: true
         allowDelete: true
-        useContextMenu: true
         toolset:
             - type: drawLine
             - type: modifyFeature
@@ -268,6 +293,7 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         lastname varchar,
         email varchar,
         interests varchar,
+        category varchar,
         user_name varchar,
         group_name varchar,
         modification_date date,
@@ -276,12 +302,13 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         x float,
         y float,
         city varchar,
+        style text,
         geom geometry(point,4326)
     );
 
 .. code-block:: postgres
 
-    create table public.lines (
+    CREATE TABLE  public.lines (
         gid serial PRIMARY KEY,
         name varchar,
         type varchar,
@@ -303,12 +330,13 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         x float,
         y float,
         city varchar,
+        style text,
         geom geometry(linestring,4326)
     );
 
 .. code-block:: postgres
 
-    create table public.polygons (
+    CREATE TABLE public.polygons (
         gid serial PRIMARY KEY,
         name varchar,
         type varchar,
@@ -330,10 +358,11 @@ Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie leg
         x float,
         y float,
         city varchar,
+        style text,
         geom geometry(polygon,4326)
     );
     
-    
+
 Konfiguration
 =============
 
@@ -349,6 +378,8 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
     poi:
         label: point digitizing
         minScale: 5000
+        maxScale: 20000
+        maxResults: 500 
         featureType:
             connection: search_db
             table: poi
@@ -357,6 +388,12 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
             geomField: geom
             srid: 4326
             filter: interests = 'maps'
+            userColumn: user_name
+            styleField: style
+            # file upload location - customization per column on featureType (or dataStore) level
+            files:
+                - field: file_reference
+                  path: /data/demo/mapbender_upload_lines/
         openFormAfterEdit: true
         zoomScaleDenominator: 500
         allowEditData: true
@@ -378,39 +415,32 @@ Die möglichen Optionen sind:
     * geomField: Attributspalte, in der die Geometrie liegt.
     * srid: Koordinatensystem im EPSG-Code
     * filter: Datenfilter über Werte in einer definierten Spalte, z.B. filter: interests = 'maps'
-* **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular (Standard: true).
-* **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird (Standard: 100).
-* **allowEditData:** Daten dürfen editiert und gespeichert werden [true/false]. Es erscheint immer eine Speichern Schaltfläche.
-* **allowDigitize:** Daten dürfen gespeichert werden. [true/false]
-* **allowDelete:** Daten dürfen gelöscht werden. [true/false]. Es erscheint eine Löschen Schaltfläche.
-* **allowDigitize:** Daten dürfen verändert und neu erstellt werden. [true/false]. Es erscheint immer die Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.). Das Speichern ist jedoch nicht möglich.
-* **useContextMenu:** Anzeige des Kontextmenü eines Features durch Rechtsklick auf der Karte. [true/false]
-* **allowCancelButton:** Zeigt die Abbrechen Schaltfläche. [true/false]. Siehe `Speichern, Löschen, Abbrechen <#speichern-loschen-abbrechen>`_.
-* **allowDeleteByCancelNewGeometry:** Wenn auf true gestellt: Beim Neuanlegen eines Features verhält sich der Abbrechen Knopf wie der Löschen Knopf: Das Feature wird aus der Karte und der Tabelle entfernt. Dies gilt nicht bei dem Ändern eines vorhandenen Features. [true/false]
-* **displayOnInactive:** Der aktuellen FeatureType wird weiterhin auf der Karte angezeigt, auch wenn der Digitizer in der Sidepane (Accordion, Tabs) nicht mehr aktiviert ist. [true/false]. Die Option ist, wenn angeschaltet, ein wenig tricky, da auch die einzelnen Digitizer Events noch aktiviert sind, für erfahrene Anwendern aber durchaus hilfreich.
-* **allowLocate:** Navigation zu einem Feature hin über die Bedienung mit der Tabs-Taste, sinvoll für die Bedienung ohne Maus. [true/false]. Es erscheint eine extra "ZoomTo" Schaltfläche zu jeden Feature.
-
-   .. image:: ../../../../figures/digitizer/allowlocate.png
-              :scale: 80
-
-
 * **allowChangeVisibility:** Ändern der Sichtbarkeit von einem Treffer in der Karte (sichtbar/nicht sichtbar). [true/false]. Es wird ein Auge-Symbol zu jedem Feature eingeblendet, mit dem dieses explizit aus- und wieder eingeblendet werden kann.
 
    .. image:: ../../../../figures/digitizer/allowchangevisibility.png
               :scale: 80
 
+* **allowCreate:** Es dürfen neue Feature angelegt werden (Standard true).
+* **allowDelete:** Daten dürfen gelöscht werden (Standard true). Es erscheint eine Löschen Schaltfläche.
+* **allowDigitize:** Daten dürfen verändert und neu erstellt werden. [true/false]. Es erscheint immer die Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.). Das Speichern ist jedoch nicht möglich.
+* **allowEditData:** Daten dürfen editiert und gespeichert werden [true/false]. Es erscheint immer eine Speichern Schaltfläche.
+* **displayOnInactive:** Der aktuellen FeatureType wird weiterhin auf der Karte angezeigt, auch wenn der Digitizer in der Sidepane (Accordion, Tabs) nicht mehr aktiviert ist. [true/false]. Die Option ist, wenn angeschaltet, ein wenig tricky, da auch die einzelnen Digitizer Events noch aktiviert sind, für erfahrene Anwendern aber durchaus hilfreich.
+* **allowCustomStyle:** Objekte können individuell gestylt werden (default false). Jedes Objekt kann einen eigenen Stil erhalten. Diese Option benötigt die Definition des Parameters styleField im featureType-Bereich.
 
-* **showVisibilityNavigation:** Ändern der Sichtbarkeit von allen Treffern in der Karte (sichtbar/nicht sichtbar). [true/false]
-
-   .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
+ .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
 
+* **allowRefresh:** Button zu neu Laden der DAten (für Tabellen, die gleichzeitig bearbeitet von unterschiedlichen Anwendern bearbeitet werden) (default false)
+* **continueDrawingAfterSave:** Das Zeichenwerkzeug bleibt aktiv nach dem Erzeugen und Speichern von Objekten 
+* **displayPermanent:** FeatureTypes werden dauerhaft angezeigt, auch wenn im Digitizer in ein anderes Schema gewechselt wird. (Standard: false)
+* **displayOnInactive:** Feature sind sichtbar, auch wenn der Digitizer nicht aktiv ist (default false)
+* **pageLength:** Limitert die Anzahl der Zeilen pro Seite (default 16)
+* **refreshLayersAfterFeatureSave:** List of Mapbender source instance ids / names (refer to "Layersets" tab in application backend) that will reload after any item is created, updated or deleted (default none)
 
+.. code-block:: yaml
 
-
-
-.. * **displayPermanent:** FeatureTypes werden dauerhaft angezeigt. (Standard: false)
-
+        refreshLayersAfterFeatureSave:
+            - mapbender_users # or WMS InstanceID
 
 Experimentell:
 

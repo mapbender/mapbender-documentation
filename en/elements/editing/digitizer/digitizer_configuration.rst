@@ -3,7 +3,7 @@
 Setting up of Digitizer
 =======================
 
-You can only use the element in the sidepane.
+You can only use the element in the sidepane. The element can be used more than one time in the sidepane.
 
 .. image:: ../../../../figures/digitizer_configuration.png
      :scale: 80
@@ -44,7 +44,6 @@ The functionality of the built-in features and additional functions are explaine
             geomType: point
             geomField: geom
             srid: 4326
-        #??allowCreate: true #Allow user to make new features (default true)
         allowEditData: true # Allow attribute editing (default true)
         allowDelete: true # Allow user to remove features from the database (default true)
         allowDigitize: true # Allow geometry creation and editing (default true)
@@ -72,6 +71,10 @@ The functionality of the built-in features and additional functions are explaine
         popup:
             title: point test suite
             width: 500px
+        searchType: currentExtent
+        tableFields:
+            gid: {label: Nr. , width: 20%}
+            name: {label: Name , width: 80%}
         styles:
             default:
                 strokeWidth: 2
@@ -150,8 +153,8 @@ The functionality of the built-in features and additional functions are explaine
                        options: {maps: maps, reading: reading, swimming: swimming, dancing: dancing, beer: beer, flowers: flowers}
                      - type: date
                        title: favorite Date
-                       name: date_favorite                         
-                       mandatory: true    
+                       name: date_favorite
+                       mandatory: true
                        css: {width: 25%}
                      - type: breakLine
                      - type: breakLine
@@ -301,6 +304,7 @@ With the three tables you can test the digitizer functionality using the YAML de
         x float,
         y float,
         city varchar,
+        style text,
         geom geometry(point,4326)
     );
 
@@ -328,6 +332,7 @@ With the three tables you can test the digitizer functionality using the YAML de
         x float,
         y float,
         city varchar,
+        style text,
         geom geometry(linestring,4326)
     );
 
@@ -426,7 +431,7 @@ The possible options are:
 * **allowDigitize:** Allow geometry creation and editing (If false, no Digitizer buttons will occur (new Point, move, etc.). Attribute editing may still be allowed via allowEdit) (default true)
 * **allowEditData:** Allow attribute editing (default true)
 * **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
-* **allowCustomStyle:** Allow user-specific styles for features in the map [true/false] (default false). For each feature you can set unique styles. If not set the default style is used. Needs styleField definition in featureType section.
+* **allowCustomStyle:** Allow user-specific styles for features in the map (default false). For each feature you can set unique styles. If not set the default style is used. Needs styleField definition in featureType section.
 
  .. image:: ../../../../figures/digitizer/stylemanager.png
               :scale: 80
