@@ -12,10 +12,28 @@ Migration Guide
     For in-depth information from the Mapbender development team, also see the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/UPGRADING.md>`_.
     
 
-Migration to Mapbender 4
-************************
+Migration to Mapbender 4.0.0
+****************************
 
-* For Mapbender 4, all ``.yml`` file extensions were transformed into ``.yaml``. When migrating, the corresponding syntax must be adjusted accordingly.
+* Carefully check the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/UPGRADING.md>`_ before you do the update.
+
+* You will notice that the Symfony Directory Structure changed a lot.
+* For Mapbender 4, all ``.yml`` file extensions were transformed into ``.yaml``. config.yml is omitted
+* public files moved from app/web to public
+* Instead of multi parameters in parameters.yml the database definition is replaced by an environment variable MAPBENDER_DATABASE_URL. Configure it by adding it in your .env.local file. If you have multiple connections, use one env variable per connection and configure these in the config/packages/doctrine.yaml file
+* The Apache Vhost Definition or ALIAS has to be changed. Refer to public (instead of web). Call index.php instead of app.php). See installation instruction.
+* Environment can now be set using the environment variable APP_ENV (see .env.local) .index_dev.php (instead of app_dev.php) is still available as an alternative for accessing the dev environment on remote servers.
+* Database permission can be migrated using bin/console mapbender:security:migrate-from-acl. Do that before executing the schema:update command, otherwise your old ACL tables will be gone
+
+
+Upgrade database
+----------------
+
+**Important**: Execute the following commands in the specified order to upgrade (after bringing the symfony directory structure up to date). First, make a backup of your database!
+
+* ``bin/console mapbender:database:upgrade``: this replaces doctrine's removed json_array type to json. If you are using a DBMS other than SQlite, PostgreSQL and MySQL you need to do that manually.
+*  ``bin/console mapbender:security:migrate-from-acl``: migrates security definitions from the ACL system to the new permission system
+* ``bin/console doctrine:schema:update --complete --force``: updates the rest of the database. That needs to be executed last, since it deletes the old ACL tables
 
 
 Migration to Mapbender 3.3.4

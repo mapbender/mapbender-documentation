@@ -22,3 +22,4 @@ Installationsanleitung und Details für die Mapbender-Entwicklung
    installation/installation_symfony.rst
    installation/installation_git.rst
    installation/installation_configuration.rst
+   installation/migration.rst
