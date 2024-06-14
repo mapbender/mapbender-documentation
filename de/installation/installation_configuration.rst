@@ -10,7 +10,7 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 
 * Erzeugen der Datenbank
 * Erzeugen der Datenbankschemas
-* Kopieren des bundle Assets in das öffentliche web-Verzeichnis
+* Kopieren des bundle Assets in das öffentlich zugängliche public-Verzeichnis
 * Erzeugen des "root" Benutzers
 * Initialisieren der Datenbank
 * Laden der Demo-Anwendungen in die Datenbank

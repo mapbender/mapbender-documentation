@@ -10,7 +10,7 @@ In the following, we will describe the configurational steps of Mapbender a bit 
 
 * Creating the database
 * Creating the database schema
-* Copying the bundles' assets to the public web directory
+* Copying the bundles' assets to the public public directory
 * Creating the "root" user
 * Initializing the database
 * Loading the demo applications to your database
