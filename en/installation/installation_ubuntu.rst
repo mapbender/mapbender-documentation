@@ -12,7 +12,7 @@ You can find instructions for a test installation based on the Symfony web serve
 Requirements
 ------------
 
-* PHP >= 8.0
+* PHP >= 8.1
 * Apache installation with the following modules activated:
     * mod_rewrite
     * libapache2-mod-php
@@ -80,11 +80,11 @@ Directory rights
 
  sudo chown -R :www-data /var/www/mapbender
 
- sudo chmod -R ug+w /var/www/mapbender/application/var/log
- sudo chmod -R ug+w /var/www/mapbender/application/var/cache
- sudo chmod -R ug+w /var/www/mapbender/application/public/uploads
+ sudo chmod -R ug+w /var/www/mapbender/var/log
+ sudo chmod -R ug+w /var/www/mapbender/var/cache
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
- sudo chmod -R ug+w /var/www/mapbender/application/var/db/demo.sqlite
+ sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
 
 
 First steps
@@ -138,17 +138,11 @@ Installation PHP-PostgreSQL driver
 
    sudo apt install php-pgsql
 
-Configuration of database connection (application/config/parameters.yaml):
+Configuration of database connection is done by a variable that contains the entire connection  string. Configure it by adding it in your ``.env.local`` file.
 
 .. code-block:: yaml
 
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:     ~
-    database_user:     postgres
-    database_password: secret
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
 
 For further information: :ref:`yaml`.
 
@@ -161,7 +155,7 @@ Initialisation of the database connection:
  bin/console doctrine:schema:create
  bin/console mapbender:database:init -v
  bin/composer run reimport-example-apps
-    
+
 Create root user for access:
 
 .. code-block:: bash
