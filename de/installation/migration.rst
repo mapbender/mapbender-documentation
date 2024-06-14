@@ -24,9 +24,9 @@ Umstellung auf Mapbender 4.0.0
 * Sie werden feststellen, dass sich die Symfony Verzeichnisstruktur stark verändert hat.
 * Für Mapbender 4 wurden alle ``.yml``-Dateierweiterungen in ``.yaml`` umgewandelt. Die config.yml ist entfallen.
 * Öffentliche Dateien wurden von app/web nach public verschoben.
-* Anstelle von mehreren Parametern in der Datei parameters.yml wird die Datenbankdefinition durch eine Umgebungsvariable MAPBENDER_DATABASE_URL ersetzt. Konfigurieren Sie sie, indem Sie diese in Ihrer .env.local-Datei hinzufügen. Wenn Sie mehrere Verbindungen haben, verwenden Sie eine Umgebungsvariable pro Verbindung und konfigurieren diese in der Datei config/packages/doctrine.yaml
+* Anstelle von mehreren Parametern in der Datei parameters.yml wird die Datenbankdefinition durch eine Umgebungsvariable ``MAPBENDER_DATABASE_URL`` ersetzt. Konfigurieren Sie sie, indem Sie diese in Ihrer .env.local-Datei hinzufügen. Wenn Sie mehrere Verbindungen haben, verwenden Sie eine Umgebungsvariable pro Verbindung und konfigurieren diese in der Datei config/packages/doctrine.yaml
 * Der Apache Virtual Host / ALIAS muss geändert werden. Verweisen Sie auf public (statt auf web). Rufen Sie index.php (anstelle von app.php) auf. Siehe Installationsanleitung.
-* Die Umgebung kann nun über die Umgebungsvariable APP_ENV gesetzt werden (siehe .env.local). index_dev.php (vorher app_dev.php) ist weiterhin als Alternative für den Zugriff auf die Entwicklungsumgebung auf entfernten Servern verfügbar.
+* Die Umgebung kann nun über die Umgebungsvariable ``APP_ENV`` gesetzt werden (siehe .env.local). index_dev.php (vorher app_dev.php) ist weiterhin als Alternative für den Zugriff auf die Entwicklungsumgebung auf entfernten Servern verfügbar.
 * Datenbankberechtigungen können mit bin/console mapbender:security:migrate-from-acl migriert werden. Führen Sie dies aus, bevor Sie den Befehl schema:update ausführen, da sonst Ihre alten ACL-Tabellen nicht mehr vorhanden sind.
 
 
