@@ -5,7 +5,7 @@ Suchen (Search Router)
 
 Dieses Element erzeugt ein Suchformular mit Trefferausgabe, über das Objekte innerhalb der Karte lokalisiert werden können. Sowohl eine Verbindung zur Datenbank als auch das Formular und die Trefferausgabe sind über das :ref:`backend_de` konfigurierbar. Derzeit werden PostgreSQL-Tabellen als Grundlage für Suchen unterstützt.
 
-.. image:: ../../../figures/de/search_router_de.png
+.. image:: ../../../figures/de/search_router.png
      :scale: 80
 
 
@@ -17,7 +17,7 @@ Konfiguration
 Das Element kann entweder in der Sidepane oder als Button in der oberen Werkzeugleiste integriert werden. Zu der Konfiguration des Buttons besuchen Sie die Dokumentationsseite unter :ref:`button_de`.
 
 
-.. image:: ../../../figures/de/search_router_edit_de.png
+.. image:: ../../../figures/de/search_router_configuration.png
      :scale: 80
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt sowie als Titel in der Seitenleiste (Nutzung in der Sidepane) oder als Titel des Suchdialogs (Nutzung via Button).
@@ -72,6 +72,10 @@ Hier erfolgt die Definition:
     results:
         view: table
         count: true
+        exportcsv: true
+        sortBy: name
+        sortOrder: asc #desc
+        zoomToResultExtent: true
         headers:
             gid: ID
             name: Name
@@ -209,6 +213,9 @@ Im Bereich **results** erfolgt die Definition zum Aufbau der Trefferliste und da
         view: table
         count: true
         exportcsv: true
+        sortBy: name
+        sortOrder: asc #desc
+        zoomToResultExtent: true
         headers:
             gid: ID
             name: Name
@@ -277,6 +284,7 @@ Die Konfiguration beinhaltet drei Stilkonfigurationen:
                 fillColor: '#ff00ff'
                 fillOpacity: 0.8
                 pointRadius: 10
+                label: ${name}
             temporary:
                strokeColor: '#0000ff'
                fillColor: '#0000ff'
@@ -442,6 +450,9 @@ Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
       view: table
       count: true
       exportcsv: true
+      sortBy: name
+      sortOrder: asc
+      zoomToResultExtent: true
       headers:
         id: ID
         name: Name

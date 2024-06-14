@@ -5,7 +5,7 @@ Search Router
 
 The Search Router element enables users to locate items within the map by interfacing with a specified database connected via the :ref:`backend`. Both the search form and table output are customizable and facilitate generic SQL search functionality via PostgreSQL tables. This is achieved through the storage of geometries in the database, allowing users to query and display dynamic results on the map.
 
-.. image:: ../../../figures/search_router_en.png
+.. image:: ../../../figures/search_router.png
      :scale: 80
 
 
@@ -17,7 +17,7 @@ Configuration
 The element may be integrated into the sidepane or via a button into from the toolbar. To configure a button visit the documentation at :ref:`button`.
 
 
-.. image:: ../../../figures/search_router_edit_en.png
+.. image:: ../../../figures/search_router_configuration.png
      :scale: 80
 
 * **Title:** Title of the element. The title will be listed in the Layouts section in the :ref:`backend`. It is shown as sidepane tab/button title (usage in sidepane) or dialog title (usage via button).
@@ -69,6 +69,10 @@ In the textarea configuration you define all important information for each sear
     results:
         view: table
         count: true
+        exportcsv: true
+        sortBy: name
+        sortOrder: asc #desc
+        zoomToResultExtent: true
         headers:
             gid: ID
             name: Name
@@ -208,6 +212,9 @@ In the section **results** the definition for the result table and styling is no
         view: table
         count: true
         exportcsv: true
+        sortBy: name
+        sortOrder: asc #desc
+        zoomToResultExtent: true
         headers:
             gid: ID
             name: Name
@@ -293,7 +300,6 @@ The temporary symbols on mouse-hover are blue points.
 The styleMap settings override the default settings, so you only have to define the sections you want to overwrite. No extra styleMap is set the default style will be used.
 
 Note, that the hexadeximal color values have to be stated in quotation marks, because # would be interpreted as a comment instead.
-
 
 
 Configuration Examples
@@ -444,6 +450,9 @@ Example of a route-configuration in the ``configuration`` area:
       view: table
       count: true
       exportcsv: true
+      sortBy: name
+      sortOrder: asc
+      zoomToResultExtent: true
       headers:
         id: ID
         name: Name
@@ -472,7 +481,7 @@ This template can be used to insert the element into a YAML application.
    width: 700                                                # width of dialog
    routes:                                                   # collection of search routes
        demo_polygon:                                         # machine-readable name
-      class: Mapbender\CoreBundle\Component\SQLSearchEngine  # path to used search engine
+       class: Mapbender\CoreBundle\Component\SQLSearchEngine  # path to used search engine
       class_options:                                         # options passed to the search engine
           connection: geodata_db                             # search_db, DBAL connection name, ~ for default
           relation: polygons          
