@@ -11,7 +11,7 @@ Configuration
 -------------
 
 .. image:: ../../../figures/dataupload_configuration.png
-     :width: 100%
+     :scale: 70
 
 
 * **Show label**: Shows a label which incorporates the title and appears next to the coordinates.

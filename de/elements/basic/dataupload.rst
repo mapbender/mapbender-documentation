@@ -11,7 +11,7 @@ Konfiguration
 -------------
 
 .. image:: ../../../figures/dataupload_configuration.png
-     :width: 100%
+     :scale: 70
 
 
 * **Beschriftung anzeigen (Show label)**: Zeigt eine Titelbeschriftung an, die neben den Koordinaten erscheint.

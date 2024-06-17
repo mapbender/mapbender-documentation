@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/scalebar_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Title of the element. The title will be listed in "Layouts".
 * **Max width:** The maximum width of the scale bar (default: 200px).

@@ -14,7 +14,7 @@ Konfiguration
 Der Konfigurationsdialog:
 
 .. image:: ../../../figures/de/overview_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Fixieren:** Definiert, ob die Übersichtskarte in ihrem Maßstab fixiert sein soll (Standard: false).
 * **Title:** Titel des Elements, wird in der Layouts-Liste angezeigt.

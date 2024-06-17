@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/navigation_toolbar_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Draggable:** Element is draggable or not (default: true)
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

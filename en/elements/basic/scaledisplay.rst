@@ -15,7 +15,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/scaledisplay_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons.
 * **Prefix:** Customizable description shown before the actual scale. The default ``mb.core.scaledisplay.label`` is rendered as *Scale* in the user's language.

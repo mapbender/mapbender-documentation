@@ -34,7 +34,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/coordinates_display_configuration.png
-     :scale: 75
+     :scale: 70
 
 * **Show label:** Show a label which incorporates the title and appears next to the coordinates.
 * **Title:** Title of the element. It will appear next to the coordinates if "Show label" is activated.

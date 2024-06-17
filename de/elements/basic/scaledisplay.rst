@@ -15,7 +15,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/scaledisplay_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden.

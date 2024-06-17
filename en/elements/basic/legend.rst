@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/legend_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 * **Auto-open:** If activated, the legend opens when the application is started (default: active)
@@ -37,7 +37,7 @@ If yout want to integrate a legend in the sidepane, click the ``+`` -button in t
 Then, choose the element "Legend" in the appearing window. The configurational dialog "Add element – Legend" will open.
 
 .. image:: ../../../figures/legend_example_sidepane_dialog.png
-     :scale: 80
+     :scale: 70
 
 Our configured element has the title "Legend". The legend opens automatically (set checkbox *Auto-open*). Moreover, the layer title and the title of all grouped layers will appear if the checkboxes *Show layer title* and *Show grouped layer title* are set.
 

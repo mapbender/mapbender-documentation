@@ -32,7 +32,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/coordinates_display_configuration.png
-     :scale: 75
+     :scale: 70
 
 * **Beschriftung anzeigen (Show label):** Schaltet die Beschriftung an/aus. Die Beschriftung richtet sich nach dem Title.
 * **Title:** Titel des Elements. Dieser wird links neben den Koordinaten angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.

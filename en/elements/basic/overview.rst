@@ -14,7 +14,7 @@ Configuration
 The configuration dialog offers the following settings:
 
 .. image:: ../../../figures/overview_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Fix:** Fixes the overview extent (default: false).
 * **Title:** Title of the element, will be listed in "Layouts".

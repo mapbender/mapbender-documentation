@@ -12,7 +12,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/navigation_toolbar_configuration.png
-   :scale: 80
+   :scale: 70
 
 * **Verschiebbar:** Navigationswerkzeug ist verschiebbar oder nicht (Standard: true).
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt.

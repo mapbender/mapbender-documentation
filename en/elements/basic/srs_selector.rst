@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/srs_selector_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Show label:** Labels the SRS Selector (default: false).
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

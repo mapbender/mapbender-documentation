@@ -12,7 +12,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/scalebar_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Titel des Elements. Dieser wird unter dem Reiter Layouts angezeigt.
 * **Max width:** Maximale Breite der Maßstabsleiste (Standard: 200px).

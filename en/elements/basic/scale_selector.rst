@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/scale_selector_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Show label:** Displays label of the Scale Selector (default: false).
 * **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.

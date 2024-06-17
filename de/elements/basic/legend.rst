@@ -12,7 +12,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/legend_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 * **Automatisches Öffnen:** Sofern aktiviert, öffnet sich die Legende beim Anwendungsstart (Standard: deaktiviert).
@@ -37,7 +37,7 @@ Die Legende in der Sidepane wird über das ``+`` -Zeichen im :ref:`backend_de` d
 Anschließend wird das Element ausgewählt. Es öffnet sich der Konfigurationsdialog.
 
 .. image:: ../../../figures/de/legend_example_sidepane_dialog.png
-     :scale: 80
+     :scale: 70
 
 Das hier konfigurierte Element hat den Titel "Legende". Die Legende öffnet sich automatisch (Häkchen bei *Automatisches Öffnen*). Der Titel der Ebenen sowie der Titel der gruppierten Ebenen (Häkchen bei *Titel der Ebene anzeigen* und *Titel der gruppierten Ebene anzeigen*) werden angezeigt.
 
