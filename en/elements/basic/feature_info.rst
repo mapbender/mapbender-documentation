@@ -15,7 +15,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/feature_info_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 * **Auto-open:** Enable or disable autoopening of the copyright window when starting the application (default: false).

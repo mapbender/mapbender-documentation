@@ -13,7 +13,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/ruler_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Titel des Elements. Dieser wird im :ref:`backend_de` in der Layouts Liste angezeigt. In der Anwendung selbst wird der Titel im Messfenster angezeigt.
 * **Geometrie:** Typ des Elements, entweder 'Linie', 'Fläche'  oder 'vom Nutzer auswählbar'. Pflichtfeld.
