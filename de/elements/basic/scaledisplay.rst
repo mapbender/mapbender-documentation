@@ -3,7 +3,7 @@
 Maßstabsanzeige (Scale display)
 *******************************
 
-Die Maßstabsanzeige zeigt den aktuellen Maßstab numerisch an (1:1K or 1:1000).
+Die Maßstabsanzeige zeigt den aktuellen Maßstab numerisch an (z.B. 1:1000 oder 1:1K).
 
 .. image:: ../../../figures/scaledisplay.png
      :scale: 100
@@ -18,10 +18,10 @@ Konfiguration
      :scale: 70
 
 
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden.
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden.
 * **Präfix:** Anpassbare Bezeichnung, die vor der Maßstabsangabe steht. Der Standard ``mb.core.scaledisplay.label`` wird als Maßstab in der Sprache des Benutzers gerendert.
-* **Maßstab abkürzen:** Falls aktiviert, werden Maßstabszahlen über 1.000 nicht ausgeschrieben, sondern mit nachgestelltem ``K`` oder ``M`` versehen. z.B. 1K für 1000 (Standard: false).
-* **Position:** Position des Elements (Standard: 'Oben rechts').
+* **Maßstab abkürzen:** Falls aktiviert, werden Maßstabszahlen über 1000 nicht ausgeschrieben, sondern mit nachgestelltem ``K`` oder ``M`` versehen; z.B. 1K anstelle von 1000 (Standard: false).
+* **Position:** Position des Elements (Pflichtfeld, Standard: 'Oben rechts').
 
 
 YAML-Definition

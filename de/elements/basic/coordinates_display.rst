@@ -34,13 +34,13 @@ Konfiguration
 .. image:: ../../../figures/de/coordinates_display_configuration.png
      :scale: 70
 
-* **Beschriftung anzeigen (Show label):** Schaltet die Beschriftung an/aus. Die Beschriftung richtet sich nach dem Title.
-* **Title:** Titel des Elements. Dieser wird links neben den Koordinaten angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Num digits:** Anzahl der Nachkommastellen der Koordinaten.
-* **Empty:** Angezeigter Text, wenn sich die Maus nicht in der Karte befindet (Standard: 'x= - y= -').
-* **Prefix:** Präfix vor der X-Koordinate (Standard: 'x= ').
-* **Separator:** Separator nach X- und vor Y-Koordinate (Standard: ' y= ').
-* **Position:** Positionierung (nur bei Nutzung im Kartenbereich)
+* **Beschriftung anzeigen:** Schaltet die Beschriftung an/aus. Die Beschriftung richtet sich nach dem Title.
+* **Titel:** Titel des Elements. Dieser wird links neben den Koordinaten angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Anzahl der Nachkommastellen:** Nachkommastellen der angezeigten Koordinaten.
+* **Leere Anzeige:** Angezeigter Text, wenn sich die Maus nicht in der Karte befindet (Standard: 'x= - y= -').
+* **Präfix:** Präfix vor der X-Koordinate (Standard: 'x= ').
+* **Trennzeichen:** Separator nach X- und vor Y-Koordinate (Standard: ' y= ').
+* **Position:** Positionierung (Pflichtfeld, nur bei Nutzung im Kartenbereich)
 
 YAML-Definition
 ---------------

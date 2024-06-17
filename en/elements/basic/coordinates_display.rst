@@ -38,11 +38,11 @@ Configuration
 
 * **Show label:** Show a label which incorporates the title and appears next to the coordinates.
 * **Title:** Title of the element. It will appear next to the coordinates if "Show label" is activated.
-* **Num digits:** Number of decimal digits of the coordinates.
+* **Number of decimal places:** Number of decimal digits of the coordinates.
 * **Empty:** Text displayed when the mouse is not on the map (default: 'x = - y = -').
 * **Prefix:** Prefix in front of the X coordinate (default: '= x').
 * **Separator:** Separator in between the X coordinate and Y coordinate (default: ' y= ').
-* **Position:** Position (only when used in Map area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
+* **Position:** Position (mandatory field, only when used in Map area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
 
 
 YAML-Definition

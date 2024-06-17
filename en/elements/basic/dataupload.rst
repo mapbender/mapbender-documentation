@@ -16,7 +16,7 @@ Configuration
 
 * **Show label**: Shows a label which incorporates the title and appears next to the coordinates.
 * **Title**: Title of the element. It will appear next to the coordinates if 'Show label' is activated.
-* **Target**: Id of the Map element to query.
+* **Target**: Id of the Map element to query (mandatory).
 * **Group**: Optional group name.
 * **Tooltip**: Hint text entered as a tooltip will be indicated by hovering over the element with the cursor.
 * **Icon**: Choose an icon that will be displayed as the button of the element in the map.
@@ -24,7 +24,7 @@ Configuration
 After the element has been added to the backend, it is displayed at the corresponding position in Mapbender.
 
 .. image:: ../../../figures/dataupload.png
-     :width: 100%
+     :scale: 70
 
 
 After an object is uploaded, it will be shown in the map and the element list.

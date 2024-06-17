@@ -16,7 +16,7 @@ Konfiguration
 
 
 * **Automatisches Öffnen:** Sofern aktiviert, öffnet sich die Legende beim Anwendungsstart (Standard: deaktiviert).
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. In der Karte wird der Titel neben dem :ref:`button_de` angezeigt, wenn dort "Beschriftung anzeigen" aktiviert ist.
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. In der Karte wird der Titel neben dem :ref:`button_de` angezeigt, wenn dort "Beschriftung anzeigen" aktiviert ist.
 * **Titel der Datenquelle anzeigen:** zeigt den WMS Titel (Standard: true).
 * **Titel der Ebene anzeigen:** zeigt den Layertitel (Standard: true).
 * **Titel der gruppierten Ebenen anzeigen:** zeigt den Gruppenlayertitel für gruppierte Layer (Standard: true).

@@ -15,8 +15,8 @@ Configuration
      :scale: 70
 
 
-* **Auto-open:** If activated, the legend opens when the application is started (default: active)
-* **Title:** Title of the element. The title will be listed in "Layouts". Is also shown next to the button, if "Show layer title" is activated.
+* **Open automatically:** If activated, the legend opens when the application is started (default: active).
+* **Title:** Title of the element. The title will be listed under :ref:`layouts`. Is also shown next to the button, if "Show layer title" is activated.
 * **Show source title:** shows WMS/source title (default: true)
 * **Show layer title:** shows layer title (default: true)
 * **Show grouped layer title:** shows group title for grouped layers (default: true)
@@ -29,7 +29,7 @@ Configuration Examples
 
 Legend in the Sidepane:
 -----------------------
-If yout want to integrate a legend in the sidepane, click the ``+`` -button in the "Layouts"-tab (section "Sidepane").
+If you want to integrate a legend in the sidepane, click the ``+`` -button in the "Layouts"-tab (section "Sidepane").
 
 .. image:: ../../../figures/add_sidepane.png
      :scale: 80
@@ -39,7 +39,7 @@ Then, choose the element "Legend" in the appearing window. The configurational d
 .. image:: ../../../figures/legend_example_sidepane_dialog.png
      :scale: 70
 
-Our configured element has the title "Legend". The legend opens automatically (set checkbox *Auto-open*). Moreover, the layer title and the title of all grouped layers will appear if the checkboxes *Show layer title* and *Show grouped layer title* are set.
+Our configured element has the title "Legend". The legend opens automatically (set checkbox *Open automatically*). Moreover, the layer title and the title of all grouped layers will appear if the checkboxes *Show layer title* and *Show grouped layer title* are set.
 
 Given this configuration, the result looks like this:
 
@@ -60,7 +60,7 @@ In this example, the following settings are chosen:
 .. image:: ../../../figures/legend_example_toolbar_dialog.png
      :scale: 75
 
-In our example, the checkbox *Auto-open* is dismissed. Therefore, the legend opens only with a click on a button.
+In our example, the checkbox *Open automatically* is dismissed. Therefore, the legend opens only with a click on a button.
 This :ref:`button` has to be implemented into the toolbar section.
 
 The configuration of a button can look like this:

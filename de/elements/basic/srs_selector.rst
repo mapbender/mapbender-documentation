@@ -16,7 +16,7 @@ Konfiguration
      :scale: 70
 
 * **Beschriftung anzeigen:** Beschriftet die SRS Auswahl (Standard: false).
-* **Title:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht die Unterscheidung mehrerer Button-Elemente voneinander. Der Titel wird außerdem neben dem SRS Selector angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Titel:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht die Unterscheidung mehrerer Button-Elemente voneinander. Der Titel wird außerdem neben dem SRS Selector angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 
 
