@@ -12,10 +12,10 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/scale_selector_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Zeigt die Beschriftung der Maßstabsauswahl an (Standard: false).
-* **Title:** Titel des Elements. Dieser wird unter dem Reiter Layouts angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben der Auswahlbox angezeigt, wenn die Option "Beschriftung anzeigen" aktiviert ist.
+* **Titel:** Titel des Elements. Dieser wird unter dem Reiter :ref:`layouts_de` angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben der Auswahlbox angezeigt, wenn die Option "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 
 YAML-Definition

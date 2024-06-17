@@ -14,13 +14,14 @@ Konfiguration
 Der Konfigurationsdialog:
 
 .. image:: ../../../figures/de/overview_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Fixieren:** Definiert, ob die Übersichtskarte in ihrem Maßstab fixiert sein soll (Standard: false).
-* **Title:** Titel des Elements, wird in der Layouts-Liste angezeigt.
+* **Titel:** Titel des Elements, wird in der Layouts-Liste angezeigt.
 * **Layerset:** Layerset, das im Kartenrahmen angezeigt werden soll.
 * **Sichtbarkeit:** Definiert, ob der Kartenrahmen beim Start maximiert (Initial offen) oder minimiert (Initial geschlossen) oder Dauerhaft offen (kein Button zum schließen) ist (Standard: Initial offen). 
-* **Width/Height:** Breite und Höhe der Übersichtskarte.
+* **Width:** Breite der Übersichtskarte.
+* **Height:** Höhe der Übersichtskarte.
 * **Position:** Position des Übersichtskartenrahmens in der Anwendung; Auswahlmöglichkeiten: oben links, unten links, oben rechts, unten rechts.
 
 Konfigurationsbeispiele

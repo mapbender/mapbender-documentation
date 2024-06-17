@@ -15,7 +15,7 @@ Configuration
 -------------
 
 .. image:: ../../../figures/dataupload_configuration.png
-     :width: 100%
+     :scale: 70
 
 
 * **Title**: Title of the element, appears in the header of the element.

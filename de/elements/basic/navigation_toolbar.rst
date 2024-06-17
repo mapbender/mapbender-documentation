@@ -12,13 +12,13 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/navigation_toolbar_configuration.png
-   :scale: 80
+   :scale: 70
 
 * **Verschiebbar:** Navigationswerkzeug ist verschiebbar oder nicht (Standard: true).
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt.
-* **Components:** Komponenten des Navigationswerkzeugs, standardmäßig wird alles selektiert; Auswahlmöglichkeiten: Rotation, zoom to max extent, Zurück zum Anfang, Zoom in/out und Zoom slider.
-* **Zurück zum Anfang** Zurücksetzen von Dienstzuständen (Standard: false).
-* **Position:** Ausrichtung des Navigationswerkzeugs (Standard: 'left-top'); Auswahlmöglichkeiten: inline (zum Einbinden in der Sidepane), left-top (oben links), left-bottom (unten links), right-top (oben rechts), right-bottom (unten rechts)
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt.
+* **Komponenten:** Komponenten des Navigationswerkzeugs; Pflichtfeld. Auswahlmöglichkeiten: Drehen, Zoom auf maximale Ausdehnung, Zurück zum Anfang, Rein- und Rauszoomen und Zoom-Schieberegler.
+* **"Zurück zum Anfang" setzt Dienstezustände zurück:** Zurücksetzen von Dienstzuständen (Standard: false).
+* **Position:** Ausrichtung des Navigationswerkzeugs (Standard: 'left-top'); Pflichtfeld. Auswahlmöglichkeiten: inline (zum Einbinden in der Sidepane), left-top (oben links), left-bottom (unten links), right-top (oben rechts), right-bottom (unten rechts).
 
 .. note:: Das Element muss innerhalb des Kartenbereichs konfiguriert werden.
 
@@ -27,11 +27,11 @@ Komponenten des Navigationswerkzeugs
 
 Im Konfigurationsdialog können unterschiedliche Komponenten (*Components*), also Funktionen des Navigationswerkszeugs, eingebunden werden. Diese Komponenten bestehen aus:
 
-*  Rotation
-*  Zoom to max extent
+*  Drehen
+*  Zoom auf maximale Ausdehnung
 *  Zurück zum Anfang
-*  Zoom in/out
-*  Zoom slider
+*  Rein- und Rauszoomen
+*  Zoom-Schieberegler
 
 Die Komponenten sehen in der Anwendung wie folgt aus:
 
@@ -40,9 +40,9 @@ Die Komponenten sehen in der Anwendung wie folgt aus:
 
 Wenn das Häkchen bei **Verschiebbar** gesetzt wurde, dann erscheint in der Anwendung ein kleines Kreuzsymbol zur Verschiebung des Navigationselements.
 
-Mit **Rotation** kann die Ausrichtung der Karte verändert werden. Durch Klick auf den Nordpfeil ist es möglich, die Standardrotation (Nordausrichtung) wiederherzustellen.
+Mit **Drehen** kann die Ausrichtung der Karte verändert werden. Durch Klick auf den Nordpfeil ist es möglich, die Standardrotation (Nordausrichtung) wiederherzustellen.
 
-Es besteht die Möglichkeit, mit **Zoom to max extent** auf den kleinsten Maßstab zu zoomen. Dieser wird innerhalb des :ref:`Kartenelements <map_de>` im Kartenbereich definiert.
+Es besteht die Möglichkeit, mit **Zoom auf maximale Ausdehnung** auf den kleinsten Maßstab zu zoomen. Dieser wird innerhalb des :ref:`Kartenelements <map_de>` im Kartenbereich definiert.
 
 .. image:: ../../../figures/de/navigationtoolbar_zoom_to_max.png
    :width: 100%
@@ -52,8 +52,8 @@ Nutzer können außerdem die anfänglichen Einstellungen von Maßstab, Koordinat
 .. image:: ../../../figures/de/navigationtoolbar_zoom_to_start.png
    :width: 100%
 
-**Zoom in/out** ermöglicht durch einen Klick auf das ``+`` -Zeichen ein Hineinzoomen, sowie durch einen Klick auf das ``–`` -Zeichen ein Hinauszoomen aus der Karte. Der Kartenausschnitt springt dabei immer zum jeweils nächstgrößeren bzw. -kleineren Maßstab. Je nach Definition im Kartenelement sind größere oder kleinere Zoomschritte möglich. Nutzer haben außerdem die Möglichkeit, feste Zoomstufen im Kartenelement zu deaktivieren.
-Die Komponente **Zoom slider** beinhaltet automatisch die Komponente *Zoom in/out*, in welcher auch ``+`` und ``–`` -Zeichen zur Verfügung stehen. Zusätzlich besteht diese Komponente aus einer Leiste, die die möglichen Zoomstufen als auswählbare Punkte anzeigt.
+**Rein- und Rauszoomen** ermöglicht durch einen Klick auf das ``+`` -Zeichen ein Hineinzoomen, sowie durch einen Klick auf das ``–`` -Zeichen ein Hinauszoomen aus der Karte. Der Kartenausschnitt springt dabei immer zum jeweils nächstgrößeren bzw. -kleineren Maßstab. Je nach Definition im Kartenelement sind größere oder kleinere Zoomschritte möglich. Nutzer haben außerdem die Möglichkeit, feste Zoomstufen im Kartenelement zu deaktivieren.
+Die Komponente **Zoom-Schieberegler** beinhaltet automatisch die Komponente *Zoom in/out*, in welcher auch ``+`` und ``–`` -Zeichen zur Verfügung stehen. Zusätzlich besteht diese Komponente aus einer Leiste, die die möglichen Zoomstufen als auswählbare Punkte anzeigt.
 
 
 YAML-Definition
