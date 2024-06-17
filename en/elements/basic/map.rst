@@ -11,7 +11,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/map_dialog.png
-     :width: 50%
+     :scale: 70
 
 * **Title:** Title of the element. It will be listed in the :ref:`layouts` section.
 * **Layersets:** Select which :ref:`layerset` will be displayed on the map. Their order is changeable via drag & drop.

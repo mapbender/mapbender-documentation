@@ -13,7 +13,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/ruler_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Title of the element. It will be displayed in the measuring window in the application itself.
 * **Geometry:** Choose type of element: line, area or user-selectable. Mandatory field.

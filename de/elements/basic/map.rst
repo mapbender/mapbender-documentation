@@ -11,7 +11,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/map_dialog.png
-     :width: 50%
+     :scale: 70
 
 * **Title:** Titel des Elements. Dieser wird im :ref:`layouts_de`-Bereich angezeigt.
 * **Layersets:** Wählen Sie ein oder mehrere :ref:`layerset_de` aus, die vom Kartenelement dargestellt werden sollen. Dabei kann die Reihenfolge der Layersets via Drag-and-drop verändert werden.

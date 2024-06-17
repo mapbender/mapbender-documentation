@@ -15,7 +15,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/feature_info_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 * **Automatisches Öffnen:** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: false).
