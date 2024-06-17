@@ -17,7 +17,7 @@ Configuration
      :scale: 80
      
 * **Use Mailto:** Sends POI by e-mail.
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Body:** Defines text to display. 
 * **GPS Position:** Defines GPS Position in the map.
 

@@ -29,7 +29,7 @@ Configuration Examples
 
 Legend in the Sidepane:
 -----------------------
-If you want to integrate a legend in the sidepane, click the ``+`` -button in the "Layouts"-tab (section "Sidepane").
+If you want to integrate a legend in the sidepane, click the ``+`` -button in the :ref:`layouts`-tab (section "Sidepane").
 
 .. image:: ../../../figures/add_sidepane.png
      :scale: 80

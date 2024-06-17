@@ -122,7 +122,7 @@ For a better understanding of the functions and their usage, we now edit the bac
 
 By enabling **Show base sources**, instances that have been loaded as a base source in the application are displayed in the Layertree.
 
-If you activate **Autoopen**, the Layertree is open by default and does not need to be activated by clicking on a button or the unfolding of a sidepane. The **Title** of the element is displayed in the "Layouts" list and allows you to distinguish between different layertrees.
+If you activate **Autoopen**, the Layertree is open by default and does not need to be activated by clicking on a button or the unfolding of a sidepane. The **Title** of the element is displayed in the :ref:`layouts` list and allows you to distinguish between different layertrees.
 
 Via the **Menu** a number of functions can be activated, which are then available in the layertree.
 

@@ -17,7 +17,7 @@ Configuration
 .. image:: ../../../figures/scaledisplay_configuration.png
      :scale: 70
 
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons.
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons.
 * **Prefix:** Customizable description shown before the actual scale. The default ``mb.core.scaledisplay.label`` is rendered as *Scale* in the user's language.
 * **Shorten scale:** If checked, scale numbers higher than 1,000 will be shortened with a postpositioned ``K`` or ``M`` (e.g. 1K as 1000).
 * **Position:** Scale display alignment (mandatory field; default: 'Bottom right').
