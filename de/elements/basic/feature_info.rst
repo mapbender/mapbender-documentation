@@ -3,18 +3,19 @@
 Information (FeatureInfo)
 *************************
 
-Mit diesem Element können Sie Informationen eines WMS abfragen. In der folgenden Abbildung sehen Sie ein Beispiel für eine solche Informationsabfrage. Es wurde hierfür der WMS "Krankenhäuser NRW" (http://www.wms.nrw.de/wms/krankenhaus?) vom Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW verwendet.
+FeatureInfo bietet die Möglichkeit, mit einem Mausklick auf einen Layer Informationen über Features zu erhalten. 
+Das Element funktioniert mit unterstützten WMS-Diensten. Es kann in die Sidepane oder in einen :ref:`button_de` integriert werden.
 
 .. image:: ../../../figures/de/feature_info.png
      :scale: 80
 
-Der Dienst Krankenhäuser NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) dienst zur Veranschaulichung.
+Der Dienst Krankenhäuser NRW des Ministeriums für Gesundheit, Emanzipation, Pflege und Alter NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) dient zur Veranschaulichung.
      
 Konfiguration
 =============
 
 .. image:: ../../../figures/de/feature_info_configuration.png
-     :align: center
+     :scale: 80
 
 
 * **Automatisches Öffnen:** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: false).
@@ -35,7 +36,6 @@ Konfiguration
 * **Hover-Opazität (%) der Füllfarbe** Setzt die Opazität der Füllfarbe in Prozent beim Hovern.
 * **Hover-Linienstärke (in Pixeln)** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
 
-Für das Element wird zudem ein Button benötigt. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :ref:`button_de`.
 
 Einstellungen im Ebenenbaum
 ---------------------------
