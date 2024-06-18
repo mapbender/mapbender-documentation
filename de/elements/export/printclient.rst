@@ -19,12 +19,12 @@ Mit dem PrintClient können folgende Druckeinstellungen beeinflusst werden:
  * Optionale Textfelder (z.B. Titel, Kommentar, Bemerkung).
 
 .. image:: ../../../figures/de/print_client.png
-     :scale: 80
+     :scale: 70
      
 Das Element kann über einen Button aufgerufen oder in der Sidepane als Element eingebunden werden. Sobald der PrintClient angesteuert wird, erscheint auf der Karte ein Druckrahmen. Dieser bestimmt den zu druckenden Bereich der Karte und kann vom Anwender beliebig ausgerichtet werden. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
 
 .. image:: ../../../figures/print_client_sidebar.png
-     :scale: 80     
+     :scale: 70     
      
 Konfiguration
 -------------
@@ -32,7 +32,7 @@ Konfiguration
 Der PrintClient wird im :ref:`backend_de` konfiguriert. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A0 bis A4 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
 
 .. image:: ../../../figures/de/print_client_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Titel**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Maßstabsstufen (Scales)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, muss ein beliebiger Maßstab hinzugefügt werden.

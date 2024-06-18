@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/image_export_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. The title will be displayed besides the button if "Show label" is activated.
 

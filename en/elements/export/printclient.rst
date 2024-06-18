@@ -19,12 +19,12 @@ It is possible to define different properties of the PDF you would like to print
  * Optional input fields (e.g. title, comment, remark).
 
 .. image:: ../../../figures/print_client.png
-     :scale: 80
+     :scale: 70
 
 The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. The print frame can be moved around freely in the map canvas, it defines the area of the PDF output. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
 
 .. image:: ../../../figures/print_client_sidebar.png
-     :scale: 80
+     :scale: 70
 
 
 Configuration
@@ -33,7 +33,7 @@ Configuration
 The Printclient is configured in the backend. It relies on print templates (A0 to A4). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
 
 .. image:: ../../../figures/print_client_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title**: Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. The title will be displayed next to the button if "Show label" is activated.
 * **Scales**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
