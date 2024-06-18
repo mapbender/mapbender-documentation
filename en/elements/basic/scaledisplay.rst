@@ -3,7 +3,7 @@
 Scale Display
 *************
 
-The Scale Display shows the current map scale (1:1K or 1:1000).
+The Scale Display shows the current map scale (1:10K or 1:10.000).
 
 .. image:: ../../../figures/scaledisplay.png
      :scale: 100

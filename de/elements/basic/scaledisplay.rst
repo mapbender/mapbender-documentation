@@ -3,7 +3,7 @@
 Maßstabsanzeige (Scale display)
 *******************************
 
-Die Maßstabsanzeige zeigt den aktuellen Maßstab numerisch an (1:1K or 1:1000).
+Die Maßstabsanzeige zeigt den aktuellen Maßstab numerisch an (1:10K or 1:10.000).
 
 .. image:: ../../../figures/scaledisplay.png
      :scale: 100
