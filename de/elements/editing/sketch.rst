@@ -20,7 +20,7 @@ Konfiguration
 ================
 
 .. image:: ../../../figures/de/sketch_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Automatisch öffnen:** Das Element wird beim Anwendungsstart automatisch geöffnet (Standard: deaktiviert).
 * **Beim Schließen deaktivieren:** Erstellte Skizzen werden nach Schließen des Elements (Button oder Sidepane) nicht mehr in der Karte angezeigt. Erneutes Öffnen zeigt erstellte Skizzen wieder an.
