@@ -22,7 +22,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/share_url_configuration.png
-     :scale: 80
+     :scale: 70
 
 YAML-Definition
 ---------------

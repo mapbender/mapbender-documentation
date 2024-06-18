@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/applicationswitcher_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Title of the element. The title will be shown as tooltip on mouseover on the selectbox.
 * **Applications:** Choose the applications that should be offered in the selectbox.

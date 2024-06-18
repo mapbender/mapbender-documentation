@@ -12,7 +12,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/applicationswitcher_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Titel des Elements. Dieser wird angezeigt, wenn der Mauszeiger eine längere Zeit über der Auswahl verweilt.
 * **Anwendungen:** Wählen Sie die Anwendungen, die zur Auswahl erscheinen sollen.
