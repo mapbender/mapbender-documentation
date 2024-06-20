@@ -349,7 +349,7 @@ Currently, the element can be used to transfer user- and group information, e.g.
 * toggle allowed: allows opening in the layer tree
 * toggle on: open folder on start of the application
 * more information (...): opens a dialog with detailed layer information
-    * ID: ID of the layer. Can be useful :ref:`to control <en/elements/basic/map:Make Layer visible>` URL parameters.
+    * ID: ID of the layer. Can be useful :ref:`to control <en/elements/basic/map:Activating Layers>` URL parameters.
     * Name: layer name of the service information (for getMap-Requests)
     * Style: if a WMS provides more than one style you can choose a different style than the default style.
 
@@ -360,9 +360,6 @@ Currently, the element can be used to transfer user- and group information, e.g.
 Access to Mapbender requires authentication. Only public applications can be used by everyone.
 
 A user can get permissions to access one or a set of applications and services.
-
-.. NOT IMPLEMENTED YET
-  There is no inherent difference between roles like :``guest``, ``operator`` or ``administrator``. The ``role`` of a user depends on the functionality and services the user has access through his applications.
 
 
 Create a user
@@ -402,14 +399,16 @@ Create a group
 6. Rights management
 ====================
 
-Mapbender provides different rights. They refer to the Symfony ACL System. 
+Mapbender provides an easy-to-use rights management that is implemented into the backend. 
 
-* View:	Whether someone is allowed to view the object.
-* Create:	Whether someone is allowed to create an object.
-* Edit:	Whether someone is allowed to make changes to the object.
-* Delete: Whether someone is allowed to delete the object.
+* **View**:	Select a user that is allowed to view an object (e.g., an application or a service).
+* **Create**:	Select a user that is allowed to create an object.
+* **Edit**:	Select a user that is allowed to make changes to an object.
+* **Delete**: Select a user that is allowed to delete an object.
 
-Assign roles to a user by ``Security`` → ``Global Permissions`` → ``User``.
+.. important:: Assign rights to a user via ``Security`` → ``Global Permissions``.
+
+Example for user rights in *Global Permissions*:
 
   .. image:: ../figures/mapbender_roles.png
      :width: 100%
@@ -418,40 +417,40 @@ Assign roles to a user by ``Security`` → ``Global Permissions`` → ``User``.
 Assign an Application to a User/Group
 -------------------------------------
 
-#. Edit your application via ``Application`` → |mapbender-button-edit| ``Edit-Button``.
+#. Edit your application via *Application* → |mapbender-button-edit| *Edit*.
 
-#. Choose ``Security``
+#. Choose ``Security``.
 
-#. Make your application accessable to the public by ``Security`` → ``public access``. Alternatively, one can use the |mapbender-button-publish| ``Button``. If this option is activated, also anonymous users will gain access to the application.
+#. Make your application accessable to the public by *Security* → *Public Access*. Alternatively, one can use |mapbender-button-publish| *Toggle public access*.
 
-#. Alternatively to public access you can set permissions for specific users/groups.
+#. Alternatively to public access, you can set permissions for specific users/groups:
 
   .. image:: ../figures/mapbender_security.png
      :width: 100%
 
-Test your configuration. Logout from Mapbender by ``Logout``. Login again as the new user.
+Test your configuration. Logout from Mapbender by clicking *Logout* in the upper right corner. Login again as the new user.
 
 
 Assign elements to a User/Group
 -------------------------------
 
-Per default, all elements are accessible to users/groups if they have access to that particular application. This can be modified for each element. 
+Per default, all elements of an application are accessible to users and groups if they have access to that particular application. This can be modified for each element. 
 
-#. Edit your application by pressing the |mapbender-button-edit| ``Edit Button`` .
+#. Edit your application by pressing the |mapbender-button-edit| *Edit*.
 
-#. In your application settings, choose ``Layouts``.
+#. In your application settings, choose :ref:`en/backend/applications/layouts:Layouts`.
 
-#. Every element has a |mapbender-button-key| ``Acl button``.
+#. Every element has a |mapbender-button-key| *Restrict element access*.
 
-#. Choose the |mapbender-button-key| ``Acl button`` from the element that should be only available for special users/groups.
+#. Choose the |mapbender-button-key| *Restrict element access* from the element that should be only available for special users/groups.
 
-#. Assign one or more users or groups to the element. Then, set permissions like view, edit, delete, operator, master, owner
+#. Assign one or more users or groups to the element. Then, you can set a *View* permission for the specific users or groups.
 
 #. Test your configuration.
 
 
-7. Start Application at a defined position
-==========================================
+7. Start an Application at a defined position
+=============================================
 
 You can open an application at a defined location. This can be done by a POI. You also can add texts in the request.
 
