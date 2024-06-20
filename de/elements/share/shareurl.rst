@@ -8,7 +8,7 @@ Das Teilen von URLs kann durch den Einbau eines entsprechenden Elements vereinfa
 .. image:: ../../../figures/de/share_url.png
      :scale: 80
 
-Durch Klick auf das Element wird die URL in der Zwischenablage gespeichert. Standardbrowser-Interaktionen (z.B. Öffnen in einem neuen Tab) sind ebenfalls möglich.
+Durch einen Klick auf das Element wird die URL in der Zwischenablage gespeichert. Gängige Browser-Interaktionen (z.B. In neuem Tab öffnen) sind ebenfalls möglich.
 
 Das Element speichert folgende Informationen:
 
@@ -23,6 +23,11 @@ Konfiguration
 
 .. image:: ../../../figures/de/share_url_configuration.png
      :scale: 70
+
+* **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
+* **Titel:** Titel des Elements. Entspricht dem Button-Titel.
+* **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger längere Zeit über dem Element verweilt.
+
 
 YAML-Definition
 ---------------
