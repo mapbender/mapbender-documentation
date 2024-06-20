@@ -20,7 +20,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/sketch_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Open automatically:** Opens the Sketch element on application start (default: off).
 * **Deactivate on close:** Sketches are deactivated after closure of the element.
