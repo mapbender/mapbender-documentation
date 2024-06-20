@@ -36,7 +36,7 @@ The Printclient is configured in the backend. It relies on print templates (A0 t
      :scale: 70
 
 * **Title**: Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. The title will be displayed next to the button if "Show label" is activated.
-* **Scales**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
+* **Scales (comma-separated)**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
 * **Rotatable**: defines if the print extent is rotatable, default is true
 * **Print legend**: adds a checkbox which allows your print to have a legend
 * **Legend checkbox active**: if true, the legend checkbox is checked by default
