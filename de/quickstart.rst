@@ -137,7 +137,7 @@ In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendu
 
 Es gibt drei verschiedene Möglichkeiten, durch die neue Anwendungen erstellt werden können:
 
-Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_db"* (bei yaml-Anwendungen) oder *"_imp"* (bei Anwendungen, die aus der :ref:`Datenbank <postgres_install_config_de>` heraus kopiert werden). Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich unter :ref:`yaml_de`.
+Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_db"* (bei yaml-Anwendungen) oder *"_imp"* (bei Anwendungen, die aus der Datenbank heraus kopiert werden). Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich unter :ref:`yaml_de`.
 
 Es können außerdem komplett neue Anwendungen über das :ref:`backend_de` definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
 
@@ -351,7 +351,7 @@ Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzug
 * Aufklappen erlauben: Erlaubt Aufklappen des Layers im Ebenenbaum
 * Aufklappen an: Klappt Layer beim Start der Anwendung auf
 * Weitere Informationen (Drei-Punkte-Button): Öffnet einen Dialog mit weiteren Layer-Informationen
-    * ID: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <layer_activation_de>`.
+    * ID: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <de/elements/basic/map:Ebenen aktivieren>`.
     * Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
     * Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil (default) wählen.
 
@@ -359,10 +359,7 @@ Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzug
 5. Benutzer- und Gruppenverwaltung
 ==================================
 
-Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. Nur öffentliche Anwendungen können von allen Anwendern genutzt werden. Benutzer oder Gruppen können Berechtigungen bekommen, um auf eine oder mehrere Anwendungen oder Dienste zuzugreifen.
-
-.. NOCH NICHT IMPLEMENTIERT
-  Es gibt keinen vorgegebenen Unterschied zwischen Rollen wie ``guest``, ``operator`` oder ``administrator``. Die ``role`` eines Benutzers beruht auf den Funktionen und den Diensten, auf die der Benutzer durch diese Anwendung Zugriff hat.
+Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. Nur öffentliche Anwendungen können von allen genutzt werden. Benutzer oder Gruppen können Berechtigungen zugewiesen werden, um auf eine oder mehrere Anwendungen, Dienste und mehr zuzugreifen.
 
 
 Benutzer anlegen
@@ -378,7 +375,7 @@ Benutzer anlegen
 
 #. Die Checkbox ``aktiviert`` gibt dem erstellten Account Zugriffsrechte auf das Mapbender-:ref:`backend_de`.
 
-#. Speichern Sie Ihren neuen Benutzer. Sie können alle Informationen auch im Nachhinein anpassen.
+#. Speichern Sie Ihren neuen Benutzer. Sie können alle Informationen auch nachträglich anpassen.
 
   .. image:: ../figures/de/mapbender_create_user.png
    :width: 100%
@@ -404,36 +401,37 @@ Gruppen anlegen
 6. Rechteverwaltung
 ===================
 
-Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Diese beruhen auf dem Symfony ACL System. 
+Mapbender bietet eine einfach zu bedienende Rechteverwaltung an, die im Backend implementiert ist. 
 
-* view:	kann anzeigen
-* edit:	kann editieren
-* delete: kann löschen
-* operator: kann anzeigen, editieren und löschen
-* master: kann anzeigen, editieren und löschen und diese Rechte außerdem weitergeben
-* owner: Besitzer darf alles (darf auch master- und owner-Recht vergeben)
+* **Ansehen**: Anklicken, damit eine Person die Berechtigung hat, sich Objekte (z.B. Anwendungen oder Datenquellen) ansehen zu können.
+* **Erstellen**: Anklicken, damit eine Person die Berechtigung hat, Objekte erstellen zu können.
+* **Bearbeiten**:	Anklicken, damit eine Person die Berechtigung hat, Objekte bearbeiten zu können.
+* **Löschen**: Anklicken, damit eine Person die Berechtigung hat, Objekte löschen zu können.
 
-Weisen Sie einem Benutzer über ``Sicherheit`` → ``Benutzer`` → ``Benutzer bearbeiten`` → ``Sicherheit`` Rechte zu.
+.. important:: Weisen Sie einem Benutzer Berechtigungen über ``Sicherheit`` → ``Globale Berechtigungen`` zu.
+
+Beispiel für Benutzerberechtigungen in den *Globalen Berechtigungen*:
 
   .. image:: ../figures/de/mapbender_roles.png
+     :width: 100%
 
 
-Zuweisen einer Anwendung zu einem Benutzer/einer Gruppe
--------------------------------------------------------
+Zuweisen einer einzelnen Anwendung zu einem Benutzer/einer Gruppe
+-----------------------------------------------------------------
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen`` → |mapbender-button-edit| ``Button`` einer Anwendung.
+#. Bearbeiten Sie Ihre Anwendung über *Anwendungen* → |mapbender-button-edit| *Bearbeiten* einer Anwendung.
 
 #. Wählen Sie ``Sicherheit``.
 
-#. Veröffentlichen Sie Ihre Anwendung über die Auswahl *"öffentlicher Zugriff"* unter ``Sicherheit`` oder den Button zur Veröffentlichung |mapbender-button-publish| in der Anwendungsübersicht. Ist diese Einstellung aktiviert, haben auch nicht angemeldete Nutzer einen Zugriff auf die Anwendung.
+#. Veröffentlichen Sie Ihre Anwendung über die Auswahl des Benutzers *Öffentlicher Zugriff*. Alternativ wählen Sie |mapbender-button-publish| *Öffentlichen Zugriff umschalten* in der Anwendungsübersicht. Ist diese Einstellung aktiviert, haben auch nicht angemeldete Nutzer einen Zugriff auf die Anwendung.
 
-#. Alternativ zum öffentlichen Zugriff können Sie individuelle Zugriffsrechte für einen Benutzer oder eine Gruppe setzen.
+#. Alternativ zum öffentlichen Zugriff können Sie individuelle Zugriffsrechte für einen Benutzer oder eine Gruppe setzen:
 
   .. image:: ../figures/de/mapbender_security.png
      :width: 100%
 
 
-Testen Sie die Konfiguration. Melden Sie sich dafür über ``Logout`` aus und melden sich unter einer neuen Benutzerbezeichnung an.
+Testen Sie die Konfiguration. Melden Sie sich oben rechts über *Abmelden* ab und melden sich unter einer neuen Benutzerbezeichnung an.
 
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
@@ -441,15 +439,15 @@ Zuweisen einzelner Elemente zu Benutzern/Gruppen
 
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Der Zugriff kann darüber hinaus für einzelne Elemente noch genauer definiert werden, sodass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen`` → |mapbender-button-edit| ``Button`` einer Anwendung.
+#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen`` → |mapbender-button-edit| *Bearbeiten* einer Anwendung.
 
-#. Wählen Sie ``Layouts``.
+#. Wählen Sie :ref:`de/backend/applications/layouts:Layouts`.
 
-#. Jedes Element verfügt über einen |mapbender-button-key| ``Acl-Button``.
+#. Jedes Element kann über |mapbender-button-key| *Zugriff auf das Element einschränken* eingeschränkt werden.
 
-#. Wählen Sie den |mapbender-button-key| ``Acl-Button`` zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
+#. Wählen Sie |mapbender-button-key| *Zugriff auf das Element einschränken* zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
 
-#. Weisen Sie das Element Benutzern/Gruppen zu. Setzen Sie anschließend Berechtigungen für den Benutzer/die Gruppe.
+#. Weisen Sie dem Element Benutzern/Gruppen zu. Dadurch erhalten diese die Berechtigung *Anzeige* und können das Element in der Anwendung sehen.
 
 #. Testen Sie die Konfiguration.
 
