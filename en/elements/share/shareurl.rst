@@ -22,7 +22,12 @@ Configuration
 =============
 
 .. image:: ../../../figures/share_url_configuration.png
-     :scale: 80
+     :scale: 70
+
+* **Show label:** Enables or disables text (title) next to the button (default: true).
+* **Title:** Title of the element. 
+* **Tooltip:** Text to use as tooltip.
+
 
 YAML-Definition
 ---------------

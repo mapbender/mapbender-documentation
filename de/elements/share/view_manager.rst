@@ -54,7 +54,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/view_manager_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition
