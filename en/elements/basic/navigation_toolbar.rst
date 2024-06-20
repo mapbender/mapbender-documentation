@@ -12,13 +12,13 @@ Configuration
 =============
 
 .. image:: ../../../figures/navigation_toolbar_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **Draggable:** Element is draggable or not (default: true)
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Components:** Components of the navigation toolbal (all selected by default). Options: Rotation, zoom to max extent, Back to start, Zoom in/out, Zoom slider
-* **Back to start:** Resets layer settings (default: false).
-* **Position:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar). Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom
+* **Draggable:** Element is draggable or not (default: true).
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Components:** Components of the navigation toolbal (all selected by default). Options: Rotation, Zoom to maximum extent, Back to start, Zoom in and out, Zoom slider
+* **"Back to start" also resets layer settings:** Resets layer settings (default: false).
+* **Position:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar); mandatory field. Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom.
 
 .. note:: The element must be integrated into the Map area.
 
@@ -29,9 +29,9 @@ Components of the Navigation Toolbar element:
 You can integrate various different *components* in the configuration dialog box. These components include:
 
 * Rotation
-* Zoom to max extent
+* Zoom to maximum extent
 * Zoom to start
-* Zoom in/out
+* Zoom in and out
 * Zoom slider
 
 In the application these components look like this:

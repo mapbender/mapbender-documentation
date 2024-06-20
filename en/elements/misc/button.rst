@@ -15,7 +15,7 @@ Configuration
      :scale: 80
 
 * **Show label:** Enables or disables text (title) next to the button (default: true).
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Target:** Target element (Title(ID)) of the button. The target element will be triggered by clicking on the button (e.g. Print).
 * **Group:** Adds the element to a group. Only one button of the group may be activated.
 * **Tooltip:** Text, that will be indicated if the mouse hovers over the button for a longer time.

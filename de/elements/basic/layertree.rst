@@ -198,7 +198,7 @@ Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die 
 
 **Einrichtung in der Karte zur Anzeige der Layersets**
 
-Als Nächstes erfolgt die Einrichtung des :ref:`Kartenelements <map_de>` zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter "Layouts" und bearbeiten das Kartenelement im Kartenbereich.
+Als Nächstes erfolgt die Einrichtung des :ref:`Kartenelements <map_de>` zur Anzeige des Layersets in der Karte. Dazu wechseln wir in den Reiter :ref:`layouts_de` und bearbeiten das Kartenelement im Kartenbereich.
 Wichtig ist, dass bei dem Bereich Layersets beide Layersets "World" und "Project NRW" per Checkbox aktiviert sind, damit diese in der Anwendung angezeigt werden. 
 
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des :ref:`Kartenelements <map_de>` weiterhelfen.

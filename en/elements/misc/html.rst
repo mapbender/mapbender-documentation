@@ -22,7 +22,7 @@ This element has to be integrated in the :ref:`backend`.
 .. image:: ../../../figures/html_element.png
      :scale: 80
 
-* **Title:** Title of the element. The title will be listed in "Layouts".
+* **Title:** Title of the element. The title will be listed in :ref:`layouts`.
 * **Content:** Content of the HTML-element. The variables "application" and "entity" are available.
 * **Classes:** You can refer to a CSS class for the HTML element. The class can be defined in the css editor.
 

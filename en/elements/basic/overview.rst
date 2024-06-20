@@ -14,13 +14,14 @@ Configuration
 The configuration dialog offers the following settings:
 
 .. image:: ../../../figures/overview_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Fix:** Fixes the overview extent (default: false).
-* **Title:** Title of the element, will be listed in "Layouts".
+* **Title:** Title of the element, will be listed in :ref:`layouts`.
 * **Layerset:** Refers to a previously defined layerset, e.g. overview.
-* **Visibility:** Initially open/Initially closed/Permanently open - Defines whether the overview will be open or closed on start. The first two options will show a button to close the overview map. The third option provides an overview map and does not show a button. (default: Initially open)
-* **Width/Height:** Width and height of the element.
+* **Visibility:** Initially open/Initially closed/Permanently open. Defines whether the overview will be open or closed on start. The first two options will show a button to close the overview map. The third option provides an overview map and does not show a button (Default: Initially open). 
+* **Width:** Width of the element.
+* **Height:** Height of the element.
 * **Position:** Position of the overview map frame in the application; options are: top left, bottom left, top right and bottom right.
 
 Configuration examples

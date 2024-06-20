@@ -18,7 +18,7 @@ Configuration
 
 * **Auto open:** Opens the element when application is started (default: false).
 * **Split layers:** Splits layer on load of the service (default: false).
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Default format:** image/png, image/gif, image/jpeg (default: image/png).
 * **Default info format:** text/html, text/xml, text/plain (default: text/html).
 

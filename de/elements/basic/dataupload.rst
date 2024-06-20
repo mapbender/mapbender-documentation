@@ -14,8 +14,8 @@ Für eine passende Projektion wählen Sie entweder ein eigenes Koordinatenrefere
 Konfiguration
 -------------
 
-.. image:: ../../../figures/dataupload_configuration.png
-     :width: 100%
+.. image:: ../../../figures/de/dataupload_configuration.png
+     :scale: 70
 
 
 * **Titel**: Titel des Elements, erscheint in der Kopfzeile des Elements.
