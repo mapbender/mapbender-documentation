@@ -3,7 +3,7 @@
 Scale Display
 *************
 
-The Scale Display shows the current map scale (1:1000 or 1:1K).
+The Scale Display shows the current map scale (e.g. as 1:7,500 or 1:10K).
 
 .. image:: ../../../figures/scaledisplay.png
      :scale: 100
@@ -19,7 +19,7 @@ Configuration
 
 * **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons.
 * **Prefix:** Customizable description shown before the actual scale. The default ``mb.core.scaledisplay.label`` is rendered as *Scale* in the user's language.
-* **Shorten scale:** If checked, scale numbers higher than 1,000 will be shortened with a postpositioned ``K`` or ``M`` (e.g. 1K as 1000).
+* **Shorten scale:** If checked, scale numbers from 10,000 or higher will be shortened with a postpositioned ``K`` or ``M`` (e.g. 10,000 as 10K).
 * **Position:** Scale display alignment (mandatory field; default: 'Bottom right').
 
 
@@ -36,5 +36,5 @@ This template can be used to insert the element into a YAML application.
      'left-bottom'/'right-top'/     # use inline, e.g. in sidebar
      'right-bottom'
    scalePrefix: Scale               # prefix, shown with scale
-   unitPrefix: false                # prefix, shown with unit, e.g. 1K as 1000
+   unitPrefix: false                # prefix, shown with unit, e.g. 1000 as 1K
 

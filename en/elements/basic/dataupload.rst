@@ -8,7 +8,7 @@ You can either choose a fitting CRS or use the feature *Determine projection aut
 .. hint:: File size is limited. A maximum file size can be defined in the element configuration.
 
 .. image:: ../../../figures/dataupload.png
-     :width: 100%
+     :scale: 70
 
 
 Configuration
