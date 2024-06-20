@@ -61,7 +61,7 @@ With the configuration of the following values it is possible to enable optional
 Here's an example for the :ref:`backend` configuration (or look below in the YAML definition for an enhanced and commented example).
 
 .. image:: ../../../figures/print_client_configuration_enhanced.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition
