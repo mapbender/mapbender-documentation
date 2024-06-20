@@ -406,14 +406,12 @@ Gruppen anlegen
 
 Mapbender bietet verschiedene Rechte an, die Sie vergeben können. Diese beruhen auf dem Symfony ACL System. 
 
-* view:	kann anzeigen
-* edit:	kann editieren
-* delete: kann löschen
-* operator: kann anzeigen, editieren und löschen
-* master: kann anzeigen, editieren und löschen und diese Rechte außerdem weitergeben
-* owner: Besitzer darf alles (darf auch master- und owner-Recht vergeben)
+* Ansehen: Ob eine Person die Befugnisse hat, sich das Objekt ansehen zu können.
+* Erstellen:	Ob eine Person die Befugnisse hat, ein Objekt erstellen zu können.
+* Bearbeiten:	Ob eine Person die Befugnisse hat, das Objekt bearbeiten zu können.
+* Löschen: Ob eine Person die Befugnisse hat, Objekt löschen zu können.
 
-Weisen Sie einem Benutzer über ``Sicherheit`` → ``Benutzer`` → ``Benutzer bearbeiten`` → ``Sicherheit`` Rechte zu.
+Weisen Sie einem Benutzer über ``Sicherheit`` → ``Globale Berechtigungen`` → ``Benutzer`` Rechte zu.
 
   .. image:: ../figures/de/mapbender_roles.png
 

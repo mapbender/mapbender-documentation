@@ -404,14 +404,12 @@ Create a group
 
 Mapbender provides different rights. They refer to the Symfony ACL System. 
 
-* view:	Whether someone is allowed to view the object.
-* edit:	Whether someone is allowed to make changes to the object.
-* delete: Whether someone is allowed to delete the object.
-* operator: Whether someone is allowed to perform all of the above actions.
-* master: Whether someone is allowed to perform all of the above actions and in addition is allowed to grant any of the above permissions to others.
-* owner: Whether someone owns the object. An owner can perform any of the above actions and grant master and owner permissions.
+* View:	Whether someone is allowed to view the object.
+* Create:	Whether someone is allowed to create an object.
+* Edit:	Whether someone is allowed to make changes to the object.
+* Delete: Whether someone is allowed to delete the object.
 
-Assign roles to a user by ``Security`` → ``Users`` → ``Edit your User`` → ``Security``.
+Assign roles to a user by ``Security`` → ``Global Permissions`` → ``User``.
 
   .. image:: ../figures/mapbender_roles.png
      :width: 100%
