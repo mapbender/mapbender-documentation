@@ -162,7 +162,7 @@ Weitere Informationen zur Einrichtung von Datenbankverbindungen finden sich im K
     php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
 
-Für die Administration von Mapbedner wird ein Root-Benutzer benötigt. Dieser Benutzer wird über den folgende Befehl angelegt:
+Für die Administration von Mapbender wird ein Root-Benutzer benötigt. Dieser Benutzer wird über den folgende Befehl angelegt:
 
 .. code-block:: text
 
