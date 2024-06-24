@@ -18,12 +18,13 @@ Migration to Mapbender 4.0.0
 * Carefully check the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/UPGRADING.md>`_ before you do the update.
 
 * You will notice that the Symfony Directory Structure changed a lot.
-* For Mapbender 4, all ``.yml`` file extensions were transformed into ``.yaml``. config.yml is omitted
-* public files moved from app/web to public
-* Instead of multi parameters in parameters.yml the database definition is replaced by an environment variable ``MAPBENDER_DATABASE_URL``. Configure it by adding it in your .env.local file. If you have multiple connections, use one env variable per connection and configure these in the config/packages/doctrine.yaml file
+* For Mapbender 4, all ``.yml`` file extensions were transformed into ``.yaml``.
+* config.yml is omitted.
+* public files moved from app/web to public.
+* Instead of multi parameters in parameters.yml the database definition is replaced by an environment variable ``MAPBENDER_DATABASE_URL``. Configure it by adding it in your .env.local file. If you have multiple connections, use one env variable per connection and configure these in the config/packages/doctrine.yaml file.
 * The Apache Vhost Definition or ALIAS has to be changed. Refer to public (instead of web). Call index.php instead of app.php). See installation instruction.
 * Environment can now be set using the environment variable ``APP_ENV`` (see .env.local) .index_dev.php (instead of app_dev.php) is still available as an alternative for accessing the dev environment on remote servers.
-* Database permission can be migrated using bin/console mapbender:security:migrate-from-acl. Do that before executing the schema:update command, otherwise your old ACL tables will be gone
+* Database permission can be migrated using ``bin/console mapbender:security:migrate-from-acl``. Do that before executing the schema:update command, otherwise your old ACL tables will be gone!
 
 
 Upgrade database
@@ -32,8 +33,8 @@ Upgrade database
 **Important**: Execute the following commands in the specified order to upgrade (after bringing the symfony directory structure up to date). First, make a backup of your database!
 
 * ``bin/console mapbender:database:upgrade``: this replaces doctrine's removed json_array type to json. If you are using a DBMS other than SQlite, PostgreSQL and MySQL you need to do that manually.
-*  ``bin/console mapbender:security:migrate-from-acl``: migrates security definitions from the ACL system to the new permission system
-* ``bin/console doctrine:schema:update --complete --force``: updates the rest of the database. That needs to be executed last, since it deletes the old ACL tables
+* ``bin/console mapbender:security:migrate-from-acl``: migrates security definitions from the ACL system to the new permission system.
+* ``bin/console doctrine:schema:update --complete --force``: updates the rest of the database. This must be executed last, since it deletes the old ACL tables.
 
 
 Migration to Mapbender 3.3.4
@@ -104,7 +105,7 @@ Some elements may not work after the update and may need a closer look.
 
 
 Update map_engine_code
-======================
+----------------------
 
 If it makes sense, update all applications to map_engine_code current.
 
@@ -112,7 +113,7 @@ If it makes sense, update all applications to map_engine_code current.
 
 
 SearchRouter
-============
+------------
 
 In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/master/app/config/applications/mapbender_demo_nrw.yml>`_.
 
@@ -148,7 +149,7 @@ You can update the configuration with the following SQL.
 
 
 Migrating SimpleSearch
-======================
+----------------------
 
 SimpleSearch element was improved. You can now define the projection of the result that comes from the Solr Service. Mapbender will then transform the result to the projection of the map.
 
@@ -165,7 +166,7 @@ SimpleSearch Supports Nominatim, Photon from version 3.2.5 - see workshop demo a
 
 
 Migrating BaseSourceSwitcher
-============================
+----------------------------
 
 Please note that on start of an application, all WMS are activated where the root layer is activated.
 
@@ -173,7 +174,7 @@ Before 3.2, it was possible to activate all BaseSources, where only the first WM
 
 
 Template / CSS
-==============
+--------------
 
 CSS change. Plus, there will be a big redesign in backend and frontend in the upcoming versions.
 
@@ -182,7 +183,7 @@ CSS change. Plus, there will be a big redesign in backend and frontend in the up
 
 
 Migrating Digitizer
-===================
+-------------------
 
 Digitizer is available for Mapbender >= 3.2.2. The new Digitizer Version is 1.4. Some functionality is not updated to 1.4 already (e.g. cluster).
 
@@ -226,14 +227,14 @@ There is a new style called unsaved.
 
 
 WMS Layer visibility
-====================
+--------------------
 
 Make sure that your WMS provides a proper extent for all supported EPSG-codes (this is used and saved in table mb_wms_wmslayersource Spalten latlonbounds und boundingboxes). 
 Else it can happen that a layer is not requested for the given extent of your map.
 
 
 Notice on the Sketch element
-============================
+----------------------------
 
 Redlining was renamed to Sketch (>= 3.2.3).
 
@@ -245,14 +246,14 @@ Redlining was renamed to Sketch (>= 3.2.3).
 		
 		
 FeatureInfo
-===========
+-----------
 
 * showOriginal deprecated - parameter not available anymore (from 3.2.3).
 * highlighting: true - new >= 3.2.3 highlights the geometry if you have WKT integrated in the featureinfo result - see `issue 1287 <https://github.com/mapbender/mapbender/issues/1287>`_ and also this `FeatureInfo blog post <https://wheregroup.com/blog/details/mapbender-featureinfo-mit-highlighting-der-treffer-geometrie/>`_
 
 
 Print - Print queue
-===================
+-------------------
 
 * Mapbender supports print queue
 * see `Queue blog post <https://wheregroup.com/blog/details/mapbender-druckauftraege-verwalten-und-wiederverwenden-einrichtung-der-warteschleife/>`_
