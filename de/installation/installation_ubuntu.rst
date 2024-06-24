@@ -12,7 +12,7 @@ Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finde
 Voraussetzungen
 ---------------
 
-* PHP >= 8.0
+* PHP >= 8.1
 * Apache Installation mit folgenden aktivierten Modulen:
     * mod_rewrite
     * libapache2-mod-php
@@ -80,11 +80,11 @@ Verzeichnisrechte
 
  sudo chown -R :www-data /var/www/mapbender
 
- sudo chmod -R ug+w /var/www/mapbender/application/var/log
- sudo chmod -R ug+w /var/www/mapbender/application/var/cache
- sudo chmod -R ug+w /var/www/mapbender/application/public/uploads
+ sudo chmod -R ug+w /var/www/mapbender/var/log
+ sudo chmod -R ug+w /var/www/mapbender/var/cache
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
- sudo chmod -R ug+w /var/www/mapbender/application/var/db/demo.sqlite
+ sudo chmod -R ug+w /var/www/mapbender/var/db/demo.sqlite
 
 
 Nächste Schritte
@@ -140,19 +140,11 @@ Installation PHP-PostgreSQL Treiber:
 
    sudo apt install php-pgsql
 
-
-Konfiguration der Datenbankverbindung in (application/config/parameters.yaml).
-Weitere Informationen im Kapitel :ref:`yaml_de`.
+Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer ``.env.local``-Datei hinzufügen.
 
 .. code-block:: yaml
 
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:     ~
-    database_user:     postgres
-    database_password: geheim
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
 
 Initialisierung der Datenbank:
 

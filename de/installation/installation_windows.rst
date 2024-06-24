@@ -13,7 +13,7 @@ Mapbender benötigt eine Datenbank zur Speicherung der Administrationsinformatio
 Voraussetzungen
 ---------------
 
-* PHP NTS >= 8.0 (https://windows.php.net/download/)
+* PHP NTS >= 8.1 (https://windows.php.net/download/)
 * Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/) mit folgenden aktivierten Modulen:
     * mod_rewrite
     * mod_fcgid
@@ -143,21 +143,16 @@ Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
 Konfiguration PostgreSQL
 ------------------------
 
-Konfiguration der Datenbankverbindung erfolgt in der Datei application/config/parameters.yaml.
-
-Weitere Informationen im Kapitel :ref:`yaml_de`.
+Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer ``.env.local``-Datei hinzufügen.
 
 .. code-block:: yaml
 
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:     ~
-    database_user:     postgres
-    database_password: geheim
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+
+Weitere Informationen zur Einrichtung von Datenbankverbindungen finden sich im Kapitel :ref:`yaml_de`.
+
     
-Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befehle eingeben: 
+Öffnen Sie nun die Eingabeaufforderung. Zur Initialisierung der Datenbank geben Sie bitte folgende Befehle ein:
 
 .. code-block:: text
  
@@ -167,7 +162,7 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
     php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
 
-Für die Administration von Mapbedner wird ein Root-Benutzer benötigt. Dieser Benutzer wird über den folgende Befehl angelegt:
+Für die Administration von Mapbender wird ein Root-Benutzer benötigt. Dieser Benutzer wird über den folgende Befehl angelegt:
 
 .. code-block:: text
 

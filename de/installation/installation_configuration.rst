@@ -10,7 +10,7 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 
 * Erzeugen der Datenbank
 * Erzeugen der Datenbankschemas
-* Kopieren des bundle Assets in das öffentliche web-Verzeichnis
+* Kopieren des bundle Assets in das öffentlich zugängliche public-Verzeichnis
 * Erzeugen des "root" Benutzers
 * Initialisieren der Datenbank
 * Laden der Demo-Anwendungen in die Datenbank
@@ -63,7 +63,7 @@ Erzeugen des Datenbankschemas über Symfony:
 Kopieren des Asset Bundles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien, Bilder und mehr – diese müssen in das öffentliche web-Verzeichnis kopiert werden:
+Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien, Bilder und mehr – diese müssen in das öffentliche public-Verzeichnis kopiert werden:
 
 .. code-block:: yaml
 

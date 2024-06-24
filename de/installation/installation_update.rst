@@ -5,16 +5,18 @@ Aktualisierung von Mapbender auf eine neuere Version
 
 Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
-* Laden Sie die neuste Version von https://mapbender.org/builds/ herunter
-* Sichern Sie Ihre Konfigurationsdateien (parameters.yaml und die Dateien im Verzeichnis config/packages) und Ihre alte Mapbender Version (Dateien und Datenbank)
-* Ersetzen Sie die Dateien durch die neuen Mapbender-Dateien
-* Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen
-* Aktualisieren Sie Ihre Mapbender-Datenbank
-* Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von mapbender/public/uploads/ in das mapbender/public/uploads Verzeichnis Ihrer neuen Mapbender Version
-* Wenn Sie Ihre eigenen Templates verwenden sollten, müssen Sie diese mit denen der neuen Version vergleichen (kam es zu Änderungen?)
-* Importieren Sie die Demo-Anwendungen (über den Befehl bin/composer run reimport-example-apps oder über die Web-Administration), um sich den neusten Stand der Entwicklungen anzuschauen
-* Unter :ref:`installation_ubuntu_de` im Bereich **Entpacken und im Webserver registrieren** ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte
-* Das war's auch schon! Schauen Sie sich Ihre neue Mapbender Version an.
+* Laden Sie die neuste Version von https://mapbender.org/builds/ herunter.
+* Sichern Sie Ihre Konfigurationsdateien (``parameters.yml`` für Versionen < 4.0.0 bzw. ``.env.local`` für Versionen >= 4.0.0, und die Dateien im Verzeichnis *config/packages*) und Ihre alte Mapbender Version (Dateien und Datenbank).
+* Ersetzen Sie die Dateien durch die neuen Mapbender-Dateien.
+* Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen.
+* Aktualisieren Sie Ihre :ref:`Mapbender-Datenbank<de/customization/commands:bin/console doctrine:schema:update>`.
+* Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von */public/uploads/* (*web/uploads* für Versionen < 4.0.0) in das */public/uploads* Verzeichnis Ihrer neuen Mapbender Version.
+* Wenn Sie Ihre eigenen Templates verwenden sollten, müssen Sie diese mit denen der neuen Version vergleichen (kam es zu Änderungen?).
+* Druck Templates: Kopieren Sie eventuell selbsterstellte Drucktemplates zurück unter *config/MapbenderPrintBundle/templates/*.
+* Importieren Sie die Demo-Anwendungen (über den Befehl ``bin/composer run reimport-example-apps`` oder über die Web-Administration), um sich den neusten Stand der Entwicklungen anzuschauen.
+* Unter :ref:`de/installation/installation_ubuntu:Entpacken und im Webserver registrieren` ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte.
+
+Das war's auch schon! Schauen Sie sich Ihre neue Mapbender Version an.
 
 .. hint::
     
@@ -40,8 +42,8 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  mv /var/www/mapbender-starter-v4.0.0 /var/www/mapbender
  
  # Übernehmen Sie die Konfigurationsdateien in die neue Version von Mapbender
- cp /var/www/mapbender_save/application/config/parameters.yaml /var/www/mapbender/application/config/parameters.yaml
- cp /var/www/mapbender_save/application/config/packages/doctrine.yaml /var/www/mapbender/application/packages/doctrine.yaml
+ # Übernehmen Sie die Informationen von der config/parameters.yml nach .env.local bzw. /config/parameters.yaml
+ # Übernehmen Sie die Informationen die Information der alten config.yml nach /var/www/mapbender/config/packages/doctrine.yaml
  
  # Händisch müssen Sie nun die Konfigurationsdateien auf neue Parameter überprüfen.
  # Vergleichen Sie die Dateien parameters.yaml,packages/doctrine.yaml und ggf. andere Dateien aus dem packages-Verzeichnis
@@ -55,9 +57,9 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
 
  # Aktualisieren Sie Ihre Mapbender Datenbank
  cd /var/www/mapbender/
- bin/console doctrine:schema:update --dump-sql
- bin/console doctrine:schema:update --force
-
+ bin/console doctrine:schema:update --complete --dump-sql
+ bin/console doctrine:schema:update --complete --force
+  
  # Importieren Sie die Demo-Anwendungen, um sich den neusten Stand der Entwicklungen anzuschauen
  bin/composer run reimport-example-apps
 
@@ -69,9 +71,9 @@ Im Folgenden sind die einzelnen Schritte als Befehle aufgeführt.
  sudo chown -R :www-data /var/www/mapbender
 
  # Sie benötigen Schreibrechte für die Verzeichnisse var/cache und var/log.
- sudo chmod -R ug+w /var/www/mapbender/application/var/cache
- sudo chmod -R ug+w /var/www/mapbender/application/var/log
- sudo chmod -R ug+w /var/www/mapbender/application/public/uploads
+ sudo chmod -R ug+w /var/www/mapbender/var/cache
+ sudo chmod -R ug+w /var/www/mapbender/var/log
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
 
 Aktualisierungsbeispiel für Windows
@@ -92,8 +94,8 @@ Aktualisierungsbeispiel für Windows
  cd mapbender
  
  # Aktualisieren Sie Ihre Mapbender Datenbank
- php.exe bin/console doctrine:schema:update --dump-sql
- php.exe bin/console doctrine:schema:update --force
+ php.exe bin/console doctrine:schema:update --complete --dump-sql
+ php.exe bin/console doctrine:schema:update --complete --force
 
  # Importieren Sie die Anwendungen aus der mapbender.yaml Datei, um sich den neusten Stand der Entwicklungen anzuschauen
  php.exe bin/composer run reimport-example-apps

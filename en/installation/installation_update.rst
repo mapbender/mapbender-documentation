@@ -5,17 +5,18 @@ Update Mapbender to a newer Version
 
 To update Mapbender you have to do the following steps:
 
-* get the new version from http://mapbender.org/builds/
-* save your configuration files (parameters.yaml and files from folder config/packages) and your old Mapbender (files and database)
-* replace the new files 
-* merge your configuration files (check for new parameters and changes)
-* update your Mapbender database
-* copy the screenshots from your old Mapbender version from /public/uploads/ to the folder /public/uploads of your new installation
-* Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?)
-* print templates: if you use your own print templates: copy them back to config/MapbenderPrintBundle/templates/.
-* Import the demo applications either via bin/composer run reimport-example-apps or via the web administration
-* At :ref:`installation_ubuntu` under the section **Unpack and register in your Web-Server** you can see how the config file for the Apache Alias should look like
-* That's all! Have a look at your new Mapbender version
+* Get the new version from https://mapbender.org/builds/.
+* Save your configuration files (``parameters.yml`` for versions < 4.0.0 respectively ``.env.local`` for >= 4.0.0, and the files from the folder *config/packages*) and your old Mapbender version (files and database).
+* Replace the old with the new Mapbender files.
+* Merge your configuration files (check for new parameters and changes).
+* Update your :ref:`Mapbender database <en/customization/commands:bin/console doctrine:schema:update>`.
+* Copy the screenshots from your old Mapbender version from */public/uploads/* (web/uploads for < 4.0.0) to the folder */public/uploads* of your new installation.
+* Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?).
+* Print templates: If you use your own print templates, copy them back to *config/MapbenderPrintBundle/templates/*.
+* Import the demo applications; either via ``bin/composer run reimport-example-apps`` or via the web administration.
+* At :ref:`en/installation/installation_ubuntu:Unpack and register to web server`, you can see how the config file for the Apache Alias should look like.
+
+And that's all! Have a look at your new Mapbender version.
 
 .. hint::
     
@@ -39,9 +40,10 @@ Have a look at the steps as commands
  cp -R /tmp/build_mapbender/mapbender-starter-v4.0.0 /var/www/
  mv /var/www/mapbender-starter-v4.0.0 /var/www/mapbender
  
- # copy your old configuration files to the new version
- cp /var/www/mapbender_save/application/config/parameters.yaml /var/www/mapbender/application/config/parameters.yaml
- cp /var/www/mapbender_save/application/config/packages/doctrine.yaml /var/www/mapbender/application/config/packages/doctrine.yaml
+ # transfer your old configuration information to the new version
+ # transfer the information from config/parameters.yml to .env.local resp. /config/parameters.yaml
+ # transfer the information from old config.yml to  /var/www/mapbender/config/packages/doctrine.yaml
+
  
  # manual step
  # merge parameters.yaml, doctrine.yaml and other YAML files you use
@@ -55,8 +57,8 @@ Have a look at the steps as commands
  
  # Update your Mapbender database
  cd /var/www/mapbender/
- bin/console doctrine:schema:update --dump-sql
- bin/console doctrine:schema:update --force
+ bin/console doctrine:schema:update --complete --dump-sql
+ bin/console doctrine:schema:update --complete --force
   
  # Import the mapbender demo applications
  bin/composer run reimport-example-apps
@@ -69,9 +71,9 @@ Have a look at the steps as commands
  sudo chown -R :www-data /var/www/mapbender
 
  # You have to set write permission to var/cache and var/log.
- sudo chmod -R ug+w /var/www/mapbender/application/var/cache
- sudo chmod -R ug+w /var/www/mapbender/application/var/log
- sudo chmod -R ug+w /var/www/mapbender/application/public/uploads
+ sudo chmod -R ug+w /var/www/mapbender/var/cache
+ sudo chmod -R ug+w /var/www/mapbender/var/log
+ sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
 Update Example for Windows
 ------------------------------------
@@ -91,10 +93,10 @@ Update Example for Windows
  cd mapbender
  
  # Update your Mapbender database
- php.exe bin/console doctrine:schema:update --dump-sql
- php.exe bin/console doctrine:schema:update --force
- 
- # Import the applications from mapbender.yaml to your database to get to know about the latest developments
+ php.exe bin/console doctrine:schema:update --complete --dump-sql
+ php.exe bin/console doctrine:schema:update --complete --force
+
+ # Import the mapbender demo applications
  php.exe bin/composer run reimport-example-apps
 
  # Export files to the web-directory

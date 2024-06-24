@@ -13,7 +13,7 @@ Mapbender needs a database to store information. The Mapbender download package 
 Requirements
 ------------
 
-* PHP NTS >= 8.0 (https://windows.php.net/download/)
+* PHP NTS >= 8.1 (https://windows.php.net/download/)
 * Apache installation (https://www.apachelounge.com/download/, run as service with these modules):
     * mod_rewrite
     * mod_fcgid
@@ -139,20 +139,14 @@ Create file **<apache>\\conf\\conf.d\\fcgi.conf** with:
 Configuration PostgreSQL
 ------------------------
 
-The configuration of the Mapbender database is done in the file application/config/parameters.yaml.
-
-For more information on the database configuration, see :ref:`yaml`.
+Configuration of database connection is done by a variable that contains the entire connection  string. Configure it by adding it in your ``.env.local`` file.
 
 .. code-block:: yaml
 
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:     ~
-    database_user:     postgres
-    database_password: secret
-    
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+
+For more information on the database configuration, see :ref:`yaml`.
+
 
 Open the windows shell and initialize the database connection with the following commands:
 
