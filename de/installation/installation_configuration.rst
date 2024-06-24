@@ -63,7 +63,7 @@ Erzeugen des Datenbankschemas über Symfony:
 Kopieren des Asset Bundles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien, Bilder und mehr – diese müssen in das öffentliche web-Verzeichnis kopiert werden:
+Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien, Bilder und mehr – diese müssen in das öffentliche public-Verzeichnis kopiert werden:
 
 .. code-block:: yaml
 

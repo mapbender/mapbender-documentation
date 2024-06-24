@@ -10,7 +10,7 @@ In the following, we will describe the configurational steps of Mapbender a bit 
 
 * Creating the database
 * Creating the database schema
-* Copying the bundles' assets to the public public directory
+* Copying the bundles' assets into the ``public`` directory
 * Creating the "root" user
 * Initializing the database
 * Loading the demo applications to your database
@@ -63,7 +63,7 @@ Copying the assets bundles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each bundle has its own assets - CSS files, JavaScript files, images and more -
-but these need to be copied into the public web folder:
+these must be copied into the ``public`` folder:
 
 .. code-block:: yaml
 
