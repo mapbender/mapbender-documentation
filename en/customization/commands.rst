@@ -185,8 +185,8 @@ The command is needed on Mapbender update. It generates the SQL needed to synchr
 
 .. code-block:: yaml
 
-    bin/console doctrine:schema:update --dump-sql
-    bin/console doctrine:schema:update --force
+    bin/console doctrine:schema:update --complete --dump-sql
+    bin/console doctrine:schema:update --complete --force
 		
 * --dump-sql    Shows changes in the database schema.
 * --force       Executes the changes in the database schema.
