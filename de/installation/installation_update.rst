@@ -20,7 +20,7 @@ Das war's auch schon! Schauen Sie sich Ihre neue Mapbender Version an.
 
 .. hint::
     
-    Folgen Sie bitte zusätzlich den :ref:`Migrationshinweisen für bestimmte Versionen<migration>`.
+    Folgen Sie bitte zusätzlich den :ref:`Migrationshinweisen für bestimmte Versionen<migration_de>`.
 
 
 Aktualisierungsbeispiel für Linux
