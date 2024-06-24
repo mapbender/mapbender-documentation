@@ -3,10 +3,12 @@
 Suchen (Search Router)
 **********************
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Dieses Element erzeugt ein Suchformular mit Trefferausgabe, über das Objekte innerhalb der Karte lokalisiert werden können. Sowohl eine Verbindung zur Datenbank als auch das Formular und die Trefferausgabe sind über das :ref:`backend_de` konfigurierbar. Derzeit werden PostgreSQL-Tabellen als Grundlage für Suchen unterstützt.
 
 .. image:: ../../../figures/de/search_router.png
-     :scale: 80
+     :scale: 50
 
 
 Konfiguration
@@ -20,29 +22,29 @@ Das Element kann entweder in der Sidepane oder als Button in der oberen Werkzeug
 .. image:: ../../../figures/de/search_router_configuration.png
      :scale: 80
 
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt sowie als Titel in der Seitenleiste (Nutzung in der Sidepane) oder als Titel des Suchdialogs (Nutzung via Button).
-* **Width:** Breite des Dialogs (nur wenn das Element als Dialog eingebunden wurde)
-* **Height:** Höhe des Dialogs (nur wenn das Element als Dialog eingebunden wurde)
+* **Titel:** Titel des Elements. Dieser wird unter der :ref:`layouts_de`-Liste sowie als Titel in der Seitenleiste oder als Titel des Suchdialogs (via Button) angezeigt.
+* **Breite:** Breite des Dialog-Fensters (im Kartenbereich).
+* **Höhe:** Höhe des Dialogs-Fensters (im Kartenbereich).
 
-Über den Button ``+`` bei Routes können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Title* und *Configuration*. Der eingegebene Titel bei *Title* ist in der Suche in der Anwendung in einer Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. 
+Über |mapbender-button-add| bei *Routen* können mehrere Suchen erstellt werden. Jede Suche beinhaltet die Felder *Titel* und *Konfiguration*. Der eingegebene Titel ist in der Suche über eine Auswahlbox selektierbar. So können mehrere Suchen unterschieden und ausgewählt werden. 
 
-* **Routes:** Erstellung einer neuen Suche.
-* **Title**: Titel der Suche (erscheint erst, wenn über das + bei Routes eine Suche hinzugefügt wurde)
-* **Configuration**: Feld für die Konfiguration der Suche (erscheint erst, wenn über das + bei Routes eine Suche hinzugefügt wurde)
+* **Routen:** Erstellung einer neuen Suche.
+* **Titel**: Titel der Suche (erscheint erst, wenn über |mapbender-button-add| bei *Routen* eine Suche hinzugefügt wurde).
+* **Konfiguration**: Feld für die Konfiguration der Suche (erscheint erst, wenn über |mapbender-button-add| bei *Routen* eine Suche hinzugefügt wurde).
 
 
-Konfiguration der einzelnen Suchen (Route Configuration)
---------------------------------------------------------
+Konfiguration der einzelnen Suchen
+----------------------------------
 
-Die Definition der einzelnen Suchen erfolgt im YAML-Syntax im Textfeld **Configuration**. 
+Die Definition der einzelnen Suchen erfolgt im YAML-Syntax im Textfeld *Konfiguration*. 
 
 Hier erfolgt die Definition:
 
-* der Datenbankverbindung
-* der Suchtabelle bzw. Abfrage
-* des Formularaufbaus
-* der Aufbau der Trefferausgabe 
-* sowie das Styling der Treffer in der Karte
+* der Datenbankverbindung,
+* der Suchtabelle bzw. Abfrage,
+* des Formularaufbaus,
+* der Aufbau der Trefferausgabe,
+* sowie das Styling der Treffer in der Karte.
 
 
 .. code-block:: yaml
@@ -90,28 +92,28 @@ Hier erfolgt die Definition:
 
 Class und Class Optionen
 ------------------------
-Die Konfiguration beginnt mit der Angabe der class (immer class: Mapbender\CoreBundle\Component\SQLSearchEngine) sowie Informationen zur Datenbankverbindung, der Suchtabelle, den verwendeten Spalten und der Angabe der Geometriespalte.
+
+Die Konfiguration beginnt mit der Angabe der **class** (immer ``class: Mapbender\CoreBundle\Component\SQLSearchEngine``) sowie Informationen zur Datenbankverbindung, der Suchtabelle, den verwendeten Spalten und der Angabe der Geometriespalte.
 
 
 Formular
 --------
-Im Bereich **form** können Textfelder und Auswahlboxen für das Suchformular definiert werden.
 
-Die jeweilige Tabellenspalte wird angegeben und mit Definitionen für type, options und compare versehen.
+Im Bereich **form** können Textfelder und Auswahlboxen für das Suchformular definiert werden. Die jeweilige Tabellenspalte wird angegeben und mit Definitionen für *type*, *options* und *compare* versehen.
 
 
 Typ
 ---
 
-Das Formular unterstützt zwei Typen - *text* für Textfelder und *choice* für Auswahlfelder. 
+Das Formular unterstützt zwei Typen: *text* für Textfelder und *choice* für Auswahlfelder. 
 
-Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguration erstellt werden. Die Konfiguration beginnt mit dem Spaltennamen (in den Beispielen sind es die Spalten name und usertype).
+Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguration erstellt werden. Die Konfiguration beginnt mit dem Spaltennamen (in den Beispielen sind es die Spalten *name* und *usertype*).
 
 * **label** - Sie können den Parameter label für die Spaltenbeschriftung angeben. Fehlt der Parameter wird der Tabellenspalten-Name mit führendem Großbuchstaben verwendet.
 
-* **required** - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard: false). Mit required: true wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
+* **required** - Sie können definieren, ob ein Suchfeld zwingend gefüllt sein muss (Standard: false). Mit ``required: true`` wird ein Pflichtfeld erzeugt. Die Suche kann dann nicht abgeschickt werden, bevor alle Pflichtfelder gefüllt sind. Überschriften der Pflichtfelder werden mit einem roten * angezeigt.
 
-Sie können außerdem den Vergleichsoperator definieren. Siehe 'comparison mode'.
+Sie können außerdem den Vergleichsoperator definieren. Siehe :ref:`de/elements/search/search_router:vergleichsmodus`.
 
 
 Typ text
@@ -119,16 +121,16 @@ Typ text
 
 Über den Typ **text** können Textfelder in das Suchformular eingefügt werden.
 
-Text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten, müssen Sie zusätzliche additional attr-Parameter hinzufügen.
+Text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten, müssen Sie zusätzliche Parameter hinzufügen.
 
-Unterstützte autocomplete-Paramter:
+Unterstützte autocomplete-Parameter:
 
-* **data-autocomplete**: on - Parameter zum Aktivieren der Autovervollständigung
-* **data-autocomplete-distinct**: on - Gibt doppelte Ergebnisse der Autovervollständigung nur einmal aus
+* **data-autocomplete**: 'on' - Parameter zum Aktivieren der Autovervollständigung.
+* **data-autocomplete-distinct**: 'on' - Gibt doppelte Ergebnisse der Autovervollständigung nur einmal aus.
 * **data-autocomplete-using**: column1, column2 - Definiert weitere Spalte/n des Suchformulars, die bei der Autovervollständigung berücksichtigt werden sollen.
 
 
-* **type text** Beispiel mit Autocomplete und Pflichtfeld:
+**type text**-Beispiel mit Autocomplete und Pflichtfeld:
 
 .. image:: ../../../figures/de/search_router_text_de.png
      :scale: 80
@@ -158,12 +160,12 @@ Der Typ **choice** ermöglicht die Definition von Auswahlboxen in dem Suchformul
 
 Die Auswahlmöglichkeiten werden im Bereich choices definiert. Dabei werden ein Wert (value) und ein Schlüssel (key) angegeben.
 
-* **key** - wird bei der Suchanfrage verwendet 
-* **value** - wird in der Auswahlbox angezeigt 
+* **key**: Wird bei der Suchanfrage verwendet. 
+* **value**: Wird in der Auswahlbox angezeigt.
 
-.. note:: **Hinweis:** Ab Mapbender 3.2 sollte die Angabe in der Reihenfolge value: key erfolgen, die Typdefinition lautet type: Symfony\Component\Form\Extension\Core\Type\ChoiceType.
+.. note:: **Hinweis:** Ab Mapbender 3.2 sollte die Angabe in der Reihenfolge ``value: key`` erfolgen, die Typdefinition lautet ``type: Symfony\Component\Form\Extension\Core\Type\ChoiceType``.
 
-* **type choice** Beispiel für ein Feld mit Auswahlmöglichkeiten:
+**type choice**-Beispiel für ein Feld mit Auswahlmöglichkeiten:
 
 .. image:: ../../../figures/de/search_router_choice_de.png
      :scale: 80
@@ -189,22 +191,23 @@ Die Auswahlmöglichkeiten werden im Bereich choices definiert. Dabei werden ein 
 Vergleichsmodus
 ---------------
 
-Für jedes Feld kann ein Vergleichsmodus (compare mode) bestimmt werden. Dieser wird beim Senden der Suchanfrage verwendet. 
+Für jedes Feld kann ein Vergleichsmodus bestimmt werden. Dieser wird beim Senden der Suchanfrage verwendet. 
 
 Folgende Vergleichsmodi werde unterstützt:
 
-* **exact:** genauer Vergleich, Schlüssel = Wert (key = val)
-* **iexact:** Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive)
-* **like:** Standard, zweiseitiges 'like'
-* **like-left:** linksseitiges 'like'
-* **like-right:** rechtsseitiges 'like'
-* **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring\*)
-* **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring)
-* **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring\*)
+* **exact:** genauer Vergleich, Schlüssel = Wert (key = val),
+* **iexact:** Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive),
+* **like:** Standard, zweiseitiges 'like',
+* **like-left:** linksseitiges 'like',
+* **like-right:** rechtsseitiges 'like',
+* **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring\*),
+* **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring),
+* **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring\*).
 
 
 Ergebnisausgabe
 ---------------
+
 Im Bereich **results** erfolgt die Definition zum Aufbau der Trefferliste und das Styling der Treffer in der Karte.
 
 .. code-block:: yaml
@@ -227,15 +230,15 @@ Im Bereich **results** erfolgt die Definition zum Aufbau der Trefferliste und da
                 minScale: null
                 maxScale: null
 
-* **view**: immer Angabe **table**. Derzeit keine weiteren Optionen.
+* **view**: Angabe ``table``. Derzeit keine weiteren Optionen.
 * **count**: Zeigt die Anzahl der Ergebnisse an (Standard: true).
 * **exportcsv**: Erzeugt einen Button, der den Download der Trefferliste als CSV-Datei ermöglicht (Standard: false).
 * **sortBy**:  optional. Definition, ob eine Sortierung nach einem Attribut erfolgen soll. Angabe via attributname (Standard: keine Sortierung).
-* **sortOrder**: optional. Definition, ob die Sortierung aufsteigend (asc) oder absteigend (desc) erfolgen soll (Standard: asc)
+* **sortOrder**: optional. Definition, ob die Sortierung aufsteigend (asc) oder absteigend (desc) erfolgen soll (Standard: asc).
 * **zoomToResultExtent**: Definition, ob direkt auf den Bereich der Ergebnisse gezoomt werden soll (Standard: false).
 * **headers**: Definition der Ausgabespalten  und Spaltenbeschriftung.
 * **callback**: Definition der Aktion beim Klick auf einzelne Treffer.
-* **event**: immer Angabe **click**. Derzeit keine weiteren Optionen.
+* **event**: Angabe ``click``. Derzeit keine weiteren Optionen.
 * **buffer**: Zoom zum Treffer mit einem definierten Puffer.
 * **minScale and maxScale**: Zoom zum Treffer in einem Maßstab zwischen minScale und maxScale.
 
@@ -252,9 +255,9 @@ Sie können diese Farbgebung überschreiben, indem Sie eine styleMap-Konfigurati
 
 Die Konfiguration beinhaltet drei Stilkonfigurationen:
 
-* **default**: Standardanzeige der Treffer
-* **select**: Anzeige bei Auswahl
-* **temporary**: Anzeige beim Mouseover
+* **default**: Standardanzeige der Treffer,
+* **select**: Anzeige bei Auswahl,
+* **temporary**: Anzeige beim Mouseover.
 
 .. code-block:: yaml
 
@@ -291,7 +294,7 @@ Die Konfiguration beinhaltet drei Stilkonfigurationen:
                fillOpacity: 1
 
 
-Wird Opacity auf 0 gesetzt (fillOpacity: 0), so wird die Fläche nicht gefüllt, sondern transparent dargestellt. In der default-Definition wird lediglich eine grüne Umrandung dargestellt (strokeColor: '#00ff00'). 
+Wird Opacity auf 0 gesetzt (``fillOpacity: 0``), so wird die Fläche nicht gefüllt, sondern transparent dargestellt. In der default-Definition wird lediglich eine grüne Umrandung dargestellt (``strokeColor: '#00ff00'``). 
 Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt und sind mit leichter Opazität versehen. Sie verfügen über eine blaue Umrandung. Die temporäre Darstellung beim Mouse-Hover über ein Ergebnis erfolgt in blau. 
 
 .. image:: ../../../figures/de/search_router_example_colour_purplegreen.png
@@ -299,7 +302,7 @@ Die selektierten Objekte in diesem Beispiel werden mit der Farbe Lila gefüllt u
 
 Die styleMap-Angaben überschreiben Standardangaben. Daher müssen Sie lediglich die Angaben setzen, die Sie überschreiben möchten. Wenn Sie die Angaben weglassen wird der default-Stil verwendet.
 
-Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
+.. note:: Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
 
 
 Konfigurationsbeispiele
@@ -308,7 +311,7 @@ Konfigurationsbeispiele
 1. Beispiel
 -----------
 
-In diesem Beispiel wurde eine Suche für den "Mapbender User"-Layer konfiguriert. Die Suche wurde in die Sidepane über das ``+`` -Zeichen in der Anwendung unter dem Layouts-Tab hinzugefügt.
+In diesem Beispiel wurde eine Suche für den "Mapbender User"-Layer konfiguriert. Die Suche wurde in die Sidepane über |mapbender-button-add| in der Anwendung unter dem Layouts-Tab hinzugefügt.
 
 .. image:: ../../../figures/de/add_sidepane.png
      :scale: 80
@@ -318,7 +321,7 @@ Der Konfigurationsdialog zu diesem Konfigurationsbeispiel sieht wie folgt aus:
 .. image:: ../../../figures/de/search_router_example_dialog.png
      :scale: 80
 
-Der Elementitel (*Title*) lautet Suchen. Dieser wird in der Sidepane als Titel angezeigt. Da das Element in der Sidepane eingebunden wird und nicht als Button, wurde bei Dialog kein Haken gesetzt. Der *Timeout factor* wurde auf 2 gestellt. In den Feldern *Width* und *Height* stehen zwar Werte, diese werden in der Anwendung jedoch nicht übergeben, da das Element in der Sidepane konfiguriert wird und diese die Werte nicht beachtet. Es wurde über das ``+`` -Zeichen bei *Routes* eine Suche eingebunden, die die Bezeichnung (*Title*) Mapbender User trägt. In *Configuration* wurde die yaml-Konfiguration des Elements eingefügt. Vollständig lautet diese:
+Der Elementitel (*Titel*) lautet Suchen, er wird in der Sidepane angezeigt. Da das Element in der Sidepane eingebunden wird und nicht als Button, wurde bei Dialog kein Haken gesetzt. Der *Timeout factor* wurde auf 2 gestellt. In den Feldern *Breite* und *Höhe* stehen zwar Werte, diese werden in der Anwendung jedoch nicht übergeben, da das Element in der Sidepane konfiguriert wird und diese die Werte nicht beachtet. Es wurde über |mapbender-button-add| bei *Routen* eine Suche eingebunden, die die Bezeichnung (*Titel*) Mapbender User trägt. In *Konfiguration* wurde die yaml-Konfiguration des Elements eingefügt. Vollständig lautet diese:
 
 .. code-block:: yaml
 
@@ -410,7 +413,9 @@ Auf dieser Abbildung wird gezeigt, welche Auswirkungen die vorgenommenen Konfigu
 .. image:: ../../../figures/de/search_router_example_results_description.png
      :scale: 80
 
-Auf dieser Abbildung ist lediglich die Konfiguration der Ergebnisse angezeigt. Die Anzahl der Ergebnisse wird aufgrund von `count: true` angezeigt. Anschließend werden die Spaltentitel unter *headers* definiert. Hier wird zuerst die Bezeichnung der Spalte in der Tabelle angegeben, sodass definiert wird, auf welche Tabellenspalte sich die Ergebnisanzeige bezieht. Nach dem Doppelpunkt wird angegeben, welcher Titel in der Anwendung angezeigt werden soll. Im Block *styleMap* wird das Styling der Punkte vorgenommen. Der Block *default* bezieht sieht dabei auf alle Punkte und der Block *select* nur auf das ausgewählte Objekt.
+Auf dieser Abbildung ist lediglich die Konfiguration der Ergebnisse angezeigt. Die Anzahl der Ergebnisse wird aufgrund von `count: true` angezeigt. Anschließend werden die Spaltentitel unter *headers* definiert. Hier wird zuerst die Bezeichnung der Spalte in der Tabelle angegeben, sodass definiert wird, auf welche Tabellenspalte sich die Ergebnisanzeige bezieht. Nach dem Doppelpunkt wird angegeben, welcher Titel in der Anwendung angezeigt werden soll.
+
+Im Block *styleMap* wird das Styling der Punkte vorgenommen. Der Block *default* bezieht sieht dabei auf alle Punkte und der Block *select* nur auf das ausgewählte Objekt.
 
 Da keines dieser Felder ein Pflichtfeld ist, kann die Suchabfrage auch nur mithilfe eines Feldes erfolgen.
 
@@ -420,13 +425,13 @@ Da keines dieser Felder ein Pflichtfeld ist, kann die Suchabfrage auch nur mithi
 
 Das folgende Beispiel baut auf dem Deutschen Geographischen Namenskatalog im Maßstab 1:250.000 des `Bundesamtes für Kartographie und Geodäsie <http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=20>`_ auf. Die Daten wurden in die Tabelle ``gn250_p`` der Datenbank ``gisdb`` kopiert und eignen sich gut für eine Ortssuche. Die Daten haben viele verschiedene Spalten, u.a.:
 
-- id: Die ID des Datensatzes
-- name: Der Name des Datensatzes
-- kreis: Der Landkreis (nicht für jeden Datensatz vorhanden)
-- oba_wert: Die Art des Features (z.B.. Bahnhof, Museum, etc.)
+- **id**: Die ID des Datensatzes,
+- **name**: Der Name des Datensatzes,
+- **kreis**: Der Landkreis (nicht für jeden Datensatz vorhanden),
+- **oba_wert**: Die Art des Features (z.B. Bahnhof, Museum, etc.).
 
 
-Beispiel einer Suchkonfiguration in dem ``configuration`` Bereich:
+Beispiel einer Suchkonfiguration im ``Konfiguration`` Bereich:
 
 .. code-block:: yaml
 
