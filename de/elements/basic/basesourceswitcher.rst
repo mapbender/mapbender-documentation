@@ -46,7 +46,7 @@ Die Konfiguration des Elements geschieht in zwei Schritten:
 * **Instancesets:** Es können eine oder mehrere Themengruppen definiert werden. Diese verweisen auf eine Auswahl an Instanzen und sind mit einem Titel und einem Gruppennamen (optional) zu versehen.
 
 .. image:: ../../../figures/de/basesourceswitcher_de.png
-     :scale: 80
+     :scale: 70
 
 Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
 
