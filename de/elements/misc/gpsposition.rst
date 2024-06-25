@@ -18,7 +18,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/gps_position_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
 * **Autostart** Startet Element beim Öffnen der Anwendung (Standard: aus).

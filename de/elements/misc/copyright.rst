@@ -12,7 +12,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/copyright_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Automatisches Öffnen:** Schaltet ein/aus, ob das Copyright Fenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: aus).
 * **Title:** Titel des Elements. Der Titel wird neben dem Button angezeigt.
@@ -28,7 +28,7 @@ Verweis auf eine Twig-Datei
 Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
 
 .. image:: ../../../figures/de/copyright_configuration_include_twig.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

@@ -14,7 +14,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/wms_loader_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Auto open:** Opens the element when application is started (default: false).
 * **Split layers:** Splits layer on load of the service (default: false).

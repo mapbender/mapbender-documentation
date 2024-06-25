@@ -14,7 +14,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/wms_loader_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Automatisches Öffnen:** Öffnet Element beim Start der Anwendung (Standard: false).
 * **Layer aufteilen:** Teilt Ebenen beim Laden des Dienstes auf (Standard: false).

@@ -13,7 +13,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/copyright_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Autoopen:** Enable or disable autoopening of the copyright window while starting the application (default: off).
 * **Title:** Title of the element. It will be indicated next to the button.
@@ -29,7 +29,7 @@ Refer to a twig file
 You can refer to a twig file in the Content area. Please note that the twig file has to contain valid HTML.
 
 .. image:: ../../../figures/copyright_configuration_include_twig.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

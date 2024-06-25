@@ -20,7 +20,7 @@ Konfiguration
 Das Element wird im :ref:`backend_de` in die Anwendung eingebunden.
 
 .. image:: ../../../figures/de/html_element.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Titel des HTML-Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden.
 * **Content:** Inhalt des HTML-Elements, z.B. Bild oder Link. Der Content kann die Variablen "application" und "entity" beinhalten.
@@ -124,7 +124,7 @@ Verweis auf eine Twig-Datei
 Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
 
 .. image:: ../../../figures/de/html_configuration_include_twig.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

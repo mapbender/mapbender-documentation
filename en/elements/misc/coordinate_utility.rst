@@ -11,7 +11,7 @@ Coordinates Utility allows two different coordinate operations:
 Both functions can be accessed with one user interface:
 
 .. image:: ../../../figures/coordinate_utility.png
-     :scale: 80
+     :scale: 70
 
 Both cases allow a dynamic coordinate transformation. Simply insert and transform coordinates from other systems.
 
@@ -20,7 +20,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/coordinate_utility_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Title of the element.
 * **Srs List:** You can define additional SRS to which the tool has to transform the coordinates. This list can be left empty.
@@ -35,7 +35,7 @@ Using the tool
 ===============
 
 .. image:: ../../../figures/coordinate_utility.png
-     :scale: 80
+     :scale: 70
 
 **Get Coordinate**
 

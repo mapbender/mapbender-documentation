@@ -12,7 +12,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/button_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
@@ -59,12 +59,12 @@ Nach Auswahl des Elements Button öffnet sich der Dialog "Element hinzufügen �
 Die Bezeichnung des Buttons zum Öffnen der Legende wird im Feld *Title* eingetragen und lautet hier "Legende". Im Beispiel wurde kein Text für "Tooltip" definiert. Das heißt, es erscheint kein Text, wenn die Maus über den Button innehält. Als Icon können nun eine Vielzahl an Möglichkeiten ausgewählt werden. In diesem Fall wird die Option "Legend" gewählt.
 
 .. image:: ../../../figures/de/button_legend_dialog_icon.png
-     :scale: 80
+     :scale: 70
      
 Nun wird im Feld *Target* gewählt, welche vorher definierte Funktion mit dem Button angesprochen werden soll. Die Liste, die dort als Dropdown-Menü erscheint, beinhaltet alle Funktionen, die vorher im Kartenbereich, in der Sidepane oder Fußzeile konfiguriert wurden. Da hier der Button für die Legende konfiguriert wird, muss ebenfalls die Option "Legend" gewählt werden.
 
 .. image:: ../../../figures/de/button_legend_dialog_target.png
-     :scale: 80
+     :scale: 70
      
 Das Feld "Group" wird für diesen Fall leer gelassen. Der Button sieht in der Mapbender-Anwendung wie folgt aus:
 

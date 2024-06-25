@@ -10,7 +10,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, falls die Checkbox "Beschriftung anzeigen" aktiviert ist.
@@ -56,7 +56,7 @@ Hierzu muss *Beschriftung anzeigen* aktiviert sein. Sie können im Feld "Tooltip
 Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole ausgewählen.
 
 .. image:: ../../../figures/de/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

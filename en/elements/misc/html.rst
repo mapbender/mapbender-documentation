@@ -20,7 +20,7 @@ Configuration
 This element has to be integrated in the :ref:`backend`.
 
 .. image:: ../../../figures/html_element.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Title of the element. The title will be listed in :ref:`layouts`.
 * **Content:** Content of the HTML-element. The variables "application" and "entity" are available.
@@ -125,7 +125,7 @@ Refer to a twig file
 You can refer to a twig file in the Content area. Please note that the twig file has to contain valid HTML.
 
 .. image:: ../../../figures/html_configuration_include_twig.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition
