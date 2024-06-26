@@ -13,13 +13,13 @@ Migrations-Leitfaden
 
 .. note::
 
-    Für ausführliche Informationen des Mapbender-Entwicklungsteams siehe auch den `Upgrading Guide auf GitHub <https://github.com/mapbender/mapbender/blob/master/UPGRADING.md>`_.
+    Für ausführliche Informationen des Mapbender-Entwicklungsteams siehe auch den `Upgrading Guide auf GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_.
 
 
 Umstellung auf Mapbender 4.0.0
 ******************************
 
-* Schauen Sie sich den `Upgrading Guide auf GitHub <https://github.com/mapbender/mapbender/blob/master/UPGRADING.md>`_ sorgfältig an, bevor Sie das Update durchführen.
+* Schauen Sie sich den `Upgrading Guide auf GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_ sorgfältig an, bevor Sie das Update durchführen.
 
 * Sie werden feststellen, dass sich die Symfony Verzeichnisstruktur stark verändert hat.
 * Für Mapbender 4 wurden alle ``.yml``-Dateierweiterungen in ``.yaml`` umgewandelt.
