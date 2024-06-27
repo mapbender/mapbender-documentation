@@ -48,7 +48,7 @@ Die Konfiguration des Elements geschieht in zwei Schritten:
 .. image:: ../../../figures/de/basesourceswitcher_de.png
      :scale: 70
 
-Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
+Das Konfigurationsbeispiel zeigt, dass entweder ein, mehrere oder keine Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
 
 * **Title**: Name der Hintergrundkarte.
 * **Group**: Optionale Zuweisung zu einer Themengruppe.
