@@ -343,16 +343,17 @@ Detaillierte Beschreibungen zu den enthaltenen Elementen finden Sie unter :ref:`
 Mapbender Demo Map basic
 ------------------------
 
-Die zweite Demoanwendung, welche folgende Unterschiede zur Hauptanwendung aufweist:
+Die zweite Demo-Anwendung, welche folgende Unterschiede zur Hauptanwendung aufweist:
 
 Werkzeugleiste
-    Verwendet :ref:`coordinate_utility_de` anstelle von :ref:`POI_de`.
+    Enthält Elemente aus dem Seitenbereich der ersten Hauptanwendung.
 
 Seitenbereich
     Enthält keine im Voraus konfigurierten Elemente.
 
 Kartenbereich
-    Verwendet :ref:`coordinate_utility_de` anstelle von :ref:`scaledisplay_de` und :ref:`POI_de`.
+    Verwendet eine kompaktere :ref:`navigation_toolbar_de` ohne den zoom slider.
+    Beinhaltet die :ref:`simplesearch_de`.
 
 Detaillierte Beschreibungen der Elemente finden Sie unter :ref:`elements_de`.
 

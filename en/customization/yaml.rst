@@ -343,13 +343,13 @@ Mapbender Demo Map basic
 Differences to the main Demo Map:
 
 Toolbar
-    Uses :ref:`coordinate_utility` instead of :ref:`POI`.
+    Contains elements from the sidepane of the main application.
 
 Sidepane
     Has no elements pre-implemented.
 
 Map area
-    Uses :ref:`coordinate_utility` instead of :ref:`scaledisplay` and :ref:`POI`.
+    Uses a compact :ref:`navigation_toolbar` without the zoom slider. Includes the :ref:`simplesearch`.
 
 Detailed descriptions of the elements at :ref:`elements`.
 
