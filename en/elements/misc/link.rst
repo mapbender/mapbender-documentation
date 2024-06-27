@@ -10,7 +10,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Show label:** Enables or disables text (title) next to the button (default: true).
 * **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
@@ -38,8 +38,10 @@ More information on icons under:
 
 Example
 =======
+
 It is possible to create and adjust different buttons with different functions.
 Buttons can refer to features which are included in the Map area. For example, it is possible to create a Legend button or Line- and/or Area Ruler buttons:
+
 
 Link to a Webpage
 -----------------
@@ -56,7 +58,7 @@ You can set the name of the link button in the field *Title*. This title will be
 In the field *Tooltip*, you can define a text that will be displaced as tooltip during hovering over the button. You can choose from a variety of icons to set the icon for your link button.
 
 .. image:: ../../../figures/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

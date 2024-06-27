@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/button_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Show label:** Enables or disables text (title) next to the button (default: true).
 * **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
@@ -54,19 +54,19 @@ You can add a button for the legend by following these steps:
 First, you have to select the button element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
 
 .. image:: ../../../figures/de/add_toolbar.png
-     :scale: 80
+     :scale: 50
 
 After the selection of the button element, the "Add element - Button" dialog box opens, where you can configure the button.
 
 You can set the name of the legend button in the field *Title*. Here the title is "Legend". There will be no text displaced during hovering over the button, because no text was defined in the field *Tooltip*. You can choose from a variety of icons to set the icon for your button. In this example, the icon "Legend" was chosen. 
 
 .. image:: ../../../figures/de/button_legend_dialog_icon.png
-     :scale: 80
+     :scale: 70
 
 In the *Target* field you can choose the predefined feature which should be activated or opened by clicking on the button. The dropdown list contains all features which have been added to the Map area, the sidepane or the footer before. In this example, the option "Legend" was chosen.
 
 .. image:: ../../../figures/de/button_legend_dialog_target.png
-     :scale: 80
+     :scale: 70
 
 In this example, *Group* remains empty. In the Mapbender application, the button will look like this:
 

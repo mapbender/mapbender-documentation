@@ -10,16 +10,16 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, falls die Checkbox "Beschriftung anzeigen" aktiviert ist.
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, falls die Checkbox "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Icon:** Symbol des Buttons, basierend auf einer CSS-Klasse.
+* **Symbol:** Symbol des Buttons, basierend auf einer CSS-Klasse.
 * **Ziel-URL:** Angabe der Ziel-URL, auf die der Button verweist.
 
-Icons
------
+Symbole
+-------
 
 Für einige Symbole können zwei verschiedene Icon-Typen ausgewählt werden.
 
@@ -56,7 +56,7 @@ Hierzu muss *Beschriftung anzeigen* aktiviert sein. Sie können im Feld "Tooltip
 Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole ausgewählen.
 
 .. image:: ../../../figures/de/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

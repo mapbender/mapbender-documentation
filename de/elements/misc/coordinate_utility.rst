@@ -11,7 +11,7 @@ Koordinaten Utility erlaubt zwei verschiedene Koordinatenoperationen:
 Beide Funktionen werden über eine Oberfläche realisiert.
 
 .. image:: ../../../figures/de/coordinate_utility.png
-     :scale: 80
+     :scale: 70
 
 In beiden Fällen ist zusätzlich eine dynamische Koordinatentransformation möglich, so dass auch Punkte anderer Koordinatensysteme eingegeben werden können.
 
@@ -20,7 +20,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/coordinate_utility_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title:** Titel des Elements
 * **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren können soll. Das Feld kann leer gelassen werden.
@@ -34,7 +34,7 @@ Benutzung
 =========
 
 .. image:: ../../../figures/de/coordinate_utility.png
-     :scale: 80
+     :scale: 70
 
 **Koordinate abgreifen**
 

@@ -20,11 +20,11 @@ Konfiguration
 Das Element wird im :ref:`backend_de` in die Anwendung eingebunden.
 
 .. image:: ../../../figures/de/html_element.png
-     :scale: 80
+     :scale: 70
 
-* **Title:** Titel des HTML-Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden.
-* **Content:** Inhalt des HTML-Elements, z.B. Bild oder Link. Der Content kann die Variablen "application" und "entity" beinhalten.
-* **Classes:** Alternativ kann auch auf eine CSS-Klasse für das HTML-Element verwiesen werden. Die im CSS-Editor definiert werden kann.
+* **Titel:** Titel des HTML-Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden.
+* **Inhalt:** Inhalt des HTML-Elements, z.B. Bild oder Link. Der Content kann die Variablen "application" und "entity" beinhalten.
+* **Klassen:** Alternativ kann auch auf eine CSS-Klasse für das HTML-Element verwiesen werden. Die im CSS-Editor definiert werden kann.
 
 
 Konfigurationsbeispiele
@@ -43,8 +43,8 @@ Das Mapbender Logo wurde im Beispiel als Bild in die Seitenleiste eingebunden. E
 .. image:: ../../../figures/de/html_example_logo.png
      :scale: 80
 
-Bild mit hinterlegtem Link einbinden:
--------------------------------------
+Bild mit hinterlegtem Link einbinden
+------------------------------------
 
 Das zuvor eingebundene Logo kann um eine Linkverknüpfung erweitert werden. Der Link verweist auf die Mapbender-Webseite. Die Information ``target='_blank'`` sorgt dafür, dass sich der Link beim Klicken in einem neuen Tab öffnet.
 
@@ -121,10 +121,10 @@ Diese Variablen sehen in der Anwendung wie folgt aus:
 Verweis auf eine Twig-Datei
 ---------------------------
 
-Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
+Im Bereich *Inhalt* kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
 
 .. image:: ../../../figures/de/html_configuration_include_twig.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

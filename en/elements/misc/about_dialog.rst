@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/about_dialog_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Show Label:** Enable/Disable About dialog text next to its icon (default: true).
 * **Title:** Text indicated next to the about dialog icon. 

@@ -12,7 +12,7 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/about_dialog_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Schaltet Text neben dem About Dialog Button ein/aus (Standard: true).
 * **Title:** Text, der neben dem About Dialog Button angezeigt wird.
