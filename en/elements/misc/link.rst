@@ -38,8 +38,10 @@ More information on icons under:
 
 Example
 =======
+
 It is possible to create and adjust different buttons with different functions.
 Buttons can refer to features which are included in the Map area. For example, it is possible to create a Legend button or Line- and/or Area Ruler buttons:
+
 
 Link to a Webpage
 -----------------

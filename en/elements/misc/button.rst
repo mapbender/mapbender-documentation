@@ -54,7 +54,7 @@ You can add a button for the legend by following these steps:
 First, you have to select the button element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
 
 .. image:: ../../../figures/de/add_toolbar.png
-     :scale: 80
+     :scale: 50
 
 After the selection of the button element, the "Add element - Button" dialog box opens, where you can configure the button.
 

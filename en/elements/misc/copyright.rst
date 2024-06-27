@@ -15,11 +15,10 @@ Configuration
 .. image:: ../../../figures/copyright_configuration.png
      :scale: 70
 
-* **Autoopen:** Enable or disable autoopening of the copyright window while starting the application (default: off).
+* **Open automatically:** Enable or disable autoopening of the copyright window while starting the application (default: off).
 * **Title:** Title of the element. It will be indicated next to the button.
-* **Tooltip:** Text used as a tooltip. It will be displayed when hovering with the cursor over the button. It also used as a header in the copyright window.
-* **Popup width:** Width of the Popup window (default: 300).
-* **Popup height:** Height of the Popup window (default: 170).
+* **Dialog width:** Width of the Popup window (default: 300).
+* **Dialog height:** Height of the Popup window (default: 170).
 * **Content:** Content of the copyright window, displayed when clicking on the button (or autoopened by starting the application, if enabled).
 
 
