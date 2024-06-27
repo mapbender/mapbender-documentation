@@ -343,16 +343,16 @@ Detaillierte Beschreibungen zu den enthaltenen Elementen finden Sie unter :ref:`
 Mapbender Demo Map basic
 ------------------------
 
-Die zweite Demo-Anwendung, welche folgende Unterschiede zur Hauptanwendung aufweist:
+Die zweite Demo-Anwendung, welche folgende Unterschiede zur ersten Demo-Anwendung aufweist:
 
 Werkzeugleiste
-    Enthält Elemente aus dem Seitenbereich der ersten Hauptanwendung.
+    Enthält Elemente aus dem Seitenbereich der ersten Demo-Anwendung.
 
 Seitenbereich
     Enthält keine im Voraus konfigurierten Elemente.
 
 Kartenbereich
-    Verwendet eine kompaktere :ref:`navigation_toolbar_de` ohne den zoom slider.
+    Verwendet eine kompaktere :ref:`navigation_toolbar_de` ohne den Zoom-Schieberegler.
     Beinhaltet die :ref:`simplesearch_de`.
 
 Detaillierte Beschreibungen der Elemente finden Sie unter :ref:`elements_de`.
