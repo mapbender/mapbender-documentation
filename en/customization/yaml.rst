@@ -343,7 +343,7 @@ Mapbender Demo Map basic
 Differences to the main Demo Map:
 
 Toolbar
-    Contains elements from the sidepane of the main application.
+    Contains elements from the sidepane of the first demo application.
 
 Sidepane
     Has no elements pre-implemented.
