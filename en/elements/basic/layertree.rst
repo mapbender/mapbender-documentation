@@ -132,7 +132,7 @@ Via the **Menu** a number of functions can be activated, which are then availabl
 * *Metadata* (show the metadata of the layer)
 * *Dimension* (change the dimension, e.g. time or elevation of the Layer - read more about the :ref:`dimensions_handler` )
 
-.. figure:: ../../../figures/layertree/layertree_menu.png
+.. figure:: ../../../figures/layertree/layertree_menu_en.png
            :scale: 80
            :alt: Configuration for the context menu.
 
