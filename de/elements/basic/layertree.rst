@@ -125,12 +125,12 @@ Für das Verstehen der Funktionen und das eigene Erstellen eines Ebenenbaums bea
 
 Wenn **Automatisches Öffnen** aktiv ist, wird der Ebenenbaum beim Anwendungsstart geöffnet. Der **Titel** des Elements ermöglicht die Unterscheidung mehrerer eingebundener Ebenenbäume.
 
-Über **Menu** kann eine Auswahl von Funktionen aktiviert werden, die dann im Ebenenbaum zur Verfügung gestellt werden.
+Über **Menü** kann eine Auswahl von Funktionen aktiviert werden, die dann im Ebenenbaum zur Verfügung gestellt werden.
 
-* *Remove layer* (Entfernen von Layern aus dem Ebenenbaum erlauben)
-* *Opacity* (Deckkraft eines einzelnen Layers verändern)
-* *Zoom to layer* (Layer zentriert in seiner vollen Ausdehnung anzeigen)
-* *Metadata* (Metadaten eines Layers anzeigen)
+* *Ebenen entfernen* (Entfernen von Layern aus dem Ebenenbaum erlauben)
+* *Deckkraft* (Deckkraft eines einzelnen Layers verändern)
+* *Auf Ebene zoomen* (Layer zentriert in seiner vollen Ausdehnung anzeigen)
+* *Metadaten* (Metadaten eines Layers anzeigen)
 * *Dimension* (Dimension eines Layers kontrollieren - mehr Informationen unter :ref:`dimensions_handler_de` )
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
@@ -176,11 +176,11 @@ Im Folgenden gehen wir eine beispielhafte Konfiguration eines Ebenenbaums mit er
 In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen definiert:
 
 * Layerset Project NRW:
-    * Instanz `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-    * Instanz `Wald NRW <https://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instanz `NW DTK50 <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instanz `Wald und Holz NRW <https://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 * Layerset World: 
-    * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instanz `OpenStreetMap (OSM) <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
     * Instanz `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der :ref:`layerset_de` und :ref:`sources_de`).
