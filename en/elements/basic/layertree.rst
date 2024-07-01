@@ -184,8 +184,8 @@ In the example, we define two layersets with two instances each:
 
 For the configuration of the layersets, the four services mentioned above were added as instances (For detailed information, see above or in the :ref:`layerset` and :ref:`sources` documentation).
 
-For this example, the above mentioned steps were performed to add the Layerset "World" **[2]** with the instance "osm". Now we add the instance "GEBCO" in this Layerset. 
-To use the thematic grouping, we create a new Layerset named "Project NRW" **[3]** and load the two instances "DTK50 NRW" and "Forest NRW" into our new Layerset "Project NRW".  
+For this example, the above mentioned steps were performed to add the Layerset "World" with the instance "OpenStreetMap (OSM)". Now we add the instance "GEBCO" in this Layerset. 
+To use the thematic grouping, we create a new Layerset named "Project NRW" and load the two instances "NW DTK50" and "Wald und Holz NRW(Forest NRW)" into it.  
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex_en.png
            :scale: 80
@@ -193,7 +193,7 @@ To use the thematic grouping, we create a new Layerset named "Project NRW" **[3]
 
            Configuration of Layersets for a thematic Layertree.
 
-The Layerset should now contain three Layersets. The **Overview** [1] for the overview map, the **Project NRW** Layerset [2] with two regional data sets from Western Germany and the **World**-Layerset [3] with the supraregional data. 
+The Layerset should now contain three Layersets. The **Overview** for the overview map, the **Project NRW** Layerset with two regional data sets from Western Germany and the **World**-Layerset with the supraregional data. 
 
 **Configuration of the map to display the Layerset**
 

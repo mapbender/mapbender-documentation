@@ -185,8 +185,8 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
 
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der :ref:`layerset_de` und :ref:`sources_de`).
 
-Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[3]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset die Instanz "GEBCO" hinzu. 
-Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" **[2]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein.
+Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" mit der Instanz "OpenStreetMap (OSM)" hinzuzufügen. Nun fügen wir in dieses Layerset auch die Instanz "GEBCO" hinzu. 
+Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" und laden in dieses die beiden oben genannten Instanzen "NW DTK50" und "Wald und Holz NRW" ein.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex.png
            :scale: 80
@@ -194,7 +194,7 @@ Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein 
 
            Konfiguration der Layersets für den thematischen Ebenenbaum.
 
-Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die Übersichtskarte, das **Project NRW** Layerset [2] mit den zwei regionalen Datensets aus NRW und das **World**-Layerset [3] mit den überregionalen Layern. 
+Das Layerset sollte nun drei Layersets enthalten. Die **Overview** für die Übersichtskarte, das **Project NRW** Layerset mit den zwei regionalen Datensets aus NRW und das **World**-Layerset mit den überregionalen Layern. 
 
 **Einrichtung in der Karte zur Anzeige der Layersets**
 
