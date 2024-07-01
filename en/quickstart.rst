@@ -124,7 +124,7 @@ The application overview site displays a list of all available applications. The
  * |mapbender-button-copy| button to duplicate the application
  * |mapbender-button-export| button to export the application
  * |mapbender-button-edit| button to edit the application
- * |mapbender-button-publish| button to make the application available for anonymous users
+ * |mapbender-button-publish| button to make the application available for the public
  * |mapbender-button-delete| button to delete the application
 
   .. image:: ../figures/mapbender_app_dev.png
@@ -407,11 +407,6 @@ Mapbender provides an easy-to-use rights management that is implemented into the
 * **Delete**: Select a user that is allowed to delete an object.
 
 .. important:: Assign rights to a user via ``Security`` → ``Global Permissions``.
-
-Example for user rights in *Global Permissions*:
-
-  .. image:: ../figures/mapbender_roles.png
-     :width: 100%
 
 
 Assign an Application to a User/Group

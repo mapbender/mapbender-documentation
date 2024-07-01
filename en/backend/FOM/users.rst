@@ -30,32 +30,44 @@ The functionality can be switched off in the doctrine.yaml.
 Registration
 ------------
 
-Users can self-register themselves in Mapbender. For this you have to adjust the setting fom_user:selfregister in the doctrine.yaml to true.
+Users can self-register themselves in Mapbender. For this, you have to adjust the setting `fom_user:selfregister` in the *doctrine.yaml* to true.
 
 .. code-block:: yaml
 
                 fom_user:
                     selfregister: false # true/false
 
-The Login-dialog contains a "Register" link. This opens a page where the user can type in his/her name, password and e-mail adresss.
+The Login dialog contains a *Register* button. This opens a page where the user can type in their name, password and email address.
 
 .. image:: ../../../figures/fom/user_self_register.png
 
-After that he gets a confirmation mail to complete the registration. Until that time he is only managed as an inactive user in Mapbender.
+After that, the user gets a confirmation mail to complete the registration. Until then, Mapbender will handle the user as inactive.
 
-The text of the confirmation mail can be customized in the /FOM/UserBundle/Resources/translations/messages.en.xlf file.
+The text of the confirmation mail can be customized in the `/FOM/UserBundle/Resources/translations/messages.en.xlf` file.
 
 
 Activation of users
 -------------------
 
-Users can be set activated or deactivated by Administrators with the User-ACL-Right of at least *edit*. For this purpose, a checkbox exists in the Edit User dialog. A user with administration rights cannot activate or deactivate himself.
+Users can be set activated or deactivated by Administrators with the *Edit* right. For this purpose, an `activated` checkbox exists in the Edit User dialog. A user with administration rights cannot activate or deactivate himself.
 
 .. image:: ../../../figures/fom/edit_user_activated.png
 
-A user who is deactivated cannot login into Mapbender anymore until he gets activated again.
+A user who is deactivated cannot login into Mapbender anymore until re-activation.
 
 Users which have self-registered themselves but have not approved the activation mail can now be activated by an administrator.
+
+
+Assign a user to another User/Group
+-----------------------------------
+
+#. Edit a user by clicking **Security** → **Users**.
+
+#. In the user administration, choose **Security**.
+
+#. Give users/groups individual rights on the selected user: Add users/groups via the **Add users and groups** button. Thereafter, set permissions within the rights table.
+
+#. You have now assigned a user/group controlling options over another user account. Test your configuration with the entitled user accounts.
 
 
 Login Failures

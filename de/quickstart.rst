@@ -403,17 +403,12 @@ Gruppen anlegen
 
 Mapbender bietet eine einfach zu bedienende Rechteverwaltung an, die im Backend implementiert ist. 
 
-* **Ansehen**: Anklicken, damit eine Person die Berechtigung hat, sich Objekte (z.B. Anwendungen oder Datenquellen) ansehen zu können.
-* **Erstellen**: Anklicken, damit eine Person die Berechtigung hat, Objekte erstellen zu können.
-* **Bearbeiten**:	Anklicken, damit eine Person die Berechtigung hat, Objekte bearbeiten zu können.
-* **Löschen**: Anklicken, damit eine Person die Berechtigung hat, Objekte löschen zu können.
+* **Ansehen**: Anklicken, damit ein Benutzer die Berechtigung hat, sich Objekte (z.B. Anwendungen oder Datenquellen) ansehen zu können.
+* **Erstellen**: Anklicken, damit ein Benutzer die Berechtigung hat, Objekte erstellen zu können.
+* **Bearbeiten**:	Anklicken, damit ein Benutzer die Berechtigung hat, Objekte bearbeiten zu können.
+* **Löschen**: Anklicken, damit ein Benutzer die Berechtigung hat, Objekte löschen zu können.
 
-.. important:: Weisen Sie einem Benutzer Berechtigungen über ``Sicherheit`` → ``Globale Berechtigungen`` zu.
-
-Beispiel für Benutzerberechtigungen in den *Globalen Berechtigungen*:
-
-  .. image:: ../figures/de/mapbender_roles.png
-     :width: 100%
+.. important:: Weisen Sie einem Benutzer globale Berechtigungen über ``Sicherheit`` → ``Globale Berechtigungen`` zu.
 
 
 Zuweisen einer einzelnen Anwendung zu einem Benutzer/einer Gruppe

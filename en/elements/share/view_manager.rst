@@ -42,7 +42,7 @@ The View Manager does **not** store or reapply the following configurations:
 Access rights
 -------------
 
-Each map state is attributed to an application and further separated into a public and user-private list. The rights to save, reapply or delete map states are defined in the element configuration. Furthermore, rights to show private lists and dates as well as the permition for anonymous users to save map states can be set here.
+Each map state is attributed to an application and further separated into a public and user-private list. The rights to save, reapply or delete map states are defined in the element configuration. Furthermore, rights to show private lists and dates as well as the permission for anonymous users to save map states can be set here.
 
 In general, access checks on public entries are suspended for the root user. The administrator can create, update and delete public entries at will.
 

@@ -34,32 +34,44 @@ Die Funktionalität kann in der doctrine.yaml ausgeschaltet werden.
 Registrierung
 -------------
 
-Benutzer können sich in Mapbender selbst registrieren. Vorher muss in der doctrine.yaml die Einstellung *fom_user:selfregister* auf true gestellt werden.
+Benutzer können sich in Mapbender selbst registrieren. Vorher muss in der doctrine.yaml die Einstellung `fom_user:selfregister` auf true gestellt werden.
 
 .. code-block:: yaml
 
                 fom_user:
                     selfregister: false # true/false
 
-Im Login-Dialog erscheint der "Register" Link. Der Benutzer wird zu einer Maske geführt, in der er Name, Passwort und E-Mail Adresse angeben kann.
+Im Login-Dialog erscheint der *Registrieren* Button. Der Benutzer wird zu einer Maske geführt, in der er Name, Passwort und E-Mail-Adresse angeben kann.
 
 .. image:: ../../../figures/de/fom/user_self_register.png
 
 Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung abschließen kann. Bis zu diesem Zeitpunkt ist er als inaktiver Nutzer in Mapbender hinterlegt.
 
-Die Texte der Bestätigungsmail können unter /FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
+Die Texte der Bestätigungsmail können unter `/FOM/UserBundle/Resources/translations/messages.de.xlf` angepasst werden.
 
 
 Aktivieren von Nutzern
 ----------------------
 
-Benutzer können von Administratoren mit der ACL-Rolle *edit* aktiviert oder deaktiviert werden. Ein Benutzer mit Administrationsrechten kann sich selbst nicht aktivieren oder deaktivieren.
+Benutzer können von Administratoren über eine entsprechende Checkbox aktiviert oder deaktiviert werden. Ein Benutzer mit Administrationsrechten kann sich selbst nicht aktivieren oder deaktivieren.
 
 .. image:: ../../../figures/de/fom/edit_user_activated.png
 
 Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender anmelden, bis er wieder aktiviert wird.
 
 Benutzer, die sich selbst registriert haben, aber die Freischaltungsmail noch nicht bestätigt haben, können so von einem Administrator per Hand freigeschaltet werden.
+
+
+Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
+-----------------------------------------------------
+
+#. Bearbeiten Sie Ihre Benutzer über **Sicherheit** → **Benutzer**.
+
+#. Wählen Sie **Sicherheit**.
+
+#. Weisen Sie Benutzern/Gruppen individuelle Berechtigungen auf den individuellen Benutzer zu. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie Benutzer(n)/Gruppe(n) einen Benutzer zu.
+
+#. Melden Sie sich unter dem Benutzer bzw. der Gruppe mit neuen Rechten an, um die Rechtevergabe zu testen. Je nach Konfiguration ist es so z.B. möglich, dass alle Teilnehmer einer Gruppe Berechtigungen über einen bestimmten Benutzer haben und dessen Account bearbeiten oder löschen können.
 
 
 Login Fehler
