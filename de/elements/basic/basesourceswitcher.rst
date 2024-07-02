@@ -3,6 +3,8 @@
 Hintergrund wechseln
 ********************
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 "Hintergrund wechseln" erstellt Buttons mit Themen, um zuvor für diesen Zweck konfigurierte Dienste im Kartenbereich sichtbar zu schalten. Auf diese Weise kann etwa zwischen verschiedenen Hintergrundkarten gewechselt werden. Dabei ist immer nur ein Thema aktiv. 
 Zusätzlich können Gruppen für die Hintergrund-Themen definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
@@ -41,19 +43,19 @@ Die Konfiguration des Elements geschieht in zwei Schritten:
 #. Erzeugen eines Elements zum Wechseln der vordefinierten Themen (Titel, Tooltip; bei Einbindung in Kartenbereich: Position)
 #. Hinzufügen von Themen mit einer oder mehreren Quellen und optionaler Definition einer Gruppe
 
-* **Title:** Titel des Elements.
+* **Titel:** Titel des Elements.
 * **Tooltip:** Text, der erscheint, wenn der Mauszeiger längere Zeit über dem Hintergrundwechsler gehalten wird.
 * **Instancesets:** Es können eine oder mehrere Themengruppen definiert werden. Diese verweisen auf eine Auswahl an Instanzen und sind mit einem Titel und einem Gruppennamen (optional) zu versehen.
 
 .. image:: ../../../figures/de/basesourceswitcher_de.png
      :scale: 80
 
-Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden. Weitere Instancesets können über den + ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
+Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden. Weitere Instancesets können über den |mapbender-button-add| ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
 
-* **Title**: Name der Hintergrundkarte.
-* **Group**: Optionale Zuweisung zu einer Themengruppe.
+* **Titel**: Name der Hintergrundkarte.
+* **Gruppe**: Optionale Zuweisung zu einer Themengruppe.
 * **Position:** Positionierung (nur bei Nutzung im Kartenbereich). Möglichkeiten: 'Oben links', 'Unten links', 'Oben rechts', 'Unten rechts'
-* **Instances**: Auswahl der Instanzen für die Hintergrundkarte.
+* **Instanzen**: Auswahl der Instanzen für die Hintergrundkarte.
 
 
 YAML-Definition
