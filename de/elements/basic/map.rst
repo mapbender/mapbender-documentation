@@ -13,16 +13,16 @@ Konfiguration
 .. image:: ../../../figures/de/map_dialog.png
      :scale: 70
 
-* **Title:** Titel des Elements. Dieser wird im :ref:`layouts_de`-Bereich angezeigt.
+* **Titel:** Titel des Elements. Dieser wird im :ref:`layouts_de`-Bereich angezeigt.
 * **Layersets:** Wählen Sie ein oder mehrere :ref:`layerset_de` aus, die vom Kartenelement dargestellt werden sollen. Dabei kann die Reihenfolge der Layersets via Drag-and-drop verändert werden.
-* **Tile size:** Größe der Tiles bei gekachelten Diensten.
+* **Kachelgröße:** Größe der Tiles bei gekachelten Diensten.
 * **SRS:** Koordinatenbezugssystem beim Start der Anwendung ("Spatial Reference System"). Zwei Arten der SRS Definition werden unterstützt: EPSG:CODE oder EPSG:CODE|MEIN SRS TITEL. Wird kein eigener SRS-Titel definiert, so wird die Standarddefinition aus der Title-Spalte der Tabelle *mb_core_srs* verwendet.
 * **Max. Kartenausdehnung:** Maximaler Kartenbereich (BBOX mit min/max x/y). Ein Umgebungsrechteck, das den Ausschnitt definiert. Bei Klick auf das Globus-Icon im :ref:`navigation_toolbar_de` wird auf die maximale Ausdehnung gezoomt.
 * **Initiale Kartenausdehnung:** Bereich der Karte, der beim Starten der Anwendung angezeigt wird (BBOX mit min/max x/y). Ein Umgebungsrechteck, das den Ausschnitt definiert. Bei Klick auf das Haus-Icon im :ref:`navigation_toolbar_de` wird auf die initiale Ausdehnung gezoomt.
 * **Standard-Auflösung [dpi]:** Die Auflösung passt sich auf Basis dieses Wertes an die Auflösung des verwendeten Gerätes an. Standard: 96 dpi.
 * **Feste Maßstabsstufen:** Das Zoom-Verhalten wird hierdurch konfiguriert. Feste Maßstabsstufen verbessern die visuelle Qualität von Diensten, welche nur auf bestimmten Maßstäben zwischengespeichert werden. Ist die Einstellung aktiviert, dann können nur Maßstäbe ausgewählt werden, die auch unter *scales* im Folgenden definiert sind (Standard: false).
-* **Scales (csv):** Festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma getrennt).
-* **Other SRS:** Weitere auswählbare Projektionen unter denen die Karte angezeigt werden kann (werden durch Komma getrennt). Zwei Arten der SRS Definition werden unterstützt: EPSG:CODE oder EPSG:CODE|MEIN SRS TITEL.
+* **Maßstäbe (csv):** Festgelegte Zoomstufen, die durch Drehen des Mausrads oder bei stufenweisem Zoomen für den Maßstab genutzt werden (werden durch Komma getrennt).
+* **Andere SRS:** Weitere auswählbare Projektionen unter denen die Karte angezeigt werden kann (werden durch Komma getrennt). Zwei Arten der SRS Definition werden unterstützt: EPSG:CODE oder EPSG:CODE|MEIN SRS TITEL.
 
 
 Konfigurationsbeispiel
@@ -40,7 +40,7 @@ In der Karte können alle Instanzen angezeigt werden, welche im Layerset enthalt
 
 Damit *Layersets* auch in der Karte angezeigt werden, müssen diese im Kartenelement aktiviert werden. Eine Mehrfachauswahl ist hierbei auch möglich. Layersets, welche nicht ausgewählt wurden, können als :ref:`overview_de` fungieren. Im Beispiel dient *main* als Haupt- und *overview* als Übersichtskarte.
 
-Im Feld *SRS* muss das Koordinatenreferenzsystem eingetragen werden. Im Beispiel ist dies EPSG:25832 bzw. ETRS89/UTM Zone 32N. Wenn andere Referenzsysteme zur Auswahl stehen sollen, werden diese unter *Other SRS* angegeben. Im Beispiel umfasst dies: EPSG:25833 (ETRS89/UTM Zone 33N), EPSG:31466 (DHDN/3-degree Gauss-Krüger Zone 2), EPSG:31467 (DHDN/3-degree Gauss-Krüger Zone 3), EPSG:3857 (WGS 84/Pseudo-Mercator) und EPSG:4326 (WGS 84).
+Im Feld *SRS* muss das Koordinatenreferenzsystem eingetragen werden. Im Beispiel ist dies EPSG:3857 bzw. WGS 84/Pseudo-Mercator. Wenn andere Referenzsysteme zur Auswahl stehen sollen, werden diese unter *Other SRS* angegeben. Im Beispiel umfasst dies: EPSG:25832 (ETRS89/UTM Zone 32N), EPSG:25833 (ETRS89/UTM Zone 33N), EPSG:31466 (DHDN/3-degree Gauss-Krüger Zone 2), EPSG:31467 (DHDN/3-degree Gauss-Krüger Zone 3) und EPSG:4326 (WGS 84).
 
 Weiterhin muss das Feld *Max. Kartenausdehnung* definiert werden. Dieses gibt den maximalen sichtbaren Kartenbereich an. Alles was außerhalb dieser Angabe liegt, wird in der Anwendung nicht dargestellt. Das Pflichtfeld *Initiale Kartenausdehnung* wiederum definiert den Startbereich, welcher beim Öffnen der Anwendung zu sehen ist. Im Beispiel wird das Stadtgebiet von Bonn angezeigt.
 

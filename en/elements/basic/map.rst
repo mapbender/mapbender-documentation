@@ -17,9 +17,9 @@ Configuration
 * **Layersets:** Select which :ref:`layerset` will be displayed on the map. Their order is changeable via drag & drop.
 * **Tile size:** Size of the tiles of tiled WMS services.
 * **SRS:** Spatial reference system. Two ways of SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE. If you do not enable a custom SRS title, the default title for each SRS from the *mb_core_srs* table is used.
-* **Max. Extent:** Maximal map extent, defined by BBOX parameters. This rectangle defines the possible map extent. In response to clicking the globe icon in the :ref:`navigation_toolbar`, the map view will zoom out to this extent.
-* **Start Extent:** Map extent that is visible at application launch, defined by BBOX parameters. This rectangle defines the start map extent. In response to clicking the home icon in the :ref:`navigation_toolbar`, the map view will zoom to this extent.
-* **Default resolution [dpi]**: The default resolution adapts to the screen resolution based on the configured value in dpi. Default: 96 dpi.
+* **Max. extent:** Maximal map extent, defined by BBOX parameters. This rectangle defines the possible map extent. In response to clicking the globe icon in the :ref:`navigation_toolbar`, the map view will zoom out to this extent.
+* **Start extent:** Map extent that is visible at application launch, defined by BBOX parameters. This rectangle defines the start map extent. In response to clicking the home icon in the :ref:`navigation_toolbar`, the map view will zoom to this extent.
+* **Default Resolution [dpi]**: The default resolution adapts to the screen resolution based on the configured value in dpi. Default: 96 dpi.
 * **Fixed zoom steps:** This option activates a zoom behaviour with fixed scales. This is useful to increase visual quality of services that are cached on very particular resolution steps only. When set true, scale denominator snaps to one of the values given in the *scales* option as defined below (default: false).
 * **Scales (csv):** A csv scale list. These scales will be supported in your application if you zoom (e.g. via mouse wheel)
 * **Other SRS:** Other spatial reference systems. Two SRS definitions are supported: EPSG:CODE or EPSG:CODE|MY SRS TITLE.
@@ -40,7 +40,7 @@ The map can entail all instances that are defined in the layerset. The following
 
 In order to display all *Layersets* on the map, they have to be activated. Multiple selections are possible as well. De-selected layersets can function as an :ref:`overview`. In the example, *main* is displayed on the main map and *overview* as an overview map.
 
-The field *SRS* defines the coordinate reference system that is used at application start. In this example, the coordinate reference system EPSG:25832 or ETRS89/UTM Zone 32N was chosen. If the application should support other coordinate systems, simply add those in the *Other SRS* field. In this example, the following codes are used: EPSG:25833 (ETRS89/UTM Zone 33N), EPSG:31466 (DHDN/3-degree Gauss-Kruger Zone 2), EPSG:31467 (DHDN/3-degree Gauss-Kruger Zone 3), EPSG:3857 (WGS 84/Pseudo-Mercator) and EPSG:4326 (WGS 84).
+The field *SRS* defines the coordinate reference system that is used at application start. In this example, the coordinate reference system EPSG:3857 or WGS 84/Pseudo-Mercator was chosen. If the application should support other coordinate systems, simply add those in the *Other SRS* field. In this example, the following codes are used: EPSG:25832 (ETRS89/UTM Zone 32N), EPSG:25833 (ETRS89/UTM Zone 33N), EPSG:31466 (DHDN/3-degree Gauss-Krüger Zone 2), EPSG:31467 (DHDN/3-degree Gauss-Krüger Zone 3) and EPSG:4326 (WGS 84).
 
 The field *max. Extent* states the maximum zoomable extent of the map application. If there is data outside of the extent, it will not appear in the map. The field *start Extent* refers to the extent of the map that is visible when the application is started in the browser (in this example: the city of Bonn).
 
