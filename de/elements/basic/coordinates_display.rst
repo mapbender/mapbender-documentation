@@ -40,7 +40,6 @@ Konfiguration
 * **Leere Anzeige:** Angezeigter Text, wenn sich die Maus nicht in der Karte befindet (Standard: 'x= - y= -').
 * **Präfix:** Präfix vor der X-Koordinate (Standard: 'x= ').
 * **Trennzeichen:** Separator nach X- und vor Y-Koordinate (Standard: ' y= ').
-* **Position:** Positionierung (Pflichtfeld, nur bei Nutzung im Kartenbereich)
 
 YAML-Definition
 ---------------

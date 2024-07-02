@@ -18,23 +18,21 @@ Konfiguration
      :scale: 70
 
 
-* **Automatisches Öffnen:** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: false).
+* **Automatisch aktivieren:** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: false).
 * **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht (Standard: true).
-* **Print Result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Standard: false).
+* **Print result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Standard: false).
 * **Nur valide zeigen** Anzeige von ausschließlich validen WMS (Standard: false).
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Display type:** Anzeige der Information als Tabs oder in Accordionform (Standard: tabs).
-* **Max count:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
-* **Width/Height:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Anzeigetyp:** Anzeige der Information als Tabs oder in Accordionform (Standard: tabs).
+* **Max. Anzahl:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
+* **Breite/Höhe:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
 * **Highlighting aktiv** Aktivierung des FeatureInfo Highlightings.
-* **Füllfarbe** Füllfarbe der ausgewählten Objekte.
 * **Strichfarbe** Umrandungsfarbe der ausgewählten Objekte.
-* **Deckkraft (%)** Setzt die Opazität der Füllfarbe in Prozent.
-* **Linienstärke (in Pixeln)** Setzt die Breite der Umrandungslinie in Pixeln.
-* **Hover-Füllfarbe** Füllfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
+* **Linienstärke (Pixel)** Setzt die Breite der Umrandungslinie in Pixeln.
+* **Füllfarbe** Füllfarbe der ausgewählten Objekte.
 * **Hover-Strichfarbe** Umrandungsfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
-* **Hover-Opazität (%) der Füllfarbe** Setzt die Opazität der Füllfarbe in Prozent beim Hovern.
-* **Hover-Linienstärke (in Pixeln)** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
+* **Hover-Linienstärke (Pixel)** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
+* **Hover-Füllfarbe** Füllfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
 
 
 Einstellungen im Ebenenbaum

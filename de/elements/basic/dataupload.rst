@@ -2,7 +2,7 @@ Daten laden
 ***********
 
 Mit **Daten laden** können Punkte, Linien, Polygone und Multipolygone aus Geodaten in den Formaten GeoJSON-, KML-, GML- und GPX geladen werden.
-Sie können eine oder mehrere Dateien per drag & drop oder über die Dateiauswahl hochladen.
+Sie können eine oder mehrere Dateien per Drag-and-Drop oder über die Dateiauswahl hochladen.
 Für eine passende Projektion wählen Sie entweder ein eigenes Koordinatenreferenzsystem oder nutzen das Feature *Projektion automatisch bestimmen*.
 
 .. hint:: Die Dateigröße ist begrenzt. In der Elementkonfiguration kann eine maximale Größe definiert werden.
@@ -23,7 +23,7 @@ Konfiguration
 * **Hilfetext**: Frei definierbarer Hilfetext, der über dem Uploadfeld angezeigt wird.
 
 Nachdem **Daten laden** dem Backend hinzugefügt wurde, wird es in Mapbender an der entsprechenden Position angezeigt.
-Anschließend können neue Dateien sowohl über Drag and drop als auch über den 'Datei wählen'-Button hinzugefügt werden.
+Anschließend können neue Dateien sowohl über Drag-and-Drop als auch über den 'Datei wählen'-Button hinzugefügt werden.
 Nachdem eine Datei hochgeladen wurde, werden die Objekte auf der Karte angezeigt und in der Sidepane gelistet.
 Über die Liste können Sie die Objektsichtbarkeit einstellen, auf das Objekt zoomen oder es löschen.
 
