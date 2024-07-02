@@ -132,7 +132,7 @@ Via the **Menu** a number of functions can be activated, which are then availabl
 * *Metadata* (show the metadata of the layer)
 * *Dimension* (change the dimension, e.g. time or elevation of the Layer - read more about the :ref:`dimensions_handler` )
 
-.. figure:: ../../../figures/layertree/layertree_menu.png
+.. figure:: ../../../figures/layertree/layertree_menu_en.png
            :scale: 80
            :alt: Configuration for the context menu.
 
@@ -175,17 +175,17 @@ In the following section, we walk through an exemplary configuration of a Layert
 In the example, we define two layersets with two instances each:
 
 * Layerset **Project NRW**:
-    * Instance `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-    * Instance `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instance `NW DTK50 <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instance `Wald und Holz NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 * Layerset **World**: 
-    * Instance OSM  Demo Service http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+    * Instance `OpenStreetMap (OSM) <http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
     * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
 For the configuration of the layersets, the four services mentioned above were added as instances (For detailed information, see above or in the :ref:`layerset` and :ref:`sources` documentation).
 
-For this example, the above mentioned steps were performed to add the Layerset "World" **[2]** with the instance "osm". Now we add the instance "GEBCO" in this Layerset. 
-To use the thematic grouping, we create a new Layerset named "Project NRW" **[3]** and load the two instances "DTK50 NRW" and "Forest NRW" into our new Layerset "Project NRW".  
+For this example, the above mentioned steps were performed to add the Layerset "World" with the instance "OpenStreetMap (OSM)". Now we add the instance "GEBCO" in this Layerset. 
+To use the thematic grouping, we create a new Layerset named "Project NRW" and load the two instances "NW DTK50" and "Wald und Holz NRW(Forest NRW)" into it.  
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex_en.png
            :scale: 80
@@ -193,7 +193,7 @@ To use the thematic grouping, we create a new Layerset named "Project NRW" **[3]
 
            Configuration of Layersets for a thematic Layertree.
 
-The Layerset should now contain three Layersets. The **Overview** [1] for the overview map, the **Project NRW** Layerset [2] with two regional data sets from Western Germany and the **World**-Layerset [3] with the supraregional data. 
+The Layerset should now contain three Layersets. The **Overview** for the overview map, the **Project NRW** Layerset with two regional data sets from Western Germany and the **World**-Layerset with the supraregional data. 
 
 **Configuration of the map to display the Layerset**
 

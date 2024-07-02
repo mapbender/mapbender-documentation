@@ -45,9 +45,9 @@ The configuration of the element itself occurs in two steps:
 * **Instancesets:** One or more instancesets can be defined. Select one or more instances and assign a title and group (optional).
 
 .. image:: ../../../figures/basesourceswitcher_configuration.png
-     :scale: 80
+     :scale: 70
 
-In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the dropdown list. It is possible to move an instanceset in the configuration window via drag and drop.
+In the configuration example either one, several or no entries per instanceset can be selected. You can create groups, which are then grouped together in the dropdown list. It is possible to move an instanceset in the configuration window via drag and drop.
 
 * **Title**: Title of the BaseSource.
 * **Group**: Optional group name.
