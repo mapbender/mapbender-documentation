@@ -16,7 +16,7 @@ It is possible to define different properties of the PDF you would like to print
  * Scale
  * Rotation
  * Title
- * Activate/deactivate Print legend
+ * *Print legend* checkbox
 
 .. image:: ../../../figures/print_client.png
      :scale: 70
