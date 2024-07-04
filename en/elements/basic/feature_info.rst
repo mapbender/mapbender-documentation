@@ -18,23 +18,21 @@ Configuration
      :scale: 70
 
 
-* **Auto-open:** Enable or disable autoopening of the copyright window when starting the application (default: false).
+* **Activate automatically:** Enable or disable autoopening of the copyright window when starting the application (default: false).
 * **Deactivate on close:** true/false to deactivate the functionality after closing the result dialog (default: true).
-* **Print Result:** Offer a link to print the result of FeatureInfo (default: false).
+* **Print result:** Offer a link to print the result of FeatureInfo (default: false).
 * **Only valid:** Display valid WMS (default: false).
 * **Title:** Title of the element. It will be indicated next to the button.
 * **Display type:** Display of the information, tabs or accordion.
 * **Max count:** Maximum number of results that should be displayed in the result dialog.
 * **Width/Height:** Width/height of the dialog in px.
 * **Highlighting enabled:** Deactivates/activates FeatureInfo Highlighting (default: false).
-* **Default fill color** Sets the fill color for selected objects.
 * **Default stroke color** Sets the stroke color for selected objects.
-* **Opacity (%) of the default color** Sets the opacity of the default color.
 * **Stroke width (pixels) of the default color** Sets the stroke width (in pixels) of the default color.
-* **Hover fill color** Sets the hover fill color for selected objects.
+* **Default fill color** Sets the fill color for selected objects.
 * **Hover stroke color** Sets the hover stroke color for selected objects.
-* **Opacity (%) of the hover color** Sets the opacity of the hover color.
 * **Stroke width (pixels) of the hover color** Sets the stroke width (in pixels) of the hover color.
+* **Hover fill color** Sets the hover fill color for selected objects.
 
 
 Layertree settings

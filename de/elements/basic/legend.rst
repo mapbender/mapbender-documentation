@@ -3,6 +3,8 @@
 Legende (Legend)
 ****************
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Nicht jeder Layer verfügt dabei über eine Legende. Zusätzlich zum Legendenbild können der Titel des Dienstes, des Layers und der Gruppe (sofern vorhanden) angezeigt werden. 
 
 .. image:: ../../../figures/de/legend.png
@@ -29,7 +31,7 @@ Konfigurationsbeispiele
 
 Legende in der Sidepane
 -----------------------
-Die Legende in der Sidepane wird über das ``+`` -Zeichen im :ref:`backend_de` der Anwendung unter Layouts - Sidepane eingebunden.
+Die Legende in der Sidepane wird über |mapbender-button-add| im :ref:`backend_de` der Anwendung unter Layouts - Sidepane eingebunden.
 
 .. image:: ../../../figures/de/add_sidepane.png
      :scale: 80

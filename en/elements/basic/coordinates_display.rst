@@ -42,8 +42,7 @@ Configuration
 * **Empty:** Text displayed when the mouse is not on the map (default: 'x = - y = -').
 * **Prefix:** Prefix in front of the X coordinate (default: '= x').
 * **Separator:** Separator in between the X coordinate and Y coordinate (default: ' y= ').
-* **Position:** Position (mandatory field, only when used in Map area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'
-
+* **Position:** Position (mandatory field, only when used in Map area). Options: 'left-top', 'right-top', 'left-bottom', 'right-bottom'.
 
 YAML-Definition
 ---------------

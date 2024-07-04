@@ -3,6 +3,8 @@
 Base source switcher
 ********************
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Base source switcher is a group of buttons that enables the user to switch between different predefined services (BaseSources), e. g. background maps. For every sourceset a button will be displayed in the client. Only one sourceset is active at the same time.
 Moreover, it is possible to define groups. All sourcesets of the same group will be listed in a dropdown list with the group name as the title.
 
@@ -47,7 +49,7 @@ The configuration of the element itself occurs in two steps:
 .. image:: ../../../figures/basesourceswitcher_configuration.png
      :scale: 80
 
-In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the dropdown list. It is possible to move an instanceset in the configuration window via drag and drop.
+In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the dropdown list. Further Instancesets can be added via the |mapbender-button-add| button. It is possible to move an instanceset in the configuration window via drag and drop.
 
 * **Title**: Title of the BaseSource.
 * **Group**: Optional group name.
