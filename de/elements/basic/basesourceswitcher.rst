@@ -50,7 +50,7 @@ Die Konfiguration des Elements geschieht in zwei Schritten:
 .. image:: ../../../figures/de/basesourceswitcher_de.png
      :scale: 80
 
-Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden. Weitere Instancesets können über den |mapbender-button-add| ``Button`` hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
+Das Konfigurationsbeispiel zeigt, dass entweder ein, kein oder mehrere Einträge pro Instanceset gewählt werden können. Durch eine Group-Angabe lassen sich Gruppen bilden. Weitere Instancesets können über den |mapbender-button-add| Button hinzugefügt werden. Ein Instanceset lässt sich mit Drag & Drop verschieben.
 
 * **Titel**: Name der Hintergrundkarte.
 * **Gruppe**: Optionale Zuweisung zu einer Themengruppe.

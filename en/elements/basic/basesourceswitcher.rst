@@ -49,7 +49,7 @@ The configuration of the element itself occurs in two steps:
 .. image:: ../../../figures/basesourceswitcher_configuration.png
      :scale: 80
 
-In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the dropdown list. Further Instancesets can be added via the |mapbender-button-add| ``Button``. It is possible to move an instanceset in the configuration window via drag and drop.
+In the configuration example either one, none or several entries per instanceset can be selected. You can create groups, which are then grouped together in the dropdown list. Further Instancesets can be added via the |mapbender-button-add| button. It is possible to move an instanceset in the configuration window via drag and drop.
 
 * **Title**: Title of the BaseSource.
 * **Group**: Optional group name.
