@@ -131,7 +131,7 @@ Dabei verfügen die Buttons über folgende Optionen:
 * **Auf Mobilgeräten anzeigen**: Zeigt Elemente nur auf mobilen Geräten an.
 * **Auf großen Bildschrimen anzeigen**: Zeigt Elemente nur auf Desktop-Geräten an.
 * **Bearbeiten**: Erlaubt die Anpassung des Elements.
-* **ACL Element**: Erlaubt die Konfiguration von Element-Sichtbarkeiten bei bestimmten Berechtigungen.
+* **Zugriff auf das Element einschränken**: Erlaubt die Konfiguration von Element-Sichtbarkeiten bei bestimmten Berechtigungen.
 * **Löschen**: Entfernt ein Element vom Back- und Frontend.
 
 
@@ -140,9 +140,9 @@ Bearbeiten
 Öffnet über den |mapbender-button-edit| Button die individuelle Konfigurationsmaske eines Elements. Diese finden Sie in der Dokumentation des jeweiligen Elements unter :ref:`elements_de`.
 
 
-Acl Element
-===========
-Öffnet über den |mapbender-button-key| Button einen **Element sichern**-Dialog, der ein explizites Konfigurieren der :ref:`acl_de` Regel **View** für Benutzer und Gruppen ermöglicht.
+Zugriff auf das Element einschränken
+====================================
+Öffnet über den |mapbender-button-key| Button einen **Element sichern**-Dialog, der ein explizites Konfigurieren der *Ansehen*-Regel in :ref:`de/backend/FOM/index:Rechteverwaltung` für Benutzer und Gruppen ermöglicht.
 
 Ist dies nicht konfiguriert, hat das Element keine expliziten Zugangsbeschränkungen und sollte allen Benutzern und Gruppen zur Verfügung stehen.
 
@@ -151,16 +151,16 @@ Sofern die **View**-Regel für bestimmte Benutzer oder Gruppen gesetzt ist, kön
 Beschränken Sie den Zugriff, indem Sie Benutzer über den |mapbender-button-add| Button hinzufügen. Eine gesetzte Checkbox zeigt an, dass die benötigten Berechtigungen zur Verfügung stehen.
 
 .. image:: ../../../figures/de/fom/acl_secure_element.png
-     :width: 100%
+     :width: 50%
 
 
 Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
 
 .. image:: ../../../figures/fom/element_security_key_popup.png
-     :width: 100%
+     :width: 75%
 
 
-Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :ref:`security_de`.
+Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :ref:`de/backend/FOM/index`.
 
 
 Löschen

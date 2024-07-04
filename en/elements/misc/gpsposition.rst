@@ -18,7 +18,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/gps_position_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Show label:** Switches the button label on/off (default: on).
 * **Autostart:** Starts element when opening the application (default: off).

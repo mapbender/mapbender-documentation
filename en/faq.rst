@@ -234,12 +234,12 @@ A: Alternative 1 (via Git): Go in the directory application/mapbender and checko
 Alternative 2 (via Composer): Change the entry in composer: "mapbender/mapbender": "dev-fix/meinfix" and do a Composer Update. Keep in mind that with that step all other vendor packages will be updated. To go back, specify the original branch. In addition go back to application/mapbender and checkout the original branch.
 
 
-Overriding twig templates
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Overwriting twig templates
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Q: What is the process for overriding twig templates in bundles, and how can I customize the design of specific elements in Mapbender?
+Q: What is the process for overwriting twig templates in bundles, and how can I customize the design of specific elements in Mapbender?
 
-A: Twig templates within bundles can be overridden by placing a twig file with the same name in `templates/bundles/<bundlename>`.
+A: Twig templates within bundles can be overwritten by placing a twig file with the same name in `templates/bundles/<bundlename>`.
 If, for example, you want to customise the coordinates display (`Resources/views/Element/coordinatesdisplay.html.twig` within the Mapbender CoreBundle), place a replacement file in `templates/bundles/MapbenderCoreBundle/Element/coordinatesdisplay.html.twig`. The new file will be used instead of the original one.
 
 

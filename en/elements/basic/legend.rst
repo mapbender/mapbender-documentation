@@ -3,6 +3,8 @@
 Legend
 ******
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 The legend object shows a legend of the layers that are displayed in the map. Not every layer provides a legend. In addition to the legend image you can display the service title, layer name and group name (if a group exists).
 
 .. image:: ../../../figures/legend.png
@@ -27,9 +29,9 @@ The Legend element is integrated via a :ref:`button` or in the sidepane.
 Configuration Examples
 ======================
 
-Legend in the Sidepane:
------------------------
-If you want to integrate a legend in the sidepane, click the ``+`` -button in the :ref:`layouts`-tab (section "Sidepane").
+Legend in the Sidepane
+----------------------
+If you want to integrate a legend in the sidepane, click on |mapbender-button-add| in the :ref:`layouts`-tab (section "Sidepane").
 
 .. image:: ../../../figures/add_sidepane.png
      :scale: 80

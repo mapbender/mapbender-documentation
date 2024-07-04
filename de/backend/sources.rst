@@ -34,8 +34,8 @@ Mit einem Klick auf ``Laden`` wird der Dienst registriert.
 Nach einer erfolgreichen Dienstregistrierung zeigt Mapbender Informationen zum Dienst in einem Übersichtsfenster an.
 
 
-Datenquellen - Übersicht
-------------------------
+Datenquellen-Übersicht
+----------------------
 
 Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen und konfigurierten Dienste auf:
 

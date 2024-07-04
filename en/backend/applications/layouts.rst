@@ -133,7 +133,7 @@ The following button functions are available:
 * **Show on mobile screens**: Displays an element only on mobile-sized screens.
 * **Show on Desktop screens**: Displays an element only on Desktop-sized screens.
 * **Edit**: Adjusts an element.
-* **ACL element**: Sets specific visibility permissions for an element.
+* **Restrict element access**: Sets specific visibility permissions for an element.
 * **Delete**: Removes an element from both front- and :ref:`backend`.
 
 
@@ -142,27 +142,27 @@ Edit
 The |mapbender-button-edit| button opens a configuration mask for a specific element. The :ref:`elements` overview page can help you to look up a setting for a specific element.
 
 
-Acl element
-===========
-The |mapbender-button-key| button opens a **Secure element** window that allows configuration of the :ref:`acl` **View** right for users/groups. 
+Restrict element access
+=======================
+The |mapbender-button-key| button opens a **Secure element** window that allows the configuration of the *View* right for users/groups. 
 
 Without configuration, an element has no access restriction and is avaible to the users/groups that can access the application.
 
-When via Acl element View access rights are set, only the defined users/groups get access to the element.
+When **View** access rights are set, only the defined users/groups get access to the element.
 
 Add users to restrict access to them with the |mapbender-button-add| button. A set checkmark next to the user account provides the necessary rights.
 
-.. image:: ../../../figures/de/fom/acl_secure_element.png
-     :width: 100%
+.. image:: ../../../figures/fom/acl_secure_element.png
+     :width: 50%
 
 
-After setting specific access rights, the security key turns red. If you hover over the key with the cursor, you will see the names of the users who have rights to the element.
+After setting specific access rights, the security key turns red.
 
 .. image:: ../../../figures/fom/element_security_key_popup.png
-     :width: 100%
+     :width: 75%
 
 
-You can find more security details under :ref:`security`.
+You can find more security details under :ref:`en/backend/FOM/index:Permission management`.
 
 
 Delete

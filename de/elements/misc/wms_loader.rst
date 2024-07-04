@@ -14,29 +14,16 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/wms_loader_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **Automatisches Öffnen:** Öffnet Element beim Start der Anwendung (Standard: false).
+* **Automatisch Öffnen:** Öffnet Element beim Start der Anwendung (Standard: false).
 * **Layer aufteilen:** Teilt Ebenen beim Laden des Dienstes auf (Standard: false).
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Default format:** image/png, image/gif, image/jpeg (Standard: image/png).
-* **Default info format:** text/html, text/xml, text/plain (Standard: text/html).
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Standardformat:** image/png, image/gif, image/jpeg (Standard: image/png).
+* **Standardinfoformat:** text/html, text/xml, text/plain (Standard: text/html).
 
 Für das Element wird ein Button verwendet. Siehe unter :ref:`button_de` für weitere Informationen zu dessen Konfiguration.
 
-YAML-Definition
----------------
-
-Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
-
-.. code-block:: yaml
-
-   target: ~                            # ID des Kartenelements
-   tooltip: 'WMS Loader'                # Text des Tooltips
-   autoOpen: false                      # true, wenn das Element beim Start der Anwendung geöffnet werden soll (Standard: false).
-   defaultFormat: 'image/png'           # image/png, image/gif, image/jpeg (Standard: image/png)
-   defaultInfoFormat: 'text/html'       # text/html, text/xml, text/plain (Standard: text/html)
-   splitLayers: false                   # Nutzt geteilte Ebenen beim Laden des Dienstes (Standard: false)
 
 Hinzufügen eines WMS über einen definierten Link
 ================================================
@@ -61,3 +48,17 @@ Mapbender kann einen WMS über einen definierten Link hinzufügen, z. B. über :
     href oder mb-url                   # Verweist auf die WMS getcapabilities URL.
     mb-add-vendor-specific="bplan=123" # Definition von Vendor Specific Parametern, die an den Request angefügt werden (ab Version 3.2.9).
 
+
+YAML-Definition
+---------------
+
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+
+.. code-block:: yaml
+
+   target: ~                            # ID des Kartenelements
+   tooltip: 'WMS Loader'                # Text des Tooltips
+   autoOpen: false                      # true, wenn das Element beim Start der Anwendung geöffnet werden soll (Standard: false).
+   defaultFormat: 'image/png'           # image/png, image/gif, image/jpeg (Standard: image/png)
+   defaultInfoFormat: 'text/html'       # text/html, text/xml, text/plain (Standard: text/html)
+   splitLayers: false                   # Nutzt geteilte Ebenen beim Laden des Dienstes (Standard: false)

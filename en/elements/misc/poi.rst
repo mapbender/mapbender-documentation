@@ -7,19 +7,19 @@ Generate POI-URLs (aka meeting points) suitable for e-mail. The generated point 
 
 
 .. image:: ../../../figures/poi.png
-     :scale: 80
+     :scale: 70
 
 
 Configuration
 =============
 
 .. image:: ../../../figures/poi_configuration.png
-     :scale: 80
+     :scale: 70
      
-* **Use Mailto:** Sends POI by e-mail.
+* **Use Mailto:** Sends POI by email.
 * **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Body:** Defines text to display. 
-* **GPS Position:** Defines GPS Position in the map.
+* **GPS:** Defines GPS Position in the map.
 
 YAML-Definition
 ---------------
