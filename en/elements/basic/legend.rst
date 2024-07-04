@@ -29,9 +29,9 @@ The Legend element is integrated via a :ref:`button` or in the sidepane.
 Configuration Examples
 ======================
 
-Legend in the Sidepane:
------------------------
-If you want to integrate a legend in the sidepane, click the |mapbender-button-add| ``Button`` in the :ref:`layouts`-tab (section "Sidepane").
+Legend in the Sidepane
+----------------------
+If you want to integrate a legend in the sidepane, click on |mapbender-button-add| in the :ref:`layouts`-tab (section "Sidepane").
 
 .. image:: ../../../figures/add_sidepane.png
      :scale: 80

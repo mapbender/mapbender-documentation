@@ -31,7 +31,7 @@ Konfigurationsbeispiele
 
 Legende in der Sidepane
 -----------------------
-Die Legende in der Sidepane wird über den |mapbender-button-add| ``Button`` im :ref:`backend_de` der Anwendung unter Layouts - Sidepane eingebunden.
+Die Legende in der Sidepane wird über |mapbender-button-add| im :ref:`backend_de` der Anwendung unter Layouts - Sidepane eingebunden.
 
 .. image:: ../../../figures/de/add_sidepane.png
      :scale: 80
