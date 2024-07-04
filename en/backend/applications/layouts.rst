@@ -144,7 +144,7 @@ The |mapbender-button-edit| button opens a configuration mask for a specific ele
 
 Restrict element access
 =======================
-The |mapbender-button-key| button opens a **Secure element** window that allows configuration of the :ref:`fom` **View** right for users/groups. 
+The |mapbender-button-key| button opens a **Secure element** window that allows the configuration of the *View* right for users/groups. 
 
 Without configuration, an element has no access restriction and is avaible to the users/groups that can access the application.
 
@@ -162,7 +162,7 @@ After setting specific access rights, the security key turns red.
      :width: 75%
 
 
-You can find more security details under :ref:`fom`.
+You can find more security details under :ref:`en/backend/FOM/index:Permission management`.
 
 
 Delete

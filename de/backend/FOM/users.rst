@@ -11,7 +11,7 @@ Das Bundle enthält Möglichkeiten für folgende Optionen:
 * Registierung eines Benutzers
 * Zurücksetzung des eigenen Passworts
 
-Der Benutzer mit der ID 1 (root) ist besonders, da dieser Benutzer bei der Installation erstellt wird und immer alle Rechte hat. Falls alle Stricke reißen, können Sie mit diesem Benutzer alles verwalten. Und falls Sie gar die Anmeldedaten vergessen haben sollten, können Sie über ein bin/console Kommando den Benutzer zurücksetzen: *fom:user:resetroot*.
+Der Benutzer mit der ID 1 (root) ist besonders, da dieser Benutzer bei der Installation erstellt wird und immer alle Rechte hat. Falls alle Stricke reißen, können Sie mit diesem Benutzer alles verwalten. Und falls Sie gar die Anmeldedaten vergessen haben sollten, können Sie über ein :ref:`bin/console Kommando<commands_de>` den Benutzer zurücksetzen: ``fom:user:resetroot``.
 
 
 Passwort vergessen
@@ -62,16 +62,18 @@ Ein Benutzer, der deaktiviert ist, kann sich so lange nicht mehr im Mapbender an
 Benutzer, die sich selbst registriert haben, aber die Freischaltungsmail noch nicht bestätigt haben, können so von einem Administrator per Hand freigeschaltet werden.
 
 
-Zuweisen von Benutzern zu einem Benutzer/einer Gruppe
------------------------------------------------------
+Zuweisung der Rechteverwaltung an Benutzer oder Gruppen
+-------------------------------------------------------
 
-#. Bearbeiten Sie Ihre Benutzer über **Sicherheit** → **Benutzer**.
+#. Gehen Sie zu **Sicherheit** → **Globale Berechtigungen**.
 
-#. Wählen Sie **Sicherheit**.
+#. Wählen Sie **Rechteverwaltung**.
 
-#. Weisen Sie Benutzern/Gruppen individuelle Berechtigungen auf den individuellen Benutzer zu. Fügen Sie Benutzer oder Gruppen über den ``+``-Button hinzu. Setzen Sie anschließend individuelle Berechtigungen über die Rechtetabelle. So weisen Sie Benutzer(n)/Gruppe(n) einen Benutzer zu.
+#. Weisen Sie Rechte an Benutzer oder Gruppen über die Schaltfläche **Füge Benutzer und Gruppen hinzu** zu. Diese erhalten das Recht *Globale Rechteverwaltung*.
 
-#. Melden Sie sich unter dem Benutzer bzw. der Gruppe mit neuen Rechten an, um die Rechtevergabe zu testen. Je nach Konfiguration ist es so z.B. möglich, dass alle Teilnehmer einer Gruppe Berechtigungen über einen bestimmten Benutzer haben und dessen Account bearbeiten oder löschen können.
+#. Sie haben nun einem Benutzer/einer Gruppe die Kontrolle über andere Benutzerkonten zugewiesen.
+
+#. Mit dieser Berechtigung können Benutzer und Gruppen anderen Benutzern und Gruppen Rechte über **Sicherheit** → **Benutzer** oder **Sicherheit** → **Gruppen** zuweisen.
 
 
 Login Fehler
