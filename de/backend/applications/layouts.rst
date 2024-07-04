@@ -142,7 +142,7 @@ Bearbeiten
 
 Zugriff auf das Element einschränken
 ====================================
-Öffnet über den |mapbender-button-key| Button einen **Element sichern**-Dialog, der ein explizites Konfigurieren der :ref:`fom_de` Regel **View** für Benutzer und Gruppen ermöglicht.
+Öffnet über den |mapbender-button-key| Button einen **Element sichern**-Dialog, der ein explizites Konfigurieren der *Ansehen*-Regel in :ref:`de/backend/FOM/index:Rechteverwaltung` für Benutzer und Gruppen ermöglicht.
 
 Ist dies nicht konfiguriert, hat das Element keine expliziten Zugangsbeschränkungen und sollte allen Benutzern und Gruppen zur Verfügung stehen.
 
@@ -160,7 +160,7 @@ Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Curso
      :width: 75%
 
 
-Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :ref:`fom_de`.
+Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :ref:`de/backend/FOM/index`.
 
 
 Löschen
