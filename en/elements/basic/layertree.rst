@@ -126,11 +126,11 @@ If you activate **Autoopen**, the Layertree is open by default and does not need
 
 Via the **Menu** a number of functions can be activated, which are then available in the layertree.
 
-* *Remove layer* (remove layer from the application session)
-* *Opacity* (change the opacity of a layer)
-* *Zoom to layer* (zoom to full layer extent)
-* *Metadata* (show the metadata of the layer)
-* *Dimension* (change the dimension, e.g. time or elevation of the Layer - read more about the :ref:`dimensions_handler` )
+* **Remove layer**: Remove a layer from the application session
+* **Opacity**: Change the opacity of a layer
+* **Zoom to layer**: Zoom to full layer extent
+* **Metadata**: Show the metadata of the layer
+* **Dimension**: Change the dimension, e.g. time or elevation of the Layer. Read more about the :ref:`dimensions_handler`
 
 .. figure:: ../../../figures/layertree/layertree_menu_en.png
            :scale: 80

@@ -98,7 +98,7 @@ Bei Schwierigkeiten bei der Einbindung kann die Dokumentation der :ref:`layerset
 **Einrichtung in der Karte zur Anzeige des Layersets**
 
 Als Nächstes erfolgt die Einrichtung des :ref:`Kartenelements <map_de>` zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Anwendungsreiter **Layouts** und bearbeiten dann das Kartenelement im Kartenbereich.
-Wichtig ist, dass im Bereich Layersets das Layerset World aktiviert wird, damit es in der Anwendung angezeigt wird. 
+Wichtig ist, dass im Bereich Layersets das Layerset "World" aktiviert wird, damit es in der Anwendung angezeigt wird. 
 
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des :ref:`Kartenelements <map_de>` weiterhelfen.
 
@@ -127,11 +127,11 @@ Wenn **Automatisches Öffnen** aktiv ist, wird der Ebenenbaum beim Anwendungssta
 
 Über **Menü** kann eine Auswahl von Funktionen aktiviert werden, die dann im Ebenenbaum zur Verfügung gestellt werden.
 
-* *Ebenen entfernen* (Entfernen von Layern aus dem Ebenenbaum erlauben)
-* *Deckkraft* (Deckkraft eines einzelnen Layers verändern)
-* *Auf Ebene zoomen* (Layer zentriert in seiner vollen Ausdehnung anzeigen)
-* *Metadaten* (Metadaten eines Layers anzeigen)
-* *Dimension* (Dimension eines Layers kontrollieren - mehr Informationen unter :ref:`dimensions_handler_de` )
+* **Ebenen entfernen**: Entfernen von Layern aus dem Ebenenbaum erlauben
+* **Deckkraft**: Deckkraft eines einzelnen Layers verändern
+* **Auf Ebene zoomen**: Layer zentriert in seiner vollen Ausdehnung anzeigen
+* **Metadaten**: Metadaten eines Layers anzeigen
+* **Dimension**: Dimension eines Layers kontrollieren. Mehr Informationen unter :ref:`dimensions_handler_de`.
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
@@ -194,7 +194,7 @@ Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein 
 
            Konfiguration der Layersets für den thematischen Ebenenbaum.
 
-Das Layerset sollte nun drei Layersets enthalten. Die **Overview** für die Übersichtskarte, das **Project NRW** Layerset mit den zwei regionalen Datensets aus NRW und das **World**-Layerset mit den überregionalen Layern. 
+Das Layerset sollte nun drei Layersets enthalten. Die **Overview** für die Übersichtskarte, das **Project NRW** Layerset mit den zwei regionalen Datensets aus NRW und das "World"-Layerset mit den überregionalen Layern. 
 
 **Einrichtung in der Karte zur Anzeige der Layersets**
 
@@ -229,7 +229,7 @@ Damit die **Themen** in der Anwendung wie gewünscht angezeigt werden, gibt es v
 :[2] Thema offen oder geschlossen:
   Ist diese Option gesetzt (Symbol des geöffneten Ordners), ist das Thema im Ebenenbaum automatisch ausgeklappt (sofern "Thema anzeigen" auch aktiv ist).
 
-Wenn wir im Thema “World” die Standardeinstellungen beibehalten und im Thema “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements wie folgt aus:
+Wenn wir im Thema "World" die Standardeinstellungen beibehalten und im Thema “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements wie folgt aus:
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_config.png
           :scale: 80
