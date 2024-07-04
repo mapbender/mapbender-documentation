@@ -11,12 +11,12 @@ General
 
 It is possible to define different properties of the PDF you would like to print with the client:
 
- * Print template
+ * Template
  * Quality
  * Scale
- * Frame rotation
- * Activate/deactivate legend
- * Optional input fields (e.g. title, comment, remark).
+ * Rotation
+ * Title
+ * Activate/deactivate Print legend
 
 .. image:: ../../../figures/print_client.png
      :scale: 70
@@ -36,7 +36,7 @@ The Printclient is configured in the backend. It relies on print templates (A0 t
      :scale: 70
 
 * **Title**: Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. The title will be displayed next to the button if "Show label" is activated.
-* **Scales (comma-separated)**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
+* **Scales (csv)**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
 * **Rotatable**: defines if the print extent is rotatable, default is true
 * **Print legend**: adds a checkbox which allows your print to have a legend
 * **Legend checkbox active**: if true, the legend checkbox is checked by default

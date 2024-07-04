@@ -10,13 +10,12 @@ Allgemeines
 
 Mit dem PrintClient können folgende Druckeinstellungen beeinflusst werden:
 
- * Druckvorlage
+ * Vorlage
  * Qualität
  * Maßstab
- * Drehung des Ausschnitts
+ * Drehung
  * Titel
- * Aktivierung/Deaktivierung einer Legende
- * Optionale Textfelder (z.B. Titel, Kommentar, Bemerkung).
+ * Aktivierung/Deaktivierung Legende drucken
 
 .. image:: ../../../figures/de/print_client.png
      :scale: 70
@@ -35,7 +34,7 @@ Der PrintClient wird im :ref:`backend_de` konfiguriert. Er greift dabei auf Druc
      :scale: 70
 
 * **Titel**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Maßstabsstufen (Scales)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, muss ein beliebiger Maßstab hinzugefügt werden.
+* **Maßstäbe (csv)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, muss ein beliebiger Maßstab hinzugefügt werden.
 * **Drehbar**: definiert, ob der Ausdruck gedreht werden kann (Standard: true).
 * **Legende drucken**: fügt eine Checkbox hinzu, die den Druck der Kartenlegende ermöglicht (Standard: false).
 * **Legenden Checkbox aktiv**: definiert, ob die "Legende drucken" - Checkbox bei Anwendungsstart aktiv ist

@@ -24,8 +24,8 @@ Konfiguration
 
 * **Automatisch öffnen:** Das Element wird beim Anwendungsstart automatisch geöffnet (Standard: deaktiviert).
 * **Beim Schließen deaktivieren:** Erstellte Skizzen werden nach Schließen des Elements (Button oder Sidepane) nicht mehr in der Karte angezeigt. Erneutes Öffnen zeigt erstellte Skizzen wieder an.
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Geometrytypes:** Liste der unterstützten Geometrietypen (Pflichtfeld)
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
+* **Geometrietypen:** Liste der unterstützten Geometrietypen (Pflichtfeld)
 * **Farben:** Texteingabefeld für optionale Farbanpassung (Hex-Codes). Kommaseparierte Eingabe. Benötigt mindestens einen Farbcode.
 * **Farbanpassung erlauben:** Aktiviert einen Button als Farbwähler, mit dem aus der Anwendung heraus Skizzen farblich verändert werden können.
 
