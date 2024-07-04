@@ -50,7 +50,7 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 Layers are included in the application via the **Layerset** tab in the :ref:`backend`.
 
 The instances are the references to the individual WMS services. With the large ``+`` button, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
-For a detailed documentation on how the services can be integrated and registered correctly, please head over to the :ref:`layerset` and :ref:`sources` documentation..
+For a detailed documentation on how the services can be integrated and registered correctly, please head over to the :ref:`layerset` and :ref:`sources` documentation.
 
 .. figure:: ../../../figures/mapbender_add_source_to_application.png
            :scale: 80
@@ -130,7 +130,7 @@ Via the **Menu** a number of functions can be activated, which are then availabl
 * **Opacity**: Change the opacity of a layer
 * **Zoom to layer**: Zoom to full layer extent
 * **Metadata**: Show the metadata of the layer
-* **Dimension**: Change the dimension, e.g. time or elevation of the Layer. Read more about the :ref:`dimensions_handler`
+* **Dimension**: Change the dimension, e.g. time or elevation of the Layer. Read more about the :ref:`dimensions_handler`.
 
 .. figure:: ../../../figures/layertree/layertree_menu_en.png
            :scale: 80
