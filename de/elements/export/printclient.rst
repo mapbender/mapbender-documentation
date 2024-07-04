@@ -15,7 +15,7 @@ Mit dem PrintClient können folgende Druckeinstellungen beeinflusst werden:
  * Maßstab
  * Drehung
  * Titel
- * Aktivierung/Deaktivierung Legende drucken
+ * Checkbox *Legende drucken*
 
 .. image:: ../../../figures/de/print_client.png
      :scale: 70
