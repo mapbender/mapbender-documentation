@@ -19,12 +19,12 @@ Migration to Mapbender 4.0.0
 
 * You will notice that the Symfony Directory Structure changed a lot.
 * For Mapbender 4, all ``.yml`` file extensions were transformed into ``.yaml``.
-* config.yml is omitted.
-* public files moved from app/web to public.
-* Instead of multi parameters in parameters.yml the database definition is replaced by an environment variable ``MAPBENDER_DATABASE_URL``. Configure it by adding it in your .env.local file. If you have multiple connections, use one env variable per connection and configure these in the config/packages/doctrine.yaml file.
-* The Apache Vhost Definition or ALIAS has to be changed. Refer to public (instead of web). Call index.php instead of app.php). See installation instruction.
-* Environment can now be set using the environment variable ``APP_ENV`` (see .env.local) .index_dev.php (instead of app_dev.php) is still available as an alternative for accessing the dev environment on remote servers.
-* Database permission can be migrated using ``bin/console mapbender:security:migrate-from-acl``. Do that before executing the schema:update command, otherwise your old ACL tables will be gone!
+* `config.yml` is omitted.
+* public files moved from `app/web` to `public`.
+* Instead of multi parameters in `parameters.yml`, the database definition is replaced by an environment variable ``MAPBENDER_DATABASE_URL``. Configure it by adding it in your `.env.local` file. If you have multiple connections, use one env variable per connection and configure these in the `config/packages/doctrine.yaml` file.
+* The Apache Vhost Definition or ALIAS has to be changed. Refer to `public` (instead of `web`). Call ``index.php`` instead of ``app.php``). See :ref:`installation instruction<en/installation/installation_ubuntu:Configuration Apache 2.4>`.
+* Environment can now be set using the environment variable ``APP_ENV`` (see `.env.local`), ``.index_dev.php`` (instead of ``app_dev.php``) is still available as an alternative for accessing the dev environment on remote servers.
+* Database permission can be migrated using ``bin/console mapbender:security:migrate-from-acl``. Do that before executing the ``schema:update`` command, otherwise your old ACL tables will be gone!
 
 
 Upgrade database
