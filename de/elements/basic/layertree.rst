@@ -98,7 +98,7 @@ Bei Schwierigkeiten bei der Einbindung kann die Dokumentation der :ref:`layerset
 **Einrichtung in der Karte zur Anzeige des Layersets**
 
 Als Nächstes erfolgt die Einrichtung des :ref:`Kartenelements <map_de>` zur Anzeige des Layersets in der **Karte**. Dazu wechseln wir in den Anwendungsreiter **Layouts** und bearbeiten dann das Kartenelement im Kartenbereich.
-Wichtig ist, dass im Bereich Layersets das Layerset World aktiviert wird, damit es in der Anwendung angezeigt wird. 
+Wichtig ist, dass im Bereich Layersets das Layerset "World" aktiviert wird, damit es in der Anwendung angezeigt wird. 
 
 Bei Fragen zur weiteren Konfiguration der Karte kann die Dokumentation des :ref:`Kartenelements <map_de>` weiterhelfen.
 
@@ -125,13 +125,13 @@ Für das Verstehen der Funktionen und das eigene Erstellen eines Ebenenbaums bea
 
 Wenn **Automatisches Öffnen** aktiv ist, wird der Ebenenbaum beim Anwendungsstart geöffnet. Der **Titel** des Elements ermöglicht die Unterscheidung mehrerer eingebundener Ebenenbäume.
 
-Über **Menu** kann eine Auswahl von Funktionen aktiviert werden, die dann im Ebenenbaum zur Verfügung gestellt werden.
+Über **Menü** kann eine Auswahl von Funktionen aktiviert werden, die dann im Ebenenbaum zur Verfügung gestellt werden.
 
-* *Remove layer* (Entfernen von Layern aus dem Ebenenbaum erlauben)
-* *Opacity* (Deckkraft eines einzelnen Layers verändern)
-* *Zoom to layer* (Layer zentriert in seiner vollen Ausdehnung anzeigen)
-* *Metadata* (Metadaten eines Layers anzeigen)
-* *Dimension* (Dimension eines Layers kontrollieren - mehr Informationen unter :ref:`dimensions_handler_de` )
+* **Ebenen entfernen**: Entfernen von Layern aus dem Ebenenbaum erlauben
+* **Deckkraft**: Deckkraft eines einzelnen Layers verändern
+* **Auf Ebene zoomen**: Layer zentriert in seiner vollen Ausdehnung anzeigen
+* **Metadaten**: Metadaten eines Layers anzeigen
+* **Dimension**: Dimension eines Layers kontrollieren. Mehr Informationen unter :ref:`dimensions_handler_de`.
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
@@ -176,17 +176,17 @@ Im Folgenden gehen wir eine beispielhafte Konfiguration eines Ebenenbaums mit er
 In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen definiert:
 
 * Layerset Project NRW:
-    * Instanz `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-    * Instanz `Wald NRW <https://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instanz `NW DTK50 <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instanz `Wald und Holz NRW <https://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 * Layerset World: 
-    * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instanz `OpenStreetMap (OSM) <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
     * Instanz `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der :ref:`layerset_de` und :ref:`sources_de`).
 
-Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" **[3]** mit der Instanz "osm" hinzuzufügen. Nun fügen wir in dieses Layerset die Instanz "GEBCO" hinzu. 
-Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" **[2]** und laden in dieses die beiden oben genannten Instanzen "DTK50 NRW" und "Wald NRW" ein.
+Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" mit der Instanz "OpenStreetMap (OSM)" hinzuzufügen. Nun fügen wir in dieses Layerset auch die Instanz "GEBCO" hinzu. 
+Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" und laden in dieses die beiden oben genannten Instanzen "NW DTK50" und "Wald und Holz NRW" ein.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex.png
            :scale: 80
@@ -194,7 +194,7 @@ Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein 
 
            Konfiguration der Layersets für den thematischen Ebenenbaum.
 
-Das Layerset sollte nun drei Layersets enthalten. Die **Overview** [1] für die Übersichtskarte, das **Project NRW** Layerset [2] mit den zwei regionalen Datensets aus NRW und das **World**-Layerset [3] mit den überregionalen Layern. 
+Das Layerset sollte nun drei Layersets enthalten. Die **Overview** für die Übersichtskarte, das **Project NRW** Layerset mit den zwei regionalen Datensets aus NRW und das "World"-Layerset mit den überregionalen Layern. 
 
 **Einrichtung in der Karte zur Anzeige der Layersets**
 
@@ -229,7 +229,7 @@ Damit die **Themen** in der Anwendung wie gewünscht angezeigt werden, gibt es v
 :[2] Thema offen oder geschlossen:
   Ist diese Option gesetzt (Symbol des geöffneten Ordners), ist das Thema im Ebenenbaum automatisch ausgeklappt (sofern "Thema anzeigen" auch aktiv ist).
 
-Wenn wir im Thema “World” die Standardeinstellungen beibehalten und im Thema “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements wie folgt aus:
+Wenn wir im Thema "World" die Standardeinstellungen beibehalten und im Thema “Project NRW” die anderen Optionen aktivieren, sieht die Konfiguration des Elements wie folgt aus:
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_config.png
           :scale: 80
