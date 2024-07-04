@@ -16,7 +16,7 @@ Configuration
 
 * **Title:** Title of the element. It will be listed under :ref:`layouts`.
 * **Maximum width:** The maximum width of the scale bar (mandatory field; default: 200px).
-* **Units:** Scale bar units 'kilometer' or 'miles' (mandatory field; default: kilometer).
+* **Unit:** Scale bar units 'kilometer' or 'miles' (mandatory field; default: kilometer).
 * **Position:** Scale bar alignment (mandatory field; default: Bottom right).
 
 YAML-Definition
