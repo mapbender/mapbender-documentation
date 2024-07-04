@@ -14,7 +14,7 @@ Konfiguration
 .. image:: ../../../figures/de/scalebar_configuration.png
      :scale: 70
 
-* **Titel:** Titel des Elements. Dieser wird unter dem Reiter :ref:`layouts` angezeigt.
+* **Titel:** Titel des Elements. Dieser wird unter dem Reiter :ref:`layouts_de` angezeigt.
 * **Maximale Breite:** Maximale Breite der Maßstabsleiste (Pflichtfeld; Standard: 200px).
 * **Einheit:** Die wählbaren Einheiten der Maßstabsleiste:'kilometer' oder 'miles' (Pflichtfeld; Standard: kilometer).
 * **Position:** Ausrichtung der Maßstabsleiste (Pflichtfeld; Standard: Unten rechts).
