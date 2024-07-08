@@ -3,6 +3,8 @@
 Link
 ****
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Dieses Element stellt ein Button-Modul bereit, über das eine Webseite oder ein Skript verlinkt werden kann. 
 
 
@@ -44,7 +46,7 @@ Buttons können für Features eingebunden werden, die vorher im Kartenbereich ko
 Link zur Mapbender-Webseite
 ---------------------------
 
-Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Bereich der oberen Werkzeugleiste das Element Button ausgewählt werden.
+Zuerst muss über |mapbender-button-add| in der Anwendung unter dem Reiter Layouts im Bereich der oberen Werkzeugleiste das Element Button ausgewählt werden.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80

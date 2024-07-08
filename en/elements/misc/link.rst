@@ -3,6 +3,8 @@
 Link
 ****
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 The link element provides a button widget that refers a defined link like a website or script.
 
 
@@ -46,7 +48,7 @@ Buttons can refer to features which are included in the Map area. For example, i
 Link to a Webpage
 -----------------
 
-First, you have to select the link element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
+First, you have to select the link element by clicking on |mapbender-button-add| in the Toolbar section in the Layouts tab.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80
