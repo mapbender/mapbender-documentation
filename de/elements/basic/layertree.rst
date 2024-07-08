@@ -3,6 +3,8 @@
 Ebenenbaum (Layertree)
 **********************
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Funktionen
 ==========
 
@@ -49,7 +51,7 @@ Um Layersets im Ebenenbaum nutzen zu können, sind verschiedene Anpassungen notw
 
 Über den Reiter **Layerset** können Layersets definiert und Datenquellen in eine Anwendung eingebunden werden. 
 
-Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über den großen ``+``-Button kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im :ref:`backend_de` registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
+Die Instanzen sind die Referenzen auf die einzelnen WMS-Dienste. Über |mapbender-button-add| kann ein neues Layerset hinzugefügt werden. In dieses lassen sich im Anschluss neue Layer über das Hinzufügen von im :ref:`backend_de` registrierten Instanzen einbinden. Das Layerset "overview" wird im Beispiel für die Anzeige der Übersichtskarte verwendet. 
 Eine Dokumentation, wie die Dienste korrekt registriert und eingebunden werden, findet sich unter :ref:`sources_de` und :ref:`layerset_de`. 
 
 

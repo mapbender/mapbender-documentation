@@ -3,6 +3,8 @@
 Data Manager
 ************
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 The element Data Manager is similar to the :ref:`digitizer`. 
 However, Data Manager only works with nonspatial data, i. e. you can not create geometries.
 Data Manager can be used to maintain reference tables, for example a table with contact information.
@@ -25,7 +27,7 @@ Data Manager is a good solution to store simple contact information in Mapbender
 .. image:: ../../../figures/data_manager.png
      :scale: 80
 
-In the example, an input template is opened after clicking the ``+`` -button. 
+In the example, an input template is opened after clicking |mapbender-button-add|. 
    
 .. image:: ../../../figures/data_manager_form.png
      :scale: 80
