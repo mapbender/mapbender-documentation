@@ -7,7 +7,7 @@ User are implemented as FOM\\UserBundle\\Entity\\User and stored in the database
 
 The bundle provides all means to administrate users by admin as well as self-registration and password recovery.
 
-The user with the id 1 (root) is special, as this user is created during installation and will always be given full access. If all is lost, you can use this user to manage everything. And in the event that the credentials for this user are also lost, a console command (fom:user:resetroot) is available for resetting.
+The user with the id 1 (root) is special, as this user is created during installation and will always be given full access. If all is lost, you can use this user to manage everything. And in the event that the credentials for this user are also lost, a :ref:`console command<commands>` (``fom:user:resetroot``) is available for resetting.
 
 
 Forgot Password
@@ -17,9 +17,9 @@ If a user has forgotten his/her password, he can use the "Forgot password?" link
 
 .. image:: ../../../figures/fom/user_forgot_password.png
 
-After that, the user should receive an e-mail with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the /FOM/UserBundle/Resources/translations/messages.en.xlf file.
+After that, the user should receive an email with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the */FOM/UserBundle/Resources/translations/messages.en.xlf* file.
 
-The functionality can be switched off in the doctrine.yaml.
+The functionality can be switched off in the *doctrine.yaml*.
 
 .. code-block:: yaml
 
@@ -30,7 +30,7 @@ The functionality can be switched off in the doctrine.yaml.
 Registration
 ------------
 
-Users can self-register themselves in Mapbender. For this, you have to adjust the setting `fom_user:selfregister` in the *doctrine.yaml* to true.
+Users can self-register themselves in Mapbender. For this, you have to adjust the setting ``fom_user:selfregister`` in the *doctrine.yaml* to ``true``.
 
 .. code-block:: yaml
 
@@ -42,32 +42,32 @@ The Login dialog contains a *Register* button. This opens a page where the user 
 .. image:: ../../../figures/fom/user_self_register.png
 
 After that, the user gets a confirmation mail to complete the registration. Until then, Mapbender will handle the user as inactive.
-
 The text of the confirmation mail can be customized in the `/FOM/UserBundle/Resources/translations/messages.en.xlf` file.
 
 
 Activation of users
 -------------------
 
-Users can be set activated or deactivated by Administrators with the *Edit* right. For this purpose, an `activated` checkbox exists in the Edit User dialog. A user with administration rights cannot activate or deactivate himself.
+Users can be set activated or deactivated by Administrators with the *Edit* right. For this purpose, an **activated** checkbox exists in the Edit User dialog. A user with administration rights cannot activate or deactivate himself.
 
 .. image:: ../../../figures/fom/edit_user_activated.png
 
 A user who is deactivated cannot login into Mapbender anymore until re-activation.
+Users who self-registered but did not approve the activation email can be activated by an administrator.
 
-Users which have self-registered themselves but have not approved the activation mail can now be activated by an administrator.
 
+Assign permission management to users or groups
+-----------------------------------------------
 
-Assign a user to another User/Group
------------------------------------
+#. Go to **Security** → **Global Permissions**.
 
-#. Edit a user by clicking **Security** → **Users**.
+#. Choose **Permission management**.
 
-#. In the user administration, choose **Security**.
+#. Add users or groups via the **Add users and groups** button. This will assign the *Global Permission Management* right.
 
-#. Give users/groups individual rights on the selected user: Add users/groups via the **Add users and groups** button. Thereafter, set permissions within the rights table.
+#. You have now assigned a user/group controlling options over other user accounts.
 
-#. You have now assigned a user/group controlling options over another user account. Test your configuration with the entitled user accounts.
+#. With this permission, users and groups can assign rights to other users and groups via **Security** → **Users** or **Security** → **Groups**.
 
 
 Login Failures
