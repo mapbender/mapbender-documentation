@@ -3,6 +3,8 @@
 Data Manager
 ************
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Der Data Manager ähnelt in seiner Funktionalität dem :ref:`digitizer_de`.
 Allerdings speichert das Element nur Sachdaten und keine Geodaten.
 Es kann zur Pflege von Referenztabellen verwendet werden, beispielsweise einer Tabelle mit Kontaktinformationen.
@@ -25,7 +27,7 @@ Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu 
 .. image:: ../../../figures/de/data_manager.png
      :scale: 80
 
-In dem dargestellten Konfigurationsbeispiel öffnet sich eine Eingabevorlage nach Klick auf das ``+``-Zeichen.
+In dem dargestellten Konfigurationsbeispiel öffnet sich eine Eingabevorlage nach Klick auf |mapbender-button-add|.
 
 .. image:: ../../../figures/data_manager_form.png
      :scale: 80

@@ -3,6 +3,8 @@
 Button
 ******
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 The button element provides a push button widget. Some elements like :ref:`legend`, :ref:`layertree`, :ref:`feature_info`, :ref:`ruler` and :ref:`printclient` need a button to be displayed/activated if not defined in a frame.
 
 Buttons optionally can be grouped, so that only one button in a group can be active at any given time. This is done by the group paramter.
@@ -51,7 +53,7 @@ Button for the legend element
 The legend is very helpful because it provides information about the Map area. In this user example, the legend is integrated in the Map area. You can find a descripton of how to configure the legend element in this documentation under :ref:`legend`.
 You can add a button for the legend by following these steps:
 
-First, you have to select the button element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
+First, you have to select the button element by clicking on |mapbender-button-add| in the Toolbar section in the Layouts tab.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 50
@@ -93,7 +95,7 @@ The line and area ruler also can be integrated in the application via buttons. T
 
 This example demonstrates how to create groups: Both buttons should be in one group, so that only one line or area ruler can be active and not both at the same time.
 
-You can add this button, like the legend button, by clicking on the ``+`` -symbol in the application in the Layouts tab. The dialog box "Add element - Button" appears. For the line ruler feature it can look like this:
+You can add this button, like the legend button, by clicking on |mapbender-button-add| in the application in the Layouts tab. The dialog box "Add element - Button" appears. For the line ruler feature it can look like this:
 
 .. image:: ../../../figures/de/button_distance_dialog.png
      :scale: 80

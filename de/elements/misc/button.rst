@@ -3,6 +3,8 @@
 Button
 ******
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Dieses Element stellt ein Button-Modul bereit. Einige Elemente wie die :ref:`legend_de`, :ref:`layertree_de`, :ref:`feature_info_de`, :ref:`ruler_de` und der :ref:`printclient_de` benötigen einen Button, um einen Dialog anzuzeigen oder um aktiviert zu werden, wenn das Element in den Kartenbereich oder die Fußleiste eingebunden wurde.
 
 Buttons können optional gruppiert werden, sodass nur ein Button in der Gruppe aktiviert ist. Dies wird im Gruppen-Parameter eingestellt.
@@ -50,7 +52,7 @@ Button für die Legende
 Für Karten sind Legenden sehr hilfreich, da sich so die Betrachter der Karte über den Inhalt informieren können. Die Legende ist in diesem Anwendungsbeispiel im Kartenbereich eingebunden. Wie eine Legende konfiguriert wird, wird in der Dokumentation unter :ref:`legend_de` beschrieben.
 Der Button für eine Legende wird wie folgt eingebunden:
 
-Zuerst muss über das ``+`` - Zeichen in der Anwendung (unter Layouts, Obere Werkzeugleiste) das Element Button ausgewählt werden.
+Zuerst muss über |mapbender-button-add| in der Anwendung (unter Layouts, Obere Werkzeugleiste) das Element Button ausgewählt werden.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80
@@ -89,7 +91,7 @@ Button für Linien- und Flächenmessung
 
 Auch die Funktionen der Linien- und Flächenmessung können über Buttons in eine Anwendung eingebunden werden. Auch in diesem Fall ist es notwendig, dass diese Funktionen schon in Kartenbereich, Sidepane oder Fußzeile konfiguriert sind.
 In diesem Konfigurationsbeispiel sollen beide Buttons einer Gruppe zugeordnet werden, so dass entweder Linien oder Flächen gemessen werden können, jedoch nicht beides gleichzeitig.
-Der Button wird, wie schon der Legendenbutton, über das ``+`` - Zeichen in der Anwendung unter dem Reiter *Layouts* im Bereich der oberen Werkzeugleiste eingebunden. Es erscheint der Dialog "Element hinzufügen – Button", der für die Konfiguration des Buttons für die Linienmessung wie folgt aussehen kann:
+Der Button wird, wie schon der Legendenbutton, über |mapbender-button-add| in der Anwendung unter dem Reiter *Layouts* im Bereich der oberen Werkzeugleiste eingebunden. Es erscheint der Dialog "Element hinzufügen – Button", der für die Konfiguration des Buttons für die Linienmessung wie folgt aussehen kann:
 
 .. image:: ../../../figures/de/button_distance_dialog.png
      :scale: 80
