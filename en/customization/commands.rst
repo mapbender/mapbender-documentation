@@ -183,7 +183,7 @@ bin/console doctrine:schema:update
 
 The command is needed on Mapbender update. It generates the SQL needed to synchronize the database schema to the new Mapbender version. 
 
-.. note:: The Mapbender database is an independent database that is **not** linked to the geodata stored other databases. While updating, tables that are not covered by a doctrine schema might be deleted. Geodata in independent databases is not affected by this.
+.. note:: The Mapbender database should be an independent database. Your geodata should be stored other separate databases. While updating the Mapbender database, tables that are not covered by a doctrine schema might be deleted. Geodata in independent databases is not affected by this.
 
 .. code-block:: yaml
 
