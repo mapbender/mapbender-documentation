@@ -180,7 +180,9 @@ Mit dem Befehl wird bei der Installation das Datenbankschema angelegt, d.h. es w
 bin/console doctrine:schema:update 
 **********************************
 
-Der Befehl wird beim Update auf eine Mapbender Version benötigt. Er generiert die SQL-Befehle, um die Datenbank auf das Schema der neuen Version zu aktualisieren. 
+Dieser Befehl wird beim Update auf eine Mapbender Version benötigt. Er generiert die SQL-Befehle, um die Datenbank auf das Schema der neuen Version zu aktualisieren. 
+
+.. note:: Die Mapbender-Datenbank sollte eine eigenständige Datenbank sein. Ihre Geodaten sollten in anderen separaten Datenbanken gespeichert werden. Bei einem Update der Mapbender-Datenbank können Tabellen, die nicht durch ein Doctrine Schema beschrieben sind, gelöscht werden. Geodaten in eigenständigen Datenbanken sind davon nicht betroffen.
 
 .. code-block:: yaml
 

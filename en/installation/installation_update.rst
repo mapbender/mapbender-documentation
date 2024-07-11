@@ -9,6 +9,9 @@ To update Mapbender you have to do the following steps:
 * Save your configuration files (``parameters.yml`` for versions < 4.0.0 respectively ``.env.local`` for >= 4.0.0, and the files from the folder *config/packages*) and your old Mapbender version (files and database).
 * Replace the old with the new Mapbender files.
 * Merge your configuration files (check for new parameters and changes).
+
+.. warning:: If you are migrating to Mapbender version 4, please read the :ref:`note in the migration guide<en/installation/migration:Upgrade database>` before upgrading the database!
+    
 * Update your :ref:`Mapbender database <en/customization/commands:bin/console doctrine:schema:update>`.
 * Copy the screenshots from your old Mapbender version from */public/uploads/* (web/uploads for < 4.0.0) to the folder */public/uploads* of your new installation.
 * Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?).

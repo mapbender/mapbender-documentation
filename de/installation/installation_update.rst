@@ -5,10 +5,13 @@ Aktualisierung von Mapbender auf eine neuere Version
 
 Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 
-* Laden Sie die neuste Version von https://mapbender.org/builds/ herunter.
+* Laden Sie die neueste Version von https://mapbender.org/builds/ herunter.
 * Sichern Sie Ihre Konfigurationsdateien (``parameters.yml`` für Versionen < 4.0.0 bzw. ``.env.local`` für Versionen >= 4.0.0, und die Dateien im Verzeichnis *config/packages*) und Ihre alte Mapbender Version (Dateien und Datenbank).
 * Ersetzen Sie die Dateien durch die neuen Mapbender-Dateien.
 * Vergleichen Sie die Konfigurationsdateien und prüfen diese auf neue Parameter und Änderungen.
+
+.. warning:: Wenn Sie auf die Mapbender-Version 4 umsteigen, beachten Sie vor dem Upgrade der Datenbank unbedingt den :ref:`Hinweis im Migrationsleitfaden<de/installation/migration:Upgrade der Datenbank>`!
+
 * Aktualisieren Sie Ihre :ref:`Mapbender-Datenbank<de/customization/commands:bin/console doctrine:schema:update>`.
 * Übernahme Ihrer Screenshots: Kopieren Sie die Dateien Ihrer alten Mapbender Version von */public/uploads/* (*web/uploads* für Versionen < 4.0.0) in das */public/uploads* Verzeichnis Ihrer neuen Mapbender Version.
 * Wenn Sie Ihre eigenen Templates verwenden sollten, müssen Sie diese mit denen der neuen Version vergleichen (kam es zu Änderungen?).
