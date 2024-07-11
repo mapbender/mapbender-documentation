@@ -59,28 +59,21 @@ The legend element can be integrated with a button in the toolbar. First step: O
 
 In this example, the following settings are chosen:
 
-.. image:: ../../../figures/legend_example_toolbar_dialog.png
-     :scale: 75
+.. image:: ../../../figures/legend_example_sidepane_dialog.png
+     :scale: 70
 
-In our example, the checkbox *Open automatically* is dismissed. Therefore, the legend opens only with a click on a button.
-This :ref:`button` has to be implemented into the toolbar section.
+As soon as this element has been implemented into the map area, a :ref:`button` has to be implemented into the toolbar section.
+Following these instructions, the result in the application looks like this:
 
-The configuration of a button can look like this:
-
-.. image:: ../../../figures/legend_example_button.png
+.. image:: ../../../figures/legend.png
      :scale: 80
 
-Following the above instructions, the result in the application looks like this:
-
-.. image:: ../../../figures/legend_example_toolbar.png
-     :scale: 80
-
-The toolbar shows the button for the legend element. If the button is clicked, the dialog with the generated legend opens.
+The toolbar shows the button for the legend element. If the button is clicked, the dialog with the generated legend opens(will open automatically in our example).
 
 The activation and deactivation of checkboxes in the configurational settings leads to:
 
 .. image:: ../../../figures/legend_example_toolbar_checkboxes.png
-     :width: 100%
+     :scale: 80
 
 YAML-Definition
 ---------------

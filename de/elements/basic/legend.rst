@@ -58,23 +58,16 @@ Die Legende kann auch als Button in der Werkzeugleiste eingebunden werden. Hierf
 
 Für das Konfigurationsbeispiel wurden folgende Einstellungen gewählt:
 
-.. image:: ../../../figures/de/legend_example_toolbar_dialog.png
-     :scale: 80
+.. image:: ../../../figures/de/legend_example_sidepane_dialog.png
+     :scale: 70
 
-Für das Konfigurationsbeispiel wurde das Häkchen bei *Automatisches Öffnen* entfernt, sodass sich die Legende nur bei aktivem Klicken auf einen Button öffnet.
 Sobald dieses Element im Kartenbereich eingebunden wurde, muss ein Button in der oberen Werkzeugleiste eingefügt werden. Die Konfiguration von Buttons wird in der Mapbender-Dokumentation unter :ref:`button_de` beschrieben.
-
-Die Konfiguration eines Buttons für die Legende kann wie folgt aussehen:
-
-.. image:: ../../../figures/de/legend_example_button.png
-     :scale: 80
-
 Mit diesen Einstellungen sieht das Ergebnis in der Anwendung wie folgt aus:
 
-.. image:: ../../../figures/de/legend_example_toolbar.png
+.. image:: ../../../figures/de/legend.png
      :scale: 80
 
-In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende.
+In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende(wird in unserem Beispiel automatisch geöffnet).
 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
