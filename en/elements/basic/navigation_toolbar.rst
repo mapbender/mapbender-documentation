@@ -26,36 +26,19 @@ Configuration
 Components of the Navigation Toolbar element:
 ---------------------------------------------
 
-You can integrate various different *components* in the configuration dialog box. These components include:
-
-* Rotation
-* Zoom to maximum extent
-* Zoom to start
-* Zoom in and out
-* Zoom slider
+You can integrate various different *components* in the configuration dialog box.
 
 In the application these components look like this:
 
 .. image:: ../../../figures/navigationtoolbar_features.png
      :scale: 80
 
-If you set the checkmark at **Draggable**, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
-
-**Rotation** enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
-
-Users can zoom to the smallest map scale by **Zoom to max extent**. This can be set individually in the :ref:`map element <map>`.
-
-.. image:: ../../../figures/navigationtoolbar_zoom_to_max.png
-     :scale: 80
-
-It is possible to restore the initial center, scale, SRS and rotation with **Zoom to start**.
-
-.. image:: ../../../figures/navigationtoolbar_zoom_to_start.png
-     :scale: 80
-
-Finally, **Zoom in/out** allows to zoom in (``+`` -button) and out (``–`` -button) of the map. The element automatically sets to the next higher or lower scale. Zoom steps can be defined in the map element as well. There, users also have the option to deactivate fixed zoom steps.
-The component **Zoom slider** already includes *Zoom in/out*. Additionally, the user can select different scales from a bar.
-
+* **Draggable:** If you set the checkmark at draggable, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
+* **Rotation:** Enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
+* **Zoom to maximum extent:** Users can zoom to the smallest map scale by zoom to max extent. This can be set individually in the :ref:`map element <map>`.
+* **Zoom to start:** Restore the initial center, scale, SRS and rotation.
+* **Zoom in and out:** Allows to zoom in and out of the map. The element automatically sets to the next higher or lower scale. Zoom steps can be defined in the map element as well. There, users also have the option to deactivate fixed zoom steps.
+* **Zoom slider:** This component already includes *Zoom in/out*. Additionally, the user can select different scales from a bar.
 
 YAML-Definition
 ---------------
