@@ -68,7 +68,7 @@ Following these instructions, the result in the application looks like this:
 .. image:: ../../../figures/legend.png
      :scale: 80
 
-The toolbar shows the button for the legend element. If the button is clicked, the dialog with the generated legend opens(will open automatically in our example).
+The toolbar shows the button for the legend element. If the button is clicked, the dialog with the generated legend opens. With the "Open automatically" setting, the dialog is displayed directly when the application is started.
 
 The activation and deactivation of checkboxes in the configurational settings leads to:
 

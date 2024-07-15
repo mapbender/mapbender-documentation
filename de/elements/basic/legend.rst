@@ -67,7 +67,7 @@ Mit diesen Einstellungen sieht das Ergebnis in der Anwendung wie folgt aus:
 .. image:: ../../../figures/de/legend.png
      :scale: 80
 
-In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende(wird in unserem Beispiel automatisch geöffnet).
+In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende. Durch die Einstellung "Automatisch öffnen" wird der Dialog beim Start der Anwendung direkt angezeigt.
 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
