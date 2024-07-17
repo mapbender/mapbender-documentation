@@ -28,24 +28,24 @@ Konfigurationsbeispiele
 =======================
 
 .. image:: ../../../figures/de/overview_configuration_example.png
-     :scale: 80
+     :scale: 70
 
 Das Element bietet verschiedene Konfigurationsmöglichkeiten. Im Beispiel sind die Einstellungen *Sichtbarkeit Initial offen* sowie *Fixieren* gesetzt. Dadurch wird das Element beim Öffnen der Anwendung direkt angezeigt (d.h. maximiert), zusätzlich ist die Ansicht der Karte fixiert.
 Ist die Übersicht nicht fixiert, dann passt sich die Übersichtskarte dem entsprechenden Kartenausschnitt der Hauptkarte an, sobald diese verschoben oder ihr Maßstab verändert wird. Als Startansicht beim Öffnen der Anwendung wird der Startextent angezeigt.
 Das Element hat im Beispiel den Standardtitel "Übersicht (overview)". Es ist außerdem notwendig, dass die Übersichtskarte mit einem Layerset verknüpft wird. In diesem Beispiel stehen folgende Layersets zur Auswahl:
 
 .. image:: ../../../figures/de/map_example_layersets.png
-     :width: 100%
+     :scale: 70
 
 Für die Übersicht wurde das Layerset "overview" gewählt. Breite (*Width*) sowie Höhe (*Height*) des Elements entsprechen der Standardeinstellung. Die Position ist als "Unten rechts" definiert. Das Element sieht in der Anwendung folgendermaßen aus:
 
 .. image:: ../../../figures/de/overview_example_right-bottom_fixed.png
-     :scale: 80
+     :scale: 60
 
 Ein alternatives Konfigurationsbeispiel kann die Anpassung der folgenden Parameter (*Fixieren*: nicht aktiv, *Position*: unten links, *Width*: 400, *Height*: 200) sein, die eine andere Übersichtskarte (nach Einklappen der Sidepane) generiert:
 
 .. image:: ../../../figures/de/overview_example_left-bottom.png
-     :width: 100%
+     :scale: 60
 
 
 YAML-Definition
