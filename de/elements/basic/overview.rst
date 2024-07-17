@@ -40,12 +40,12 @@ Das Element hat im Beispiel den Standardtitel "Übersicht (overview)". Es ist au
 Für die Übersicht wurde das Layerset "overview" gewählt. Breite (*Width*) sowie Höhe (*Height*) des Elements entsprechen der Standardeinstellung. Die Position ist als "Unten rechts" definiert. Das Element sieht in der Anwendung folgendermaßen aus:
 
 .. image:: ../../../figures/de/overview_example_right-bottom_fixed.png
-     :scale: 60
+     :scale: 80
 
 Ein alternatives Konfigurationsbeispiel kann die Anpassung der folgenden Parameter (*Fixieren*: nicht aktiv, *Position*: unten links, *Width*: 400, *Height*: 200) sein, die eine andere Übersichtskarte (nach Einklappen der Sidepane) generiert:
 
 .. image:: ../../../figures/de/overview_example_left-bottom.png
-     :scale: 60
+     :scale: 51
 
 
 YAML-Definition

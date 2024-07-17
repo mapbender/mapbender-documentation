@@ -40,12 +40,12 @@ In the example, the element has the title "Overview". It is necessary that the o
 In this first example, the layerset "Overview" was chosen. Width and height of the element correspond to the default setting. The position is defined as "lower right". The element looks like this in the application:
 
 .. image:: ../../../figures/de/overview_example_right-bottom_fixed.png
-     :scale: 60
+     :scale: 80
 
 In the second example, an adjustment of the parameters (unchecking *Fix*, *Position*: left-bottom, *Width* 400 and *Height* 200) results in an overview like this:
 
 .. image:: ../../../figures/de/overview_example_left-bottom.png
-     :scale: 60
+     :scale: 51
 
 
 YAML-Definition
