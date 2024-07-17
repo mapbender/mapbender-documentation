@@ -86,7 +86,7 @@ In the following section, we walk through an exemplary configuration of a Layert
 In the example, we defined one **Layerset** with one instance:
 
 * Layerset **World**: 
-    * Instance OSM Demo Service https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+    * Instance `OSM Demo Service <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 The registered instance of the OSM  Demo Service is automatically included in Mapbender's installation. The WMS only has to be integrated into an existing Layerset. Switch to the tab Layersets. The following example uses the Layerset "World". 
 In case of difficulties with the integration, :ref:`layerset` provides useful information.

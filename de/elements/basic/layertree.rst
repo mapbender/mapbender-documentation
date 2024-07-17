@@ -86,7 +86,7 @@ Im Folgenden gehen wir eine beispielhafte Konfiguration eines Ebenenbaums mit Ba
 Im Beispiel ist ein **Layerset** mit einer Instanz definiert:
 
 * Layerset World: 
-    * Instanz OSM Demodienst https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+    * Instanz `OSM Demodienst <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 Die registrierte Instanz des OSM-Demodienstes wird bei der Installation von Mapbender bereits mitgeliefert. Diese muss nur noch über den Anwendungsreiter **Layerset** in ein Layerset eingebunden werden. Im Beispiel wurde das Layerset "World" genutzt. 
 Bei Schwierigkeiten bei der Einbindung kann die Dokumentation der :ref:`layerset_de` weiterhelfen. 
