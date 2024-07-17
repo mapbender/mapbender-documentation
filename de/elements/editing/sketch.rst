@@ -43,7 +43,7 @@ Geometrien erstellen
 Beispiele für die verschiedenen Skizzengeometrien zeigt die Abbildung:
 
 .. image:: ../../../figures/de/sketch.png
-     :width: 100%
+     :scale: 60
 
 
 Löschen, Bearbeiten und Zoomen
@@ -70,7 +70,7 @@ Zeichnen abbrechen
 Das Zeichnen von Skizzen kann mithilfe von "Zeichnen abbrechen" (Stop-Button) unterbrochen werden.
 
 .. image:: ../../../figures/de/sketch_stop_drawing.png
-     :width: 100%
+     :scale: 80
 
 
 YAML-Definition
