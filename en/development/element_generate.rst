@@ -3,9 +3,7 @@
 How to create your own Element?
 ###############################
 
-.. note:: This guide is under complete restructuring. We will provide a new documentation in the Contributing Guite in our Git-Repository:
-
-`https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_.
+.. warning:: The development section of the documentation is partly deprecated, please read with caution. An updated technical documentation for developers is integrated into the Mapbender source code. It can be read directly on `GitHub <https://github.com/mapbender/mapbender/tree/master/docs>`_. 
 
 
 Mapbender offers an bin/console command to create different elements:

@@ -3,6 +3,8 @@
 Controllers
 ###########
 
+.. warning:: The development section of the documentation is partly deprecated, please read with caution. An updated technical documentation for developers is integrated into the Mapbender source code. It can be read directly on `GitHub <https://github.com/mapbender/mapbender/tree/master/docs>`_. 
+
 This pages gives a quick overview of the controllers used in a Mapbender application.
 
 The Front Controller - Using Routes
