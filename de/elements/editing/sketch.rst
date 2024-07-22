@@ -49,7 +49,7 @@ Beispiele für die verschiedenen Skizzengeometrien zeigt die Abbildung:
 Löschen, Bearbeiten und Zoomen
 ------------------------------
 
-Gezeichnete Skizzen können individuell gelöscht [1] bearbeitet [2] werden. Außerdem besteht die Möglichkeit, auf einzelne Geometrien zu zoomen [3].
+Gezeichnete Skizzen können individuell gelöscht [1] oder bearbeitet [2] werden. Außerdem besteht die Möglichkeit, auf einzelne Geometrien zu zoomen [3].
 
 .. image:: ../../../figures/de/sketch_delete_edit_zoom.png
      :scale: 80
