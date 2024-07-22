@@ -7,7 +7,7 @@ Für eine passende Projektion wählen Sie entweder ein eigenes Koordinatenrefere
 
 .. hint:: Die Dateigröße ist begrenzt. In der Elementkonfiguration kann eine maximale Größe definiert werden.
 
-.. image:: ../../../figures/dataupload.png
+.. image:: ../../../figures/de/dataupload.png
      :scale: 70
 
 

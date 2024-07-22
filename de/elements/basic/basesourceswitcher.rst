@@ -8,7 +8,7 @@ Hintergrund wechseln
 "Hintergrund wechseln" erstellt Buttons mit Themen, um zuvor für diesen Zweck konfigurierte Dienste im Kartenbereich sichtbar zu schalten. Auf diese Weise kann etwa zwischen verschiedenen Hintergrundkarten gewechselt werden. Dabei ist immer nur ein Thema aktiv. 
 Zusätzlich können Gruppen für die Hintergrund-Themen definiert werden. Alle Definitionen einer Gruppe werden als Dropdown-Liste angezeigt, wobei der Gruppenname als übergeordneter Eintrag erscheint.
 
-.. image:: ../../../figures/basesourceswitcher.png
+.. image:: ../../../figures/de/basesourceswitcher.png
      :scale: 80
 
 .. hint:: Das Element kann auch in der Sidepane eingebunden werden. Beim Hinzufügen des Hintergrundwechslers in der Sidepane ist keine Definition von Gruppen möglich.
