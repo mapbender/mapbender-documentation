@@ -43,7 +43,7 @@ Draw geometries
 See the image below for sketch examples:
 
 .. image:: ../../../figures/sketch.png
-     :width: 100%
+     :scale: 60
 
 
 Delete, Edit and Zoom
@@ -70,7 +70,7 @@ Stop drawing
 To interrupt a drawing, click the stop button: Note that this deletes your current draft.
 
 .. image:: ../../../figures/sketch_stop_drawing.png
-     :width: 100%
+     :scale: 80
 
 
 YAML-Definition

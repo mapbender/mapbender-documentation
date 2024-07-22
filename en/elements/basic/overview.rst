@@ -18,7 +18,7 @@ The configuration dialog offers the following settings:
 
 * **Fix:** Fixes the overview extent (default: false).
 * **Title:** Title of the element, will be listed in :ref:`layouts`.
-* **Layerset:** Refers to a previously defined layerset, e.g. overview.
+* **Layerset:** Refers to a previously defined layerset, e.g. background themes.
 * **Visibility:** Initially open/Initially closed/Permanently open. Defines whether the overview will be open or closed on start. The first two options will show a button to close the overview map. The third option provides an overview map and does not show a button (Default: Initially open). 
 * **Width:** Width of the element.
 * **Height:** Height of the element.
@@ -28,14 +28,14 @@ Configuration examples
 ======================
 
 .. image:: ../../../figures/overview_configuration_example.png
-     :scale: 80
+     :scale: 70
 
 The element provides various configuration options. In the example, the settings *Visibility Initially open* and *Fix* are activated. As a result, the element is displayed (i.e. maximized) when the application is opened and the view of the map is fixed.
 If the latter function is deactivated, the overview adapts as soon as the map is moved or the scale is changed. The start extent is displayed when the application is opened.
 In the example, the element has the title "Overview". It is necessary that the overview map is linked to a layerset. The following layersets are available:
 
 .. image:: ../../../figures/map_example_layersets.png
-     :width: 100%
+     :scale: 70
 
 In this first example, the layerset "Overview" was chosen. Width and height of the element correspond to the default setting. The position is defined as "lower right". The element looks like this in the application:
 
@@ -45,7 +45,7 @@ In this first example, the layerset "Overview" was chosen. Width and height of t
 In the second example, an adjustment of the parameters (unchecking *Fix*, *Position*: left-bottom, *Width* 400 and *Height* 200) results in an overview like this:
 
 .. image:: ../../../figures/de/overview_example_left-bottom.png
-     :width: 100%
+     :scale: 51
 
 
 YAML-Definition

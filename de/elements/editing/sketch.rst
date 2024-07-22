@@ -43,13 +43,13 @@ Geometrien erstellen
 Beispiele für die verschiedenen Skizzengeometrien zeigt die Abbildung:
 
 .. image:: ../../../figures/de/sketch.png
-     :width: 100%
+     :scale: 60
 
 
 Löschen, Bearbeiten und Zoomen
 ------------------------------
 
-Gezeichnete Skizzen können individuell gelöscht [1] bearbeitet [2] werden. Außerdem besteht die Möglichkeit, auf einzelne Geometrien zu zoomen [3].
+Gezeichnete Skizzen können individuell gelöscht [1] oder bearbeitet [2] werden. Außerdem besteht die Möglichkeit, auf einzelne Geometrien zu zoomen [3].
 
 .. image:: ../../../figures/de/sketch_delete_edit_zoom.png
      :scale: 80
@@ -70,7 +70,7 @@ Zeichnen abbrechen
 Das Zeichnen von Skizzen kann mithilfe von "Zeichnen abbrechen" (Stop-Button) unterbrochen werden.
 
 .. image:: ../../../figures/de/sketch_stop_drawing.png
-     :width: 100%
+     :scale: 80
 
 
 YAML-Definition
