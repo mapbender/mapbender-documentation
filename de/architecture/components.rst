@@ -53,7 +53,7 @@ Mehr über jquery UI: https://jqueryui.com/
 
 Mapbender
 **********
-Mapbender ist aus Komponentensicht eine Bundle-Sammlung. Als Voraussetzung muss das MapbenderCoreBundle und die FOMBundles genutzt werden.
+Mapbender ist aus Komponentensicht eine Bundle-Sammlung. Als Voraussetzung müssen das MapbenderCoreBundle und die FOMBundles genutzt werden.
 
 Andere (optionale) Bundles, die die Funktionalität grundlegend erweitern, sind:
 
@@ -69,8 +69,6 @@ Das Mapbender CoreBundle ist das Mapbender Standard-Bundle. Es beinhaltet grundl
 
 Es stellt jQuery, jQuery UI, OpenLayers und MapQuery für alle anderen Mapbender Bundles bereit.
 
-.. ToDo
-  FOM Bundle
 
 Mapbender Starter
 *****************

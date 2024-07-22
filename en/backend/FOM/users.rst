@@ -17,7 +17,7 @@ If a user has forgotten his/her password, he can use the "Forgot password?" link
 
 .. image:: ../../../figures/fom/user_forgot_password.png
 
-After that, the user should receive an email with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the */FOM/UserBundle/Resources/translations/messages.en.xlf* file.
+After that, the user should receive an email with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the `/FOM/UserBundle/Resources/translations/messages.en.xlf` file.
 
 The functionality can be switched off in the *doctrine.yaml*.
 

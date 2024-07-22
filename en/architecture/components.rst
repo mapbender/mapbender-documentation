@@ -71,8 +71,6 @@ The Mapbender CoreBundle is the base bundle for Mapbender. It offers base classe
 
 It provides jQuery, jQuery UI, OpenLayers and MapQuery for all other Mapbender bundles.
 
-.. ToDo
-  FOM Bundle
 
 Mapbender Starter
 *****************

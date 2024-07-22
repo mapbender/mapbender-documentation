@@ -3,8 +3,8 @@
  .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
  .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
 
-Security (FOMUserBundle)
-========================
+Security
+========
 
 The security for domain objects is implemented in Mapbender using a permission system.
 It allows global authorizations for areas and individual authorizations for objects.
