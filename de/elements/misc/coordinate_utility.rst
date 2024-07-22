@@ -22,9 +22,9 @@ Konfiguration
 .. image:: ../../../figures/de/coordinate_utility_configuration.png
      :scale: 70
 
-* **Title:** Titel des Elements
-* **Srs List:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren können soll. Das Feld kann leer gelassen werden.
-* **Zoom-Level** Zoom-Level der Karte (Standard: 6)
+* **Titel:** Titel des Elements
+* **SRS-Liste:** Hier können weitere SRS angegeben werden, in denen das Tool transformieren können soll. Das Feld kann leer gelassen werden.
+* **Zoomstufe** Zoom-Level der Karte (Standard: 6)
 * **Koordinatensysteme von der Karte hinzufügen:** Ist die Checkbox aktiviert, so werden die von der :ref:`map_de` angegebenen Koordinatensysteme automatisch vom Tool unterstützt. Diese werden in der Karte angegeben und auch im  :ref:`srs_selector_de` unterstützt.
 
 

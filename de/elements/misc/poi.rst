@@ -18,7 +18,7 @@ Konfiguration
      
 * **Versenden per Mail - Mailclient öffnen:** Der POI wird per Mail verschickt. 
 * **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Body:** Dialogtext der nach dem Setzen eines POI angezeigt wird. 
+* **Text:** Dialogtext der nach dem Setzen eines POI angezeigt wird. 
 * **GPS:** Erlaubt eine GPS Positionierung.
 
 

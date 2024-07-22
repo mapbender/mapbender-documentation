@@ -15,7 +15,7 @@ Konfiguration
      :scale: 70
 
 * **Beschriftung anzeigen:** Schaltet Text neben dem About Dialog Button ein/aus (Standard: true).
-* **Title:** Text, der neben dem About Dialog Button angezeigt wird.
+* **Titel:** Text, der neben dem About Dialog Button angezeigt wird.
 * **Tooltip:** Text, der erscheint, wenn der Mauszeiger längere Zeit über dem Button gehalten wird. 
 
 
