@@ -23,20 +23,20 @@ Configuration
 .. note:: The element must be integrated into the Map area.
 
 
-Components of the Navigation Toolbar element:
----------------------------------------------
+Components of the Navigation Toolbar element
+--------------------------------------------
 
-You can integrate various different *components* in the configuration dialog box.
+You can integrate various different components in the configuration dialog box.
 
 In the application these components look like this:
 
 .. image:: ../../../figures/navigationtoolbar_features.png
      :scale: 80
 
-* **Draggable:** If you set the checkmark at draggable, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
+* **Draggable:** If you set the checkmark at draggable, a small cross will appear next to the navigation toolbar that allows the user to move the element around.
 * **Rotation:** Enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
 * **Zoom to maximum extent:** Users can zoom to the smallest map scale by zoom to max extent. This can be set individually in the :ref:`map element <map>`.
-* **Zoom to start:** Restore the initial center, scale, SRS and rotation.
+* **Zoom to start:** Restores the initial center, scale, SRS and rotation.
 * **Zoom in and out:** Allows to zoom in and out of the map. The element automatically sets to the next higher or lower scale. Zoom steps can be defined in the map element as well. There, users also have the option to deactivate fixed zoom steps.
 * **Zoom slider:** This component already includes *Zoom in/out*. Additionally, the user can select different scales from a bar.
 
