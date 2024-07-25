@@ -456,7 +456,7 @@ You can stop the server again with Control -C.
     APP_ENV=prod symfony server:start --no-tls
     
      
-Clear cache 
+Clear cache
 -----------
 
 bin/console cache:clear
