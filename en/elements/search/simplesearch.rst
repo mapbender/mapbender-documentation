@@ -48,6 +48,15 @@ Configuration
 * **Result icon offset:**  Offset x and y for the icon (e.g. ``0,0``).
 
 
+Duplicate a simple search configuration
+---------------------------------------
+
+It is possible to duplicate a search form in the backend configuration window:
+
+.. image:: ../../../figures/simplesearchduplication.png
+     :scale: 80
+
+
 Flexible configuration via label_attribute
 ------------------------------------------
 
