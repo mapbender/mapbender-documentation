@@ -160,7 +160,7 @@ Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Curso
      :width: 75%
 
 
-Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :ref:`de/backend/FOM/index`.
+Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :ref:`de/backend/FOM/index:Rechteverwaltung`.
 
 
 Löschen
