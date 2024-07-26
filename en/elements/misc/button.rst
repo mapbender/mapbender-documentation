@@ -55,34 +55,34 @@ You can add a button for the legend by following these steps:
 
 First, you have to select the button element by clicking on |mapbender-button-add| in the Toolbar section in the Layouts tab.
 
-.. image:: ../../../figures/de/add_toolbar.png
-     :scale: 50
+.. image:: ../../../figures/add_toolbar.png
+     :scale: 80
 
 After the selection of the button element, the "Add element - Button" dialog box opens, where you can configure the button.
 
 You can set the name of the legend button in the field *Title*. Here the title is "Legend". There will be no text displaced during hovering over the button, because no text was defined in the field *Tooltip*. You can choose from a variety of icons to set the icon for your button. In this example, the icon "Legend" was chosen. 
 
-.. image:: ../../../figures/de/button_legend_dialog_icon.png
+.. image:: ../../../figures/button_legend_dialog_icon.png
      :scale: 70
 
 In the *Target* field you can choose the predefined feature which should be activated or opened by clicking on the button. The dropdown list contains all features which have been added to the Map area, the sidepane or the footer before. In this example, the option "Legend" was chosen.
 
-.. image:: ../../../figures/de/button_legend_dialog_target.png
+.. image:: ../../../figures/button_legend_dialog_target.png
      :scale: 70
 
 In this example, *Group* remains empty. In the Mapbender application, the button will look like this:
 
-.. image:: ../../../figures/de/button_legend_text.png
+.. image:: ../../../figures/button_legend_text.png
      :scale: 80
      
 The title of the element is displayed next to the icon, because in the configuration dialog box the option "Show label" was checked. If the checkmark is not set, the button looks like this:
 
-.. image:: ../../../figures/de/button_legend_symbol.png
+.. image:: ../../../figures/button_legend_symbol.png
      :scale: 80
 
-If you choose the *Icon* "Legend (Font Awesome)" instead of "Legend" and check the option "Show label", the button would look like this:
+If you choose the *Icon* "List" instead of "Legend" and check the option "Show label", the button would look like this:
 
-.. image:: ../../../figures/de/button_legend_font_awesome_text.png
+.. image:: ../../../figures/button_legend_font_awesome_text.png
      :scale: 80
      
 Now, by clicking on the button, the legend will open in a dialog box.
@@ -95,30 +95,26 @@ The line and area ruler also can be integrated in the application via buttons. T
 
 This example demonstrates how to create groups: Both buttons should be in one group, so that only one line or area ruler can be active and not both at the same time.
 
-You can add this button, like the legend button, by clicking on |mapbender-button-add| in the application in the Layouts tab. The dialog box "Add element - Button" appears. For the line ruler feature it can look like this:
-
-.. image:: ../../../figures/de/button_distance_dialog.png
+.. image:: ../../../figures/button_distance_dialog.png
      :scale: 80
      
-In this example, the title (*Title*) of the button is "Line ruler". The element references to a *Target* called "line". This element was created beforehand with the feature Line/Area Ruler. You can find a description on how to create this feature under :ref:`ruler`.
+In this example, the *Title* of the button is "Line". The element references to a *Target* called "Line". This element was created beforehand with the feature Line/Area Ruler. You can find a description on how to create this feature under :ref:`ruler`.
 
 To group this button and the button for the area ruler, you have to put a group name in the field *Group*. In this example, the name of the group is "measure". You also have to add this group name to the button for the area ruler. 
 
-When you hover your mouse over the button, the text "measure line" will appear (*Tooltip*). The option "Line ruler" was chosen for *Icon*.
-
 The button for the area ruler can be integrated the same way as the button for the line ruler. The dialog box for the configuration of this button can look like this:
 
-.. image:: ../../../figures/de/button_area_dialog.png
+.. image:: ../../../figures/button_area_dialog.png
      :scale: 80
 
 Attention should be paid to the field *Group* with the group name "measure". It has to be the same as the one of the button line ruler. Both buttons can look like this in the application:
 
-.. image:: ../../../figures/de/button_measure.png
+.. image:: ../../../figures/button_measure.png
      :scale: 80
 
 If the button line ruler is active, it looks like this:
 
-.. image:: ../../../figures/de/button_measure_activated.png
+.. image:: ../../../figures/button_measure_activated.png
      :scale: 80
 
 As soon as you click on the button area ruler, the feature line ruler is deactivated and the feature area ruler activated.

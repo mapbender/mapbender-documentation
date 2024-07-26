@@ -75,10 +75,10 @@ Das Feld "Gruppe" wird für diesen Fall leer gelassen. Der Button sieht in der M
      
 Da im Konfigurationsdialog zum Button Element bei *Beschriftung anzeigen* ein Haken gesetzt war, wird die Beschriftung neben dem Icon angezeigt. Ist dieser Haken nicht aktiviert, sieht der Button wie folgt aus:
 
-.. image:: ../../../figures/de/button_legend_symbol.png
+.. image:: ../../../figures/button_legend_symbol.png
      :scale: 80
      
-Wäre hier im Feld *Symbol* statt "Legend" "Legend (Font Awesome)" ausgewählt und die Beschriftung aktiviert worden, sähe der Button wie folgt aus:
+Wäre hier im Feld *Symbol* statt "Legend" "Liste" ausgewählt und die Beschriftung aktiviert worden, sähe der Button wie folgt aus:
 
 .. image:: ../../../figures/de/button_legend_font_awesome_text.png
      :scale: 80
@@ -90,22 +90,22 @@ Button für Linien- und Flächenmessung
 --------------------------------------
 
 Auch die Funktionen der Linien- und Flächenmessung können über Buttons in eine Anwendung eingebunden werden. Auch in diesem Fall ist es notwendig, dass diese Funktionen schon in Kartenbereich, Sidepane oder Fußzeile konfiguriert sind.
+
 In diesem Konfigurationsbeispiel sollen beide Buttons einer Gruppe zugeordnet werden, so dass entweder Linien oder Flächen gemessen werden können, jedoch nicht beides gleichzeitig.
-Der Button wird, wie schon der Legendenbutton, über |mapbender-button-add| in der Anwendung unter dem Reiter *Layouts* im Bereich der oberen Werkzeugleiste eingebunden. Es erscheint der Dialog "Element hinzufügen – Button", der für die Konfiguration des Buttons für die Linienmessung wie folgt aussehen kann:
 
 .. image:: ../../../figures/de/button_distance_dialog.png
      :scale: 80
      
-Im Anwendungsbeispiel ist die Bezeichnung (*Titel*) des Buttons "Linienmessung". Als *Target* wird das vorher im Kartenbereich erstellte Element "line" eingebunden. Um die Gruppierung mit der Flächenmessung möglich zu machen, wird im Feld *Gruppe* ein Gruppenname vergeben. Hier lautet die Bezeichnung der Gruppe "messen". Dieser Gruppenname wird analog auch bei dem Button für die Flächenmessung eingetragen. Der Text "Linien messen" wird beim Platzieren der Maus auf dem Button angezeigt (*Tooltip*). Als *Icon* wird "Line ruler" gewählt.
+Im Anwendungsbeispiel ist der *Titel* des Buttons "Linie". Als *Target* wird das vorher im Kartenbereich erstellte Element "Linie" eingebunden. Um die Gruppierung mit der Flächenmessung möglich zu machen, wird im Feld *Gruppe* ein Gruppenname vergeben. Hier lautet die Bezeichnung der Gruppe "messen". Dieser Gruppenname wird analog auch bei dem Button für die Flächenmessung eingetragen. Als *Symbol* wird "Strecke messen" gewählt.
 
-Das Element "line" wurde mithilfe der Funktion Linien-/Flächenmessung erstellt und als Linienmessung konfiguriert. Wie das Element Linien-/Flächenmessung konfiguriert wird, wird in der Dokumentation unter :ref:`ruler_de` beschrieben.
+Das Element "Linie" wurde mithilfe der Funktion Linien-/Flächenmessung erstellt und als Linienmessung konfiguriert. Wie das Element Linien-/Flächenmessung konfiguriert wird, wird in der Dokumentation unter :ref:`ruler_de` beschrieben.
 
 Der Button für die Flächenmessung wird analog eingebunden. Der Dialog der Konfiguration des Buttons sieht im Konfigurationsbeispiel wie folgt aus:
 
 .. image:: ../../../figures/de/button_area_dialog.png
      :scale: 80
 
-Zu beachten ist besonders das Feld *Gruppe* mit dem Namen der Gruppe. Dieser muss mit dem Eintrag im Feld *Gruppe* des Buttons "Linienmessung" übereinstimmen muss. Beide Buttons können in der Anwendung wie folgt aussehen:
+Zu beachten ist besonders das Feld *Gruppe* mit dem Namen der Gruppe. Dieser muss mit dem Eintrag im Feld *Gruppe* des Buttons "Linie" übereinstimmen muss. Beide Buttons können in der Anwendung wie folgt aussehen:
 
 .. image:: ../../../figures/de/button_measure.png
      :scale: 80
