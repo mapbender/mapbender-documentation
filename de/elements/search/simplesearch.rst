@@ -47,13 +47,21 @@ Konfiguration
 * **Result icon offset:** Versatz x und y des Symbols (z.B. ``-6,-38`` für das Stecknadel-Icon).
 
 
-Duplizieren einer Einfachen Suchkonfiguration
----------------------------------------------
+Duplizieren einer Suchkonfiguration
+-----------------------------------
 
-Es ist möglich, ein Suchformular im Backend-Konfigurationsfenster zu duplizieren:
+Das Element unterstützt mehrere Suchkonfigurationen. Es ist möglich, ein Suchformular im Backend-Konfigurationsfenster mithilfe des Kopieren-Buttons zu duplizieren:
 
-.. image:: ../../../figures/de/simplesearchduplication.png
-     :scale: 80
+.. image:: ../../../figures/de/simplesearch_duplication.png
+     :scale: 70
+
+
+Die verschiedenen Suchkonfigurationen sind außerdem via Drag and drop sortierbar.
+
+In der Anwendung können die eingebundenen Konfigurationen über eine Dropdown-Auswahl angewählt werden:
+
+.. image:: ../../../figures/de/simplesearch_dropdown.png
+     :scale: 100
 
 
 Flexible Konfigurationsmöglichkeiten für label_attribute
