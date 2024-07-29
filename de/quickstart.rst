@@ -359,7 +359,7 @@ Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzug
 5. Benutzer- und Gruppenverwaltung
 ==================================
 
-Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. Nur öffentliche Anwendungen können von allen genutzt werden. Benutzer oder Gruppen können Berechtigungen zugewiesen werden, um auf eine oder mehrere Anwendungen, Dienste und mehr zuzugreifen.
+Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. Nur öffentliche Anwendungen können von allen genutzt werden. Benutzern oder Gruppen können Berechtigungen zugewiesen werden, um auf eine oder mehrere Anwendungen, Dienste oder mehr zuzugreifen.
 
 
 Benutzer anlegen
