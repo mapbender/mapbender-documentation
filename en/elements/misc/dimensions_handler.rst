@@ -3,21 +3,15 @@
 Dimensions handler
 ******************
 
-The dimensions handler can be used to integrate WMS services with a time dimension. WMS-Time services are registered as a normal WMS data source. If a dimension is specified in the service, it is displayed in the layer metadata.
-
-.. code-block:: yaml
-
-    Dimension:
- 		name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
-
-
-.. image:: ../../../figures/wmst_source.png
-     :scale: 80
+The dimensions handler can be used to integrate WMS services with a time dimension. WMS-Time services are registered as a normal WMS data source. 
 
 WMS-T are inserted almost like WMS in the layersets, with the exception that the time parameter still has to be activated. If it is not activated, the dimensions of the service are ignored and the default value is used when calling the layer in the map.
 
 If a service supports a time dimension, the instance displays the **Dimensions** button. By clicking on this button, the supported time parameters are displayed and time values can be activated by clicking the checkbox.
 Another click on the form shows more customization options. Here you can optionally further restrict the values ​​from the WMS service as follos to set up the service:
+
+.. image:: ../../../figures/wmst_layer.png
+     :scale: 80
 
 * **Query type**: multiple, nearest, current
 * **Name**: value TIME (name=time)
@@ -25,10 +19,6 @@ Another click on the form shows more customization options. Here you can optiona
 * **Unit symbol**: time unit symbol (service-dependent, e.g. (y) for year)
 * **Default**: default time
 * **Extent (extent slider)**: Supported extent for the time dimension 
-
-
-.. image:: ../../../figures/wmst_layer.png
-     :scale: 80
 
 After defining the service itself, Dimensions handler supports the following time variables:
 
@@ -48,7 +38,7 @@ Timeslider in context menu
 A timeslider can be integrated via the layertree as an option in the context menu of the layer. To do this, the **Dimension** option must be activated in the :ref:`layertree` element.
 
 .. image:: ../../../figures/wmst_layertree.png
-     :scale: 80
+     :scale: 70
 
 After activation in the layertree, a time slider appears in the context menu. To use the feature, the element must first be activated via the checkbox. Then it's possible to alter the timeslider with the cursor.
 
@@ -76,7 +66,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/wmst_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title**: Title of the element
 * **Tooltip**: Labeling of the element on mouseover
@@ -84,6 +74,19 @@ Configuration
 
 
 The following section lists the YAML definitions for the element and the inclusion in the service and leveltree.
+
+If a dimension is specified in the service, it is displayed in the layer metadata.
+
+
+.. code-block:: yaml
+
+     Dimension:
+     name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
+
+
+.. image:: ../../../figures/wmst_source.png
+     :scale: 80
+
 
 Element configuration
 ---------------------
