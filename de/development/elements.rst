@@ -3,7 +3,7 @@
 Elemente verstehen
 ##################
 
-.. note:: *Anmerkung*: Dieser Guide ist veraltet. Eine neue Dokumentation steht im Contributing Guide für Entwickler bereit, dieses befindet sich `im Mapbender-Starter Git-Repository <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#elements>`_.
+.. warning:: Dieses Dokumentationskapitel ist teilweise stark veraltet. Eine aktuelle technische Dokumentation (englischsprachig) ist direkt in den Mapbender-Quellcode integriert. Sie kann `direkt auf GitHub  <https://github.com/mapbender/mapbender/tree/master/docs>`_ gelesen werden.
 
 
 Bereiche der Elemente

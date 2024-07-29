@@ -9,6 +9,9 @@ This book is targeted at Mapbender developers and will cover useful topics not n
 Things to consider
 ******************
 
+.. warning:: The development section of the documentation is partly deprecated, please read with caution. An updated technical documentation for developers is integrated into the Mapbender source code. It can be read directly on `GitHub <https://github.com/mapbender/mapbender/tree/master/docs>`_. 
+
+
 There are a couple of things you should be familiar with in order to contribute to Mapbender:
 
 * Object-Orientated PHP: We're using PHP which offers full object orientation.
@@ -72,11 +75,15 @@ Below you will find an example that utilizes custom resources for the **Button**
 Getting Help
 ************
 
-Malinglists:
+Technical documentation
+
+* `Mapbender <https://github.com/mapbender/mapbender/blob/master/docs/README.md>`_
+
+Malinglists
 
 * `Mapbender-Developer and -User mailinglist <https://mapbender.org/?q=en/community>`_
 
-Libraries and frameworks:
+Libraries and frameworks
 
 * `Symfony framework <https://www.symfony.com/>`_
 * `Composer documentation <https://getcomposer.org/doc/>`_

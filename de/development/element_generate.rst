@@ -3,9 +3,7 @@
 Wie können eigene Elemente erzeugt werden?
 ##########################################
 
-*Anmerkung*: Diese Anleitung wird gerade überarbeitet. Wir werden eine neue Dokumentation im Contributing Guide für Entwickler im Git-Repository bereitstellen:
-
-`https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md>`_.
+.. warning:: Dieses Dokumentationskapitel ist teilweise stark veraltet. Eine aktuelle technische Dokumentation (englischsprachig) ist direkt in den Mapbender-Quellcode integriert. Sie kann `direkt auf GitHub  <https://github.com/mapbender/mapbender/tree/master/docs>`_ gelesen werden.
 
 
 Mapbender bietet einen bin/console-Befehl zur Erzeugung von Elementen. 

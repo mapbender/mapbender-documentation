@@ -9,6 +9,9 @@ Diese Dokumentation ist an Mapbender-Entwickler gerichtet und behandelt Themen, 
 Was ist zu beachten?
 ********************
 
+.. warning:: Dieses Dokumentationskapitel ist teilweise stark veraltet. Eine aktuelle technische Dokumentation (englischsprachig) ist direkt in den Mapbender-Quellcode integriert. Sie kann `direkt auf GitHub  <https://github.com/mapbender/mapbender/tree/master/docs>`_ gelesen werden.
+
+
 Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu können:
 
 * Objektorientiertes PHP: Verwendet wird PHP, welches objektorientierte Programmierung ermöglicht.
@@ -74,11 +77,15 @@ Nachfolgend finden Sie ein Beispiel, welches eigene Ressourcen für die **Button
 Wo gibt es Hilfe?
 *****************
 
+Technische Dokumentationen 
+
+* `Mapbender <https://github.com/mapbender/mapbender/blob/master/docs/README.md>`_
+
 Mailinglisten
 
 * `Mapbender-Developer und -Anwender Mailingliste <https://mapbender.org/community/>`_
 
-Bibliotheken und Frameworks:
+Bibliotheken und Frameworks
 
 * `Symfony framework <https://www.symfony.com/>`_
 * `Composer documentation <https://getcomposer.org/doc/>`_

@@ -3,8 +3,8 @@
  .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
  .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
 
-Sicherheit (FOM UserBundle)
-===========================
+Sicherheit
+==========
 
 Die Absicherung von Domain-Objekten ist in Mapbender über ein Berechtigungssystem implementiert.
 Es erlaubt globale Berechtigungen auf Bereiche und individuelle Berechtigungen auf Objekte.

@@ -9,7 +9,7 @@ The following configuration files are under `application/config` and its subfold
 doctrine.yaml
 -------------
 
-* **fom_user.selfregistration**: To enable or disable self-registration of users, change the fom_user.selfregistration parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
+* **fom_user.selfregistration**: To enable or disable self-registration of users, change this parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
 * **fom_user.reset_password**: In the same way the possibility to reset passwords can be enabled or disabled.
 * **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
 
