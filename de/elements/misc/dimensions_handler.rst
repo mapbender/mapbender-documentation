@@ -3,21 +3,15 @@
 Dimensions-Handler
 ******************
 
-Für die Anzeige von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions-Handler genutzt werden. WMS-Time Dienste müssen dafür zunächst als WMS-Datenquelle registriert werden. Falls der Dienst über eine zeitliche Dimension verfügt, wird diese in den Layer-Metadaten angezeigt. 
-
-.. code-block:: yaml
-
-    Dimension:
-    name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
-
-
-.. image:: ../../../figures/wmst_source.png
-     :scale: 80
+Für die Anzeige von WMS-Diensten mit einer zeitlichen Dimension kann der Dimensions-Handler genutzt werden. WMS-Time Dienste müssen dafür zunächst als WMS-Datenquelle registriert werden. 
 
 WMS-T werden wie herkömmliche WMS in die Layersets eingefügt, zusätzlich muss jedoch der Time-Parameter aktiviert werden. Wird dieser nicht aktiviert, werden die Dimensionen des Dienstes außer Acht gelassen und beim Aufruf der Kartenebene der Standardwert genutzt.
 
 Bei Diensten mit einer zeitlichen Dimension erscheint bei der Instanz die Schaltfläche **Dimensionen**. Durch einen Klick auf diese Schaltfläche werden die unterstützten Zeit-Parameter angezeigt. Die zeitliche Dimension kann dort per Checkbox-Klick aktiviert werden. 
-Nach einem weiteren Klick in die Schaltfläche öffnet sich das Detailformular, in dem die Nutzung weiter definiert werden kann. Die Werte aus dem WMS-Dienst werden in das Formular übernommen und können teilweise weiter konfiguriert werden: 
+Nach einem weiteren Klick in die Schaltfläche öffnet sich das Detailformular, in dem die Nutzung weiter definiert werden kann: 
+
+.. image:: ../../../figures/de/wmst_layer.png
+     :scale: 80
 
 * **Abfrageart**: multiple, nearest, current
 * **Name**: Wert TIME (name=time)
@@ -25,10 +19,6 @@ Nach einem weiteren Klick in die Schaltfläche öffnet sich das Detailformular, 
 * **Unit symbol**: Dienstabhängig variierendes Einheitensymbol (bspw. (y) für Jahre)
 * **Default**: Standardzeitpunkt
 * **Extent (extent slider)**: Unterstützter Zeitbereich  
-
-
-.. image:: ../../../figures/de/wmst_layer.png
-     :scale: 80
 
 Nach der Dienste-Konfiguration unterstützt der Dimensions-Handler je nach Konfiguration die folgenden Zeitdimensionen: 
 
@@ -49,7 +39,7 @@ Schieberegler im Kontextmenü
 Die Zeitachse kann über den Ebenenbaum als Option in das Kontextmenü des Layers im integriert werden. Dazu muss die Option **Dimension** im :ref:`layertree_de` aktiviert werden. 
 
 .. image:: ../../../figures/de/wmst_layertree.png
-     :scale: 80
+     :scale: 70
 
 Nach der Aktivierung in dem Ebenenbaum erscheint ein Schieberegler in dem Kontextmenü. Für die Nutzung der zeitlichen Anzeige muss das Element zuvor über die Checkbox aktviert werden. Danach kann die Zeitachse mithilfe des Cursors verschoben werden. 
 
@@ -77,14 +67,24 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/wmst_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Title**: Titel des Elements
 * **Tooltip**: Beschriftung des Elements bei Mouseover
-* **Dimensionsset**: Gruppe für die zeitliche Dimensionsanzeige mit Titel (**Title**), Layergruppe (**Group**) und zeitlicher Dimensionsspanne (**Extent**)
-
+* **Dimensionsset**: Gruppe für die zeitliche Dimensionsanzeige mit Titel (**Titel**), Layergruppe (**Gruppe**) und zeitlicher Dimensionsspanne (**Ausmaß**)
 
 Im folgenden Abschnitt sind die YAML-Definitionen für das Element und die Einbindung in Dienst und Ebenenbaum aufgeführt. 
+
+Falls der Dienst über eine zeitliche Dimension verfügt, wird diese in den Layer-Metadaten angezeigt.
+
+.. code-block:: yaml
+
+    Dimension:
+    name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
+
+
+.. image:: ../../../figures/wmst_source.png
+     :scale: 80
 
 Elementkonfiguration
 --------------------
