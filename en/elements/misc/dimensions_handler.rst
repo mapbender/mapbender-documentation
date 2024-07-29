@@ -80,8 +80,8 @@ If a dimension is specified in the service, it is displayed in the layer metadat
 
 .. code-block:: yaml
 
-    Dimension:
- 		name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
+     Dimension:
+     name:'time', units:'ISO8601', unitSymbol:'', default:'2018-01', multipleValues:'', nearestValue:'1', current:'', extent:'2014-01/2018-01/P1M'
 
 
 .. image:: ../../../figures/wmst_source.png
