@@ -54,7 +54,7 @@ Duplicate a search configuration
 The element can handle multiple search configurations. It is possible to duplicate a search form in the backend configuration window with the Copy button:
 
 .. image:: ../../../figures/simplesearch_duplication.png
-     :scale: 80
+     :scale: 70
 
 
 Use drag and drop to sort the different search configurations for the application list.
