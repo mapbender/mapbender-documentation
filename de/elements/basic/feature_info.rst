@@ -40,35 +40,24 @@ Einstellungen im Ebenenbaum
 
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist aktiviert:
 
-.. image:: ../../../figures/de/feature_info_on.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_on.png
+     :scale: 70
 
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist deaktiviert:
 
-.. image:: ../../../figures/de/feature_info_off.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_off.png
+     :scale: 70
 
 Layer ist nicht sichtbar; es erfolgt keine FeatureInfo-Abfrage, auch wenn diese aktiviert ist:
 
-.. image:: ../../../figures/de/feature_info_on_layer_invisible.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_on_layer_invisible.png
+     :scale: 70
      
 
 Anzeige als Tabs und Accordion
 ------------------------------
 
 Mit dem Schalter "Type" können die Antworten der einzelnen Dienste in unterschiedlichen Reitern oder als Akkordeon angezeigt werden.
-
-Beispiel Reiter:
-
-.. image:: ../../../figures/de/feature_info_tabs.png
-     :scale: 80
-
-Beispiel Akkordeon:
-
-.. image:: ../../../figures/de/feature_info_accordion.png
-     :scale: 80
-
 
 
 Ausdruck der Resultate

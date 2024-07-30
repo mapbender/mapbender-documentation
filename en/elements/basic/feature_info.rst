@@ -39,18 +39,18 @@ Layertree settings
 ------------------
 The layer is visible and FeatureInfo request for the layer is activated.
 
-.. image:: ../../../figures/de/feature_info_on.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_on.png
+     :scale: 70
 
 The layer is visible and the FeatureInfo request for the layer is deactivated.
  
-.. image:: ../../../figures/de/feature_info_off.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_off.png
+     :scale: 70
 
 The layer is invisible and there will be no FeatureInfo request (even if FeatureInfo request is activated).
 
-.. image:: ../../../figures/de/feature_info_on_layer_invisible.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_on_layer_invisible.png
+     :scale: 70
      
 
 Display as tabs and accordion
@@ -58,17 +58,7 @@ Display as tabs and accordion
 
 With the switch "type", the responses of multiple services can be displayed either in different tabs or in an accordion.
 
-Example Tabs:
 
-.. image:: ../../../figures/feature_info_tabs.png
-     :scale: 80
-
-Example Accordion:
-
-.. image:: ../../../figures/feature_info_accordion.png
-     :scale: 80
-
-     
 Printing the results
 --------------------
 
