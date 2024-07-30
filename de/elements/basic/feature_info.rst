@@ -9,7 +9,7 @@ Das Element funktioniert mit unterstützten WMS-Diensten. Es kann in die Sidepan
 .. image:: ../../../figures/de/feature_info.png
      :scale: 80
 
-Der Dienst Krankenhäuser NRW des Ministeriums für Gesundheit, Emanzipation, Pflege und Alter NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) dient zur Veranschaulichung.
+Der Dienst `Krankenhäuser NRW <https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities>`_ des Ministeriums für Gesundheit, Emanzipation, Pflege und Alter NRW dient zur Veranschaulichung.
      
 Konfiguration
 =============
@@ -40,18 +40,18 @@ Einstellungen im Ebenenbaum
 
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist aktiviert:
 
-.. image:: ../../../figures/feature_info_on.png
-     :scale: 70
+.. image:: ../../../figures/de/feature_info_on.png
+     :scale: 100
 
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist deaktiviert:
 
-.. image:: ../../../figures/feature_info_off.png
-     :scale: 70
+.. image:: ../../../figures/de/feature_info_off.png
+     :scale: 100
 
 Layer ist nicht sichtbar; es erfolgt keine FeatureInfo-Abfrage, auch wenn diese aktiviert ist:
 
-.. image:: ../../../figures/feature_info_on_layer_invisible.png
-     :scale: 70
+.. image:: ../../../figures/de/feature_info_on_layer_invisible.png
+     :scale: 100
      
 
 Anzeige als Tabs und Accordion

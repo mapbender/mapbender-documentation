@@ -9,7 +9,7 @@ The element works with supported WMS services. It can be integrated into the sid
 .. image:: ../../../figures/feature_info.png
      :scale: 80
 
-The WMS Krankenhäuser NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) from 'Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW' serves as example service.
+The `WMS Krankenhäuser NRW <https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities>`_ from 'Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW' serves as example service.
 
 Configuration
 =============
