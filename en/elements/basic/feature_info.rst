@@ -23,16 +23,16 @@ Configuration
 * **Print result:** Offer a link to print the result of FeatureInfo (default: false).
 * **Only valid:** Display valid WMS (default: false).
 * **Title:** Title of the element. It will be indicated next to the button.
-* **Display type:** Display of the information, tabs or accordion.
+* **Display type:** Display of the information either in different tabs or in an accordion.
 * **Max count:** Maximum number of results that should be displayed in the result dialog.
 * **Width/Height:** Width/height of the dialog in px.
 * **Highlighting enabled:** Deactivates/activates FeatureInfo Highlighting (default: false).
-* **Default stroke color** Sets the stroke color for selected objects.
-* **Stroke width (pixels) of the default color** Sets the stroke width (in pixels) of the default color.
-* **Default fill color** Sets the fill color for selected objects.
-* **Hover stroke color** Sets the hover stroke color for selected objects.
-* **Stroke width (pixels) of the hover color** Sets the stroke width (in pixels) of the hover color.
-* **Hover fill color** Sets the hover fill color for selected objects.
+* **Default stroke color:** Sets the stroke color for selected objects.
+* **Stroke width (pixels) of the default color:** Sets the stroke width (in pixels) of the default color.
+* **Default fill color:** Sets the fill color for selected objects.
+* **Hover stroke color:** Sets the hover stroke color for selected objects.
+* **Stroke width (pixels) of the hover color:** Sets the stroke width (in pixels) of the hover color.
+* **Hover fill color:** Sets the hover fill color for selected objects.
 
 
 Layertree settings
@@ -53,16 +53,10 @@ The layer is invisible and there will be no FeatureInfo request (even if Feature
      :scale: 70
      
 
-Display as tabs and accordion
------------------------------
-
-With the switch "type", the responses of multiple services can be displayed either in different tabs or in an accordion.
-
-
 Printing the results
 --------------------
 
-The switch "Print result" allows you to print the output of the FeatureInfo. A "Print" button will appear on the FeatureInfo dialogue. The printing itself is achieved with the printing dialogue of your web browser.
+The switch **Print result** allows you to print the output of the FeatureInfo. A Print button will appear on the FeatureInfo dialogue. The printing itself will be processed via the printing dialogue of your web browser.
 
 To make sure that all images and background colors are available in your printout, you should check the print settings of your web browser: In Firefox, you can check the option "Print background". In Chrome-based browsers the option is called "Background graphics". The used fonts can vary on a printout as PDF and depend on the specific viewer. Furthermore, most web browsers modify the pages a bit before printing to save ink/toner.
 
