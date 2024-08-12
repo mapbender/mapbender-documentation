@@ -2,15 +2,15 @@
 
 This is the repository of the Mapbender documentation.
 
-You can find compiled pages of the latest of [the tagged releases](https://github.com/mapbender/mapbender-documentation/releases) on [the official documentation landing page](https://doc.mapbender.org/). Other versions of the documentation are also available on the same page under the heading [Older Versions](https://doc.mapbender.org/#older-versions).
+You can find compiled pages of the latest [tagged releases](https://github.com/mapbender/mapbender-documentation/releases) on the [official documentation landing page](https://doc.mapbender.org/). Other versions of the documentation are also available on the same page under [Older Versions](https://doc.mapbender.org/#older-versions).
+
+The website code is generated using [Sphinx](https://sphinx-doc.org/), the documentation is written in [Restructured Text](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
 
 The documentation source code is available on [Github](https://github.com/mapbender/mapbender-documentation).
 
-The website code is generated using [Sphinx](https://sphinx-doc.org/), the documentation source is written in [Restructured Text](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
-
 ## Prerequisites
 
-To build the website locally, you need to install Sphinx first. Install it in Debian-based distributions:
+To build the website locally, you need to install Sphinx first. Install it and the required extensions in Debian-based distributions with:
 
 ```bash
 sudo apt install sphinx-common python3-sphinx
@@ -43,7 +43,7 @@ Then, build a tagged version with:
 sphinx-build . _build -A version=4.0
 ```
 
-Now, create a symlink from you build folder to the Apache Webserver:
+Now, create a symlink from your build folder to the Apache Webserver:
 
 ```bash
 ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
@@ -61,7 +61,7 @@ rm -rf _build
 
 ## How to participate
 
-To contribute to the documentation, first create a fork of this repository, implement your changes in it and then submit a pull request with your changes.
+To contribute to the documentation, first create a fork of this repository, then implement your changes in it and finally test the changes on your local machine.
 
 ```bash
   cd /mapbender-documentation/en/elements/basic # In your forked repo, let's assume that you want to create a docs page that is part of the Mapbender CoreBundle. Switch to the folder where you want to put your file.
@@ -79,12 +79,12 @@ Here are some basic conventions for writing documentation.
 
 ### Formatting syntax
 
-We implement the basic .rst formatting syntax in the Mapbender documentation. It is documented in detail on the [Sphinx page](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-primer)
+We implement the basic .rst formatting syntax in the Mapbender documentation. It is documented in detail on the [Sphinx page](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-primer).
 
 For inline markup, the aim is to comply with the following syntax:
 
-* One asterik for file names (*README.md*),
-* two asteriks for text quoted directly from Mapbender, e.g. feature names or button labels (**Save**),
+* One asterisk for file names (*README.md*),
+* two asterisks for text quoted directly from Mapbender, e.g. feature names or button labels (**Save**),
 * backquotes for (file) paths (`figures/sketch.png`),
 * double backquotes for inline code (``bin/console mapbender:security:migrate-from-acl``),
 
@@ -94,7 +94,7 @@ For several lines of code, we use code blocks.
 .. code-block::
 ```
 
-Moreover, we use formatting blocks to add important information to the documentation:
+Moreover, we use formatting blocks to add important information to the documentation.
 
 ```rst
 .. hint::
@@ -116,12 +116,12 @@ Here are some basic conventions for referencing images and headings.
 
 ### Referencing images
 
-Images for the documentation can be found at `mapbender-documentation/figures`.
+Images for the documentation are available in `mapbender-documentation/figures`.
 
 * Create optimized web images in .png file format that are approximately 1 MB (or smaller) in size.
 * For elements, use *elementname.png* and *elementname_configuration.png* as names.
 * If you also provide German image files, please keep the names and create two more images in the `de` folder.
-* See the *quickstart.rst* file to see the image referencing methods in action.
+* See the [Quickstart](en/quickstart.rst) file to see image referencing methods in action.
 
 ### Referencing text
 
