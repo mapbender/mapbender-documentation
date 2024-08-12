@@ -1,93 +1,147 @@
 # Mapbender Documentation
 
-This is the Mapbender documentation repository.
+This is the repository of the Mapbender documentation.
 
-You can find the compiled pages of [the latest released version](https://github.com/mapbender/mapbender-documentation/releases) at [https://doc.mapbender.org/](https://doc.mapbender.org/). Other versions of the documentation are also available at [https://docs.mapbender.org/](https://docs.mapbender.org/current/##older-versions).
+You can find compiled pages of the latest [tagged releases](https://github.com/mapbender/mapbender-documentation/releases) on the [official documentation landing page](https://doc.mapbender.org/). Other versions of the documentation are also available on the same page under [Older Versions](https://doc.mapbender.org/#older-versions).
 
-The sources are [on Github](https://github.com/mapbender/mapbender-documentation).
+The website code is generated using [Sphinx](https://sphinx-doc.org/), the documentation is written in [Restructured Text](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
 
-The website code is generated using [Sphinx](http://sphinx-doc.org/), therefore the documentation source is written in [Restructured Text](http://sphinx-doc.org/rest.html).
+The documentation source code is available on [Github](https://github.com/mapbender/mapbender-documentation).
 
-To build the website locally, you need to install Sphinx first. Install it in Debian-based distributions via
+## Prerequisites
+
+To build the website locally, you need to install Sphinx first. Install it and the required extensions in Debian-based distributions with:
 
 ```bash
-sudo apt-get install sphinx-common python3-sphinx
-sudo apt-get install pip3
-sudo pip3 install sphinxcontrib-phpdomain
-sudo pip3 install sphinx-rtd-theme
-sudo pip install sphinx-notfound-page
-sudo pip install sphinx_copybutton
+sudo apt install sphinx-common python3-sphinx
+sudo apt install python3-sphinxcontrib.phpdomain
+sudo apt install python3-sphinx-rtd-theme
+sudo apt install python3-sphinx-notfound-page
+sudo apt install python3-sphinx-copybutton
 ```
 
-You can then build the documentation by running:
+You will then be able to build the documentation by running:
 
 ```bash
 make
 ```
 
-## How to build the documentation
+## How to build
+
+Alternatively, clone the repository from GitHub to any directory:
 
 ```bash
 cd /data
 git clone git@github.com:mapbender/mapbender-documentation
 cd mapbender-documentation
 git checkout master
+```
 
-sphinx-build . _build -A version=3.3
+Then, build a tagged version with:
 
+```bash
+sphinx-build . _build -A version=4.0
+```
+
+Now, create a symlink from your build folder to the Apache Webserver:
+
+```bash
 ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc
+```
 
-http://localhost/mb-doc/
+Finally, you can open the documentation in a web browser using:
 
-If you want rebuild the documentation, delete the old version before
+<http://localhost/mb-doc/>
+
+If you want to rebuild the documentation, delete the old build first:
+
+```bash
 rm -rf _build
 ```
 
-## How to participate in the documentation
+## How to participate
 
-To participate in the documentation, create a fork and submit a pull request with your changes. In your fork, write new content, e.g.:
+To contribute to the documentation, first create a fork of this repository, then implement your changes in it and finally test the changes on your local machine.
 
 ```bash
-  cd /mapbender-documentation/en/elements/basic # Let's assume that you want to create a docs page that is part of the Mapbender CoreBundle. Switch to the folder where your file should be located.
-  cp overview.rst basic/add_wms.rst  # Create a rst-file. E.g., copy the overview.rst as template for your add_wms.rst documentation file.
-  # Write the documentation: keep it short and simple. Use the structure of the document.
-  sphinx-build . _build -A version=3.3.0 # Build the documentation locally to see how your documentation looks like. Adjust the version number (if necessary).
+  cd /mapbender-documentation/en/elements/basic # In your forked repo, let's assume that you want to create a docs page that is part of the Mapbender CoreBundle. Switch to the folder where you want to put your file.
+  cp overview.rst basic/add_wms.rst  # Create an .rst file. In this example, we copy the overview.rst as a template for the new documentation file.
+  # Write the documentation. Keep it short and simple. Use the structure of the document and check the documentation rules below.
+  sphinx-build . _build -A version=4.0 # Build the documentation locally to see what your documentation looks like. Adjust the version number (optional).
   ln -s /data/mapbender-documentation/_build/ /var/www/html/mb-doc # Create a symlink from your Sphinx build folder to your Apache web server to test the documentation locally.
 ```
 
-Now, take a look at the documentation page in your browser. Is everything ok? Are any changes needed? If not, you can create a pull request to add your reviewed changes into the documentation.
+Now, take a look at the documentation in your browser. Is everything OK? Are any changes needed? If not, you can create a pull request to add your reviewed changes to the documentation.
 
-## Rules
+## How to write
 
-Below you'll find some basic conventions about documentation writing.
+Here are some basic conventions for writing documentation.
 
-### Crosslinks
+### Formatting syntax
 
-Create crosslinks to refer to another documentation page with a label. Labels that refer to a page are always in the first line of the file. Feel free to add labels above headings, if you want to refer to these instead.
+We implement the basic .rst formatting syntax in the Mapbender documentation. It is documented in detail on the [Sphinx page](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-primer).
 
-```bash
-    .. _activity_indicator:
+For inline markup, the aim is to comply with the following syntax:
+
+* One asterisk for file names (*README.md*),
+* two asterisks for text quoted directly from Mapbender, e.g. feature names or button labels (**Save**),
+* backquotes for (file) paths (`figures/sketch.png`),
+* double backquotes for inline code (``bin/console mapbender:security:migrate-from-acl``),
+
+For several lines of code, we use code blocks.
+
+```rst
+.. code-block::
 ```
 
-Add the crosslink to your documentation text section like this:
+Moreover, we use formatting blocks to add important information to the documentation.
 
-```bash
-    After this text is a link to :ref:`activity_indicator`.
+```rst
+.. hint::
+    This is a small hint.
+
+.. note::
+    This is an important note.
+
+.. tip::
+    This is a handy tip.
+
+.. warning::
+    This is a warning.
 ```
 
-Note that German labels always use the `_de` suffix.
+## Referencing syntax
 
-### Images (figures)
+Here are some basic conventions for referencing images and headings.
 
-Images for the documentation are located at mapbender-documentation/figures
+### Referencing images
 
-* Create images with size 800 x 600px
-* Have a look at quickstart.rst to learn about image referring
-* For elements, use elementname.png and elementname_configuration.png as name. If you also provide german image files, please keep the names and create two more images in the de folder.
+Images for the documentation are available in `mapbender-documentation/figures`.
+
+* Create optimized web images in .png file format that are approximately 1 MB (or smaller) in size.
+* For elements, use *elementname.png* and *elementname_configuration.png* as names.
+* If you also provide German image files, please keep the names and create two more images in the `de` folder.
+* See the [Quickstart](en/quickstart.rst) file to see image referencing methods in action.
+
+### Referencing text
+
+Each .rst file has its own tag that you can refer to. Use `:ref:` and the tag in the first line of the corresponding file to refer to another page in the documentation, e.g.:
+
+```bash
+    :ref:`overview_de` points to the German page of the overview map.
+```
+
+For referencing specific documentation sections, we use the [Sphinx Autosectionlabel extension](https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html). It allows to reference sections using its title. The syntax is a combination of the file path name, a colon and the section title name.
+
+For example, you can add a link to the *Install Mapbender* section of the Quickstart document like this:
+
+```bash
+    The following class refers to the :ref:`en/quickstart:Install Mapbender` text section.
+```
 
 ### Languages
 
-The two fully supported languages (i.e.: en - english, de - german) should have the same file structure, that is:
+The two fully supported languages (i.e.: en - English, de - German) should have the same file structure:
 
 ```bash
   /mapbender-documentation
