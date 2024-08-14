@@ -9,7 +9,7 @@ Das Element funktioniert mit unterstützten WMS-Diensten. Es kann in die Sidepan
 .. image:: ../../../figures/de/feature_info.png
      :scale: 80
 
-Der Dienst Krankenhäuser NRW des Ministeriums für Gesundheit, Emanzipation, Pflege und Alter NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) dient zur Veranschaulichung.
+Der Dienst `Krankenhäuser NRW <https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities>`_ des Ministeriums für Gesundheit, Emanzipation, Pflege und Alter NRW dient zur Veranschaulichung.
      
 Konfiguration
 =============
@@ -21,18 +21,18 @@ Konfiguration
 * **Automatisch aktivieren:** Schaltet ein/aus, ob das Informationsfenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: false).
 * **Beim Schließen deaktivieren:** Steuert, ob das FeatureInfo beim Schließen des Ergebnisfensters deaktiviert wird oder nicht (Standard: true).
 * **Print result:** Anzeige eines Links, über den die abgefragten Daten ausgedruckt werden können (Standard: false).
-* **Nur valide zeigen** Anzeige von ausschließlich validen WMS (Standard: false).
+* **Nur valide zeigen:** Anzeige von ausschließlich validen WMS (Standard: false).
 * **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* **Anzeigetyp:** Anzeige der Information als Tabs oder in Accordionform (Standard: tabs).
+* **Anzeigetyp:** Anzeige verschiedener Dienstabfragen im Informationsfenster, entweder in verschiedenen Reitern oder als Akkordeon (Standard: tabs).
 * **Max. Anzahl:** Maximale Anzahl an Treffern/Ergebnissen, die angezeigt werden soll.
 * **Breite/Höhe:** Größe des Dialogfeldes (Breite und Höhe in Pixel).
-* **Highlighting aktiv** Aktivierung des FeatureInfo Highlightings.
-* **Strichfarbe** Umrandungsfarbe der ausgewählten Objekte.
-* **Linienstärke (Pixel)** Setzt die Breite der Umrandungslinie in Pixeln.
-* **Füllfarbe** Füllfarbe der ausgewählten Objekte.
-* **Hover-Strichfarbe** Umrandungsfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
-* **Hover-Linienstärke (Pixel)** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
-* **Hover-Füllfarbe** Füllfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
+* **Highlighting aktiv:** Aktivierung des FeatureInfo Highlightings.
+* **Strichfarbe:** Umrandungsfarbe der ausgewählten Objekte.
+* **Linienstärke (Pixel):** Setzt die Breite der Umrandungslinie in Pixeln.
+* **Füllfarbe:** Füllfarbe der ausgewählten Objekte.
+* **Hover-Strichfarbe:** Umrandungsfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
+* **Hover-Linienstärke (Pixel):** Setzt die Breite der Umrandungslinie in Pixeln beim Hovern.
+* **Hover-Füllfarbe:** Füllfarbe der ausgewählten Objekte beim Hovern (Verweilen des Mauszeigers auf dem Objekt).
 
 
 Einstellungen im Ebenenbaum
@@ -41,40 +41,23 @@ Einstellungen im Ebenenbaum
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist aktiviert:
 
 .. image:: ../../../figures/de/feature_info_on.png
-     :width: 50%
+     :scale: 100
 
 Layer ist sichtbar und FeatureInfo-Abfrage für den Layer ist deaktiviert:
 
 .. image:: ../../../figures/de/feature_info_off.png
-     :width: 50%
+     :scale: 100
 
 Layer ist nicht sichtbar; es erfolgt keine FeatureInfo-Abfrage, auch wenn diese aktiviert ist:
 
 .. image:: ../../../figures/de/feature_info_on_layer_invisible.png
-     :width: 50%
+     :scale: 100
      
-
-Anzeige als Tabs und Accordion
-------------------------------
-
-Mit dem Schalter "Type" können die Antworten der einzelnen Dienste in unterschiedlichen Reitern oder als Akkordeon angezeigt werden.
-
-Beispiel Reiter:
-
-.. image:: ../../../figures/de/feature_info_tabs.png
-     :scale: 80
-
-Beispiel Akkordeon:
-
-.. image:: ../../../figures/de/feature_info_accordion.png
-     :scale: 80
-
-
 
 Ausdruck der Resultate
 ----------------------
 
-Mit dem Schalter "Drucken" kann die Information des FeatureInfo ausgedruckt werden. Eine Druckschaltfläche ist dann in dem FeatureInfo-Dialog sichtbar. Das Drucken geschieht über den Druckdialog des Webbrowsers.
+Über die **Print Result**-Checkbox kann der Informationsdruck aktivierbar, sodass im Anschluss ein Drucken-Button im FeatureInfo-Dialog sichtbar ist. Der Druckprozess selbst geschieht über den Druckdialog des Webbrowsers.
 
 Um alle Bilder und Hintergrundfarben im Ausdruck zu erhalten, sollten Sie die Druckeinstellungen des Webbrowsers beachten: In Firefox heißt die Option "Hintergrund drucken" und wird im Druckoptionendialog angeschaltet, in Chrome-basierten Browsern nennt sich die Option "Hintergrundgrafiken". Die übermittelten Schriften können bei einem Ausdruck in PDF je nach Viewer unterschiedlich gut funktionieren. Des Weiteren modifizieren die meisten Browser Webseiten etwas vor dem Druck, damit nicht so viel Tinte/Toner verbraucht wird.
 
