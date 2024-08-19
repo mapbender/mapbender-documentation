@@ -28,10 +28,9 @@ Als Webserver kann auch Nginx verwendet werden. In dieser Anleitung wird darauf 
 Konfiguration PHP
 -----------------
 
-* Entpacken des Zip-Archives, z.B. nach c:\\php
+* Entpacken des Zip-Archives, z.B. nach `c:\\php`.
 * Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-Verzeichnis nicht richtig gesetzt.
-
-* Es muss deshalb geprüft werden, ob die folgenden Variablen (php.ini) gesetzt sind:
+* Es muss deshalb geprüft werden, ob die folgenden Variablen (*php.ini*) gesetzt sind:
 
 .. code-block:: ini
 
@@ -39,9 +38,8 @@ Konfiguration PHP
     upload_tmp_dir
     date.timezone
 
-* der Pfad vom PHP-bin Verzeichnis zur PATH-Variable (Windows-Umgebungsvariable) muss hinzugefügt werden
-
-* Aktivieren Sie die benötigten PHP-Erweiterungen in der php.ini Konfigurationsdatei:
+* Der Pfad vom `PHP-bin`-Verzeichnis zur ``PATH``-Variable (Windows-Umgebungsvariable) muss hinzugefügt werden.
+* Aktivieren Sie die benötigten PHP-Erweiterungen in der *php.ini* Konfigurationsdatei:
 
 .. code-block:: ini
 
@@ -64,24 +62,22 @@ Konfiguration PHP
 Mapbender entpacken und im Webserver registrieren
 -------------------------------------------------
 
-Download der aktuellen Mapbender Version (https://mapbender.org/builds/mapbender-starter-current.zip) und entpacken nach c:\\mapbender\\
+Download der `aktuellen Mapbender Version <https://mapbender.org/builds/mapbender-starter-current.zip>`_ und entpacken nach `c:\\mapbender\\`
     
 
 Konfiguration Apache
 --------------------
 
-* ein Unterordner "conf.d" muss im Verzeichnis <apache>/conf erstellt werden
+* Ein Unterordner `conf.d` muss im Verzeichnis `<apache>/conf` erstellt werden
 
-
-
-In der httpd.conf am Ende einfügen:
+In der *httpd.conf* am Ende einfügen:
 
 .. code-block:: apache
 
                 # Include directory conf.d
                 Include "conf/conf.d/*.conf"
 
-Datei **<apache>\\conf\\conf.d\\mapbender.conf** mit dem folgenden Inhalt anlegen:
+Datei `<apache>\\conf\\conf.d\\mapbender.conf` mit dem folgenden Inhalt anlegen:
   
 .. code-block:: apache
 
@@ -103,7 +99,7 @@ Der Apache Webserverdienst muss im Anschluss neu gestartet werden.
 mod_fcgid
 ---------
 
-Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
+Datei `<apache>\\conf\\conf.d\\fcgi.conf` mit dem folgenden Inhalt anlegen:
 
 .. code-block:: apacheconf
 
@@ -143,7 +139,7 @@ Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
 Konfiguration PostgreSQL
 ------------------------
 
-Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer ``.env.local``-Datei hinzufügen.
+Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer *.env.local*-Datei hinzufügen.
 
 .. code-block:: yaml
 
@@ -151,7 +147,6 @@ Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den g
 
 Weitere Informationen zur Einrichtung von Datenbankverbindungen finden sich im Kapitel :ref:`yaml_de`.
 
-    
 Öffnen Sie nun die Eingabeaufforderung. Zur Initialisierung der Datenbank geben Sie bitte folgende Befehle ein:
 
 .. code-block:: text
@@ -185,7 +180,8 @@ Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufe
 
 Per Voreinstellung lauten die Anmeldedaten (wenn die SQLite-Datenbank verwendet wurde)
 
-Benutzername: "root", Passwort: "root"
+* Benutzername: root
+* Passwort: root
 
 Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
@@ -193,7 +189,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 	php.exe bin/console mapbender:config:check
 
-.. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
+.. hint:: Bitte beachten Sie, dass der Befehl ``mapbender:config:check`` die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise ``php -r 'phpinfo();'`` zur Ausgabe der PHP-Webserver Einstellungen.
 
 Weitere Informationen dazu finden Sie unter :ref:`de/customization/commands:bin/console mapbender:config:check`.
 
