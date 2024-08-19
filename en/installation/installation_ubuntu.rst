@@ -3,7 +3,7 @@
 Installation on Ubuntu/Debian
 #############################
 
-Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under ``<mapbender>/var/db/demo.sqlite``).
+Mapbender is shipped with a preconfigured SQLite database which includes preconfigured applications (the database is located under `<mapbender>/var/db/demo.sqlite`).
 You can find instructions for a test installation based on the Symfony web server at :ref:`installation_symfony`.
 
 .. hint:: PostgreSQL is strongly recommended for productive use. Look up the neccessary configurational steps in the chapter `Optional > Mapbender Deployment on PostgreSQL <#optional>`_.
@@ -38,7 +38,7 @@ Installation of mandatory PHP extensions:
 Unpack and register to web server
 ---------------------------------
 
-Download the current Mapbender version and unzip it into ``/var/www/mapbender`` or a different location:
+Download the current Mapbender version and unzip it into `/var/www/mapbender` or a different location:
 
 .. code-block:: bash
 
@@ -50,7 +50,7 @@ Download the current Mapbender version and unzip it into ``/var/www/mapbender`` 
 Configuration Apache 2.4
 ------------------------
 
-Create the file ``/etc/apache2/sites-available/mapbender.conf`` with the following content:
+Create the file `/etc/apache2/sites-available/mapbender.conf` with the following content:
 
 .. code-block:: apache
 
@@ -93,7 +93,9 @@ First steps
 The Mapbender installation can now be accessed under ``http://[hostname]/mapbender/``.
 User data by default:
 
-username: "root", password: "root"
+* username: root
+* password: root
+
 
 Troubleshooting is available via the following command (must be executed in the application directory):
 
@@ -101,7 +103,7 @@ Troubleshooting is available via the following command (must be executed in the 
 
 	bin/console mapbender:config:check
 
-.. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
+.. hint:: Please note that ``config:check`` will use the php-cli version. The settings may be different from your webserver PHP settings. Please use ``php -r 'phpinfo();'`` to show your PHP webserver settings.
 
 Congratulations! Mapbender is now set up correctly and ready for further configuration.
 Find Information about the first steps with Mapbender in the :ref:`Mapbender Quickstart <quickstart>`.
@@ -119,7 +121,7 @@ To use the optional LDAP-connection, following PHP-LDAP-extension is required:
 
    sudo apt install php-ldap
 
-.. note:: To use LDAP, the `LDAP-Bundle <https://github.com/mapbender/ldapBundle>`_ must be integrated into Mapbender. Further setup instructions can be found in the bundle's README.md on GitHub.
+.. note:: To use LDAP, the `LDAP-Bundle <https://github.com/mapbender/ldapBundle>`_ must be integrated into Mapbender. Further setup instructions can be found in the `Bundle's README.md <https://github.com/mapbender/ldapBundle/blob/master/README.md>`_ on GitHub.
 
 
 Mapbender installation with PostgreSQL
@@ -138,7 +140,7 @@ Installation PHP-PostgreSQL driver
 
    sudo apt install php-pgsql
 
-Configuration of database connection is done by a variable that contains the entire connection  string. Configure it by adding it in your ``.env.local`` file.
+Configuration of database connection is done by a variable that contains the entire connection string. Configure it by adding it in your *.env.local* file.
 
 .. code-block:: yaml
 
@@ -176,7 +178,7 @@ Install the MySQL driver:
 
    sudo apt install php-mysql
 
-Adapt these parameters (in parameters.yaml) accordingly:
+Adapt these parameters (in *parameters.yaml*) accordingly:
 
 .. code-block:: yaml
 

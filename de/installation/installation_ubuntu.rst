@@ -3,7 +3,7 @@
 Installation auf Ubuntu/Debian
 ##############################
 
-Die mitgelieferte SQLite-Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (sie liegt unter ``<mapbender>/var/db/demo.sqlite``).
+Die mitgelieferte SQLite-Datenbank ist für Testinstallationen geeignet. In dieser Datenbank befinden sich bereits vorkonfigurierte Demoanwendungen (sie liegt unter `<mapbender>/var/db/demo.sqlite`).
 Eine Anleitung für eine Testinstallation auf Basis des Symfony Webservers finden Sie unter :ref:`installation_symfony_de`.
 
 .. hint:: Für den Produktiveinsatz wird PostgreSQL dringend empfohlen. Wichtige Konfigurationshinweise dazu finden Sie im Kapitel `Optional > Mapbender Einrichtung auf PostgreSQL <#optional>`_.
@@ -38,7 +38,7 @@ Installation der benötigten PHP-Extensions:
 Entpacken und im Webserver registrieren
 ---------------------------------------
 
-Download der aktuellen Mapbender Version und entpacken nach ``/var/www/mapbender`` oder ein anderes Verzeichnis:
+Download der aktuellen Mapbender Version und entpacken nach `/var/www/mapbender` oder ein anderes Verzeichnis:
 
 .. code-block:: bash
 
@@ -50,7 +50,7 @@ Download der aktuellen Mapbender Version und entpacken nach ``/var/www/mapbender
 Konfiguration Apache 2.4
 ------------------------
 
-Datei ``/etc/apache2/sites-available/mapbender.conf`` mit dem folgenden Inhalt anlegen:
+Datei `/etc/apache2/sites-available/mapbender.conf` mit dem folgenden Inhalt anlegen:
 
 .. code-block:: apache
 
@@ -94,7 +94,8 @@ Es kann nun auf die Mapbender Installation unter ``http://[hostname]/mapbender/`
 
 Per Voreinstellung lauten die Anmeldedaten
 
-Benutzername: "root", Passwort: "root"
+* Benutzername: root
+* Passwort: root
 
 
 Zur Überprüfung der Konfiguration dient der folgende Befehl:
@@ -103,7 +104,7 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 	bin/console mapbender:config:check
 
-.. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
+.. hint:: Bitte beachten Sie, dass der Befehl ``mapbender:config:check`` die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise ``php -r 'phpinfo();'`` zur Ausgabe der PHP-Webserver Einstellungen.
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
 Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`Mapbender Schnellstart <quickstart_de>`.
@@ -121,7 +122,7 @@ Zur Nutzung der optionalen LDAP-Anbindung wird zunächst die PHP-LDAP-Extension 
 
    sudo apt install php-ldap
 
-.. note:: Zur Verwendung von LDAP muss im Anschluss außerdem das `LDAP-Bundle <https://github.com/mapbender/ldapBundle>`_ in Mapbender integriert werden. Weitere Anweisungen zur Einrichtung finden Sie in der README.md auf GitHub.
+.. note:: Zur Verwendung von LDAP muss im Anschluss außerdem das `LDAP-Bundle <https://github.com/mapbender/ldapBundle>`_ in Mapbender integriert werden. Weitere Anweisungen zur Einrichtung finden Sie in der `README.md <https://github.com/mapbender/ldapBundle/blob/master/README.md>`_.
 
 
 Mapbender Einrichtung auf PostgreSQL
@@ -140,7 +141,7 @@ Installation PHP-PostgreSQL Treiber:
 
    sudo apt install php-pgsql
 
-Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer ``.env.local``-Datei hinzufügen.
+Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer *.env.local*-Datei hinzufügen.
 
 .. code-block:: yaml
 
@@ -177,7 +178,7 @@ Installation MySQL Treiber:
    sudo apt install php-mysql
 
 
-Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Parameter (parameters.yaml) angepasst werden:
+Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Parameter (*parameters.yaml*) angepasst werden:
 
 .. code-block:: yaml
 
