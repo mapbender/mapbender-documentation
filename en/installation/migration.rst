@@ -18,12 +18,12 @@ Migration to Mapbender 4.0.0
 * Carefully check the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_ before you do the update.
 
 * You will notice that the Symfony Directory Structure changed a lot.
-* For Mapbender 4, all ``.yml`` file extensions were transformed into ``.yaml``.
-* `config.yml` is omitted.
+* For Mapbender 4, all *.yml* file extensions were transformed into *.yaml*.
+* *config.yml* is omitted.
 * public files moved from `app/web` to `public`.
-* Instead of multi parameters in `parameters.yml`, the database definition is replaced by an environment variable ``MAPBENDER_DATABASE_URL``. Configure it by adding it in your `.env.local` file. If you have multiple connections, use one env variable per connection and configure these in the `config/packages/doctrine.yaml` file.
+* Instead of multi parameters in *parameters.yml*, the database definition is replaced by an environment variable ``MAPBENDER_DATABASE_URL``. Configure it by adding it in your *.env.local* file. If you have multiple connections, use one env variable per connection and configure these in the `config/packages/doctrine.yaml` file.
 * The Apache Vhost Definition or ALIAS has to be changed. Refer to `public` (instead of `web`). Call ``index.php`` instead of ``app.php``). See :ref:`installation instruction<en/installation/installation_ubuntu:Configuration Apache 2.4>`.
-* Environment can now be set using the environment variable ``APP_ENV`` (see `.env.local`), ``.index_dev.php`` (instead of ``app_dev.php``) is still available as an alternative for accessing the dev environment on remote servers.
+* Environment can now be set using the environment variable ``APP_ENV`` (see *.env.local*), ``.index_dev.php`` (instead of ``app_dev.php``) is still available as an alternative for accessing the dev environment on remote servers.
 * Database permission can be migrated using ``bin/console mapbender:security:migrate-from-acl``. Do that before executing the ``schema:update`` command, otherwise your old ACL tables will be gone!
 
 
@@ -32,9 +32,23 @@ Upgrade database
 
 **Important**: Execute the following commands in the specified order to upgrade (after bringing the symfony directory structure up to date). First, make a backup of your database!
 
-* ``bin/console mapbender:database:upgrade``: this replaces doctrine's removed json_array type to json. If you are using a DBMS other than SQlite, PostgreSQL and MySQL you need to do that manually.
-* ``bin/console mapbender:security:migrate-from-acl``: migrates security definitions from the ACL system to the new permission system.
-* ``bin/console doctrine:schema:update --complete --force``: updates the rest of the database. This must be executed last, since it deletes the old ACL tables.
+1. Replace Doctrine's removed ``json_array`` type to ``json``. If you are using a DBMS other than SQlite, PostgreSQL and MySQL, you need to do that manually:
+
+.. code-block:: bash
+
+    bin/console mapbender:database:upgrade 
+
+2. Migrate security definitions from the ACL system to the new permission system:
+
+.. code-block:: bash
+
+    bin/console mapbender:security:migrate-from-acl
+
+3. Update the rest of the database. This must be executed last, since it deletes the old ACL tables:
+
+.. code-block:: bash
+    
+    bin/console doctrine:schema:update --complete --force``
 
 
 Migration to Mapbender 3.3.4
@@ -46,7 +60,7 @@ Migration to Mapbender 3.3.4
 
     bin/console doctrine:schema:update --force
 
-* Next, you need to configure CSRF tokens to be used during login to the **csrf_token_generator** form_login section in ``security.yaml`` as follows:
+* Next, you need to configure CSRF tokens to be used during login to the **csrf_token_generator** form_login section in *security.yaml* as follows:
 
 .. code-block:: yaml
 
@@ -55,39 +69,22 @@ Migration to Mapbender 3.3.4
         login_path: /user/login
         csrf_token_generator: security.csrf.token_manager
 
-* For productive environments, it is important to install an SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yaml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+* For productive environments, it is important to install an SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your *parameters.yaml* to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
 Migration to Mapbender 3.3
 **************************
 
-* Make sure you have PHP >= 7.4 or PHP 8.x
+* Make sure you have PHP >= 7.4 or PHP 8.x.
 * Provide a backup of your database. 
-* Update your database schema to 3.3 with bin/console doctrine:schema:update --force
-* doctrine.yaml: Please note that in the doctrine connection configuration variables must be set with quotes, for example '%database_driver%'
-* CAUTION: Please note that the eye at application is used from (3.2.x) onwards to make the application available for the anonymous user (public access). Before 3.2.x, the eye/checkbox at security was used to publish an application.  
+* Update your database schema to 3.3 with ``bin/console doctrine:schema:update --force``.
+* *doctrine.yaml*: Please note that in the doctrine connection configuration variables must be set with quotes, for example '%database_driver%'
+* CAUTION: Please note that the eye at application is used from (3.2.x) onwards to make the application available for the anonymous user (public access). Before 3.2.x, the eye/checkbox at **Security** was used to publish an application.  
 
 To update from 3.2.x to 3.3.x should be quite easy.
 
 .. note:: 
     
     If you update from a version < 3.2, you have to follow the steps described at the `Migration to Mapbender 3.2 <#Migration to Mapbender 3.2>`_ section below.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Migration to Mapbender 3.2
 **************************
@@ -96,10 +93,10 @@ You can migrate older Mapbender installations to Mapbender 3.2.
 
 Check the :ref:`installation_update` Guide.
 
-* Make sure you have PHP >= 7.1.0 and PHP < 8 
+* Make sure you have PHP >= 7.1.0 and PHP < 8.
 * Provide a backup of your database. 
-* Update your database schema to 3.2 with bin/console doctrine:schema:update --force
-* CAUTION: Please note that the eye at application is from (3.2.x) used to make the application available for the anonymous user (public access). Before the eye /checkbox at security was used to publish an application.  
+* Update your database schema to 3.2 with ``bin/console doctrine:schema:update --force``.
+* CAUTION: Please note that the eye at application is from (3.2.x) used to make the application available for the anonymous user (public access). Before the eye/checkbox at **Security** was used to publish an application.  
 
 Some elements may not work after the update and may need a closer look.
 
@@ -108,6 +105,8 @@ Update map_engine_code
 ----------------------
 
 If it makes sense, update all applications to map_engine_code current.
+
+.. code-block:: sql
 
     Update mb_core_application set map_engine_code = 'current';
 
@@ -229,7 +228,7 @@ There is a new style called unsaved.
 WMS Layer visibility
 --------------------
 
-Make sure that your WMS provides a proper extent for all supported EPSG-codes (this is used and saved in table mb_wms_wmslayersource Spalten latlonbounds und boundingboxes). 
+Make sure that your WMS provides a proper extent for all supported EPSG-codes (this is used and saved in table ``mb_wms_wmslayersource`` columns latlonbounds and boundingboxes). 
 Else it can happen that a layer is not requested for the given extent of your map.
 
 
@@ -248,7 +247,7 @@ Redlining was renamed to Sketch (>= 3.2.3).
 FeatureInfo
 -----------
 
-* showOriginal deprecated - parameter not available anymore (from 3.2.3).
+* ``showOriginal`` deprecated - parameter not available anymore (from 3.2.3).
 * highlighting: true - new >= 3.2.3 highlights the geometry if you have WKT integrated in the featureinfo result - see `issue 1287 <https://github.com/mapbender/mapbender/issues/1287>`_ and also this `FeatureInfo blog post <https://wheregroup.com/blog/details/mapbender-featureinfo-mit-highlighting-der-treffer-geometrie/>`_
 
 
