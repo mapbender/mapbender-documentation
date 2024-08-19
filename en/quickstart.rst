@@ -470,11 +470,8 @@ To pass a single POI, use the following URL format:
 What's next?
 ============
 
-This is only the first step on the road to using Mapbender. There is a lot more functionality you can try.
+This is only the first step on the road to using Mapbender. There is a lot more to discover:
 
-
-Mapbender Website: https://mapbender.org/
-
-You find tutorials at: https://doc.mapbender.org
-
-Get involved in the project: https://mapbender.org/en/community/
+* Head over to the official `Mapbender website <https://mapbender.org/>`_,
+* Find quick answers to the biggest Mapbender-related questions in the :ref:`faq`,
+* Become a member of the `Mapbender community <https://mapbender.org/en/community/>`_.

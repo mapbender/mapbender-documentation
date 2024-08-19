@@ -169,7 +169,7 @@ Es können außerdem komplett neue Anwendungen über das :ref:`backend_de` defin
 
 Mapbender-Anwendungen bestehen aus den Bereichen Obere Werkzeugleiste, Sidepane, Kartenbereich und Fußzeile. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
 
-#. Wählen Sie **Anwendungen** → |mapbender-button-edit| → **Layouts** 
+#. Wählen Sie **Anwendungen** → |mapbender-button-edit| → **Layouts**.
 
 #. Klicken Sie auf |mapbender-button-add| neben einem Bereich, um einen Überblick über die dort verfügbaren Elemente zu erhalten.
 
@@ -475,10 +475,8 @@ Format für die Übergabe eines einzelnen Punktes:
 Was kommt als Nächstes?
 =======================
 
-Dies waren nur die ersten Schritte mit Mapbender. Es gibt viele weitere Funktionen, die Sie ausprobieren können.
+Dies waren nur die ersten Schritte auf dem Weg zur Nutzung von Mapbender. Es gibt noch eine Menge mehr zu entdecken:
 
-Mapbender Webseite: https://mapbender.org/
-
-Sie finden Tutorials unter: https://doc.mapbender.org
-
-Beteiligen Sie sich: https://mapbender.org/community/
+* Besuchen Sie die offizielle `Mapbender-Website <https://mapbender.org/>`_,
+* Finden Sie schnelle Antworten auf die wichtigsten Mapbender-bezogenen Fragen in der :ref:`faq_de`,
+* Werden Sie Mitglied der `Mapbender-Community <https://mapbender.org/community/>`_.
