@@ -11,4 +11,4 @@ Alle wesentlichen Informationen werden vom Mapbender-Team auf GitHub dokumentier
 * `CHANGELOG.md <https://github.com/mapbender/mapbender/blob/master/CHANGELOG.md>`_ listet Versionsänderungen der Mapbender-Entwicklungsstände auf.
 * `UPGRADING.MD <https://github.com/mapbender/mapbender/blob/develop/docs/UPGRADING.md>`_ gibt wichtige Hinweise zu Mapbender-Installationsupgrades auf bestimmte Versionen.
 * Der `Contributing Guide <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_ stellt die Software-Architektur und die Schritte zur Entwicklung von Mapbender vor.
-* Die `/docs/`-`README.MD <https://github.com/mapbender/mapbender/blob/develop/docs/README.md>`_ dient als Einstiegsseite für die technische Dokumentation von Mapbender.
+* Die `/docs/-README.md <https://github.com/mapbender/mapbender/blob/develop/docs/README.md>`_ dient als Einstiegsseite für die technische Dokumentation von Mapbender.
