@@ -264,7 +264,7 @@ The name of the project (default: Mapbender) can be changed in `parameters.yaml`
     branding.project_name: Geoportal
 
 
-.. important:: In `parameters.yaml`, **tabulators may not be used for indentation**. Instead, you need to use the space bar.
+.. warning:: In *parameters.yaml*, tabulators may not be used for indentation. Instead, you need to use the space bar.
 
 
 Proxy settings

@@ -9,6 +9,6 @@ All essential information is documented by the Mapbender team on GitHub. The key
 
 * `README.md <https://github.com/mapbender/mapbender-starter/blob/master/README.md>`_ describes the installation from the Git sources of the Mapbender Starter Git repository.
 * `CHANGELOG.md <https://github.com/mapbender/mapbender/blob/master/CHANGELOG.md>`_ lists changes between the different Mapbender versions.
-* `UPGRADING.md <https://github.com/mapbender/mapbender/blob/develop/docs/UPGRADING.md>`_ provides important information on Mapbender installation upgrades to specific versions.
+* `UPGRADING.md <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_ provides important information on Mapbender installation upgrades to specific versions.
 * The `Contributing Guide <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_ presents the software architecture and the steps involved in developing Mapbender.
 * The `/docs/-README.md <https://github.com/mapbender/mapbender/blob/develop/docs/README.md>`_ is the entry page for the technical documentation of Mapbender. 

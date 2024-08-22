@@ -19,7 +19,7 @@ Eine flexible Rechtezuweisung ist in diesen Bereichen möglich:
    roles_groups
 
 
-.. important:: Globale Berechtigungen für einen Bereich weisen Sie über ``Sicherheit`` → ``Globale Berechtigungen`` zu.
+.. hint:: Globale Berechtigungen für einen Bereich weisen Sie über ``Sicherheit`` → ``Globale Berechtigungen`` zu.
 
 
 Rechteverwaltung

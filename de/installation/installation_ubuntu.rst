@@ -165,24 +165,24 @@ Root-Benutzer für Zugriff anlegen:
 
 Weitere Informationen zur Konfiguration im Kapitel :ref:`installation_configuration_de`.
 
+..
+    Mapbender Einrichtung auf MySQL
+    +++++++++++++++++++++++++++++++
 
-Mapbender Einrichtung auf MySQL
-+++++++++++++++++++++++++++++++
+    Analog zur Konfiguration mit PostgreSQL.
 
-Analog zur Konfiguration mit PostgreSQL.
+    Installation MySQL Treiber:
 
-Installation MySQL Treiber:
+    .. code-block:: bash
 
-.. code-block:: bash
-
-   sudo apt install php-mysql
+    sudo apt install php-mysql
 
 
-Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Parameter (*parameters.yaml*) angepasst werden:
+    Abweichend von der PostgreSQL-Konfiguration müssen für MySQL folgende Parameter (*parameters.yaml*) angepasst werden:
 
-.. code-block:: yaml
+    .. code-block:: yaml
 
-                    database_driver:   pdo_mysql
-                    database_port:     3306
+                        database_driver:   pdo_mysql
+                        database_port:     3306
 
-Nachfolgend muss die Datenbank initialisiert werden, siehe :ref:`de/installation/installation_ubuntu:Mapbender Einrichtung auf PostgreSQL`.
+    Nachfolgend muss die Datenbank initialisiert werden, siehe :ref:`de/installation/installation_ubuntu:Mapbender Einrichtung auf PostgreSQL`.

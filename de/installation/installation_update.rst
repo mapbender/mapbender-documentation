@@ -15,7 +15,7 @@ Um Mapbender zu aktualisieren, müssen Sie die folgenden Schritte durchführen:
 * Aktualisieren Sie Ihre :ref:`Mapbender-Datenbank<de/customization/commands:bin/console doctrine:schema:update>`.
 * Übernahme Ihrer **Screenshots**: Kopieren Sie die Dateien Ihrer alten Mapbender Version von `/public/uploads/` (`web/uploads` für Versionen < 4.0.0) in das `/public/uploads`-Verzeichnis Ihrer neuen Mapbender Version.
 * Wenn Sie Ihre eigenen **Templates** verwenden sollten, müssen Sie diese mit denen der neuen Version vergleichen (kam es zu Änderungen?).
-* **Druck Templates**: Kopieren Sie eventuell selbsterstellte Drucktemplates zurück unter `config/MapbenderPrintBundle/templates/`.
+* **Druck Templates**: Kopieren Sie eventuell selbst erstellte Drucktemplates zurück unter `config/MapbenderPrintBundle/templates/`.
 * Importieren Sie die **Demo-Anwendungen**: über den Befehl ``bin/composer run reimport-example-apps`` oder über die Web-Administration, um sich den neusten Stand der Entwicklungen anzuschauen.
 * Unter :ref:`de/installation/installation_ubuntu:Entpacken und im Webserver registrieren` ist beschrieben, wie die Konfigurationsdatei für den Apache Alias aussehen sollte.
 

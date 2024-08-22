@@ -229,7 +229,7 @@ Der Projektname (Standard: Mapbender) kann in der Datei `parameters.yaml` angepa
     branding.project_name: Geoportal
 
 
-.. important:: In der `parameters.yaml` dürfen **keine Tabulatoren für Einrückungen** verwendet werden. Nutzen Sie stattdessen Leerzeichen.
+.. warning:: In der `parameters.yaml` dürfen **keine Tabulatoren für Einrückungen** verwendet werden. Nutzen Sie stattdessen Leerzeichen.
 
 
 Proxy-Einstellungen

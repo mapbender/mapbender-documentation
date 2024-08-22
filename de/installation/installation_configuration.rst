@@ -166,7 +166,8 @@ dev-Caches ist aber, wie angesprochen, anders.
 
 Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf ``prod`` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
 
-* durch Bearbeiten der ``APP_ENV``-Variable in der *.env*-Datei,
+.. * durch Bearbeiten der ``APP_ENV``-Variable in der *.env*-Datei,
+
 * durch Überschreiben des Werts in einer *.env.local*-Datei,
 * durch Festlegen einer Umgebungsvariable in Ihrer Apache2-vHost-Konfiguration: ``SetEnv APP_ENV prod``,
 * durch explizites Festlegen beim Starten des lokalen Webservers:

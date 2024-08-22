@@ -166,23 +166,23 @@ Create root user for access:
 
 Find further information in :ref:`installation_configuration`.
 
+.. 
+    Mapbender installation with MySQL
+    ++++++++++++++++++++++++++++++++++
 
-Mapbender installation with MySQL
-++++++++++++++++++++++++++++++++++
+    Similar to configuration with PostgreSQL.
 
-Similar to configuration with PostgreSQL.
+    Install the MySQL driver:
 
-Install the MySQL driver:
+    .. code-block:: bash
 
-.. code-block:: bash
+    sudo apt install php-mysql
 
-   sudo apt install php-mysql
+    Adapt these parameters (in *parameters.yaml*) accordingly:
 
-Adapt these parameters (in *parameters.yaml*) accordingly:
+    .. code-block:: yaml
 
-.. code-block:: yaml
+                        database_driver:   pdo_mysql
+                        database_port:     3306
 
-                    database_driver:   pdo_mysql
-                    database_port:     3306
-
-To initialize your database connection, see :ref:`en/installation/installation_ubuntu:Mapbender installation with PostgreSQL`.
+    To initialize your database connection, see :ref:`en/installation/installation_ubuntu:Mapbender installation with PostgreSQL`.

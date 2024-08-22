@@ -180,7 +180,7 @@ The Mapbender installation can now be accessed under **http://[hostname]/mapbend
 * username: root
 * password: root
 
-Troubleshooting is available via the following command (must be executed in the `application` directory):
+Troubleshooting is available via the following command (must be executed above the `bin/` directory):
 
 .. code-block:: yaml
 
