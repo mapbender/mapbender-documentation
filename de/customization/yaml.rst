@@ -3,7 +3,7 @@
 YAML Konfiguration (Konfigurations- und Anwendungsdateien)
 ==========================================================
 
-Die folgenden Konfigurationsdateien liegen unter `application/config` und dessen Unterverzeichnissen:
+Die folgenden Konfigurationsdateien liegen unter `config/` und dessen Unterverzeichnissen:
 
 
 doctrine.yaml
@@ -229,7 +229,7 @@ Der Projektname (Standard: Mapbender) kann in der Datei `parameters.yaml` angepa
     branding.project_name: Geoportal
 
 
-.. important:: In der `parameters.yaml` dürfen **keine Tabulatoren für Einrückungen** verwendet werden. Nutzen Sie stattdessen Leerzeichen.
+.. warning:: In der `parameters.yaml` dürfen **keine Tabulatoren für Einrückungen** verwendet werden. Nutzen Sie stattdessen Leerzeichen.
 
 
 Proxy-Einstellungen
@@ -316,7 +316,7 @@ Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :r
 YAML Anwendungsdateien
 ----------------------
 
-Als YAML definierte Anwendungen werden im Verzeichnis ``application/config/applications`` abgelegt. Dort liegen nach jeder Installation bereits drei Beispielanwendungen als YAML Dateien:
+Als YAML definierte Anwendungen werden im Verzeichnis `applications/` abgelegt. Dort liegen nach jeder Installation bereits drei Beispielanwendungen als YAML Dateien:
 
 - Mapbender Demo (*mapbender_user*)
 - Mapbender Demo Basic (*mapbender_user_basic*)
@@ -408,8 +408,8 @@ Bitte gehen Sie zu :ref:`de/customization/commands:Anwendungs-Export, Import und
 **Export über die Konsole**
 
 Anwendungen können als .json oder .yaml - Datei über die Konsole exportiert werden.
-Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter application/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
-Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter application/config/application.
+Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter `applications/` abgelegt und somit als Anwendung in Mapbender eingefügt werden.
+Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter `applications/`.
 
 **Import über die Konsole**
 

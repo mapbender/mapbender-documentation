@@ -88,7 +88,8 @@ The productive environment enables caching and only shows generic error messages
 
 The environment can be set via the ``APP_ENV`` variable. Make sure to change this to ``prod`` when deploying your application for the public. The value can be changed in several ways:
 
-* by editing the ``APP_ENV`` variable in the *.env* file,
+.. * by editing the ``APP_ENV`` variable in the *.env* file,
+
 * by overriding the value in an *.env.local* file,
 * by setting an environment variable in your Apache2 vHost configuration: ``SetEnv APP_ENV prod``,
 * by explicitly setting it when starting the local webserver:
@@ -411,7 +412,7 @@ Mapbender provides an easy-to-use rights management that is implemented into the
 * **Edit**:	Select a user that is allowed to make changes to an object.
 * **Delete**: Select a user that is allowed to delete an object.
 
-.. important:: Assign rights to a user via **Security** → **Global Permissions**.
+.. hint:: Assign rights to a user via **Security** → **Global Permissions**.
 
 
 Assign an Application to a User/Group
@@ -470,11 +471,8 @@ To pass a single POI, use the following URL format:
 What's next?
 ============
 
-This is only the first step on the road to using Mapbender. There is a lot more functionality you can try.
+This is only the first step on the road to using Mapbender. There is a lot more to discover:
 
-
-Mapbender Website: https://mapbender.org/
-
-You find tutorials at: https://doc.mapbender.org
-
-Get involved in the project: https://mapbender.org/en/community/
+* Head over to the official `Mapbender website <https://mapbender.org/>`_,
+* Find quick answers to the biggest Mapbender-related questions in the :ref:`faq`,
+* Become a member of the `Mapbender community <https://mapbender.org/en/community/>`_.

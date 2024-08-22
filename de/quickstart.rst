@@ -91,7 +91,8 @@ In der Produktionsumgebung wird das Caching aktiviert, zusätzlich werden nur al
 
 Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf ``prod`` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
 
-* durch Bearbeiten der ``APP_ENV``-Variable in der *.env*-Datei,
+.. * durch Bearbeiten der ``APP_ENV``-Variable in der *.env*-Datei,
+
 * durch Überschreiben des Werts in einer *.env.local*-Datei,
 * durch Festlegen einer Umgebungsvariable in Ihrer Apache2-vHost-Konfiguration: ``SetEnv APP_ENV prod``,
 * durch explizites Festlegen beim Starten des lokalen Webservers:
@@ -169,7 +170,7 @@ Es können außerdem komplett neue Anwendungen über das :ref:`backend_de` defin
 
 Mapbender-Anwendungen bestehen aus den Bereichen Obere Werkzeugleiste, Sidepane, Kartenbereich und Fußzeile. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
 
-#. Wählen Sie **Anwendungen** → |mapbender-button-edit| → **Layouts** 
+#. Wählen Sie **Anwendungen** → |mapbender-button-edit| → **Layouts**.
 
 #. Klicken Sie auf |mapbender-button-add| neben einem Bereich, um einen Überblick über die dort verfügbaren Elemente zu erhalten.
 
@@ -415,7 +416,7 @@ Mapbender bietet eine einfach zu bedienende Rechteverwaltung an, die im Backend 
 * **Bearbeiten**:	Anklicken, damit ein Benutzer die Berechtigung hat, Objekte bearbeiten zu können.
 * **Löschen**: Anklicken, damit ein Benutzer die Berechtigung hat, Objekte löschen zu können.
 
-.. important:: Weisen Sie einem Benutzer globale Berechtigungen über **Sicherheit** → ``Globale Berechtigungen`` zu.
+.. hint:: Weisen Sie einem Benutzer globale Berechtigungen über **Sicherheit** → ``Globale Berechtigungen`` zu.
 
 
 Zuweisen einer einzelnen Anwendung zu einem Benutzer/einer Gruppe
@@ -475,10 +476,8 @@ Format für die Übergabe eines einzelnen Punktes:
 Was kommt als Nächstes?
 =======================
 
-Dies waren nur die ersten Schritte mit Mapbender. Es gibt viele weitere Funktionen, die Sie ausprobieren können.
+Dies waren nur die ersten Schritte auf dem Weg zur Nutzung von Mapbender. Es gibt noch eine Menge mehr zu entdecken:
 
-Mapbender Webseite: https://mapbender.org/
-
-Sie finden Tutorials unter: https://doc.mapbender.org
-
-Beteiligen Sie sich: https://mapbender.org/community/
+* Besuchen Sie die offizielle `Mapbender-Website <https://mapbender.org/>`_,
+* Finden Sie schnelle Antworten auf die wichtigsten Mapbender-bezogenen Fragen in der :ref:`faq_de`,
+* Werden Sie Mitglied der `Mapbender-Community <https://mapbender.org/community/>`_.

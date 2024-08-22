@@ -16,7 +16,7 @@ After this banner is dismissed it doesn't appear again until you have deleted th
 Configuration
 -------------
 
-Configuration takes place in the ``parameters.yaml`` file under ``application/config/parameters.yaml`` and accounts for the whole Mapbender instance. Please add the parameter ``mapbender.cookieconsent:`` with the value ``true`` or ``false``. If the parameter is missing or the value is set to ``false``, the banner will not be displayed in your applications.
+Configuration takes place in the *parameters.yaml* file and accounts for the whole Mapbender instance. Please add the parameter ``mapbender.cookieconsent`` with the value ``true`` or ``false``. If the parameter is missing or the value is set to ``false``, the banner will not be displayed in your applications.
 
 Example:
 
