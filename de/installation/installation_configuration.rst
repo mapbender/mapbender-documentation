@@ -19,7 +19,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfon
 
 .. note:: **Hinweis:** Das console-Hilfsprogramm wird Dateien in die Verzeichnisse var/cache und var/log schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis var/db und die SQLite Datenbank. Wenn Sie die Applikation in Ihrem Browser öffnen, wird die SQLite-Datenbank mit Server-PHP-Prozess versuchen, auf diese Dateien zuzugreifen oder in die Verzeichnisse mit anderen Benutzerrechten zu schreiben. Stellen Sie sicher, dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
-.. note:: **Wichtiger Hinweis:** Die folgenden ``bin/console`` Schritte gehen davon aus, dass Sie sich oberhalb des `app`-Verzeichnisses befinden (für die git-Installation bedeutet das `mapbender/application/` , andernfalls `mapbender/`).
+.. note:: **Wichtiger Hinweis:** Die folgenden ``bin/console`` Schritte gehen davon aus, dass Sie sich oberhalb des `bin`-Verzeichnisses befinden (für die git-Installation bedeutet das `mapbender/application/` , andernfalls `mapbender/`).
 
 .. code-block:: yaml
 
@@ -108,7 +108,7 @@ Führen Sie das nachfolgende Kommando aus, um die Datenbank zu initialisieren un
 Importieren von Anwendungen aus application/config/applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sie können die Anwendungen, die in dem Ordner applications definiert sind, in die Datenbank importieren:
+Sie können die Anwendungen, die in dem Ordner `applications` definiert sind, in die Datenbank importieren:
 
 .. code-block:: yaml
 
