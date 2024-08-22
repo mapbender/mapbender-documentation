@@ -311,7 +311,7 @@ To manually override JavaScript and CSS/Sass resources, and as an alternative to
 YAML Application files
 -----------------------
 
-YAML application files are stored under `/applications/` (underneath `config/`!). There are three files pre-implemented as example applications:
+YAML application files are stored under `applications/` (underneath `config/`!). There are three files pre-implemented as example applications:
 
 - Mapbender Demo (*mapbender_user*)
 - Mapbender Demo Basic (*mapbender_user_basic*)

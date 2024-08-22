@@ -1041,7 +1041,7 @@ Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per ein
        refreshLayersAfterFeatureSave:  # bei keiner Angabe in diesem Bereich erfolgt kein Karten-Refresh nach Speichern
          - 17
          - 18
-         - osm                         # Namensangabe nur bei Anwendungen unter /applications/ möglich
+         - osm                         # Namensangabe nur bei Anwendungen unter applications/ möglich
       [...]
       
 **Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Mehr Informationen unter: https://github.com/mapbender/mapbender-digitizer
