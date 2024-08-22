@@ -19,7 +19,7 @@ All that can be done using the console utility provided by `Symfony <http://symf
 
 .. note:: The console utility will write files in the var/cache and var/log directories. These operations are made using the user permissions of whatever user you're logged in with. This is also true for the var/db directory and the SQLite database within. When you open the application from within the browser, the SQLite database with its server PHP process will try to access/write all these files with other permissions. So make sure you give the PHP process write access to these files. See last step below.
 
-.. note:: **Important:** The following steps assume that you are in the directory above the `bin` directory (for git installation that means in `mapbender/application/`, else `mapbender/`).
+.. note:: **Important:** The following steps assume that you are in the directory above the `bin` directory (for git installation that means in `mapbender/application/`, otherwise `mapbender/`).
 
 .. code-block:: yaml
 
@@ -106,10 +106,10 @@ Initializing the database can be done using the command:
 
     bin/console mapbender:database:init
 
-Importing applications from application/config/applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Importing applications
+^^^^^^^^^^^^^^^^^^^^^^
 
-It is possible to (re-)import applications from the applications folder into the database with the command:
+It is possible to (re-)import applications from the `applications/` folder into the database with the command:
 
 .. code-block:: yaml
 
@@ -119,11 +119,11 @@ It is possible to (re-)import applications from the applications folder into the
 Configuration files
 -------------------
 
-The configuration files are located under `application/config`.
+The configuration files are located in the `config/` folder.
 
 Find more information in: :ref:`yaml`.
 
-Also have a look at the *.env.local* and the *.env* file at `application`.
+Also have a look at the *.env.local* and the *.env* file at `application/`.
 
 
 Production and Development environment and Caching

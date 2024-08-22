@@ -105,10 +105,10 @@ Führen Sie das nachfolgende Kommando aus, um die Datenbank zu initialisieren un
     bin/console mapbender:database:init
 
 
-Importieren von Anwendungen aus application/config/applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Importieren von Anwendungen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sie können die Anwendungen, die in dem Ordner `applications` definiert sind, in die Datenbank importieren:
+Sie können die Anwendungen, die in dem Ordner `applications` (innerhalb von `config/`) definiert sind, in die Datenbank importieren:
 
 .. code-block:: yaml
 
@@ -118,7 +118,7 @@ Sie können die Anwendungen, die in dem Ordner `applications` definiert sind, in
 Konfigurationsdateien
 ---------------------
 
-Die Konfigurationsdateien liegen unter `application/config`. 
+Die Konfigurationsdateien liegen im Verzeichnis `config/`. 
 
 Mehr Informationen dazu finden Sie im Kapitel: :ref:`yaml_de`.
 

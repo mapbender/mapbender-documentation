@@ -3,7 +3,7 @@
 YAML Configuration (Configuration and Application files)
 ========================================================
 
-The following configuration files are under `application/config` and its subfolders.
+The following configuration files are under the `config/` folder and its subfolders.
 
 
 doctrine.yaml
@@ -311,7 +311,7 @@ To manually override JavaScript and CSS/Sass resources, and as an alternative to
 YAML Application files
 -----------------------
 
-YAML application files are stored under ``application/config/applications``. There are three files pre-implemented as example applications:
+YAML application files are stored under `/applications/` (underneath `config/`!). There are three files pre-implemented as example applications:
 
 - Mapbender Demo (*mapbender_user*)
 - Mapbender Demo Basic (*mapbender_user_basic*)
@@ -403,8 +403,8 @@ Please go to :ref:`en/customization/commands:Application Export, Import & Clonin
 
 Applications can be exported as .json or .yaml file over the console.
 
-A YAML file that has been exported over the console cannot be placed under application/config/application to be imported in a Mapbender installation.
-The YAML format that is produced by exporting over the console is different from the YAML format of the files under application/config/application.
+A YAML file that has been exported over the console cannot be placed under `applications/` to be imported in a Mapbender installation.
+The YAML format that is produced by exporting over the console is different from the YAML format of the files under `applications/`.
 
 
 **Import**
