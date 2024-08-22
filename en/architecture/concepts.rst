@@ -58,6 +58,6 @@ Backend
 =======
 
 The :ref:`backend` is where you configure your Mapbender installation. It's called
-the manager and allows your admins to manage users, roles, services,
+the manager and allows your admins to manage users, groups and roles, services,
 applications and elements.
 
