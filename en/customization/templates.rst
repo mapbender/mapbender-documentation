@@ -3,33 +3,28 @@
 How to create your own Template?
 ################################
 
-Mapbender comes with application templates out of the box, you can find them in the Mapbender CoreBundle ``/application/mapbender/src/Mapbender/CoreBundle/Template``. But usually you want to use your own templates with your own corporate design.
-
+Mapbender comes with application templates out of the box, you can find them in the Mapbender CoreBundle: `/application/mapbender/src/Mapbender/CoreBundle/Template`.
+But usually you want to use your own templates with your own corporate design.
 To prevent overwriting your custom templates after an Mapbender upgrade you should create an extra bundle to safely store your custom files.
-
 You can also change the style of your application with the built-in :ref:`CSS-Editor <css>`.
-
 
 **Steps for including your templates:**
 
-* Create your own bundle
-* Create a new namespace
-* Create a template PHP-file to register your template
-* Create your own Twig-file
-* Create your own CSS-file(s)
-* Register your bundle in src/Kernel.php
-* Use your template
+* Create your own bundle,
+* Create a new namespace,
+* Create a template PHP-file to register your template,
+* Create your own Twig-file,
+* Create your own CSS-file(s),
+* Register your bundle in `src/Kernel.php`,
+* Use your template.
 
-To help you we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files with the following links:
-
-* https://github.com/mapbender/mapbender-workshop/tree/master
+To help you, we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files from the `Workshop bundle <https://github.com/mapbender/mapbender-workshop/tree/master>`_.
 
 
 Create your own bundle
-~~~~~~~~~~~~~~~~~~~~~~
+**********************
 
-User bundles are stored in the src-directory ``/application/src``.
-
+User bundles are stored in the src-directory `/application/src`.
 This is how the structure can look like:
 
 
@@ -57,14 +52,14 @@ This is how the structure can look like:
 
 The following files have to be altered for design changes:
 
-* twig-file: to change the structure (e.g. - delete a component like the sidebar)
-* css-file:  to change colors, icons, fonts
+* twig-file: to change the structure (e.g. - delete a component like the sidebar),
+* css-file:  to change colors, icons, fonts.
 
 
 Create a new namespace
-~~~~~~~~~~~~~~~~~~~~~~
+**********************
 
-The file WorkshopDemoBundle.php creates the namespace for the bundle and refers to the template and to your css-files.
+The *WorkshopDemoBundle.php* file creates the namespace for the bundle and refers to the template and to your css files.
 
 
 .. code-block:: php
@@ -90,14 +85,11 @@ The file WorkshopDemoBundle.php creates the namespace for the bundle and refers 
     }
     
    
-
 Create your own template file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*****************************
 
-In our example the template file is called FullscreenDemo.php. You find it at ``src/Workshop/DemoBundle/Template/FullscreenDemo.php``.
-
+In our example, the template file is called *FullscreenDemo.php*. You can find it at `src/Workshop/DemoBundle/Template/FullscreenDemo.php`.
 In the template file you define the name of your template, the regions that you want to provide and refer to a twig file.
-
 
 .. code-block:: php
 
@@ -136,26 +128,25 @@ In the template file you define the name of your template, the regions that you 
         public $twigTemplate = 'WorkshopDemoBundle:Template:demo_fullscreen.html.twig';
     }
     
+
 Create your own twig-file
-~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************
 
 You find the twig-files at the following path:
 
-* ``application/mapbender/src/Mapbender/CoreBundle/Resources/views/Template``
+* `application/mapbender/src/Mapbender/CoreBundle/Resources/views/Template`
 
 The easiest way to create your own twig file is to copy an existing twig, save it under a new name and change the content like colors.
+Use the existing template from `mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig` and copy it to *fullscreen_demo.html.twig*.
 
-Use the existing template from ``mapbender/src/Mapbender/CoreBundle/Resources/views/Template/fullscreen.html.twig`` and copy it to ``fullscreen_demo.html.twig``.
 
-
-Create your own css-file
-~~~~~~~~~~~~~~~~~~~~~~~~
+Create your own CSS file
+************************
 
 Create an empty css-file and fill it with content. You only have to define the parts that have to look different from the default style of the element.
+Developer tools can help you to find out the styles you want to change.
 
-Firebug can help you to find out the styles you want to change.
-
-Your file could be named like this: ``src/Workshop/DemoBundle/public/demo_fullscreen.css`` and have the following definition:
+Your file could be named `src/Workshop/DemoBundle/public/demo_fullscreen.css` and have the following definition:
 
 .. code-block:: css
 
@@ -220,11 +211,11 @@ The result of these few lines of css will look like this:
 .. image:: ../../figures/workshop_application.png
      :scale: 80
 
-When you open your new application a css-file will be created at:
+When you open your new application, a css-file will be created at:
 
-* ``web/assets/WorkshopDemoBundle__demo_fullscreen__css.css``
+* `web/assets/WorkshopDemoBundle__demo_fullscreen__css.css`
 
-If you do further edits at your css file you may have to delete the generated css file in the assets directory to see the changes. You should also clear the browser cache.
+If you do further edits at your css file, you may have to delete the generated css file in the assets directory to see the changes. You should also clear the browser cache.
 
 .. code-block:: bash
 
@@ -236,15 +227,14 @@ Style the administrational pages
 
 Please change the following css-files for the :ref:`backend` pages:
 
- * login.css : Change the design of the login page
- * manager.css : Change the design of the administration pages (e.g. application overview)
- * password.css : Change the design of the password pages (e.g. Reset Password - page)
+ * *login.css*: Change the design of the **login page**,
+ * *manager.css*: Change the design of the administration pages (e.g. **Application**),
+ * *password.css*: Change the design of the password pages (e.g. **Reset Password**).
 
 You only have to define the parts that have to look different than the default page style.
+Developer tools can help you to find out the styles you want to change.
 
-Firebug can help you to find out the styles you want to change.
-
-Referencing the CSS-files is possible with FOMManagerBundle and FOMUserBundle. They must be filed under ``app/Resources/``. The already contained twig-files overwrite the default settings if configured correctly (Requirements from manager.html.twig file).
+Referencing the CSS-files is possible with FOMManagerBundle and FOMUserBundle. They must be filed under `app/Resources/`. The already contained twig-files overwrite the default settings if configured correctly (Requirements from *manager.html.twig* file).
 Alternatively, it is possible to copy a twig-file and adjust it afterwards.
 
  .. code-block:: bash
@@ -253,16 +243,16 @@ Alternatively, it is possible to copy a twig-file and adjust it afterwards.
 
 
 Register your bundle in config/bundles.php
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+******************************************
 
-Add write access to the ``public`` directory for your webserver user, if need be:
+Add write access to the `public` directory for your webserver user, if need be:
 
 .. code-block:: bash
 
     chmod ug+w public
 
 
-Update the ``public`` directory. Each bundle has its own assets - CSS files, JavaScript files, images and more - but these need to be copied into the public web folder:
+Update the `public` directory. Each bundle has its own assets - CSS files, JavaScript files, images and more - but these must be copied into the public `web` folder:
 
 .. code-block:: bash
 
@@ -280,13 +270,15 @@ Now your template should show up in the template list when you create a new appl
 
 
 How to use a new template
-~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************
+
 There are different ways of how to use the new template:
 
-Usage in YAML-applications
-**************************
 
-You can adjust the YAML-applications in ``config/applications`` and change the template parameter.
+Usage in YAML applications
+==========================
+
+You can adjust the YAML-applications in `config/applications` and change the template parameter.
 
 .. code-block:: yaml
 
@@ -294,24 +286,26 @@ You can adjust the YAML-applications in ``config/applications`` and change the t
 
 
 Usage in new applications from the backend
-******************************************
+==========================================
 
 If you create a new application in the administration interface of Mapbender, you can choose the new template.
 
 
 Usage in an existing application
-********************************
+================================
 
-For existing applications you can change the parameter in the Mapbender database in the column ``template`` of the table ``mb_core_application``.
+For existing applications, you can change the parameter in the Mapbender database in the column **template** of the table **mb_core_application**.
 
-For the *WorkshopDemoBundle* you change the entry from ``Mapbender\CoreBundle\Template\Fullscreen`` to ``Workshop\DemoBundle\WorkshopDemoBundle``.
+For the **WorkshopDemoBundle**, you can change the entry from ``Mapbender\CoreBundle\Template\Fullscreen`` to ``Workshop\DemoBundle\WorkshopDemoBundle``.
 
 
 Usecases
-~~~~~~~~
+********
 
-How do I change the logo, the title and the language?
-This and more tips can be found here: :ref:`yaml`.
+Q: How do I change the logo, the title and the language?
+
+A: This and more tips can be found under :ref:`yaml`.
+
 
 How do I change the buttons?
 ****************************
@@ -328,7 +322,7 @@ Mapbender uses 'Font Awesome Icons' font icon collection:
    font-style: normal;
  }
 
-In your css-file you can refer to a font images like this:
+In your CSS file, you can refer to a font images like this:
 
 .. code-block:: css
 
@@ -336,7 +330,7 @@ In your css-file you can refer to a font images like this:
     content: "\f02f";
   }
 
-If you want to use an image you could place the image in your bundle and refer to it like this
+If you want to use an image, you could place it in your bundle and refer to it like this:
 
 .. code-block:: css
 
@@ -346,12 +340,12 @@ If you want to use an image you could place the image in your bundle and refer t
 
 
 Try this out
-~~~~~~~~~~~~
+************
 
-* you can download the Workshop/DemoBundle at https://github.com/mapbender/mapbender-workshop
-* change the color of your icons
-* change the size of your icons
-* change the color of the toolbar
-* use an image instead of a font-icon for your button
-* move the position of your overview to the left
-* Have a look at the workshop files to see how it works
+* you can download the Workshop/DemoBundle `here <https://github.com/mapbender/mapbender-workshop>`_,
+* change the color of your icons,
+* change the size of your icons,
+* change the color of the toolbar,
+* use an image instead of a font-icon for your button,
+* move the position of your overview to the left,
+* Have a look at the workshop files to see how it works.
