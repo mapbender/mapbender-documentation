@@ -3,57 +3,41 @@
 Directory structure in Mapbender
 ################################
 
-app
+bin
 ***
-This directory contains:
 
-* the php-Cache (`var/cache`)
-* the logs (`var/log`)
-* the configuration directory (`config/`)
-* the application kernel (`src/Kernel.php`) (is called by the FrontendControllers and controls the whole application)
-* the Autoloading (*autoload.php*) 
-* the application specific resource directory (*Resources*)
-* the command line application for maintaining and management tasks (`bin/console`)
+Mapbender-related libraries are stored here, e.g.:
 
+* The command line application for maintaining and managing tasks (`bin/console`)
 
 config
-------
+******
 
-Basic configuration files of Mapbender are placed in the `config/` directory and the `config/packages` directory. Two files are of particular importance:
+Basic configuration files of Mapbender are placed in the `config/` directory and the `config/packages` directory. These files are of particular importance:
 
-* *parameters.yaml*
-* `packages/doctrine.yaml`
+* :ref:`doctrine.yaml<en/customization/yaml:doctrine.yaml>`
+* :ref:`parameters.yaml<en/customization/yaml:parameters.yaml>`
+* *services.yaml*: Serves as entry point to configure services.
 
-More Information: :ref:`yaml`.
-
-  
 config/applications
 -------------------
 
 The directory `config/applications` contains all applications that are defined in a YAML file. 
 
-More information in :ref:`yaml` .
-
-
-bin
-***
-
-Here you find some libraries.
-
+Find more information in :ref:`yaml` .
 
 mapbender
 *********
 
-Directory of the `Mapbender submodule <https://github.com/mapbender/mapbender>`_. Provides the Mapbender-specific bundles and the Mapbender code.
-
+* Directory of the `Mapbender submodule <https://github.com/mapbender/mapbender>`_. Provides the Mapbender-specific bundles and the Mapbender code.
+* Directory for application resources (`Resources/`)
 
 mapbender/...../translations
 ----------------------------
 
-Directory: `mapbender/src/Mapbender/CoreBundle/Resources/translations/`
+Directory: `../mapbender/src/Mapbender/CoreBundle/Resources/translations/`
 
-The translations are stored in `YAML files <https://en.wikipedia.org/wiki/YAML>`_. Every language needs a YAML-file, like *messages.en.yaml* for the English translation.
-
+The translations are stored in `YAML files <https://en.wikipedia.org/wiki/YAML>`_. Every language needs a YAML-file, like *messages.fr.yaml* for the French translation of Mapbender.
 
 public
 ******
@@ -66,12 +50,11 @@ It controls:
 * *index.php* - the FrontendController (PHP script which can be called).
 * *index_dev.php* - FrontendController for easy access to the development environment. By default, it can only be accessed from local IP addresses.
 
-
 public/bundles
 --------------
 
-* storage for the static resources of the single bundles.
-* the following command copies the resources from the bundles to the folder: 
+* Is the storage for the static resources of the single bundles.
+* The following command copies the resources from the bundles to the folder: 
 
 .. code-block:: yaml
 
@@ -83,11 +66,21 @@ public/bundles
 src
 ***
 
-* directory for applications specific bundles
+* Directory for applications specific bundles
+* The application kernel (`src/Kernel.php`) (is called by the FrontendControllers and controls the whole application)
 
+var
+***
+
+This directory contains:
+
+* the caches (`var/cache/dev` and `var/cache/prod`)
+* the logs (`var/log`)
+* Sqlite-databases (`var/db`)
 
 vendor
 ******
 
-* Directory for external libraries (loaded by composer) are placed. Resources are used by Symfony using the Autoloading.
+Directory for external libraries (loaded by composer) are placed here. Resources are used by Symfony using the Autoloading:
 
+* Autoloading: *autoload.php*
