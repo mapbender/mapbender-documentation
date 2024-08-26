@@ -13,7 +13,7 @@ Hier liegen diverse Bibliotheken, z.B.
 config
 ******
 
-Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis `config/` sowie im Verzeichnis `config/packages`. Zwei Dateien sind dabei von besonderer Bedeutung:
+Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis `config/` sowie im Verzeichnis `config/packages`. Diese Dateien sind dabei von besonderer Bedeutung:
 
 * :ref:`doctrine.yaml<de/customization/yaml:doctrine.yaml>`
 * :ref:`parameters.yaml<de/customization/yaml:parameters.yaml>`
