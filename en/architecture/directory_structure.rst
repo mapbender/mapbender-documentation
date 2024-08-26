@@ -76,7 +76,7 @@ This directory contains:
 
 * the caches (`var/cache/dev` and `var/cache/prod`)
 * the logs (`var/log`)
-* Sqlite-databases (`var/db`)
+* Sqlite-databases (`var/db/`)
 
 vendor
 ******
