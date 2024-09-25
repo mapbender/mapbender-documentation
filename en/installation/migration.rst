@@ -7,15 +7,48 @@ Migration Guide
     
     This page gives migration instructions on specific Mapbender versions. For general tips on updating, see the :ref:`installation_update` page instead.
 
-.. note::
+.. tip::
     
-    For in-depth information from the Mapbender development team, also see the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/UPGRADING.md>`_.
+    For in-depth information from the Mapbender development team, also see the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_.
     
 
-Migration to Mapbender 4
-************************
+Migration to Mapbender 4.0.0
+****************************
 
-* For Mapbender 4, all ``.yml`` file extensions were transformed into ``.yaml``. When migrating, the corresponding syntax must be adjusted accordingly.
+* Carefully check the `Upgrading Guide on GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_ before you do the update.
+
+* You will notice that the Symfony Directory Structure changed a lot.
+* For Mapbender 4, all *.yml* file extensions were transformed into *.yaml*.
+* *config.yml* is omitted.
+* public files moved from `web/` to `public/`.
+* Instead of multi parameters in *parameters.yml*, the database definition is replaced by an environment variable ``MAPBENDER_DATABASE_URL``. Configure it by adding it in your *.env.local* file. If you have multiple connections, use one env variable per connection and configure these in the `config/packages/doctrine.yaml` file.
+* The Apache Vhost Definition or ALIAS has to be changed. Refer to `public` (instead of `web`). Call ``index.php`` instead of ``app.php``). See :ref:`installation instruction<en/installation/installation_ubuntu:Configuration Apache 2.4>`.
+* Environment can now be set using the environment variable ``APP_ENV`` (see *.env.local*), ``.index_dev.php`` (instead of ``app_dev.php``) is still available as an alternative for accessing the dev environment.
+* Database permission can be migrated using ``bin/console mapbender:security:migrate-from-acl``. Do that before executing the ``schema:update`` command, otherwise your old ACL tables will be gone!
+
+
+Upgrade database
+----------------
+
+.. warning:: Execute the following commands in the specified order to upgrade (after bringing the symfony directory structure up to date). First, make a backup of your database!
+
+1. Replace Doctrine's removed ``json_array`` type to ``json``. If you are using a DBMS other than SQlite, PostgreSQL and MySQL, you need to do that manually:
+
+.. code-block:: bash
+
+    bin/console mapbender:database:upgrade 
+
+2. Migrate security definitions from the ACL system to the new permission system:
+
+.. code-block:: bash
+
+    bin/console mapbender:security:migrate-from-acl
+
+3. Update the rest of the database. This must be executed last, since it deletes the old ACL tables:
+
+.. code-block:: bash
+    
+    bin/console doctrine:schema:update --complete --force``
 
 
 Migration to Mapbender 3.3.4
@@ -27,7 +60,7 @@ Migration to Mapbender 3.3.4
 
     bin/console doctrine:schema:update --force
 
-* Next, you need to configure CSRF tokens to be used during login to the **csrf_token_generator** form_login section in ``security.yaml`` as follows:
+* Next, you need to configure CSRF tokens to be used during login to the **csrf_token_generator** form_login section in *security.yaml* as follows:
 
 .. code-block:: yaml
 
@@ -36,49 +69,22 @@ Migration to Mapbender 3.3.4
         login_path: /user/login
         csrf_token_generator: security.csrf.token_manager
 
-* For productive environments, it is important to install an SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yaml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+* For productive environments, it is important to install an SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your *parameters.yaml* to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
 Migration to Mapbender 3.3
 **************************
 
-* Make sure you have PHP >= 7.4 or PHP 8.x
+* Make sure you have PHP >= 7.4 or PHP 8.x.
 * Provide a backup of your database. 
-* Update your database schema to 3.3 with bin/console doctrine:schema:update --force
-* doctrine.yaml: Please note that in the doctrine connection configuration variables must be set with quotes, for example '%database_driver%'
-* CAUTION: Please note that the eye at application is used from (3.2.x) onwards to make the application available for the anonymous user (public access). Before 3.2.x, the eye/checkbox at security was used to publish an application.  
+* Update your database schema to 3.3 with ``bin/console doctrine:schema:update --force``.
+* *doctrine.yaml*: Please note that in the doctrine connection configuration variables must be set with quotes, for example '%database_driver%'
+* CAUTION: Please note that the eye at application is used from (3.2.x) onwards to make the application available for the anonymous user (public access). Before 3.2.x, the eye/checkbox at **Security** was used to publish an application.  
 
 To update from 3.2.x to 3.3.x should be quite easy.
 
 .. note:: 
     
     If you update from a version < 3.2, you have to follow the steps described at the `Migration to Mapbender 3.2 <#Migration to Mapbender 3.2>`_ section below.
-
-
-New features
-============
-
-Styling
--------
-
-Styling is now possible via variables that can be passed to your application. 
-
-* `Mapbender <https://github.com/mapbender/mapbender/blob/master/src/Mapbender/CoreBundle/Resources/public/sass/libs/_variables.scss>`_
-* Create your own scss file, see this `Demo Bundle SCSS Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Resources/public/demo_variables_blue.scss>`_.
-* Modify your template - add function getSassVariablesAssets and refer to your scss file see, see this `Demo Bundle Template Example <https://github.com/mapbender/mapbender-workshop/blob/master/src/Workshop/DemoBundle/Template/DemoFullscreen.php#L23>`_.
-
-
-Sketch
-------
-
-* Sketch now supports to draw a circle with a defined radius. You draw the circle first and then edit the circle and define a radius.
-* Sketch now allows to define colors to be offered to draw. You can also activate a color picker
-
-
-FeatureInfo
------------
-
-* FeatureInfo Highlight now allows to style the fill and stroke and opacity
-
 
 Migration to Mapbender 3.2
 **************************
@@ -87,32 +93,34 @@ You can migrate older Mapbender installations to Mapbender 3.2.
 
 Check the :ref:`installation_update` Guide.
 
-* Make sure you have PHP >= 7.1.0 and PHP < 8 
+* Make sure you have PHP >= 7.1.0 and PHP < 8.
 * Provide a backup of your database. 
-* Update your database schema to 3.2 with bin/console doctrine:schema:update --force
-* CAUTION: Please note that the eye at application is from (3.2.x) used to make the application available for the anonymous user (public access). Before the eye /checkbox at security was used to publish an application.  
+* Update your database schema to 3.2 with ``bin/console doctrine:schema:update --force``.
+* CAUTION: Please note that the eye at application is from (3.2.x) used to make the application available for the anonymous user (public access). Before the eye/checkbox at **Security** was used to publish an application.  
 
 Some elements may not work after the update and may need a closer look.
 
 
 Update map_engine_code
-======================
+----------------------
 
 If it makes sense, update all applications to map_engine_code current.
+
+.. code-block:: sql
 
     Update mb_core_application set map_engine_code = 'current';
 
 
 SearchRouter
-============
+------------
 
-In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/release/3.2/application/config/applications/mapbender_demo_nrw.yaml>`_
+In the Workshop bundle, you can find a `Demo <https://github.com/mapbender/mapbender-workshop/blob/master/app/config/applications/mapbender_demo_nrw.yml>`_.
 
 1. deprecated empty: use placeholder instead
 
 2. For text and choice you have to define the full class-path.
 
-You also find information at `Best Practices Page <https://github.com/mapbender/mapbender/wiki/Best-practices:-form-types#inversion-of-choices>`_
+You also find information at `Best Practices Page <https://github.com/mapbender/mapbender/wiki/Best-practices:-form-types#inversion-of-choices>`_.
 
 You can update the configuration with the following SQL.
 
@@ -139,8 +147,8 @@ You can update the configuration with the following SQL.
         Siegburg - this is the value not the key: Siegburg
 
 
-SimpleSearch
-============
+Migrating SimpleSearch
+----------------------
 
 SimpleSearch element was improved. You can now define the projection of the result that comes from the Solr Service. Mapbender will then transform the result to the projection of the map.
 
@@ -156,16 +164,16 @@ SimpleSearch Supports Nominatim, Photon from version 3.2.5 - see workshop demo a
                      query_ws_replace: +
 
 
-BaseSourceSwitcher
-==================
+Migrating BaseSourceSwitcher
+----------------------------
 
-Please note that on start of an application, all WMS are activated where the root-Layer is activated.
+Please note that on start of an application, all WMS are activated where the root layer is activated.
 
-Before 3.2, it was possible to activate all Basesource and only the first WMS was visible on start.
+Before 3.2, it was possible to activate all BaseSources, where only the first WMS was visible on start.
 
 
 Template / CSS
-==============
+--------------
 
 CSS change. Plus, there will be a big redesign in backend and frontend in the upcoming versions.
 
@@ -173,8 +181,8 @@ CSS change. Plus, there will be a big redesign in backend and frontend in the up
 * Define your template as desktop-template
 
 
-Digitizer
-=========
+Migrating Digitizer
+-------------------
 
 Digitizer is available for Mapbender >= 3.2.2. The new Digitizer Version is 1.4. Some functionality is not updated to 1.4 already (e.g. cluster).
 
@@ -218,14 +226,14 @@ There is a new style called unsaved.
 
 
 WMS Layer visibility
-====================
+--------------------
 
-Make sure that your WMS provides a proper extent for all supported EPSG-codes (this is used and saved in table mb_wms_wmslayersource Spalten latlonbounds und boundingboxes). 
+Make sure that your WMS provides a proper extent for all supported EPSG-codes (this is used and saved in table ``mb_wms_wmslayersource`` columns latlonbounds and boundingboxes). 
 Else it can happen that a layer is not requested for the given extent of your map.
 
 
-Sketch
-======
+Notice on the Sketch element
+----------------------------
 
 Redlining was renamed to Sketch (>= 3.2.3).
 
@@ -237,14 +245,14 @@ Redlining was renamed to Sketch (>= 3.2.3).
 		
 		
 FeatureInfo
-===========
+-----------
 
-* showOriginal deprecated - parameter not available anymore (from 3.2.3).
+* ``showOriginal`` deprecated - parameter not available anymore (from 3.2.3).
 * highlighting: true - new >= 3.2.3 highlights the geometry if you have WKT integrated in the featureinfo result - see `issue 1287 <https://github.com/mapbender/mapbender/issues/1287>`_ and also this `FeatureInfo blog post <https://wheregroup.com/blog/details/mapbender-featureinfo-mit-highlighting-der-treffer-geometrie/>`_
 
 
 Print - Print queue
-===================
+-------------------
 
 * Mapbender supports print queue
 * see `Queue blog post <https://wheregroup.com/blog/details/mapbender-druckauftraege-verwalten-und-wiederverwenden-einrichtung-der-warteschleife/>`_

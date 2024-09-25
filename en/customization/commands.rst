@@ -13,7 +13,6 @@ Make sure you are in the correct directory (above the app directory)
 
 * mapbender (installation via package)
 
-.. _app_command_help:
    
 Help command
 ------------
@@ -25,8 +24,6 @@ The parameter ``--help`` displays the help message for every command, for exampl
     bin/console mapbender:user:create --help
    
 
-.. _app_command_export_import_clone:
-
 Application Export, Import & Cloning
 ------------------------------------
 
@@ -35,9 +32,18 @@ bin/console mapbender:application:export
 
 You can export an application as JSON- or YAML-file. In the command you have to add the Url title (slug) of the application and define the export file.
 
+For .json files (also available via browser):
+
 .. code-block:: yaml
 
    bin/console mapbender:application:export mapbender_user_db --format=json > export.json
+
+
+For .yaml files (only via command line):
+
+.. code-block:: yaml
+
+   bin/console mapbender:application:export mapbender_user_db --format=yaml > export.yaml
 
 
 bin/console mapbender:application:import
@@ -56,8 +62,7 @@ You can import an application from a JSON or YAML-file. Mapbender will automatic
 bin/console mapbender:application:clone
 ***************************************
 
-You can clone an existing application in the Application backend. This will create a new application with a *_imp* suffix as application name.
-In the example below, the name of the new application becomes `mapbender_user_yml_imp1`.
+In the application backend, you can also clone an existing application. This will generate a new application with a suffix added to the application name. For yaml applications, a *_db* suffix is appended, while for applications from the database, a *_imp* suffix is added.
 
 .. code-block:: bash
 
@@ -178,10 +183,12 @@ bin/console doctrine:schema:update
 
 The command is needed on Mapbender update. It generates the SQL needed to synchronize the database schema to the new Mapbender version. 
 
+.. note:: The Mapbender database should be an independent database. Your geodata should be stored other separate databases. While updating the Mapbender database, tables that are not covered by a doctrine schema might be deleted. Geodata in independent databases is not affected by this.
+
 .. code-block:: yaml
 
-    bin/console doctrine:schema:update --dump-sql
-    bin/console doctrine:schema:update --force
+    bin/console doctrine:schema:update --complete --dump-sql
+    bin/console doctrine:schema:update --complete --force
 		
 * --dump-sql    Shows changes in the database schema.
 * --force       Executes the changes in the database schema.
@@ -211,10 +218,10 @@ The queued print is disabled by default because it requires some external integr
 
 	mapbender.print.queueable: true
 
-Read more about the general characteristics of queued print at :ref:`queued_print`. Also `here <https://github.com/mapbender/mapbender/pull/1070>`_
+Read more about the general characteristics of queued print at :ref:`en/elements/export/printclient:Queued Print`. Also `here <https://github.com/mapbender/mapbender/pull/1070>`_
 
 
-The print assistant is then updated in the backend of Mapbender and two new lines appear: mode and queue. 
+The print assistant is then updated in the :ref:`backend` of Mapbender and two new lines appear: mode and queue. 
 Mode is set to "queue" and queue is set to "global", if the print jobs are expected to be accessible to all colleagues. 
 The new tab "Recent jobs" (which shows your scheduled print jobs) appears in the print client pop-up window. 
 
@@ -449,7 +456,7 @@ You can stop the server again with Control -C.
     APP_ENV=prod symfony server:start --no-tls
     
      
-Clear cache 
+Clear cache
 -----------
 
 bin/console cache:clear
@@ -478,7 +485,7 @@ WMS Services
 ------------
 
 bin/console mapbender:wms:add
-***********************************
+*****************************
 
 Adds a new WMS Source to your Mapbender Service repository.
 
@@ -490,6 +497,23 @@ Adds a new WMS Source to your Mapbender Service repository.
     * * osm OpenStreetMap
     * * osm-grey OpenStreetMap (grey scale)
     Saved new source #76
+
+
+bin/console mapbender:wms:assign
+********************************
+
+Adds a WMS source instance from the sources repository to a Mapbender application.
+
+.. code-block:: yaml
+
+	bin/console mapbender:wms:assign <application> <source> [<layerset>]
+
+Configuration
+-------------
+
+* `application`: ID or slug of the application,
+* `source`: ID of the WMS service,
+* `layerset` (optional): ID or name of the layerset. The default value is *main* or the first layerset in the application.
 
 
 bin/console mapbender:wms:parse:url
@@ -550,23 +574,6 @@ Command to displays layer information of a persisted WMS source. You have to par
      * * osm OpenStreetMap
      * * osm-grey OpenStreetMap (grey scale)
 
-
-
-bin/console mapbender:wms:validate:url 
-**************************************
-
-Command to check the accessibility of the WMS data source. The available layers are listed, if the service is accessible. 
-
-.. code-block:: yaml
-
-    bin/console mapbender:wms:validate:url "https://osm-demo.wheregroup.com/service?VERSION=1.3.0"
-    
-	WMS source loaded and validated
-	Source describes 3 layers:
-	* OpenStreetMap (WhereGroup)
-	* OpenStreetMap
-	* OpenStreetMap (grey scale)
-    
     
 Other
 -----
@@ -580,7 +587,7 @@ Use this command to update the hostname in the source URLs, eliminating the need
 
   bin/console mapbender:source:rewrite:host [options] [--] <from> <to>
 
-As usual, the :ref:`app_command_help` shows more options.
+As usual, the :ref:`en/customization/commands:Help command` shows more options.
 
 Example to update the hostname:
 
@@ -596,9 +603,7 @@ Example to update the hostname:
 	14 urls unchanged
 
 
-.. _mapbender_config_check:
-
-bin/console mapbender:config:check 
+bin/console mapbender:config:check
 **********************************
 
 Command to check the system configuration and mapbender requirements. Useful command to determine whether dependencies are compliant and database access works.

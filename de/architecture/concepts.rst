@@ -41,5 +41,5 @@ Das Frontend ist die Anwendungssicht der Mapbender-Installation. Es beinhaltet d
 Backend
 =======
 
-Über das Backend wird die Mapbender-Installation konfiguriert. Es wird auch der Manager genannt. Mit dem Backend können Administratoren Benutzer, Rollen, Dienste, Anwendungen und Elemente verwalten.
+Über das :ref:`backend_de` wird die Mapbender-Installation konfiguriert. Es wird auch der Manager genannt. Mit ihm lassen sich Benutzer, Gruppen und Rollen, Dienste, Anwendungen und Elemente verwalten.
 

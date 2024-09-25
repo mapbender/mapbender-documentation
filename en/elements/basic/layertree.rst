@@ -3,6 +3,8 @@
 Layertree
 *********
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Functions
 =========
 
@@ -47,10 +49,11 @@ To use the different Layersets in our Layertree, various adjustments are necessa
 #. Configuration of the map to display the Layersets 
 #. Configuration of the Layertree itself
 
-Layers are included in the application via the **Layerset** tab in the backend.
+Layers are included in the application via the **Layerset** tab in the :ref:`backend`.
 
-The instances are the references to the individual WMS services. With the large ``+`` button, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
-For a detailed documentation on how the services can be integrated and registered correctly, please head over to the :ref:`layerset` and :ref:`sources` documentation..
+The instances are the references to the individual WMS services. With |mapbender-button-add|, new Layersets can be created. New layers can be integrated in the application by adding registered instances into Layersets. In the example, the Layerset "overview" is used for displaying the overview map.
+For a detailed documentation on how the services can be integrated and registered correctly, please head over to the :ref:`layerset` and :ref:`sources` documentation.
+
 
 .. figure:: ../../../figures/mapbender_add_source_to_application.png
            :scale: 80
@@ -83,7 +86,7 @@ In the following section, we walk through an exemplary configuration of a Layert
 In the example, we defined one **Layerset** with one instance:
 
 * Layerset **World**: 
-    * Instance OSM Demo Service https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+    * Instance `OSM Demo Service <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 The registered instance of the OSM  Demo Service is automatically included in Mapbender's installation. The WMS only has to be integrated into an existing Layerset. Switch to the tab Layersets. The following example uses the Layerset "World". 
 In case of difficulties with the integration, :ref:`layerset` provides useful information.
@@ -122,17 +125,17 @@ For a better understanding of the functions and their usage, we now edit the bac
 
 By enabling **Show base sources**, instances that have been loaded as a base source in the application are displayed in the Layertree.
 
-If you activate **Autoopen**, the Layertree is open by default and does not need to be activated by clicking on a button or the unfolding of a sidepane. The **Title** of the element is displayed in the "Layouts" list and allows you to distinguish between different layertrees.
+If you activate **Autoopen**, the Layertree is open by default and does not need to be activated by clicking on a button or the unfolding of a sidepane. The **Title** of the element is displayed in the :ref:`layouts` list and allows you to distinguish between different layertrees.
 
 Via the **Menu** a number of functions can be activated, which are then available in the layertree.
 
-* *Remove layer* (remove layer from the application session)
-* *Opacity* (change the opacity of a layer)
-* *Zoom to layer* (zoom to full layer extent)
-* *Metadata* (show the metadata of the layer)
-* *Dimension* (change the dimension, e.g. time or elevation of the Layer - read more about the :ref:`dimensions_handler` )
+* **Remove layer**: Remove a layer from the application session
+* **Opacity**: Change the opacity of a layer
+* **Zoom to layer**: Zoom to full layer extent
+* **Metadata**: Show the metadata of the layer
+* **Dimension**: Change the dimension, e.g. time or elevation of the Layer. Read more about the :ref:`dimensions_handler`.
 
-.. figure:: ../../../figures/layertree/layertree_menu.png
+.. figure:: ../../../figures/layertree/layertree_menu_en.png
            :scale: 80
            :alt: Configuration for the context menu.
 
@@ -145,8 +148,6 @@ The individual functions can be activated by clicking on the buttons. All active
            :alt: Context menu of the layer in the Layertree.
 
            Context menu of the layer in the Layertree.          
-
-The function **Hide visibility by folders** allows to save the configuration of the opacity. When active, the opacity of the individual layer is not displayed and cannot be changed.
 
 The function **Hide info** allows you to disable the "i"-icon. If enabled, the "i"-icon next to a layer name indicates if the FeatureInfo function is active for that layer. The function is inactive if the "i"-icon is grayed out. If you activate the function with a click, the icon will turn dark gray and be framed. If activated, the requested information of the layer appears in a dialogue box. 
 
@@ -164,7 +165,7 @@ The checkbox next to its respective layer name allows to turn a layer on and off
 
 
 Workflow thematic Layertree
--------------------------------
+---------------------------
 
 In the following section, we walk through an exemplary configuration of a Layertree with advanced features, such as thematic layersets, in three steps:
 
@@ -177,17 +178,17 @@ In the following section, we walk through an exemplary configuration of a Layert
 In the example, we define two layersets with two instances each:
 
 * Layerset **Project NRW**:
-    * Instance `DTK50 NRW <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-    * Instance `Wald NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Instance `NW DTK50 <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instance `Wald und Holz NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 * Layerset **World**: 
-    * Instance OSM  Demo Service http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+    * Instance `OpenStreetMap (OSM) <http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
     * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
 
 For the configuration of the layersets, the four services mentioned above were added as instances (For detailed information, see above or in the :ref:`layerset` and :ref:`sources` documentation).
 
-For this example, the above mentioned steps were performed to add the Layerset "World" **[2]** with the instance "osm". Now we add the instance "GEBCO" in this Layerset. 
-To use the thematic grouping, we create a new Layerset named "Project NRW" **[3]** and load the two instances "DTK50 NRW" and "Forest NRW" into our new Layerset "Project NRW".  
+For this example, the above mentioned steps were performed to add the Layerset "World" with the instance "OpenStreetMap (OSM)". Now we add the instance "GEBCO" in this Layerset. 
+To use the thematic grouping, we create a new Layerset named "Project NRW" and load the two instances "NW DTK50" and "Wald und Holz NRW(Forest NRW)" into it.  
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex_en.png
            :scale: 80
@@ -195,11 +196,11 @@ To use the thematic grouping, we create a new Layerset named "Project NRW" **[3]
 
            Configuration of Layersets for a thematic Layertree.
 
-The Layerset should now contain three Layersets. The **Overview** [1] for the overview map, the **Project NRW** Layerset [2] with two regional data sets from Western Germany and the **World**-Layerset [3] with the supraregional data. 
+The Layerset should now contain three Layersets. The **Overview** for the overview map, the **Project NRW** Layerset with two regional data sets from Western Germany and the **World**-Layerset with the supraregional data. 
 
 **Configuration of the map to display the Layerset**
 
-Now, we configure the :ref:`Map element <map>` to display the Layersets in the map. To do this, we switch to the **Layouts** backend tab and edit the feature in the map area.
+Now, we configure the :ref:`Map element <map>` to display the Layersets in the map. To do this, we switch to the :ref:`layouts` tab and edit the feature in the map area.
 It is now important that you set an active checkbox in the Layerset "World" AND Layerset "Project NRW", so that they both appear in the application.
 
 If you have questions regarding further configuration of the map, you can view its configuration in the :ref:`Map element <map>`.
@@ -211,7 +212,7 @@ If you have questions regarding further configuration of the map, you can view i
 
            Configuration of Layersets for a thematic Layertree.
 
-**Configuration of the thematic Layertree itself**
+**Configuration of the thematic Layertree**
 
 The last step is the creation of the Layertree itself. In this example, we add the thematic Layertree to the sidepane.
 
@@ -229,7 +230,7 @@ Thus, to let the **themes** in the application appear as you want, there are sev
 :[1] View theme:
   If this option is set, the Layerset appears as an additional level. If this option is not set, the defined instances are displayed on the main level.
 :[2] Theme open or closed:
-  If this option is set (symbol of the open folder), the theme in the Layertree is automatically opened or closed.
+  If this option is set (symbol of the open folder), the theme in the Layertree is automatically opened or closed (Condition: "View theme" is also checked).
 
 If we keep the default settings in the theme "World" and activate the other options in the theme "Project NRW", the configuration of the element will look like this:
 
@@ -250,8 +251,8 @@ Now we have the Layersets integrated as thematic groups. By configuring the them
 The Layerset "World" is displayed as a theme, but it is closed and the two buttons are not available. In the Layerset "Project NRW" the theme is shown unfolded upon opening the application. The layers can be activated via a button.
 
 
-YAML-Definition:
-=================
+YAML-Definition
+===============
 
 This template can be used to insert the element into a YAML application.
 

@@ -13,7 +13,7 @@ Mapbender benötigt eine Datenbank zur Speicherung der Administrationsinformatio
 Voraussetzungen
 ---------------
 
-* PHP NTS >= 8.0 (https://windows.php.net/download/)
+* PHP NTS >= 8.1 (https://windows.php.net/download/)
 * Apache Installation, als Dienst eingerichtet (https://www.apachelounge.com/download/) mit folgenden aktivierten Modulen:
     * mod_rewrite
     * mod_fcgid
@@ -28,10 +28,9 @@ Als Webserver kann auch Nginx verwendet werden. In dieser Anleitung wird darauf 
 Konfiguration PHP
 -----------------
 
-* Entpacken des Zip-Archives, z.B. nach c:\\php
+* Entpacken des Zip-Archives, z.B. nach `c:\\php`.
 * Abhängig von der PHP-Version werden unter Windows PHP-Variablen für ein Temp-Verzeichnis nicht richtig gesetzt.
-
-* Es muss deshalb geprüft werden, ob die folgenden Variablen (php.ini) gesetzt sind:
+* Es muss deshalb geprüft werden, ob die folgenden Variablen (*php.ini*) gesetzt sind:
 
 .. code-block:: ini
 
@@ -39,9 +38,8 @@ Konfiguration PHP
     upload_tmp_dir
     date.timezone
 
-* der Pfad vom PHP-bin Verzeichnis zur PATH-Variable (Windows-Umgebungsvariable) muss hinzugefügt werden
-
-* Aktivieren Sie die benötigten PHP-Erweiterungen in der php.ini Konfigurationsdatei:
+* Der Pfad vom `PHP-bin`-Verzeichnis zur ``PATH``-Variable (Windows-Umgebungsvariable) muss hinzugefügt werden.
+* Aktivieren Sie die benötigten PHP-Erweiterungen in der *php.ini* Konfigurationsdatei:
 
 .. code-block:: ini
 
@@ -64,24 +62,22 @@ Konfiguration PHP
 Mapbender entpacken und im Webserver registrieren
 -------------------------------------------------
 
-Download der aktuellen Mapbender Version (https://mapbender.org/builds/mapbender-starter-current.zip) und entpacken nach c:\\mapbender\\
+Download der `aktuellen Mapbender Version <https://mapbender.org/builds/mapbender-starter-current.zip>`_ und entpacken nach `c:\\mapbender\\`
     
 
 Konfiguration Apache
 --------------------
 
-* ein Unterordner "conf.d" muss im Verzeichnis <apache>/conf erstellt werden
+* Ein Unterordner `conf.d` muss im Verzeichnis `<apache>/conf` erstellt werden
 
-
-
-In der httpd.conf am Ende einfügen:
+In der *httpd.conf* am Ende einfügen:
 
 .. code-block:: apache
 
                 # Include directory conf.d
                 Include "conf/conf.d/*.conf"
 
-Datei **<apache>\\conf\\conf.d\\mapbender.conf** mit dem folgenden Inhalt anlegen:
+Datei `<apache>\\conf\\conf.d\\mapbender.conf` mit dem folgenden Inhalt anlegen:
   
 .. code-block:: apache
 
@@ -103,7 +99,7 @@ Der Apache Webserverdienst muss im Anschluss neu gestartet werden.
 mod_fcgid
 ---------
 
-Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
+Datei `<apache>\\conf\\conf.d\\fcgi.conf` mit dem folgenden Inhalt anlegen:
 
 .. code-block:: apacheconf
 
@@ -143,21 +139,15 @@ Datei **<apache>\\conf\\conf.d\\fcgi.conf** mit dem folgenden Inhalt anlegen:
 Konfiguration PostgreSQL
 ------------------------
 
-Konfiguration der Datenbankverbindung erfolgt in der Datei application/config/parameters.yaml.
-
-Weitere Informationen im Kapitel :ref:`yaml_de`.
+Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer *.env.local*-Datei hinzufügen.
 
 .. code-block:: yaml
 
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:     ~
-    database_user:     postgres
-    database_password: geheim
-    
-Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befehle eingeben: 
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+
+Weitere Informationen zur Einrichtung von Datenbankverbindungen finden sich im Kapitel :ref:`yaml_de`.
+
+Öffnen Sie nun die Eingabeaufforderung. Zur Initialisierung der Datenbank geben Sie bitte folgende Befehle ein:
 
 .. code-block:: text
  
@@ -167,7 +157,7 @@ Die Eingabeaufforderung öffnen. Zur Initialisierung der Datenbank folgende Befe
     php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
 
-Für die Administration von Mapbedner wird ein Root-Benutzer benötigt. Dieser Benutzer wird über den folgende Befehl angelegt:
+Für die Administration von Mapbender wird ein Root-Benutzer benötigt. Dieser Benutzer wird über den folgende Befehl angelegt:
 
 .. code-block:: text
 
@@ -186,11 +176,12 @@ Die Mapbender Installation kann unter **http://[hostname]/mapbender/** aufgerufe
 
 Überprüfen Sie, ob der Alias erreichbar ist:
 
-* http://localhost/mapbender/
+* ``http://localhost/mapbender/``
 
 Per Voreinstellung lauten die Anmeldedaten (wenn die SQLite-Datenbank verwendet wurde)
 
-Benutzername: "root", Passwort: "root"
+* Benutzername: root
+* Passwort: root
 
 Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
@@ -198,9 +189,9 @@ Zur Überprüfung der Konfiguration dient der folgende Befehl:
 
 	php.exe bin/console mapbender:config:check
 
-.. hint:: Bitte beachten Sie, dass der Befehl mapbender:config:check die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise php -r 'phpinfo();' zur Ausgabe der PHP-Webserver Einstellungen.
+.. hint:: Bitte beachten Sie, dass der Befehl ``mapbender:config:check`` die PHP-CLI Version nutzt. Die Einstellungen der CLI-Version können sich von denen der Webserver PHP-Version unterscheiden. Nutzen Sie beispielsweise ``php -r 'phpinfo();'`` zur Ausgabe der PHP-Webserver Einstellungen.
 
-Weitere Informationen dazu finden Sie unter :ref:`mapbender_config_check_de`.
+Weitere Informationen dazu finden Sie unter :ref:`de/customization/commands:bin/console mapbender:config:check`.
 
 Glückwunsch! Mapbender wurde erfolgreich installiert.
 Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`Mapbender Schnellstart <quickstart_de>`.

@@ -18,7 +18,7 @@ Mehr zu diesem Thema finden Sie unter :ref:`yaml_de`.
 
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 
-.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`environments_de`.
+.. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`de/quickstart:Starten von Mapbender als Produktivumgebung`.
 
 
 YAML-Definition für das Element digitizer in der Textarea unter schemes
@@ -876,11 +876,11 @@ auf.
 
 Das Verzeichnis ist:
 
-* <mapbender>/web/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+* ``<mapbender>/web/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png``
 
 Die in der Datenbank verlinkte URL ist:
 
-* http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png
+* ``http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png``
 
 
 
@@ -1056,7 +1056,7 @@ Karten-Refresh nach Speichern
 
 Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option ``refreshLayersAfterFeatureSave`` aktiviert werden. Über diesen Parameter werden die definierten Layer-Instanzen aus dem Map-Element neu geladen. Damit werden Änderungen in WMS-Diensten direkt in der Karte sichtbar. Dieses Event wird nur gestartet, wenn der Speichern Knopf aus dem Attributdialog verwendet wird.
 
-Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im Backend mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
+Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im :ref:`backend_de` mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
 
 
 .. image:: ../../../../figures/digitizer/layerinstance_id.png
@@ -1071,7 +1071,7 @@ Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per ein
        refreshLayersAfterFeatureSave:  # bei keiner Angabe in diesem Bereich erfolgt kein Karten-Refresh nach Speichern
          - 17
          - 18
-         - osm                         # Namensangabe nur bei Anwendungen unter application/config/application möglich
+         - osm                         # Namensangabe nur bei Anwendungen unter applications/ möglich
       [...]
       
 **Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Mehr Informationen unter: https://github.com/mapbender/mapbender-digitizer
@@ -1143,7 +1143,7 @@ Im folgenden einige Anwendungsbeispiele. Falls mehrere Parameter in einem Event 
 
 **Speichern von festen Sachdaten in zusätzlichen Attributspalte:**
 
-Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit der Spalte "interests" und dem festen Wert "maps". Beim Speichern wird der feste Wert in die Tabelle gespeichert und kann z.B. über einen Filter für die selektierte Anzeige genutzt werden. 
+Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werden können. Hier geschieht das mit der Spalte "interests" und dem festen Wert "maps". Beim Speichern wird der feste Wert in die Tabelle gespeichert und kann z.B. über einen Filter für die selektierte Anzeige genutzt werden. 
 
 .. code-block:: yaml
 
@@ -1152,7 +1152,7 @@ Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attri
 
 **Speichern von Gruppenrollen in zusätzlichen Attributspalte:**
 
-Das folgende Beispiel zeigt, wie Mapbender-Benutzerdaten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit der Spalte "group" und der Füllung mit den jeweiligen Gruppenrollen des Benutzers (userRoles)
+Das folgende Beispiel zeigt, wie Mapbender-Benutzerdaten beim Speichern in eine zusätzliche Attributspalte geschrieben werden können. Hier geschieht das mit der Spalte "group" und der Füllung mit den jeweiligen Gruppenrollen des Benutzers (userRoles)
 
 .. code-block:: yaml
 
@@ -1162,7 +1162,7 @@ Das folgende Beispiel zeigt, wie Mapbender-Benutzerdaten beim Speichern in eine 
 
 **Speichern von Sachdaten in zusätzlichen Attributspalten:**
 
-Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werde können. Hier geschieht das mit den Spalten "geom" und "geom2". Beim Speichern sollen die Daten von geom in das Feld geom2 geschrieben werden.
+Das folgende Beispiel zeigt, wie Daten beim Speichern in eine zusätzliche Attributspalte geschrieben werden können. Hier geschieht das mit den Spalten "geom" und "geom2". Beim Speichern sollen die Daten von geom in das Feld geom2 geschrieben werden.
 
 Man kann das Event je nach Anwendungsfall bei onBeforeInsert oder onBeforeUpdate eintragen.
 

@@ -6,8 +6,11 @@ Einführung
 Diese Dokumentation ist an Mapbender-Entwickler gerichtet und behandelt Themen, die von Mapbender-Administratoren und -Benutzern nicht benötigt werden.
 
 
-Dinge, die es zu beachten gilt
-******************************
+Was ist zu beachten?
+********************
+
+.. warning:: Dieses Dokumentationskapitel ist teilweise stark veraltet. Eine aktuelle technische Dokumentation (englischsprachig) ist direkt in den Mapbender-Quellcode integriert. Sie kann `direkt auf GitHub  <https://github.com/mapbender/mapbender/tree/master/docs>`_ gelesen werden.
+
 
 Sie sollten einige Dinge wissen, um an der Mapbender-Entwicklung mitwirken zu können:
 
@@ -25,7 +28,7 @@ Die Installation aus den Git-Quellen heraus wird unter :ref:`installation_git_de
 Module und Bundles
 ******************
 
-Bitte beachten Sie die jeweiligen Beiträge im Entwicklungshandbuch `CONTRIBUTING.md`, um zu erfahren, was ein `Modul <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#modules>`_ und was ein `Bundle <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundles>`_ ist und wie letzteres `erstellt <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundle-creation>`_ werden kann.
+Bitte beachten Sie die jeweiligen Beiträge im Entwicklungshandbuch `CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_, um zu erfahren, was ein `Modul <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#modules>`_ und was ein `Bundle <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundles>`_ ist und wie letzteres `erstellt <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#bundle-creation>`_ werden kann.
 
 
 Twig
@@ -36,8 +39,6 @@ Ein Template ist eine Textdatei, die jedes textbasierte Format wie HTML oder XML
 Sie kann verwendet werden, um ein Layout zu erstellen. Auf diese Weise kann ein Basislayout erstellt und dann beliebige Layout-Blöcke mit individuellen Templates überschrieben oder hinzugefügt werden.
 Lesen Sie mehr über Templates auf der Seite :ref:`templates_de` oder im `Contributing Guide <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#generate-translations>`_. Eine Einführung in Twig gibt außerdem die `Symfony Template Dokumentation <https://symfony.com/doc/current/templates.html>`_.
 
-
-.. _override_js_css_de:
 
 Überschreiben von JavaScript- und CSS/Sass-Ressourcen
 *****************************************************
@@ -70,20 +71,23 @@ Nachfolgend finden Sie ein Beispiel, welches eigene Ressourcen für die **Button
    }
 
 
-.. hint:: Alternativ ist es möglich, Ressourcen mithilfe :ref:`eines Parameters<override_js_css_yaml_de>` zu überschreiben.
+.. hint:: Alternativ ist es möglich, Ressourcen mithilfe :ref:`eines Parameters<de/customization/yaml:Überschreiben von JavaScript- und CSS/Sass-Ressourcen>` zu überschreiben.
 
 
 Wo gibt es Hilfe?
 *****************
 
+Technische Dokumentationen 
+
+* `Mapbender <https://github.com/mapbender/mapbender/blob/master/docs/README.md>`_
+
 Mailinglisten
 
 * `Mapbender-Developer und -Anwender Mailingliste <https://mapbender.org/community/>`_
 
-Bibliotheken und Frameworks:
+Bibliotheken und Frameworks
 
 * `Symfony framework <https://www.symfony.com/>`_
-* `PHPUnit documentation <https://phpunit.de/>`_
 * `Composer documentation <https://getcomposer.org/doc/>`_
 * `General GitHub documentation <https://support.github.com/>`_
 * `GitHub pull request documentation <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request>`_

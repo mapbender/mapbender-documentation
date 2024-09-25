@@ -12,14 +12,13 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/copyright_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **Automatisches Öffnen:** Schaltet ein/aus, ob das Copyright Fenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: aus).
-* **Title:** Titel des Elements. Der Titel wird neben dem Button angezeigt.
-* **Tooltip:** Text, der als Tooltip angezeigt wird. Dieser wird angezeigt, wenn der Mauszeiger längere Zeit über dem Button verweilt. Er wird außerdem als Kopfzeile im Copyright Fenster verwendet.
-* **Popup width:** Breite des Popup Fensters (Standard: 300).
-* **Popup height:** Höhe des Popup Fensters (Standard: 170).
-* **Content:** Inhalt des Copyright Fensters. Dieser wird angezeigt, wenn das Element per Klick aktiviert wird (oder beim Start der Anwendung, wenn die "Automatisches Öffnen"-Option aktiviert wurde).
+* **Automatisch Öffnen:** Schaltet ein/aus, ob das Copyright Fenster beim Start der Anwendung automatisch geöffnet werden soll (Standard: aus).
+* **Titel:** Titel des Elements. Der Titel wird neben dem Button angezeigt.
+* **Dialog-Breite:** Breite des Popup Fensters (Standard: 300).
+* **Dialog-Höhe:** Höhe des Popup Fensters (Standard: 170).
+* **Inhalt:** Inhalt des Copyright Fensters. Dieser wird angezeigt, wenn das Element per Klick aktiviert wird (oder beim Start der Anwendung, wenn die "Automatisches Öffnen"-Option aktiviert wurde).
 
 
 Verweis auf eine Twig-Datei
@@ -28,11 +27,11 @@ Verweis auf eine Twig-Datei
 Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
 
 .. image:: ../../../figures/de/copyright_configuration_include_twig.png
-     :scale: 80
+     :scale: 70
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

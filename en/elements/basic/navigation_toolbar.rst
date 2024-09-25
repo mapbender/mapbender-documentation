@@ -3,7 +3,7 @@
 Navigation Toolbar
 ******************
 
-This element simplifies navigation within the map via rotation and zoom. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The navigation toolbar itself is draggable.
+This element is a tool to simplify navigation within the map via rotation, zoom and buttons. Different scales can be selected from a bar or slider. Users also have the option to zoom to max extent or return to the start configuration. The navigation toolbar itself can be configured to be draggable.
 
 .. image:: ../../../figures/navigation_toolbar.png
      :scale: 80
@@ -12,51 +12,36 @@ Configuration
 =============
 
 .. image:: ../../../figures/navigation_toolbar_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **Draggable:** Element is draggable or not (default: true)
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
-* **Components:** Components of the navigation toolbal (all selected by default). Options: Rotation, zoom to max extent, Back to start, Zoom in/out, Zoom slider
-* **Back to start:** Resets layer settings (default: false).
-* **Position:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar). Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom
+* **Draggable:** Element is draggable or not (default: true).
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Components:** Components of the navigation toolbal (all selected by default). Options: Rotation, Zoom to maximum extent, Back to start, Zoom in and out, Zoom slider
+* **"Back to start" also resets layer settings:** Resets layer settings (default: false).
+* **Position:** Navigation toolbar alignment, default is 'left-top' (use inline e.g. in sidebar); mandatory field. Options: inline (for using the element in the sidepane), left-top, left-bottom, right-top, right-bottom.
+
+.. note:: The element must be integrated into the Map area.
 
 
-Components of the Navigation Toolbar element:
----------------------------------------------
+Components of the Navigation Toolbar element
+--------------------------------------------
 
-You can integrate various different *components* in the configuration dialog box. These components include:
-
-* Rotation
-* Zoom to max extent
-* Zoom to start
-* Zoom in/out
-* Zoom slider
+You can integrate various different components in the configuration dialog box.
 
 In the application these components look like this:
 
 .. image:: ../../../figures/navigationtoolbar_features.png
      :scale: 80
 
-If you set a tick at **Draggable**, then a small cross will appear next to the navigation toolbar that allows the user to move the element around.
+* **Draggable:** If you set the checkmark at draggable, a small cross will appear next to the navigation toolbar that allows the user to move the element around.
+* **Rotation:** Enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
+* **Zoom to maximum extent:** Users can zoom to the smallest map scale by zoom to max extent. This can be set individually in the :ref:`map element <map>`.
+* **Zoom to start:** Restores the initial center, scale, SRS and rotation.
+* **Zoom in and out:** Allows to zoom in and out of the map. The element automatically sets to the next higher or lower scale. Zoom steps can be defined in the map element as well. There, users also have the option to deactivate fixed zoom steps.
+* **Zoom slider:** This component already includes *Zoom in/out*. Additionally, the user can select different scales from a bar.
 
-**Rotation** enables changes of the map orientation. A click on the north arrow allows for a restoration of the original rotation.
-
-Users can zoom to their smallest scale by **Zoom to max extent**. This *Max Extent* can be set individually in the :ref:`map element <map>`. The element must be integrated into the Map area.
-
-.. image:: ../../../figures/navigationtoolbar_zoom_to_max.png
-     :scale: 80
-
-It is possible to restore the initial center, scale, SRS and rotation with **Zoom to start**.
-
-.. image:: ../../../figures/navigationtoolbar_zoom_to_start.png
-     :scale: 80
-
-Finally, **Zoom in/out** allows to zoom in (``+`` -button) and out (``–`` -button) of the map. The element automatically sets to the next higher or lower scale. Zoom steps can be defined in the map element as well. There, users also have the option to deactivate fixed zoom steps.
-The component **Zoom slider** already includes *Zoom in/out*. Additionally, the user can select different scales from a bar.
-
-
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

@@ -13,7 +13,7 @@ Mapbender needs a database to store information. The Mapbender download package 
 Requirements
 ------------
 
-* PHP NTS >= 8.0 (https://windows.php.net/download/)
+* PHP NTS >= 8.1 (https://windows.php.net/download/)
 * Apache installation (https://www.apachelounge.com/download/, run as service with these modules):
     * mod_rewrite
     * mod_fcgid
@@ -28,9 +28,9 @@ Nginx can also be used as web server, but it will not be discussed in this manua
 Configuration PHP
 -----------------
 
-Unzip the Zip archive, for example under c:\\php .
-
-* It needs to be checked if the following variables (php.ini) are set correctly:
+* Unzip the Zip archive, for example under `c:\\php`.
+* Depending on the PHP version, PHP variables for a temp directory are not set correctly under Windows.
+* Therefore, it has to be checked if the following variables (*php.ini*) are set correctly:
 
 .. code-block:: ini
 
@@ -38,8 +38,8 @@ Unzip the Zip archive, for example under c:\\php .
     upload_tmp_dir
     date.timezone
 
-* the path from PHP-bin directory to the PATH variable (Windows environment variable) needs to be set
-* activate the required PHP extensions in the php.ini configuration file:
+* The path from `PHP-bin` directory to the ``PATH`` variable (Windows environment variable) needs to be set.
+* Activate the required PHP extensions in the *php.ini* configuration file:
 
 .. code-block:: ini
 
@@ -62,22 +62,22 @@ Unzip the Zip archive, for example under c:\\php .
 Extract Mapbender and register to web server
 --------------------------------------------
 
-Download the current Mapbender version (https://mapbender.org/builds/mapbender-starter-current.zip) and unzip it into c:\\mapbender\\
+Download the `current Mapbender version <https://mapbender.org/builds/mapbender-starter-current.zip>`_ and unzip it into `c:\\mapbender\\`
 
 
 Configuration Apache
 --------------------
 
-A subfolder "conf.d" must be prepared in the directory <apache>/conf.
+A subfolder `conf.d` must be prepared in the directory `<apache>/conf`.
 
-Add the following code at the end of file httpd.conf :
+Add the following code at the end of file *httpd.conf*:
 
 .. code-block:: apache
 
                 # Include directory conf.d
                 Include "conf/conf.d/*.conf"
 
-Create file **<apache>\\conf\\conf.d\\mapbender.conf** with:
+Create file `<apache>\\conf\\conf.d\\mapbender.conf` with:
 
 .. code-block:: apache
 
@@ -99,7 +99,7 @@ Restart Apache.
 mod_fcgid
 ---------
 
-Create file **<apache>\\conf\\conf.d\\fcgi.conf** with:
+Create file `<apache>\\conf\\conf.d\\fcgi.conf` with:
 
 .. code-block:: apacheconf
 
@@ -139,20 +139,13 @@ Create file **<apache>\\conf\\conf.d\\fcgi.conf** with:
 Configuration PostgreSQL
 ------------------------
 
-The configuration of the Mapbender database is done in the file application/config/parameters.yaml.
-
-For more information on the database configuration, see :ref:`yaml`.
+Configuration of database connection is done by a variable that contains the entire connection string. Configure it by adding it in your *.env.local* file.
 
 .. code-block:: yaml
 
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:     ~
-    database_user:     postgres
-    database_password: secret
-    
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+
+For more information on the database configuration, see :ref:`yaml`.
 
 Open the windows shell and initialize the database connection with the following commands:
 
@@ -182,20 +175,21 @@ The Mapbender installation can now be accessed under **http://[hostname]/mapbend
 
 **Check if the alias is working**
 
-* http://localhost/mapbender/
+* ``http://localhost/mapbender/``
 
-username: "root", password: "root" (if you use the SQLite database shipped with Mapbender)
+* username: root
+* password: root
 
-Troubleshooting is available via the following command (must be executed in the application directory):
+Troubleshooting is available via the following command (must be executed above the `bin/` directory):
 
 .. code-block:: yaml
 
 	php.exe bin/console mapbender:config:check
 
-.. hint:: Please note that config:check will use the php-cli version. The settings may be different from your webserver PHP settings. Please use php -r 'phpinfo();' to show your PHP webserver settings.
+.. hint:: Please note that ``config:check`` will use the php-cli version. The settings may be different from your webserver PHP settings. Please use ``php -r 'phpinfo();'`` to show your PHP webserver settings.
 
-Further information can be found at :ref:`mapbender_config_check`.
+Further information can be found at :ref:`en/customization/commands:bin/console mapbender:config:check`.
 
 Congratulations! Mapbender is now set up correctly and ready for further configuration.
-Find Information about the first steps with Mapbender in the :ref:`Mapbender Quickstart <quickstart>`.
+Find information about the first steps with Mapbender in the :ref:`Mapbender Quickstart <quickstart>`.
 

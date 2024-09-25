@@ -3,64 +3,63 @@
 Druck (PrintClient)
 *******************
 
-Das Druckelement ermöglicht den Druck eines auswählbaren Kartenbereichs. Im Folgenden wird zunächst der allgemeine Aufbau und die Konfiguration des PrintClients erklärt. Danach folgt eine Einführung in die Erstellung individueller Druckvorlagen. Im letzten Teil wird auf den Druckvorgang selbst eingegangen und wie dieser konfiguriert werden kann. 
-
+Das Druckelement ermöglicht den Druck eines auswählbaren Kartenausschnitts. Diese Dokumentation bietet einen Überblick über dessen Einrichtung und Konfiguration, skizziert die Erstellung individueller Druckvorlagen und erläutert den Druckvorgang sowie seine Konfigurationsoptionen. 
 
 Allgemeines
 ===========
 
 Mit dem PrintClient können folgende Druckeinstellungen beeinflusst werden:
 
- * Druckvorlage,
- * Qualität,
- * Maßstab,
- * Drehung des Ausschnitts,
- * Titel,
- * Aktivierung/Deaktivierung einer Legende,
- * Optional können Textfelder definiert werden (z.B. Titel, Kommentar, Bemerkung), die mit in den Druck übergeben werden.
+ * Vorlage
+ * Qualität
+ * Maßstab
+ * Drehung
+ * Titel
+ * Checkbox *Legende drucken*
 
 .. image:: ../../../figures/de/print_client.png
-     :scale: 80
+     :scale: 70
      
 Das Element kann über einen Button aufgerufen oder in der Sidepane als Element eingebunden werden. Sobald der PrintClient angesteuert wird, erscheint auf der Karte ein Druckrahmen. Dieser bestimmt den zu druckenden Bereich der Karte und kann vom Anwender beliebig ausgerichtet werden. Nach dem Druck muss der Druckrahmen wieder deaktiviert werden, damit die Karte wie gehabt genutzt werden kann (im Dialog geschieht dies alles durch das Öffnen und Schließen des Dialogfensters).
 
 .. image:: ../../../figures/print_client_sidebar.png
-     :scale: 80     
+     :scale: 70     
      
-Konfiguration des PrintClients
-------------------------------
+Konfiguration
+-------------
 
-Der PrintClient kann im Backend konfiguriert werden. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A4 bis A0 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
+Der PrintClient wird im :ref:`backend_de` konfiguriert. Er greift dabei auf Druckvorlagen (Templates) zurück. Diese LibreOffice Draw Dateien liegen in den Formaten A0 bis A4 vor. In ihnen können Bereiche für Datum, Maßstab, Nordpfeil, Übersichtskarte und dynamische Bild- und Textbereiche definiert werden.
 
 .. image:: ../../../figures/de/print_client_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Titel**: Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Maßstabsstufen (Scales)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, muss ein beliebiger Maßstab hinzugefügt werden.
+* **Maßstäbe (csv)**: Maßstäbe, die in der Selectbox ausgewählt werden können. Wenn keine Maßstäbe angegeben werden, muss ein beliebiger Maßstab hinzugefügt werden.
 * **Drehbar**: definiert, ob der Ausdruck gedreht werden kann (Standard: true).
 * **Legende drucken**: fügt eine Checkbox hinzu, die den Druck der Kartenlegende ermöglicht (Standard: false).
 * **Legenden Checkbox aktiv**: definiert, ob die "Legende drucken" - Checkbox bei Anwendungsstart aktiv ist
-* **File prefix**: Anpassung des Dateinamens für das PDF. Dieser setzt sich aus dem definierbarem Prefix und der Datums- und Uhrzeitangabe des Drucks zusammen.
+* **Datei-Präfix**: Anpassung des Dateinamens für das PDF. Dieser setzt sich aus dem definierbarem Prefix und der Datums- und Uhrzeitangabe des Drucks zusammen.
 * **Qualitätsstufen**: Qualität in dpi-Werten definieren und die dazugehörige Beschriftung angegeben
-* **Template**: Verweis auf die Druckvorlage (z.B. a4portrait). Löschen und Hinzufügen von Vorlagen ist über die "+"- bzw. "x"-Symbole möglich.
-* **Beschriftung (Label)**: Bezeichnung der Druckvorlagen im Frontend (z.B. Portrait A4).
 
-* **Optionale Felder (optional fields)**:
+**Vorlagen**
+
+* **Vorlage**: Verweis auf die Druckvorlage (z.B. a4portrait). Löschen und Hinzufügen von Vorlagen ist über die "+"- bzw. "x"-Symbole möglich.
+* **Bezeichnung**: Bezeichnung der Druckvorlagen im Frontend (z.B. Portrait A4).
+
+**Optionale Felder**
 
 Über die Konfiguration folgender Werte können optionale Felder im Druckdialog ermöglicht werden. Eine Beispielkonfiguration mit vier Feldern (Titel, zwei Kommentarfelder, Bearbeiter) gibt die YAML-Definition.
 
 * **title**: Name des optionalen Feldes, der Standardwert ist null (keine optionalen Felder sind definiert).
 * **label**: Beschriftung des optionalen Feldes.
-* **options**: { required: true } : Typ des optionalen Feldes, muss true oder false sein.
+* **options**: Typ des optionalen Feldes, muss true oder false sein.
+* **Pflichtfelder ganz oben anzeigen**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
+* **Muster ersetzen**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer).
 
-* **Zeige Pflichtfelder zuerst (Display required fields first)**: Ist diese Checkbox aktiv, erscheinen Pflichtfelder im Druckdialog ganz oben.
-
-* **Replace pattern**: Verändert den Kartenaufruf, Standardwert ist null. Angaben können hinzugefügt oder verändert werden, wie beispielsweise map_resolution (für MapServer).
-
-Im Backend finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein ausführliches und kommentiertes Beispiel steht weiter unten im Abschnitt YAML-Definition).
+Im :ref:`backend_de` finden Sie die Formularfelder im unteren Teil des Druckdialogs (ein ausführliches und kommentiertes Beispiel steht weiter unten im Abschnitt YAML-Definition).
 
 .. image:: ../../../figures/de/print_client_configuration_enhanced.png
-     :scale: 80
+     :scale: 70
      
 
 YAML-Definition
@@ -346,10 +345,8 @@ Mit Klick auf den Druckbutton, öffnet sich ein Druckdialog, der das definierte 
 
 Das gewünschte Gebiet kann auswählt werden und ein PDF erzeugt. Das PDF beinhaltet die Informationen für das selektierte Objekt.
 
-Bemerkung: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwender nicht daran, den Rahmen in einen Bereich zu verschieben, der nicht das ausgewählte Objekt enthält. Die ausgedruckte Objektinformation passt dann nicht zur Darstellung in der Karte.
+.. note:: Die Flexibilität, den Druckrahmen zu verschieben, hindert den Anwender nicht daran, den Rahmen in einen Bereich zu verschieben, der nicht das ausgewählte Objekt enthält. Die ausgedruckte Objektinformation passt dann nicht zur Darstellung in der Karte.
 
-
-.. _queued_print_de:
   
 Warteschleifendruck
 -------------------

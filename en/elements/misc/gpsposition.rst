@@ -5,7 +5,7 @@ GPS Position
 
 This element provides a button to navigate to your current position and display a symbol at that position. The scale will not be changed until you activate ``zoom to accuracy (zoom to accuracy on first position)``.
 
-The element is built upon the `Geolocation-API <https://www.w3.org/TR/geolocation-API/>`_ by the W3C. To validate that your browser supports this functionality please take a look at the `Can I Use <http://caniuse.com/#feat=geolocation>`_ page. The element uses the ``High Accuracy Parameter`` that forces the positioning via GPS. If your device is shipped with a GPS-receiver and if it is activated, the positioning is more accurate. Otherwise the WIFI access points are used for positioning.
+The element is built upon the `Geolocation-API <https://www.w3.org/TR/geolocation/>`_ by the W3C. To validate that your browser supports this functionality please take a look at the `Can I Use <http://caniuse.com/#feat=geolocation>`_ page. The element uses the ``High Accuracy Parameter`` that forces the positioning via GPS. If your device is shipped with a GPS-receiver and if it is activated, the positioning is more accurate. Otherwise the WIFI access points are used for positioning.
 
 The midpoint shows the probable position of the device, the outer circle the accuracy of the positioning, that means the region where the position is probably to find.
 
@@ -18,7 +18,7 @@ Configuration
 =============
 
 .. image:: ../../../figures/gps_position_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Show label:** Switches the button label on/off (default: on).
 * **Autostart:** Starts element when opening the application (default: off).
@@ -31,8 +31,8 @@ Configuration
 * **Zoom to accuracy on first position:** Zoom map according to first received gps position accuracy (default: on).
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application. The element is placed as a button into the toolbar.
 

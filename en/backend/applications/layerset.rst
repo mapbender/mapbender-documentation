@@ -72,13 +72,13 @@ The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ `
 
 - **Visible:** The service can be set visible with this option.
 
-- **BaseSource:** The service should be treated as a BaseSource. This affects the :ref:`BaseSourceSwitcher <basesourceswitcher>`, which should only display BaseSources, and the :ref:`Layertree <layertree>`, where these BaseSources can be hidden. See also the `hints <hints-layersets_>`_ below.
+- **BaseSource:** The service should be treated as a BaseSource. This affects the :ref:`BaseSourceSwitcher <basesourceswitcher>`, which should only display BaseSources, and the :ref:`Layertree <layertree>`, where these BaseSources can be hidden. See also the :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>` below.
 
-- **Proxy:** If activated, the service will be requested via a proxy in Mapbender. See the `hints <hints-layersets_>`_ below.
+- **Proxy:** If activated, the service will be requested via a proxy in Mapbender. See the :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>` below.
 
 - **Transparency:** If this switch is enabled (that is the default), the service is requested with a transparent background. So in the WMS GetMap request with the parameter ``TRANSPARENT=TRUE``.
 
-- **Tiled:** The service is requested in tiles. The standard is not tiled. See the following `hints <hints-layersets_>`_.
+- **Tiled:** The service is requested in tiles. The standard is not tiled. See the following :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>`.
 
 
 **Layer-Order:**
@@ -137,10 +137,6 @@ Shared instances will appear as sepatrate data sources. To incorporate a shared 
 
 All shared instances can be viewed under **Sources** -> **Shared instances**.
 
-.. image:: ../../../figures/layerset/shared_instances_overview.png
-
-
-.. _layer_configuration:
 
 Layer Configuration
 ===================
@@ -151,8 +147,8 @@ The layer table offers several checkboxes and two scale visibility fields that a
            :width: 100%
 
 * **Title**: Layer title from Service information shown in Mapbender, adjustable.
-* **Active** (on/off): Enables/disables a layer for the individual application layer. If not set, all other checkboxes of the same layer will be ignored.
 * **Minscale / maxscale**: the scale range in which the layer should be displayed, 0 or no entry = no scale limitation.
+* **Active** (on/off): Enables/disables a layer for the individual application layer. If not set, all other checkboxes of the same layer will be ignored.
 * **Select allow**: Layer is active when the application starts.
 * **Select on**: Selectable in geodata explorer.
 * **Info allow**: layer info is active when the application starts.
@@ -165,8 +161,6 @@ The layer table offers several checkboxes and two scale visibility fields that a
 * **Layer's name**: Layer name of the service information (for getMap-Requests, not adjustable).
 * **Style**: If a WMS provides more than one style, you can choose a different style than the default style.
 
-
-.. _hints-layersets:
 
 Notes on the effects of each configuration
 ===========================================
@@ -215,12 +209,12 @@ The item is useful for passing the service on only to specific users and groups.
 Further information
 -------------------
 
-* You can find information about using layersets in the :ref:`Quickstart <quickstart>`.
+* You can find information about using layersets under Quickstart chapter :ref:`en/quickstart:4. Configure Sources`.
 
-* Further tips on manipulating WMS can be found in the :ref:`FAQs <faq>`.
+* Further tips on manipulating WMS can be found under :ref:`en/faq:performance`.
 
-* The relevance of layersets for the display in the layertree is described in the Thematic Layers section of the `layertree documentation <../basic/layertree#workflow-thematic-layertree>`_.
+* The relevance of layersets for the display in the layertree is described under :ref:`en/elements/basic/layertree:Workflow thematic Layertree`.
 
-* Disabling one or more layersets for an application is possible in its `Map element <../basic/map>`_ settings.
+* Disabling one or more layersets for an application is possible in its :ref:`map` settings.
 
 * Likewise, individual thematic layersets can be (de)activated via checkbox in the layerset configuration so that they are (not) visible in the map on application startup.

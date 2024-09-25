@@ -13,15 +13,15 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/srs_selector_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Beschriftet die SRS Auswahl (Standard: false).
-* **Title:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht die Unterscheidung mehrerer Button-Elemente voneinander. Der Titel wird außerdem neben dem SRS Selector angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Titel:** Titel des Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht die Unterscheidung mehrerer Button-Elemente voneinander. Der Titel wird außerdem neben dem SRS Selector angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

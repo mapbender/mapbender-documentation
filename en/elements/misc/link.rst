@@ -3,6 +3,8 @@
 Link
 ****
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 The link element provides a button widget that refers a defined link like a website or script.
 
 
@@ -10,10 +12,10 @@ Configuration
 =============
 
 .. image:: ../../../figures/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Show label:** Enables or disables text (title) next to the button (default: true).
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Tooltip:** Text, that will be indicated if the mouse hovers over the button for a longer time.
 * **Icon:** Symbol of the button. Based on a CSS class.
 * **Target URL** Reference to a website or a script.
@@ -28,7 +30,7 @@ For some symbols you can choose between two different types of icons:
 
 The latter are based on a `IconSet <https://github.com/mapbender/icons>`_, which is delivered with Mapbender as a module. We recommend to use the symbols from this library.
 
-.. hint:: It is also possible to deactivate an icon set and/or to use other icons. For more, see :ref:`custom-icons`.
+.. hint:: It is also possible to deactivate an icon set and/or to use other icons. For more, see :ref:`en/customization/yaml:Customizing icons`.
 
 More information on icons under:
 
@@ -38,13 +40,15 @@ More information on icons under:
 
 Example
 =======
+
 It is possible to create and adjust different buttons with different functions.
 Buttons can refer to features which are included in the Map area. For example, it is possible to create a Legend button or Line- and/or Area Ruler buttons:
+
 
 Link to a Webpage
 -----------------
 
-First, you have to select the link element by clicking on the ``+`` - symbol in the Toolbar section in the Layouts tab.
+First, you have to select the link element by clicking on |mapbender-button-add| in the Toolbar section in the Layouts tab.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80
@@ -56,11 +60,11 @@ You can set the name of the link button in the field *Title*. This title will be
 In the field *Tooltip*, you can define a text that will be displaced as tooltip during hovering over the button. You can choose from a variety of icons to set the icon for your link button.
 
 .. image:: ../../../figures/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

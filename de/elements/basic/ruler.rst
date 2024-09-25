@@ -3,8 +3,8 @@
 Linien-/Flächenmessung (Line/Area Ruler)
 ****************************************
 
-Mit dem Lineal wird eine Geometrie gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Für das Element wird ein :ref:`button_de` verwendet.
-Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst. Für die Nutzung beider Geometrietypen in einer Anwendung werden zwei Buttons benötigt, die in einer gemeinsamen Gruppe sind.
+Mit dem Messen-Werkzeug wird eine Geometrie gezeichnet, deren Länge oder Flächeninhalt berechnet wird. Das Element kann in der Sidepane oder mit einem :ref:`button_de` verwendet werden.
+Durch die Auswahl eines Typs wird bestimmt, ob das Element Linien oder Flächen misst oder beides und so der Benutzer die Auswahl im Client treffen kann.
 
 .. image:: ../../../figures/de/ruler.png
      :scale: 80
@@ -13,10 +13,10 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/ruler_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **Title:** Titel des Elements. Dieser wird im Backend in der Layouts Liste angezeigt. In der Anwendung selbst wird der Titel im Messfenster angezeigt.
-* **Geometrie:** Typ des Elements, entweder 'Linie' oder 'Fläche' (definiert, ob das Element eine Strecken- oder eine Flächenmessung erstellt). Pflichtfeld.
+* **Titel:** Titel des Elements. Dieser wird im :ref:`backend_de` in der Layouts Liste angezeigt. In der Anwendung selbst wird der Titel im Messfenster angezeigt.
+* **Geometrie:** Typ des Elements, entweder 'Linie', 'Fläche'  oder 'vom Nutzer auswählbar'. Pflichtfeld.
 * **Hilfetext:** Definition eines individuellen Hilfetextes. Der Standardwert mb.core.ruler.help ist in der Mapbender Übersetzungsdatei definiert und enthält auf Deutsch den Text "Doppelklicken zum Beenden". Der Text variiert je nach Anzeigesprache des Browsers.
 * **Linienstärke während des Zeichnens:** Zahlenwert in Pixel, der die Strichstärke während des Zeichnens definiert.
 * **Strichfarbe:** RGBA-Wert, der die Strichfarbe definiert. Kann nach einem Klick in die Eingabemaske über einen Farbwähler geändert werden.
@@ -26,17 +26,17 @@ Konfiguration
 * **Schriftgröße:** Zahlenwert, der die Schriftgröße der in der Geometrie angezeigten Fläche definiert. Wird als Geometrie *Linie* gewählt, bleibt die Option ohne Effekt.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Applikation einzubinden.
 
 .. code-block:: yaml
 
-   title: mb.core.ruler.tag.line             # 'line', 'area' oder beliebigen Titel wählen
+   title: mb.core.ruler.class.title          # 'Linien-/Flächenmessung'
    class: Mapbender\CoreBundle\Element\Ruler # Element-Klasse
    target: map                               # ID des Kartenelements, z.B. 'map'
-   type: line                                # Wählen Sie Typ 'line' oder 'area'
+   type: line                                # Wählen Sie Typ 'line', 'area' oder 'both'
    strokeColor: 'rgba(16, 101, 93, 0.8)'     # Angabe der Strichfarbe (für Linien und Flächen)
    fillColor: 'rgba(100, 100, 100, 0.5)'     # Angabe der Füllfarbe (nur Flächenmessung)
    fontColor: 'rgba(0,0,0,1)'                # Angabe der Schriftarbe (nur Flächenmessung)

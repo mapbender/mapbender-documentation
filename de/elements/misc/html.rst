@@ -17,14 +17,14 @@ Es stehen grundsätzlich die folgenden Variablen im HTML-Element zur Verfügung:
 Konfiguration
 =============
 
-Das Element wird im Backend in die Anwendung eingebunden.
+Das Element wird im :ref:`backend_de` in die Anwendung eingebunden.
 
 .. image:: ../../../figures/de/html_element.png
-     :scale: 80
+     :scale: 70
 
-* **Title:** Titel des HTML-Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden.
-* **Content:** Inhalt des HTML-Elements, z.B. Bild oder Link. Der Content kann die Variablen "application" und "entity" beinhalten.
-* **Classes:** Alternativ kann auch auf eine CSS-Klasse für das HTML-Element verwiesen werden. Die im CSS-Editor definiert werden kann.
+* **Titel:** Titel des HTML-Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden.
+* **Inhalt:** Inhalt des HTML-Elements, z.B. Bild oder Link. Der Content kann die Variablen "application" und "entity" beinhalten.
+* **Klassen:** Alternativ kann auch auf eine CSS-Klasse für das HTML-Element verwiesen werden. Die im CSS-Editor definiert werden kann.
 
 
 Konfigurationsbeispiele
@@ -33,7 +33,7 @@ Konfigurationsbeispiele
 Bild einbinden:
 ---------------
 
-Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``<img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg' />``). Es kann eine definierte Höhe (``height='60px'``) angegeben werden. Es kann eine Hintergrundfarbe soowie Transparenz (``background-color:rgb(240, 240, 240, 0.9)``) gesetzt werden und beispielsweise ein bestimmter Seitenrandabstand (``padding:10px``). Diese Eigenschaften werden im Styling-Bereich (``style=``) definiert.
+Das Mapbender Logo wurde im Beispiel als Bild in die Seitenleiste eingebunden. Es kann eine definierte Höhe angegeben werden. Es kann eine Hintergrundfarbe, ein bestimmter Seitenrandabstand und die Transparenz gesetzt werden. Diese Eigenschaften werden im Styling-Bereich definiert.
 
 .. code-block:: yaml
 
@@ -43,10 +43,10 @@ Das Mapbender Logo wurde als Bild in die Seitenleiste eingebunden (``<img src='h
 .. image:: ../../../figures/de/html_example_logo.png
      :scale: 80
 
-Bild mit hinterlegtem Link einbinden:
--------------------------------------
+Bild mit hinterlegtem Link einbinden
+------------------------------------
 
-Das zuvor eingebundene Logo kann um eine Linkverknüpfung erweitert werden. Der Link verweist auf die Mapbender-Webseite (``href='https://mapbender.org'``). Die Information ``target='_blank'`` sorgt dafür, dass sich der Link beim Klicken in einem neuen Tab öffnet.
+Das zuvor eingebundene Logo kann um eine Linkverknüpfung erweitert werden. Der Link verweist auf die Mapbender-Webseite. Die Information ``target='_blank'`` sorgt dafür, dass sich der Link beim Klicken in einem neuen Tab öffnet.
 
 .. code-block:: yaml
 
@@ -69,7 +69,7 @@ Der HTML-Code kann wie folgt aussehen:
 
      <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{ application.title }} </span></b>
 
-Die Variable für den Anwendungstitel wird durch ``{{ application.title }}`` eingebunden. Der Begriff "Anwendung" ist ein Textzusatz und erscheint unabhängig vom Titel. Durch den Style-Block (``style=``) wurden Schriftgröße (``font-size:25px``), Schriftbreite (``<b></b>``), Schriftfarbe (``color:#b6dd18``) sowie Position (``margin-right:50vw``) des Titels angepasst.
+Die Variable für den Anwendungstitel wird durch ``{{ application.title }}`` eingebunden. Der Begriff "Anwendung" ist ein Textzusatz und erscheint unabhängig vom Titel. Durch den Style-Block wurden Schriftgröße, Schriftbreite, Schriftfarbe sowie Position des Titels angepasst.
 
 Für das Anwendungsbeispiel sieht das Ergebnis des HTML-Elements wie folgt aus:
 
@@ -87,7 +87,6 @@ Diese Variable gibt den Namen des aktiven Nutzers im HTML-Element aus:
 Im Anwendungsbeispiel wird der Nutzername in der oberen Werkzeugleiste angezeigt:
 	
 .. image:: ../../../figures/de/html_example_user_name.png
-     :scale: 80
     
 * Variable: **group.title**
 
@@ -103,7 +102,6 @@ Um Gruppentitel dennoch ausgeben zu können, wird eine Schleife im HTML-Element 
 Im Anwendungsbeispiel werden Index und Name der Gruppe in der oberen Werkzeugleiste ausgegeben:
 
 .. image:: ../../../figures/de/html_example_group_name.png
-     :scale: 80
 
 * Variable: **"entity"**
 
@@ -123,14 +121,14 @@ Diese Variablen sehen in der Anwendung wie folgt aus:
 Verweis auf eine Twig-Datei
 ---------------------------
 
-Im Content-Bereich kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
+Im Bereich *Inhalt* kann auch auf eine Twig-Datei verwiesen werden. Bitte beachten Sie, dass die Twig-Datei valides HTML enthalten muss.
 
 .. image:: ../../../figures/de/html_configuration_include_twig.png
-     :scale: 80
+     :scale: 70
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

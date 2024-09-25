@@ -383,7 +383,7 @@ Verschiedenes:
   * :ref:`editing_de`
   * WMC
   * :ref:`backend_de`
-  * :ref:`fom_de`
+  * FOM
   * :ref:`misc_de`
 
 * Verbesserte Dokumentation zu den Elementen:

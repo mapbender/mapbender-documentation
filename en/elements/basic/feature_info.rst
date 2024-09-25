@@ -3,78 +3,60 @@
 FeatureInfo
 ***********
 
-This element provides feature info capabilities to Mapbender. It works with WMS.
+FeatureInfo offers the possibility of obtaining information about features with a mouse click on a layer. 
+The element works with supported WMS services. It can be integrated into the sidepane or within a :ref:`button`.
 
 .. image:: ../../../figures/feature_info.png
      :scale: 80
 
-The WMS Krankenhäuser NRW (https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities) from 'Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW' serves as example service.
+The `WMS Krankenhäuser NRW <https://www.wms.nrw.de/wms/krankenhaus?Service=WMS&Version=1.3.0&Request=getCapabilities>`_ from 'Ministerium für Gesundheit, Emanzipation, Pflege und Alter NRW' serves as example service.
 
 Configuration
 =============
 
 .. image:: ../../../figures/feature_info_configuration.png
-     :align: center
+     :scale: 70
 
 
-* **Auto-open:** Enable or disable autoopening of the copyright window when starting the application (default: false).
+* **Activate automatically:** Enable or disable autoopening of the copyright window when starting the application (default: false).
 * **Deactivate on close:** true/false to deactivate the functionality after closing the result dialog (default: true).
-* **Print Result:** Offer a link to print the result of FeatureInfo (default: false).
+* **Print result:** Offer a link to print the result of FeatureInfo (default: false).
 * **Only valid:** Display valid WMS (default: false).
 * **Title:** Title of the element. It will be indicated next to the button.
-* **Display type:** Display of the information, tabs or accordion.
+* **Display type:** Display of the information either in different tabs or in an accordion.
 * **Max count:** Maximum number of results that should be displayed in the result dialog.
 * **Width/Height:** Width/height of the dialog in px.
 * **Highlighting enabled:** Deactivates/activates FeatureInfo Highlighting (default: false).
-* **Default fill color** Sets the fill color for selected objects.
-* **Default stroke color** Sets the stroke color for selected objects.
-* **Opacity (%) of the default color** Sets the opacity of the default color.
-* **Stroke width (pixels) of the default color** Sets the stroke width (in pixels) of the default color.
-* **Hover fill color** Sets the hover fill color for selected objects.
-* **Hover stroke color** Sets the hover stroke color for selected objects.
-* **Opacity (%) of the hover color** Sets the opacity of the hover color.
-* **Stroke width (pixels) of the hover color** Sets the stroke width (in pixels) of the hover color.
+* **Default stroke color:** Sets the stroke color for selected objects.
+* **Stroke width (pixels) of the default color:** Sets the stroke width (in pixels) of the default color.
+* **Default fill color:** Sets the fill color for selected objects.
+* **Hover stroke color:** Sets the hover stroke color for selected objects.
+* **Stroke width (pixels) of the hover color:** Sets the stroke width (in pixels) of the hover color.
+* **Hover fill color:** Sets the hover fill color for selected objects.
 
-A :ref:`button` is also needed for complete frontend integration.
 
 Layertree settings
 ------------------
 The layer is visible and FeatureInfo request for the layer is activated.
 
-.. image:: ../../../figures/de/feature_info_on.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_on.png
+     :scale: 70
 
 The layer is visible and the FeatureInfo request for the layer is deactivated.
  
-.. image:: ../../../figures/de/feature_info_off.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_off.png
+     :scale: 70
 
 The layer is invisible and there will be no FeatureInfo request (even if FeatureInfo request is activated).
 
-.. image:: ../../../figures/de/feature_info_on_layer_invisible.png
-     :width: 50%
+.. image:: ../../../figures/feature_info_on_layer_invisible.png
+     :scale: 70
      
 
-Display as tabs and accordion
------------------------------
-
-With the switch "type", the responses of multiple services can be displayed either in different tabs or in an accordion.
-
-Example Tabs:
-
-.. image:: ../../../figures/feature_info_tabs.png
-     :scale: 80
-
-Example Accordion:
-
-.. image:: ../../../figures/feature_info_accordion.png
-     :scale: 80
-
-     
 Printing the results
 --------------------
 
-The switch "Print result" allows you to print the output of the FeatureInfo. A "Print" button will appear on the FeatureInfo dialogue. The printing itself is achieved with the printing dialogue of your web browser.
+The switch **Print result** allows you to print the output of the FeatureInfo. A Print button will appear on the FeatureInfo dialogue. The printing itself will be processed via the printing dialogue of your web browser.
 
 To make sure that all images and background colors are available in your printout, you should check the print settings of your web browser: In Firefox, you can check the option "Print background". In Chrome-based browsers the option is called "Background graphics". The used fonts can vary on a printout as PDF and depend on the specific viewer. Furthermore, most web browsers modify the pages a bit before printing to save ink/toner.
 
@@ -108,8 +90,8 @@ The necessary adjustment is shown here using a configuration for MapServer. In t
   </div>
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

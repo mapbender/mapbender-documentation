@@ -12,15 +12,15 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/scalebar_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **Title:** Titel des Elements. Dieser wird unter dem Reiter Layouts angezeigt.
-* **Max width:** Maximale Breite der Maßstabsleiste (Standard: 200px).
-* **Units:** Die wählbaren Einheiten der Maßstabsleiste:'kilometer' oder 'miles' (Standard: kilometer)
-* **Position:** Ausrichtung der Maßstabsleiste (Standard: Unten rechts).
+* **Titel:** Titel des Elements. Dieser wird unter dem Reiter :ref:`layouts_de` angezeigt.
+* **Maximale Breite:** Maximale Breite der Maßstabsleiste (Pflichtfeld; Standard: 200px).
+* **Einheit:** Die wählbaren Einheiten der Maßstabsleiste:'kilometer' oder 'miles' (Pflichtfeld; Standard: kilometer).
+* **Position:** Ausrichtung der Maßstabsleiste (Pflichtfeld; Standard: Unten rechts).
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 
@@ -35,3 +35,4 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
    maxWidth: 200                    # Maximale Breite des Maßstabsbalkens (Standard: 200)
    units: ['km']                    # Einheiten des Maßstabsbalkens, 'kilometer' und/oder 'miles' (ml), (Standard: ['km'])
 
+Pflichtfeld; 

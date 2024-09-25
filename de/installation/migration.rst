@@ -1,0 +1,54 @@
+.. _migration_de:
+
+Migrations-Leitfaden
+####################
+
+.. hint::
+
+    Diese Seite enthält Migrationsanweisungen für die Umstellung auf Mapbender 4. Migrationsanweisungen zu Versionen < 4.0.0 finden Sie in der :ref:`englischen Version <en/installation/migration:Migration to Mapbender 3.3.4>` dieser Seite.
+    Allgemeine Tipps zur Aktualisierung finden Sie stattdessen auf der Seite :ref:`installation_update_de`.
+
+.. tip::
+
+    Für ausführliche Informationen des Mapbender-Entwicklungsteams siehe auch den `Upgrading Guide auf GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_.
+
+
+Umstellung auf Mapbender 4.0.0
+******************************
+
+* Schauen Sie sich den `Upgrading Guide auf GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_ sorgfältig an, bevor Sie das Update durchführen.
+
+* Sie werden feststellen, dass sich die Symfony Verzeichnisstruktur stark verändert hat.
+* Für Mapbender 4 wurden alle *.yml*-Dateierweiterungen in *.yaml* umgewandelt.
+* Die *config.yml* ist entfallen.
+* Öffentliche Dateien wurden von `web/` nach `public/` verschoben.
+* Anstelle von mehreren Parametern in der Datei *parameters.yml* wird die Datenbankdefinition durch eine Umgebungsvariable ``MAPBENDER_DATABASE_URL`` ersetzt. Konfigurieren Sie sie, indem Sie diese in Ihrer *.env.local*-Datei hinzufügen. Wenn Sie mehrere Verbindungen haben, verwenden Sie eine Umgebungsvariable pro Verbindung und konfigurieren diese in der Datei `config/packages/doctrine.yaml`.
+* Der Apache Virtual Host / ALIAS muss geändert werden. Verweisen Sie auf `public` (statt auf `web`). Rufen Sie ``index.php`` (anstelle von ``app.php``) auf. Siehe :ref:`Installationsanleitung <de/installation/installation_ubuntu:Konfiguration Apache 2.4>`.
+* Die Umgebung kann nun über die Umgebungsvariable ``APP_ENV`` gesetzt werden (siehe *.env.local*). ``index_dev.php`` (vorher ``app_dev.php``) ist weiterhin als Alternative für den Zugriff auf die Entwicklungsumgebung verfügbar.
+* Datenbankberechtigungen können mit ``bin/console mapbender:security:migrate-from-acl`` migriert werden. Führen Sie dies aus, bevor Sie den Befehl ``schema:update`` ausführen, da sonst Ihre alten ACL-Tabellen nicht mehr vorhanden sind.
+
+
+Upgrade der Datenbank
+---------------------
+
+.. warning:: Führen Sie die folgenden Befehle exakt in der angegebenen Reihenfolge aus, um ein Upgrade durchzuführen (nachdem Sie die Verzeichnisstruktur von Symfony auf den neuesten Stand gebracht haben). Erstellen Sie zuerst ein Backup Ihrer Datenbank!
+
+
+1. Dies ersetzt den aus doctrine entfernten ``json_array``-Typ durch ``json``. Wenn Sie ein anderes DBMS als SQlite, PostgreSQL und MySQL verwenden, müssen Sie dies manuell tun.
+
+.. code-block:: bash
+
+    bin/console mapbender:database:upgrade
+
+2. Migriert Sicherheitsdefinitionen aus dem ACL-System in das neue Rechtesystem:
+
+.. code-block:: bash
+
+    bin/console mapbender:security:migrate-from-acl
+
+3. Aktualisiert den Rest der Datenbank. Dies muss als letzter Schritt ausgeführt werden, da es die alten ACL-Tabellen löscht:
+
+.. code-block:: bash
+
+    bin/console doctrine:schema:update --complete --force
+

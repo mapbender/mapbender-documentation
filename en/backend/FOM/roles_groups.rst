@@ -1,13 +1,28 @@
 .. _roles_groups:
 
-Roles and Groups
+Groups and Roles
 ================
 
-Roles are used for global permission checks when no domain object is involved and can be used as security identities of Access Control Entries in Access Control Lists of domain objects.
+Groups
+******
+Groups are individually created database entities that can be assigned to one or more users.
+Their primary use case is to distribute a set of permissions which are assigned to every user of that group.
+Assuming that an account has the permission, groups will be created and configured via ``Security`` → ``Groups`` → ``Add new group``.
+Mapbender offers an overview over every group at the same place:
 
-In Mapbender, there are currently two roles for rights allocation in the backend available:
+  .. image:: /figures/mapbender_security_group_overview.png
+   :scale: 70
 
-* All authenticated users: Gives global set permissions for one or more domain object to all users that are logged in while working with Mapbender.
-* Anonymous users: Sets global permissions for users which are browsing Mapbender without an individual account.
+Roles
+*****
+Roles are used for global permission checks, even if no other permission structure (e.g., a group membership) is involved. They can be used as security identities for domain objects.
+In Mapbender, there are currently two roles for permission allocation available:
 
-Groups are individually created database entities which can be assigned to one or more users. Therefore their primary use is to collect rights which are assigned to every user of that group.
+* **Public Access**: Sets global permissions for users which are browsing Mapbender without an individual account.
+* **All authenticated users**: Gives global permissions for one or more entities to all users that are logged in while working with Mapbender.
+
+Depending on the context, roles can be assigned authorizations in the ``Security`` tab of an application or under ``Global permissions``.
+An individual application could be secured as follows:
+
+  .. image:: /figures/mapbender_roles_application_overview.png
+   :scale: 70

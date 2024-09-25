@@ -14,30 +14,16 @@ Configuration
 =============
 
 .. image:: ../../../figures/wms_loader_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **Auto open:** Opens the element when application is started (default: false).
+* **Open automatically:** Opens the element when application is started (default: false).
 * **Split layers:** Splits layer on load of the service (default: false).
-* **Title:** Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
 * **Default format:** image/png, image/gif, image/jpeg (default: image/png).
 * **Default info format:** text/html, text/xml, text/plain (default: text/html).
 
 You need a :ref:`button` to show this element.
 
-
-YAML-Definition:
-----------------
-
-This template can be used to insert the element into a YAML application.
-
-.. code-block:: yaml
-
-   target: ~                            # Id of Map element to query
-   tooltip: 'WMS Loader'                # text to use as tooltip
-   autoOpen: false                      # true/false open when application is started (default: false)
-   defaultFormat: 'image/png'           # image/png, image/gif, image/jpeg (default: image/png)
-   defaultInfoFormat: 'text/html'       # text/html, text/xml, text/plain (default: text/html)
-   splitLayers: false                   # split layer on load of the service (default: false)
 
 How to add a WMS by defining a link
 ====================================
@@ -62,3 +48,17 @@ You can add a WMS to Mapbender by defining a link, e. g. in your :ref:`feature_i
     href oder mb-url                   # refer to the WMS getcapabilities URL
     mb-add-vendor-specific="bplan=123" # define a vendor specific that will be added to the requests (version 3.2.9 and up)
 
+
+YAML-Definition
+---------------
+
+This template can be used to insert the element into a YAML application.
+
+.. code-block:: yaml
+
+   target: ~                            # Id of Map element to query
+   tooltip: 'WMS Loader'                # text to use as tooltip
+   autoOpen: false                      # true/false open when application is started (default: false)
+   defaultFormat: 'image/png'           # image/png, image/gif, image/jpeg (default: image/png)
+   defaultInfoFormat: 'text/html'       # text/html, text/xml, text/plain (default: text/html)
+   splitLayers: false                   # split layer on load of the service (default: false)

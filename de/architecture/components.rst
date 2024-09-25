@@ -32,7 +32,7 @@ Diese Komponenten bietet Symfony an:
 
 Mehr über Symfony und dessen Funktionsweisen findet sich in der offiziellen Dokumentation: 
 
-* https://symfony.com/doc/current/book/index.html
+* https://symfony.com/doc/current/index.html
 
 
 OpenLayers
@@ -53,7 +53,7 @@ Mehr über jquery UI: https://jqueryui.com/
 
 Mapbender
 **********
-Mapbender ist aus Komponentensicht eine Bundle-Sammlung. Als Voraussetzung muss das MapbenderCoreBundle und die FOMBundles genutzt werden.
+Mapbender ist aus Komponentensicht eine Bundle-Sammlung. Als Voraussetzung müssen das MapbenderCoreBundle und das FOMBundle genutzt werden.
 
 Andere (optionale) Bundles, die die Funktionalität grundlegend erweitern, sind:
 
@@ -69,14 +69,12 @@ Das Mapbender CoreBundle ist das Mapbender Standard-Bundle. Es beinhaltet grundl
 
 Es stellt jQuery, jQuery UI, OpenLayers und MapQuery für alle anderen Mapbender Bundles bereit.
 
-.. ToDo
-  FOM Bundle
 
 Mapbender Starter
 *****************
 Mapbender Starter ist ein Symfony Demo-Projekt welches Mapbender Bundles nutzt, um eine grundlegende Mapbender-Anwendung zu präsentieren.
 
-Es enthält die Standard-Demo-Anwendungen, welche in der mapbender.yaml definiert werden. Diese sind über ein Web-Interface mit Authentifizierungsmöglichkeiten (Backend) eingebunden. Das Backend kann darüber hinaus genutzt werden, um Anwendungen, Benutzer und Gruppen zur Rechteverwaltung zu erstellen und verschiedene Dienste einzubinden.
+Es enthält die Standard-Demo-Anwendungen, welche in der mapbender.yaml definiert werden. Diese sind über ein Web-Interface mit Authentifizierungsmöglichkeiten eingebunden. Das :ref:`backend_de` kann darüber hinaus genutzt werden, um Anwendungen, Benutzer und Gruppen zur Rechteverwaltung zu erstellen und verschiedene Dienste einzubinden.
 
 Mapbender Starter kann als einfache Startmöglichkeit in das eigene Mapbender-Projekt genutzt werden.
 

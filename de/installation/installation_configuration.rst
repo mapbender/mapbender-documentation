@@ -10,16 +10,16 @@ Im Folgenden werden die für die Mapbender-Installation aufgeführten Konfigurat
 
 * Erzeugen der Datenbank
 * Erzeugen der Datenbankschemas
-* Kopieren des bundle Assets in das öffentliche web-Verzeichnis
+* Kopieren des bundle Assets in das öffentlich zugängliche `public`-Verzeichnis
 * Erzeugen des "root" Benutzers
 * Initialisieren der Datenbank
-* Laden der Anwendungen der mapbender.yaml Definition in die Datenbank
+* Laden der Demo-Anwendungen in die Datenbank
 
 Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfony.com/>`_ Frameworks durchgeführt, auf dem Mapbender aufbaut. Hier noch einige wichtige Hinweise, bevor Sie fortfahren: 
 
 .. note:: **Hinweis:** Das console-Hilfsprogramm wird Dateien in die Verzeichnisse var/cache und var/log schreiben. Für diese Operationen werden die Benutzerrechte des Benutzers benötigt, mit dem Sie angemeldet sind. Sie benötigen ebenfalls Benutzerrechte für das Verzeichnis var/db und die SQLite Datenbank. Wenn Sie die Applikation in Ihrem Browser öffnen, wird die SQLite-Datenbank mit Server-PHP-Prozess versuchen, auf diese Dateien zuzugreifen oder in die Verzeichnisse mit anderen Benutzerrechten zu schreiben. Stellen Sie sicher, dass Sie den Verzeichnissen und Dateien Schreib- und Leserechte zugewiesen haben. 
 
-.. note:: **Wichtiger Hinweis:** Die folgenden bin/console Schritte gehen davon aus, dass Sie sich oberhalb des app-Verzeichnisses befinden (für die git-Installation bedeutet das mapbender/application/ , andernfalls mapbender/).
+.. note:: **Wichtiger Hinweis:** Die folgenden ``bin/console`` Schritte gehen davon aus, dass Sie sich oberhalb des `bin`-Verzeichnisses befinden (für die git-Installation bedeutet das `mapbender/application/` , andernfalls `mapbender/`).
 
 .. code-block:: yaml
 
@@ -31,7 +31,7 @@ Diese Schritte werden mit dem console-Hilfsprogramm des `Symfony <https://symfon
 Anpassen der Konfigurationsdatei
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Die Parameter der Datenbankverbindung sind zusammen mit einigen anderen Konfigurationsparametern in der Datei ``application/config/parameters.yaml`` gespeichert.
+Die Parameter der Datenbankverbindung sind in der Datei *.env.local* gespeichert. Weitere Konfigurationsparameter finden sich in der Datei *parameters.yaml* und anderen Dateien im `config`-Verzeichnis.
 
 Mehr Informationen dazu finden Sie im Kapitel : :ref:`yaml_de`.
 
@@ -63,14 +63,14 @@ Erzeugen des Datenbankschemas über Symfony:
 Kopieren des Asset Bundles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien, Bilder und mehr – diese müssen in das öffentliche web-Verzeichnis kopiert werden:
+Jedes Bundle hat seine eigenen Abhängigkeiten - CSS-Dateien, JavaScript-Dateien, Bilder und mehr – diese müssen in das öffentliche `public`-Verzeichnis kopiert werden:
 
 .. code-block:: yaml
 
     bin/console assets:install public
 
 
-Sie können auch einen symbolischen Link verwenden, statt die Dateien zu kopieren.  Dies erleichtert die Bearbeitung der abhängigen Dateien in den bundle-Verzeichnissen.
+Sie können auch einen symbolischen Link verwenden, statt die Dateien zu kopieren.  Dies erleichtert die Bearbeitung der abhängigen Dateien in den `bundle`-Verzeichnissen.
 
 .. code-block:: yaml
 
@@ -88,7 +88,7 @@ Der erste Benutzer, der alle Privilegien hat, wird mit folgendem Kommando erzeug
 
 Dieses Kommando wird interaktiv alle notwendigen Informationen abfragen und den Benutzer in der Datenbank erzeugen.
 
-Sie können auch den Modus "silent" verwenden, wenn Sie ein Skript nutzen möchten, um Mapbender zu installieren und dabei nicht nach Parametern gefragt werden wollen.
+Sie können auch den Modus ``silent`` verwenden, wenn Sie ein Skript nutzen möchten, um Mapbender zu installieren und dabei nicht nach Parametern gefragt werden wollen.
 
 .. code-block:: yaml
 
@@ -105,11 +105,10 @@ Führen Sie das nachfolgende Kommando aus, um die Datenbank zu initialisieren un
     bin/console mapbender:database:init
 
 
-Importieren von Anwendungen aus application/config/applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Importieren von Anwendungen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-Sie können die Anwendungen, die in dem Ordner applications definiert sind, in die Datenbank importieren:
+Sie können die Anwendungen, die in dem Ordner `applications` (innerhalb von `config/`) definiert sind, in die Datenbank importieren:
 
 .. code-block:: yaml
 
@@ -119,25 +118,57 @@ Sie können die Anwendungen, die in dem Ordner applications definiert sind, in d
 Konfigurationsdateien
 ---------------------
 
-Die Konfigurationsdateien liegen unter ``application/config``. 
+Die Konfigurationsdateien liegen im Verzeichnis `config/`. 
 
 Mehr Informationen dazu finden Sie im Kapitel: :ref:`yaml_de`.
 
+Außerdem die Datei *env.local* und *.env* im Verzeichnis `application`.
 
-.. _app_cache_de:
 
 Produktions- und Entwicklungsumgebung und Caches
 ------------------------------------------------
 
-Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den normalen Betrieb und eine Entwicklungsumgebung, in dem die Anwendungen getestet werden können. Dieses Konzept orientiert sich an den `Configuration Environments <https://symfony.com/doc/current/configuration.html#configuration-environments>`_ im Symfony Framework.
+Mapbender bietet zwei Umgebungen an: eine Produktionsumgebung für den
+normalen Betrieb und eine Entwicklungsumgebung, in dem die Anwendungen
+getestet werden können. Dieses Konzept orientiert sich an den
+`"Environments" im Symfony Framework
+<https://symfony.com/doc/current/book/configuration.html>`_.
 
-Die Entwicklungsumgebung zeigt vollständige Fehlermeldungen (einschließlich Stacktraces) im Browser und aktiviert die Symfony-Debug-Konsole und den Profiler. Außerdem wird das Caching deaktiviert.
-In der Produktionsumgebung wird das Caching aktiviert, zusätzlich werden nur allgemeine Fehlermeldungen angezeigt. Ausführlichere Meldungen werden hingegen in die Logdateien geschrieben.
+Die Produktionsumgebung wird mit der URL http://localhost/index.php
+aufgerufen, die Entwicklungsumgebung mit der URL
+http://localhost/index_dev.php. Der Aufruf über ``index_dev.php`` kann
+und sollte nur vom localhost erfolgen.
+Sie können die Datei *index_dev.php* anpassen und IP-Adressen hinzufügen, so dass auch von diesen Adressen der Entwicklungsmodus erreicbar ist.
 
-Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf `prod` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
+Es gibt Unterschiede im Verhalten von *index.php* und *index_dev.php*:
 
-* durch Bearbeiten der ``APP_ENV``-Variable in der `.env`-Datei,
-* durch Hinzufügen einer `.env.local`-Datei und Überschreiben des Werts dort,
+* Der Cache-Mechanismus verhält sich in der Entwicklungsumgebung anders: Es
+  werden nicht alle Dateien gecacht, so dass vorgenommene Änderungen direkt
+  sichtbar sind. Dadurch ist der Aufruf einer Anwendung über ``index_dev.php``
+  immer langsamer als im Produktivbetrieb.
+
+  Im Detail werden in der Entwicklungsumgebung von Mapbender u.a. die CSS,
+  JavaScript und Übersetzungsdateien nicht gecacht.
+
+  In der Produktionsumgebung werden diese aber in `var/cache` abgelegt.
+
+* In der Entwicklungsumgebung werden Fehlermeldungen und ihr Stacktrace direkt
+  an der Oberfläche angezeigt. In der Produktionsumgebung werden die
+  Fehlermeldungen in die Datei `var/log/prod.log` geschrieben.
+
+* Die Entwicklungsumgebung zeigt den Symfony Profiler an. Dort werden Dinge
+  protokolliert, die nur für die Entwickler, aber nicht für Außenstehende
+  sichtbar sein sollten.
+
+Das Verzeichnis `var/cache` enthält die einzelnen Cache-Dateien. Es werden
+Verzeichnisse für jede Umgebung (``prod`` und ``dev``) angelegt, das Verhalten des
+dev-Caches ist aber, wie angesprochen, anders.
+
+Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf ``prod`` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
+
+.. * durch Bearbeiten der ``APP_ENV``-Variable in der *.env*-Datei,
+
+* durch Überschreiben des Werts in einer *.env.local*-Datei,
 * durch Festlegen einer Umgebungsvariable in Ihrer Apache2-vHost-Konfiguration: ``SetEnv APP_ENV prod``,
 * durch explizites Festlegen beim Starten des lokalen Webservers:
 

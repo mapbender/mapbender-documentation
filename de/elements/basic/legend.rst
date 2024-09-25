@@ -3,6 +3,8 @@
 Legende (Legend)
 ****************
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Dieses Element zeigt eine Legende der Layer an, die in der Karte dargestellt werden. Nicht jeder Layer verfügt dabei über eine Legende. Zusätzlich zum Legendenbild können der Titel des Dienstes, des Layers und der Gruppe (sofern vorhanden) angezeigt werden. 
 
 .. image:: ../../../figures/de/legend.png
@@ -12,11 +14,11 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/legend_configuration.png
-     :scale: 80
+     :scale: 70
 
 
-* **Automatisches Öffnen:** true, wenn die Legende beim Start der Anwendung geöffnet werden soll (Standard: false).
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Automatisches Öffnen:** Sofern aktiviert, öffnet sich die Legende beim Anwendungsstart (Standard: deaktiviert).
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt. In der Karte wird der Titel neben dem :ref:`button_de` angezeigt, wenn dort "Beschriftung anzeigen" aktiviert ist.
 * **Titel der Datenquelle anzeigen:** zeigt den WMS Titel (Standard: true).
 * **Titel der Ebene anzeigen:** zeigt den Layertitel (Standard: true).
 * **Titel der gruppierten Ebenen anzeigen:** zeigt den Gruppenlayertitel für gruppierte Layer (Standard: true).
@@ -29,24 +31,23 @@ Konfigurationsbeispiele
 
 Legende in der Sidepane
 -----------------------
-Die Legende in der Sidepane wird über das ``+`` -Zeichen im Backend der Anwendung unter Layouts - Sidepane eingebunden.
+Die Legende in der Sidepane wird über |mapbender-button-add| im :ref:`backend_de` der Anwendung unter Layouts - Sidepane eingebunden.
 
 .. image:: ../../../figures/de/add_sidepane.png
      :scale: 80
 
-Im Dialogfeld wird das Element "Legende" ausgewählt. Anschließend öffnet sich der Konfigurationsdialog "Element hinzufügen – Legende".
+Anschließend wird das Element ausgewählt. Es öffnet sich der Konfigurationsdialog.
 
 .. image:: ../../../figures/de/legend_example_sidepane_dialog.png
-     :scale: 80
+     :scale: 70
 
-Das hier konfigurierte Element hat den Titel "Legende". Die Legende öffnet sich automatisch (Häkchen bei *Automatisches Öffnen*). Der Titel der Ebenen wird angezeigt sowie der Titel der gruppierten Ebenen (Häkchen bei *Titel der Ebene anzeigen* und *Titel der gruppierten Ebene anzeigen*).
+Das hier konfigurierte Element hat den Titel "Legende". Die Legende öffnet sich automatisch (Häkchen bei *Automatisches Öffnen*). Der Titel der Ebenen sowie der Titel der gruppierten Ebenen (Häkchen bei *Titel der Ebene anzeigen* und *Titel der gruppierten Ebene anzeigen*) werden angezeigt.
 
 Diese Konfiguration ergibt folgendes Ergebnis in der Anwendung:
 
 .. image:: ../../../figures/de/legend_example_sidepane.png
      :scale: 80
 
-Die Legende wurde in diesem Fall in der Sidepane eingefügt.
 
 Legende in der Oberen Werkzeugleiste (Toolbar)
 -----------------------------------------------
@@ -57,31 +58,24 @@ Die Legende kann auch als Button in der Werkzeugleiste eingebunden werden. Hierf
 
 Für das Konfigurationsbeispiel wurden folgende Einstellungen gewählt:
 
-.. image:: ../../../figures/de/legend_example_toolbar_dialog.png
-     :scale: 80
+.. image:: ../../../figures/de/legend_example_sidepane_dialog.png
+     :scale: 70
 
-Für das Konfigurationsbeispiel wurde das Häkchen bei *Automatisches Öffnen* entfernt, sodass sich die Legende nur bei aktivem Klicken auf einen Button öffnet.
 Sobald dieses Element im Kartenbereich eingebunden wurde, muss ein Button in der oberen Werkzeugleiste eingefügt werden. Die Konfiguration von Buttons wird in der Mapbender-Dokumentation unter :ref:`button_de` beschrieben.
-
-Die Konfiguration eines Buttons für die Legende kann wie folgt aussehen:
-
-.. image:: ../../../figures/de/legend_example_button.png
-     :scale: 80
-
 Mit diesen Einstellungen sieht das Ergebnis in der Anwendung wie folgt aus:
 
-.. image:: ../../../figures/de/legend_example_toolbar.png
+.. image:: ../../../figures/de/legend.png
      :scale: 80
 
-In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende.
+In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element zu sehen. Sobald auf den Button geklickt wird, öffnet sich ein Dialog mit der Legende. Durch die Einstellung "Automatisch öffnen" wird der Dialog beim Start der Anwendung direkt angezeigt.
 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
 .. image:: ../../../figures/de/legend_example_toolbar_checkboxes.png
-     :scale: 80
+     :scale: 60
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

@@ -4,63 +4,64 @@
 PrintClient
 ***********
 
-The PrintClient allows for the print of a predefined map area. The following documentation will first give an overview about the general set-up and configuration of the PrintClient. The second part will answer the question how individual print templates can be generated. Lastly, the print process and all its configuration options will be presented.
+The PrintClient enables printing of a predefined map area. This documentation provides an overview of its setup and configuration, outlines the generation of individual print templates, and details the print process along with its configuration options.
 
 General
 =======
 
 It is possible to define different properties of the PDF you would like to print with the client:
 
- * Print template,
- * Quality,
- * Scale,
- * Frame rotation,
- * Activate/deactivate legend
- * Optionally, it is possible to define individual input fields (e.g. title, comment, remark), which will then also be printed in the PDF.
+ * Template
+ * Quality
+ * Scale
+ * Rotation
+ * Title
+ * *Print legend* checkbox
 
 .. image:: ../../../figures/print_client.png
-     :scale: 80
+     :scale: 70
 
 The PrintClient element can be implemented both as a dialog (via a button) and as element as part of the sidepane. If it is part of the sidepane, you have to activate the print frame first to start the print. The print frame can be moved around freely in the map canvas, it defines the area of the PDF output. When finished, you have to deactivate the print frame to use the map as usual again (when used as a dialog this happens automatically by opening and closing the dialog window).
 
 .. image:: ../../../figures/print_client_sidebar.png
-     :scale: 80
+     :scale: 70
 
 
 Configuration
 -------------
 
-The Printclient can be configured in the backend. It relies on print templates (format A0 to A4). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
+The Printclient is configured in the backend. It relies on print templates (A0 to A4). These LibreOffice Draw files can be individually modified regarding the location of date, scale, north arrow, overview map as well as dynamic images/texts in the PDF.
 
 .. image:: ../../../figures/print_client_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **title**: Title of the element. The title will be listed in "Layouts" and allows to distinguish between different buttons. The title will be displayed next to the button if "Show label" is activated.
-* **scales**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
-* **rotatable**: defines if the print extent is rotatable, default is true
-* **print legend**: adds a checkbox which allows your print to have a legend
-* **legend checkbox checked**: if true, the legend checkbox is checked by default
-* **file_prefix**: defines a file prefix for the PDF that is generated when creating a PDF (file_prefix_date.pdf will be created)
-* **quality_levels**: defines quality levels in DPI values.
-* **templates**: template name. Add template file name without file extensions (Mapbender is looking for two files, e.g. a4portrait.odg & a4portrait.pdf), Template files are located at config/MapbenderPrintBundle. Deleting or adding templates is possible with the "+"- or "x" buttons.
-* **label**: defines a template label for the selectbox in the frontend.
+* **Title**: Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. The title will be displayed next to the button if "Show label" is activated.
+* **Scales (csv)**:  define scales to choose from selectbox, or – if empty – a free scale can be defined in a text field.
+* **Rotatable**: defines if the print extent is rotatable, default is true
+* **Print legend**: adds a checkbox which allows your print to have a legend
+* **Legend checkbox active**: if true, the legend checkbox is checked by default
+* **File prefix**: defines a file prefix for the PDF that is generated when creating a PDF (file_prefix_date.pdf will be created)
+* **Quality levels**: defines quality levels in DPI values.
 
-* **optional_fields**:
+**Templates**
+
+* **Template**: Template name. Add template file name without file extensions (Mapbender is looking for two files, e.g. a4portrait.odg & a4portrait.pdf), Template files are located at config/MapbenderPrintBundle. Deleting or adding templates is possible with the "+"- or "x" buttons.
+* **Label**: Template label description for the selectbox in the frontend.
+
+**Optional fields**
 
 With the configuration of the following values it is possible to enable optional fields in the print dialog. An example (title, two comment fields, name) is offered in the YAML definition.
 
 * **title**: name of the optional field, default value is null (no optional fields are defined).
 * **label**: Label of the optional field.
-* **options**: { required: true } : Type of the optional field. Has to be true or false.
-
+* **options**: Type of the optional field. Has to be true or false.
 * **Display required fields first**: If this checkbox is active, your defined required fields appear utmost.
+* **Replace pattern**: You can modify the map request for printing. You can add additional parameters like map_resolution (for MapServer).
 
-* **replace_pattern** - You can modify the map request for printing. You can add additional parameters like map_resolution (for MapServer).
-
-Here's an example for the backend configuration (or look below in the YAML definition for an enhanced and commented example).
+Here's an example for the :ref:`backend` configuration (or look below in the YAML definition for an enhanced and commented example).
 
 .. image:: ../../../figures/print_client_configuration_enhanced.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition
@@ -333,8 +334,6 @@ With click on the print button the print dialog opens and offers the print templ
 
 .. note:: The flexibility to move the print frame won‘t stop you from choosing a region that does not contain the feature that was selected. In this case, the feature information does not match to the features that are displayed.
 
-
-.. _queued_print:
 
 Queued Print
 ------------

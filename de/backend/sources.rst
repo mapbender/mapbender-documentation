@@ -5,7 +5,7 @@ Datenquellen (Sources)
 
 Über den Backend-Menübereich Datenquellen können OGC WMS- und WMTS/TMS-Dienste in den Versionen 1.1.1 und 1.3.0 registriert werden.
 
-Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im Schnellstart-Kapitel :ref:`load_sources_de`.
+Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im Schnellstart-Kapitel :ref:`de/quickstart:Laden von Datenquellen`.
 
 
 Datenquelle laden
@@ -34,8 +34,8 @@ Mit einem Klick auf ``Laden`` wird der Dienst registriert.
 Nach einer erfolgreichen Dienstregistrierung zeigt Mapbender Informationen zum Dienst in einem Übersichtsfenster an.
 
 
-Datenquellen - Übersicht
-------------------------
+Datenquellen-Übersicht
+----------------------
 
 Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen und konfigurierten Dienste auf:
 

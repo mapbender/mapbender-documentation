@@ -12,15 +12,15 @@ Configuration
 =============
 
 .. image:: ../../../figures/scalebar_configuration.png
-     :scale: 80
+     :scale: 70
 
-* **Title:** Title of the element. The title will be listed in "Layouts".
-* **Max width:** The maximum width of the scale bar (default: 200px).
-* **Units:** Scale bar units 'kilometer' or 'miles' (default: kilometer).
-* **Position:** Scale bar alignment (default: Bottom right).
+* **Title:** Title of the element. It will be listed under :ref:`layouts`.
+* **Maximum width:** The maximum width of the scale bar (mandatory field; default: 200px).
+* **Unit:** Scale bar units 'kilometer' or 'miles' (mandatory field; default: kilometer).
+* **Position:** Scale bar alignment (mandatory field; default: Bottom right).
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

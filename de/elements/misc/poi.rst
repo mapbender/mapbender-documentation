@@ -6,7 +6,7 @@ MeetingPoint (POI)
 Generiert POI-URLs (Treffpunkt-URLS), verwendbar für das Verschicken eines Koordinatenpunkts per E-Mail. Dabei wird der übermittelte Punkt in das Koordinatensystem der Karte projeziert und angezeigt.
 
 .. image:: ../../../figures/de/poi.png
-     :scale: 80
+     :scale: 70
      
 
 Konfiguration
@@ -14,16 +14,16 @@ Konfiguration
 
 
 .. image:: ../../../figures/de/poi_configuration.png
-     :scale: 80
+     :scale: 70
      
-* **Versenden per Mail:** Der POI wird per Mail verschickt. 
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
-* **Body:** Dialogtext der nach dem Setzen eines POI angezeigt wird. 
+* **Versenden per Mail - Mailclient öffnen:** Der POI wird per Mail verschickt. 
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Text:** Dialogtext der nach dem Setzen eines POI angezeigt wird. 
 * **GPS:** Erlaubt eine GPS Positionierung.
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

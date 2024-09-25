@@ -12,11 +12,12 @@ You can only use the element in the sidepane. The element can be used more than 
 * **Title:** Title of the element. This is displayed in the layouts list and allows you to define several elements.
 * **Target:** (ID) of the map.
 * **Schemes:** YAML-Definition of the element Digitizer
+* **debug:** Display error messages, e.g. syntax error in SQL [experimental]
 
 The Digitizer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. 
 Read more about this under :ref:`yaml`.
 
-.. hint:: It is not recommended to place spatial data into the "default" Mapbender database containing your Doctrine entities. You will encounter errors running Doctrine schema updates
+.. hint:: It is not recommended to place spatial data into the "default" Mapbender database containing your Doctrine entities. You will encounter errors running Doctrine schema updates.
 
 The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
 
@@ -1191,11 +1192,11 @@ The storage path and the name of the stored files can not yet be changed. The fi
 
 The filesystem path is:
 
-* <mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png
+* ``<mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png``
 
 The linked URL stored in the database column is:
 
-* http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png
+* ``http://localhost/mapbender/uploads/featureTypes/[tablename]/[columnname]/[filename].png``
 
 .. code-block:: yaml
 
@@ -1271,9 +1272,10 @@ There is a context menu is available for every feature by default. You can open 
 Map-Refresh after save
 ----------------------
 
-After saving an object the *refreshLayersAfterFeatureSave* option can force a reload of one or many WMS layer. 
+After saving an object, the *refreshLayersAfterFeatureSave* option can force a reload of one or many WMS layer. 
 
-The layer can be specified by their name or by their instance-ID. 
+A layer can be specified by its name or by its Instance-ID: 
+
 
 .. image:: ../../../../figures/digitizer/layerinstance_id.png
      :scale: 80
@@ -1286,7 +1288,7 @@ The layer can be specified by their name or by their instance-ID.
        refreshLayersAfterFeatureSave:  # If no entry is made in this area no map refresh is carried out after saving 
          - 17
          - 18
-         - osm        # specify by unique name only with applications in application/config/application
+         - osm        # specify by unique name only with applications in applications/
       [...]
 
 

@@ -3,6 +3,8 @@
 Link
 ****
 
+ .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
+
 Dieses Element stellt ein Button-Modul bereit, über das eine Webseite oder ein Skript verlinkt werden kann. 
 
 
@@ -10,16 +12,16 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, falls die Checkbox "Beschriftung anzeigen" aktiviert ist.
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, falls die Checkbox "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Icon:** Symbol des Buttons, basierend auf einer CSS-Klasse.
+* **Symbol:** Symbol des Buttons, basierend auf einer CSS-Klasse.
 * **Ziel-URL:** Angabe der Ziel-URL, auf die der Button verweist.
 
-Icons
------
+Symbole
+-------
 
 Für einige Symbole können zwei verschiedene Icon-Typen ausgewählt werden.
 
@@ -28,7 +30,7 @@ Für einige Symbole können zwei verschiedene Icon-Typen ausgewählt werden.
 
 Letztere basieren auf einem `IconSet <https://github.com/mapbender/icons>`_, das mit dem Mapbender als Modul ausgeliefert wird. Wir empfehlen die Verwendung der Symbole aus dieser Bibliothek.
 
-.. hint:: Es ist auch möglich, ein Icon-Set zu deaktivieren und/oder andere Icons zu verwenden. Weitere Informationen finden Sie unter :ref:`custom-icons_de`.
+.. hint:: Es ist auch möglich, ein Icon-Set zu deaktivieren und/oder andere Icons zu verwenden. Weitere Informationen finden Sie unter :ref:`de/customization/yaml:Icons anpassen`.
 
 Mehr Informationen zu Icons unter:
 
@@ -44,7 +46,7 @@ Buttons können für Features eingebunden werden, die vorher im Kartenbereich ko
 Link zur Mapbender-Webseite
 ---------------------------
 
-Zuerst muss über das ``+`` - Zeichen in der Anwendung unter dem Reiter Layouts im Bereich der oberen Werkzeugleiste das Element Button ausgewählt werden.
+Zuerst muss über |mapbender-button-add| in der Anwendung unter dem Reiter Layouts im Bereich der oberen Werkzeugleiste das Element Button ausgewählt werden.
 
 .. image:: ../../../figures/de/add_toolbar.png
      :scale: 80
@@ -56,11 +58,11 @@ Hierzu muss *Beschriftung anzeigen* aktiviert sein. Sie können im Feld "Tooltip
 Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole ausgewählen.
 
 .. image:: ../../../figures/de/link_configuration.png
-     :scale: 80
+     :scale: 70
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

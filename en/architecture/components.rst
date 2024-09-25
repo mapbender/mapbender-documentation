@@ -39,9 +39,9 @@ OpenLayers
 **********
 OpenLayers is a powerful software for web maps. It supports a lot of data sources and functionality.
 
-Read more about OpenLayers at http://openlayers.org/
+Read more about OpenLayers at https://openlayers.org/
 
-You find example applications with OpenLayers at http://dev.openlayers.org/examples/
+You find example applications with OpenLayers at https://openlayers.org/en/latest/examples/
 
 
 jQuery and jQuery UI
@@ -55,7 +55,7 @@ Read more about jquery UI at http://jqueryui.com/
 
 Mapbender
 **********
-Mapbender is a collection of bundles. Only the MapbenderCoreBundle and the FOMBundles are mandatory.
+Mapbender is a collection of bundles. Only the MapbenderCoreBundle and the FOMBundle are mandatory.
 
 There are optional bundles like:
 
@@ -71,8 +71,6 @@ The Mapbender CoreBundle is the base bundle for Mapbender. It offers base classe
 
 It provides jQuery, jQuery UI, OpenLayers and MapQuery for all other Mapbender bundles.
 
-.. ToDo
-  FOM Bundle
 
 Mapbender Starter
 *****************

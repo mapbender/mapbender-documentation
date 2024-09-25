@@ -28,3 +28,19 @@ Wenn Sie das Schaltflächenmenü in der oberen Werkzeugleiste verwenden, können
 
 
 Die Menü-Funktion kann im **Layouts**-Tab des Backends gefunden werden: Klicken Sie auf den Zahnrad-Button und aktivieren anschließend das Kontrollkästchen **Menü für Schaltflächen generieren**.
+
+
+Den Ladescreen individuell anpassen
+-----------------------------------
+
+Sofern der Ladescreen einer Anwendung über :ref:`basedata_de` aktiviert ist, ist es möglich, diesen weiter über CSS anzupassen.
+
+.. code-block:: CSS
+
+    :root {
+        --primary: #079ee0;                                 /* Farbe des Ladeindikators */
+        --splashscreen-border: none;                        /* Rand um den Startbildschirm-Dialog, der z.B. mit https://html-css-js.com/css/generator/border-outline/ generiert werden kann */
+        --splashscreen-border-radius: 25px;                 /* Radius der abgerundeten Ecken um den Dialog */
+        --splashscreen-background: rgba(255,255,255,0.8);   /* Hintergrundfarbe des Ladescreens */
+        --splashscreen-fade-out-duration: 200ms;            /* Animationsdauer beim Ausblenden des Ladescreens */
+    }

@@ -3,10 +3,7 @@
 Understanding Elements
 ######################
 
-*Note*: This guide is under complete restructuring. We will provide a new documentation in the Contributing Guite in our Git-Repository:
-
-`https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#elements <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#elements>`_.
-
+.. warning:: The development section of the documentation is partly deprecated, please read with caution. An updated technical documentation for developers is integrated into the Mapbender source code. It can be read directly on `GitHub <https://github.com/mapbender/mapbender/tree/master/docs>`_. 
 
 
 Parts of an Elements
@@ -24,7 +21,7 @@ Twig Template
 Every Element must have an HTML element it is represented by. In the most basic case, this can be a simple DIV element,
 but this can be complex as needed.
 
-For HTML generation Mapbender uses `Twig <http://twig.sensiolabs.org/>`_. A minimal twig template for an element would
+For HTML generation, Mapbender uses `Twig <https://twig.symfony.com/>`_. A minimal twig template for an element would
 like this:
 
 .. code-block:: html+jinja

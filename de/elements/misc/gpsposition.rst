@@ -18,21 +18,21 @@ Konfiguration
 =============
 
 .. image:: ../../../figures/de/gps_position_configuration.png
-     :scale: 80
+     :scale: 70
 
 * **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
 * **Autostart** Startet Element beim Öffnen der Anwendung (Standard: aus).
-* **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
+* **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn "Beschriftung anzeigen" aktiviert ist.
 * **Tooltip:** Text, der angezeigt wird, wenn der Mauszeiger eine längere Zeit über dem Element verweilt.
-* **Icon:** Symbol des Buttons, basierend auf einer CSS Klasse.
-* **Average:** Berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten (Standard: 1).
-* **Follow:** Positioniert die Karte bei jeder empfangenen GPS Koordinate neu (Standard: false).
-* **Center on first position:** Zentriert die Karte auf die erstermittelte Position (Standard: true).
-* **Zoom to accuracy on first position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position (Standard: true).
+* **Symbol:** Symbol des Buttons, basierend auf einer CSS Klasse.
+* **Durchschnitt:** Berechnet den Mittelwert der unter Average angegebenen letzten empfangenen GPS Koordinaten (Standard: 1).
+* **Folge:** Positioniert die Karte bei jeder empfangenen GPS Koordinate neu (Standard: false).
+* **Zentriere auf die erste Position:** Zentriert die Karte auf die erstermittelte Position (Standard: true).
+* **Zoom auf Genauigkeit der ersten Position:** Zoomt auf die ermittelte Koordinate nach Messgenauigkeit bei erster ermittelten Position (Standard: true).
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
 

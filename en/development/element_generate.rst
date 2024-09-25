@@ -3,9 +3,7 @@
 How to create your own Element?
 ###############################
 
-.. note:: This guide is under complete restructuring. We will provide a new documentation in the Contributing Guite in our Git-Repository:
-
-`https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md>`_.
+.. warning:: The development section of the documentation is partly deprecated, please read with caution. An updated technical documentation for developers is integrated into the Mapbender source code. It can be read directly on `GitHub <https://github.com/mapbender/mapbender/tree/master/docs>`_. 
 
 
 Mapbender offers an bin/console command to create different elements:
@@ -28,7 +26,7 @@ There are some steps you have to follow on the way to your own element.
 * create your own bundle
 * create an element via bin/console
 * edit your new element for your needs
-* add the new element to the function *getElements()* to make it available from the backend
+* add the new element to the function *getElements()* to make it available from the :ref:`backend`
 
 
 Use bin/console to generate your own bundle
@@ -99,7 +97,7 @@ Register the new Element
 
 You can register an element by adding it to the function *getElements()* in the file src/Workshop/DemoBundle/WorkshopDemoBundle.php. After creation of the bundle this function does not exist. You also have to refer to the MapbenderBundle and define that your  extends the MapbenderBundle.
 
-This will make the element available in the backend when you configure your application.
+This will make the element available in the :ref:`backend` when you configure your application.
 
 .. code-block:: html+php
 

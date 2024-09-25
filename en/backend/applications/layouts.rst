@@ -1,15 +1,15 @@
 .. _layouts:
 
+Layouts
+#######
+
  .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
 
  .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
 
  .. |mapbender-button-key| image:: ../../../figures/mapbender_button_key.png
 
-Layouts
-#######
-
-In the Layouts section of an application you get an overview of the regions (layout sections) of the application. In the regions, the elements of the application are listed.
+The Layouts section in the :ref:`backend` of an application gives an overview of the regions (layout sections) of the application. In those regions, the elements of the application are listed.
 An overview of all elements is available under :ref:`elements`.
 
 .. note:: Different templates can have different regions: In the demo applications you can see two different region layouts. Not every element can be used in every region. Mapbender cares about that.
@@ -50,6 +50,29 @@ The Top toolbar and the Footer provide the following configuration options:
 
 .. tip:: **Note**: Using the dropdown menu is especially handy on mobile devices. There is a code snippet in :ref:`CSS` that adds a scroll bar to the menu and helps to increase the user experience. 
 
+YAML Configuration
+==================
+This template can be used to configure the **properties** of the toolbar in a YAML application:
+
+.. code-block:: yaml
+
+    - name: toolbar
+      properties:
+        item_alignment: right  # right/left/center
+        screenType: all         # desktop/mobile/all
+        generate_button_menu: false # true/false
+        menu_label: "Menu" # NULL or text
+
+Besides, this template can be used to configure the **properties** of the footer in a YAML application:
+
+.. code-block:: yaml
+
+    - name: footer
+      properties:
+        item_alignment: right # right/left/center
+        screenType: all # all/desktop/mobile
+        generate_button_menu: false # true/false
+        menu_label: "Menu" # NULL or text
 
 Configuration of the Sidepane
 *****************************
@@ -62,6 +85,7 @@ The Sidepane provide the following configuration options through their |mapbende
 * **Type** (Accordion, Buttons, Unstyled. Default: Accordion): See explanation below.
 * **Screen type** (Any, Mobile, Desktop. Default Any): The region will not be displayed when other screen types are used. Any - will always show the region.
 * **Width** (in px) (in px. Default: 350px): Width of the Sidepane in Pixels.
+* **Resizable** (Default: true): Allows to resize the width of the sidepane.
 * **Position** (Left, Right. Default: Left): Defines the placement of the sidepane.
 * **Initially closed** (Default: disabled): Defines whether the Sidepane should be closed or open on start of the application.
 
@@ -71,8 +95,30 @@ The option **Type** adjusts the inserted elements:
 
 - ``Buttons`` shows elements via buttons.
 
-- ``Unstyled`` does not contain any styling options at all and displays the elements in the configured backend order.
+- ``Unstyled`` does not contain any styling options at all and displays the elements in the configured :ref:`backend` order.
 
+The option **Resizable** uses a minimum size of 120 px and a maximum of 95 % of the screen's width. These values can be further restricted by using custom css:
+
+.. code-block:: css
+   
+    .sidePane.resizable {
+      min-width: 200px;
+      max-width: 500px;
+    }
+
+YAML Configuration
+==================
+This template can be used to configure the **properties** of the sidepane in a YAML application:
+
+.. code-block:: yaml
+
+    - name: sidepane
+      properties:
+        name: accordion # tabs (for button) / accordion / NULL (for unstyled)
+        align: right # right/left
+        closed: false # true/false
+        screenType: all # all/desktop/mobile
+        width: "654px"
 
 Button area (Elements)
 **********************
@@ -83,12 +129,12 @@ The following button functions are available:
     :alt: Mapbender Button Area
 
 
-* **Toggle show/hide element**: A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the backend.
+* **Toggle show/hide element**: A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the :ref:`backend`.
 * **Show on mobile screens**: Displays an element only on mobile-sized screens.
 * **Show on Desktop screens**: Displays an element only on Desktop-sized screens.
 * **Edit**: Adjusts an element.
-* **ACL element**: Sets specific visibility permissions for an element.
-* **Delete**: Removes an element from both front- and backend.
+* **Restrict element access**: Sets specific visibility permissions for an element.
+* **Delete**: Removes an element from both front- and :ref:`backend`.
 
 
 Edit
@@ -96,29 +142,29 @@ Edit
 The |mapbender-button-edit| button opens a configuration mask for a specific element. The :ref:`elements` overview page can help you to look up a setting for a specific element.
 
 
-Acl element
-===========
-The |mapbender-button-key| button opens a **Secure element** window that allows configuration of the :ref:`acl` **View** right for users/groups. 
+Restrict element access
+=======================
+The |mapbender-button-key| button opens a **Secure element** window that allows the configuration of the *View* right for users/groups. 
 
 Without configuration, an element has no access restriction and is avaible to the users/groups that can access the application.
 
-When via Acl element View access rights are set, only the defined users/groups get access to the element.
+When **View** access rights are set, only the defined users/groups get access to the element.
 
 Add users to restrict access to them with the |mapbender-button-add| button. A set checkmark next to the user account provides the necessary rights.
 
-.. image:: ../../../figures/de/fom/acl_secure_element.png
-     :width: 100%
+.. image:: ../../../figures/fom/acl_secure_element.png
+     :width: 50%
 
 
-After setting specific access rights, the security key turns red. If you hover over the key with the cursor, you will see the names of the users who have rights to the element.
+After setting specific access rights, the security key turns red.
 
 .. image:: ../../../figures/fom/element_security_key_popup.png
-     :width: 100%
+     :width: 75%
 
 
-You can find more security details under :ref:`security`.
+You can find more security details under :ref:`en/backend/FOM/index:Permission management`.
 
 
 Delete
 ======
-Removes an element from both front- and backend.
+Removes an element from both front- and :ref:`backend`.

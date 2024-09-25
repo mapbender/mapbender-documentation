@@ -17,12 +17,12 @@ The following variables can be integrated in HTML:
 Configuration
 =============
 
-This element has to be integrated in the backend.
+This element has to be integrated in the :ref:`backend`.
 
 .. image:: ../../../figures/html_element.png
-     :scale: 80
+     :scale: 70
 
-* **Title:** Title of the element. The title will be listed in "Layouts".
+* **Title:** Title of the element. The title will be listed in :ref:`layouts`.
 * **Content:** Content of the HTML-element. The variables "application" and "entity" are available.
 * **Classes:** You can refer to a CSS class for the HTML element. The class can be defined in the css editor.
 
@@ -33,7 +33,7 @@ Configuration examples
 Insert picture:
 ---------------
 
-In this example, the Mapbender Logo was integrated in the sidepane (``<img src='https://mapbender.org/fileadmin/mapbender/resources/images/logos/Mapbender-Logo.svg' />``). It can be adjusted with a predefined height (``height='60px'``), background color and transparency (``background-color:rgb(240, 240, 240, 0.9)``) as well as a certain padding (``padding:10px``). These configurations were defined as styling through ``style=``.
+In this example, the Mapbender Logo was integrated in the sidepane. It can be adjusted with a predefined height, background color and transparency as well as a certain padding.
 
 .. code-block:: yaml
 
@@ -69,7 +69,7 @@ The HTML-Code could look like this:
 
      <b><span style="font-size:25px;color:#b6dd18;margin-right:50vw"> Anwendung {{ application.title }} </span></b>
 
-The application title is defined through ``{{ application.title }}``. The term "Anwendung" is an addition and will display independently from the actual title. The style-block (``style=``) defines font size (``font-size:25px``), font width (``<b></b>``), font color (``color:#b6dd18``) as well as position (``margin-right:50vw``) of the title.
+The application title is defined through ``{{ application.title }}``. The term "Anwendung" is an addition and will display independently from the actual title. The style-block defines font size, font width, font color as well as position of the title.
 
 The result for the configuration example looks like this:
 
@@ -87,7 +87,6 @@ This variable displays the name of the active user:
 In this example, the user name is displayed in the toolbar:
 	
 .. image:: ../../../figures/html_example_user_name.png
-     :scale: 80
     
 * Variable: **group.title**
 
@@ -102,7 +101,6 @@ The group of a user cannot be defined in a single expression, because Twig only 
 In this example, index and group name are displayed in the toolbar:
 
 .. image:: ../../../figures/html_example_group_name.png
-     :scale: 80
 
 * Variable: **"entity"**
 
@@ -127,11 +125,11 @@ Refer to a twig file
 You can refer to a twig file in the Content area. Please note that the twig file has to contain valid HTML.
 
 .. image:: ../../../figures/html_configuration_include_twig.png
-     :scale: 80
+     :scale: 70
 
 
-YAML-Definition:
-----------------
+YAML-Definition
+---------------
 
 This template can be used to insert the element into a YAML application.
 

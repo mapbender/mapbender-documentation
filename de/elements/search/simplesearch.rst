@@ -25,7 +25,7 @@ Konfiguration
 
 
 * **Title:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, wenn “Beschriftung anzeigen” aktiviert ist.
-* *Position:** Positionierung (nur bei Nutzung im Kartenbereich)
+* **Position:** Positionierung (nur bei Nutzung im Kartenbereich)
 * **Platzhalter:** Text, der im Suchfeld angezeigt wird, wenn dieses leer ist. Wird playeholder nicht gesetzt, wird der Titel verwendet. 
 * **Query URL:** Solr bzw. Nominatim URL, an die der eingegebene Suchbegriff gesendet wird (z.B. ``http://localhost:8080/solr/core0/select?wt=json&indent=true``).
 * **Query URL key:** Der Suchparameterschlüssel, der angehängt wird (z.B. ``q``).
@@ -45,6 +45,23 @@ Konfiguration
 * **Result minscale/maxscale:** Maßstabsbegrenzung beim Zoomen (z.B. ``1000`` und ``5000``). ~ wenn keine Begrenzung gewünscht wird.
 * **Result icon url:** Symbol, das zur Trefferanzeige verwendet werden soll (z.B. ``/bundles/mapbendercore/image/pin_red.png``).
 * **Result icon offset:** Versatz x und y des Symbols (z.B. ``-6,-38`` für das Stecknadel-Icon).
+
+
+Duplizieren einer Suchkonfiguration
+-----------------------------------
+
+Das Element unterstützt mehrere Suchkonfigurationen. Es ist möglich, ein Suchformular im Backend-Konfigurationsfenster mithilfe des Kopieren-Buttons zu duplizieren:
+
+.. image:: ../../../figures/de/simplesearch_duplication.png
+     :scale: 70
+
+
+Die verschiedenen Suchkonfigurationen sind außerdem via Drag and drop sortierbar.
+
+In der Anwendung können die eingebundenen Konfigurationen über eine Dropdown-Auswahl angewählt werden:
+
+.. image:: ../../../figures/de/simplesearch_dropdown.png
+     :scale: 100
 
 
 Flexible Konfigurationsmöglichkeiten für label_attribute

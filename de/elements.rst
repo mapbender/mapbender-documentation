@@ -9,6 +9,6 @@ Elemente
    elements/basic.rst
    elements/editing.rst
    elements/export.rst
-   elements/search.rst
    elements/share.rst
+   elements/search.rst
    elements/misc.rst

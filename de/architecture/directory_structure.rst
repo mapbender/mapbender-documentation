@@ -7,22 +7,22 @@ app
 ***
 Dieses Verzeichnis beinhaltet:
 
-* den php-Cache (var/cache)
-* das log-Verzeichnis (var/log)
-* das Konfigurationsverzeichnis (config)
-* Der Anwendungs-Kernel (src/Kernel.php) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
-* das Autoladen (autoload.php)
-* Verzeichnis für spezielle Anwendungsressourcen (Resources)
-* die Kommandozeilen-Anwendungen für Pflege und Management (bin/console)
+* den php-Cache (`var/cache`)
+* das log-Verzeichnis (`var/log`)
+* das Konfigurationsverzeichnis (`config/`)
+* Der Anwendungs-Kernel (`src/Kernel.php`) (wird über die FrontendController aufgerufen; darüber wird die gesamte Anwendung kontrolliert)
+* das Autoladen (*autoload.php*)
+* Verzeichnis für spezielle Anwendungsressourcen (`Resources/`)
+* die Kommandozeilen-Anwendungen für Pflege und Management (`bin/console`)
 
 
-config
-------
+config/
+-------
 
-Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis config sowie im Verzeichnis config/packages. Zwei Dateien sind dabei von besonderer Bedeutung:
+Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis `config/` sowie im Verzeichnis `config/packages`. Zwei Dateien sind dabei von besonderer Bedeutung:
 
-* parameters.yaml
-* packages/doctrine.yaml
+* *parameters.yaml*
+* `packages/doctrine.yaml`
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 
@@ -30,10 +30,9 @@ Weitere Informationen im Kapitel :ref:`yaml_de`.
 config/applications
 -------------------
 
-Als YAML definierte Anwendungen können in dem Verzeichnis config/applications abgelegt werden. Die bekannten Beispielanwendungen "Mapbender mobile", "Mapbender Demo Map" und "Mapbender Demo Map basic" liegen dort als einzelne YAML Dateien.
+Als YAML definierte Anwendungen können in dem Verzeichnis `config/applications` abgelegt werden. Die bekannten Beispielanwendungen **Mapbender mobile**, **Mapbender Demo Map** und **Mapbender Demo Map basic** liegen dort als einzelne YAML Dateien.
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.
-
 
 
 bin
@@ -42,35 +41,32 @@ bin
 Hier liegen diverse Bibliotheken.
 
 
-
 mapbender
 *********
 
 Verzeichnis des `Mapbender Submoduls <https://github.com/mapbender/mapbender>`_. Liefert die Mapbender-spezifischen Bundles und den Mapbender-Code.
 
 
-
 mapbender/...../translations
 ----------------------------
 
-Verzeichnis: mapbender/src/Mapbender/CoreBundle/Resources/translations/
+Verzeichnis: `mapbender/src/Mapbender/CoreBundle/Resources/translations/`
 
 
-Die Übersetzungen werden in `YAML-Dateien <https://en.wikipedia.org/wiki/YAML>`_ gespeichert. Jede Sprache benötigt eine YAML-Datei wie z.B. messages.de.yaml für die deutsche Übersetzung
-
+Die Übersetzungen werden in `YAML-Dateien <https://en.wikipedia.org/wiki/YAML>`_ gespeichert. Jede Sprache benötigt eine YAML-Datei, wie z.B. *messages.de.yaml* für die deutsche Übersetzung.
 
 
 public
 ******
 
-Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Der ALIAS muss auf dieses Verzeichnis verweisen.
+Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Der Alias muss auf dieses Verzeichnis verweisen.
+Dieses Verzeichnis beinhaltet die statischen Ressourcen wie css, js, favicon etc.
 
 
 Es kontrolliert:
 
-* index.php - den FrontendController (PHP-Script, welches aufgerufen werden kann).
-
-* dieses Verzeichnis beinhaltet die statischen Ressourcen wie css, js, favicon etc.
+* *index.php*: FrontendController (PHP-Script, welches aufgerufen werden kann).
+* *index_dev.php*: FrontendController als Zugangspunkt in die Entwicklungsumgebung. Kann standardmäßig nur von lokalen IP-Adressen aufgerufen werden.
 
 
 public/bundles
@@ -83,7 +79,7 @@ public/bundles
 
      bin/console assets:install --symlink --relative public
 
-* **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das folgende Kommando (**bin/console assets:install public**) nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
+.. note:: **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das Kommando ``bin/console assets:install public`` nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
 
 
 src
@@ -92,7 +88,8 @@ src
 * Verzeichnis für anwendungsspezifische Bundles (Kunden-Bundle)
 
 
-
 vendor
 ******
+
 * Verzeichnis mit externen Bibliotheken, die via composer geladen wurden. Ressourcen werden von Symfony durch das Autoladen verwendet.
+

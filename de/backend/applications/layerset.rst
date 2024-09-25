@@ -70,13 +70,13 @@ Der Screenshot zeigt die `private Instanz <#freie-und-private-instanzen>`_ ``2/2
 
 - **Sichtbarkeit:** Der Dienst kann mit dieser Schaltfläche sichtbar geschaltet werden.
 
-- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den :ref:`basesourceswitcher_de`, der nur BaseSources anzeigen soll und auf den :ref:`layertree_de`, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch unter `Hinweise <hinweise-layersets_>`_.
+- **BaseSource:** Der Dienst soll als BaseSource (Basisdienst) behandelt werden. Dies hat Auswirkungen auf den :ref:`basesourceswitcher_de`, der nur BaseSources anzeigen soll und auf den :ref:`layertree_de`, in dem diese BaseSources dann auch ausgeblendet werden können. Siehe auch unter :ref:`Hinweise <de/backend/applications/layerset:Hinweise zu den Auswirkungen der einzelnen Konfigurationen>`.
 
-- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe auch unter `Hinweise <hinweise-layersets_>`.
+- **Proxy:** Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Siehe auch unter :ref:`Hinweise <de/backend/applications/layerset:Hinweise zu den Auswirkungen der einzelnen Konfigurationen>`.
 
 - **Transparenz:** Ist dieser Schalter aktiviert (und das ist er standardmäßig) wird der Dienst mit transparentem Hintergrund angefordert. Also im WMS GetMap-Request mit dem Parameter ``TRANSPARENT=TRUE``.
 
-- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert (Standard: nicht gekachelt). Siehe auch unter `Hinweise <hinweise-layersets_>`.
+- **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert (Standard: nicht gekachelt). Siehe auch unter :ref:`Hinweise <de/backend/applications/layerset:Hinweise zu den Auswirkungen der einzelnen Konfigurationen>`.
 
 
 **Layer-Reihenfolge:**
@@ -134,10 +134,7 @@ Um eine freie Instanz in eine Anwendung einzubinden, kann diese als Datenquelle 
 
 Zu einer Übersicht aller freien Instanzen kann über das Menü zu **Datenquellen -> Freie Instanzen** navigiert werden.
 
-.. image:: ../../../figures/de/layerset/shared_instances_overview.png
 
-
-.. _layer_konfiguration:
 
 Layerkonfiguration
 ==================
@@ -161,7 +158,6 @@ Layerkonfiguration
 * **Name**: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar).
 * **Style**: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil wählen.
 
-.. _hinweise-layersets:
 
 Hinweise zu den Auswirkungen der einzelnen Konfigurationen
 ==========================================================
@@ -171,8 +167,8 @@ Basesources
 
 Es gibt verschiedene Möglichkeiten, den Ebenenbaum zu füllen und mit Basesources zu arbeiten:
 
-- Z.B durch das Verstecken im Layerbaum und das Nutzen des `BaseSourceSwitcher <../basic/basesourceswitcher>`_.
-- Oder auch mit den Möglichkeiten im `Ebenenbaum mit der thematische Layer <../basic/layertree>`_ zu arbeiten. Diese Option zeigt den Namen des Layersets entlang eines Ordners und einer Checkbox im Ebenenbaum. Dabei lässt sich konfigurieren, ob der Ordner nach dem Öffnen der Anwendung angezeigt werden soll; zudem ist es möglich, den Ordner aufgeklappt darzustellen.
+- Durch das Verstecken im Layerbaum und das Nutzen des :ref:`basesourceswitcher_de`-Elements.
+- Alternativ kann der :ref:`de/elements/basic/layertree:Workflow thematischer Ebenenbaum` genutzt werden. Dieser zeigt den Namen des Layersets entlang eines Ordners und einer Checkbox im Ebenenbaum. Dabei lässt sich konfigurieren, ob der Ordner nach dem Öffnen der Anwendung angezeigt werden soll; zudem ist es möglich, den Ordner aufgeklappt darzustellen.
 
 
 
@@ -213,12 +209,12 @@ Weitere Informationen
 ---------------------
 
 
-* Information zur Benutzung von Layersets finden Sie auch im `Schnellstart <../../quickstart#datenquellen-sources-verwenden>`_.
+* Information zur Benutzung von Layersets finden Sie auch im Schnellstart-Kapitel :ref:`de/quickstart:4. Datenquellen (Sources) verwenden`.
 
-* Tipps, wie sich das Kacheln von WMS begrenzen lässt, finden Sie in den `FAQs <../../faq#performance>`_.
+* Tipps, wie sich das Kacheln von WMS begrenzen lässt, finden Sie unter :ref:`de/faq:performance`.
 
-* Die Bedeutung der Layersets für die Anzeige im Ebenenbaum ist im Abschnitt zu den Thematischen Layern in der `Layertree-Dokumentation <../basic/layertree#workflow-thematischer-ebenenbaum>`_ beschrieben.
+* Die Bedeutung der Layersets für die Anzeige im Ebenenbaum ist im Abschnitt zu den Thematischen Layern wird im :ref:`de/elements/basic/layertree:Workflow thematischer Ebenenbaum` beschrieben.
 
-* Einzelne Layersets können in den Einstellungen zur `Karte <../basic/map>`_ für die jeweilige Anwendung an- bzw. abgeschaltet werden.
+* Einzelne Layersets können in den Einstellungen zur :ref:`map_de` für die jeweilige Anwendung an- bzw. abgeschaltet werden.
 
 * Ebenso können bei der Anzeige thematischer Layer die Layersets in der Layerset-Konfiguration per Checkbox bei Anwendungsstart (de-)aktiviert werden.

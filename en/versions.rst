@@ -386,7 +386,7 @@ Miscellaneous:
   * :ref:`editing`
   * WMC
   * :ref:`backend`
-  * :ref:`fom`
+  * FOM
   * :ref:`misc`
 
 * Improved documentation for the elements:

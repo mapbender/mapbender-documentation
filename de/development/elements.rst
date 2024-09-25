@@ -3,9 +3,7 @@
 Elemente verstehen
 ##################
 
-*Anmerkung*: Dieser Guide wird überarbeitet. Wir werden eine neue Dokumentation im Contributing Guide für Entwickler bereitstellen, der sich im Git-Repository befindet:
-
-`https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#elements <https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/CONTRIBUTING.md#elements>`_.
+.. warning:: Dieses Dokumentationskapitel ist teilweise stark veraltet. Eine aktuelle technische Dokumentation (englischsprachig) ist direkt in den Mapbender-Quellcode integriert. Sie kann `direkt auf GitHub  <https://github.com/mapbender/mapbender/tree/master/docs>`_ gelesen werden.
 
 
 Bereiche der Elemente
@@ -22,7 +20,7 @@ Twig Template
 
 Jedes Element benötigt ein HTML-Element. In den meisten Fällen kann das ein DIV-Element sein, aber es kann auch komplexer sein.
 
-Für Mapbender wird Twig verwendet. Eine einfache Twig-Vorlage für ein Element kann wie folgt aussehen:
+Für Mapbender wird `Twig <https://twig.symfony.com/>`_ verwendet. Eine einfache Twig-Vorlage für ein Element kann wie folgt aussehen:
 
 .. code-block:: html+jinja
 

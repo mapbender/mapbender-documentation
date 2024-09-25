@@ -3,78 +3,132 @@
 YAML Configuration (Configuration and Application files)
 ========================================================
 
-The following Configuration files are under application/config.
+The following configuration files are under the `config/` folder and its subfolders.
+
+
+doctrine.yaml
+-------------
+
+* **fom_user.selfregistration**: To enable or disable self-registration of users, change this parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
+* **fom_user.reset_password**: In the same way the possibility to reset passwords can be enabled or disabled.
+* **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
+
+
+Database configuration
+**********************
+
+The files ``.env.local`` and ``doctrine.yaml`` are needed to configure databases in Mapbender. In ``.env.local``, (multiple) variables and definitions for database connection(s) can be defined. These variables are being processed in ``doctrine.yaml``. 
+
+.. note:: Every database defined in `.env` needs to have a placeholder in `doctrine.yaml`:
+
+.. code-block:: yaml
+
+    doctrine:
+        dbal:
+            default_connection: default                     # Database connection, used as standard in Mapbender (``default_connection: default``).
+            connections:
+                default:
+                url: '%env(resolve:MAPBENDER_DATABASE_URL)%'# Placeholder which resolves the environment variable in parameters.yaml. 
+                persistent: true                            # Parameter specifying if the database connection should be established continuously.
+                charset:    UTF8                            # Coding of the database.
+                #server_version: '15'                       # Important: You MUST configure your server version, either here or in the DATABASE_URL env var (see .env file).
+                logging:   "%kernel.debug%"                 # Option, SQLs won't be logged (standard: %kernel.debug%). `More information: <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
+                profiling: "%kernel.debug%"                 # Profiling SQL requests. This option can be turned of in production. (standard: %kernel.debug%)
+
+
+**Use of several databases**
+
+Example with two database connections in `doctrine.yaml`:
+
+.. code-block:: yaml
+
+    doctrine:
+        dbal:
+            default_connection: default
+            connections:
+                # database connection default
+                default:
+                    url: '%env(resolve:MAPBENDER_DATABASE_URL)%'
+                    charset:    UTF8
+                    #server_version: '15' 
+                    logging:   "%kernel.debug%"
+                    profiling: "%kernel.debug%"
+                # database connection geodata_db
+                geodata_db:
+                    url: '%env(resolve:GEOBASIS_DATABASE_URL)%'
+                    persistent: true
+                    charset:  UTF8
+                    logging: '%kernel.debug%'
+                    profiling: '%kernel.debug%'
+                    # IMPORTANT: You MUST configure your server version,
+                    # either here or in the DATABASE_URL env var (see .env file)
+                    #server_version: '15'
+
+
+.env or .env.local file
+-----------------------
+This file handles necessary environmental variables:
+
+
+Database
+********
+The files `.env` and `doctrine.yaml` are used to configure database connections in Mapbender. In `.env`, (multiple) variables for database connection(s) can be defined. The `.env` is overwritten by `.env.local`.
+This is read by `doctrine.yaml`. Several database connections can also be defined in `doctrine.yaml`. An alias is assigned to each database connection.
+
+Example:
+Database configuration in `.env.local` with the default database variable, if the pre-installed SQLite database is used:
+
+.. code-block:: bash
+
+    MAPBENDER_DATABASE_URL="sqlite:///%kernel.project_dir%/var/db/demo.sqlite"
+
+When using PostgreSQL (e.g. for the use with :ref:`search_router`), use the following configuration instead:
+
+.. code-block:: bash
+
+    SEARCH_DB_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+
+
+Use of several databases
+************************
+Mapbender also allows you to use several databases. This is recommended when integrating geodata. These should be stored separately from the Mapbender database.
+You need a second database for geo data search (with SearchRouter) and data collection (Digitizer).
+The default database connection (``default_connection: default``) is used by Mapbender.
+
+If you want to use another database, you just have to define a database connection with a different name in your `.env.local` file.
+Now, you can refer to the database *search_db* in the elements SearchRouter and Digitizer.
+
+To learn more about this structure, visit the `Symfony documentation <https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration>`_.
+Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine project <http://www.doctrine-project.org/>`_).
+
+
+Mailer
+*******
+The mailer information is defined in the `.env.local` file via the ``MAILER_DSN`` variable.
+
+.. code-block:: bash
+
+    #MAILER_DSN=smtp://user:pass@smtp.example.com:25
+    MAILER_DSN=null://null
+
+
+The configuration will be called via the `fom.yaml` file:
+
+.. code-block:: yaml
+
+    fom_user:
+        selfregister: false
+        reset_password: true
+        max_reset_time: 1
+        mail_from_address: info@mapbender.org
+        mail_from_name: Mapbender Team
+
+.. hint:: The functions 'Self-Registration' and 'Reset password' need a mailer. More information in chapter :ref:`users`.
 
 
 parameters.yaml
 ---------------
 The following fundamental Mapbender parameters are specified here.
-
-
-Database
-********
-The files ``parameters.yaml`` and ``doctrine.yaml`` are needed to configure databases in Mapbender. In ``parameters.yaml``, (multiple) variables for database connection(s) can be defined. These variables are being processed in ``doctrine.yaml``. An alias is assigned to each database connection.
-
-* **database_driver**: Database driver. Possible values are:
-    * pdo_sqlite - SQLite PDO driver
-    * pdo_mysql - MySQL PDO driver
-    * pdo_pgsql - PostgreSQL PDO driver
-    * oci8 - Oracle OCI8 driver
-    * pdo_oci - Oracle PDO driver
-
-  Please note: Necessary PHP drivers need to be installed and activated.
-
-Example:
-Database configuration in ``parameters.yaml``, when PostgreSQL is used:
-
-.. code-block:: yaml
-
-    database_driver:   pdo_pgsql
-    database_host:     localhost
-    database_port:     5432
-    database_name:     mapbender
-    database_path:     ~
-    database_user:     postgres
-    database_password: secret
-
-
-Use of several databases
-************************
-Mapbender can handle several databases. This is recommended if you want to keep your data seperated from Mapbender data. Or if you want to use code that doesn't belong to a Mapbender bundle.
-
-You need a second database for *geo data search* (with SearchRouter)  and data collection (Digitizer).
-
-The default database connection (``default_connection: default``) is used by Mapbender.
-
-If you want to use another database, you have to define a database connection with a different name.
-
-.. code-block:: yaml
-
-    parameters:
-        # database connection "default"
-        database_driver:   pdo_pgsql
-        database_host:     localhost
-        database_port:     5432
-        database_name:     mapbender
-        database_path:     ~
-        database_user:     postgres
-        database_password: postgres
-
-        # database connection "search_db"
-        database2_driver:   pdo_pgsql
-        database2_host:     localhost
-        database2_port:     5432
-        database2_name:     search_db
-        database2_path:     ~
-        database2_user:     postgres
-        database2_password: postgres
-
-
-Now, you can refer to the database **search_db** in the elements SearchRouter and Digitizer.
-
-To learn more about this structure, visit the `Symfony documentation <https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration>`_.
-
-Mapbender uses Doctrine. Doctrine is a collection of PHP libaries (`Doctrine project <http://www.doctrine-project.org/>`_).
 
 
 Disclaimer
@@ -91,11 +145,18 @@ A disclaimer can be added through the use of site links.
         text: Imprint & Contact									    # Link text
       - link: https://mapbender.org/en/privacy-policy/
         text: Privacy Policy
+      - link: https://doc.mapbender.org/
+        text: Documentation
 
-Site links will be seperated by "|".
 
+Disabling Elements
+******************
+Disabling individual elements can be configured using the following parameter:
 
-.. _custom-icons:
+.. code-block:: yaml
+
+    mapbender.disabled_elements:
+
 
 Customizing icons
 *****************
@@ -137,8 +198,8 @@ With these configuration options, you can customize the icons in Mapbender to su
 
 Language settings
 *****************
-Mapbender is automatically adjusted to your browser's language. Yet it is possible to set a language option in the configuration file **application/config/parameters.yaml**.
-If a translation of your browser's set language is missing in Mapbender, it will then take a fallback language.
+Mapbender is automatically adjusted to your browser's language.
+Yet it is also possible to set your preferred language via the `fallback_locale` parameter. If a translation of your browser's language is missing in Mapbender, it will take the defined language.
 
 The locale can only be set for the entire Mapbender installation (not for single applications).
 
@@ -164,7 +225,7 @@ Configuration example:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
 
-You also can force Mapbender to use the language defined for the parameter locale to be used. to do this add mapbender.automatic_locale: false.
+You also can force Mapbender to use the language defined for the parameter locale to be used. To do this, add ``mapbender.automatic_locale: false``.
 
 .. code-block:: yaml
 
@@ -177,49 +238,38 @@ You also can force Mapbender to use the language defined for the parameter local
 More information in :ref:`translation`.
 
 
-Logo
-****
-In parameters.yaml, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
+Logo and branding
+*****************
+In `parameters.yaml`, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
+
 
 .. code-block:: yaml
 
-    branding.logo: ./bundles/mapbendercore/image/logo_mb.png
-    branding.login_backdrop: ./bundles/mapbendercore/image/body.png
+    branding.project_name: Geoportal powered by Mapbender
+    branding.project_version: 1.0
+    branding.logo: ./bundles/mapbendercore/image/OSGeo_project.png
+    branding.favicon: ./application/public/brand-favicon.ico
+    branding.login_backdrop: ./bundles/mapbendercore/image/login-backdrop.jpg
 
 
- The files must be accessible under application/public.
-
-
-Mailer
-*******
-Mailer information are inserted in ``parameters.yaml`` via the `mailer_dsn` parameter (e.g. smtp or sendmail).
-
-Configuration example:
-
-.. code-block:: yaml
-
-    mailer_dsn: smtp://user:pass@smtp.example.com:25
-
-The functions 'Self-Registration' and 'reset password' need a mailer.
-
-More information in chapter :ref:`users`.
+The files must be accessible under ``application/public``.
 
 
 Project name
 ************
-The name of the project (default: Mapbender) can be changed in ``parameters.yaml``. The change has a global impact on the whole Mapbender installation.
+The name of the project (default: Mapbender) can be changed in `parameters.yaml`. The change has a global impact on the whole Mapbender installation.
 
 .. code-block:: yaml
 
     branding.project_name: Geoportal
 
 
-**Important note:** In ``parameters.yaml`` **tabulators may not be used for indentation** instead you need to use space.
+.. warning:: In *parameters.yaml*, tabulators may not be used for indentation. Instead, you need to use the space bar.
 
 
 Proxy settings
 **************
-If you use a proxy, you need to change ``parameters.yaml``.
+If you use a proxy, you need to change `parameters.yaml`.
 
 .. hint:: OWSProxy3 is a transparent Buzz-based proxy that uses cURL for connection to web resources via/without a proxy server.
 
@@ -242,14 +292,12 @@ Configuration example:
 
 SSL certificate
 ***************
-For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your ``parameters.yaml`` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your `parameters.yaml` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
 
-
-.. _override_js_css_yaml:
 
 Overriding JavaScript and CSS/Sass Resources
 ********************************************
-To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`overriding in the bundle <override_js_css>`, you can add the following to your ``paramaters.yaml`` file:
+To manually override JavaScript and CSS/Sass resources, and as an alternative to :ref:`overriding in the bundle <en/development/introduction:Overriding JavaScript and CSS/Sass Resources>`, you can add the following to your ``paramaters.yaml`` file:
 
 .. code-block:: yaml
     
@@ -260,86 +308,16 @@ To manually override JavaScript and CSS/Sass resources, and as an alternative to
 .. note:: Please note that the @ sign in the replacement key must be escaped with an additional @@ sign.
 
 
-doctrine.yaml
--------------
-
-* **fom_user.selfregistration**: To enable or disable self-registration of users, change the fom_user.selfregistration parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
-* **fom_user.reset_password**: In the same way the possibility to reset passwords can be enabled or disabled.
-* **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
-
-
-Database
-********
-Important: Every database defined in parameters.yaml needs to have a placeholder in ``doctrine.yaml`` as well:
-
-.. code-block:: yaml
-
-    doctrine:                                               # Values, surrounded by %-marks, are variables
-        dbal:
-            default_connection: default                     # Database connection, used as standard in Mapbender (``default_connection: default``).
-            connections:
-                default:
-                driver:    "%database_driver%"              # More information below the code
-                host:      "%database_host%"                # Database host on which the database runs. Either name of the host (e.g. localhost) or IP address (e.g. 127.0.0.1).
-                port:      "%database_port%"                # Port, the database listens to (e.g. 5432 for PostgreSQL).
-                dbname:    "%database_name%"                # Name of the database (e.g. mapbender). Create a database with the command ``doctrine:database:create`` bzw. ``doctrine:schema:create``.
-                path:      "%database_path%"                # %database_path%, path to the file of the SQLite database. If you don't use a SQ-lite database, write (~) or ``null``.
-                user:      "%database_user%"                # User name for database connection.
-                password:  "%database_password%"            # Password.
-                persistent: true                            # Parameter specifying if the database connection should be established continuously.
-                charset:    UTF8                            # Coding of the database.
-                #server_version: '15'                       # Important: You MUST configure your server version, either here or in the DATABASE_URL env var (see .env file).
-                logging:   "%kernel.debug%"                 # Option, SQLs won't be logged (standard: %kernel.debug%). `More information: <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
-                profiling: "%kernel.debug%"                 # Profiling SQL requests. This option can be turned of in production. (standard: %kernel.debug%)
-
-
-Use of several databases
-************************
-Example with two database connections in ``doctrine.yaml``:
-
-.. code-block:: yaml
-
-    doctrine:
-        dbal:
-            default_connection: default
-            connections:
-                # database connection default
-                default:
-                    driver:    "%database_driver%"
-                    host:      "%database_host%"
-                    port:      "%database_port%"
-                    dbname:    "%database_name%"
-                    path:      "%database_path%"
-                    user:      "%database_user%"
-                    password:  "%database_password%"
-                    charset:    UTF8
-                    #server_version: '15' 
-                    logging:   "%kernel.debug%"
-                    profiling: "%kernel.debug%"
-                # database connection search_db
-                search_db:
-                    driver:    "%database2_driver%"
-                    host:      "%database2_host%"
-                    port:      "%database2_port%"
-                    dbname:    "%database2_name%"
-                    path:      "%database2_path%"
-                    user:      "%database2_user%"
-                    password:  "%database2_password%"
-                    charset:    UTF8
-                    #server_version: '15' 
-                    logging:   "%kernel.debug%"
-                    profiling: "%kernel.debug%"
-
-More information under ``parameters.yaml``.
-
-
 YAML Application files
 -----------------------
 
-YAML application files are stored under **application/config/applications**.
-“**Mapbender mobile**”, “**Mapbender Demo Map**” and “**Mapbender Demo Map basic**” are pre-implemented as example applications.
+YAML application files are stored under `applications/` (underneath `config/`!). There are three files pre-implemented as example applications:
 
-If you do not want the three example applications to be visible, you can change the variable 'published' to 'false'.
+- Mapbender Demo (*mapbender_user*)
+- Mapbender Demo Basic (*mapbender_user_basic*)
+- Mapbender Mobile Demo (*mapbender_mobile*)
+
+If you do not want the three example applications to be visible, you can adjust the ``published`` variable as follows.
 
 .. code-block:: yaml
 
@@ -349,9 +327,15 @@ If you do not want the three example applications to be visible, you can change 
 				[...]
 				published: false
 
-Now the applications will not be visible for users (except for root user).
 
-New YAML applications can be placed in the folder and will be automatically recognized by Mapbender.
+Then, clear the :ref:`Mapbender cache<en/customization/commands:Clear cache>` and your browser cache. After that, the applications will not be visible for users.
+
+.. hint:: The root user can always see unpublished applications.
+
+
+It is also possible to remove the applications from the ``applications`` folder. Repeat the cache clearing process afterwards.
+
+In the same way, new YAML applications can be placed in the folder and will be automatically recognized by Mapbender.
 
 
 Mapbender Demo Map
@@ -368,13 +352,13 @@ Mapbender Demo Map basic
 Differences to the main Demo Map:
 
 Toolbar
-    Uses :ref:`coordinate_utility` instead of :ref:`POI`.
+    Contains elements from the sidepane of the first demo application.
 
 Sidepane
     Has no elements pre-implemented.
 
 Map area
-    Uses :ref:`coordinate_utility` instead of :ref:`scaledisplay` and :ref:`POI`.
+    Uses a compact :ref:`navigation_toolbar` without the zoom slider. Includes the :ref:`simplesearch`.
 
 Detailed descriptions of the elements at :ref:`elements`.
 
@@ -413,14 +397,14 @@ Then, use the Import mask to load an import file as an application.
 Export/import/clone YAML application files over the console
 -----------------------------------------------------------
 
-Please go to :ref:`app_command_export_import_clone` to see the console commands. Find a few introductional words about exporting and importing applications over the console below.
+Please go to :ref:`en/customization/commands:Application Export, Import & Cloning` to see the console commands. Find a few introductional words about exporting and importing applications over the console below.
 
 **Export**
 
 Applications can be exported as .json or .yaml file over the console.
 
-A YAML file that has been exported over the console cannot be placed under application/config/application to be imported in a Mapbender installation.
-The YAML format that is produced by exporting over the console is different from the YAML format of the files under application/config/application.
+A YAML file that has been exported over the console cannot be placed under `applications/` to be imported in a Mapbender installation.
+The YAML format that is produced by exporting over the console is different from the YAML format of the files under `applications/`.
 
 
 **Import**
