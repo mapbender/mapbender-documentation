@@ -8,7 +8,7 @@ Der Digitizer erlaubt das Erstellen und Bearbeiten von Punkten, Linien und Fläc
 Um das Digitizer-Element nutzen zu können, muss eine YAML-Definition aufgebaut werden: 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    digitizer/digitizer_configuration.rst
    
@@ -16,6 +16,6 @@ Um das Digitizer-Element nutzen zu können, muss eine YAML-Definition aufgebaut 
 Mehr Informationen zur Nutzung des Digitizers sind hier zu finden:   
    
 .. toctree::
-   :maxdepth: 1   
+   :maxdepth: 2   
    
    digitizer/digitizer_functionality.rst  

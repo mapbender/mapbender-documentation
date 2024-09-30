@@ -16,6 +16,8 @@ Das Element kann nur in der Sidepane eingebettet werden. Das Element kann mehrfa
 Der Digitizer benötigt einen Zugriff auf die Datenbank, in der die zu editierenden Tabellen liegen. Sie müssen dazu einen Datenbankzugriff konfigurieren.
 Mehr zu diesem Thema finden Sie unter :ref:`yaml_de`.
 
+.. hint:: Es wird nicht empfohlen, Geodaten in der "default"-Datenbank von Mapbender zu definieren, die Ihre Doctrine-Entitäten enthält. Fehler bei der Ausführung von Doctrine-Schema-Updates sind zu erwarten.
+
 Die Definition des Digitizers wird in einer YAML-Syntax durchgeführt. Hier definieren Sie die Datenbankverbindung, die editierbaren Felder, das Formular für die Anzeige und andere Verhaltensweisen.
 
 .. hint:: Bei fehlerhaften Angaben zur Datenbank, Feldern und Formularfehlern erscheinen Fehlermeldungen. Bei Produktivumgebungen erscheint eine allgemeine Fehlermeldung. Falls Sie die detaillierte Fehlermeldung sehen möchten, sollten Sie die Anwendung als Entwicklungsumgebung aufrufen. Weitergehende Informationen unter :ref:`de/quickstart:Starten von Mapbender als Produktivumgebung`.
@@ -276,12 +278,12 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
 SQL für die Demo-Tabellen
 -------------------------
 
-Die folgenden SQL-Befehle müssen in Ihrer Datenbank ausgeführt werden. Sie legen drei Demo-Tabellen an, damit mit der oben gezeigte YAML-Definition die einzelnen Funktionen getestet werden können. Die PostGIS Extension muss aktiviert sein.
+Die folgenden SQL-Befehle müssen in Ihrer Geodaten-Datenbank ausgeführt werden. Sie legen drei Demo-Tabellen an, mit denen die oben gezeigte YAML-Definition mit den einzelnen Funktionen getestet werden kann. Die PostGIS-Extension muss aktiviert sein.
 
 
 .. code-block:: postgres
 
-    create table public.poi (
+    CREATE TABLE public.poi (
         gid serial PRIMARY KEY,
         name varchar,
         type varchar,
@@ -368,6 +370,7 @@ Konfiguration
 
 Im Folgenden werden die einzelnen Bestandteile des Digitizers erklärt, die die Grundstruktur ausmachen und die in dem Formular eingebettet werden können.
 
+
 Basisdefinition
 ---------------
 
@@ -416,10 +419,6 @@ Die möglichen Optionen sind:
     * srid: Koordinatensystem im EPSG-Code
     * filter: Datenfilter über Werte in einer definierten Spalte, z.B. filter: interests = 'maps'
 * **allowChangeVisibility:** Ändern der Sichtbarkeit von einem Treffer in der Karte (sichtbar/nicht sichtbar). [true/false]. Es wird ein Auge-Symbol zu jedem Feature eingeblendet, mit dem dieses explizit aus- und wieder eingeblendet werden kann.
-
-   .. image:: ../../../../figures/digitizer/allowchangevisibility.png
-              :scale: 80
-
 * **allowCreate:** Es dürfen neue Feature angelegt werden (Standard true).
 * **allowDelete:** Daten dürfen gelöscht werden (Standard true). Es erscheint eine Löschen Schaltfläche.
 * **allowDigitize:** Daten dürfen verändert und neu erstellt werden. [true/false]. Es erscheint immer die Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.). Das Speichern ist jedoch nicht möglich.
@@ -442,23 +441,168 @@ Die möglichen Optionen sind:
         refreshLayersAfterFeatureSave:
             - mapbender_users # or WMS InstanceID
 
-Experimentell:
 
-* **allowCustomerStyle:** Erlauben benutzerspezifischer Styles für Elemente in der Karte. [true/false]. Dieses Feature ist noch experimentell: Zu jedem Feature können über ein Symbol die einzelnen Styles verändert werden.
+* **roles:** List of Roles. Show this schema only to users with (at least one of) these roles
 
- .. image:: ../../../../figures/digitizer/showvisibilitynavigation.png
-              :scale: 80
+.. code-block:: yaml
 
- Es erscheint ein Style-Manager zur Anpassung einzelner Features.
-
- .. image:: ../../../../figures/digitizer/stylemanager.png
-              :scale: 80
+        roles: # Dieses Schema nur Benutzern mit (mindestens einer) der folgenden Rollen zeigen
+            - root
+            - ROLE_GROUP_EDITING
 
 
-Definition Popup
-----------------
+Kombinationsschema
+------------------
+
+Wenn ein Schema eine Kombinationseinstellung (``combine``) definiert, wird es als Kombinationsschema behandelt. Daten aus mehreren anderen Schemata werden dann gemeinsam angezeigt. Die Einträge in der Kombinationsliste müssen die Namen der zu kombinierenden Teilschemata sein.
+
+* Ein Schema mit Angabe von ``combine`` erlaubt nur einen reduzierten Satz anderer Einstellungen.
+* Es kann Rollen definieren, um den Benutzerzugriff auf die gesamte Kombination zu beschränken.
+* Es kann eine Tabelle definieren, um explizit die Tabellenformatierung von Daten anzugeben, die allen referenzierten Teilschemata gemeinsam sind.
+* Ein Schema, auf das eine Kombinationsliste verweist, darf selbst keine Kombination definieren.
+
+.. code-block:: yaml
+
+                        schemes:
+                            combine_schemes_together:
+                                label: combine schemes (hier poi und line)
+                                searchType: currentExtent
+                                combine:
+                                    - poi
+                                    - line
+                                roles: # Dieses Schema nur Benutzern mit (mindestens einer) der folgenden Rollen zeigen
+                                    - root
+                                    - ROLE_GROUP_EDITING
+
+
+Benutzerspezifische Daten
+-------------------------
+
+Die in jedem Schema angezeigten Daten können für verschiedene Benutzer unterschiedlich sein.
+
+Jedes Schema kann definieren:
+
+* **filterUser** Daten für jeden Benutzer getrennt halten (Standardwert false). Erfordert die Definition einer userColumn in featureType.
+* **trackUser** Speichert den erstellenden/ändernden Benutzer (Standardwert false). Kann ohne tatsächliche Filterung der Auswahl durchgeführt werden. Benötigt die Definition einer userColumn in featureType.
+
+Wenn eine der beiden Optionen auf true gesetzt wird, muss zusätzlich **userColumn** (string) in der dataStore / featureType Definition definiert werden. Diese muss eine Tabellenspalte von ausreichender Länge benennen, um den Benutzernamen zu speichern.
+
+.. hint:: Es ist zu beachten, dass bei filterUser true, trackUser impliziert ist und seine Einstellung, falls vorhanden, ignoriert wird.
+
+
+.. code-block:: yaml
+
+        poi:
+        label: 'point digitizing'
+        filterUser: true
+        trackUser: true
+        featureType:
+            connection: geodata_db
+            table: poi
+            uniqueId: gid
+            geomType: point
+            geomField: geom
+            srid: 4326
+            userColumn: user_name
+
+
+Definition der verfügbaren Toolsets (Toolset Type)
+---------------------------------------------------
+
+Jedes Schema kann eine Toolset-Einstellung definieren, um die Arten der bei der Geometrieerstellung verfügbaren Zeichenwerkzeuge zu konfigurieren. Dabei sollte es sich um eine Liste von Zeichenketten handeln, oder um NULL für die automatische Konfiguration (NULL ist der Standardwert).
+
+
+Toolset-Typen:
+
+* **drawPoint** - Punkt zeichnen
+* **drawLine** - Zeichnen einer Linie
+* **drawPolygon** - Polygon zeichnen
+* **drawRectangle** - Rechteck zeichnen
+* **drawCircle** - Kreis zeichnen
+* **drawEllipse** - Ellipse zeichnen
+* **drawDonut** - Zeichnet einen Donut (Enklave)
+* **modifyFeature** - Verschiebt Eckpunkte einer Geometrie
+* **moveFeature** - Geometrie verschieben
+
+YAML-Definition of toolset types
+
+.. code-block:: yaml
+
+    polygon:
+        [...]
+        toolset:
+            - type: drawPolygon
+            - type: drawRectangle
+            - type: drawDonut
+
+
+Wenn toolset eine leere Liste ist, werden keine Geometrieerstellungswerkzeuge angeboten.
+
+Wenn toolset NULL oder nicht gesetzt ist und der verknüpfte Featuretyp seinen geomType deklariert, reduziert Digitizer die Auswahl der Werkzeuge auf diejenigen, die mit dem geomType kompatibel sind (z.B. keine Linienzeichnung für Datensätze, die nur Punkte oder Polygone enthalten).
+
+Wenn weder ein Werkzeugsatz noch der GeomType definiert sind, werden alle unterstützten Werkzeuge angeboten.
+
+Wenn die Änderung von Features erlaubt ist (über allowDigitize / allowEdit), werden auch Werkzeuge für die Änderung von Eckpunkten und das Kopieren von Features angeboten.
+
+Wenn allowCreate auf false gesetzt ist, werden keine Erstellungswerkzeuge aus der Toolset-Einstellung angeboten. drawDonut (inhärent ein Modifikations-, kein Erstellungswerkzeug) kann dennoch angeboten werden, wenn die Bearbeitung erlaubt ist.
+
+
+Definition der Objekttabelle
+----------------------------
+
+Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte gezoomt werden und das Bearbeitungsformular kann geöffnet werden. Die Objekttabelle ist sortierbar. Die Breite der einzelnen Spalten kann optional in Prozent oder Pixeln angegeben werden.
+
+* **tableFields:** Definition der Spalten für die Objekttabelle.
+    * Definition einer Spalte: [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe, z.B. Angabe der Breite]}
+* **searchType:** Suchbereich in der Karte, Anzeige aller Objekttreffer in der Tabelle oder nur aller Objekttreffer in dem derzeitigen Kartenausschnitt [all / currentExtent] (Standard: currentExtent).
+* **inlineSearch:** Erlaubt das Suchen in der Tabelle (Standardwert: true).
+* **paging:** De/aktivieren des Pagings (Ansicht über mehrere Seiten, Standardwert true).
+* **pageLength:** Definiert Trefferanzahl pro Seite bei Aktivierung des Pagings (Standardwert 16)
+
+Detaillierte Informationen zu möglichen Angaben finden Sie unter https://datatables.net/reference/option/
+
+.. code-block:: yaml
+
+    poi:
+      []
+        searchType: currentExtent
+        paging: true
+        pageLength: 10
+        inlineSearch: true
+        tableFields:
+            gid:
+                label: Nr.
+                width: 20%
+            name:
+                label: Name
+                width: 80%
+
+
+Suche in den Tabellen (inline Search)
+-------------------------------------
+
+Über die Suche können Begriffe in der Tabelle gesucht werden.
+Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eines Suchbegriffs werden alle Spalten dieser Tabelle durchsucht und deren Ergebnisse angezeigt.
+
+.. code-block:: yaml
+
+  poi:
+      ...
+      inlineSearch: true      # Suche in den Tabellenspalten (Standard: true)
+      ...
+
+
+Configuring forms
+-----------------
 
 In Zusammenhang mit der Digitalisierung können für die Erfassung von dazugehörigen Sachdaten komplexe Formulare generiert werden.
+
+Jede Schema-Konfiguration enthält unter dem Parameter formItems eine Liste von (teilweise verschachtelten) Objekten,  über die der Inhalt und die Struktur des Formulars definiert wird.
+
+.. hint:: Beachten Sie, dass dieses Formular auch zur Anzeige vernwendet wird, wenn das Editieren deativiert wurde.
+
+.. image:: ../../../../figures/digitizer.png
+     :scale: 80
 
 Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 
@@ -478,54 +622,108 @@ Folgende Optionen stehen für den Aufbau von Formularen zur Verfügung:
 * Möglichkeit, in Formulare eingegebene Inhalte per Buttonklick in die Zwischenablage zu kopieren
 * Karten-Refresh nach Speichern
 
+Zusätzliche Optionen sind:
+
+* Pflichtfelder, reguläre Ausdrücke zur Validierung von Eingaben
+* Definition von Hilfe-Texten
+* Auffrischen nach dem Speichern
+* Kopieren von Einhaben in den Zwischenspeicher via Button
+
+
+Formular-Felder
+---------------
+
+Es gibt eine Vielzahl an Formularfeldern, die über den type definiert werden. Alle Felder teilen die gleichen Konfigurations-Optionen.
+
+
+.. list-table::
+   :widths: 20 20 40 10
+   :header-rows: 1
+
+   * - name
+     - type
+     - description
+     - default
+   * - type
+     - string
+     - Typ des Formularfelds (siehe unten)
+     - -none-
+   * - name
+     - string
+     - Tabellenspalte, auf die sich das Feld bezieht
+     - -none-
+   * - value
+     - string
+     - Initialer Wert, nur bei neu erstellten Objekten
+     - -none-
+   * - title
+     - string
+     - Beschriftung
+     - -none-
+   * - attr
+     - object
+     - Anwenden von HTML-Attributen
+     - -none-
+   * - infoText
+     - string
+     - Erklärender Text als Tooltio neben der Beschriftung
+     - -none-
+   * - css
+     - object
+     - Anwenden von CSS-Regeln zur Formular-Gruppe(Container um Beschriftung und input-Feld)
+     - -none-
+   * - cssClass
+     - string
+     - Fügt CSS zum class-Attribut der Formular-Gruppe hinzu (Container um Beschriftung- und input-Feld)
+     - -none-
+
+
 .. image:: ../../../../figures/digitizer_with_tabs.png
      :scale: 80
 
+Anpassungen über attr-Objektdefinitionen
+----------------------------------------
+
+Einige gängige Anpassungen für input-Felder können einfach über das attr-Objekt erfolgen. Beispielsweise kann der Typ "input" auf die Eingabe von Zahlen limitiert werden, indem dessen HTML-Type-Attribut überschrieben wird. Beispielsweise können Felder bia attr auch als Pflichtfeld oder als readonly definiert werden.
 
 .. code-block:: yaml
 
-        popup:                                                          # Definition des Formularfensters als PopUp-Fenster. Weitere experimentelle Anpassungsmöglichkeiten unter http://api.jqueryui.com/dialog/
-            title: POI                                                  # Definition des Titels vom Formularfensters
-            height: 400                                                 # Höhe des Formularfensters
-            width: 500                                                  # Breite des Formularfensters
+	formItems:
+	  - type: input
+	    name: strictly_formatted_column
+	    title: Strict input pattern demo
+            required: true
+	    attr:
+		  pattern: '\w{2}\d{3,}'
+		  placeholder: Two letters followed by at least three digits
+	  - type: input
+	    name: numeric_column
+	    title: Numbers only
+            required: true
+	    attr:
+	      type: number
+	      min: 10
+	      max: 200
+	      step: 10
+	  - type: textArea
+	    name: text_column
+	    title: Very large text area
+	    attr:
+	      rows: 10
 
-            #modal: true                                                # Alles außer dem Formularfensters wird ausgegraut und die Position und Größe des Fensters ist für die Dauer der Datenaufnahme fixiert
-            #position: {at: "left+20px",  my: "left top-460px"}         # Positionierung des Formularfensters im Browserbereich
 
+Definition Popup
+----------------
 
-
-Definition der Objekttabelle
-----------------------------
-
-Der Digitizer stellt eine Objekttabelle bereit. Über diese kann auf die Objekte gezoomt werden und das Bearbeitungsformular kann geöffnet werden. Die Objekttabelle ist sortierbar. Die Breite der einzelnen Spalten kann optional in Prozent oder Pixeln angegeben werden.
-
-* **tableFields:** Definition der Spalten für die Objekttabelle.
-    * Definition einer Spalte: [Tabellenspalte]: {label: [Beschriftung], width: [css-Angabe, z.B. Angabe der Breite]}
-* **searchType:** Suchbereich in der Karte, Anzeige aller Objekttreffer in der Tabelle oder nur aller Objekttreffer in dem derzeitigen Kartenausschnitt [all / currentExtent] (Standard: currentExtent).
-* **showExtendSearchSwitch:** Anzeige der searchType Selectbox zur Suche im Kartenausschnitt aktivieren oder deaktivieren [true/false]
-* **view:** Einstellungen zu der Objekttabelle
-   * **type**: Templatename [table]
-   * **settings**: Einstellungen zum Funktionsumfang der Objekttabelle *(neu hinzugefügt, noch nicht vollst. dokumentiert!)*
-
-Detaillierte Informationen zu möglichen Angaben finden Sie unter https://datatables.net/reference/option/
+Die folgenden Optionen können für ein Popup definiert werden:
 
 .. code-block:: yaml
 
-        searchType: currentExtent
-        showExtendSearchSwitch: true
-        tableFields:
-            gid: {label: Nr. , width: 20%}
-            name: {label: Name , width: 80%}
-        view:
-            type: table
-            settings:
-                info: true
-                processing: false
-                ordering: true
-                paging: true
-                selectable: false
-                autoWidth: false
-                order: [[1, "asc"]]          # Spalte 1 | 2 vorsortieren
+        popup:
+            title: POI    # Definition des Titels vom Formularfensters
+            height: 400   # Höhe des Formularfensters
+            width: 500    # Breite des Formularfensters
+            #width: 50vw   # Breite auf Hälfte des Browserfensters
 
 
 Dateireiter (type tabs)
@@ -536,64 +734,21 @@ Die Formularelemente können in verschiedenen Reitern dargestellt werden. Dazu d
 .. code-block:: yaml
 
         formItems:
-           - type: tabs                      # Type tabs erzeugt Reiter im Erfassungsformular
-             children:                       # Die Reiter werden als Unterobjekte (children) vom Type form definiert.
-               - type: form
-                 title: Basic information    # Titel des Reiters
-                 css: {padding: 10px}
-                 children:                   # Durch mehrere Unterobjekte in Gruppen können Angaben im Formular nebeneinander angeordnet werden.
-                     - type: label
-                       title: Welcome to the digitize demo. Try the new Mapbender3 feature!
-                       ...
-
-Bei jedem Eingabefeld können unabhängig vom Typ Verhaltensparameter per Event und Stylingangaben per CSS vergeben werden. Damit können beispielsweise wichtige Felder hervorgehoben oder auch ein Attributfeld in Abhängigkeit zu einem anderen Feld gefüllt werden.
-
-Verhaltensparameter:
-
-* load, focus, blur
-* input, change, paste
-* click, dblclick, contextmenu
-* keydown, keypress, keyup
-* dragstart, ondrag, dragover, drop
-* mousedown, mouseenter, mouseleave, mousemove, mouseout, mouseover, mouseup
-* touchstart, touchmove, touchend, touchcancel
-
-.. code-block:: yaml
-
-        formItems:
            - type: tabs
              children:
-               - type: form
-                 [...]
-                     - type: input
-                       name: firstname
-                       title: Firstname
-                       css: {width: 30%}
-                       input: |
-                            var inputField = el;
-                            var form = inputField.closest(".modal-body");
-                            var datenkennungField = form.find("[name='datenkennung']");
-                            datenkennungField.val(inputField.val());
-                       focus: |
-                            var inputField = el;
-                            var form = inputField.closest(".modal-body");
-                            form.css("background-color","#ffc0c0");
-                       blur: |
-                            var inputField = el;
-                            var form = inputField.closest(".modal-body");
-                            form.css("background-color","transparent");
-                     - type: date
-                       name: date
-                       title: Datum
-                       css: {width: 30%}
-                       # Hervorhebung des Jahres bei Änderung des Datum-Feldes und autom. Füllen des Jahres aus dem Datum
-                       change: |
-                            var inputField = el;
-                            var form = inputField.closest(".modal-body");
-                            var yearField = form.find("[name='year']");
-                            var year = inputField.val().match(/\d+$/)[0];
-                            yearField.val(year);
-                            yearField.css("background-color","#ffc0c0");
+                 - title: '1. Basic information'    # erster Reiter, Titel des Reiters
+                   css: {padding: 10px}
+                   children:                        
+                       # Erster Reiter, Formulardefnition
+                       - type: label
+                         title: Welcome to the digitize demo. Try the new Mapbender feature!
+                         ...
+                 - title: '2. More information'    # zweiter Reiter, Titel des Reiters
+                   children:                       
+                       # Zweiter Reiter, Formulardefinition
+                       - type: label
+                         title: Welcome to the digitize demo. Try the new Mapbender feature!
+                         ...
 
 
 Textfelder (type input)
@@ -601,19 +756,37 @@ Textfelder (type input)
 
 .. code-block:: yaml
 
-                                                 - type: input                                        # Typ Textfeld
-                                                   title: Title for the field                         # Beschriftung mit dem Titel des Feldes (optional)
-                                                   name: column_name                                  # Referenz zur Tabellenspalte
-                                                   copyClipboard: false                               # Button, der eingetragene Inhalte in die Zwischenablage kopiert (optional) (Standard: false).
-                                                   mandatory: true                                    # Angabe ob Pflichtfeld (optional). [true/false]
-                                                   mandatoryText: You have to provide information.    # Text, sofern Pflichtfeld nicht gefüllt wurde
-                                                   infoText: 'Bitte geben Sie einen Wert an'          # Definition eines Informationstextes (optional)
-                                                   cssClass: 'input-css'                              # css-Klasse, die für das Textfeld verwendet werden soll
-                                                   value: 'default Text'                              # Definition eines Standard-Wertes  (optional)
-                                                   placeholder: 'Bitte geben Sie ... ein'             # Platzhalter, der vor der Eingabe erscheint (optional)
+         - type: input                                      # element type definition
+           title: Title for the field                       # Definition of a labeling (optional, if not defined no labeling is set)
+           name: column_name                                # Reference to table column
+           copyClipboard: false                             # Offer a button that copies entered information to the clipboard (default: false) (optional)
+           #mandatory: true                                 # Specifies a mandatory field (optional), please use required instead
+           infoText: "Info: Please emter Information."      # Offer a button that that provides Intormation on mouse-over (optional)
+           mandatoryText: You have to provide information.  # Define text that is shown on save if no content is provided for a mandatory field (optional)
+           required: true
+           cssClass: 'input-css'                            # css class to use as style for the input field (optional).
+           value: 'default Text'                            # Define a default value  (optional)
+           css:                                             # CSS definition (optional)
+               color: green
+           attr:
+               placeholder: 'please edit this field'        # placeholder appears in the field as information when field is empty (optional)
 
 
-Auswahlboxen (selectbox oder multiselect [type select])
+* **title:** Definition einer Beschriftung (optional, wenn nicht definiert, wird keine Beschriftung gesetzt)
+* **name:** Verweis auf Tabellenspalte (erforderlich)
+* **copyClipboard:** Bietet eine Schaltfläche an, die eingegebene Informationen in die Zwischenablage kopiert (optional, Standard: false)
+* **infoText:** Bietet eine Schaltfläche an, die beim Überfahren mit der Maus Informationen liefert (optional)
+* **mandatoryText:** Definieren Sie einen Text, der beim Speichern angezeigt wird, wenn kein Inhalt für ein Pflichtfeld angegeben wurde (optional)
+* **value:** Definieren Sie einen Standardwert (optional)
+* **css:** CSS-Definition (optional)
+* **cssClass:** Wird zum class-Attribut der Formulargruppe (Container um Label und Input) hinzugefügt
+
+Attribute (attr)
+* **placeholder:** Platzhalter erscheint im Feld als Information (optional)
+* **required:** Gibt ein Pflichtfeld an (optional, Standardwert false)
+
+
+Auswahlboxen - Selectbox oder Multiselect (type select)
 -------------------------------------------------------
 
 Durch die Definition einer Auswahlbox können vordefinierte Werte im Formular genutzt werden.
@@ -623,84 +796,115 @@ Hier wird in eine Auswahlbox mit einem wählbaren Eintrag (type select) und eine
 
 .. code-block:: yaml
 
-                                                 - type: select                                       # Typ Auswahlbox
-                                                   title: select some types                           # Beschriftung mit dem Titel des Feldes (optional)
-                                                   name: my_type                                      # Referenz zur Tabellenspalte
-                                                   copyClipboard: false                               # Button, der den ausgewählten Wert in die Zwischenablage kopiert (optional).
-                                                   multiple: false                                    # Definition einer Mehrfachauswahl (multiselect). (Standard: false)
-                                                   options:                                           # Definition der Optionen (key: value)
-                                                       1: pub
-                                                       2: bar
-                                                       3: pool
-                                                       4: garden
-                                                       5: playground
+         - type: select                     # Typ-Definition
+           title: select a type             # Beschriftung (optional)
+           name: type                       # Tabellenspalte
+           select2: true                    # Aktivierung der Volltextsuche (Hinweis für multi: true - die Voltextsuche ist standardmäßig aktiv)
+           maximumSelectionLength: 2        # Definition der maximalen Anzahl der möglichen Selectionen (benötigt select2: true)
+           copyClipboard: false             # Definition eines Buttons der die ausgewählten Werte in den Zwischenspeicher kopiert (optional). [true/false] (Standardwert: false).
+           infoText: 'Help: Please choose a type.'
+           attr:
+               multiple: false              # Definition der Mehrfachauswahl (Standardwert: false)
+           options:                         # Definition der Optionen (key, value)
+               '': 'Please select a type...'
+               'A': 'Type A'
+               'B': 'Type B'
+               'C': 'Type C'
+               'D': 'Type D'
+
+.. code-block:: yaml
+
+           options:
+               - label: 'Please select a type...'
+                 value: ''
+               - label: 'Type A'
+                 value: 'A'
+               - label: 'Type B'
+                 value: 'B'
+               - label: 'Type C'
+                 value: 'C'
+               - label: 'Type D'
+                 value: 'D'
+
+
+Wenn Sie ``useValuesAsKeys: true`` definieren, müssen Sie sich nur auf die Werte beziehen. Die Werte werden dann auch als Schlüssel verwendet. Bitte beachten Sie, dass ohne den Parameter oder mit useValuesAsKeys: false eine Zahl verwendet wird.
+
+.. code-block:: yaml
+
+            useValuesAsKeys: true
+            options:
+                - A
+                - B
+                - C
+                - D
+
+
+* **select2:** Aktiviert die Volltextsuche für die Selectbox (bitte beachten Sie, dass bei Multiselectboxen (multi: true) die Volltextsuche standardmäßig aktiviert ist)
+* *multi:** Definieren Sie eine Single- oder Multiselectbox (Standard: false)
+* *value:** Definition des Standardwertes
+* *Optionen mit label und value:** Definition der Optionen (label, value)
+* **useValuesAsKeys:** Die Werte werden auch als Schlüssel verwendet. Andernfalls handelt es sich um eine Zahl, die für jede Option zugewiesen wird (Standard: false)
 
 **(2) multiselect - mehrere Einträge können ausgewählt werden**
 
 Multiselect-Box wird durch das attribute `multiple: true` aktiviert. Es können mehrere Einträge ausgewählt werden. Die Nutzung und die Voraussetzungen der Datenbank können variieren. Bei dem oben beschriebenen Beispiel können die Interessen in den POI als Multiobjekte abgespeichert werden. Das Datenbankfeld ist weiterhin ein character varying.
 
+Die Verwendung und ihre Anforderungen an die Datenbanktabellenspalte können variieren. Generell können Sie bei dem obigen Beispiel über multiple: true auf multiselects umschalten. Die Datenbankfelder sind nach wie vor ein variierendes Zeichen.
+
+Die Werte werden kommasepariert in der Tabellenspalte gespeichert.
+
 .. code-block:: yaml
 
-                -
-                  type: select
-                  multiple: true
-                  title: Interests
-                  name: interests
-                  copyClipboard: false
-                  options:
-                    maps: maps
-                    reading: reading
-                    swimming: swimming
-                    dancing: dancing
-                    beer: beer
-                    flowers: flowers
+         - type: select
+           title: Interests
+           name: type
+           maximumSelectionLength: 2 # maximum number of possible selections
+           attr:
+               multiple: true
+           options:
+               - label: 'Please select a type...'
+                 value: ''
+               - label: 'Type A'
+                 value: 'A'
+               - label: 'Type B'
+                 value: 'B'
+               - label: 'Type C'
+                 value: 'C'
+               - label: 'Type D'
+                 value: 'D'
+                 attr:
+                     disabled: disabled
+           value: A,C   # use comma-separated values for default multi-select value
 
-**Anmerkungen:** Ab Digitizer 1.2 wird für die Mehrfachauswahl eine vereinfachte Auswahlmöglichkeit genutzt, die auch die Suche innerhalb der Drop-Down-Liste ermöglicht. Die Navigation durch die Liste ist mit der Tastatur möglich. Mögliche Einträge werden beim Eintippen hevorgehoben. Eine vorhandene Auswahl kann über das kleine "x" Symbol wieder deaktiviert werden.
-Aktuelle Informationen zur Digitizer-Version finden sich unter: https://github.com/mapbender/mapbender-digitizer
+
+**Hinweise:** Die Mehrfachauswahl bietet einen einfacheren Mechanismus zur Auswahl eines Eintrags, der auch eine Suche in der Dropdown-Liste ermöglicht. Die Navigation durch die Liste ist über die Tastatur möglich.
+Mögliche Einträge werden während des Tippens hervorgehoben. Ein bereits ausgewählter Eintrag kann durch Anklicken des kleinen "x"-Symbols entfernt werden. Ein Eintrag kann auch als deaktiviert markiert werden.
+
 
 .. image:: ../../../../figures/digitizer/digi_multiselecttool.png
      :scale: 80
 
+**maximumSelectionLength**: maximale Anzahl der möglichen Auswahlen (optionaler Parameter)
 
-Das SQL (wenn maps und reading abgespeichert wurden):
-
-.. code-block:: postgres
-
-                gisdb=> select interests from poi where gid=3;
-                interests
-                --------------
-                maps,reading
-                (1 row)
+.. image:: ../../../../figures/digitizer/digi_multiselect_maximumselectionlength.png
+     :scale: 80
 
 
-Beim Abspeichern von Einträgen werden die Schlüsselwörter in der Datenbank abgelegt (Bsp.: "dancing: Tanzen" und "flowers: Blumen" speichert "dancing,flowers"). Das Kopieren mehrerer Werte in die Zwischenablage ist ebenfalls möglich (siehe konfiguriertes Beispiel).
+
+**Optionen für die Selectbox über SQL**
+
+Mit einer SQL-Anfrage können die Werte der Selectbox direkt aus einer Datenbanktabelle geholt werden.
 
 .. code-block:: yaml
 
-
-                                                 - type: select                       # Typ Auswahlbox
-                                                   title: Wählen Sie einen Typ aus    # Beschriftung mit dem Titel des Feldes (optional)
-                                                   name: my_type                      # Referenz zur Tabellenspalte
-                                                   copyClipboard: true                # Button, der den ausgewählten Wert in die Zwischenablage kopiert (optional).                                                   
-                                                   multiple: true                     # Definition einer Mehrfachauswahl (multiselect). (Standard: false)
-                                                   options:                           # Definition der Optionen (key: value)
-                                                     a: a                             
-                                                     b: b
-                                                     c: c
-
-
-**Füllen der Auswahlboxen über eine SQL Abfrage**
-
-Mit einer SQL-Abfrage können die Werte direkt aus der Datenbank gezogen werden. Dabei ist zu beachten, dass die key-value-Zuordnungen wegfallen und nur noch die Stützpunkte abgespeichert werden.
-
-.. code-block:: yaml
-
-                                                 - type: select                       # Typ Auswahlbox
-                                                   title: select some types           # Beschriftung (optional)
-                                                   name: my_type                      # Referenz zu Tabellenspalte
-                                                   connection: connectionName         # Definition einer Datenbankverbindung (connection)
-                                                   sql: 'SELECT DISTINCT key, value FROM tableName order by value' # Definition SQL, Abfrage der Werte key und value
-
+         - type: select         # Typ-Definition
+           title: Choose a type # Beschrfitung (optional)
+           name: type           # Reference zur Tabellenspalte
+           connection: connectionName # Definition der Datenbank-Verbindung
+           sql: 'SELECT DISTINCT type_name as label, type_id as value FROM types order by value;'    # get the options fro the selectbox
+           options:
+               - label: 'Please select a type...'
+                 value: ''
 
 
 Texte/Label (type label)
@@ -708,8 +912,10 @@ Texte/Label (type label)
 
 .. code-block:: yaml
 
-                                                 - type: label                                     # Typ Label schreibt einen nicht bearbeitbaren Text in das Formularfenster.
-                                                   title: 'Please give information about the poi.' # Definition eines nicht bearbeitbaren Textes.
+         - type: label                                    # Erstellt einen nicht bearbeitbaren Text imFormularfenster.
+           text: 'Please give information about the poi.' # Definition eines nicht bearbeitbaren Textes. 
+           css:
+              color: red
 
 
 Texte (type text)
@@ -719,14 +925,13 @@ Im Formular können Texte definiert werden. Hierbei kann auf Felder der Datenque
 
 .. code-block:: yaml
 
-                                                - type: text                     # Typ text zur Generierung von dynamischen Texten aus der Datenbank
-                                                  title:       Name              # Beschriftung (optional)
-                                                  name:        name              # Referenz zu Tabellenspalte, dessen Inhalt angezeigt werden soll
-                                                  css:         {width: 80%}      # CSS Definition (optional)
-                                                  text: data.gid + ': ' + data.name
-                                                  # Text Definition in JavaScript
-                                                  # data - Angabe, dass Datenbankfeld aus der Tabelle angesprochen wird.
-                                                  # z.B.: data.gid --> Anzeige der ID der Geometrie im Textfeld
+        - type: text   # Typ text zur Generierung von dynamischen Texten aus der Datenbank
+          title: Name  # Beschriftung (optional)
+          name: name   # Referenz zu Tabellenspalte, dessen Inhalt angezeigt werden soll
+          text: data.gid + ': ' + data.name
+          # Text Definition in JavaScript
+          # data - Die Angabe data ermöglicht den Zugriff auf alle Datenfaelder
+
 
 Textbereiche (type textArea)
 ----------------------------
@@ -735,79 +940,106 @@ Textbereiche (type textArea)
 
 .. code-block:: yaml
 
-                                                 - type: textArea                    # Typ textArea erzeugt einen Textbereich
-                                                   rows: 4                           # Anzahl der Zeilen für den Textbereich, die beim Öffnen des Formulars erscheinen. Feld kann per Maus im Formular größer gezogen werden.
-                                                   name: beschreibung                # Tabellenspalte
-                                                   title: Bestandsaufnahme Bemerkung # Beschriftung (optional)
+         - type: textArea       # Typ textArea erzeugt einen Textbereich
+           rows: 4              # Anzahl der Zeilen für den Textbereich (Standardwert ).
+           title: Beschreibung  # Beschriftung (optional)
+           name: abstract       # Tabellenspalte
+
+* **rows**: Anzahl der Zeilen für den Textbereich (Standardwert 3).
 
 
 Trennlinien (type breakLine)
 ----------------------------
 
+Fügt ein einzelnes HTML <hr>-Element ein. Unterstützt das Hinzufügen von HTML-Attributen über das attr-Objekt und benutzerdefinierte cssClass.
+
 .. code-block:: yaml
 
-                                                 - type: breakLine      # fügt eine einfache Trennlinie ein
+         - type: breakLine      # fügt eine einfache Trennlinie ein
 
 
 Checkboxen (type checkbox)
 --------------------------
 
-.. code-block:: yaml
-
-                                                 - type:  checkbox        # Typ checkbox erzeugt eine Checkbox. Beim Aktivieren wird in die Datenbank der angegebene Value (hier 'TRUE') geschrieben.
-                                                   title: Is this true?   # Beschriftung (optional)
-                                                   name:  public          # Referenz zu Tabellenspalte
-                                                   value: true            # angegebener Parameter beim Aktivieren der Checkbox wird in DB gespeichert (hier 'TRUE').
-                                                   checked: false         # Definiert, ob die Checkbox vordefiniert angehakt sein soll. (Standard: false)
-
-
-
-Pflichtfelder
--------------
-
-Die Hinweise für ein Pflichtfeld erscheinen über dem jeweiligen Feldern. Bei einer fehlenden Angabe in einem definierten Pflichtfeld wird dieses rot umrandet und (wenn vorher definiert) erscheinen Hinweise. Das Objekt kann nicht gespeichert werden, wenn Pflichtangaben fehlen.
-
-.. note:: **Hinweis:** Bei der Nutzung von mehreren Reitern in dem Formular kann es sein, dass der Erfasser bei einem Pflichtfeld auf einem nicht sichtbaren Reiter eine Angabe falsch setzt und das Abspeichern daher nicht funktioniert. Hier erscheint keine Fehlermeldung außerhalb des Formulars. Der Erfasser muss die Angaben in dem Formular überprüfen (Kennzeichen: rote Umrandung/Sprechblase mit Hinweis), bevor diese korrekt abgespeichert werden können.
+Type checkbox erzeugt eine an/aus-Checkbox.
 
 .. code-block:: yaml
 
-                                                 - type:  [Angabe zum Feldtyp]              # jedes Feld kann zum Pflichtfeld gemacht werden
+         - type:  checkbox        # Typ checkbox erzeugt eine Checkbox. Beim Aktivieren wird in die Datenbank der angegebene Value (hier 'TRUE') geschrieben.
+           title: Is this true?   # Beschriftung (optional)
+           name:  public          # Referenz zu Tabellenspalte
+           value: true            # Initialer Wert für neue Objekte (true/false, Standardwert true)
 
-                                                   mandatory: true                          # true - Das Feld muss gefüllt werden. Ansonsten kann der Datensatz nicht gespeichert werden. Bei der Definition sind auch reguläre Ausdrücke möglich.
-                                                   mandatorytitle: Pflichtfeld füllen!      # Text der im Feld angezeigt wird, wenn das Feld nicht gefüllt wird oder mit einem ungültigen Wert gefüllt wird.
-                                                   mandatoryText: Bitte eine Zahl eingeben! # Text der in einer Sprechblase über dem Feld angezeigt wird, wenn das Feld beim Speichern nicht gefüllt ist oder mit einem ungültigen Wert gefüllt ist.
-                                                   mandatory: /^\w+$/gi                     # Es können auch reguläre Ausdrücke angegeben werden, um die Eingabe zu überprüfen (z.B. Email oder numbers) Weitere Informationen unter: http://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
 
-                                                   # Prüfung, ob die Eingabe eine Zahl ist
-                                                   mandatory: /^[0-9]+$/
-                                                   mandatoryText: Bitte eine Zahl eingeben!
+Radio-Buttons (type radioGroup)
+-------------------------------
+
+Der Typ radioGroup erzeugt Radio-Buttons.
+
+.. code-block:: yaml
+
+        -   type: radioGroup      # Typ radioGroup erzeugt Radio-Buttons. Wenn sie aktiviert ist, wird der angegebene Wert in die Tabellenspalte geschrieben.
+            title: Radiobuttons - Treffen Sie eine Auswahl # Beschriftung (optional)
+            name: test1           # Tabellenspalte
+            options:              # Definition der Optionen
+                - label: Option 1
+                  value: v1
+                - label: Option 2
+                  value: v2
+            value: v2   # Definition von Vorgabewerten. Hier wird die Option v2 für neue Objekte vorausgewählt.
 
 
 Datumsauswahl (type date)
 -------------------------
+
+Type date erstellt ein Eingabefeld, in das Sie ein Datum eingeben können, entweder mit einem Textfeld, das die Eingabe überprüft, oder 
+einer speziellen Schnittstelle zur Datumsauswahl. Es erzeugt das Standard-SQL-Datums-String-Format "YYYY-MM-DD".
 
 .. image:: ../../../../figures/digitizer_datepicker.png
      :scale: 80
 
 .. code-block:: yaml
 
-                     - type: date                                       # Textfeld, das eine Datumsauswahl bereitstellt
-                       title: favorite Date                             # Beschriftung (optional)
-                       name: date_favorite                              # Referenz zu Tabellenspalt
-                       mandatory: true                                  # Pflichtfeld
+                     - type: date                  # Textfeld, das eine Datumsauswahl bereitstellt
+                       title: favorite Date        # Beschriftung (optional)
+                       name: date_favorite         # Referenz zur Tabellenspalte
+                       attr:
+                           min: '2020-01-01'       # Legt das kleinste auswählbare Datum fest.
+                           max: '2030-01-01'       # Legt das größte auswählbare Datum fest.
 
 
-Hilfetexten zu den Eingabefeldern (Attribut infoText)
------------------------------------------------------
+* **min**: Legt das kleinste auswählbare Datum fest. Wenn es auf null gesetzt ist, gibt es kein Minimum (optional).
+* **max**: Legt das maximal auswählbare Datum fest. Wenn es auf null gesetzt ist, gibt es kein Maximum (optional).
 
-Anders als bei Hifetexten zu den Pflichtfeldern kann der Infotext über jedem Feld erscheinen, unabhängig davon, ob dieses ein Pflichtfeld ist oder nicht. Bei der Angabe infotext: [Text] erscheint ein Info-Button über dem jeweiligen Feld.
-Der Klick auf diesen Button öffnet den angegebenen Informationstext.
+
+Farbauswahl (type colorPicker)
+-------------------------------
+
+Der Typ colorPicker erstellt ein Eingabefeld, in das Sie einen Farbwert (in HEX-Form, z. B. #ff00ff)  eingeben können oder diesen über eine Farbauswahl auswählen können.
+
+.. image:: ../../../../figures/digitizer/digitizer_colorpicker.png
+     :scale: 80
 
 .. code-block:: yaml
 
-                                                 - type:  [Angabe zum Feldtyp]                                   # jedes Feld kann einen Infotext nutzen
+                     - type: colorPicker      # Farbauswah
+                       title: 'Fill color'    # Beschriftung (optional)
+                       name: fill_color       # Tabellenspalte
+                       value: 'ff00ff'        # Vordefinition eines Farbwertes
 
-                                                   infoText: In dieses Feld dürfen nur Zahlen eingegeben werden  # Hinweistext, der angezeigt wird über i-Symbol.
+
+Typ HTML (type html)
+----------------------
+
+Type html erlaubt es HTML zu definieren  (z.B. Buttons, Links).
+
+.. image:: ../../../../figures/digitizer/digitizer_html.png
+     :scale: 80
+
+.. code-block:: yaml
+
+                     - type: html      # define html
+                       html: '<b>Read more at the </b><a href="https://mapbender.org" target="_blank">Mapbender-Webseite</a></br>'
 
 
 Gruppierungen (type: fieldSet)
@@ -833,33 +1065,6 @@ Für jedes Gruppenelement kann eine Breite über CSS angegeben werden, um die Au
                              name: email
                              css: {width: 40%}
 
-Koordinaten (type coordinates)
-------------------------------
-
-Um ein visuelles Feedback zu erhalten, Koordinaten manuell eingeben zu können oder diese manuell nachzubessern, kann für Punkt-Geometrien das *coordinates* Element eingebunden werden.
-
-.. image:: ../../../../figures/digitizer_coordinates.png
-     :scale: 80
-
-.. code-block:: yaml
-
-                     - type: coordinates
-                       title_epsg: 'EPSG angeben'
-                       title_longitude: 'Longitude'
-                       title_latitude: 'Latitude'
-                       coordinatesFieldsOrder: ['epsg','x','y']
-                       title: ''
-                       css: {width: 100% }
-                       epsgCodes: [['EPSG:3857', 'EPSG:3857 (Pseudo Mercator)'], ['EPSG:4326', 'EPSG:4326 (WGS84)']]
-
-Die verfügbaren Parameter sind:
-
-* **title_epsg**: die Beschriftung für das Feld zur Auswahl des Koordinatensystems der Koordinaten
-* **title_longitude**: die Beschriftung für das logitude Feld
-* **title_latitude**: die Beschriftung für das latitude Feld
-* **coordinatesFieldsOrder**: eine Liste aus Strings, die die Reihenfolge der drei Eingabefelder (Koordinatensystemauswahl, Longitude, Latitude) definiert
-* **epsgCodes**: eine Liste aus Tupeln, die jeweils einen EPSG Code und dessen Beschriftung im Formular definieren
-
 
 Dateiupload (type file)
 -----------------------
@@ -882,24 +1087,18 @@ Die in der Datenbank verlinkte URL ist:
 
 * ``http://localhost/mapbender/uploads/featureTypes/[tabellenname]/[spaltenname]/[dateiname].png``
 
-
-
 .. code-block:: yaml
 
-                    - type: file                        # Typ file für das Hochladen von Dateien
-                      title: Dateiupload                # Beschriftung (optional)
-                      text: Laden Sie ein Bild hoch.    # Informationstext zum Feld (optional)
-                      name: file_reference              # Angabe der Datenbankspalte, in die der Speicher-Pfad geschrieben wird
+                    - type: file                   # Typ file für das Hochladen von Dateien
+                      title: Datei-Upload          # Beschriftung (optional)
+                      text: Laden Sie ein Bild.    # Informationstext zum Feld (optional)
+                      name: file_reference         # Angabe der Datenbankspalte, in die der Speicher-Pfad geschrieben wird
+                      attr:
+                          accept: image/*          # Vorauswahl von Elementen im Image-Format (Fenster für Dateiupload öffnet sich mit Einschränkungsfilter)
+                                                   # Es können jedoch weiterhin auch andere Dateiformate hochgeladen werden.
 
 
-                      # Experimentelle Parameter:
-                      #accept: image/*                  # Vorauswahl von Elementen im Image-Format (Fenster für Dateiupload öffnet sich mit Einschränkungsfilter)
-                                                        # Es können jedoch weiterhin auch andere Dateiformate hochgeladen werden.
-
-**Anmerkungen:** Es wird momentan noch ein "thumbnail" Verzeichnis angelegt, dass eine kleinere Version der Bilder beinhaltet. Dieses wird in weiteren Entwicklungsphasen noch verändert.
-
-Für die Ansicht von hochgeladenen Bildern kann die Bildanzeige dazugenommen werden.
-
+Für die Ansicht von hochgeladenen Bildern kann die Bildanzeige via type: image verwendet werden.
 
 
 Bildanzeige (type image)
@@ -908,7 +1107,7 @@ Bildanzeige (type image)
 .. image:: ../../../../figures/digitizer_image.png
      :scale: 80
 
-Für die Ansicht eines Bildes im Formular kann das Bild-Element genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
+Für die Ansicht eines Bildes im Formular kann der Typ image genutzt werden. Durch die Angabe einer URL in einem Datenbankfeld oder einer URL über den src-Parameter können Bilder angezeigt werden.
 
 Bilder, die durch das Element Dateiupload in einer Tabellenspalte vermerkt sind können somit auch direkt eingebunden und angezeigt werden.
 
@@ -925,8 +1124,6 @@ Das Bild lässt sich durch die Angabe von den beiden Parametern src und name ang
                       name: file_reference                                # Referenz zur Datenbankspalte. Wenn definiert, wird der Pfad oder die URL in dem Feld ermittelt und "src" Option ersetzt
                       src: "../bundles/mapbendercore/image/logo_mb3.png"  # Angabe eines Pfades oder URL zu einem Bild. Falls der relative Pfad genutzt wird, muss relative: true stehen.
                       enlargeImage: true                                  # Bild wird beim Klick auf das Vorschaubild auf Originalgröße/maximale Auflösung vergrößert. Es wird nicht auf die Bildschirmgröße skaliert.
-
-                      # Experimentelle Angaben zum Styling
                       imageCss:
                         width: 100%                                       # Image CSS Style: Skaliert das Vorschaubild in dem Formular, abweichend von der Originalgröße in Prozent.
 
@@ -936,119 +1133,38 @@ Dynamische Pfade (z.B. "bundles/mapbendercore/image/[nr].png" oder 'bundles/mapb
 
 Eine Möglichkeit, das zu umgehen, wäre ein Trigger, der in die Datenbankspalte beim Insert den Pfad und den Inhalt eines Tabellenfeldes als Name zusammenführt.
 
+Bitte beachten Sie, dass ein alternativer Hochladeort im Abschnitt featureType definiert werden kann (siehe featureType).
 
-Definition der zur Verfügung stehenden Werkzeuge (Toolset Type)
----------------------------------------------------------------
 
-Jeder FeatureType kann unterschiedliche Toolsets freischalten, die dann in der Schaltflächenleiste des Digitizers sichtbar sind.
-In dem FeatureType "poi" wird mit dem "drawPoint" Toolset z.B. die Schaltfläche zum Erstellen eines neuen Punktes freigeschaltet, mit dem Toolset "modifyFeature" die Verschieben-Schaltfläche eingeblendet.
+Pflichtfelder
+-------------
 
-Werkzeugliste:
-
-* **drawPoint** - Punkt erstellen
-* **drawLine** - Line erstellen
-* **drawPolygon** - Polygone erstellen
-* **drawRectangle** - Rechteck erstellen
-* **drawCircle** - Circle erstellen
-* **drawEllipse** - Ellipse erstellen
-* **drawDonut** - Donut erstellen oder die bestehende Geometrien editieren
-* **modifyFeature** - einzelne Knotenpunkte bei Geometrien verschieben
-* **moveFeature** - Geometrien verschieben
-* **selectFeature** - Geometrien de-/selektieren (experimentell). Es findet noch keine Interaktion mit der Tabelle statt und die zur Verfügung stehenden Workflows beschränken sich auf das Löschen.
-* **removeSelected** - die selektierten Geometrien löschen (experimentell). Löscht alle in der Karte selektierten Objekte.
-* **removeAll** - Vorsicht: alle Geometrien aus der Tabelle löschen
-
-Definition der für die Erfassung verwendeten Toolset Typen:
+Das Objekt kann nicht gespeichert werden, wenn Pflichtangaben fehlen. Im Falle einer fehlenden Eingabe in einem Pflichtfeld wird das Feld mit einem roten Rahmen markiert und ein Text (mandatroyText) angezeigt, falls definiert.
 
 .. code-block:: yaml
 
-    polygon:
-        [...]
-        toolset:
-            - type: drawPolygon
-            - type: drawRectangle
-            - type: drawDonut
-            - type: removeSelected
+         - type:  [Angabe zum Feldtyp]     # Jeder Feldtyp kann ein Pflichtfeld sein
+           attr:
+               placeholder: 'Das Feld ist ein Pflichtfeld....'  # Der Text wird im Feld angezeigt und verschwindet bei der Eingabe.
+                                                                # Der Text wird nicht gespeichert.
+               pattern:  /^\w+$/gi         # Sie können einen regulären Ausdruck definieren, um den Inhalt eines Feldes zu prüfen.
+                                           # Lesen Sie mehr https://wiki.selfhtml.org/wiki/JavaScript/Objekte/RegExp
+                                           # pattern:  /^[0-9]+$/ # Prüft, ob die Eingabe eine Zahl ist.
+           required: true                  # true/required / false Standardwert false
+           mandatoryText: Please choose a type!  # Text, der angezeigt wird, bei fehlender oder falscher Eingabe im Pflichtfeld.
+           mandatory: /^\w+$/gi                  # Sie können einen regulären Ausdruck definieren, um den Inhalt eines Feldes zu prüfen.
 
 
-Suche in den Tabellen (inline Search)
--------------------------------------
+Hilfetexten zu den Eingabefeldern (Attribut infoText)
+-----------------------------------------------------
 
-Über die Suche können Begriffe in der Tabelle gesucht werden.
-Die aktivierte Sucheleiste erscheint über der Tabelle und nach der Eingabe eines Suchbegriffs werden alle Spalten dieser Tabelle durchsucht und deren Ergebnisse angezeigt.
-
-.. code-block:: yaml
-
-  poi:
-      ...
-      inlineSearch: true      # Suche in den Tabellenspalten (Standard: true)
-      ...
-
-
-Kontextmenü
------------
-
-Über das Kontextmenü kann ein Objekt auf der Karte näher betrachtet werden.
-Nach der Aktivierung lässt sich über den rechten Mausklick auf ein Objekt ein Kontextmenü öffnen.
-
-.. image:: ../../../../figures/digitizer_contextmenu.png
-     :scale: 80
-
-Elemente des Kontextmenüs:
-
-* **Heranzoomen:** Auf den Kartenausschnitt des Objekts zoomen.
-* **Bearbeiten:** Informationen zu dem Objekt verändern. Klick öffnet die Digitalisieroberfläche.
-* **Löschen:** Löscht das ausgewählte Objekt.
-
-Ist die korrespondierende `Basisdefinition <#basisdefinition>`_ (allowEditData, allowDelete) nicht definiert, stehen diese auch im Kontextmenü nicht zur Verfügung. In dem oben stehenden Beispiel steht für die Polygone die Löschen-Funktion nicht zur Verfügung.
-
+Anders als bei Hifetexten zu den Pflichtfeldern kann der Infotext über jedem Feld erscheinen, unabhängig davon, ob dieses ein Pflichtfeld ist oder nicht. Bei der Angabe infotext: [Text] erscheint ein Info-Button über dem jeweiligen Feld.
+Der Klick auf diesen Button öffnet den angegebenen Informationstext.
 
 .. code-block:: yaml
 
-  poi:
-      ...
-      useContextMenu: true
-      ...
-
-
-Clustering (experimentell)
---------------------------
-
-Über das Clustering können die Objekte auf der Karte zusammengefasst werden.
-Abhängig von der definerten Distanz und Zoomstufe werden unterschiedlich viele Objekte zusammengeführt.
-
-Durch die Komplexität des Clusterings können sich in zukünftigen Versionen noch Änderungen an der Funktion und der Syntax ergeben, so dass wir dieses Feature bislang als experimentell kennzeichnen. Abhängigkeiten existieren zu der Anzeige der Features für den aktuellen Ausschnitt/den gesamten Bereich und den unterschiedlichen Geometrietypen.
-
-
-.. image:: ../../../../figures/digitizer_clustering.png
-     :scale: 80
-
-Definition der Clusterelemente:
-
-* **scale:** Zoomstufe.
-* **distance:** Distanz zwischen einzelne Features in Metern, die zusammengefügt werden.
-* **disable:** Schaltet Clustering für die Zoomstufe ab.
-
-
-.. code-block:: yaml
-
-  poi:
-      [...]
-      clustering:
-          -
-              scale: 10000        # Zoomstufe
-              distance: 60        # Distanz zwischen einzelne Features in Metern, die zusammengefügt werden
-          -
-              scale: 2500
-              distance: 40
-          -
-              scale: 1000
-              distance: 20
-          -
-              scale: 500
-              distance: 1
-              disable: true       # Schaltet Clustering für die Zoomstufe ab
-      [...]
+         - type:  [Angabe zum Feldtyp]     # jedes Feld kann einen Infotext nutzen
+           infoText: 'In dieses Feld dürfen nur Zahlen eingegeben werden'  # Hinweistext, der angezeigt wird über i-Symbol.
 
 
 Karten-Refresh nach Speichern
@@ -1056,26 +1172,17 @@ Karten-Refresh nach Speichern
 
 Nach dem Speichern eines Objekts kann ein Refresh der Karte über die Option ``refreshLayersAfterFeatureSave`` aktiviert werden. Über diesen Parameter werden die definierten Layer-Instanzen aus dem Map-Element neu geladen. Damit werden Änderungen in WMS-Diensten direkt in der Karte sichtbar. Dieses Event wird nur gestartet, wenn der Speichern Knopf aus dem Attributdialog verwendet wird.
 
-Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per eindeutigen Name oder per Instance-ID erfolgen. Wenn die Anwendungen über die graphische Oberfläche im :ref:`backend_de` mit dem Digitizer-Element bearbeitet wird, kann nur die Angabe per Instance-ID erfolgen.
-
-
-.. image:: ../../../../figures/digitizer/layerinstance_id.png
-     :scale: 80
-
+Ein Layer kann über den Namen oder die Instanz-ID angegeben werden: 
 
 .. code-block:: yaml
 
   poi:
       [...]
-       allowEditData: true
        refreshLayersAfterFeatureSave:  # bei keiner Angabe in diesem Bereich erfolgt kein Karten-Refresh nach Speichern
          - 17
          - 18
          - osm                         # Namensangabe nur bei Anwendungen unter applications/ möglich
       [...]
-      
-**Anmerkungen**: Karten-Refresh nach dem Speichern ist ab Version 1.2 möglich. Mehr Informationen unter: https://github.com/mapbender/mapbender-digitizer
- 
 
 
 Duplizieren von Objekten
@@ -1086,8 +1193,9 @@ Damit das neue Objekt in der Karte besser erkannt werden kann ist hier eine farb
 
 Der Duplizieren-Button kann in Abhängigkeit von einem bestimmten Attribut-Wert aktiviert werden. Dies bedeutet, dass nur wenn das entsprechende Attribut einen bestimmten Wert hat (date > 0), erscheint die Duplizieren-Funktion.
 
+* **copy:** Duplizieren aktivieren
+* **enabled:** Duplizieren aktivieren (Standardwert false)
 * **data**: Angabe von Standardwerten für Attributfelder
-* **rules**: regelbasiertes Duplizieren (nur wenn die Regel zutrifft darf das Objekt dupliziert werden).
 * **style**: Styling des kopierten Objekts (mehr dazu s.u. unter dem Bereich Darstellung)
 * **on**: Events beim Duplizieren
 
@@ -1095,12 +1203,10 @@ Der Duplizieren-Button kann in Abhängigkeit von einem bestimmten Attribut-Wert 
 
   poi:
       [...]
-       copy: # bei keiner Angabe in diesem Bereich können keine Objekte dupliziert werden
-         enable: true
+       copy:
+         enable: true  # Aktivierung der Möglichkeit, Objekte zu Duplizieren (default false)
          data:
            date: 2017
-         rules:
-           - feature.attributes.id > 10
          style:
            label: "Dupliziertes Objekt"
            fillColor: "#ff0000"
@@ -1185,7 +1291,7 @@ Dieses Szenario ist zu einem konsturierten Beispiel erweiterbar, in dem gleichze
 
                 events:
                   onBeforeInsert: |
-                    $sql = "SELECT
+                    $sql = "SELECT 
                     ST_Line_Interpolate_Point('".$item['geomline']."'::geometry, 1) as geom";
                     $stmnt = $this->getConnection()->prepare($sql);
                     $stmnt->execute();
@@ -1194,27 +1300,6 @@ Dieses Szenario ist zu einem konsturierten Beispiel erweiterbar, in dem gleichze
 
 Hier wird das onBeforeInsert-Event genommen. Der Längsstrich '|' hinter dem Event zeigt einen mehrzeiligen Block an. Dieser Block besteht aus PHP-Code, der ein SQL-Statement weiterleitet. Das SQL Statement ruft die ST_Line_Interpolate_Point Funktion auf und übergibt die Geometrie der gezeichneten Linie. Da diese noch nicht persistent ist, muss über das "Item" auf die Geometrie (geomline) zugegriffen werden. Die restlichen Zeilen bauen das SQL Statement zusammen und schicken es an die im FeatureType angegebene SQL-Connection. In der letzten Zeile wird der resultierende Punkt (geompoi) in die Punktgeometrie geschrieben.
 
-Buttons
--------
-
-Für die Erfassungsformulare können weitere Buttons definiert werden. Die Events beim Klick auf den Button können frei per JavaScript definiert werden. Somit können beispielsweise mailto-Angaben für die Einbindung einer Mail generiert werden.
-
-.. code-block:: yaml
-
-  poi:
-      ...
-        popup:
-            title: polygon test suite
-            buttons:
-              - text: Nachricht an Bearbeiter
-                click: |
-                  var body = encodeURI("Sehr geehrter Herr/Frau xx,"+"\nLink:"+location.href);
-                  location.href = "mailto:vorname.nachname@mail.com?subject=Neue Bearbeitung im WebGIS&body=Mail an den Bearbeiter für die die weitere Bearbeitung.";
-              - text: Nachricht an Kontrolle
-                click: |
-                 location.href = "mailto:vorname.nachname@mail.com&subject=WebGIS&body=really?";
-
-
 
 Darstellung (Styles)
 --------------------
@@ -1222,8 +1307,9 @@ Darstellung (Styles)
 Über die Angabe eines Styles kann definiert werden, wie die Objekte angezeigt werden.
 
 * **default**: Definiert die normale Darstellung der Objekte auf der Karte
-* **select**: Darstellung der ausgewählten Objekte beim Mouseover
-* **selected**: Darstellung der ausgewählten Objekte nach dem Klick Event
+* **select**: Darstellung der ausgewählten Objekte beim Klick-Ereignis
+* **unsaved**: Darstellung der nicht gespeicherten Objekte.
+
 
 .. code-block:: yaml
 
@@ -1231,30 +1317,34 @@ Darstellung (Styles)
       ...
       styles:
           default:
-              graphic: true
               strokeWidth: 5
-              strokeColor: "transparent"
+              strokeColor: "#ff00ff"
               fillColor:  '#c0c0c0'
-              fillOpacity: 1
-              fillWidth: 2
-              # label: ${name} ${type}
-              # labelOutlineColor: '#eeeeee'
+              fillOpacity: 0.5
               pointRadius: 10
           select:
               strokeWidth: 1
               strokeColor: "#0e6a9e"
               fillOpacity: 0.7
               fillColor: "#0e6a9e"
-              label: ${name} ${type}
               pointRadius: 10
-          selected:
+              label: ${name} ${type}
+              fontColor: black
+              fontSize: 12
+              fontFamily: 'Arial, Courier New, monospace'
+              fontWeight: bold
+              labelOutlineColor: white
+              labelOutlineWidth: 1
+              labelYOffset: -18
+              labelXOffset: -18
+          unsaved:
               strokeWidth: 4
               strokeColor: "#648296"
               fillOpacity: 1
-              fillColor: "#eeeeee"
-              label: ${name} ${type}
+              fillColor: "#eeeeee"              
+              label: 'Bitte speichern'
               pointRadius: 10
-      ...
+
 
 * **strokeColor:** Farbe der Umrandungslinie [Farbwert/transparent]
 * **strokeWidth:** Breite der Umrandungslinie [numeric]
@@ -1264,12 +1354,89 @@ Darstellung (Styles)
 * **fillOpacity:** Transparenz der Füllung [0-1]
 * **pointRadius:** Radius um den Mittelpunkt [numeric]
 * **label:** Beschriftung des Objekts mit festen Werten und/oder DB-Feldern, z.B. "ID ${nummmer}"
-* **labelOutlineColor:** Farbe der Umrandung von der Beschriftung [Farbwert/transparent]
+* **fontColor:**  "#0000ff" #'${fontcolor}' Schriftfarbe
+* **fontSize:** Schriftgröße in pixel
+* **fontFamily:** Schriftart (Font family)
+* **fontWeight:** Font weight (default normal)
+* **labelOutlineColor:** Farbe der Umrandung der Beschriftung [Farbwert/transparent]
+* **labelOutlineWidth:** Label outline width Breite der Umrandung der Beschriftung
+* **labelYOffset:** Beschriftung Versatz x (default 0)
+* **labelXOffset:** Beschriftung Versatz y (default 0)
+
+
+Es ist möglich auf Grafiken zu verweisen
+
+.. code-block:: yaml
+          
+          default:
+              graphic: true
+              externalGraphic: 'https://schulung.foss.academy/symbols/${symbol}.png'
+              graphicWidth: 30
+              graphicHeight: 30
+
+
+* **graphic:** [true/false]
+* **externalGraphic:** Definition eines Links zu einer externen Grafik. In der Definition können Variablen verwendet werden.
+* **graphicWidth/graphicHeight:** Definition der Breite und Höhe in Pixeln.
+
+
+CSS-Verhalten und Styling-Felder
+--------------------------------
+Jedem Eingabefeld können, unabhängig vom Typ, CSS-Verhaltens- und Stylinginformationen zugewiesen werden. Dies kann z.B. genutzt werden, um wichtige Felder hervorzuheben oder ein Attributfeld beim Bearbeiten eines anderen Feldes zu füllen.
+
+Verhaltensparameter:
+
+* load, focus, blur
+* input, change, paste
+* click, dblclick, contextmenu
+* keydown, keypress, keyup
+* dragstart, ondrag, dragover, drop
+* mousedown, mouseenter, mouseleave, mousemove, mouseout, mouseover, mouseup
+* touchstart, touchmove, touchend, touchcancel
+
+.. code-block:: yaml
+
+        formItems:
+           - type: tabs
+             children:
+               - type: form
+                 [...]
+                     - type: input
+                       name: firstname
+                       title: Firstname
+                       css: {width: 30%}
+                       input: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            var lastnameField = form.find("[name='lastname']");
+                            lastnameField.val(inputField.val());
+                       focus: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            form.css("background-color","#ffc0c0");
+                       blur: |
+                            var inputField = el;
+                            var form = inputField.closest(".modal-body");
+                            form.css("background-color","transparent");
+                     - type: date
+                       name: date
+                       title: Datum
+                       css: {width: 30%}
+                       # Hervorhebung des Jahres bei Änderung des Datum-Feldes und autom. Füllen des Jahres aus dem Datum
+                       change: |
+                          var inputField = el;
+                          var form = inputField.closest(".data-manager-edit-data");
+                          var yearField = form.find("[name='year']");
+                          var value = inputField.val()
+                          var year = value && value.match(/^\d{4}/)[0] || null;
+                          yearField.val(year);
+                          yearField.css("background-color","#ffc0c0");
+
 
 YAML-Definition für das Element "digitizer" in der Sidepane in der mapbender.yaml
 =================================================================================
 
-Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+Im Workshop-Bundle finden Sie ein Beispiel für eine YAML-Definition.
 
 .. code-block:: yaml
 
