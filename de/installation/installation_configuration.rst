@@ -138,7 +138,7 @@ Die Produktionsumgebung wird mit der URL http://localhost/index.php
 aufgerufen, die Entwicklungsumgebung mit der URL
 http://localhost/index_dev.php. Der Aufruf über ``index_dev.php`` kann
 und sollte nur vom localhost erfolgen.
-Sie können die Datei *index_dev.php* anpassen und IP-Adressen hinzufügen, so dass auch von diesen Adressen der Entwicklungsmodus erreicbar ist.
+Sie können die Datei *index_dev.php* anpassen und IP-Adressen hinzufügen, so dass auch von diesen Adressen der Entwicklungsmodus erreichbar ist.
 
 Es gibt Unterschiede im Verhalten von *index.php* und *index_dev.php*:
 
