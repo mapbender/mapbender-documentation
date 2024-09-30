@@ -3,7 +3,7 @@
 Wie werden eigene Style-Vorlagen (templates) erzeugt?
 #####################################################
 
-Mapbender beinhaltet bereits Anwendungs-Vorlagen, sie befinden sich im Mapbender CoreBundle Template-Verzeichnis `/application/mapbender/src/Mapbender/CoreBundle/Template`. 
+Mapbender beinhaltet bereits Anwendungs-Vorlagen. Sie befinden sich im Mapbender CoreBundle Template-Verzeichnis `/application/mapbender/src/Mapbender/CoreBundle/Template`. 
 Häufig sollen jedoch eigene Anwendungs-Vorlagen und Administrationsoberflächen mit eigenem Corporate Design verwendet werden.
 Um Probleme bei einem Upgrade zu vermeiden, sollte für personalisierte Oberflächen ein eigenes Bundle verwendet werden.
 Der Stil einer einzelnen Anwendung kann ebenfalls über den :ref:`css_de` angepasst werden.
@@ -18,18 +18,17 @@ Wie werden eigene Vorlagen erzeugt?
 * Template PHP-Datei zur Registrierung der eigenen Vorlage erzeugen,
 * Erzeugen einer eigenen Twig-Datei,
 * Erzeugen eigener CSS-Datei(en),
-* Registrierung des Bundles in `src/Kernel.php`,
 * Verwenden der neuen Vorlage.
 
 
 Als Beispiel für die Einbindung einer eigenen Vorlage wurde ein Workshop/DemoBundle vorbereitet. Dieses kann verwendet und individuell verändert werden. 
-Sie können sich die Dateien `hier <https://github.com/mapbender/mapbender-workshop/tree/master>`_ herunterladen.
+Sie können sich die Dateien `im Workshop-Bundle <https://github.com/mapbender/mapbender-workshop/>`_ herunterladen.
 
 
 Erzeugen eines eigenen Bundles
 ******************************
 
-Anwender-Bundles werden im src-Verzeichnis `/application/src` abgelegt.
+Anwender-Bundles werden im `src`-Verzeichnis abgelegt.
 Die Struktur eines Bundles kann wie folgt aussehen:
 
 .. code-block:: bash
@@ -92,8 +91,8 @@ In unserem Beispiel erzeugt die Datei *WorkshopDemoBundle.php* einen Namespace f
 Anlegen der eigenen Template-Datei
 **********************************
 
-In unserem Beispiel heißt die Template-Datei *FullscreenDemo.php*. Sie befindet sich unter `src/Workshop/DemoBundle/Template/DemoFullscreen.php`.
-In der Template-Datei wird der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete Twig-Datei definiert.
+In unserem Beispiel heißt die Template-Datei *DemoFullscreen.php*. Sie befindet sich unter `src/Workshop/DemoBundle/Template/DemoFullscreen.php`.
+In der Templates-Datei wird der Name des Templates, die Regionen die angelegt werden sollen sowie die verwendete Twig-Datei definiert.
 
 .. code-block:: php
 
@@ -129,9 +128,10 @@ In der Template-Datei wird der Name des Templates, die Regionen die angelegt wer
             "/components/vis-ui.js/vis-ui.js-built.js"
         );
 
-        public $twigTemplate = 'WorkshopDemoBundle:Template:demo_fullscreen.html.twig';
-    }
-
+        public function getTwigTemplate()
+        {
+            return '@WorkshopDemoBundle/Resources/views/Template/demo_fullscreen.html.twig';
+        }
 
 Eigene Twig-Datei erzeugen
 **************************

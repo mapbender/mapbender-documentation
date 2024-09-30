@@ -3,7 +3,7 @@
 How to create your own Template?
 ################################
 
-Mapbender comes with application templates out of the box, you can find them in the Mapbender CoreBundle: `/application/mapbender/src/Mapbender/CoreBundle/Template`.
+Mapbender comes with application templates out of the box. You can find them in the Mapbender CoreBundle: `/application/mapbender/src/Mapbender/CoreBundle/Template`.
 But usually you want to use your own templates with your own corporate design.
 To prevent overwriting your custom templates after an Mapbender upgrade you should create an extra bundle to safely store your custom files.
 You can also change the style of your application with the built-in :ref:`CSS-Editor <css>`.
@@ -15,16 +15,15 @@ You can also change the style of your application with the built-in :ref:`CSS-Ed
 * Create a template PHP-file to register your template,
 * Create your own Twig-file,
 * Create your own CSS-file(s),
-* Register your bundle in `src/Kernel.php`,
 * Use your template.
 
-To help you, we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files from the `Workshop bundle <https://github.com/mapbender/mapbender-workshop/tree/master>`_.
+To help you, we prepared a Workshop/DemoBundle, which can be used not only for application templates, but also for customizing the administration interface. For the following steps, you can download the files from the `Workshop bundle <https://github.com/mapbender/mapbender-workshop/>`_.
 
 
 Create your own bundle
 **********************
 
-User bundles are stored in the src-directory `/application/src`.
+User bundles are stored in the `src`-directory.
 This is how the structure can look like:
 
 
@@ -88,8 +87,8 @@ The *WorkshopDemoBundle.php* file creates the namespace for the bundle and refer
 Create your own template file
 *****************************
 
-In our example, the template file is called *FullscreenDemo.php*. You can find it at `src/Workshop/DemoBundle/Template/FullscreenDemo.php`.
-In the template file you define the name of your template, the regions that you want to provide and refer to a twig file.
+In our example, the template file is called *DemoFullscreen.php*. You can find it at `src/Workshop/DemoBundle/Template/DemoFullscreen.php`.
+In the templates file, you define the name of your template, the regions that you want to provide and refer to a twig file.
 
 .. code-block:: php
 
@@ -125,9 +124,11 @@ In the template file you define the name of your template, the regions that you 
             '/components/jquerydialogextendjs/jquerydialogextendjs-built.js',
             "/components/vis-ui.js/vis-ui.js-built.js"
         );
-        public $twigTemplate = 'WorkshopDemoBundle:Template:demo_fullscreen.html.twig';
-    }
-    
+
+      public function getTwigTemplate()
+      {
+          return '@WorkshopDemoBundle/Resources/views/Template/demo_fullscreen.html.twig';
+      }
 
 Create your own twig-file
 *************************

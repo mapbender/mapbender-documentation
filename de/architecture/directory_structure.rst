@@ -6,7 +6,7 @@ Verzeichnisstruktur in Mapbender
 application
 ***********
 
-Dieses Verzeichnis enthält beinahe sämtliche Mapbender-Komponenten. Wichtige Unterverzeichnisse und Dateien sind:
+Bei einer :ref:`Git-basierten Installation <de/installation/installation_git:Git-basierte Installation>` enthält das `application`-Verzeichnis beinahe sämtliche Mapbender-Komponenten. Wichtige Unterverzeichnisse und Dateien sind:
 
 * Das :ref:`config<de/architecture/directory_structure:config>`-Verzeichnis,
 * Der Anwendungskernel (`src/Kernel.php`) als Zugangspunkt zu Symfony,
@@ -26,7 +26,6 @@ Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis `config/`
 
 * :ref:`doctrine.yaml<de/customization/yaml:doctrine.yaml>`
 * :ref:`parameters.yaml<de/customization/yaml:parameters.yaml>`
-* *services.yaml*: Dient als Einstiegspunkt zur Konfiguration von Diensten.
 
 config/applications
 -------------------
@@ -52,14 +51,14 @@ Die Übersetzungen werden in `YAML-Dateien <https://en.wikipedia.org/wiki/YAML>`
 public
 ======
 
-Dieses Verzeichnis muss vom Webserver veröffentlicht werden. DocumentRoot muss auf dieses Verzeichnis verweisen.
+Dieses Verzeichnis muss vom Webserver veröffentlicht werden. Ein entsprechendes Alias muss auf dieses Verzeichnis verweisen.
 
 
 Es kontrolliert:
 
-* *index.php*: FrontendController (PHP-Script, welches aufgerufen werden kann). Benutzt die Umgebung, die in *.env* oder *.env.local* definiert wird.
-* *index_dev.php*: Benutzt immer die Entwicklungsumgebung. Kann standardmäßig nur von lokalen Host-Umgebungen aufgerufen werden.
-* `public/` beinhaltet außerdem die statischen Ressourcen wie css, js, favicon etc.
+* *index.php*: FrontendController (PHP-Script, welches aufgerufen werden kann). Benutzt je nach Definition der Variable ``APP_ENV`` den Produktiv- oder Entwicklungsmodus (siehe :ref:`.env bzw. .env.local <de/customization/yaml:.env bzw. .env.local>`).
+* *index_dev.php*: Benutzt immer die Entwicklungsumgebung. Kann standardmäßig nur von der lokalen Hostumgebung aufgerufen werden. Lesen Sie mehr dazu, wie auch andere IPs für den Zugriff freigegeben werden können, unter :ref:`Produktions- und Entwicklungsumgebung und Caches<de/installation/installation_configuration:Produktions- und Entwicklungsumgebung und Caches>`.
+* `public/` beinhaltet öffentlich verfügbare Ressourcen wie css, js, favicon etc.
 
 public/bundles
 --------------
@@ -71,7 +70,7 @@ public/bundles
 
      bin/console assets:install --symlink --relative public
 
-.. note:: **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das Kommando ``php.exe bin/console assets:install public`` nach jeder Änderung im Code aufrufen, um die Dateien in das Verzeichnis zu kopieren.
+.. note:: **Hinweis**: Wenn Sie Windows benutzen, können Sie keine symbolischen Links verwenden. Daher müssen Sie das Kommando ``php.exe bin/console assets:install public`` nach jeder Änderung von JavaScript-, css- oder twig- sowie Bilddateien aufrufen, um die Dateien in das öffentliche Verzeichnis zu kopieren.
 
 
 src

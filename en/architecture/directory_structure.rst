@@ -6,7 +6,7 @@ Directory structure in Mapbender
 application
 ***********
 
-This directory contains the default Mapbender application. Some important subdirectories and files are:
+Only in :ref:`Git-based installations <en/installation/installation_git:Git-based installation>`, the `application` directory contains the default Mapbender application. Some important subdirectories and files are:
 
 * the :ref:`config<en/architecture/directory_structure:config>` directory,
 * the application kernel (`src/Kernel.php`) as entry point to the Symfony application,
@@ -26,7 +26,6 @@ Basic configuration files of Mapbender are placed in the `config/` directory and
 
 * :ref:`doctrine.yaml<en/customization/yaml:doctrine.yaml>`
 * :ref:`parameters.yaml<en/customization/yaml:parameters.yaml>`
-* *services.yaml*: Serves as entry point to configure services.
 
 config/applications
 -------------------
@@ -51,13 +50,13 @@ The translations are stored in `YAML files <https://en.wikipedia.org/wiki/YAML>`
 public
 ======
 
-This directory has to be published by the webserver. The DocumentRoot directive has to refer to this directory. 
+This directory has to be published by the webserver. The alias has to refer to this directory. 
 
 It controls: 
 
-* *index.php*: The FrontendController (PHP script which can be called). Uses the environment defined in *.env* or *.env.local*.
-* *index_dev.php*: Always uses the dev environment. Per default, access is only allowed from local hosts.
-* `public/` also contains the static resoures like css, js, favicon etc.
+* *index.php*: The FrontendController (PHP script which can be called). Uses the productive or development mode depending on the definition of the APP_ENV variable, see :ref:`.env or .env.local file <en/customization/yaml:.env or .env.local file>`.
+* *index_dev.php*: Always uses the dev environment. Per default, access is only allowed from localhost. Find out more about giving access to other IP addresses in :ref:`Production and Development environment and Caching<en/installation/installation_configuration:Production and Development environment and Caching>`.
+* `public/` also contains the static resources like css, js, favicon etc.
 
 
 public/bundles
@@ -70,7 +69,7 @@ public/bundles
 
      bin/console assets:install --symlink --relative public
 
-.. note:: If you use Windows, you cannot create symbolic links and therefore have to run the command ``php.exe bin/console assets:install public`` to copy the files to the directory after every change in the code.
+.. note:: If you use Windows, you cannot create symbolic links and therefore have to run the command ``php.exe bin/console assets:install public`` to copy the files to the public directory after every change in JavaScript-, css-, twig- or image files.
 
 
 src
