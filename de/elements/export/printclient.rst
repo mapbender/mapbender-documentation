@@ -122,7 +122,7 @@ Verzeichnisse
 **Die Druck-Dateien (pdf)**
 
 * Die Druckdateien werden in dem Standard-Download-Ordner Ihres Webbrowsers abgelegt oder direkt im Browser angezeigt je nach Browserkonfiguration.
-* Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **web/prints/**.
+* Mapbender speichert die Dateien des Warteschleifendrucks hingegen standardmäßig unter **public/prints/**.
 
 
 Erstellen einer individuellen Vorlage
