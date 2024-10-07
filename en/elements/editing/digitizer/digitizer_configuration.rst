@@ -6,11 +6,9 @@ Setting up of Digitizer
 You can only use the element in the sidepane. The element can be used more than one time in the sidepane.
 
 .. image:: ../../../../figures/digitizer_configuration.png
-     :scale: 80
-
+     :width: 100%
 
 * **Title:** Title of the element. This is displayed in the layouts list and allows you to define several elements.
-* **Target:** (ID) of the map.
 * **Schemes:** YAML-Definition of the element Digitizer
 * **debug:** Display error messages, e.g. syntax error in SQL [experimental]
 
@@ -21,7 +19,7 @@ Read more about this under :ref:`yaml`.
 
 The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
 
-.. hint:: If errors occur in the database, fields or form, various error messages will appear. The productive environment will only give a general error message. If you want to see the exact error message, you should use the development environment. Find more under :ref:`environments`.
+.. hint:: If errors occur in the database, fields or form, various error messages will appear. The productive environment will only give a general error message. If you want to see the exact error message, you should use the development environment. Find more under :ref:`en/installation/installation_configuration:Production and Development environment and Caching`.
  
 
 YAML-Definition for the element Digitizer in the textarea schemes
