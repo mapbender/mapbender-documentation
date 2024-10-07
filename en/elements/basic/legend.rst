@@ -73,7 +73,7 @@ The toolbar shows the button for the legend element. If the button is clicked, t
 The activation and deactivation of checkboxes in the configurational settings leads to:
 
 .. image:: ../../../figures/legend_example_toolbar_checkboxes.png
-     :scale: 60
+     :width: 100%
 
 YAML-Definition
 ---------------
