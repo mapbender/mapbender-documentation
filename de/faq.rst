@@ -58,7 +58,7 @@ Wenn Sie SQL bevorzugen, können Sie die WMS-ID der Datenquelle im folgenden SQL
                 mb_core_source.id = <id_of_the_wms>;
 
 
-QGIS2Mapbender plugin
+QGIS2Mapbender Plugin
 ~~~~~~~~~~~~~~~~~~~~~
 
 Q: Gibt es eine Möglichkeit mein QGIS Projekt als Mapbender Projekt aufzusetzten?
