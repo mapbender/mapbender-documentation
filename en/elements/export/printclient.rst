@@ -122,7 +122,7 @@ Directories
 
 **The print pdf output**
 
-* Mapbender saves its generated print files in the browser's default download folder or shows them directly in your browser (depending on your browser settings).
+* Mapbender displays the generated PDF directly in your browser and provides it for download.
 * If the queued print is used, the files will be saved under the Mapbender directory **public/prints/**.
 
 
