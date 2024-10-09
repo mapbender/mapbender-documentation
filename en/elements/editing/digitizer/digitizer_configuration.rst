@@ -3,31 +3,133 @@
 Setting up of Digitizer
 =======================
 
-You can only use the element in the sidepane. The element can be used more than one time in the sidepane.
+In an application, the Digitizer element can only be embedded into the sidepane. However, it is possible to add multiple instances.
+The element itself is set up in the backend. For this, a YAML definition has to be adjusted accordingly.
+The definition is used to configure the database connection, editable fields, display forms and other behaviours of the digitizer.
 
 .. image:: ../../../../figures/digitizer_configuration.png
      :width: 100%
 
-* **Title:** Title of the element. This is displayed in the layouts list and allows you to define several elements.
-* **Schemes:** YAML-Definition of the element Digitizer
-* **debug:** Display error messages, e.g. syntax error in SQL [experimental]
+* **Title:** Title of the element. Allows the implementation of several instances.
+* **Schemes:** YAML definition of the element.
 
-The Digitizer needs access to a database where the editable tables are. You have to define a new database configuration to be able to connect with the geo database. 
-Read more about this under :ref:`yaml`.
+In addition to this, Digitizer needs access to a database with editable tables.
+You have to define a new database configuration to be able to connect with the geo database. Read more about this under :ref:`yaml`.
 
-.. hint:: It is not recommended to place spatial data into the "default" Mapbender database containing your Doctrine entities. You will encounter errors running Doctrine schema updates.
-
-The definition of the Digitizer is done in YAML syntax in the textarea configuration at schemes. Here you define the database connection, the editable table, the form to display the table, the attribute form and other behavior.
-
-.. hint:: If errors occur in the database, fields or form, various error messages will appear. The productive environment will only give a general error message. If you want to see the exact error message, you should use the development environment. Find more under :ref:`en/installation/installation_configuration:Production and Development environment and Caching`.
+.. warning:: Do **not** place spatial data into the "default" Mapbender database containing your Doctrine entities. You will encounter errors running Doctrine schema updates.
  
+.. hint:: If errors occur in the database, fields or form, various error messages will appear. The productive environment will only give a general error message. If you want to see the exact error message, you should use the development environment. Find more under :ref:`en/installation/installation_configuration:Production and Development environment and Caching`.
 
-YAML-Definition for the element Digitizer in the textarea schemes
------------------------------------------------------------------
+This page is divided into several chapters:
 
-In the following YAML block, the example definition for three Digitizer forms is included. Copy the following block into your Digitizer element to test the capture of points, lines, and polygons.
-You must first create the database connection and the three demo tables. The SQL commands for creating the tables can be found below.
-The functionality of the built-in features and additional functions are explained in more detail in this example.
+1. :ref:`en/elements/editing/digitizer/digitizer_configuration:SQL for the demo tables` uses SQL commands to create a database connection and three demo tables for the digitizer.
+2. :ref:`en/elements/editing/digitizer/digitizer_configuration:YAML definition` gives a YAML configuration example for a fully configured Digitizer instance.
+3. :ref:`en/elements/editing/digitizer/digitizer_configuration:configuration` explains the functional scope of the features built into the YAML block (and more Digitizer functions).
+
+
+SQL for the demo tables
+-----------------------
+
+The following SQL statements must be executed in your geodata database to create the three table for the demo. With them you can test the Digitizer functionality using the :ref:`en/elements/editing/digitizer/digitizer_configuration:YAML definition`.
+
+.. note:: The `PostGIS extension <https://postgis.net/>`_ must be configured in the database.
+
+
+.. code-block:: postgres
+
+    CREATE TABLE public.poi (
+        gid serial PRIMARY KEY,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        year int,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        interests varchar,
+        category varchar,
+        user_name varchar,
+        group_name varchar,
+        modification_date date,
+        my_type varchar,
+        file_reference varchar,
+        x float,
+        y float,
+        city varchar,
+        style text,
+        fill_color varchar,        
+        geom geometry(point,4326)
+    );
+
+.. code-block:: postgres
+
+    CREATE TABLE  public.lines (
+        gid serial PRIMARY KEY,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        year int,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        interests varchar,
+        length float,
+        category varchar,
+        user_name varchar,
+        group_name varchar,
+        modification_date date,
+        my_type varchar,
+        file_reference varchar,
+        x float,
+        y float,
+        city varchar,
+        style text,
+        fill_color varchar,
+        geom geometry(linestring,4326)
+    );
+
+.. code-block:: postgres
+
+    CREATE TABLE public.polygons (
+        gid serial PRIMARY KEY,
+        name varchar,
+        type varchar,
+        abstract varchar,
+        public boolean,
+        date_favorite date,
+        year int,
+        title varchar,
+        firstname varchar,
+        lastname varchar,
+        email varchar,
+        interests varchar,
+        area float,
+        category varchar,
+        user_name varchar,
+        group_name varchar,
+        modification_date date,
+        my_type varchar,
+        file_reference varchar,
+        x float,
+        y float,
+        city varchar,
+        style text,
+        fill_color varchar,
+        geom geometry(polygon,4326)
+    );
+
+
+YAML definition
+---------------
+
+The following YAML block contains definitions for three Digitizer forms.
+Copy and paste it in its entirety under **schemes** in the backend mask of the element to configure a Digitizer element for points, lines and polygons.
 
 .. code-block:: yaml
 
@@ -43,9 +145,9 @@ The functionality of the built-in features and additional functions are explaine
             geomType: point
             geomField: geom
             srid: 4326
-        allowEditData: true # Allow attribute editing (default true)
-        allowDelete: true # Allow user to remove features from the database (default true)
-        allowDigitize: true # Allow geometry creation and editing (default true)
+        allowEditData: true # Allow attribute editing (default: true)
+        allowDelete: true # Allow user to remove features from the database (default: true)
+        allowDigitize: true # Allow geometry creation and editing (default: true)
         roles: #Show this schema only to users with (at least one of) these roles
             - root
             - ROLE_GROUP_EDITING
@@ -274,112 +376,16 @@ The functionality of the built-in features and additional functions are explaine
                    options: {A: A, B: B, C: C, D: D, E: E}
 
 
-SQL for the demo tables
------------------------
-
-The following SQL statements must be executed in your geodata database to create the three table for the demo. 
-With the three tables you can test the digitizer functionality using the YAML definition shown above.
-
-.. code-block:: postgres
-
-    CREATE TABLE public.poi (
-        gid serial PRIMARY KEY,
-        name varchar,
-        type varchar,
-        abstract varchar,
-        public boolean,
-        date_favorite date,
-        year int,
-        title varchar,
-        firstname varchar,
-        lastname varchar,
-        email varchar,
-        interests varchar,
-        category varchar,
-        user_name varchar,
-        group_name varchar,
-        modification_date date,
-        my_type varchar,
-        file_reference varchar,
-        x float,
-        y float,
-        city varchar,
-        style text,
-        fill_color varchar,        
-        geom geometry(point,4326)
-    );
-
-.. code-block:: postgres
-
-    CREATE TABLE  public.lines (
-        gid serial PRIMARY KEY,
-        name varchar,
-        type varchar,
-        abstract varchar,
-        public boolean,
-        date_favorite date,
-        year int,
-        title varchar,
-        firstname varchar,
-        lastname varchar,
-        email varchar,
-        interests varchar,
-        length float,
-        category varchar,
-        user_name varchar,
-        group_name varchar,
-        modification_date date,
-        my_type varchar,
-        file_reference varchar,
-        x float,
-        y float,
-        city varchar,
-        style text,
-        fill_color varchar,
-        geom geometry(linestring,4326)
-    );
-
-.. code-block:: postgres
-
-    CREATE TABLE public.polygons (
-        gid serial PRIMARY KEY,
-        name varchar,
-        type varchar,
-        abstract varchar,
-        public boolean,
-        date_favorite date,
-        year int,
-        title varchar,
-        firstname varchar,
-        lastname varchar,
-        email varchar,
-        interests varchar,
-        area float,
-        category varchar,
-        user_name varchar,
-        group_name varchar,
-        modification_date date,
-        my_type varchar,
-        file_reference varchar,
-        x float,
-        y float,
-        city varchar,
-        style text,
-        fill_color varchar,
-        geom geometry(polygon,4326)
-    );
-    
-
 Configuration
 =============
 
-The following chapters explain the individual components of the Digitizer that build up the base-structure and which can be used in the formular.
+The following chapter explains the individual components of the element that can be included into the YAML configuration, offering the base structure that is used in the Digitizer.
 
 
-Feature basic definition
-------------------------
+Basic definition
+----------------
 
-A basic definition, here for the poi-example, may look like the following snippet:
+A basic definition for a Digitizer capturing instance (in this example for *poi*) may look like the following YAML snippet.
 
 .. code-block:: yaml
 
@@ -463,39 +469,38 @@ A basic definition, here for the poi-example, may look like the following snippe
           name: title
 
 
-
 The possible options are:
 
-* **label:** Label of the Digitizer configuration
-* **minScale:** Minimum scale denominator, when the features should be visualised
-* **maxScale:** Maximum scale denominator, when the features should be visualised
-* **featureType:** Connection to the database
-    * connection: Name of the database connection see packages/doctrine.yaml
-    * table: Name of the feature table
-    * uniqueId: Column name of the unique identifier
-    * geomType: Geometry type - point, line, polygon, multipolygon
-    * geomField: name of the geometry column
-    * srid: Coordinate reference system of the geometry column - EPSG code (f.e. 4326)
-    * filter: Data filters for values in a defined column, e.g. filter: interests = 'maps'
-    * userColumn: stores the user name on save (see filterUser / trackUser)
-    * styleField: column to store the style for a feature
-* **allowChangeVisibility:** Offer buttons to toggle feature visibility (default true)
-* **allowCreate:** Allow user to create new features (default true)
-* **allowDelete:** Allow to delete data (default true)
-* **allowDigitize:** Allow geometry creation and editing (If false, no Digitizer buttons will occur (new Point, move, etc.). Attribute editing may still be allowed via allowEdit) (default true)
-* **allowEditData:** Allow attribute editing (default true)
-* **displayOnInactive:** The current FeatureType will still be displayed on the map, although the Digitizer is deactivated in the Sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit tricky, due to the still activated Digitizer events but will be helpful for experienced users.
-* **allowCustomStyle:** Allow user-specific styles for features in the map (default false). For each feature you can set unique styles. If not set the default style is used. Needs styleField definition in featureType section.
+* **label:** Label of the Digitizer instance.
+* **minScale:** Minimum scale denominator for visualizing features.
+* **maxScale:** Maximum scale denominator for visualizing features.
+* **featureType:** Connection to the database.
+    * connection: Name of the database connection (see `packages/doctrine.yaml`).
+    * table: Name of the feature table.
+    * uniqueId: Column name of the unique identifier (Default if empty: [id]).
+    * geomType: Geometry type - point, line, polygon, or multipolygon.
+    * geomField: Name of the geometry column.
+    * srid: Coordinate reference system of the geometry column as EPSG code (e.g. 4326).
+    * filter: Data filters for values in a defined column (e.g. filter: interests = 'maps').
+    * userColumn: Stores the user name on save (see filterUser/trackUser).
+    * styleField: Column to store the style for a feature.
+* **allowChangeVisibility:** Offer buttons to toggle feature visibility (default: true).
+* **allowCreate:** Allow feature creation (default: true).
+* **allowDelete:** Allow data deletion (default: true).
+* **allowDigitize:** Allow geometry creation and editing (if false, no Digitizer buttons will appear (new Point, move, etc.). Attribute editing may still be allowed via allowEdit (default: true).
+* **allowEditData:** Allow attribute editing (default: true).
+* **displayOnInactive:** The current FeatureType will still be displayed on the map, although Digitizer is deactivated in the sidepane (Accordion, Tabs) [true/false]. If switched to true, this option is a bit intricate, due to the still activated Digitizer events. For experienced users, it will be helpful in some scenarios.
+* **allowCustomStyle:** Allow user-specific styles for features in the map (default: false). For each feature you can set unique styles. If not set, the default style is used. Needs ``styleField`` definition in featureType section.
 
  .. image:: ../../../../figures/digitizer/stylemanager.png
-              :scale: 80
+              :width: 100%
 
-* **allowRefresh:** Offer button to reload data (for tables frequently modified by concurrent users) (default false)
-* **continueDrawingAfterSave:** Keep drawing tool active after creating and saving a new feature (~fast batch mode feature creation)
-* **displayPermanent:** Keep features visible on map even after switching to a different schema (default false)
-* **displayOnInactive:** Keep features visible on map even after deactivating Digitizer (default false)
-* **pageLength:** Limits the number of rows per page (default 16)
-* **refreshLayersAfterFeatureSave:** List of Mapbender source instance ids / names (refer to "Layersets" tab in application backend) that will reload after any item is created, updated or deleted (default none)
+* **allowRefresh:** Offer a button to refresh data (for tables frequently modified by several users) (default: false).
+* **continueDrawingAfterSave:** Keep the drawing tool active after creating and saving a new feature.
+* **displayPermanent:** Keep features visible on the map, even after switching to a different schema (default: false).
+* **displayOnInactive:** Keep features visible on map, even after deactivating Digitizer (default: false).
+* **pageLength:** Limits the number of rows per page (default: 16).
+* **refreshLayersAfterFeatureSave:** List of Mapbender source instance IDs/names (see :ref:`en/backend/applications/layerset:layerset-instances`) that will reload after any item is created, updated or deleted (default: none).
 
 .. code-block:: yaml
 
@@ -503,7 +508,7 @@ The possible options are:
             - mapbender_users # or WMS InstanceID
 
 
-* **roles:** List of Roles. Show this schema only to users with (at least one of) these roles
+* **roles:** List of roles. Show this schema only to users with (at least one of) these roles.
 
 .. code-block:: yaml
 
@@ -543,12 +548,12 @@ Data shown in each schema can be separate for different users.
 
 Each schema may define:
 
-* **filterUser** Keep data separate for each user (default false). Needs definition of userColumn in featureType.
-* **trackUser** Store the creating / modiying user (default false). Can be done without actually filtering selection. Needs definition of userColumn in featureType.
+* **filterUser** Keep data separate for each user (default: false). Needs definition of userColumn in featureType.
+* **trackUser** Store the creating / modiying user (default: false). Can be done without actually filtering selection. Needs definition of userColumn in featureType.
 
-Setting either of these to true additionally requires **userColumn** (string) to be defined in the dataStore / featureType definition. This must name a table column of sufficient length to store the user name.
+Setting either of these to true additionally requires ``userColumn`` (string) to be defined in the dataStore/featureType definition. This must name a table column of sufficient length to store the user name.
 
-.. hint:: Note that with filterUser true, trackUser is implied and its setting, if present, is ignored.
+.. hint:: Note that with ``filterUser: true``, *trackUser* is implied and its setting, if present, is ignored.
 
 
 .. code-block:: yaml
@@ -570,22 +575,25 @@ Setting either of these to true additionally requires **userColumn** (string) to
 Definition of the available toolsets (Toolset Type)
 ---------------------------------------------------
 
-Each schema may define a toolset setting to configure the types of drawing tools available during geometry creation. This should be a list of strings, or null for auto-configuration (which is the default).
+Each schema may define a toolset setting to configure the types of drawing tools available during geometry creation. This should be a list of strings, or ``null`` for auto-configuration (which is the default).
 
 
-Toolset types:
+Toolset types
+^^^^^^^^^^^^^
 
-* **drawPoint** - Draw point
-* **drawLine** - Draw a line
-* **drawPolygon** - Draw polygon
-* **drawRectangle** - Draw rectangle
-* **drawCircle** - Draw circle
-* **drawEllipse** - Draw ellipse
-* **drawDonut** - Draw a Donut (enclave)
-* **modifyFeature** - Move vertices of a geometry
-* **moveFeature** - Move geometry
+* **drawPoint** - Draw a point.
+* **drawLine** - Draw a line.
+* **drawPolygon** - Draw a polygon.
+* **drawRectangle** - Draw a rectangle.
+* **drawCircle** - Draw a circle.
+* **drawEllipse** - Draw an ellipse.
+* **drawDonut** - Draw a donut (enclave).
+* **modifyFeature** - Move the vertices of a geometry.
+* **moveFeature** - Move the whole geometry.
 
-YAML-Definition of toolset types
+
+YAML definition of toolset types
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: yaml
 
@@ -597,31 +605,29 @@ YAML-Definition of toolset types
             - type: drawDonut
 
 
-If toolset is set as an empty list, no geometry creation tools will be offered.
+Some example configurations:
 
-If toolset is null or not set, and the connected feature type declares its geomType, Digitizer will reduce the selection of tools to to those compatible with the geomType (e.g. no line drawing for datasets containing only points or polygons).
-
-If neither toolset nor the geomType are defined, all supported tools are offered.
-
-If feature modification is allowed (via allowDigitize / allowEdit), vertex modification and feature translation tools will also be offered.
-
-If allowCreate is set to false, no creation tools from the toolset setting will be offered. drawDonut (inherently a modification, not creation tool) may still be offered, if editing is allowed.
+* If ``toolset`` is set as an empty list, no geometry creation tools will be offered.
+* If ``toolset`` is null or not set, and the connected feature type declares its geomType, Digitizer will reduce the selection of tools to to those compatible with the ``geomType`` (e.g., no line drawing for datasets containing only points or polygons).
+* If neither ``toolset`` nor the ``geomType`` are defined, all supported tools are offered.
+* If feature modification is allowed (via ``allowDigitize``/``allowEdit``), vertex modification and feature translation tools will also be offered.
+* If ``allowCreate: false``, no creation tools from the toolset setting will be offered. ``drawDonut`` (inherently a modification, not creation tool) may still be offered, if editing is allowed.
 
 
 Definition of the feature table
 -------------------------------
 
-The Digitizer provides an object table. It can be used to navigate to features and open the editing form. The object table can be sorted. 
+The Digitizer provides an feature table in the sidepane. It can be used to navigate to features and open their editing form. The table can be filtered and sorted. 
 The width of the individual columns can optionally be specified in percent or pixels.
 
-* **tableFields:** Define the columns for the feature table. (default - display primary key only)
-    * definition of a colum: [table column]: {label: [label text], width: [css-definition, like width]}  
-* **searchType:** Initial state of checkbox for limiting feature loading to current visible map portion. [all / currentExtent] (default: currentExtent).
-* **inlineSearch:** Allows the search in the table (default: true).
-* **paging:** De/activate paging (default true).
-* **pageLength:** Define the length of a page when paging is activated (default 16)
+* **tableFields:** Define the columns for the feature table. (default - display primary key only).
+    * definition of a column: ``[table column]: {label: [label text], width: [css-definition, like width]}``.
+* **searchType:** Initial state of a checkbox for limiting feature loading to current visible map portion. [all/currentExtent] (default: currentExtent).
+* **inlineSearch:** Allows to search in the table (default: true).
+* **paging:** De/activate paging, showing several pages in the feature table (default: true).
+* **pageLength:** Define the length of a page when paging is activated (default: 16).
 
-You can find more detailed information on possible configurations under https://datatables.net/reference/option/.
+You can find more detailed information on possible configurations `here <https://datatables.net/reference/option/>`_.
 
 .. code-block:: yaml
 
@@ -640,10 +646,10 @@ You can find more detailed information on possible configurations under https://
 
 
 Search in the tables (inline Search)
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can use the inline search to search for an element in the table. 
-The activated element displays a search bar above the table. It shows all the search results for records of the table.
+The activated search bar will be displayed above the table. After entering a search request, it shows all the search results for the records of the table.
 
 .. code-block:: yaml
 
@@ -656,45 +662,38 @@ The activated element displays a search bar above the table. It shows all the se
 Configuring forms
 -----------------
 
-Very complex forms can be defined to collect attributes for your features.
-    
-Each schema configuration contains a list of (potentially nested) objects under key formItems, defining the contents and structure of the form shown when an item is created or edited. 
+Very complex forms can be defined to collect attributes for your features. Each schema configuration contains a list of (potentially nested) objects under ``formItems``, defining the contents and structure of the form shown when an item is created or edited. 
 
 .. hint:: Note that this form will also be used purely as a detail display vehicle even if editing is disabled.
 
 .. image:: ../../../../figures/digitizer.png
-     :scale: 80
+     :width: 100%
 
-The following option for the construction of the forms are available as type:
+The following options for the configuration of the forms are available as type:
 
-* Define more than one feature type for digitization. You can switch from one feature type to another with a select box.
-* It is possible to define a filter to only query a subset of your database table.
-* Textfields (type: input)
-* Selectboxes, Multiselectboxes (type: select)
-* Checkboxes (type: checkbox) 
-* Radiobuttons (type: radioGroup)
-* Textareas (type: textArea)
-* Datepicker (type: date)
-* Color picker (type: colorPicker)
-* File upload (type: file)
-* Image Display (type: image)
-* Text (type: text or type: label)
-* Break line (type: breakLines)
-* Definition of tabs (type: tabs)
-* Definition of html (type: html)
+* Textfields (type: input).
+* Text (type: label or type: text).
+* Textareas (type: textArea).
+* Definition of html (type: html).
 
-Additional features are:
+* Checkboxes (type: checkbox).
+* Selectboxes, Multiselectboxes (type: select).
+* Radiobuttons (type: radioGroup).
 
-* Mandatory fields, regular expressions to validate the field input
-* Definition of help texts
-* Refresh after save
-* Possibility to copy entered information from a form into the clipboard via a button
+* Datepicker (type: date).
+* Color picker (type: colorPicker).
+
+* File upload (type: file).
+* Image Display (type: image).
+
+* Definition of tabs (type: tabs).
+* Break line (type: breakLines).
 
 
 Form fields
------------
+^^^^^^^^^^^
 
-Form input fields come in a multitude of different types, controlled by the type value. All inputs share a common set of configuration options:
+Form input fields come in a multitude of different types, controlled by the ``type`` value. All inputs share a common set of configuration options:
 
 
 .. list-table::
@@ -742,10 +741,48 @@ Form input fields come in a multitude of different types, controlled by the type
 .. image:: ../../../../figures/digitizer_with_tabs.png
      :scale: 80
 
-Customization by attr object definitions
-----------------------------------------
 
-Many common customizations for inputs can be performed purely with the attr object. E.g. type "input" can be restricted to allow numbers only by overriding its HTML type attribute; all inputs can be made required or readonly.
+Text fields (type: input)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Text fields are produced via the ``type: input`` flag.
+
+.. code-block:: yaml
+
+         - type: input                                      # element type definition
+           title: Title for the field                       # Definition of a labeling (optional, if not defined no labeling is set)
+           name: column_name                                # Reference to table column
+           copyClipboard: false                             # Offer a button that copies entered information to the clipboard (default: false) (optional)
+           #mandatory: true                                 # Specifies a mandatory field (optional), please use required instead
+           infoText: "Info: Please emter Information."      # Offer a button that that provides Intormation on mouse-over (optional)
+           mandatoryText: You have to provide information.  # Define text that is shown on save if no content is provided for a mandatory field (optional)
+           required: true
+           cssClass: 'input-css'                            # css class to use as style for the input field (optional).
+           value: 'default Text'                            # Define a default value  (optional)
+           css:                                             # CSS definition (optional)
+               color: green
+           attr:
+               placeholder: 'please edit this field'        # placeholder appears in the field as information when field is empty (optional)
+
+
+* **title:** Definition of a labeling (optional - if not defined, no labeling is set).
+* **name:** Reference to table column (required).
+* **copyClipboard:** Offer a button that copies entered information to the clipboard (optional, default: false).
+* **infoText:** Offer a button that provides information on mouseover (optional).
+* **mandatoryText:** Define a text that is shown on save if no content is provided for a mandatory field (optional).
+* **value:** Define a default value (optional).
+* **css:** CSS definition (optional).
+* **cssClass:** Added to the class attribute of the form group (container around label and input).
+
+Attributes (attr)
+* **placeholder:** placeholder appears in the field as information (optional)
+* **required:** Specifies a mandatory field (optional, default: false)
+
+
+Customization by attr object definitions
+""""""""""""""""""""""""""""""""""""""""
+
+Many common customizations for inputs can be performed purely with the attr object. E.g. ``type: input`` can be restricted to allow numbers only by overriding its HTML type attribute; all inputs can be made *required* or *readonly*.
 
 .. code-block:: yaml
 
@@ -772,96 +809,103 @@ Many common customizations for inputs can be performed purely with the attr obje
 	    attr:
 	      rows: 10
 
+Element groups (type: fieldSet)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Definition of the popup
------------------------
-
-You can define the following options for the popup:
-
-.. code-block:: yaml
-
-        popup:
-            title: POI    # Definition of the popup title
-            height: 400   # height of the popup, if not defined it will adapt to the content
-            width: 500    # width of the popup
-            #width: 50vw   # half screen width
-
-
-Tabs (type: tabs)
------------------
-
-Complex form dialogs can be organized into multiple tabs by inserting an object with type: tabs into the formItems list, and assigning it one or more tab specifications, which consist of title (text displayed on the tab) and children (contents of the tab).
+Elements can be grouped together in one row to provide logical connections or to save space. To define a group, you have to set ``type: fieldSet`` and afterwards define the children which shall be grouped.
+For every children you can define a css parameter, for example a width to control the space for each element.
 
 .. code-block:: yaml
 
-        formItems:
-           - type: tabs
-             children:
-                 - title: '1. Basic information'    # first tab, text displayed on the tab
-                   css: {padding: 10px}
-                   children:                        
-                       # First tab form item specifications
-                       - type: label
-                         title: Welcome to the digitize demo. Try the new Mapbender feature!
-                         ...
-                 - title: '2. More information'    # second tab, text displayed on the tab
-                   children:                       
-                       # Second form item specifications
-                       - type: label
-                         title: Welcome to the digitize demo. Try the new Mapbender feature!
-                         ...
+                     - type: fieldSet             # Grouping of fields, regardless of field type
+                       children:                  # Define the group elements by children
+                           - type: input
+                             title: Firstname
+                             name: firstname
+                             css: {width: 30%} 
+                           - type: input
+                             title: Lastname
+                             name: lastname
+                             css: 
+                                 width: 30%
+                           - type: input
+                             title: E-Mail
+                             name: email
+                             css: 
+                                 width: 40%
 
 
-Text fields (type input)
-------------------------
+Text/Label (type: label)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+With ``type: label`` you can write a non-editable text to the form window.
 
 .. code-block:: yaml
 
-         - type: input                                      # element type definition
-           title: Title for the field                       # Definition of a labeling (optional, if not defined no labeling is set)
-           name: column_name                                # Reference to table column
-           copyClipboard: false                             # Offer a button that copies entered information to the clipboard (default: false) (optional)
-           #mandatory: true                                 # Specifies a mandatory field (optional), please use required instead
-           infoText: "Info: Please emter Information."      # Offer a button that that provides Intormation on mouse-over (optional)
-           mandatoryText: You have to provide information.  # Define text that is shown on save if no content is provided for a mandatory field (optional)
-           required: true
-           cssClass: 'input-css'                            # css class to use as style for the input field (optional).
-           value: 'default Text'                            # Define a default value  (optional)
-           css:                                             # CSS definition (optional)
-               color: green
-           attr:
-               placeholder: 'please edit this field'        # placeholder appears in the field as information when field is empty (optional)
+         - type: label                                    # label writes a non-editable text to the form window.
+           text: 'Please give information about the poi.' # define a text 
+           css:
+              color: red
 
 
-* **title:** Definition of a labeling (optional, if not defined no labeling is set)
-* **name:** Reference to table column (required)
-* **copyClipboard:** Offer a button that copies entered information to the clipboard (optional, default: false)
-* **infoText:** Offer a button that that provides Intormation on mouse-over (optional)
-* **mandatoryText:** Define text that is shown on save if no content is provided for a mandatory field (optional)
-* **value:** Define a default value  (optional)
-* **css:** CSS definition (optional)
-* **cssClass:** Added to the class attribute of the form group (container around label and input)
+Textareas (type: textArea)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Attributes (attr)
-* **placeholder:** placeholder appears in the field as information (optional)
-* **required:** Specifies a mandatory field (optional, default false)
+Similar to the text field via ``type: input``, text areas can be created that can contain several lines using ``type: textArea``.
+
+.. code-block:: yaml
+
+         - type: textArea       # Typ textArea creates a text area
+           rows: 4              # Number of rows for the text area
+           title: Description   # Label (optional)
+           name: abstract       # table column
+
+* **rows**: Number of rows for the text area.
 
 
-Selectbox or multiselect (type select)
---------------------------------------------------
+Write HTML (type: html)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+``Type: html`` allows you to define html (e.g., button or links).
+
+.. image:: ../../../../figures/digitizer/digitizer_html.png
+     :scale: 80
+
+.. code-block:: yaml
+
+                     - type: html   # allows to define html
+                       html: '<p><b>Read more at the </b><a href="https://mapbender.org" target="_blank" style="color:blue;">Mapbender-Website</a>!</br>Enjoy Mapbender.</p>'
+
+
+Checkboxes (type: checkbox)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``Type: checkbox`` creates an on/off checkbox.
+
+.. code-block:: yaml
+
+         - type:  checkbox        # Type checkbox creates a checkbox. When activated, the specified value is written to the database.
+           title: Is this true?   # Label (optional)
+           name:  public          # table column 
+           value: true            # Initial field value on newly created items (true/false, default: false)
+
+
+Selectbox or multiselect (type: select)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By defining a selectbox, predefined values can be used in the form.
-You can choose between a selectbox with a selectable entry (type select) or a multiselectbox with several selectable entries (type multiselect).
+You can choose between a selectbox with a selectable entry (``type: select``) or a multiselectbox with several selectable entries (``type: multiselect``).
 
 
-**(1) select - one selectable entry**
+(1) select - one selectable entry
+"""""""""""""""""""""""""""""""""
 
 .. code-block:: yaml
 
          - type: select                     # element type definition
            title: select a type             # labeling (optional)
            name: type                       # reference to table column
-           select2: true                    # Activates full text search for the select box (please note for multi: true full text search is activated by default)
+           select2: true                    # Activates full text search for the selectbox (please note for multi: true full text search is activated by default)
            maximumSelectionLength: 2        # define the maximum number of possible selections (needs select2: true)
            copyClipboard: false             # specify button that copies chosen values to the clipboard (optional). [true/false] (default: false).           
            infoText: 'Help: Please choose a type.'
@@ -889,7 +933,7 @@ You can choose between a selectbox with a selectable entry (type select) or a mu
                  value: 'D'
 
 
-If you define ``useValuesAsKeys: true`` you only have to refer to the values. The values will be used as keys too. Please be aware that without the parameter or with useValuesAsKeys: false a number will be used.
+If you define ``useValuesAsKeys: true``, you only have to refer to the values. The values will be used as keys too. Please be aware that without the parameter or with ``useValuesAsKeys: false``, a number will be used.
 
 .. code-block:: yaml
 
@@ -901,19 +945,19 @@ If you define ``useValuesAsKeys: true`` you only have to refer to the values. Th
                 - D
 
 
-* **select2:** Activates full text search for the select box (please note for multiselectboxes (multi: true) full text search is activated by default) 
-* **multi:** Define a singleselectbox or multiselectbox (default: false)
-* **value:** Definition of the default value
-* **options with label and value:** Definition of the options (label, value)
-* **useValuesAsKeys:** The values will be used as keys too. Else it will be a number that will be assigned for each option (default: false)
+* **select2:** Activates full text search for the selectbox (please note for multiselectboxes, full text search is activated by default). 
+* **multi:** Define a singleselectbox or multiselectbox (default: false).
+* **value:** Definition of the default value.
+* **options with label and value:** Definition of the options (label, value).
+* **useValuesAsKeys:** The values will be used as keys too. Else it will be a number that will be assigned for each option (default: false).
 
-**(2) multiselect - several selectable entries**
 
-The Multiselect-Box is activated by the attribute "multiple: true". You can choose multiple entries in the selectbox. 
+(2) multiselect - several selectable entries
+""""""""""""""""""""""""""""""""""""""""""""
 
-The usage and their requirements of the database table column may vary. In general with the example above, you can switch via multiple: true to multiselects. The database fields is still a character varying.
-
-The values are saved comma separeated in the table colummn.
+The multiselectbox is activated by the attribute ``multiple: true``. You can choose multiple entries in the selectbox. 
+The usage and their requirements of the database table column may vary. In general with the example above, you can switch via ``multiple: true`` to multiselects. The database fields is still a character varying.
+The values are saved comma separated in the table column.
  
 .. code-block:: yaml
 
@@ -939,7 +983,8 @@ The values are saved comma separeated in the table colummn.
            value: A,C   # use comma-separated values for default multi-select value
 
 
-**Notes:** The multiple selection provides an easier mechanism to choose an entry, which also allows a search in the drop-down-list. The navigation through the list is possible via keyboard. 
+.. tip:: The multiple selection provides an easier mechanism to choose an entry, which also allows a search in the dropdown list. The navigation through the list is possible via keyboard. 
+
 Possible entries are highlighted during typing. An already chosen entry can be removed by clicking the small "x" symbol. An entry can also be marked as disabled.
 
 
@@ -953,8 +998,8 @@ Possible entries are highlighted during typing. An already chosen entry can be r
      :scale: 80
 
 
-
-**Get options for the selectbox via SQL**
+Get options for the selectbox via SQL
+"""""""""""""""""""""""""""""""""""""
 
 With a SQL request, the values of the selectbox can be directly taken from a database table.
 
@@ -969,76 +1014,8 @@ With a SQL request, the values of the selectbox can be directly taken from a dat
                - label: 'Please select a type...'
                  value: ''
 
-
-
-Text/Label (type label)
------------------------
-
-With type label you can write a non-editable text to the form window.
-
-.. code-block:: yaml
-
-         - type: label                                    # label writes a non-editable text to the form window.
-           text: 'Please give information about the poi.' # define a text 
-           css:
-              color: red
-
-
-Text (type text)
-----------------
-
-More powerful as type label is type text. You can access fields of the data source by using JavaScript with this type .
-
-.. code-block:: yaml
-
-        - type: text   # Type text for generating dynamic texts from table columns
-          title: Name  # Label (optional)
-          name: name   # Name of the field (optional)
-          text: data.gid + ': ' + data.name
-          # Text definition in JavaScript
-          # data - data is the object, that gives access to all fields.
-
-
-Textareas (type textArea)
--------------------------
-
-Similar to the text field via type input (see above), text areas can be created that can contain several lines using type textArea.
-
-.. code-block:: yaml
-
-         - type: textArea       # Typ textArea creates a text area
-           rows: 4              # Number of rows for the text area (default 3).
-           title: Description   # Label (optional)
-           name: abstract       # table column
-
-* **rows**: Number of rows for the text area. Default is 7
-
-
-Breaklines (type breakLine)
----------------------------
-
-Inserts a single HTML <hr> element. Supports adding free-form HTML attributes via attr object and custom cssClass.
-
-.. code-block:: yaml
-
-         - type: breakLine                     # element type definition, will draw a line 
-
-
-Checkboxes (type checkbox)
---------------------------
-
-Type checkbox creates an on/off checkbox.
-
-.. code-block:: yaml
-
-         - type:  checkbox        # Type checkbox creates a checkbox. When activated, the specified value is written to the database.
-           title: Is this true?   # Label (optional)
-           name:  public          # table column 
-           value: true            # Initial field value on newly created items (true/false, default false)
-
-
-Radio buttons (type radioGroup)
--------------------------------
+Radio buttons (type: radioGroup)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Type radioGroup creates radio buttons.
 
@@ -1055,11 +1032,11 @@ Type radioGroup creates radio buttons.
             value: v2   # Pre-select option v2 by default for new items
 
 
-Date picker (type date)
------------------------
+Date picker (type: date)
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Type date creates an input fields that allows you to enter a date, either with a textbox that validates the input or 
-a special date picker interface. It produces standard SQL date string format "YYYY-MM-DD".
+Type date creates an input field that allows you to enter a date, either with a textbox that validates the input or a special date picker interface.
+It produces standard SQL date string format "YYYY-MM-DD".
 
 .. image:: ../../../../figures/digitizer_datepicker.png
      :scale: 80
@@ -1078,8 +1055,8 @@ a special date picker interface. It produces standard SQL date string format "YY
 * **max**: Set the maximum selectable date. When set to null, there is no maximum. Optional attribute.
 
 
-Color picker (type colorPicker)
--------------------------------
+Color picker (type: colorPicker)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Type colorPicker creates an input fields that allows you to enter a color value (in HEX form for example #ff00ff) or via a color picker interface.
 
@@ -1094,54 +1071,11 @@ Type colorPicker creates an input fields that allows you to enter a color value 
                        value: 'ff00ff'        # predefine the value of the color picker
 
 
-
-Write HTML (type html)
-----------------------
-
-Type html allows you to define html (for example button, links).
-
-.. image:: ../../../../figures/digitizer/digitizer_html.png
-     :scale: 100
-
-.. code-block:: yaml
-
-                     - type: html   # allows to define html
-                       html: '<p><b>Read more at the </b><a href="https://mapbender.org" target="_blank" style="color:blue;">Mapbender-Website</a>!</br>Enjoy Mapbender.</p>'
-
-
-Element groups (type: fieldSet)
--------------------------------
-
-Elements can be grouped together in one row to provide logical connections or save space. To define a group you have to set type fieldSet and afterwards define the children which shall be grouped.
-
-For every children you can define css parameter for example a width to control the space for each element.
-
-.. code-block:: yaml
-
-                     - type: fieldSet             # Grouping of fields, regardless of field type
-                       children:                  # Define the group elements by children
-                           - type: input
-                             title: Firstname
-                             name: firstname
-                             css: {width: 30%} 
-                           - type: input
-                             title: Lastname
-                             name: lastname
-                             css: 
-                                 width: 30%
-                           - type: input
-                             title: E-Mail
-                             name: email
-                             css: 
-                                 width: 40%
-
-
-File upload (type file)
------------------------
+File upload (type: file)
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 The file upload can be used to link files to a database column in the form. To do this, the uploaded files are stored in Mapbender and the path is noted in the column.
-
-The storage path and the name of the stored files can not yet be changed. The file upload always saves to the same directory and is  built up from the parameters:
+The storage path and the name of the stored files cannot yet be changed. The file upload always saves to the same directory and is built up from the parameters:
 
 * tablename
 * columnname
@@ -1149,7 +1083,7 @@ The storage path and the name of the stored files can not yet be changed. The fi
 
 The filesystem path is:
 
-* ``<mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png``
+* `<mapbender>/web/uploads/featureTypes/[tablename]/[columnname]/[filename].png`
 
 The linked URL stored in the database column is:
 
@@ -1166,23 +1100,21 @@ The linked URL stored in the database column is:
                                                    # Important: Other file-formats can be still uploaded
 
 
-It is possitble to show the uploaded images via type: image. 
+It is possible to show the uploaded images via ``type: image``. 
 
 
-Images (type image)
--------------------
+Images (type: image)
+^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../../../../figures/digitizer_image.png
      :scale: 80
 
-Type image can be used to display images. You can display images by specifying a URL in a database field or URL using the src parameter.
+Type image can be used to display images. You can display images by specifying a URL in a database field or a URL using the src parameter.
+Images, which are marked by the element file in a table column, can also directly be integrated and displayed.
+For that, the image can be specified by specifying the two parameters src and name.
 
-Images, which are marked by the element file in a table column, can thus also directly be integrated and displayed.
-
-The image can be specified by specifying the two parameters src and name.
-
-* **src**: Url-path or file path (can be a relative path)
-* **name**: Url-path or file path from the table column (can't be a relative path)
+* **src**: URL path or file path (can be a relative path).
+* **name**: URL path or file path from the table column (can't be a relative path).
 * definition of name and src together: The content of the database column from name is taken. If the column is empty, the src is used.
 
 .. code-block:: yaml
@@ -1195,13 +1127,11 @@ The image can be specified by specifying the two parameters src and name.
                       imageCss:
                         width: 100%                                       # Image CSS Style: Scales the preview image in the form, different from the original size in percent.
 
-**Caution**: If only name and not name and src are specified, the wrong image appears from the previous data entry, if the column is empty.
+.. warning:: If only name and not name and src are specified, the wrong image appears from the previous data entry, if the column is empty.
 
-Dynamic paths (eg "bundles/mapbendercore/image/[nr].png" or 'bundles/mapbendercore/image/' + data.image_reference) can not be specified.
-
+Dynamic paths (e.g. `bundles/mapbendercore/image/[nr].png` or `bundles/mapbendercore/image/' + data.image_reference`) cannot be specified.
 One way to work around this is to create a trigger that will merge the path and contents of a table field into the database column.
-
-Please not that an alternative upload location can be defined in the featureType section (see featureType).
+Please note that an alternative upload location can be defined in the ``featureType`` section (see featureType).
 
 
 .. code-block:: yaml
@@ -1214,10 +1144,84 @@ Please not that an alternative upload location can be defined in the featureType
                    path: /data/demo/mapbender_upload_lines/
 
 
-Mandatory fields
-----------------
+Tabs (type: tabs)
+^^^^^^^^^^^^^^^^^
 
-The object can not be saved if mandatory data is missing. In the case of a missing entry in a required field, the field will be marked with a red border and a text (mandatroyText) will be displayed if defined.
+Complex form dialogs can be organized into multiple tabs by inserting an object with ``type: tabs`` into the formItems list, and assigning it to one or more tab specifications, which consist of a title (text displayed on the tab) and its children (contents of the tab).
+
+.. code-block:: yaml
+
+        formItems:
+           - type: tabs
+             children:
+                 - title: '1. Basic information'    # first tab, text displayed on the tab
+                   css: {padding: 10px}
+                   children:                        
+                       # First tab form item specifications
+                       - type: label
+                         title: Welcome to the digitize demo. Try the new Mapbender feature!
+                         ...
+                 - title: '2. More information'    # second tab, text displayed on the tab
+                   children:                       
+                       # Second form item specifications
+                       - type: label
+                         title: Welcome to the digitize demo. Try the new Mapbender feature!
+                         ...
+
+
+Breaklines (type: breakLine)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Inserts a single HTML <hr> element. Supports adding free-form HTML attributes via attr object and custom cssClass.
+
+.. code-block:: yaml
+
+         - type: breakLine                     # element type definition, will draw a line 
+
+
+Advanced features
+-----------------
+
+* Popups.
+* Help texts.
+* Mandatory fields.
+* Regular expressions to validate the field input.
+* Possibility to copy entered information from a form into the clipboard via a button.
+* Possibility to duplicate features.
+* Definition of events.
+* Design and Styles.
+* Refresh after save.
+
+
+Definition of a popup
+^^^^^^^^^^^^^^^^^^^^^
+
+You can define the following options for a popup:
+
+.. code-block:: yaml
+
+        popup:
+            title: POI    # Definition of the popup title
+            height: 400   # height of the popup, if not defined it will adapt to the content
+            width: 500    # width of the popup
+            #width: 50vw   # half screen width
+
+
+Help text for form elements (attribute infoText)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If infoText is specified, an i-button appears above the field. Hovering over this button opens the information text.
+
+.. code-block:: yaml
+
+         - type:  [type name]
+           infoText:  'Info: Please note - only numbers are valid for this field.' # Notice which will be displayed by i-symbol
+
+
+Mandatory fields
+^^^^^^^^^^^^^^^^
+
+The object cannot be saved if mandatory data is missing. In the case of a missing entry in a required field, the field will be marked with a red border and a text (mandatoryText) will be displayed if defined.
 
 .. code-block:: yaml
 
@@ -1233,53 +1237,23 @@ The object can not be saved if mandatory data is missing. In the case of a missi
            mandatory: /^\w+$/gi                  # You can define a regular expression to check the input for a field.
 
 
-Help text for form elements (attribute infoText)
-----------------------------------------------------
-
-If infoText is specified, an i-button appears above the field. Hover over this button opens the information text.
-
-.. code-block:: yaml
-
-         - type:  [type name]
-           infoText:  'Info: Please note - only numbers are valid for this field.' # Notice which will be displayed by i-symbol
-
-
-Map-Refresh after save
-----------------------
-
-After saving an object, the *refreshLayersAfterFeatureSave* option can force a reload of one or many WMS layer. 
-
-A layer can be specified by its name or by its Instance-ID: 
-
-
-.. code-block:: yaml
-
-  poi:
-      [...]
-       refreshLayersAfterFeatureSave:  # If no entry is made in this area no map refresh is carried out after saving 
-         - 17
-         - 18
-         - osm        # specify by unique name only with applications in applications/
-      [...]
-
-
 Duplicate features
-------------------
+^^^^^^^^^^^^^^^^^^
 
-If you add copy to your configuration you enable the possibility to duplicate feature. This can then be done via a duplicate-button within the attribute form of a feature or via a button in the result table.
+If you add ``copy`` to your configuration, you enable the possibility to duplicate feature. This can then be done via a **Duplicate** button within the attribute form of a feature or via a button in the result table.
 
-* **copy:** Add copy section to enable duplicate feature
-* **enabled:** Activate duplicate feature (default false)
+* **copy:** Add copy section to enable duplicate feature.
+* **enabled:** Activate duplicate feature (default: false).
 * **data**: Define default values for attributes.
-* **style**: Styling of the duplicated feature (more at Design and Styles)
-* **on**: Events while duplicating process
+* **style**: Styling of the duplicated feature (more at Design and Styles).
+* **on**: Events while duplicating process.
 
 .. code-block:: yaml
 
   poi:
       [...]
        copy:
-         enable: true # activate duplicate feature (default false)
+         enable: true # activate duplicate feature (default: false)
          data:
            date: 2017
          style:
@@ -1293,32 +1267,35 @@ If you add copy to your configuration you enable the possibility to duplicate fe
            error: console.error(feature)
 
 Events
-------
+^^^^^^
 
 Different events exist that can be associated to a feature to manipulate attributes before or after an action.
 
-* **onBeforeSave**: Event before the storage of a new/modified information
-* **onAfterSave**: Event after the storage of a new/modified information
+* **onBeforeSave**: Event before the storage of a new/modified information.
+* **onAfterSave**: Event after the storage of a new/modified information.
 
-* **onBeforeUpdate**: Event before the update of a modified information
-* **onAfterUpdate**: Event after the update of a modified information
+* **onBeforeUpdate**: Event before the update of a modified information.
+* **onAfterUpdate**: Event after the update of a modified information.
   
-* **onBeforeSearch**: Event before the search in the SearchField of the Digitizer
-* **onAfterSearch**: Event after the search in the SearchField of the Digitizer
+* **onBeforeSearch**: Event before the search in the SearchField of the Digitizer.
+* **onAfterSearch**: Event after the search in the SearchField of the Digitizer.
  
-* **onBeforeRemove**: Event before deleting data
-* **onAfterRemove**: Event after deleting data
+* **onBeforeRemove**: Event before deleting data.
+* **onAfterRemove**: Event after deleting data.
 
 In difference to the save events, the update events work only on an update of the data, not on creation.
-
-The following sections show some examples. If you want to set several parameters in an event, these can be listed in sequence, separated by a semicolon, e.g.
+The following sections show some examples. If you want to set several parameters in an event, these can be listed in sequence, separated by a semicolon, e.g.:
 
 .. code-block:: yaml
 
                 events:
                   onBeforeSave: $feature->setAttribute('interests', 'maps'); $feature->setAttribute('name', 'test');
 
-**Storage of predefined attibute data in an additional attribute-columns:**
+
+Usage examples of this are:
+
+Storage of predefined attibute data in an additional attribute columns
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 The following example shows how data can be written to an additional attribute column. This is done with the column "interests" and the fixed value "maps". When saving, the fixed value is stored in the table and you can use it via a filter for the selected display.
 
@@ -1327,7 +1304,9 @@ The following example shows how data can be written to an additional attribute c
                 events:
                   onBeforeSave: $feature->setAttribute('interests', 'maps');
 
-**Storage of group roles in an additional attribute-columns:**
+
+Storage of group roles in an additional attribute columns
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 The following example shows how Mapbender user and group information can be saved via $user and $userRoles. 
 
@@ -1337,13 +1316,12 @@ The following example shows how Mapbender user and group information can be save
                   onBeforeSave: $feature->setAttribute('user_name', $user ); $feature->setAttribute('group', implode(',', $userRoles));
 
 
-**Storage of attibute data in an additional attribute-columns:**
+Storage of attibute data in an additional attribute columns
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 This example shows how data can be stored in an additional attribute-column after saving. In this case it is done with two geometry-columns "geom" and "geom2". When saving, the data of "geom" should be saved in the field "geom2".
-
-Depending on the use case, the onBeforeInsert or the onBeforeUpdate event can be used.
-
-At the time of the saving-process the new geometry doesn't yet persist in the database. Therefore it cannot be accessed as a feature but only via the corresponding "item", an internal Digitizer structure. This "item" is based on the formular and the defined attribute fields.
+Depending on the use case, the ``onBeforeInsert`` or the ``onBeforeUpdate`` event can be used.
+At the time of the saving process, the new geometry doesn't yet persist in the database. Therefore, it cannot be accessed as a feature but only via the corresponding "item", an internal Digitizer structure. This "item" is based on the YAML block and the defined attribute fields.
 
 .. code-block:: yaml
 
@@ -1355,7 +1333,8 @@ At the time of the saving-process the new geometry doesn't yet persist in the da
 In this event the value of "geom2" is overwritten with the value of "geom".
 
 
-**Storage of different geometry-types:**
+Storage of different geometry types
+"""""""""""""""""""""""""""""""""""
 
 The above scenario can be extended to a slightly constructed example in which simultaneously different geometry types shall be saved. With the help of PostGIS, lines are interpolated to points. The Digitizer can use an event to fire the according SQL statement.
 
@@ -1370,17 +1349,17 @@ The above scenario can be extended to a slightly constructed example in which si
                     $result  = $stmnt->fetchAll();
                     $item['geompoi'] = $result[0]['geom'];
 
-The onBeforeInsert event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL-statement and delivers it to the SQL-connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
+The ``onBeforeInsert`` event is used here. The pipe symbol "|" after the event signals a following multiline statement. This blog contains PHP code, which calls SQL-statement. The SQL-statement calls the ST_Line_Interpolate_Point function of PostGIS and commits the digitized line. Because this line is not yet persisted in the database, you have to access it with the "item" (geomline). The next lines build up the SQL-statement and delivers it to the SQL-connection defined in the featuretype. The last line writes the resulting point (geompoi) into the point-geometry-field.
 
 
 Design and Styles
------------------
+^^^^^^^^^^^^^^^^^
 
-By specifying a style the way the objects are displayed on the map can be defined.
+By specifying a style, the way the objects are displayed on the map can be defined.
 
-* **default**: defines the normal display of the objects on the map 
-* **select**: defines the appearance of the objects after click event
-* **unsaved**: defines the appearance of the not saved objects
+* **default**: Defines the normal display of the objects on the map.
+* **select**: Defines the appearance of the objects after click event.
+* **unsaved**: Defines the appearance of the not saved objects.
 
 
 .. code-block:: yaml
@@ -1418,25 +1397,25 @@ By specifying a style the way the objects are displayed on the map can be define
               pointRadius: 10
 
 
-* **strokeColor:** Color of the border line [color value/transparent]
-* **strokeWidth:** Width of the border line [numeric]
-* **strokeOpacity:** Transparency of the border line [0-1]
-* **fillColor:** Color of the filling [color value/transparent]
-* **fillWidth:** Width of the filling [numeric]
-* **fillOpacity:** Transparency of the filling [0-1]
-* **pointRadius:** Radius around the center [numeric]
-* **label:** Label the object with fixed values and / or DB fields, e.g. "ID ${nummmer}"
-* **fontColor:**  "#0000ff" #'${fontcolor}'
-* **fontSize:** Font size in pixel
-* **fontFamily:** Font family
-* **fontWeight:** Font weight (default normal)
-* **labelOutlineColor:** Color of the border from the label [color value/transparent]
-* **labelOutlineWidth:** Label outline width
-* **labelYOffset:** Label offset x (default 0)
-* **labelXOffset:** Label offset y (default 0)
+* **strokeColor:** Color of the border line [color value/transparent].
+* **strokeWidth:** Width of the border line [numeric].
+* **strokeOpacity:** Transparency of the border line [0-1].
+* **fillColor:** Color of the filling [color value/transparent].
+* **fillWidth:** Width of the filling [numeric].
+* **fillOpacity:** Transparency of the filling [0-1].
+* **pointRadius:** Radius around the center [numeric].
+* **label:** Label the object with fixed values and / or DB fields, e.g. "ID ${nummmer}" .
+* **fontColor:**  "#0000ff" #'${fontcolor}' .
+* **fontSize:** Font size in pixel.
+* **fontFamily:** Font family.
+* **fontWeight:** Font weight (default: normal).
+* **labelOutlineColor:** Color of the border from the label [color value/transparent].
+* **labelOutlineWidth:** Label outline width.
+* **labelYOffset:** Label offset x (default: 0).
+* **labelXOffset:** Label offset y (default: 0).
 
 
-It is possible to refer to a graphic
+It is also possible to refer to a graphic:
 
 .. code-block:: yaml
           
@@ -1447,14 +1426,15 @@ It is possible to refer to a graphic
               graphicHeight: 30
 
 
-* **graphic:** [true/false]
+* **graphic:** [true/false].
 * **externalGraphic:** Define a link to an external graphic. You can use variables in the definition.
-* **graphicWidth/graphicHeight:** define the width and height in pixel.
+* **graphicWidth/graphicHeight:** Define the width and height in pixel.
 
 
-CSS-behaviour and styling fields
---------------------------------
-For each input field the CSS-behavior and styling information can be assigned, regardless of the type. This can be used, for example, to highlight important fields or to fill an attribute field when editing another field.
+CSS behaviour and styling fields
+""""""""""""""""""""""""""""""""
+
+For each input field, the CSS behavior and styling information can be assigned, regardless of the type. This can be used, for example, to highlight important fields or to fill an attribute field when editing another field.
 
 parameters: 
 
@@ -1505,8 +1485,25 @@ parameters:
                           yearField.css("background-color","#ffc0c0");
 
 
+Map refresh after save
+^^^^^^^^^^^^^^^^^^^^^^
 
-YAML-Definition for the element Digitizer in mapbender.yaml
+After saving an object, the *refreshLayersAfterFeatureSave* option can force a reload of one or many WMS layers. 
+A layer can be specified by its name or by its Instance ID: 
+
+
+.. code-block:: yaml
+
+  poi:
+      [...]
+       refreshLayersAfterFeatureSave:  # If no entry is made in this area no map refresh is carried out after saving 
+         - 17
+         - 18
+         - osm        # specify by unique name only with applications in applications/
+      [...]
+
+
+YAML definition for the element Digitizer in mapbender.yaml
 ===========================================================
 
 In the Workshop-Bundle you will find an example of a YAML definition.
