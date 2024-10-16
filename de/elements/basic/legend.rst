@@ -72,7 +72,7 @@ In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
 .. image:: ../../../figures/de/legend_example_toolbar_checkboxes.png
-     :scale: 60
+     :width: 100%
 
 YAML-Definition
 ---------------
