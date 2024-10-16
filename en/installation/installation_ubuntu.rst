@@ -132,6 +132,7 @@ Configuration of PostgreSQL database for productive use:
 Requirements:
 
 * Installation of PostgreSQL
+* database for the Mapbender configuration
 * PostgreSQl database user to access the database (optional) 
 
 Installation PHP-PostgreSQL driver
