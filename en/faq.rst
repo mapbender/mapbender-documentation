@@ -58,6 +58,14 @@ If you prefer SQL, you can also take the WMS ID from the Source, replace the ``<
                 mb_core_source.id = <id_of_the_wms>;
 
 
+QGIS2Mapbender plugin
+~~~~~~~~~~~~~~~~~~~~~
+
+Q: Is there a way to set up my QGIS project as a Mapbender project?
+
+A: Yes, there is! For more information please visit the `Blog <https://wheregroup.com/blog/details/mapbender-anwendungen-einfach-direkt-aus-qgis-heraus-erstellen/>`_ (german) or take a look at the `GitHub’s <https://github.com/WhereGroup/QGIS2Mapbender>`_ README.
+
+
 Performance
 -----------
 
