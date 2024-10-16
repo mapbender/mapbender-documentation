@@ -134,13 +134,15 @@ Voraussetzungen:
 
 * Installation von PostgreSQL
 * vorhandene Datenbank zur Mapbender-Konfiguration
-* ggf. eigenen Benutzer für Zugriff
+* ggf. eigenen Benutzer für den Zugriff
 
 Installation PHP-PostgreSQL Treiber:
 
-.. code-block:: bash
+.. code-block:: ini
 
-   sudo apt install php-pgsql
+    # php.ini
+    extension=php_pgsql
+    extension=php_pdo_pgsql
 
 Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer *.env.local*-Datei hinzufügen.
 
