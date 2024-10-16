@@ -139,6 +139,23 @@ Datei `<apache>\\conf\\conf.d\\fcgi.conf` mit dem folgenden Inhalt anlegen:
 Konfiguration PostgreSQL
 ------------------------
 
+Für den Einsatz in einer Produktivumgebung wird nachfolgend die Konfiguration einer PostgreSQL Datenbank beschrieben.
+
+Voraussetzungen:
+
+* Installation von PostgreSQL
+* vorhandene Datenbank zur Mapbender-Konfiguration
+* ggf. eigenen Benutzer für den Zugriff
+
+Installation PHP-PostgreSQL Treiber:
+
+.. code-block:: ini
+
+    # php.ini
+    extension=php_pgsql
+    extension=php_pdo_pgsql
+
+
 Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer *.env.local*-Datei hinzufügen.
 
 .. code-block:: yaml
