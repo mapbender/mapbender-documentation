@@ -155,7 +155,7 @@ Anlegen der Mapbender Datenbank, sofern diese noch nicht vorliegt:
     cd /var/www/mapbender
     bin/console doctrine:database:create 
 
-Einrichtung der Mapbedner Tabellenstruktur und laden der Demo-Anwendungen:
+Einrichtung der Mapbender Tabellenstruktur und laden der Demo-Anwendungen:
 
 .. code-block:: bash
 
