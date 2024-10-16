@@ -139,20 +139,45 @@ Create file `<apache>\\conf\\conf.d\\fcgi.conf` with:
 Configuration PostgreSQL
 ------------------------
 
+Configuration of PostgreSQL database for productive use:
+
+Requirements:
+
+* Installation of PostgreSQL
+* database for the Mapbender configuration
+* PostgreSQl database user to access the database (optional) 
+
+Activate the PHP-PostgreSQL driver
+
+.. code-block:: ini
+
+    # php.ini
+    extension=php_pgsql
+    extension=php_pdo_pgsql
+
 Configuration of database connection is done by a variable that contains the entire connection string. Configure it by adding it in your *.env.local* file.
 
 .. code-block:: yaml
 
-    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=17&charset=utf8"
 
 For more information on the database configuration, see :ref:`yaml`.
 
-Open the windows shell and initialize the database connection with the following commands:
+Open the windows shell.
 
-.. code-block:: text
+Create the Mapbender database if it does not exist already:
+
+.. code-block:: bash
  
     cd c:\mapbender
     php.exe bin/console doctrine:database:create
+
+
+Create the Mapbender table structure and the load example applications:
+
+.. code-block:: bash
+ 
+    cd c:\mapbender
     php.exe bin/console doctrine:schema:create
     php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
