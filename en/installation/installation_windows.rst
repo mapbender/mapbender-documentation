@@ -152,6 +152,7 @@ Activate the PHP-PostgreSQL driver
 
     # php.ini
     extension=php_pgsql
+    extension=php_pdo_pgsql
 
 Configuration of database connection is done by a variable that contains the entire connection string. Configure it by adding it in your *.env.local* file.
 
