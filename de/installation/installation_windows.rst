@@ -143,13 +143,13 @@ Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den g
 
 .. code-block:: yaml
 
-    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=17&charset=utf8"
 
 Weitere Informationen zur Einrichtung von Datenbankverbindungen finden sich im Kapitel :ref:`yaml_de`.
 
 Öffnen Sie nun die Eingabeaufforderung. 
 
-Zur Erzeugung der Datenbank geben Sie bitte folgende Befehl ein (nur wenn die Datenbank nicht bereits vorliegt):
+Zur Erzeugung der Datenbank geben Sie bitte folgenden Befehl ein (nur wenn die Datenbank nicht bereits vorliegt):
 
 .. code-block:: text
  
