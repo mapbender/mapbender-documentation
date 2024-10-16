@@ -5,18 +5,18 @@ Update Mapbender to a newer Version
 
 To update Mapbender you have to do the following steps:
 
-* Get the new version from https://mapbender.org/builds/.
-* Save your configuration files (``parameters.yml`` for versions < 4.0.0 respectively ``.env.local`` for >= 4.0.0, and the files from the folder *config/packages*) and your old Mapbender version (files and database).
+* Get the `new version <https://mapbender.org/builds/>`_.
+* Save your **configuration files** (*parameters.yml* for versions < 4.0.0 respectively *.env.local* for >= 4.0.0, and the files from the folder `config/packages`) and your old Mapbender version (files and database).
 * Replace the old with the new Mapbender files.
 * Merge your configuration files (check for new parameters and changes).
 
 .. warning:: If you are migrating to Mapbender version 4, please read the :ref:`note in the migration guide<en/installation/migration:Upgrade database>` before upgrading the database!
     
 * Update your :ref:`Mapbender database <en/customization/commands:bin/console doctrine:schema:update>`.
-* Copy the screenshots from your old Mapbender version from */public/uploads/* (web/uploads for < 4.0.0) to the folder */public/uploads* of your new installation.
-* Templates: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?).
-* Print templates: If you use your own print templates, copy them back to *config/MapbenderPrintBundle/templates/*.
-* Import the demo applications; either via ``bin/composer run reimport-example-apps`` or via the web administration.
+* Copy the **screenshots** from your old Mapbender version from `/public/uploads/` (respectively, `web/uploads` for < 4.0.0) to the folder `/public/uploads` of your new installation.
+* **Templates**: If you are using your own template, you have to compare your scripts with the new scripts (are there any changes?).
+* **Print templates**: If you use your own print templates, copy them back to *config/MapbenderPrintBundle/templates/*.
+* Import the **demo applications**: either via ``bin/composer run reimport-example-apps`` or via the web administration.
 * At :ref:`en/installation/installation_ubuntu:Unpack and register to web server`, you can see how the config file for the Apache Alias should look like.
 
 And that's all! Have a look at your new Mapbender version.
@@ -79,7 +79,7 @@ Have a look at the steps as commands
  sudo chmod -R ug+w /var/www/mapbender/public/uploads
 
 Update Example for Windows
-------------------------------------
+--------------------------
  
 .. code-block:: bash
 

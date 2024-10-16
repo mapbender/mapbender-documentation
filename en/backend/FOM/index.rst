@@ -3,8 +3,8 @@
  .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
  .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
 
-Security (FOMUserBundle)
-========================
+Security
+========
 
 The security for domain objects is implemented in Mapbender using a permission system.
 It allows global authorizations for areas and individual authorizations for objects.
@@ -19,7 +19,7 @@ Therefore, it provides flexible permissions and security for the following entit
    roles_groups
 
 
-.. important:: Assign rights to an entity via ``Security`` → ``Global Permissions``.
+.. hint:: Assign rights to an entity via **Security** → **Global Permissions**.
 
 
 Permission management
@@ -34,5 +34,5 @@ An authorized user can manage global or individual permissions to secure the dom
 - **Manage Permissions**: Allow permission editing  
 - **Refresh**: Allow source refreshing  
 
-Add users and groups to this area via ``Security`` → ``Global permissions`` → ``Permission management`` so that they have access to manage permissions.
+Add users and groups to this area via **Security** → **Global permissions** → **Permission management** so that they have access to manage permissions.
 

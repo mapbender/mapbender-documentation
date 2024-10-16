@@ -21,7 +21,7 @@ Falls ein Benutzer sein Passwort vergessen hat, kann er in der Login-Maske über
 
 .. image:: ../../../figures/de/fom/user_forgot_password.png
 
-Danach bekommt der Benutzer eine E-Mail mit einem Link zur Zurücksetzung des Passworts. Der Link ist nach der Nutzung nicht mehr gültig. Der Text der Mail kann in der Datei /FOM/UserBundle/Resources/translations/messages.de.xlf angepasst werden.
+Danach bekommt der Benutzer eine E-Mail mit einem Link zur Zurücksetzung des Passworts. Der Link ist nach der Nutzung nicht mehr gültig. Der Text der Mail kann in der Datei `/FOM/UserBundle/Resources/translations/messages.de.xlf` angepasst werden.
 
 Die Funktionalität kann in der doctrine.yaml ausgeschaltet werden.
 

@@ -48,15 +48,16 @@ Mit dieser Code-Grundlage wird die Idee eines Geoportal-Frameworks fortgesetzt. 
 
 Sie brauchen nichts weiter als einen Webbrowser für diesen Schnellstart.
 
-Diese Schnellstart-Anleitung beschreibt, wie Sie:
+Diese Schnellstart-Anleitung umfasst die folgenden Kapitel:
 
-#. Mapbender starten
-#. Eine Anwendung erstellen
-#. Elemente in eine Anwendung einfügen
-#. Datenquellen (Sources) verwenden
-#. Benutzer und Gruppen verwalten
-#. Die Rechteverwaltung bedienen
-#. Ihre Anwendung beim Start positionieren
+* :ref:`de/quickstart:1. Mapbender starten`
+* :ref:`de/quickstart:2. Eine Anwendung erstellen`
+* :ref:`de/quickstart:3. Elemente in eine Anwendung einfügen`
+* :ref:`de/quickstart:4. Datenquellen (Sources) verwenden`
+* :ref:`de/quickstart:5. Benutzer- und Gruppenverwaltung`
+* :ref:`de/quickstart:6. Rechteverwaltung`
+* :ref:`de/quickstart:7. Anwendung beim Start positionieren`
+
 
 Eine Mapbender Anwendung kann wie folgt aussehen:
 
@@ -73,7 +74,7 @@ Dieser Schnellstart erklärt die Mapbender-Grundlagen nach erfolgter Installatio
 1. Mapbender starten
 ====================
 
-#. Wählen Sie ``Mapbender`` aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch :ref:`installation_de`).
+#. Wählen Sie **Mapbender** aus dem Startmenü (sofern vorher eine solche browseröffnende Verknüpfung erstellt wurde) oder besuchen Sie http://localhost/mapbender (Adresse kann unter Umständen abweichen, je nachdem wie der Apache Alias in der Datei /etc/apache2/sites-available/mapbender.conf erstellt wurde, siehe auch :ref:`installation_de`).
 
 #. Das Mapbender-:ref:`backend_de` sollte anschließend im Browserfenster erscheinen.
 
@@ -83,15 +84,16 @@ Falls Sie Schwierigkeiten haben Mapbender zu starten, überprüfen Sie, ob der A
 Starten von Mapbender als Produktivumgebung
 -------------------------------------------
 
-Mapbender bietet zwei Umgebungen an: dev (Standard) und prod.
+Mapbender bietet zwei Umgebungen an: **dev** (Standard) und **prod**.
 
 Die Entwicklungsumgebung zeigt vollständige Fehlermeldungen (einschließlich Stacktraces) im Browser und aktiviert die Symfony-Debug-Konsole und den Profiler. Außerdem wird das Caching deaktiviert.
 In der Produktionsumgebung wird das Caching aktiviert, zusätzlich werden nur allgemeine Fehlermeldungen angezeigt. Ausführlichere Meldungen werden hingegen in die Logdateien geschrieben.
 
-Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf `prod` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
+Eine Umgebung kann über die Variable ``APP_ENV`` explizit festgelegt werden. Stellen Sie sicher, dass Sie dies auf ``prod`` ändern, wenn Sie Ihre Anwendung für die Öffentlichkeit bereitstellen. Der Wert kann auf verschiedene Arten geändert werden:
 
-* durch Bearbeiten der ``APP_ENV``-Variable in der `.env`-Datei,
-* durch Überschreiben des Werts in einer `.env.local`-Datei,
+.. * durch Bearbeiten der ``APP_ENV``-Variable in der *.env*-Datei,
+
+* durch Überschreiben des Werts in einer *.env.local*-Datei,
 * durch Festlegen einer Umgebungsvariable in Ihrer Apache2-vHost-Konfiguration: ``SetEnv APP_ENV prod``,
 * durch explizites Festlegen beim Starten des lokalen Webservers:
 
@@ -107,7 +109,9 @@ Das Backend
 
 #. Eine Anwendung kann per Klick auf den Titel, das Vorschaubild oder über |mapbender-button-show| aufgerufen werden.
 
-#. Um Mapbender verwalten zu können, muss zunächst eine Anmeldung in das :ref:`backend_de` erfolgen. Klicken Sie auf den Link **Anmelden** oben rechts, um die Anmeldeseite aufzurufen. Sie können sich mit dem Benutzer anmelden, der während der Installation erzeugt wurde. Er kann ``root`` heißen mit dem Kennwort ``root`` - dies ist der Standardbenutzer/das Standardkennwort nach der Installation von Mapbender. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben. Löschen Sie den Benutzer ``root`` nicht. 
+#. Um Mapbender verwalten zu können, muss zunächst eine Anmeldung in das :ref:`backend_de` erfolgen. Klicken Sie auf den Link **Anmelden** oben rechts, um die Anmeldeseite aufzurufen. Sie können sich mit dem Benutzer anmelden, der während der Installation erzeugt wurde. Er kann **root** heißen mit dem Kennwort **root** - dies ist der Standardbenutzer/das Standardkennwort nach der Installation von Mapbender. Bitte ändern Sie das Kennwort, wenn Sie eine Produktivumgebung betreiben.
+
+.. warning:: Löschen Sie den Benutzer **root** nicht. 
 
 Nach erfolgreicher Anmeldung werden Sie zum Administrationsbackend weitergeleitet.
 
@@ -137,11 +141,11 @@ In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendu
 
 Es gibt drei verschiedene Möglichkeiten, durch die neue Anwendungen erstellt werden können:
 
-Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz *"_db"* (bei yaml-Anwendungen) oder *"_imp"* (bei Anwendungen, die aus der Datenbank heraus kopiert werden). Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich unter :ref:`yaml_de`.
+Einerseits besteht die Option, diese aus bereits vorhandenen Anwendungen zu erstellen. Dies erfolgt über einen Klick auf den |mapbender-button-copy| Button in der Anwendungsübersicht. Die Applikation erhält dabei den gleichen Titel und URL-Titel zuzüglich dem Zusatz **_db** (bei yaml-Anwendungen) oder **_imp** (bei Anwendungen, die aus der Datenbank heraus kopiert werden). Alle zuvor definierten Elemente und Konfigurationen werden ebenfalls übernommen. Eine weitere Möglichkeit ist der Import einer Anwendung. Zusätzliche Informationen hierzu finden sich unter :ref:`yaml_de`.
 
 Es können außerdem komplett neue Anwendungen über das :ref:`backend_de` definiert werden. Die einzelnen Arbeitsschritte hierfür werden im Folgenden näher erläutert:
 
-#. Wählen Sie zunächst den Button *"Anwendung anlegen"* auf der Anwendungsübersichtsseite.
+#. Wählen Sie zunächst **Anwendung anlegen** auf der Anwendungsübersichtsseite.
 
 #. Wählen Sie anschließend eine Vorlage für die Anwendung. Diese bestimmt den Aufbau der Anwendung. Zur Auswahl stehen: Fullscreen, Fullscreen alternative, Mapbender Mobile template. Es ist ebenfalls möglich, eigene Vorlagen anzulegen und neuen Anwendungen zuzuordnen.
 
@@ -149,13 +153,13 @@ Es können außerdem komplett neue Anwendungen über das :ref:`backend_de` defin
 
 #. Geben Sie einen Titel, einen URL-Titel und ggf. eine Beschreibung für die Anwendung an. Titel und URL-Titel können identisch sein. Letzterer muss sich nach den Standards der festgelegten URL-Syntax richten: Üblicherweise sind Kleinbuchstaben, Zahlen sowie der Binde- und Unterstrich erlaubt.
 
-#. Laden Sie ggf. eine Bilddatei hoch. Diese wird dann als Vorschaubild in der Anwendungsübersicht angezeigt. Klicken Sie dazu unter dem Abschnitt Vorschaubild auf den Button "*Datei auswählen"*.
+#. Laden Sie ggf. eine Bilddatei hoch. Diese wird dann als Vorschaubild in der Anwendungsübersicht angezeigt. Klicken Sie dazu unter dem Abschnitt Vorschaubild auf den Button **Datei auswählen**.
 
-#. Setzen Sie ein Häkchen bei *"Kartenzustand merken"*, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie unter :ref:`share_de`.
+#. Setzen Sie ein Häkchen bei **Kartenzustand merken**, um bestimmte Kartenparameter und -einstellungen persistent zu machen. Weitere Informationen finden Sie unter :ref:`share_de`.
 
-#. Setzen Sie ein Häkchen bei *"Ladescreen anzeigen"*, um ein Bild bei Anwendungsstart anzuzeigen, das die Ladezeit graphisch überbrückt.
+#. Setzen Sie ein Häkchen bei **Ladescreen anzeigen**, um ein Bild bei Anwendungsstart anzuzeigen, das die Ladezeit graphisch überbrückt.
 
-#. Klicken Sie *"Speichern"*, um die Anwendung zu erzeugen. Nach der Erstellung können Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Dienste hinzufügen.
+#. Klicken Sie **Speichern**, um die Anwendung zu erzeugen. Nach der Erstellung können Sie Elemente (z.B. Kartenelement, Navigation, Legende) und Dienste hinzufügen.
 
   .. image:: ../figures/de/mapbender_create_application.png
      :width: 100%
@@ -166,15 +170,19 @@ Es können außerdem komplett neue Anwendungen über das :ref:`backend_de` defin
 
 Mapbender-Anwendungen bestehen aus den Bereichen Obere Werkzeugleiste, Sidepane, Kartenbereich und Fußzeile. In diese Bereiche kann eine Vielzahl von Elementen eingebunden werden.
 
-#. Wählen Sie ``Anwendungen`` → |mapbender-button-edit| ``Button`` → ``Layouts`` 
+#. Wählen Sie **Anwendungen** → |mapbender-button-edit| → **Layouts**.
 
-#. Klicken Sie auf den |mapbender-button-add| ``Button`` neben einem Bereich, um einen Überblick über die dort verfügbaren Elemente zu erhalten.
+#. Klicken Sie auf |mapbender-button-add| neben einem Bereich, um einen Überblick über die dort verfügbaren Elemente zu erhalten.
 
-#. Wählen Sie ein Element aus der Liste aus. Beachten Sie dabei den jeweiligen Bereich Ihrer Anwendung. Es können nicht alle Elemente zu jedem Bereich hinzugefügt werden. Beispielsweise ist die Übersicht (overview) nur in den Kartenbereich integrierbar.
+.. note:: Beachten Sie dabei den jeweiligen Bereich Ihrer Anwendung. Es können nicht alle Elemente zu jedem Bereich hinzugefügt werden. 
 
-#. Konfigurieren Sie das Element. Hinweis: Wenn Sie ein Element z.B. **Karte (map)** auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
+#. Wählen Sie ein Element aus der Liste aus. Beispielsweise ist die Übersicht (overview) nur in den Kartenbereich integrierbar.
 
-#. Die Position von Elementen kann per drag & drop innerhalb und zwischen Bereichen verändert werden.
+#. Konfigurieren Sie das Element.
+
+.. note:: Hinweis: Wenn Sie ein Element z.B. :ref:`map_de` auswählen, sehen Sie lediglich die Optionen für dieses Element und können es entsprechend konfigurieren.
+
+#. Die Position von Elementen kann per Drag & drop innerhalb und zwischen Bereichen verändert werden.
 
 #. Schauen Sie sich Ihre Anwendung an. Öffnen Sie Ihre Anwendung über den Button |mapbender-button-show|.
 
@@ -185,40 +193,40 @@ Jetzt sollten sie eine Idee davon haben, wie einfach es ist, eine Mapbender-Anwe
 
 Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer Funktion. Detaillierte Informationen können Sie in den jeweiligen Kapiteln der :ref:`Mapbender Dokumentation <welcome_de>` nachlesen.
 
-* :ref:`about_dialog_de`: zeigt Informationen über Mapbender an
-* :ref:`activity_indicator_de`: zeigt die HTTP-Aktivität an
-* :ref:`applicationswitcher_de`: wechselt unter Beibehaltung der aktuellen Kartenposition zu einer anderen Anwendung
-* :ref:`basesourceswitcher_de`: ermöglicht den Wechsel zwischen selbst definierten Hintergrundkarten
-* :ref:`button_de`: bindet ein Element als Button ein
-* :ref:`coordinate_utility_de`: transformiert Koordinaten und navigiert zu ihnen auf der Karte
-* :ref:`coordinates_display_de`: zeigt Mausposition in den Kartenkoordinaten an
-* :ref:`copyright_de`: zeigt Nutzungsbedingungen an
-* :ref:`datamanager_de`: erzeugt und speichert Sachinformationen in einer Datenbank*
-* :ref:`digitizer_de`: erzeugt und speichert Geometrieinformationen in einer Datenbank*
-* :ref:`dimensions_handler_de`: bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein
-* :ref:`feature_info_de`: gibt Informationen eines Dienstes aus
-* :ref:`gpspostion_de`: erzeugt einen Button zur Anzeige der eigenen GPS-Position
-* :ref:`html_de`: bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links
-* :ref:`imageexport_de`: exportiert einen Kartenausschnitt
-* :ref:`layertree_de`: Auflistung aller eingebundenen Layersets und Layer samt Auswahl- und Sortiermöglichkeiten
-* :ref:`legend_de`: zeigt die Legende von aktiven Diensten an
-* :ref:`link_de`: verlinkt zu einer externen URL
-* :ref:`map_de`: erstellt ein zentrales Kartenelement, in welches die Layersets und Layer eingebunden sind
-* :ref:`navigation_toolbar_de`: ermöglicht die Navigation in der Karte über ein graphisches Steuerelement
-* :ref:`overview_de`: zeigt eine kleinere Übersichtskarte über der Hauptkarte an
-* :ref:`poi_de`: generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird
-* :ref:`printclient_de`: erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können
-* :ref:`ruler_de`: erlaubt das Messen von Linien und Flächen in der Karte
-* :ref:`scaledisplay_de`: zeigt aktuellen Maßstab numerisch an
-* :ref:`scale_selector_de`: dieses Element zeigt eine Auswahlbox mit Maßstäben an.
-* :ref:`scalebar_de`: zeigt den aktuellen Maßstab graphisch an
-* :ref:`search_router_de`: ermöglicht die Konfiguration von individuellen Suchen
-* :ref:`shareurl_de`: teilt die aktuelle Kartenansicht über eine URL
-* :ref:`simplesearch_de`: erstellt eine Einfeldsuche
-* :ref:`sketch_de`: ermöglicht das Zeichnen verschiedener Formen in der Karte
-* :ref:`srs_selector_de`: generiert die Möglichkeit, eine Projektion (SRS) über eine Auswahlbox zu wechseln
-* :ref:`view_manager_de`: speichert Kartenzustände zum späteren Abruf
-* :ref:`wms_loader_de`: lädt einen WMS per getCapabilities-Request
+* :ref:`about_dialog_de`: Zeigt Informationen über Mapbender an.
+* :ref:`activity_indicator_de`: Zeigt die HTTP-Aktivität an.
+* :ref:`applicationswitcher_de`: Wechselt unter Beibehaltung der aktuellen Kartenposition zu einer anderen Anwendung.
+* :ref:`basesourceswitcher_de`: Ermöglicht den Wechsel zwischen selbst definierten Hintergrundkarten.
+* :ref:`button_de`: Bindet ein Element als Button ein.
+* :ref:`coordinate_utility_de`: Transformiert Koordinaten und navigiert zu ihnen auf der Karte.
+* :ref:`coordinates_display_de`: Zeigt Mausposition in den Kartenkoordinaten an.
+* :ref:`copyright_de`: Zeigt Nutzungsbedingungen an.
+* :ref:`datamanager_de`: Erzeugt und speichert Sachinformationen in einer Datenbank.*
+* :ref:`digitizer_de`: Erzeugt und speichert Geometrieinformationen in einer Datenbank.*
+* :ref:`dimensions_handler_de`: Bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein.
+* :ref:`feature_info_de`: Gibt Informationen eines Dienstes aus.
+* :ref:`gpspostion_de`: Erzeugt einen Button zur Anzeige der eigenen GPS-Position.
+* :ref:`html_de`: Bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links.
+* :ref:`imageexport_de`: Exportiert einen Kartenausschnitt.
+* :ref:`layertree_de`: Auflistung aller eingebundenen Layersets und Layer samt Auswahl- und Sortiermöglichkeiten.
+* :ref:`legend_de`: Zeigt die Legende von aktiven Diensten an.
+* :ref:`link_de`: Verlinkt zu einer externen URL.
+* :ref:`map_de`: Erstellt ein zentrales Kartenelement, in welches die Layersets und Layer eingebunden sind.
+* :ref:`navigation_toolbar_de`: Ermöglicht die Navigation in der Karte über ein graphisches Steuerelement.
+* :ref:`overview_de`: Zeigt eine kleinere Übersichtskarte über der Hauptkarte an.
+* :ref:`poi_de`: Generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird.
+* :ref:`printclient_de`: Erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können.
+* :ref:`ruler_de`: Erlaubt das Messen von Linien und Flächen in der Karte.
+* :ref:`scaledisplay_de`: Zeigt aktuellen Maßstab numerisch an.
+* :ref:`scale_selector_de`: Dieses Element zeigt eine Auswahlbox mit Maßstäben an.
+* :ref:`scalebar_de`: Zeigt den aktuellen Maßstab graphisch an.
+* :ref:`search_router_de`: Ermöglicht die Konfiguration von individuellen Suchen.
+* :ref:`shareurl_de`: Teilt die aktuelle Kartenansicht über eine URL.
+* :ref:`simplesearch_de`: Erstellt eine Einfeldsuche.
+* :ref:`sketch_de`: Ermöglicht das Zeichnen verschiedener Formen in der Karte.
+* :ref:`srs_selector_de`: Generiert die Möglichkeit, eine Projektion (SRS) über eine Auswahlbox zu wechseln.
+* :ref:`view_manager_de`: Speichert Kartenzustände zum späteren Abruf.
+* :ref:`wms_loader_de`: Lädt einen WMS per getCapabilities-Request.
 
 
 .. hint:: Mit einem * markierte Elemente benötigen zusätzliche Dependencies.
@@ -227,9 +235,9 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 4. Datenquellen (Sources) verwenden
 ===================================
 
-In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf ``Datenquellen`` kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich unter :ref:`layerset_de`.
+In Mapbender können Dienste vom Typ OGC WMS und OGC WMTS / TMS eingeladen werden. Durch einen Klick auf **Datenquellen** kann zu einer Übersicht mit allen hinzugefügten Diensten navigiert werden. Diese ist wiederum in eine Liste mit allen Datenquellen sowie den freien Instanzen untergliedert. Mehr Informationen zu privaten und freien Instanzen finden sich unter :ref:`layerset_de`.
 
-Die Übersichtsseite bietet dem Nutzer folgende Funktionen:
+Die Übersichtsseite **Datenquellen** bietet dem Nutzer folgende Funktionen:
 
  * |mapbender-button-add| Datenquelle hinzufügen
  * |mapbender-button-show| Datenquelle anzeigen
@@ -248,15 +256,15 @@ Sie können OGC Web Map Services (WMS) und Web Map Tile Services (WMTS) in Ihre 
 
 .. tip:: Sofern möglich, sollten das Capabilities-Dokument zuerst in Ihrem Browser überprüfen, bevor Sie versuchen, den Dienst in Mapbender zu laden.
 
-#. Um eine neue Datenquelle einzuladen, klicken Sie auf den Button ``Datenquelle hinzufügen``.
+#. Um eine neue Datenquelle einzuladen, klicken Sie auf den Button **Datenquelle hinzufügen**.
 
-#. Definieren Sie den *"Typ"* des Dienstes: OGC WMS oder OGC WMTS / TMS.
+#. Definieren Sie den **Typ** des Dienstes: *OGC WMS* oder *OGC WMTS / TMS*.
 
-#. Geben Sie den Link zur getCapabilities URL in das Textfeld *Dienst-URL* ein.
+#. Geben Sie den Link zur getCapabilities URL in das Textfeld **Dienst-URL** ein.
 
 #. Geben Sie Benutzername und Kennwort ein, sofern der Dienst eine Authentifizierung benötigt.
 
-#. Klicken Sie ``Laden``, um den Dienst in das Dienst-Repository zu laden.
+#. Klicken Sie **Laden**, um den Dienst in das Dienst-Repository zu laden.
 
 #. Nach erfolgreicher Registrierung des Dienstes zeigt Mapbender eine Übersicht der Informationen an, die der Dienst geliefert hat.
 
@@ -269,11 +277,11 @@ Hinzufügen von Diensten zu Anwendungen
 
 Nachdem ein Dienst in Mapbender geladen wurde, kann dieser zu einer oder mehreren Anwendungen hinzugefügt werden.
 
-#. Navigieren Sie zunächst zur Übersichtsseite mit allen Anwendungen. Klicken Sie dann auf den |mapbender-button-edit| ``Button`` der jeweiligen Anwendung und navigieren Sie zum Tab *Layersets*.
+#. Navigieren Sie zunächst zur Seite **Anwendungen**. Klicken Sie dann auf |mapbender-button-edit| bei der jeweiligen Anwendung und navigieren Sie zum Tab **Layersets**.
 
-#. Im Bereich *Layersets* besteht die Möglichkeit, einzelne hochgeladene Dienste zu einer Anwendung hinzuzufügen. Klicken Sie hierfür zunächst auf den |mapbender-button-add| ``Button`` neben der Filterfunktion, um ein Layerset anzulegen. Alle Dienste in einer Anwendung müssen einem bestimmten Layerset zugeordnet sein. Vergeben Sie für dieses einen Titel (z.B. "main" für die Hauptkarte und "overview" für die Übersichtskarte).
+#. Im Bereich **Layersets** besteht die Möglichkeit, einzelne hochgeladene Dienste zu einer Anwendung hinzuzufügen. Klicken Sie hierfür zunächst auf |mapbender-button-add| neben der Filterfunktion, um ein Layerset anzulegen. Alle Dienste in einer Anwendung müssen einem bestimmten Layerset zugeordnet sein. Vergeben Sie für dieses einen Titel (z.B. *main* für die Hauptkarte und *overview* für die Übersichtskarte).
 
-#. Jetzt können Sie Dienste zum Layerset hinzufügen. Wählen Sie dafür den |mapbender-button-add| ``Button`` des jeweiligen Layersets.
+#. Jetzt können Sie Dienste zum Layerset hinzufügen. Wählen Sie dafür |mapbender-button-add| des jeweiligen Layersets.
 
 #. Die Reihenfolge der Dienste kann über Drag & Drop verändert werden.
 
@@ -285,7 +293,7 @@ Konfiguration von Diensten
 
 Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie sich nicht alle Ebenen anzeigen lassen, oder Sie möchten die Reihenfolge oder den Titel der Ebenen ändern, die Info-Abfrage für einzelne Ebenen verhindern oder den Minimal-/Maximalmaßstab ändern.
 
-#. Wählen Sie  ``Anwendung`` → |mapbender-button-edit| ``Button`` → ``Layerset`` → |mapbender-button-edit| ``Instanz bearbeiten``, um eine Instanz zu konfigurieren.
+#. Wählen Sie **Anwendung** → |mapbender-button-edit|  → **Layerset** → |mapbender-button-edit| **Instanz bearbeiten**, um eine Instanz zu konfigurieren.
 
 #. Sie können nun Ihren Dienst konfigurieren.
 
@@ -296,18 +304,18 @@ Sie können Dienste für Ihre Anwendung konfigurieren. Vielleicht möchten Sie s
 
 **Dienstekonfiguration:**
 
-* Titel: Titel des Dienstes
-* Opacity: Durchlässigkeit (Deckkraft) des Dienstes in Prozent (0: transparent, 100: undurchsichtig)
-* Format: Das Format für den getMap-Request
-* Infoformat: Das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen)
-* Exceptionformat: Das Format für Fehlermeldungen
-* Kachel-Puffer: Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen (Standard: 0).
-* BBOX-Faktor: Dieser Parameter gilt für Dienste, die nicht gekachelt angefordert werden. Hier kann angegeben werden, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Standard: 1.25
-* BaseSource: Der Dienst soll als BaseSource behandelt werden: Eine Aktivierung ist sinnvoll für vollflächige Hintergrundkarten, wie bspw. Straßenkarte und Satellit, bei denen eine gleichzeitige Anzeige wenig sinnvoll ist.
-* Proxy: Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Der Browser fordert dann nicht direkt den Dienst an. Für passwortgeschützte Dienste sollte diese Option immer aktiviert sein, da ansonsten das Passwort für jeden Benutzer auslesbar ist.
-* Transparenz: standardmäßig aktiviert, bei Deaktivierung wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit Transparent=FALSE)
-* gekachelt: Dienst wird in Kacheln angefordert. Kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt. (Standard: nicht gekachelt)
-* Layer-Reihenfolge: gibt eine Lesrichtung für die im Dienst enthaltenen Layer vor. Standard (umgekehrt) und QGIS-Style (gleiche Reihenfolge) sind auswählbar.
+* **Titel**: Titel des Dienstes.
+* **Opacity**: Durchlässigkeit (Deckkraft) des Dienstes in Prozent (0: transparent, 100: undurchsichtig).
+* **Format**: Das Format für den getMap-Request.
+* **Infoformat**: Das Format für getFeatureInfo-Requests (text/html für die Ausgabe als HTML wird empfohlen).
+* **Exceptionformat**: Das Format für Fehlermeldungen.
+* **Kachel-Puffer**: Dieser Parameter gilt für Dienste, die gekachelt angefordert werden und gibt an, ob weitere umgebende Kacheln abgerufen werden sollen. Damit sind diese bei einer Pan-Bewegung schon heruntergeladen und sichtbar. Je höher der Wert, desto mehr umgebende Kacheln werden abgerufen (Standard: 0).
+* **BBOX-Faktor**: Dieser Parameter gilt für Dienste, die nicht gekachelt angefordert werden. Hier kann angegeben werden, wie groß das zurückgegebene Bild sein soll. Ein Wert größer 1 wird ein größeres Kartenbild anfordern. Standard: 1.25
+* **BaseSource**: Der Dienst soll als BaseSource behandelt werden: Eine Aktivierung ist sinnvoll für vollflächige Hintergrundkarten, wie bspw. Straßenkarte und Satellit, bei denen eine gleichzeitige Anzeige wenig sinnvoll ist.
+* **Proxy**: Bei Aktivierung wird der Dienst über Mapbender als Proxy angefordert. Der Browser fordert dann nicht direkt den Dienst an. Für passwortgeschützte Dienste sollte diese Option immer aktiviert sein, da ansonsten das Passwort für jeden Benutzer auslesbar ist.
+* **Transparenz**: standardmäßig aktiviert, bei Deaktivierung wird der Dienst ohne transparenten Hintergrund angefordert (getMap-Request mit ``Transparent=FALSE``).
+* **gekachelt**: Dienst wird in Kacheln angefordert. Kann bei großer Karte sehr hilfreich sein, wenn der Dienst die Kartengröße nicht unterstützt (Standard: nicht gekachelt).
+* **Layer-Reihenfolge**: gibt eine Lesrichtung für die im Dienst enthaltenen Layer vor. *Standard* (umgekehrt) und *QGIS-Style* (gleiche Reihenfolge) sind auswählbar.
 
 
 **Dimensionen:**
@@ -323,49 +331,49 @@ In Mapbender können die Vendor Specific Parameter genutzt werden, um z.B. Benut
 
 Liste der möglichen Variablen:
 
-* User: $email$, $groups$, $id$, $username$
-* Groups: $id$, $title$, $description$
+* **User**: $email$, $groups$, $id$, $username$
+* **Groups**: $id$, $title$, $description$
 
-Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
+Das folgende Beispiel zeigt die Definition eines Parameters ``group``, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
 .. image:: ../figures/de/layerset/mapbender_vendor_specific_parameter.png
    :width: 75%
 
-* Vstype: Mapbender spezifische Variablen: simple, Gruppe (groups), User (users)
-* Name: Parameter-Name im WMS Request
-* Default: Standardwert
-* Hidden: Falls der Wert gesetzt ist, werden die Anfragen serverseitig versendet, sodass die Parameter nicht direkt sichtbar sind. Funktioniert nur, sofern der Dienst als `Proxy` angefragt wird.
+* **Vstype**: Mapbender spezifische Variablen: simple, Gruppe (groups), User (users)
+* **Name**: Parameter-Name im WMS Request
+* **Default**: Standardwert
+* **Hidden**: Falls der Wert gesetzt ist, werden die Anfragen serverseitig versendet, sodass die Parameter nicht direkt sichtbar sind. Funktioniert nur, sofern der Dienst als **Proxy** angefragt wird.
 
 Momentan eignet sich das Element, um Benutzer und Gruppeninformationen weiterzugeben, z.B. für Benutzer die $id$ und für Gruppen den Parameter $groups$.
 
 
 **Layerkonfiguration:**
 
-* Titel: Layertitel, wie er im Ebenenbaum angezeigt wird. Als Standard wird der Titel aus dem getCapabilities-Request genutzt.
-* Min./Max. Maßstab: Maßstabsbereich, in dem der Layer angezeigt wird (z.B.: 1:100 - 1:1000)
-* aktiv: aktiviert/deaktiviert einen Layer, sodass bei Deaktivierung in der Hierarchie untergeordnete ignoriert werden
-* Ausgewählt erlauben: Layer wird angezeigt und ist auswählbar im Ebenenbaum
-* Ausgewählt an: Layer ist bei Anwendungsstart aktiv
-* Info erlauben: Infoabfrage wird für diesen Layer zugelassen
-* Info an: Layer-Infoabfrage wird beim Start aktiviert
-* Aufklappen erlauben: Erlaubt Aufklappen des Layers im Ebenenbaum
-* Aufklappen an: Klappt Layer beim Start der Anwendung auf
-* Weitere Informationen (Drei-Punkte-Button): Öffnet einen Dialog mit weiteren Layer-Informationen
-    * ID: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <de/elements/basic/map:Ebenen aktivieren>`.
-    * Name: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
-    * Style: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil (default) wählen.
+* **Titel**: Layertitel, wie er im Ebenenbaum angezeigt wird. Als Standard wird der Titel aus dem getCapabilities-Request genutzt.
+* **Min./Max. Maßstab**: Maßstabsbereich, in dem der Layer angezeigt wird (z.B.: 1:100 - 1:1000)
+* **aktiv**: aktiviert/deaktiviert einen Layer, sodass bei Deaktivierung in der Hierarchie untergeordnete ignoriert werden
+* **Ausgewählt erlauben**: Layer wird angezeigt und ist auswählbar im Ebenenbaum
+* **Ausgewählt an**: Layer ist bei Anwendungsstart aktiv
+* **Info erlauben**: Infoabfrage wird für diesen Layer zugelassen
+* **Info an**: Layer-Infoabfrage wird beim Start aktiviert
+* **Aufklappen erlauben**: Erlaubt Aufklappen des Layers im Ebenenbaum
+* **Aufklappen an**: Klappt Layer beim Start der Anwendung auf
+* **Weitere Informationen** (Drei-Punkte-Button): Öffnet einen Dialog mit weiteren Layer-Informationen
+    * **ID**: ID des Layers. Nützlich etwa, um URL-Parameter :ref:`zu kontrollieren <de/elements/basic/map:Ebenen aktivieren>`.
+    * **Name**: Layername der Service Information (wird beim getMap-Request verwendet und ist nicht veränderbar)
+    * **Style**: Wenn ein WMS mehr als einen Stil anbietet, können Sie einen anderen Stil als den Standard-Stil (default) wählen.
 
 
 5. Benutzer- und Gruppenverwaltung
 ==================================
 
-Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. Nur öffentliche Anwendungen können von allen genutzt werden. Benutzer oder Gruppen können Berechtigungen zugewiesen werden, um auf eine oder mehrere Anwendungen, Dienste und mehr zuzugreifen.
+Der Zugriff auf eine Anwendung benötigt eine entsprechende Authentifizierung. Nur öffentliche Anwendungen können von allen genutzt werden. Benutzern oder Gruppen können Berechtigungen zugewiesen werden, um auf eine oder mehrere Anwendungen, Dienste oder mehr zuzugreifen.
 
 
 Benutzer anlegen
 ----------------
 
-#. Um einen Benutzer anzulegen, gehen Sie zu ``Sicherheit`` → ``Benutzer`` → ``Neuen Benutzer hinzufügen``.
+#. Um einen Benutzer anzulegen, gehen Sie zu **Sicherheit** → **Benutzer** → **Neuen Benutzer hinzufügen**.
 
 #. Wählen Sie einen Benutzernamen.
 
@@ -373,14 +381,14 @@ Benutzer anlegen
 
 #. Wählen Sie ein Passwort für Ihren Benutzer aus und bestätigen Sie unter Passwort wiederholen.
 
-#. Die Checkbox ``aktiviert`` gibt dem erstellten Account Zugriffsrechte auf das Mapbender-:ref:`backend_de`.
+#. Die Checkbox **aktiviert** gibt dem erstellten Account Zugriffsrechte auf das Mapbender-:ref:`backend_de`.
 
 #. Speichern Sie Ihren neuen Benutzer. Sie können alle Informationen auch nachträglich anpassen.
 
   .. image:: ../figures/de/mapbender_create_user.png
    :width: 100%
 
-Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reitern ``Gruppen`` und ``Sicherheit`` können dem Benutzer zusätzliche Parameter, z.B. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
+Weitere Angaben zum Benutzer können im Reiter **Profil** erfolgen. In den Reitern **Gruppen** und **Sicherheit** können dem Benutzer zusätzliche Parameter, z.B. die Zugehörigkeit zu einer Gruppe, zugewiesen werden.
 
   .. image:: ../figures/de/mapbender_assign_user_to_group.png
    :width: 100%
@@ -389,11 +397,11 @@ Weitere Angaben zum Benutzer können im Reiter ``Profil`` erfolgen. In den Reite
 Gruppen anlegen
 ---------------
 
-#. Erzeugen Sie eine Gruppe über  ``Sicherheit`` → ``Gruppen`` → ``Neue Gruppe hinzufügen``.
+#. Erzeugen Sie eine Gruppe über  **Sicherheit** → **Gruppen** → **Neue Gruppe hinzufügen**.
 
 #. Wählen Sie einen Namen und eine Beschreibung für Ihre Gruppe.
 
-#. Weisen Sie der Gruppe über den Reiter ``Benutzer`` entsprechende Benutzer zu.
+#. Weisen Sie der Gruppe über den Reiter **Benutzer** entsprechende Benutzer zu.
 
 #. Speichern Sie Ihre neue Gruppe.
 
@@ -408,17 +416,17 @@ Mapbender bietet eine einfach zu bedienende Rechteverwaltung an, die im Backend 
 * **Bearbeiten**:	Anklicken, damit ein Benutzer die Berechtigung hat, Objekte bearbeiten zu können.
 * **Löschen**: Anklicken, damit ein Benutzer die Berechtigung hat, Objekte löschen zu können.
 
-.. important:: Weisen Sie einem Benutzer globale Berechtigungen über ``Sicherheit`` → ``Globale Berechtigungen`` zu.
+.. hint:: Weisen Sie einem Benutzer globale Berechtigungen über **Sicherheit** → ``Globale Berechtigungen`` zu.
 
 
 Zuweisen einer einzelnen Anwendung zu einem Benutzer/einer Gruppe
 -----------------------------------------------------------------
 
-#. Bearbeiten Sie Ihre Anwendung über *Anwendungen* → |mapbender-button-edit| *Bearbeiten* einer Anwendung.
+#. Bearbeiten Sie Ihre Anwendung über **Anwendungen** → |mapbender-button-edit|.
 
-#. Wählen Sie ``Sicherheit``.
+#. Wählen Sie **Sicherheit**.
 
-#. Veröffentlichen Sie Ihre Anwendung über die Auswahl des Benutzers *Öffentlicher Zugriff*. Alternativ wählen Sie |mapbender-button-publish| *Öffentlichen Zugriff umschalten* in der Anwendungsübersicht. Ist diese Einstellung aktiviert, haben auch nicht angemeldete Nutzer einen Zugriff auf die Anwendung.
+#. Veröffentlichen Sie Ihre Anwendung über die Auswahl des Benutzers **Öffentlicher Zugriff**. Alternativ wählen Sie |mapbender-button-publish| **Öffentlichen Zugriff umschalten** in der Anwendungsübersicht. Ist diese Einstellung aktiviert, haben auch nicht angemeldete Nutzer einen Zugriff auf die Anwendung.
 
 #. Alternativ zum öffentlichen Zugriff können Sie individuelle Zugriffsrechte für einen Benutzer oder eine Gruppe setzen:
 
@@ -426,7 +434,7 @@ Zuweisen einer einzelnen Anwendung zu einem Benutzer/einer Gruppe
      :width: 100%
 
 
-Testen Sie die Konfiguration. Melden Sie sich oben rechts über *Abmelden* ab und melden sich unter einer neuen Benutzerbezeichnung an.
+Testen Sie die Konfiguration. Melden Sie sich oben rechts über **Abmelden** ab und melden sich unter einer neuen Benutzerbezeichnung an.
 
 
 Zuweisen einzelner Elemente zu Benutzern/Gruppen
@@ -434,15 +442,15 @@ Zuweisen einzelner Elemente zu Benutzern/Gruppen
 
 Standardmäßig stehen alle Elemente den Benutzern/Gruppen zur Verfügung, die Zugriff auf eine Anwendung haben. Der Zugriff kann darüber hinaus für einzelne Elemente noch genauer definiert werden, sodass diese nur bestimmten Benutzern/Gruppen zur Verfügung stehen.
 
-#. Bearbeiten Sie Ihre Anwendung über ``Anwendungen`` → |mapbender-button-edit| *Bearbeiten* einer Anwendung.
+#. Bearbeiten Sie Ihre Anwendung über **Anwendungen** → |mapbender-button-edit|.
 
 #. Wählen Sie :ref:`de/backend/applications/layouts:Layouts`.
 
-#. Jedes Element kann über |mapbender-button-key| *Zugriff auf das Element einschränken* eingeschränkt werden.
+#. Jedes Element kann über |mapbender-button-key| **Zugriff auf das Element einschränken** eingeschränkt werden.
 
-#. Wählen Sie |mapbender-button-key| *Zugriff auf das Element einschränken* zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
+#. Wählen Sie |mapbender-button-key| **Zugriff auf das Element einschränken** zu dem Element, das nur ausgewählten Benutzern/Gruppen zur Verfügung stehen soll.
 
-#. Weisen Sie dem Element Benutzern/Gruppen zu. Dadurch erhalten diese die Berechtigung *Anzeige* und können das Element in der Anwendung sehen.
+#. Weisen Sie dem Element Benutzern/Gruppen zu. Dadurch erhalten diese die Berechtigung **Anzeige** und können das Element in der Anwendung sehen.
 
 #. Testen Sie die Konfiguration.
 
@@ -454,9 +462,9 @@ Sie können eine Anwendung beim Start positionieren. Dies kann über einen Punkt
 
 Sie können dabei einen oder mehrere Punkte (POIs) in der URL übergeben. Jeder Punkt verfügt dabei über die folgenden Parameter:
 
-- Punkt (point): Koordinatenpaar, die Werte werden mit Komma getrennt (zwingend)
-- Beschriftung (label): Beschriftung, die angezeigt werden soll (optional)
-- Maßstab (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional, Angabe ist nur bei der Anzeige eines Punktes sinnvoll)
+- **Punkt** (point): Koordinatenpaar, die Werte werden mit Komma getrennt (zwingend)
+- **Beschriftung** (label): Beschriftung, die angezeigt werden soll (optional)
+- **Maßstab** (scale): Maßstab, in dem der Punkt angezeigt werden soll (optional, Angabe ist nur bei der Anzeige eines Punktes sinnvoll)
 
 Wenn Sie mehr als einen Punkt im Aufruf übergeben, zoomt die Karte auf 150% der POI-Boundingbox.
 
@@ -468,10 +476,8 @@ Format für die Übergabe eines einzelnen Punktes:
 Was kommt als Nächstes?
 =======================
 
-Dies waren nur die ersten Schritte mit Mapbender. Es gibt viele weitere Funktionen, die Sie ausprobieren können.
+Dies waren nur die ersten Schritte auf dem Weg zur Nutzung von Mapbender. Es gibt noch eine Menge mehr zu entdecken:
 
-Mapbender Webseite: https://mapbender.org/
-
-Sie finden Tutorials unter: https://doc.mapbender.org
-
-Beteiligen Sie sich: https://mapbender.org/community/
+* Besuchen Sie die offizielle `Mapbender-Website <https://mapbender.org/>`_,
+* Finden Sie schnelle Antworten auf die wichtigsten Mapbender-bezogenen Fragen in der :ref:`faq_de`,
+* Werden Sie Mitglied der `Mapbender-Community <https://mapbender.org/community/>`_.

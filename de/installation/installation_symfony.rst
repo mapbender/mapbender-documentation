@@ -12,8 +12,8 @@ Der Aufruf von Mapbender im lokalen Symfony Webserver ermöglicht eine schnelle 
 In dieser Anleitung wird die im Installationspaket mitgelieferte SQLite-Datenbank verwendet.
 
 * Bitte prüfen Sie die Systemvoraussetzungen unter :ref:`Linux <installation_ubuntu_de>` bzw. :ref:`Windows <installation_windows_de>`.
-* Laden Sie die aktuellen Mapbender-Version herunter https://mapbender.org/builds/.
-* Entpacken in ein beliebiges Verzeichnis.
+* Laden Sie den aktuellen `Mapbender-Build <https://mapbender.org/builds/>` herunter.
+* Entpacken in die Dateien ein beliebiges Verzeichnis.
 * Starten Sie den installierten lokalen Symfony Webserver.
 
 .. code-block:: bash
@@ -23,7 +23,7 @@ In dieser Anleitung wird die im Installationspaket mitgelieferte SQLite-Datenban
 
 Der Befehl führt einen lokalen Webserver aus, sodass Mapbender nun auf dem lokalen Rechner erreichbar ist und die Konsole den Status des Servers mitprotokolliert.
 
-.. note:: Beachten Sie, dass über diesen Aufruf die Anwendungsumgebung (`prod` oder `dev`) definiert werden kann:
+.. note:: Beachten Sie, dass über diesen Aufruf die Anwendungsumgebung (``prod`` oder ``dev``) definiert werden kann:
 
 .. code-block:: bash
 

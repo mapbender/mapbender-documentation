@@ -3,8 +3,8 @@
  .. |mapbender-button-add| image:: ../../../figures/mapbender_button_add.png
  .. |mapbender-button-edit| image:: ../../../figures/mapbender_button_edit.png
 
-Sicherheit (FOM UserBundle)
-===========================
+Sicherheit
+==========
 
 Die Absicherung von Domain-Objekten ist in Mapbender über ein Berechtigungssystem implementiert.
 Es erlaubt globale Berechtigungen auf Bereiche und individuelle Berechtigungen auf Objekte.
@@ -19,7 +19,7 @@ Eine flexible Rechtezuweisung ist in diesen Bereichen möglich:
    roles_groups
 
 
-.. important:: Globale Berechtigungen für einen Bereich weisen Sie über ``Sicherheit`` → ``Globale Berechtigungen`` zu.
+.. hint:: Globale Berechtigungen für einen Bereich weisen Sie über ``Sicherheit`` → ``Globale Berechtigungen`` zu.
 
 
 Rechteverwaltung

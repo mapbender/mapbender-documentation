@@ -3,7 +3,7 @@
 YAML Konfiguration (Konfigurations- und Anwendungsdateien)
 ==========================================================
 
-Die folgenden Konfigurationsdateien liegen unter `application/config` und dessen Unterverzeichnissen:
+Die folgenden Konfigurationsdateien liegen unter `config/` und dessen Unterverzeichnissen:
 
 
 doctrine.yaml
@@ -11,7 +11,7 @@ doctrine.yaml
 
 Diese Datei enthält grundlegende Architektur-Vorgaben von Mapbender. Gleichzeitig sind hier die Parameter für die `parameters.yaml` als Platzhalter definiert. Des Weiteren legt die Datei fest, welche Konfigurationen für den produktiven Modus und den Entwicklungsmodus verwendet werden sollen.
 
-* **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie den fom_user.selfregistration Parameter an.   Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
+* **fom_user.selfregistration**: Um die Selbstregistrierung zu de/aktivieren, passen Sie diesen Parameter an. Sie müssen unter self_registration_groups eine/mehrere Gruppen angeben, so dass selbstregistriere Anwender automatisch (bei der Registrierung) diesen Gruppen zugewiesen werden. Über die Gruppe bekommen Sie dann entsprechend Rechte zugewiesen.
 * **fom_user.reset_password**: Über diesen Parameter kann die Möglichkeit de/aktiviert werden, das Passwort neu zu setzen.
 * **framework.session.cookie_httponly**: Stellen Sie für HTTP-only session cookies sicher, dass der Parameter framework.session.cookie_httponly auf true steht.
 
@@ -37,6 +37,7 @@ Zur Konfiguration der Datenbankverbindung erfolgt in den Dateien ``.env.local`` 
                 logging:   "%kernel.debug%"                 # Die Option sorgt dafür, das alle SQLs nicht mehr geloggt werden (Standard: %kernel.debug%). `Mehr Informationen <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
                 profiling: "%kernel.debug%"                 # Profiling von SQL Anfragen. Diese Option kann in der Produktion ausgeschaltet werden. (Standard: %kernel.debug%)
                 #server_version: '15'                       # Wichtig: Sie MÜSSEN die Serverversion konfigurieren, entweder hier oder in der DATABASE_URL Umgebungsvariable (siehe .env-Datei).
+
 
 **Verwendung mehrerer Datenbanken**
 
@@ -228,7 +229,7 @@ Der Projektname (Standard: Mapbender) kann in der Datei `parameters.yaml` angepa
     branding.project_name: Geoportal
 
 
-**Wichtiger Hinweis:** In der `parameters.yaml` dürfen **keine Tabulatoren für Einrückungen** verwendet werden.
+.. warning:: In der `parameters.yaml` dürfen **keine Tabulatoren für Einrückungen** verwendet werden. Nutzen Sie stattdessen Leerzeichen.
 
 
 Proxy-Einstellungen
@@ -315,9 +316,13 @@ Um genannte Ressourcen manuell zu überschreiben, können Sie als Alternative :r
 YAML Anwendungsdateien
 ----------------------
 
-Als YAML definierte Anwendungen können in dem Verzeichnis **application/config/applications** abgelegt werden. Die bekannten Beispielanwendungen “**Mapbender mobile**”, “**Mapbender Demo Map**” und “**Mapbender Demo Map basic**” liegen dort als einzelne YAML Dateien.
+Als YAML definierte Anwendungen werden im Verzeichnis `applications/` abgelegt. Dort liegen nach jeder Installation bereits drei Beispielanwendungen als YAML Dateien:
 
-Sollen die drei Beispielanwendungen nicht im Mapbender sichtbar sein, so kann unter **application/config/applications** die einzelne Anwendung ausgewählt und deren Variable "published" auf "false" gesetzt werden.
+- Mapbender Demo (*mapbender_user*)
+- Mapbender Demo Basic (*mapbender_user_basic*)
+- Mapbender Mobile Demo (*mapbender_mobile*)
+
+Falls eine Beispielanwendung nicht im Mapbender sichtbar sein soll, kann sie mit einem Texteditor geöffnet und die Variable ``published`` wie folgt angepasst werden:
 
 .. code-block:: yaml
 
@@ -327,9 +332,15 @@ Sollen die drei Beispielanwendungen nicht im Mapbender sichtbar sein, so kann un
 				[...]
 				published: false
 
-Nun sind die Anwendungen für Benutzer (außer dem root user) nicht sichtbar.
 
-Weitere YAML basierende Anwendungen können einfach in dieses Verzeichnis abgelegt werden und werden automatisch von Mapbender erkannt.
+Löschen Sie anschließend den :ref:`Mapbender-Cache<de/customization/commands:Cache löschen>` und Ihren Browser-Cache. Danach ist die Anwendung für Benutzer nicht mehr sichtbar.
+
+.. hint:: Der Root-Benutzer sieht immer alle unveröffentlichten Anwendungen.
+
+
+Sie können außerdem die Anwendungsdateien aus dem Verzeichnis ``applications`` entfernen, um Sie aus der Mapbender-Instanz zu entfernen. Wiederholen Sie anschließend das Löschen der Caches.
+
+Auf die gleiche Weise können auch neue YAML-basierte Anwendungen in dieses Verzeichnis abgelegt werden, um sie der Mapbender-Instanz hinzuzufügen.
 
 
 Mapbender Demo Map
@@ -397,8 +408,8 @@ Bitte gehen Sie zu :ref:`de/customization/commands:Anwendungs-Export, Import und
 **Export über die Konsole**
 
 Anwendungen können als .json oder .yaml - Datei über die Konsole exportiert werden.
-Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter application/config/application abgelegt und somit als Anwendung in Mapbender eingefügt werden.
-Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter application/config/application.
+Jedoch kann eine YAML-Datei, die über die Konsole exportiert wurde, nicht unter `applications/` abgelegt und somit als Anwendung in Mapbender eingefügt werden.
+Das YAML-Format einer Datei, die über die Konsole exportiert wurde, unterscheidet sich von dem YAML-Format der Dateien unter `applications/`.
 
 **Import über die Konsole**
 

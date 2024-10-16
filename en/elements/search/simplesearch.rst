@@ -48,6 +48,23 @@ Configuration
 * **Result icon offset:**  Offset x and y for the icon (e.g. ``0,0``).
 
 
+Duplicate a search configuration
+--------------------------------
+
+The element can handle multiple search configurations. It is possible to duplicate a search form in the backend configuration window with the Copy button:
+
+.. image:: ../../../figures/simplesearch_duplication.png
+     :scale: 70
+
+
+Use drag and drop to sort the different search configurations for the application list.
+
+There, they are selectable via a dropdown menu next to the search bar:
+
+.. image:: ../../../figures/simplesearch_dropdown.png
+     :scale: 100
+
+
 Flexible configuration via label_attribute
 ------------------------------------------
 

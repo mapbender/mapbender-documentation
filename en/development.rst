@@ -10,4 +10,3 @@ Development
    development/controllers.rst
    development/elements.rst
    development/element_generate.rst
-   documentation_howto.rst

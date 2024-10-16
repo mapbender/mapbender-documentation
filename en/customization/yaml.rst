@@ -3,13 +3,13 @@
 YAML Configuration (Configuration and Application files)
 ========================================================
 
-The following configuration files are under `application/config` and its subfolders.
+The following configuration files are under the `config/` folder and its subfolders.
 
 
 doctrine.yaml
 -------------
 
-* **fom_user.selfregistration**: To enable or disable self-registration of users, change the fom_user.selfregistration parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
+* **fom_user.selfregistration**: To enable or disable self-registration of users, change this parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
 * **fom_user.reset_password**: In the same way the possibility to reset passwords can be enabled or disabled.
 * **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
 
@@ -264,7 +264,7 @@ The name of the project (default: Mapbender) can be changed in `parameters.yaml`
     branding.project_name: Geoportal
 
 
-**Important note:** In `parameters.yaml` **tabulators may not be used for indentation** instead you need to use space.
+.. warning:: In *parameters.yaml*, tabulators may not be used for indentation. Instead, you need to use the space bar.
 
 
 Proxy settings
@@ -311,10 +311,13 @@ To manually override JavaScript and CSS/Sass resources, and as an alternative to
 YAML Application files
 -----------------------
 
-YAML application files are stored under **application/config/applications**.
-“**Mapbender mobile**”, “**Mapbender Demo Map**” and “**Mapbender Demo Map basic**” are pre-implemented as example applications.
+YAML application files are stored under `applications/` (underneath `config/`!). There are three files pre-implemented as example applications:
 
-If you do not want the three example applications to be visible, you can change the variable 'published' to 'false'.
+- Mapbender Demo (*mapbender_user*)
+- Mapbender Demo Basic (*mapbender_user_basic*)
+- Mapbender Mobile Demo (*mapbender_mobile*)
+
+If you do not want the three example applications to be visible, you can adjust the ``published`` variable as follows.
 
 .. code-block:: yaml
 
@@ -324,9 +327,15 @@ If you do not want the three example applications to be visible, you can change 
 				[...]
 				published: false
 
-Now the applications will not be visible for users (except for root user).
 
-New YAML applications can be placed in the folder and will be automatically recognized by Mapbender.
+Then, clear the :ref:`Mapbender cache<en/customization/commands:Clear cache>` and your browser cache. After that, the applications will not be visible for users.
+
+.. hint:: The root user can always see unpublished applications.
+
+
+It is also possible to remove the applications from the ``applications`` folder. Repeat the cache clearing process afterwards.
+
+In the same way, new YAML applications can be placed in the folder and will be automatically recognized by Mapbender.
 
 
 Mapbender Demo Map
@@ -394,8 +403,8 @@ Please go to :ref:`en/customization/commands:Application Export, Import & Clonin
 
 Applications can be exported as .json or .yaml file over the console.
 
-A YAML file that has been exported over the console cannot be placed under application/config/application to be imported in a Mapbender installation.
-The YAML format that is produced by exporting over the console is different from the YAML format of the files under application/config/application.
+A YAML file that has been exported over the console cannot be placed under `applications/` to be imported in a Mapbender installation.
+The YAML format that is produced by exporting over the console is different from the YAML format of the files under `applications/`.
 
 
 **Import**

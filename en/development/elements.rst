@@ -3,7 +3,7 @@
 Understanding Elements
 ######################
 
-*Note*: This guide is deprecated. Please check the `Contributing Guite in our Git-Repository <https://github.com/mapbender/mapbender-starter/blob/master/CONTRIBUTING.md#elements>`_ instead.
+.. warning:: The development section of the documentation is partly deprecated, please read with caution. An updated technical documentation for developers is integrated into the Mapbender source code. It can be read directly on `GitHub <https://github.com/mapbender/mapbender/tree/master/docs>`_. 
 
 
 Parts of an Elements
