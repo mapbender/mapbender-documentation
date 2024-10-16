@@ -147,12 +147,20 @@ Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den g
 
 Weitere Informationen zur Einrichtung von Datenbankverbindungen finden sich im Kapitel :ref:`yaml_de`.
 
-Öffnen Sie nun die Eingabeaufforderung. Zur Initialisierung der Datenbank geben Sie bitte folgende Befehle ein:
+Öffnen Sie nun die Eingabeaufforderung. 
+
+Zur Erzeugung der Datenbank geben Sie bitte folgende Befehl ein (nur wenn die Datenbank nicht bereits vorliegt):
 
 .. code-block:: text
  
     cd c:\mapbender
     php.exe bin/console doctrine:database:create
+
+Einrichtung der Mapbender Tabellenstruktur und laden der Demo-Anwendungen:
+
+.. code-block:: text
+ 
+    cd c:\mapbender
     php.exe bin/console doctrine:schema:create
     php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
