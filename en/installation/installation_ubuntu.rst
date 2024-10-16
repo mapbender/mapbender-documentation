@@ -138,7 +138,7 @@ Installation PHP-PostgreSQL driver
 
 .. code-block:: bash
 
-   sudo apt install php-pgsql
+   sudo apt install php-pgsql php_pdo_pgsql
 
 Configuration of database connection is done by a variable that contains the entire connection string. Configure it by adding it in your *.env.local* file.
 
