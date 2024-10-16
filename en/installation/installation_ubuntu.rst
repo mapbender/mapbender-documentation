@@ -130,9 +130,9 @@ Mapbender installation with PostgreSQL
 Configuration of PostgreSQL database for productive use:
 
 Requirements:
-- configured PostgreSQL database
-- database for Mapbender configuration
-- PostgreSQl database user to access the database with *create database* right
+
+* Installation of PostgreSQL
+* PostgreSQl database user to access the database (optional) 
 
 Installation PHP-PostgreSQL driver
 
@@ -144,16 +144,23 @@ Configuration of database connection is done by a variable that contains the ent
 
 .. code-block:: yaml
 
-    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=17&charset=utf8"
 
 For further information: :ref:`yaml`.
 
-Initialisation of the database connection:
+Create Mapbender database if it does not exist already:
+
+.. code-block:: bash
+
+    cd /var/www/mapbender
+    bin/console doctrine:database:create 
+
+
+Create mapbender table structure and load example applications
 
 .. code-block:: bash
 
  cd /var/www/mapbender
- bin/console doctrine:database:create
  bin/console doctrine:schema:create
  bin/console mapbender:database:init -v
  bin/composer run reimport-example-apps
