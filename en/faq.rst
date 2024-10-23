@@ -61,9 +61,10 @@ If you prefer SQL, you can also take the WMS ID from the Source, replace the ``<
 QGIS2Mapbender plugin
 ~~~~~~~~~~~~~~~~~~~~~
 
-Q: Is there a way to set up my QGIS project as a Mapbender project?
+Q: Is there a way to publish my QGIS project directly from QGIS as a QGIS Server project and in Mapbender?
 
-A: Yes, there is! For more information please visit the `Blog <https://wheregroup.com/blog/details/mapbender-anwendungen-einfach-direkt-aus-qgis-heraus-erstellen/>`_ (german) or take a look at the `GitHub’s <https://github.com/WhereGroup/QGIS2Mapbender>`_ README.
+A: Yes, there is! From Mapbender version 4.0 you can use the QGIS2Mapbender plugin. It transfers QGIS projects to your server and makes them available as WMS. You can also load your project directly into an application in Mapbender.
+Take a look at the blog post `Mapbender-Anwendungen einfach direkt aus QGIS heraus erstellen <https://wheregroup.com/blog/details/mapbender-anwendungen-einfach-direkt-aus-qgis-heraus-erstellen/>`_ . You can find the plugin on `GitHub <https://github.com/WhereGroup/QGIS2Mapbender>`_ .
 
 
 Performance
