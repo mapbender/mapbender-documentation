@@ -11,8 +11,8 @@ Dieses Element stellt ein Button-Modul bereit, über das eine Webseite oder ein 
 Konfiguration
 =============
 
-.. image:: ../../../figures/de/link_configuration.png
-     :scale: 70
+.. image:: ../../../figures/de/link.png
+     :scale: 92
 
 * **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
 * **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, falls die Checkbox "Beschriftung anzeigen" aktiviert ist.
@@ -59,7 +59,6 @@ Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole a
 
 .. image:: ../../../figures/de/link_configuration.png
      :scale: 70
-
 
 YAML-Definition
 ---------------
