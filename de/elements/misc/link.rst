@@ -11,8 +11,8 @@ Dieses Element stellt ein Button-Modul bereit, über das eine Webseite oder ein 
 Konfiguration
 =============
 
-.. image:: ../../../figures/de/link_configuration.png
-     :scale: 70
+.. image:: ../../../figures/de/link.png
+     :scale: 92
 
 * **Beschriftung anzeigen:** Schaltet die Beschriftung des Buttons an/aus (Standard: an).
 * **Titel:** Titel des Elements. Dieser wird in der Layouts Liste angezeigt und ermöglicht, mehrere Button-Elemente voneinander zu unterscheiden. Der Titel wird außerdem neben dem Button angezeigt, falls die Checkbox "Beschriftung anzeigen" aktiviert ist.
@@ -56,9 +56,6 @@ Nach Auswahl des Elementes "Link" öffnet sich der Dialog "Element hinzufügen �
 Im Feld *Title* definieren Sie den Text, der rechts neben dem Button angezeigt werden soll. 
 Hierzu muss *Beschriftung anzeigen* aktiviert sein. Sie können im Feld "Tooltip" einen Text definieren, der erscheinen soll, wenn die Maus über den Button fährt. 
 Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole ausgewählen.
-
-.. image:: ../../../figures/de/link.png
-     :scale: 92
 
 .. image:: ../../../figures/de/link_configuration.png
      :scale: 70

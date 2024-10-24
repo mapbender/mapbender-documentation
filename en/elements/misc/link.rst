@@ -11,8 +11,8 @@ The link element provides a button widget that refers a defined link like a webs
 Configuration
 =============
 
-.. image:: ../../../figures/link_configuration.png
-     :scale: 70
+.. image:: ../../../figures/link.png
+     :scale: 92
 
 * **Show label:** Enables or disables text (title) next to the button (default: true).
 * **Title:** Title of the element. The title will be listed in :ref:`layouts` and allows to distinguish between different buttons. It will be indicated if "Show label" is activated.
@@ -58,10 +58,6 @@ After the selection of the link element, the "Add element - Link" dialog box ope
 You can set the name of the link button in the field *Title*. This title will be displayed as label next to the icon if *Show label* is active. 
 
 In the field *Tooltip*, you can define a text that will be displaced as tooltip during hovering over the button. You can choose from a variety of icons to set the icon for your link button.
-
-.. image:: ../../../figures/link.png
-     :scale: 92
-
 
 .. image:: ../../../figures/link_configuration.png
      :scale: 70
