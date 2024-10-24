@@ -62,6 +62,8 @@ In the field *Tooltip*, you can define a text that will be displaced as tooltip 
 .. image:: ../../../figures/link_configuration.png
      :scale: 70
 
+.. image:: ../../../figures/link_configuration_example.png
+     :scale: 92
 
 YAML-Definition
 ---------------

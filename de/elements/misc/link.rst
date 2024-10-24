@@ -60,6 +60,8 @@ Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole a
 .. image:: ../../../figures/de/link_configuration.png
      :scale: 70
 
+.. image:: ../../../figures/de/link_configuration_example.png
+     :scale: 92
 
 YAML-Definition
 ---------------
