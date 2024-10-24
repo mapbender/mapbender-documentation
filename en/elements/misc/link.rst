@@ -59,11 +59,12 @@ You can set the name of the link button in the field *Title*. This title will be
 
 In the field *Tooltip*, you can define a text that will be displaced as tooltip during hovering over the button. You can choose from a variety of icons to set the icon for your link button.
 
+.. image:: ../../../figures/link.png
+     :scale: 92
+
+
 .. image:: ../../../figures/link_configuration.png
      :scale: 70
-
-.. image:: ../../../figures/link_configuration_example.png
-     :scale: 92
 
 YAML-Definition
 ---------------

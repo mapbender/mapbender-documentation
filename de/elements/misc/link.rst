@@ -57,11 +57,11 @@ Im Feld *Title* definieren Sie den Text, der rechts neben dem Button angezeigt w
 Hierzu muss *Beschriftung anzeigen* aktiviert sein. Sie können im Feld "Tooltip" einen Text definieren, der erscheinen soll, wenn die Maus über den Button fährt. 
 Unter *Icon* können Sie über die Auswahl einen der möglichen Button-Symbole ausgewählen.
 
+.. image:: ../../../figures/de/link.png
+     :scale: 92
+
 .. image:: ../../../figures/de/link_configuration.png
      :scale: 70
-
-.. image:: ../../../figures/de/link_configuration_example.png
-     :scale: 92
 
 YAML-Definition
 ---------------
