@@ -5,7 +5,7 @@ Karte (Map)
 Die Karte ist das zentrale Element einer Anwendung. Sie basiert auf OpenLayers und wird als Element in den Kartenbereich im :ref:`backend_de` integriert.
 
 .. image:: ../../../figures/de/map.png
-     :width: 75%
+     :scale: 90
 
 Konfiguration
 =============

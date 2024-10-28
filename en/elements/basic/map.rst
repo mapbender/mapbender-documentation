@@ -5,7 +5,7 @@ Map
 The map is the central element of a Mapbender application. It is based on OpenLayers and has be integrated into the Map area of the :ref:`backend`.
 
 .. image:: ../../../figures/map.png
-     :width: 75%
+     :scale: 90
 
 Configuration
 =============
