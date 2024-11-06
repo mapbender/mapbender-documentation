@@ -22,9 +22,8 @@ Configuration
 * **Enable Search:** Configuration to deactivate/activate the search option (default: false).
 * **Reverse Geocoding:** 
 * **Zoom buffer (m):** Definition of a zoom buffer for the result display in meters (default: 0).
-* **Line color:** Option to adjust the line color (default: #4286F4).
+* **Line color:** Option to adjust the line color and opacity with the rgba standard (default: rgba(66, 134, 244, 1)).
 * **Line width:** Option to adjust the line width (default: 3).
-* **Line opacity:** Adjust the line opacity via a slider (default: max).
 * **Route info text:** Option to add an info text for the rout (default: {start} → {destination} </br> {length} will take {time}).
 * **Time output format:** Adjust the time format (default: ms).
 
@@ -61,14 +60,14 @@ Configuration
 * **Search format:** Set the search format (in this example the SimpleSearch format is: %s). 
 * **Tokenizer split/search/replace:** Set RegexFormat-split pattern/search pattern/replacement parameter (default: false).
 * **Collection path:** Set the attribute path that is extracted from the query result (default: response.docs).
-* **Label attribute:**
-* **Geom attribute:**
+* **Label attribute:** Name of the attribute's to show as result.
+* **Geom attribute:** Name of the geometry data attribute (e.g. geom).
 * **Projection Geom:**
-* **Geom format:**
+* **Geom format:** Geometry data format, can be WKT or GeoJSON (e.g. WKT).
 * **Zoom buffer (m):**
 * **Zoom buffer min./max.:**
 * **Icon pfad:**
-* **Icon offset (x,y):**
+* **Icon offset (x,y):** Offset x and y for the icon (e.g. 0, 0).
 
 
 

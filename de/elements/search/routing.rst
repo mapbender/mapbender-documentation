@@ -22,9 +22,8 @@ Konfiguration
 * **Suche aktivieren:** Konfiguration zum Deaktivieren/Aktivieren der Suchoption (Standard: false).
 * **Geokodierung aktivieren:** Konfiguration zum Deaktivieren/Aktivieren der Geokodierung (Standard: false).
 * **Zoompuffer(m):** Definition eines Zoompuffers für die Ergebnisanzeige in Meter (Standard: 0).
-* **Linienfarbe:** Anpassen der Lineinfarbe (Standard: #4286F4).
+* **Linienfarbe:** Anpassen der Lineinfarbe und Deckkraft per rgba Standard (Standard: rgba(66, 134, 244, 1)).
 * **Linienbreite:** Anpassen der Linienbreite (Standard: 3).
-* **Liniendeckkraft:** Anpassen der Liniendeckkraft per Schieberegler (Standard: max).
 * **Infotext zur Route:** Option einen Infotext zur Route zu implementieren (Standard: {start} → {destination} </br> {length} will take {time}).
 * **Zeitformat:** Anpassen des Zeitformats (Standard: ms).
 
@@ -61,14 +60,14 @@ Konfiguration
 * **Suchformat:** Setzen des Such-Formats (Im diesem SimpleSearch Format Beispiel: %s).
 * **Tokenizer spaltet/sucht/ersetzt:** Setzen von RegexFormat-Teilungsmuster/-Suchmuster/-Ersetzungsparameter(Standard: false).
 * **Attributspfad:** Setzen des Attributspfads, der vom Abfrageergebnis extrahiert wird (Standard: response.docs).
-* **Attributname:** 
-* **Attributname Geodaten:** 
+* **Attributname:** Attribut oder mehrere Attribute , die als Ergebnis angezeigt werden sollen.
+* **Attributname Geodaten:** Attributname der Geodaten (z.B. geom).
 * **Projektion Geodaten:** 
-* **Geodatenformat:** 
+* **Geodatenformat:** Geodatenformat, kann WKT oder GeoJSON sein (z.B. WKT).
 * **Zoompuffer (m):** 
 * **Zoompuffer min./max.:** 
 * **Symbol-Pfad:** 
-* **Versatz des Symbols (x,y):** 
+* **Versatz des Symbols (x,y):** Versatz x und y des Symbols (z.B. 0, 0).
 
 
 YAML-Definition
