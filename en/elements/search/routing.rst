@@ -12,7 +12,7 @@ Configuration
 =============
 
 
-.. image:: ../../../figures/de/routing_configuration.png
+.. image:: ../../../figures/routing_configuration.png
      :scale: 70
 
 * **Advanced route settings:** Allows you to make further settings.
@@ -27,7 +27,7 @@ Configuration
 * **Route info text:** Option to add an info text for the rout (default: {start} → {destination} </br> {length} will take {time}).
 * **Time output format:** Adjust the time format (default: ms).
 
-.. image:: ../../../figures/de/routing_configuration_icons.png
+.. image:: ../../../figures/routing_configuration_icons.png
      :scale: 70
 
 * **Path start icon:** Customize the start icon (default: /bundles/mapbenderrouting/image/start.png).
@@ -36,7 +36,7 @@ Configuration
 * **Size Icon:** Adjust the size of the different icons.
 * **Offset Icon:** Adjust the offset of the different icons.
 
-.. image:: ../../../figures/de/routing_configuration_service.png
+.. image:: ../../../figures/routing_configuration_service.png
      :scale: 70
 
 * **Routing software:** Select the routing software (OSRM, GraphHopper, PgRouting, Trias).
@@ -46,7 +46,7 @@ Configuration
 * **API-Version:** Determine the version of the API.
 * **Route description:** Select whether there should be a route description or not (default: no).
 
-.. image:: ../../../figures/de/routing_configuration_search.png
+.. image:: ../../../figures/routing_configuration_search.png
      :scale: 100
 
 * **Search software:** Select the search service (currently only Solr).
