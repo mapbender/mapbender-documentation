@@ -44,11 +44,7 @@ Configuration
 * **Services:** Select from various services (route, matrix, round trip, Mapbox Vector Tiles, next, match).
 * **Transportation mode:** Select the routing profiles (car, bicycle, pedestrian). It is also possible to select more than one.
 * **API-Version:** Determine the version of the API.
-* **Alternative Route:**
-* **Route description:** Select the routing description.
-* **Annotations:**
-* **Overview:**
-* **continue Straight:**
+* **Route description:** Select whether there should be a route description or not (default: no).
 
 .. image:: ../../../figures/de/routing_configuration_search.png
      :scale: 100

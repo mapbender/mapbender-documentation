@@ -44,11 +44,7 @@ Konfiguration
 * **Services:** Auswahl aus verschiedenen Services (Route, matrix, Rundreise, Mapbox Vector Tiles, nächste, übereinstimmen).
 * **Transportmodus:** Auswählen der Routing-Profile (Auto, Fahhrad, Füßgänger). Auch die Auswahl mehrerer ist möglich.
 * **API-Version:** Version der API bestimmen.
-* **Alternativ Route:** 
-* **Routingeschreibung:** Auswählen der Routingbeschreibung.
-* **Anmerkungen:** 
-* **Übersicht:**
-* **direkt weitermachen:** 
+* **Wegbeschreibung ausgeben:** Auswählen ob es eine Wegbeschreibung geben soll oder nicht (Standard: false).
 
 .. image:: ../../../figures/de/routing_configuration_search.png
      :scale: 100
