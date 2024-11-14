@@ -47,23 +47,19 @@ Konfiguration
 * **Wegbeschreibung ausgeben:** Auswählen ob es eine Wegbeschreibung geben soll oder nicht (Standard: false).
 
 .. image:: ../../../figures/de/routing_configuration_search.png
-     :scale: 100
+     :scale: 87
 
 * **Suchsoftware:** Auswählen des Such-Dienstes (derzeit nur Solr).
-* **Such-URL:** Setzen der URL-Adresse für die Suchsoftware (Solr).
-* **Suchparameterschlüssel:** Setzen des Suchparameterschlüssels.
-* **Leerzeichenersetzung:** Setzen von Paramteren zum Ersetzung im Such-Therm.
-* **Suchformat:** Setzen des Such-Formats (Im diesem SimpleSearch Format Beispiel: %s).
-* **Tokenizer spaltet/sucht/ersetzt:** Setzen von RegexFormat-Teilungsmuster/-Suchmuster/-Ersetzungsparameter(Standard: false).
-* **Attributspfad:** Setzen des Attributspfads, der vom Abfrageergebnis extrahiert wird (Standard: response.docs).
-* **Attributname:** Attribut oder mehrere Attribute , die als Ergebnis angezeigt werden sollen.
-* **Attributname Geodaten:** Attributname der Geodaten (z.B. geom).
-* **Projektion Geodaten:** 
-* **Geodatenformat:** Geodatenformat, kann WKT oder GeoJSON sein (z.B. WKT).
-* **Zoompuffer (m):** 
-* **Zoompuffer min./max.:** 
-* **Symbol-Pfad:** 
-* **Versatz des Symbols (x,y):** Versatz x und y des Symbols (z.B. 0, 0).
+* **Query URL:** Setzen der URL-Adresse für die Suchsoftware (Solr).
+* **Query URL-Parameter:** Der Suchparameterschlüssel, der angehängt wird (z.B. q).
+* **Query Whitespace Ersetzung:** Setzen von Paramteren zum Ersetzung im Such-Therm.
+* **Query Key Format:** Setzen des Such-Formats (Im diesem SimpleSearch Format Beispiel: %s).
+* **Tokenizer Split/Such/Ersetzungs-Regex:** Setzen von RegexFormat-Teilungsmuster/-Suchmuster/-Ersetzungsparameter(Standard: false).
+* **Pfas zu den Ergebnissen:** Setzen des Pfads, der vom Abfrageergebnis extrahiert wird (Standard: response.docs).
+* **Attribut für Beschriftung:** Attribut oder mehrere Attribute , die als Ergebnis angezeigt werden sollen.
+* **Attributname  für Geometrie:** Attributname der Geometrie (z.B. wgs84).
+* **Geometrieformat:** Geometrieformat, kann WKT oder GeoJSON sein (z.B. WKT).
+* **Quell-SRS:** EPSG-Code des primären Koordinatenbezugsystems (z.B. EPSG:4326).
 
 
 YAML-Definition

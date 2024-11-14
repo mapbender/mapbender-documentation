@@ -47,7 +47,7 @@ Configuration
 * **Route description:** Select whether there should be a route description or not (default: no).
 
 .. image:: ../../../figures/routing_configuration_search.png
-     :scale: 100
+     :scale: 87
 
 * **Search software:** Select the search service (currently only Solr).
 * **Search URL:** Set the URL address for the search software (Solr).
@@ -57,13 +57,9 @@ Configuration
 * **Tokenizer split/search/replace:** Set RegexFormat-split pattern/search pattern/replacement parameter (default: false).
 * **Collection path:** Set the attribute path that is extracted from the query result (default: response.docs).
 * **Label attribute:** Name of the attribute's to show as result.
-* **Geom attribute:** Name of the geometry data attribute (e.g. geom).
-* **Projection Geom:**
+* **Geom attribute:** Name of the geometry attribute (e.g. wgs84).
 * **Geom format:** Geometry data format, can be WKT or GeoJSON (e.g. WKT).
-* **Zoom buffer (m):**
-* **Zoom buffer min./max.:**
-* **Icon pfad:**
-* **Icon offset (x,y):** Offset x and y for the icon (e.g. 0, 0).
+* **Projection Geom:** EPSG code of the spatial reference system(e.g. EPSG:4326).
 
 
 
