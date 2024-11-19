@@ -15,12 +15,12 @@ Configuration
 .. image:: ../../../figures/routing_configuration.png
      :scale: 70
 
-* **Advanced route settings:** Allows you to make further settings.
+* **Advanced route settings:** Allows you to make further settings (default: false).
 * **Title:** Elements Title.
 * **Route immediately:** Configuration to deactivate/activate automatic routing without the users interaction (default: false).
 * **Allow intermediate points:** Configuration for deactivating/activating intermediate points (default: false).
 * **Enable Search:** Configuration to deactivate/activate the search option (default: false).
-* **Reverse Geocoding:** 
+* **Reverse Geocoding:** Configuration to deactivate/activate the Geocoding (default: false).
 * **Zoom buffer (m):** Definition of a zoom buffer for the result display in meters (default: 0).
 * **Line color:** Option to adjust the line color and opacity with the rgba standard (default: rgba(66, 134, 244, 1)).
 * **Line width:** Option to adjust the line width (default: 3).
@@ -31,7 +31,7 @@ Configuration
      :scale: 70
 
 * **Path start icon:** Customize the start icon (default: /bundles/mapbenderrouting/image/start.png).
-* **Path intermediate icon:** Customize the intermediate icon
+* **Path intermediate icon:** Customize the intermediate icon (default: /bundles/mapbenderrouting/image/intermediate.png):
 * **Path destination icon:** Customize the destination icon (default: /bundles/mapbenderrouting/image/destination.png).
 * **Size Icon:** Adjust the size of the different icons.
 * **Offset Icon:** Adjust the offset of the different icons.
@@ -40,26 +40,26 @@ Configuration
      :scale: 70
 
 * **Routing software:** Select the routing software (OSRM, GraphHopper, PgRouting, Trias).
-* **URL:** Set the URL address for the routing software.
-* **Services:** Select from various services (route, matrix, round trip, Mapbox Vector Tiles, next, match).
-* **Transportation mode:** Select the routing profiles (car, bicycle, pedestrian). It is also possible to select more than one.
-* **API-Version:** Determine the version of the API.
+* **URL:** Set the URL address for the routing software (default: https://).
+* **Services:** Select from various services (defaut: Route).
+* **Transportation mode:** Select the routing profiles (car, bicycle, pedestrian). It is also possible to select more than one (default: none).
+* **API-Version:** Determine the version of the API (default: v1).
 * **Route description:** Select whether there should be a route description or not (default: no).
 
 .. image:: ../../../figures/routing_configuration_search.png
      :scale: 87
 
-* **Search software:** Select the search service (currently only Solr).
-* **Search URL:** Set the URL address for the search software (Solr).
-* **Search parameter key:** Set the search parameter key.
+* **Search software:** Select the search service (default: Solr).
+* **Search URL:** Set the URL address for the search software (default: https://).
+* **Search parameter key:** Set the search parameter key (default: q).
 * **Whitespace replacement pattern:**  Set parameters to replace the search term.
-* **Search format:** Set the search format (in this example the SimpleSearch format is: %s). 
+* **Search format:** Set the search format (default: %s). 
 * **Tokenizer split/search/replace:** Set RegexFormat-split pattern/search pattern/replacement parameter (default: false).
 * **Collection path:** Set the attribute path that is extracted from the query result (default: response.docs).
-* **Label attribute:** Name of the attribute's to show as result.
-* **Geom attribute:** Name of the geometry attribute (e.g. wgs84).
-* **Geom format:** Geometry data format, can be WKT or GeoJSON (e.g. WKT).
-* **Projection Geom:** EPSG code of the spatial reference system(e.g. EPSG:4326).
+* **Label attribute:** Name of the attribute's to show as result (default: label).
+* **Geom attribute:** Name of the geometry attribute (default: geom).
+* **Geom format:** Geometry data format, can be WKT or GeoJSON (default. WKT).
+* **Projection Geom:** EPSG code of the spatial reference system(default EPSG:4326).
 
 
 
