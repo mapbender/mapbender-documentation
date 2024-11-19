@@ -50,7 +50,7 @@ Configuration
      :scale: 87
 
 * **Search software:** Select the search service (default: Solr).
-* **Search URL:** Set the URL address for the search software (default: https://).
+* **Search URL:** Set the URL address for the search software.
 * **Search parameter key:** Set the search parameter key (default: q).
 * **Whitespace replacement pattern:**  Set parameters to replace the search term.
 * **Search format:** Set the search format (default: %s). 

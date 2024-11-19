@@ -50,7 +50,7 @@ Konfiguration
      :scale: 87
 
 * **Suchsoftware:** Auswählen des Such-Dienstes (derzeit nur Solr).
-* **Query URL:** Setzen der URL-Adresse für die Suchsoftware (Standard: https://).
+* **Query URL:** Setzen der URL-Adresse für die Suchsoftware.
 * **Query URL-Parameter:** Der Suchparameterschlüssel, der angehängt wird (Standard: q).
 * **Query Whitespace Ersetzung:** Setzen von Paramteren zum Ersetzung im Such-Therm.
 * **Query Key Format:** Setzen des Such-Formats (Standard: %s).
