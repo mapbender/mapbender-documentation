@@ -20,12 +20,10 @@ Konfiguration
 * **Route direkt ausgeben:** Konfiguration zum Deaktivieren/Aktivieren des automatischen Routings ohne Interaktion des Nutzers (Standard: false).
 * **Zwischenpunkte erlauben:** Konfiguration zum Deaktivieren/Aktivieren der Zwischenpunkten (Standard: false).
 * **Suche aktivieren:** Konfiguration zum Deaktivieren/Aktivieren der Suchoption (Standard: false).
-* **Geokodierung aktivieren:** Konfiguration zum Deaktivieren/Aktivieren der Geokodierung (Standard: false).
 * **Zoompuffer(m):** Definition eines Zoompuffers für die Ergebnisanzeige in Meter (Standard: 0).
 * **Linienfarbe:** Anpassen der Lineinfarbe und Deckkraft per rgba Standard (Standard: rgba(66, 134, 244, 1)).
 * **Linienbreite:** Anpassen der Linienbreite (Standard: 3).
 * **Infotext zur Route:** Option einen Infotext zur Route zu implementieren (Standard: {start} → {destination} </br> {length} will take {time}).
-* **Zeitformat:** Anpassen des Zeitformats (Standard: ms).
 
 .. image:: ../../../figures/de/routing_configuration_icons.png
      :scale: 70
@@ -54,10 +52,13 @@ Konfiguration
 * **Query URL-Parameter:** Der Suchparameterschlüssel, der angehängt wird (Standard: q).
 * **Query Whitespace Ersetzung:** Setzen von Paramteren zum Ersetzung im Such-Therm.
 * **Query Key Format:** Setzen des Such-Formats (Standard: %s).
-* **Tokenizer Split/Such/Ersetzungs-Regex:** Setzen von RegexFormat-Teilungsmuster/-Suchmuster/-Ersetzungsparameter(Standard: false).
-* **Pfas zu den Ergebnissen:** Setzen des Pfads, der vom Abfrageergebnis extrahiert wird (Standard: response.docs).
+* **Token Split-/Such-/Ersetzungs-Regex (JavaScript regex):** Tokenizer spaltet/sucht/ersetzt regexp.
+    * **Token Split**, z.B.: ``[^a-zA-Z0-9äöüÄÖÜß]``
+    * **Token Such**, z.B..: ``([a-zA-ZäöüÄÖÜß]{3,})``
+    * **Token Ersetzung**, z.B..: ``$1*``
+* **Pfad zu den Ergebnissen:** Setzen des Pfads, der vom Abfrageergebnis extrahiert wird (Standard: response.docs).
 * **Attribut für Beschriftung:** Attribut oder mehrere Attribute , die als Ergebnis angezeigt werden sollen (Standard: label).
-* **Attributname  für Geometrie:** Attributname der Geometrie (Standard: geom).
+* **Attribut für Geometrie:** Attributname der Geometrie (Standard: geom).
 * **Geometrieformat:** Geometrieformat, kann WKT oder GeoJSON sein (Standard WKT).
 * **Quell-SRS:** EPSG-Code des primären Koordinatenbezugsystems (Standard EPSG:4326).
 

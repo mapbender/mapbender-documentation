@@ -20,12 +20,10 @@ Configuration
 * **Route immediately:** Configuration to deactivate/activate automatic routing without the users interaction (default: false).
 * **Allow intermediate points:** Configuration for deactivating/activating intermediate points (default: false).
 * **Enable Search:** Configuration to deactivate/activate the search option (default: false).
-* **Reverse Geocoding:** Configuration to deactivate/activate the Geocoding (default: false).
 * **Zoom buffer (m):** Definition of a zoom buffer for the result display in meters (default: 0).
 * **Line color:** Option to adjust the line color and opacity with the rgba standard (default: rgba(66, 134, 244, 1)).
 * **Line width:** Option to adjust the line width (default: 3).
 * **Route info text:** Option to add an info text for the rout (default: {start} → {destination} </br> {length} will take {time}).
-* **Time output format:** Adjust the time format (default: ms).
 
 .. image:: ../../../figures/routing_configuration_icons.png
      :scale: 70
@@ -39,7 +37,7 @@ Configuration
 .. image:: ../../../figures/routing_configuration_service.png
      :scale: 70
 
-* **Routing software:** Select the routing software (OSRM, GraphHopper, PgRouting, Trias).
+* **Routing software:** Select the routing software (OSRM).
 * **URL:** Set the URL address for the routing software (default: https://).
 * **Services:** Select from various services (defaut: Route).
 * **Transportation mode:** Select the routing profiles (car, bicycle, pedestrian). It is also possible to select more than one (default: none).
@@ -54,7 +52,10 @@ Configuration
 * **Search parameter key:** Set the search parameter key (default: q).
 * **Whitespace replacement pattern:**  Set parameters to replace the search term.
 * **Search format:** Set the search format (default: %s). 
-* **Tokenizer split/search/replace:** Set RegexFormat-split pattern/search pattern/replacement parameter (default: false).
+* **Token split/search/replace (JavaScript regex):** Tokenizer splits/searches/replaces regexp.
+    * **Token split**, z.B.: ``[^a-zA-Z0-9äöüÄÖÜß]``
+    * **Token search**, z.B..: ``([a-zA-ZäöüÄÖÜß]{3,})``
+    * **Token replace**, z.B..: ``$1*``
 * **Collection path:** Set the attribute path that is extracted from the query result (default: response.docs).
 * **Label attribute:** Name of the attribute's to show as result (default: label).
 * **Geom attribute:** Name of the geometry attribute (default: geom).
