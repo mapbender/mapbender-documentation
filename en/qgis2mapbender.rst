@@ -3,6 +3,6 @@
 QGIS2Mapbender Plugin
 =====================
 
-QGIS plugin to transfer your QGIS Server project on your server and publish your QGIS Server WMS in Mapbender.
+QGIS2Mapbender is a QGIS plugin to transfer your QGIS Server project on your server and publish the QGIS Server WMS in Mapbender.
 
-For more information please visit our `GitHub <https://github.com/WhereGroup/QGIS2Mapbender>`_
+For more information visit `QGIS2Mapbender on GitHub <https://github.com/WhereGroup/QGIS2Mapbender>`_
