@@ -42,7 +42,7 @@ Der Funktionsumfang der eingebauten Features und weitere Funktionen werden nach 
             srid: 4326
         openFormAfterEdit: true
         zoomScaleDenominator: 500
-        allowEditData: true
+        allowEdit: true
         allowDelete: true
         allowDigitize: true
         useContextMenu: true
@@ -359,7 +359,7 @@ Eine Basisdefinition, hier am Beispiel der poi, sieht folgendermaßen aus:
             filter: interests = 'maps'
         openFormAfterEdit: true
         zoomScaleDenominator: 500
-        allowEditData: true
+        allowEdit: true
         allowDelete: true
         allowDigitize: true
         [...]
@@ -380,10 +380,9 @@ Die möglichen Optionen sind:
     * filter: Datenfilter über Werte in einer definierten Spalte, z.B. filter: interests = 'maps'
 * **openFormAfterEdit:** Nach der Erfassung einer Geometrie öffnet sich das Erfassungsformular (Standard: true).
 * **zoomScaleDenominator:** Zoomstufen, die für das Zoomen auf das Objekt gewählt wird (Standard: 100).
-* **allowEditData:** Daten dürfen editiert und gespeichert werden [true/false]. Es erscheint immer eine Speichern Schaltfläche.
-* **allowDigitize:** Daten dürfen gespeichert werden. [true/false]
+* **allowEdit:** Entscheidet, ob Formulardaten editiert und Geometrien gespeichert werden dürfen [true/false]. Ob die Geometrie bearbeitet werden darf, entscheidet allowDigitize.
+* **allowDigitize:** Entscheidet, ob Geometrien editiert werden dürfen, z.B. verschieben der kompletten Geometrie, hinzufügen von Stützpunkten zu Polygonen etc. [true/false]. Falls true, erscheinen die Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.). Hat nur einen Effekt, wenn auch allowEdit auf true gesetzt ist.
 * **allowDelete:** Daten dürfen gelöscht werden. [true/false]. Es erscheint eine Löschen Schaltfläche.
-* **allowDigitize:** Daten dürfen verändert und neu erstellt werden. [true/false]. Es erscheint immer die Digitalisierungs-Schaltflächen (neuer Punkt, verschieben, etc.). Das Speichern ist jedoch nicht möglich.
 * **useContextMenu:** Anzeige des Kontextmenü eines Features durch Rechtsklick auf der Karte. [true/false]
 * **allowCancelButton:** Zeigt die Abbrechen Schaltfläche. [true/false]. Siehe `Speichern, Löschen, Abbrechen <#speichern-loschen-abbrechen>`_.
 * **allowDeleteByCancelNewGeometry:** Wenn auf true gestellt: Beim Neuanlegen eines Features verhält sich der Abbrechen Knopf wie der Löschen Knopf: Das Feature wird aus der Karte und der Tabelle entfernt. Dies gilt nicht bei dem Ändern eines vorhandenen Features. [true/false]
@@ -970,7 +969,7 @@ Elemente des Kontextmenüs:
 * **Bearbeiten:** Informationen zu dem Objekt verändern. Klick öffnet die Digitalisieroberfläche.
 * **Löschen:** Löscht das ausgewählte Objekt.
 
-Ist die korrespondierende `Basisdefinition <#basisdefinition>`_ (allowEditData, allowDelete) nicht definiert, stehen diese auch im Kontextmenü nicht zur Verfügung. In dem oben stehenden Beispiel steht für die Polygone die Löschen-Funktion nicht zur Verfügung.
+Ist die korrespondierende `Basisdefinition <#basisdefinition>`_ (allowEdit, allowDelete) nicht definiert, stehen diese auch im Kontextmenü nicht zur Verfügung. In dem oben stehenden Beispiel steht für die Polygone die Löschen-Funktion nicht zur Verfügung.
 
 
 .. code-block:: yaml
@@ -1037,7 +1036,7 @@ Wenn YAML-Anwendungen unter /application genutzt werden, kann die Angabe per ein
 
   poi:
       [...]
-       allowEditData: true
+       allowEdit: true
        refreshLayersAfterFeatureSave:  # bei keiner Angabe in diesem Bereich erfolgt kein Karten-Refresh nach Speichern
          - 17
          - 18

@@ -52,7 +52,7 @@ The functionality of the built-in features and additional functions are explaine
             srid: 4326
         openFormAfterEdit: true
         zoomScaleDenominator: 500
-        allowEditData: true
+        allowEdit: true
         allowDelete: true
         allowDigitize: true
         useContextMenu: true
@@ -369,7 +369,7 @@ A basic definition, here for the poi-example, may look like the following snippe
             filter: interests = 'maps'
         openFormAfterEdit: true
         zoomScaleDenominator: 500
-        allowEditData: true
+        allowEdit: true
         allowDelete: true
         allowDigitize: true
         [...]
@@ -390,10 +390,9 @@ The possible options are:
     * filter: Data filters for values ​​in a defined column, e.g. filter: interests = 'maps' 
 * **openFormAfterEdit:** After creating a geometry the form popup is opened automatically to insert the attribute data (default: true)
 * **zoomScaleDenominator:** Zoom-scales to use for zooming to a feature.
-* **allowEditData:** Allow or disable functions to edit or remove data. [true/false]. The Save button is always visible.
-* **allowDigitize:** Allow to save data [true/false].
+* **allowEdit:** Allow to edit form data and save geometries [true/false]. allowDigitize decides whether the geometry may be edited.
+* **allowDigitize:** Allow to edit geometries, e.g. moving the entire geometry, adding support points to polygons, etc. [true/false]. If true, the digitizing buttons appear (new point, move, etc.). Only evaludated if allowEdit is set to true.
 * **allowDelete:** Allow to delete data [true/false]. The Delete button is always visible.
-* **allowDigitize:** Allow to create new features [true/false]. if false, no Digitizer buttons will occur (new Point, move, etc.).
 * **useContextMenu:** Show the context-menu of a feature. [true/false]
 * **allowCancelButton:** Show the Cancel button [true/false]. See `Save, Delete, Cancel <#save-delete-cancel>`_.
 * **allowDeleteByCancelNewGeometry:** If true: When you create a new feature, the Cancel button will behave like the Delete button: The feature is removed from the map and the table. This is not the case if you edit an existing feature. [true/false]
@@ -982,7 +981,7 @@ Items of the Context Menu:
 * **Edit features:** Edit the features of the object. Opens the Digitizer dialog.
 * **Remove:** Remove the selected object.
 
-If the corresponding `basic definition <#feature-basic-definition>`_ (allowEditData, allowDelete) not defined, then they are also not available in the Context Menu. In the above example the delete function is not available for the polygons.
+If the corresponding `basic definition <#feature-basic-definition>`_ (allowEdit, allowDelete) not defined, then they are also not available in the Context Menu. In the above example the delete function is not available for the polygons.
 
 .. code-block:: yaml
 
@@ -1046,7 +1045,7 @@ If the YAML application is used in the /application folder, it can be specified 
 
   poi:
       [...]
-       allowEditData: true
+       allowEdit: true
        refreshLayersAfterFeatureSave:  # If no entry is made in this area no map refresh is carried out after saving 
          - 17
          - 18
