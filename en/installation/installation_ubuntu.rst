@@ -72,11 +72,11 @@ Activate the site and reload Apache:
  a2ensite mapbender.conf
  service apache2 reload
 
-Konfiguration nginx
+Configuration nginx
 -------------------
 
 As an alternative to apache2, nginx can also be used as webserver. 
-To use mapbender in nginx, create a configuration file within ``/etc/nginx/sites-available``:
+To use Mapbender in nginx, create a configuration file within ``/etc/nginx/sites-available``:
 
 .. code-block:: nginx
     
