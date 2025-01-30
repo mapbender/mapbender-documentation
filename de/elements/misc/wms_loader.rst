@@ -35,7 +35,8 @@ Mapbender kann einen WMS über einen definierten Link hinzufügen, z. B. über :
   <a href="#"
   mb-action="source.add.wms" mb-layer-merge="1" mb-wms-merge="1"
   mb-wms-layers="Gewaesser,Fluesse" 
-  mb-add-vendor-specific="bplan=123"
+  mb-add-vendor-specific="bplan=123" 
+  mb-infoformat="text/plain"   
   mb-url="http://wms.wheregroup.com/cgi-bin/germany.xml?VERSION=1.1.1&REQUEST=GetCapabilities&SERVICE=WMS">load service</a>
 
 
@@ -47,6 +48,7 @@ Mapbender kann einen WMS über einen definierten Link hinzufügen, z. B. über :
     mb-wms-layers="Gewaesser,Fluesse"  # Definiert die Ebenen, die aktiviert werden sollen, _all activates aktiviert alle Ebenen.
     href oder mb-url                   # Verweist auf die WMS getcapabilities URL.
     mb-add-vendor-specific="bplan=123" # Definition von Vendor Specific Parametern, die an den Request angefügt werden (ab Version 3.2.9).
+    mb-infoformat="text/plain"         # Definition des GetFeatureInfo-Formats für den WMS (Standard: text/html)
 
 
 YAML-Definition
