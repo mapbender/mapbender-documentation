@@ -16,11 +16,11 @@ Requirements
 * Apache installation with the following modules activated:
     * mod_rewrite
     * libapache2-mod-php
+* alternatively: nginx installation with the following modules activated:
+    * php-fpm
 * PostgreSQL Installation
     * It is recommended to use a PostgreSQL database for Mapbender.
     * It is recommended to create a database user to access the Mapbender database.
-
-Nginx can also be used as web server (this will not be discussed in detail here).
 
 
 Preparation
@@ -71,6 +71,51 @@ Activate the site and reload Apache:
 
  a2ensite mapbender.conf
  service apache2 reload
+
+Configuration nginx
+-------------------
+
+As an alternative to apache2, nginx can also be used as webserver. 
+To use Mapbender in nginx, create a configuration file within ``/etc/nginx/sites-available``:
+
+.. code-block:: nginx
+    
+  server {
+      listen 80;
+      listen [::]:80;
+      server_name mapbender.localhost # change this to your needs
+  
+      # recommended to setup ssl here when not in a local environment
+  
+      root /var/www/mapbender/application/public;
+  
+      index index.php;
+  
+      location / {
+          # First attempt to serve request as file, then
+          # as directory, then redirect to index.php
+          try_files $uri $uri/ /index.php$is_args$args;
+      }
+  
+      # pass PHP scripts to FastCGI server
+      location ~ \.php$ {
+          include snippets/fastcgi-php.conf;
+          fastcgi_pass unix:/run/php/php8.3-fpm.sock; # change this when using another PHP version
+      }
+  
+      # deny access to .htaccess files, if Apache's document root
+      # concurs with nginx's one
+      location ~ /\.ht {
+          deny all;
+      }
+  }
+
+Activate the new site and restart nginx:
+
+.. code-block:: bash
+
+ ln -s /etc/nginx/sites-available/mapbender /etc/nginx/sites-enabled/
+ systemctl restart nginx
 
 
 Directory rights

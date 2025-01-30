@@ -22,8 +22,8 @@ Requirements
     * It is recommended to create a database user to access the Mapbender database.
 
 
-Nginx can also be used as web server, but it will not be discussed in this manual.   
-
+As a web server, you can also use nginx, which is considered a beta version for Windows. If you still want to use it,
+  you can use the same configuration file as in the Linux installation guide.
 
 Configuration PHP
 -----------------

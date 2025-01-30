@@ -22,7 +22,8 @@ Voraussetzungen
     * Es wird empfohlen, einen eigenen Datenbankbenutzer für den Zugriff auf die Mapbender Datenbank anzulegen.
 
 
-Als Webserver kann auch Nginx verwendet werden. In dieser Anleitung wird darauf nicht weiter eingegangen.
+Als Webserver kann auch Nginx verwendet werden, der für Windows aber als Beta-Version betrachtet wird. Sollte es trotzdem
+  gewünscht sein, nginx auf Windows zu verwenden, kann die gleiche Konfiguration wie für die Linux-Installation verwendet werden.   
 
 
 Konfiguration PHP
