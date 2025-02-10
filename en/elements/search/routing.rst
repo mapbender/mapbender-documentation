@@ -5,8 +5,8 @@ Routing
 
 The routing element adds a routing tool to an application. After specifying the start, destination and any intermediate points, a suitable route is displayed on the map. Information about the route can also be displayed.
 
-.. image:: ../../../figures/de/routing.png
-     :scale: 70
+.. image:: ../../../figures/routing.png
+     :width: 100%
 
 Configuration
 =============
@@ -38,11 +38,12 @@ Configuration
      :scale: 70
 
 * **Routing software:** Select the routing software (OSRM).
-* **URL:** Set the URL address for the routing software (default: https://).
+* **URL:** Set the URL address for the routing software or choose a variable, e.g. https://routing.openstreetmap.de/routed-%profile (default: https://).
 * **Services:** Select from various services (defaut: Route).
 * **Transportation mode:** Select the routing profiles (car, bicycle, pedestrian). It is also possible to select more than one (default: none).
 * **API-Version:** Determine the version of the API (default: v1).
 * **Route description:** Select whether there should be a route description or not (default: no).
+* **Attribution:** Provid a source reference (default: Take a look at the screenshot above).
 
 .. image:: ../../../figures/routing_configuration_search.png
      :scale: 87
