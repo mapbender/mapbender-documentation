@@ -77,13 +77,13 @@ FeatureInfo Highlighting is activated within the Feature Info element. Here, use
 
 Furthermore, the HTML output of the FeatureInfo request has to be adjusted. In order to do so, the geometry query has to be hidded as a WKT in an HTML div (will not be displayed). In addition, the EPSG code must be transferred and there must be a unique ID in the HTML div (see configuration below). Mapbender evaluates this information and displays the geometries on the map. When you hover over the entries in the info window, the associated geometry is highlighted accordingly. The adaptation looks different depending on which WMS server software you are using. Adjustments can easily be made for MapServer, QGIS Server, GeoServer.
 
-The necessary adjustment is shown here using a configuration for MapServer. In the DATA specification, the geometry is put out as a WKT. In addition, the FeatureInfo template is adapted. If a WMS is now queried via GetFeatureInfo, the corresponding areas are highlighted on the map.
+The necessary adjustment is shown here using a configuration for MapServer. In the DATA specification, the geometry is put out as a WKT. In addition, the FeatureInfo template is adapted. If a WMS is now queried via GetFeatureInfo, the corresponding areas are highlighted on the map. You also could add data-label to define a labeling.
 
 .. code-block:: bash
 
   DATA "geom from (Select *, ST_AsText(geom) as geom_wkt from plz) as foo USING UNIQUE gid USING SRID 4326"
 
-  <div class="geometryElement" id="[gid]" data-geometry="[geom_wkt]" data-srid="EPSG:4326">
+  <div class="geometryElement" id="[gid]" data-geometry="[geom_wkt]" data-srid="EPSG:4326" data-label="[beschriftung]" >
   <table>
   	...
   <table>

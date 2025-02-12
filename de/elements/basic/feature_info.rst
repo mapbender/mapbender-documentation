@@ -79,13 +79,13 @@ Das FeatureInfo Highlighting kann im FeatureInfo-Element im Kartenbereich aktivi
 Darüber hinaus muss die HTML-Ausgabe der Infoabfrage angepasst werden. Hierfür ist es notwendig, dass die Geometrieabfrage versteckt als WKT über ein HTML-div erfolgt. Zusätzlich muss der EPSG-Code übergeben werden und eine eindeutige ID in dem HTML-div vorliegen (siehe Konfigurationsbeispiel unten).
 Mapbender wertet nach korrekter Konfiguration diese Informationen aus und stellt die Geometrien in der Karte dar. Beim Mouse-Over auf den Treffern des Infofensters wird die dazugehörige Geometrie farblich entsprechend hervorgehoben. Anpassungen können für MapServer, QGIS Server, GeoServer erfolgen.
 
-Die notwendige Anpassung wird hier am Beispiel von MapServer gezeigt. In der DATA-Angabe wird zusätzlich die Geometrie als WKT ausgegeben. Außerdem wird das FeatureInfo-Template angepasst. Wird nun ein WMS über GetFeatureInfo abgefragt, werden die entsprechenden Flächen in der Karte hervorgehoben.
+Die notwendige Anpassung wird hier am Beispiel von MapServer gezeigt. In der DATA-Angabe wird zusätzlich die Geometrie als WKT ausgegeben. Außerdem wird das FeatureInfo-Template angepasst. Wird nun ein WMS über GetFeatureInfo abgefragt, werden die entsprechenden Flächen in der Karte hervorgehoben. Sofern gewünscht kann auch via data-label eine Beschriftung definiert werden.
 
 .. code-block:: bash
 
   DATA "geom from (Select *, ST_AsText(geom) as geom_wkt from plz) as foo USING UNIQUE gid USING SRID 4326"
 
-  <div class="geometryElement" id="[gid]" data-geometry="[geom_wkt]" data-srid="EPSG:4326">
+  <div class="geometryElement" id="[gid]" data-geometry="[geom_wkt]" data-srid="EPSG:4326" data-label="[beschriftung]" >
   <table>
   	...
   <table>
