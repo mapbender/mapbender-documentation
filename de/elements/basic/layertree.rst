@@ -134,6 +134,7 @@ Wenn **Automatisches Öffnen** aktiv ist, wird der Ebenenbaum beim Anwendungssta
 * **Auf Ebene zoomen**: Layer zentriert in seiner vollen Ausdehnung anzeigen
 * **Metadaten**: Metadaten eines Layers anzeigen
 * **Dimension**: Dimension eines Layers kontrollieren. Mehr Informationen unter :ref:`dimensions_handler_de`.
+* **Stil auswählen**: Erlaubt die Möglichkeit den Stil in der Anwendung zu wechseln, wenn ein Layer mehrere Stile anbietet.
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80

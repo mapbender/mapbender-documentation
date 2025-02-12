@@ -134,6 +134,7 @@ Via the **Menu** a number of functions can be activated, which are then availabl
 * **Zoom to layer**: Zoom to full layer extent
 * **Metadata**: Show the metadata of the layer
 * **Dimension**: Change the dimension, e.g. time or elevation of the Layer. Read more about the :ref:`dimensions_handler`.
+* **Select style**: Allow the option to change the style of a layer is the layer offers multiple styles.
 
 .. figure:: ../../../figures/layertree/layertree_menu_en.png
            :scale: 80
