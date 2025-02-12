@@ -43,7 +43,7 @@ Konfiguration
 * **Transportmodus:** Auswählen der Routing-Profile (Auto, Fahhrad, Füßgänger). Auch die Auswahl mehrerer ist möglich (Standard: false).
 * **API-Version:** Version der API bestimmen (Standard: v1).
 * **Wegbeschreibung ausgeben:** Auswählen ob es eine Wegbeschreibung geben soll oder nicht (Standard: nein).
-* **Attribuierung:** Angeben eines Quellenverweises (Standard: Siehe oben im Konfigurations Screenshot zur Routingsoftware).
+* **Attributierung:** Angabe eines Quellenverweises (Standard: Siehe oben im Konfigurations Screenshot zur Routingsoftware).
 
 .. image:: ../../../figures/de/routing_configuration_search.png
      :scale: 87
