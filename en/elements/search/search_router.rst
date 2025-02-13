@@ -276,8 +276,8 @@ Three different styles are configured:
                 fontWeight: bold        # font weight 
                 labelOutlineColor: '#ffff00' # font outline
                 labelOutlineWidth: 1    # font outline width
-                labelXOffset: -18       # Offset X-axis
-                labelYOffset: -18       # Offset Y-axis
+                fontOffsetX: -18       # Offset X-axis
+                fontOffsetY: -18       # Offset Y-axis
             select:
                 strokeColor: '#0000ff'
                 strokeOpacity: 1
