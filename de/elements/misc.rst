@@ -6,6 +6,7 @@ Verschiedenes
 .. toctree::
    :maxdepth: 1
    
+   misc/about_dialog.rst
    misc/applicationswitcher.rst
    misc/button.rst
    misc/cookieconsent.rst
@@ -16,5 +17,5 @@ Verschiedenes
    misc/coordinate_utility.rst
    misc/link.rst
    misc/poi.rst
-   misc/about_dialog.rst
+   misc/querybuilder.rst
    misc/wms_loader.rst
