@@ -158,7 +158,7 @@ Die Checkbox **Erlaubt sortieren im Layerbaum** steuert, ob ein freies Umsortier
 
 Die Checkbox neben einem Layernamen ermöglicht das An- und Ausschalten eines Layers. Ist die Checkbox aktiviert, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet (wie z.B. maßstabsabhängige Anzeigen).
 
-.. hint:: Mit der Version 4.1.0 gibt es nun die Funktion, den Status aller Sublayer zu ändern, wenn die Umschalttaste (Shifttaste) während des Umschaltens eines Layers gehalten wird.
+.. hint:: Mit der Version 4.1.0 ist es nun möglich, den Status aller Sublayer zu ändern, wenn die Umschalt-Taste (Shift-Taste) während des Umschaltens eines Layers gehalten wird.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
