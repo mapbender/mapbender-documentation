@@ -134,7 +134,7 @@ Via the **Menu** a number of functions can be activated, which are then availabl
 * **Zoom to layer**: Zoom to full layer extent
 * **Metadata**: Show the metadata of the layer
 * **Dimension**: Change the dimension, e.g. time or elevation of the Layer. Read more about the :ref:`dimensions_handler`.
-* **Select style**: Allow the option to change the style of a layer is the layer offers multiple styles.
+* **Select style**: Allow the option to change the style of a layer if the layer offers multiple styles.
 
 .. figure:: ../../../figures/layertree/layertree_menu_en.png
            :scale: 80
@@ -157,6 +157,8 @@ The checkbox **Thematic layer** activates the thematic division of levels. By cl
 The checkbox **Allow Reorder at TOC** controls if layers are rearrangeable via drag & drop in the application's layertree (TOC).
 
 The checkbox next to its respective layer name allows to turn a layer on and off. If the checkbox is set, the Layer will appear on the map. However, it will continue to respect the defined rules of the Layerset (such as scale-dependent display).
+
+.. hint:: With the 4.1.0 Version you now have the ability to Toggle the state of all sublayers when holding shift while toggling a layer.
 
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
