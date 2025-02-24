@@ -144,10 +144,10 @@ Unterstützte autocomplete-Parameter:
             options:
                 label: Name 
                 required: true
-            attr:
-                data-autocomplete: 'on'           # aktiviere Autovervollständigung
-                data-autocomplete-distinct: 'on'  # gleiche Treffer nur einmal anzeigen
-                data-autocomplete-using: type, city   # Liste von weiteren Spalten für die Autovervollständigung (kommasepariert)           
+                attr:
+                    data-autocomplete: 'on'           # aktiviere Autovervollständigung
+                    data-autocomplete-distinct: 'on'  # gleiche Treffer nur einmal anzeigen
+                    data-autocomplete-using: type, city   # Liste von weiteren Spalten für die Autovervollständigung (kommasepariert)           
             compare: exact                                          
 
 
