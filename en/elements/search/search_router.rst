@@ -142,10 +142,10 @@ Supported autocomplete parameters are:
             options:
                 label: Name 
                 required: true
-            attr:
-                data-autocomplete: 'on'          # activate autocomplete
-                data-autocomplete-distinct: 'on' # only show equal results once
-                data-autocomplete-using: type, city     # autocomplete, list of input fields (with comma seperated), WHERE input           
+                attr:
+                    data-autocomplete: 'on'          # activate autocomplete
+                    data-autocomplete-distinct: 'on' # only show equal results once
+                    data-autocomplete-using: type, city     # autocomplete, list of input fields (with comma seperated), WHERE input           
             compare: exact                                          
 
 
