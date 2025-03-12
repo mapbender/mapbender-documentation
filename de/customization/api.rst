@@ -22,6 +22,10 @@ Sie können die Dokumentation in der Mapbender-Demo erreichen unter:
 
 https://demo.mapbender.org/api/doc/
 
+Weitere Informationen zur Developer Dokumentation finden Sie hier:
+
+https://github.com/mapbender/mapbender/blob/develop/docs/api/setup.md
+
 
 Apache Autorisierung
 --------------------

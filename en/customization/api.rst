@@ -5,7 +5,7 @@ API
 
 Mapbender provides a API through which clients can run several commands.
 
-With the API clients can administrate Mapbender without needing to use the web administration interface. The REST API provides commands to get information for example about services and it also provides commands to publish or update services.
+With the API clients can administrate Mapbender without needing to use the web administration interface. The API provides commands to get information for example about services and it also provides commands to publish or update services.
 
 .. image:: ../../figures/customization/api.png
      :width: 100%
@@ -21,6 +21,10 @@ You find examples for each endpoint in the documentation. Please note that you n
 You can browse through the documentation at the Mapbender demo: 
 
 https://demo.mapbender.org/api/doc/
+
+Further information about the Developer Documentation can be found here: 
+
+https://github.com/mapbender/mapbender/blob/develop/docs/api/setup.md
 
 
 Apache Authorisation
