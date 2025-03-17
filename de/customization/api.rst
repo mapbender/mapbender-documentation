@@ -46,7 +46,7 @@ Um das Upload Directory zu ändern, können Sie den
 
      api_upload_dir: /data/qgis_server_projects/ 
      
-Parameter in der *paramter.yaml* Datei anpassen
+Parameter in der *paramter.yaml* Datei anpassen.
 
 
 API-Seite für den öffentlichen Zugriff sperren
