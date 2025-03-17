@@ -35,3 +35,27 @@ Apache leitet per default den Authorization Header aus Sicherheitsgründen nicht
 .. code-block:: apacheconf
      
    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1 
+
+
+Upload Directory ändern
+-----------------------
+
+Um das Upload Directory zu ändern, können Sie den "api_upload_dir" Parameter in der paramter.yaml Datei anpassen
+
+
+API-Seite für den öffentlichen Zugriff sperren
+----------------------------------------------
+
+Um den öffentlichen Zugriff der API-Seite zu sperren, können Sie in der security.yaml Datei folgende Paramter anpassen. Ändern Sie hierbei 
+
+.. code-block:: yaml
+
+   { path: ^/api/doc, roles: PUBLIC_ACCESS }
+
+in
+
+.. code-block:: yaml
+
+   { path: ^/api/doc, roles: ROLE_ADMIN }
+
+um.

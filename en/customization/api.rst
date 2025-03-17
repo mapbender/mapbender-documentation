@@ -35,3 +35,25 @@ By default, Apache does not forward the Authorization header to the client for s
 .. code-block:: apacheconf
      
    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+
+Configure Upload Directory
+--------------------------
+
+You can configure the upload directory using the 'api_upload_dir' parameter in the parameters.yaml file.
+
+
+Disable the API page from public access
+---------------------------------------
+
+To disable the public access to the API documentation page, modify the security.yaml file by changing
+
+.. code-block:: yaml
+
+   { path: ^/api/doc, roles: PUBLIC_ACCESS }
+
+to
+
+.. code-block:: yaml
+
+   { path: ^/api/doc, roles: ROLE_ADMIN }
