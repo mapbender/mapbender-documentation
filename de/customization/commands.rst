@@ -508,7 +508,7 @@ Fügt einen im Dienste-Repository stehenden WMS-Dienst einer Mapbender-Anwendung
 
 .. code-block:: yaml
 
-	bin/console mapbender:wms:assign <application> <source> [<layerset>]
+	bin/console mapbender:wms:assign [options] [--] <application> <source> [<layerset>]
 
 
 Konfiguration:
@@ -518,6 +518,13 @@ Konfiguration:
 * `source`: ID des WMS-Dienstes,
 * `layerset` (optional): ID oder Name des Layersets. Der Standardwert ist *main* oder das erste Layerset in der Anwendung.
 
+Folgende zusätzliche Optionen sind möglich:
+
+* -f, --format    Legt das Format für die GetMap-Anfrage fest, z.B. image/png. 
+* -i, --infoformat    Legt das Format für die FeatureInfo-Anfrage fest, z.B. text/html.
+* -p, --proxy    Bestimmt, ob ein Proxy verwendet wird (true | false).
+* -t, --tiled    Gibt an, ob GetMap-Anfragen gekachelt zurückgegeben werden (true | false).
+* -l, --layerorder    Legt die Layer-Reihenfolge fest (standard | reverse) (Hinweis: reverse = QGIS).
 
 bin/console mapbender:wms:parse:url
 ***********************************
