@@ -508,7 +508,7 @@ Fügt einen im Dienste-Repository stehenden WMS-Dienst einer Mapbender-Anwendung
 
 .. code-block:: yaml
 
-	bin/console mapbender:wms:assign <application> <source> [<layerset>]
+	bin/console mapbender:wms:assign [options] [--] <application> <source> [<layerset>]
 
 
 Konfiguration:
@@ -518,6 +518,22 @@ Konfiguration:
 * `source`: ID des WMS-Dienstes,
 * `layerset` (optional): ID oder Name des Layersets. Der Standardwert ist *main* oder das erste Layerset in der Anwendung.
 
+Folgende zusätzliche Optionen sind möglich:
+
+* -f, --format    Legt das Format für die GetMap-Anfrage fest, z.B. image/png. 
+* -i, --infoformat    Legt das Format für die FeatureInfo-Anfrage fest, z.B. text/html.
+* -p, --proxy    Bestimmt, ob ein Proxy verwendet wird (true | false).
+* -t, --tiled    Gibt an, ob GetMap-Anfragen gekachelt zurückgegeben werden (true | false).
+* -l, --layerorder    Legt die Layer-Reihenfolge fest (standard | reverse) (Hinweis: reverse = QGIS).
+* -h, --help    Zeigt die Hilfe für den angegebenen Befehl an. Wenn kein Befehl angegeben wird, wird die Hilfe für den list-Befehl angezeigt.
+* -q, --quiet    Gibt keine Ausgaben aus.
+* -V, --version    Zeigt die Version der Applikation an.
+* --ansi, --no-ansi    (De-)aktiviert die ANSI-Ausgabe.
+* -n, --no-interaction    Keine interaktiven Rückfragen.
+* -e, --env=UMGEBUNG    Name der Umgebung (Standard: "dev").
+* --no-debug    Schaltet Debug-Modus aus.
+* --profile    Aktiviert Profiling (benötigt Debug-Modus).
+* -v, -vv, -vvv, --verbose    Erhöht die Ausführlichkeit der Ausgaben: 1 für normale Ausgabe, 2 für ausführlichere Ausgabe, 3 für Debug.
 
 bin/console mapbender:wms:parse:url
 ***********************************

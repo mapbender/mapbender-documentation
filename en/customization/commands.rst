@@ -506,7 +506,7 @@ Adds a WMS source instance from the sources repository to a Mapbender applicatio
 
 .. code-block:: yaml
 
-	bin/console mapbender:wms:assign <application> <source> [<layerset>]
+	bin/console mapbender:wms:assign [options] [--] <application> <source> [<layerset>]
 
 Configuration
 -------------
@@ -515,6 +515,22 @@ Configuration
 * `source`: ID of the WMS service,
 * `layerset` (optional): ID or name of the layerset. The default value is *main* or the first layerset in the application.
 
+The following additional options are available:
+
+* -f, --format    Sets the format for the GetMap request, such as image/png.
+* -i, --infoformat    Sets the format for the FeatureInfo request, such as text/html.
+* -p, --proxy    Determines whether a proxy is used (true | false).
+* -t, --tiled    Specifies whether GetMap requests are returned as tiles (true | false).
+* -l, --layerorder    Sets the layer order (standard | reverse) (Note: reverse = QGIS).
+* -h, --help    Displays help for the command. When no command is given display help for the list command.
+* -q, --quiet    Do not output any message.
+* -V, --version    Displays the application version.
+* --ansi, --no-ansi    Force (or disable --no-ansi) ANSI output
+* -n, --no-interaction    Do not ask any interactive questions.
+* -e, --env=ENV    The Environment name. (default: "dev").
+* --no-debug    Switch off debug mode.
+* --profile    Enables profiling (requires debug).
+* -v, -vv, -vvv, --verbose    Increases the verbosity of messages: 1 for normal output, 2 for more verbose output, 3 for debug.
 
 bin/console mapbender:wms:parse:url
 ***********************************
