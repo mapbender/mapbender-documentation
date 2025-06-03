@@ -525,15 +525,6 @@ Folgende zusätzliche Optionen sind möglich:
 * -p, --proxy    Bestimmt, ob ein Proxy verwendet wird (true | false).
 * -t, --tiled    Gibt an, ob GetMap-Anfragen gekachelt zurückgegeben werden (true | false).
 * -l, --layerorder    Legt die Layer-Reihenfolge fest (standard | reverse) (Hinweis: reverse = QGIS).
-* -h, --help    Zeigt die Hilfe für den angegebenen Befehl an. Wenn kein Befehl angegeben wird, wird die Hilfe für den list-Befehl angezeigt.
-* -q, --quiet    Gibt keine Ausgaben aus.
-* -V, --version    Zeigt die Version der Applikation an.
-* --ansi, --no-ansi    (De-)aktiviert die ANSI-Ausgabe.
-* -n, --no-interaction    Keine interaktiven Rückfragen.
-* -e, --env=UMGEBUNG    Name der Umgebung (Standard: "dev").
-* --no-debug    Schaltet Debug-Modus aus.
-* --profile    Aktiviert Profiling (benötigt Debug-Modus).
-* -v, -vv, -vvv, --verbose    Erhöht die Ausführlichkeit der Ausgaben: 1 für normale Ausgabe, 2 für ausführlichere Ausgabe, 3 für Debug.
 
 bin/console mapbender:wms:parse:url
 ***********************************
