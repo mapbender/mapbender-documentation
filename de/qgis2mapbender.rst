@@ -10,7 +10,7 @@ QGIS2Mapbender ist ein QGIS-Plugin, mit dem ein QGIS Server Projekt auf einen Se
 
 Sie finden den QGIS2Mapbender im QGIS Python Plugins Repository: https://plugins.qgis.org/plugins/QGIS2Mapbender
 
-.. image:: ../../../figures/qgis2mapbender.png
+.. image:: ../figures/qgis2mapbender.png
      :scale: 70
 
 Installation und Anforderungen
@@ -21,7 +21,7 @@ Bitte beachten Sie, dass QGIS2Mapbender Version >= 1.0.0 eine Mapbender Version 
 Installation des Plugins
 ------------------------
 
-QGIS2Mapbender wird im QGIS Plugin Repository veröffentlicht. Die Installation ist direkt aus dem QGIS Plugin Repository über den QGIS Plugin Manager möglich. Klicken Sie dazu auf den Menüpunkt Plugins ► Verwalten und Installieren von Plugins. Alternativ kann eine Version auch hier heruntergeladen werden. Der gezippte Ordner kann manuell installiert werden. Klicken Sie auf den Menüpunkt Plugins ► Plugins verwalten und installieren. Wählen Sie im Dialog Plugin-Manager die Option Nicht installiert und laden Sie das Zip hoch.
+QGIS2Mapbender ist im QGIS Plugin Repository verfügbar. Die Installation ist direkt aus dem QGIS Plugin Repository über den QGIS Plugin Manager möglich. Klicken Sie dazu auf den Menüpunkt Plugins ► Verwalten und Installieren von Plugins. Alternativ kann eine Version auch hier heruntergeladen werden. Der gezippte Ordner kann manuell installiert werden. Klicken Sie auf den Menüpunkt Plugins ► Plugins verwalten und installieren. Wählen Sie im Dialog Plugin-Manager die Option "nicht installiert" und laden Sie das Zip hoch.
 
 Anforderungen an Ihr lokales System
 -----------------------------------
@@ -37,24 +37,24 @@ Anforderungen an Ihren Server
 Voraussetzungen für Ihre Mapbender-Installation
 -----------------------------------------------
 
-*Apache*
+**Apache**
 
 * Konfigurieren Sie die Apache-Autorisierung und das Mapbender-Upload-Verzeichnis api_upload_dir (siehe https://doc.mapbender.org/en/customization/api.html)
 
-*PHP*
+**PHP**
 
 * Konfigurieren Sie die folgenden Parameter in der php.ini so, dass sie den Eigenschaften der Projekte entsprechen, die Sie auf den Server hochladen möchten. Denken Sie daran, dass der Ordner, der Ihr Projekt und Ihre Daten enthält, beim Hochladen auf den Server gezippt wird.
     
     * upload_max_filesize - die maximale Größe einer hochgeladenen Datei.
-    * post_max_size - maximale Größe aller Daten, die über eine POST-Anfrage gesendet werden; der Wert sollte gleich oder größer als upload_max_filesize sein.
+    * post_max_size - maximale Größe aller Daten, die über eine POST-Anfrage gesendet werden. Der Wert sollte gleich oder größer als upload_max_filesize sein.
     * max_execution_tine - hier wird die maximale Zeit in Sekunden festgelegt, die ein Skript für die Analyse der Eingabedaten benötigt.
 
 
-*Mapbender*
+**Mapbender**
 
-* Anwendung: Erstellen Sie mindestens eine Vorlageanwendung in Mapbender (die kopiert und zur Veröffentlichung eines neuen WMS verwendet werden kann) oder eine Anwendung, die direkt zur Veröffentlichung eines neuen WMS verwendet wird.
+* Anwendung: Erstellen Sie mindestens eine Vorlage-Anwendung in Mapbender (die kopiert und zur Veröffentlichung eines neuen WMS verwendet werden kann) oder eine Anwendung, die direkt zur Veröffentlichung eines neuen WMS verwendet wird.
 
-* Die Anwendungen sollten mindestens eine Instanz einer Karte und ein Layerset enthalten.
+* Die Anwendungen sollten mindestens eine Instanz einer Karte und eines Layersets enthalten.
 
 Hinweis: Das Feld „layerset“ in QGIS2Mapbender ist die ID oder der Name des zu verwendenden Layersets. Die Voreinstellung ist „main“ oder das erste Layerset in der Anwendung.
 
@@ -73,13 +73,18 @@ Konfigurieren der Verbindung zum Server
 
 Die folgende Abbildung zeigt eine typische Konfiguration der Verbindung zum Server.
 
-.. image:: ../../../figures/qgis2mapbender_server_configuration.png
+.. image:: ../figures/qgis2mapbender_server_configuration.png
      :scale: 70
 
 Einige Anmerkungen zur Standardkonfiguration:
 
-
-
++-----------------------+-------------------------------------------------------------------+-----------------------------------------------+
+| Parameter             | Beschreibung                                                      | Beispiel                                      |
++=======================+===================================================================+===============================================+
+| Mapbender Basis-URL   | Link zu Ihrer Mapbender-Landingpage (Anwendungsübersicht)         | http://localhost/mapbender/                   |
++-----------------------+-------------------------------------------------------------------+-----------------------------------------------+
+| QGIS Server URL       | URL für den QGIS-Server Zugriff                                   | http://localhost/cgi-bin/qgis_mapserv.fcgi    |
++-----------------------+-------------------------------------------------------------------+-----------------------------------------------+
 
 Docker
 ------
@@ -95,4 +100,4 @@ info@wheregroup.com
 Lizenz
 ======
 
-Das Plugin ist unter der beigefügten GNU General Public License lizenziert:
+Das Plugin ist unter der beigefügten GNU General Public License lizenziert.
