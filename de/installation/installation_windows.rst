@@ -86,6 +86,9 @@ Datei `<apache>\\conf\\conf.d\\mapbender.conf` mit dem folgenden Inhalt anlegen:
  <Directory c:/mapbender/public/>
   Options MultiViews FollowSymLinks
   Require all granted
+
+  # SetEnvIf aktiviveren, wenn die Mapbender API verwendet werden soll
+  # SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
  
   RewriteEngine On
   RewriteBase /mapbender/
