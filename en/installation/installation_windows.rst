@@ -56,7 +56,8 @@ Configuration PHP
     extension=php_zip
     extension=php_bz2
 
-* Please check the :ref:`faq` for further PHP settings. 
+* Please check the :ref:`faq` for further PHP settings
+* Please check :ref:`api` if you want to use the Mapbender API
 
 
 Extract Mapbender and register to web server
