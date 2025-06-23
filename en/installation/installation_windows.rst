@@ -56,7 +56,8 @@ Configuration PHP
     extension=php_zip
     extension=php_bz2
 
-* Please check the :ref:`faq` for further PHP settings. 
+* Please check the :ref:`faq` for further PHP settings
+* Please check :ref:`api` if you want to use the Mapbender API
 
 
 Extract Mapbender and register to web server
@@ -85,6 +86,9 @@ Create file `<apache>\\conf\\conf.d\\mapbender.conf` with:
  <Directory c:/mapbender/public/>
   Options MultiViews FollowSymLinks
   Require all granted
+
+  # Activate SetEnvIf if you want to use the Mapbender API
+  # SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
  
   RewriteEngine On
   RewriteBase /mapbender/

@@ -33,6 +33,7 @@ Installation der benötigten PHP-Extensions:
     sudo apt install php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
 * Bitte prüfen Sie die :ref:`faq_de` für weitere PHP-Einstellungen. 
+* Bitte prüfen Sie die :ref:`api_de` zur Verwendung der Mapbender API. 
 
 
 Entpacken und im Webserver registrieren
@@ -58,6 +59,9 @@ Datei `/etc/apache2/sites-available/mapbender.conf` mit dem folgenden Inhalt anl
  <Directory /var/www/mapbender/public/>
   Options MultiViews FollowSymLinks
   Require all granted
+
+  # SetEnvIf aktiviveren, wenn die Mapbender API verwendet werden soll
+  # SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 
   RewriteEngine On
   RewriteBase /mapbender/
