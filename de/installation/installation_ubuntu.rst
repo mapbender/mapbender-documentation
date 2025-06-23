@@ -33,6 +33,7 @@ Installation der benötigten PHP-Extensions:
     sudo apt install php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
 * Bitte prüfen Sie die :ref:`faq_de` für weitere PHP-Einstellungen. 
+* Bitte prüfen Sie die :ref:`api_de` zur Verwendung der Mapbender API. 
 
 
 Entpacken und im Webserver registrieren
