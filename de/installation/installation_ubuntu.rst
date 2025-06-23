@@ -59,6 +59,9 @@ Datei `/etc/apache2/sites-available/mapbender.conf` mit dem folgenden Inhalt anl
   Options MultiViews FollowSymLinks
   Require all granted
 
+  # SetEnvIf aktiviveren, wenn die Mapbender API verwendet werden soll
+  # SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
