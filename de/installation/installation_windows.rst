@@ -57,7 +57,8 @@ Konfiguration PHP
     extension=php_zip
     extension=php_bz2
 
-* Bitte prüfen Sie die :ref:`faq_de` für weitere PHP-Einstellungen. 
+* Bitte prüfen Sie die :ref:`faq_de` für weitere PHP-Einstellungen
+* Bitte prüfen Sie die :ref:`api_de` zur Verwendung der Mapbender API
 
 
 Mapbender entpacken und im Webserver registrieren
