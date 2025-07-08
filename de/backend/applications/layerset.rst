@@ -34,7 +34,7 @@ Instanz-Ebene
  * |mapbender-button-edit|: Instanz bearbeiten
  * |mapbender-button-delete|: Instanz löschen
 
-  .. image:: ../../../figures/de/mapbender_add_source_to_application.png
+.. image:: ../../../figures/de/mapbender_add_source_to_application.png
      :width: 100%
 
 
