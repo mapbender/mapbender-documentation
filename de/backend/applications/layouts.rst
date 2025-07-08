@@ -156,7 +156,7 @@ Beschränken Sie den Zugriff, indem Sie Benutzer über den |mapbender-button-add
 
 Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
 
-.. image:: ../../../figures/fom/element_security_key_popup.png
+.. image:: ../../../figures/de/fom/element_security_key_popup.png
      :width: 75%
 
 
