@@ -158,7 +158,7 @@ Add users to restrict access to them with the |mapbender-button-add| button. A s
 
 After setting specific access rights, the security key turns red.
 
-.. image:: ../../../figures/fom/element_security_key_popup.png
+.. image:: ../../../figures/element_security_key_popup.png
      :width: 75%
 
 
