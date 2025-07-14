@@ -48,5 +48,5 @@ Per default, all elements of an application are available to all :ref:`users` an
 
 #. Test your configuration. For example, open the application with a user account that has (no) rights to a previously configured element. 
 
-  .. image:: ../../../figures/fom/element_security_key_popup.png
+  .. image:: ../../../figures/element_security_key_popup.png
      :width: 100%
