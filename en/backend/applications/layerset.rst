@@ -80,6 +80,7 @@ The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ `
 
 - **Tiled:** The service is requested in tiles. The standard is not tiled. See the following :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>`.
 
+- **Update interval [s]:** If set and not 0, the service will automatically update at the specified interval (in seconds).
 
 **Layer-Order:**
 

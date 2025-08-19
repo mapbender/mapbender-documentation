@@ -78,6 +78,7 @@ Der Screenshot zeigt die `private Instanz <#freie-und-private-instanzen>`_ ``2/2
 
 - **Gekachelt (Tiled):** Der Dienst wird in Kacheln angefordert (Standard: nicht gekachelt). Siehe auch unter :ref:`Hinweise <de/backend/applications/layerset:Hinweise zu den Auswirkungen der einzelnen Konfigurationen>`.
 
+- **Aktualisierungsintervall [s]:** Ist dieses gesetzt und nicht 0, wird der Dienst automatisch im angegebenen Intervall (in Sekunden) aktualisiert.
 
 **Layer-Reihenfolge:**
 
