@@ -47,7 +47,7 @@ Layerset-instances contain options to configure certain WMS parameters: image-fo
 
 As soon a WMS service is integrated in a layerset, it is linked as a layerset-instance within the application.
 
-The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ ``2/28`` based on a WMS service. The associated data source is number 2, the layer's instance itself has the number 28. It is based on the WhereGroup OSM service and can be configured for the application in this dialog.
+The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ ``20/581`` based on a WMS service. The associated data source is number 20, the layer's instance itself has the number 581. It is based on the WhereGroup OSM service and can be configured for the application in this dialog.
 
 
 **The properties of the WMS-Capabilities:**
@@ -80,6 +80,7 @@ The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ `
 
 - **Tiled:** The service is requested in tiles. The standard is not tiled. See the following :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>`.
 
+- **Update interval [s]:** If set and not 0, the service will automatically update at the specified interval (in seconds).
 
 **Layer-Order:**
 
