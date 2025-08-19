@@ -17,12 +17,13 @@ Functions
 * Zoom to map extent of a layer
 * Query the metadata of a layer
 * Control the time dimension of a layer
+* Filter Layers
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog_en.png
            :scale: 80
            :alt: Layertree as a dialogue popup showing services with layers.
 
-           Layertree as a dialogue popup showing services with layers.
+           Layertree dialog popup with filter functionality.
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_en.png
            :scale: 80
@@ -166,6 +167,7 @@ The checkbox next to its respective layer name allows to turn a layer on and off
 
            Layertree Buttons.
 
+The checkbox “Show Filter” controls whether a filter and search function is available in the application's layer tree. If the checkbox is enabled, layers can be searched and filtered to improve the overview in the layer tree.
 
 Workflow thematic Layertree
 ---------------------------

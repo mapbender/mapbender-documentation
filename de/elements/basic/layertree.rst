@@ -17,12 +17,13 @@ Funktionen
 * Zoom zum Kartenausschnitt eines Layers
 * Abfrage der Metadaten eines Layers
 * Zeitliche Dimension eines Layers kontrollieren
+* Themen filtern
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog.png
            :scale: 80
            :alt: Ebenenbaum im Dialogfenster zeigt Dienste mit Ebenen
 
-           Einfacher Ebenenbaum im Dialogfenster zeigt Dienste mit Ebenen.
+           Einfacher Ebenenbaum im Dialogfenster mit Filter-Funktion.
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane.png
            :scale: 80
@@ -165,6 +166,8 @@ Die Checkbox neben einem Layernamen ermöglicht das An- und Ausschalten eines La
            :alt: Ebenenbaum Buttons.
 
            Ebenenbaum Buttons.
+
+Die Checkbox „Filter anzeigen“ steuert, ob eine Filter- und Suchfunktion im Layerbaum zur Verfügung steht. Ist die Checkbox aktiviert, können Layer gezielt gesucht oder gefiltert werden, um die Übersichtlichkeit im Ebenenbaum zu erhöhen. 
 
 
 Workflow thematischer Ebenenbaum
