@@ -46,7 +46,7 @@ Layerset-Instanzen enthalten unterschiedliche Optionen, mit denen WMS-Dienste an
 .. image:: ../../../figures/de/layerset/mapbender_wms_application_settings.png
 
 Sobald ein WMS-Dienst in ein Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
-Der Screenshot zeigt die `private Instanz <#freie-und-private-instanzen>`_ ``2/28`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 2. Die Layerset-Instanz selbst hat die Laufnummer 28.
+Der Screenshot zeigt die `private Instanz <#freie-und-private-instanzen>`_ ``20/581`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 20. Die Layerset-Instanz selbst hat die Laufnummer 581.
 
 **Die Eigenschaften aus den WMS-Capabilities:**
 
