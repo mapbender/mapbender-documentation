@@ -129,11 +129,12 @@ The following button functions are available:
     :alt: Mapbender Button Area
 
 
-* **Toggle show/hide element**: A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the :ref:`backend`.
+* **Edit**: Adjusts an element.
 * **Show on mobile screens**: Displays an element only on mobile-sized screens.
 * **Show on Desktop screens**: Displays an element only on Desktop-sized screens.
-* **Edit**: Adjusts an element.
 * **Restrict element access**: Sets specific visibility permissions for an element.
+* **Duplicate element**: Creates a copy of the element with the same settings.
+* **Toggle show/hide element**: A shown element is visible in the application. A hidden one is not visible in the application itself, but can still be adjusted in the :ref:`backend`.
 * **Delete**: Removes an element from both front- and :ref:`backend`.
 
 
@@ -158,7 +159,7 @@ Add users to restrict access to them with the |mapbender-button-add| button. A s
 
 After setting specific access rights, the security key turns red.
 
-.. image:: ../../../figures/fom/element_security_key_popup.png
+.. image:: ../../../figures/element_security_key_popup.png
      :width: 75%
 
 

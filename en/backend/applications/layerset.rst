@@ -33,7 +33,7 @@ Instance actions
  * |mapbender-button-edit|: Edit instance
  * |mapbender-button-delete|: Delete instance
 
-.. image:: ../../../figures/de/layerset/mapbender_service_edit.png
+.. image:: ../../../figures/mapbender_add_source_to_application.png
      :width: 100%
 
 

@@ -127,11 +127,12 @@ Dabei verfügen die Buttons über folgende Optionen:
 .. image:: ../../../figures/mapbender_layouts_button_area.png
     :alt: Buttonleiste der Elemente
 
-* **aktiv/inaktiv**: Ein aktives Element ist in der Anwendung freigeschaltet. Ein inaktives Element kann zwar bearbeitet werden, ist aber in der Anwendung ausgeblendet.
+* **Bearbeiten**: Erlaubt die Anpassung des Elements.
 * **Auf Mobilgeräten anzeigen**: Zeigt Elemente nur auf mobilen Geräten an.
 * **Auf großen Bildschrimen anzeigen**: Zeigt Elemente nur auf Desktop-Geräten an.
-* **Bearbeiten**: Erlaubt die Anpassung des Elements.
 * **Zugriff auf das Element einschränken**: Erlaubt die Konfiguration von Element-Sichtbarkeiten bei bestimmten Berechtigungen.
+* **Aktiv/inaktiv**: Ein aktives Element ist in der Anwendung freigeschaltet. Ein inaktives Element kann zwar bearbeitet werden, ist aber in der Anwendung ausgeblendet.
+* **Element duplizieren**:  Erstellt eine Kopie des Elements mit den gleichen Einstellungen.
 * **Löschen**: Entfernt ein Element vom Back- und Frontend.
 
 
@@ -156,7 +157,7 @@ Beschränken Sie den Zugriff, indem Sie Benutzer über den |mapbender-button-add
 
 Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
 
-.. image:: ../../../figures/fom/element_security_key_popup.png
+.. image:: ../../../figures/de/fom/element_security_key_popup.png
      :width: 75%
 
 
