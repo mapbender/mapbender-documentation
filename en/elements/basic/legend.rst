@@ -25,6 +25,10 @@ Configuration
 
 The Legend element is integrated via a :ref:`button` or in the sidepane.
 
+.. hint:: Please note that you can deactivate the legend for a single layer in the instance configuration.
+
+.. image:: ../../../figures/legend_activate_checkbox.png
+     :scale: 60
 
 Configuration Examples
 ======================
