@@ -18,16 +18,15 @@ Datenquelle laden
 .. tip:: **Hinweis**: Es ist wichtig, dass die Datenquelle vor dem Hochladen auf ihre Richtigkeit überprüft wird. Dies erfolgt über den Aufruf des getCapabilities-Requests im Browser.
 
   .. |mapbender-button-add| image:: ../../figures/mapbender_button_add.png
+
+.. image:: ../../figures/de/source_selection.png
+   :scale: 70
     
 Um einen Dienst zu laden, drücken Sie auf |mapbender-button-add| **Datenquelle hinzufügen** und wählen Sie einen Datenquellen-Typ. Dies öffnet einen Konfigurationsbereich mit folgenden Parametern:
 
 * **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z. B. für `OGC WMS Version 1.3.0 <https://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities>`_)
 
 * **Benutzername / Passwort**: Eingabe von Benutzername und Passwort bei gesicherten Diensten.
-
-  .. image:: ../../figures/de/source_selection.png
-     :scale: 70
-
 
 Mit einem Klick auf ``Laden`` wird der Dienst registriert.
 

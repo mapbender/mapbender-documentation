@@ -19,6 +19,9 @@ Load sources
 
   .. |mapbender-button-add| image:: ../../figures/mapbender_button_add.png
 
+.. image:: ../../figures/source_selection.png
+   :scale: 70
+    
 To register a service, click on |mapbender-button-add| **Add source** and select a source type. Then a configuration field opens with the following parameters:
 
 * **Service URL**: URL to the Capabilities document of the service (e.g. `OGC WMS Version 1.3.0: <https://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities>`_)
