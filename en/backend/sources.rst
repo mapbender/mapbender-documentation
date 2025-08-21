@@ -6,8 +6,8 @@ Sources
 With Sources, you can register:
 
 * **OGC WMS**: Web Map Service
-* **OGC WMTS/TMS**: Web Map Tile Service
-* **Vector Tiles**: Vector Tile Service
+* **OGC WMTS/TMS**: Web Map Tile Service / Tile Map Service
+* **Vector Tiles**
 
 Further information about the registration process of services and their usage in applications is available in the Quickstart chapter :ref:`en/quickstart:Load sources`.
 
@@ -19,10 +19,15 @@ Load sources
 
   .. |mapbender-button-add| image:: ../../figures/mapbender_button_add.png
 
+To register a service, click on |mapbender-button-add| **Add source** and select a source type. 
+
 .. image:: ../../figures/source_selection.png
    :scale: 70
     
-To register a service, click on |mapbender-button-add| **Add source** and select a source type. Then a configuration field opens with the following parameters:
+In the configuration you can set different parameters depending on the type that was selected:
+
+  .. image:: ../../figures/mapbender_add_source.png
+     :width: 100%
 
 * **Service URL**: URL to the Capabilities document of the service (e.g. `OGC WMS Version 1.3.0: <https://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities>`_)
 
@@ -30,18 +35,17 @@ To register a service, click on |mapbender-button-add| **Add source** and select
 
 Click on ``Load`` to register the service to the repository.
 
-
-  .. image:: ../../figures/mapbender_add_source.png
-     :width: 100%
-
-
 After a successful registration, Mapbender will provide an overview of the service.
 
 
 Sources Overview
 ----------------
 
-The sources and shared instances sections list and provide additional information about the services registered:
+The sources and shared instances sections list and provides information about the services registered:
+
+
+  .. image:: ../../figures/mapbender_sources.png
+     :width: 100%
 
 * **Filter**: Search for services names, URLs, types and descriptions.
 * **Show metadata**: Shows metadata about a specific service. Opens a new field that lists specific metadata, Mapbender applications that use the source, contact information, details (e.g. service version) and layers.
@@ -49,22 +53,42 @@ The sources and shared instances sections list and provide additional informatio
 * **Delete source**: Removes the registered service from Mapbender.
 
 
-  .. image:: ../../figures/mapbender_sources.png
+
+Source Information
+------------------
+
+The data source information provides information about the service.
+
+  .. image:: ../../figures/source_overview.png
      :width: 100%
 
+The following information was taken from the job description:
 
-Sources menu button
--------------------
+* Metadata
+* Contact
+* Details
+* Layers
 
-In the metadata dialog of a specific service, it is also possible to click on the menu button (top right) that allows:
+At the section **Applications**, you will find an overview of the applications in which the service has been integrated.
+
+
+
+Source menu button
+------------------
+
+In the metadata dialog of a specific source, it is also possible to click on the menu button.
+
+  .. image:: ../../figures/source_overview.png
+     :width: 100%
+
+The menu provides the following options:
 
 * **Update source**: Updates service information by reloading the getCapabilities document.
 * **Create shared instance**: Creates a new shared instance from the specific service. The instance is listed in the Shared instances tab.
 * **Delete**: Removes the registered shared instance from Mapbender.
 
 
-  .. image:: ../../figures/source_overview.png
-     :width: 100%
+
 
 
 Updating sources
@@ -90,9 +114,11 @@ Moreover, there are two checkboxes handling layer updates:
 
 If you want to save the changes, click the ``Load`` button to refresh the WMS. This will re-read the getCapabilities document. The updated version will be displayed in the configuration settings, with changes applied in applications using the service.
 
-Details about the Data Sources:
+Data Source Types
+=================
 
-* **WMS**:
+WMS
+---
 
   * **type**: must be wms
   * **title**: The source title as displayed in the layer tree
@@ -124,7 +150,9 @@ Details about the Data Sources:
     * **legendurl**: url for this layer's legend
     * **layers**: sublayers, array with the same structure as the layers on the top level
 
-* **WMTS/TMS**:
+
+WMTS/TMS
+--------
 
   * **type**: must be wmts or tms
   * **url**: URL to the service's Get capability XML. Note that to obtain the TileMatrices this document will be downloaded for every page view (unlike for database WMTS sources, where this information is cached in the database)
@@ -142,7 +170,8 @@ Details about the Data Sources:
     * **selected (alias: visible)**: initial selected state of the layer. (default: true)
     * **allowSelected**: can the user change state in the layertree? If selected and allowSelected are both false, the layer is ignored, as if active was set to false. (default: true)
 
-* **Vector Tiles**:
+Vector Tiles
+------------
 
   * **type**: must be vector_tiles
   * **title**: The source title as displayed in the layer tree

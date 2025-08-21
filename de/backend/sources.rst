@@ -6,8 +6,8 @@ Datenquellen (Sources)
 Über den Backend-Menübereich können folgende Datenquellen registriert werden:
 
 * **OGC WMS**: Web Map Service
-* **OGC WMTS/TMS**: Web Map Tile Service
-* **Vector Tiles**: Vector Tile Service
+* **OGC WMTS/TMS**: Web Map Tile Service / Tile Map Service
+* **Vector Tiles**
 
 Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im Schnellstart-Kapitel :ref:`de/quickstart:Laden von Datenquellen`.
 
@@ -17,23 +17,25 @@ Datenquelle laden
 
 .. tip:: **Hinweis**: Es ist wichtig, dass die Datenquelle vor dem Hochladen auf ihre Richtigkeit überprüft wird. Dies erfolgt über den Aufruf des getCapabilities-Requests im Browser.
 
+Um einen Dienst zu laden, drücken Sie auf |mapbender-button-add| **Datenquelle hinzufügen** und wählen Sie einen Datenquellen-Typ aus.
+
+
   .. |mapbender-button-add| image:: ../../figures/mapbender_button_add.png
 
 .. image:: ../../figures/de/source_selection.png
    :scale: 70
     
-Um einen Dienst zu laden, drücken Sie auf |mapbender-button-add| **Datenquelle hinzufügen** und wählen Sie einen Datenquellen-Typ. Dies öffnet einen Konfigurationsbereich mit folgenden Parametern:
+Im Konfigurationsbereich können ja nach Auswahl der Datenquelle Parametern gesetzt werden:
 
 * **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z. B. für `OGC WMS Version 1.3.0 <https://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities>`_)
 
 * **Benutzername / Passwort**: Eingabe von Benutzername und Passwort bei gesicherten Diensten.
 
-Mit einem Klick auf ``Laden`` wird der Dienst registriert.
-
 
   .. image:: ../../figures/de/mapbender_add_source.png
      :width: 100%
 
+Mit einem Klick auf ``Laden`` wird der Dienst registriert.
 
 Nach einer erfolgreichen Dienstregistrierung zeigt Mapbender Informationen zum Dienst in einem Übersichtsfenster an.
 
@@ -41,7 +43,12 @@ Nach einer erfolgreichen Dienstregistrierung zeigt Mapbender Informationen zum D
 Datenquellen-Übersicht
 ----------------------
 
-Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen und konfigurierten Dienste auf:
+Die Bereiche Datenquellen und Freie Instanzen geben eine Übersicht der registrierten Dienste
+
+
+  .. image:: ../../figures/de/mapbender_sources.png
+     :width: 100%
+
 
 * **Filter**: Filtert die Dienste nach kontextspezifischer Eingabe, berücksichtigt Name, URL, Typ und Beschreibung.
 * **Metadaten anzeigen**: Zeigt die Metadaten eines ausgewählten Dienstes an. Öffnet einen neuen Bereich, der in mehreren Reitern Metadaten, Mapbender-Anwendungen mit Zugriff, Kontaktinformationen, Details (z.B. Version) und die Layer des Dienstes ausgibt.
@@ -49,22 +56,38 @@ Die Bereiche Datenquellen und Freie Instanzen listen die erfolgreich geladenen u
 * **Datenquelle entfernen**: Entfernt den Dienst aus Mapbender.
 
 
-  .. image:: ../../figures/de/mapbender_sources.png
+Datenquellen-Information
+------------------------
+
+Die Datenquellen-Information gibt Informationen zum Dienst aus.
+
+  .. image:: ../../figures/de/source_overview.png
      :width: 100%
+
+Die folgenden Angaben wurden aus der Dienstbeschreibung ausgelesen:
+
+* Metadaten
+* Kontakt
+* Detail
+* Layers
+
+Unter dem **Anwendungen** findet sich eine Übersicht, in welchen Anwendungen der Dienst eingebunden wurde.
 
 
 Datenquellen-Kontextmenü
 ------------------------
 
-Im Metadatendialog eines Dienstes befindet sich oben rechts außerdem das Datenquellen-Kontextmenü. Es ermöglicht folgende Funktionen:
+Im Metadatendialog eines Dienstes befindet sich ein Kontextmenü. 
+
+  .. image:: ../../figures/de/source_overview.png
+     :width: 100%
+
+Es ermöglicht folgende Funktionen:
 
 * **Datenquelle aktualisieren**: Aktualisiert die Dienst-Informationen durch erneutes Laden des getCapabilities-Dokuments.
 * **Freie Instanz erzeugen**: Erzeugt eine freie Instanz aus der Datenquelle. Diese wird im Bereich "Freie Instanzen" angezeigt. 
 * **Löschen**: Entfernt die freie Instanz aus Mapbender.
 
-
-  .. image:: ../../figures/de/source_overview.png
-     :width: 100%
 
 
 Datenquellen aktualisieren
@@ -89,10 +112,12 @@ Zusätzlich bietet die Maske zwei Checkboxen an:
 
 Falls die Änderungen vorgenommen werden sollen, klicken Sie auf den ``Laden``-Button, um die Datenquelle zu aktualisieren. Dabei wird das getCapabilities-Dokument neu ausgelesen. Die aktualisierte Version wird anschließend in den Konfigurationseinstellungen angezeigt und Änderungen werden in Anwendungen, in denen der Dienst verwendet wird, angewandt.
 
-Details zu den Datenquellen
----------------------------
 
-* **WMS**:
+Datenquellen Typen
+==================
+
+WMS
+---
 
   * **type**: muss wms sein
   * **title**: Der Titel der Quelle, wie er im Ebenenbaum angezeigt wird
@@ -123,7 +148,8 @@ Details zu den Datenquellen
     * **legendurl**: URL für die Legende dieses Layers
     * **layers**: Sublayer, Array mit derselben Struktur wie die Layer auf der obersten Ebene
 
-* **WMTS/TMS**:
+WMTS/TMS
+--------
 
   * **type**: muss wmts oder tms sein
   * **url**: URL zum GetCapabilities-XML des Dienstes. Beachten Sie, dass dieses Dokument für jede Seitenansicht heruntergeladen wird (anders als bei Datenbank-WMTS-Quellen, bei denen diese Informationen im Cache gespeichert werden)
@@ -140,7 +166,8 @@ Details zu den Datenquellen
     * **selected (alias: visible)**: Anfangszustand des Layers. (Standard: true)
     * **allowSelected**: Kann der Benutzer den Zustand im Ebenenbaum ändern? Wenn sowohl selected als auch allowSelected false sind, wird der Layer ignoriert, als ob active auf false gesetzt wäre. (Standard: true)
 
-* **Vector Tiles**:
+Vector Tiles
+------------
 
   * **type**: muss vector_tiles sein
   * **title**: Der Titel der Quelle, wie er im Ebenenbaum angezeigt wird
