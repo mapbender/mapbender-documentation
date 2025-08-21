@@ -13,13 +13,14 @@ Configuration
 
 
 .. image:: ../../../figures/routing_configuration.png
-     :scale: 70
+     :scale: 65
 
 * **Advanced route settings:** Allows you to make further settings (default: false).
 * **Title:** Elements Title.
 * **Route immediately:** Configuration to deactivate/activate automatic routing without the users interaction (default: false).
 * **Allow intermediate points:** Configuration for deactivating/activating intermediate points (default: false).
 * **Enable Search:** Configuration to deactivate/activate the search option (default: false).
+* **Allow export:** Configuration to deactivate/activate the export of the route (default: false).
 * **Zoom buffer (m):** Definition of a zoom buffer for the result display in meters (default: 0).
 * **Line color:** Option to adjust the line color and opacity with the rgba standard (default: rgba(66, 134, 244, 1)).
 * **Line width:** Option to adjust the line width (default: 3).
