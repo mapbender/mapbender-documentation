@@ -29,8 +29,8 @@ Layerset actions
 
 Instance actions
 ----------------
- * |mapbender-button-publish|: Toggle show/hide instance
  * |mapbender-button-edit|: Edit instance
+ * |mapbender-button-publish|: Toggle show/hide instance
  * |mapbender-button-delete|: Delete instance
 
 .. image:: ../../../figures/mapbender_add_source_to_application.png
@@ -39,6 +39,9 @@ Instance actions
 
 Layerset-instances
 ==================
+
+WMS Instance Configuration
+--------------------------
 
 Layerset-instances contain options to configure certain WMS parameters: image-format, info-format, exception-format, scales for the different layers etc. Layerset-instances can be configured by clicking on the gear symbol. 
 
@@ -219,3 +222,9 @@ Further information
 * Disabling one or more layersets for an application is possible in its :ref:`map` settings.
 
 * Likewise, individual thematic layersets can be (de)activated via checkbox in the layerset configuration so that they are (not) visible in the map on application startup.
+
+WMTS Instance Configuration
+---------------------------
+
+Vector Tiles Instance Configuration
+-----------------------------------

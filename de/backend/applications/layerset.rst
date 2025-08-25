@@ -30,8 +30,8 @@ Layerset-Ebene
 
 Instanz-Ebene
 -------------
- * |mapbender-button-publish|: Instanz an/aus
  * |mapbender-button-edit|: Instanz bearbeiten
+ * |mapbender-button-publish|: Instanz an/aus
  * |mapbender-button-delete|: Instanz löschen
 
 .. image:: ../../../figures/de/mapbender_add_source_to_application.png
@@ -40,6 +40,9 @@ Instanz-Ebene
 
 Layerset-Instanzen
 ==================
+
+WMS Instanz-Konfiguration
+-------------------------
 
 Layerset-Instanzen enthalten unterschiedliche Optionen, mit denen WMS-Dienste angesprochen werden können: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr. Aus der Layerset-Übersicht können mit dem Zahnrad-Button einzelne Instanzen konfiguriert werden.
 
@@ -219,3 +222,9 @@ Weitere Informationen
 * Einzelne Layersets können in den Einstellungen zur :ref:`map_de` für die jeweilige Anwendung an- bzw. abgeschaltet werden.
 
 * Ebenso können bei der Anzeige thematischer Layer die Layersets in der Layerset-Konfiguration per Checkbox bei Anwendungsstart (de-)aktiviert werden.
+
+WMTS Instanz-Konfiguration
+--------------------------
+
+Vector Tiles Instanz-Konfiguration
+----------------------------------
