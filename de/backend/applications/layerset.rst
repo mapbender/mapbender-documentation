@@ -226,5 +226,57 @@ Weitere Informationen
 WMTS Instanz-Konfiguration
 --------------------------
 
+.. image:: ../../../figures/de/layerset/layerset_wmts_instance.png
+
+Die Layerset-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
+
+**Die Eigenschaften aus den WMS-Capabilities:**
+
+* **Ursprungs-URL**: Die URL des GetCapabilities-Dokuments des Dienstes.
+* **Titel**: Der Titel der Instanz, wie er im Ebenenbaum angezeigt wird.
+* **Deckkraft**: Die Transparenz der Instanz, angegeben als Wert zwischen 0 (vollständig transparent) und 100 (vollständig undurchsichtig).
+* **BaseSource**: Gibt an, ob die Instanz als Basisquelle behandelt werden soll.
+* **Proxy**: Bool-Wert, ob der Dienst über einen Proxy geleitet werden soll.
+
+**Layer-Einstellungen:**
+
+* **Titel**: Der Titel des Layers, wie er im Ebenenbaum angezeigt wird.
+* **Aktiv**: Gibt an, ob der Layer standardmäßig aktiviert ist.
+* **Ausgewählt**: Gibt an, ob der Layer standardmäßig sichtbar ist.
+* **Aufklappen**: Gibt an, ob der Layer standardmäßig im Ebenenbaum aufgeklappt ist.
+* **Info**: Gibt an, ob der Layer zusätzliche Informationen anzeigen kann.
+
+Die Einstellungen können durch die Buttons "Speichern" und "Zurück" bestätigt oder abgebrochen werden.
+
 Vector Tiles Instanz-Konfiguration
 ----------------------------------
+
+.. image:: ../../../figures/de/layerset/layerset_vector_tiles_instance.png
+
+Die Vector Tiles-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
+
+* **Ursprungs-URL**: Die URL zur Mapbox Style Spec JSON-Datei.
+* **Titel**: Der Titel der Instanz, wie er im Ebenenbaum angezeigt wird.
+* **Deckkraft**: Die Transparenz der Instanz, angegeben als Wert zwischen 0 (vollständig transparent) und 100 (vollständig undurchsichtig).
+* **Minimaler/Maximaler Maßstab(Nenner)**: Der Maßstabsbereich, in dem der Layer angezeigt wird.
+* **Auflösungskorrektur für den Druck**: Gibt an, ob eine Auflösungskorrektur für den Druck angewendet werden soll.
+* **BaseSource**: Gibt an, ob die Instanz als Basisquelle behandelt werden soll.
+* **Bei Anwendungsstart aktivieren**: Checkbox, ob die Instanz beim Start der Anwendung aktiviert sein soll.
+* **Auswahl im Ebenenbaum erlauben**: Checkbox, ob der Benutzer die Instanz im Ebenenbaum auswählen darf.
+
+**Feature-Information**
+
+* **Information bei Anwendungsstart aktiv**: Checkbox, ob die Feature-Information standardmäßig aktiviert ist.
+* **Information vom Nutzer umschaltbar**: Checkbox, ob der Benutzer die Feature-Information umschalten darf.
+* **Wenn erweitere Einstellungen aktiviert worden sind dann sind folgende Einstellungen sichtbar**:
+* **Titel**: Eigenschaft/Eigenschaften des Features, die als Titel angezeigt werden.
+* **Features mit leerem Titel ausblenden**: Checkbox, ob Features ohne Titel ausgeblendet werden sollen.
+* **Feld-Auswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Feldern. Beispiel:
+
+**Legende**
+
+* **Legende aktivieren**: Bool-Wert, ob eine Legende für die Instanz angezeigt werden soll.
+* **Wenn erweitere Einstellungen aktiviert worden sind dann sind wfolgende Einstellungen sichtbar**:
+* **Ebenenauswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Ebenen. Beispiel:
+
+Die Einstellungen können durch die Buttons "Speichern" und "Zurück" bestätigt oder abgebrochen werden.
