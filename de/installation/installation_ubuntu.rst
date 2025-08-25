@@ -176,7 +176,7 @@ Für die Einrichtung muss `NodeJS <https://nodejs.org/en/download>`_ installiert
 * Befolgen Sie die Anweisungen auf https://nodejs.org/en/download für Installationsanweisungen für Node.js auf Ihrer Plattform.
 * Führen Sie dies als Webserver-Benutzer aus (wichtig!)    
 
-.. image:: ../../figures/vector_tiles_configuration.png
+.. image:: ../../figures/vector_tiles_print_configuration.png
     :scale: 70
 
 

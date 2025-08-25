@@ -176,7 +176,7 @@ The setup needs `NodeJS <https://nodejs.org/en/download>`_ installed, as well as
 * Follow instruction on https://nodejs.org/en/download for installation instructions for node.js on your platform
 * Execute this as your webserver user (important!)    
 
-.. image:: ../../figures/vector_tiles_configuration.png
+.. image:: ../../figures/vector_tiles_print_configuration.png
     :scale: 70
 
 LDAP
