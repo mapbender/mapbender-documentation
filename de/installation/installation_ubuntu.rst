@@ -166,14 +166,15 @@ Konfiguration zum Druck von Vector Tiles
 
 Das Drucken von Vector Tiles ist komplizierter als das einfache Herunterladen eines Bildes, wie es beispielsweise auch bei WMS der Fall ist. Es benötigt eine Render-Engine zum Rendern der einzelnen Kacheln, die leider einige zusätzliche Einstellungen erfordert. Mapbender funktioniert auch ohne diese zusätzlichen Einstellungen, aber Vector Tiles würden beim Drucken dann leer bleiben.
 
-Für die Einrichtung muss NodeJS installiert sein, ebenso wie das Node-Modul puppeteer im globalen Namespace.
+Für die Einrichtung muss `NodeJS <https://nodejs.org/en/download>`_ installiert sein, ebenso wie das Node-Modul `puppeteer <https://pptr.dev>`_ im globalen Namespace.
 
 .. code-block:: bash
 
-    # Follow instruction on https://nodejs.org/en/download for installation instructions for node.js on your platform
-    # Execute this as your webserver user (important!)
     npm install -g puppeteer
     puppeteer browsers install
+
+* Befolgen Sie die Anweisungen auf https://nodejs.org/en/download für Installationsanweisungen für Node.js auf Ihrer Plattform.
+* Führen Sie dies als Webserver-Benutzer aus (wichtig!)    
 
 .. image:: ../../figures/vector_tiles_configuration.png
     :scale: 70
