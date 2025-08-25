@@ -164,7 +164,7 @@ Optional
 Konfiguration zum Druck von Vector Tiles
 ++++++++++++++++++++++++++++++++++++++++
 
-Das Drucken von Vector Tiles ist komplizierter als das einfache Herunterladen eines Bildes, wie es beispielsweise auch bei WMS der Fall ist. Es benötigt eine Render-Engine zum Rendern der einzelnen Kacheln, die leider einige zusätzliche Einstellungen erfordert. Mapbender funktioniert auch ohne diese zusätzlichen Einstellungen, aber Vector Tiles bleiben beim Drucken dann leer.
+Das Drucken von Vector Tiles ist komplizierter als das einfache Herunterladen eines Bildes, wie es beispielsweise auch bei WMS der Fall ist. Es benötigt eine Render-Engine zum Rendern der einzelnen Kacheln, die leider einige zusätzliche Einstellungen erfordert. Mapbender funktioniert auch ohne diese zusätzlichen Einstellungen, aber Vector Tiles würden beim Drucken dann leer bleiben.
 
 Für die Einrichtung muss NodeJS installiert sein, ebenso wie das Node-Modul puppeteer im globalen Namespace.
 
