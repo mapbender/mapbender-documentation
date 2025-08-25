@@ -161,6 +161,23 @@ Find Information about the first steps with Mapbender in the :ref:`Mapbender Qui
 Optional
 --------
 
+Vector Tiles Print Configuration
+++++++++++++++++++++++++++++++++
+
+Printing vector tiles is more complicated than just downloading an image as it is the case with e.g. WMS. It needs a render engine to render the tiles which unfortunately needs some additional setup. The Mapbender will also work without this additional setup, but printed vector tiles will remain blank.
+
+The setup needs NodeJS installed, as well as the node module puppeteer installed in the global namespace.
+
+.. code-block:: bash
+    
+    # Follow instruction on https://nodejs.org/en/download for installation instructions for node.js on your platform
+    # Execute this as your webserver user (important!)
+    npm install -g puppeteer
+    puppeteer browsers install
+
+.. image:: ../../figures/vector_tiles_configuration.png
+    :scale: 70
+
 LDAP
 ++++
 
