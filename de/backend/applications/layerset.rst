@@ -35,7 +35,7 @@ Instanz-Ebene
  * |mapbender-button-delete|: Instanz löschen
 
 .. image:: ../../../figures/de/mapbender_add_source_to_application.png
-     :width: 100%
+  :scale: 70
 
 
 Layerset-Instanzen
@@ -47,6 +47,7 @@ WMS Instanz-Konfiguration
 Layerset-Instanzen enthalten unterschiedliche Optionen, mit denen WMS-Dienste angesprochen werden können: das Bildformat, das Infoformat, Exceptionformat, die Maßstäbe für die einzelnen Layer und vieles mehr. Aus der Layerset-Übersicht können mit dem Zahnrad-Button einzelne Instanzen konfiguriert werden.
 
 .. image:: ../../../figures/de/layerset/mapbender_wms_application_settings.png
+  :scale: 90
 
 Sobald ein WMS-Dienst in ein Layerset eingebunden wird, ist er als Layerset-Instanz mit der Anwendung verknüpft.
 Der Screenshot zeigt die `private Instanz <#freie-und-private-instanzen>`_ ``20/581`` basierend auf einem WMS-Dienst. Die zugehörige Datenquelle ist die Nr. 20. Die Layerset-Instanz selbst hat die Laufnummer 581.
@@ -227,6 +228,7 @@ WMTS Instanz-Konfiguration
 --------------------------
 
 .. image:: ../../../figures/de/layerset/layerset_wmts_instance.png
+  :scale: 70   
 
 Die Layerset-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
 
@@ -236,7 +238,7 @@ Die Layerset-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
 * **Titel**: Der Titel der Instanz, wie er im Ebenenbaum angezeigt wird.
 * **Deckkraft**: Die Transparenz der Instanz, angegeben als Wert zwischen 0 (vollständig transparent) und 100 (vollständig undurchsichtig).
 * **BaseSource**: Gibt an, ob die Instanz als Basisquelle behandelt werden soll.
-* **Proxy**: Bool-Wert, ob der Dienst über einen Proxy geleitet werden soll.
+* **Proxy**: Checkbox, ob der Dienst über einen Proxy geleitet werden soll.
 
 **Layer-Einstellungen:**
 
@@ -246,18 +248,17 @@ Die Layerset-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
 * **Aufklappen**: Gibt an, ob der Layer standardmäßig im Ebenenbaum aufgeklappt ist.
 * **Info**: Gibt an, ob der Layer zusätzliche Informationen anzeigen kann.
 
-Die Einstellungen können durch die Buttons "Speichern" und "Zurück" bestätigt oder abgebrochen werden.
-
 Vector Tiles Instanz-Konfiguration
 ----------------------------------
 
 .. image:: ../../../figures/de/layerset/layerset_vector_tiles_instance.png
+  :scale: 80
 
 Die Vector Tiles-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
 
-* **Ursprungs-URL**: Die URL zur Mapbox Style Spec JSON-Datei.
+* **Ursprungs-URL**: Die URL zur JSON-Datei.
 * **Titel**: Der Titel der Instanz, wie er im Ebenenbaum angezeigt wird.
-* **Deckkraft**: Die Transparenz der Instanz, angegeben als Wert zwischen 0 (vollständig transparent) und 100 (vollständig undurchsichtig).
+* **Deckkraft**: Die Transparenz der Instanz.
 * **Minimaler/Maximaler Maßstab(Nenner)**: Der Maßstabsbereich, in dem der Layer angezeigt wird.
 * **Auflösungskorrektur für den Druck**: Gibt an, ob eine Auflösungskorrektur für den Druck angewendet werden soll.
 * **BaseSource**: Gibt an, ob die Instanz als Basisquelle behandelt werden soll.
@@ -268,15 +269,29 @@ Die Vector Tiles-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkei
 
 * **Information bei Anwendungsstart aktiv**: Checkbox, ob die Feature-Information standardmäßig aktiviert ist.
 * **Information vom Nutzer umschaltbar**: Checkbox, ob der Benutzer die Feature-Information umschalten darf.
-* **Wenn erweitere Einstellungen aktiviert worden sind dann sind folgende Einstellungen sichtbar**:
+* **Wenn erweitere Einstellungen aktiviert worden sind, dann sind folgende Einstellungen sichtbar**:
 * **Titel**: Eigenschaft/Eigenschaften des Features, die als Titel angezeigt werden.
 * **Features mit leerem Titel ausblenden**: Checkbox, ob Features ohne Titel ausgeblendet werden sollen.
 * **Feld-Auswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Feldern. Beispiel:
 
+     - klasse: Klasse
+     - name: Name
+     - layer: 'Layer name'
+     - 'mvt:layer': Thema
+     - land: Bundesland
+
 **Legende**
 
 * **Legende aktivieren**: Bool-Wert, ob eine Legende für die Instanz angezeigt werden soll.
-* **Wenn erweitere Einstellungen aktiviert worden sind dann sind wfolgende Einstellungen sichtbar**:
+* **Wenn erweitere Einstellungen aktiviert worden sind, dann sind folgende Einstellungen sichtbar**:
 * **Ebenenauswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Ebenen. Beispiel:
 
-Die Einstellungen können durch die Buttons "Speichern" und "Zurück" bestätigt oder abgebrochen werden.
+     - SiedlungF_Siedlung: Siedlung
+     - VegetationsF_Wald: Wald
+     - VegetationsF_Ackerland_und_Co: Vegetation
+     - Gebaeude2D_nicht_oeffentlich: Gebäude
+
+.. image:: ../../../figures/de/layerset/layerset_vector_tiles_visualisation.png
+  :width: 100%
+
+Der Screenshot zeigt eine Mapbender-Anwendung mit aktivierter Legende und Feature-Information.  

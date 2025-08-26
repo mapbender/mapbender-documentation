@@ -34,7 +34,7 @@ Instance actions
  * |mapbender-button-delete|: Delete instance
 
 .. image:: ../../../figures/mapbender_add_source_to_application.png
-     :width: 100%
+  :scale: 70
 
 
 Layerset-instances
@@ -46,7 +46,7 @@ WMS Instance Configuration
 Layerset-instances contain options to configure certain WMS parameters: image-format, info-format, exception-format, scales for the different layers etc. Layerset-instances can be configured by clicking on the gear symbol. 
 
 .. image:: ../../../figures/layerset/mapbender_wms_application_settings.png
-           :width: 100%
+  :scale: 90
 
 As soon a WMS service is integrated in a layerset, it is linked as a layerset-instance within the application.
 
@@ -227,6 +227,7 @@ WMTS Instance Configuration
 ---------------------------
 
 .. image:: ../../../figures/layerset/layerset_wmts_instance.png
+  :scale: 70
 
 The layerset instance settings offer the following configuration options:
 
@@ -236,7 +237,7 @@ The layerset instance settings offer the following configuration options:
 * **Title**: The title of the instance as displayed in the layer tree.
 * **Opacity**: The transparency of the instance, specified as a value between 0 (fully transparent) and 100 (fully opaque).
 * **BaseSource**: Indicates whether the instance should be treated as a base source.
-* **Proxy**: Boolean value indicating whether the service should be routed through a proxy.
+* **Proxy**: Checkbox, indicating whether the service should be routed through a proxy.
 
 **Layer Settings:**
 
@@ -246,18 +247,17 @@ The layerset instance settings offer the following configuration options:
 * **Toggle**: Indicates whether the layer is expanded in the layer tree by default.
 * **Info**: Indicates whether the layer can display additional information.
 
-The settings can be confirmed or canceled using the "Save" and "Back" buttons.
-
 Vector Tiles Instance Configuration
 -----------------------------------
 
 .. image:: ../../../figures/layerset/layerset_vector_tiles_instance.png
+  :scale: 80
 
 The Vector Tiles instance settings offer the following configuration options:
 
-* **Origin URL**: The URL to the Mapbox Style Spec JSON file.
+* **Origin URL**: The URL to the JSON file.
 * **Title**: The title of the instance as displayed in the layer tree.
-* **Opacity**: The transparency of the instance, specified as a value between 0 (fully transparent) and 100 (fully opaque).
+* **Opacity**: The transparency of the instance.
 * **Minimum/Maximum Scale (Denominator)**: The scale range in which the layer should be displayed.
 * **Resolution correction for printing**: Specifies whether a resolution correction for printing should be applied.
 * **BaseSource**: Indicates whether the instance should be treated as a base source.
@@ -273,12 +273,24 @@ The Vector Tiles instance settings offer the following configuration options:
 * **Hide features with empty title**: Checkbox indicating whether features without a title should be hidden.
 * **Field filter & translation**: YAML array for field selection and translation. Example:
 
+     - klasse: Klasse
+     - name: Name
+     - layer: 'Layer name'
+     - 'mvt:layer': Thema
+     - land: Bundesland
+
 **Legend**
 
 * **Enable legend**: Boolean value indicating whether a legend should be displayed for the instance.
 * **If advanced settings are enabled, following settings become visible**:
 * **Layer selection & translation**: YAML array for layer selection and translation. Example:
 
-  * VegetationsF_Wald: Wald
+     - SiedlungF_Siedlung: Siedlung
+     - VegetationsF_Wald: Wald
+     - VegetationsF_Ackerland_und_Co: Vegetation
+     - Gebaeude2D_nicht_oeffentlich: Gebäude
 
-The settings can be confirmed or canceled using the "Save" and "Back" buttons.
+.. image:: ../../../figures/layerset/layerset_vector_tiles_visualisation.png
+  :width: 100%
+
+The screenshot shows a Mapbender application with an active legend and feature information.  
