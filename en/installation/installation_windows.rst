@@ -222,3 +222,50 @@ Further information can be found at :ref:`en/customization/commands:bin/console 
 Congratulations! Mapbender is now set up correctly and ready for further configuration.
 Find information about the first steps with Mapbender in the :ref:`Mapbender Quickstart <quickstart>`.
 
+Optional
+--------
+
+Configuration for Printing Vector Tiles on Windows
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Node.js Installation 
+====================
+
+First, install Node.js using the Windows Installer from https://nodejs.org/en/download.
+
+The Apache web server requires the path to the Node.js directory, so it must be added to the PATH environment variable.
+
+Example in the `fcgi.conf`:
+
+.. code-block:: bash
+
+    FcgidInitialEnv PATH "C:/srv/php;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;C:/Program Files/nodejs"
+
+Installing the Puppeteer Node Module
+====================================
+
+Installing the Puppeteer Node module on Windows is a bit more complex because it must be done in the context of the user under which the Apache web server is running.
+
+Often, Apache runs as a service with the user 'Local System'. If this is the case, you will need an additional tool to run a CMD or PowerShell command line as SYSTEM:
+
+1. Download the PsExec Tool: https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+
+2. Extract the ZIP file, e.g., to C:\\Tools\\PsExec\\.
+
+3. Run CMD or PowerShell as Administrator.
+
+4. Run the console as SYSTEM:
+
+   .. code-block:: bash
+
+        c:\Tools\PsExec\PsExec.exe -i -s cmd.exe
+
+5. In the SYSTEM console, install the Puppeteer module in the application directory of Mapbender (not globally!):
+
+   .. code-block:: bash
+
+       c:\srv\htdocs\mapbender\application> npm install puppeteer
+
+   .. code-block:: bash
+
+       c:\srv\htdocs\mapbender\application> npm puppeteer browsers install
