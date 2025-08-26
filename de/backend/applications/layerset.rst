@@ -272,7 +272,10 @@ Die Vector Tiles-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkei
 * **Wenn erweitere Einstellungen aktiviert worden sind, dann sind folgende Einstellungen sichtbar**:
 * **Titel**: Eigenschaft/Eigenschaften des Features, die als Titel angezeigt werden.
 * **Features mit leerem Titel ausblenden**: Checkbox, ob Features ohne Titel ausgeblendet werden sollen.
-* **Feld-Auswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Feldern. Beispiel:
+* **Feld-Auswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Feldern.
+Beispiel:
+
+  .. code-block:: yaml
 
      - klasse: Klasse
      - name: Name
@@ -284,7 +287,10 @@ Die Vector Tiles-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkei
 
 * **Legende aktivieren**: Bool-Wert, ob eine Legende für die Instanz angezeigt werden soll.
 * **Wenn erweitere Einstellungen aktiviert worden sind, dann sind folgende Einstellungen sichtbar**:
-* **Ebenenauswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Ebenen. Beispiel:
+* **Ebenenauswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Ebenen. 
+Beispiel:
+
+  .. code-block:: yaml
 
      - SiedlungF_Siedlung: Siedlung
      - VegetationsF_Wald: Wald

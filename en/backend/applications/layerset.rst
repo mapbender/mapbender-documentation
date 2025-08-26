@@ -271,7 +271,10 @@ The Vector Tiles instance settings offer the following configuration options:
 * **If advanced settings are enabled, following settings become visible**:
 * **Title**: Property/properties of the feature displayed as the title.
 * **Hide features with empty title**: Checkbox indicating whether features without a title should be hidden.
-* **Field filter & translation**: YAML array for field selection and translation. Example:
+* **Field filter & translation**: YAML array for field selection and translation.
+Example:
+
+  .. code-block:: yaml
 
      - klasse: Klasse
      - name: Name
@@ -283,7 +286,10 @@ The Vector Tiles instance settings offer the following configuration options:
 
 * **Enable legend**: Boolean value indicating whether a legend should be displayed for the instance.
 * **If advanced settings are enabled, following settings become visible**:
-* **Layer selection & translation**: YAML array for layer selection and translation. Example:
+* **Layer selection & translation**: YAML array for layer selection and translation.
+Example:
+
+  .. code-block:: yaml
 
      - SiedlungF_Siedlung: Siedlung
      - VegetationsF_Wald: Wald
