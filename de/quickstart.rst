@@ -6,6 +6,8 @@
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
 
+  .. |mapbender-button-edit| image:: ../figures/mapbender_button_edit.png
+
   .. |mapbender-button-show| image:: ../figures/mapbender_button_show.png
 
   .. |mapbender-button-copy| image:: ../figures/mapbender_button_copy.png
@@ -13,8 +15,6 @@
   .. |mapbender-button-export| image:: ../figures/mapbender_button_export.png
 
   .. |mapbender-button-publish| image:: ../figures/mapbender_button_publish.png
-
-  .. |mapbender-button-edit| image:: ../figures/mapbender_button_edit.png
 
   .. |mapbender-button-delete| image:: ../figures/mapbender_button_delete.png
 
@@ -124,11 +124,11 @@ In der Anwendungsübersicht finden Sie eine Liste mit allen verfügbaren Anwendu
  * Titel, URL-Titel und Beschreibung
  * Vorschaubild der Anwendung
  * Filtertextfeld zur Suche von Anwendungen
- * Option zum Anlegen neuer Anwendungen
+ * |mapbender-button-add| Option zum Anlegen neuer Anwendungen
+ * |mapbender-button-edit| Bearbeiten der Anwendung
  * |mapbender-button-show| Link zur Anwendung
  * |mapbender-button-copy| Kopieren der Anwendung
  * |mapbender-button-export| Exportieren der Anwendung 
- * |mapbender-button-edit| Bearbeiten der Anwendung
  * |mapbender-button-publish| macht die Anwendung öffentlich zugänglich
  * |mapbender-button-delete| Löschen der Anwendung
  
