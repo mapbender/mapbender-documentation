@@ -55,6 +55,21 @@ Configuration
 .. image:: ../../../figures/view_manager_configuration.png
      :scale: 70
 
+Controlling URL parameters
+--------------------------
+
+.. image:: ../../../figures/view_manager_viewid.png
+     :scale: 70
+
+Mapbender provides the ability to call different saved views using the ``viewid`` parameter in the URL. This feature allows users to quickly switch between predefined views of the map application, as demonstrated in the screenshot.
+
+Each saved view is assigned a unique ID, which can be used to load the corresponding view directly. For example, the view titled "Poppelsdorfer Schloss" can be accessed using the following URL parameter:
+
+.. code-block:: php
+
+     ?viewid=1
+
+By appending this parameter to the application's URL, Mapbender will automatically load the saved view associated with the specified ID.
 
 YAML-Definition
 ---------------

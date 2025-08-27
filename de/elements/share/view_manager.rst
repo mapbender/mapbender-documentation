@@ -56,6 +56,21 @@ Konfiguration
 .. image:: ../../../figures/de/view_manager_configuration.png
      :scale: 70
 
+Kontrolle über URL-Parameter
+----------------------------
+
+.. image:: ../../../figures/de/view_manager_viewid.png
+     :scale: 70
+
+Mapbender bietet die Möglichkeit, verschiedene gespeicherte Ansichten mithilfe des ``viewid``-Parameters in der URL aufzurufen. Diese Funktion ermöglicht es Benutzern, schnell zwischen vordefinierten Ansichten der Kartenanwendung zu wechseln, wie im Screenshot gezeigt.
+
+Jede gespeicherte Ansicht erhält eine eindeutige ID, die verwendet werden kann, um die entsprechende Ansicht direkt zu laden. Zum Beispiel kann die Ansicht mit dem Titel "Poppelsdorfer Schloss" über den folgenden URL-Parameter aufgerufen werden:
+
+.. code-block:: php
+
+     ?viewid=1
+
+Durch das Anhängen dieses Parameters an die URL der Anwendung lädt Mapbender automatisch die gespeicherte Ansicht, die mit der angegebenen ID verknüpft ist.
 
 YAML-Definition
 ---------------
