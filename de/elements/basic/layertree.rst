@@ -189,11 +189,11 @@ In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen def
 
 * Layerset World: 
     * Instanz `OpenStreetMap (OSM) <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
-    * Instanz `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instanz `Basemap VT <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ 
 
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der :ref:`layerset_de` und :ref:`sources_de`).
 
-Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" mit der Instanz "OpenStreetMap (OSM)" hinzuzufügen. Nun fügen wir in dieses Layerset auch die Instanz "GEBCO" hinzu. 
+Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" mit der Instanz "OpenStreetMap (OSM)" hinzuzufügen. Nun fügen wir in dieses Layerset auch die Instanz "Basemap VT" hinzu. 
 Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" und laden in dieses die beiden oben genannten Instanzen "NW DTK50" und "Wald und Holz NRW" ein.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex.png

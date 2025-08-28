@@ -188,11 +188,11 @@ In the example, we define two layersets with two instances each:
 
 * Layerset **World**: 
     * Instance `OpenStreetMap (OSM) <http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
-    * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * Instance `Basemap VT <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ 
 
 For the configuration of the layersets, the four services mentioned above were added as instances (For detailed information, see above or in the :ref:`layerset` and :ref:`sources` documentation).
 
-For this example, the above mentioned steps were performed to add the Layerset "World" with the instance "OpenStreetMap (OSM)". Now we add the instance "GEBCO" in this Layerset. 
+For this example, the above mentioned steps were performed to add the Layerset "World" with the instance "OpenStreetMap (OSM)". Now we add the instance "Basemap VT" in this Layerset. 
 To use the thematic grouping, we create a new Layerset named "Project NRW" and load the two instances "NW DTK50" and "Wald und Holz NRW(Forest NRW)" into it.  
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex_en.png
