@@ -58,8 +58,13 @@ Configuration
 Controlling URL parameters
 --------------------------
 
-.. image:: ../../../figures/view_manager_viewid.png
+Load a configuration via paramter viewid
+========================================
+
+.. figure:: ../../../figures/view_manager_viewid.png
      :scale: 70
+     
+     Hovering over a saved view displays the associated ID.
 
 Mapbender provides the ability to call different saved views using the ``viewid`` parameter in the URL. This feature allows users to quickly switch between predefined views of the map application, as demonstrated in the screenshot.
 
