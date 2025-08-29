@@ -60,7 +60,7 @@ Kontrolle über URL-Parameter
 ----------------------------
 
 Aufruf einer Ansicht über den Parameter viewid
-=============================================
+==============================================
 
 .. figure:: ../../../figures/de/view_manager_viewid.png
      :scale: 70
