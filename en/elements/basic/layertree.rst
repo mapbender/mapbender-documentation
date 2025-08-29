@@ -180,20 +180,20 @@ In the following section, we walk through an exemplary configuration of a Layert
 
 **Configuration of multiple Layersets**
 
-In the example, we define two layersets with two instances each:
+In the example, we define two layersets with two services each:
 
 * Layerset **Project NRW**:
-    * Instance `NW DTK50 <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-    * Instance `Wald und Holz NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * WMS `NW DTK50 <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * WMS `Wald und Holz NRW <http://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 * Layerset **World**: 
-    * Instance `OpenStreetMap (OSM) <http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
-    * Instance `GEBCO <https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * WMS `OpenStreetMap (OSM) <http://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Vector Tiles `basemap.de Web Vector (Stli: Farbe) <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ 
 
 For the configuration of the layersets, the four services mentioned above were added as instances (For detailed information, see above or in the :ref:`layerset` and :ref:`sources` documentation).
 
-For this example, the above mentioned steps were performed to add the Layerset "World" with the instance "OpenStreetMap (OSM)". Now we add the instance "GEBCO" in this Layerset. 
-To use the thematic grouping, we create a new Layerset named "Project NRW" and load the two instances "NW DTK50" and "Wald und Holz NRW(Forest NRW)" into it.  
+For this example, the above mentioned steps were performed to add the Layerset "World" with the instance "OpenStreetMap (OSM)". Now we add the instance "basemap.de Web Vector (Stli: Farbe)" in this Layerset. 
+To use the thematic grouping, we create a new Layerset named "Project NRW" and load the two services "NW DTK50" and "Wald und Holz NRW (Forest NRW)" into it.  
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex_en.png
            :scale: 80
@@ -201,7 +201,7 @@ To use the thematic grouping, we create a new Layerset named "Project NRW" and l
 
            Configuration of Layersets for a thematic Layertree.
 
-The Layerset should now contain three Layersets. The **Overview** for the overview map, the **Project NRW** Layerset with two regional data sets from Western Germany and the **World**-Layerset with the supraregional data. 
+The Layerset should now contain three Layersets. **Overview** for the overview map, the **Project NRW** Layerset with two regional data sets from NRW and the **World**-Layerset with the supraregional data. 
 
 **Configuration of the map to display the Layerset**
 
