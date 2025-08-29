@@ -58,8 +58,8 @@ Configuration
 Controlling URL parameters
 --------------------------
 
-Load a configuration via paramter viewid
-========================================
+Load a configuration via parameter viewid
+=========================================
 
 .. figure:: ../../../figures/view_manager_viewid.png
      :scale: 70
