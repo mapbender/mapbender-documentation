@@ -184,17 +184,17 @@ Im Folgenden gehen wir eine beispielhafte Konfiguration eines Ebenenbaums mit er
 In dem folgenden Beispiel sind zwei **Layersets** mit jeweils zwei Instanzen definiert:
 
 * Layerset Project NRW:
-    * Instanz `NW DTK50 <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
-    * Instanz `Wald und Holz NRW <https://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * WMS `NW DTK50 <https://www.wms.nrw.de/geobasis/wms_nw_dtk50?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_ 
+    * WMS `Wald und Holz NRW <https://www.wms.nrw.de/umwelt/waldNRW?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
 
 * Layerset World: 
-    * Instanz `OpenStreetMap (OSM) <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
-    * Instanz `Basemap VT <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ 
+    * WMS `OpenStreetMap (OSM) <https://osm-demo.wheregroup.com/service?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>`_
+    * Vector Tiles `basemap.de Web Vector (Stil: Farbe) <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ 
 
 Für die Einrichtung der Layersets wurden die vier oben genannten Dienste als Instanzen hinzugefügt (detaillierte Information siehe oben oder in der Doku der :ref:`layerset_de` und :ref:`sources_de`).
 
-Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" mit der Instanz "OpenStreetMap (OSM)" hinzuzufügen. Nun fügen wir in dieses Layerset auch die Instanz "Basemap VT" hinzu. 
-Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" und laden in dieses die beiden oben genannten Instanzen "NW DTK50" und "Wald und Holz NRW" ein.
+Für dieses Beispiel wurden die oben genannten Schritte durchgeführt, um das Layerset "World" mit der Instanz "OpenStreetMap (OSM)" hinzuzufügen. Nun fügen wir in dieses Layerset auch den Dienst "basemap.de  Web Vector (Sti: Farbe)" hinzu. 
+Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein neues Layerset mit dem Namen "Project NRW" und fügen in dieses die beiden oben genannten Dienste "NW DTK50" und "Wald und Holz NRW" ein.
 
 .. figure:: ../../../figures/layertree/layertree_configuration_layerset_komplex.png
            :scale: 80
@@ -202,7 +202,7 @@ Um die thematische Gruppierung nutzen zu können, erstellen wir zusätzlich ein 
 
            Konfiguration der Layersets für den thematischen Ebenenbaum.
 
-Das Layerset sollte nun drei Layersets enthalten. Die **Overview** für die Übersichtskarte, das **Project NRW** Layerset mit den zwei regionalen Datensets aus NRW und das "World"-Layerset mit den überregionalen Layern. 
+Das Layerset sollte nun drei Layersets enthalten. **Overview** für die Übersichtskarte, das **Project NRW** Layerset mit regionalen Informationen aus NRW und das "World"-Layerset mit den überregionalen Themen. 
 
 **Einrichtung in der Karte zur Anzeige der Layersets**
 
