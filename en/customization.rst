@@ -9,5 +9,6 @@ Customization / Tips and tricks
    customization/templates.rst
    customization/yaml.rst
    customization/commands.rst
-   
+   customization/api.rst
+
 

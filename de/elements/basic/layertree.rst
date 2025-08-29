@@ -17,12 +17,13 @@ Funktionen
 * Zoom zum Kartenausschnitt eines Layers
 * Abfrage der Metadaten eines Layers
 * Zeitliche Dimension eines Layers kontrollieren
+* Themen filtern
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog.png
            :scale: 80
            :alt: Ebenenbaum im Dialogfenster zeigt Dienste mit Ebenen
 
-           Einfacher Ebenenbaum im Dialogfenster zeigt Dienste mit Ebenen.
+           Einfacher Ebenenbaum im Dialogfenster mit Filter-Funktion.
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane.png
            :scale: 80
@@ -134,6 +135,7 @@ Wenn **Automatisches Öffnen** aktiv ist, wird der Ebenenbaum beim Anwendungssta
 * **Auf Ebene zoomen**: Layer zentriert in seiner vollen Ausdehnung anzeigen
 * **Metadaten**: Metadaten eines Layers anzeigen
 * **Dimension**: Dimension eines Layers kontrollieren. Mehr Informationen unter :ref:`dimensions_handler_de`.
+* **Stil auswählen**: Erlaubt die Möglichkeit den Stil in der Anwendung zu wechseln, wenn ein Layer mehrere Stile anbietet.
 
 .. figure:: ../../../figures/layertree/layertree_menu.png
            :scale: 80
@@ -157,11 +159,15 @@ Die Checkbox **Erlaubt sortieren im Layerbaum** steuert, ob ein freies Umsortier
 
 Die Checkbox neben einem Layernamen ermöglicht das An- und Ausschalten eines Layers. Ist die Checkbox aktiviert, erscheint der Layer in der Karte. Es werden jedoch weiterhin die im Layerset definierten Regeln beachtet (wie z.B. maßstabsabhängige Anzeigen).
 
+.. hint:: Mit der Version 4.1.0 ist es nun möglich, den Status aller Sublayer zu ändern, wenn die Umschalt-Taste (Shift-Taste) während des Umschaltens eines Layers gehalten wird.
+
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
            :alt: Ebenenbaum Buttons.
 
            Ebenenbaum Buttons.
+
+Die Checkbox „Filter anzeigen“ steuert, ob eine Filter- und Suchfunktion im Layerbaum zur Verfügung steht. Ist die Checkbox aktiviert, können Layer gezielt gesucht oder gefiltert werden, um die Übersichtlichkeit im Ebenenbaum zu erhöhen. 
 
 
 Workflow thematischer Ebenenbaum

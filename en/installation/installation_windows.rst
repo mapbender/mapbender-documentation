@@ -22,8 +22,8 @@ Requirements
     * It is recommended to create a database user to access the Mapbender database.
 
 
-Nginx can also be used as web server, but it will not be discussed in this manual.   
-
+As a web server, you can also use nginx, which is considered a beta version for Windows. If you still want to use it,
+  you can use the same configuration file as in the Linux installation guide.
 
 Configuration PHP
 -----------------
@@ -56,7 +56,8 @@ Configuration PHP
     extension=php_zip
     extension=php_bz2
 
-* Please check the :ref:`faq` for further PHP settings. 
+* Please check the :ref:`faq` for further PHP settings
+* Please check :ref:`api` if you want to use the Mapbender API
 
 
 Extract Mapbender and register to web server
@@ -85,6 +86,9 @@ Create file `<apache>\\conf\\conf.d\\mapbender.conf` with:
  <Directory c:/mapbender/public/>
   Options MultiViews FollowSymLinks
   Require all granted
+
+  # Activate SetEnvIf if you want to use the Mapbender API
+  # SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
  
   RewriteEngine On
   RewriteBase /mapbender/
@@ -139,20 +143,45 @@ Create file `<apache>\\conf\\conf.d\\fcgi.conf` with:
 Configuration PostgreSQL
 ------------------------
 
+Configuration of PostgreSQL database for productive use:
+
+Requirements:
+
+* Installation of PostgreSQL
+* database for the Mapbender configuration
+* PostgreSQl database user to access the database (optional) 
+
+Activate the PHP-PostgreSQL driver
+
+.. code-block:: ini
+
+    # php.ini
+    extension=php_pgsql
+    extension=php_pdo_pgsql
+
 Configuration of database connection is done by a variable that contains the entire connection string. Configure it by adding it in your *.env.local* file.
 
 .. code-block:: yaml
 
-    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=17&charset=utf8"
 
 For more information on the database configuration, see :ref:`yaml`.
 
-Open the windows shell and initialize the database connection with the following commands:
+Open the windows shell.
 
-.. code-block:: text
+Create the Mapbender database if it does not exist already:
+
+.. code-block:: bash
  
     cd c:\mapbender
     php.exe bin/console doctrine:database:create
+
+
+Create the Mapbender table structure and the load example applications:
+
+.. code-block:: bash
+ 
+    cd c:\mapbender
     php.exe bin/console doctrine:schema:create
     php.exe bin/console mapbender:database:init -v
     php.exe bin/composer run reimport-example-apps
@@ -193,3 +222,50 @@ Further information can be found at :ref:`en/customization/commands:bin/console 
 Congratulations! Mapbender is now set up correctly and ready for further configuration.
 Find information about the first steps with Mapbender in the :ref:`Mapbender Quickstart <quickstart>`.
 
+Optional
+--------
+
+Configuration for Printing Vector Tiles on Windows
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Node.js Installation 
+====================
+
+First, install Node.js using the Windows Installer from https://nodejs.org/en/download.
+
+The Apache web server requires the path to the Node.js directory, so it must be added to the PATH environment variable.
+
+Example in the `fcgi.conf`:
+
+.. code-block:: bash
+
+    FcgidInitialEnv PATH "C:/srv/php;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;C:/Program Files/nodejs"
+
+Installing the Puppeteer Node Module
+====================================
+
+Installing the Puppeteer Node module on Windows is a bit more complex because it must be done in the context of the user under which the Apache web server is running.
+
+Often, Apache runs as a service with the user 'Local System'. If this is the case, you will need an additional tool to run a CMD or PowerShell command line as SYSTEM:
+
+1. Download the PsExec Tool: https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+
+2. Extract the ZIP file, e.g., to C:\\Tools\\PsExec\\.
+
+3. Run CMD or PowerShell as Administrator.
+
+4. Run the console as SYSTEM:
+
+   .. code-block:: bash
+
+        c:\Tools\PsExec\PsExec.exe -i -s cmd.exe
+
+5. In the SYSTEM console, install the Puppeteer module in the application directory of Mapbender (not globally!):
+
+   .. code-block:: bash
+
+       c:\srv\htdocs\mapbender\application> npm install puppeteer
+
+   .. code-block:: bash
+
+       c:\srv\htdocs\mapbender\application> npm puppeteer browsers install

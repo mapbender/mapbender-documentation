@@ -8,3 +8,4 @@ Suchen
 
    search/search_router.rst
    search/simplesearch.rst
+   search/routing.rst

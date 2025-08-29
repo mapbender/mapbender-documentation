@@ -11,7 +11,7 @@ Der Mittelpunkt zeigt die wahrscheinliche Position des Gerätes an, der äußere
 
 Kompatibilität: Internet Explorer und MS Edge geben ohne GPS-Gerät am Rechner teilweise sehr ungenaue Informationen heraus. Das Verhalten ist auch mit anderen Anwendungen zu beobachten.
 
-.. image:: ../../../figures/gps_position.png
+.. image:: ../../../figures/de/gps_position.png
      :scale: 80
 
 Konfiguration

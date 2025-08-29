@@ -58,6 +58,14 @@ Wenn Sie SQL bevorzugen, können Sie die WMS-ID der Datenquelle im folgenden SQL
                 mb_core_source.id = <id_of_the_wms>;
 
 
+QGIS2Mapbender Plugin
+~~~~~~~~~~~~~~~~~~~~~
+
+Q: Gibt es eine Möglichkeit, mein QGIS-Projekt direkt aus QGIS als QGIS Server-Projekt und in Mapbender zu veröffentlichen?
+
+A: Ja, die gibt es! Ab der Mapbender Version 4.0 können Sie das Plugin QGIS2Mapbender nutzen. Es überträgt QGIS-Projekte auf ihren Server und stellt sie als WMS bereit. Außerdem können Sie ihr Projekt direkt in Mapbender in eine Anwendung laden. Schauen Sie sich dazu den `Blogbeitrag Mapbender-Anwendungen einfach direkt aus QGIS heraus erstellen <https://wheregroup.com/blog/details/mapbender-anwendungen-einfach-direkt-aus-qgis-heraus-erstellen/>`_ an. Das Plugin finden Sie auf `GitHub <https://github.com/WhereGroup/QGIS2Mapbender>`_.
+
+
 Performance
 -----------
 

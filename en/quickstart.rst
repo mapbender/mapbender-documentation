@@ -6,6 +6,8 @@
 :License: Creative Commons Attribution-ShareAlike 3.0 Unported  (CC BY-SA 3.0)
 :Thanks: mapbender-user list
 
+  .. |mapbender-button-edit| image:: ../figures/mapbender_button_edit.png
+
   .. |mapbender-button-show| image:: ../figures/mapbender_button_show.png
 
   .. |mapbender-button-copy| image:: ../figures/mapbender_button_copy.png
@@ -13,8 +15,6 @@
   .. |mapbender-button-export| image:: ../figures/mapbender_button_export.png
 
   .. |mapbender-button-publish| image:: ../figures/mapbender_button_publish.png
-
-  .. |mapbender-button-edit| image:: ../figures/mapbender_button_edit.png
 
   .. |mapbender-button-delete| image:: ../figures/mapbender_button_delete.png
 
@@ -122,10 +122,10 @@ The **Applications** page displays a list of all available applications. The roo
  * Preview screenshot for the application
  * Filter textfield for application search
  * |mapbender-button-add| Button to create new applications
+ * |mapbender-button-edit| Button to edit an application
  * |mapbender-button-show| Button to show an application
  * |mapbender-button-copy| Button to duplicate an application
  * |mapbender-button-export| Button to export an application
- * |mapbender-button-edit| Button to edit an application
  * |mapbender-button-publish| Button to make an application available for the public
  * |mapbender-button-delete| Button to delete an application
 

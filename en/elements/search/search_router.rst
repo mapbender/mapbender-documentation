@@ -142,10 +142,10 @@ Supported autocomplete parameters are:
             options:
                 label: Name 
                 required: true
-            attr:
-                data-autocomplete: 'on'          # activate autocomplete
-                data-autocomplete-distinct: 'on' # only show equal results once
-                data-autocomplete-using: type, city     # autocomplete, list of input fields (with comma seperated), WHERE input           
+                attr:
+                    data-autocomplete: 'on'          # activate autocomplete
+                    data-autocomplete-distinct: 'on' # only show equal results once
+                    data-autocomplete-using: type, city     # autocomplete, list of input fields (with comma seperated), WHERE input           
             compare: exact                                          
 
 
@@ -276,8 +276,8 @@ Three different styles are configured:
                 fontWeight: bold        # font weight 
                 labelOutlineColor: '#ffff00' # font outline
                 labelOutlineWidth: 1    # font outline width
-                labelXOffset: -18       # Offset X-axis
-                labelYOffset: -18       # Offset Y-axis
+                fontOffsetX: -18       # Offset X-axis
+                fontOffsetY: -18       # Offset Y-axis
             select:
                 strokeColor: '#0000ff'
                 strokeOpacity: 1

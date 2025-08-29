@@ -23,16 +23,17 @@ Download
 * PDF: `Deutsch <https://doc.mapbender.org/download/Mapbender_de.pdf>`_ / `English <https://doc.mapbender.org/download/Mapbender_en.pdf>`_
 
 
-Online version
+Development documentation
 ====================================
 
-* https://doc.mapbender.org/
-* Newest documentation tree: https://docs.mapbender.org/current/
+* `Development documentation <https://github.com/mapbender/mapbender/tree/master/docs>`_
+* `Newest documentation tree <https://docs.mapbender.org/develop/>`_
 
 
 Older versions
 ====================================
 
+* https://docs.mapbender.org/4.1
 * https://docs.mapbender.org/3.3
 * https://docs.mapbender.org/3.2
 * https://docs.mapbender.org/3.0.8

@@ -25,6 +25,10 @@ Konfiguration
 
 Für das Element wird ein Button oder die Sidepane verwendet. Zu der Konfiguration des Buttons besuchen sie die Dokumentationsseite unter :ref:`button_de`.
 
+.. hint:: Sie haben die Option, die Legende eines einzelnen Layers direkt in der Instanz-Konfiguration zu deaktivieren.
+
+.. image:: ../../../figures/de/legend_activate_checkbox.png
+     :scale: 70
 
 Konfigurationsbeispiele
 =======================
@@ -72,7 +76,7 @@ In der Oberen Werkzeugleiste (Toolbar) ist der Button für das Legenden-Element 
 Inwiefern sich die Aktivierung bzw. Deaktivierung einzelner Haken auf die Legende auswirkt, ist hier zu sehen:
 
 .. image:: ../../../figures/de/legend_example_toolbar_checkboxes.png
-     :scale: 60
+     :width: 100%
 
 YAML-Definition
 ---------------

@@ -144,10 +144,10 @@ Unterstützte autocomplete-Parameter:
             options:
                 label: Name 
                 required: true
-            attr:
-                data-autocomplete: 'on'           # aktiviere Autovervollständigung
-                data-autocomplete-distinct: 'on'  # gleiche Treffer nur einmal anzeigen
-                data-autocomplete-using: type, city   # Liste von weiteren Spalten für die Autovervollständigung (kommasepariert)           
+                attr:
+                    data-autocomplete: 'on'           # aktiviere Autovervollständigung
+                    data-autocomplete-distinct: 'on'  # gleiche Treffer nur einmal anzeigen
+                    data-autocomplete-using: type, city   # Liste von weiteren Spalten für die Autovervollständigung (kommasepariert)           
             compare: exact                                          
 
 
@@ -278,8 +278,8 @@ Die Konfiguration beinhaltet drei Stilkonfigurationen:
                 fontWeight: bold
                 labelOutlineColor: '#ffff00' # Schriftumrandungsfarbe
                 labelOutlineWidth: 1    # Breite der Umrandung
-                labelXOffset: -18       # Versatz X-Achse
-                labelYOffset: -18       # Versatz Y-Achse
+                fontOffsetX: -18       # Versatz X-Achse
+                fontOffsetY: -18       # Versatz Y-Achse
             select:
                 strokeColor: '#0000ff'
                 strokeOpacity: 1

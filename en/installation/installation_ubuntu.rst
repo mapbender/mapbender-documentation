@@ -16,11 +16,11 @@ Requirements
 * Apache installation with the following modules activated:
     * mod_rewrite
     * libapache2-mod-php
+* alternatively: nginx installation with the following modules activated:
+    * php-fpm
 * PostgreSQL Installation
     * It is recommended to use a PostgreSQL database for Mapbender.
     * It is recommended to create a database user to access the Mapbender database.
-
-Nginx can also be used as web server (this will not be discussed in detail here).
 
 
 Preparation
@@ -32,7 +32,8 @@ Installation of mandatory PHP extensions:
 
     sudo apt install php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
-* Please check the :ref:`faq` for further PHP settings. 
+* Please check the :ref:`faq` for further PHP settings
+* Please check :ref:`api` if you want to use the Mapbender API 
 
 
 Unpack and register to web server
@@ -59,6 +60,9 @@ Create the file `/etc/apache2/sites-available/mapbender.conf` with the following
   Options MultiViews FollowSymLinks
   Require all granted
 
+  # Activate SetEnvIf if you want to use the Mapbender API
+  # SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -71,6 +75,51 @@ Activate the site and reload Apache:
 
  a2ensite mapbender.conf
  service apache2 reload
+
+Configuration nginx
+-------------------
+
+As an alternative to apache2, nginx can also be used as webserver. 
+To use Mapbender in nginx, create a configuration file within ``/etc/nginx/sites-available``:
+
+.. code-block:: nginx
+    
+  server {
+      listen 80;
+      listen [::]:80;
+      server_name mapbender.localhost # change this to your needs
+  
+      # recommended to setup ssl here when not in a local environment
+  
+      root /var/www/mapbender/application/public;
+  
+      index index.php;
+  
+      location / {
+          # First attempt to serve request as file, then
+          # as directory, then redirect to index.php
+          try_files $uri $uri/ /index.php$is_args$args;
+      }
+  
+      # pass PHP scripts to FastCGI server
+      location ~ \.php$ {
+          include snippets/fastcgi-php.conf;
+          fastcgi_pass unix:/run/php/php8.3-fpm.sock; # change this when using another PHP version
+      }
+  
+      # deny access to .htaccess files, if Apache's document root
+      # concurs with nginx's one
+      location ~ /\.ht {
+          deny all;
+      }
+  }
+
+Activate the new site and restart nginx:
+
+.. code-block:: bash
+
+ ln -s /etc/nginx/sites-available/mapbender /etc/nginx/sites-enabled/
+ systemctl restart nginx
 
 
 Directory rights
@@ -112,6 +161,24 @@ Find Information about the first steps with Mapbender in the :ref:`Mapbender Qui
 Optional
 --------
 
+Vector Tiles Print Configuration
+++++++++++++++++++++++++++++++++
+
+Printing vector tiles is more complicated than just downloading an image as it is the case with e.g. WMS. It needs a render engine to render the tiles which unfortunately needs some additional setup. The Mapbender will also work without this additional setup, but printed vector tiles will remain blank.
+
+The setup needs `NodeJS <https://nodejs.org/en/download>`_ installed, as well as the node module `puppeteer <https://pptr.dev>`_ installed in the global namespace.
+
+.. code-block:: bash
+    
+    npm install -g puppeteer
+    puppeteer browsers install
+
+* Follow instruction on https://nodejs.org/en/download for installation instructions for node.js on your platform
+* Execute this as your webserver user (important!)    
+
+.. image:: ../../figures/vector_tiles_print_configuration.png
+    :scale: 70
+
 LDAP
 ++++
 
@@ -130,30 +197,38 @@ Mapbender installation with PostgreSQL
 Configuration of PostgreSQL database for productive use:
 
 Requirements:
-- configured PostgreSQL database
-- database for Mapbender configuration
-- PostgreSQl database user to access the database with *create database* right
+
+* Installation of PostgreSQL
+* database for the Mapbender configuration
+* PostgreSQl database user to access the database (optional) 
 
 Installation PHP-PostgreSQL driver
 
 .. code-block:: bash
 
-   sudo apt install php-pgsql
+   sudo apt install php-pgsql php_pdo_pgsql
 
 Configuration of database connection is done by a variable that contains the entire connection string. Configure it by adding it in your *.env.local* file.
 
 .. code-block:: yaml
 
-    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=17&charset=utf8"
 
 For further information: :ref:`yaml`.
 
-Initialisation of the database connection:
+Create Mapbender database if it does not exist already:
+
+.. code-block:: bash
+
+    cd /var/www/mapbender
+    bin/console doctrine:database:create 
+
+
+Create mapbender table structure and load example applications
 
 .. code-block:: bash
 
  cd /var/www/mapbender
- bin/console doctrine:database:create
  bin/console doctrine:schema:create
  bin/console mapbender:database:init -v
  bin/composer run reimport-example-apps

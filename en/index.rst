@@ -47,3 +47,8 @@ Welcome to the Mapbender documentation
    :maxdepth: 1
 
    versions
+
+.. toctree::
+   :maxdepth: 1
+
+   qgis2mapbender

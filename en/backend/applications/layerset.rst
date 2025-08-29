@@ -29,25 +29,28 @@ Layerset actions
 
 Instance actions
 ----------------
- * |mapbender-button-publish|: Toggle show/hide instance
  * |mapbender-button-edit|: Edit instance
+ * |mapbender-button-publish|: Toggle show/hide instance
  * |mapbender-button-delete|: Delete instance
 
-.. image:: ../../../figures/de/layerset/mapbender_service_edit.png
-     :width: 100%
+.. image:: ../../../figures/mapbender_add_source_to_application.png
+  :scale: 70
 
 
 Layerset-instances
 ==================
 
+WMS Instance Configuration
+--------------------------
+
 Layerset-instances contain options to configure certain WMS parameters: image-format, info-format, exception-format, scales for the different layers etc. Layerset-instances can be configured by clicking on the gear symbol. 
 
 .. image:: ../../../figures/layerset/mapbender_wms_application_settings.png
-           :width: 100%
+  :scale: 90
 
 As soon a WMS service is integrated in a layerset, it is linked as a layerset-instance within the application.
 
-The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ ``2/28`` based on a WMS service. The associated data source is number 2, the layer's instance itself has the number 28. It is based on the WhereGroup OSM service and can be configured for the application in this dialog.
+The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ ``20/581`` based on a WMS service. The associated data source is number 20, the layer's instance itself has the number 581. It is based on the WhereGroup OSM service and can be configured for the application in this dialog.
 
 
 **The properties of the WMS-Capabilities:**
@@ -80,6 +83,7 @@ The screenshot above shows the `bound instance <#shared-and-bound-instances>`_ `
 
 - **Tiled:** The service is requested in tiles. The standard is not tiled. See the following :ref:`hints <en/backend/applications/layerset:Notes on the effects of each configuration>`.
 
+- **Update interval [s]:** If set and not 0, the service will automatically update at the specified interval (in seconds).
 
 **Layer-Order:**
 
@@ -218,3 +222,81 @@ Further information
 * Disabling one or more layersets for an application is possible in its :ref:`map` settings.
 
 * Likewise, individual thematic layersets can be (de)activated via checkbox in the layerset configuration so that they are (not) visible in the map on application startup.
+
+WMTS Instance Configuration
+---------------------------
+
+.. image:: ../../../figures/layerset/layerset_wmts_instance.png
+  :scale: 70
+
+The layerset instance settings offer the following configuration options:
+
+**Properties from the WMS Capabilities:**
+
+* **Origin URL**: The URL of the service's GetCapabilities document.
+* **Title**: The title of the instance as displayed in the layer tree.
+* **Opacity**: The transparency of the instance, specified as a value between 0 (fully transparent) and 100 (fully opaque).
+* **BaseSource**: Indicates whether the instance should be treated as a base source.
+* **Proxy**: Checkbox, indicating whether the service should be routed through a proxy.
+
+**Layer Settings:**
+
+* **Title**: The title of the layer as displayed in the layer tree.
+* **Active**: Indicates whether the layer is active by default.
+* **Select**: Indicates whether the layer is visible by default.
+* **Toggle**: Indicates whether the layer is expanded in the layer tree by default.
+* **Info**: Indicates whether the layer can display additional information.
+
+Vector Tiles Instance Configuration
+-----------------------------------
+
+.. image:: ../../../figures/layerset/layerset_vector_tiles_instance.png
+  :scale: 80
+
+The Vector Tiles instance settings offer the following configuration options:
+
+* **Origin URL**: The URL to the JSON file.
+* **Title**: The title of the instance as displayed in the layer tree.
+* **Opacity**: The transparency of the instance.
+* **Minimum/Maximum Scale (Denominator)**: The scale range in which the layer should be displayed.
+* **Resolution correction for printing**: Specifies whether a resolution correction for printing should be applied.
+* **BaseSource**: Indicates whether the instance should be treated as a base source.
+* **Activate on Application Start**: Checkbox indicating whether the instance should be activated when the application starts.
+* **Selectable in layer tree**: Checkbox indicating whether the user can select the instance in the layer tree.
+
+**Feature Information**
+
+* **Information active on application start**: Checkbox indicating whether the feature information should be activated by default.
+* **Information toggleable by user**: Checkbox indicating whether the user can toggle the feature information.
+* **If advanced settings are enabled, following settings become visible**:
+* **Title**: Property/properties of the feature displayed as the title.
+* **Hide features with empty title**: Checkbox indicating whether features without a title should be hidden.
+* **Field filter & translation**: YAML array for field selection and translation.
+Example:
+
+  .. code-block:: yaml
+
+     - klasse: Klasse
+     - name: Name
+     - layer: 'Layer name'
+     - 'mvt:layer': Thema
+     - land: Bundesland
+
+**Legend**
+
+* **Enable legend**: Boolean value indicating whether a legend should be displayed for the instance.
+* **If advanced settings are enabled, following settings become visible**:
+* **Layer selection & translation**: YAML array for layer selection and translation.
+Example:
+
+  .. code-block:: yaml
+
+     - SiedlungF_Siedlung: Siedlung
+     - VegetationsF_Wald: Wald
+     - VegetationsF_Ackerland_und_Co: Vegetation
+     - Gebaeude2D_nicht_oeffentlich: Gebäude
+
+.. image:: ../../../figures/layerset/layerset_vector_tiles_visualisation.png
+  :width: 100%
+
+The screenshot shows a Mapbender application with an active legend and feature information.  

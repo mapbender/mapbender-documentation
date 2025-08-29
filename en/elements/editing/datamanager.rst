@@ -64,7 +64,7 @@ Element configuration
 Afterwards, the element can be embedded into the sidepane.
 
 .. image:: ../../../figures/data_manager_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

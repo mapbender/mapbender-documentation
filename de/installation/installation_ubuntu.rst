@@ -16,11 +16,11 @@ Voraussetzungen
 * Apache Installation mit folgenden aktivierten Modulen:
     * mod_rewrite
     * libapache2-mod-php
+* alternativ: nginx-Installation mit folgenden aktivierten Modulen:
+    * php-fpm
 * PostgreSQL Installation
     * Es wird empfohlen, eine PostgreSQL Datenbank für Mapbender zu verwenden.
     * Es wird empfohlen, einen eigenen Datenbankbenutzer für den Zugriff auf die Mapbender Datenbank anzulegen.
-
-Als Webserver kann auch nginx verwendet werden. In dieser Anleitung wird darauf nicht weiter eingegangen.
 
 
 Vorbereitung
@@ -33,6 +33,7 @@ Installation der benötigten PHP-Extensions:
     sudo apt install php-gd php-curl php-cli php-xml php-sqlite3 sqlite3 php-apcu php-intl openssl php-zip php-mbstring php-bz2
 
 * Bitte prüfen Sie die :ref:`faq_de` für weitere PHP-Einstellungen. 
+* Bitte prüfen Sie die :ref:`api_de` zur Verwendung der Mapbender API. 
 
 
 Entpacken und im Webserver registrieren
@@ -59,6 +60,9 @@ Datei `/etc/apache2/sites-available/mapbender.conf` mit dem folgenden Inhalt anl
   Options MultiViews FollowSymLinks
   Require all granted
 
+  # SetEnvIf aktiviveren, wenn die Mapbender API verwendet werden soll
+  # SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
   RewriteEngine On
   RewriteBase /mapbender/
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -71,6 +75,50 @@ Aktivieren der Seite und Apache neu starten:
 
  a2ensite mapbender.conf
  service apache2 reload
+ 
+Konfiguration nginx
+-------------------
+
+Alternativ zu Apache kann auch nginx verwendet werden. 
+Dafür muss eine eigene Konfiguration in ``/etc/nginx/sites-available`` angelegt werden:
+
+.. code-block:: nginx
+    
+  server {
+      listen 80;
+      listen [::]:80;
+      server_name mapbender.localhost # bitte anpassen
+  
+      # SSL-Konfiguration wird hier empfohlen sofern der Mapbender nicht lokal ausgeführt wird
+  
+      root /var/www/mapbender/application/public;
+  
+      index index.php;
+  
+      location / {
+          # Versuche zunächst als Datei auszuliefern, dann als Verzeichnis,
+          # alles andere wird an die index.php weitergeleitet
+          try_files $uri $uri/ /index.php$is_args$args;
+      }
+  
+      # PHP-Skripte an den FastCGI server weitergeben
+      location ~ \.php$ {
+          include snippets/fastcgi-php.conf;
+          fastcgi_pass unix:/run/php/php8.3-fpm.sock; # bitte anpassen, wenn eine andere PHP-Version verwendet wird
+      }
+  
+      # Zugriff auf Apache-Konfiugurationsdateien verbieten
+      location ~ /\.ht {
+          deny all;
+      }
+  }
+
+Aktivieren der Seite und nginx neu starten:
+
+.. code-block:: bash
+
+ ln -s /etc/nginx/sites-available/mapbender /etc/nginx/sites-enabled/
+ systemctl restart nginx
 
 
 Verzeichnisrechte
@@ -113,6 +161,25 @@ Informationen zu den ersten Schritten mit Mapbender finden sich im :ref:`Mapbend
 Optional
 --------
 
+Konfiguration zum Druck von Vector Tiles
+++++++++++++++++++++++++++++++++++++++++
+
+Das Drucken von Vector Tiles ist komplizierter als das einfache Herunterladen eines Bildes, wie es beispielsweise auch bei WMS der Fall ist. Es benötigt eine Render-Engine zum Rendern der einzelnen Kacheln, die leider einige zusätzliche Einstellungen erfordert. Mapbender funktioniert auch ohne diese zusätzlichen Einstellungen, aber Vector Tiles würden beim Drucken dann leer bleiben.
+
+Für die Einrichtung muss `NodeJS <https://nodejs.org/en/download>`_ installiert sein, ebenso wie das Node-Modul `puppeteer <https://pptr.dev>`_ im globalen Namespace.
+
+.. code-block:: bash
+
+    npm install -g puppeteer
+    puppeteer browsers install
+
+* Befolgen Sie die Anweisungen auf https://nodejs.org/en/download für Installationsanweisungen für Node.js auf Ihrer Plattform.
+* Führen Sie dies als Webserver-Benutzer aus (wichtig!)    
+
+.. image:: ../../figures/vector_tiles_print_configuration.png
+    :scale: 70
+
+
 LDAP
 ++++
 
@@ -131,28 +198,35 @@ Mapbender Einrichtung auf PostgreSQL
 Für den Einsatz in einer Produktivumgebung wird nachfolgend die Konfiguration einer PostgreSQL Datenbank beschrieben.
 
 Voraussetzungen:
-- eingerichtete PostgreSQL Datenbank (Version < 10)
-- vorhandene Datenbank zur Mapbender Konfiguration
-- ggf. eigenen Benutzer für Zugriff
+
+* Installation von PostgreSQL
+* vorhandene Datenbank zur Mapbender-Konfiguration
+* ggf. eigenen Benutzer für den Zugriff
 
 Installation PHP-PostgreSQL Treiber:
 
 .. code-block:: bash
 
-   sudo apt install php-pgsql
+   sudo apt install php-pgsql php_pdo_pgsql
 
 Die Konfiguration der Datenbankverbindung erfolgt über eine Variable, die den gesamten Verbindungsstring enthält. Konfigurieren Sie sie, indem Sie sie in Ihrer *.env.local*-Datei hinzufügen.
 
 .. code-block:: yaml
 
-    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+    MAPBENDER_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=17&charset=utf8"
 
-Initialisierung der Datenbank:
+Anlegen der Mapbender Datenbank, sofern diese noch nicht vorliegt:
 
 .. code-block:: bash
 
     cd /var/www/mapbender
-    bin/console doctrine:database:create
+    bin/console doctrine:database:create 
+
+Einrichtung der Mapbender Tabellenstruktur und laden der Demo-Anwendungen:
+
+.. code-block:: bash
+
+    cd /var/www/mapbender
     bin/console doctrine:schema:create
     bin/console mapbender:database:init -v
     bin/composer run reimport-example-apps

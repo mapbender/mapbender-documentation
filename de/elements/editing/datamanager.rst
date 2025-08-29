@@ -29,7 +29,7 @@ Der Data Manager kann beispielsweise genutzt werden, um Kontaktinformationen zu 
 
 In dem dargestellten Konfigurationsbeispiel öffnet sich eine Eingabevorlage nach Klick auf |mapbender-button-add|.
 
-.. image:: ../../../figures/data_manager_form.png
+.. image:: ../../../figures/de/data_manager_form.png
      :scale: 80
 
 SQL for the contact table
@@ -64,7 +64,7 @@ Element-Konfiguration
 Das Element kann danach in die Sidepane eingebettet werden.
 
 .. image:: ../../../figures/de/data_manager_configuration.png
-     :scale: 80
+     :scale: 70
 
 
 YAML-Definition

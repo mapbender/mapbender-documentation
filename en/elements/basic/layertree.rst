@@ -17,12 +17,13 @@ Functions
 * Zoom to map extent of a layer
 * Query the metadata of a layer
 * Control the time dimension of a layer
+* Filter Layers
 
 .. figure:: ../../../figures/layertree/layertree_example_dialog_en.png
            :scale: 80
            :alt: Layertree as a dialogue popup showing services with layers.
 
-           Layertree as a dialogue popup showing services with layers.
+           Layertree dialog popup with filter functionality.
 
 .. figure:: ../../../figures/layertree/layertree_example_sidepane_en.png
            :scale: 80
@@ -134,6 +135,7 @@ Via the **Menu** a number of functions can be activated, which are then availabl
 * **Zoom to layer**: Zoom to full layer extent
 * **Metadata**: Show the metadata of the layer
 * **Dimension**: Change the dimension, e.g. time or elevation of the Layer. Read more about the :ref:`dimensions_handler`.
+* **Select style**: Allow the option to change the style of a layer if the layer offers multiple styles.
 
 .. figure:: ../../../figures/layertree/layertree_menu_en.png
            :scale: 80
@@ -157,12 +159,15 @@ The checkbox **Allow Reorder at TOC** controls if layers are rearrangeable via d
 
 The checkbox next to its respective layer name allows to turn a layer on and off. If the checkbox is set, the Layer will appear on the map. However, it will continue to respect the defined rules of the Layerset (such as scale-dependent display).
 
+.. hint:: With the 4.1.0 Version you now have the ability to Toggle the state of all sublayers when holding shift while toggling a layer.
+
 .. figure:: ../../../figures/layertree/layertree_buttons.png
            :scale: 80
            :alt: Layertree Buttons.
 
            Layertree Buttons.
 
+The checkbox “Show Filter” controls whether a filter and search function is available in the application's layer tree. If the checkbox is enabled, layers can be searched and filtered to improve the overview in the layer tree.
 
 Workflow thematic Layertree
 ---------------------------
