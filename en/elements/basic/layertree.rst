@@ -167,7 +167,7 @@ The checkbox next to its respective layer name allows to turn a layer on and off
 
            Layertree Buttons.
 
-The checkbox “Show Filter” controls whether a filter and search function is available in the application's layer tree. If the checkbox is enabled, layers can be searched and filtered to improve the overview in the layer tree.
+The checkbox **Show Filter** controls whether a filter and search function is available in the application's layer tree. If the checkbox is enabled, layers can be searched and filtered to improve the overview in the layer tree.
 
 Workflow thematic Layertree
 ---------------------------
