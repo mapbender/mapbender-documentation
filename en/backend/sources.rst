@@ -154,7 +154,7 @@ WMS
 WMTS/TMS
 --------
 
-WMTS (Web Map Tile Service) and TMS (Tile Map Service) are standardized OGC services for providing raster map images over the internet, with WMTS delivering tiles and TMS delivering single images on request.
+Tile Map Service (TMS) is a specification for tiled web maps that uses a simple, REST-like URL structure to deliver map data. TMS bridges the gap between the basic OpenStreetMap standard and the complex Web Map Service by providing easily accessible tile URLs and support for different coordinate reference systems.
 
 Loading WMTS/TMS Source
 +++++++++++++++++++++++
@@ -162,7 +162,7 @@ Loading WMTS/TMS Source
   .. image:: ../../figures/mapbender_add_wmts_source.png
      :width: 100%
 
-* **Service URL**: URL to the Capabilities document of the service (e.g. `OGC WMS Version 1.3.0: <https://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities>`_)
+* **Service URL**: URL to the Capabilities document of the service (e.g. `OpenStreetMap WMTS <https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml>`_)
 
 * **Username / Password**: Input of the username and the password for secured services.
 
@@ -196,7 +196,7 @@ Loading Vector Tiles Source
 .. image:: ../../figures/mapbender_add_vt_source.png
    :width: 100%
 
-* **Service URL**: URL to the Capabilities document of the service (e.g. https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json)   
+* **Service URL**: URL to the Capabilities document of the service (e.g. `bm_web_col <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_)   
 
 * **HTTP Referer**: Some services require a specific HTTP referer header to accept requests. If the service demands this, please enter the corresponding URL here.
 

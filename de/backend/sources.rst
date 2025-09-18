@@ -151,7 +151,7 @@ WMS
 WMTS/TMS
 --------
 
-WMTS (Web Map Tile Service) und WMS (Web Map Service) sind standardisierte OGC-Dienste zur Bereitstellung von Rasterkartenbildern über das Internet, wobei WMTS Kacheln und WMS Einzelbilder auf Anfrage liefert.
+Tile Map Service (TMS) ist eine Spezifikation für gekachelte Webkarten, die eine einfache, REST-ähnliche URL-Struktur zur Bereitstellung von Kartendaten verwendet. TMS schließt die Lücke zwischen dem einfachen OpenStreetMap-Standard und dem komplexen Web Map Service, indem es leicht zugängliche Kachel-URLs und die Unterstützung verschiedener Koordinatenreferenzsysteme bietet.
 
 Laden einer WMTS/TMS Quelle
 +++++++++++++++++++++++++++
@@ -159,7 +159,7 @@ Laden einer WMTS/TMS Quelle
 .. image:: ../../figures/de/mapbender_add_wmts_source.png
   :width: 100%
 
-* **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z. B. für `OGC WMS Version 1.3.0 <https://osm-demo.wheregroup.com/service?SERVICE=WMS&Version=1.3.0&REQUEST=GetCapabilities>`_)
+* **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z. B. für `OpenStreetMap WMTS <https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml>`_)
 
 * **Benutzername / Passwort**: Eingabe von Benutzername und Passwort bei gesicherten Diensten.    
 
@@ -192,7 +192,7 @@ Laden einer Vector Tiles Quelle
 .. image:: ../../figures/de/mapbender_add_vt_source.png
   :width: 100%
 
-* **URL zur JSON-Style-Definition**: URL zur Mapbox Style Spec JSON-Datei (z. B. https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json)
+* **URL zur JSON-Style-Definition**: URL zur Mapbox Style Spec JSON-Datei (z. B. `bm_web_col <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_)
 
 * **HTTP-Referer**: Einige Dienste erfordern einen bestimmten HTTP-Referer-Header, um Anfragen zu akzeptieren. Geben Sie hier die entsprechende URL ein, wenn der Dienst dies verlangt.
 
