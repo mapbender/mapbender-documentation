@@ -167,7 +167,7 @@ Die Checkbox neben einem Layernamen ermöglicht das An- und Ausschalten eines La
 
            Ebenenbaum Buttons.
 
-Die Checkbox „Filter anzeigen“ steuert, ob eine Filter- und Suchfunktion im Layerbaum zur Verfügung steht. Ist die Checkbox aktiviert, können Layer gezielt gesucht oder gefiltert werden, um die Übersichtlichkeit im Ebenenbaum zu erhöhen. 
+Die Checkbox **Filter anzeigen** steuert, ob eine Filter- und Suchfunktion im Layerbaum zur Verfügung steht. Ist die Checkbox aktiviert, können Layer gezielt gesucht oder gefiltert werden, um die Übersichtlichkeit im Ebenenbaum zu erhöhen. 
 
 
 Workflow thematischer Ebenenbaum
