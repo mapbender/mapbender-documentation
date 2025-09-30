@@ -151,7 +151,7 @@ WMS
 WMTS/TMS
 --------
 
-Tile Map Service (TMS) ist eine Spezifikation für gekachelte Webkarten, die eine einfache, REST-ähnliche URL-Struktur zur Bereitstellung von Kartendaten verwendet. TMS schließt die Lücke zwischen dem einfachen OpenStreetMap-Standard und dem komplexen Web Map Service, indem es leicht zugängliche Kachel-URLs und die Unterstützung verschiedener Koordinatenreferenzsysteme bietet.
+Der Web Map Tile Service (WMTS) ist ein Standard-Geodienst, der die Bereitstellung und den Abruf digitaler Karten in Form von Kacheln ermöglicht.Tile Map Service (TMS) ist eine Spezifikation für gekachelte Webkarten, die eine einfache, REST-ähnliche URL-Struktur zur Bereitstellung von Kartendaten verwendet. TMS schließt die Lücke zwischen dem einfachen OpenStreetMap-Standard und dem komplexen Web Map Service, indem es leicht zugängliche Kachel-URLs und die Unterstützung verschiedener Koordinatenreferenzsysteme bietet.
 
 Laden einer WMTS/TMS Quelle
 +++++++++++++++++++++++++++
