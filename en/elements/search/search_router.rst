@@ -122,7 +122,7 @@ You also can define the :ref:`en/elements/search/search_router:comparison`.
 
 
 Type Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Type **TextType** allows you to provide text fields for your search formular.
 
@@ -158,7 +158,7 @@ Supported autocomplete parameters are:
 
 
 Type Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Type **ChoiceType** allows you to provide a selectbox in your search formular.
 
@@ -195,13 +195,13 @@ You have to define the choices for the selectbox. You define a value and a key.
 
 
 Type Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Search field for number
-* Kompatibel mit den compare-Modi exact, greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
-* Unterstützt keine Auto-Vervollständigung.
-* Optionally, html5: true can be added as an option, then the up/down arrows appear, else a normal text field appears.
-
+* Compatible with the compare modes greater, greater-equal, lower, lower-equal, not; not compatible with all like modes.
+* The compare mode **exact** generally does not work with floating point numbers, as JavaScript and SQL have different precision.
+* Auto-complete is ignored and does not suppoert the compare mode iexact and all like-mode.
+* Optionally, html5: true can be added as an option, then the up/down arrows appear, otherwise a normal text field appears.
 
 .. code-block:: yaml
   
@@ -214,12 +214,11 @@ Type Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType
 
 
 Type Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Search field for integer
-* Kompatibel mit den compare-Modi exact, greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
-* Unterstützt keine Auto-Vervollständigung.
-
+* Compatible with the compare modes exact, greater, greater-equal, lower, lower-equal, not; not compatible with all like modes.
+* Auto-complete is ignored and does not suppoert the compare mode iexact and all like-mode.
 
 .. code-block:: yaml
   
@@ -230,11 +229,11 @@ Type Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType
             compare: greater
 
 Type Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Allows date selection
 * Compatible with the compare modes exact, greater, greater-equal, lower, lower-equal, not; Not compatible with all like modes.
-* Does not support auto-completion.
+* Auto-complete is ignored and does not suppoert the compare mode iexact and all like-mode.
 * Date selection needs option widget: single_text
 
 
@@ -255,7 +254,7 @@ For every field a comparison mode can be set. This is used by the engine when th
 
 The following comparison modes are supported:
 
-* **exact:** exact comparison (key = val)
+* **exact:** exact comparison (key = val), generally does not work with floating point numbers, as JavaScript and SQL have different precision.
 * **iexact:** comparison ignoring cases (case-insensitive)
 * **like:** Standard, both-side 'like'
 * **like-left:** left-hand 'like'
@@ -263,11 +262,11 @@ The following comparison modes are supported:
 * **ilike**: both-side 'like', (case-insensitive - \*searchstring\*)
 * **ilike-left:** left-side 'like' (case-insensitive - \*searchstring)
 * **ilike-right:** right-side 'like' (case-insensitive - searchstring\*)
-* **greater:** greater (for type number, integer or date) Not compatible with all like modes. Does not support auto-complete.
-* **greater-equal:** greater or equal  (for type number, integer or date) Not compatible with all like modes. Does not support auto-complete.
-* **lower:** lower  (for type number, integer or date) Not compatible with all like modes. Does not support auto-complete.
-* **lower-equal:** lower or equal  (for type number, integer or date) Not compatible with all like modes. Does not support auto-complete.
-* **not:** is not (for type number, integer or date) Not compatible with all like modes. Does not support auto-complete.
+* **greater:** greater (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
+* **greater-equal:** greater or equal  (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
+* **lower:** lower  (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
+* **lower-equal:** lower or equal  (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
+* **not:** is not (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
 
 Result
 ------

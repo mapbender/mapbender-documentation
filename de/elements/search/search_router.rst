@@ -124,7 +124,7 @@ Sie können außerdem den Vergleichsoperator definieren. Siehe :ref:`de/elements
 
 
 Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Über den Typ **TextType** können Textfelder in das Suchformular eingefügt werden.
 
@@ -161,7 +161,7 @@ Unterstützte autocomplete-Parameter:
 
 
 Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Der Typ **ChoiceType** ermöglicht die Definition von Auswahlboxen in dem Suchformular.
 
@@ -198,11 +198,12 @@ Die Auswahlmöglichkeiten werden im Bereich choices definiert. Dabei werden ein 
 
 
 Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Suchfeld für Fließkommazahlen
-* Kompatibel mit den compare-Modi exact, greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
-* Unterstützt keine Auto-Vervollständigung.
+* Kompatibel mit den compare-Modi greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
+* Der compare-Modus **exact** funktioniert mit Fließkommazahlen in aller Regel nicht, da JavaScript und SQL eine andere Präzision haben.
+* Auto-Vervollständigung wir ignoriert und den Modus iexact und alle like-Modi werden nicht unterstützt.
 * Optional kann als Option html5: true hinzugefügt werden, dann erscheinen die hoch/runter Pfeile, sonst erscheint ein normales Textfeld.
 
 
@@ -217,12 +218,11 @@ Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType
 
 
 Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Suchfeld für Ganzzahlen
 * Kompatibel mit den compare-Modi exact, greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
-* Unterstützt keine Auto-Vervollständigung.
-
+* Auto-Vervollständigung wir ignoriert und den Modus iexact und alle like-Modi werden nicht unterstützt.
 
 .. code-block:: yaml
   
@@ -233,11 +233,11 @@ Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType
             compare: greater
 
 Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Datumsauswahl
 * Kompatibel mit den compare-Modi exact, greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
-* Unterstützt keine Auto-Vervollständigung.
+* Auto-Vervollständigung wir ignoriert und den Modus iexact und alle like-Modi werden nicht unterstützt.
 * Datumsauswahl, benötigt die Option widget: single_text
 
 
@@ -259,7 +259,7 @@ Für jedes Feld kann ein Vergleichsmodus bestimmt werden. Dieser wird beim Sende
 
 Folgende Vergleichsmodi werde unterstützt:
 
-* **exact:** genauer Vergleich, Schlüssel = Wert (key = val),
+* **exact:** genauer Vergleich, Schlüssel = Wert (key = val), funktioniert mit Fließkommazahlen in aller Regel nicht, da JavaScript und SQL eine andere Präzision haben.
 * **iexact:** Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive),
 * **like:** Standard, zweiseitiges 'like',
 * **like-left:** linksseitiges 'like',
@@ -267,11 +267,11 @@ Folgende Vergleichsmodi werde unterstützt:
 * **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring\*),
 * **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring),
 * **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring\*).
-* **greater:** größer (für Type Number, Integer oder Date) Nicht kompatibel mit allen like-Modi. Unterstützt keine Auto-Vervollständigung.
-* **greater-equal:** größer gleich (für Type Number, Integer oder Date) Nicht kompatibel mit allen like-Modi. Unterstützt keine Auto-Vervollständigung.
-* **lower:** kleiner (für Type Number, Integer oder Date) Nicht kompatibel mit allen like-Modi. Unterstützt keine Auto-Vervollständigung.
-* **lower-equal:** kleiner gleich (für Type Number, Integer oder Date) Nicht kompatibel mit allen like-Modi. Unterstützt keine Auto-Vervollständigung.
-* **not:** nicht (für Type Number, Integer oder Date) Nicht kompatibel mit allen like-Modi. Unterstützt keine Auto-Vervollständigung.
+* **greater:** größer (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+* **greater-equal:** größer gleich (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+* **lower:** kleiner (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+* **lower-equal:** kleiner gleich (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+* **not:** nicht (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
 
 
 
