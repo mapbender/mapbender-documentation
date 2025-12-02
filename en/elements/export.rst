@@ -8,3 +8,4 @@ Export / Print
 
    export/imageexport.rst
    export/printclient.rst
+   export/printclientbatch.rst
