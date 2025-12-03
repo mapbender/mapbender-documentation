@@ -3,10 +3,9 @@
 Seriendruck (PrintClient Batch Mode)
 ************************************
 
-Das Druckelement ermöglicht den Druck eines auswählbaren Kartenausschnitts. 
+Das Standard-Druckelement ermöglicht den Druck eines auswählbaren Kartenausschnitts. 
 
-Der Seriendruck bietet zusätzlich die Möglichkeit, 
-mehrere Druckrahmen zu definieren und zu drucken.
+Der Seriendruck bietet zusätzlich die Möglichkeit, mehrere Druckrahmen zu definieren und zu drucken.
 Die Druckrahmen können durch Klicken auf die Karte platziert werden. 
 
 
@@ -20,11 +19,13 @@ Außerdem kann eine Linie hochgeladen werden und es können Druckrahmen entlang 
 
 Konfiguration
 -------------
+
 Diese Dokumentation beschreibt nur die zusätzlichen Funktionen des Seriendrucks.
 
-Die Dokumentation zum allgemeinen Drucken finden Sie unter PrintClient.
+Die Dokumentation zum allgemeinen Drucken finden Sie unter :ref:`printclient_de`.
 
 .. image:: ../../../figures/de/printclient_batch_mode_configuration.png
      :scale: 70
 
-* **Enable upload of track (KML, GeoJSON, GPX, GML)**: Allow the upload of linstrings(default true)
+
+* **Hochladen von Geodaten aktivieren**: Das Hochladen von Linienobjekten in unterschiedlichen Formaten KML, GeoJSON, GPX, GML erlauben (Standard aktiv).

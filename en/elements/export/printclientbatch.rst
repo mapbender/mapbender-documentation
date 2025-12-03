@@ -13,7 +13,7 @@ The frames can be place by click on the map.
 .. image:: ../../../figures/printclient_batch_mode.png
      :scale: 70
 
-Also by uploading a linestring and generate print frames along the line.
+Also by uploading a linestring and generating print frames along the line.
 
 .. image:: ../../../figures/printclient_batch_mode_along_line.png
      :scale: 70
@@ -23,11 +23,11 @@ Also by uploading a linestring and generate print frames along the line.
 Configuration
 -------------
 
-This documentation only decscribes the additional features of the Batch Mode Print. 
+This documentation only describes the additional features of the Batch Mode. 
 
-You find the documentation about general printing at PrintClient.
+You find the documentation about the general printing at :ref:`printclient`.
 
 .. image:: ../../../figures/printclient_batch_mode_configuration.png
      :scale: 70
 
-* **Hochladen von Geodaten aktivieren**: Das Hochladen von Linienobjekten in unterschiedlichen Formaten KML, GeoJSON, GPX, GML erlauben (Standard aktiv)
+* **Enable upload of track (KML, GeoJSON, GPX, GML)**: Allow the upload of linstrings (default true)
