@@ -33,6 +33,7 @@ Development documentation
 Older versions
 ====================================
 
+* https://docs.mapbender.org/4.2
 * https://docs.mapbender.org/4.1
 * https://docs.mapbender.org/3.3
 * https://docs.mapbender.org/3.2
