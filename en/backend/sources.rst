@@ -154,56 +154,86 @@ WMS
 WMTS/TMS
 --------
 
-  * **type**: must be wmts or tms
-  * **url**: URL to the service's Get capability XML. Note that to obtain the TileMatrices this document will be downloaded for every page view (unlike for database WMTS sources, where this information is cached in the database)
-  * **title**: The source title as displayed in the layer tree
-  * **basesource (alias: isBaseSource)**: boolean value if the source should be treated as a base source
-  * **opacity**: int 0 (fully transparent)-100 (fully opaque)
-  * **selected (alias: visible)**: initial selected state of the root layer. (default: true)
-  * **allowSelected**: can the user change state of the root layer in the layertree? If selected and allowSelected are both false, the layer is ignored. (default: true)
-  * **toggle**: initial folder state of the root layer in the layer tree (default: true = folder is expanded)
-  * **allowToggle**: can the user collapse/expand the root layer? (default: true)
-  * **layers**: optional object to modify individual sublayers. The key should be the value of the <ows:Identifier> attribute in the GetCapabilities document (for WMTS) or the url suffix of the layer for TMS. For example, if The URL of the Capability document is https://osm-demo.wheregroup.com/tms/1.0.0/ and the layer's href in the TileMap tag is defined as https://osm-demo.wheregroup.com/tms/1.0.0/osm/webmercator, the layer key will be osm/webmercator.
+The Web Map Tile Service (WMTS) is a standard geospatial service that enables the provision and retrieval of digital maps in the form of tiles.Tile Map Service (TMS) is a specification for tiled web maps that uses a simple, REST-like URL structure to deliver map data. TMS bridges the gap between the basic OpenStreetMap standard and the complex Web Map Service by providing easily accessible tile URLs and support for different coordinate reference systems.
+
+Loading WMTS/TMS Source
++++++++++++++++++++++++
+
+  .. image:: ../../figures/mapbender_add_wmts_source.png
+     :width: 100%
+
+* **Service URL**: URL to the Capabilities document of the service (e.g. `OpenStreetMap WMTS https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml <https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml>`_)
+
+* **Username / Password**: Input of the username and the password for secured services.
+
+YAML
+++++
+
+* **type**: must be wmts or tms
+* **url**: URL to the service's Get capability XML. Note that to obtain the TileMatrices this document will be downloaded for every page view (unlike for database WMTS sources, where this information is cached in the database)
+* **title**: The source title as displayed in the layer tree
+* **basesource (alias: isBaseSource)**: boolean value if the source should be treated as a base source
+* **opacity**: int 0 (fully transparent)-100 (fully opaque)
+* **selected (alias: visible)**: initial selected state of the root layer. (default: true)
+* **allowSelected**: can the user change state of the root layer in the layertree? If selected and allowSelected are both false, the layer is ignored. (default: true)
+* **toggle**: initial folder state of the root layer in the layer tree (default: true = folder is expanded)
+* **allowToggle**: can the user collapse/expand the root layer? (default: true)
+* **layers**: optional object to modify individual sublayers. The key should be the value of the <ows:Identifier> attribute in the GetCapabilities document (for WMTS) or the url suffix of the layer for TMS. For example, if The URL of the Capability document is https://osm-demo.wheregroup.com/tms/1.0.0/ and the layer's href in the TileMap tag is defined as https://osm-demo.wheregroup.com/tms/1.0.0/osm/webmercator, the layer key will be osm/webmercator.
     
-    * **title**: The layer title as displayed in the layer tree
-    * **active**: if false, the layer is ignored and won't be available in the application at all (default: true)
-    * **selected (alias: visible)**: initial selected state of the layer. (default: true)
-    * **allowSelected**: can the user change state in the layertree? If selected and allowSelected are both false, the layer is ignored, as if active was set to false. (default: true)
+  * **title**: The layer title as displayed in the layer tree
+  * **active**: if false, the layer is ignored and won't be available in the application at all (default: true)
+  * **selected (alias: visible)**: initial selected state of the layer. (default: true)
+  * **allowSelected**: can the user change state in the layertree? If selected and allowSelected are both false, the layer is ignored, as if active was set to false. (default: true)
 
 Vector Tiles
 ------------
 
-  * **type**: must be vector_tiles
-  * **title**: The source title as displayed in the layer tree
-  * **jsonUrl**: URL to the Mapbox Style Spec JSON file
-  * **basesource (alias: isBaseSource)**: boolean value if the source should be treated as a base source
-  * **opacity**: int 0 (fully transparent)-100 (fully opaque) (default: 100)
-  * **selected (alias: visible)**: initial selected state of the layer. (default: true)
-  * **allowSelected**: can the user change the selected state? (default: true)
-  * **toggle**: initial folder state of the root layer in the layer tree (default: true = folder is expanded)
-  * **allowToggle**: can the user collapse/expand the root layer? (default: true)
-  * **minScale**: minimum scale (1:x) where the source is displayed (default: unset)
-  * **maxScale**: maximum scale (1:x) where the source is displayed (default: unset)
-  * **featureInfo**: is featureinfo enabled by default? (default: true)
-  * **featureInfoAllowToggle**: can the user toggle the feature info state? (default: true)
-  * **featureInfoPropertyMap**: If not empty, only the specified properties will be displayed in the feature info. Specify as YAML array. The key is the name of the field, the optional value is the translation. Example:
+Vector Tiles are a format for transmitting geographic vector data in tile form, enabling flexible and performant rendering of interactive maps directly in the browser.
+
+Loading Vector Tiles Source
++++++++++++++++++++++++++++
+
+.. image:: ../../figures/mapbender_add_vt_source.png
+   :width: 100%
+
+* **Service URL**: URL to the Capabilities document of the service (e.g. `bm_web_col https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_)   
+
+* **HTTP Referer**: Some services require a specific HTTP referer header to accept requests. If the service demands this, please enter the corresponding URL here.
+
+YAML
+++++
+
+* **type**: must be vector_tiles
+* **title**: The source title as displayed in the layer tree
+* **jsonUrl**: URL to the Mapbox Style Spec JSON file
+* **basesource (alias: isBaseSource)**: boolean value if the source should be treated as a base source
+* **opacity**: int 0 (fully transparent)-100 (fully opaque) (default: 100)
+* **selected (alias: visible)**: initial selected state of the layer. (default: true)
+* **allowSelected**: can the user change the selected state? (default: true)
+* **toggle**: initial folder state of the root layer in the layer tree (default: true = folder is expanded)
+* **allowToggle**: can the user collapse/expand the root layer? (default: true)
+* **minScale**: minimum scale (1:x) where the source is displayed (default: unset)
+* **maxScale**: maximum scale (1:x) where the source is displayed (default: unset)
+* **featureInfo**: is featureinfo enabled by default? (default: true)
+* **featureInfoAllowToggle**: can the user toggle the feature info state? (default: true)
+* **featureInfoPropertyMap**: If not empty, only the specified properties will be displayed in the feature info. Specify as YAML array. The key is the name of the field, the optional value is the translation. Example:
     
-    .. code-block:: yaml
+  .. code-block:: yaml
 
-      class
-      name
-      layer: Layer-Name
+    class
+    name
+    layer: Layer-Name
 
-  * **hideIfNoTitle**: Hide features with empty title in the featureInfo (default: true)
-  * **featureInfoTitle**: Property/Properties of the feature that is/are displayed as title above the table. ${property} will be replaced by the property's value. If not specified, the first non-empty value from "label", "name", and "title" will be used.
-  * **printScaleCorrection**: Resolution correction for printing. Default value is 1.0. Higher values result in more details and smaller labels; lower values in less details and larger labels.
-  * **legendEnabled (alias: legend)**: should a legend be displayed for this source? (default: false)
-  * **legendPropertyMap**: If not empty, only the specified layers will be shown in the legend. Specify as a YAML array. The key is the layer ID from the "layers" field in the style JSON; the optional value is the translation. Example:
+* **hideIfNoTitle**: Hide features with empty title in the featureInfo (default: true)
+* **featureInfoTitle**: Property/Properties of the feature that is/are displayed as title above the table. ${property} will be replaced by the property's value. If not specified, the first non-empty value from "label", "name", and "title" will be used.
+* **printScaleCorrection**: Resolution correction for printing. Default value is 1.0. Higher values result in more details and smaller labels; lower values in less details and larger labels.
+* **legendEnabled (alias: legend)**: should a legend be displayed for this source? (default: false)
+* **legendPropertyMap**: If not empty, only the specified layers will be shown in the legend. Specify as a YAML array. The key is the layer ID from the "layers" field in the style JSON; the optional value is the translation. Example:
 
-    .. code-block:: yaml
+  .. code-block:: yaml
 
-      City
-      Stations
-      Transport: Public Transport
+    City
+    Stations
+    Transport: Public Transport
 
-  * **bbox**: Bounding box (array xmin, ymin, xmax, ymax) for the source
+* **bbox**: Bounding box (array xmin, ymin, xmax, ymax) for the source

@@ -151,57 +151,87 @@ WMS
 WMTS/TMS
 --------
 
-  * **type**: muss wmts oder tms sein
-  * **url**: URL zum GetCapabilities-XML des Dienstes. Beachten Sie, dass dieses Dokument für jede Seitenansicht heruntergeladen wird (anders als bei Datenbank-WMTS-Quellen, bei denen diese Informationen im Cache gespeichert werden)
-  * **title**: Der Titel der Quelle, wie er im Ebenenbaum angezeigt wird
-  * **basesource (alias: isBaseSource)**: Bool-Wert, ob die Quelle als Basisquelle behandelt werden soll
-  * **opacity**: int 0 (vollständig transparent)-100 (vollständig undurchsichtig)
-  * **selected (alias: visible)**: Anfangszustand der Wurzelebene. (Standard: true)
-  * **allowSelected**: Kann der Benutzer den Zustand der Wurzelebene im Ebenenbaum ändern? Wenn sowohl selected als auch allowSelected false sind, wird der Layer ignoriert. (Standard: true)
-  * **toggle**: Anfangszustand des Wurzelordners im Ebenenbaum (Standard: true = Ordner ist erweitert)
-  * **allowToggle**: Kann der Benutzer den Wurzelordner ein-/ausklappen? (Standard: true)
-  * **layers**: Optionales Objekt zur Anpassung einzelner Sublayer. Der Schlüssel sollte der Wert des <ows:Identifier>-Attributs im GetCapabilities-Dokument (für WMTS) oder der URL-Suffix des Layers für TMS sein. Beispiel: Wenn die URL des Capability-Dokuments https://osm-demo.wheregroup.com/tms/1.0.0/ ist und der href des Layers im TileMap-Tag als https://osm-demo.wheregroup.com/tms/1.0.0/osm/webmercator definiert ist, lautet der Layer-Schlüssel osm/webmercator.
-    * **title**: Der Titel des Layers, wie er im Ebenenbaum angezeigt wird
-    * **active**: Wenn false, wird der Layer ignoriert und steht in der Anwendung überhaupt nicht zur Verfügung (Standard: true)
-    * **selected (alias: visible)**: Anfangszustand des Layers. (Standard: true)
-    * **allowSelected**: Kann der Benutzer den Zustand im Ebenenbaum ändern? Wenn sowohl selected als auch allowSelected false sind, wird der Layer ignoriert, als ob active auf false gesetzt wäre. (Standard: true)
+Der Web Map Tile Service (WMTS) ist ein Standard-Geodienst, der die Bereitstellung und den Abruf digitaler Karten in Form von Kacheln ermöglicht.Tile Map Service (TMS) ist eine Spezifikation für gekachelte Webkarten, die eine einfache, REST-ähnliche URL-Struktur zur Bereitstellung von Kartendaten verwendet. TMS schließt die Lücke zwischen dem einfachen OpenStreetMap-Standard und dem komplexen Web Map Service, indem es leicht zugängliche Kachel-URLs und die Unterstützung verschiedener Koordinatenreferenzsysteme bietet.
+
+Laden einer WMTS/TMS Quelle
++++++++++++++++++++++++++++
+
+.. image:: ../../figures/de/mapbender_add_wmts_source.png
+  :width: 100%
+
+* **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z. B. für `OpenStreetMap WMTS https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml <https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml>`_)
+
+* **Benutzername / Passwort**: Eingabe von Benutzername und Passwort bei gesicherten Diensten.    
+
+YAML
+++++
+
+* **type**: muss wmts oder tms sein
+* **url**: URL zum GetCapabilities-XML des Dienstes. Beachten Sie, dass dieses Dokument für jede Seitenansicht heruntergeladen wird (anders als bei Datenbank-WMTS-Quellen, bei denen diese Informationen im Cache gespeichert werden)
+* **title**: Der Titel der Quelle, wie er im Ebenenbaum angezeigt wird
+* **basesource (alias: isBaseSource)**: Bool-Wert, ob die Quelle als Basisquelle behandelt werden soll
+* **opacity**: int 0 (vollständig transparent)-100 (vollständig undurchsichtig)
+* **selected (alias: visible)**: Anfangszustand der Wurzelebene. (Standard: true)
+* **allowSelected**: Kann der Benutzer den Zustand der Wurzelebene im Ebenenbaum ändern? Wenn sowohl selected als auch allowSelected false sind, wird der Layer ignoriert. (Standard: true)
+* **toggle**: Anfangszustand des Wurzelordners im Ebenenbaum (Standard: true = Ordner ist erweitert)
+* **allowToggle**: Kann der Benutzer den Wurzelordner ein-/ausklappen? (Standard: true)
+* **layers**: Optionales Objekt zur Anpassung einzelner Sublayer. Der Schlüssel sollte der Wert des <ows:Identifier>-Attributs im GetCapabilities-Dokument (für WMTS) oder der URL-Suffix des Layers für TMS sein. Beispiel: Wenn die URL des Capability-Dokuments https://osm-demo.wheregroup.com/tms/1.0.0/ ist und der href des Layers im TileMap-Tag als https://osm-demo.wheregroup.com/tms/1.0.0/osm/webmercator definiert ist, lautet der Layer-Schlüssel osm/webmercator.
+* **title**: Der Titel des Layers, wie er im Ebenenbaum angezeigt wird
+* **active**: Wenn false, wird der Layer ignoriert und steht in der Anwendung überhaupt nicht zur Verfügung (Standard: true)
+* **selected (alias: visible)**: Anfangszustand des Layers. (Standard: true)
+* **allowSelected**: Kann der Benutzer den Zustand im Ebenenbaum ändern? Wenn sowohl selected als auch allowSelected false sind, wird der Layer ignoriert, als ob active auf false gesetzt wäre. (Standard: true)
 
 Vector Tiles
 ------------
 
-  * **type**: muss vector_tiles sein
-  * **title**: Der Titel der Quelle, wie er im Ebenenbaum angezeigt wird
-  * **jsonUrl**: URL zur Mapbox Style Spec JSON-Datei
-  * **basesource (alias: isBaseSource)**: Bool-Wert, ob die Quelle als Basisquelle behandelt werden soll
-  * **opacity**: int 0 (vollständig transparent)-100 (vollständig undurchsichtig) (Standard: 100)
-  * **selected (alias: visible)**: Anfangszustand des Layers. (Standard: true)
-  * **allowSelected**: Kann der Benutzer den ausgewählten Zustand ändern? (Standard: true)
-  * **toggle**: Anfangszustand des Wurzelordners im Ebenenbaum (Standard: true = Ordner ist erweitert)
-  * **allowToggle**: Kann der Benutzer den Wurzelordner ein-/ausklappen? (Standard: true)
-  * **minScale**: Mindestmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
-  * **maxScale**: Höchstmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
-  * **featureInfo**: Ist FeatureInfo standardmäßig aktiviert? (Standard: true)
-  * **featureInfoAllowToggle**: Kann der Benutzer den FeatureInfo-Zustand umschalten? (Standard: true)
-  * **featureInfoPropertyMap**: Wenn nicht leer, werden nur die angegebenen Eigenschaften in der FeatureInfo angezeigt. Als YAML-Array angeben. Der Schlüssel ist der Name des Feldes, der optionale Wert ist die Übersetzung. Beispiel:
+Vector Tiles sind ein Format zur Übertragung von geografischen Vektordaten in Kachelform, das eine flexible und performante Darstellung interaktiver Karten direkt im Browser ermöglicht.
 
-    .. code-block:: yaml
+Laden einer Vector Tiles Quelle
++++++++++++++++++++++++++++++++
 
-      class
-      name
-      layer: Layer-Name
+.. image:: ../../figures/de/mapbender_add_vt_source.png
+  :width: 100%
+
+* **URL zur JSON-Style-Definition**: URL zur Mapbox Style Spec JSON-Datei (z. B. `bm_web_col https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_)
+
+* **HTTP-Referer**: Einige Dienste erfordern einen bestimmten HTTP-Referer-Header, um Anfragen zu akzeptieren. Geben Sie hier die entsprechende URL ein, wenn der Dienst dies verlangt.
+
+YAML
+++++  
+
+* **type**: muss vector_tiles sein
+* **title**: Der Titel der Quelle, wie er im Ebenenbaum angezeigt wird
+* **jsonUrl**: URL zur Mapbox Style Spec JSON-Datei
+* **basesource (alias: isBaseSource)**: Bool-Wert, ob die Quelle als Basisquelle behandelt werden soll
+* **opacity**: int 0 (vollständig transparent)-100 (vollständig undurchsichtig) (Standard: 100)
+* **selected (alias: visible)**: Anfangszustand des Layers. (Standard: true)
+* **allowSelected**: Kann der Benutzer den ausgewählten Zustand ändern? (Standard: true)
+* **toggle**: Anfangszustand des Wurzelordners im Ebenenbaum (Standard: true = Ordner ist erweitert)
+* **allowToggle**: Kann der Benutzer den Wurzelordner ein-/ausklappen? (Standard: true)
+* **minScale**: Mindestmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
+* **maxScale**: Höchstmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
+* **featureInfo**: Ist FeatureInfo standardmäßig aktiviert? (Standard: true)
+* **featureInfoAllowToggle**: Kann der Benutzer den FeatureInfo-Zustand umschalten? (Standard: true)
+* **featureInfoPropertyMap**: Wenn nicht leer, werden nur die angegebenen Eigenschaften in der FeatureInfo angezeigt. Als YAML-Array angeben. Der Schlüssel ist der Name des Feldes, der optionale Wert ist die Übersetzung. Beispiel:
+
+  .. code-block:: yaml
+
+     class
+     name
+     layer: Layer-Name
 
 
-  * **hideIfNoTitle**: Verstecke Features mit leerem Titel in der FeatureInfo (Standard: true)
-  * **featureInfoTitle**: Eigenschaft/Eigenschaften des Features, die als Titel über der Tabelle angezeigt werden. ${property} wird durch den Wert der Eigenschaft ersetzt. Wenn nicht angegeben, wird der erste nicht-leere Wert aus "label", "name" und "title" verwendet.
-  * **printScaleCorrection**: Auflösungskorrektur für den Druck. Standardwert ist 1.0. Höhere Werte führen zu mehr Details und kleineren Beschriftungen; niedrigere Werte zu weniger Details und größeren Beschriftungen.
-  * **legendEnabled (alias: legend)**: Soll eine Legende für diese Quelle angezeigt werden? (Standard: false)
-  * **legendPropertyMap**: Wenn nicht leer, werden nur die angegebenen Layer in der Legende angezeigt. Als YAML-Array angeben. Der Schlüssel ist die Layer-ID aus dem "layers"-Feld im Style-JSON; der optionale Wert ist die Übersetzung. Beispiel:
+* **hideIfNoTitle**: Verstecke Features mit leerem Titel in der FeatureInfo (Standard: true)
+* **featureInfoTitle**: Eigenschaft/Eigenschaften des Features, die als Titel über der Tabelle angezeigt werden. ${property} wird durch den Wert der Eigenschaft ersetzt. Wenn nicht angegeben, wird der erste nicht-leere Wert aus "label", "name" und "title" verwendet.
+* **printScaleCorrection**: Auflösungskorrektur für den Druck. Standardwert ist 1.0. Höhere Werte führen zu mehr Details und kleineren Beschriftungen; niedrigere Werte zu weniger Details und größeren Beschriftungen.
+* **legendEnabled (alias: legend)**: Soll eine Legende für diese Quelle angezeigt werden? (Standard: false)
+* **legendPropertyMap**: Wenn nicht leer, werden nur die angegebenen Layer in der Legende angezeigt. Als YAML-Array angeben. Der Schlüssel ist die Layer-ID aus dem "layers"-Feld im Style-JSON; der optionale Wert ist die Übersetzung. Beispiel:
 
-    .. code-block:: yaml
+  .. code-block:: yaml
 
-      Stadt
-      Stationen
-      Verkehr: Öffentlicher Verkehr
+    Stadt
+    Stationen
+    Verkehr: Öffentlicher Verkehr
 
-  * **bbox**: Begrenzungsrahmen (Array xmin, ymin, xmax, ymax) für die Quelle
+* **bbox**: Begrenzungsrahmen (Array xmin, ymin, xmax, ymax) für die Quelle
 
