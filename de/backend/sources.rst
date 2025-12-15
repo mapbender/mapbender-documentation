@@ -159,7 +159,7 @@ Laden einer WMTS/TMS Quelle
 .. image:: ../../figures/de/mapbender_add_wmts_source.png
   :width: 100%
 
-* **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z. B. für `OpenStreetMap WMTS <https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml>`_)
+* **Dienst-URL**: URL zum Capabilities-Dokument des Dienstes (z. B. für `OpenStreetMap WMTS https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml <https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml>`_)
 
 * **Benutzername / Passwort**: Eingabe von Benutzername und Passwort bei gesicherten Diensten.    
 
@@ -192,7 +192,7 @@ Laden einer Vector Tiles Quelle
 .. image:: ../../figures/de/mapbender_add_vt_source.png
   :width: 100%
 
-* **URL zur JSON-Style-Definition**: URL zur Mapbox Style Spec JSON-Datei (z. B. `bm_web_col <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_)
+* **URL zur JSON-Style-Definition**: URL zur Mapbox Style Spec JSON-Datei (z. B. `bm_web_col https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_)
 
 * **HTTP-Referer**: Einige Dienste erfordern einen bestimmten HTTP-Referer-Header, um Anfragen zu akzeptieren. Geben Sie hier die entsprechende URL ein, wenn der Dienst dies verlangt.
 

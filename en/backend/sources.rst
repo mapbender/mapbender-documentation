@@ -162,7 +162,7 @@ Loading WMTS/TMS Source
   .. image:: ../../figures/mapbender_add_wmts_source.png
      :width: 100%
 
-* **Service URL**: URL to the Capabilities document of the service (e.g. `OpenStreetMap WMTS <https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml>`_)
+* **Service URL**: URL to the Capabilities document of the service (e.g. `OpenStreetMap WMTS https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml <https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml>`_)
 
 * **Username / Password**: Input of the username and the password for secured services.
 
@@ -196,7 +196,7 @@ Loading Vector Tiles Source
 .. image:: ../../figures/mapbender_add_vt_source.png
    :width: 100%
 
-* **Service URL**: URL to the Capabilities document of the service (e.g. `bm_web_col <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_)   
+* **Service URL**: URL to the Capabilities document of the service (e.g. `bm_web_col https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_)   
 
 * **HTTP Referer**: Some services require a specific HTTP referer header to accept requests. If the service demands this, please enter the corresponding URL here.
 
