@@ -201,13 +201,15 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 * :ref:`coordinate_utility_de`: Transformiert Koordinaten und navigiert zu ihnen auf der Karte.
 * :ref:`coordinates_display_de`: Zeigt Mausposition in den Kartenkoordinaten an.
 * :ref:`copyright_de`: Zeigt Nutzungsbedingungen an.
-* :ref:`datamanager_de`: Erzeugt und speichert Sachinformationen in einer Datenbank.*
-* :ref:`digitizer_de`: Erzeugt und speichert Geometrieinformationen in einer Datenbank.*
+* :ref:`datamanager_de`: Erzeugt und speichert Sachinformationen in einer Datenbank.
+* :ref:`dataupload_de`: Ermöglicht das Hochladen von Geodaten.
+* :ref:`digitizer_de`: Erzeugt und speichert Geometrieinformationen in einer Datenbank.
 * :ref:`dimensions_handler_de`: Bindet Dienste mit einer zeitlichen Dimension in die Anwendung ein.
 * :ref:`feature_info_de`: Gibt Informationen eines Dienstes aus.
 * :ref:`gpspostion_de`: Erzeugt einen Button zur Anzeige der eigenen GPS-Position.
 * :ref:`html_de`: Bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links.
 * :ref:`imageexport_de`: Exportiert einen Kartenausschnitt.
+* :ref:`interactivehelp_de`: Bietet interaktive Hilfen für Nutzer.
 * :ref:`layertree_de`: Auflistung aller eingebundenen Layersets und Layer samt Auswahl- und Sortiermöglichkeiten.
 * :ref:`legend_de`: Zeigt die Legende von aktiven Diensten an.
 * :ref:`link_de`: Verlinkt zu einer externen URL.
@@ -216,6 +218,8 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 * :ref:`overview_de`: Zeigt eine kleinere Übersichtskarte über der Hauptkarte an.
 * :ref:`poi_de`: Generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird.
 * :ref:`printclient_de`: Erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können.
+* :ref:`printclientbatch_de`: Fügt die Möglichkeit hinzu, mehrere Druckrahmen gleichzeitig zu setzen und zu drucken.
+* :ref:`routing_de`: Bietet Routing-Funktionalitäten.
 * :ref:`ruler_de`: Erlaubt das Messen von Linien und Flächen in der Karte.
 * :ref:`scaledisplay_de`: Zeigt aktuellen Maßstab numerisch an.
 * :ref:`scale_selector_de`: Dieses Element zeigt eine Auswahlbox mit Maßstäben an.
@@ -479,5 +483,5 @@ Was kommt als Nächstes?
 Dies waren nur die ersten Schritte auf dem Weg zur Nutzung von Mapbender. Es gibt noch eine Menge mehr zu entdecken:
 
 * Besuchen Sie die offizielle `Mapbender-Website <https://mapbender.org/>`_,
-* Finden Sie schnelle Antworten auf die wichtigsten Mapbender-bezogenen Fragen in der :ref:`faq_de`,
+* Probieren Sie das `QGIS2Mapbender Plugin <https://doc.mapbender.org/de/qgis2mapbender.html>`_ aus,
 * Werden Sie Mitglied der `Mapbender-Community <https://mapbender.org/community/>`_.
