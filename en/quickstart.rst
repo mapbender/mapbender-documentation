@@ -200,10 +200,12 @@ In the following, you find a complete list of all elements and their functionali
 * :ref:`coordinate_utility`: Transform coordinates to different SRS and navigate to them on the map.
 * :ref:`coordinates_display`: Show the map coordinates of your mouse position.
 * :ref:`copyright`: Shows terms of use.
-* :ref:`datamanager`: Create and save information in a database.*
-* :ref:`digitizer`: Create and manage spatial data.*
+* :ref:`datamanager`: Create and save information in a database.
+* :ref:`dataupload`: Allows you to upload data.
+* :ref:`digitizer`: Create and manage spatial data.
 * :ref:`dimensions_handler`: Manage sources with a time dimension.
 * :ref:`imageexport`: Export the current map view (format options: *.png* or *.jpeg*)
+* :ref:`interactivehelp`: Provides interactive help in the application.
 * :ref:`legend`: Displays legend of active themes on the map.
 * :ref:`link`: Links to an external URL.
 * :ref:`layertree`: Lists all included layer sets and layers with selection and sorting options.
@@ -211,6 +213,8 @@ In the following, you find a complete list of all elements and their functionali
 * :ref:`overview`: Provides an overview map.
 * :ref:`poi`: Create a POI for sharing.
 * :ref:`printclient`: Renders a Print dialog.
+* :ref:`printclientbatch`: Adds the ability to set and print multiple frames at once.
+* :ref:`routing`: Provides routing functionality.
 * :ref:`ruler`: Enables to measure a line/area and display its length/area in a dialog.
 * :ref:`scaledisplay`: Displays the current map scale.
 * :ref:`scalebar`: Displays a small line indicator representing the current map scale.
@@ -474,5 +478,5 @@ What's next?
 This is only the first step on the road to using Mapbender. There is a lot more to discover:
 
 * Head over to the official `Mapbender website <https://mapbender.org/>`_,
-* Find quick answers to the biggest Mapbender-related questions in the :ref:`faq`,
+* Try the `QGIS2Mapbender plugin <https://doc.mapbender.org/en/qgis2mapbender.html>`_,
 * Become a member of the `Mapbender community <https://mapbender.org/en/community/>`_.

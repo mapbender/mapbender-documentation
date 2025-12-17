@@ -1,3 +1,5 @@
+.. _dataupload:
+
 Data Upload
 ***********
 
