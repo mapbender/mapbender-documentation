@@ -105,7 +105,14 @@ Im Bereich **form** können Textfelder und Auswahlboxen für das Suchformular de
 Typ
 ---
 
-Das Formular unterstützt zwei Typen: *text* für Textfelder und *choice* für Auswahlfelder. 
+Das Formular unterstützt verschiedene Types:
+
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType - für Textfelder
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType - für Auswahlfelder 
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType - für Fließkommazahlen
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType - für Ganzzahlen
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType - für Datumsfelder
+
 
 Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguration erstellt werden. Die Konfiguration beginnt mit dem Spaltennamen (in den Beispielen sind es die Spalten *name* und *usertype*).
 
@@ -116,10 +123,12 @@ Für jede Tabellenspalte, die im Formular erscheinen soll muss eine Konfiguratio
 Sie können außerdem den Vergleichsoperator definieren. Siehe :ref:`de/elements/search/search_router:vergleichsmodus`.
 
 
-Typ text
-~~~~~~~~
+Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Über den Typ **text** können Textfelder in das Suchformular eingefügt werden.
+Über den Typ **TextType** können Textfelder in das Suchformular eingefügt werden.
+
+Die neuen Vergleichsmöglichkeiten (compare) greater, greater-equal, lower, lower-equal, not werden unterstützt. Es sind Standard-SQL-Vergleichsoperatoren. Bei TextType, dann wird alphabetisch verglichen.
 
 Text unterstützt Autovervollständigung. Sofern sie diese nutzen möchten, müssen Sie zusätzliche Parameter hinzufügen.
 
@@ -151,10 +160,10 @@ Unterstützte autocomplete-Parameter:
             compare: exact                                          
 
 
-Typ choice
-~~~~~~~~~~
+Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Der Typ **choice** ermöglicht die Definition von Auswahlboxen in dem Suchformular.
+Der Typ **ChoiceType** ermöglicht die Definition von Auswahlboxen in dem Suchformular.
 
 * **placeholder** - Es kann ein Platzhaltertext definiert werden. Dieser erscheint wenn noch keine Auswahl erfolgte.
 
@@ -188,6 +197,61 @@ Die Auswahlmöglichkeiten werden im Bereich choices definiert. Dabei werden ein 
         compare: exact     
 
 
+Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Suchfeld für Fließkommazahlen
+* Kompatibel mit den compare-Modi greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
+* Der compare-Modus **exact** funktioniert mit Fließkommazahlen in aller Regel nicht, da JavaScript und SQL eine andere Präzision haben.
+* Auto-Vervollständigung wir ignoriert und den Modus iexact und alle like-Modi werden nicht unterstützt.
+* Optional kann als Option html5: true hinzugefügt werden, dann erscheinen die hoch/runter Pfeile, sonst erscheint ein normales Textfeld.
+
+
+.. code-block:: yaml
+  
+        year:
+	    type: Symfony\Component\Form\Extension\Core\Type\NumberType
+            options:
+                label: Year
+                html5: true
+            compare: greater
+
+
+Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Suchfeld für Ganzzahlen
+* Kompatibel mit den compare-Modi exact, greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
+* Auto-Vervollständigung wir ignoriert und den Modus iexact und alle like-Modi werden nicht unterstützt.
+
+.. code-block:: yaml
+  
+        year:
+	    type: Symfony\Component\Form\Extension\Core\Type\IntegerType
+            options:
+                label: Year 
+            compare: greater
+
+Typ Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Datumsauswahl
+* Kompatibel mit den compare-Modi exact, greater, greater-equal, lower, lower-equal, not; nicht kompatibel mit allen like-Modi. 
+* Auto-Vervollständigung wir ignoriert und den Modus iexact und alle like-Modi werden nicht unterstützt.
+* Datumsauswahl, benötigt die Option widget: single_text
+
+
+.. code-block:: yaml
+  
+        date_favorite:
+	    type: Symfony\Component\Form\Extension\Core\Type\DateType
+            options:
+                label:  Früher als date_favorite
+                widget: single_text
+            compare: lower
+
+
+
 Vergleichsmodus
 ---------------
 
@@ -195,7 +259,7 @@ Für jedes Feld kann ein Vergleichsmodus bestimmt werden. Dieser wird beim Sende
 
 Folgende Vergleichsmodi werde unterstützt:
 
-* **exact:** genauer Vergleich, Schlüssel = Wert (key = val),
+* **exact:** genauer Vergleich, Schlüssel = Wert (key = val), funktioniert mit Fließkommazahlen in aller Regel nicht, da JavaScript und SQL eine andere Präzision haben.
 * **iexact:** Vergleich, bei der Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive),
 * **like:** Standard, zweiseitiges 'like',
 * **like-left:** linksseitiges 'like',
@@ -203,6 +267,12 @@ Folgende Vergleichsmodi werde unterstützt:
 * **ilike**: zweiseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring\*),
 * **ilike-left:** linksseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - \*searchstring),
 * **ilike-right:** rechtsseitiges 'like', bei dem Groß- / Kleinschreibung nicht unterschieden wird (case-insensitive - searchstring\*).
+* **greater:** größer (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+* **greater-equal:** größer gleich (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+* **lower:** kleiner (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+* **lower-equal:** kleiner gleich (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+* **not:** nicht (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
+
 
 
 Ergebnisausgabe

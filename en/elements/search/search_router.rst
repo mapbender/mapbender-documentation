@@ -103,7 +103,14 @@ In the form section, you can define the setup of the form and define textfields 
 Type
 ----
 
-The form supports two types - *text* and *choice*.
+The form supports different types:
+
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType - for text fields
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType - for select boxes 
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType - for numbers
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType - for integer fields
+* Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType - for date fields
+
 
 You have to define a configuration for each table column you would like to provide in the search form. The configuraton starts with the column name (in the example it is the column called *name*).
 
@@ -114,11 +121,12 @@ You have to define a configuration for each table column you would like to provi
 You also can define the :ref:`en/elements/search/search_router:comparison`.
 
 
-Type text
-~~~~~~~~~
+Type Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Type **text** allows you to provide text fields for your search formular.
+Type **TextType** allows you to provide text fields for your search formular.
 
+The new comparison options (compare) greater, greater-equal, lower, lower-equal, and not are supported. These are standard SQL comparison operators. For TextType, the comparison is alphabetical.
 Type text supports autocomplete. If you want to add autocomplete to the field you have to add additional parameters:
 
 Supported autocomplete parameters are:
@@ -149,10 +157,10 @@ Supported autocomplete parameters are:
             compare: exact                                          
 
 
-Type choice
-~~~~~~~~~~~
+Type Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Type **choice** allows you to provide a selectbox in your search formular.
+Type **ChoiceType** allows you to provide a selectbox in your search formular.
 
 For type choice you can define a **placeholder**. This is a text that is shown before an option is selected.
 
@@ -186,6 +194,59 @@ You have to define the choices for the selectbox. You define a value and a key.
         compare: exact     
 
 
+Type Symfony\\Component\\Form\\Extension\\Core\\Type\\NumberType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Search field for number
+* Compatible with the compare modes greater, greater-equal, lower, lower-equal, not; not compatible with all like modes.
+* The compare mode **exact** generally does not work with floating point numbers, as JavaScript and SQL have different precision.
+* Auto-complete is ignored and does not suppoert the compare mode iexact and all like-mode.
+* Optionally, html5: true can be added as an option, then the up/down arrows appear, otherwise a normal text field appears.
+
+.. code-block:: yaml
+  
+        year:
+	    type: Symfony\Component\Form\Extension\Core\Type\NumberType
+            options:
+                label: Year
+                html5: true
+            compare: greater
+
+
+Type Symfony\\Component\\Form\\Extension\\Core\\Type\\IntegerType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Search field for integer
+* Compatible with the compare modes exact, greater, greater-equal, lower, lower-equal, not; not compatible with all like modes.
+* Auto-complete is ignored and does not suppoert the compare mode iexact and all like-mode.
+
+.. code-block:: yaml
+  
+        year:
+	    type: Symfony\Component\Form\Extension\Core\Type\IntegerType
+            options:
+                label: Year 
+            compare: greater
+
+Type Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Allows date selection
+* Compatible with the compare modes exact, greater, greater-equal, lower, lower-equal, not; Not compatible with all like modes.
+* Auto-complete is ignored and does not suppoert the compare mode iexact and all like-mode.
+* Date selection needs option widget: single_text
+
+
+.. code-block:: yaml
+  
+        date_favorite:
+	    type: Symfony\Component\Form\Extension\Core\Type\DateType
+            options:
+                label: earlier as date_favorite
+                widget: single_text
+            compare: lower
+
+
 Comparison
 ----------
 
@@ -193,7 +254,7 @@ For every field a comparison mode can be set. This is used by the engine when th
 
 The following comparison modes are supported:
 
-* **exact:** exact comparison (key = val)
+* **exact:** exact comparison (key = val), generally does not work with floating point numbers, as JavaScript and SQL have different precision.
 * **iexact:** comparison ignoring cases (case-insensitive)
 * **like:** Standard, both-side 'like'
 * **like-left:** left-hand 'like'
@@ -201,7 +262,11 @@ The following comparison modes are supported:
 * **ilike**: both-side 'like', (case-insensitive - \*searchstring\*)
 * **ilike-left:** left-side 'like' (case-insensitive - \*searchstring)
 * **ilike-right:** right-side 'like' (case-insensitive - searchstring\*)
-
+* **greater:** greater (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
+* **greater-equal:** greater or equal  (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
+* **lower:** lower  (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
+* **lower-equal:** lower or equal  (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
+* **not:** is not (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
 
 Result
 ------
