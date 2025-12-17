@@ -205,7 +205,7 @@ In the following, you find a complete list of all elements and their functionali
 * :ref:`digitizer`: Create and manage spatial data.
 * :ref:`dimensions_handler`: Manage sources with a time dimension.
 * :ref:`imageexport`: Export the current map view (format options: *.png* or *.jpeg*)
-* :ref:`interactivehelp`: Provides interactive help for users.
+* :ref:`interactivehelp`: Provides interactive help in the application.
 * :ref:`legend`: Displays legend of active themes on the map.
 * :ref:`link`: Links to an external URL.
 * :ref:`layertree`: Lists all included layer sets and layers with selection and sorting options.
@@ -214,7 +214,7 @@ In the following, you find a complete list of all elements and their functionali
 * :ref:`poi`: Create a POI for sharing.
 * :ref:`printclient`: Renders a Print dialog.
 * :ref:`printclientbatch`: Adds the ability to set and print multiple frames at once.
-* :ref:`routing`: Provides routing capabilities.
+* :ref:`routing`: Provides routing functionality.
 * :ref:`ruler`: Enables to measure a line/area and display its length/area in a dialog.
 * :ref:`scaledisplay`: Displays the current map scale.
 * :ref:`scalebar`: Displays a small line indicator representing the current map scale.

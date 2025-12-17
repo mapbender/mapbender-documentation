@@ -209,7 +209,7 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 * :ref:`gpspostion_de`: Erzeugt einen Button zur Anzeige der eigenen GPS-Position.
 * :ref:`html_de`: Bietet die freie Definition von HTML zur Einbindung von Bildern, Texten oder Links.
 * :ref:`imageexport_de`: Exportiert einen Kartenausschnitt.
-* :ref:`interactivehelp_de`: Bietet interaktive Hilfen für Nutzer.
+* :ref:`interactivehelp_de`: Bietet eine interaktive Hilfe in der Anwendung.
 * :ref:`layertree_de`: Auflistung aller eingebundenen Layersets und Layer samt Auswahl- und Sortiermöglichkeiten.
 * :ref:`legend_de`: Zeigt die Legende von aktiven Diensten an.
 * :ref:`link_de`: Verlinkt zu einer externen URL.
@@ -219,7 +219,7 @@ Im Folgenden finden Sie eine vollständige Liste aller Elemente inklusive ihrer 
 * :ref:`poi_de`: Generiert einen Treffpunkt, welcher mit Hinweistexten und über eine URL verschickt wird.
 * :ref:`printclient_de`: Erzeugt einen Druckdialog, mit dem Karteninhalte als PDF exportiert und gedruckt werden können.
 * :ref:`printclientbatch_de`: Fügt die Möglichkeit hinzu, mehrere Druckrahmen gleichzeitig zu setzen und zu drucken.
-* :ref:`routing_de`: Bietet Routing-Funktionalitäten.
+* :ref:`routing_de`: Bietet Routing-Funktionalität.
 * :ref:`ruler_de`: Erlaubt das Messen von Linien und Flächen in der Karte.
 * :ref:`scaledisplay_de`: Zeigt aktuellen Maßstab numerisch an.
 * :ref:`scale_selector_de`: Dieses Element zeigt eine Auswahlbox mit Maßstäben an.
