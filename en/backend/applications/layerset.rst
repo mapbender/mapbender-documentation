@@ -12,6 +12,9 @@ Layerset
  .. |mapbender-button-delete| image:: ../../../figures/mapbender_button_delete.png
 
  .. |mapbender-button-publish| image:: ../../../figures/mapbender_button_publish.png
+
+ .. |mapbender-button-key| image:: ../../../figures/mapbender_button_key.png
+
      
 Layersets are logical containers that can contain one or more layerset-instances (WMS services). In the demo applications two layersets are defined: Layerset "main" for the main map and layerset "overview" for the overview map. The names of the layersets can be freely chosen. Moreover, more than one layerset can be chosen in the map element. Layertree shows the layerset name when thematic layers is activated.
 
@@ -30,12 +33,34 @@ Layerset actions
 Instance actions
 ----------------
  * |mapbender-button-edit|: Edit instance
+ * |mapbender-button-key|: Restrict instance access
  * |mapbender-button-publish|: Toggle show/hide instance
  * |mapbender-button-delete|: Delete instance
 
 .. image:: ../../../figures/mapbender_add_source_to_application.png
-  :scale: 70
+  :scale: 90
 
+
+Restrict Instance access
+------------------------
+The |mapbender-button-key| button opens a **Secure Instance** window that allows the configuration of the *View* right for users/groups. 
+
+Without configuration, an instance has no access restriction and is available to the users/groups that can access the application.
+
+When **View** access rights are set, only the defined users/groups get access to the instance.
+
+.. image:: ../../../figures/fom/acl_secure_instance.png
+     :width: 60%
+
+Add users to restrict access to them with the |mapbender-button-add| button. Set checkmark next to the user account provides the necessary rights.
+
+.. image:: ../../../figures/de/instance_security_key_popup.png
+     :width: 55%
+
+After setting specific access rights, the security key turns red.
+
+.. image:: ../../../figures/instance_security_key.png
+     :width: 85%
 
 Layerset-instances
 ==================
