@@ -13,6 +13,9 @@ Layerset
 
  .. |mapbender-button-publish| image:: ../../../figures/mapbender_button_publish.png
 
+ .. |mapbender-button-key| image:: ../../../figures/mapbender_button_key.png
+
+
 Ein Layerset ist ein logischer Container, der einen oder mehrere Layerset-Instanzen (WMS-Dienste) beinhalten kann.
 In den Demo-Anwendungen sind zwei Layersets definiert: Das Layerset "Main" für die Hauptkarte und das Layerset "Overview" für die Übersichtskarte. Die Namen der Layersets können frei gewählt werden. Außerdem können mehrere Layersets im Kartenelement ausgewählt werden. Zudem zeigt der Ebenenbaum den Namen der Layersets an, wenn die Option der thematischen Layer aktiviert ist.
 
@@ -31,11 +34,37 @@ Layerset-Ebene
 Instanz-Ebene
 -------------
  * |mapbender-button-edit|: Instanz bearbeiten
+ * |mapbender-button-key|: Zugriff auf die Instanz einschränken
  * |mapbender-button-publish|: Instanz an/aus
  * |mapbender-button-delete|: Instanz löschen
 
 .. image:: ../../../figures/de/mapbender_add_source_to_application.png
-  :scale: 70
+  :scale: 90
+
+
+Zugriff auf eine Instanz einschränken
+-------------------------------------
+Öffnet über den |mapbender-button-key| Button einen Dialog, der ein explizites Konfigurieren der *Ansehen*-Regel in :ref:`de/backend/FOM/index:Rechteverwaltung` für Benutzer und Gruppen ermöglicht.
+
+Ist dies nicht konfiguriert, hat die Instanz keine expliziten Zugangsbeschränkungen und sollte allen Benutzern und Gruppen zur Verfügung stehen.
+
+Sofern die **View**-Regel für bestimmte Benutzer oder Gruppen gesetzt ist, wird ausschließlich für diese die Instanz angezeigt.
+
+.. image:: ../../../figures/de/fom/acl_secure_instance.png
+     :width: 60%
+
+Beschränken Sie den Zugriff, indem Sie Benutzer über den |mapbender-button-add| Button hinzufügen. Eine gesetzte Checkbox zeigt an, dass die benötigten Berechtigungen zur Verfügung stehen.
+
+.. image:: ../../../figures/de/instance_security_key_popup.png
+     :width: 55%
+
+
+Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Cursor über den Schlüssel halten, sehen Sie die Namen der berechtigten Nutzer in einem Pop-Up Fenster.
+
+.. image:: ../../../figures/de/instance_security_key.png
+     :width: 85%
+
+Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :ref:`de/backend/FOM/index:Rechteverwaltung`.
 
 
 Layerset-Instanzen
