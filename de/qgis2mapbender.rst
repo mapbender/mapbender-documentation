@@ -47,7 +47,7 @@ Voraussetzungen für Ihre Mapbender-Installation
     
     * upload_max_filesize - die maximale Größe einer hochgeladenen Datei.
     * post_max_size - maximale Größe aller Daten, die über eine POST-Anfrage gesendet werden. Der Wert sollte gleich oder größer als upload_max_filesize sein.
-    * max_execution_tine - hier wird die maximale Zeit in Sekunden festgelegt, die ein Skript für die Analyse der Eingabedaten benötigt.
+    * max_execution_time - hier wird die maximale Zeit in Sekunden festgelegt, die ein Skript für die Analyse der Eingabedaten benötigt.
 
 
 **Mapbender**
