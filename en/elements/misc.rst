@@ -16,6 +16,7 @@ Other
    misc/dimensions_handler.rst
    misc/gpsposition.rst
    misc/html.rst
+   misc/interactivehelp.rst
    misc/poi.rst
    misc/querybuilder.rst
    misc/wms_loader.rst

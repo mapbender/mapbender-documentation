@@ -14,6 +14,7 @@ Verschiedenes
    misc/dimensions_handler.rst
    misc/gpsposition.rst
    misc/html.rst
+   misc/interactivehelp.rst
    misc/coordinate_utility.rst
    misc/link.rst
    misc/poi.rst
