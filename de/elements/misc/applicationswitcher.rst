@@ -52,7 +52,7 @@ Konfigurationsbeispiel:
 
 .. code-block:: yaml
 
-    mapbender_user: # Wechsel zu anderer Mapbedner Anwendung
+    mapbender_user: # Wechsel zu anderer Mapbender-Anwendung
     mapbender_user_basic:
       title: 'Mapbender User Basic'
       url: null
@@ -95,7 +95,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
     class: Mapbender\CoreBundle\Element\ApplicationSwitcher
     open_in_new_tab: true   # false/true Anwendung in neuem Browser-Tab öffnen
     applications:
-      mapbender_user: # Wechsel zu anderer Mapbedner Anwendung
+      mapbender_user: # Wechsel zu anderer Mapbender-Anwendung
       mapbender_user_basic:
         title: 'Mapbender User Basic'
         url: null
