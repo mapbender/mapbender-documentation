@@ -52,7 +52,7 @@ Konfigurationsbeispiel:
 
 .. code-block:: yaml
 
-    mapbender_user: # switch to another application
+    mapbender_user: # Wechsel zu anderer Mapbender-Anwendung
     mapbender_user_basic:
       title: 'Mapbender User Basic'
       url: null
@@ -61,17 +61,17 @@ Konfigurationsbeispiel:
     mapbender_user_basic_with_zoom:
       title: 'external: open with zoom'
       url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%zoom%@%lat%/%lon%r%rotation%@EPSG:%srs%'
-      group: 'Demo'
+      group: 'External'
     external_dz_nrw:
-      title: 'external: www.dz.nrw.de with srs scale center_x and center_y'
+      title: 'www.dz.nrw.de with srs scale center_x and center_y'
       url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%srs%&cam=%center_x%,%center_y%,%scale%,360,65,55'
       imgUrl: null
-      group: 'Demo'
+      group: 'External'
     external_osm:
-      title: 'external: OSM with lon & lat'
+      title: 'OSM with lon & lat'
       url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
       imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
-      group: 'Demo'
+      group: 'External'
     link_mapbender:
       title: 'Link: mapbender.org'
       url: 'https://mapbender.org'
@@ -87,7 +87,7 @@ Konfigurationsbeispiel:
 YAML-Definition
 ---------------
 
-Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden.
+Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzubinden. Bitte beachten Sie, dass Sie die Variablen mit doppelten Prozentzeichen (%%) in der URL-Definition angeben müssen.
 
 .. code-block:: yaml
 
@@ -95,25 +95,25 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
     class: Mapbender\CoreBundle\Element\ApplicationSwitcher
     open_in_new_tab: true   # false/true Anwendung in neuem Browser-Tab öffnen
     applications:
-      mapbender_user: # switch to another application
+      mapbender_user: # Wechsel zu anderer Mapbender-Anwendung
       mapbender_user_basic:
         title: 'Mapbender User Basic'
         url: null
         imgUrl: null
         group: 'Mapbender Demos'
       mapbender_user_basic_with_zoom:
-        title: 'external: open with zoom'
-        url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%zoom%@%lat%/%lon%r%rotation%@EPSG:%srs%'
-        group: 'Demo'
+        title: 'external Mapbender: open with zoom'
+        url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%%zoom%%@%%lat%%/%%lon%%r%%rotation%%@EPSG:%%srs%%'
+        group: 'External'
       external_dz_nrw:
-        title: 'external: www.dz.nrw.de with srs scale center_x and center_y'
-        url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%srs%&cam=%center_x%,%center_y%,%scale%,360,65,55'
+        title: 'www.dz.nrw.de with srs scale center_x and center_y'
+        url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
         imgUrl: null
-        group: 'Demo'
+        group: 'External'
       external_osm:
-        title: 'external: OSM with lon & lat'
+        title: 'OSM with lon & lat'
         url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
         imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
-        group: 'Demo'
+        group: 'External'
 
 
