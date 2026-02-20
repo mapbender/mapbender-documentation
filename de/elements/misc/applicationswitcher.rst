@@ -41,11 +41,14 @@ Sie können auf Anwendungen ohne weitere Parameter verweisen. Oder Sie können z
 
 Die folgenden Platzhalter sind definiert und liefern Informationen zum derzeit in der Anwendung ausgewählten Bereich. Der Platzhalter kann in der URL-Definition verwendet werden:
 
-* **scale%:** Maßstab
-* **lat%:**latitude der Mittelpunktskoordinate
+* **%scale%:** Maßstab
+* **%lat%:** latitude der Mittelpunktskoordinate
 * **%lon%:** longitude der Mittelpunktskoordinate
 * **%center_x%:** x-Wert der Mittelpunktskoordinate in der aktuell verwendeten Projektion 
 * **%center_y%:** y-Wert der Mittelpunktskoordinate in der aktuell verwendeten Projektion 
+* **%rotation%:** numerischer Wert der die Rotation der Karte repräsentiert
+* **%srs%:** EPSG-Code
+* **%zoom%:** Zoomfaktor 
 
 
 Konfigurationsbeispiel: 
