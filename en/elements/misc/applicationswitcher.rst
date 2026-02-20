@@ -43,8 +43,8 @@ You can only refer to an application without further parameter. Or you can defin
 
 The following placeholder are defined and provide information for the actual extent. The placeholder can be used in the url definition:
 
-* **scale%:** scale denominator
-* **lat%:** latitude value of the center coordinate
+* **%scale%:** scale denominator
+* **%lat%:** latitude value of the center coordinate
 * **%lon%:** longitude value of the center coordinate
 * **%center_x%:** x value of the center coordinate in the actual used projection 
 * **%center_y%:** y value of the center coordinate in the actual used projection 
@@ -66,17 +66,17 @@ Example configuration
     mapbender_user_basic_with_zoom:
       title: 'external: open with zoom'
       url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%zoom%@%lat%/%lon%r%rotation%@EPSG:%srs%'
-      group: 'Demo'
+      group: 'External'
     external_dz_nrw:
-      title: 'external: www.dz.nrw.de with srs scale center_x and center_y'
+      title: 'www.dz.nrw.de with srs scale center_x and center_y'
       url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%srs%&cam=%center_x%,%center_y%,%scale%,360,65,55'
       imgUrl: null
-      group: 'Demo'
+      group: 'External'
     external_osm:
-      title: 'external: OSM with lon & lat'
+      title: 'OSM with lon & lat'
       url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
       imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
-      group: 'Demo'
+      group: 'External'
     link_mapbender:
       title: 'Link: mapbender.org'
       url: 'https://mapbender.org'
@@ -92,7 +92,7 @@ Example configuration
 YAML-Definition
 ---------------
 
-This template can be used to insert the element into a YAML application.
+This template can be used to insert the element into a YAML application. Please note that you have to refer to the variables with double percentage signs (%%) in the url definition.
 
 .. code-block:: yaml
 
@@ -107,18 +107,18 @@ This template can be used to insert the element into a YAML application.
         imgUrl: null
         group: 'Mapbender Demos'
       mapbender_user_basic_with_zoom:
-        title: 'external: open with zoom'
-        url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%zoom%@%lat%/%lon%r%rotation%@EPSG:%srs%'
-        group: 'Demo'
+        title: 'external Mapbender: open with zoom'
+        url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%%zoom%%@%%lat%%/%%lon%%r%%rotation%%@EPSG:%%srs%%'
+        group: 'External'
       external_dz_nrw:
-        title: 'external: www.dz.nrw.de with srs scale center_x and center_y'
-        url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%srs%&cam=%center_x%,%center_y%,%scale%,360,65,55'
+        title: 'www.dz.nrw.de with srs scale center_x and center_y'
+        url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
         imgUrl: null
-        group: 'Demo'
+        group: 'External'
       external_osm:
-        title: 'external: OSM with lon & lat'
+        title: 'OSM with lon & lat'
         url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
         imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
-        group: 'Demo'
+        group: 'External'
 
 
