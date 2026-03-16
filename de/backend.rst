@@ -2,7 +2,8 @@
 
 Backend
 =======
-Das Backend ist die Verwaltungsoberfläche von Mapbender: Mit ihm können Anwendungen und Datenquellen verwaltet und über Benutzer und Gruppen abgesichert werden. 
+Das Backend ist die Verwaltungsoberfläche von Mapbender: Mit ihm können Anwendungen und Datenquellen verwaltet und über Benutzer und Gruppen abgesichert werden. Außerdem können Stile für Vektordatenquellen verwaltet werden.
+
 Zur Installation und Einrichtung von Mapbender besuchen Sie bitte die Seiten zur :ref:`installation_de` bzw. den :ref:`Schnellstart <quickstart_de>`.
 In einer lokalen Standardkonfiguration kann das Backend über ``http://localhost/mapbender`` aufgerufen werden. Nach der erfolgreichen Anmeldung mit dem root-Benutzer stehen folgende Seiten zur Verfügung:
 
@@ -16,6 +17,7 @@ In einer lokalen Standardkonfiguration kann das Backend über ``http://localhost
    :maxdepth: 2
    
    backend/sources.rst
+   backend/styles.rst
    
 .. toctree::
    :maxdepth: 2

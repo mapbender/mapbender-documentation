@@ -8,6 +8,7 @@ With Sources, you can register:
 * **OGC WMS**: Web Map Service
 * **OGC WMTS/TMS**: Web Map Tile Service / Tile Map Service
 * **Vector Tiles**
+* **OGC API Features**
 
 Further information about the registration process of services and their usage in applications is available in the Quickstart chapter :ref:`en/quickstart:Load sources`.
 
@@ -237,3 +238,19 @@ YAML
     Transport: Public Transport
 
 * **bbox**: Bounding box (array xmin, ymin, xmax, ymax) for the source
+
+
+OGC API Features
+----------------
+
+OGC API Features 
+
+Read more about OGC API Features at the `OGC documentation https://ogcapi.ogc.org/features/ <https://ogcapi.ogc.org/features/>`_.
+
+Loading an OGC API Features Service
++++++++++++++++++++++++++++++++++++
+
+.. image:: ../../figures/mapbender_add_ogc_api_features_source.png
+  :width: 100%
+
+* **URL to an OGC API Features Service**: Service URL (for example `bm_web_col https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ oder `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )

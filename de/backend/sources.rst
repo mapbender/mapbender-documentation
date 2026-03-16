@@ -8,6 +8,7 @@ Datenquellen (Sources)
 * **OGC WMS**: Web Map Service
 * **OGC WMTS/TMS**: Web Map Tile Service / Tile Map Service
 * **Vector Tiles**
+* **OGC API Features**
 
 Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im Schnellstart-Kapitel :ref:`de/quickstart:Laden von Datenquellen`.
 
@@ -235,3 +236,18 @@ YAML
 
 * **bbox**: Begrenzungsrahmen (Array xmin, ymin, xmax, ymax) für die Quelle
 
+
+OGC API Features
+----------------
+
+OGC API Features 
+
+Lesen Sie mehr über OGC API Features in der `OGC documentation https://ogcapi.ogc.org/features/ <https://ogcapi.ogc.org/features/>`_.
+
+Laden einer OGC API Features Quelle
++++++++++++++++++++++++++++++++++++
+
+.. image:: ../../figures/de/mapbender_add_ogc_api_features_source.png
+  :width: 100%
+
+* **URL zum OGC API Features Dienst**: URL zum Dienst (z. B. `pygeoapi Demo https://demo.pygeoapi.io/stable <https://demo.pygeoapi.io/stable>`_ or `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )

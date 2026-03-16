@@ -325,3 +325,53 @@ Example:
   :width: 100%
 
 The screenshot shows a Mapbender application with an active legend and feature information.  
+
+OGC API Features Service Instance Configuration
+-----------------------------------------------
+
+.. image:: ../../../figures/layerset/layerset_ogc_api_features_instance.png
+  :scale: 80
+
+The OGC API Features Service instance settings offer the following configuration options:
+
+* **Origin URL**: The URL to the OGC API Features Service.
+* **Title**: The title of the instance as displayed in the layer tree.
+* **Opacity**: The transparency of the instance.
+* **Max features**: Specifies how many features to fetch from the collections.
+* **Minimum/Maximum Scale Denominator**: The scale range in which the layer should be displayed.
+
+* **BaseSource**: Indicates whether the instance should be treated as a base source.
+* **Selected**: Service is active when the application starts.
+* **Allow Selected**: Selectable in geodata explorer.
+* **Toggle**: Opens the folder on start of the application.
+* **Allow Toggle**: Folder can be opened via Layertree.
+
+* **Field information & translation**: YAML array for fields and translation.
+Example:
+
+  .. code-block:: yaml
+
+     - name: Name
+     - objid: ID
+     - flaeche: 'Area'
+     - land: Province
+
+**Collections**
+
+* **Title**: The title for the collection, that shall be displayed in the layer tree.
+* **Max features**: Specifies how many features to fetch from the collections.
+* **Minimum/Maximum Scale Denominator**: The scale range in which the layer should be displayed.
+
+* **Active** (on/off): Enables/disables collection for the individual application. If not set, all other checkboxes of the same collection will be ignored.
+* **Select allow**: Collection is active when the application starts.
+* **Select on**: Selectable in geodata explorer.
+* **Info allow**: Collection info is active when the application starts.
+* **Info**: Collection provides feature info requests, info default activates the feature info functionality.
+* **...** -> Opens a dialog with more information:
+* **Collection name**: Collection name of the service information
+* **Style**: You can choose a default style and offer other styles.
+
+.. image:: ../../../figures/layerset/layerset_ogc_api_features_visualisation.png
+  :width: 100%
+
+The screenshot shows a Mapbender application with an OGC API Features Service.
