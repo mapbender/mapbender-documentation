@@ -28,16 +28,17 @@ Konfiguration
 .. image:: ../../../figures/de/applicationswitcher_configuration.png
      :scale: 70
 
-* **Title:** Titel des Elements. Dieser wird angezeigt, wenn der Mauszeiger eine längere Zeit über der Auswahl verweilt.
+* **Titel:** Titel des Elements. Dieser wird angezeigt, wenn der Mauszeiger eine längere Zeit über der Auswahl verweilt.
 * **In neuem Tab öffnen:** Definiert, ob die Anwendung beim Wechsel in einem neuen Browser-Tab geöffnet werden soll.
 * **Konfiguration:** Definieren Sie in diesem Bereich die Anwendungen, die zur Auswahl erscheinen sollen. Die Definition erfolgt im YAML-Syntax.
 
 Sie können auf Anwendungen ohne weitere Parameter verweisen. Oder Sie können zusätzliche Parameter definieren.
 
-* **Titel:** Definieren Sie einen alternativen Titel. Wenn kein Titel definiert ist, wird der Titel der Anwendung verwendet, wenn Sie auf eine vorhandene Mapbender-Anwendung Ihrer Installation verweisen. (optional)
-* **URL:** Sie können einen Link hinzufügen und auf eine Mapbender-Anwendung, eine Website oder ein anderes Portal verweisen (optional).
-* **imgUrl:** Link zu einem Bild, das Sie anzeigen möchten. (optional).
-* **Gruppe:** Definieren Sie eine Gruppe. Anwendungen mit derselben Gruppe werden in einem Abschnitt mit dem Gruppentitel als Überschrift angezeigt (optional).
+* **title:** Definieren Sie einen alternativen Titel. Wenn kein Titel definiert ist, wird der Titel der Anwendung verwendet, wenn Sie auf eine vorhandene Mapbender-Anwendung Ihrer Installation verweisen (optional)
+* **url:** Sie können einen Link hinzufügen und auf eine Mapbender-Anwendung, eine Website oder ein anderes Portal verweisen (optional).
+* **imgUrl:** Link zu einem Bild, das Sie anzeigen möchten. (optional)
+* **description:** Fügen Sie eine Beschreibung hinzu. Diese wird als Tooltip angezeigt (optional)
+* **group:** Definieren Sie eine Gruppe. Anwendungen mit derselben Gruppe werden in einem Abschnitt mit dem Gruppentitel als Überschrift angezeigt (optional).
 
 Die folgenden Platzhalter sind definiert und liefern Informationen zum derzeit in der Anwendung ausgewählten Bereich. Der Platzhalter kann in der URL-Definition verwendet werden:
 
@@ -55,7 +56,7 @@ Konfigurationsbeispiel:
 
 .. code-block:: yaml
 
-    mapbender_user: # Wechsel zu anderer Mapbender-Anwendung
+    mapbender_user: # switch to another application
     mapbender_user_basic:
       title: 'Mapbender User Basic'
       url: null
@@ -64,26 +65,31 @@ Konfigurationsbeispiel:
     mapbender_user_basic_with_zoom:
       title: 'external: open with zoom'
       url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%zoom%@%lat%/%lon%r%rotation%@EPSG:%srs%'
+      description: Link to an external application with zoom and rotation.
       group: 'External'
     external_dz_nrw:
       title: 'www.dz.nrw.de with srs scale center_x and center_y'
       url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%srs%&cam=%center_x%,%center_y%,%scale%,360,65,55'
       imgUrl: null
+      description: Link to Digitaler Zwilling NRW (external application).      
       group: 'External'
     external_osm:
       title: 'OSM with lon & lat'
       url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
       imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
+      description: Link to OpenStreetMap (external application). 
       group: 'External'
     link_mapbender:
       title: 'Link: mapbender.org'
       url: 'https://mapbender.org'
       imgUrl: 'https://doc.mapbender.org/_images/mapbender_logo_font.png' #'https://mapbender.org/fileadmin/mapbender/resources/images/startseite/mapbender-stadt-markierungen.jpg'
+      description: Link to the Mapbender Documentation      
       group: 'Link external Website'
     link_fossgis:
       title: 'Link: fossgis.de'
       url: 'https://fossgis.de'
       imgUrl: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
+      description: Link to FOSSGIS e.V.      
       group: 'Link external Website'
 
 
