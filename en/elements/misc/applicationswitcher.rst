@@ -36,9 +36,10 @@ Configuration
 
 You can only refer to an application without further parameter. Or you can define additional parameters.
 
-* **Title:** Define an alternative Title. If not defined the Title of the application will be used, if you refer to an existing mapbender application of your installation. (optional)
+* **title:** Define an alternative Title. If not defined the Title of the application will be used, if you refer to an existing mapbender application of your installation. (optional)
 * **url:** You can add a link and refer to a Mapbender application, a website or an alternative portal (optional)
 * **imgUrl:** Link to an image, that you would like to show (optional)
+* **description:** Add more Information. It wil be show as tooltip (optional)
 * **group:** Define a group. Applications with the same group will be shown in a section with the group title as heading (optional)
 
 The following placeholder are defined and provide information for the actual extent. The placeholder can be used in the url definition:
@@ -66,26 +67,31 @@ Example configuration
     mapbender_user_basic_with_zoom:
       title: 'external: open with zoom'
       url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%zoom%@%lat%/%lon%r%rotation%@EPSG:%srs%'
+      description: Link to an external application with zoom and rotation.
       group: 'External'
     external_dz_nrw:
       title: 'www.dz.nrw.de with srs scale center_x and center_y'
       url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%srs%&cam=%center_x%,%center_y%,%scale%,360,65,55'
       imgUrl: null
+      description: Link to Digitaler Zwilling NRW (external application).      
       group: 'External'
     external_osm:
       title: 'OSM with lon & lat'
       url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
       imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
+      description: Link to OpenStreetMap (external application). 
       group: 'External'
     link_mapbender:
       title: 'Link: mapbender.org'
       url: 'https://mapbender.org'
       imgUrl: 'https://doc.mapbender.org/_images/mapbender_logo_font.png' #'https://mapbender.org/fileadmin/mapbender/resources/images/startseite/mapbender-stadt-markierungen.jpg'
+      description: Link to the Mapbender Documentation      
       group: 'Link external Website'
     link_fossgis:
       title: 'Link: fossgis.de'
       url: 'https://fossgis.de'
       imgUrl: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
+      description: Link to FOSSGIS e.V.      
       group: 'Link external Website'
 
 
@@ -109,16 +115,18 @@ This template can be used to insert the element into a YAML application. Please 
       mapbender_user_basic_with_zoom:
         title: 'external Mapbender: open with zoom'
         url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%%zoom%%@%%lat%%/%%lon%%r%%rotation%%@EPSG:%%srs%%'
+        description: Link to an external application with zoom and rotation.              
         group: 'External'
       external_dz_nrw:
         title: 'www.dz.nrw.de with srs scale center_x and center_y'
         url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
         imgUrl: null
+        description: Link to Digitaler Zwilling NRW (external application).         
         group: 'External'
       external_osm:
         title: 'OSM with lon & lat'
         url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
         imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
+        description: Link to OpenStreetMap (external application).         
         group: 'External'
-
 
