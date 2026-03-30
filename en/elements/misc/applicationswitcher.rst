@@ -115,16 +115,18 @@ This template can be used to insert the element into a YAML application. Please 
       mapbender_user_basic_with_zoom:
         title: 'external Mapbender: open with zoom'
         url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%%zoom%%@%%lat%%/%%lon%%r%%rotation%%@EPSG:%%srs%%'
+        description: Link to an external application with zoom and rotation.              
         group: 'External'
       external_dz_nrw:
         title: 'www.dz.nrw.de with srs scale center_x and center_y'
         url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
         imgUrl: null
+        description: Link to Digitaler Zwilling NRW (external application).         
         group: 'External'
       external_osm:
         title: 'OSM with lon & lat'
         url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
         imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
+        description: Link to OpenStreetMap (external application).         
         group: 'External'
-
 
