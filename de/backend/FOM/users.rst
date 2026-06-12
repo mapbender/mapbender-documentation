@@ -81,7 +81,7 @@ Login Fehler
 
 Fehlerhafte Logins werden mit der Meldung "Login fehlerhaft" kommentiert. Loginfehler schließen den Account nicht dauerhaft aus. Vielmehr wird der Account für eine bestimmte Zeit ausgeschlossen (gelockt).
 
-Die doctrine.yaml ermöglicht die Anpassung dieses Verhaltens:
+Die fom.yaml ermöglicht die Anpassung dieses Verhaltens:
 
 .. code-block:: yaml
 

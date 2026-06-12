@@ -75,7 +75,7 @@ Login Failures
 
 Login failures are responded with the Message "Bad credentials". For security reasons it is not shown if the error is based on a wrong username or a wrong password. Login failures will not lock the account indefinitely after four attempts. Rather the account will be locked for a given period of time.
 
-The doctrine.yaml allows to adjust this behaviour:
+The fom.yaml allows to adjust this behaviour:
 
 .. code-block:: yaml
 
