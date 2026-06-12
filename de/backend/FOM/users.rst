@@ -21,9 +21,9 @@ Falls ein Benutzer sein Passwort vergessen hat, kann er in der Login-Maske über
 
 .. image:: ../../../figures/de/fom/user_forgot_password.png
 
-Danach bekommt der Benutzer eine E-Mail mit einem Link zur Zurücksetzung des Passworts. Der Link ist nach der Nutzung nicht mehr gültig. Der Text der Mail kann in der Datei `/FOM/UserBundle/Resources/translations/messages.de.xlf` angepasst werden.
+Danach bekommt der Benutzer eine E-Mail mit einem Link zur Zurücksetzung des Passworts. Der Link ist nach der Nutzung nicht mehr gültig. Der Text der Mail kann in der Datei `/FOM/UserBundle/Resources/translations/messages.de.yaml` angepasst werden.
 
-Die Funktionalität kann in der doctrine.yaml ausgeschaltet werden.
+Die Funktionalität kann in der fom.yaml ausgeschaltet werden.
 
 .. code-block:: yaml
 
@@ -34,7 +34,7 @@ Die Funktionalität kann in der doctrine.yaml ausgeschaltet werden.
 Registrierung
 -------------
 
-Benutzer können sich in Mapbender selbst registrieren. Vorher muss in der doctrine.yaml die Einstellung `fom_user:selfregister` auf true gestellt werden.
+Benutzer können sich in Mapbender selbst registrieren. Vorher muss in der fom.yaml die Einstellung `fom_user:selfregister` auf true gestellt werden.
 
 .. code-block:: yaml
 
@@ -47,7 +47,7 @@ Im Login-Dialog erscheint der *Registrieren* Button. Der Benutzer wird zu einer 
 
 Danach erhält er eine Bestätigungsmail, mit der er seine Anmeldung abschließen kann. Bis zu diesem Zeitpunkt ist er als inaktiver Nutzer in Mapbender hinterlegt.
 
-Die Texte der Bestätigungsmail können unter `/FOM/UserBundle/Resources/translations/messages.de.xlf` angepasst werden.
+Die Texte der Bestätigungsmail können unter `/FOM/UserBundle/Resources/translations/messages.de.yaml` angepasst werden.
 
 
 Aktivieren von Nutzern

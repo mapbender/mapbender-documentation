@@ -17,9 +17,9 @@ If a user has forgotten his/her password, he can use the "Forgot password?" link
 
 .. image:: ../../../figures/fom/user_forgot_password.png
 
-After that, the user should receive an email with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the `/FOM/UserBundle/Resources/translations/messages.en.xlf` file.
+After that, the user should receive an email with a link which leads to a page where a password reset is possible. The link is not valid anymore after this operation. The text of the mail can be customized in the `/FOM/UserBundle/Resources/translations/messages.en.yaml` file.
 
-The functionality can be switched off in the *doctrine.yaml*.
+The functionality can be switched off in the *fom.yaml*.
 
 .. code-block:: yaml
 
@@ -30,7 +30,7 @@ The functionality can be switched off in the *doctrine.yaml*.
 Registration
 ------------
 
-Users can self-register themselves in Mapbender. For this, you have to adjust the setting ``fom_user:selfregister`` in the *doctrine.yaml* to ``true``.
+Users can self-register themselves in Mapbender. For this, you have to adjust the setting ``fom_user:selfregister`` in the *fom.yaml* to ``true``.
 
 .. code-block:: yaml
 
@@ -42,7 +42,7 @@ The Login dialog contains a *Register* button. This opens a page where the user 
 .. image:: ../../../figures/fom/user_self_register.png
 
 After that, the user gets a confirmation mail to complete the registration. Until then, Mapbender will handle the user as inactive.
-The text of the confirmation mail can be customized in the `/FOM/UserBundle/Resources/translations/messages.en.xlf` file.
+The text of the confirmation mail can be customized in the `/FOM/UserBundle/Resources/translations/messages.en.yaml` file.
 
 
 Activation of users
@@ -73,7 +73,7 @@ Assign permission management to users or groups
 Login Failures
 --------------
 
-Login failures are responded with the Message "Bad credentials". For security reasons it is not shown if the error is based on a wrong username or a wrong password. Login failures will not lock the account indefinitely after four attempts.  Rather the account will be locked for a given period of time.
+Login failures are responded with the Message "Bad credentials". For security reasons it is not shown if the error is based on a wrong username or a wrong password. Login failures will not lock the account indefinitely after four attempts. Rather the account will be locked for a given period of time.
 
 The doctrine.yaml allows to adjust this behaviour:
 
