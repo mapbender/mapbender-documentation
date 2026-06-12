@@ -69,6 +69,11 @@ Here, you define all important information for each search:
                 required: false
                 label: City/Town
             compare: ilike
+            multi_value: true
+            multi_value_separators:
+              - ','
+              - ;
+              - '|'
     results:
         view: table
         count: true
@@ -268,6 +273,23 @@ The following comparison modes are supported:
 * **lower-equal:** lower or equal  (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
 * **not:** is not (for type number, integer or date) Not compatible with all like modes. Auto-complete is ignored.
 
+Multi Value Search 
+------------------
+
+You can define multi value fields. If multi-value is activated you can enter more than one search text. You can define one or more possible separator characters.
+
+.. code-block:: yaml
+  
+    multi_value: true
+    multi_value_separators:
+      - ','
+      - ;
+      - '|'
+
+* **multi_value:** activate multi value search for a search field (default is false)
+* **multi_value_separators:** list of characters that are used to separate the different search values (default is comma)
+
+
 Result
 ------
 
@@ -418,6 +440,11 @@ The element title (*Title*) is Search. It is again displayed as a title in the s
           data-autocomplete: 'on'
           data-autocomplete-distinct: 'on'
       compare: ilike
+      multi_value: true
+      multi_value_separators:
+        - ','
+        - ;
+        - '|'         
     usertype:                              # search field (search for specific User type)
       type: Symfony\Component\Form\Extension\Core\Type\ChoiceType
       options:

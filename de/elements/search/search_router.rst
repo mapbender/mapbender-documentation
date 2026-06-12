@@ -71,6 +71,11 @@ Hier erfolgt die Definition:
                 required: false
                 label: Ort/Stadt
             compare: ilike
+            multi_value: true
+            multi_value_separators:
+              - ','
+              - ;
+              - '|'            
     results:
         view: table
         count: true
@@ -274,6 +279,22 @@ Folgende Vergleichsmodi werde unterstützt:
 * **not:** nicht (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
 
 
+Suche nach mehreren Begriffen ()Multi Value)
+--------------------------------------------
+
+Sie können Felder als multi-value definieren. Dadurch können mehrere Werte für die Suche eingegeben werden. Sie können ein oder mehrere mögliche Trennzeichen definieren.
+
+.. code-block:: yaml
+  
+    multi_value: true
+    multi_value_separators:
+      - ','
+      - ;
+      - '|'
+
+* **multi_value:** Aktiviert die Suche nach mehreren Begriffen für dieses Feld (Standard ist false)
+* **multi_value_separators:** Liste von möglichen Zeichen, zur Trennung der einzelnen Suchbegriffe (Standard ist Komma)
+
 
 Ergebnisausgabe
 ---------------
@@ -424,6 +445,11 @@ Der Elementitel (*Titel*) lautet Suchen, er wird in der Sidepane angezeigt. Da d
           data-autocomplete: 'on'
           data-autocomplete-distinct: 'on'
       compare: ilike
+      multi_value: true
+      multi_value_separators:
+        - ','
+        - ;
+        - '|'      
     usertype:                                                           # Feld für die Suche nach dem Nutzertyp
       type: Symfony\Component\Form\Extension\Core\Type\ChoiceType
       options:
