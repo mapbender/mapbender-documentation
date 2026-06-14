@@ -279,7 +279,7 @@ Folgende Vergleichsmodi werde unterstützt:
 * **not:** nicht (für Type Number, Integer oder Date) Nicht kompatibel mit iexact und allen like-Modi. Auto-Vervollständigung ignoriert diesen Modus.
 
 
-Suche nach mehreren Begriffen ()Multi Value)
+Suche nach mehreren Begriffen (Multi Value)
 --------------------------------------------
 
 Sie können Felder als multi-value definieren. Dadurch können mehrere Werte für die Suche eingegeben werden. Sie können ein oder mehrere mögliche Trennzeichen definieren.
