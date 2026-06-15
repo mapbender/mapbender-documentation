@@ -8,6 +8,7 @@ Datenquellen (Sources)
 * **OGC WMS**: Web Map Service
 * **OGC WMTS/TMS**: Web Map Tile Service / Tile Map Service
 * **Vector Tiles**
+* **OGC API - Features**
 
 Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im Schnellstart-Kapitel :ref:`de/quickstart:Laden von Datenquellen`.
 
@@ -235,3 +236,52 @@ YAML
 
 * **bbox**: Begrenzungsrahmen (Array xmin, ymin, xmax, ymax) für die Quelle
 
+
+OGC API - Features
+------------------
+OGC API - Features ist ein OGC Standard. der die Möglichkeit bietet im Web räumliche Daten zu erzeugen, zu verändern und abzufragen. Der Standard ist der Nachfolger des OGC WFS Standards.
+
+Lesen Sie mehr über OGC API - Features in der `OGC documentation https://ogcapi.ogc.org/features/ <https://ogcapi.ogc.org/features/>`_.
+
+Laden einer OGC API - Features Quelle
++++++++++++++++++++++++++++++++++++++
+
+.. image:: ../../figures/de/mapbender_add_ogc_api_features_source.png
+  :width: 100%
+
+* **URL zum OGC API - Features Dienst**: URL zum Dienst (z. B. `pygeoapi Demo https://demo.pygeoapi.io/stable <https://demo.pygeoapi.io/stable>`_ or `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )
+
+YAML
+++++  
+
+* **type**: muss ogc_api_features sein
+* **title**: Der Titel der Quelle, wie er im Ebenenbaum angezeigt wird
+* **jsonUrl**: URL zum OGC API - Features Dienst
+* **basesource (alias: isBaseSource)**: Bool-Wert, ob die Quelle als Basisquelle behandelt werden soll
+* **opacity**: int 0 (vollständig transparent)-100 (vollständig undurchsichtig) (Standard: 100)
+* **selected (alias: visible)**: Anfangszustand des Layers. (Standard: true)
+* **allowSelected**: Kann der Benutzer den ausgewählten Zustand ändern? (Standard: true)
+* **toggle**: Anfangszustand des Wurzelordners im Ebenenbaum (Standard: true = Ordner ist erweitert)
+* **allowToggle**: Kann der Benutzer den Wurzelordner ein-/ausschalten? (Standard: true)
+* **featureLimit**: Maximale Anzahl der angeforderten Features (Standard 1000)
+* **minScale**: Mindestmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
+* **maxScale**: Höchstmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
+* **featureInfoPropertyMap**: Wenn nicht leer, werden nur die angegebenen Eigenschaften in der FeatureInfo angezeigt. Als YAML-Arra y angeben. Der Schlüssel ist der Name des Feldes, der optionale Wert ist die Übersetzung. Beispiel:
+
+  .. code-block:: yaml
+
+     class
+     name
+     layer: Layer-Name
+
+Collections
+
+* **title**: Der Titel der Collection, wie er im Ebenenbaum angezeigt wird
+* **featureLimit**: Maximale Anzahl der angeforderten Features (Standard 1000)
+* **minScale**: Mindestmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
+* **maxScale**: Höchstmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
+* **visible**: Anfangszustand des Layers. (Standard: true)
+* **toggle**: Anfangszustand des Ordners im Ebenenbaum (Standard: false = Ordner ist eingeklappt)
+* **allowToggle**: Kann der Benutzer das Thema ein-/ausschalten? (Standard: true)
+* **allowInfo**: liefert die Collection Informationen (default: false)
+* **info**: initialer Status für die Informationsabfrage (default: false)

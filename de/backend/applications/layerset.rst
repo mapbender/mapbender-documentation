@@ -288,7 +288,7 @@ Die Vector Tiles-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkei
 * **Ursprungs-URL**: Die URL zur JSON-Datei.
 * **Titel**: Der Titel der Instanz, wie er im Ebenenbaum angezeigt wird.
 * **Deckkraft**: Die Transparenz der Instanz.
-* **Minimaler/Maximaler Maßstab(Nenner)**: Der Maßstabsbereich, in dem der Layer angezeigt wird.
+* **Minimaler/Maximaler Maßstab (Nenner)**: Der Maßstabsbereich, in dem der Layer angezeigt wird.
 * **Auflösungskorrektur für den Druck**: Gibt an, ob eine Auflösungskorrektur für den Druck angewendet werden soll.
 * **BaseSource**: Gibt an, ob die Instanz als Basisquelle behandelt werden soll.
 * **Bei Anwendungsstart aktivieren**: Checkbox, ob die Instanz beim Start der Anwendung aktiviert sein soll.
@@ -302,6 +302,7 @@ Die Vector Tiles-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkei
 * **Titel**: Eigenschaft/Eigenschaften des Features, die als Titel angezeigt werden.
 * **Features mit leerem Titel ausblenden**: Checkbox, ob Features ohne Titel ausgeblendet werden sollen.
 * **Feld-Auswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Feldern.
+
 Beispiel:
 
   .. code-block:: yaml
@@ -317,6 +318,7 @@ Beispiel:
 * **Legende aktivieren**: Bool-Wert, ob eine Legende für die Instanz angezeigt werden soll.
 * **Wenn erweitere Einstellungen aktiviert worden sind, dann sind folgende Einstellungen sichtbar**:
 * **Ebenenauswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Ebenen. 
+
 Beispiel:
 
   .. code-block:: yaml
@@ -329,4 +331,57 @@ Beispiel:
 .. image:: ../../../figures/de/layerset/layerset_vector_tiles_visualisation.png
   :width: 100%
 
-Der Screenshot zeigt eine Mapbender-Anwendung mit aktivierter Legende und Feature-Information.  
+Der Screenshot zeigt eine Mapbender-Anwendung mit Vector Tiles Dienst und aktivierter Legende und Feature-Information.  
+
+
+OGC API - Features Service Instanz-Konfiguration
+------------------------------------------------
+
+.. image:: ../../../figures/de/layerset/layerset_ogc_api_features_instance.png
+  :scale: 80
+
+Die OGC API - Features Dienst-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
+
+* **Ursprungs-URL**: Die URL zum OGC API - Features Dienst
+* **Titel**: Der Titel der Instanz, der im Ebenenbaum angezeigt werden soll.
+* **Deckkraft**: Die Transparenz der Instanz.
+* **Max.-Anzahl Features**: Definition wie viele Objekte von den Collections angefordert werden sollen.
+* **Minimaler/Maximaler Maßstab (Nenner)**: Der Maßstabsbereich, in dem die Collections angezeigt werden sollen.
+
+* **BaseSource**: Gibt an, ob die Instanz als Basisquelle behandelt werden soll.
+* **Ausgewählt**: Checkbox, ob die Instanz beim Start der Anwendung aktiviert sein soll.
+* **Auswahl erlauben**: Checkbox, ob der Benutzer die Instanz im Ebenenbaum auswählen darf.
+* **Aufgeklappt**: Checkbox, ob die Instanz beim Start der Anwendung aktiviert sein soll.
+* **Aufklappen erlauben**: Checkbox, ob der Benutzer die Instanz im Ebenenbaum aufklappen darf.
+* **Aufklappen**: Gibt an, ob der Ordner beim Start der Anwendung aufgeklappt sein soll.
+
+* **Feld-Information & Übersetzung**: YAML-Array zur Definition von Feldern und Übersetzungen für die Informationsausgabe.
+
+Beispiel:
+
+  .. code-block:: yaml
+
+     - name: Name
+     - objid: ID
+     - flaeche: 'Fläche'
+     - land: Bundesland
+ 
+**Collections**
+
+* **Titel**: Titel für die Collection, der im Ebenenbaum angezeigt werden soll.
+* **Max.-Anzahl Features**: Definition wie viele Objekte für die Collection angefordert werden sollen.
+* **Minimaler/Maximaler Maßstab (Nenner)**: Der Maßstabsbereich, in dem die Collection angezeigt werden soll.
+* **Aktiv an/aus**: Aktiviert/deaktiviert eine Collection in dieser Anwendung. Sobald dieser Haken nicht gesetzt ist, werden alle anderen Haken derselben Instanz ignoriert.
+
+* **Auswählen erlauben**: Die Collection ist im Ebenenbaum auswählbar.
+* **Auswählen an**: Die Collection ist bei Anwendungsstart im Ebenenbaum aktiv.
+* **Info erlauben**: Die Infoabfrage wird für diese Collection zugelassen.
+* **Info an**: Die Infoabfrage wird beim Start aktiviert.
+* **...** (Drei-Punkte-Menü): Öffnet einen Dialog mit weiteren Informationen:
+* **Collection Name**: Layername der Service Information
+* **Style**: Sie können einen Standard-Stil und weitere Stile auswählen.
+
+.. image:: ../../../figures/de/layerset/layerset_ogc_api_features_visualisation.png
+  :width: 100%
+
+Der Screenshot zeigt eine Mapbender-Anwendung mit OGC API Features Dienst.
