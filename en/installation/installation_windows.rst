@@ -44,17 +44,16 @@ Configuration PHP
 .. code-block:: ini
 
     # php.ini
-    extension=php_curl
-    extension=php_fileinfo
-    extension=php_gd
-    extension=php_intl
-    extension=php_pdo_pgsql
-    extension=php_pdo_sqlite
-    extension=php_pgsql
-    extension=php_openssl
-    extension=php_mbstring
-    extension=php_zip
-    extension=php_bz2
+    extension=bz2
+    extension=curl
+    extension=fileinfo
+    extension=gd
+    extension=intl
+    extension=mbstring
+    extension=openssl
+    extension=pdo_sqlite
+    extension=sqlite3
+    extension=zip
 
 * Please check the :ref:`faq` for further PHP settings
 * Please check :ref:`api` if you want to use the Mapbender API
@@ -156,8 +155,8 @@ Activate the PHP-PostgreSQL driver
 .. code-block:: ini
 
     # php.ini
-    extension=php_pgsql
-    extension=php_pdo_pgsql
+    extension=pdo_pgsql
+    extension=pgsql
 
 Configuration of database connection is done by a variable that contains the entire connection string. Configure it by adding it in your *.env.local* file.
 
