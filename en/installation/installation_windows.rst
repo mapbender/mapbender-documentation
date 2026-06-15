@@ -259,12 +259,12 @@ Often, Apache runs as a service with the user 'Local System'. If this is the cas
 
         c:\Tools\PsExec\PsExec.exe -i -s cmd.exe
 
-5. In the SYSTEM console, install the Puppeteer module in the application directory of Mapbender (not globally!):
+5. In the SYSTEM console, install the Puppeteer module in the mapbender directory or application directory (for git installation) of Mapbender (not globally!):
 
    .. code-block:: bash
 
-       c:\srv\htdocs\mapbender\application> npm install puppeteer
+       c:\mapbender\> npm install puppeteer
 
    .. code-block:: bash
 
-       c:\srv\htdocs\mapbender\application> npm puppeteer browsers install
+       c:\mapbender\> npm puppeteer browsers install
