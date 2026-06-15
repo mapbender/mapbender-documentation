@@ -302,6 +302,7 @@ Die Vector Tiles-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkei
 * **Titel**: Eigenschaft/Eigenschaften des Features, die als Titel angezeigt werden.
 * **Features mit leerem Titel ausblenden**: Checkbox, ob Features ohne Titel ausgeblendet werden sollen.
 * **Feld-Auswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Feldern.
+
 Beispiel:
 
   .. code-block:: yaml
@@ -317,6 +318,7 @@ Beispiel:
 * **Legende aktivieren**: Bool-Wert, ob eine Legende für die Instanz angezeigt werden soll.
 * **Wenn erweitere Einstellungen aktiviert worden sind, dann sind folgende Einstellungen sichtbar**:
 * **Ebenenauswahl & Übersetzung**: YAML-Array zur Auswahl und Übersetzung von Ebenen. 
+
 Beispiel:
 
   .. code-block:: yaml
@@ -332,8 +334,8 @@ Beispiel:
 Der Screenshot zeigt eine Mapbender-Anwendung mit Vector Tiles Dienst und aktivierter Legende und Feature-Information.  
 
 
-OGC API Features Service Instanz-Konfiguration
-----------------------------------------------
+OGC API - Features Service Instanz-Konfiguration
+------------------------------------------------
 
 .. image:: ../../../figures/de/layerset/layerset_ogc_api_features_instance.png
   :scale: 80
@@ -354,6 +356,7 @@ Die OGC API Features Dienst-Instanz-Einstellungen bieten folgende Konfigurations
 * **Aufklappen**: Gibt an, ob der Ordner beim Start der Anwendung aufgeklappt sein soll.
 
 * **Feld-Information & Übersetzung**: YAML-Array zur Definition von Feldern und Übersetzungen für die Informationsausgabe.
+
 Beispiel:
 
   .. code-block:: yaml

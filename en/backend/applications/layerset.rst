@@ -297,6 +297,7 @@ The Vector Tiles instance settings offer the following configuration options:
 * **Title**: Property/properties of the feature displayed as the title.
 * **Hide features with empty title**: Checkbox indicating whether features without a title should be hidden.
 * **Field filter & translation**: YAML array for field selection and translation.
+
 Example:
 
   .. code-block:: yaml
@@ -312,6 +313,7 @@ Example:
 * **Enable legend**: Boolean value indicating whether a legend should be displayed for the instance.
 * **If advanced settings are enabled, following settings become visible**:
 * **Layer selection & translation**: YAML array for layer selection and translation.
+
 Example:
 
   .. code-block:: yaml
@@ -326,8 +328,8 @@ Example:
 
 The screenshot shows a Mapbender application with an active legend and feature information.  
 
-OGC API Features Service Instance Configuration
------------------------------------------------
+OGC API - Features Service Instance Configuration
+-------------------------------------------------
 
 .. image:: ../../../figures/layerset/layerset_ogc_api_features_instance.png
   :scale: 80
@@ -347,6 +349,7 @@ The OGC API Features Service instance settings offer the following configuration
 * **Allow Toggle**: Folder can be opened via Layertree.
 
 * **Field information & translation**: YAML array for fields and translation.
+
 Example:
 
   .. code-block:: yaml

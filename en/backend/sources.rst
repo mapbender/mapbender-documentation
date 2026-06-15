@@ -8,7 +8,7 @@ With Sources, you can register:
 * **OGC WMS**: Web Map Service
 * **OGC WMTS/TMS**: Web Map Tile Service / Tile Map Service
 * **Vector Tiles**
-* **OGC API Features**
+* **OGC API - Features**
 
 Further information about the registration process of services and their usage in applications is available in the Quickstart chapter :ref:`en/quickstart:Load sources`.
 
@@ -240,17 +240,53 @@ YAML
 * **bbox**: Bounding box (array xmin, ymin, xmax, ymax) for the source
 
 
-OGC API Features
-----------------
+OGC API - Features
+------------------
 
-OGC API Features 
+OGC API - Features is an OGC Standard that offers the capability to create, modify, and query spatial data on the Web. The Standard is the successor of the OGC WFS Standard.
 
-Read more about OGC API Features at the `OGC documentation https://ogcapi.ogc.org/features/ <https://ogcapi.ogc.org/features/>`_.
+Read more about OGC API - Features at the `OGC documentation https://ogcapi.ogc.org/features/ <https://ogcapi.ogc.org/features/>`_.
 
-Loading an OGC API Features Service
-+++++++++++++++++++++++++++++++++++
+Loading an OGC API - Features Service
++++++++++++++++++++++++++++++++++++++
 
 .. image:: ../../figures/mapbender_add_ogc_api_features_source.png
   :width: 100%
 
-* **URL to an OGC API Features Service**: Service URL (for example `bm_web_col https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ oder `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )
+* **URL to an OGC API - Features Service**: Service URL (for example `bm_web_col https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ oder `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )
+
+YAML
+++++  
+
+* **type**: must be ogc_api_features
+* **title**: The source title as displayed in the layer tree
+* **jsonUrl**: URL to the OGC API Features Service
+* **basesource (alias: isBaseSource)**: boolean value if the source should be treated as a base source
+* **opacity**: int 0 (fully transparent)-100 (fully opaque) (default: 100)
+* **selected (alias: visible)**: initial selected state of the layer. (default: true)
+* **allowSelected**: can the user change the selected state? (default: true)
+* **toggle**: initial folder state of the root layer in the layer tree (default: true = folder is expanded)
+* **allowToggle**: can the user collapse/expand the root layer? (default: true)
+* **featureLimit**: maximum number of features requested from the service (default: 1000)
+* **minScale**: minimum scale (1:x) where the source is displayed (default: unset)
+* **maxScale**: maximum scale (1:x) where the source is displayed (default: unset)
+* **featureInfoPropertyMap**: If not empty, only the specified properties will be displayed in the feature info. Specify as YAML array. The key is the name of the field, the optional value is the translation. Example:
+
+  .. code-block:: yaml
+
+     class
+     name
+     layer: Layer-Name
+
+Collections
+
+* **title**: The title of the collection as displayed in the layer tree
+* **featureLimit**: maximum number of features requested from the service (default: 1000)
+* **minScale**: minimum scale (1:x) where this source is displayed (default: unset)
+* **maxScale**: maximum scale (1:x) where this source is displayed (default: unset)
+* **visible**: initial selected state of the source. (default: true)
+* **toggle**: initial folder state of the source in the layertree (default: false = folder is collapsed)
+* **allowToggle**: can the user collapse/expand the layer? (default: true)
+* **allowInfo**: does the collection provide information (default: false)
+* **info**: initial info state of the source (default: false)
+  
