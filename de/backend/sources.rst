@@ -8,7 +8,7 @@ Datenquellen (Sources)
 * **OGC WMS**: Web Map Service
 * **OGC WMTS/TMS**: Web Map Tile Service / Tile Map Service
 * **Vector Tiles**
-* **OGC API Features**
+* **OGC API - Features**
 
 Informationen zum Einbinden von Diensten und die Nutzung in Anwendungen finden Sie im Schnellstart-Kapitel :ref:`de/quickstart:Laden von Datenquellen`.
 
@@ -239,8 +239,7 @@ YAML
 
 OGC API - Features
 ------------------
-
-OGC API - Features is an OGC Standard that offers the capability to create, modify, and query spatial data on the Web. The Standard is the successor of the OGC WFS Standard.
+OGC API - Features ist ein OGC Standard. der die Möglichkeit bietet im Web räumliche Daten zu erzeugen, zu verändern und abzufragen. Der Standard ist der Nachfolger des OGC WFS Standards.
 
 Lesen Sie mehr über OGC API - Features in der `OGC documentation https://ogcapi.ogc.org/features/ <https://ogcapi.ogc.org/features/>`_.
 

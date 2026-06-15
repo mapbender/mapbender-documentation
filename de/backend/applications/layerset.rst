@@ -340,9 +340,9 @@ OGC API - Features Service Instanz-Konfiguration
 .. image:: ../../../figures/de/layerset/layerset_ogc_api_features_instance.png
   :scale: 80
 
-Die OGC API Features Dienst-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
+Die OGC API - Features Dienst-Instanz-Einstellungen bieten folgende Konfigurationsmöglichkeiten:
 
-* **Ursprungs-URL**: Die URL zum OGC API Features Dienst
+* **Ursprungs-URL**: Die URL zum OGC API - Features Dienst
 * **Titel**: Der Titel der Instanz, der im Ebenenbaum angezeigt werden soll.
 * **Deckkraft**: Die Transparenz der Instanz.
 * **Max.-Anzahl Features**: Definition wie viele Objekte von den Collections angefordert werden sollen.
