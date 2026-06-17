@@ -334,9 +334,9 @@ OGC API - Features Service Instance Configuration
 .. image:: ../../../figures/layerset/layerset_ogc_api_features_instance.png
   :scale: 80
 
-The OGC API Features Service instance settings offer the following configuration options:
+The OGC API - Features Service instance settings offer the following configuration options:
 
-* **Origin URL**: The URL to the OGC API Features Service.
+* **Origin URL**: The URL to the OGC API - Features Service.
 * **Title**: The title of the instance as displayed in the layer tree.
 * **Opacity**: The transparency of the instance.
 * **Max features**: Specifies how many features to fetch from the collections.
@@ -377,4 +377,4 @@ Example:
 .. image:: ../../../figures/layerset/layerset_ogc_api_features_visualisation.png
   :width: 100%
 
-The screenshot shows a Mapbender application with an OGC API Features Service.
+The screenshot shows a Mapbender application with an OGC API - Features Service.

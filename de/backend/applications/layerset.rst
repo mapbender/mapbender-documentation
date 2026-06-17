@@ -384,4 +384,4 @@ Beispiel:
 .. image:: ../../../figures/de/layerset/layerset_ogc_api_features_visualisation.png
   :width: 100%
 
-Der Screenshot zeigt eine Mapbender-Anwendung mit OGC API Features Dienst.
+Der Screenshot zeigt eine Mapbender-Anwendung mit OGC API - Features Dienst.
