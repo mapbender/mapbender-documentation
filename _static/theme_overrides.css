@@ -1,3 +1,12 @@
+body {
+    font-family: Ubuntu, Arial, sans-serif;
+}
+
+h1, h2, .rst-content .toctree-wrapper > p.caption, h3, h4, h5, h6, legend {
+    font-family: "Ubuntu, Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+    font-weight: 500;
+}
+
 /*
   Print margin for printing.
   Quickstart Printout as PDF from browser
@@ -17,17 +26,20 @@
 }
 
 /*
- * Text of version underneath the logo
+ * Text with House above the logo
  */
 .wy-side-nav-search .icon-home {
     color: #000;
+    font-size: 120%;
 }
 
 /*
  * Text of version underneath the logo
  */
 .wy-side-nav-search > div.version {
-    color: #000;
+    color: #0087b9;
+    font-size: 120%;
+    font-weight: 600;
 }
 
 /*
@@ -68,7 +80,7 @@
  * Search box is squared not rounded
  */
 .wy-side-nav-search input[type="text"] {
-	border-radius: 0px;
+    border-radius: 5px !important;
 }
 
 .wy-nav-content-wrap {
@@ -81,4 +93,16 @@
 .wy-nav-content {
   max-width: 1000px;
   color: #3A3A3A;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #cad400;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 160%;
+}
+.wy-menu-vertical li.toctree-l3, .wy-menu-vertical li.toctree-l4 {
+    font-size: .98em;
 }
