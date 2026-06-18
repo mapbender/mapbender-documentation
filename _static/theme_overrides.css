@@ -98,6 +98,7 @@ h1, h2, .rst-content .toctree-wrapper > p.caption, h3, h4, h5, h6, legend {
 .wy-menu-vertical a:hover {
     background-color: #cad400;
     cursor: pointer;
+    font-weight: 600;
 }
 
 h1 {
@@ -105,4 +106,13 @@ h1 {
 }
 .wy-menu-vertical li.toctree-l3, .wy-menu-vertical li.toctree-l4 {
     font-size: .98em;
+}
+
+.wy-menu-vertical a {
+    color: #fcfcfc;
+    font-weight: 500;
+}
+
+.wy-menu-vertical li.current a {
+    color: #0087b9;
 }
