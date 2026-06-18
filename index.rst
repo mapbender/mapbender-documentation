@@ -1,6 +1,9 @@
 Welcome to the Mapbender documentation
 ######################################
 
+Version 5.0.0
+=============
+
 Mapbender Project Page https://mapbender.org
 
 Please choose your preferred language:
