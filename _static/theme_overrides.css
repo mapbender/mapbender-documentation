@@ -116,3 +116,6 @@ h1 {
 .wy-menu-vertical li.current a {
     color: #0087b9;
 }
+.wy-menu-vertical li.current > a, .wy-menu-vertical li.on a {
+    font-weight: 500;
+}
