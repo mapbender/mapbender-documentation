@@ -4,7 +4,8 @@ Welcome to the Mapbender documentation
 Version 5.0.0
 =============
 
-Mapbender Project Page https://mapbender.org
+* Mapbender Project Page https://mapbender.org
+* Visual Changelog Version 5.0.0 https://mapbender.org/aktuelles/details/mapbender-version-500-released/
 
 Please choose your preferred language:
 
