@@ -133,25 +133,43 @@ parameters.yaml
 ---------------
 Hier werden weitere grundlegende Parameter von Mapbender bestimmt.
 
+Sortierung der Anwendungen
+**************************
+
+Standardmäßig werden in der Anwendungsliste zuerst die Anwendungen aus der Datenbank angezeigt.
+
+Sie können die Sortierung jedoch über den Parameter `mapbender.application.sortorder` ändern.
+
+.. code-block:: yaml
+
+    mapbender.application.sortorder: yaml-first
+
+* **db-first:** Datenbank-Anwendungen werden zuerst angezeigt, gefolgt von YAML-Anwendungen. Interne Sortierung nach Titel (Standard).
+* **yaml-first:** YAML-Anwendungen werden zuerst angezeigt, gefolgt von Datenbank-Anwendungen. Interne Sortierung nach Titel.
+* **db-only:** Nur Datenbank-Anwendungen werden in der Anwendungsliste angezeigt; YAML-Anwendungen sind ausgeblendet. ⚠️ YAML-Anwendungen sind weiterhin über den Aufruf von `/application/<slug>` erreichbar. Um YAML-Anwendungen vollständig zu entfernen, löschen Sie diese aus dem Verzeichnis `config/applications` im Dateisystem.
+* **yaml-only:** Nur YAML-Anwendungen werden in der Anwendungsliste angezeigt; Datenbank-Anwendungen sind ausgeblendet. ⚠️ Datenbank-Anwendungen sind weiterhin über den Aufruf von `/application/<slug>` erreichbar. Um Datenbank-Anwendungen vollständig zu entfernen, ändern Sie den Parameterwert vorübergehend zurück und löschen Sie die Anwendungen.
+* **title:** Anwendungen werden nach Titel sortiert, unabhängig von ihrer Herkunft.
+* **date:** Anwendungen werden nach dem Zeitpunkt der letzten Aktualisierung sortiert, unabhängig von ihrer Herkunft.
+
+
 
 Disclaimer
 **********
 
-.. image:: ../../figures/disclaimer.png
+.. image:: ../../figures/de/disclaimer.png
 
 Es kann ein Disclaimer mittels Sitelinks hinzugefügt werden. Dafür muss Folgendes in der `parameters.yaml` ergänzt werden:
 
 .. code-block:: yaml
 
     mapbender.sitelinks:
-      - link: https://mapbender.org/impressum           			# Link URL
-        text: Impressum & Kontakt									# Link Text
+      - link: https://mapbender.org/impressum  # Link URL
+        text: Impressum & Kontakt			   # Link Text
       - link: https://mapbender.org/datenschutz
         text: Datenschutz
       - link: https://doc.mapbender.org/
         text: Dokumentation
 
-Die Sitelinks werden mittels "|" voneinander getrennt.
 
 Elemente deaktivieren
 *********************
@@ -269,6 +287,7 @@ Folgende Sprachcodes sind verfügbar:
 * it für Italienisch
 * nl für Niederländisch
 * pt für Portugiesisch
+* ro für Rumänisch
 * ru für Russisch
 * tr für Türkisch
 * uk für Ukrainisch
