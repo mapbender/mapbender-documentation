@@ -130,6 +130,23 @@ parameters.yaml
 ---------------
 The following fundamental Mapbender parameters are specified here.
 
+Application Sorting
+*******************
+
+The default sorting of the application list shows the applications from the database shown first. 
+
+However, you can change the sorting via the parameter `mapbender.application.sortorder`. 
+
+.. code-block:: yaml
+
+    mapbender.application.sortorder: yaml-first
+
+* **db-first:** Database applications are shown first, then yaml applications. Internally sorted by title (default).
+* **yaml-first:** Yaml applications are shown first, then database applications. Internally sorted by title.
+* **db-only:** Only database applications are shown in the applications list, yaml applications are hidden. ⚠️ yaml applications are still accessible by calling /application/<slug>, to completely remove yaml applications, delete the from the config/applications directory in the filesystem.
+* **yaml-only:** Only yaml applications are shown in the applications list, database applications are hidden. ⚠️ database applications are still accessible by calling /application/<slug>, to completely remove database applications, temporarily change the parameter value back and delete the applications
+* **title:** Applications are sorted by title, independant of origin
+* **date:** Applications are sorted by most recent update, independant of origin
 
 Disclaimer
 **********
@@ -141,8 +158,8 @@ A disclaimer can be added through the use of site links.
 .. code-block:: yaml
 
     mapbender.sitelinks:
-      - link: https://mapbender.org/en/legal-notice/				# Link URL
-        text: Imprint & Contact									    # Link text
+      - link: https://mapbender.org/en/legal-notice/	 # Link URL
+        text: Imprint & Contact							 # Link text
       - link: https://mapbender.org/en/privacy-policy/
         text: Privacy Policy
       - link: https://doc.mapbender.org/
@@ -211,7 +228,8 @@ Available language codes are:
 * fr for French
 * it for Italian
 * nl for Dutch
-* pt for Portugese
+* pt for Portuguese
+* ro for Romanian
 * ru for Russian
 * tr for Turkish
 * uk for Ukrainian     
