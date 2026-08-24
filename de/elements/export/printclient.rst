@@ -435,3 +435,58 @@ Das hat damit zu tun, dass unter bestimmten Umständen die angeforderte Pixelaus
 
 Durch diese Begrenzung werden die größtmöglichen WIDTH=- und HEIGHT=-Werte für die Exportanfrage festgelegt. Im GetCapabilities-Request des jeweiligen Dienstes wird die maximale Auflösung unter ``MaxWidth`` bzw. ``MaxHeight`` definiert, sodass der getCapabilities-Request das Limit bereits vorgibt - bei `8192` handelt es sich um den Standardwert, der eventuell weiter angepasst werden muss.
 Die oben genannten Parameter können auch unabhängig voneinander definiert werden. Verwenden Sie ``mapbender.imaageexport.renderer.wms.max_getmap_size.x`` für den **WIDTH=**- und ``mapbender.imaageexport.renderer.wms.max_getmap_size.y`` für den **HEIGHT=**-Parameter.
+
+
+Druckbezogene Parameter
+------------------------
+
+In allen druckbezogenen Texten (Textfelder, Maßstabsleiste, GeoJSON-Beschriftungen und Legenden-Einträgen) können benutzerdefinierte Schriftarten verwendet werden. Die Schriftarten müssen von der `fpdf`-Bibliothek verarbeitet werden, damit sie funktionieren (siehe custom-fonts.md für Details).
+
+Die folgenden Parameter können in der `parameters.yaml` gesetzt werden, um Schriftarten, Größen und Legendenabstände für den Druck zu steuern:
+
+.. list-table::
+   :widths: 30 15 55
+   :header-rows: 1
+
+   * - Parameter
+     - Standardwert
+     - Beschreibung
+   * - ``mapbender.print.font``
+     - ``helvetica``
+     - Schlüssel der Standard-Schriftart. Entweder der Schlüssel einer benutzerdefinierten Schriftart oder einer der Standardwerte: helvetica (Alias: arial), courier, times.
+   * - ``mapbender.print.fonts``
+     - ``null``
+     - Definition benutzerdefinierter Schriftarten (siehe custom-fonts-Dokumentation für Details).
+   * - ``mapbender.print.font_scale_bar``
+     - ``null``
+     - Schlüssel der Schriftart, die für die Maßstabsleiste verwendet werden soll; fällt auf die Standard-Schriftart zurück, wenn nicht definiert.
+   * - ``mapbender.print.font_legend``
+     - ``null``
+     - Schlüssel der Schriftart für Legendenüberschriften; fällt auf die Standard-Schriftart zurück, wenn nicht definiert.
+   * - ``mapbender.print.font_geojson``
+     - ``null``
+     - Schlüssel der Schriftart für Beschriftungen in GeoJSON-Layern (z. B. sketch); fällt auf die Standard-Schriftart zurück, wenn nicht definiert.
+   * - ``mapbender.print.font_size``
+     - ``10``
+     - Standard-Schriftgröße in Punkt (z. B. für Legendenbeschriftungen).
+   * - ``mapbender.print.font_size_scale_bar``
+     - ``8``
+     - Schriftgröße für die Maßstabsleiste, in Punkt.
+   * - ``mapbender.print.font_style_scale_bar``
+     - ``null``
+     - Schriftstil für die Maßstabsleiste: Kombination aus B (bold), I (italic) oder U (underline).
+   * - ``mapbender.print.scale_bar_height``
+     - ``2``
+     - Höhe der Maßstabsleiste selbst, in px.
+   * - ``mapbender.print.legend_margin_x``
+     - ``5``
+     - Horizontaler Abstand zwischen Seitenrand und Legende sowie zwischen Legenden, in mm.
+   * - ``mapbender.print.legend_margin_y``
+     - ``10``
+     - Vertikaler Abstand zwischen Legenden, in mm.
+   * - ``mapbender.print.legend_margin_y_page``
+     - ``5``
+     - Vertikaler Abstand zwischen Seitenrand und Legenden, in mm.
+   * - ``mapbender.print.legend_margin_title_to_image``
+     - ``0``
+     - Vertikaler Abstand zwischen Legendentiteln und dem Legendenbild, in mm.
