@@ -395,6 +395,31 @@ Die styleMap-Angaben überschreiben Standardangaben. Daher müssen Sie lediglich
 
 .. note:: Beachten Sie, dass die hexadezimalen Farbwerte in Anführungszeichen angegeben werden müssen, da das #-Zeichen ansonsten als Kommentar interpretiert wird.
 
+Es ist möglich, auf Grafiken zu verweisen:
+
+.. code-block:: yaml
+          
+      results:
+        styleMap:
+          default:
+            externalGraphic: 'https://schulung.foss.academy/symbols/hospital.png'
+            graphicWidth: 20
+            graphicHeight: 20
+            graphicOffsetX: 10
+            graphicOffsetY: -10
+
+
+* **externalGraphic:** Definition eines Links zu einer externen Grafik. In der Definition können Variablen verwendet werden.
+* **graphicWidth/graphicHeight:** Definition der Breite und der Höhe in Pixeln.
+* **graphicOffsetX/graphicOffsetY:** Definition des Offsets der Grafik in Pixeln.
+
+Auch ist es möglich Platzhalter für die Beschriftung zu verwenden. Die Platzhalter werden in der Form ${attributname} angegeben. Besipiel:
+
+.. code-block:: yaml
+
+
+      externalGraphic: 'images/${type}.png'
+
 
 Konfigurationsbeispiele
 ========================
