@@ -1419,16 +1419,26 @@ It is also possible to refer to a graphic:
 
 .. code-block:: yaml
           
+      results:
+        styleMap:
           default:
-              graphic: true
-              externalGraphic: 'https://schulung.foss.academy/symbols/${symbol}.png'
-              graphicWidth: 30
-              graphicHeight: 30
+            externalGraphic: 'https://schulung.foss.academy/symbols/hospital.png'
+            graphicWidth: 20
+            graphicHeight: 20
+            graphicOffsetX: 10
+            graphicOffsetY: -10
 
 
-* **graphic:** [true/false].
 * **externalGraphic:** Define a link to an external graphic. You can use variables in the definition.
 * **graphicWidth/graphicHeight:** Define the width and height in pixel.
+* **graphicOffsetX/graphicOffsetY:** Define the offset of the graphic in pixel.
+
+You can also use placeholders for the externalGraphic url in the form of ${columnName}. The referenced column must be included in the attributes section. Example: 
+
+.. code-block:: yaml
+
+
+      externalGraphic: 'images/${type}.png'
 
 
 CSS behaviour and styling fields

@@ -1371,16 +1371,26 @@ Es ist möglich, auf Grafiken zu verweisen:
 
 .. code-block:: yaml
           
+      results:
+        styleMap:
           default:
-              graphic: true
-              externalGraphic: 'https://schulung.foss.academy/symbols/${symbol}.png'
-              graphicWidth: 30
-              graphicHeight: 30
+            externalGraphic: 'https://schulung.foss.academy/symbols/hospital.png'
+            graphicWidth: 20
+            graphicHeight: 20
+            graphicOffsetX: 10
+            graphicOffsetY: -10
 
 
-* **graphic:** [true/false].
 * **externalGraphic:** Definition eines Links zu einer externen Grafik. In der Definition können Variablen verwendet werden.
 * **graphicWidth/graphicHeight:** Definition der Breite und der Höhe in Pixeln.
+* **graphicOffsetX/graphicOffsetY:** Definition des Offsets der Grafik in Pixeln.
+
+Auch ist es möglich Platzhalter für die Beschriftung zu verwenden. Die Platzhalter werden in der Form ${attributname} angegeben. Besipiel:
+
+.. code-block:: yaml
+
+
+      externalGraphic: 'images/${type}.png'
 
 
 CSS-Verhalten und Styling-Felder

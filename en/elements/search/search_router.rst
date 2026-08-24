@@ -390,6 +390,30 @@ The styleMap settings override the default settings, so you only have to define 
 
 .. note:: Note that the hexadeximal color values have to be stated in quotation marks, because # would be interpreted as a comment instead.
 
+It is also possible to refer to a graphic:
+
+.. code-block:: yaml
+          
+      results:
+        styleMap:
+          default:
+            externalGraphic: 'https://schulung.foss.academy/symbols/hospital.png'
+            graphicWidth: 20
+            graphicHeight: 20
+            graphicOffsetX: 10
+            graphicOffsetY: -10
+
+
+* **externalGraphic:** Define a link to an external graphic. You can use variables in the definition.
+* **graphicWidth/graphicHeight:** Define the width and height in pixel.
+* **graphicOffsetX/graphicOffsetY:** Define the offset of the graphic in pixel.
+
+You can also use placeholders for the externalGraphic url in the form of ${columnName}. The referenced column must be included in the attributes section. Example: 
+
+.. code-block:: yaml
+
+
+      externalGraphic: 'images/${type}.png'
 
 Configuration Examples
 ======================
