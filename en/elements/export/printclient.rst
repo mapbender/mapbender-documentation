@@ -427,3 +427,58 @@ This is because, under certain circumstances, the requested pixel size for the W
     
 These limitations set the maximum possible WIDTH= and HEIGHT= values for the export request. In the GetCapabilities request of the respective service, the maximum resolution is defined under `MaxWidth` and `MaxHeight`, which means that the getCapabilities request already sets the limit - `8192` is the default value, which may need to be further adjusted.
 The mentioned parameters can also be defined independently of each other: Use ``mapbender.imageexport.renderer.wms.max_getmap_size.x`` for the **WIDTH=** parameter and ``mapbender.imageexport.renderer.wms.max_getmap_size.y`` for the **HEIGHT=** parameter.
+
+
+Print-related parameters
+------------------------
+
+In all print-related texts (text fields, scale bar, geojson labels and legend entries), custom fonts can be used. The fonts need to be processed by the `fpdf` library to work (see custom-fonts.md for details).
+
+The following parameters can be set in `parameters.yaml` to control fonts, sizes and legend margins for printing:
+
+.. list-table::
+   :widths: 30 15 55
+   :header-rows: 1
+
+   * - Parameter
+     - Default Value
+     - Description
+   * - ``mapbender.print.font``
+     - ``helvetica``
+     - Key of the default font. Either the key of a custom font or one of the defaults: helvetica (alias: arial), courier, times.
+   * - ``mapbender.print.fonts``
+     - ``null``
+     - Custom fonts definition (see custom-fonts documentation for details).
+   * - ``mapbender.print.font_scale_bar``
+     - ``null``
+     - Key of font to be used for the scale bar; falls back to the default font if not defined.
+   * - ``mapbender.print.font_legend``
+     - ``null``
+     - Key of font to be used for legend headings; falls back to the default font if not defined.
+   * - ``mapbender.print.font_geojson``
+     - ``null``
+     - Key of font to be used for labels in geojson layers (e.g. sketch); falls back to default font if not defined.
+   * - ``mapbender.print.font_size``
+     - ``10``
+     - Default font size in points (e.g. for legend labels).
+   * - ``mapbender.print.font_size_scale_bar``
+     - ``8``
+     - Font size for the scale bar, in points.
+   * - ``mapbender.print.font_style_scale_bar``
+     - ``null``
+     - Font style for scale bar: combination of B (bold), I (italic) or U (underline).
+   * - ``mapbender.print.scale_bar_height``
+     - ``2``
+     - Height of the scale bar itself, in px.
+   * - ``mapbender.print.legend_margin_x``
+     - ``5``
+     - Horizontal margin between page edge and legend and between legends, in mm.
+   * - ``mapbender.print.legend_margin_y``
+     - ``10``
+     - Vertical margin between legends, in mm.
+   * - ``mapbender.print.legend_margin_y_page``
+     - ``5``
+     - Vertical margin between the page edge and the legends, in mm.  
+   * - ``mapbender.print.legend_margin_title_to_image``
+     - ``0``
+     - Vertical margin between legend titles and the legend image, in mm.
