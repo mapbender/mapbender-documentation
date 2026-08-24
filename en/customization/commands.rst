@@ -120,6 +120,36 @@ During the update, the unique assignment is made via the already existing ID, th
 	bin/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
 
 
+Password options
+----------------
+
+The command supports multiple ways to set the new root password. They are applied in the following priority order (descending):
+
+- Option ``--password`` (unchanged):
+
+.. code-block:: bash
+
+    bin/console fom:user:resetroot --password verySafePassword
+
+- Option ``--generate-password``: generates a 12-digit password consisting of alphanumeric characters and common special characters and prints the generated password to stdout:
+
+.. code-block:: bash
+
+    bin/console fom:user:resetroot --generate-password
+
+- Environment variable ``MAPBENDER_ROOT_PASSWORD``:
+
+.. code-block:: bash
+
+    MAPBENDER_ROOT_PASSWORD=verySafePassword bin/console fom:user:resetroot
+
+- Console input (unchanged): if no password is provided via the methods above and interactive mode is enabled (i.e. ``--no-interaction`` is not set), the command will prompt for a password on the console.
+
+.. warning::
+
+    When first creating the root user and no password is set in any of the above ways, the password will be set to ``root``. This is a last resort — always use one of the methods above to set a secure password.
+
+
 
 bin/console mapbender:user:list
 *******************************

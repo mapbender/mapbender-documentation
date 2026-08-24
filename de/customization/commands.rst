@@ -119,6 +119,36 @@ Bei der Aktualisierung erfolgt die eindeutige Zuordnung über die bereits vorhan
 	bin/console fom:user:resetroot --username="root" --password="root" --email="root@example.com"
 
 
+Passwort-Optionen
+------------------
+
+Der Befehl unterstützt mehrere Möglichkeiten, das neue Root-Passwort zu setzen. Diese werden in folgender Prioritätsreihenfolge (absteigend) angewendet:
+
+- Option ``--password`` (unverändert):
+
+.. code-block:: bash
+
+	bin/console fom:user:resetroot --password verySafePassword
+
+- Option ``--generate-password``: erzeugt ein 12-stelliges Passwort aus alphanumerischen Zeichen und gängigen Sonderzeichen und gibt das generierte Passwort auf stdout aus:
+
+.. code-block:: bash
+
+	bin/console fom:user:resetroot --generate-password
+
+- Umgebungsvariable ``MAPBENDER_ROOT_PASSWORD``:
+
+.. code-block:: bash
+
+	MAPBENDER_ROOT_PASSWORD=verySafePassword bin/console fom:user:resetroot
+
+- Konsoleneingabe (unverändert): Falls kein Passwort über die oben genannten Wege gesetzt ist und der interaktive Modus aktiviert ist (d. h. ``--no-interaction`` ist nicht gesetzt), wird im Terminal nach einem Passwort gefragt.
+
+.. warning::
+
+	Beim erstmaligen Anlegen des Root-Benutzers und wenn kein Passwort auf eine der oben genannten Weisen gesetzt wird, wird das Passwort auf ``root`` gesetzt. Dies ist die letzte Option — verwenden Sie stets eine der oben genannten Methoden, um ein sicheres Passwort zu setzen.
+
+
 
 bin/console mapbender:user:list
 *******************************
