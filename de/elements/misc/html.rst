@@ -25,6 +25,13 @@ Das Element wird im :ref:`backend_de` in die Anwendung eingebunden.
 * **Titel:** Titel des HTML-Elements. Dieser wird in der Layouts-Liste angezeigt und ermöglicht, mehrere HTML-Elemente voneinander zu unterscheiden.
 * **Inhalt:** Inhalt des HTML-Elements, z.B. Bild oder Link. Der Content kann die Variablen "application" und "entity" beinhalten.
 * **Klassen:** Alternativ kann auch auf eine CSS-Klasse für das HTML-Element verwiesen werden. Die im CSS-Editor definiert werden kann.
+* **OpenInline** (boolean): Wenn true, wird das HTML-Element inline angezeigt (ohne Titel und Popup), wenn es sich in der Region ``content`` oder ``toolbar`` befindet. Wird ignoriert, wenn das Element in anderen Regionen ist.
+* **AutoOpen** (boolean): (nur im Popup-Modus): Das Popup wird automatisch geöffnet, falls gesetzt.
+* **Modal** (boolean): (nur im Popup-Modus): Wenn gesetzt, wird der Hintergrund abgedunkelt (früher das Standardverhalten für das Copyright-Element; wird automatisch für vorhandene Copyright-Elemente gesetzt).
+* **PopupWidth** (int): (nur im Popup-Modus): Breite des Popups in Pixel.
+* **PopupHeight** (int): (nur im Popup-Modus): Höhe des Popups in Pixel.
+* **DontShowAgain** (boolean): (nur im Popup-Modus und nur wenn ``AutoOpen`` true ist): Wenn gesetzt, wird dem Benutzer eine Checkbox angezeigt. Wenn diese angehakt wird, ist `AutoOpen` deaktiviert, bis sich der Inhalt ändert.
+* **DontShowAgainLabel** (string): (nur im Popup-Modus): Beschriftung für die `DontShowAgain`-Checkbox.
 
 
 Konfigurationsbeispiele

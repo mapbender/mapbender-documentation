@@ -25,7 +25,13 @@ This element has to be integrated in the :ref:`backend`.
 * **Title:** Title of the element. The title will be listed in :ref:`layouts`.
 * **Content:** Content of the HTML-element. The variables "application" and "entity" are available.
 * **Classes:** You can refer to a CSS class for the HTML element. The class can be defined in the css editor.
-
+* **OpenInline** (boolean): If true, the html element will be displayed inline (without title and popup) when in `content` or `toolbar` region. Ignored when the element is in other regions.
+* **AutoOpen** (boolean): (only in popup mode): The popup will be opened automatically if set.
+* **Modal** (boolean): (only in popup mode): If set to true, the background will be darkened (previously the default behaviour for the copyright element; will be set automatically for existing copyright elements).
+* **PopupWidth** (int): (only in popup mode): popup width in pixels.
+* **PopupHeight** (int): (only in popup mode): popup height in pixels.
+* **DontShowAgain** (boolean): (only in popup mode and only when `autoOpen` is true): If set to true, a checkbox will be shown to the user. If ticked, `autoOpen` is disabled until the content changes.
+* **DontShowAgainLabel** (string): (only in popup mode): Label for the `dontShowAgain` checkbox.
 
 Configuration examples
 ======================
