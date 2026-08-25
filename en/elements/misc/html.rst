@@ -109,9 +109,7 @@ The group of a user cannot be defined in a single expression, because Twig only 
       <p>Group #{{ index }}: {{ group.title }}</p>
   {% endfor %}
 
-In this example, index and group name are displayed in the toolbar:
-
-.. image:: ../../../figures/html_example_group_name.png
+With this configuration, index and group name are displayed in the toolbar.
 
 * Variable: **"entity"**
 
