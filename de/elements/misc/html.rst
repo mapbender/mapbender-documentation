@@ -32,7 +32,11 @@ Das Element wird im :ref:`backend_de` in die Anwendung eingebunden.
 * **PopupHeight** (int): (nur im Popup-Modus): Höhe des Popups in Pixel.
 * **DontShowAgain** (boolean): (nur im Popup-Modus und nur wenn ``AutoOpen`` true ist): Wenn gesetzt, wird dem Benutzer eine Checkbox angezeigt. Wenn diese angehakt wird, ist `AutoOpen` deaktiviert, bis sich der Inhalt ändert.
 * **DontShowAgainLabel** (string): (nur im Popup-Modus): Beschriftung für die `DontShowAgain`-Checkbox.
+* **Element Symbol**: (nur in der Sidepane): Das Symbol des Elements. Das Symbol wird in der Sidepane angezeigt und kann zum Öffnen des Elements verwendet werden.
 
+.. warning::
+
+     Je nachdem, wo das Element eingebunden ist, kann der Inhalt dessen, was verändert werden kann, variieren. Zum Beispiel kann das Element in der Sidepane nur Titel, Inhalt, Klasse, Inline und Element-Symbol verändern.
 
 Konfigurationsbeispiele
 =======================

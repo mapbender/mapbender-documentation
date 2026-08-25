@@ -22,9 +22,9 @@ This element has to be integrated in the :ref:`backend`.
 .. image:: ../../../figures/html_element.png
      :scale: 70
 
-* **Title:** Title of the element. The title will be listed in :ref:`layouts`.
-* **Content:** Content of the HTML-element. The variables "application" and "entity" are available.
-* **Classes:** You can refer to a CSS class for the HTML element. The class can be defined in the css editor.
+* **Title:** Title of the element. The title will be listed in :ref:`layouts` (changeable in all 4 Regions).
+* **Content:** Content of the HTML-element. The variables "application" and "entity" are available (changeable in all 4 Regions).
+* **Classes:** You can refer to a CSS class for the HTML element. The class can be defined in the css editor (changeable in all 4 Regions).
 * **OpenInline** (boolean): If true, the html element will be displayed inline (without title and popup) when in `content` or `toolbar` region. Ignored when the element is in other regions.
 * **AutoOpen** (boolean): (only in popup mode): The popup will be opened automatically if set.
 * **Modal** (boolean): (only in popup mode): If set to true, the background will be darkened (previously the default behaviour for the copyright element; will be set automatically for existing copyright elements).
@@ -32,6 +32,11 @@ This element has to be integrated in the :ref:`backend`.
 * **PopupHeight** (int): (only in popup mode): popup height in pixels.
 * **DontShowAgain** (boolean): (only in popup mode and only when `autoOpen` is true): If set to true, a checkbox will be shown to the user. If ticked, `autoOpen` is disabled until the content changes.
 * **DontShowAgainLabel** (string): (only in popup mode): Label for the `dontShowAgain` checkbox.
+* **Element Symbol**: (only in Sidepane): The symbol of the element. The symbol is displayed in the Sidepane and can be used to open the Element.
+
+.. warning::
+
+     Depending on where the Element is integrated, the content of what can be changed may vary. For example, if the element is integrated in the sidepane, only the title, content, class, inline and element symbol can be changed.
 
 Configuration examples
 ======================
