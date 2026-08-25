@@ -110,9 +110,7 @@ Um Gruppentitel dennoch ausgeben zu können, wird eine Schleife im HTML-Element 
       <p>Gruppe #{{ index }}: {{ group.title }}</p>
   {% endfor %}
 
-Im Anwendungsbeispiel werden Index und Name der Gruppe in der oberen Werkzeugleiste ausgegeben:
-
-.. image:: ../../../figures/de/html_example_group_name.png
+So werden Index und Name der Gruppe in der oberen Werkzeugleiste ausgegeben.
 
 * Variable: **"entity"**
 
