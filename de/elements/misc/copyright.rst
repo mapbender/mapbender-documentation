@@ -3,6 +3,10 @@
 Copyright
 *********
 
+.. warning::
+
+     Dieses Element wird ab Mapbender Version 5 entfernt. Bitte nutzen Sie stattdessen das `HTML`-Element (siehe :ref:`html_de`).
+
 Dieses Element kann verwendet werden, um Text (auch HTML) in einem Dialog anzuzeigen. Der Dialog kann auf Wunsch beim Start automatisch erscheinen. Es können auch Links und Bilder integriert werden (siehe :ref:`html_de`).
 
 Es kann die Option "Don't show again" aktiviert werden. Dann wird der Dialog erst wieder angezeigt, wenn sich der Text ändert.

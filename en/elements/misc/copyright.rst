@@ -3,6 +3,10 @@
 Copyright
 *********
 
+.. warning::
+
+     This element will be removed in Mapbender version 5. Please use the `HTML` element instead (see :ref:`html`).
+
 The copyright element can be used to show simple text or HTML in a window dialog. It can be opened automatically on application start. It is also possible to integrate links and images into the window (see :ref:`html`).
 
 The "Don't show again" option can be activated. Then the dialog will only be displayed again when the text changes.
