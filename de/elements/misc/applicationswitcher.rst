@@ -36,7 +36,7 @@ Sie können auf Anwendungen ohne weitere Parameter verweisen. Oder Sie können z
 
 * **title:** Definieren Sie einen alternativen Titel. Wenn kein Titel definiert ist, wird der Titel der Anwendung verwendet, wenn Sie auf eine vorhandene Mapbender-Anwendung Ihrer Installation verweisen (optional)
 * **url:** Sie können einen Link hinzufügen und auf eine Mapbender-Anwendung, eine Website oder ein anderes Portal verweisen (optional).
-* **imgUrl:** Link zu einem Bild, das Sie anzeigen möchten. (optional)
+* **img_url:** Link zu einem Bild, das Sie anzeigen möchten. (optional)
 * **description:** Fügen Sie eine Beschreibung hinzu. Diese wird als Tooltip angezeigt (optional)
 * **group:** Definieren Sie eine Gruppe. Anwendungen mit derselben Gruppe werden in einem Abschnitt mit dem Gruppentitel als Überschrift angezeigt (optional).
 
@@ -51,6 +51,17 @@ Die folgenden Platzhalter sind definiert und liefern Informationen zum derzeit i
 * **%srs%:** EPSG-Code
 * **%zoom%:** Zoomfaktor 
 
+Sie können außerdem Links definieren, die WMS zur aktuellen Anwendung hinzufügen. Hierzu müssen weitere Parameter im Bereich **add_wms** definiert werden.
+
+* **add_wms:** defines action to add a WMS
+* **mb_url:** refer to the WMS getcapabilities URL
+* **mb_wms_merge:** adds the WMS only once, if WMS is already part of the application it will use the WMS which is there (default: 1)
+* **mb_layer_merge:** activate the layers passed mb-wms-layers and do not disable the layers which are already active (default: 1)
+* **mb_wms_layers:** defines the layers to be activated, _all activates all layers, default all layers are deactivated
+* **mb_add_vendor_specific:** define a vendor specific that will be added to the requests
+* **mb_infoformat:** defines the GetFeatureInfo format for the WMS (default: text/html)
+
+
 
 Konfigurationsbeispiel: 
 
@@ -60,7 +71,7 @@ Konfigurationsbeispiel:
     mapbender_user_basic:
       title: 'Mapbender User Basic'
       url: null
-      imgUrl: null
+      img_url: null
       group: 'Mapbender Demos'
     mapbender_user_basic_with_zoom:
       title: 'external: open with zoom'
@@ -70,27 +81,40 @@ Konfigurationsbeispiel:
     external_dz_nrw:
       title: 'www.dz.nrw.de with srs scale center_x and center_y'
       url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%srs%&cam=%center_x%,%center_y%,%scale%,360,65,55'
-      imgUrl: null
+      img_url: null
       description: Link to Digitaler Zwilling NRW (external application).      
       group: 'External'
     external_osm:
       title: 'OSM with lon & lat'
       url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
-      imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
+      img_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
       description: Link to OpenStreetMap (external application). 
       group: 'External'
     link_mapbender:
       title: 'Link: mapbender.org'
       url: 'https://mapbender.org'
-      imgUrl: 'https://doc.mapbender.org/_images/mapbender_logo_font.png' #'https://mapbender.org/fileadmin/mapbender/resources/images/startseite/mapbender-stadt-markierungen.jpg'
+      img_url: 'https://doc.mapbender.org/_images/mapbender_logo_font.png' #'https://mapbender.org/fileadmin/mapbender/resources/images/startseite/mapbender-stadt-markierungen.jpg'
       description: Link to the Mapbender Documentation      
       group: 'Link external Website'
     link_fossgis:
       title: 'Link: fossgis.de'
       url: 'https://fossgis.de'
-      imgUrl: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
+      img_url: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
       description: Link to FOSSGIS e.V.      
       group: 'Link external Website'
+    mapbender_user_wms:
+      title: 'WMS Mapbender User'
+      description: 'Click to load the WMS'
+      img_url: 'https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default'
+      group: WMS Service
+      add_wms:
+        mb_url: 'https://wms.wheregroup.com/cgi-bin/mapbender_user.xml'
+        mb_wms_merge: 0
+        mb_layer_merge: 0
+        mb_wms_layers: 'Mapbender_User,Mapbender_Names'
+        mb_add_vendor_specific: bplan=123
+        mb_infoformat: text/html
+
 
 
 YAML-Definition
@@ -108,7 +132,7 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
       mapbender_user_basic:
         title: 'Mapbender User Basic'
         url: null
-        imgUrl: null
+        img_url: null
         group: 'Mapbender Demos'
       mapbender_user_basic_with_zoom:
         title: 'external Mapbender: open with zoom'
@@ -118,14 +142,25 @@ Diese Vorlage kann genutzt werden, um das Element in einer YAML-Anwendung einzub
       external_dz_nrw:
         title: 'www.dz.nrw.de with srs scale center_x and center_y'
         url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
-        imgUrl: null
+        img_url: null
         description: Link to Digitaler Zwilling NRW (external application). 
         group: 'External'
       external_osm:
         title: 'OSM with lon & lat'
         url: 'https://www.openstreetmap.org/?#map=19/%lon%/%lat%'
-        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
+        img_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
         description: Link to OpenStreetMap (external application).         
         group: 'External'
-
+      mapbender_user_wms:
+        title: 'WMS Mapbender User'
+        description: 'Click to load the WMS'
+        img_url: 'https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default'
+        group: WMS Service
+        add_wms:
+          mb_url: 'https://wms.wheregroup.com/cgi-bin/mapbender_user.xml'
+          mb_wms_merge: 0
+          mb_layer_merge: 0
+          mb_wms_layers: 'Mapbender_User,Mapbender_Names'
+          mb_add_vendor_specific: bplan=123
+          mb_infoformat: text/html
 
