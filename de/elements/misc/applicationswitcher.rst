@@ -53,14 +53,13 @@ Die folgenden Platzhalter sind definiert und liefern Informationen zum derzeit i
 
 Sie können außerdem Links definieren, die WMS zur aktuellen Anwendung hinzufügen. Hierzu müssen weitere Parameter im Bereich **add_wms** definiert werden.
 
-* **add_wms:** defines action to add a WMS
-* **mb_url:** refer to the WMS getcapabilities URL
-* **mb_wms_merge:** adds the WMS only once, if WMS is already part of the application it will use the WMS which is there (default: 1)
-* **mb_layer_merge:** activate the layers passed mb-wms-layers and do not disable the layers which are already active (default: 1)
-* **mb_wms_layers:** defines the layers to be activated, _all activates all layers, default all layers are deactivated
-* **mb_add_vendor_specific:** define a vendor specific that will be added to the requests
-* **mb_infoformat:** defines the GetFeatureInfo format for the WMS (default: text/html)
-
+* **add_wms:** Definiert die Aktion, um einen WMS hinzuzufügen
+* **mb_url:** Verweist auf die WMS getcapabilities URL.
+* **mb_wms_merge:** Fügt den WMS nur einmal hinzu, wenn der WMS in der Applikation bereits Bestandteil ist, wird dieser verwendet (Standard: 1)
+* **mb_layer_merge:** Aktiviert die Ebene in mb-wms-layers. Deaktiviert die Ebenen nicht, die schon aktiviert sind (Standard: 1).
+* **mb_wms_layers:** Definiert die Ebenen, die aktiviert werden sollen, _all activates aktiviert alle Ebenen.
+* **mb_add_vendor_specific:** efinition von Vendor Specific Parametern, die an den Request angefügt werden (ab Version 3.2.9).
+* **mb_infoformat:** Definition des GetFeatureInfo-Formats für den WMS (Standard: text/html)
 
 
 Konfigurationsbeispiel: 
