@@ -53,8 +53,7 @@ The following placeholder are defined and provide information for the actual ext
 * **%srs%:** EPSG code 
 * **%zoom%:** zoom factor 
 
-You can also define a configuration that will add a WMS to your
- actual application. There are additional option that you have to define in the **add_wms** section.
+You can also define a configuration that will add a WMS to your actual application. There are additional option that you have to define in the **add_wms** section.
 
 * **add_wms:** defines action to add a WMS
 * **mb_url:** refer to the WMS getcapabilities URL
