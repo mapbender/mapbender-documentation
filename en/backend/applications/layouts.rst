@@ -12,29 +12,22 @@ Layouts
 The Layouts section in the :ref:`backend` of an application gives an overview of the regions (layout sections) of the application. In those regions, the elements of the application are listed.
 An overview of all elements is available under :ref:`elements`.
 
-.. note:: Different templates can have different regions: In the demo applications you can see two different region layouts. Not every element can be used in every region. Mapbender cares about that.
+.. note:: Different templates can have different regions: In the demo applications we use the same region layouts. Not every element can be used in every region. Mapbender cares about that.
 
 
 Layout of the Fullscreen template:
 
-* Top toolbar (region for Buttons, Links, HTML,...)
-* Sidepane (region for Layertree, Legend, Search, Print, HTML,...)
-* Map area (region for Map, Scalebar,...)
-* Footer (region for Copyright, Activity Indicator, Scale select,...)
-
-
-Layout of the Mobile template:
-
-* Footer (region for Copyright, Activity Indicator, Scale select,...)
-* Map area (region for Map, Scalebar,...)
-* MobilePane (region for dialogs like Layertree, Legend, BaseSourceSwicther, FeatureInfo,...)
+* **Top toolbar** - region for Buttons, Links, HTML,...
+* **Sidepane** - region for Layertree, Legend, Search, Print, HTML,...
+* **Map area** - region for Map, Scalebar,...
+* **Footer** - region for Copyright, Activity Indicator, Scale select,...
 
 
 The |mapbender-button-add| button located at the top right of each region allows adding elements. After pressing the button, a dialog will open, which allows for the selection of an element and its subsequent configuration.
 
 All elements in an application can be moved between regions using drag and drop.
 
-The regions themselves can be configured using the |mapbender-button-edit| button at right. There is no configuration option for region Map area and MobilePane.
+The regions themselves can be configured using the |mapbender-button-edit| button in the top right corner of each region.
 
 The regions Top toolbar and Footer provide the following configuration options:
 
@@ -43,10 +36,10 @@ Configuration of the Top toolbar and the Footer
 ***********************************************
 The Top toolbar and the Footer provide the following configuration options:
 
-* **Screen type** (Any, Mobile, Desktop. Default: Any): The region will not be displayed when other screen types are used. *Any* will always show the region.
-* **Alignment** (Left, Right, Center. Default: Right): Sets the alignment for the buttons, texts, links.
-* **Generate menu for buttons**:Creates a dropdown menu for the elements.
-* **Menu label input field**: Labeling for the dropdown menu.
+* **Screen type**: (Any, Mobile, Desktop. Default: Any) The region will not be displayed when other screen types are used. *Any* will always show the region.
+* **Alignment**: (Left, Right, Center. Default: Right) Sets the alignment for the buttons, texts, links.
+* **Generate menu for buttons**: (No, Desktop only, Mobile only, Desktop + Mobile, Default: Mobile only) Creates a dropdown menu for the elements.
+* **Menu label input field**: Labeling for the dropdown menu. Default no Labeling.
 
 .. tip:: **Note**: Using the dropdown menu is especially handy on mobile devices. There is a code snippet in :ref:`CSS` that adds a scroll bar to the menu and helps to increase the user experience. 
 
@@ -58,9 +51,9 @@ This template can be used to configure the **properties** of the toolbar in a YA
 
     - name: toolbar
       properties:
-        item_alignment: right  # right/left/center
-        screenType: all         # desktop/mobile/all
-        generate_button_menu: false # true/false
+        item_alignment: right  # right/left/center - default right
+        screenType: all         # desktop/mobile/all - default all
+        generate_button_menu: only_mobile # no/yes/only_desktop/only_mobile - default only_mobile
         menu_label: "Menu" # NULL or text
 
 Besides, this template can be used to configure the **properties** of the footer in a YAML application:
@@ -69,10 +62,14 @@ Besides, this template can be used to configure the **properties** of the footer
 
     - name: footer
       properties:
-        item_alignment: right # right/left/center
-        screenType: all # all/desktop/mobile
-        generate_button_menu: false # true/false
+        item_alignment: right # right/left/center - default right
+        screenType: all # all/desktop/mobile - default all
+        generate_button_menu: only_mobile # no/yes/only_desktop/only_mobile - default only_mobile
         menu_label: "Menu" # NULL or text
+
+.. image:: ../../../figures/toolbar_backend.png
+    :alt: Mapbender Toolbar Options
+
 
 Configuration of the Sidepane
 *****************************
@@ -82,18 +79,20 @@ The Sidepane provide the following configuration options through their |mapbende
     :alt: Mapbender Sidepane Options
 
 
-* **Type** (Accordion, Buttons, Unstyled. Default: Accordion): See explanation below.
+* **Type** (Buttons, Accordion, List, Unstyled. Default: Accordion): See explanation below.
 * **Screen type** (Any, Mobile, Desktop. Default Any): The region will not be displayed when other screen types are used. Any - will always show the region.
 * **Width** (in px) (in px. Default: 350px): Width of the Sidepane in Pixels.
 * **Resizable** (Default: true): Allows to resize the width of the sidepane.
 * **Position** (Left, Right. Default: Left): Defines the placement of the sidepane.
-* **Initially closed** (Default: disabled): Defines whether the Sidepane should be closed or open on start of the application.
+* **Initially closed** (No, Desktop only, Mobile only, Desktop + Mobile): Defines whether the Sidepane should be closed or open on start of the application.
 
 The option **Type** adjusts the inserted elements:
 
+- ``Buttons`` shows elements via buttons.
+
 - ``Accordion`` shows elements via tabs.
 
-- ``Buttons`` shows elements via buttons.
+- ``List`` shows elements as a list. The active element takes up the entire area of the Sidepane.
 
 - ``Unstyled`` does not contain any styling options at all and displays the elements in the configured :ref:`backend` order.
 
@@ -116,13 +115,15 @@ This template can be used to configure the **properties** of the sidepane in a Y
       properties:
         name: accordion # tabs (for button) / accordion / NULL (for unstyled)
         align: right # right/left
-        closed: false # true/false
+        closed: no # no/yes/only_desktop/only_mobile
         screenType: all # all/desktop/mobile
         width: "654px"
+
 
 Button area (Elements)
 **********************
 Every element offers a set of buttons for configuration. The button area helps configuring elements in their specific regions.
+
 The following button functions are available:
 
 .. image:: ../../../figures/mapbender_layouts_button_area.png
@@ -165,7 +166,3 @@ After setting specific access rights, the security key turns red.
 
 You can find more security details under :ref:`en/backend/FOM/index:Permission management`.
 
-
-Delete
-======
-Removes an element from both front- and :ref:`backend`.

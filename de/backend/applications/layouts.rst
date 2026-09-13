@@ -12,23 +12,15 @@ Layouts
 Im Layouts-Bereich des :ref:`backend_de` einer Anwendung werden die jeweiligen Frontend-Regionen der Anwendung und die in ihnen enthaltenen Elemente aufgelistet.
 Eine Übersicht über alle Elemente gibt es unter :ref:`elements_de`.
 
-.. note:: Unterschiedliche Templates können durch unterschiedliche Regionen strukturiert sein.
+.. note:: Unterschiedliche Templates können durch unterschiedliche Regionen strukturiert sein. Die Demo-Anwendungen nutzen das selbe Layout. Nicht jedes Element kann in jeder Region verwendet werden. Mapbender achtet darauf.
 
 
 Layout des Fullscreen Templates:
 
-* Obere Werkzeugleiste (Region für die Platzierung von Buttons, Links, HTML, ...)
-* Sidepane (Seitenleisten-Region für den Ebenenbaum, die Legende, die Suche, den Druck, HTML, ...)
-* Kartenbereich (Region für die Karte, die Maßstabsleiste, ...)
-* Fußzeile (Region für das Impressum, die Aktivitätsanzeige, die Maßstabsauswahl, ...)
-
-
-Layout des Mobilen Templates:
-
-* Fußzeile (Region für das Copyright, die Aktivitätsanzeige, die Maßstabsauswahl, ...)
-* Kartenbereich (Region für die Karte, die Maßstabsleiste, ...)
-* MobilePane (Region für Dialoge wie den Ebenenbaum, die Legende, den Hintergrundwechsler, die Infoabfrage, ...)
-
+* **Obere Werkzeugleiste** - Region für die Platzierung von Buttons, Links, HTML, ...
+* **Sidepane** - Seitenleisten-Region für den Ebenenbaum, die Legende, die Suche, den Druck, HTML, ...
+* **Kartenbereich** - Region für die Karte, die Maßstabsleiste, ...
+* **Fußzeile** - Region für das Impressum, die Aktivitätsanzeige, die Maßstabsauswahl, ...
 
 Der |mapbender-button-add| Button rechts oberhalb des Bereichs ermöglicht das Hinzufügen von Elementen. Nach dem Klick auf den Button öffnet sich eine Dialogmaske, die die Auswahl eines Elements und dessen anschließende Konfiguration ermöglicht.
 
@@ -44,9 +36,9 @@ Konfigurationsmöglichkeiten der Oberen Werkzeugleiste und Fußzeile
 Die Regionen der Oberen Werkzeugleiste und der Fußzeile bieten folgende Konfigurationsmöglichkeiten über den |mapbender-button-edit| Button an:
 
 * **Bildschirmtyp** (Alle, Mobil, Desktop. Standard: Alle) Bei dieser Option wird der Bereich für die nicht ausgewählte Geräteart ausgeblendet. *Alle* zeigt die Region auf allen Geräten an.
-* **Ausrichtung** (Links, Rechts, Zentriert. Standard: Rechts.): Die Ausrichtung definiert die Positionierung der Elemente innerhalb der Bereiche.
-* **Checkbox Schaltflächen zu Menü zusammenfassen**: Konfiguriert ein Ausklappmenü, welches die in den Bereich eingebundenen Elemente umfasst.
-* **Menütitel-Textfeld**: Mit dieser Textbox lässt sich dem Ausklappmenü eine Beschriftung zuweisen.
+* **Ausrichtung** (Links, Rechts, Zentriert. Standard: Rechts): Die Ausrichtung definiert die Positionierung der Elemente innerhalb der Bereiche.
+* **Menü**: (No, nur Desktop, nur Mobil, Desktop + Mobil, Standard: nur Mobil) Elemente werden in ein aufklappbares Menü zusammengefasst.
+* **Menütitel**: Es lässt sich ein Text definieren, der dem Menü vorangestellt wird.
 
 .. tip:: **Hinweis**: Das Ausklappmenü ist besonders sinnvoll, wenn die Anwendung für mobile Endgeräte ausgerichtet sein soll. Unter :ref:`CSS_de` findet sich ein Codebaustein, der die Bedienbarkeit bei Anwendungen mit vielen Elementen erhöht. 
 
@@ -58,10 +50,10 @@ Diese Vorlage kann zur **Eigenschaftenkonfiguration** der Oberen Werkzeugleiste 
 
     - name: toolbar
       properties:
-        item_alignment: right  # right/left/center
-        screenType: all         # desktop/mobile/all
-        generate_button_menu: false # true/false
-        menu_label: "Menu" # NULL or text
+        item_alignment: right # right/left/center - Standard right
+        screenType: all # all/desktop/mobile - Standard all
+        generate_button_menu: only_mobile # no/yes/only_desktop/only_mobile - Standard only_mobile
+        menu_label: "Menu" # NULL oder Text
 
 Außerdem kann diese Vorlage verwendet werden, um eine **Eigenschaftenkonfiguration** für die Fußzeile einer YAML-Anwendung vorzunehmen:
 
@@ -69,10 +61,14 @@ Außerdem kann diese Vorlage verwendet werden, um eine **Eigenschaftenkonfigurat
 
     - name: footer
       properties:
-        item_alignment: right # right/left/center
-        screenType: all # all/desktop/mobile
-        generate_button_menu: false # true/false
-        menu_label: "Menu" # NULL or text
+        item_alignment: right # right/left/center - Standard right
+        screenType: all # all/desktop/mobile - Standard all
+        generate_button_menu: only_mobile # no/yes/only_desktop/only_mobile - Standard only_mobile
+        menu_label: "Menu" # NULL oder Text
+
+
+.. image:: ../../../figures/de/toolbar_backend.png
+    :alt: Mapbender Toolbar Optionen
 
 
 Sidepane-Konfigurationsmöglichkeiten
@@ -88,12 +84,13 @@ Die Ansichtsoptionen für die Sidepane können im Sidepane-Bereich im Mapbender-
 * **Breite** (in Pixeln, Standard: 350 px) Definiert über einen Pixelwert die Breite der Sidepane in der Anwendung.
 * **Größe veränderbar** (Standard: true): Erlaubt das Verbreitern und Verkleinern der Seitenleiste.
 * **Position** (Links, Rechts. Standard: Links) gibt an, ob die Sidepane am linken oder rechten Bildschirmrand angezeigt wird.
-* **Geschlossen starten** (Standard: deaktiviert) hält nach Aktivierung die Sidepane bei Anwendungsstart eingeklappt. Sie ist über einen Button in der Anwendung nachträglich aus- & wieder einklappbar.
+* **Geschlossen starten** (No, nur Desktop, nur Mobil, Desktop + Mobil) Verhalten der  Sidepane bei Anwendungsstart - zugeklappt / aufgeklappt.
 
 Die Option **Typ** zeigt die Sidepane-Elemente in unterschiedlichen Ansichten an:
 
-- ``Akkordeon`` zeigt alle hinzugefügten Elemente in Reitern.
 - ``Buttons`` zeigt alle hinzugefügten Elemente über Buttons.
+- ``Akkordeon`` zeigt alle hinzugefügten Elemente in Reitern.
+- ``Liste`` zeigt alle Elemente als Liste. Das aktive Element nimmt den gesamten Bereich der Sidepane ein.
 - ``Unformatiert`` verzichtet auf Styling-Optionen und zeigt die Elemente direkt und in der im :ref:`backend_de` gewählten Reihenfolge untereinander an.
 
 Die Option **Größe verändern** geht von einer minimalen Breite von 120 px und einem Maximum von 95 % der Bildschirmbreite aus. Diese Werte können über CSS angepasst werden:
@@ -115,13 +112,15 @@ Diese Vorlage kann zur **Eigenschaftenkonfiguration** der Sidepane in einer YAML
       properties:
         name: accordion # tabs (für Button) / accordion (für Akkordeon) / NULL (für unformatiert)
         align: right # right/left
-        closed: false # true/false
+        closed: no # no/yes/only_desktop/only_mobile
         screenType: all # all/desktop/mobile
         width: "654px"
+
 
 Element-Buttonleiste
 ********************
 Jedem Element kann ein konfigurierter Button zugewiesen werden. Die Buttonleiste dient der Konfiguration dieser Buttons.
+
 Dabei verfügen die Buttons über folgende Optionen:
 
 .. image:: ../../../figures/mapbender_layouts_button_area.png
@@ -163,7 +162,3 @@ Der Schlüssel wird nach erfolgreicher Rechtevergabe rot. Wenn Sie nun den Curso
 
 Detaillierte Informationen zu den Sicherheitseinstellungen finden sich unter :ref:`de/backend/FOM/index:Rechteverwaltung`.
 
-
-Löschen
-=======
-Löscht das Element mitsamt der konfigurierten Einstellungen aus Front- und Backend.

@@ -13,6 +13,12 @@ Migrations-Leitfaden
     Für ausführliche Informationen des Mapbender-Entwicklungsteams siehe auch den `Upgrading Guide auf GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_.
 
 
+Umstellung auf Mapbender 5.0.0
+******************************
+
+* Schauen Sie sich den ausführlichen `Upgrading Guide auf GitHub <https://github.com/mapbender/mapbender/blob/master/docs/UPGRADING.md>`_ sorgfältig an, bevor Sie das Update durchführen.
+
+
 Umstellung auf Mapbender 4.0.0
 ******************************
 
