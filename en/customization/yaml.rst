@@ -5,14 +5,22 @@ YAML Configuration (Configuration and Application files)
 
 The following configuration files are under the `config/` folder and its subfolders.
 
+.. warning:: In all *.yaml* files, tabulators may not be used for indentation. Instead, you need to use the space bar.
 
 doctrine.yaml
 -------------
 
+.. code-block:: yaml
+    
+    fom_user:
+        selfregister: false
+        reset_password: true
+        max_reset_time: 1
+        mail_from_address: ~
+        mail_from_name: ~
+
 * **fom_user.selfregistration**: To enable or disable self-registration of users, change this parameter. You have to define self_registration_groups, so that self-registered users are added to these groups automatically, when they register. They will get the rights that are assigned to these groups.
 * **fom_user.reset_password**: In the same way the possibility to reset passwords can be enabled or disabled.
-* **framework.session.cookie_httponly**: For HTTP-only session cookies, make sure the framework.session.cookie_httponly parameter is set to true.
-
 
 Database configuration
 **********************
@@ -28,12 +36,7 @@ The files ``.env.local`` and ``doctrine.yaml`` are needed to configure databases
             default_connection: default                     # Database connection, used as standard in Mapbender (``default_connection: default``).
             connections:
                 default:
-                url: '%env(resolve:MAPBENDER_DATABASE_URL)%'# Placeholder which resolves the environment variable in parameters.yaml. 
-                persistent: true                            # Parameter specifying if the database connection should be established continuously.
-                charset:    UTF8                            # Coding of the database.
-                #server_version: '15'                       # Important: You MUST configure your server version, either here or in the DATABASE_URL env var (see .env file).
-                logging:   "%kernel.debug%"                 # Option, SQLs won't be logged (standard: %kernel.debug%). `More information: <http://www.loremipsum.at/blog/doctrine-2-sql-profiler-in-debugleiste>`_.
-                profiling: "%kernel.debug%"                 # Profiling SQL requests. This option can be turned of in production. (standard: %kernel.debug%)
+                url: '%env(resolve:MAPBENDER_DATABASE_URL)%'# Placeholder which resolves the environment variable in the file .env.local. This variable contains the database connection information.
 
 
 **Use of several databases**
@@ -49,17 +52,9 @@ Example with two database connections in `doctrine.yaml`:
                 # database connection default
                 default:
                     url: '%env(resolve:MAPBENDER_DATABASE_URL)%'
-                    charset:    UTF8
-                    #server_version: '15' 
-                    logging:   "%kernel.debug%"
-                    profiling: "%kernel.debug%"
                 # database connection geodata_db
                 geodata_db:
                     url: '%env(resolve:GEOBASIS_DATABASE_URL)%'
-                    persistent: true
-                    charset:  UTF8
-                    logging: '%kernel.debug%'
-                    profiling: '%kernel.debug%'
                     # IMPORTANT: You MUST configure your server version,
                     # either here or in the DATABASE_URL env var (see .env file)
                     #server_version: '15'
@@ -67,7 +62,7 @@ Example with two database connections in `doctrine.yaml`:
 
 .env or .env.local file
 -----------------------
-This file handles necessary environmental variables:
+This file handles necessary environmental variables.
 
 
 Database
@@ -86,7 +81,7 @@ When using PostgreSQL (e.g. for the use with :ref:`search_router`), use the foll
 
 .. code-block:: bash
 
-    SEARCH_DB_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=14&charset=utf8"
+    SEARCH_DB_DATABASE_URL="postgresql://dbuser:dbpassword@localhost:5432/dbname?serverVersion=18&charset=utf8"
 
 
 Use of several databases
@@ -130,12 +125,51 @@ parameters.yaml
 ---------------
 The following fundamental Mapbender parameters are specified here.
 
+Language settings
+*****************
+Mapbender is automatically adjusted to your browser's language.
+Yet it is also possible to set your preferred language via the `fallback_locale` parameter. If a translation of your browser's language is missing in Mapbender, it will take the defined language.
+
+The locale can only be set for the entire Mapbender installation (not for single applications).
+
+Available language codes are:
+
+* en for English (default)
+* de for German
+* es for Spanish
+* fr for French
+* it for Italian
+* nl for Dutch
+* pt for Portuguese
+* ro for Romanian
+* ru for Russian
+* tr for Turkish
+* uk for Ukrainian     
+
+Configuration example:
+
+.. code-block:: yaml
+
+    fallback_locale:   en
+    locale:            de   
+
+You also can force Mapbender to use the language defined for the parameter locale to be used. To do this, add ``mapbender.automatic_locale: false``.
+
+.. code-block:: yaml
+
+    mapbender.automatic_locale: false
+    fallback_locale:   en
+    locale:            es
+
+
+More information in :ref:`translation`.
+
 Application Sorting
 *******************
 
 The default sorting of the application list shows the applications from the database shown first. 
 
-However, you can change the sorting via the parameter `mapbender.application.sortorder`. 
+However, you can change the behaviour via the parameter `mapbender.application.sortorder`. 
 
 .. code-block:: yaml
 
@@ -148,12 +182,71 @@ However, you can change the sorting via the parameter `mapbender.application.sor
 * **title:** Applications are sorted by title, independant of origin
 * **date:** Applications are sorted by most recent update, independant of origin
 
-Disclaimer
-**********
+
+SSL certificate
+***************
+For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your `parameters.yaml` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+
+
+Proxy settings
+**************
+If you use a proxy, you need to change `parameters.yaml`.
+
+.. hint:: OWSProxy3 is a transparent Buzz-based proxy that uses cURL for connection to web resources via/without a proxy server.
+
+Configuration example:
+
+.. code-block:: yaml
+
+    # OWSProxy Configuration
+        ows_proxy3_logging: false             # logging of requests, default is false, true logs in table owsproxy_log 
+        ows_proxy3_obfuscate_client_ip: true  # obfuscats a client ip, default is true, true will hide the last byte of the client's ip address
+        ows_proxy3_host: myproxy              # proxy definition for connnection via a proxy server. Host name of the proxy server
+        ows_proxy3_port: 8080                 # proxy definition for connnection via a proxy server. Port name of the proxy server
+        ows_proxy3_connecttimeout: 60
+        ows_proxy3_timeout: 90
+        ows_proxy3_user: ~                    # user name for proxy server (set user for proxy server if needed)
+        ows_proxy3_password: ~                # password for proxy server (set password for proxy server if defined)
+        ows_proxy3_noproxy:                   # list of hosts for connnections without proxy server
+            - 192.168.1.123
+
+
+Logo and custom branding
+************************
+In `parameters.yaml`, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
+
+
+.. code-block:: yaml
+
+    branding.project_name: Geoportal powered by Mapbender
+    branding.project_version: 1.0
+    branding.logo: ./bundles/mapbendercore/image/OSGeo_project.png
+    branding.login_backdrop: ./bundles/mapbendercore/image/login-backdrop.jpg
+
+
+The files must be accessible under ``application/public``.
+
+
+Project name
+************
+The name of the project (default: Mapbender) can be changed in `parameters.yaml`. The change has a global impact on the whole Mapbender installation.
+
+.. code-block:: yaml
+
+    branding.project_name: Geoportal
+
+
+.. warning:: In *parameters.yaml*, tabulators may not be used for indentation. Instead, you need to use the space bar.
+
+
+Sidelinks
+*********
 
 .. image:: ../../figures/disclaimer.png
 
-A disclaimer can be added through the use of site links.
+Sidelinks can be added through the use of mapbender.sitelinks.
+
+A sidelinks always needs a link and a text.
 
 .. code-block:: yaml
 
@@ -173,6 +266,20 @@ Disabling individual elements can be configured using the following parameter:
 .. code-block:: yaml
 
     mapbender.disabled_elements:
+      - Mapbender\CoreBundle\Element\ResetView
+
+
+Default layer order
+*******************
+You can define a default layer order when creating *new* WMS layerset instances.
+
+Allowed values are either
+* "standard": Traditional Mapbender behaviour: top-down rendering in GetCapabilities order; also the default if this parameter is not defined
+* "reverse": bottom-up, for QGIS server, ArcGIS etc
+
+.. code-block:: yaml
+
+    wms.default_layer_order: standard
 
 
 Customizing icons
@@ -213,104 +320,40 @@ With these configuration options, you can customize the icons in Mapbender to su
           class: fa-solid fa-heart-pulse
 
 
-Language settings
-*****************
-Mapbender is automatically adjusted to your browser's language.
-Yet it is also possible to set your preferred language via the `fallback_locale` parameter. If a translation of your browser's language is missing in Mapbender, it will take the defined language.
+Reglar Expression for search requests
+*************************************
 
-The locale can only be set for the entire Mapbender installation (not for single applications).
+The default regular expression for input fields in search/data manager/digitizer. 
 
-Available language codes are:
+It can be overridden per search field in the element configuration (`pattern`) or per data manager field in the form field configuration (`attr.pattern`).
 
-* en for English (default)
-* de for German
-* es for Spanish
-* fr for French
-* it for Italian
-* nl for Dutch
-* pt for Portuguese
-* ro for Romanian
-* ru for Russian
-* tr for Turkish
-* uk for Ukrainian     
-
-Configuration example:
+The default value is '.*', allowing all characters.
 
 .. code-block:: yaml
-
-    fallback_locale:   en
-    locale:            en    
-    secret:            ThisTokenIsNotSoSecretChangeIt
-
-
-You also can force Mapbender to use the language defined for the parameter locale to be used. To do this, add ``mapbender.automatic_locale: false``.
-
-.. code-block:: yaml
-
-    mapbender.automatic_locale: false
-    fallback_locale:   en
-    locale:            es
-    secret:            ThisTokenIsNotSoSecretChangeIt
+   
+    mapbender.search.default_regex: '.*'
+    mapbender.data_manager.default_regex: '.*'
 
 
-More information in :ref:`translation`.
-
-
-Logo and branding
-*****************
-In `parameters.yaml`, you can refer to your own logo and to an alternative image for the login page. This change has a global impact on the whole Mapbender installation.
-
+The following setting restrict input to letters, digits, underscores, hyphens and whitespace.
 
 .. code-block:: yaml
-
-    branding.project_name: Geoportal powered by Mapbender
-    branding.project_version: 1.0
-    branding.logo: ./bundles/mapbendercore/image/OSGeo_project.png
-    branding.favicon: ./application/public/brand-favicon.ico
-    branding.login_backdrop: ./bundles/mapbendercore/image/login-backdrop.jpg
+    
+   mapbender.search.default_regex: '^[\p{L}0-9_\-\s]*$'
+   mapbender.data_manager.default_regex: '^[\p{L}0-9_\-\s]*$'
 
 
-The files must be accessible under ``application/public``.
 
+FeatureInfo iframe sandbox options
+**********************************
 
-Project name
-************
-The name of the project (default: Mapbender) can be changed in `parameters.yaml`. The change has a global impact on the whole Mapbender installation.
+You can set the sandbox iframe attributes in the feature info dialog,
+
+See https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox for options
 
 .. code-block:: yaml
-
-    branding.project_name: Geoportal
-
-
-.. warning:: In *parameters.yaml*, tabulators may not be used for indentation. Instead, you need to use the space bar.
-
-
-Proxy settings
-**************
-If you use a proxy, you need to change `parameters.yaml`.
-
-.. hint:: OWSProxy3 is a transparent Buzz-based proxy that uses cURL for connection to web resources via/without a proxy server.
-
-Configuration example:
-
-.. code-block:: yaml
-
-    # OWSProxy Configuration
-        ows_proxy3_logging: false             # logging of requests, default is false, true logs in table owsproxy_log 
-        ows_proxy3_obfuscate_client_ip: true  # obfuscats a client ip, default is true, true will hide the last byte of the client's ip address
-        ows_proxy3_host: myproxy              # proxy definition for connnection via a proxy server. Host name of the proxy server
-        ows_proxy3_port: 8080                 # proxy definition for connnection via a proxy server. Port name of the proxy server
-        ows_proxy3_connecttimeout: 60
-        ows_proxy3_timeout: 90
-        ows_proxy3_user: ~                    # user name for proxy server (set user for proxy server if needed)
-        ows_proxy3_password: ~                # password for proxy server (set password for proxy server if defined)
-        ows_proxy3_noproxy:                   # list of hosts for connnections without proxy server
-            - 192.168.1.123
-
-
-SSL certificate
-***************
-For productive environments, it is important to install a SSL certificate. After that, set the ``parameters.cookie_secure`` variable in your `parameters.yaml` to ``true``. This ensures that the Login cookie is only transmitted over secure connections.
+   
+    mapbender.featureinfo.iframe_sandbox_params: 'allow-scripts allow-popups allow-popups-to-escape-sandbox allow-downloads'
 
 
 Overriding JavaScript and CSS/Sass Resources
@@ -329,13 +372,16 @@ To manually override JavaScript and CSS/Sass resources, and as an alternative to
 YAML Application files
 -----------------------
 
-YAML application files are stored under `applications/` (underneath `config/`!). There are three files pre-implemented as example applications:
+YAML application files are stored under `applications/` (underneath `config/`!). There are files pre-implemented as example applications:
 
 - Mapbender Demo (*mapbender_user*)
 - Mapbender Demo Basic (*mapbender_user_basic*)
-- Mapbender Mobile Demo (*mapbender_mobile*)
 
-If you do not want the three example applications to be visible, you can adjust the ``published`` variable as follows.
+If you do not want the example applications to be visible you have different way to do this.
+
+* Set ``mapbender.application.sortorder: db-only`` in your parameters.yaml file.
+* Delete the demo applications.
+* Edit the demo application with a text editor and set the ``published`` variable to false.
 
 .. code-block:: yaml
 
@@ -350,16 +396,13 @@ Then, clear the :ref:`Mapbender cache<en/customization/commands:Clear cache>` an
 
 .. hint:: The root user can always see unpublished applications.
 
-
-It is also possible to remove the applications from the ``applications`` folder. Repeat the cache clearing process afterwards.
-
 In the same way, new YAML applications can be placed in the folder and will be automatically recognized by Mapbender.
 
 
 Mapbender Demo Map
 ------------------
 
-This is the main Demo application. Should be used for a desktop based application.
+This is the main Demo application. It can be optimized for a desktop and mobile use. It contains most of the Mapbender elements.
 
 Detailed descriptions of the elements at :ref:`elements`.
 
@@ -367,24 +410,9 @@ Detailed descriptions of the elements at :ref:`elements`.
 Mapbender Demo Map basic
 ------------------------
 
-Differences to the main Demo Map:
-
-Toolbar
-    Contains elements from the sidepane of the first demo application.
-
-Sidepane
-    Has no elements pre-implemented.
-
-Map area
-    Uses a compact :ref:`navigation_toolbar` without the zoom slider. Includes the :ref:`simplesearch`.
+Differences to the Mapbender Demo Map. It does not has a sidepane. It offers the elements via buttons. The possibilities of styling via CSS are demonstrated.
 
 Detailed descriptions of the elements at :ref:`elements`.
-
-
-Mapbender mobile
-----------------
-
-For a mobile template on smartphones and tablets.
 
 
 Export/import YAML application files with the backend

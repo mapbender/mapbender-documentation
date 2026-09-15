@@ -170,7 +170,7 @@ Database
 bin/console mapbender:database:upgrade 
 **************************************
 
-Command to update the Mapbender database. 
+Command to update the Mapbender database. It removes outdated element configuration values and doctrine types
 
 
 .. code-block:: yaml
