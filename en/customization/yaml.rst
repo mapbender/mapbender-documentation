@@ -387,7 +387,7 @@ If you do not want the example applications to be visible you have different way
 
 	parameters:
 		applications:
-			mapbender_mobile:
+			mapbender_user:
 				[...]
 				published: false
 

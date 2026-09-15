@@ -41,7 +41,23 @@ Das Element wird im :ref:`backend_de` in die Anwendung eingebunden.
 Konfigurationsbeispiele
 =======================
 
-Bild einbinden:
+OpenInline
+----------
+OpenInline bewirkt, dass der HTML-Inhalt dauerhaft angezeigt wird. Dies kann auf der Karte (z.B. Copyright-Hinweis) oder in der Seitenleiste explizit aktiviert werden.
+
+
+Modaler Modus und "Nicht mehr anzeigen"-Option
+---------------------------------------
+
+Das HTML-Element kann im modalen Modus verwendet werden. Dann ist keine weitere Interaktion möglich, solange der Dialog geöffent ist
+
+Die "Nicht mehr anzeigen"-Option kann aktiviert werden. Der Dialog wird erst wieder angezeigt, wenn sich der Text ändert.
+
+.. image:: ../../../figures/copyright.png
+     :scale: 80
+
+
+Bild einbinden
 ---------------
 
 Das Mapbender Logo wurde im Beispiel als Bild in die Seitenleiste eingebunden. Es kann eine definierte Höhe angegeben werden. Es kann eine Hintergrundfarbe, ein bestimmter Seitenrandabstand und die Transparenz gesetzt werden. Diese Eigenschaften werden im Styling-Bereich definiert.
