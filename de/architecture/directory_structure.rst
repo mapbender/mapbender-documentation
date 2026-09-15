@@ -30,7 +30,7 @@ Grundlegende Konfigurationsdateien von Mapbender liegen im Verzeichnis `config/`
 config/applications
 -------------------
 
-Als YAML definierte Anwendungen können in dem Verzeichnis `config/applications` abgelegt werden. Die bekannten Beispielanwendungen **Mapbender mobile**, **Mapbender Demo Map** und **Mapbender Demo Map basic** liegen dort als einzelne YAML Dateien.
+Als YAML definierte Anwendungen können in dem Verzeichnis `config/applications` abgelegt werden. Die Beispielanwendungen liegen dort als einzelne YAML-Dateien.
 
 Weitere Informationen im Kapitel :ref:`yaml_de`.
 

@@ -388,7 +388,7 @@ Falls eine Beispielanwendung nicht im Mapbender sichtbar sein soll, gibt es mehr
 
 	parameters:
 		applications:
-			mapbender_mobile:
+			mapbender_user:
 				[...]
 				published: false
 

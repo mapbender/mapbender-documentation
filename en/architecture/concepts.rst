@@ -44,8 +44,7 @@ Application Template
 ====================
 
 Each application is an HTML page, and the application template renders the basic
-layout of that page. Each application can have a different template as needed.
-Think of HTML templates specialised for mobile viewing.
+layout of that page. Each application can have a different template.
 
 Frontend
 ========

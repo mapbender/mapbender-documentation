@@ -31,8 +31,7 @@ Jedes Element besteht aus vier Bereichen:
 Anwendungsvorlage
 ==================
 
-Jede Anwendung ist eine HTML-Seite. Die Anwendungsvorlage definiert das Basislayout der Seite. Die Anwendungen können unterschiedliche Vorlagen verwenden, beispielsweise spezielle Vorlagen für die mobile Anwendung.
-
+Jede Anwendung ist eine HTML-Seite. Die Anwendungsvorlage definiert das Basislayout der Seite. Die Anwendungen können unterschiedliche Vorlagen verwenden.
 Frontend
 ========
 

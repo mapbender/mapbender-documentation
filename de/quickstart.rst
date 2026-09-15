@@ -39,12 +39,12 @@ Mapbender ist ein webbasiertes Geoportal-Framework zum Veröffentlichen, Registr
 Mit dieser Code-Grundlage wird die Idee eines Geoportal-Frameworks fortgesetzt. Zentrale Mapbender-Funktionen sind:
 
 * Anwendungen können direkt im Browser erstellt, konfiguriert und gestylt werden.
-* Dienste (wie WMS) können in einem Dienst-Repository verwaltet und mit Anwendungen verbunden werden.
+* Dienste (wie WMS, WMTS, Vector Tiles, OGC API - Features) können in einem Dienst-Repository verwaltet und mit Anwendungen verbunden werden.
 * Das Rechtemanagement ist sowohl für einzelne Benutzer als auch Gruppen einfach zu verwalten, egal ob sie in einer Datenbank oder über LDAP gespeichert werden.
 * Der Administrator braucht keine Zeile Code zu schreiben, da die Konfiguration über die webbasierte Administrationsoberfläche erfolgt.
 * Suchen können konfiguriert werden.
 * Anwendungen zur Digitalisierung können aufgebaut werden.
-* Anwendungen können flexibel für Smartphones und Tablets angelegt werden.
+* Routing
 
 Sie brauchen nichts weiter als einen Webbrowser für diesen Schnellstart.
 
@@ -147,7 +147,7 @@ Es können außerdem komplett neue Anwendungen über das :ref:`backend_de` defin
 
 #. Wählen Sie zunächst **Anwendung anlegen** auf der Anwendungsübersichtsseite.
 
-#. Wählen Sie anschließend eine Vorlage für die Anwendung. Diese bestimmt den Aufbau der Anwendung. Zur Auswahl stehen: Fullscreen, Fullscreen alternative, Mapbender Mobile template. Es ist ebenfalls möglich, eigene Vorlagen anzulegen und neuen Anwendungen zuzuordnen.
+#. Wählen Sie anschließend eine Vorlage für die Anwendung. Diese bestimmt den Aufbau der Anwendung. Es ist ebenfalls möglich, eigene Vorlagen anzulegen und neuen Anwendungen zuzuordnen.
 
 .. tip:: Beachten Sie, dass Layout-, Icon- und Farbanpassungen online über den CSS-Editor und/oder lokal über Konfigurationsdateien erfolgen. Lesen Sie dazu die Dokumentation unter :ref:`templates_de`.
 

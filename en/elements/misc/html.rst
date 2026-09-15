@@ -41,8 +41,24 @@ This element has to be integrated in the :ref:`backend`.
 Configuration examples
 ======================
 
-Insert picture:
----------------
+OpenInline
+----------
+OpenInline allows you to display the HTML content permanently. This can be explicitly enabled on the map (e.g., copyright notice) or in the sidepane.
+
+
+Modal Mode and do not show again option
+---------------------------------------
+
+The HTML element can be used in modal mode. No other interaction is possible when the dialog opens. 
+
+The "Don't show again" option can be activated. The dialog will only be displayed again when the text changes.
+
+.. image:: ../../../figures/copyright.png
+     :scale: 80
+
+
+Insert picture
+--------------
 
 In this example, the Mapbender Logo was integrated in the sidepane. It can be adjusted with a predefined height, background color and transparency as well as a certain padding.
 
