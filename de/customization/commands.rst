@@ -169,7 +169,7 @@ Datenbanken
 bin/console mapbender:database:upgrade 
 **************************************
 
-Aktualisiert die Kartenelementkonfigurationen, falls neue vorhanden sind. 
+Aktualisiert die Kartenelementkonfigurationen, falls neue vorhanden sind. Entfernt veraltete Elementkonfigurationswerte und Doctrine-Typen.
 
 
 .. code-block:: yaml

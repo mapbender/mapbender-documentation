@@ -165,4 +165,3 @@ After setting specific access rights, the security key turns red.
 
 
 You can find more security details under :ref:`en/backend/FOM/index:Permission management`.
-
