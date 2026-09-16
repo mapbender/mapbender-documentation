@@ -223,9 +223,8 @@ There are also some WMS services that only support a maximum image size that can
 Vendor Specific Parameter
 -------------------------
 
-In a service instance, vendor specific parameters are appended to the WMS request. In Mapbender, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values ​​can also be transmitted. The following example shows the definition of a parameter "group", which passes on the group of the user currently logged into Mapbender.
+In a service instance, vendor specific parameters are appended to the WMS request. In Mapbender, the vendor specific parameters can be used to append user and group information of the logged-in user to the WMS request. Fixed values can also be transmitted. 
 
-.. image:: ../../../figures/layerset/mapbender_vendor_specific_parameter.png
 
 * Name: Parameter name in WMS request.
 * Default: Default value.
@@ -233,6 +232,15 @@ In a service instance, vendor specific parameters are appended to the WMS reques
 * Hidden: If this value is set, the requests are sent on the server so that the parameters are not directly visible.
 
 The item is useful for passing the service on only to specific users and groups. This happens e.g. for users via the ``$id$`` and for groups via the parameter ``$groups$``.
+
+List of the possible parameters:
+
+* **User**: $email$, $groups$, $id$, $username$
+* **Groups**: $id$, $title$, $description$
+
+The following example shows the definition of a parameter "group", which passes on the group of the user currently logged into Mapbender.
+
+.. image:: ../../../figures/layerset/mapbender_vendor_specific_parameter.png
 
 
 Further information
@@ -370,11 +378,72 @@ Example:
 * **Select on**: Selectable in geodata explorer.
 * **Info allow**: Collection info is active when the application starts.
 * **Info**: Collection provides feature info requests, info default activates the feature info functionality.
-* **...** -> Opens a dialog with more information:
+* **Edit**: |mapbender-button-edit| Button to open the configuration dialog for styles, hoover tooltip and featureInfo
+* **...** -> Opens a dialog with more information (IDs and collection name)
 * **Collection name**: Collection name of the service information
-* **Style**: You can choose a default style and offer other styles.
+
+**Editing properties for collections**
+
+The properties for individual collections can be edited using the |mapbender-button-edit|  button. 
+
+The following can be adjusted:
+
+* Style
+* Tooltip, that shall be displayed when hovering over the features
+* FeatureInfo output, that shall be displayed when clicking on a feature
+
+**Style**
+
+It can be selected from the existing styles. A primary style can be chosen for the representation. Additionally, secondary styles can be defined.
+
+.. image:: ../../../figures/layerset/layerset_ogc_api_features_collection_style.png
+  :scale: 80
+
+**Hoover-Tooltip** 
+
+Default: no attributes are displayed in the Hoover-Tooltip.
+
+There are three options to configure the hoover tooltip for the features of a collection:
+
+* Choose attributes for the tooltip and change the ordering if needed.
+* List attributes
+* Add a HTML-template for the tooltip.
+
+In addition you can define a fill color, stroke width and stroke color for the representation of the hoover tooltip.
+
+.. image:: ../../../figures/layerset/layerset_ogc_api_features_collection_tooltip.png
+  :scale: 80
+
+Example list
+
+  .. code-block:: yaml
+
+     - name: Name
+     - flaeche: 'Area'
+     - land: Province
+
+Example HTML-template
+
+  .. code-block:: yaml
+
+     <b>${name}</b><br>${location}
+
+**FeatureInfo** 
+
+Default: all attributes are displayed in the FeatureInfo.
+
+There are three options to configure the FeatureInfo output for the features of a collection:
+
+* Choose attributes for the FeatureInfo and change the ordering if needed.
+* List attributes
+* Add a HTML-template for the FeatureInfo.
+
+
+.. image:: ../../../figures/layerset/layerset_ogc_api_features_collection_featureinfo.png
+  :scale: 80
+
+
+The screenshot shows a Mapbender application with an OGC API - Features Service.
 
 .. image:: ../../../figures/layerset/layerset_ogc_api_features_visualisation.png
   :width: 100%
-
-The screenshot shows a Mapbender application with an OGC API - Features Service.
