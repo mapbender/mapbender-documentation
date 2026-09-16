@@ -227,9 +227,7 @@ Vendor Specific Parameter
 
 In einer Dienstinstanz können Vendor Specific Parameter angegeben werden, die an den WMS Request angefügt werden.
 In Mapbender können die Vendor Specific Parameter genutzt werden, um Benutzer und Gruppeninformation des angemeldeten Benutzers an die WMS-Anfrage zu hängen. Es können auch feste Werte übermittelt werden.
-Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
 
-.. image:: ../../../figures/de/layerset/mapbender_vendor_specific_parameter.png
 
 * Name: Parameter Name im WMS Request.
 * default: Standardwert
@@ -238,10 +236,23 @@ Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als
 
 Momentan eignet sich das Element, um den Dienst nur an bestimmte Benutzer und Gruppen weiterzugeben. Dies geschieht z.B. für Benutzer über die ``$id$`` und für Gruppen über den Parameter ``$groups$``.
 
+Liste der möglichen Variablen:
+
+* **User**: $email$, $groups$, $id$, $username$
+* **Groups**: $id$, $title$, $description$
+
+Das folgende Beispiel zeigt die Definition eines Parameters ``group``, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
+
+.. image:: ../figures/de/layerset/mapbender_vendor_specific_parameter.png
+   :width: 75%
+
+Das folgende Beispiel zeigt die Definition eines Parameters „group“, der als Inhalt die Gruppe des gerade in Mapbender angemeldeten Nutzers weitergibt.
+
+.. image:: ../../../figures/de/layerset/mapbender_vendor_specific_parameter.png
+
 
 Weitere Informationen
 ---------------------
-
 
 * Information zur Benutzung von Layersets finden Sie auch im Schnellstart-Kapitel :ref:`de/quickstart:4. Datenquellen (Sources) verwenden`.
 
@@ -355,17 +366,7 @@ Die OGC API - Features Dienst-Instanz-Einstellungen bieten folgende Konfiguratio
 * **Aufklappen erlauben**: Checkbox, ob der Benutzer die Instanz im Ebenenbaum aufklappen darf.
 * **Aufklappen**: Gibt an, ob der Ordner beim Start der Anwendung aufgeklappt sein soll.
 
-* **Feld-Information & Übersetzung**: YAML-Array zur Definition von Feldern und Übersetzungen für die Informationsausgabe.
 
-Beispiel:
-
-  .. code-block:: yaml
-
-     - name: Name
-     - objid: ID
-     - flaeche: 'Fläche'
-     - land: Bundesland
- 
 **Collections**
 
 * **Titel**: Titel für die Collection, der im Ebenenbaum angezeigt werden soll.
@@ -377,11 +378,71 @@ Beispiel:
 * **Auswählen an**: Die Collection ist bei Anwendungsstart im Ebenenbaum aktiv.
 * **Info erlauben**: Die Infoabfrage wird für diese Collection zugelassen.
 * **Info an**: Die Infoabfrage wird beim Start aktiviert.
-* **...** (Drei-Punkte-Menü): Öffnet einen Dialog mit weiteren Informationen:
-* **Collection Name**: Layername der Service Information
-* **Style**: Sie können einen Standard-Stil und weitere Stile auswählen.
+* **Bearbeiten** (|mapbender-button-edit| Button): Öffnet den Konfigurationsdialog für Stile, Hoover-Tooltip und FeatureInfo-Ausgabe
+* **...** (Drei-Punkte-Menü): Öffnet einen Dialog mit weiteren Informationen (Ids und Collection-Name)
+
+
+**Eigenschaften für Collections bearbeiten**
+
+Über den |mapbender-button-edit| Button können die Eigenschaften für einzelne Collections bearbeitet werden. 
+
+Dabei kann Folgendes angepasst werden:
+
+* Stil 
+* Tooltip, der beim Überfahren der Features angezeigt werden soll
+* FeatureInfo-Ausgabe, die beim Klicken auf ein Feature angezeigt werden soll
+
+**Stil** 
+
+Es kann aus den bestehenden Stilen ausgewählt werden. Dabei kann ein primärer Stil für die Darstellung gewählt werden. Außerdem können sekundäre Stile definiert werden. 
+
+.. image:: ../../../figures/de/layerset/layerset_ogc_api_features_collection_style.png
+  :scale: 80
+
+**Hoover-Tooltip - Anzeige beim Überfahren von Features** 
+
+Es gibt 3 Möglichkeiten , wie der Hoover-Tooltip für die Features einer Collection konfiguriert werden kann:
+
+* Wählen Sie Attribute für den Tooltip aus und ändern Sie bei Bedarf die Reihenfolge.
+* Auflistung der Attribute und Anpassung der Titel
+* Fügen Sie eine HTML-Vorlage für den Tooltip hinzu.
+
+Außerdem kann eine Füllfarbe, Strichbreite und Strichfarbe für die Darstellung des Hoover-Tooltips konfiguriert werden.
+
+.. image:: ../../../figures/de/layerset/layerset_ogc_api_features_collection_tooltip.png
+  :scale: 80
+
+Beispiel Auflistung
+
+  .. code-block:: yaml
+
+     - name: Name
+     - flaeche: 'Fläche'
+     - land: Bundesland
+
+Beispiel HTML-Vorlage
+
+  .. code-block:: yaml
+
+     <b>${name}</b><br>${location}
+
+**FeatureInfo** 
+
+Standardmäßig werden alle Attribute beim FeatureInfo ausgegeben. 
+
+Es gibt 3 Möglichkeiten, wie die FeatureInfo-Ausgabe für die Features einer Collection konfiguriert werden kann:
+
+* Wählen Sie Attribute für die FeatureInfo aus und ändern Sie bei Bedarf die Reihenfolge.
+* Auflistung der Attribute und Anpassung der Titel
+* Fügen Sie eine HTML-Vorlage für die FeatureInfo hinzu.
+
+
+.. image:: ../../../figures/de/layerset/layerset_ogc_api_features_collection_featureinfo.png
+  :scale: 80
+
+
+Der Screenshot zeigt eine Mapbender-Anwendung mit OGC API - Features Dienst.
 
 .. image:: ../../../figures/de/layerset/layerset_ogc_api_features_visualisation.png
   :width: 100%
 
-Der Screenshot zeigt eine Mapbender-Anwendung mit OGC API - Features Dienst.

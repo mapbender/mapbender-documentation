@@ -249,7 +249,7 @@ Laden einer OGC API - Features Quelle
 .. image:: ../../figures/de/mapbender_add_ogc_api_features_source.png
   :width: 100%
 
-* **URL zum OGC API - Features Dienst**: URL zum Dienst (z. B. `pygeoapi Demo https://demo.pygeoapi.io/stable <https://demo.pygeoapi.io/stable>`_ or `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )
+* **URL zum OGC API - Features Dienst**: URL zum Dienst (z. B. `FOSSGIS Conferences Service https://wms.wheregroup.com/cgi-bin/mapserv/ogcapidemo/ogcapi <https://wms.wheregroup.com/cgi-bin/mapserv/ogcapidemo/ogcapi>`_,  `pygeoapi Demo https://demo.pygeoapi.io/stable <https://demo.pygeoapi.io/stable>`_ oder `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )
 
 YAML
 ++++  
@@ -266,13 +266,6 @@ YAML
 * **featureLimit**: Maximale Anzahl der angeforderten Features (Standard 1000)
 * **minScale**: Mindestmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
 * **maxScale**: Höchstmaßstab (1:x), bei dem die Quelle angezeigt wird (Standard: nicht gesetzt)
-* **featureInfoPropertyMap**: Wenn nicht leer, werden nur die angegebenen Eigenschaften in der FeatureInfo angezeigt. Als YAML-Arra y angeben. Der Schlüssel ist der Name des Feldes, der optionale Wert ist die Übersetzung. Beispiel:
-
-  .. code-block:: yaml
-
-     class
-     name
-     layer: Layer-Name
 
 Collections
 
@@ -285,3 +278,5 @@ Collections
 * **allowToggle**: Kann der Benutzer das Thema ein-/ausschalten? (Standard: true)
 * **allowInfo**: liefert die Collection Informationen (default: false)
 * **info**: initialer Status für die Informationsabfrage (default: false)
+* **edit**: Button zum Öffnen des Konfigurationsdialogs für Stile, Hoover-Tooltip und FeatureInfo-Ausgabe
+  

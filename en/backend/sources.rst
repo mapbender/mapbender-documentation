@@ -253,7 +253,7 @@ Loading an OGC API - Features Service
 .. image:: ../../figures/mapbender_add_ogc_api_features_source.png
   :width: 100%
 
-* **URL to an OGC API - Features Service**: Service URL (for example `bm_web_col https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json <https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json>`_ oder `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )
+* **URL to an OGC API - Features Service**: Service URL (for example `FOSSGIS Conferences Service https://wms.wheregroup.com/cgi-bin/mapserv/ogcapidemo/ogcapi <https://wms.wheregroup.com/cgi-bin/mapserv/ogcapidemo/ogcapi>`_, `pygeoapi Demo https://demo.pygeoapi.io/stable <https://demo.pygeoapi.io/stable>`_ or `Daten des Liegenschaftskatasters in NRW https://ogc-api.nrw.de/lika/v1 <https://ogc-api.nrw.de/lika/v1>`_ )
 
 YAML
 ++++  
@@ -270,13 +270,7 @@ YAML
 * **featureLimit**: maximum number of features requested from the service (default: 1000)
 * **minScale**: minimum scale (1:x) where the source is displayed (default: unset)
 * **maxScale**: maximum scale (1:x) where the source is displayed (default: unset)
-* **featureInfoPropertyMap**: If not empty, only the specified properties will be displayed in the feature info. Specify as YAML array. The key is the name of the field, the optional value is the translation. Example:
 
-  .. code-block:: yaml
-
-     class
-     name
-     layer: Layer-Name
 
 Collections
 
@@ -289,4 +283,5 @@ Collections
 * **allowToggle**: can the user collapse/expand the layer? (default: true)
 * **allowInfo**: does the collection provide information (default: false)
 * **info**: initial info state of the source (default: false)
+* **edit**: Button to open the configuration dialog for styles, hoover tooltip and featureInfo
   
